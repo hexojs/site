@@ -35,6 +35,16 @@ Option | Description
 `-d`<br>`--deploy` | Deploy after generate done
 `-w`<br>`--watch` | Watch file changes
 
+## publish
+
+``` bash
+$ hexo publish <filename>
+```
+
+Publishes a draft.
+
+**Alias**: p
+
 ## server
 
 ``` bash
@@ -50,6 +60,7 @@ Option | Description
 `-p`<br>`--port` | Override default port
 `-s`<br>`--static` | Only serve static files
 `-l`<br>`--log` | Enable logger. Override logger format.
+`-d`<br>`--drafts` | Serve drafts as normal posts.
 
 ## deploy
 

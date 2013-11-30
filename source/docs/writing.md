@@ -46,7 +46,9 @@ Variable | Description
 `:title` | Escaped title (lower case and replace spaces with dash)
 `:year` | Created year (4-digit)
 `:month` | Created month (2-digit)
+`:i_month` | Created month (Without leading zeros)
 `:day` | Created day (2-digit)
+`:i_day` | Created day (Without leading zeros)
 
 {% note tip Organize your posts by date %}
 You can set `new_post_name` as `:year-:month-:day-:title.md` to make your posts ordered by date.

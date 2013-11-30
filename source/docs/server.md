@@ -30,6 +30,14 @@ In static mode, only files in `public` folder will be served and file watching i
 $ hexo server -s
 ```
 
+### Drafts
+
+In draft mode, drafts will be served as normal posts. You can preview your drafts on the server. All changes you made on drafts will be updated at once.
+
+``` bash
+$ hexo server -d
+```
+
 ### Logger
 
 To log requests of server, you can enable logger in `_config.yml`. Logger is always enabled in debug mode.
