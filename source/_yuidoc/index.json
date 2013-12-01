@@ -1,0 +1,5529 @@
+{
+    "project": {
+        "name": "hexo",
+        "description": "A fast, simple & powerful blog framework, powered by Node.js.",
+        "version": "2.3.0",
+        "url": "http://zespia.tw/hexo/"
+    },
+    "files": {
+        "tmp/hexo/lib/core/i18n.js": {
+            "name": "tmp/hexo/lib/core/i18n.js",
+            "modules": {
+                "hexo": 1
+            },
+            "classes": {
+                "Hexo.i18n": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "Hexo": 1
+            }
+        },
+        "tmp/hexo/lib/core/index.js": {
+            "name": "tmp/hexo/lib/core/index.js",
+            "modules": {},
+            "classes": {
+                "Hexo": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "tmp/hexo/lib/core/render.js": {
+            "name": "tmp/hexo/lib/core/render.js",
+            "modules": {},
+            "classes": {
+                "Hexo.render": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "Hexo": 1
+            }
+        },
+        "tmp/hexo/lib/core/router.js": {
+            "name": "tmp/hexo/lib/core/router.js",
+            "modules": {},
+            "classes": {
+                "Hexo.Router": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "Hexo": 1
+            }
+        },
+        "tmp/hexo/lib/core/scaffold.js": {
+            "name": "tmp/hexo/lib/core/scaffold.js",
+            "modules": {},
+            "classes": {
+                "Hexo.scaffold": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "Hexo": 1
+            }
+        },
+        "tmp/hexo/lib/core/source.js": {
+            "name": "tmp/hexo/lib/core/source.js",
+            "modules": {},
+            "classes": {
+                "Hexo.source": 1,
+                "Hexo.source.ProcessData": 1
+            },
+            "fors": {
+                "Hexo": 1
+            },
+            "namespaces": {
+                "Hexo": 1,
+                "Hexo.source": 1
+            }
+        },
+        "tmp/hexo/lib/core/theme.js": {
+            "name": "tmp/hexo/lib/core/theme.js",
+            "modules": {},
+            "classes": {
+                "Hexo.theme": 1,
+                "Hexo.theme.Locals": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "Hexo": 1,
+                "Hexo.theme": 1
+            }
+        },
+        "tmp/hexo/lib/error/extend.js": {
+            "name": "tmp/hexo/lib/error/extend.js",
+            "modules": {},
+            "classes": {
+                "Hexo.Error.ExtendError": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "Hexo.Error": 1
+            }
+        },
+        "tmp/hexo/lib/error/index.js": {
+            "name": "tmp/hexo/lib/error/index.js",
+            "modules": {},
+            "classes": {
+                "Hexo.Error": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "Hexo": 1
+            }
+        },
+        "tmp/hexo/lib/extend/console.js": {
+            "name": "tmp/hexo/lib/extend/console.js",
+            "modules": {},
+            "classes": {
+                "Hexo.Extend.Console": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "Hexo.Extend": 1
+            }
+        },
+        "tmp/hexo/lib/extend/deployer.js": {
+            "name": "tmp/hexo/lib/extend/deployer.js",
+            "modules": {},
+            "classes": {
+                "Hexo.Extend.Deployer": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "Hexo.Extend": 1
+            }
+        },
+        "tmp/hexo/lib/extend/filter.js": {
+            "name": "tmp/hexo/lib/extend/filter.js",
+            "modules": {},
+            "classes": {
+                "Hexo.Extend.Filter": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "Hexo.Extend": 1
+            }
+        },
+        "tmp/hexo/lib/extend/generator.js": {
+            "name": "tmp/hexo/lib/extend/generator.js",
+            "modules": {},
+            "classes": {
+                "Hexo.Extend.Generator": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "Hexo.Extend": 1
+            }
+        },
+        "tmp/hexo/lib/extend/helper.js": {
+            "name": "tmp/hexo/lib/extend/helper.js",
+            "modules": {},
+            "classes": {
+                "Hexo.Extend.Helper": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "Hexo.Extend": 1
+            }
+        },
+        "tmp/hexo/lib/extend/index.js": {
+            "name": "tmp/hexo/lib/extend/index.js",
+            "modules": {},
+            "classes": {
+                "Hexo.Extend": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "Hexo": 1
+            }
+        },
+        "tmp/hexo/lib/extend/migrator.js": {
+            "name": "tmp/hexo/lib/extend/migrator.js",
+            "modules": {},
+            "classes": {
+                "Hexo.Extend.Migrator": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "Hexo.Extend": 1
+            }
+        },
+        "tmp/hexo/lib/extend/processor.js": {
+            "name": "tmp/hexo/lib/extend/processor.js",
+            "modules": {},
+            "classes": {
+                "Hexo.Extend.Processor": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "Hexo.Extend": 1
+            }
+        },
+        "tmp/hexo/lib/extend/renderer.js": {
+            "name": "tmp/hexo/lib/extend/renderer.js",
+            "modules": {},
+            "classes": {
+                "Hexo.Extend.Renderer": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "Hexo.Extend": 1
+            }
+        },
+        "tmp/hexo/lib/extend/swig.js": {
+            "name": "tmp/hexo/lib/extend/swig.js",
+            "modules": {},
+            "classes": {
+                "Hexo.Extend.Swig": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "Hexo.Extend": 1
+            }
+        },
+        "tmp/hexo/lib/extend/tag.js": {
+            "name": "tmp/hexo/lib/extend/tag.js",
+            "modules": {},
+            "classes": {
+                "Hexo.Extend.Tag": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "Hexo.Extend": 1
+            }
+        },
+        "tmp/hexo/lib/logger/console.js": {
+            "name": "tmp/hexo/lib/logger/console.js",
+            "modules": {},
+            "classes": {
+                "Hexo.Logger.Stream.Console": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "Hexo.Logger.Stream": 1
+            }
+        },
+        "tmp/hexo/lib/logger/file.js": {
+            "name": "tmp/hexo/lib/logger/file.js",
+            "modules": {},
+            "classes": {
+                "Hexo.Logger.Stream.File": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "Hexo.Logger.Stream": 1
+            }
+        },
+        "tmp/hexo/lib/logger/index.js": {
+            "name": "tmp/hexo/lib/logger/index.js",
+            "modules": {},
+            "classes": {
+                "Hexo.Logger": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "Hexo": 1
+            }
+        },
+        "tmp/hexo/lib/logger/stream.js": {
+            "name": "tmp/hexo/lib/logger/stream.js",
+            "modules": {},
+            "classes": {
+                "Hexo.Logger.Stream": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "Hexo.Logger": 1
+            }
+        },
+        "tmp/hexo/lib/model/index.js": {
+            "name": "tmp/hexo/lib/model/index.js",
+            "modules": {},
+            "classes": {
+                "Hexo.Model": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "Hexo": 1
+            }
+        },
+        "tmp/hexo/lib/post/create.js": {
+            "name": "tmp/hexo/lib/post/create.js",
+            "modules": {},
+            "classes": {},
+            "fors": {
+                "Hexo.post": 1,
+                "Hexo": 1
+            },
+            "namespaces": {}
+        },
+        "tmp/hexo/lib/post/index.js": {
+            "name": "tmp/hexo/lib/post/index.js",
+            "modules": {},
+            "classes": {
+                "Hexo.post": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "Hexo": 1
+            }
+        },
+        "tmp/hexo/lib/post/load.js": {
+            "name": "tmp/hexo/lib/post/load.js",
+            "modules": {},
+            "classes": {},
+            "fors": {
+                "Hexo.post": 1
+            },
+            "namespaces": {}
+        },
+        "tmp/hexo/lib/post/render.js": {
+            "name": "tmp/hexo/lib/post/render.js",
+            "modules": {},
+            "classes": {},
+            "fors": {
+                "Hexo.post": 1
+            },
+            "namespaces": {}
+        },
+        "tmp/hexo/lib/util/escape.js": {
+            "name": "tmp/hexo/lib/util/escape.js",
+            "modules": {},
+            "classes": {
+                "Hexo.util.escape": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "Hexo.util": 1
+            }
+        },
+        "tmp/hexo/lib/util/exec.js": {
+            "name": "tmp/hexo/lib/util/exec.js",
+            "modules": {},
+            "classes": {},
+            "fors": {
+                "Hexo.util": 1
+            },
+            "namespaces": {}
+        },
+        "tmp/hexo/lib/util/file.js": {
+            "name": "tmp/hexo/lib/util/file.js",
+            "modules": {},
+            "classes": {
+                "Hexo.util.file": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "Hexo.util": 1
+            }
+        },
+        "tmp/hexo/lib/util/file2.js": {
+            "name": "tmp/hexo/lib/util/file2.js",
+            "modules": {},
+            "classes": {
+                "Hexo.util.file2": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "Hexo.util": 1
+            }
+        },
+        "tmp/hexo/lib/util/highlight.js": {
+            "name": "tmp/hexo/lib/util/highlight.js",
+            "modules": {},
+            "classes": {},
+            "fors": {
+                "Hexo.util": 1
+            },
+            "namespaces": {}
+        },
+        "tmp/hexo/lib/util/html_tag.js": {
+            "name": "tmp/hexo/lib/util/html_tag.js",
+            "modules": {},
+            "classes": {},
+            "fors": {
+                "Hexo.util": 1
+            },
+            "namespaces": {}
+        },
+        "tmp/hexo/lib/util/index.js": {
+            "name": "tmp/hexo/lib/util/index.js",
+            "modules": {},
+            "classes": {
+                "Hexo.util": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "Hexo": 1
+            }
+        },
+        "tmp/hexo/lib/util/inflector.js": {
+            "name": "tmp/hexo/lib/util/inflector.js",
+            "modules": {},
+            "classes": {
+                "Hexo.util.inflector": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "Hexo.util": 1
+            }
+        },
+        "tmp/hexo/lib/util/pool.js": {
+            "name": "tmp/hexo/lib/util/pool.js",
+            "modules": {},
+            "classes": {
+                "Hexo.util.Pool": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "Hexo.util": 1
+            }
+        },
+        "tmp/hexo/lib/util/spawn.js": {
+            "name": "tmp/hexo/lib/util/spawn.js",
+            "modules": {},
+            "classes": {},
+            "fors": {
+                "Hexo.util": 1
+            },
+            "namespaces": {}
+        },
+        "tmp/hexo/lib/util/yfm.js": {
+            "name": "tmp/hexo/lib/util/yfm.js",
+            "modules": {},
+            "classes": {
+                "Hexo.util.yfm": 1
+            },
+            "fors": {
+                "Hexo.util": 1
+            },
+            "namespaces": {
+                "Hexo.util": 1
+            }
+        }
+    },
+    "modules": {
+        "hexo": {
+            "name": "hexo",
+            "submodules": {},
+            "classes": {
+                "Hexo.i18n": 1,
+                "Hexo": 1,
+                "Hexo.render": 1,
+                "Hexo.Router": 1,
+                "Hexo.scaffold": 1,
+                "Hexo.source": 1,
+                "Hexo.source.ProcessData": 1,
+                "Hexo.theme": 1,
+                "Hexo.theme.Locals": 1,
+                "Hexo.Error.ExtendError": 1,
+                "Hexo.Error": 1,
+                "Hexo.Extend.Console": 1,
+                "Hexo.Extend.Deployer": 1,
+                "Hexo.Extend.Filter": 1,
+                "Hexo.Extend.Generator": 1,
+                "Hexo.Extend.Helper": 1,
+                "Hexo.Extend": 1,
+                "Hexo.Extend.Migrator": 1,
+                "Hexo.Extend.Processor": 1,
+                "Hexo.Extend.Renderer": 1,
+                "Hexo.Extend.Swig": 1,
+                "Hexo.Extend.Tag": 1,
+                "Hexo.Logger.Stream.Console": 1,
+                "Hexo.Logger.Stream.File": 1,
+                "Hexo.Logger": 1,
+                "Hexo.Logger.Stream": 1,
+                "Hexo.Model": 1,
+                "Hexo.post": 1,
+                "Hexo.util.escape": 1,
+                "Hexo.util": 1,
+                "Hexo.util.file": 1,
+                "Hexo.util.file2": 1,
+                "Hexo.util.inflector": 1,
+                "Hexo.util.Pool": 1,
+                "Hexo.util.yfm": 1
+            },
+            "fors": {
+                "Hexo": 1,
+                "Hexo.post": 1,
+                "Hexo.util": 1
+            },
+            "namespaces": {
+                "Hexo": 1,
+                "Hexo.source": 1,
+                "Hexo.theme": 1,
+                "Hexo.Error": 1,
+                "Hexo.Extend": 1,
+                "Hexo.Logger.Stream": 1,
+                "Hexo.Logger": 1,
+                "Hexo.util": 1
+            },
+            "tag": "module",
+            "file": "tmp/hexo/lib/util/yfm.js",
+            "line": 11,
+            "description": "This module is used for i18n."
+        }
+    },
+    "classes": {
+        "Hexo.i18n": {
+            "name": "Hexo.i18n",
+            "shortname": "Hexo.i18n",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "hexo",
+            "namespace": "Hexo",
+            "file": "tmp/hexo/lib/core/i18n.js",
+            "line": 6,
+            "description": "This module is used for i18n.",
+            "is_constructor": 1
+        },
+        "Hexo": {
+            "name": "Hexo",
+            "shortname": "Hexo",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "hexo",
+            "namespace": "",
+            "file": "tmp/hexo/lib/core/index.js",
+            "line": 12,
+            "description": "All Hexo methods and functions are defined inside of this namespace.",
+            "is_constructor": 1,
+            "extends": "EventEmitter"
+        },
+        "Hexo.render": {
+            "name": "Hexo.render",
+            "shortname": "Hexo.render",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "hexo",
+            "namespace": "Hexo",
+            "file": "tmp/hexo/lib/core/render.js",
+            "line": 1,
+            "description": "Render functions.",
+            "static": 1
+        },
+        "Hexo.Router": {
+            "name": "Hexo.Router",
+            "shortname": "Hexo.Router",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "hexo",
+            "namespace": "Hexo",
+            "file": "tmp/hexo/lib/core/router.js",
+            "line": 3,
+            "description": "This module is used to manage routes.",
+            "is_constructor": 1,
+            "extends": "EventEmitter"
+        },
+        "Hexo.scaffold": {
+            "name": "Hexo.scaffold",
+            "shortname": "Hexo.scaffold",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "hexo",
+            "namespace": "Hexo",
+            "file": "tmp/hexo/lib/core/scaffold.js",
+            "line": 1,
+            "description": "Scaffold functions.",
+            "since": "2.4.0",
+            "static": 1
+        },
+        "Hexo.source": {
+            "name": "Hexo.source",
+            "shortname": "Hexo.source",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "hexo",
+            "namespace": "Hexo",
+            "file": "tmp/hexo/lib/core/source.js",
+            "line": 1,
+            "description": "Source functions.",
+            "since": "2.4.0",
+            "static": 1
+        },
+        "Hexo.source.ProcessData": {
+            "name": "Hexo.source.ProcessData",
+            "shortname": "Hexo.source.ProcessData",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "hexo",
+            "namespace": "Hexo.source",
+            "file": "tmp/hexo/lib/core/source.js",
+            "line": 294,
+            "params": [
+                {
+                    "name": "src",
+                    "description": "",
+                    "type": "String"
+                },
+                {
+                    "name": "type",
+                    "description": "",
+                    "type": "String"
+                },
+                {
+                    "name": "params",
+                    "description": "",
+                    "type": "Object"
+                }
+            ],
+            "is_constructor": 1
+        },
+        "Hexo.theme": {
+            "name": "Hexo.theme",
+            "shortname": "Hexo.theme",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "hexo",
+            "namespace": "Hexo",
+            "file": "tmp/hexo/lib/core/theme.js",
+            "line": 1,
+            "description": "Theme functions.",
+            "since": "2.4.0",
+            "static": 1
+        },
+        "Hexo.theme.Locals": {
+            "name": "Hexo.theme.Locals",
+            "shortname": "Hexo.theme.Locals",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "hexo",
+            "namespace": "Hexo.theme",
+            "file": "tmp/hexo/lib/core/theme.js",
+            "line": 445,
+            "description": "Local variables for generators.",
+            "params": [
+                {
+                    "name": "path",
+                    "description": "",
+                    "type": "String"
+                },
+                {
+                    "name": "locals",
+                    "description": "",
+                    "type": "Object"
+                }
+            ]
+        },
+        "Hexo.Error.ExtendError": {
+            "name": "Hexo.Error.ExtendError",
+            "shortname": "Hexo.Error.ExtendError",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "hexo",
+            "namespace": "Hexo.Error",
+            "file": "tmp/hexo/lib/error/extend.js",
+            "line": 3,
+            "description": "An error class used in Hexo extensions.",
+            "params": [
+                {
+                    "name": "msg",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "is_constructor": 1,
+            "extends": "Hexo.Error"
+        },
+        "Hexo.Error": {
+            "name": "Hexo.Error",
+            "shortname": "Hexo.Error",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "hexo",
+            "namespace": "Hexo",
+            "file": "tmp/hexo/lib/error/index.js",
+            "line": 1,
+            "description": "An error class used in Hexo.",
+            "params": [
+                {
+                    "name": "msg",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "is_constructor": 1
+        },
+        "Hexo.Extend.Console": {
+            "name": "Hexo.Extend.Console",
+            "shortname": "Hexo.Extend.Console",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "hexo",
+            "namespace": "Hexo.Extend",
+            "file": "tmp/hexo/lib/extend/console.js",
+            "line": 4,
+            "description": "This class is used to manage all console plugins in Hexo.",
+            "is_constructor": 1
+        },
+        "Hexo.Extend.Deployer": {
+            "name": "Hexo.Extend.Deployer",
+            "shortname": "Hexo.Extend.Deployer",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "hexo",
+            "namespace": "Hexo.Extend",
+            "file": "tmp/hexo/lib/extend/deployer.js",
+            "line": 3,
+            "description": "This class is used to manage all deployer plugins in Hexo.",
+            "is_constructor": 1
+        },
+        "Hexo.Extend.Filter": {
+            "name": "Hexo.Extend.Filter",
+            "shortname": "Hexo.Extend.Filter",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "hexo",
+            "namespace": "Hexo.Extend",
+            "file": "tmp/hexo/lib/extend/filter.js",
+            "line": 3,
+            "description": "This class is used to manage all filter plugins in Hexo.",
+            "is_constructor": 1
+        },
+        "Hexo.Extend.Generator": {
+            "name": "Hexo.Extend.Generator",
+            "shortname": "Hexo.Extend.Generator",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "hexo",
+            "namespace": "Hexo.Extend",
+            "file": "tmp/hexo/lib/extend/generator.js",
+            "line": 3,
+            "description": "This class is used to manage all generator plugins in Hexo.",
+            "is_constructor": 1
+        },
+        "Hexo.Extend.Helper": {
+            "name": "Hexo.Extend.Helper",
+            "shortname": "Hexo.Extend.Helper",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "hexo",
+            "namespace": "Hexo.Extend",
+            "file": "tmp/hexo/lib/extend/helper.js",
+            "line": 3,
+            "description": "This class is used to manage all helper plugins in Hexo.",
+            "is_constructor": 1
+        },
+        "Hexo.Extend": {
+            "name": "Hexo.Extend",
+            "shortname": "Hexo.Extend",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "hexo",
+            "namespace": "Hexo",
+            "file": "tmp/hexo/lib/extend/index.js",
+            "line": 1,
+            "description": "This class is used to manage all plugins used in Hexo.\n\nThere're 10 types of plugins:\n\n- {{#crossLink \"Hexo.Extend.Console\"}}Console{{/crossLink}}\n- {{#crossLink \"Hexo.Extend.Deployer\"}}Deployer{{/crossLink}}\n- {{#crossLink \"Hexo.Extend.Filter\"}}Filter{{/crossLink}}\n- {{#crossLink \"Hexo.Extend.Generator\"}}Generator{{/crossLink}}\n- {{#crossLink \"Hexo.Extend.Helper\"}}Helper{{/crossLink}}\n- {{#crossLink \"Hexo.Extend.Migrator\"}}Migrator{{/crossLink}}\n- {{#crossLink \"Hexo.Extend.Processor\"}}Processor{{/crossLink}}\n- {{#crossLink \"Hexo.Extend.Renderer\"}}Renderer{{/crossLink}}\n- {{#crossLink \"Hexo.Extend.Swig\"}}Swig{{/crossLink}}\n- {{#crossLink \"Hexo.Extend.Tag\"}}Tag{{/crossLink}}",
+            "is_constructor": 1
+        },
+        "Hexo.Extend.Migrator": {
+            "name": "Hexo.Extend.Migrator",
+            "shortname": "Hexo.Extend.Migrator",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "hexo",
+            "namespace": "Hexo.Extend",
+            "file": "tmp/hexo/lib/extend/migrator.js",
+            "line": 3,
+            "description": "This class is used to manage all migrator plugins in Hexo.",
+            "is_constructor": 1
+        },
+        "Hexo.Extend.Processor": {
+            "name": "Hexo.Extend.Processor",
+            "shortname": "Hexo.Extend.Processor",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "hexo",
+            "namespace": "Hexo.Extend",
+            "file": "tmp/hexo/lib/extend/processor.js",
+            "line": 5,
+            "description": "This class is used to manage all processor plugins in Hexo.",
+            "is_constructor": 1
+        },
+        "Hexo.Extend.Renderer": {
+            "name": "Hexo.Extend.Renderer",
+            "shortname": "Hexo.Extend.Renderer",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "hexo",
+            "namespace": "Hexo.Extend",
+            "file": "tmp/hexo/lib/extend/renderer.js",
+            "line": 4,
+            "description": "This class is used to manage all renderer plugins in Hexo.",
+            "is_constructor": 1
+        },
+        "Hexo.Extend.Swig": {
+            "name": "Hexo.Extend.Swig",
+            "shortname": "Hexo.Extend.Swig",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "hexo",
+            "namespace": "Hexo.Extend",
+            "file": "tmp/hexo/lib/extend/swig.js",
+            "line": 3,
+            "description": "This class is used to manage all swig plugins in Hexo.",
+            "is_constructor": 1
+        },
+        "Hexo.Extend.Tag": {
+            "name": "Hexo.Extend.Tag",
+            "shortname": "Hexo.Extend.Tag",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "hexo",
+            "namespace": "Hexo.Extend",
+            "file": "tmp/hexo/lib/extend/tag.js",
+            "line": 3,
+            "description": "This class is used to manage all tag plugins in Hexo.",
+            "is_constructor": 1
+        },
+        "Hexo.Logger.Stream.Console": {
+            "name": "Hexo.Logger.Stream.Console",
+            "shortname": "Hexo.Logger.Stream.Console",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "hexo",
+            "namespace": "Hexo.Logger.Stream",
+            "file": "tmp/hexo/lib/logger/console.js",
+            "line": 6,
+            "description": "Console stream.",
+            "params": [
+                {
+                    "name": "logger",
+                    "description": "",
+                    "type": "Logger"
+                },
+                {
+                    "name": "options",
+                    "description": "",
+                    "type": "Object"
+                }
+            ],
+            "is_constructor": 1,
+            "extends": "Hexo.Logger.Stream"
+        },
+        "Hexo.Logger.Stream.File": {
+            "name": "Hexo.Logger.Stream.File",
+            "shortname": "Hexo.Logger.Stream.File",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "hexo",
+            "namespace": "Hexo.Logger.Stream",
+            "file": "tmp/hexo/lib/logger/file.js",
+            "line": 6,
+            "description": "File stream.",
+            "params": [
+                {
+                    "name": "logger",
+                    "description": "",
+                    "type": "Logger"
+                },
+                {
+                    "name": "options",
+                    "description": "",
+                    "type": "Object"
+                }
+            ],
+            "is_constructor": 1,
+            "extends": "Hexo.Logger.Stream"
+        },
+        "Hexo.Logger": {
+            "name": "Hexo.Logger",
+            "shortname": "Hexo.Logger",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "hexo",
+            "namespace": "Hexo",
+            "file": "tmp/hexo/lib/logger/index.js",
+            "line": 5,
+            "description": "This module is used for log.",
+            "is_constructor": 1,
+            "extends": "EventEmitter"
+        },
+        "Hexo.Logger.Stream": {
+            "name": "Hexo.Logger.Stream",
+            "shortname": "Hexo.Logger.Stream",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "hexo",
+            "namespace": "Hexo.Logger",
+            "file": "tmp/hexo/lib/logger/stream.js",
+            "line": 3,
+            "description": "Logger stream.",
+            "params": [
+                {
+                    "name": "logger",
+                    "description": "",
+                    "type": "Logger"
+                },
+                {
+                    "name": "options",
+                    "description": "",
+                    "type": "Object"
+                }
+            ],
+            "is_constructor": 1
+        },
+        "Hexo.Model": {
+            "name": "Hexo.Model",
+            "shortname": "Hexo.Model",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "hexo",
+            "namespace": "Hexo",
+            "file": "tmp/hexo/lib/model/index.js",
+            "line": 3,
+            "description": "This module is used to manage all models used in Hexo.",
+            "params": [
+                {
+                    "name": "db",
+                    "description": "",
+                    "type": "Warehouse"
+                }
+            ],
+            "is_constructor": 1
+        },
+        "Hexo.post": {
+            "name": "Hexo.post",
+            "shortname": "Hexo.post",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "hexo",
+            "namespace": "Hexo",
+            "file": "tmp/hexo/lib/post/index.js",
+            "line": 1,
+            "description": "Post functions.",
+            "static": 1
+        },
+        "Hexo.util.escape": {
+            "name": "Hexo.util.escape",
+            "shortname": "Hexo.util.escape",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "hexo",
+            "namespace": "Hexo.util",
+            "file": "tmp/hexo/lib/util/escape.js",
+            "line": 1,
+            "static": 1
+        },
+        "Hexo.util": {
+            "name": "Hexo.util",
+            "shortname": "Hexo.util",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "hexo",
+            "namespace": "Hexo",
+            "file": "tmp/hexo/lib/util/index.js",
+            "line": 1,
+            "description": "Utilities.",
+            "static": 1
+        },
+        "Hexo.util.file": {
+            "name": "Hexo.util.file",
+            "shortname": "Hexo.util.file",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "hexo",
+            "namespace": "Hexo.util",
+            "file": "tmp/hexo/lib/util/file.js",
+            "line": 1,
+            "description": "File utility.",
+            "deprecated": true,
+            "deprecationMessage": "Use hexo.util.file2 or hexo.file instead.",
+            "static": 1
+        },
+        "Hexo.util.file2": {
+            "name": "Hexo.util.file2",
+            "shortname": "Hexo.util.file2",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "hexo",
+            "namespace": "Hexo.util",
+            "file": "tmp/hexo/lib/util/file2.js",
+            "line": 1,
+            "description": "File utility.",
+            "static": 1
+        },
+        "Hexo.util.inflector": {
+            "name": "Hexo.util.inflector",
+            "shortname": "Hexo.util.inflector",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "hexo",
+            "namespace": "Hexo.util",
+            "file": "tmp/hexo/lib/util/inflector.js",
+            "line": 1,
+            "description": "Inflector.",
+            "since": "2.4.0"
+        },
+        "Hexo.util.Pool": {
+            "name": "Hexo.util.Pool",
+            "shortname": "Hexo.util.Pool",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "hexo",
+            "namespace": "Hexo.util",
+            "file": "tmp/hexo/lib/util/pool.js",
+            "line": 14,
+            "description": "Thread pool.",
+            "params": [
+                {
+                    "name": "worker",
+                    "description": "",
+                    "type": "String"
+                },
+                {
+                    "name": "concurrency",
+                    "description": "Default to number of CPUs.",
+                    "type": "Number",
+                    "optional": true
+                }
+            ],
+            "is_constructor": 1
+        },
+        "Hexo.util.yfm": {
+            "name": "Hexo.util.yfm",
+            "shortname": "Hexo.util.yfm",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "hexo",
+            "namespace": "Hexo.util",
+            "file": "tmp/hexo/lib/util/yfm.js",
+            "line": 11,
+            "description": "YAML front-matter parser.",
+            "static": 1
+        }
+    },
+    "classitems": [
+        {
+            "file": "tmp/hexo/lib/core/i18n.js",
+            "line": 16,
+            "itemtype": "property",
+            "name": "store",
+            "type": "Object",
+            "class": "Hexo.i18n",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/core/i18n.js",
+            "line": 24,
+            "description": "Gets a nested property. You can use either `foo.bar` or `foo[bar]` to get the nested property.",
+            "itemtype": "method",
+            "name": "_getProperty",
+            "params": [
+                {
+                    "name": "obj",
+                    "description": "",
+                    "type": "Object"
+                },
+                {
+                    "name": "key",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Any"
+            },
+            "access": "private",
+            "tagname": "",
+            "class": "Hexo.i18n",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/core/i18n.js",
+            "line": 45,
+            "description": "Gets the language code. The form of language code may be `en` or `zh-tw`.\nWhen the language is not defined, it returns `default`.",
+            "itemtype": "method",
+            "name": "_getCode",
+            "params": [
+                {
+                    "name": "lang",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "String"
+            },
+            "access": "private",
+            "tagname": "",
+            "class": "Hexo.i18n",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/core/i18n.js",
+            "line": 79,
+            "description": "Gets the localization function.",
+            "itemtype": "method",
+            "name": "get",
+            "params": [
+                {
+                    "name": "lang",
+                    "description": "",
+                    "type": "String",
+                    "optional": true,
+                    "optdefault": "default"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Function"
+            },
+            "class": "Hexo.i18n",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/core/i18n.js",
+            "line": 98,
+            "description": "Gets the localization function for plural string.",
+            "itemtype": "method",
+            "name": "plural",
+            "params": [
+                {
+                    "name": "lang",
+                    "description": "",
+                    "type": "String",
+                    "optional": true,
+                    "optdefault": "default"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Function"
+            },
+            "class": "Hexo.i18n",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/core/i18n.js",
+            "line": 125,
+            "description": "Loads language files. The language files must be written in YAML format.",
+            "itemtype": "method",
+            "name": "load",
+            "params": [
+                {
+                    "name": "path",
+                    "description": "",
+                    "type": "String"
+                },
+                {
+                    "name": "callback",
+                    "description": "",
+                    "type": "Function",
+                    "optional": true
+                }
+            ],
+            "async": 1,
+            "class": "Hexo.i18n",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/core/index.js",
+            "line": 25,
+            "description": "Defines a constant.",
+            "itemtype": "method",
+            "name": "constant",
+            "params": [
+                {
+                    "name": "name",
+                    "description": "",
+                    "type": "String"
+                },
+                {
+                    "name": "value",
+                    "description": "",
+                    "type": "Any"
+                }
+            ],
+            "chainable": 1,
+            "class": "Hexo",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/core/index.js",
+            "line": 48,
+            "description": "Bootstraps Hexo environment.",
+            "itemtype": "method",
+            "name": "bootstrap",
+            "params": [
+                {
+                    "name": "baseDir",
+                    "description": "",
+                    "type": "String"
+                },
+                {
+                    "name": "args",
+                    "description": "",
+                    "type": "Object"
+                }
+            ],
+            "chainable": 1,
+            "since": "2.4.0",
+            "class": "Hexo",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/core/index.js",
+            "line": 59,
+            "description": "The path of core directory of Hexo.",
+            "itemtype": "property",
+            "name": "core_dir",
+            "type": "String",
+            "final": 1,
+            "class": "Hexo",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/core/index.js",
+            "line": 69,
+            "description": "The path of library directory of Hexo.",
+            "itemtype": "property",
+            "name": "lib_dir",
+            "type": "String",
+            "final": 1,
+            "class": "Hexo",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/core/index.js",
+            "line": 79,
+            "description": "Hexo version number.",
+            "itemtype": "property",
+            "name": "version",
+            "type": "String",
+            "final": 1,
+            "class": "Hexo",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/core/index.js",
+            "line": 89,
+            "description": "The path of base directory, equals to the current working directory (CWD).",
+            "itemtype": "property",
+            "name": "base_dir",
+            "type": "String",
+            "final": 1,
+            "class": "Hexo",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/core/index.js",
+            "line": 99,
+            "description": "Environment variables.\n\nThis object contains the following attributes:\n\n  - debug: Determines whether debug mode is on.\n  - safe: Determines whether safe mode is on.\n  - silent: Determines whether silent mode is on.\n  - env: Node.js environment variable. Default to `development`.\n  - version: Hexo version number.\n  - init: Determines whether Hexo has been initalized.",
+            "itemtype": "property",
+            "name": "env",
+            "type": "Object",
+            "final": 1,
+            "class": "Hexo",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/core/index.js",
+            "line": 125,
+            "description": "See {{#crossLink \"Hexo.util\"}}{{/crossLink}}",
+            "itemtype": "property",
+            "name": "util",
+            "type": "Hexo.util",
+            "class": "Hexo",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/core/index.js",
+            "line": 134,
+            "description": "See {{#crossLink \"Hexo.util.file2\"}}{{/crossLink}}",
+            "itemtype": "property",
+            "name": "file",
+            "type": "Hexo.util.file2",
+            "class": "Hexo",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/core/index.js",
+            "line": 143,
+            "description": "See {{#crossLink \"Hexo.Router\"}}{{/crossLink}}",
+            "itemtype": "property",
+            "name": "route",
+            "type": "Hexo.Router",
+            "class": "Hexo",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/core/index.js",
+            "line": 152,
+            "description": "See {{#crossLink \"Hexo.render\"}}{{/crossLink}}",
+            "itemtype": "property",
+            "name": "render",
+            "type": "Hexo.render",
+            "class": "Hexo",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/core/index.js",
+            "line": 161,
+            "description": "See {{#crossLink \"Hexo.scaffold\"}}{{/crossLink}}",
+            "itemtype": "property",
+            "name": "scaffold",
+            "type": "Hexo.scaffold",
+            "class": "Hexo",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/core/index.js",
+            "line": 170,
+            "description": "See {{#crossLink \"Hexo.theme\"}}{{/crossLink}}",
+            "itemtype": "property",
+            "name": "theme",
+            "type": "Hexo.theme",
+            "class": "Hexo",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/core/index.js",
+            "line": 179,
+            "description": "See {{#crossLink \"Hexo.post\"}}{{/crossLink}}",
+            "itemtype": "property",
+            "name": "post",
+            "type": "Hexo.post",
+            "class": "Hexo",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/core/index.js",
+            "line": 188,
+            "description": "See {{#crossLink \"Hexo.source\"}}{{/crossLink}}",
+            "itemtype": "property",
+            "name": "source",
+            "type": "Hexo.source",
+            "class": "Hexo",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/core/index.js",
+            "line": 200,
+            "description": "Calls a console plugin.",
+            "itemtype": "method",
+            "name": "call",
+            "params": [
+                {
+                    "name": "name",
+                    "description": "",
+                    "type": "String"
+                },
+                {
+                    "name": "args",
+                    "description": "",
+                    "type": "Object",
+                    "optional": true
+                },
+                {
+                    "name": "callback",
+                    "description": "",
+                    "type": "Function",
+                    "optional": true
+                }
+            ],
+            "chainable": 1,
+            "async": 1,
+            "class": "Hexo",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/core/render.js",
+            "line": 24,
+            "description": "Checks if the given `path` is renderable.",
+            "itemtype": "method",
+            "name": "isRenderable",
+            "params": [
+                {
+                    "name": "path",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Boolean"
+            },
+            "static": 1,
+            "class": "Hexo.render",
+            "module": "hexo",
+            "namespace": "Hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/core/render.js",
+            "line": 37,
+            "description": "Checks if the given `path` is renderable by synchronized renderer.",
+            "itemtype": "method",
+            "name": "isRenderableSync",
+            "params": [
+                {
+                    "name": "path",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Boolean"
+            },
+            "static": 1,
+            "class": "Hexo.render",
+            "module": "hexo",
+            "namespace": "Hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/core/render.js",
+            "line": 50,
+            "description": "Gets the output extension name.",
+            "itemtype": "method",
+            "name": "getOutput",
+            "params": [
+                {
+                    "name": "path",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "String"
+            },
+            "static": 1,
+            "class": "Hexo.render",
+            "module": "hexo",
+            "namespace": "Hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/core/render.js",
+            "line": 63,
+            "description": "Renders data.",
+            "itemtype": "method",
+            "name": "render",
+            "params": [
+                {
+                    "name": "data",
+                    "description": "",
+                    "type": "Object"
+                },
+                {
+                    "name": "options",
+                    "description": "",
+                    "type": "Object",
+                    "optional": true
+                },
+                {
+                    "name": "callback",
+                    "description": "",
+                    "type": "Function",
+                    "optional": true
+                }
+            ],
+            "async": 1,
+            "static": 1,
+            "class": "Hexo.render",
+            "module": "hexo",
+            "namespace": "Hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/core/render.js",
+            "line": 108,
+            "description": "Renders data synchronizedly.",
+            "itemtype": "method",
+            "name": "renderSync",
+            "params": [
+                {
+                    "name": "data",
+                    "description": "",
+                    "type": "Object"
+                },
+                {
+                    "name": "options",
+                    "description": "",
+                    "type": "Object",
+                    "optional": true
+                }
+            ],
+            "static": 1,
+            "class": "Hexo.render",
+            "module": "hexo",
+            "namespace": "Hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/core/render.js",
+            "line": 138,
+            "description": "Renders a file.",
+            "itemtype": "method",
+            "name": "renderFile",
+            "params": [
+                {
+                    "name": "source",
+                    "description": "",
+                    "type": "String"
+                },
+                {
+                    "name": "options",
+                    "description": "",
+                    "type": "Object",
+                    "optional": true
+                },
+                {
+                    "name": "callback",
+                    "description": "",
+                    "type": "Function",
+                    "optional": true
+                }
+            ],
+            "async": 1,
+            "static": 1,
+            "class": "Hexo.render",
+            "module": "hexo",
+            "namespace": "Hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/core/router.js",
+            "line": 14,
+            "itemtype": "property",
+            "name": "routes",
+            "type": "Object",
+            "class": "Hexo.Router",
+            "module": "hexo",
+            "namespace": "Hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/core/router.js",
+            "line": 24,
+            "description": "Formats URL.\n\nThis function does:\n\n- Removes the prefixed slash.\n- Appends `index.html` if the URL has trailing slash.\n- Replaces all backslashes with slash.",
+            "itemtype": "method",
+            "name": "format",
+            "params": [
+                {
+                    "name": "str",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "String"
+            },
+            "class": "Hexo.Router",
+            "module": "hexo",
+            "namespace": "Hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/core/router.js",
+            "line": 49,
+            "description": "Gets a router.\n\n**Example:**\n\n```\nvar route = router.get('index.html');\n\nroute(function(err, content){\n  // do something...\n});\n```",
+            "itemtype": "method",
+            "name": "get",
+            "params": [
+                {
+                    "name": "source",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Function"
+            },
+            "class": "Hexo.Router",
+            "module": "hexo",
+            "namespace": "Hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/core/router.js",
+            "line": 71,
+            "description": "Sets a router.\n\nYou can use either a function:\n\n```\nrouter.set('index.html', function(callback){\n  fs.readFile('index.txt', function(err, content){\n    if (err) return callback(err);\n\n    callback(null, content);\n  });\n});\n```\n\nor a string:\n\n```\nrouter.set('foo.html', 'foo');\n```",
+            "itemtype": "method",
+            "name": "set",
+            "params": [
+                {
+                    "name": "source",
+                    "description": "",
+                    "type": "String"
+                },
+                {
+                    "name": "callback",
+                    "description": "",
+                    "type": "Any"
+                }
+            ],
+            "chainable": 1,
+            "class": "Hexo.Router",
+            "module": "hexo",
+            "namespace": "Hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/core/router.js",
+            "line": 118,
+            "description": "Removes a router.",
+            "itemtype": "method",
+            "name": "remove",
+            "params": [
+                {
+                    "name": "source",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "chainable": 1,
+            "class": "Hexo.Router",
+            "module": "hexo",
+            "namespace": "Hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/core/scaffold.js",
+            "line": 17,
+            "description": "Default scaffolds.",
+            "itemtype": "property",
+            "name": "defaults",
+            "type": "Object",
+            "static": 1,
+            "class": "Hexo.scaffold",
+            "module": "hexo",
+            "namespace": "Hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/core/scaffold.js",
+            "line": 51,
+            "description": "Gets the path of a scaffold.",
+            "itemtype": "method",
+            "name": "_getScaffoldPath",
+            "params": [
+                {
+                    "name": "layout",
+                    "description": "",
+                    "type": "String"
+                },
+                {
+                    "name": "callback",
+                    "description": "",
+                    "type": "Function"
+                }
+            ],
+            "access": "private",
+            "tagname": "",
+            "async": 1,
+            "class": "Hexo.scaffold",
+            "module": "hexo",
+            "namespace": "Hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/core/scaffold.js",
+            "line": 93,
+            "description": "Gets a scaffold.",
+            "itemtype": "method",
+            "name": "get",
+            "params": [
+                {
+                    "name": "layout",
+                    "description": "",
+                    "type": "String"
+                },
+                {
+                    "name": "callback",
+                    "description": "",
+                    "type": "Function"
+                }
+            ],
+            "async": 1,
+            "static": 1,
+            "class": "Hexo.scaffold",
+            "module": "hexo",
+            "namespace": "Hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/core/scaffold.js",
+            "line": 115,
+            "description": "Creates a scaffold.",
+            "itemtype": "method",
+            "name": "create",
+            "params": [
+                {
+                    "name": "layout",
+                    "description": "",
+                    "type": "String"
+                },
+                {
+                    "name": "content",
+                    "description": "",
+                    "type": "String"
+                },
+                {
+                    "name": "callback",
+                    "description": "",
+                    "type": "Function",
+                    "optional": true
+                }
+            ],
+            "async": 1,
+            "static": 1,
+            "class": "Hexo.scaffold",
+            "module": "hexo",
+            "namespace": "Hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/core/scaffold.js",
+            "line": 141,
+            "description": "Updates the scaffold.",
+            "itemtype": "method",
+            "name": "update",
+            "params": [
+                {
+                    "name": "layout",
+                    "description": "",
+                    "type": "String"
+                },
+                {
+                    "name": "content",
+                    "description": "",
+                    "type": "String"
+                },
+                {
+                    "name": "callback",
+                    "description": "",
+                    "type": "Function",
+                    "optional": true
+                }
+            ],
+            "async": 1,
+            "static": 1,
+            "class": "Hexo.scaffold",
+            "module": "hexo",
+            "namespace": "Hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/core/scaffold.js",
+            "line": 168,
+            "description": "Removes a scaffold.",
+            "itemtype": "method",
+            "name": "remove",
+            "params": [
+                {
+                    "name": "layout",
+                    "description": "",
+                    "type": "String"
+                },
+                {
+                    "name": "callback",
+                    "description": "",
+                    "type": "Function",
+                    "optional": true
+                }
+            ],
+            "async": 1,
+            "static": 1,
+            "class": "Hexo.scaffold",
+            "module": "hexo",
+            "namespace": "Hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/core/source.js",
+            "line": 26,
+            "description": "Gets the matching processors.",
+            "itemtype": "method",
+            "name": "_getProcessor",
+            "params": [
+                {
+                    "name": "path",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "access": "private",
+            "tagname": "",
+            "class": "Hexo.source",
+            "module": "hexo",
+            "namespace": "Hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/core/source.js",
+            "line": 61,
+            "description": "Saves data to the database.",
+            "itemtype": "method",
+            "name": "_saveDatabase",
+            "params": [
+                {
+                    "name": "callback",
+                    "description": "",
+                    "type": "Function",
+                    "optional": true
+                }
+            ],
+            "access": "private",
+            "tagname": "",
+            "async": 1,
+            "class": "Hexo.source",
+            "module": "hexo",
+            "namespace": "Hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/core/source.js",
+            "line": 88,
+            "description": "Loads source files.",
+            "itemtype": "method",
+            "name": "load",
+            "params": [
+                {
+                    "name": "callback",
+                    "description": "",
+                    "type": "Function",
+                    "optional": true
+                }
+            ],
+            "async": 1,
+            "static": 1,
+            "class": "Hexo.source",
+            "module": "hexo",
+            "namespace": "Hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/core/source.js",
+            "line": 122,
+            "description": "Parses chokidar file type.",
+            "itemtype": "method",
+            "name": "_parseType",
+            "params": [
+                {
+                    "name": "type",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "String"
+            },
+            "access": "private",
+            "tagname": "",
+            "class": "Hexo.source",
+            "module": "hexo",
+            "namespace": "Hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/core/source.js",
+            "line": 147,
+            "description": "Watches source files.",
+            "itemtype": "method",
+            "name": "watch",
+            "params": [
+                {
+                    "name": "callback",
+                    "description": "",
+                    "type": "Function",
+                    "optional": true
+                }
+            ],
+            "async": 1,
+            "static": 1,
+            "class": "Hexo.source",
+            "module": "hexo",
+            "namespace": "Hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/core/source.js",
+            "line": 207,
+            "description": "Runs processors.",
+            "itemtype": "method",
+            "name": "process",
+            "params": [
+                {
+                    "name": "files",
+                    "description": "",
+                    "type": "String|Array"
+                },
+                {
+                    "name": "callback",
+                    "description": "",
+                    "type": "Function",
+                    "optional": true
+                }
+            ],
+            "async": 1,
+            "static": 1,
+            "class": "Hexo.source",
+            "module": "hexo",
+            "namespace": "Hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/core/source.js",
+            "line": 223,
+            "description": "Fired before processing started.",
+            "itemtype": "event",
+            "name": "processBefore",
+            "class": "Hexo",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/core/source.js",
+            "line": 282,
+            "description": "Fired after processing done.",
+            "itemtype": "event",
+            "name": "processAfter",
+            "class": "Hexo",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/core/source.js",
+            "line": 310,
+            "description": "Reads the source file.",
+            "itemtype": "method",
+            "name": "read",
+            "params": [
+                {
+                    "name": "options",
+                    "description": "",
+                    "type": "Object",
+                    "optional": true
+                },
+                {
+                    "name": "callback",
+                    "description": "",
+                    "type": "Function"
+                }
+            ],
+            "async": 1,
+            "chainable": 1,
+            "class": "Hexo.source.ProcessData",
+            "module": "hexo",
+            "namespace": "Hexo.source"
+        },
+        {
+            "file": "tmp/hexo/lib/core/source.js",
+            "line": 343,
+            "description": "Gets the status of source file.",
+            "itemtype": "method",
+            "name": "stat",
+            "params": [
+                {
+                    "name": "callback",
+                    "description": "",
+                    "type": "Function"
+                }
+            ],
+            "async": 1,
+            "chainable": 1,
+            "class": "Hexo.source.ProcessData",
+            "module": "hexo",
+            "namespace": "Hexo.source"
+        },
+        {
+            "file": "tmp/hexo/lib/core/theme.js",
+            "line": 29,
+            "description": "Gets the path of theme layout directory.",
+            "itemtype": "method",
+            "name": "_layoutDir",
+            "return": {
+                "description": "",
+                "type": "String"
+            },
+            "access": "private",
+            "tagname": "",
+            "class": "Hexo.theme",
+            "module": "hexo",
+            "namespace": "Hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/core/theme.js",
+            "line": 41,
+            "description": "Gets the path of theme source directory.",
+            "itemtype": "method",
+            "name": "_sourceDir",
+            "return": {
+                "description": "",
+                "type": "String"
+            },
+            "access": "private",
+            "tagname": "",
+            "class": "Hexo.theme",
+            "module": "hexo",
+            "namespace": "Hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/core/theme.js",
+            "line": 53,
+            "description": "Gets the path of theme language directory.",
+            "itemtype": "method",
+            "name": "_languageDir",
+            "return": {
+                "description": "",
+                "type": "String"
+            },
+            "access": "private",
+            "tagname": "",
+            "class": "Hexo.theme",
+            "module": "hexo",
+            "namespace": "Hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/core/theme.js",
+            "line": 65,
+            "description": "Loads theme configuration.",
+            "itemtype": "method",
+            "name": "_loadConfig",
+            "params": [
+                {
+                    "name": "callback",
+                    "description": "",
+                    "type": "Function",
+                    "optional": true
+                }
+            ],
+            "access": "private",
+            "tagname": "",
+            "async": 1,
+            "class": "Hexo.theme",
+            "module": "hexo",
+            "namespace": "Hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/core/theme.js",
+            "line": 93,
+            "description": "Loads theme layouts.",
+            "itemtype": "method",
+            "name": "_loadLayout",
+            "params": [
+                {
+                    "name": "callback",
+                    "description": "",
+                    "type": "Function",
+                    "optional": true
+                }
+            ],
+            "access": "private",
+            "tagname": "",
+            "async": 1,
+            "class": "Hexo.theme",
+            "module": "hexo",
+            "namespace": "Hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/core/theme.js",
+            "line": 126,
+            "description": "Processes theme source files.",
+            "itemtype": "method",
+            "name": "_processSource",
+            "params": [
+                {
+                    "name": "src",
+                    "description": "",
+                    "type": "String"
+                },
+                {
+                    "name": "callback",
+                    "description": "",
+                    "type": "Function",
+                    "optional": true
+                }
+            ],
+            "access": "private",
+            "tagname": "",
+            "async": 1,
+            "class": "Hexo.theme",
+            "module": "hexo",
+            "namespace": "Hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/core/theme.js",
+            "line": 152,
+            "description": "Loads theme source files.",
+            "itemtype": "method",
+            "name": "_loadSource",
+            "params": [
+                {
+                    "name": "callback",
+                    "description": "",
+                    "type": "Function",
+                    "optional": true
+                }
+            ],
+            "access": "private",
+            "tagname": "",
+            "async": 1,
+            "class": "Hexo.theme",
+            "module": "hexo",
+            "namespace": "Hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/core/theme.js",
+            "line": 184,
+            "description": "Loads theme language files.",
+            "itemtype": "method",
+            "name": "_loadi18n",
+            "params": [
+                {
+                    "name": "callback",
+                    "description": "",
+                    "type": "Function",
+                    "optional": true
+                }
+            ],
+            "access": "private",
+            "tagname": "",
+            "async": 1,
+            "class": "Hexo.theme",
+            "module": "hexo",
+            "namespace": "Hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/core/theme.js",
+            "line": 210,
+            "description": "Loads the theme.",
+            "itemtype": "method",
+            "name": "load",
+            "params": [
+                {
+                    "name": "callback",
+                    "description": "",
+                    "type": "Function",
+                    "optional": true
+                }
+            ],
+            "async": 1,
+            "static": 1,
+            "class": "Hexo.theme",
+            "module": "hexo",
+            "namespace": "Hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/core/theme.js",
+            "line": 249,
+            "description": "Watches changes of theme configuration.",
+            "itemtype": "method",
+            "name": "_watchConfig",
+            "params": [
+                {
+                    "name": "type",
+                    "description": "",
+                    "type": "String"
+                },
+                {
+                    "name": "src",
+                    "description": "",
+                    "type": "String"
+                },
+                {
+                    "name": "stats",
+                    "description": "",
+                    "type": "fs.Stats"
+                }
+            ],
+            "access": "private",
+            "tagname": "",
+            "class": "Hexo.theme",
+            "module": "hexo",
+            "namespace": "Hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/core/theme.js",
+            "line": 263,
+            "description": "Watches changes of theme layouts.",
+            "itemtype": "method",
+            "name": "_watchLayout",
+            "params": [
+                {
+                    "name": "type",
+                    "description": "",
+                    "type": "String"
+                },
+                {
+                    "name": "src",
+                    "description": "",
+                    "type": "String"
+                },
+                {
+                    "name": "stats",
+                    "description": "",
+                    "type": "fs.Stats"
+                }
+            ],
+            "access": "private",
+            "tagname": "",
+            "class": "Hexo.theme",
+            "module": "hexo",
+            "namespace": "Hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/core/theme.js",
+            "line": 284,
+            "description": "Watches changes of theme source files.",
+            "itemtype": "method",
+            "name": "_watchSource",
+            "params": [
+                {
+                    "name": "type",
+                    "description": "",
+                    "type": "String"
+                },
+                {
+                    "name": "src",
+                    "description": "",
+                    "type": "String"
+                },
+                {
+                    "name": "stats",
+                    "description": "",
+                    "type": "fs.Stats"
+                }
+            ],
+            "access": "private",
+            "tagname": "",
+            "class": "Hexo.theme",
+            "module": "hexo",
+            "namespace": "Hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/core/theme.js",
+            "line": 315,
+            "description": "Watches changes of theme language files.",
+            "itemtype": "method",
+            "name": "_watchi18n",
+            "params": [
+                {
+                    "name": "type",
+                    "description": "",
+                    "type": "String"
+                },
+                {
+                    "name": "src",
+                    "description": "",
+                    "type": "String"
+                },
+                {
+                    "name": "stats",
+                    "description": "",
+                    "type": "fs.Stats"
+                }
+            ],
+            "access": "private",
+            "tagname": "",
+            "class": "Hexo.theme",
+            "module": "hexo",
+            "namespace": "Hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/core/theme.js",
+            "line": 329,
+            "description": "Parses chokidar file type.",
+            "itemtype": "method",
+            "name": "_parseType",
+            "params": [
+                {
+                    "name": "type",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "String"
+            },
+            "access": "private",
+            "tagname": "",
+            "class": "Hexo.theme",
+            "module": "hexo",
+            "namespace": "Hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/core/theme.js",
+            "line": 354,
+            "description": "Watches theme changes.",
+            "itemtype": "method",
+            "name": "watch",
+            "static": 1,
+            "class": "Hexo.theme",
+            "module": "hexo",
+            "namespace": "Hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/core/theme.js",
+            "line": 390,
+            "description": "Resets theme cache.",
+            "itemtype": "method",
+            "name": "reset",
+            "static": 1,
+            "class": "Hexo.theme",
+            "module": "hexo",
+            "namespace": "Hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/core/theme.js",
+            "line": 405,
+            "description": "Runs generators.",
+            "itemtype": "method",
+            "name": "generate",
+            "params": [
+                {
+                    "name": "options",
+                    "description": "",
+                    "type": "Object",
+                    "optional": true
+                },
+                {
+                    "name": "callback",
+                    "description": "",
+                    "type": "Function",
+                    "optional": true
+                }
+            ],
+            "async": 1,
+            "static": 1,
+            "class": "Hexo.theme",
+            "module": "hexo",
+            "namespace": "Hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/core/theme.js",
+            "line": 455,
+            "description": "Page variables.",
+            "itemtype": "property",
+            "name": "page",
+            "type": "Object",
+            "class": "Hexo.theme.Locals",
+            "module": "hexo",
+            "namespace": "Hexo.theme"
+        },
+        {
+            "file": "tmp/hexo/lib/core/theme.js",
+            "line": 464,
+            "description": "The path of current page.",
+            "itemtype": "property",
+            "name": "path",
+            "type": "String",
+            "class": "Hexo.theme.Locals",
+            "module": "hexo",
+            "namespace": "Hexo.theme"
+        },
+        {
+            "file": "tmp/hexo/lib/core/theme.js",
+            "line": 473,
+            "description": "The full URL of current page.",
+            "itemtype": "property",
+            "name": "url",
+            "type": "String",
+            "class": "Hexo.theme.Locals",
+            "module": "hexo",
+            "namespace": "Hexo.theme"
+        },
+        {
+            "file": "tmp/hexo/lib/core/theme.js",
+            "line": 482,
+            "description": "Site variables.",
+            "itemtype": "property",
+            "name": "site",
+            "type": "Object",
+            "class": "Hexo.theme.Locals",
+            "module": "hexo",
+            "namespace": "Hexo.theme"
+        },
+        {
+            "file": "tmp/hexo/lib/core/theme.js",
+            "line": 491,
+            "description": "Global configuration.",
+            "itemtype": "property",
+            "name": "config",
+            "type": "Object",
+            "class": "Hexo.theme.Locals",
+            "module": "hexo",
+            "namespace": "Hexo.theme"
+        },
+        {
+            "file": "tmp/hexo/lib/core/theme.js",
+            "line": 500,
+            "description": "Theme configuration.",
+            "itemtype": "property",
+            "name": "theme",
+            "type": "Object",
+            "class": "Hexo.theme.Locals",
+            "module": "hexo",
+            "namespace": "Hexo.theme"
+        },
+        {
+            "file": "tmp/hexo/lib/core/theme.js",
+            "line": 509,
+            "description": "Expose of [Lodash](http://lodash.com/).",
+            "itemtype": "property",
+            "name": "_",
+            "type": "Function",
+            "class": "Hexo.theme.Locals",
+            "module": "hexo",
+            "namespace": "Hexo.theme"
+        },
+        {
+            "file": "tmp/hexo/lib/core/theme.js",
+            "line": 518,
+            "description": "i18n function.",
+            "itemtype": "property",
+            "name": "__",
+            "type": "Function",
+            "class": "Hexo.theme.Locals",
+            "module": "hexo",
+            "namespace": "Hexo.theme"
+        },
+        {
+            "file": "tmp/hexo/lib/core/theme.js",
+            "line": 527,
+            "description": "i18n function. (Plural)",
+            "itemtype": "property",
+            "name": "_p",
+            "type": "Function",
+            "class": "Hexo.theme.Locals",
+            "module": "hexo",
+            "namespace": "Hexo.theme"
+        },
+        {
+            "file": "tmp/hexo/lib/core/theme.js",
+            "line": 536,
+            "description": "Template layout.",
+            "itemtype": "property",
+            "name": "layout",
+            "type": "String",
+            "class": "Hexo.theme.Locals",
+            "module": "hexo",
+            "namespace": "Hexo.theme"
+        },
+        {
+            "file": "tmp/hexo/lib/core/theme.js",
+            "line": 545,
+            "description": "Whether cache is enabled or not.",
+            "itemtype": "property",
+            "name": "cache",
+            "type": "Boolean",
+            "class": "Hexo.theme.Locals",
+            "module": "hexo",
+            "namespace": "Hexo.theme"
+        },
+        {
+            "file": "tmp/hexo/lib/core/theme.js",
+            "line": 554,
+            "description": "Environment variables.",
+            "itemtype": "property",
+            "name": "env",
+            "type": "Object",
+            "class": "Hexo.theme.Locals",
+            "module": "hexo",
+            "namespace": "Hexo.theme"
+        },
+        {
+            "file": "tmp/hexo/lib/core/theme.js",
+            "line": 563,
+            "description": "The path of view directory.",
+            "itemtype": "property",
+            "name": "view_dir",
+            "type": "String",
+            "class": "Hexo.theme.Locals",
+            "module": "hexo",
+            "namespace": "Hexo.theme"
+        },
+        {
+            "file": "tmp/hexo/lib/error/index.js",
+            "line": 22,
+            "description": "Replace the error message with the string.",
+            "itemtype": "method",
+            "name": "wrap",
+            "params": [
+                {
+                    "name": "err",
+                    "description": "",
+                    "type": "Error"
+                },
+                {
+                    "name": "msg",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Error"
+            },
+            "static": 1,
+            "class": "Hexo.Error",
+            "module": "hexo",
+            "namespace": "Hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/extend/console.js",
+            "line": 14,
+            "itemtype": "property",
+            "name": "store",
+            "type": "Object",
+            "class": "Hexo.Extend.Console",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/extend/console.js",
+            "line": 21,
+            "itemtype": "property",
+            "name": "alias",
+            "type": "Object",
+            "class": "Hexo.Extend.Console",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/extend/console.js",
+            "line": 28,
+            "description": "Gets the console plugin.",
+            "itemtype": "method",
+            "name": "get",
+            "params": [
+                {
+                    "name": "name",
+                    "description": "You can use either full name or alias of the console plugin.",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Object"
+            },
+            "class": "Hexo.Extend.Console",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/extend/console.js",
+            "line": 42,
+            "description": "Returns a list of console plugins.",
+            "itemtype": "method",
+            "name": "list",
+            "return": {
+                "description": "",
+                "type": "Object"
+            },
+            "class": "Hexo.Extend.Console",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/extend/console.js",
+            "line": 53,
+            "description": "Registers a console plugin.",
+            "itemtype": "method",
+            "name": "register",
+            "params": [
+                {
+                    "name": "name",
+                    "description": "Name",
+                    "type": "String"
+                },
+                {
+                    "name": "desc",
+                    "description": "Description",
+                    "type": "String",
+                    "optional": true
+                },
+                {
+                    "name": "options",
+                    "description": "",
+                    "type": "Object",
+                    "optional": true,
+                    "props": [
+                        {
+                            "name": "init",
+                            "description": "Determines whether the plugin is available even Hexo not initalized yet",
+                            "type": "Boolean",
+                            "optional": true,
+                            "optdefault": "false"
+                        },
+                        {
+                            "name": "desc",
+                            "description": "The detailed description",
+                            "type": "String",
+                            "optional": true
+                        },
+                        {
+                            "name": "options",
+                            "description": "Descriptions of each option used in the plugin",
+                            "type": "Object",
+                            "optional": true
+                        },
+                        {
+                            "name": "arguments",
+                            "description": "Descriptions of each argument used in the plugin",
+                            "type": "Object",
+                            "optional": true
+                        },
+                        {
+                            "name": "alias",
+                            "description": "The alias for the plugin",
+                            "type": "String",
+                            "optional": true
+                        }
+                    ]
+                },
+                {
+                    "name": "fn",
+                    "description": "",
+                    "type": "Function"
+                }
+            ],
+            "class": "Hexo.Extend.Console",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/extend/deployer.js",
+            "line": 13,
+            "itemtype": "property",
+            "name": "store",
+            "type": "Object",
+            "class": "Hexo.Extend.Deployer",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/extend/deployer.js",
+            "line": 21,
+            "description": "Returns a list of deployer plugins.",
+            "itemtype": "method",
+            "name": "list",
+            "return": {
+                "description": "",
+                "type": "Object"
+            },
+            "class": "Hexo.Extend.Deployer",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/extend/deployer.js",
+            "line": 32,
+            "description": "Registers a deployer plugin.",
+            "itemtype": "method",
+            "name": "register",
+            "params": [
+                {
+                    "name": "name",
+                    "description": "",
+                    "type": "String"
+                },
+                {
+                    "name": "fn",
+                    "description": "",
+                    "type": "Function"
+                }
+            ],
+            "class": "Hexo.Extend.Deployer",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/extend/filter.js",
+            "line": 13,
+            "itemtype": "property",
+            "name": "store",
+            "type": "Object",
+            "class": "Hexo.Extend.Filter",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/extend/filter.js",
+            "line": 24,
+            "description": "Returns a list of filter plugins.",
+            "itemtype": "method",
+            "name": "list",
+            "return": {
+                "description": "",
+                "type": "Object"
+            },
+            "class": "Hexo.Extend.Filter",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/extend/filter.js",
+            "line": 35,
+            "description": "Registers a filter plugin.",
+            "itemtype": "method",
+            "name": "register",
+            "params": [
+                {
+                    "name": "type",
+                    "description": "The type of filter plugins can be either `pre` or `post`.",
+                    "type": "String",
+                    "optional": true,
+                    "optdefault": "post"
+                },
+                {
+                    "name": "fn",
+                    "description": "",
+                    "type": "Function"
+                }
+            ],
+            "class": "Hexo.Extend.Filter",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/extend/generator.js",
+            "line": 13,
+            "itemtype": "property",
+            "name": "store",
+            "type": "Array",
+            "class": "Hexo.Extend.Generator",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/extend/generator.js",
+            "line": 21,
+            "description": "Returns a list of generator plugins.",
+            "itemtype": "method",
+            "name": "list",
+            "return": {
+                "description": "",
+                "type": "Array"
+            },
+            "class": "Hexo.Extend.Generator",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/extend/generator.js",
+            "line": 32,
+            "description": "Registers a generator plugin.",
+            "itemtype": "method",
+            "name": "register",
+            "params": [
+                {
+                    "name": "fn",
+                    "description": "",
+                    "type": "Function"
+                }
+            ],
+            "class": "Hexo.Extend.Generator",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/extend/helper.js",
+            "line": 13,
+            "itemtype": "property",
+            "name": "store",
+            "type": "Object",
+            "class": "Hexo.Extend.Helper",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/extend/helper.js",
+            "line": 21,
+            "description": "Returns a list of helper plugins.",
+            "itemtype": "method",
+            "name": "list",
+            "return": {
+                "description": "",
+                "type": "Object"
+            },
+            "class": "Hexo.Extend.Helper",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/extend/helper.js",
+            "line": 32,
+            "description": "Registers a helper plugin.",
+            "itemtype": "method",
+            "name": "register",
+            "params": [
+                {
+                    "name": "name",
+                    "description": "",
+                    "type": "String"
+                },
+                {
+                    "name": "fn",
+                    "description": "",
+                    "type": "Function"
+                }
+            ],
+            "class": "Hexo.Extend.Helper",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/extend/index.js",
+            "line": 26,
+            "description": "Registers a new module.",
+            "itemtype": "method",
+            "name": "module",
+            "params": [
+                {
+                    "name": "name",
+                    "description": "",
+                    "type": "String"
+                },
+                {
+                    "name": "fn",
+                    "description": "",
+                    "type": "Function"
+                }
+            ],
+            "class": "Hexo.Extend",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/extend/migrator.js",
+            "line": 13,
+            "itemtype": "property",
+            "name": "store",
+            "type": "Object",
+            "class": "Hexo.Extend.Migrator",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/extend/migrator.js",
+            "line": 21,
+            "description": "Returns a list of migrator plugins.",
+            "itemtype": "method",
+            "name": "list",
+            "return": {
+                "description": "",
+                "type": "Object"
+            },
+            "class": "Hexo.Extend.Migrator",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/extend/migrator.js",
+            "line": 32,
+            "description": "Registers a migrator plugin.",
+            "itemtype": "method",
+            "name": "register",
+            "params": [
+                {
+                    "name": "type",
+                    "description": "",
+                    "type": "String"
+                },
+                {
+                    "name": "fn",
+                    "description": "",
+                    "type": "Function"
+                }
+            ],
+            "class": "Hexo.Extend.Migrator",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/extend/processor.js",
+            "line": 15,
+            "itemtype": "property",
+            "name": "store",
+            "type": "Array",
+            "class": "Hexo.Extend.Processor",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/extend/processor.js",
+            "line": 23,
+            "description": "Returns a list of processor plugins.",
+            "itemtype": "method",
+            "name": "list",
+            "return": {
+                "description": "",
+                "type": "Array"
+            },
+            "class": "Hexo.Extend.Processor",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/extend/processor.js",
+            "line": 34,
+            "description": "Formats the rule.",
+            "itemtype": "method",
+            "name": "format",
+            "params": [
+                {
+                    "name": "rule",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Object"
+            },
+            "class": "Hexo.Extend.Processor",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/extend/processor.js",
+            "line": 68,
+            "description": "Register a processor plugin.",
+            "itemtype": "method",
+            "name": "register",
+            "params": [
+                {
+                    "name": "rule",
+                    "description": "",
+                    "type": "String|RegExp",
+                    "optional": true
+                },
+                {
+                    "name": "fn",
+                    "description": "",
+                    "type": "Function"
+                }
+            ],
+            "class": "Hexo.Extend.Processor",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/extend/renderer.js",
+            "line": 14,
+            "itemtype": "property",
+            "name": "store",
+            "type": "Object",
+            "class": "Hexo.Extend.Renderer",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/extend/renderer.js",
+            "line": 21,
+            "itemtype": "property",
+            "name": "storeSync",
+            "type": "Object",
+            "class": "Hexo.Extend.Renderer",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/extend/renderer.js",
+            "line": 29,
+            "description": "Returns a list of renderer plugins.",
+            "itemtype": "method",
+            "name": "list",
+            "params": [
+                {
+                    "name": "sync",
+                    "description": "",
+                    "type": "Boolean"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Object"
+            },
+            "class": "Hexo.Extend.Renderer",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/extend/renderer.js",
+            "line": 41,
+            "description": "Registers a renderer plugin.",
+            "itemtype": "method",
+            "name": "register",
+            "params": [
+                {
+                    "name": "name",
+                    "description": "",
+                    "type": "String"
+                },
+                {
+                    "name": "output",
+                    "description": "",
+                    "type": "String"
+                },
+                {
+                    "name": "fn",
+                    "description": "",
+                    "type": "Function"
+                },
+                {
+                    "name": "sync",
+                    "description": "",
+                    "type": "Boolean",
+                    "optional": true,
+                    "optdefault": "false"
+                }
+            ],
+            "class": "Hexo.Extend.Renderer",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/extend/renderer.js",
+            "line": 79,
+            "description": "Gets extension name.",
+            "itemtype": "method",
+            "name": "getExtname",
+            "params": [
+                {
+                    "name": "str",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "String"
+            },
+            "access": "private",
+            "tagname": "",
+            "class": "Hexo.Extend.Renderer",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/extend/renderer.js",
+            "line": 92,
+            "description": "Gets the renderer plugin.",
+            "itemtype": "method",
+            "name": "get",
+            "params": [
+                {
+                    "name": "name",
+                    "description": "",
+                    "type": "String"
+                },
+                {
+                    "name": "sync",
+                    "description": "",
+                    "type": "Boolean",
+                    "optional": true,
+                    "optdefault": "false"
+                }
+            ],
+            "class": "Hexo.Extend.Renderer",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/extend/renderer.js",
+            "line": 106,
+            "description": "Checks if the given `path` is renderable.",
+            "itemtype": "method",
+            "name": "isRenderable",
+            "params": [
+                {
+                    "name": "path",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Boolean"
+            },
+            "class": "Hexo.Extend.Renderer",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/extend/renderer.js",
+            "line": 118,
+            "description": "Checks if the given `path` is renderable by synchronized renderer.",
+            "itemtype": "method",
+            "name": "isRenderableSync",
+            "params": [
+                {
+                    "name": "path",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Boolean"
+            },
+            "class": "Hexo.Extend.Renderer",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/extend/renderer.js",
+            "line": 130,
+            "description": "Gets the output extension name.",
+            "itemtype": "method",
+            "name": "getOutput",
+            "params": [
+                {
+                    "name": "path",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "String"
+            },
+            "class": "Hexo.Extend.Renderer",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/extend/swig.js",
+            "line": 13,
+            "itemtype": "property",
+            "name": "store",
+            "type": "Object",
+            "class": "Hexo.Extend.Swig",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/extend/swig.js",
+            "line": 21,
+            "description": "Returns a list of swig plugins.",
+            "itemtype": "method",
+            "name": "list",
+            "return": {
+                "description": "",
+                "type": "Object"
+            },
+            "class": "Hexo.Extend.Swig",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/extend/swig.js",
+            "line": 32,
+            "description": "Registers a swig plugin.",
+            "itemtype": "method",
+            "name": "register",
+            "params": [
+                {
+                    "name": "name",
+                    "description": "",
+                    "type": "String"
+                },
+                {
+                    "name": "fn",
+                    "description": "",
+                    "type": "Function"
+                },
+                {
+                    "name": "ends",
+                    "description": "",
+                    "type": "Boolean",
+                    "optional": true,
+                    "optdefault": "false"
+                }
+            ],
+            "class": "Hexo.Extend.Swig",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/extend/tag.js",
+            "line": 13,
+            "itemtype": "property",
+            "name": "store",
+            "type": "Object",
+            "class": "Hexo.Extend.Tag",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/extend/tag.js",
+            "line": 21,
+            "description": "Returns a list of tag plugins.",
+            "itemtype": "method",
+            "name": "list",
+            "return": {
+                "description": "",
+                "type": "Object"
+            },
+            "class": "Hexo.Extend.Tag",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/extend/tag.js",
+            "line": 32,
+            "description": "Registers a tag plugin.",
+            "itemtype": "method",
+            "name": "register",
+            "params": [
+                {
+                    "name": "name",
+                    "description": "",
+                    "type": "String"
+                },
+                {
+                    "name": "fn",
+                    "description": "",
+                    "type": "Function"
+                },
+                {
+                    "name": "ends",
+                    "description": "",
+                    "type": "Boolean",
+                    "optional": true,
+                    "optdefault": "false"
+                }
+            ],
+            "class": "Hexo.Extend.Tag",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/logger/console.js",
+            "line": 23,
+            "description": "Format.",
+            "itemtype": "property",
+            "name": "format",
+            "type": "String",
+            "class": "Hexo.Logger.Stream.Console",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/logger/console.js",
+            "line": 32,
+            "description": "Colors.",
+            "itemtype": "property",
+            "name": "colors",
+            "type": "Object",
+            "class": "Hexo.Logger.Stream.Console",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/logger/console.js",
+            "line": 49,
+            "description": "Writes data to process stream.",
+            "itemtype": "method",
+            "name": "_write",
+            "params": [
+                {
+                    "name": "data",
+                    "description": "",
+                    "type": "Object"
+                }
+            ],
+            "access": "private",
+            "tagname": "",
+            "class": "Hexo.Logger.Stream.Console",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/logger/console.js",
+            "line": 77,
+            "description": "Sets color.",
+            "itemtype": "method",
+            "name": "setColor",
+            "params": [
+                {
+                    "name": "level",
+                    "description": "",
+                    "type": "String"
+                },
+                {
+                    "name": "color",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "chainable": 1,
+            "class": "Hexo.Logger.Stream.Console",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/logger/console.js",
+            "line": 92,
+            "description": "Sets format.",
+            "itemtype": "method",
+            "name": "setFormat",
+            "params": [
+                {
+                    "name": "format",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "chainable": 1,
+            "class": "Hexo.Logger.Stream.Console",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/logger/file.js",
+            "line": 35,
+            "description": "Writes file to process stream.",
+            "itemtype": "method",
+            "name": "_write",
+            "params": [
+                {
+                    "name": "data",
+                    "description": "",
+                    "type": "Object"
+                }
+            ],
+            "access": "private",
+            "tagname": "",
+            "class": "Hexo.Logger.Stream.File",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/logger/file.js",
+            "line": 47,
+            "description": "Converts data to a string.",
+            "itemtype": "method",
+            "name": "toString",
+            "params": [
+                {
+                    "name": "format",
+                    "description": "",
+                    "type": "String"
+                },
+                {
+                    "name": "data",
+                    "description": "",
+                    "type": "Object"
+                }
+            ],
+            "access": "private",
+            "tagname": "",
+            "class": "Hexo.Logger.Stream.File",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/logger/file.js",
+            "line": 74,
+            "description": "Sets format.",
+            "itemtype": "method",
+            "name": "setFormat",
+            "params": [
+                {
+                    "name": "format",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "chainable": 1,
+            "class": "Hexo.Logger.Stream.File",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/logger/file.js",
+            "line": 88,
+            "description": "Prepares starting file stream.",
+            "itemtype": "method",
+            "name": "prepare",
+            "params": [
+                {
+                    "name": "path",
+                    "description": "",
+                    "type": "String"
+                },
+                {
+                    "name": "callback",
+                    "description": "",
+                    "type": "Function"
+                }
+            ],
+            "static": 1,
+            "class": "Hexo.Logger.Stream.File",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/logger/file.js",
+            "line": 117,
+            "description": "Dumps all logs to the file.",
+            "itemtype": "method",
+            "name": "dump",
+            "params": [
+                {
+                    "name": "path",
+                    "description": "",
+                    "type": "String"
+                },
+                {
+                    "name": "log",
+                    "description": "",
+                    "type": "Hexo.Logger"
+                },
+                {
+                    "name": "callback",
+                    "description": "",
+                    "type": "Function"
+                }
+            ],
+            "static": 1,
+            "class": "Hexo.Logger.Stream.File",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/logger/index.js",
+            "line": 18,
+            "itemtype": "property",
+            "name": "store",
+            "type": "Array",
+            "class": "Hexo.Logger",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/logger/index.js",
+            "line": 25,
+            "itemtype": "property",
+            "name": "levels",
+            "type": "Object",
+            "class": "Hexo.Logger",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/logger/index.js",
+            "line": 37,
+            "itemtype": "property",
+            "name": "alias",
+            "type": "Object",
+            "class": "Hexo.Logger",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/logger/index.js",
+            "line": 50,
+            "itemtype": "property",
+            "name": "default",
+            "type": "String",
+            "default": "info",
+            "class": "Hexo.Logger",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/logger/index.js",
+            "line": 61,
+            "description": "Set a new level.",
+            "itemtype": "method",
+            "name": "setLevel",
+            "params": [
+                {
+                    "name": "name",
+                    "description": "",
+                    "type": "String"
+                },
+                {
+                    "name": "level",
+                    "description": "",
+                    "type": "Number"
+                }
+            ],
+            "chainable": 1,
+            "class": "Hexo.Logger",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/logger/index.js",
+            "line": 76,
+            "description": "Set a new alias.",
+            "itemtype": "method",
+            "name": "setAlias",
+            "params": [
+                {
+                    "name": "name",
+                    "description": "",
+                    "type": "String"
+                },
+                {
+                    "name": "alias",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "chainable": 1,
+            "class": "Hexo.Logger",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/logger/index.js",
+            "line": 91,
+            "description": "Set the default level.",
+            "itemtype": "method",
+            "name": "setDefault",
+            "params": [
+                {
+                    "name": "name",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "chainable": 1,
+            "class": "Hexo.Logger",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/logger/index.js",
+            "line": 105,
+            "description": "Create a new log.",
+            "itemtype": "method",
+            "name": "log",
+            "params": [
+                {
+                    "name": "level",
+                    "description": "",
+                    "type": "String",
+                    "optional": true
+                },
+                {
+                    "name": "msg",
+                    "description": "",
+                    "type": "String",
+                    "multiple": true
+                }
+            ],
+            "chainable": 1,
+            "class": "Hexo.Logger",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/logger/index.js",
+            "line": 147,
+            "description": "Fires a new event.",
+            "itemtype": "method",
+            "name": "_emit",
+            "params": [
+                {
+                    "name": "level",
+                    "description": "",
+                    "type": "String"
+                },
+                {
+                    "name": "data",
+                    "description": "",
+                    "type": "Object"
+                }
+            ],
+            "access": "private",
+            "tagname": "",
+            "class": "Hexo.Logger",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/logger/index.js",
+            "line": 157,
+            "description": "Fires when a new log created.",
+            "itemtype": "event",
+            "name": "log",
+            "class": "Hexo.Logger",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/logger/index.js",
+            "line": 167,
+            "description": "Creates a new log on debug level.\n\n`debug` is also alias as `d`.",
+            "itemtype": "method",
+            "name": "debug",
+            "params": [
+                {
+                    "name": "msg",
+                    "description": "",
+                    "type": "String",
+                    "multiple": true
+                }
+            ],
+            "chainable": 1,
+            "class": "Hexo.Logger",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/logger/index.js",
+            "line": 177,
+            "description": "Creates a new log on info level.\n\n`info` is also alias as `i`.",
+            "itemtype": "method",
+            "name": "info",
+            "params": [
+                {
+                    "name": "msg",
+                    "description": "",
+                    "type": "String",
+                    "multiple": true
+                }
+            ],
+            "chainable": 1,
+            "class": "Hexo.Logger",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/logger/index.js",
+            "line": 187,
+            "description": "Creates a new log on warn level.\n\n`warn` is also alias as `w`.",
+            "itemtype": "method",
+            "name": "warn",
+            "params": [
+                {
+                    "name": "msg",
+                    "description": "",
+                    "type": "String",
+                    "multiple": true
+                }
+            ],
+            "chainable": 1,
+            "class": "Hexo.Logger",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/logger/index.js",
+            "line": 197,
+            "description": "Creates a new log on error level.\n\n`error` is also alias as `e`, `err`.",
+            "itemtype": "method",
+            "name": "error",
+            "params": [
+                {
+                    "name": "msg",
+                    "description": "",
+                    "type": "String",
+                    "multiple": true
+                }
+            ],
+            "chainable": 1,
+            "class": "Hexo.Logger",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/logger/index.js",
+            "line": 220,
+            "itemtype": "property",
+            "name": "stream",
+            "type": "Object",
+            "static": 1,
+            "class": "Hexo.Logger",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/logger/stream.js",
+            "line": 17,
+            "description": "Hide level.",
+            "itemtype": "property",
+            "name": "hide",
+            "type": "Number",
+            "class": "Hexo.Logger.Stream",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/logger/stream.js",
+            "line": 37,
+            "description": "Set hide level.",
+            "itemtype": "method",
+            "name": "setHide",
+            "params": [
+                {
+                    "name": "level",
+                    "description": "",
+                    "type": "Number"
+                }
+            ],
+            "chainable": 1,
+            "class": "Hexo.Logger.Stream",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/model/index.js",
+            "line": 19,
+            "description": "Register a model.",
+            "itemtype": "method",
+            "name": "register",
+            "params": [
+                {
+                    "name": "name",
+                    "description": "Model name. The model name should be written in CamelCase.",
+                    "type": "String"
+                },
+                {
+                    "name": "method",
+                    "description": "",
+                    "type": "Object",
+                    "optional": true,
+                    "props": [
+                        {
+                            "name": "statics",
+                            "description": "Static methods for the model",
+                            "type": "Object",
+                            "optional": true
+                        },
+                        {
+                            "name": "methods",
+                            "description": "Instance methods for the model",
+                            "type": "Object",
+                            "optional": true
+                        },
+                        {
+                            "name": "hooks",
+                            "description": "Model hooks",
+                            "type": "Object",
+                            "optional": true
+                        }
+                    ]
+                }
+            ],
+            "class": "Hexo.Model",
+            "module": "hexo",
+            "namespace": "Hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/post/create.js",
+            "line": 77,
+            "description": "Creates a new post.",
+            "itemtype": "method",
+            "name": "create",
+            "params": [
+                {
+                    "name": "data",
+                    "description": "",
+                    "type": "Object",
+                    "props": [
+                        {
+                            "name": "title",
+                            "description": "Post title",
+                            "type": "String"
+                        },
+                        {
+                            "name": "slug",
+                            "description": "Post slug. If not defined, the value will be escaped `data.title`.",
+                            "type": "String",
+                            "optional": true
+                        },
+                        {
+                            "name": "layout",
+                            "description": "Post layout. If not defined, the value will be `default_layout` in global configuration.",
+                            "type": "String",
+                            "optional": true
+                        },
+                        {
+                            "name": "date",
+                            "description": "Post date. If not defined, the value will be `Date.now()`.",
+                            "type": "Date",
+                            "optional": true
+                        }
+                    ]
+                },
+                {
+                    "name": "replace",
+                    "description": "Determines whether to replace existing data.",
+                    "type": "Boolean",
+                    "optional": true,
+                    "optdefault": "false"
+                },
+                {
+                    "name": "callback",
+                    "description": "",
+                    "type": "Function"
+                }
+            ],
+            "class": "Hexo.post",
+            "module": "hexo",
+            "namespace": "Hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/post/create.js",
+            "line": 136,
+            "description": "Fired when a new post created.",
+            "itemtype": "event",
+            "name": "new",
+            "class": "Hexo",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/post/load.js",
+            "line": 4,
+            "description": "Loads post files.\n\nThis function does:\n\n- {{#crossLink \"Hexo.theme/load\"}}Hexo.theme/load{{/crossLink}}: Loads theme files\n- {{#crossLink \"Hexo.theme/watch\"}}Hexo.theme/watch{{/crossLink}}: Watches theme files (When `options.watch` is true)\n- {{#crossLink \"Hexo.source/load\"}}Hexo.source/load{{/crossLink}}: Loads source files\n- {{#crossLink \"Hexo.source/watch\"}}Hexo.source/watch{{/crossLink}}: Watches source files (When `options.watch` is true)\n- {{#crossLink \"Hexo.theme/generate\"}}Hexo.theme/generate{{/crossLink}}: Runs generators",
+            "itemtype": "method",
+            "name": "load",
+            "params": [
+                {
+                    "name": "options",
+                    "description": "",
+                    "type": "Object",
+                    "optional": true,
+                    "props": [
+                        {
+                            "name": "watch",
+                            "description": "Watch source files",
+                            "type": "Boolean",
+                            "optional": true,
+                            "optdefault": "false"
+                        }
+                    ]
+                },
+                {
+                    "name": "callback",
+                    "description": "",
+                    "type": "Function",
+                    "optional": true
+                }
+            ],
+            "class": "Hexo.post",
+            "module": "hexo",
+            "namespace": "Hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/post/render.js",
+            "line": 10,
+            "description": "Renders post contents.\n\nRendering flow:\n\n- Compiles with Swig\n- Runs pre-filter\n- Compiles with Markdown (or other render engines, depends on the extension name of source files)\n- Runs post-filter",
+            "itemtype": "method",
+            "name": "render",
+            "params": [
+                {
+                    "name": "source",
+                    "description": "The path of source file",
+                    "type": "String"
+                },
+                {
+                    "name": "data",
+                    "description": "",
+                    "type": "Object"
+                },
+                {
+                    "name": "callback",
+                    "description": "",
+                    "type": "Function"
+                }
+            ],
+            "class": "Hexo.post",
+            "module": "hexo",
+            "namespace": "Hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/util/escape.js",
+            "line": 8,
+            "description": "Converts the string to a proper filename.\n\nTransform:\n  - 1: Lower case\n  - 2: Upper case",
+            "itemtype": "method",
+            "name": "filename",
+            "params": [
+                {
+                    "name": "str",
+                    "description": "",
+                    "type": "String"
+                },
+                {
+                    "name": "transform",
+                    "description": "",
+                    "type": "Number",
+                    "optional": true
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "String"
+            },
+            "static": 1,
+            "class": "Hexo.util.escape",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/util/escape.js",
+            "line": 36,
+            "description": "Converts the string to a proper path.\n\nTransform:\n  - 1: Lower case\n  - 2: Upper case",
+            "itemtype": "method",
+            "name": "path",
+            "params": [
+                {
+                    "name": "str",
+                    "description": "",
+                    "type": "String"
+                },
+                {
+                    "name": "transform",
+                    "description": "",
+                    "type": "Number"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "String"
+            },
+            "static": 1,
+            "class": "Hexo.util.escape",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/util/escape.js",
+            "line": 64,
+            "description": "Converts all tabs to spaces in the string.",
+            "itemtype": "method",
+            "name": "yaml",
+            "params": [
+                {
+                    "name": "str",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "String"
+            },
+            "static": 1,
+            "class": "Hexo.util.escape",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/util/exec.js",
+            "line": 3,
+            "description": "Runs a command in a shell and buffers the output.",
+            "itemtype": "method",
+            "name": "exec",
+            "params": [
+                {
+                    "name": "options",
+                    "description": "",
+                    "type": "Object",
+                    "props": [
+                        {
+                            "name": "command",
+                            "description": "The command to run, with space-separated arguments",
+                            "type": "String"
+                        },
+                        {
+                            "name": "options",
+                            "description": "See [child_process.exec](http://nodejs.org/api/child_process.html#child_process_child_process_spawn_command_args_options)",
+                            "type": "Object",
+                            "optional": true
+                        },
+                        {
+                            "name": "callback",
+                            "description": "",
+                            "type": "Function"
+                        }
+                    ]
+                }
+            ],
+            "static": 1,
+            "class": "Hexo.util",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/util/file.js",
+            "line": 23,
+            "description": "Creates a directory.",
+            "itemtype": "method",
+            "name": "mkdir",
+            "params": [
+                {
+                    "name": "destination",
+                    "description": "",
+                    "type": "String"
+                },
+                {
+                    "name": "callback",
+                    "description": "",
+                    "type": "Function"
+                }
+            ],
+            "async": 1,
+            "static": 1,
+            "class": "Hexo.util.file",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/util/file.js",
+            "line": 47,
+            "description": "Writes a file.",
+            "itemtype": "method",
+            "name": "writeFile",
+            "params": [
+                {
+                    "name": "destination",
+                    "description": "",
+                    "type": "String"
+                },
+                {
+                    "name": "content",
+                    "description": "",
+                    "type": "String"
+                },
+                {
+                    "name": "callback",
+                    "description": "",
+                    "type": "Function"
+                }
+            ],
+            "access": "private",
+            "tagname": "",
+            "async": 1,
+            "static": 1,
+            "class": "Hexo.util.file",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/util/file.js",
+            "line": 68,
+            "description": "Writes a file.",
+            "itemtype": "method",
+            "name": "write",
+            "params": [
+                {
+                    "name": "destination",
+                    "description": "",
+                    "type": "String"
+                },
+                {
+                    "name": "content",
+                    "description": "",
+                    "type": "String"
+                },
+                {
+                    "name": "callback",
+                    "description": "",
+                    "type": "Function"
+                }
+            ],
+            "async": 1,
+            "static": 1,
+            "class": "Hexo.util.file",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/util/file.js",
+            "line": 93,
+            "description": "Copies a file from `source` to `destination`.",
+            "itemtype": "method",
+            "name": "copy",
+            "params": [
+                {
+                    "name": "source",
+                    "description": "",
+                    "type": "String"
+                },
+                {
+                    "name": "destination",
+                    "description": "",
+                    "type": "String"
+                },
+                {
+                    "name": "callback",
+                    "description": "",
+                    "type": "Function"
+                }
+            ],
+            "async": 1,
+            "static": 1,
+            "class": "Hexo.util.file",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/util/file.js",
+            "line": 130,
+            "description": "Returns a list of files in the directory.",
+            "itemtype": "method",
+            "name": "dir",
+            "params": [
+                {
+                    "name": "source",
+                    "description": "",
+                    "type": "String"
+                },
+                {
+                    "name": "callback",
+                    "description": "",
+                    "type": "Function"
+                },
+                {
+                    "name": "parent",
+                    "description": "",
+                    "type": "String",
+                    "optional": true
+                }
+            ],
+            "async": 1,
+            "static": 1,
+            "class": "Hexo.util.file",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/util/file.js",
+            "line": 173,
+            "description": "Transforms EOL & Removes UTF BOM.",
+            "itemtype": "method",
+            "name": "textProcess",
+            "params": [
+                {
+                    "name": "str",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "access": "private",
+            "tagname": "",
+            "static": 1,
+            "class": "Hexo.util.file",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/util/file.js",
+            "line": 192,
+            "description": "Reads a file.",
+            "itemtype": "method",
+            "name": "read",
+            "params": [
+                {
+                    "name": "source",
+                    "description": "",
+                    "type": "String"
+                },
+                {
+                    "name": "callback",
+                    "description": "",
+                    "type": "Function"
+                }
+            ],
+            "async": 1,
+            "static": 1,
+            "class": "Hexo.util.file",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/util/file.js",
+            "line": 215,
+            "description": "Reads a file synchronizedly.",
+            "itemtype": "method",
+            "name": "readSync",
+            "params": [
+                {
+                    "name": "source",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "static": 1,
+            "class": "Hexo.util.file",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/util/file.js",
+            "line": 230,
+            "description": "Cleans a directory.",
+            "itemtype": "method",
+            "name": "empty",
+            "params": [
+                {
+                    "name": "target",
+                    "description": "",
+                    "type": "String"
+                },
+                {
+                    "name": "exception",
+                    "description": "",
+                    "type": "Array"
+                },
+                {
+                    "name": "callback",
+                    "description": "",
+                    "type": "Function"
+                }
+            ],
+            "async": 1,
+            "static": 1,
+            "class": "Hexo.util.file",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/util/file2.js",
+            "line": 22,
+            "description": "Joins paths.",
+            "itemtype": "method",
+            "name": "join",
+            "params": [
+                {
+                    "name": "parent",
+                    "description": "",
+                    "type": "String"
+                },
+                {
+                    "name": "child",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "String"
+            },
+            "access": "private",
+            "tagname": "",
+            "static": 1,
+            "class": "Hexo.util.file2",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/util/file2.js",
+            "line": 37,
+            "description": "Creates a directory recursively.",
+            "itemtype": "method",
+            "name": "mkdirs",
+            "params": [
+                {
+                    "name": "path",
+                    "description": "",
+                    "type": "String"
+                },
+                {
+                    "name": "callback",
+                    "description": "",
+                    "type": "Function"
+                }
+            ],
+            "async": 1,
+            "static": 1,
+            "class": "Hexo.util.file2",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/util/file2.js",
+            "line": 61,
+            "description": "Creates the parent directories if not exist.",
+            "itemtype": "method",
+            "name": "checkParent",
+            "params": [
+                {
+                    "name": "path",
+                    "description": "",
+                    "type": "String"
+                },
+                {
+                    "name": "callback",
+                    "description": "",
+                    "type": "Function"
+                }
+            ],
+            "async": 1,
+            "access": "private",
+            "tagname": "",
+            "static": 1,
+            "class": "Hexo.util.file2",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/util/file2.js",
+            "line": 86,
+            "description": "Writes a file.",
+            "itemtype": "method",
+            "name": "writeFile",
+            "params": [
+                {
+                    "name": "path",
+                    "description": "",
+                    "type": "String"
+                },
+                {
+                    "name": "data",
+                    "description": "",
+                    "type": "String|Buffer"
+                },
+                {
+                    "name": "options",
+                    "description": "",
+                    "type": "Object",
+                    "optional": true,
+                    "props": [
+                        {
+                            "name": "checkParent",
+                            "description": "Creates the parent directories if not exist.",
+                            "type": "Boolean",
+                            "optional": true,
+                            "optdefault": "true"
+                        }
+                    ]
+                },
+                {
+                    "name": "callback",
+                    "description": "",
+                    "type": "Function"
+                }
+            ],
+            "async": 1,
+            "static": 1,
+            "class": "Hexo.util.file2",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/util/file2.js",
+            "line": 127,
+            "description": "Appends a file. Creates the file if not yet exists.",
+            "itemtype": "method",
+            "name": "appendFile",
+            "params": [
+                {
+                    "name": "path",
+                    "description": "",
+                    "type": "String"
+                },
+                {
+                    "name": "data",
+                    "description": "",
+                    "type": "String|Buffer"
+                },
+                {
+                    "name": "options",
+                    "description": "",
+                    "type": "Object",
+                    "optional": true,
+                    "props": [
+                        {
+                            "name": "checkParent",
+                            "description": "Creates the parent directories if not exist.",
+                            "type": "Boolean",
+                            "optional": true,
+                            "optdefault": "true"
+                        }
+                    ]
+                },
+                {
+                    "name": "callback",
+                    "description": "",
+                    "type": "Function"
+                }
+            ],
+            "async": 1,
+            "static": 1,
+            "class": "Hexo.util.file2",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/util/file2.js",
+            "line": 168,
+            "description": "Copies a file from `src` to `dest`.",
+            "itemtype": "method",
+            "name": "copyFile",
+            "params": [
+                {
+                    "name": "src",
+                    "description": "",
+                    "type": "String"
+                },
+                {
+                    "name": "dest",
+                    "description": "",
+                    "type": "String"
+                },
+                {
+                    "name": "options",
+                    "description": "",
+                    "type": "Object",
+                    "optional": true,
+                    "props": [
+                        {
+                            "name": "checkParent",
+                            "description": "Creates the parent directories if not exist.",
+                            "type": "Boolean",
+                            "optional": true,
+                            "optdefault": "true"
+                        }
+                    ]
+                },
+                {
+                    "name": "callback",
+                    "description": "",
+                    "type": "Function"
+                }
+            ],
+            "async": 1,
+            "static": 1,
+            "class": "Hexo.util.file2",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/util/file2.js",
+            "line": 228,
+            "description": "Copies a directory from `src` to `dest`.",
+            "itemtype": "method",
+            "name": "copyDir",
+            "params": [
+                {
+                    "name": "src",
+                    "description": "",
+                    "type": "String"
+                },
+                {
+                    "name": "dest",
+                    "description": "",
+                    "type": "String"
+                },
+                {
+                    "name": "options",
+                    "description": "",
+                    "type": "Object",
+                    "optional": true,
+                    "props": [
+                        {
+                            "name": "ignoreHidden",
+                            "description": "Ignores hidden files.",
+                            "type": "Boolean",
+                            "optional": true,
+                            "optdefault": "true"
+                        },
+                        {
+                            "name": "ignorePattern",
+                            "description": "The file name pattern to ignore.",
+                            "type": "RegExp",
+                            "optional": true
+                        }
+                    ]
+                },
+                {
+                    "name": "callback",
+                    "description": "",
+                    "type": "Function"
+                }
+            ],
+            "async": 1,
+            "static": 1,
+            "class": "Hexo.util.file2",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/util/file2.js",
+            "line": 293,
+            "description": "Returns a list of files in the directory.",
+            "itemtype": "method",
+            "name": "list",
+            "params": [
+                {
+                    "name": "path",
+                    "description": "",
+                    "type": "String"
+                },
+                {
+                    "name": "options",
+                    "description": "",
+                    "type": "Object",
+                    "optional": true,
+                    "props": [
+                        {
+                            "name": "ignoreHidden",
+                            "description": "Ignores hidden files.",
+                            "type": "Boolean",
+                            "optional": true,
+                            "optdefault": "true"
+                        },
+                        {
+                            "name": "ignorePattern",
+                            "description": "The file path pattern to ignore.",
+                            "type": "RegExp",
+                            "optional": true
+                        }
+                    ]
+                },
+                {
+                    "name": "callback",
+                    "description": "",
+                    "type": "Function"
+                }
+            ],
+            "async": 1,
+            "static": 1,
+            "class": "Hexo.util.file2",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/util/file2.js",
+            "line": 365,
+            "description": "Transforms EOL & Removes UTF BOM.",
+            "itemtype": "method",
+            "name": "escape",
+            "params": [
+                {
+                    "name": "str",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "access": "private",
+            "tagname": "",
+            "static": 1,
+            "class": "Hexo.util.file2",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/util/file2.js",
+            "line": 384,
+            "description": "Reads a file.",
+            "itemtype": "method",
+            "name": "readFile",
+            "params": [
+                {
+                    "name": "path",
+                    "description": "",
+                    "type": "String"
+                },
+                {
+                    "name": "options",
+                    "description": "",
+                    "type": "Object",
+                    "optional": true,
+                    "props": [
+                        {
+                            "name": "escape",
+                            "description": "Transforms EOL & Removes UTF BOM in the file.",
+                            "type": "Boolean",
+                            "optional": true,
+                            "optdefault": "true"
+                        },
+                        {
+                            "name": "encoding",
+                            "description": "File encoding.",
+                            "type": "String",
+                            "optional": true,
+                            "optdefault": "utf8"
+                        }
+                    ]
+                },
+                {
+                    "name": "callback",
+                    "description": "",
+                    "type": "Function"
+                }
+            ],
+            "async": 1,
+            "static": 1,
+            "class": "Hexo.util.file2",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/util/file2.js",
+            "line": 421,
+            "description": "Reads a file synchronizedly.",
+            "itemtype": "method",
+            "name": "readFileSync",
+            "params": [
+                {
+                    "name": "path",
+                    "description": "",
+                    "type": "String"
+                },
+                {
+                    "name": "options",
+                    "description": "",
+                    "type": "Object",
+                    "optional": true,
+                    "props": [
+                        {
+                            "name": "escape",
+                            "description": "Transforms EOL & Removes UTF BOM in the file.",
+                            "type": "Boolean",
+                            "optional": true,
+                            "optdefault": "true"
+                        },
+                        {
+                            "name": "encoding",
+                            "description": "File encoding.",
+                            "type": "String",
+                            "optional": true,
+                            "optdefault": "utf8"
+                        }
+                    ]
+                }
+            ],
+            "static": 1,
+            "class": "Hexo.util.file2",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/util/file2.js",
+            "line": 446,
+            "description": "Cleans a directory.",
+            "itemtype": "method",
+            "name": "emptyDir",
+            "params": [
+                {
+                    "name": "path",
+                    "description": "",
+                    "type": "String"
+                },
+                {
+                    "name": "options",
+                    "description": "",
+                    "type": "Object",
+                    "optional": true,
+                    "props": [
+                        {
+                            "name": "ignoreHidden",
+                            "description": "Ignores hidden files.",
+                            "type": "Boolean",
+                            "optional": true,
+                            "optdefault": "true"
+                        },
+                        {
+                            "name": "ignorePattern",
+                            "description": "The file name pattern to ignore.",
+                            "type": "RegExp",
+                            "optional": true
+                        },
+                        {
+                            "name": "exclude",
+                            "description": "The list of file path you don't want to delete.",
+                            "type": "Array",
+                            "optional": true
+                        }
+                    ]
+                },
+                {
+                    "name": "callback",
+                    "description": "",
+                    "type": "Function"
+                }
+            ],
+            "async": 1,
+            "static": 1,
+            "class": "Hexo.util.file2",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/util/file2.js",
+            "line": 517,
+            "description": "Remove a directory.",
+            "itemtype": "method",
+            "name": "rmdir",
+            "params": [
+                {
+                    "name": "path",
+                    "description": "",
+                    "type": "String"
+                },
+                {
+                    "name": "callback",
+                    "description": "",
+                    "type": "Function"
+                }
+            ],
+            "async": 1,
+            "static": 1,
+            "class": "Hexo.util.file2",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/util/highlight.js",
+            "line": 19,
+            "description": "Highlights a code block.\n\nSee [highlight.js](http://highlightjs.org/)",
+            "itemtype": "method",
+            "name": "highlight",
+            "params": [
+                {
+                    "name": "str",
+                    "description": "",
+                    "type": "String"
+                },
+                {
+                    "name": "options",
+                    "description": "",
+                    "type": "Object",
+                    "optional": true,
+                    "props": [
+                        {
+                            "name": "gutter",
+                            "description": "Displays line numbers. Only available when `options.wrap` is true",
+                            "type": "Boolean",
+                            "optional": true,
+                            "optdefault": "true"
+                        },
+                        {
+                            "name": "wrap",
+                            "description": "Wraps code block with a table",
+                            "type": "Boolean",
+                            "optional": true,
+                            "optdefault": "true"
+                        },
+                        {
+                            "name": "first_line",
+                            "description": "The first line number",
+                            "type": "Number",
+                            "optional": true,
+                            "optdefault": "1"
+                        },
+                        {
+                            "name": "lang",
+                            "description": "Language. Program will decide the language automatically if not defined.",
+                            "type": "String",
+                            "optional": true
+                        },
+                        {
+                            "name": "caption",
+                            "description": "Caption.",
+                            "type": "String",
+                            "optional": true
+                        },
+                        {
+                            "name": "tab",
+                            "description": "Tab replacement",
+                            "type": "String",
+                            "optional": true
+                        }
+                    ]
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "String"
+            },
+            "static": 1,
+            "class": "Hexo.util",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/util/html_tag.js",
+            "line": 1,
+            "description": "Creates a snippet of HTML tag.\n\n**Examples:**\n\n```\nhtml_tag('a', {href: 'http://www.google.com'}, 'Google');\nhtml_tag('img', {src: 'foo.jpg'});\n```\n\nyields:\n\n```\n<a href=\"http://www.google.com\">Google</a>\n<img src=\"foo.jpg\">\n```",
+            "itemtype": "method",
+            "name": "html_tag",
+            "params": [
+                {
+                    "name": "tag",
+                    "description": "",
+                    "type": "String"
+                },
+                {
+                    "name": "attrs",
+                    "description": "",
+                    "type": "Object"
+                },
+                {
+                    "name": "text",
+                    "description": "",
+                    "type": "String",
+                    "optional": true
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "String"
+            },
+            "static": 1,
+            "class": "Hexo.util",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/util/index.js",
+            "line": 11,
+            "description": "See {{#crossLink \"Hexo.util.file\"}}{{/crossLink}}",
+            "itemtype": "property",
+            "name": "file",
+            "type": "Hexo.util.file",
+            "deprecated": true,
+            "deprecationMessage": "Use hexo.util.file2 or hexo.file instead.",
+            "class": "Hexo.util",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/util/index.js",
+            "line": 21,
+            "description": "See {{#crossLink \"Hexo.util.yfm\"}}{{/crossLink}}",
+            "itemtype": "property",
+            "name": "yfm",
+            "type": "Hexo.util.yfm",
+            "class": "Hexo.util",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/util/index.js",
+            "line": 33,
+            "description": "See {{#crossLink \"Hexo.util.file2\"}}{{/crossLink}}",
+            "itemtype": "property",
+            "name": "file2",
+            "type": "Hexo.util.file2",
+            "class": "Hexo.util",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/util/index.js",
+            "line": 42,
+            "description": "See {{#crossLink \"Hexo.util.escape\"}}{{/crossLink}}",
+            "itemtype": "property",
+            "name": "escape",
+            "type": "Hexo.util.escape",
+            "class": "Hexo.util",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/util/index.js",
+            "line": 51,
+            "description": "See {{#crossLink \"Hexo.util.Pool\"}}{{/crossLink}}",
+            "itemtype": "property",
+            "name": "pool",
+            "type": "Hexo.util.Pool",
+            "class": "Hexo.util",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/util/index.js",
+            "line": 61,
+            "description": "See {{#crossLink \"Hexo.util.inflector\"}}{{/crossLink}}",
+            "itemtype": "property",
+            "name": "inflector",
+            "type": "Hexo.util.inflector",
+            "class": "Hexo.util",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/util/index.js",
+            "line": 70,
+            "description": "See {{#crossLink \"Hexo.util.inflector/titleize\"}}{{/crossLink}} method of {{#crossLink \"Hexo.util.inflector\"}}{{/crossLink}}.",
+            "itemtype": "method",
+            "name": "titlecase",
+            "params": [
+                {
+                    "name": "str",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "String"
+            },
+            "class": "Hexo.util",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/util/inflector.js",
+            "line": 19,
+            "description": "Register a plural rule.",
+            "itemtype": "method",
+            "name": "plural",
+            "params": [
+                {
+                    "name": "key",
+                    "description": "",
+                    "type": "RegExp"
+                },
+                {
+                    "name": "value",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "access": "private",
+            "tagname": "",
+            "class": "Hexo.util.inflector",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/util/inflector.js",
+            "line": 32,
+            "description": "Register a singular rule.",
+            "itemtype": "method",
+            "name": "singular",
+            "params": [
+                {
+                    "name": "key",
+                    "description": "",
+                    "type": "RegExp"
+                },
+                {
+                    "name": "value",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "access": "private",
+            "tagname": "",
+            "class": "Hexo.util.inflector",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/util/inflector.js",
+            "line": 45,
+            "description": "Register a irregular rule.",
+            "itemtype": "method",
+            "name": "irregular",
+            "params": [
+                {
+                    "name": "key",
+                    "description": "",
+                    "type": "RegExp"
+                },
+                {
+                    "name": "value",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "access": "private",
+            "tagname": "",
+            "class": "Hexo.util.inflector",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/util/inflector.js",
+            "line": 59,
+            "description": "Register a uncountable rule.",
+            "itemtype": "method",
+            "name": "uncountable",
+            "params": [
+                {
+                    "name": "word",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "access": "private",
+            "tagname": "",
+            "class": "Hexo.util.inflector",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/util/inflector.js",
+            "line": 135,
+            "description": "Returns the plural form of the string.",
+            "itemtype": "method",
+            "name": "pluralize",
+            "params": [
+                {
+                    "name": "str",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "String"
+            },
+            "class": "Hexo.util.inflector",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/util/inflector.js",
+            "line": 164,
+            "description": "Returns the singular form of the string.",
+            "itemtype": "method",
+            "name": "singularize",
+            "params": [
+                {
+                    "name": "str",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "String"
+            },
+            "class": "Hexo.util.inflector",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/util/inflector.js",
+            "line": 193,
+            "description": "Converts the string to CamelCase.",
+            "itemtype": "method",
+            "name": "singularize",
+            "params": [
+                {
+                    "name": "str",
+                    "description": "",
+                    "type": "String"
+                },
+                {
+                    "name": "uppercase",
+                    "description": "",
+                    "type": "Boolean"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "String"
+            },
+            "class": "Hexo.util.inflector",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/util/inflector.js",
+            "line": 216,
+            "description": "Returns an underscored, lowercased form of the string.",
+            "itemtype": "method",
+            "name": "underscore",
+            "params": [
+                {
+                    "name": "str",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "String"
+            },
+            "class": "Hexo.util.inflector",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/util/inflector.js",
+            "line": 236,
+            "description": "Capitalizes the first word, turns underscores into spaces and strip a trailing \"_id\".",
+            "itemtype": "method",
+            "name": "humanize",
+            "params": [
+                {
+                    "name": "str",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "String"
+            },
+            "class": "Hexo.util.inflector",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/util/inflector.js",
+            "line": 253,
+            "description": "Capitalizes all the words.",
+            "itemtype": "method",
+            "name": "startcase",
+            "params": [
+                {
+                    "name": "str",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "String"
+            },
+            "class": "Hexo.util.inflector",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/util/inflector.js",
+            "line": 272,
+            "description": "Capitalizes all the words, except for articles, prepositions, and conjunctions.\n\n`titleize` is also aliased as `titlecase`.",
+            "itemtype": "method",
+            "name": "titleize",
+            "params": [
+                {
+                    "name": "str",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "String"
+            },
+            "class": "Hexo.util.inflector",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/util/inflector.js",
+            "line": 299,
+            "description": "Creates a name of a table.",
+            "itemtype": "method",
+            "name": "tableize",
+            "params": [
+                {
+                    "name": "str",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "String"
+            },
+            "class": "Hexo.util.inflector",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/util/inflector.js",
+            "line": 311,
+            "description": "Creates a class name.",
+            "itemtype": "method",
+            "name": "classify",
+            "params": [
+                {
+                    "name": "str",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "String"
+            },
+            "class": "Hexo.util.inflector",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/util/inflector.js",
+            "line": 323,
+            "description": "Replaces underscores with dashes in the string.",
+            "itemtype": "method",
+            "name": "dasherize",
+            "params": [
+                {
+                    "name": "str",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "String"
+            },
+            "class": "Hexo.util.inflector",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/util/inflector.js",
+            "line": 335,
+            "description": "Replaces special characters in a string so that it may be used as part of a ‘pretty’ URL.",
+            "itemtype": "method",
+            "name": "parameterize",
+            "params": [
+                {
+                    "name": "str",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "String"
+            },
+            "class": "Hexo.util.inflector",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/util/inflector.js",
+            "line": 361,
+            "description": "Creates a foreign key name from a class name. `separate_class_name_and_id_with_underscore` sets\nwhether the method should put '_' between the name and 'id'.",
+            "itemtype": "method",
+            "name": "foreignKey",
+            "params": [
+                {
+                    "name": "str",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "String"
+            },
+            "class": "Hexo.util.inflector",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/util/inflector.js",
+            "line": 376,
+            "description": "Returns the suffix that should be added to a number to denote the position in\nan ordered sequence such as 1st, 2nd, 3rd, 4th.",
+            "itemtype": "method",
+            "name": "ordinal",
+            "params": [
+                {
+                    "name": "num",
+                    "description": "",
+                    "type": "Number"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "String"
+            },
+            "class": "Hexo.util.inflector",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/util/inflector.js",
+            "line": 404,
+            "description": "Turns a number into an ordinal string used to denote the position in an ordered sequence\nsuch as 1st, 2nd, 3rd, 4th.",
+            "itemtype": "method",
+            "name": "ordinalize",
+            "params": [
+                {
+                    "name": "num",
+                    "description": "",
+                    "type": "Number"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "String"
+            },
+            "class": "Hexo.util.inflector",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/util/pool.js",
+            "line": 26,
+            "description": "Tasks.",
+            "itemtype": "property",
+            "name": "tasks",
+            "type": "Array",
+            "access": "private",
+            "tagname": "",
+            "class": "Hexo.util.Pool",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/util/pool.js",
+            "line": 36,
+            "description": "Workers.",
+            "itemtype": "property",
+            "name": "workers",
+            "type": "Array",
+            "access": "private",
+            "tagname": "",
+            "class": "Hexo.util.Pool",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/util/pool.js",
+            "line": 46,
+            "description": "Concurrency.",
+            "itemtype": "property",
+            "name": "concurrency",
+            "type": "Number",
+            "class": "Hexo.util.Pool",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/util/pool.js",
+            "line": 55,
+            "description": "This function is invoked when the last task in the pool is done.",
+            "itemtype": "property",
+            "name": "drain",
+            "type": "Function",
+            "class": "Hexo.util.Pool",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/util/pool.js",
+            "line": 64,
+            "description": "This function is invoked when the number of pending tasks equals to the concurrency of the pool.",
+            "itemtype": "property",
+            "name": "saturated",
+            "type": "Function",
+            "class": "Hexo.util.Pool",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/util/pool.js",
+            "line": 73,
+            "description": "This function is invoked when the last task in the pool is started.",
+            "itemtype": "property",
+            "name": "empty",
+            "type": "Function",
+            "class": "Hexo.util.Pool",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/util/pool.js",
+            "line": 87,
+            "description": "Inserts a task to the pool.",
+            "itemtype": "method",
+            "name": "_insert",
+            "params": [
+                {
+                    "name": "tasks",
+                    "description": "",
+                    "type": "Array|Object"
+                },
+                {
+                    "name": "first",
+                    "description": "",
+                    "type": "Boolean"
+                },
+                {
+                    "name": "callback",
+                    "description": "",
+                    "type": "Function",
+                    "optional": true
+                }
+            ],
+            "access": "private",
+            "tagname": "",
+            "class": "Hexo.util.Pool",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/util/pool.js",
+            "line": 124,
+            "description": "Starts distributing tasks to each worker.",
+            "itemtype": "method",
+            "name": "process",
+            "access": "private",
+            "tagname": "",
+            "class": "Hexo.util.Pool",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/util/pool.js",
+            "line": 162,
+            "description": "Adds a task to last of queue.",
+            "itemtype": "method",
+            "name": "push",
+            "params": [
+                {
+                    "name": "tasks",
+                    "description": "",
+                    "type": "Array|Object"
+                },
+                {
+                    "name": "callback",
+                    "description": "",
+                    "type": "Function",
+                    "optional": true
+                }
+            ],
+            "class": "Hexo.util.Pool",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/util/pool.js",
+            "line": 174,
+            "description": "Adds a task to first of queue.",
+            "itemtype": "method",
+            "name": "unshift",
+            "params": [
+                {
+                    "name": "tasks",
+                    "description": "",
+                    "type": "Array|Object"
+                },
+                {
+                    "name": "callback",
+                    "description": "",
+                    "type": "Function",
+                    "optional": true
+                }
+            ],
+            "class": "Hexo.util.Pool",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/util/pool.js",
+            "line": 186,
+            "description": "Terminates all workers.",
+            "itemtype": "method",
+            "name": "end",
+            "class": "Hexo.util.Pool",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/util/pool.js",
+            "line": 198,
+            "description": "Returns the number of pending tasks.",
+            "itemtype": "method",
+            "name": "length",
+            "return": {
+                "description": "",
+                "type": "Number"
+            },
+            "class": "Hexo.util.Pool",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/util/spawn.js",
+            "line": 3,
+            "description": "Launches a new process.",
+            "itemtype": "method",
+            "name": "spawn",
+            "params": [
+                {
+                    "name": "options",
+                    "description": "",
+                    "type": "Object",
+                    "props": [
+                        {
+                            "name": "command",
+                            "description": "The command to run",
+                            "type": "String"
+                        },
+                        {
+                            "name": "args",
+                            "description": "The list of string arguments",
+                            "type": "Array"
+                        },
+                        {
+                            "name": "options",
+                            "description": "See [child_process.spawn](http://nodejs.org/api/child_process.html#child_process_child_process_spawn_command_args_options)",
+                            "type": "Object",
+                            "optional": true
+                        }
+                    ]
+                }
+            ],
+            "class": "Hexo.util",
+            "module": "hexo",
+            "namespace": "Hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/util/yfm.js",
+            "line": 1,
+            "description": "See {{#crossLink \"Hexo.util.yfm/parse\"}}{{/crossLink}} method of {{#crossLink \"Hexo.util.yfm\"}}{{/crossLink}}.",
+            "itemtype": "method",
+            "name": "yfm",
+            "params": [
+                {
+                    "name": "source",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Object"
+            },
+            "static": 1,
+            "class": "Hexo.util",
+            "module": "hexo",
+            "namespace": "Hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/util/yfm.js",
+            "line": 37,
+            "description": "Parses YAML front-matter.",
+            "itemtype": "method",
+            "name": "parse",
+            "params": [
+                {
+                    "name": "source",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Object"
+            },
+            "static": 1,
+            "class": "Hexo.util.yfm",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/util/yfm.js",
+            "line": 50,
+            "description": "Converts the object to YAML front-matter string.",
+            "itemtype": "method",
+            "name": "stringify",
+            "params": [
+                {
+                    "name": "data",
+                    "description": "",
+                    "type": "Object"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "String"
+            },
+            "static": 1,
+            "class": "Hexo.util.yfm",
+            "module": "hexo"
+        }
+    ],
+    "warnings": []
+}

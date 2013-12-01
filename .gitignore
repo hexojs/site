@@ -4,3 +4,4 @@ public
 .deploy
 db.json
 debug.log
+tmp
