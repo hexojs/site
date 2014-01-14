@@ -2,6 +2,8 @@ title: Events
 prev: models
 next: plugins
 ---
+## Overview
+
 Hexo inherits EventEmitter of Node.js. You can subscribe or publish specified events. For example:
 
 ``` js

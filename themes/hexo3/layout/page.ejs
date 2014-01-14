@@ -1,14 +1,12 @@
 <article class="page">
-  <header id="page-banner">
-    <div class="outer">
-      <div class="inner">
-        <h1 class="page-title"><%= page.title %></h1>
-      </div>
-    </div>
-  </header>
+  <%- partial('_partial/banner', {banner_title: page.title}) %>
   <div class="outer">
     <%- partial('_partial/mobile-menu') %>
     <div class="page-content">
+      <div class="toc-wrap">
+        <strong class="toc-title">Contents</strong>
+        <%- toc(page.content) %>
+      </div>
       <div class="page-entry">
         <%- page.content %>
       </div>

@@ -28,15 +28,7 @@ module.exports = function(grunt){
         description: '<%= hexo.description %>',
         version: '<%= hexo.version %>',
         options: {
-          paths: [
-            'tmp/hexo/lib/core',
-            'tmp/hexo/lib/error',
-            'tmp/hexo/lib/extend',
-            'tmp/hexo/lib/logger',
-            'tmp/hexo/lib/model',
-            'tmp/hexo/lib/post',
-            'tmp/hexo/lib/util'
-          ],
+          paths: 'tmp/hexo/lib',
           outdir: 'tmp/hexo-out'
         }
       },

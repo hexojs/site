@@ -23,6 +23,8 @@ Name | Description
 `path` | The URL of the post without root URL
 `permalink` | Full URL of the post
 `raw` | The raw data of the post
+`photos` | The photos of the article (Used in gallery posts)
+`link` | The external link of the article (Used in link posts)
 
 ### Page
 

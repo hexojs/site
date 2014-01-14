@@ -23,15 +23,15 @@ If not, please follow the following instructions to install all the requirements
 You may encounter some problems when compiling. Please install Xcode from App Store first. After Xcode is installed, open Xcode and go to **Preferences -> Download -> Command Line Tools -> Install** to install command line tools.
 {% endnote %}
 
-## 1. Install Git
+## Step 1: Install Git
 
 - Windows: Download & install [msysgit](http://code.google.com/p/msysgit/).
 - Mac: Install it with [Homebrew](http://mxcl.github.com/homebrew/), [MacPorts](http://www.macports.org/) or [installer](http://code.google.com/p/git-osx-installer/).
 - Linux (Ubuntu, Debian): `sudo apt-get install git-core`
 - Linux (Fedora, Red Hat, CentOS): `sudo yum install git-core`
-	
-## 2. Install Node.js
-	
+
+## Step 2: Install Node.js
+
 The best way to install Node.js is installing with [nvm](https://github.com/creationix/nvm).
 
 cURL:
@@ -51,11 +51,11 @@ Once installed, restart the terminal and run the following command to install No
 ``` bash
 $ nvm install 0.10
 ```
-	
+
 Or you can download the [installer](http://nodejs.org/) and install it.
-	
-## 3. Install Hexo
-	
+
+## Step 3: Install Hexo
+
 Once all the requirements are installed, you can install Hexo with npm.
 
 ``` bash

@@ -138,3 +138,19 @@ $ hexo --debug
 ```
 
 Displays verbose messages in terminal and saves log in `debug.log`. When you get some problems, try to run Hexo again in debug mode and submit the messages to GitHub.
+
+### Silent mode
+
+``` bash
+$ hexo --silent
+```
+
+Hides output on console.
+
+### Customize config file path
+
+``` bash
+$ hexo --config custom.yml
+```
+
+Customize config file path instead of `_config.yml`.

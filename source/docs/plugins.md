@@ -2,13 +2,15 @@ title: Plugins
 prev: scripts
 next: troubleshooting
 ---
+## Overview
+
 Hexo has powerful plugin system. Most of built-in plugins are extensions of Hexo. This makes you easy to hook up your custom code easily.
 
 There're 2 ways to extend Hexo: **Script** and **Plugin**. If your code is simple and doesn't have any dependencies, you can choose **Script**. If your code is complicated and have dependencies, or you want to publish it on NPM registry, you should use **Plugin**.
 
 ### Script
 
-To use script, put your JavaScript file in `scripts` folder and it'll be loaded once Hexo is initialized.
+To use script, put JavaScript files in `scripts` folder and it'll be loaded once Hexo is initialized.
 
 ### Plugin
 
@@ -32,7 +34,7 @@ You should at least describe `name`, `version`, `main` and `dependencies` in `pa
 }
 ```
 
-Hexo has 10 categories of plugins:
+Hexo has 9 categories of plugins:
 
 1. Generator
 2. Renderer
@@ -43,7 +45,6 @@ Hexo has 10 categories of plugins:
 7. Console
 8. Migrator
 9. Filter
-10. Swig
 
 ## Generator
 
@@ -370,21 +371,5 @@ hexo.extend.filter.register('post', function(data){
   return data;
 });
 ```
-
-## Swig
-
-You can extend Swig tags with Swig plugin. The API is same as Swig. You can find more detail [here](http://paularmstrong.github.io/swig/docs/#tags).
-
-### Syntax
-
-``` js
-hexo.extend.swig.register(name, fn, [end]);
-```
-
-Paramter | Description
---- | ---
-`name` | Plugin name
-`fn` | Plugin function
-`end` | Enables end tag (disabled by default)
 
 [Optimist]: https://github.com/substack/node-optimist

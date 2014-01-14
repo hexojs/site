@@ -29,8 +29,10 @@ $ hexo server
 
 - [Hexo](http://zespia.tw/hexo/)
 
-	Installation: <http://zespia.tw/hexo/docs/>
-	
+	``` bash
+  $ npm install hexo -g
+  ```
+
 - [YUIDoc](http://yui.github.io/yuidoc/)
 
 	``` bash

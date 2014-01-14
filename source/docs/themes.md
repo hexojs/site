@@ -15,6 +15,7 @@ $ hexo server --debug
 ├── _config.yml
 ├── languages
 ├── layout
+├── scripts
 └── source
 ```
 
@@ -53,6 +54,12 @@ Hexo supports **Layout** and **Partials**. Every template file use `layout.ejs` 
 {% note info Custom layout %}
 If you set a custom for your posts. You have to add a new layout file in `layout` folder or it'll fallback to `post` layout. Page variables in the custom layout is same as `post` layout.
 {% endnote %}
+
+### scripts
+
+Script folder. JavaScript files in this folder will be loaded when Hexo started. This feature requires Hexo 2.4 and above.
+
+For more info, see [plugins](plugins.html).
 
 ### source
 

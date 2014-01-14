@@ -2,94 +2,91 @@
     "project": {
         "name": "warehouse",
         "description": "Simple JSON-based database",
-        "version": "0.1.12",
-        "url": ""
+        "version": "0.1.13"
     },
     "files": {
         "tmp/warehouse/lib/types/array.js": {
             "name": "tmp/warehouse/lib/types/array.js",
-            "modules": {
-                "warehouse": 1
-            },
+            "modules": {},
             "classes": {
-                "Warehouse.SchemaType.Array": 1
+                "SchemaType.Array": 1
             },
             "fors": {},
             "namespaces": {
-                "Warehouse.SchemaType": 1
+                "SchemaType": 1
             }
         },
         "tmp/warehouse/lib/types/boolean.js": {
             "name": "tmp/warehouse/lib/types/boolean.js",
             "modules": {},
             "classes": {
-                "Warehouse.SchemaType.Boolean": 1
+                "SchemaType.Boolean": 1
             },
             "fors": {},
             "namespaces": {
-                "Warehouse.SchemaType": 1
+                "SchemaType": 1
             }
         },
         "tmp/warehouse/lib/types/date.js": {
             "name": "tmp/warehouse/lib/types/date.js",
             "modules": {},
             "classes": {
-                "Warehouse.SchemaType.Date": 1
+                "SchemaType.Date": 1
             },
             "fors": {},
             "namespaces": {
-                "Warehouse.SchemaType": 1
+                "SchemaType": 1
             }
         },
         "tmp/warehouse/lib/types/number.js": {
             "name": "tmp/warehouse/lib/types/number.js",
             "modules": {},
             "classes": {
-                "Warehouse.SchemaType.Number": 1
+                "SchemaType.Number": 1
             },
             "fors": {},
             "namespaces": {
-                "Warehouse.SchemaType": 1
+                "SchemaType": 1
             }
         },
         "tmp/warehouse/lib/types/object.js": {
             "name": "tmp/warehouse/lib/types/object.js",
             "modules": {},
             "classes": {
-                "Warehouse.SchemaType.Object": 1
+                "SchemaType.Object": 1
             },
             "fors": {},
             "namespaces": {
-                "Warehouse.SchemaType": 1
+                "SchemaType": 1
             }
         },
         "tmp/warehouse/lib/types/string.js": {
             "name": "tmp/warehouse/lib/types/string.js",
             "modules": {},
             "classes": {
-                "Warehouse.SchemaType.String": 1
+                "SchemaType.String": 1
             },
             "fors": {},
             "namespaces": {
-                "Warehouse.SchemaType": 1
+                "SchemaType": 1
             }
         },
         "tmp/warehouse/lib/document.js": {
             "name": "tmp/warehouse/lib/document.js",
             "modules": {},
             "classes": {
-                "Warehouse.Document": 1
+                "Document": 1
             },
             "fors": {},
-            "namespaces": {
-                "Warehouse": 1
-            }
+            "namespaces": {}
         },
         "tmp/warehouse/lib/index.js": {
             "name": "tmp/warehouse/lib/index.js",
-            "modules": {},
+            "modules": {
+                "warehouse": 1
+            },
             "classes": {
-                "Warehouse": 1
+                "Database": 1
             },
             "fors": {},
             "namespaces": {}
@@ -98,78 +95,64 @@
             "name": "tmp/warehouse/lib/model.js",
             "modules": {},
             "classes": {
-                "Warehouse.Model": 1
+                "Model": 1
             },
             "fors": {},
-            "namespaces": {
-                "Warehouse": 1
-            }
+            "namespaces": {}
         },
         "tmp/warehouse/lib/query.js": {
             "name": "tmp/warehouse/lib/query.js",
             "modules": {},
             "classes": {
-                "Warehouse.Query": 1
+                "Query": 1
             },
             "fors": {},
-            "namespaces": {
-                "Warehouse": 1
-            }
+            "namespaces": {}
         },
         "tmp/warehouse/lib/schema.js": {
             "name": "tmp/warehouse/lib/schema.js",
             "modules": {},
             "classes": {
-                "Warehouse.Schema": 1
+                "Schema": 1
             },
             "fors": {},
-            "namespaces": {
-                "Warehouse": 1
-            }
+            "namespaces": {}
         },
         "tmp/warehouse/lib/schematype.js": {
             "name": "tmp/warehouse/lib/schematype.js",
             "modules": {},
             "classes": {
-                "Warehouse.SchemaType": 1
+                "SchemaType": 1
             },
             "fors": {},
-            "namespaces": {
-                "Warehouse": 1
-            }
+            "namespaces": {}
         },
         "tmp/warehouse/lib/store.js": {
             "name": "tmp/warehouse/lib/store.js",
             "modules": {},
             "classes": {
-                "Warehouse.Store": 1
+                "Store": 1
             },
             "fors": {},
-            "namespaces": {
-                "Warehouse": 1
-            }
+            "namespaces": {}
         },
         "tmp/warehouse/lib/util.js": {
             "name": "tmp/warehouse/lib/util.js",
             "modules": {},
             "classes": {
-                "Warehouse.util": 1
+                "util": 1
             },
             "fors": {},
-            "namespaces": {
-                "Warehouse": 1
-            }
+            "namespaces": {}
         },
         "tmp/warehouse/lib/virtual.js": {
             "name": "tmp/warehouse/lib/virtual.js",
             "modules": {},
             "classes": {
-                "Warehouse.Virtual": 1
+                "Virtual": 1
             },
             "fors": {},
-            "namespaces": {
-                "Warehouse": 1
-            }
+            "namespaces": {}
         }
     },
     "modules": {
@@ -177,47 +160,47 @@
             "name": "warehouse",
             "submodules": {},
             "classes": {
-                "Warehouse.SchemaType.Array": 1,
-                "Warehouse.SchemaType.Boolean": 1,
-                "Warehouse.SchemaType.Date": 1,
-                "Warehouse.SchemaType.Number": 1,
-                "Warehouse.SchemaType.Object": 1,
-                "Warehouse.SchemaType.String": 1,
-                "Warehouse.Document": 1,
-                "Warehouse": 1,
-                "Warehouse.Model": 1,
-                "Warehouse.Query": 1,
-                "Warehouse.Schema": 1,
-                "Warehouse.SchemaType": 1,
-                "Warehouse.Store": 1,
-                "Warehouse.util": 1,
-                "Warehouse.Virtual": 1
+                "SchemaType.Array": 1,
+                "SchemaType.Boolean": 1,
+                "SchemaType.Date": 1,
+                "SchemaType.Number": 1,
+                "SchemaType.Object": 1,
+                "SchemaType.String": 1,
+                "Document": 1,
+                "Database": 1,
+                "Model": 1,
+                "Query": 1,
+                "Schema": 1,
+                "SchemaType": 1,
+                "Store": 1,
+                "util": 1,
+                "Virtual": 1
             },
             "fors": {},
             "namespaces": {
-                "Warehouse.SchemaType": 1,
-                "Warehouse": 1
+                "SchemaType": 1
             },
-            "tag": "module",
+            "tag": "main",
             "file": "tmp/warehouse/lib/virtual.js",
             "line": 1,
-            "description": "SchemaType: Array."
+            "description": "This is the main module of warehouse.",
+            "itemtype": "main"
         }
     },
     "classes": {
-        "Warehouse.SchemaType.Array": {
-            "name": "Warehouse.SchemaType.Array",
-            "shortname": "Warehouse.SchemaType.Array",
+        "SchemaType.Array": {
+            "name": "SchemaType.Array",
+            "shortname": "SchemaType.Array",
             "classitems": [],
             "plugins": [],
             "extensions": [],
             "plugin_for": [],
             "extension_for": [],
             "module": "warehouse",
-            "namespace": "Warehouse.SchemaType",
+            "namespace": "SchemaType",
             "file": "tmp/warehouse/lib/types/array.js",
             "line": 5,
-            "description": "SchemaType: Array.",
+            "description": "Schema type: Array.",
             "params": [
                 {
                     "name": "options",
@@ -227,21 +210,21 @@
                 }
             ],
             "is_constructor": 1,
-            "extends": "Warehouse.SchemaType"
+            "extends": "SchemaType"
         },
-        "Warehouse.SchemaType.Boolean": {
-            "name": "Warehouse.SchemaType.Boolean",
-            "shortname": "Warehouse.SchemaType.Boolean",
+        "SchemaType.Boolean": {
+            "name": "SchemaType.Boolean",
+            "shortname": "SchemaType.Boolean",
             "classitems": [],
             "plugins": [],
             "extensions": [],
             "plugin_for": [],
             "extension_for": [],
             "module": "warehouse",
-            "namespace": "Warehouse.SchemaType",
+            "namespace": "SchemaType",
             "file": "tmp/warehouse/lib/types/boolean.js",
             "line": 4,
-            "description": "SchemaType: Boolean",
+            "description": "Schema type: Boolean",
             "params": [
                 {
                     "name": "options",
@@ -251,21 +234,21 @@
                 }
             ],
             "is_constructor": 1,
-            "extends": "Warehouse.SchemaType"
+            "extends": "SchemaType"
         },
-        "Warehouse.SchemaType.Date": {
-            "name": "Warehouse.SchemaType.Date",
-            "shortname": "Warehouse.SchemaType.Date",
+        "SchemaType.Date": {
+            "name": "SchemaType.Date",
+            "shortname": "SchemaType.Date",
             "classitems": [],
             "plugins": [],
             "extensions": [],
             "plugin_for": [],
             "extension_for": [],
             "module": "warehouse",
-            "namespace": "Warehouse.SchemaType",
+            "namespace": "SchemaType",
             "file": "tmp/warehouse/lib/types/date.js",
             "line": 4,
-            "description": "SchemaType: Date.",
+            "description": "Schema type: Date.",
             "params": [
                 {
                     "name": "options",
@@ -275,21 +258,21 @@
                 }
             ],
             "is_constructor": 1,
-            "extends": "Warehouse.SchemaType"
+            "extends": "SchemaType"
         },
-        "Warehouse.SchemaType.Number": {
-            "name": "Warehouse.SchemaType.Number",
-            "shortname": "Warehouse.SchemaType.Number",
+        "SchemaType.Number": {
+            "name": "SchemaType.Number",
+            "shortname": "SchemaType.Number",
             "classitems": [],
             "plugins": [],
             "extensions": [],
             "plugin_for": [],
             "extension_for": [],
             "module": "warehouse",
-            "namespace": "Warehouse.SchemaType",
+            "namespace": "SchemaType",
             "file": "tmp/warehouse/lib/types/number.js",
             "line": 4,
-            "description": "SchemaType: Number",
+            "description": "Schema type: Number",
             "params": [
                 {
                     "name": "options",
@@ -299,21 +282,21 @@
                 }
             ],
             "is_constructor": 1,
-            "extends": "Warehouse.SchemaType"
+            "extends": "SchemaType"
         },
-        "Warehouse.SchemaType.Object": {
-            "name": "Warehouse.SchemaType.Object",
-            "shortname": "Warehouse.SchemaType.Object",
+        "SchemaType.Object": {
+            "name": "SchemaType.Object",
+            "shortname": "SchemaType.Object",
             "classitems": [],
             "plugins": [],
             "extensions": [],
             "plugin_for": [],
             "extension_for": [],
             "module": "warehouse",
-            "namespace": "Warehouse.SchemaType",
+            "namespace": "SchemaType",
             "file": "tmp/warehouse/lib/types/object.js",
             "line": 4,
-            "description": "SchemaType: Object",
+            "description": "Schema type: Object",
             "params": [
                 {
                     "name": "options",
@@ -323,21 +306,21 @@
                 }
             ],
             "is_constructor": 1,
-            "extends": "Warehouse.SchemaType"
+            "extends": "SchemaType"
         },
-        "Warehouse.SchemaType.String": {
-            "name": "Warehouse.SchemaType.String",
-            "shortname": "Warehouse.SchemaType.String",
+        "SchemaType.String": {
+            "name": "SchemaType.String",
+            "shortname": "SchemaType.String",
             "classitems": [],
             "plugins": [],
             "extensions": [],
             "plugin_for": [],
             "extension_for": [],
             "module": "warehouse",
-            "namespace": "Warehouse.SchemaType",
+            "namespace": "SchemaType",
             "file": "tmp/warehouse/lib/types/string.js",
             "line": 4,
-            "description": "SchemaType: String.",
+            "description": "Schema type: String.",
             "params": [
                 {
                     "name": "options",
@@ -347,21 +330,21 @@
                 }
             ],
             "is_constructor": 1,
-            "extends": "Warehouse.SchemaType"
+            "extends": "SchemaType"
         },
-        "Warehouse.Document": {
-            "name": "Warehouse.Document",
-            "shortname": "Warehouse.Document",
+        "Document": {
+            "name": "Document",
+            "shortname": "Document",
             "classitems": [],
             "plugins": [],
             "extensions": [],
             "plugin_for": [],
             "extension_for": [],
             "module": "warehouse",
-            "namespace": "Warehouse",
+            "namespace": "",
             "file": "tmp/warehouse/lib/document.js",
             "line": 1,
-            "description": "Document.",
+            "description": "The document constructor.",
             "params": [
                 {
                     "name": "obj",
@@ -371,9 +354,9 @@
             ],
             "is_constructor": 1
         },
-        "Warehouse": {
-            "name": "Warehouse",
-            "shortname": "Warehouse",
+        "Database": {
+            "name": "Database",
+            "shortname": "Database",
             "classitems": [],
             "plugins": [],
             "extensions": [],
@@ -382,8 +365,8 @@
             "module": "warehouse",
             "namespace": "",
             "file": "tmp/warehouse/lib/index.js",
-            "line": 15,
-            "description": "This class is used to manage models and store data.",
+            "line": 22,
+            "description": "Manages all models and stores data.",
             "is_constructor": 1,
             "params": [
                 {
@@ -394,19 +377,19 @@
                 }
             ]
         },
-        "Warehouse.Model": {
-            "name": "Warehouse.Model",
-            "shortname": "Warehouse.Model",
+        "Model": {
+            "name": "Model",
+            "shortname": "Model",
             "classitems": [],
             "plugins": [],
             "extensions": [],
             "plugin_for": [],
             "extension_for": [],
             "module": "warehouse",
-            "namespace": "Warehouse",
+            "namespace": "",
             "file": "tmp/warehouse/lib/model.js",
             "line": 27,
-            "description": "Model.",
+            "description": "The model constructor.",
             "params": [
                 {
                     "name": "name",
@@ -426,19 +409,19 @@
             ],
             "is_constructor": 1
         },
-        "Warehouse.Query": {
-            "name": "Warehouse.Query",
-            "shortname": "Warehouse.Query",
+        "Query": {
+            "name": "Query",
+            "shortname": "Query",
             "classitems": [],
             "plugins": [],
             "extensions": [],
             "plugin_for": [],
             "extension_for": [],
             "module": "warehouse",
-            "namespace": "Warehouse",
+            "namespace": "",
             "file": "tmp/warehouse/lib/query.js",
             "line": 19,
-            "description": "Query.",
+            "description": "The query constructor.\n\nWarehouse uses a MongoDB-like way to query documents.\n\n**Logical operators**\n\nYou can use an array of two or more expressions in logical operators. For example:\n\n``` js\nquery.find({\n  $or: [{comments: true}, {published: false}]\n});\n```\n\n- **$or** - Performs a logical `OR` operation\n- **$and** - Performs a logical `AND` operation\n- **$not** - Performs a logical `NOT` operation\n- **$nor** - Performs a logical `NOR` operation",
             "params": [
                 {
                     "name": "index",
@@ -448,19 +431,19 @@
             ],
             "is_constructor": 1
         },
-        "Warehouse.Schema": {
-            "name": "Warehouse.Schema",
-            "shortname": "Warehouse.Schema",
+        "Schema": {
+            "name": "Schema",
+            "shortname": "Schema",
             "classitems": [],
             "plugins": [],
             "extensions": [],
             "plugin_for": [],
             "extension_for": [],
             "module": "warehouse",
-            "namespace": "Warehouse",
+            "namespace": "",
             "file": "tmp/warehouse/lib/schema.js",
             "line": 9,
-            "description": "Schema.",
+            "description": "The schema constructor.",
             "params": [
                 {
                     "name": "schema",
@@ -471,19 +454,19 @@
             ],
             "is_constructor": 1
         },
-        "Warehouse.SchemaType": {
-            "name": "Warehouse.SchemaType",
-            "shortname": "Warehouse.SchemaType",
+        "SchemaType": {
+            "name": "SchemaType",
+            "shortname": "SchemaType",
             "classitems": [],
             "plugins": [],
             "extensions": [],
             "plugin_for": [],
             "extension_for": [],
             "module": "warehouse",
-            "namespace": "Warehouse",
+            "namespace": "",
             "file": "tmp/warehouse/lib/schematype.js",
             "line": 1,
-            "description": "The original SchemaType.",
+            "description": "The basic schema type constructor.\n\nThis is an abstract class. Every schema type should inherit this class. For example:\n\n``` js\nvar SchemaCustom = function(options){\n  SchemaType.call(this, options);\n};\n\nSchemaCustom.__proto__ = SchemaType;\nSchemaCustom.prototype.__proto__ = SchemaType.prototype;\n```\n\n**Query operators**\n\nTo add a query operator, adds a method whose name started with `q$`. For example:\n\n``` js\nSchemaCustom.q$foo = function(data, value){\n  // ...\n};\n```\n\nThe `data` parameter is the data in the database; the `value` parameter is the value passed to the query operator.\nThe return value should be a boolean indicating whether the data passed the test.\n\n**Update operators**\n\nTo add a update operator, adds a method whose name started with `u$`. For example:\n\n``` js\nSchemaCustom.u$bar = function(data, value){\n  // ...\n};\n```\n\nThe `data` parameter is the data in the database; the `value` parameter is the value passed to the update operator.\nThe return value will replace the original data.",
             "params": [
                 {
                     "name": "options",
@@ -494,19 +477,19 @@
             ],
             "is_constructor": 1
         },
-        "Warehouse.Store": {
-            "name": "Warehouse.Store",
-            "shortname": "Warehouse.Store",
+        "Store": {
+            "name": "Store",
+            "shortname": "Store",
             "classitems": [],
             "plugins": [],
             "extensions": [],
             "plugin_for": [],
             "extension_for": [],
             "module": "warehouse",
-            "namespace": "Warehouse",
+            "namespace": "",
             "file": "tmp/warehouse/lib/store.js",
             "line": 1,
-            "description": "Store.",
+            "description": "The store constructor.",
             "params": [
                 {
                     "name": "obj",
@@ -517,34 +500,34 @@
             ],
             "is_constructor": 1
         },
-        "Warehouse.util": {
-            "name": "Warehouse.util",
-            "shortname": "Warehouse.util",
+        "util": {
+            "name": "util",
+            "shortname": "util",
             "classitems": [],
             "plugins": [],
             "extensions": [],
             "plugin_for": [],
             "extension_for": [],
             "module": "warehouse",
-            "namespace": "Warehouse",
+            "namespace": "",
             "file": "tmp/warehouse/lib/util.js",
             "line": 1,
             "description": "Utilties.",
             "static": 1
         },
-        "Warehouse.Virtual": {
-            "name": "Warehouse.Virtual",
-            "shortname": "Warehouse.Virtual",
+        "Virtual": {
+            "name": "Virtual",
+            "shortname": "Virtual",
             "classitems": [],
             "plugins": [],
             "extensions": [],
             "plugin_for": [],
             "extension_for": [],
             "module": "warehouse",
-            "namespace": "Warehouse",
+            "namespace": "",
             "file": "tmp/warehouse/lib/virtual.js",
             "line": 1,
-            "description": "Virtual",
+            "description": "The virtual constructor.",
             "params": [
                 {
                     "name": "method",
@@ -563,7 +546,7 @@
             "name": "type",
             "type": "Array",
             "static": 1,
-            "class": "Warehouse.SchemaType.Array",
+            "class": "SchemaType.Array",
             "module": "warehouse"
         },
         {
@@ -583,7 +566,7 @@
                 "description": "",
                 "type": "Boolean"
             },
-            "class": "Warehouse.SchemaType.Array",
+            "class": "SchemaType.Array",
             "module": "warehouse"
         },
         {
@@ -603,7 +586,7 @@
                 "description": "",
                 "type": "Array"
             },
-            "class": "Warehouse.SchemaType.Array",
+            "class": "SchemaType.Array",
             "module": "warehouse"
         },
         {
@@ -628,7 +611,7 @@
                 "description": "",
                 "type": "Boolean"
             },
-            "class": "Warehouse.SchemaType.Array",
+            "class": "SchemaType.Array",
             "module": "warehouse"
         },
         {
@@ -653,7 +636,7 @@
                 "description": "",
                 "type": "Boolean"
             },
-            "class": "Warehouse.SchemaType.Array",
+            "class": "SchemaType.Array",
             "module": "warehouse"
         },
         {
@@ -678,7 +661,7 @@
                 "description": "",
                 "type": "Boolean"
             },
-            "class": "Warehouse.SchemaType.Array",
+            "class": "SchemaType.Array",
             "module": "warehouse"
         },
         {
@@ -703,7 +686,7 @@
                 "description": "",
                 "type": "Boolean"
             },
-            "class": "Warehouse.SchemaType.Array",
+            "class": "SchemaType.Array",
             "module": "warehouse"
         },
         {
@@ -728,7 +711,7 @@
                 "description": "",
                 "type": "Boolean"
             },
-            "class": "Warehouse.SchemaType.Array",
+            "class": "SchemaType.Array",
             "module": "warehouse"
         },
         {
@@ -753,7 +736,7 @@
                 "description": "",
                 "type": "Array"
             },
-            "class": "Warehouse.SchemaType.Array",
+            "class": "SchemaType.Array",
             "module": "warehouse"
         },
         {
@@ -778,7 +761,7 @@
                 "description": "",
                 "type": "Array"
             },
-            "class": "Warehouse.SchemaType.Array",
+            "class": "SchemaType.Array",
             "module": "warehouse"
         },
         {
@@ -803,7 +786,7 @@
                 "description": "",
                 "type": "Array"
             },
-            "class": "Warehouse.SchemaType.Array",
+            "class": "SchemaType.Array",
             "module": "warehouse"
         },
         {
@@ -828,7 +811,7 @@
                 "description": "",
                 "type": "Array"
             },
-            "class": "Warehouse.SchemaType.Array",
+            "class": "SchemaType.Array",
             "module": "warehouse"
         },
         {
@@ -853,7 +836,7 @@
                 "description": "",
                 "type": "Array"
             },
-            "class": "Warehouse.SchemaType.Array",
+            "class": "SchemaType.Array",
             "module": "warehouse"
         },
         {
@@ -878,7 +861,7 @@
                 "description": "",
                 "type": "Array"
             },
-            "class": "Warehouse.SchemaType.Array",
+            "class": "SchemaType.Array",
             "module": "warehouse"
         },
         {
@@ -888,7 +871,7 @@
             "name": "type",
             "type": "Boolean",
             "static": 1,
-            "class": "Warehouse.SchemaType.Boolean",
+            "class": "SchemaType.Boolean",
             "module": "warehouse"
         },
         {
@@ -908,7 +891,7 @@
                 "description": "",
                 "type": "Boolean"
             },
-            "class": "Warehouse.SchemaType.Boolean",
+            "class": "SchemaType.Boolean",
             "module": "warehouse"
         },
         {
@@ -928,7 +911,7 @@
                 "description": "",
                 "type": "Boolean"
             },
-            "class": "Warehouse.SchemaType.Boolean",
+            "class": "SchemaType.Boolean",
             "module": "warehouse"
         },
         {
@@ -938,7 +921,7 @@
             "name": "type",
             "type": "Date",
             "static": 1,
-            "class": "Warehouse.SchemaType.Date",
+            "class": "SchemaType.Date",
             "module": "warehouse"
         },
         {
@@ -958,7 +941,7 @@
                 "description": "",
                 "type": "Boolean"
             },
-            "class": "Warehouse.SchemaType.Date",
+            "class": "SchemaType.Date",
             "module": "warehouse"
         },
         {
@@ -978,7 +961,7 @@
                 "description": "",
                 "type": "Date"
             },
-            "class": "Warehouse.SchemaType.Date",
+            "class": "SchemaType.Date",
             "module": "warehouse"
         },
         {
@@ -998,7 +981,7 @@
                 "description": "",
                 "type": "Number"
             },
-            "class": "Warehouse.SchemaType.Date",
+            "class": "SchemaType.Date",
             "module": "warehouse"
         },
         {
@@ -1023,7 +1006,7 @@
                 "description": "",
                 "type": "Boolean"
             },
-            "class": "Warehouse.SchemaType.Date",
+            "class": "SchemaType.Date",
             "module": "warehouse"
         },
         {
@@ -1048,7 +1031,7 @@
                 "description": "",
                 "type": "Boolean"
             },
-            "class": "Warehouse.SchemaType.Date",
+            "class": "SchemaType.Date",
             "module": "warehouse"
         },
         {
@@ -1073,7 +1056,7 @@
                 "description": "",
                 "type": "Boolean"
             },
-            "class": "Warehouse.SchemaType.Date",
+            "class": "SchemaType.Date",
             "module": "warehouse"
         },
         {
@@ -1098,7 +1081,7 @@
                 "description": "",
                 "type": "Boolean"
             },
-            "class": "Warehouse.SchemaType.Date",
+            "class": "SchemaType.Date",
             "module": "warehouse"
         },
         {
@@ -1123,7 +1106,7 @@
                 "description": "",
                 "type": "Date"
             },
-            "class": "Warehouse.SchemaType.Date",
+            "class": "SchemaType.Date",
             "module": "warehouse"
         },
         {
@@ -1148,7 +1131,7 @@
                 "description": "",
                 "type": "Date"
             },
-            "class": "Warehouse.SchemaType.Date",
+            "class": "SchemaType.Date",
             "module": "warehouse"
         },
         {
@@ -1158,7 +1141,7 @@
             "name": "type",
             "type": "Number",
             "static": 1,
-            "class": "Warehouse.SchemaType.Number",
+            "class": "SchemaType.Number",
             "module": "warehouse"
         },
         {
@@ -1178,7 +1161,7 @@
                 "description": "",
                 "type": "Boolean"
             },
-            "class": "Warehouse.SchemaType.Number",
+            "class": "SchemaType.Number",
             "module": "warehouse"
         },
         {
@@ -1198,7 +1181,7 @@
                 "description": "",
                 "type": "Number"
             },
-            "class": "Warehouse.SchemaType.Number",
+            "class": "SchemaType.Number",
             "module": "warehouse"
         },
         {
@@ -1223,7 +1206,7 @@
                 "description": "",
                 "type": "Number"
             },
-            "class": "Warehouse.SchemaType.Number",
+            "class": "SchemaType.Number",
             "module": "warehouse"
         },
         {
@@ -1248,7 +1231,7 @@
                 "description": "",
                 "type": "Number"
             },
-            "class": "Warehouse.SchemaType.Number",
+            "class": "SchemaType.Number",
             "module": "warehouse"
         },
         {
@@ -1258,7 +1241,7 @@
             "name": "type",
             "type": "Object",
             "static": 1,
-            "class": "Warehouse.SchemaType.Object",
+            "class": "SchemaType.Object",
             "module": "warehouse"
         },
         {
@@ -1283,7 +1266,7 @@
                 "description": "",
                 "type": "Boolean"
             },
-            "class": "Warehouse.SchemaType.Object",
+            "class": "SchemaType.Object",
             "module": "warehouse"
         },
         {
@@ -1292,7 +1275,7 @@
             "itemtype": "property",
             "name": "ref",
             "type": "String",
-            "class": "Warehouse.SchemaType.String",
+            "class": "SchemaType.String",
             "module": "warehouse"
         },
         {
@@ -1302,7 +1285,7 @@
             "name": "type",
             "type": "String",
             "static": 1,
-            "class": "Warehouse.SchemaType.String",
+            "class": "SchemaType.String",
             "module": "warehouse"
         },
         {
@@ -1322,7 +1305,7 @@
                 "description": "",
                 "type": "Boolean"
             },
-            "class": "Warehouse.SchemaType.String",
+            "class": "SchemaType.String",
             "module": "warehouse"
         },
         {
@@ -1342,7 +1325,7 @@
                 "description": "",
                 "type": "String"
             },
-            "class": "Warehouse.SchemaType.String",
+            "class": "SchemaType.String",
             "module": "warehouse"
         },
         {
@@ -1367,12 +1350,12 @@
                 "description": "",
                 "type": "Boolean"
             },
-            "class": "Warehouse.SchemaType.String",
+            "class": "SchemaType.String",
             "module": "warehouse"
         },
         {
             "file": "tmp/warehouse/lib/document.js",
-            "line": 20,
+            "line": 19,
             "description": "Saves the document.",
             "itemtype": "method",
             "name": "save",
@@ -1385,12 +1368,12 @@
                 }
             ],
             "chainable": 1,
-            "class": "Warehouse.Document",
+            "class": "Document",
             "module": "warehouse"
         },
         {
             "file": "tmp/warehouse/lib/document.js",
-            "line": 33,
+            "line": 32,
             "description": "Updates the document.",
             "itemtype": "method",
             "name": "update",
@@ -1408,12 +1391,12 @@
                 }
             ],
             "chainable": 1,
-            "class": "Warehouse.Document",
+            "class": "Document",
             "module": "warehouse"
         },
         {
             "file": "tmp/warehouse/lib/document.js",
-            "line": 47,
+            "line": 46,
             "description": "Replaces the document.",
             "itemtype": "method",
             "name": "replace",
@@ -1431,12 +1414,12 @@
                 }
             ],
             "chainable": 1,
-            "class": "Warehouse.Document",
+            "class": "Document",
             "module": "warehouse"
         },
         {
             "file": "tmp/warehouse/lib/document.js",
-            "line": 61,
+            "line": 60,
             "description": "Removes the document.",
             "itemtype": "method",
             "name": "remove",
@@ -1453,12 +1436,12 @@
                 "type": "Document"
             },
             "chainable": 1,
-            "class": "Warehouse.Document",
+            "class": "Document",
             "module": "warehouse"
         },
         {
             "file": "tmp/warehouse/lib/document.js",
-            "line": 75,
+            "line": 74,
             "description": "Returns a string representing the document.",
             "itemtype": "method",
             "name": "toString",
@@ -1466,12 +1449,12 @@
                 "description": "",
                 "type": "String"
             },
-            "class": "Warehouse.Document",
+            "class": "Document",
             "module": "warehouse"
         },
         {
             "file": "tmp/warehouse/lib/document.js",
-            "line": 86,
+            "line": 85,
             "description": "Populates document references.",
             "itemtype": "method",
             "name": "populate",
@@ -1486,46 +1469,49 @@
                 "description": "",
                 "type": "Warehouse.Document"
             },
-            "class": "Warehouse.Document",
+            "class": "Document",
             "module": "warehouse"
         },
         {
             "file": "tmp/warehouse/lib/index.js",
-            "line": 25,
+            "line": 32,
+            "description": "Stores all data.",
             "itemtype": "property",
             "name": "_store",
             "type": "Store",
             "access": "private",
             "tagname": "",
-            "class": "Warehouse",
+            "class": "Database",
             "module": "warehouse"
         },
         {
             "file": "tmp/warehouse/lib/index.js",
-            "line": 33,
+            "line": 42,
+            "description": "Stores all models.",
             "itemtype": "property",
             "name": "_models",
             "type": "Object",
             "access": "private",
             "tagname": "",
-            "class": "Warehouse",
+            "class": "Database",
             "module": "warehouse"
         },
         {
             "file": "tmp/warehouse/lib/index.js",
-            "line": 41,
+            "line": 52,
+            "description": "Stores all schemas of models.",
             "itemtype": "property",
             "name": "_modelSchemas",
             "type": "Object",
             "access": "private",
             "tagname": "",
-            "class": "Warehouse",
+            "class": "Database",
             "module": "warehouse"
         },
         {
             "file": "tmp/warehouse/lib/index.js",
-            "line": 54,
-            "description": "Loads a database file.",
+            "line": 67,
+            "description": "Loads database files.",
             "itemtype": "method",
             "name": "load",
             "params": [
@@ -1543,13 +1529,13 @@
             ],
             "chainable": 1,
             "async": 1,
-            "class": "Warehouse",
+            "class": "Database",
             "module": "warehouse"
         },
         {
             "file": "tmp/warehouse/lib/index.js",
-            "line": 104,
-            "description": "Restores data from a database file.",
+            "line": 117,
+            "description": "Restores data from database files.",
             "itemtype": "method",
             "name": "_restore",
             "params": [
@@ -1561,13 +1547,13 @@
             ],
             "access": "private",
             "tagname": "",
-            "class": "Warehouse",
+            "class": "Database",
             "module": "warehouse"
         },
         {
             "file": "tmp/warehouse/lib/index.js",
-            "line": 126,
-            "description": "Saves the data to a JSON file.",
+            "line": 139,
+            "description": "Saves data to JSON files.",
             "itemtype": "method",
             "name": "save",
             "params": [
@@ -1585,13 +1571,13 @@
             ],
             "chainable": 1,
             "async": 1,
-            "class": "Warehouse",
+            "class": "Database",
             "module": "warehouse"
         },
         {
             "file": "tmp/warehouse/lib/index.js",
-            "line": 162,
-            "description": "Creates/Returns a model.",
+            "line": 175,
+            "description": "Creates a model. If the model already exists, returns the existing model.",
             "itemtype": "method",
             "name": "model",
             "params": [
@@ -1611,12 +1597,12 @@
                 "description": "",
                 "type": "Model"
             },
-            "class": "Warehouse",
+            "class": "Database",
             "module": "warehouse"
         },
         {
             "file": "tmp/warehouse/lib/index.js",
-            "line": 190,
+            "line": 203,
             "description": "Checks if the model exists.",
             "itemtype": "method",
             "name": "_hasModel",
@@ -1633,157 +1619,173 @@
             },
             "access": "private",
             "tagname": "",
-            "class": "Warehouse",
+            "class": "Database",
             "module": "warehouse"
         },
         {
             "file": "tmp/warehouse/lib/index.js",
-            "line": 203,
-            "description": "See {{#crossLink \"Warehouse.Model\"}}{{/crossLink}}",
+            "line": 216,
+            "description": "See {% crosslink Model %}",
             "itemtype": "property",
-            "name": "Warehouse.Model",
-            "type": "Warehouse.Model",
+            "name": "Model",
+            "type": "Model",
             "static": 1,
-            "class": "Warehouse",
+            "class": "Database",
             "module": "warehouse"
         },
         {
             "file": "tmp/warehouse/lib/index.js",
-            "line": 213,
-            "description": "See {{#crossLink \"Warehouse.Schema\"}}{{/crossLink}}",
+            "line": 226,
+            "description": "See {% crosslink Schema %}",
             "itemtype": "property",
-            "name": "Warehouse.Schema",
-            "type": "Warehouse.Schema",
+            "name": "Schema",
+            "type": "Schema",
             "static": 1,
-            "class": "Warehouse",
+            "class": "Database",
             "module": "warehouse"
         },
         {
             "file": "tmp/warehouse/lib/index.js",
-            "line": 223,
-            "description": "See {{#crossLink \"Warehouse.SchemaType\"}}{{/crossLink}}",
+            "line": 236,
+            "description": "See {% crosslink SchemaType %}",
             "itemtype": "property",
-            "name": "Warehouse.SchemaType",
-            "type": "Warehouse.SchemaType",
+            "name": "SchemaType",
+            "type": "SchemaType",
             "static": 1,
-            "class": "Warehouse",
+            "class": "Database",
             "module": "warehouse"
         },
         {
             "file": "tmp/warehouse/lib/index.js",
-            "line": 233,
-            "description": "See {{#crossLink \"Warehouse.util\"}}{{/crossLink}}",
+            "line": 246,
+            "description": "See {% crosslink util %}",
             "itemtype": "property",
-            "name": "Warehouse.util",
-            "type": "Warehouse.util",
+            "name": "util",
+            "type": "util",
             "static": 1,
-            "class": "Warehouse",
+            "class": "Database",
             "module": "warehouse"
         },
         {
             "file": "tmp/warehouse/lib/model.js",
-            "line": 42,
+            "line": 41,
+            "description": "The name of the model.",
             "itemtype": "property",
             "name": "_name",
             "type": "String",
             "access": "private",
             "tagname": "",
-            "class": "Warehouse.Model",
+            "class": "Model",
             "module": "warehouse"
         },
         {
             "file": "tmp/warehouse/lib/model.js",
-            "line": 50,
+            "line": 51,
+            "description": "The reference to the database.",
             "itemtype": "property",
             "name": "_database",
             "type": "Database",
             "access": "private",
             "tagname": "",
-            "class": "Warehouse.Model",
+            "class": "Model",
             "module": "warehouse"
         },
         {
             "file": "tmp/warehouse/lib/model.js",
-            "line": 58,
+            "line": 61,
+            "description": "The reference to the store in the database.",
             "itemtype": "property",
             "name": "_store",
             "type": "Store",
             "access": "private",
             "tagname": "",
-            "class": "Warehouse.Model",
+            "class": "Model",
             "module": "warehouse"
         },
         {
             "file": "tmp/warehouse/lib/model.js",
-            "line": 66,
+            "line": 71,
+            "description": "The index of the model.",
             "itemtype": "property",
             "name": "_index",
             "type": "Array",
             "access": "private",
             "tagname": "",
-            "class": "Warehouse.Model",
+            "class": "Model",
             "module": "warehouse"
         },
         {
             "file": "tmp/warehouse/lib/model.js",
-            "line": 74,
+            "line": 81,
+            "description": "The schema of the model.",
             "itemtype": "property",
             "name": "schema",
             "type": "Schema",
             "access": "private",
             "tagname": "",
-            "class": "Warehouse.Model",
+            "class": "Model",
             "module": "warehouse"
         },
         {
             "file": "tmp/warehouse/lib/model.js",
-            "line": 86,
+            "line": 95,
+            "description": "The document constructor.",
             "itemtype": "property",
             "name": "_doc",
             "type": "Document",
             "access": "private",
             "tagname": "",
-            "class": "Warehouse.Model",
+            "class": "Model",
             "module": "warehouse"
         },
         {
             "file": "tmp/warehouse/lib/model.js",
-            "line": 106,
+            "line": 117,
+            "description": "The query constructor.",
             "itemtype": "property",
             "name": "_query",
             "type": "Query",
             "access": "private",
             "tagname": "",
-            "class": "Warehouse.Model",
+            "class": "Model",
             "module": "warehouse"
         },
         {
             "file": "tmp/warehouse/lib/model.js",
-            "line": 122,
+            "line": 135,
             "description": "Returns the number of items in the model.",
-            "itemtype": "attribute",
+            "itemtype": "property",
             "name": "length",
             "type": "Number",
             "readonly": "",
             "default": "0",
-            "class": "Warehouse.Model",
+            "class": "Model",
             "module": "warehouse"
         },
         {
             "file": "tmp/warehouse/lib/model.js",
-            "line": 140,
+            "line": 148,
+            "description": "Fires when the model initialized.",
+            "itemtype": "event",
+            "name": "init",
+            "class": "Model",
+            "module": "warehouse"
+        },
+        {
+            "file": "tmp/warehouse/lib/model.js",
+            "line": 159,
             "description": "Updates the index.",
             "itemtype": "method",
             "name": "_updateIndex",
             "access": "private",
             "tagname": "",
-            "class": "Warehouse.Model",
+            "class": "Model",
             "module": "warehouse"
         },
         {
             "file": "tmp/warehouse/lib/model.js",
-            "line": 158,
-            "description": "Creates a new query instance.",
+            "line": 177,
+            "description": "Creates a new query.",
             "itemtype": "method",
             "name": "_createQuery",
             "params": [
@@ -1800,12 +1802,12 @@
             },
             "access": "private",
             "tagname": "",
-            "class": "Warehouse.Model",
+            "class": "Model",
             "module": "warehouse"
         },
         {
             "file": "tmp/warehouse/lib/model.js",
-            "line": 173,
+            "line": 192,
             "description": "Checks if `id` is used.",
             "itemtype": "method",
             "name": "_checkID",
@@ -1822,12 +1824,12 @@
             },
             "access": "private",
             "tagname": "",
-            "class": "Warehouse.Model",
+            "class": "Model",
             "module": "warehouse"
         },
         {
             "file": "tmp/warehouse/lib/model.js",
-            "line": 186,
+            "line": 205,
             "description": "Creates a new document.",
             "itemtype": "method",
             "name": "new",
@@ -1842,12 +1844,12 @@
                 "description": "",
                 "type": "Document"
             },
-            "class": "Warehouse.Model",
+            "class": "Model",
             "module": "warehouse"
         },
         {
             "file": "tmp/warehouse/lib/model.js",
-            "line": 198,
+            "line": 217,
             "description": "Applies the schema.",
             "itemtype": "method",
             "name": "_applyGetter",
@@ -1880,13 +1882,13 @@
             },
             "access": "private",
             "tagname": "",
-            "class": "Warehouse.Model",
+            "class": "Model",
             "module": "warehouse"
         },
         {
             "file": "tmp/warehouse/lib/model.js",
-            "line": 262,
-            "description": "Gets a document.\n\n`get` is also aliased as `findById`",
+            "line": 281,
+            "description": "Finds a single document by id.\n\n`get` is also aliased as `findById`",
             "itemtype": "method",
             "name": "get",
             "params": [
@@ -1900,35 +1902,13 @@
                 "description": "",
                 "type": "Document"
             },
-            "class": "Warehouse.Model",
+            "class": "Model",
             "module": "warehouse"
         },
         {
             "file": "tmp/warehouse/lib/model.js",
-            "line": 288,
-            "description": "Clones an object.",
-            "itemtype": "method",
-            "name": "_clone",
-            "params": [
-                {
-                    "name": "obj",
-                    "description": "",
-                    "type": "Object"
-                }
-            ],
-            "return": {
-                "description": "",
-                "type": "Object"
-            },
-            "access": "private",
-            "tagname": "",
-            "class": "Warehouse.Model",
-            "module": "warehouse"
-        },
-        {
-            "file": "tmp/warehouse/lib/model.js",
-            "line": 330,
-            "description": "Gets raw data.",
+            "line": 340,
+            "description": "Finds raw data of a single document by id.",
             "itemtype": "method",
             "name": "_getRaw",
             "params": [
@@ -1944,12 +1924,12 @@
             },
             "access": "private",
             "tagname": "",
-            "class": "Warehouse.Model",
+            "class": "Model",
             "module": "warehouse"
         },
         {
             "file": "tmp/warehouse/lib/model.js",
-            "line": 343,
+            "line": 353,
             "description": "Iterates over the model.\n\n`forEach` is also aliased as `each`.",
             "itemtype": "method",
             "name": "forEach",
@@ -1961,12 +1941,12 @@
                 }
             ],
             "chainable": 1,
-            "class": "Warehouse.Model",
+            "class": "Model",
             "module": "warehouse"
         },
         {
             "file": "tmp/warehouse/lib/model.js",
-            "line": 363,
+            "line": 373,
             "description": "Returns an array containing all items in the model.",
             "itemtype": "method",
             "name": "toArray",
@@ -1974,12 +1954,12 @@
                 "description": "",
                 "type": "Array"
             },
-            "class": "Warehouse.Model",
+            "class": "Model",
             "module": "warehouse"
         },
         {
             "file": "tmp/warehouse/lib/model.js",
-            "line": 380,
+            "line": 390,
             "description": "Returns the number of items in the model.",
             "itemtype": "method",
             "name": "count",
@@ -1987,13 +1967,13 @@
                 "description": "",
                 "type": "Number"
             },
-            "class": "Warehouse.Model",
+            "class": "Model",
             "module": "warehouse"
         },
         {
             "file": "tmp/warehouse/lib/model.js",
-            "line": 391,
-            "description": "Applys the schema.",
+            "line": 401,
+            "description": "Applies the schema.",
             "itemtype": "method",
             "name": "_applySetter",
             "params": [
@@ -2025,13 +2005,13 @@
             },
             "access": "private",
             "tagname": "",
-            "class": "Warehouse.Model",
+            "class": "Model",
             "module": "warehouse"
         },
         {
             "file": "tmp/warehouse/lib/model.js",
-            "line": 473,
-            "description": "Saves an item.",
+            "line": 483,
+            "description": "Saves a document to the model.",
             "itemtype": "method",
             "name": "_save",
             "params": [
@@ -2048,13 +2028,13 @@
             ],
             "access": "private",
             "tagname": "",
-            "class": "Warehouse.Model",
+            "class": "Model",
             "module": "warehouse"
         },
         {
             "file": "tmp/warehouse/lib/model.js",
-            "line": 518,
-            "description": "Inserts an item.",
+            "line": 528,
+            "description": "Inserts a document to the model.",
             "itemtype": "method",
             "name": "insert",
             "params": [
@@ -2071,13 +2051,31 @@
                 }
             ],
             "chainable": 1,
-            "class": "Warehouse.Model",
+            "class": "Model",
             "module": "warehouse"
         },
         {
             "file": "tmp/warehouse/lib/model.js",
-            "line": 553,
-            "description": "Updates items.",
+            "line": 556,
+            "description": "Fires when a document inserted.",
+            "itemtype": "event",
+            "name": "insert",
+            "params": [
+                {
+                    "name": "result",
+                    "description": "",
+                    "type": "Document"
+                }
+            ],
+            "class": "Model",
+            "module": "warehouse"
+        },
+        {
+            "file": "tmp/warehouse/lib/model.js",
+            "line": 569,
+            "description": "Updates documents matching the `conditions` in the model.\n`conditions` can be either a query object or the id of the document.",
+            "itemtype": "method",
+            "name": "update",
             "params": [
                 {
                     "name": "conditions",
@@ -2097,12 +2095,12 @@
                 }
             ],
             "chainable": 1,
-            "class": "Warehouse.Model",
+            "class": "Model",
             "module": "warehouse"
         },
         {
             "file": "tmp/warehouse/lib/model.js",
-            "line": 572,
+            "line": 590,
             "description": "Combines the old and the new data.",
             "itemtype": "method",
             "name": "_update",
@@ -2124,13 +2122,13 @@
             },
             "access": "private",
             "tagname": "",
-            "class": "Warehouse.Model",
+            "class": "Model",
             "module": "warehouse"
         },
         {
             "file": "tmp/warehouse/lib/model.js",
-            "line": 618,
-            "description": "Updates the specified item.",
+            "line": 636,
+            "description": "Updates a document in the model by id.",
             "itemtype": "method",
             "name": "updateById",
             "params": [
@@ -2152,13 +2150,29 @@
                 }
             ],
             "chainable": 1,
-            "class": "Warehouse.Model",
+            "class": "Model",
             "module": "warehouse"
         },
         {
             "file": "tmp/warehouse/lib/model.js",
-            "line": 646,
-            "description": "Replaces items in the model.",
+            "line": 657,
+            "description": "Fires when a document updated.",
+            "itemtype": "event",
+            "name": "update",
+            "params": [
+                {
+                    "name": "result",
+                    "description": "",
+                    "type": "Document"
+                }
+            ],
+            "class": "Model",
+            "module": "warehouse"
+        },
+        {
+            "file": "tmp/warehouse/lib/model.js",
+            "line": 670,
+            "description": "Replaces documents matching the `conditions` in the model.\n`conditions` can be either a query object or the id of the document.",
             "itemtype": "method",
             "name": "replace",
             "params": [
@@ -2180,13 +2194,13 @@
                 }
             ],
             "chainable": 1,
-            "class": "Warehouse.Model",
+            "class": "Model",
             "module": "warehouse"
         },
         {
             "file": "tmp/warehouse/lib/model.js",
-            "line": 666,
-            "description": "Replaces the specified item.",
+            "line": 691,
+            "description": "Replaces a document in the model by id.",
             "itemtype": "method",
             "name": "replaceById",
             "params": [
@@ -2208,13 +2222,13 @@
                 }
             ],
             "chainable": 1,
-            "class": "Warehouse.Model",
+            "class": "Model",
             "module": "warehouse"
         },
         {
             "file": "tmp/warehouse/lib/model.js",
-            "line": 692,
-            "description": "Remove items.",
+            "line": 717,
+            "description": "Removes documents matching the `conditions` in the model.\n`conditions` can be either a query object or the id of the document.",
             "itemtype": "method",
             "name": "remove",
             "params": [
@@ -2231,13 +2245,13 @@
                 }
             ],
             "chainable": 1,
-            "class": "Warehouse.Model",
+            "class": "Model",
             "module": "warehouse"
         },
         {
             "file": "tmp/warehouse/lib/model.js",
-            "line": 711,
-            "description": "Removes the specificed item.",
+            "line": 737,
+            "description": "Removes a document in the model by id.",
             "itemtype": "method",
             "name": "removeById",
             "params": [
@@ -2254,13 +2268,29 @@
                 }
             ],
             "chainable": 1,
-            "class": "Warehouse.Model",
+            "class": "Model",
             "module": "warehouse"
         },
         {
             "file": "tmp/warehouse/lib/model.js",
-            "line": 751,
-            "description": "Saves an item.",
+            "line": 764,
+            "description": "Fires when a document removed.",
+            "itemtype": "event",
+            "name": "remove",
+            "params": [
+                {
+                    "name": "doc",
+                    "description": "",
+                    "type": "Document"
+                }
+            ],
+            "class": "Model",
+            "module": "warehouse"
+        },
+        {
+            "file": "tmp/warehouse/lib/model.js",
+            "line": 784,
+            "description": "Saves a document to the model.",
             "itemtype": "method",
             "name": "save",
             "params": [
@@ -2277,23 +2307,23 @@
                 }
             ],
             "chainable": 1,
-            "class": "Warehouse.Model",
+            "class": "Model",
             "module": "warehouse"
         },
         {
             "file": "tmp/warehouse/lib/model.js",
-            "line": 770,
-            "description": "Deletes all items in the model.",
+            "line": 803,
+            "description": "Deletes all documents in the model.",
             "itemtype": "method",
             "name": "destroy",
             "chainable": 1,
-            "class": "Warehouse.Model",
+            "class": "Model",
             "module": "warehouse"
         },
         {
             "file": "tmp/warehouse/lib/model.js",
-            "line": 784,
-            "description": "Gets the item at the specified index.",
+            "line": 817,
+            "description": "Returns the document at the specified index.\n`num` can be a positive or negative number.",
             "itemtype": "method",
             "name": "eq",
             "params": [
@@ -2303,39 +2333,43 @@
                     "type": "Number"
                 }
             ],
-            "class": "Warehouse.Model",
+            "return": {
+                "description": "",
+                "type": "Document"
+            },
+            "class": "Model",
             "module": "warehouse"
         },
         {
             "file": "tmp/warehouse/lib/model.js",
-            "line": 798,
-            "description": "Returns the first item in the model.",
+            "line": 833,
+            "description": "Returns the first document in the model.\n\nThis method is an alias of:\n\n``` js\nmodel.eq(0);\n```",
             "itemtype": "method",
             "name": "first",
             "return": {
                 "description": "",
                 "type": "Document"
             },
-            "class": "Warehouse.Model",
+            "class": "Model",
             "module": "warehouse"
         },
         {
             "file": "tmp/warehouse/lib/model.js",
-            "line": 809,
-            "description": "Returns the last item in the model.",
+            "line": 850,
+            "description": "Returns the last document in the model.\n\nThis method is an alias of:\n\n``` js\nmodel.eq(-1);\n```",
             "itemtype": "method",
             "name": "last",
             "return": {
                 "description": "",
                 "type": "Document"
             },
-            "class": "Warehouse.Model",
+            "class": "Model",
             "module": "warehouse"
         },
         {
             "file": "tmp/warehouse/lib/model.js",
-            "line": 820,
-            "description": "Returns the specified range of the model.",
+            "line": 867,
+            "description": "Returns the specified range of documents in the model.",
             "itemtype": "method",
             "name": "slice",
             "params": [
@@ -2355,13 +2389,13 @@
                 "description": "",
                 "type": "Query"
             },
-            "class": "Warehouse.Model",
+            "class": "Model",
             "module": "warehouse"
         },
         {
             "file": "tmp/warehouse/lib/model.js",
-            "line": 833,
-            "description": "Limits the number of items returned.",
+            "line": 880,
+            "description": "Limits the number of items returned.\n\nThis method is an alias of:\n\n``` js\nmodel.slice(0, num);\n```",
             "itemtype": "method",
             "name": "limit",
             "params": [
@@ -2375,13 +2409,13 @@
                 "description": "",
                 "type": "Query"
             },
-            "class": "Warehouse.Model",
+            "class": "Model",
             "module": "warehouse"
         },
         {
             "file": "tmp/warehouse/lib/model.js",
-            "line": 845,
-            "description": "Specifies the number of items to skip.",
+            "line": 898,
+            "description": "Specifies the number of items to skip.\n\nThis method is an alias of:\n\n``` js\nmodel.slice(num);\n`",
             "itemtype": "method",
             "name": "skip",
             "params": [
@@ -2395,12 +2429,12 @@
                 "description": "",
                 "type": "Query"
             },
-            "class": "Warehouse.Model",
+            "class": "Model",
             "module": "warehouse"
         },
         {
             "file": "tmp/warehouse/lib/model.js",
-            "line": 857,
+            "line": 916,
             "description": "Returns the model in reversed order.",
             "itemtype": "method",
             "name": "reverse",
@@ -2408,13 +2442,13 @@
                 "description": "",
                 "type": "Query"
             },
-            "class": "Warehouse.Model",
+            "class": "Model",
             "module": "warehouse"
         },
         {
             "file": "tmp/warehouse/lib/model.js",
-            "line": 868,
-            "description": "Sorts the model.",
+            "line": 927,
+            "description": "Sorts the documents in the model.\n\nSee {% crosslink Query/sort %}",
             "itemtype": "method",
             "name": "sort",
             "params": [
@@ -2434,26 +2468,26 @@
                 "description": "",
                 "type": "Query"
             },
-            "class": "Warehouse.Model",
+            "class": "Model",
             "module": "warehouse"
         },
         {
             "file": "tmp/warehouse/lib/model.js",
-            "line": 883,
-            "description": "Returns the model in random order.\n\n`random` is also aliased as `shuffle`.",
+            "line": 944,
+            "description": "Returns the documents in the model in random order.\n\n`random` is also aliased as `shuffle`.",
             "itemtype": "method",
             "name": "random",
             "return": {
                 "description": "",
                 "type": "Query"
             },
-            "class": "Warehouse.Model",
+            "class": "Model",
             "module": "warehouse"
         },
         {
             "file": "tmp/warehouse/lib/model.js",
-            "line": 896,
-            "description": "Finds the matching items.",
+            "line": 957,
+            "description": "Finds the matching documents in the model.\n\nSee {% crosslink Query/find %}",
             "itemtype": "method",
             "name": "find",
             "params": [
@@ -2473,13 +2507,13 @@
                 "description": "",
                 "type": "Query"
             },
-            "class": "Warehouse.Model",
+            "class": "Model",
             "module": "warehouse"
         },
         {
             "file": "tmp/warehouse/lib/model.js",
-            "line": 909,
-            "description": "Finds the first matching item.",
+            "line": 972,
+            "description": "Finds the first matching document.",
             "itemtype": "method",
             "name": "findOne",
             "params": [
@@ -2493,12 +2527,12 @@
                 "description": "",
                 "type": "Document"
             },
-            "class": "Warehouse.Model",
+            "class": "Model",
             "module": "warehouse"
         },
         {
             "file": "tmp/warehouse/lib/model.js",
-            "line": 921,
+            "line": 984,
             "description": "Popluates document references.",
             "itemtype": "method",
             "name": "_populate",
@@ -2520,12 +2554,12 @@
             },
             "access": "private",
             "tagname": "",
-            "class": "Warehouse.Model",
+            "class": "Model",
             "module": "warehouse"
         },
         {
             "file": "tmp/warehouse/lib/model.js",
-            "line": 965,
+            "line": 1028,
             "description": "Sets the path to populate.",
             "itemtype": "method",
             "name": "populate",
@@ -2540,47 +2574,49 @@
                 "description": "",
                 "type": "Query"
             },
-            "class": "Warehouse.Model",
-            "module": "warehouse"
-        },
-        {
-            "file": "tmp/warehouse/lib/query.js",
-            "line": 30,
-            "itemtype": "property",
-            "name": "_index",
-            "type": "Array",
-            "access": "private",
-            "tagname": "",
-            "class": "Warehouse.Query",
-            "module": "warehouse"
-        },
-        {
-            "file": "tmp/warehouse/lib/query.js",
-            "line": 38,
-            "itemtype": "property",
-            "name": "_populates",
-            "type": "Array",
-            "access": "private",
-            "tagname": "",
-            "class": "Warehouse.Query",
+            "class": "Model",
             "module": "warehouse"
         },
         {
             "file": "tmp/warehouse/lib/query.js",
             "line": 46,
-            "description": "Returns the number of items in the query.",
-            "itemtype": "attribute",
-            "name": "length",
-            "type": "Number",
-            "readonly": "",
-            "default": "0",
-            "class": "Warehouse.Query",
+            "description": "The index of the query.",
+            "itemtype": "property",
+            "name": "_index",
+            "type": "Array",
+            "access": "private",
+            "tagname": "",
+            "class": "Query",
             "module": "warehouse"
         },
         {
             "file": "tmp/warehouse/lib/query.js",
-            "line": 60,
-            "description": "Creates a new query instance.",
+            "line": 56,
+            "description": "The fields to populate.",
+            "itemtype": "property",
+            "name": "_populates",
+            "type": "Array",
+            "access": "private",
+            "tagname": "",
+            "class": "Query",
+            "module": "warehouse"
+        },
+        {
+            "file": "tmp/warehouse/lib/query.js",
+            "line": 66,
+            "description": "Returns the number of items in the query.",
+            "itemtype": "property",
+            "name": "length",
+            "type": "Number",
+            "readonly": "",
+            "default": "0",
+            "class": "Query",
+            "module": "warehouse"
+        },
+        {
+            "file": "tmp/warehouse/lib/query.js",
+            "line": 80,
+            "description": "Creates a new query.",
             "itemtype": "method",
             "name": "_createQuery",
             "params": [
@@ -2592,16 +2628,16 @@
             ],
             "return": {
                 "description": "",
-                "type": "Warehouse.Query"
+                "type": "Query"
             },
             "access": "private",
             "tagname": "",
-            "class": "Warehouse.Query",
+            "class": "Query",
             "module": "warehouse"
         },
         {
             "file": "tmp/warehouse/lib/query.js",
-            "line": 79,
+            "line": 99,
             "description": "Iterates over the query.\n\n`forEach` is also aliased as `each`.",
             "itemtype": "method",
             "name": "forEach",
@@ -2613,39 +2649,39 @@
                 }
             ],
             "chainable": 1,
-            "class": "Warehouse.Query",
+            "class": "Query",
             "module": "warehouse"
         },
         {
             "file": "tmp/warehouse/lib/query.js",
-            "line": 101,
-            "description": "Returns an array containing all items.",
+            "line": 121,
+            "description": "Returns an array containing all documents in the query.",
             "itemtype": "method",
             "name": "toArray",
             "return": {
                 "description": "",
                 "type": "Array"
             },
-            "class": "Warehouse.Query",
+            "class": "Query",
             "module": "warehouse"
         },
         {
             "file": "tmp/warehouse/lib/query.js",
-            "line": 118,
-            "description": "Returns the number of items in the query.",
+            "line": 138,
+            "description": "Returns the number of documents in the query.",
             "itemtype": "method",
             "name": "count",
             "return": {
                 "description": "",
                 "type": "Number"
             },
-            "class": "Warehouse.Query",
+            "class": "Query",
             "module": "warehouse"
         },
         {
             "file": "tmp/warehouse/lib/query.js",
-            "line": 129,
-            "description": "Updates all items in the query.",
+            "line": 149,
+            "description": "Updates all documents in the query.",
             "itemtype": "method",
             "name": "update",
             "params": [
@@ -2662,13 +2698,13 @@
                 }
             ],
             "chainable": 1,
-            "class": "Warehouse.Query",
+            "class": "Query",
             "module": "warehouse"
         },
         {
             "file": "tmp/warehouse/lib/query.js",
-            "line": 154,
-            "description": "Replaces all items in the query.",
+            "line": 174,
+            "description": "Replaces all documents in the query.",
             "itemtype": "method",
             "name": "replace",
             "params": [
@@ -2685,13 +2721,13 @@
                 }
             ],
             "chainable": 1,
-            "class": "Warehouse.Query",
+            "class": "Query",
             "module": "warehouse"
         },
         {
             "file": "tmp/warehouse/lib/query.js",
-            "line": 179,
-            "description": "Removes all items in the query.",
+            "line": 199,
+            "description": "Removes all documents in the query.",
             "itemtype": "method",
             "name": "remove",
             "params": [
@@ -2703,13 +2739,13 @@
                 }
             ],
             "chainable": 1,
-            "class": "Warehouse.Query",
+            "class": "Query",
             "module": "warehouse"
         },
         {
             "file": "tmp/warehouse/lib/query.js",
-            "line": 203,
-            "description": "Gets the item at the specified index.",
+            "line": 223,
+            "description": "Returns the document at the specified index.\n`num` can be a positive or negative number.",
             "itemtype": "method",
             "name": "eq",
             "params": [
@@ -2721,41 +2757,41 @@
             ],
             "return": {
                 "description": "",
-                "type": "Warehouse.Document"
+                "type": "Document"
             },
-            "class": "Warehouse.Query",
+            "class": "Query",
             "module": "warehouse"
         },
         {
             "file": "tmp/warehouse/lib/query.js",
-            "line": 218,
-            "description": "Returns the first item in the query.",
+            "line": 239,
+            "description": "Returns the first document in the query.\n\nThis method is an alias of:\n\n``` js\nquery.eq(0);\n```",
             "itemtype": "method",
             "name": "first",
             "return": {
                 "description": "",
-                "type": "Warehouse.Document"
+                "type": "Document"
             },
-            "class": "Warehouse.Query",
+            "class": "Query",
             "module": "warehouse"
         },
         {
             "file": "tmp/warehouse/lib/query.js",
-            "line": 229,
-            "description": "Returns the last item in the query.",
+            "line": 256,
+            "description": "Returns the last item in the model.\n\nThis method is an alias of:\n\n``` js\nquery.eq(-1);\n```",
             "itemtype": "method",
             "name": "last",
             "return": {
                 "description": "",
-                "type": "Warehouse.Document"
+                "type": "Document"
             },
-            "class": "Warehouse.Query",
+            "class": "Query",
             "module": "warehouse"
         },
         {
             "file": "tmp/warehouse/lib/query.js",
-            "line": 240,
-            "description": "Returns the specified range of the query.",
+            "line": 273,
+            "description": "Returns the specified range of documents in the query.",
             "itemtype": "method",
             "name": "slice",
             "params": [
@@ -2773,15 +2809,15 @@
             ],
             "return": {
                 "description": "",
-                "type": "Warehouse.Query"
+                "type": "Query"
             },
-            "class": "Warehouse.Query",
+            "class": "Query",
             "module": "warehouse"
         },
         {
             "file": "tmp/warehouse/lib/query.js",
-            "line": 253,
-            "description": "Limits the number of items returned.",
+            "line": 286,
+            "description": "Limits the number of items returned.\n\nThis method is an alias of:\n\n``` js\nquery.slice(0, num);\n```",
             "itemtype": "method",
             "name": "limit",
             "params": [
@@ -2793,15 +2829,15 @@
             ],
             "return": {
                 "description": "",
-                "type": "Warehouse.Query"
+                "type": "Query"
             },
-            "class": "Warehouse.Query",
+            "class": "Query",
             "module": "warehouse"
         },
         {
             "file": "tmp/warehouse/lib/query.js",
-            "line": 265,
-            "description": "Specifies the number of items to skip.",
+            "line": 304,
+            "description": "Specifies the number of items to skip.\n\nThis method is an alias of:\n\n``` js\nquery.slice(num);\n```",
             "itemtype": "method",
             "name": "skip",
             "params": [
@@ -2813,28 +2849,28 @@
             ],
             "return": {
                 "description": "",
-                "type": "Warehouse.Query"
+                "type": "Query"
             },
-            "class": "Warehouse.Query",
+            "class": "Query",
             "module": "warehouse"
         },
         {
             "file": "tmp/warehouse/lib/query.js",
-            "line": 277,
+            "line": 322,
             "description": "Returns the query in reversed order.",
             "itemtype": "method",
             "name": "reverse",
             "return": {
                 "description": "",
-                "type": "Warehouse.Query"
+                "type": "Query"
             },
-            "class": "Warehouse.Query",
+            "class": "Query",
             "module": "warehouse"
         },
         {
             "file": "tmp/warehouse/lib/query.js",
-            "line": 288,
-            "description": "Sorts the model.",
+            "line": 333,
+            "description": "Sorts the documents in the query.\n\nExample:\n\n``` js\nquery.sort('date', -1);\nquery.sort({date: -1, title: 1});\n```\n\nIf the `order` equals to `-1`, `desc` or `descending`, the data will be returned in reversed order.",
             "itemtype": "method",
             "name": "sort",
             "params": [
@@ -2852,28 +2888,28 @@
             ],
             "return": {
                 "description": "",
-                "type": "Warehouse.Query"
+                "type": "Query"
             },
-            "class": "Warehouse.Query",
+            "class": "Query",
             "module": "warehouse"
         },
         {
             "file": "tmp/warehouse/lib/query.js",
-            "line": 337,
-            "description": "Returns the model in random order.\n\n`random` is also aliased as `shuffle`.",
+            "line": 391,
+            "description": "Returns the documents in the query in random order.\n\n`random` is also aliased as `shuffle`.",
             "itemtype": "method",
             "name": "random",
             "return": {
                 "description": "",
-                "type": "Warehouse.Query"
+                "type": "Query"
             },
-            "class": "Warehouse.Query",
+            "class": "Query",
             "module": "warehouse"
         },
         {
             "file": "tmp/warehouse/lib/query.js",
-            "line": 350,
-            "description": "Finds the matching items.",
+            "line": 404,
+            "description": "Checks if the `data` matches the `conditions`.",
             "itemtype": "method",
             "name": "_query",
             "params": [
@@ -2894,13 +2930,13 @@
             },
             "access": "private",
             "tagname": "",
-            "class": "Warehouse.Query",
+            "class": "Query",
             "module": "warehouse"
         },
         {
             "file": "tmp/warehouse/lib/query.js",
-            "line": 444,
-            "description": "Finds the matching items.",
+            "line": 498,
+            "description": "Finds the matching documents in the query.",
             "itemtype": "method",
             "name": "find",
             "params": [
@@ -2926,15 +2962,15 @@
             ],
             "return": {
                 "description": "",
-                "type": "Warehouse.Query"
+                "type": "Query"
             },
-            "class": "Warehouse.Query",
+            "class": "Query",
             "module": "warehouse"
         },
         {
             "file": "tmp/warehouse/lib/query.js",
-            "line": 467,
-            "description": "Finds the first matching item.",
+            "line": 521,
+            "description": "Finds the first matching document.",
             "itemtype": "method",
             "name": "findOne",
             "params": [
@@ -2946,14 +2982,14 @@
             ],
             "return": {
                 "description": "",
-                "type": "Warehouse.Document"
+                "type": "Document"
             },
-            "class": "Warehouse.Query",
+            "class": "Query",
             "module": "warehouse"
         },
         {
             "file": "tmp/warehouse/lib/query.js",
-            "line": 479,
+            "line": 533,
             "description": "Sets the path to populate.",
             "itemtype": "method",
             "name": "populate",
@@ -2964,88 +3000,75 @@
                     "type": "String"
                 }
             ],
-            "return": {
-                "description": "",
-                "type": "Warehouse.Query"
-            },
-            "class": "Warehouse.Query",
+            "chainable": 1,
+            "class": "Query",
             "module": "warehouse"
         },
         {
             "file": "tmp/warehouse/lib/schema.js",
-            "line": 20,
+            "line": 19,
+            "description": "Schema tree.",
             "itemtype": "property",
             "name": "tree",
             "type": "Object",
             "access": "private",
             "tagname": "",
-            "class": "Warehouse.Schema",
+            "class": "Schema",
             "module": "warehouse"
         },
         {
             "file": "tmp/warehouse/lib/schema.js",
-            "line": 28,
+            "line": 29,
+            "description": "The static methods of the schema.",
             "itemtype": "property",
             "name": "statics",
             "type": "Object",
-            "class": "Warehouse.Schema",
+            "class": "Schema",
             "module": "warehouse"
         },
         {
             "file": "tmp/warehouse/lib/schema.js",
-            "line": 35,
+            "line": 38,
+            "description": "The document methods of the schema.",
             "itemtype": "property",
             "name": "methods",
             "type": "Object",
-            "class": "Warehouse.Schema",
+            "class": "Schema",
             "module": "warehouse"
         },
         {
             "file": "tmp/warehouse/lib/schema.js",
-            "line": 42,
+            "line": 47,
+            "description": "The pre-hooks of the schema.",
             "itemtype": "property",
             "name": "pres",
             "type": "Object",
-            "class": "Warehouse.Schema",
+            "class": "Schema",
             "module": "warehouse"
         },
         {
             "file": "tmp/warehouse/lib/schema.js",
-            "line": 52,
+            "line": 59,
+            "description": "The post-hooks of the schema.",
             "itemtype": "property",
             "name": "posts",
             "type": "Object",
-            "class": "Warehouse.Schema",
+            "class": "Schema",
             "module": "warehouse"
         },
         {
             "file": "tmp/warehouse/lib/schema.js",
-            "line": 67,
+            "line": 76,
             "itemtype": "property",
             "name": "Types",
             "type": "Object",
             "static": 1,
-            "class": "Warehouse.Schema",
+            "class": "Schema",
             "module": "warehouse"
         },
         {
             "file": "tmp/warehouse/lib/schema.js",
-            "line": 75,
-            "description": "Generates a unique id of length 16.",
-            "itemtype": "method",
-            "name": "uid",
-            "return": {
-                "description": "",
-                "type": "String"
-            },
-            "access": "private",
-            "tagname": "",
-            "class": "Warehouse.Schema",
-            "module": "warehouse"
-        },
-        {
-            "file": "tmp/warehouse/lib/schema.js",
-            "line": 87,
+            "line": 88,
             "description": "Adds rules to the schema.",
             "itemtype": "method",
             "name": "add",
@@ -3062,9 +3085,7 @@
                     "optional": true
                 }
             ],
-            "access": "private",
-            "tagname": "",
-            "class": "Warehouse.Schema",
+            "class": "Schema",
             "module": "warehouse"
         },
         {
@@ -3088,9 +3109,9 @@
             ],
             "return": {
                 "description": "",
-                "type": "Warehouse.SchemaType|Warehouse.Virtual"
+                "type": "SchemaType|Virtual"
             },
-            "class": "Warehouse.Schema",
+            "class": "Schema",
             "module": "warehouse"
         },
         {
@@ -3116,19 +3137,19 @@
                 "description": "",
                 "type": "Warehouse.Virtual"
             },
-            "class": "Warehouse.Schema",
+            "class": "Schema",
             "module": "warehouse"
         },
         {
             "file": "tmp/warehouse/lib/schema.js",
             "line": 160,
-            "description": "Adds a pre hook.",
+            "description": "Adds a pre-hook.",
             "itemtype": "method",
             "name": "pre",
             "params": [
                 {
                     "name": "type",
-                    "description": "",
+                    "description": "Hook type. The value should be either `save` or `remove`.",
                     "type": "String"
                 },
                 {
@@ -3137,19 +3158,19 @@
                     "type": "Function"
                 }
             ],
-            "class": "Warehouse.Schema",
+            "class": "Schema",
             "module": "warehouse"
         },
         {
             "file": "tmp/warehouse/lib/schema.js",
             "line": 175,
-            "description": "Adds a post hook.",
+            "description": "Adds a post-hook.",
             "itemtype": "method",
             "name": "post",
             "params": [
                 {
                     "name": "type",
-                    "description": "",
+                    "description": "Hook type. The value should be either `save` or `remove`.",
                     "type": "String"
                 },
                 {
@@ -3158,7 +3179,7 @@
                     "type": "Function"
                 }
             ],
-            "class": "Warehouse.Schema",
+            "class": "Schema",
             "module": "warehouse"
         },
         {
@@ -3179,7 +3200,7 @@
                     "type": "Function"
                 }
             ],
-            "class": "Warehouse.Schema",
+            "class": "Schema",
             "module": "warehouse"
         },
         {
@@ -3200,33 +3221,33 @@
                     "type": "Function"
                 }
             ],
-            "class": "Warehouse.Schema",
+            "class": "Schema",
             "module": "warehouse"
         },
         {
             "file": "tmp/warehouse/lib/schematype.js",
-            "line": 18,
+            "line": 54,
             "description": "The default value of the field.",
             "itemtype": "property",
             "name": "default",
             "type": "Function",
-            "class": "Warehouse.SchemaType",
+            "class": "SchemaType",
             "module": "warehouse"
         },
         {
             "file": "tmp/warehouse/lib/schematype.js",
-            "line": 30,
+            "line": 66,
             "description": "Determines whether the field is required.",
             "itemtype": "property",
             "name": "required",
             "type": "Boolean",
             "default": "false",
-            "class": "Warehouse.SchemaType",
+            "class": "SchemaType",
             "module": "warehouse"
         },
         {
             "file": "tmp/warehouse/lib/schematype.js",
-            "line": 41,
+            "line": 77,
             "description": "Validates a value.",
             "itemtype": "method",
             "name": "checkRequired",
@@ -3241,12 +3262,12 @@
                 "description": "",
                 "type": "Any"
             },
-            "class": "Warehouse.SchemaType",
+            "class": "SchemaType",
             "module": "warehouse"
         },
         {
             "file": "tmp/warehouse/lib/schematype.js",
-            "line": 53,
+            "line": 89,
             "description": "Casts a value.",
             "itemtype": "method",
             "name": "cast",
@@ -3261,12 +3282,12 @@
                 "description": "",
                 "type": "Any"
             },
-            "class": "Warehouse.SchemaType",
+            "class": "SchemaType",
             "module": "warehouse"
         },
         {
             "file": "tmp/warehouse/lib/schematype.js",
-            "line": 65,
+            "line": 101,
             "description": "Transforms a value into JSON.",
             "itemtype": "method",
             "name": "save",
@@ -3281,12 +3302,12 @@
                 "description": "",
                 "type": "Any"
             },
-            "class": "Warehouse.SchemaType",
+            "class": "SchemaType",
             "module": "warehouse"
         },
         {
             "file": "tmp/warehouse/lib/schematype.js",
-            "line": 77,
+            "line": 113,
             "description": "Compares data.",
             "itemtype": "method",
             "name": "compare",
@@ -3306,12 +3327,12 @@
                 "description": "",
                 "type": "Boolean"
             },
-            "class": "Warehouse.SchemaType",
+            "class": "SchemaType",
             "module": "warehouse"
         },
         {
             "file": "tmp/warehouse/lib/schematype.js",
-            "line": 90,
+            "line": 126,
             "description": "Checks whether the field exists.\n\n`q$exists` is also aliased as `q$exist`.",
             "itemtype": "method",
             "name": "q$exists",
@@ -3331,12 +3352,12 @@
                 "description": "",
                 "type": "Boolean"
             },
-            "class": "Warehouse.SchemaType",
+            "class": "SchemaType",
             "module": "warehouse"
         },
         {
             "file": "tmp/warehouse/lib/schematype.js",
-            "line": 105,
+            "line": 141,
             "description": "Checks whether `data` is equal to `value`. If not, return true.",
             "itemtype": "method",
             "name": "q$ne",
@@ -3356,12 +3377,12 @@
                 "description": "",
                 "type": "Boolean"
             },
-            "class": "Warehouse.SchemaType",
+            "class": "SchemaType",
             "module": "warehouse"
         },
         {
             "file": "tmp/warehouse/lib/schematype.js",
-            "line": 118,
+            "line": 154,
             "description": "Checks whether `data` is less than `value`.",
             "itemtype": "method",
             "name": "q$lt",
@@ -3381,12 +3402,12 @@
                 "description": "",
                 "type": "Boolean"
             },
-            "class": "Warehouse.SchemaType",
+            "class": "SchemaType",
             "module": "warehouse"
         },
         {
             "file": "tmp/warehouse/lib/schematype.js",
-            "line": 131,
+            "line": 167,
             "description": "Checks whether `data` is less than or equal to `value`.\n\n`q$lte` is also aliased as `q$max`.",
             "itemtype": "method",
             "name": "q$lte",
@@ -3406,12 +3427,12 @@
                 "description": "",
                 "type": "Boolean"
             },
-            "class": "Warehouse.SchemaType",
+            "class": "SchemaType",
             "module": "warehouse"
         },
         {
             "file": "tmp/warehouse/lib/schematype.js",
-            "line": 146,
+            "line": 182,
             "description": "Checks whether `data` is greater than `value`.",
             "itemtype": "method",
             "name": "q$gt",
@@ -3431,12 +3452,12 @@
                 "description": "",
                 "type": "Boolean"
             },
-            "class": "Warehouse.SchemaType",
+            "class": "SchemaType",
             "module": "warehouse"
         },
         {
             "file": "tmp/warehouse/lib/schematype.js",
-            "line": 159,
+            "line": 195,
             "description": "Checks whether `data` is greater than or equal to `value`.\n\n`q$gte` is also aliased as `q$min`.",
             "itemtype": "method",
             "name": "q$gte",
@@ -3456,12 +3477,12 @@
                 "description": "",
                 "type": "Boolean"
             },
-            "class": "Warehouse.SchemaType",
+            "class": "SchemaType",
             "module": "warehouse"
         },
         {
             "file": "tmp/warehouse/lib/schematype.js",
-            "line": 174,
+            "line": 210,
             "description": "Checks whether `data` contains `value`.",
             "itemtype": "method",
             "name": "q$in",
@@ -3481,12 +3502,12 @@
                 "description": "",
                 "type": "Boolean"
             },
-            "class": "Warehouse.SchemaType",
+            "class": "SchemaType",
             "module": "warehouse"
         },
         {
             "file": "tmp/warehouse/lib/schematype.js",
-            "line": 193,
+            "line": 229,
             "description": "Checks whether `data` not contains `value`.",
             "itemtype": "method",
             "name": "q$nin",
@@ -3506,12 +3527,12 @@
                 "description": "",
                 "type": "Boolean"
             },
-            "class": "Warehouse.SchemaType",
+            "class": "SchemaType",
             "module": "warehouse"
         },
         {
             "file": "tmp/warehouse/lib/schematype.js",
-            "line": 212,
+            "line": 248,
             "description": "Checks whether `data` is between `value`.",
             "itemtype": "method",
             "name": "q$within",
@@ -3531,12 +3552,12 @@
                 "description": "",
                 "type": "Boolean"
             },
-            "class": "Warehouse.SchemaType",
+            "class": "SchemaType",
             "module": "warehouse"
         },
         {
             "file": "tmp/warehouse/lib/schematype.js",
-            "line": 225,
+            "line": 261,
             "description": "Checks whether `data` is not between `value`.",
             "itemtype": "method",
             "name": "q$without",
@@ -3556,12 +3577,12 @@
                 "description": "",
                 "type": "Boolean"
             },
-            "class": "Warehouse.SchemaType",
+            "class": "SchemaType",
             "module": "warehouse"
         },
         {
             "file": "tmp/warehouse/lib/schematype.js",
-            "line": 238,
+            "line": 274,
             "description": "Validates `data` with `value` function.",
             "itemtype": "method",
             "name": "q$where",
@@ -3581,12 +3602,12 @@
                 "description": "",
                 "type": "Boolean"
             },
-            "class": "Warehouse.SchemaType",
+            "class": "SchemaType",
             "module": "warehouse"
         },
         {
             "file": "tmp/warehouse/lib/store.js",
-            "line": 14,
+            "line": 13,
             "description": "Lists all elements.",
             "itemtype": "method",
             "name": "list",
@@ -3594,13 +3615,13 @@
                 "description": "",
                 "type": "Object"
             },
-            "class": "Warehouse.Store",
+            "class": "Store",
             "module": "warehouse"
         },
         {
             "file": "tmp/warehouse/lib/store.js",
-            "line": 25,
-            "description": "Gets the specified data.",
+            "line": 24,
+            "description": "Gets the data by id.",
             "itemtype": "method",
             "name": "get",
             "params": [
@@ -3614,12 +3635,12 @@
                 "description": "",
                 "type": "Any"
             },
-            "class": "Warehouse.Store",
+            "class": "Store",
             "module": "warehouse"
         },
         {
             "file": "tmp/warehouse/lib/store.js",
-            "line": 37,
+            "line": 36,
             "description": "Sets a new data with `id`.",
             "itemtype": "method",
             "name": "set",
@@ -3635,13 +3656,13 @@
                     "type": "Any"
                 }
             ],
-            "class": "Warehouse.Store",
+            "class": "Store",
             "module": "warehouse"
         },
         {
             "file": "tmp/warehouse/lib/store.js",
-            "line": 49,
-            "description": "Removes a element.",
+            "line": 48,
+            "description": "Removes an element by id.",
             "itemtype": "method",
             "name": "remove",
             "params": [
@@ -3651,12 +3672,12 @@
                     "type": "Any"
                 }
             ],
-            "class": "Warehouse.Store",
+            "class": "Store",
             "module": "warehouse"
         },
         {
             "file": "tmp/warehouse/lib/util.js",
-            "line": 10,
+            "line": 9,
             "description": "Copies an array.",
             "itemtype": "method",
             "name": "copy",
@@ -3672,12 +3693,12 @@
                 "type": "Array"
             },
             "static": 1,
-            "class": "Warehouse.util",
+            "class": "util",
             "module": "warehouse"
         },
         {
             "file": "tmp/warehouse/lib/util.js",
-            "line": 23,
+            "line": 22,
             "description": "Returns the given `arr` in reversed order.",
             "itemtype": "method",
             "name": "reverse",
@@ -3693,12 +3714,12 @@
                 "type": "Array"
             },
             "static": 1,
-            "class": "Warehouse.util",
+            "class": "util",
             "module": "warehouse"
         },
         {
             "file": "tmp/warehouse/lib/util.js",
-            "line": 44,
+            "line": 43,
             "description": "Shuffles an array.",
             "itemtype": "method",
             "name": "shuffle",
@@ -3714,12 +3735,12 @@
                 "type": "Array"
             },
             "static": 1,
-            "class": "Warehouse.util",
+            "class": "util",
             "module": "warehouse"
         },
         {
             "file": "tmp/warehouse/lib/util.js",
-            "line": 59,
+            "line": 58,
             "description": "Creates a duplicate-value-free version of the array.",
             "itemtype": "method",
             "name": "unique",
@@ -3735,12 +3756,12 @@
                 "type": "Array"
             },
             "static": 1,
-            "class": "Warehouse.util",
+            "class": "util",
             "module": "warehouse"
         },
         {
             "file": "tmp/warehouse/lib/util.js",
-            "line": 82,
+            "line": 81,
             "description": "Flattens a nested array.",
             "itemtype": "method",
             "name": "flatten",
@@ -3756,12 +3777,12 @@
                 "type": "Array"
             },
             "static": 1,
-            "class": "Warehouse.util",
+            "class": "util",
             "module": "warehouse"
         },
         {
             "file": "tmp/warehouse/lib/util.js",
-            "line": 104,
+            "line": 103,
             "description": "Swaps elements in the array.",
             "itemtype": "method",
             "name": "_swap",
@@ -3784,12 +3805,12 @@
             ],
             "access": "private",
             "tagname": "",
-            "class": "Warehouse.util",
+            "class": "util",
             "module": "warehouse"
         },
         {
             "file": "tmp/warehouse/lib/util.js",
-            "line": 120,
+            "line": 119,
             "description": "Quick sort.",
             "itemtype": "method",
             "name": "_quickSort",
@@ -3816,12 +3837,12 @@
             },
             "access": "private",
             "tagname": "",
-            "class": "Warehouse.util",
+            "class": "util",
             "module": "warehouse"
         },
         {
             "file": "tmp/warehouse/lib/util.js",
-            "line": 153,
+            "line": 152,
             "description": "Sorts an array.",
             "itemtype": "method",
             "name": "sort",
@@ -3837,12 +3858,12 @@
                 "type": "Array"
             },
             "static": 1,
-            "class": "Warehouse.util",
+            "class": "util",
             "module": "warehouse"
         },
         {
             "file": "tmp/warehouse/lib/util.js",
-            "line": 166,
+            "line": 165,
             "description": "Generates a unique ID.",
             "itemtype": "method",
             "name": "uid",
@@ -3858,12 +3879,12 @@
                 "type": "String"
             },
             "static": 1,
-            "class": "Warehouse.util",
+            "class": "util",
             "module": "warehouse"
         },
         {
             "file": "tmp/warehouse/lib/util.js",
-            "line": 187,
+            "line": 186,
             "description": "Compares 2 arrays.",
             "itemtype": "method",
             "name": "compare",
@@ -3884,12 +3905,12 @@
                 "type": "Boolean"
             },
             "static": 1,
-            "class": "Warehouse.util",
+            "class": "util",
             "module": "warehouse"
         },
         {
             "file": "tmp/warehouse/lib/util.js",
-            "line": 212,
+            "line": 211,
             "description": "Gets a property in an object.",
             "itemtype": "method",
             "name": "getProperty",
@@ -3910,12 +3931,12 @@
                 "type": "Any"
             },
             "static": 1,
-            "class": "Warehouse.util",
+            "class": "util",
             "module": "warehouse"
         },
         {
             "file": "tmp/warehouse/lib/util.js",
-            "line": 235,
+            "line": 234,
             "description": "Sets a property in an object.",
             "itemtype": "method",
             "name": "setProperty",
@@ -3937,12 +3958,12 @@
                 }
             ],
             "static": 1,
-            "class": "Warehouse.util",
+            "class": "util",
             "module": "warehouse"
         },
         {
             "file": "tmp/warehouse/lib/util.js",
-            "line": 259,
+            "line": 258,
             "description": "Deletes a property in an object.",
             "itemtype": "method",
             "name": "deleteProperty",
@@ -3959,12 +3980,12 @@
                 }
             ],
             "static": 1,
-            "class": "Warehouse.util",
+            "class": "util",
             "module": "warehouse"
         },
         {
             "file": "tmp/warehouse/lib/util.js",
-            "line": 287,
+            "line": 286,
             "description": "Get the correct type of an object.",
             "itemtype": "method",
             "name": "getType",
@@ -3980,22 +4001,22 @@
                 "type": "String"
             },
             "static": 1,
-            "class": "Warehouse.util",
+            "class": "util",
             "module": "warehouse"
         },
         {
             "file": "tmp/warehouse/lib/virtual.js",
-            "line": 16,
+            "line": 15,
             "itemtype": "property",
             "name": "type",
             "type": "Virtual",
             "static": 1,
-            "class": "Warehouse.Virtual",
+            "class": "Virtual",
             "module": "warehouse"
         },
         {
             "file": "tmp/warehouse/lib/virtual.js",
-            "line": 24,
+            "line": 23,
             "description": "Binds a getter.",
             "itemtype": "method",
             "name": "get",
@@ -4007,12 +4028,12 @@
                 }
             ],
             "chainable": 1,
-            "class": "Warehouse.Virtual",
+            "class": "Virtual",
             "module": "warehouse"
         },
         {
             "file": "tmp/warehouse/lib/virtual.js",
-            "line": 39,
+            "line": 38,
             "description": "Binds a setter.",
             "itemtype": "method",
             "name": "set",
@@ -4024,14 +4045,9 @@
                 }
             ],
             "chainable": 1,
-            "class": "Warehouse.Virtual",
+            "class": "Virtual",
             "module": "warehouse"
         }
     ],
-    "warnings": [
-        {
-            "message": "Missing item type\nUpdates items.",
-            "line": " tmp/warehouse/lib/model.js:553"
-        }
-    ]
+    "warnings": []
 }

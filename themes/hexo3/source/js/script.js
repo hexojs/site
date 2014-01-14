@@ -8,4 +8,13 @@
 
     if (val) location.href = val;
   });
+/*
+  $('.api-options input').on('change', function(){
+    var value = $(this).val(),
+      checked = $(this).prop('checked');
+
+    $('.api-item.' + value).css({
+      display: checked ? 'block' : 'none'
+    });
+  });*/
 })(jQuery);

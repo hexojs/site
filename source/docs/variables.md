@@ -52,6 +52,8 @@ Variable | Description
 `page.prev` | The previous post. `null` if the post is the first post.
 `page.next` | The next post. `null` if the post is the last post.
 `page.raw` | The raw data of the article
+`page.photos` | The photos of the article (Used in gallery posts)
+`page.link` | The external link of the article (Used in link posts)
 
 {% note info Custom front-matter %}
 The front-matter in posts will be available in `page`.

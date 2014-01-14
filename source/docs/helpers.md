@@ -9,7 +9,7 @@ Helpers help you inserts specified content in theme or processes contents in the
 Loads CSS files. `path` can be an array or a string. If `path` isn't prefixed with `/` or any protocol, it'll be prefixed with root URL. If you didn't add extension name `.css` after `path`, it'll be added.
 
 ``` js
-<%- css(path, [path1], [path2], [...]) %>
+<%- css(path, ...) %>
 ```
 
 **Examples:**
@@ -28,7 +28,7 @@ Loads CSS files. `path` can be an array or a string. If `path` isn't prefixed wi
 Loads JavaScript files. `path` can be an array or a string. If `path` isn't prefixed with `/` or any protocol, it'll be prefixed with root URL. If you didn't add extension name `.js` after `path`, it'll be added.
 
 ``` js
-<%- js(path, [path1], [path2], [...]) %>
+<%- js(path, ...) %>
 ```
 
 **Examples:**
@@ -48,7 +48,7 @@ Conditional tags help you check the status of current page.
 
 Helper | Description
 --- | ---
-`is_current(path, strict)` | Checks if `path` matches the URL of current page.
+`is_current(path, [strict])` | Checks if `path` matches the URL of current page.
 `is_home()` | Checks if the home page is being displayed
 `is_post()` | Checks if posts are being displayed
 `is_archive()` | Checks if archive pages are being displayed
@@ -407,11 +407,11 @@ Option | Description | Default
 Formats a number.
 
 ``` js
-<%- number_format(number, options) %>
+<%- number_format(number, [options]) %>
 ```
 
 Option | Description | Default
---- | ---
+--- | --- | ---
 `precision` | The precision of number. The value can be `false` or a nonnegative integer. | false
 `delimiter` | The thousands delimiter | ,
 `separator` | The separator between the fractional and integer digits. | .
@@ -433,6 +433,46 @@ Option | Description | Default
 
 <%- number_format(12345.67, {separator: '/'}) %>
 // 12,345/67
+```
+
+### open_graph
+
+Inserts open graph data.
+
+``` js
+<%- open_graph([options]) %>
+```
+
+Option | Description | Default
+--- | --- | ---
+`title` | Page title (`og:title`) | `page.title`
+`type` | Page type (`og:type`) | blog
+`url` | Page URL (`og:url`) | `url`
+`image` | Page cover (`og:image`) | First image in the content
+`site_name` | Site name (`og:site_name`) | `config.title`
+`description` | Page description (`og:desription`) | Page excerpt or first 200 characters of the content
+`twitter_card` | Twitter card type (`twitter:card`) | summary
+`twitter_id` | Twitter ID (`twitter:creator`) |
+`google_plus` | Google+ profile link |
+`fb_admins` | Facebook admin ID |
+
+### toc
+
+Parses all heading tags (h1~h6) in the content and inserts a table of contents.
+
+``` js
+<%- toc(str, [options]) %>
+```
+
+Option | Description | Default
+--- | --- | ---
+`class` | Class name | toc
+`list_number` | Displays list number | true
+
+**Examples:**
+
+``` js
+<%- toc(page.content) %>
 ```
 
 [color keywords]: http://www.w3.org/TR/css3-color/#svg-color

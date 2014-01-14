@@ -1,5 +1,6 @@
 menu:
   Docs: docs/
+  API: api/classes/Hexo.html
   Plugins: https://github.com/tommy351/hexo/wiki/Plugins
   Themes: https://github.com/tommy351/hexo/wiki/Themes
   Source: https://github.com/tommy351/hexo

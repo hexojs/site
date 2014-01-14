@@ -1,7 +1,7 @@
-var extend = hexo.extend,
+var tag = hexo.extend.tag,
   renderSync = hexo.render.renderSync;
 
-extend.tag.register('note', function(args, content){
+tag.register('note', function(args, content){
   var className = args.shift(),
     header = '';
 
