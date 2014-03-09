@@ -7,7 +7,7 @@ The website for Hexo.
 Install dependencies:
 
 ``` bash
-$ git clone https://github.com/tommy351/hexo.git -b site site
+$ git clone https://github.com/hexojs/site.git
 $ cd site
 $ npm install
 ```
