@@ -207,7 +207,7 @@ hexo.extend.processor.register([rule], fn);
 
 Paramter | Description
 --- | ---
-`rule` | File path matching rule. This value can be a regular expression or a string.
+`rule` | File path matching rule. This value can be a [Backbone-style route](http://backbonejs.org/#Router), a regular expression or a function.
 `fn` | Processor function
 
 `fn` is invoked with 2 arguments:
@@ -224,13 +224,18 @@ Property | Description
 `source` | File source
 `path` | File relative path
 `type` | File event. The value can be `create`, `update` or `delete`.
-`read` | Function to read file content
-`stat` | Function to read file status
+`read` | Reads the file
+`readSync` | Reads the file synchronizedly
+`stat` | Gets the file status
+`statSync` | Gets the file status synchronizedly
+`render` | Renders the file
+`renderSync` | Renders the file synchronizedly
 
-**Read file content:**
+**Reads the file:**
 
 ``` js
-file.read(options, callback);
+file.read([options], callback);
+file.readSync([options]);
 ```
 
 Option | Description | Default
@@ -238,15 +243,19 @@ Option | Description | Default
 `cache` | Enables cache | false
 `encoding` | File encoding | utf8
 
-`callback` is invoked with 2 arguments: error and file content.
-
-**Read file status:**
+**Gets the file status:**
 
 ``` js
 file.stat(callback);
+file.statSync();
 ```
 
-`callback` is invoked with 2 arguments: error and file status ([fs.Stats](http://nodejs.org/api/fs.html#fs_class_fs_stats)).
+**Renders the file:**
+
+``` js
+file.render([options], callback);
+file.renderSync([options]);
+```
 
 ## Tag
 
@@ -341,13 +350,15 @@ hexo.extend.migrator.register(name, fn);
 Parameter | Description
 --- | ---
 `name` | Migrator name
-`fn` | Migrator function. Invoked with a [Optimist] argument.
+`fn` | Migrator function. Invoked with a [Minimist] argument.
 
 ## Filter
 
-There're 2 type of filters: **pre-filter** process uncompiled data, while **post-filter** process compiled data.
+Filters are similar with tags, but more powerful and customizable. You can process any attributes such as titles and contents in posts. It's recommended to run asynchronous tasks in filters.
 
-![](http://i.minus.com/ibws9s60LP8sDG.PNG)
+There're two types of filters: **pre-filter** process uncompiled data, while **post-filter** process compiled data.
+
+{% iframe plugins/filter-flow.html 100% 40 %}
 
 ### Syntax
 
@@ -365,11 +376,11 @@ Parameter | Description
 Replaces `#username` in post content to a Twitter link.
 
 ``` js
-hexo.extend.filter.register('post', function(data){
+hexo.extend.filter.register('post', function(data, callback){
   data.content = data.content.replace(/#(\d+)/, '<a href="http://twitter.com/$1">#$1</a>');
 
-  return data;
+  callback(null, data);
 });
 ```
 
-[Optimist]: https://github.com/substack/node-optimist
+[Minimist]: https://github.com/substack/minimist

@@ -30,6 +30,14 @@ In static mode, only files in `public` folder will be served and file watching i
 $ hexo server -s
 ```
 
+### Custom IP
+
+Hexo runs the server at `0.0.0.0` by default. You can override the default IP setting. For example:
+
+``` bash
+$ hexo server -i 192.168.1.1
+```
+
 ### Drafts
 
 In draft mode, drafts will be served as normal posts. You can preview your drafts on the server. All changes you made on drafts will be updated at once.
@@ -57,9 +65,9 @@ $ hexo server -l default
 
 Format | Description
 --- | ---
-`default` | :remote-addr - - [:date] ":method :url HTTP/:http-version" :status :res[content-length] ":referrer" ":user-agent"
-`short` | :remote-addr - :method :url HTTP/:http-version :status :res[content-length] - :response-time ms
-`tiny` | :method :url :status :res[content-length] - :response-time ms
+`default` | `:remote-addr - - [:date] ":method :url HTTP/:http-version" :status :res[content-length] ":referrer" ":user-agent"`
+`short` | `:remote-addr - :method :url HTTP/:http-version :status :res[content-length] - :response-time ms`
+`tiny` | `:method :url :status :res[content-length] - :response-time ms`
 `dev` | concise output colored by response status for development use
 
 **Tokens:**
@@ -100,3 +108,33 @@ $ ln -s /path/to/myapp
 ```
 
 Your website will be up and running at `http://myapp.dev`. The URL is based on the name of symlink.
+
+## Forever / PM2
+
+To keep the Hexo server alive, you can use [Forever] or [PM2].
+
+Hexo can be run programmatically since 2.5. So you can call Hexo in JavaScript instead of CLI.
+
+**1. Install Hexo in the folder of your site.**
+
+``` bash
+$ npm install hexo --save
+```
+
+**2. Add a JavaScript file with the following content.**
+
+``` js app.js
+require('hexo').init({command: 'server'});
+```
+
+**3. Run the JavaScript file you just created with [Forever] or [PM2].**
+
+PM2 has a [known issue](https://github.com/Unitech/pm2#known-bugs-and-workarounds) that the port isn't released when the script is stopped unless PM2 is killed. You have to run the script in fork mode.
+
+``` bash
+$ forever start app.js
+$ pm2 start app.js -x
+```
+
+[Forever]: https://github.com/nodejitsu/forever
+[PM2]: https://github.com/Unitech/pm2

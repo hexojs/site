@@ -2,7 +2,9 @@
   "name": "hexo",
   "version": "2.4.5",
   "private": true,
-  "dependencies": {},
+  "dependencies": {
+    "hexo-renderer-jade": "0.0.2"
+  },
   "devDependencies": {
     "grunt": "~0.4.2",
     "grunt-git": "~0.2.2",

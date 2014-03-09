@@ -55,9 +55,17 @@ Called after generating.
 
 Called before processing.
 
+Argument | Description
+--- | ---
+`target` | Base path of the processor
+
 ### processAfter
 
 Called after processing.
+
+Argument | Description
+--- | ---
+`target` | Base path of the processor
 
 ### new
 

@@ -6,7 +6,7 @@ Tag plugins are different from tags in posts. They're ported from Octopress and 
 
 ## Block Quote
 
-This plugin helps you insert quotes with author, source and title in posts.
+Inserts quotes with author, source and title in posts.
 
 **Alias:** quote
 
@@ -73,7 +73,7 @@ Every interaction is both precious and an opportunity to delight.
 
 ## Code Block
 
-This plugins helps you insert code snippets in posts.
+Inserts code snippets in posts.
 
 **Alias:** code
 
@@ -163,7 +163,7 @@ content
 
 ## jsFiddle
 
-This plugin helps you embed jsFiddle snippets in posts.
+Embeds jsFiddle snippets in posts.
 
 {% raw %}
 <figure class="highlight"><pre>{% jsfiddle shorttag [tabs] [skin] [width] [height] %}
@@ -172,16 +172,25 @@ This plugin helps you embed jsFiddle snippets in posts.
 
 ## Gist
 
-This plugin helps you embed Gist snippets in posts.
+Embeds Gist snippets in posts.
 
 {% raw %}
 <figure class="highlight"><pre>{% gist gist_id [filename] %}
 </pre></figure>
 {% endraw %}
 
+## iframe
+
+Embeds an iframe in posts.
+
+{% raw %}
+<figure class="highlight"><pre>{% iframe url [width] [height] %}
+</pre></figure>
+{% endraw %}
+
 ## Image
 
-This plugin helps you insert an image in posts with specified size.
+Inserts an image in posts with specified size.
 
 {% raw %}
 <figure class="highlight"><pre>{% img [class names] /path/to/image [width] [height] [title text [alt text]] %}
@@ -190,7 +199,7 @@ This plugin helps you insert an image in posts with specified size.
 
 ## Link
 
-This plugin helps you insert a link with `target="_blank"` attribute.
+Inserts a link with `target="_blank"` attribute.
 
 {% raw %}
 <figure class="highlight"><pre>{% link text url [external] [title] %}
@@ -199,7 +208,7 @@ This plugin helps you insert a link with `target="_blank"` attribute.
 
 ## Include Code
 
-This plugins helps you insert code snippets in `source` folder.
+Inserts code snippets in `source` folder.
 
 {% raw %}
 <figure class="highlight"><pre>{% include_code [title] [lang:language] path/to/file %}
@@ -208,7 +217,7 @@ This plugins helps you insert code snippets in `source` folder.
 
 ## Youtube
 
-This plugin helps you insert a Youtube video in posts.
+Inserts a Youtube video in posts.
 
 {% raw %}
 <figure class="highlight"><pre>{% youtube video_id %}
@@ -217,7 +226,7 @@ This plugin helps you insert a Youtube video in posts.
 
 ## Vimeo
 
-This plugin helps you insert a Vimeo video in posts.
+Inserts a Vimeo video in posts.
 
 {% raw %}
 <figure class="highlight"><pre>{% vimeo video_id %}

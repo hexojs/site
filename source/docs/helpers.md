@@ -118,7 +118,7 @@ Transforms a string into proper title caps.
 Loads other template files. You can define local variables in `local`.
 
 ``` js
-<%- partial(layout, [locals]) %>
+<%- partial(layout, [locals], [only]) %>
 ```
 
 ### tagcloud
@@ -401,6 +401,37 @@ Option | Description | Default
 `style` | Style to display the archives list. `list` displays archives in an unordered list.  | list
 `separator` | Separator between archives. (Only works if `style` is `none`) | , 
 `class` | Class name of archives list. | category
+
+### list_posts
+
+Inserts a list of posts.
+
+``` js
+<%- list_archive([options]) %>
+```
+
+Option | Description | Default
+--- | --- | ---
+`ulClass` | Class name of the container | 
+`liClass` | Class name of each item |
+`style` | Style to display the post list. `list` displays posts in an unordered list. | list
+`separator` | Separator between archives. (Only works if `style` is `none`) | , 
+`class` | Class name of post list. | post
+
+### get_posts
+
+Gets post data.
+
+``` js
+<% get_posts([options]) %>
+```
+
+Option | Description | Default
+--- | --- | ---
+`count` | The number of posts | 6
+`orderby` | Order of posts | date
+`order` | Sort of order. `1`, `asc` as ascending; `-1`, `desc` as descending | -1
+`query` | Query conditions |
 
 ### number_format
 

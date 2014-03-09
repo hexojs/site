@@ -71,6 +71,7 @@ Setting | Description | Default
 `port` | Server port | 4000
 `logger` | Display request info on the console. Always enabled in debug mode. | false
 `logger_format` | Logger format | 
+`server_ip` | Customize server IP | 0.0.0.0
 
 ### Date / Time format
 
@@ -100,6 +101,8 @@ Setting | Description
 --- | ---
 `theme` | Current theme
 `exclude_generator` | Disabled generators (archive, category, home, page, post, tag)
+`markdown` | Markdown settings (See [marked](https://github.com/chjj/marked) for more info)
+`stylus` | Stylus settings
 
 {% note warn YAML format %}
 Don't use tabs in configuration files, use spaces instead. Also, add a space after colons. Configuration files parsing error may cause Hexo can't run properly.
@@ -158,6 +161,18 @@ disqus_shortname:
 
 theme: light
 exclude_generator:
+
+markdown:
+  gfm: true
+  pedantic: false
+  sanitize: false
+  tables: true
+  breaks: true
+  smartLists: true
+  smartypants: true
+
+stylus:
+  compress: false
 
 deploy:
   type:

@@ -6,11 +6,15 @@ You can specify the permalinks for your site in `_config.yml` or in the front-ma
 
 ### Variables
 
+Besides the following variables, you can use any attributes in the permalink since Hexo 2.5.
+
 Variable | Description
 --- | ---
 `:year` | Published year of posts (4-digit)
 `:month` | Published month of posts (2-digit)
+`:i_month` | Published month of posts (Without leading zeros)
 `:day` | Published day of posts (2-digit)
+`:i_day` | Published day of posts (Without leading zeros)
 `:title` | Filename
 `:id` | Post ID
 `:category` | Categories. If the post is uncategorized, it'll be `category_dir` setting.
