@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "hexo-renderer-jade": "0.0.2",
-    "hexo-yuidoc": "0.0.2"
+    "hexo-yuidoc": "0.0.3"
   },
   "devDependencies": {
     "grunt": "~0.4.2",
