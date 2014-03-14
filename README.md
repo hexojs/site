@@ -1,4 +1,4 @@
-# Hexo Website
+# [hexo.io]
 
 The website for Hexo.
 
@@ -27,7 +27,7 @@ $ hexo server
 
 ## Requirements
 
-- [Hexo](http://zespia.tw/hexo/)
+- [Hexo][hexo.io]
 
 	``` bash
   $ npm install hexo -g
@@ -44,3 +44,5 @@ $ hexo server
 	``` bash
 	$ npm install grunt-cli -g
 	```
+
+[hexo.io]: http://hexo.io/

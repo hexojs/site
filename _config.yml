@@ -2,13 +2,13 @@
 title: Hexo
 subtitle: Node.js blog framework
 description:
-url: http://zespia.tw/hexo
+url: http://hexo.io
 author: SkyArrow
 email: tommy351@gmail.com
 language:
 
 # Permalink
-root: /hexo/
+root: /
 permalink: :category/:title/
 tag_dir: tags
 archive_dir: archives
@@ -64,5 +64,5 @@ highlight:
 # Read documentaion for more information
 deploy:
   type: github
-  repository: https://github.com/tommy351/hexo.git
+  repository: https://github.com/hexojs/hexo.io.git
   branch: gh-pages
