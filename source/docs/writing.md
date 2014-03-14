@@ -129,12 +129,12 @@ Hexo will find the scaffold file named `photo` in the `scaffolds` folder. If the
 
 Variables are wrapped by double curly brackets. For example:
 
-{% code %}
+``` plain
 layout: {% raw %}{{ layout }}{% endraw %}
 title: {% raw %}{{ title }}{% endraw %}
 date: {% raw %}{{ date }}{% endraw %}
 ---
-{% endcode %}
+```
 
 ### Variables
 

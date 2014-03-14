@@ -321,6 +321,15 @@
             },
             "namespaces": {}
         },
+        "tmp/hexo/lib/plugins/console/deploy.js": {
+            "name": "tmp/hexo/lib/plugins/console/deploy.js",
+            "modules": {},
+            "classes": {},
+            "fors": {
+                "Hexo": 1
+            },
+            "namespaces": {}
+        },
         "tmp/hexo/lib/plugins/console/server.js": {
             "name": "tmp/hexo/lib/plugins/console/server.js",
             "modules": {},
@@ -1281,7 +1290,7 @@
             "module": "hexo",
             "namespace": "Theme",
             "file": "tmp/hexo/lib/theme/view.js",
-            "line": 8,
+            "line": 5,
             "description": "The view object of the Theme class.",
             "params": [
                 {
@@ -3879,6 +3888,31 @@
             "module": "hexo"
         },
         {
+            "file": "tmp/hexo/lib/plugins/console/deploy.js",
+            "line": 40,
+            "description": "Fired before deployment.",
+            "itemtype": "event",
+            "name": "deployBefore",
+            "class": "Hexo",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/plugins/console/deploy.js",
+            "line": 50,
+            "description": "Fired after deployment.",
+            "itemtype": "event",
+            "name": "deployAfter",
+            "params": [
+                {
+                    "name": "err",
+                    "description": "",
+                    "type": "Error"
+                }
+            ],
+            "class": "Hexo",
+            "module": "hexo"
+        },
+        {
             "file": "tmp/hexo/lib/plugins/console/server.js",
             "line": 97,
             "description": "Fired after server started.",
@@ -4197,7 +4231,7 @@
         },
         {
             "file": "tmp/hexo/lib/theme/view.js",
-            "line": 20,
+            "line": 17,
             "description": "The full path of the view file.",
             "itemtype": "property",
             "name": "source",
@@ -4207,7 +4241,7 @@
         },
         {
             "file": "tmp/hexo/lib/theme/view.js",
-            "line": 28,
+            "line": 25,
             "description": "The relative path of the view file.",
             "itemtype": "property",
             "name": "path",
@@ -4217,7 +4251,7 @@
         },
         {
             "file": "tmp/hexo/lib/theme/view.js",
-            "line": 36,
+            "line": 33,
             "description": "The extension name of the view file. (With a prefixed dot)",
             "itemtype": "property",
             "name": "extname",
@@ -4227,7 +4261,7 @@
         },
         {
             "file": "tmp/hexo/lib/theme/view.js",
-            "line": 44,
+            "line": 41,
             "description": "The theme object.",
             "itemtype": "property",
             "name": "theme",
@@ -4237,10 +4271,20 @@
         },
         {
             "file": "tmp/hexo/lib/theme/view.js",
-            "line": 52,
-            "description": "The view data. (Used for cache)",
+            "line": 49,
+            "description": "View data.",
             "itemtype": "property",
             "name": "data",
+            "type": "{Object}",
+            "class": "Theme.View",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/theme/view.js",
+            "line": 57,
+            "description": "View cache.",
+            "itemtype": "property",
+            "name": "cache",
             "type": "{Object}",
             "access": "private",
             "tagname": "",
@@ -4249,22 +4293,7 @@
         },
         {
             "file": "tmp/hexo/lib/theme/view.js",
-            "line": 62,
-            "description": "Gets the data of the view.",
-            "itemtype": "method",
-            "name": "_getData",
-            "return": {
-                "description": "",
-                "type": "Object"
-            },
-            "access": "private",
-            "tagname": "",
-            "class": "Theme.View",
-            "module": "hexo"
-        },
-        {
-            "file": "tmp/hexo/lib/theme/view.js",
-            "line": 75,
+            "line": 67,
             "description": "Renders the view.",
             "itemtype": "method",
             "name": "render",
@@ -4295,7 +4324,7 @@
         },
         {
             "file": "tmp/hexo/lib/theme/view.js",
-            "line": 125,
+            "line": 115,
             "description": "Resolves the layout path.",
             "itemtype": "method",
             "name": "_resolveLayout",
@@ -4317,7 +4346,7 @@
         },
         {
             "file": "tmp/hexo/lib/theme/view.js",
-            "line": 149,
+            "line": 139,
             "description": "Clones the object and binds the helper functions.",
             "itemtype": "method",
             "name": "_buildLocals",
@@ -4339,7 +4368,7 @@
         },
         {
             "file": "tmp/hexo/lib/theme/view.js",
-            "line": 174,
+            "line": 164,
             "description": "Renders the view synchronizedly.",
             "itemtype": "method",
             "name": "renderSync",
@@ -4369,7 +4398,7 @@
         },
         {
             "file": "tmp/hexo/lib/theme/view.js",
-            "line": 214,
+            "line": 202,
             "description": "Invalidates the cache.",
             "itemtype": "method",
             "name": "invalidate",

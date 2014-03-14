@@ -57,7 +57,7 @@ Called before processing.
 
 Argument | Description
 --- | ---
-`target` | Base path of the processor
+`path` | Base path of the processor
 
 ### processAfter
 
@@ -65,7 +65,7 @@ Called after processing.
 
 Argument | Description
 --- | ---
-`target` | Base path of the processor
+`path` | Base path of the processor
 
 ### new
 
@@ -73,7 +73,7 @@ Called after a new post file is created.
 
 Argument | Description
 --- | ---
-`target` | Absolute path of the post file
+`path` | Absolute path of the post file
 
 ### server
 
@@ -82,3 +82,11 @@ Called after server is on.
 ### exit
 
 Called when Hexo exits.
+
+### deployBefore
+
+Called before deployment.
+
+### deployAfter
+
+Called after deployment.

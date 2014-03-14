@@ -147,6 +147,8 @@ Helper is used in theme to help you insert specified content quickly. If you wri
 
 ### Syntax
 
+You can get all local variables from `this`.
+
 ``` js
 hexo.extend.helper.register(name, fn);
 ```
@@ -172,7 +174,7 @@ Input:
 
 Output:
 
-```
+``` html
 <script type="text/javascript" src="script.js"></script>
 ```
 
@@ -190,6 +192,13 @@ Parameter | Description
 --- | ---
 `name` | Deployer name
 `fn` | Deployer function
+
+`fn` is invoked with 2 arguments:
+
+Argument | Description
+--- | ---
+`args` | Deployer options and arguments.
+`callback` | Callback function
 
 ## Processor
 
@@ -279,13 +288,14 @@ Argument | Description
 --- | ---
 `args` | Arguments
 `content` | Content (Only available when the tag has end tag)
+`options` | Options
 
 ### Example
 
 **Without end tag:** Inserts a Youtube video.
 
 ``` js
-hexo.extend.tag.register('youtube', function(args, content){
+hexo.extend.tag.register('youtube', function(args, content, options){
   var id = args[0];
   return '<div class="video-container"><iframe width="560" height="315" src="http://www.youtube.com/embed/' + id + '" frameborder="0" allowfullscreen></iframe></div>';
 });
@@ -294,7 +304,7 @@ hexo.extend.tag.register('youtube', function(args, content){
 **With end tag:** Inserts a pull quote.
 
 ``` js
-hexo.extend.tag.register('pullquote', function(args, content){
+hexo.extend.tag.register('pullquote', function(args, content, options){
   var className = args.length ? ' ' + args.join(' ') : '';
   return '<blockquote class="pullquote' + className + '">' + content + '</blockquote>';
 }, true);
