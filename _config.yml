@@ -64,5 +64,4 @@ highlight:
 # Read documentaion for more information
 deploy:
   type: github
-  repository: https://github.com/hexojs/hexo.io.git
-  branch: gh-pages
+  repo: https://github.com/hexojs/hexojs.github.io.git

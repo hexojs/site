@@ -1,6 +1,6 @@
-# [hexo.io]
+# Hexo Website
 
-The website for Hexo.
+The website for Hexo. You can see the generated files at [hexojs/hexojs.github.io](https://github.com/hexojs/hexojs.github.io) repository.
 
 ## Getting started
 
@@ -27,7 +27,7 @@ $ hexo server
 
 ## Requirements
 
-- [Hexo][hexo.io]
+- [Hexo](http://hexo.io/)
 
 	``` bash
   $ npm install hexo -g
@@ -44,5 +44,3 @@ $ hexo server
 	``` bash
 	$ npm install grunt-cli -g
 	```
-
-[hexo.io]: http://hexo.io/
