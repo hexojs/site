@@ -280,7 +280,7 @@ Parameter | Description
 --- | ---
 `name` | Tag name
 `fn` | Tag function
-`ends` | Enables end tag (disabled by default)
+`options` | Options
 
 `fn` is invoked with 2 arguments:
 
@@ -289,6 +289,13 @@ Argument | Description
 `args` | Arguments
 `content` | Content (Only available when the tag has end tag)
 `options` | Options
+
+### Options
+
+Option | Description | Default
+--- | --- | ---
+`ends` | Whether a tag must have an end tag | false
+`escape` | Escape contents in a tag | true
 
 ### Example
 

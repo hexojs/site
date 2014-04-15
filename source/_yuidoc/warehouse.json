@@ -2,7 +2,7 @@
     "project": {
         "name": "warehouse",
         "description": "Simple JSON-based database",
-        "version": "0.1.14"
+        "version": "0.2.1"
     },
     "files": {
         "tmp/warehouse/lib/types/array.js": {
@@ -1511,14 +1511,15 @@
         {
             "file": "tmp/warehouse/lib/index.js",
             "line": 67,
-            "description": "Loads database files.",
+            "description": "Loads a database.",
             "itemtype": "method",
             "name": "load",
             "params": [
                 {
                     "name": "src",
                     "description": "",
-                    "type": "String"
+                    "type": "String",
+                    "optional": true
                 },
                 {
                     "name": "callback",
@@ -1534,8 +1535,26 @@
         },
         {
             "file": "tmp/warehouse/lib/index.js",
-            "line": 117,
-            "description": "Restores data from database files.",
+            "line": 109,
+            "description": "Loads a database synchronizedly.",
+            "itemtype": "method",
+            "name": "loadSync",
+            "params": [
+                {
+                    "name": "src",
+                    "description": "",
+                    "type": "String",
+                    "optional": true
+                }
+            ],
+            "chainable": 1,
+            "class": "Database",
+            "module": "warehouse"
+        },
+        {
+            "file": "tmp/warehouse/lib/index.js",
+            "line": 129,
+            "description": "Restores data from a database file.",
             "itemtype": "method",
             "name": "_restore",
             "params": [
@@ -1552,15 +1571,16 @@
         },
         {
             "file": "tmp/warehouse/lib/index.js",
-            "line": 139,
-            "description": "Saves data to JSON files.",
+            "line": 158,
+            "description": "Saves a database.",
             "itemtype": "method",
             "name": "save",
             "params": [
                 {
                     "name": "dest",
                     "description": "",
-                    "type": "String"
+                    "type": "String",
+                    "optional": true
                 },
                 {
                     "name": "callback",
@@ -1576,7 +1596,40 @@
         },
         {
             "file": "tmp/warehouse/lib/index.js",
-            "line": 175,
+            "line": 187,
+            "description": "Saves a database synchronizedly.",
+            "itemtype": "method",
+            "name": "saveSync",
+            "params": [
+                {
+                    "name": "dest",
+                    "description": "",
+                    "type": "String",
+                    "optional": true
+                }
+            ],
+            "chainable": 1,
+            "class": "Database",
+            "module": "warehouse"
+        },
+        {
+            "file": "tmp/warehouse/lib/index.js",
+            "line": 206,
+            "description": "Exports a database to a JSON string.",
+            "itemtype": "method",
+            "name": "_export",
+            "return": {
+                "description": "",
+                "type": "String"
+            },
+            "access": "private",
+            "tagname": "",
+            "class": "Database",
+            "module": "warehouse"
+        },
+        {
+            "file": "tmp/warehouse/lib/index.js",
+            "line": 228,
             "description": "Creates a model. If the model already exists, returns the existing model.",
             "itemtype": "method",
             "name": "model",
@@ -1602,7 +1655,7 @@
         },
         {
             "file": "tmp/warehouse/lib/index.js",
-            "line": 203,
+            "line": 256,
             "description": "Checks if the model exists.",
             "itemtype": "method",
             "name": "_hasModel",
@@ -1624,7 +1677,7 @@
         },
         {
             "file": "tmp/warehouse/lib/index.js",
-            "line": 216,
+            "line": 269,
             "description": "See {% crosslink Model %}",
             "itemtype": "property",
             "name": "Model",
@@ -1635,7 +1688,7 @@
         },
         {
             "file": "tmp/warehouse/lib/index.js",
-            "line": 226,
+            "line": 279,
             "description": "See {% crosslink Schema %}",
             "itemtype": "property",
             "name": "Schema",
@@ -1646,7 +1699,7 @@
         },
         {
             "file": "tmp/warehouse/lib/index.js",
-            "line": 236,
+            "line": 289,
             "description": "See {% crosslink SchemaType %}",
             "itemtype": "property",
             "name": "SchemaType",
@@ -1657,7 +1710,7 @@
         },
         {
             "file": "tmp/warehouse/lib/index.js",
-            "line": 246,
+            "line": 299,
             "description": "See {% crosslink util %}",
             "itemtype": "property",
             "name": "util",
@@ -1888,7 +1941,7 @@
         {
             "file": "tmp/warehouse/lib/model.js",
             "line": 281,
-            "description": "Finds a single document by id.\n\n`get` is also aliased as `findById`",
+            "description": "Finds a single document by id.",
             "itemtype": "method",
             "name": "get",
             "params": [
@@ -1907,7 +1960,27 @@
         },
         {
             "file": "tmp/warehouse/lib/model.js",
-            "line": 307,
+            "line": 305,
+            "description": "Alias for {% crosslink Model.get %}",
+            "itemtype": "method",
+            "name": "findById",
+            "params": [
+                {
+                    "name": "id",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Document"
+            },
+            "class": "Model",
+            "module": "warehouse"
+        },
+        {
+            "file": "tmp/warehouse/lib/model.js",
+            "line": 314,
             "description": "Finds raw data of a single document by id.",
             "itemtype": "method",
             "name": "_getRaw",
@@ -1929,8 +2002,8 @@
         },
         {
             "file": "tmp/warehouse/lib/model.js",
-            "line": 320,
-            "description": "Iterates over the model.\n\n`forEach` is also aliased as `each`.",
+            "line": 327,
+            "description": "Iterates over the model.",
             "itemtype": "method",
             "name": "forEach",
             "params": [
@@ -1946,7 +2019,24 @@
         },
         {
             "file": "tmp/warehouse/lib/model.js",
-            "line": 340,
+            "line": 345,
+            "description": "Alias for {% crosslink Model.forEach %}",
+            "itemtype": "method",
+            "name": "each",
+            "params": [
+                {
+                    "name": "iterator",
+                    "description": "",
+                    "type": "Function"
+                }
+            ],
+            "chainable": 1,
+            "class": "Model",
+            "module": "warehouse"
+        },
+        {
+            "file": "tmp/warehouse/lib/model.js",
+            "line": 354,
             "description": "Returns an array containing all items in the model.",
             "itemtype": "method",
             "name": "toArray",
@@ -1959,7 +2049,7 @@
         },
         {
             "file": "tmp/warehouse/lib/model.js",
-            "line": 357,
+            "line": 371,
             "description": "Returns the number of items in the model.",
             "itemtype": "method",
             "name": "count",
@@ -1972,7 +2062,20 @@
         },
         {
             "file": "tmp/warehouse/lib/model.js",
-            "line": 368,
+            "line": 382,
+            "description": "Alias for {% crosslink Model.count %}",
+            "itemtype": "method",
+            "name": "size",
+            "return": {
+                "description": "",
+                "type": "Number"
+            },
+            "class": "Model",
+            "module": "warehouse"
+        },
+        {
+            "file": "tmp/warehouse/lib/model.js",
+            "line": 390,
             "description": "Applies the schema.",
             "itemtype": "method",
             "name": "_applySetter",
@@ -2010,7 +2113,7 @@
         },
         {
             "file": "tmp/warehouse/lib/model.js",
-            "line": 450,
+            "line": 472,
             "description": "Saves a document to the model.",
             "itemtype": "method",
             "name": "_save",
@@ -2033,7 +2136,7 @@
         },
         {
             "file": "tmp/warehouse/lib/model.js",
-            "line": 495,
+            "line": 517,
             "description": "Inserts a document to the model.",
             "itemtype": "method",
             "name": "insert",
@@ -2056,7 +2159,7 @@
         },
         {
             "file": "tmp/warehouse/lib/model.js",
-            "line": 523,
+            "line": 545,
             "description": "Fires when a document inserted.",
             "itemtype": "event",
             "name": "insert",
@@ -2072,7 +2175,7 @@
         },
         {
             "file": "tmp/warehouse/lib/model.js",
-            "line": 536,
+            "line": 558,
             "description": "Updates documents matching the `conditions` in the model.\n`conditions` can be either a query object or the id of the document.",
             "itemtype": "method",
             "name": "update",
@@ -2100,7 +2203,7 @@
         },
         {
             "file": "tmp/warehouse/lib/model.js",
-            "line": 557,
+            "line": 579,
             "description": "Combines the old and the new data.",
             "itemtype": "method",
             "name": "_update",
@@ -2127,7 +2230,7 @@
         },
         {
             "file": "tmp/warehouse/lib/model.js",
-            "line": 603,
+            "line": 625,
             "description": "Updates a document in the model by id.",
             "itemtype": "method",
             "name": "updateById",
@@ -2155,7 +2258,7 @@
         },
         {
             "file": "tmp/warehouse/lib/model.js",
-            "line": 624,
+            "line": 646,
             "description": "Fires when a document updated.",
             "itemtype": "event",
             "name": "update",
@@ -2171,7 +2274,7 @@
         },
         {
             "file": "tmp/warehouse/lib/model.js",
-            "line": 637,
+            "line": 659,
             "description": "Replaces documents matching the `conditions` in the model.\n`conditions` can be either a query object or the id of the document.",
             "itemtype": "method",
             "name": "replace",
@@ -2199,7 +2302,7 @@
         },
         {
             "file": "tmp/warehouse/lib/model.js",
-            "line": 658,
+            "line": 680,
             "description": "Replaces a document in the model by id.",
             "itemtype": "method",
             "name": "replaceById",
@@ -2227,7 +2330,7 @@
         },
         {
             "file": "tmp/warehouse/lib/model.js",
-            "line": 684,
+            "line": 706,
             "description": "Removes documents matching the `conditions` in the model.\n`conditions` can be either a query object or the id of the document.",
             "itemtype": "method",
             "name": "remove",
@@ -2250,7 +2353,7 @@
         },
         {
             "file": "tmp/warehouse/lib/model.js",
-            "line": 704,
+            "line": 726,
             "description": "Removes a document in the model by id.",
             "itemtype": "method",
             "name": "removeById",
@@ -2273,7 +2376,7 @@
         },
         {
             "file": "tmp/warehouse/lib/model.js",
-            "line": 731,
+            "line": 753,
             "description": "Fires when a document removed.",
             "itemtype": "event",
             "name": "remove",
@@ -2289,7 +2392,7 @@
         },
         {
             "file": "tmp/warehouse/lib/model.js",
-            "line": 751,
+            "line": 773,
             "description": "Saves a document to the model.",
             "itemtype": "method",
             "name": "save",
@@ -2312,7 +2415,7 @@
         },
         {
             "file": "tmp/warehouse/lib/model.js",
-            "line": 770,
+            "line": 792,
             "description": "Deletes all documents in the model.",
             "itemtype": "method",
             "name": "destroy",
@@ -2322,7 +2425,7 @@
         },
         {
             "file": "tmp/warehouse/lib/model.js",
-            "line": 784,
+            "line": 806,
             "description": "Returns the document at the specified index.\n`num` can be a positive or negative number.",
             "itemtype": "method",
             "name": "eq",
@@ -2342,7 +2445,7 @@
         },
         {
             "file": "tmp/warehouse/lib/model.js",
-            "line": 800,
+            "line": 822,
             "description": "Returns the first document in the model.\n\nThis method is an alias of:\n\n``` js\nmodel.eq(0);\n```",
             "itemtype": "method",
             "name": "first",
@@ -2355,7 +2458,7 @@
         },
         {
             "file": "tmp/warehouse/lib/model.js",
-            "line": 817,
+            "line": 839,
             "description": "Returns the last document in the model.\n\nThis method is an alias of:\n\n``` js\nmodel.eq(-1);\n```",
             "itemtype": "method",
             "name": "last",
@@ -2368,7 +2471,7 @@
         },
         {
             "file": "tmp/warehouse/lib/model.js",
-            "line": 834,
+            "line": 856,
             "description": "Returns the specified range of documents in the model.",
             "itemtype": "method",
             "name": "slice",
@@ -2394,7 +2497,7 @@
         },
         {
             "file": "tmp/warehouse/lib/model.js",
-            "line": 847,
+            "line": 869,
             "description": "Limits the number of items returned.\n\nThis method is an alias of:\n\n``` js\nmodel.slice(0, num);\n```",
             "itemtype": "method",
             "name": "limit",
@@ -2414,7 +2517,7 @@
         },
         {
             "file": "tmp/warehouse/lib/model.js",
-            "line": 865,
+            "line": 887,
             "description": "Specifies the number of items to skip.\n\nThis method is an alias of:\n\n``` js\nmodel.slice(num);\n`",
             "itemtype": "method",
             "name": "skip",
@@ -2434,7 +2537,7 @@
         },
         {
             "file": "tmp/warehouse/lib/model.js",
-            "line": 883,
+            "line": 905,
             "description": "Returns the model in reversed order.",
             "itemtype": "method",
             "name": "reverse",
@@ -2447,7 +2550,7 @@
         },
         {
             "file": "tmp/warehouse/lib/model.js",
-            "line": 894,
+            "line": 916,
             "description": "Sorts the documents in the model.\n\nSee {% crosslink Query/sort %}",
             "itemtype": "method",
             "name": "sort",
@@ -2473,8 +2576,8 @@
         },
         {
             "file": "tmp/warehouse/lib/model.js",
-            "line": 911,
-            "description": "Returns the documents in the model in random order.\n\n`random` is also aliased as `shuffle`.",
+            "line": 933,
+            "description": "Returns the documents in the model in random order.",
             "itemtype": "method",
             "name": "random",
             "return": {
@@ -2486,7 +2589,20 @@
         },
         {
             "file": "tmp/warehouse/lib/model.js",
-            "line": 924,
+            "line": 944,
+            "description": "Alias for {% crosslink Model.random %}",
+            "itemtype": "method",
+            "name": "shuffle",
+            "return": {
+                "description": "",
+                "type": "Query"
+            },
+            "class": "Model",
+            "module": "warehouse"
+        },
+        {
+            "file": "tmp/warehouse/lib/model.js",
+            "line": 952,
             "description": "Finds the matching documents in the model.\n\nSee {% crosslink Query/find %}",
             "itemtype": "method",
             "name": "find",
@@ -2512,7 +2628,7 @@
         },
         {
             "file": "tmp/warehouse/lib/model.js",
-            "line": 939,
+            "line": 967,
             "description": "Finds the first matching document.",
             "itemtype": "method",
             "name": "findOne",
@@ -2532,7 +2648,7 @@
         },
         {
             "file": "tmp/warehouse/lib/model.js",
-            "line": 951,
+            "line": 979,
             "description": "Popluates document references.",
             "itemtype": "method",
             "name": "_populate",
@@ -2559,7 +2675,7 @@
         },
         {
             "file": "tmp/warehouse/lib/model.js",
-            "line": 995,
+            "line": 1023,
             "description": "Sets the path to populate.",
             "itemtype": "method",
             "name": "populate",
@@ -2568,6 +2684,98 @@
                     "name": "name",
                     "description": "",
                     "type": "String"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Query"
+            },
+            "class": "Model",
+            "module": "warehouse"
+        },
+        {
+            "file": "tmp/warehouse/lib/model.js",
+            "line": 1035,
+            "description": "Creates an array of values by iterating each element in the collection.",
+            "itemtype": "method",
+            "name": "map",
+            "params": [
+                {
+                    "name": "callback",
+                    "description": "",
+                    "type": "Function|String"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Array"
+            },
+            "class": "Model",
+            "module": "warehouse"
+        },
+        {
+            "file": "tmp/warehouse/lib/model.js",
+            "line": 1046,
+            "description": "Reduces a collection to a value which is the accumulated result of iterating each element in the collection.",
+            "itemtype": "method",
+            "name": "reduce",
+            "params": [
+                {
+                    "name": "callback",
+                    "description": "",
+                    "type": "Function"
+                },
+                {
+                    "name": "initial",
+                    "description": "Initial value",
+                    "type": "Any",
+                    "optional": true
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Any"
+            },
+            "class": "Model",
+            "module": "warehouse"
+        },
+        {
+            "file": "tmp/warehouse/lib/model.js",
+            "line": 1058,
+            "description": "Reduces a collection to a value which is the accumulated result of iterating each element in the collection from right to left.",
+            "itemtype": "method",
+            "name": "reduceRight",
+            "params": [
+                {
+                    "name": "callback",
+                    "description": "",
+                    "type": "Function"
+                },
+                {
+                    "name": "initial",
+                    "description": "Initial value",
+                    "type": "Any",
+                    "optional": true
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Any"
+            },
+            "class": "Model",
+            "module": "warehouse"
+        },
+        {
+            "file": "tmp/warehouse/lib/model.js",
+            "line": 1070,
+            "description": "Iterates over the query and returns all elements the callback returns truey for.",
+            "itemtype": "method",
+            "name": "filter",
+            "params": [
+                {
+                    "name": "callback",
+                    "description": "",
+                    "type": "Function"
                 }
             ],
             "return": {
@@ -2638,7 +2846,7 @@
         {
             "file": "tmp/warehouse/lib/query.js",
             "line": 99,
-            "description": "Iterates over the query.\n\n`forEach` is also aliased as `each`.",
+            "description": "Iterates over the query.",
             "itemtype": "method",
             "name": "forEach",
             "params": [
@@ -2654,7 +2862,24 @@
         },
         {
             "file": "tmp/warehouse/lib/query.js",
-            "line": 121,
+            "line": 119,
+            "description": "Alias for {% crosslink Query.forEach %}",
+            "itemtype": "method",
+            "name": "each",
+            "params": [
+                {
+                    "name": "iterator",
+                    "description": "",
+                    "type": "Function"
+                }
+            ],
+            "chainable": 1,
+            "class": "Query",
+            "module": "warehouse"
+        },
+        {
+            "file": "tmp/warehouse/lib/query.js",
+            "line": 128,
             "description": "Returns an array containing all documents in the query.",
             "itemtype": "method",
             "name": "toArray",
@@ -2667,7 +2892,7 @@
         },
         {
             "file": "tmp/warehouse/lib/query.js",
-            "line": 138,
+            "line": 145,
             "description": "Returns the number of documents in the query.",
             "itemtype": "method",
             "name": "count",
@@ -2680,7 +2905,20 @@
         },
         {
             "file": "tmp/warehouse/lib/query.js",
-            "line": 149,
+            "line": 156,
+            "description": "Alias for {% crosslink Query.count %}",
+            "itemtype": "method",
+            "name": "size",
+            "return": {
+                "description": "",
+                "type": "Number"
+            },
+            "class": "Query",
+            "module": "warehouse"
+        },
+        {
+            "file": "tmp/warehouse/lib/query.js",
+            "line": 164,
             "description": "Updates all documents in the query.",
             "itemtype": "method",
             "name": "update",
@@ -2703,7 +2941,7 @@
         },
         {
             "file": "tmp/warehouse/lib/query.js",
-            "line": 174,
+            "line": 189,
             "description": "Replaces all documents in the query.",
             "itemtype": "method",
             "name": "replace",
@@ -2726,7 +2964,7 @@
         },
         {
             "file": "tmp/warehouse/lib/query.js",
-            "line": 199,
+            "line": 214,
             "description": "Removes all documents in the query.",
             "itemtype": "method",
             "name": "remove",
@@ -2744,7 +2982,7 @@
         },
         {
             "file": "tmp/warehouse/lib/query.js",
-            "line": 223,
+            "line": 238,
             "description": "Returns the document at the specified index.\n`num` can be a positive or negative number.",
             "itemtype": "method",
             "name": "eq",
@@ -2764,7 +3002,7 @@
         },
         {
             "file": "tmp/warehouse/lib/query.js",
-            "line": 239,
+            "line": 254,
             "description": "Returns the first document in the query.\n\nThis method is an alias of:\n\n``` js\nquery.eq(0);\n```",
             "itemtype": "method",
             "name": "first",
@@ -2777,7 +3015,7 @@
         },
         {
             "file": "tmp/warehouse/lib/query.js",
-            "line": 256,
+            "line": 271,
             "description": "Returns the last item in the model.\n\nThis method is an alias of:\n\n``` js\nquery.eq(-1);\n```",
             "itemtype": "method",
             "name": "last",
@@ -2790,7 +3028,7 @@
         },
         {
             "file": "tmp/warehouse/lib/query.js",
-            "line": 273,
+            "line": 288,
             "description": "Returns the specified range of documents in the query.",
             "itemtype": "method",
             "name": "slice",
@@ -2816,7 +3054,7 @@
         },
         {
             "file": "tmp/warehouse/lib/query.js",
-            "line": 286,
+            "line": 301,
             "description": "Limits the number of items returned.\n\nThis method is an alias of:\n\n``` js\nquery.slice(0, num);\n```",
             "itemtype": "method",
             "name": "limit",
@@ -2836,7 +3074,7 @@
         },
         {
             "file": "tmp/warehouse/lib/query.js",
-            "line": 304,
+            "line": 319,
             "description": "Specifies the number of items to skip.\n\nThis method is an alias of:\n\n``` js\nquery.slice(num);\n```",
             "itemtype": "method",
             "name": "skip",
@@ -2856,7 +3094,7 @@
         },
         {
             "file": "tmp/warehouse/lib/query.js",
-            "line": 322,
+            "line": 337,
             "description": "Returns the query in reversed order.",
             "itemtype": "method",
             "name": "reverse",
@@ -2869,7 +3107,7 @@
         },
         {
             "file": "tmp/warehouse/lib/query.js",
-            "line": 333,
+            "line": 348,
             "description": "Sorts the documents in the query.\n\nExample:\n\n``` js\nquery.sort('date', -1);\nquery.sort({date: -1, title: 1});\n```\n\nIf the `order` equals to `-1`, `desc` or `descending`, the data will be returned in reversed order.",
             "itemtype": "method",
             "name": "sort",
@@ -2895,8 +3133,8 @@
         },
         {
             "file": "tmp/warehouse/lib/query.js",
-            "line": 391,
-            "description": "Returns the documents in the query in random order.\n\n`random` is also aliased as `shuffle`.",
+            "line": 406,
+            "description": "Returns the documents in the query in random order.",
             "itemtype": "method",
             "name": "random",
             "return": {
@@ -2908,7 +3146,20 @@
         },
         {
             "file": "tmp/warehouse/lib/query.js",
-            "line": 404,
+            "line": 417,
+            "description": "Alias for {% crosslink Query.random %}",
+            "itemtype": "method",
+            "name": "shuffle",
+            "return": {
+                "description": "",
+                "type": "Query"
+            },
+            "class": "Query",
+            "module": "warehouse"
+        },
+        {
+            "file": "tmp/warehouse/lib/query.js",
+            "line": 425,
             "description": "Checks if the `data` matches the `conditions`.",
             "itemtype": "method",
             "name": "_query",
@@ -2935,7 +3186,7 @@
         },
         {
             "file": "tmp/warehouse/lib/query.js",
-            "line": 498,
+            "line": 519,
             "description": "Finds the matching documents in the query.",
             "itemtype": "method",
             "name": "find",
@@ -2969,7 +3220,7 @@
         },
         {
             "file": "tmp/warehouse/lib/query.js",
-            "line": 521,
+            "line": 542,
             "description": "Finds the first matching document.",
             "itemtype": "method",
             "name": "findOne",
@@ -2989,7 +3240,7 @@
         },
         {
             "file": "tmp/warehouse/lib/query.js",
-            "line": 533,
+            "line": 554,
             "description": "Sets the path to populate.",
             "itemtype": "method",
             "name": "populate",
@@ -3001,6 +3252,98 @@
                 }
             ],
             "chainable": 1,
+            "class": "Query",
+            "module": "warehouse"
+        },
+        {
+            "file": "tmp/warehouse/lib/query.js",
+            "line": 568,
+            "description": "Creates an array of values by iterating each element in the collection.",
+            "itemtype": "method",
+            "name": "map",
+            "params": [
+                {
+                    "name": "callback",
+                    "description": "",
+                    "type": "Function|String"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Array"
+            },
+            "class": "Query",
+            "module": "warehouse"
+        },
+        {
+            "file": "tmp/warehouse/lib/query.js",
+            "line": 579,
+            "description": "Reduces a collection to a value which is the accumulated result of iterating each element in the collection.",
+            "itemtype": "method",
+            "name": "reduce",
+            "params": [
+                {
+                    "name": "callback",
+                    "description": "",
+                    "type": "Function"
+                },
+                {
+                    "name": "initial",
+                    "description": "Initial value",
+                    "type": "Any",
+                    "optional": true
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Any"
+            },
+            "class": "Query",
+            "module": "warehouse"
+        },
+        {
+            "file": "tmp/warehouse/lib/query.js",
+            "line": 591,
+            "description": "Reduces a collection to a value which is the accumulated result of iterating each element in the collection from right to left.",
+            "itemtype": "method",
+            "name": "reduceRight",
+            "params": [
+                {
+                    "name": "callback",
+                    "description": "",
+                    "type": "Function"
+                },
+                {
+                    "name": "initial",
+                    "description": "Initial value",
+                    "type": "Any",
+                    "optional": true
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Any"
+            },
+            "class": "Query",
+            "module": "warehouse"
+        },
+        {
+            "file": "tmp/warehouse/lib/query.js",
+            "line": 603,
+            "description": "Iterates over the query and returns all elements the callback returns truey for.",
+            "itemtype": "method",
+            "name": "filter",
+            "params": [
+                {
+                    "name": "callback",
+                    "description": "",
+                    "type": "Function"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Query"
+            },
             "class": "Query",
             "module": "warehouse"
         },

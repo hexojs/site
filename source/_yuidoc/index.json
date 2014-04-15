@@ -2,7 +2,7 @@
     "project": {
         "name": "hexo",
         "description": "A fast, simple & powerful blog framework, powered by Node.js.",
-        "version": "2.5.0"
+        "version": "2.5.3"
     },
     "files": {
         "tmp/hexo/lib/box/file.js": {
@@ -735,7 +735,7 @@
             "module": "hexo",
             "namespace": "",
             "file": "tmp/hexo/lib/box/index.js",
-            "line": 13,
+            "line": 14,
             "description": "This module is used to manage files and processors.",
             "is_constructor": 1,
             "params": [
@@ -787,7 +787,7 @@
             "module": "hexo",
             "namespace": "",
             "file": "tmp/hexo/lib/core/index.js",
-            "line": 21,
+            "line": 17,
             "description": "All Hexo methods and functions are defined inside of this namespace.",
             "is_constructor": 1,
             "extends": "EventEmitter"
@@ -803,7 +803,7 @@
             "module": "hexo",
             "namespace": "Box",
             "file": "tmp/hexo/lib/box/pattern.js",
-            "line": 3,
+            "line": 6,
             "description": "The pattern object of the Box class.\nThis module parses the string and tests if the string matches the pattern.\n\nYou can use a regular expression, a function or a Backbone-like string in the `rule` param.",
             "params": [
                 {
@@ -1123,7 +1123,7 @@
             "module": "hexo",
             "namespace": "Extend",
             "file": "tmp/hexo/lib/extend/tag.js",
-            "line": 4,
+            "line": 7,
             "description": "This class is used to manage all tag plugins in Hexo.",
             "is_constructor": 1
         },
@@ -1587,7 +1587,7 @@
         },
         {
             "file": "tmp/hexo/lib/box/index.js",
-            "line": 28,
+            "line": 29,
             "description": "Base path.",
             "itemtype": "property",
             "name": "base",
@@ -1597,7 +1597,7 @@
         },
         {
             "file": "tmp/hexo/lib/box/index.js",
-            "line": 36,
+            "line": 37,
             "description": "Processor collection.",
             "itemtype": "property",
             "name": "processors",
@@ -1607,7 +1607,7 @@
         },
         {
             "file": "tmp/hexo/lib/box/index.js",
-            "line": 44,
+            "line": 45,
             "description": "Processing files.",
             "itemtype": "property",
             "name": "processingFiles",
@@ -1619,7 +1619,7 @@
         },
         {
             "file": "tmp/hexo/lib/box/index.js",
-            "line": 53,
+            "line": 54,
             "description": "A instance of watcher.",
             "itemtype": "property",
             "name": "watcher",
@@ -1629,7 +1629,7 @@
         },
         {
             "file": "tmp/hexo/lib/box/index.js",
-            "line": 61,
+            "line": 62,
             "description": "Indicates if the box is processing.",
             "itemtype": "property",
             "name": "isProcessing",
@@ -1641,7 +1641,7 @@
         },
         {
             "file": "tmp/hexo/lib/box/index.js",
-            "line": 70,
+            "line": 71,
             "itemtype": "property",
             "name": "options",
             "type": "Object",
@@ -1650,7 +1650,7 @@
         },
         {
             "file": "tmp/hexo/lib/box/index.js",
-            "line": 83,
+            "line": 84,
             "description": "Adds a processor to the box.",
             "itemtype": "method",
             "name": "addProcessor",
@@ -1671,7 +1671,7 @@
         },
         {
             "file": "tmp/hexo/lib/box/index.js",
-            "line": 97,
+            "line": 98,
             "description": "Dispatches files to processors.",
             "itemtype": "method",
             "name": "_dispatch",
@@ -1701,7 +1701,7 @@
         },
         {
             "file": "tmp/hexo/lib/box/index.js",
-            "line": 138,
+            "line": 154,
             "description": "Loads all files and runs processors.",
             "itemtype": "method",
             "name": "process",
@@ -1725,7 +1725,7 @@
         },
         {
             "file": "tmp/hexo/lib/box/index.js",
-            "line": 163,
+            "line": 179,
             "description": "Fired before the process started.",
             "itemtype": "event",
             "name": "processBefore",
@@ -1741,7 +1741,7 @@
         },
         {
             "file": "tmp/hexo/lib/box/index.js",
-            "line": 204,
+            "line": 216,
             "description": "Fired after the process has been done.",
             "itemtype": "event",
             "name": "processAfter",
@@ -1757,7 +1757,7 @@
         },
         {
             "file": "tmp/hexo/lib/box/index.js",
-            "line": 222,
+            "line": 234,
             "description": "Starts watching.",
             "itemtype": "method",
             "name": "watch",
@@ -1766,7 +1766,7 @@
         },
         {
             "file": "tmp/hexo/lib/box/index.js",
-            "line": 271,
+            "line": 283,
             "description": "Stops watching.",
             "itemtype": "method",
             "name": "unwatch",
@@ -1775,7 +1775,7 @@
         },
         {
             "file": "tmp/hexo/lib/box/pattern.js",
-            "line": 46,
+            "line": 50,
             "description": "Tests if the string matches the pattern.",
             "itemtype": "method",
             "name": "test",
@@ -1795,7 +1795,7 @@
         },
         {
             "file": "tmp/hexo/lib/box/pattern.js",
-            "line": 57,
+            "line": 61,
             "description": "Tests if the string matches the pattern and returns the parameters in the URL. Returns `null` if the string doesn't matches the pattern.\n\nFor example:\n\n``` js\n// posts/:id\npattern.match('posts/89')\n// {0: 'posts/89', 1: '89', id: '89'}\n\n// posts/*path\npattern.match('posts/2013/hello-world')\n// {0: 'posts/2013/hello-world', 1: '2013/hello-world', path: '2013/hello-world'}\n```",
             "itemtype": "method",
             "name": "match",
@@ -1956,7 +1956,7 @@
         },
         {
             "file": "tmp/hexo/lib/core/index.js",
-            "line": 37,
+            "line": 33,
             "description": "Defines a constant.",
             "itemtype": "method",
             "name": "constant",
@@ -1978,7 +1978,7 @@
         },
         {
             "file": "tmp/hexo/lib/core/index.js",
-            "line": 62,
+            "line": 58,
             "description": "Bootstraps Hexo environment.",
             "itemtype": "method",
             "name": "bootstrap",
@@ -2001,7 +2001,7 @@
         },
         {
             "file": "tmp/hexo/lib/core/index.js",
-            "line": 73,
+            "line": 69,
             "description": "The path of core directory of Hexo.",
             "itemtype": "property",
             "name": "core_dir",
@@ -2012,7 +2012,7 @@
         },
         {
             "file": "tmp/hexo/lib/core/index.js",
-            "line": 83,
+            "line": 79,
             "description": "The path of library directory of Hexo.",
             "itemtype": "property",
             "name": "lib_dir",
@@ -2023,7 +2023,7 @@
         },
         {
             "file": "tmp/hexo/lib/core/index.js",
-            "line": 93,
+            "line": 89,
             "description": "Hexo version number.",
             "itemtype": "property",
             "name": "version",
@@ -2034,7 +2034,7 @@
         },
         {
             "file": "tmp/hexo/lib/core/index.js",
-            "line": 103,
+            "line": 99,
             "description": "The path of base directory, equals to the current working directory (CWD).",
             "itemtype": "property",
             "name": "base_dir",
@@ -2045,7 +2045,7 @@
         },
         {
             "file": "tmp/hexo/lib/core/index.js",
-            "line": 113,
+            "line": 109,
             "description": "Environment variables.\n\nThis object contains the following attributes:\n\n  - debug: Determines whether debug mode is on.\n  - safe: Determines whether safe mode is on.\n  - silent: Determines whether silent mode is on.\n  - env: Node.js environment variable. Default to `development`.\n  - version: Hexo version number.\n  - init: Determines whether Hexo has been initalized.",
             "itemtype": "property",
             "name": "env",
@@ -2056,7 +2056,7 @@
         },
         {
             "file": "tmp/hexo/lib/core/index.js",
-            "line": 139,
+            "line": 135,
             "description": "See {% crosslink util %}.",
             "itemtype": "property",
             "name": "util",
@@ -2066,7 +2066,7 @@
         },
         {
             "file": "tmp/hexo/lib/core/index.js",
-            "line": 148,
+            "line": 144,
             "description": "See {% crosslink util.file2 %}.",
             "itemtype": "property",
             "name": "file",
@@ -2076,7 +2076,7 @@
         },
         {
             "file": "tmp/hexo/lib/core/index.js",
-            "line": 157,
+            "line": 153,
             "description": "See {% crosslink Router %}.",
             "itemtype": "property",
             "name": "route",
@@ -2086,7 +2086,7 @@
         },
         {
             "file": "tmp/hexo/lib/core/index.js",
-            "line": 166,
+            "line": 162,
             "description": "See {% crosslink Locals %}.",
             "itemtype": "property",
             "name": "locals",
@@ -2096,7 +2096,7 @@
         },
         {
             "file": "tmp/hexo/lib/core/index.js",
-            "line": 175,
+            "line": 171,
             "description": "See {% crosslink render %}.",
             "itemtype": "property",
             "name": "render",
@@ -2106,7 +2106,7 @@
         },
         {
             "file": "tmp/hexo/lib/core/index.js",
-            "line": 184,
+            "line": 180,
             "description": "See {% crosslink scaffold %}.",
             "itemtype": "property",
             "name": "scaffold",
@@ -2116,7 +2116,7 @@
         },
         {
             "file": "tmp/hexo/lib/core/index.js",
-            "line": 193,
+            "line": 189,
             "description": "See {% crosslink post %}.",
             "itemtype": "property",
             "name": "post",
@@ -2126,7 +2126,7 @@
         },
         {
             "file": "tmp/hexo/lib/core/index.js",
-            "line": 205,
+            "line": 201,
             "description": "Calls a console plugin.",
             "itemtype": "method",
             "name": "call",
@@ -3091,7 +3091,7 @@
         },
         {
             "file": "tmp/hexo/lib/extend/renderer.js",
-            "line": 79,
+            "line": 87,
             "description": "Gets extension name.",
             "itemtype": "method",
             "name": "getExtname",
@@ -3113,7 +3113,7 @@
         },
         {
             "file": "tmp/hexo/lib/extend/renderer.js",
-            "line": 92,
+            "line": 100,
             "description": "Gets the renderer plugin.",
             "itemtype": "method",
             "name": "get",
@@ -3136,7 +3136,7 @@
         },
         {
             "file": "tmp/hexo/lib/extend/renderer.js",
-            "line": 106,
+            "line": 114,
             "description": "Checks if the given `path` is renderable.",
             "itemtype": "method",
             "name": "isRenderable",
@@ -3156,7 +3156,7 @@
         },
         {
             "file": "tmp/hexo/lib/extend/renderer.js",
-            "line": 118,
+            "line": 126,
             "description": "Checks if the given `path` is renderable by synchronized renderer.",
             "itemtype": "method",
             "name": "isRenderableSync",
@@ -3176,7 +3176,7 @@
         },
         {
             "file": "tmp/hexo/lib/extend/renderer.js",
-            "line": 130,
+            "line": 138,
             "description": "Gets the output extension name.",
             "itemtype": "method",
             "name": "getOutput",
@@ -3196,16 +3196,16 @@
         },
         {
             "file": "tmp/hexo/lib/extend/tag.js",
-            "line": 14,
+            "line": 17,
             "itemtype": "property",
             "name": "store",
-            "type": "Object",
+            "type": "Array",
             "class": "Extend.Tag",
             "module": "hexo"
         },
         {
             "file": "tmp/hexo/lib/extend/tag.js",
-            "line": 22,
+            "line": 24,
             "description": "Returns a list of tag plugins.",
             "itemtype": "method",
             "name": "list",
@@ -3218,8 +3218,8 @@
         },
         {
             "file": "tmp/hexo/lib/extend/tag.js",
-            "line": 33,
-            "description": "Registers a tag plugin.",
+            "line": 35,
+            "description": "Registers a tag plugin.\n\n``` js\nhexo.extend.tag.register('name', function(){\n  // ...\n}, true);\n```\n\nequals to:\n\n``` js\nhexo.extend.tag.register('name', function(){\n  // ...\n}, {ends: true});\n```",
             "itemtype": "method",
             "name": "register",
             "params": [
@@ -3234,11 +3234,26 @@
                     "type": "Function"
                 },
                 {
-                    "name": "ends",
+                    "name": "options",
                     "description": "",
-                    "type": "Boolean",
+                    "type": "Object|Boolean",
                     "optional": true,
-                    "optdefault": "false"
+                    "props": [
+                        {
+                            "name": "ends",
+                            "description": "Whether the tag have an end tag",
+                            "type": "Boolean",
+                            "optional": true,
+                            "optdefault": "false"
+                        },
+                        {
+                            "name": "escape",
+                            "description": "Prevent contents within the tag from being rendered by markdown or other render engines.",
+                            "type": "Boolean",
+                            "optional": true,
+                            "optdefault": "true"
+                        }
+                    ]
                 }
             ],
             "class": "Extend.Tag",
@@ -3889,7 +3904,7 @@
         },
         {
             "file": "tmp/hexo/lib/plugins/console/deploy.js",
-            "line": 40,
+            "line": 41,
             "description": "Fired before deployment.",
             "itemtype": "event",
             "name": "deployBefore",
@@ -3898,7 +3913,7 @@
         },
         {
             "file": "tmp/hexo/lib/plugins/console/deploy.js",
-            "line": 50,
+            "line": 51,
             "description": "Fired after deployment.",
             "itemtype": "event",
             "name": "deployAfter",
@@ -4121,7 +4136,7 @@
         },
         {
             "file": "tmp/hexo/lib/post/render.js",
-            "line": 12,
+            "line": 11,
             "description": "Renders post contents.\n\nRendering flow:\n\n- Compiles with Swig\n- Runs pre-filter\n- Compiles with Markdown (or other render engines, depends on the extension name of source files)\n- Runs post-filter",
             "itemtype": "method",
             "name": "render",
@@ -4464,6 +4479,27 @@
             "description": "Converts all tabs to spaces in the string.",
             "itemtype": "method",
             "name": "yaml",
+            "params": [
+                {
+                    "name": "str",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "String"
+            },
+            "static": 1,
+            "class": "util.escape",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/util/escape.js",
+            "line": 89,
+            "description": "Escapes all keywords in regular expressions.",
+            "itemtype": "method",
+            "name": "regex",
             "params": [
                 {
                     "name": "str",
@@ -6049,7 +6085,7 @@
             "name": "yfm",
             "params": [
                 {
-                    "name": "source",
+                    "name": "str",
                     "description": "",
                     "type": "String"
                 }
@@ -6064,13 +6100,13 @@
         },
         {
             "file": "tmp/hexo/lib/util/yfm.js",
-            "line": 38,
+            "line": 30,
             "description": "Parses YAML front-matter.",
             "itemtype": "method",
             "name": "parse",
             "params": [
                 {
-                    "name": "source",
+                    "name": "str",
                     "description": "",
                     "type": "String"
                 }
@@ -6085,7 +6121,7 @@
         },
         {
             "file": "tmp/hexo/lib/util/yfm.js",
-            "line": 51,
+            "line": 61,
             "description": "Converts the object to YAML front-matter string.",
             "itemtype": "method",
             "name": "stringify",

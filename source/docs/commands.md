@@ -32,8 +32,8 @@ Generates static files.
 
 Option | Description
 --- | ---
-`-d`<br>`--deploy` | Deploy after generate done
-`-w`<br>`--watch` | Watch file changes
+`-d`, `--deploy` | Deploy after generate done
+`-w`, `--watch` | Watch file changes
 
 ## publish
 
@@ -57,10 +57,10 @@ Starts server.
 
 Option | Description
 --- | ---
-`-p`<br>`--port` | Override default port
-`-s`<br>`--static` | Only serve static files
-`-l`<br>`--log` | Enable logger. Override logger format.
-`-d`<br>`--drafts` | Serve drafts as normal posts.
+`-p`, `--port` | Override default port
+`-s`, `--static` | Only serve static files
+`-l`, `--log` | Enable logger. Override logger format.
+`-d`, `--drafts` | Serve drafts as normal posts.
 
 ## deploy
 
@@ -75,7 +75,8 @@ Deploys your website.
 Option | Description
 --- | ---
 `--setup` | Setup without deployment
-`--generate` | Generate before deployment
+`-g`, `--generate` | Generate before deployment
+`-m`, `--message` | Customize commit message
 
 ## render
 
@@ -87,7 +88,7 @@ Renders files.
 
 Option | Description
 --- | ---
-`-o`<br>`--output` | Output destination
+`-o`, `--output` | Output destination
 
 ## migrate
 

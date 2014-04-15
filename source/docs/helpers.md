@@ -486,6 +486,7 @@ Option | Description | Default
 `twitter_id` | Twitter ID (`twitter:creator`) |
 `google_plus` | Google+ profile link |
 `fb_admins` | Facebook admin ID |
+`fb_app_id` | Facebook App ID
 
 ### toc
 

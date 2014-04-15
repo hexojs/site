@@ -1,11 +1,11 @@
 {
   "name": "hexo",
-  "version": "2.5.1",
+  "version": "2.5.3",
   "private": true,
   "dependencies": {
     "hexo-renderer-jade": "0.0.2",
     "hexo-yuidoc": "0.0.3",
-    "hexo-generator-sitemap": "0.1.0"
+    "hexo-generator-sitemap": "0.1.1"
   },
   "devDependencies": {
     "grunt": "~0.4.2",

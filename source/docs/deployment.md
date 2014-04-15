@@ -17,12 +17,14 @@ deploy:
   type: github
   repo: <repository url>
   branch: [branch]
+  message: [message]
 ```
 
 Option | Description
 --- | ---
-`repo`<br>`repository` | GitHub repository URL (Better to use HTTPS)
+`repo`, `repository` | GitHub repository URL (Better to use HTTPS)
 `branch` | The deployer will detect the branch to use automatically. You can also customize it on your own.
+`message` | Customize commit message (Default is `Site updated: {{ now('YYYY-MM-DD HH:mm:ss') }}`)
 
 ### Remove
 
@@ -53,11 +55,13 @@ Edit `_config.yml`.
 deploy:
   type: heroku
   repo: <repository url>
+  message: [message]
 ```
 
 Option | Description
 --- | ---
-`repo`<br>`repository` | Heroku repository URL
+`repo`, `repository` | Heroku repository URL
+`message` | Customize commit message (Default is `Site updated: {{ now('YYYY-MM-DD HH:mm:ss') }}`)
 
 ### Remove
 
@@ -79,9 +83,9 @@ deploy:
 
 Option | Description | Default
 --- | --- | ---
-`host` | Address of remote host | 
-`user` | Username | 
-`root` | Root directory of remote host | 
+`host` | Address of remote host |
+`user` | Username |
+`root` | Root directory of remote host |
 `port` | Port | 22
 `delete` | Delete old files on remote host | true
 
@@ -108,6 +112,7 @@ Edit `_config.yml`.
 ``` yaml
 deploy:
   type: git
+  message: [message]
   repo:
     github: <repository url>,[branch]
     gitcafe: <repository url>,[branch]
@@ -115,7 +120,8 @@ deploy:
 
 Option | Description
 --- | --- | ---
-`repo`<br>`repository` | Repository URL and branch. Separated with a comma (`,`). The branch is `master` by default.
+`repo`, `repository` | Repository URL and branch. Separated with a comma (`,`). The branch is `master` by default.
+`message` | Customize commit message (Default is `Site updated: {{ now('YYYY-MM-DD HH:mm:ss') }}`)
 
 ## Batch Deploy
 
@@ -127,6 +133,27 @@ deploy:
   repo: ...
 - type: heroku
   repo: ...
+```
+
+## Commit message
+
+You can customize commit message in **github**, **heroku**, **git** deployer. The default message is `Site updated: {{ now('YYYY-MM-DD HH:mm:ss') }})`.
+
+Swig is availble in commit message. You can use `now(format)` to display deployment time.
+
+Commit message can be set either in shell
+
+``` bash
+$ hexo deploy -m "Commit message"
+```
+
+or in `_config.yml`.
+
+``` yaml
+deploy:
+  type: github
+  repo: ...
+  message: "Commit message"
 ```
 
 ## Other Methods

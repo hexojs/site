@@ -81,6 +81,20 @@ Setting | Description | Default
 Write the front-matter in YAML format. Don't use tabs in the front-matter, use spaces instead. Also, add a space after colons.
 {% endnote %}
 
+## Categories & Tags
+
+Hexo supports categories and tags. Categories and tags are only supported in posts and have to be set in the front-matter. For example:
+
+``` yaml
+categories:
+- Diary
+tags:
+- PS3
+- Games
+```
+
+Categories and tags may sound fimiliar in other systems, but they're totally different in Hexo. Categories have inhertiance and are ordered, which means `Foo, Bar` doesn't equal to `Bar, Foo`. Tags are unordered and flat.
+
 ## Excerpts
 
 You can hide parts of your post by adding `<!-- more -->` in the content. Index page will only show the post from the first to the first occurrence of `<!-- more -->`.
