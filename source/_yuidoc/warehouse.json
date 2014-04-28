@@ -2,7 +2,7 @@
     "project": {
         "name": "warehouse",
         "description": "Simple JSON-based database",
-        "version": "0.2.1"
+        "version": "0.2.2"
     },
     "files": {
         "tmp/warehouse/lib/types/array.js": {
@@ -1746,7 +1746,7 @@
         {
             "file": "tmp/warehouse/lib/model.js",
             "line": 61,
-            "description": "The reference to the store in the database.",
+            "description": "Reference the store in the database as lazy-loaded getter.",
             "itemtype": "property",
             "name": "_store",
             "type": "Store",
@@ -1757,7 +1757,7 @@
         },
         {
             "file": "tmp/warehouse/lib/model.js",
-            "line": 71,
+            "line": 73,
             "description": "The index of the model.",
             "itemtype": "property",
             "name": "_index",
@@ -1769,7 +1769,7 @@
         },
         {
             "file": "tmp/warehouse/lib/model.js",
-            "line": 81,
+            "line": 83,
             "description": "The schema of the model.",
             "itemtype": "property",
             "name": "schema",
@@ -1781,7 +1781,7 @@
         },
         {
             "file": "tmp/warehouse/lib/model.js",
-            "line": 95,
+            "line": 97,
             "description": "The document constructor.",
             "itemtype": "property",
             "name": "_doc",
@@ -1793,7 +1793,7 @@
         },
         {
             "file": "tmp/warehouse/lib/model.js",
-            "line": 117,
+            "line": 119,
             "description": "The query constructor.",
             "itemtype": "property",
             "name": "_query",
@@ -1805,7 +1805,7 @@
         },
         {
             "file": "tmp/warehouse/lib/model.js",
-            "line": 135,
+            "line": 137,
             "description": "Returns the number of items in the model.",
             "itemtype": "property",
             "name": "length",
@@ -1817,7 +1817,7 @@
         },
         {
             "file": "tmp/warehouse/lib/model.js",
-            "line": 148,
+            "line": 150,
             "description": "Fires when the model initialized.",
             "itemtype": "event",
             "name": "init",
@@ -1826,7 +1826,7 @@
         },
         {
             "file": "tmp/warehouse/lib/model.js",
-            "line": 159,
+            "line": 161,
             "description": "Updates the index.",
             "itemtype": "method",
             "name": "_updateIndex",
@@ -1837,7 +1837,7 @@
         },
         {
             "file": "tmp/warehouse/lib/model.js",
-            "line": 177,
+            "line": 179,
             "description": "Creates a new query.",
             "itemtype": "method",
             "name": "_createQuery",
@@ -1860,7 +1860,7 @@
         },
         {
             "file": "tmp/warehouse/lib/model.js",
-            "line": 192,
+            "line": 194,
             "description": "Checks if `id` is used.",
             "itemtype": "method",
             "name": "_checkID",
@@ -1882,7 +1882,7 @@
         },
         {
             "file": "tmp/warehouse/lib/model.js",
-            "line": 205,
+            "line": 207,
             "description": "Creates a new document.",
             "itemtype": "method",
             "name": "new",
@@ -1902,7 +1902,7 @@
         },
         {
             "file": "tmp/warehouse/lib/model.js",
-            "line": 217,
+            "line": 219,
             "description": "Applies the schema.",
             "itemtype": "method",
             "name": "_applyGetter",
@@ -1940,7 +1940,7 @@
         },
         {
             "file": "tmp/warehouse/lib/model.js",
-            "line": 281,
+            "line": 283,
             "description": "Finds a single document by id.",
             "itemtype": "method",
             "name": "get",
@@ -1960,7 +1960,7 @@
         },
         {
             "file": "tmp/warehouse/lib/model.js",
-            "line": 305,
+            "line": 307,
             "description": "Alias for {% crosslink Model.get %}",
             "itemtype": "method",
             "name": "findById",
@@ -1980,7 +1980,7 @@
         },
         {
             "file": "tmp/warehouse/lib/model.js",
-            "line": 314,
+            "line": 316,
             "description": "Finds raw data of a single document by id.",
             "itemtype": "method",
             "name": "_getRaw",
@@ -2002,7 +2002,7 @@
         },
         {
             "file": "tmp/warehouse/lib/model.js",
-            "line": 327,
+            "line": 329,
             "description": "Iterates over the model.",
             "itemtype": "method",
             "name": "forEach",
@@ -2019,7 +2019,7 @@
         },
         {
             "file": "tmp/warehouse/lib/model.js",
-            "line": 345,
+            "line": 347,
             "description": "Alias for {% crosslink Model.forEach %}",
             "itemtype": "method",
             "name": "each",
@@ -2036,7 +2036,7 @@
         },
         {
             "file": "tmp/warehouse/lib/model.js",
-            "line": 354,
+            "line": 356,
             "description": "Returns an array containing all items in the model.",
             "itemtype": "method",
             "name": "toArray",
@@ -2049,7 +2049,7 @@
         },
         {
             "file": "tmp/warehouse/lib/model.js",
-            "line": 371,
+            "line": 373,
             "description": "Returns the number of items in the model.",
             "itemtype": "method",
             "name": "count",
@@ -2062,7 +2062,7 @@
         },
         {
             "file": "tmp/warehouse/lib/model.js",
-            "line": 382,
+            "line": 384,
             "description": "Alias for {% crosslink Model.count %}",
             "itemtype": "method",
             "name": "size",
@@ -2075,7 +2075,7 @@
         },
         {
             "file": "tmp/warehouse/lib/model.js",
-            "line": 390,
+            "line": 392,
             "description": "Applies the schema.",
             "itemtype": "method",
             "name": "_applySetter",
@@ -2113,7 +2113,7 @@
         },
         {
             "file": "tmp/warehouse/lib/model.js",
-            "line": 472,
+            "line": 474,
             "description": "Saves a document to the model.",
             "itemtype": "method",
             "name": "_save",
@@ -2136,7 +2136,7 @@
         },
         {
             "file": "tmp/warehouse/lib/model.js",
-            "line": 517,
+            "line": 519,
             "description": "Inserts a document to the model.",
             "itemtype": "method",
             "name": "insert",
@@ -2159,7 +2159,7 @@
         },
         {
             "file": "tmp/warehouse/lib/model.js",
-            "line": 545,
+            "line": 547,
             "description": "Fires when a document inserted.",
             "itemtype": "event",
             "name": "insert",
@@ -2175,7 +2175,7 @@
         },
         {
             "file": "tmp/warehouse/lib/model.js",
-            "line": 558,
+            "line": 560,
             "description": "Updates documents matching the `conditions` in the model.\n`conditions` can be either a query object or the id of the document.",
             "itemtype": "method",
             "name": "update",
@@ -2203,7 +2203,7 @@
         },
         {
             "file": "tmp/warehouse/lib/model.js",
-            "line": 579,
+            "line": 581,
             "description": "Combines the old and the new data.",
             "itemtype": "method",
             "name": "_update",
@@ -2230,7 +2230,7 @@
         },
         {
             "file": "tmp/warehouse/lib/model.js",
-            "line": 625,
+            "line": 627,
             "description": "Updates a document in the model by id.",
             "itemtype": "method",
             "name": "updateById",
@@ -2258,7 +2258,7 @@
         },
         {
             "file": "tmp/warehouse/lib/model.js",
-            "line": 646,
+            "line": 648,
             "description": "Fires when a document updated.",
             "itemtype": "event",
             "name": "update",
@@ -2274,7 +2274,7 @@
         },
         {
             "file": "tmp/warehouse/lib/model.js",
-            "line": 659,
+            "line": 661,
             "description": "Replaces documents matching the `conditions` in the model.\n`conditions` can be either a query object or the id of the document.",
             "itemtype": "method",
             "name": "replace",
@@ -2302,7 +2302,7 @@
         },
         {
             "file": "tmp/warehouse/lib/model.js",
-            "line": 680,
+            "line": 682,
             "description": "Replaces a document in the model by id.",
             "itemtype": "method",
             "name": "replaceById",
@@ -2330,7 +2330,7 @@
         },
         {
             "file": "tmp/warehouse/lib/model.js",
-            "line": 706,
+            "line": 708,
             "description": "Removes documents matching the `conditions` in the model.\n`conditions` can be either a query object or the id of the document.",
             "itemtype": "method",
             "name": "remove",
@@ -2353,7 +2353,7 @@
         },
         {
             "file": "tmp/warehouse/lib/model.js",
-            "line": 726,
+            "line": 728,
             "description": "Removes a document in the model by id.",
             "itemtype": "method",
             "name": "removeById",
@@ -2376,7 +2376,7 @@
         },
         {
             "file": "tmp/warehouse/lib/model.js",
-            "line": 753,
+            "line": 755,
             "description": "Fires when a document removed.",
             "itemtype": "event",
             "name": "remove",
@@ -2392,7 +2392,7 @@
         },
         {
             "file": "tmp/warehouse/lib/model.js",
-            "line": 773,
+            "line": 775,
             "description": "Saves a document to the model.",
             "itemtype": "method",
             "name": "save",
@@ -2415,7 +2415,7 @@
         },
         {
             "file": "tmp/warehouse/lib/model.js",
-            "line": 792,
+            "line": 794,
             "description": "Deletes all documents in the model.",
             "itemtype": "method",
             "name": "destroy",
@@ -2425,7 +2425,7 @@
         },
         {
             "file": "tmp/warehouse/lib/model.js",
-            "line": 806,
+            "line": 808,
             "description": "Returns the document at the specified index.\n`num` can be a positive or negative number.",
             "itemtype": "method",
             "name": "eq",
@@ -2445,7 +2445,7 @@
         },
         {
             "file": "tmp/warehouse/lib/model.js",
-            "line": 822,
+            "line": 824,
             "description": "Returns the first document in the model.\n\nThis method is an alias of:\n\n``` js\nmodel.eq(0);\n```",
             "itemtype": "method",
             "name": "first",
@@ -2458,7 +2458,7 @@
         },
         {
             "file": "tmp/warehouse/lib/model.js",
-            "line": 839,
+            "line": 841,
             "description": "Returns the last document in the model.\n\nThis method is an alias of:\n\n``` js\nmodel.eq(-1);\n```",
             "itemtype": "method",
             "name": "last",
@@ -2471,7 +2471,7 @@
         },
         {
             "file": "tmp/warehouse/lib/model.js",
-            "line": 856,
+            "line": 858,
             "description": "Returns the specified range of documents in the model.",
             "itemtype": "method",
             "name": "slice",
@@ -2497,7 +2497,7 @@
         },
         {
             "file": "tmp/warehouse/lib/model.js",
-            "line": 869,
+            "line": 871,
             "description": "Limits the number of items returned.\n\nThis method is an alias of:\n\n``` js\nmodel.slice(0, num);\n```",
             "itemtype": "method",
             "name": "limit",
@@ -2517,7 +2517,7 @@
         },
         {
             "file": "tmp/warehouse/lib/model.js",
-            "line": 887,
+            "line": 889,
             "description": "Specifies the number of items to skip.\n\nThis method is an alias of:\n\n``` js\nmodel.slice(num);\n`",
             "itemtype": "method",
             "name": "skip",
@@ -2537,7 +2537,7 @@
         },
         {
             "file": "tmp/warehouse/lib/model.js",
-            "line": 905,
+            "line": 907,
             "description": "Returns the model in reversed order.",
             "itemtype": "method",
             "name": "reverse",
@@ -2550,7 +2550,7 @@
         },
         {
             "file": "tmp/warehouse/lib/model.js",
-            "line": 916,
+            "line": 918,
             "description": "Sorts the documents in the model.\n\nSee {% crosslink Query/sort %}",
             "itemtype": "method",
             "name": "sort",
@@ -2576,7 +2576,7 @@
         },
         {
             "file": "tmp/warehouse/lib/model.js",
-            "line": 933,
+            "line": 935,
             "description": "Returns the documents in the model in random order.",
             "itemtype": "method",
             "name": "random",
@@ -2589,7 +2589,7 @@
         },
         {
             "file": "tmp/warehouse/lib/model.js",
-            "line": 944,
+            "line": 946,
             "description": "Alias for {% crosslink Model.random %}",
             "itemtype": "method",
             "name": "shuffle",
@@ -2602,7 +2602,7 @@
         },
         {
             "file": "tmp/warehouse/lib/model.js",
-            "line": 952,
+            "line": 954,
             "description": "Finds the matching documents in the model.\n\nSee {% crosslink Query/find %}",
             "itemtype": "method",
             "name": "find",
@@ -2628,7 +2628,7 @@
         },
         {
             "file": "tmp/warehouse/lib/model.js",
-            "line": 967,
+            "line": 969,
             "description": "Finds the first matching document.",
             "itemtype": "method",
             "name": "findOne",
@@ -2648,7 +2648,7 @@
         },
         {
             "file": "tmp/warehouse/lib/model.js",
-            "line": 979,
+            "line": 981,
             "description": "Popluates document references.",
             "itemtype": "method",
             "name": "_populate",
@@ -2675,7 +2675,7 @@
         },
         {
             "file": "tmp/warehouse/lib/model.js",
-            "line": 1023,
+            "line": 1025,
             "description": "Sets the path to populate.",
             "itemtype": "method",
             "name": "populate",
@@ -2695,7 +2695,7 @@
         },
         {
             "file": "tmp/warehouse/lib/model.js",
-            "line": 1035,
+            "line": 1037,
             "description": "Creates an array of values by iterating each element in the collection.",
             "itemtype": "method",
             "name": "map",
@@ -2715,7 +2715,7 @@
         },
         {
             "file": "tmp/warehouse/lib/model.js",
-            "line": 1046,
+            "line": 1048,
             "description": "Reduces a collection to a value which is the accumulated result of iterating each element in the collection.",
             "itemtype": "method",
             "name": "reduce",
@@ -2741,7 +2741,7 @@
         },
         {
             "file": "tmp/warehouse/lib/model.js",
-            "line": 1058,
+            "line": 1060,
             "description": "Reduces a collection to a value which is the accumulated result of iterating each element in the collection from right to left.",
             "itemtype": "method",
             "name": "reduceRight",
@@ -2767,7 +2767,7 @@
         },
         {
             "file": "tmp/warehouse/lib/model.js",
-            "line": 1070,
+            "line": 1072,
             "description": "Iterates over the query and returns all elements the callback returns truey for.",
             "itemtype": "method",
             "name": "filter",
@@ -4015,6 +4015,15 @@
                     "type": "Any"
                 }
             ],
+            "class": "Store",
+            "module": "warehouse"
+        },
+        {
+            "file": "tmp/warehouse/lib/store.js",
+            "line": 59,
+            "description": "Deletes all elements in the store.",
+            "itemtype": "method",
+            "name": "destroy",
             "class": "Store",
             "module": "warehouse"
         },

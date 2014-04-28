@@ -2,7 +2,7 @@
     "project": {
         "name": "hexo",
         "description": "A fast, simple & powerful blog framework, powered by Node.js.",
-        "version": "2.5.3"
+        "version": "2.5.6"
     },
     "files": {
         "tmp/hexo/lib/box/file.js": {
@@ -4022,7 +4022,7 @@
         },
         {
             "file": "tmp/hexo/lib/post/create.js",
-            "line": 89,
+            "line": 98,
             "description": "Creates a new post.",
             "itemtype": "method",
             "name": "create",
@@ -4060,6 +4060,12 @@
                             "description": "Post date. If not defined, the value will be `Date.now()`.",
                             "type": "Date",
                             "optional": true
+                        },
+                        {
+                            "name": "content",
+                            "description": "Post content.",
+                            "type": "String",
+                            "optional": true
                         }
                     ]
                 },
@@ -4082,7 +4088,7 @@
         },
         {
             "file": "tmp/hexo/lib/post/create.js",
-            "line": 158,
+            "line": 181,
             "description": "Fired when a new post created.",
             "itemtype": "event",
             "name": "new",
@@ -4500,6 +4506,27 @@
             "description": "Escapes all keywords in regular expressions.",
             "itemtype": "method",
             "name": "regex",
+            "params": [
+                {
+                    "name": "str",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "String"
+            },
+            "static": 1,
+            "class": "util.escape",
+            "module": "hexo"
+        },
+        {
+            "file": "tmp/hexo/lib/util/escape.js",
+            "line": 200,
+            "description": "Replace diacritics in a string.\n\nMore info: http://stackoverflow.com/a/18391901",
+            "itemtype": "method",
+            "name": "diacritic",
             "params": [
                 {
                     "name": "str",
@@ -6100,7 +6127,7 @@
         },
         {
             "file": "tmp/hexo/lib/util/yfm.js",
-            "line": 30,
+            "line": 31,
             "description": "Parses YAML front-matter.",
             "itemtype": "method",
             "name": "parse",
@@ -6121,7 +6148,7 @@
         },
         {
             "file": "tmp/hexo/lib/util/yfm.js",
-            "line": 61,
+            "line": 62,
             "description": "Converts the object to YAML front-matter string.",
             "itemtype": "method",
             "name": "stringify",
