@@ -1,7 +1,4 @@
-var tag = hexo.extend.tag,
-  renderSync = hexo.render.renderSync;
-
-tag.register('note', function(args, content){
+hexo.extend.tag.register('note', function(args, content){
   var className = args.shift(),
     header = '';
 
@@ -9,5 +6,9 @@ tag.register('note', function(args, content){
     header += '<strong class="note-title">' + args.join(' ') + '</strong>';
   }
 
-  return '<blockquote class="note ' + className + '">' + header + renderSync({text: content, engine: 'markdown'}) + '</blockquote>';
+  return [
+    '<escape><blockquote class="note ' + className + '">' + header + '</escape>',
+    content,
+    '<escape></blockquote></escape>'
+  ].join('');
 }, true);
