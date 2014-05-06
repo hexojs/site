@@ -15,6 +15,13 @@
         <% if (page.prev){ %><a href="<%- config.root %>docs/<%= page.prev %>.html" id="page-footer-prev" class="page-footer-link">Prev</a><% } %>
         <% if (page.next){ %><a href="<%- config.root %>docs/<%= page.next %>.html" id="page-footer-next" class="page-footer-link">Next</a><% } %>
       </footer>
+      <% if (page.comments && config.disqus_shortname){ %>
+      <section id="comments">
+        <div id="disqus_thread">
+          <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </div>
+      </section>
+      <% } %>
     </div>
     <%- partial('_partial/sidebar') %>
   </div>
