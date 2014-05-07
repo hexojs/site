@@ -3,9 +3,11 @@ note-info = hsl(200, 100%, 50%)
 note-warn = hsl(0, 100%, 50%)
 
 #page-banner
-  background: url("images/shattered.png") #ddd
+  // background: url("images/shattered.png") #ddd
+  background-color: #ddd
+  image: "images/shattered.png"
   padding: 40px 0
-  @media screen and (max-width: 768px)
+  @media mq-mobile
     padding: 30px 0
 
 .page-title
@@ -17,7 +19,7 @@ note-warn = hsl(0, 100%, 50%)
   column(9)
   float: right
   padding: 20px 0
-  @media screen and (max-width: 768px)
+  @media mq-mobile
     column(12)
 
 .page-entry
@@ -127,6 +129,9 @@ note-warn = hsl(0, 100%, 50%)
 
 #page-footer-updated
   font-size: 0.9em
+  display: none
+  @media mq-normal
+    display: block
 
 .page-footer-link
   font-family: font-title
@@ -154,7 +159,7 @@ note-warn = hsl(0, 100%, 50%)
   column(3)
   font-family: font-title
   padding: 0 0 40px
-  @media screen and (max-width: 768px)
+  @media mq-mobile
     display: none
 
 .sidebar-title
@@ -193,7 +198,7 @@ note-warn = hsl(0, 100%, 50%)
   width: 100%
   margin: 30px 0 0
   display: none
-  @media screen and (max-width: 768px)
+  @media mq-mobile
     display: block
 
 .toc-wrap
