@@ -1,5 +1,12 @@
 <article class="page">
-  <%- partial('_partial/banner', {banner_title: page.title}) %>
+  <header id="page-banner">
+    <div class="outer">
+      <div id="page-banner-inner" class="inner">
+        <h1 id="page-title"><%= page.title %></h1>
+        <a href="https://github.com/hexojs/site/blob/master/source/<%- page.path.replace(/\.html$/, '.md') %>" title="Improve this doc" id="page-edit-link"></a>
+      </div>
+    </div>
+  </header>
   <div class="outer">
     <div id="mobile-menu-wrap"></div>
     <div class="page-content">

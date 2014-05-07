@@ -3,17 +3,41 @@ note-info = hsl(200, 100%, 50%)
 note-warn = hsl(0, 100%, 50%)
 
 #page-banner
-  // background: url("images/shattered.png") #ddd
   background-color: #ddd
   image: "images/shattered.png"
   padding: 40px 0
   @media mq-mobile
     padding: 30px 0
 
-.page-title
+#page-banner-inner
+  position: relative
+
+#page-title
   color: #555
   font: 300 35px font-title
   text-shadow: 1px 0 #eee
+
+#page-edit-link
+  color: #aaa
+  text-shadow: 1px 0 #eee
+  width: 24px
+  height: @width
+  line-height: @width
+  text-align: center
+  text-decoration: none
+  transition: color 0.2s
+  position: absolute
+  top: 0
+  bottom: 0
+  right: 0
+  margin: auto
+  &:hover
+    color: #888
+  &:before
+    content: "\f040"
+    font: @width font-icon
+  @media mq-mobile
+    display: none
 
 .page-content
   column(9)
