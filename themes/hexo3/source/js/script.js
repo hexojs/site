@@ -30,14 +30,20 @@
 
   $('#mobile-menu-wrap').html(menuHtml.join(''));
 
-  $('#banner-getting-started-input').on('click', function(){
-    $(this).select();
-  });
-
   $('#page-mobile-menu').on('change', function(){
     var val = $(this).find(':selected').val();
 
     if (val) location.href = val;
+  });
+
+  // Select text in getting started input in home page
+  $('#banner-getting-started-input').on('click', function(){
+    $(this).select();
+  });
+
+  // Main navigation menu for mobile devices
+  $('#main-nav-toggle').on('click', function(){
+    $('#main-nav').toggleClass('on');
   });
 /*
   $('.api-options input').on('change', function(){

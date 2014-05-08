@@ -6,12 +6,13 @@ logo-size = 35px
   font-family: font-title
   padding-top: 30px
   padding-bottom: 30px
+  position: relative
 
 #logo-wrap
-  float: left
-  @media mq-mobile
-    float: none
-    text-align: center
+  text-align: center
+  position: relative
+  @media mq-normal
+    float: left
 
 #logo
   color: color-blue
@@ -19,34 +20,72 @@ logo-size = 35px
   text-transform: lowercase
   text-decoration: none
   font-size: logo-size
+  line-height: 1
+
+#main-nav-toggle
+  float: right
+  width: logo-size
+  height: @width
+  text-align: center
+  color: #999
+  cursor: pointer
+  position: absolute
+  top: 0
+  bottom: 0
+  right: 0
+  margin: auto
+  user-select: none
+  &:before
+    content: "\f0c9"
+    width: 24px
+    height: @width
+    font: @width font-icon
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    margin: auto
+  &:hover, &:active
+    color: #555
+  @media mq-normal
+    display: none
 
 #main-nav
-  float: right
-  text-align: center
+  &.on
+    display: block
   @media mq-mobile
-    float: none
-    margin-top: 20px
-
-#main-nav-list
-  margin: 0 auto
-  width: auto
+    position: absolute
+    top: 100%
+    left: 0
+    right: 0
+    margin-top: -20px
+    border-bottom: 1px solid color-border
+    background: #fff
+    display: none
+    z-index: 1
+  @media mq-normal
+    float: right
+    display: block
+    margin: 0
+    margin-right: -25px
 
 .main-nav-item
-  padding-left: 50px
-  padding-top: 13px
-  display: inline-block
-  @media mq-mobile
-    padding-left: 25px
-    padding-right: 25px
+  margin: 10px
+  @media mq-normal
+    float: left
+    margin: 0 10px
 
 .main-nav-link
-  color: color-default
+  display: block
   font-weight: 300
   text-transform: uppercase
   text-decoration: none
-  border-bottom: 2px solid transparent
-  display: inline-block
-  transition: 0.2s
-  &:hover, &.current
-    padding-bottom: 5px
-    border-color: #555
+  color: color-default
+  text-align: center
+  padding: 10px 15px
+  line-height: 1
+  &:hover, &:active, &.current
+    background: color-blue
+    color: #fff
+    border-radius: 4px

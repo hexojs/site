@@ -6,11 +6,14 @@ intro-feature-column = 3
 intro-quick-start-column = 2
 
 body.index
-  background: url("images/shattered.png") #ddd
+  background-color: #ddd
+  image: "images/shattered.png"
 
 #banner
-  padding-top: 150px
+  padding-top: 50px
   padding-bottom: 50px
+  @media mq-normal
+    padding-top: 150px
 
 #banner-title
   color: #555
@@ -20,13 +23,13 @@ body.index
 
 #banner-getting-started
   clearfix()
-  padding: 30px 0
+  padding-top: 30px
 
 #banner-getting-started-prefix
   float: left
   background: getting-started-bg
   font-family: font-mono
-  font-size: 16px
+  font-size: font-size
   padding-left: 15px
   color: #999
   line-height: getting-started-height
@@ -34,7 +37,7 @@ body.index
 #banner-getting-started-input
   float: left
   background: getting-started-bg
-  font-size: 16px
+  font-size: font-size
   font-family: font-mono
   color: #555
   border: none
@@ -42,24 +45,29 @@ body.index
   margin: 0
   line-height: getting-started-height
   height: getting-started-height
+  border-radius: 0
 
 #banner-getting-started-btn
   float: left
   background: #bbb
-  padding: 0 15px
-  color: #555
+  color: #777
   text-decoration: none
-  font-family: font-title
-  font-size: 13px
-  font-weight: 300
-  line-height: getting-started-height
+  width: getting-started-height
+  height: @width
+  text-align: center
+  line-height: @width
+  &:before
+    content: "\f061"
+    font: 16px font-icon
   &:hover
     background: #aaa
-    color: #444
+    color: #555
 
 #banner-share
   padding: 100px 0 0
-
+  display: none
+  @media mq-normal
+    display: block
 
 .intro-wrap
   background: #fff
@@ -74,16 +82,16 @@ body.index
   padding-bottom: 20px
 
 .intro-feature
-  column(4)
+  column(12)
   padding-top: 30px
-  @media mq-mobile
-    column(12)
+  @media mq-normal
+    column(4)
 
 .intro-quick-start
-  column(6)
+  column(12)
   padding-top: 30px
-  @media mq-mobile
-    column(12)
+  @media mq-normal
+    column(6)
 
 .intro-feature-title
   font-size: 18px
