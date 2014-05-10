@@ -407,7 +407,7 @@ Option | Description | Default
 Inserts a list of posts.
 
 ``` js
-<%- list_archive([options]) %>
+<%- list_posts([options]) %>
 ```
 
 Option | Description | Default
