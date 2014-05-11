@@ -137,9 +137,14 @@ deploy:
 
 ## Commit message
 
-You can customize commit message in **github**, **heroku**, **git** deployer. The default message is `Site updated: {{ now('YYYY-MM-DD HH:mm:ss') }})`.
+You can customize commit message in **github**, **heroku**, **git** deployer.
 
-Swig is availble in commit message. You can use `now(format)` to display deployment time.
+Swig is availble in commit message. You can use `now(format)` to display deployment time. For example, the default message is `Site updated: {% raw %}{{ now('YYYY-MM-DD HH:mm:ss') }}{% endraw %}`:
+
+``` js
+Site updated: {% raw %}{{ now('YYYY-MM-DD HH:mm:ss') }}{% endraw %}
+// Site updated: 2014-05-12 00:02:25
+```
 
 Commit message can be set either in shell
 
