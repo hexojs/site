@@ -3,15 +3,14 @@ var links = {
   warehouse: 'https://github.com/tommy351/warehouse'
 };
 
-var rTmpDir = /^tmp\/(\w+)\//;
-
 hexo.extend.helper.register('github_link', function(data){
-  var name = data.file.match(rTmpDir)[1];
+  var match = data.file.match(/(\w+)\/lib\/(.+)/),
+    name = match[1],
+    path = 'lib/' + match[2];
 
   if (name === 'hexo') name = 'index';
 
-  var path = data.file.replace(rTmpDir, ''),
-    line = data.line,
+  var line = data.line,
     version = this.site.yuidoc.findByName(name).project.version || 'master';
 
   return '<a href="' + links[name] + '/blob/' + version + '/' + path + '#L' + line + '">' + path + ':' + line + '</a>';

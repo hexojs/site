@@ -15,7 +15,7 @@ $ npm install
 Generate:
 
 ``` bash
-$ grunt
+$ gulp
 $ hexo generate
 ```
 
@@ -33,14 +33,8 @@ $ hexo server
   $ npm install hexo -g
   ```
 
-- [YUIDoc](http://yui.github.io/yuidoc/)
+- [Gulp](http://gulpjs.com/)
 
 	``` bash
-	$ npm install yuidocjs -g
-	```
-
-- [Grunt](http://gruntjs.com/)
-
-	``` bash
-	$ npm install grunt-cli -g
+	$ npm install gulp -g
 	```

@@ -1,18 +1,20 @@
 {
   "name": "hexo",
-  "version": "2.5.6",
+  "version": "2.5.7",
   "private": true,
   "dependencies": {
-    "hexo-renderer-jade": "0.0.2",
-    "hexo-yuidoc": "0.0.3",
-    "hexo-generator-sitemap": "0.1.1"
+    "hexo-renderer-ejs": "^0.1.0",
+    "hexo-renderer-marked": "^0.1.0",
+    "hexo-renderer-stylus": "^0.1.0",
+    "hexo-renderer-jade": "^0.1.0",
+    "hexo-yuidoc": "^0.1.0",
+    "hexo-generator-sitemap": "^0.1.2"
   },
   "devDependencies": {
-    "grunt": "~0.4.2",
-    "grunt-git": "~0.2.2",
-    "load-grunt-tasks": "~0.2.0",
-    "grunt-contrib-yuidoc": "~0.5.0",
-    "grunt-contrib-clean": "~0.5.0",
-    "grunt-contrib-copy": "~0.4.1"
+    "gulp": "^3.6.2",
+    "gulp-clean": "^0.2.4",
+    "gulp-yuidoc": "^0.1.2",
+    "gulp-shell": "^0.2.4",
+    "gulp-rename": "^1.2.0"
   }
 }
