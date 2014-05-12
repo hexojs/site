@@ -68,7 +68,10 @@ logo-size = 35px
     float: right
     display: block
     margin: 0
-    margin-right: -25px
+
+#main-nav-list
+  @media mq-normal
+    float: left
 
 .main-nav-item
   margin: 10px
@@ -85,7 +88,27 @@ logo-size = 35px
   text-align: center
   padding: 10px 15px
   line-height: 1
+  transition: 0.2s
   &:hover, &:active, &.current
     background: color-blue
     color: #fff
     border-radius: 4px
+
+#search-btn
+  float: left
+  display: none
+  width: 18px
+  height: @width
+  text-align: center
+  padding: 8px
+  line-height: @width
+  cursor: pointer
+  color: #999
+  transition: color 0.2s
+  &:hover
+    color: color-blue
+  &:before
+    content: "\f002"
+    font: @width font-icon
+  @media mq-normal
+    display: block

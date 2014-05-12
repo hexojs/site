@@ -7,6 +7,7 @@
   </div>
 </footer>
 <% if (config.disqus_shortname){ %>
+<!-- Disqus -->
 <script>
   var disqus_shortname = '<%= config.disqus_shortname %>';
   <% if (page.permalink){ %>
@@ -21,6 +22,22 @@
   })();
 </script>
 <% } %>
+<!-- Swiftype -->
+<script>
+var Swiftype = window.Swiftype || {};
+  (function() {
+    Swiftype.key = '<%- theme.swiftype_key %>';
+
+    /** DO NOT EDIT BELOW THIS LINE **/
+    var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+    script.src = "//s.swiftypecdn.com/embed.js";
+    var entry = document.getElementsByTagName('script')[0];
+    document.getElementsByTagName('script')[0].parentNode.insertBefore(script, entry);
+  }());
+</script>
+<form>
+  <input type="text" id="st-search-input" class="st-search-input" />
+</form>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 <script src="<%- config.root %>js/script.js"></script>
 <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>

@@ -1,2 +1,3 @@
 User-agent: *
+Sitemap: /sitemap.xml
 Disallow: /docs/plugins/filter-flow.html
