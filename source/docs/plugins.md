@@ -12,7 +12,7 @@ To use script, put JavaScript files in `scripts` folder and it'll be loaded once
 
 ### Plugin
 
-To use plugin, create a new folder. The folder name must `hexo-` prefixed so it could be loaded by Hexo. The folder must contained 2 files at least. One is your code and the other is `package.json`.
+To use plugin, create a new folder. The folder name must be started with `hexo-` so it could be loaded by Hexo. The folder must contained 2 files at least. One is your code and the other is `package.json`.
 
 ``` plain
 .
@@ -20,15 +20,13 @@ To use plugin, create a new folder. The folder name must `hexo-` prefixed so it 
 └── package.json
 ```
 
-You should at least describe `name`, `version`, `main` and `dependencies` in `package.json`. For example:
+You should at least describe `name`, `version`, `main` in `package.json`. For example:
 
-``` json
+``` json package.json
 {
   "name": "hexo-my-plugin",
   "version": "0.0.1",
-  "main": "index",
-  "dependencies": {
-  }
+  "main": "index"
 }
 ```
 

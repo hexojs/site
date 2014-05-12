@@ -99,8 +99,6 @@ Setting | Description
 --- | ---
 `theme` | Current theme
 `exclude_generator` | Disabled generators (archive, category, home, page, post, tag)
-`markdown` | Markdown settings (See [marked](https://github.com/chjj/marked) for more info)
-`stylus` | Stylus settings
 
 {% note warn YAML format %}
 Don't use tabs in configuration files, use spaces instead. Also, add a space after colons. Configuration files parsing error may cause Hexo can't run properly.
@@ -108,7 +106,7 @@ Don't use tabs in configuration files, use spaces instead. Also, add a space aft
 
 ## Default Configuration
 
-``` yaml
+``` yaml package.json
 title: Hexo
 subtitle:
 description:
@@ -159,18 +157,6 @@ disqus_shortname:
 
 theme: light
 exclude_generator:
-
-markdown:
-  gfm: true
-  pedantic: false
-  sanitize: false
-  tables: true
-  breaks: true
-  smartLists: true
-  smartypants: true
-
-stylus:
-  compress: false
 
 deploy:
   type:

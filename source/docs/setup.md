@@ -4,6 +4,8 @@ Once Hexo is installed, run the following command and hexo will build all files 
 
 ``` bash
 $ hexo init <folder>
+$ cd <folder>
+$ npm install
 ```
 
 After build, here's how the folder looks like:
@@ -26,14 +28,18 @@ Site [configuration](configuration.html) file. You can configure most of options
 
 ### package.json
 
-Application data. If you deleted it unfortunately, rebuild the file with the following content.
+Application data. EJS, Stylus and Markdown renderer are installed by default, you can uninstall them later.
 
-``` json
+``` json package.json
 {
-  "name": "hexo",
-  "version": "0.0.1",
+  "name": "hexo-site",
+  "version": "",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "hexo-renderer-ejs": "*",
+    "hexo-renderer-stylus": "*",
+    "hexo-renderer-marked": "*"
+  }
 }
 ```
 
