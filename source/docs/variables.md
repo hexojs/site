@@ -1,6 +1,4 @@
 title: Variables
-prev: themes
-next: pagination
 ---
 ### Global Variables
 

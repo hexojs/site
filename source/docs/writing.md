@@ -1,6 +1,4 @@
 title: Writing
-prev: migration
-next: generating
 ---
 ## Create a New Post
 
@@ -69,12 +67,12 @@ You can configure all post configuration in the front-matter. The following is p
 Setting | Description | Default
 --- | --- | ---
 `layout` | Layout | post/page
-`title` | Title | 
+`title` | Title |
 `date` | Published date | File created date
 `updated` | Last updated date | File last updated date
 `comments` | Enables comment feature for the post | true
-`tags` | Tags (Not available for pages) | 
-`categories` | Categories (Not available for pages) | 
+`tags` | Tags (Not available for pages) |
+`categories` | Categories (Not available for pages) |
 `permalink` | Overrides the default permalink of the post | Filename
 
 {% note warn YAML front-matter %}

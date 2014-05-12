@@ -1,6 +1,4 @@
 title: Themes
-prev: permalinks
-next: variables
 ---
 Hexo uses [EJS] to process theme layout by default. You can use [helpers](helpers.html) to insert specified content quickly. It's recommended to enable debug mode in development. All layouts and source files will be updated automatically in debug mode.
 
@@ -42,7 +40,7 @@ Every theme should at least has `index` layout.
 
 Layout | Description | Fallback
 --- | --- | ---
-`index` | Index layout | 
+`index` | Index layout |
 `post` | Post layout | `index`
 `page` | Page layout | `index`
 `archive` | Archives layout | `index`

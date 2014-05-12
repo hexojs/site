@@ -19,8 +19,7 @@
       </div>
       <footer id="page-footer">
         <time id="page-footer-updated" datetime="<%= date_xml(page.updated) %>">Last updated: <%= date(page.updated) %></time>
-        <% if (page.prev){ %><a href="<%- config.root %>docs/<%= page.prev %>.html" id="page-footer-prev" class="page-footer-link">Prev</a><% } %>
-        <% if (page.next){ %><a href="<%- config.root %>docs/<%= page.next %>.html" id="page-footer-next" class="page-footer-link">Next</a><% } %>
+        <%- page_nav() %>
       </footer>
       <% if (page.comments && config.disqus_shortname){ %>
       <section id="comments">

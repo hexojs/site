@@ -1,6 +1,4 @@
 title: Deployment
-prev: server
-next: permalinks
 ---
 To deploy your site with Hexo, you only need one command.
 

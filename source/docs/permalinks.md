@@ -1,6 +1,4 @@
 title: Permalinks
-prev: deployment
-next: themes
 ---
 You can specify the permalinks for your site in `_config.yml` or in the front-matter for each post.
 
@@ -26,7 +24,7 @@ Given a post named `hello-world.md` in `source/_posts` folder with   the followi
 ``` yaml
 title: Hello World
 date: 2013-07-14 17:01:34
-categories: 
+categories:
 - foo
 - bar
 ```

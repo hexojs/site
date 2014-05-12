@@ -1,6 +1,4 @@
 title: Plugins
-prev: scripts
-next: troubleshooting
 ---
 ## Overview
 

@@ -1,6 +1,4 @@
 title: Troubleshooting
-prev: plugins
-next: contributing
 ---
 You may encounter some problems when using Hexo. The following are the solutions to the problems that people frequently asked. If you can't find the answer here, run again in debug mode and [report an issue](https://github.com/tommy351/hexo/issues/new) on GitHub.
 

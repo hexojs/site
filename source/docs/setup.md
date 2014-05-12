@@ -1,6 +1,4 @@
 title: Setup
-prev: installation
-next: configuration
 ---
 Once Hexo is installed, run the following command and hexo will build all files you need in the target folder.
 

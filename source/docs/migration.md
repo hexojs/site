@@ -1,6 +1,4 @@
 title: Migration
-prev: commands
-next: writing
 ---
 ## RSS
 

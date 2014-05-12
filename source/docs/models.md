@@ -1,6 +1,4 @@
 title: Models
-prev: i18n
-next: events
 ---
 Hexo store everything in data model. It's very important for you to know what's inside the data model.
 

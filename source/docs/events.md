@@ -1,6 +1,4 @@
 title: Events
-prev: models
-next: plugins
 ---
 ## Overview
 

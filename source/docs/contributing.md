@@ -1,5 +1,4 @@
 title: Contributing
-prev: troubleshooting
 ---
 It's great to hear you'd like to make Hexo more awesome! When modifying files, please keep the following in your mind.
 
@@ -14,7 +13,7 @@ Example:
 ``` js
 var fs = require('fs'),
   path = require('path');
-  
+
 var doSomething = function(callback){
   callback();
 };
@@ -58,7 +57,7 @@ Example:
 	``` bash
 	$ make install
 	```
-	
+
 4. Create a new branch and start hacking.
 5. Push the branch.
 6. Create a pull request on GitHub.
@@ -77,7 +76,7 @@ The Hexo documentation is open-source and you can find it on `site` branch of He
 	``` bash
 	$ git clone -b site git://github.com/<username>/hexo.git
 	```
-	
+
 3. Create a new branch and start editing.
 4. See live changes with `hexo server`.
 5. Push the branch.

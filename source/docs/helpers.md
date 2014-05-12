@@ -1,6 +1,4 @@
 title: Helpers
-prev: pagination
-next: i18n
 ---
 Helpers help you inserts specified content in theme or processes contents in theme quickly.
 
@@ -138,7 +136,7 @@ Option | Description | Default
 `orderby` | Order of tags | name
 `order` | Sort order. `1`, `sac` as ascending; `-1`, `desc` as descending | 1
 `color` | Colorizes the tag cloud | false
-`start_color` | Start color. You can use hex (`#b700ff`), rgba (`rgba(183, 0, 255, 1)`), hsla (`hsla(283, 100%, 50%, 1)`) or [color keywords]. This option only works when `color` is true. | 
+`start_color` | Start color. You can use hex (`#b700ff`), rgba (`rgba(183, 0, 255, 1)`), hsla (`hsla(283, 100%, 50%, 1)`) or [color keywords]. This option only works when `color` is true. |
 `end_color` | End color. You can use hex (`#b700ff`), rgba (`rgba(183, 0, 255, 1)`), hsla (`hsla(283, 100%, 50%, 1)`) or [color keywords]. This option only works when `color` is true. |
 
 ### paginator
@@ -363,7 +361,7 @@ Option | Description | Default
 `order` | Sort of order. `1`, `asc` as ascending; `-1`, `desc` as descending | 1
 `show_count` | Display the total amount of posts for each category | true
 `style` | Style to display the categories list. `list` displays categories in an unordered list.  | list
-`separator` | Separator between categories. (Only works if `style` is `none`) | , 
+`separator` | Separator between categories. (Only works if `style` is `none`) | ,
 `depth` | Levels of categories to be displayed. `0` displays all categories and child categories; `-1` is same as `0` but displayed in flat; `1` displays only top level categories. | 0
 `class` | Class name of categories list. | category
 
@@ -381,7 +379,7 @@ Option | Description | Default
 `order` | Sort of order. `1`, `asc` as ascending; `-1`, `desc` as descending | 1
 `show_count` | Display the total amount of posts for each tag | true
 `style` | Style to display the tags list. `list` displays tags in an unordered list.  | list
-`separator` | Separator between tags. (Only works if `style` is `none`) | , 
+`separator` | Separator between tags. (Only works if `style` is `none`) | ,
 `class` | Class name of tags list. | tag
 
 ### list_archives
@@ -399,7 +397,7 @@ Option | Description | Default
 `show_count` | Display the total amount of posts for each archive | true
 `format` | Date format | MMMM YYYY
 `style` | Style to display the archives list. `list` displays archives in an unordered list.  | list
-`separator` | Separator between archives. (Only works if `style` is `none`) | , 
+`separator` | Separator between archives. (Only works if `style` is `none`) | ,
 `class` | Class name of archives list. | category
 
 ### list_posts
@@ -412,10 +410,10 @@ Inserts a list of posts.
 
 Option | Description | Default
 --- | --- | ---
-`ulClass` | Class name of the container | 
+`ulClass` | Class name of the container |
 `liClass` | Class name of each item |
 `style` | Style to display the post list. `list` displays posts in an unordered list. | list
-`separator` | Separator between archives. (Only works if `style` is `none`) | , 
+`separator` | Separator between archives. (Only works if `style` is `none`) | ,
 `class` | Class name of post list. | post
 
 ### get_posts

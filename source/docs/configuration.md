@@ -1,6 +1,4 @@
 title: Configuration
-prev: setup
-next: commands
 ---
 You can modify most of options in `_config.yml`.
 
@@ -21,8 +19,8 @@ Setting | Description
 
 Setting | Description | Default
 --- | --- | ---
-`url` | The URL of your website | 
-`root` | The root directory of your website | 
+`url` | The URL of your website |
+`root` | The root directory of your website |
 `permalink` | The [permalink](permalinks.html) format of articles | :year/:month/:day/:title/
 `tag_dir` | Tag directory | tags
 `archive_dir` | Archive directory | archives
@@ -46,15 +44,15 @@ Setting | Description | Default
 `multi_thread` | Enable multi-thread generating | true
 `filename_case` | Transform filename into (1) lower case or (2) upper case | 0
 `render_drafts` | Serve drafts as normal posts in server | false
-`highlight` | Code block settings | 
+`highlight` | Code block settings |
 
 ### Category & Tag
 
 Setting | Description | Default
 --- | --- | ---
 `default_category` | Default category | uncategorized
-`category_map` | Category slugs | 
-`tag_map` | Tag slugs | 
+`category_map` | Category slugs |
+`tag_map` | Tag slugs |
 
 ### Archives
 
@@ -70,7 +68,7 @@ Setting | Description | Default
 --- | --- | ---
 `port` | Server port | 4000
 `logger` | Display request info on the console. Always enabled in debug mode. | false
-`logger_format` | Logger format | 
+`logger_format` | Logger format |
 `server_ip` | Customize server IP | 0.0.0.0
 
 ### Date / Time format

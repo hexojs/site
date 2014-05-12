@@ -1,6 +1,4 @@
 title: Generating
-prev: writing
-next: tag-plugins
 ---
 Generate static files with Hexo is quite easy and fast.
 
@@ -10,7 +8,7 @@ $ hexo generate
 
 ### Watch for File Changes
 
-Hexo can watch for file changes and regenerate files immediately. 
+Hexo can watch for file changes and regenerate files immediately.
 
 ``` bash
 $ hexo generate --watch

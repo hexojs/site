@@ -1,6 +1,4 @@
 title: Commands
-prev: configuration
-next: migration
 ---
 ## init
 
