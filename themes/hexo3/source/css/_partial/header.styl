@@ -1,4 +1,5 @@
-logo-size = 35px
+logo-width = 101px
+logo-height = 35px
 
 #header
   background: #fff
@@ -15,12 +16,13 @@ logo-size = 35px
     float: left
 
 #logo
-  color: color-blue
-  font-weight: bold
-  text-transform: lowercase
-  text-decoration: none
-  font-size: logo-size
-  line-height: 1
+  hide-text()
+  width: logo-width
+  height: logo-height
+  background-size: @width @height
+  background-image: url("images/logo.png")
+  background-image: url("images/logo.svg")
+  display: block
 
 #main-nav-toggle
   float: right
