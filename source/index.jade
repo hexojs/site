@@ -1,46 +1,33 @@
 layout: index
 description: Hexo is a fast, simple & powerful blog framework powered by Node.js
 ---
-
 .intro-wrap
   .outer
-    h2.intro-title Features
+    ul
+      li.intro-feature-wrap
+        .intro-feature#intro-feature-fast
+          h3.intro-feature-title Blazing Fast
+          p.intro-feature-desc Node.js brings you incredible generating speed. Hundreds of files take only seconds to generate.
+      li.intro-feature-wrap
+        .intro-feature#intro-feature-markdown
+          h3.intro-feature-title Markdown Support
+          p.intro-feature-desc All features of GitHub Flavored Markdown are supported. You can even use most of Octopress plugins in Hexo.
+      li.intro-feature-wrap
+        .intro-feature#intro-feature-deploy
+          h3.intro-feature-title One-Command Deployment
+          p.intro-feature-desc You only need one command to deploy your site to GitHub Pages, Heroku or other sites.
+      li.intro-feature-wrap
+        .intro-feature#intro-feature-plugin
+          h3.intro-feature-title Various Plugins
+          p.intro-feature-desc Hexo has a powerful plugin system. You can install more plugins for Jade, CoffeeScript plugins.
+  #intro-cmd-wrap
+    .outer
+      ul.inner
+        li.intro-cmd-item npm install hexo -g
+        li.intro-cmd-item hexo init blog
+        li.intro-cmd-item cd blog
+        li.intro-cmd-item npm install
+        li.intro-cmd-item hexo server
   .outer
-    .intro-feature
-      h3.intro-feature-title Blazing Fast
-      p.intro-feature-desc Hexo is powered by Node.js and supports multi-thread generating. Hundreds of files take only seconds to generate.
-    .intro-feature
-      h3.intro-feature-title Easy Write
-      p.intro-feature-desc Hexo supports GitHub Flavored Markdown and all Octopress plugins and highly Jekyll/Octopress compatible.
-    .intro-feature
-      h3.intro-feature-title Extensibility
-      p.intro-feature-desc Hexo supports EJS, Swig &amp; Stylus. You can install more plugins for Haml, Jade, Less supports.
-
-.intro-wrap
-  .outer
-    h2.intro-title Quick Start
-  .outer
-    .intro-quick-start
-      h3.intro-feature-title 1. install
-      p.intro-feature-desc
-        figure.highlight
-          pre
-            code $ npm install hexo -g
-    .intro-quick-start
-      h3.intro-feature-title 2. Setup
-      p.intro-feature-desc
-        figure.highlight
-          pre
-            code $ hexo init blog && cd blog
-    .intro-quick-start
-      h3.intro-feature-title 3. Generate
-      p.intro-feature-desc
-        figure.highlight
-          pre
-            code $ hexo generate
-    .intro-quick-start
-      h3.intro-feature-title 4. Server
-      p.intro-feature-desc
-        figure.highlight
-          pre
-            code $ hexo server
+    #intro-btn-wrap
+      a#intro-btn(href="/docs/") Get Started

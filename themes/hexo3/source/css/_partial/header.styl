@@ -26,7 +26,7 @@ logo-height = 35px
 
 #main-nav-toggle
   float: right
-  width: logo-size
+  width: logo-height
   height: @width
   text-align: center
   color: #999
@@ -37,17 +37,12 @@ logo-height = 35px
   right: 0
   margin: auto
   user-select: none
+  font-size: 24px
   &:before
+    @extend $icon-font
+    square(@font-size)
+    absolute-center()
     content: "\f0c9"
-    width: 24px
-    height: @width
-    font: @width font-icon
-    position: absolute
-    top: 0
-    left: 0
-    right: 0
-    bottom: 0
-    margin: auto
   &:hover, &:active
     color: #555
   @media mq-normal
@@ -110,7 +105,8 @@ logo-height = 35px
   &:hover
     color: color-blue
   &:before
+    @extend $icon-font
     content: "\f002"
-    font: @width font-icon
+    font-size: @width
   @media mq-normal
     display: block

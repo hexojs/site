@@ -32,11 +32,12 @@ note-warn = hsl(0, 100%, 50%)
   bottom: 0
   right: 0
   margin: auto
+  font-size: @width
   &:hover
     color: #888
   &:before
+    @extend $icon-font
     content: "\f040"
-    font: @width font-icon
   @media mq-mobile
     display: none
 
@@ -95,12 +96,12 @@ note-warn = hsl(0, 100%, 50%)
     @media mq-normal
       margin-left: 40px
     &:before
+      @extend $icon-font
       content: "\f10d"
       position: absolute
       left: -40px
       top: 20px
       font-size: 25px
-      font-family: font-icon
       width: 25px
       height: 25px
       text-align: center
@@ -159,7 +160,7 @@ note-warn = hsl(0, 100%, 50%)
   @media mq-normal
     display: inline
 
-.page-footer-link
+$page-footer-link
   font-family: font-title
   font-size: 1em
   color: color-blue
@@ -168,18 +169,20 @@ note-warn = hsl(0, 100%, 50%)
   text-decoration: none
 
 #page-footer-prev
+  @extend $page-footer-link
   float: left
   &:before
-    content: "\f053"
+    @extend $icon-font
+    content: "\f060"
     padding-right: 10px
-    font-family: font-icon
 
 #page-footer-next
+  @extend $page-footer-link
   float: right
   &:after
-    content: "\f054"
+    @extend $icon-font
+    content: "\f061"
     padding-left: 10px
-    font-family: font-icon
 
 #sidebar
   column(3)

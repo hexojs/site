@@ -42,11 +42,11 @@ hexo.extend.helper.register('page_nav', function(){
     result = [];
 
   if (index > 0){
-    result.push('<a href="' + keys[index - 1] + '" id="page-footer-prev" class="page-footer-link" title="' + list[keys[index - 1]] + '">Prev</a>');
+    result.push('<a href="' + keys[index - 1] + '" id="page-footer-prev" title="' + list[keys[index - 1]] + '">Prev</a>');
   }
 
   if (index < keys.length - 1){
-    result.push('<a href="' + keys[index + 1] + '" id="page-footer-next" class="page-footer-link" title="' + list[keys[index + 1]] + '">Next</a>');
+    result.push('<a href="' + keys[index + 1] + '" id="page-footer-next" title="' + list[keys[index + 1]] + '">Next</a>');
   }
 
   return result.join('');

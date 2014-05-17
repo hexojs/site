@@ -1,40 +1,14 @@
 <footer id="footer">
   <div class="outer">
     <div class="inner">
-      &copy; <%= new Date().getFullYear() %> <a href="http://zespia.tw">SkyArrow</a><br>
-      Background: <a href="http://subtlepatterns.com/shattered/" target="_blank">Shattered</a> by <a href="http://luukvanbaars.com/" target="_blank">Luuk van Baars</a>
+      <div id="footer-copyright">
+        &copy; <%= new Date().getFullYear() %> <a href="http://zespia.tw">SkyArrow</a><br>
+        Background: <a href="http://subtlepatterns.com/shattered/" target="_blank">Shattered</a> by <a href="http://luukvanbaars.com/" target="_blank">Luuk van Baars</a>
+      </div>
+      <div id="footer-links">
+        <a href="https://twitter.com/<%= theme.twitter %>" id="footer-link-twitter" class="footer-link" target="_blank"><span>Twitter</span></a>
+        <a href="https://github.com/tommy351/hexo" id="footer-link-github" class="footer-link" target="_blank"><span>GitHub</span></a>
+      </div>
     </div>
   </div>
 </footer>
-<% if (config.disqus_shortname){ %>
-<!-- Disqus -->
-<script>
-  var disqus_shortname = '<%= config.disqus_shortname %>';
-  <% if (page.permalink){ %>
-  var disqus_url = '<%= page.permalink %>';
-  <% } %>
-  (function(){
-    var dsq = document.createElement('script');
-    dsq.type = 'text/javascript';
-    dsq.async = true;
-    dsq.src = '//go.disqus.com/<% if (page.comments){ %>embed.js<% } else { %>count.js<% } %>';
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-  })();
-</script>
-<% } %>
-<!-- Swiftype -->
-<script>
-var Swiftype = window.Swiftype || {};
-  (function() {
-    Swiftype.key = '<%- theme.swiftype_key %>';
-
-    /** DO NOT EDIT BELOW THIS LINE **/
-    var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
-    script.src = "//s.swiftypecdn.com/embed.js";
-    var entry = document.getElementsByTagName('script')[0];
-    document.getElementsByTagName('script')[0].parentNode.insertBefore(script, entry);
-  }());
-</script>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-<script src="<%- config.root %>js/script.js"></script>
-<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>

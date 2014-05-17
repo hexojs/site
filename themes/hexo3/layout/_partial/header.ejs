@@ -9,7 +9,7 @@
         <ul id="main-nav-list">
           <% _.each(theme.menu, function(menu, title){ %>
             <li class="main-nav-item">
-              <a href="<%= /^([a-z]+:)?\/{1,2}/.test(menu) ? '' : config.root %><%= menu %>" class="main-nav-link<% if(is_current(menu)){ %> current<% } %>"><%= title %></a>
+              <a href="<%= menu %>" class="main-nav-link<% if(is_current(menu)){ %> current<% } %>"><%= title %></a>
             </li>
           <% }); %>
         </ul>
