@@ -2,17 +2,15 @@ title: Plugins
 ---
 ## Overview
 
-Hexo has powerful plugin system. Most of built-in plugins are extensions of Hexo. This makes you easy to hook up your custom code easily.
-
-There're 2 ways to extend Hexo: **Script** and **Plugin**. If your code is simple and doesn't have any dependencies, you can choose **Script**. If your code is complicated and have dependencies, or you want to publish it on NPM registry, you should use **Plugin**.
+Hexo has a powerful plugin system. Most of built-in plugins are extensions of Hexo. This makes you easy to hook up your code.
 
 ### Script
 
-To use script, put JavaScript files in `scripts` folder and it'll be loaded once Hexo is initialized.
+If your code is simple, it's recommended to use a script. All you need to do is putting JavaScript files in `scripts` folder and they'll be loaded once Hexo is initialized.
 
 ### Plugin
 
-To use plugin, create a new folder. The folder name must be started with `hexo-` so it could be loaded by Hexo. The folder must contained 2 files at least. One is your code and the other is `package.json`.
+If your code is complicated or you want to publish it to NPM registry, it's recommended to use a plugin. First, create a folder in `node_modules` folder. The name of the folder must be started with `hexo-` so it could be loaded by Hexo. The folder must be contained at least 2 files: One is the main program and the other is `package.json` describing the purpose and the dependencies of the plugin.
 
 ``` plain
 .
@@ -30,26 +28,14 @@ You should at least describe `name`, `version`, `main` in `package.json`. For ex
 }
 ```
 
-Hexo has 9 categories of plugins:
-
-1. Generator
-2. Renderer
-3. Helper
-4. Deployer
-5. Processor
-6. Tag
-7. Console
-8. Migrator
-9. Filter
-
 ## Generator
 
-Generator generates content based on processed source files.
+Generators are used to generate static files based on processed source files.
 
 ### Syntax
 
 ``` js
-extend.generator.register(function(locals, render, callback){
+hexo.extend.generator.register(function(locals, render, callback){
   // ...
 });
 ```
@@ -60,9 +46,9 @@ Argument | Description
 `render` | Render function
 `callback` | Callback function
 
-### Render
+### Render Function
 
-To render your content with theme, you have to use render function.
+To render contents with templates, use the render function.
 
 ``` js
 render(path, layout, locals)
@@ -74,10 +60,10 @@ Argument | Description
 `layout` | Theme layout to use. This value can be an array or a string. When it's an array, Hexo'll use the first matched layout.
 `locals` | Page variables
 
-If you don't need to render your content with theme. You can bind the content on the routes directly. For example:
+If you don't need to render contents with templates. You can bind contents on routes directly:
 
 ``` js
-route.set('feed.xml', content);
+hexo.route.set('feed.xml', content);
 ```
 
 ### Example
@@ -91,18 +77,20 @@ hexo.extend.generator.register(function(locals, render, callback){
 
 ## Renderer
 
-If you want to use a new markup language in Hexo, you can implement it with renderer plugin.
+Renderers are used to render contents. You can find available renderers in [plugin list](https://github.com/tommy351/hexo/wiki/Plugins#renderer).
 
 ### Syntax
 
 ``` js
-hexo.extend.renderer.register(name, output, fn, [sync]);
+hexo.extend.renderer.register(name, output, function(data, options, callback){
+  // ...
+}, sync);
 ```
 
-Paramter | Description
+Parameter | Description
 --- | ---
-`name` | Input file extension (lowercase, not included `.`)
-`output` | Output file extension (lowercase, not included `.`)
+`name` | Input file extension (lowercase, without prefixing `.`)
+`output` | Output file extension (lowercase, without prefixing `.`)
 `fn` | Render function
 `sync` | Sync mode (`false` by default)
 
@@ -111,7 +99,7 @@ Paramter | Description
 Argument | Description
 --- | ---
 `data` | `data` contains 2 properties: `path` (File path) and `text` (File content). `path` doesn't always exist in sync mode.
-`options` | Options or local variables.
+`options` | Options.
 `callback` | Callback function. Only used in async mode.
 
 ### Example
@@ -132,24 +120,25 @@ hexo.extend.renderer.register('ejs', 'html', function(data, options){
 ``` js
 var stylus = require('stylus');
 
-hexo.extend.renderer.register('styl', 'css', function(data, callback){
+hexo.extend.renderer.register('styl', 'css', function(data, options, callback){
   stylus(data.text).set('filename', data.path).render(callback);
 });
 ```
 
 ## Helper
 
-Helper is used in theme to help you insert specified content quickly. If you write something in your theme many times. You should consider to put it in the helper. (Don't repeat yourself, right?)
+Helpers are used in templates to help you insert snippets quickly. It's recommended to put complicated or often used code in helpers instead of templates. (Don't repeat yourself, right?)
 
 ### Syntax
 
 You can get all local variables from `this`.
-
 ``` js
-hexo.extend.helper.register(name, fn);
+hexo.extend.helper.register(name, function(){
+  // ...
+});
 ```
 
-Paramter | Description
+Parameter | Description
 --- | ---
 `name` | Helper name
 `fn` | Helper function
@@ -162,16 +151,9 @@ hexo.extend.helper.register('js', function(path){
 });
 ```
 
-Input:
-
 ``` js
 <%- js('script.js') %>
-```
-
-Output:
-
-``` html
-<script type="text/javascript" src="script.js"></script>
+// <script type="text/javascript" src="script.js"></script>
 ```
 
 ## Deployer
@@ -181,7 +163,9 @@ Deployer plugin helps you deploy your site on web without complicated commands.
 ### Syntax
 
 ``` js
-hexo.extend.deployer.register(name, fn);
+hexo.extend.deployer.register(name, function(args, callback){
+  // ...
+});
 ```
 
 Parameter | Description
@@ -193,21 +177,23 @@ Parameter | Description
 
 Argument | Description
 --- | ---
-`args` | Deployer options and arguments.
+`args` | Deployer options and [Minimist] arguments.
 `callback` | Callback function
 
 ## Processor
 
-Processor processes raw data and stores them in database. If you want to process some specified files in `source` folder. You can implement it with the processor plugin.
+Processors are used to process raw data in `source` folder.
 
-{% note info Hidden files won't be processed %}
+{% note info Hidden files will be ignored %}
 Hexo won't process hidden files.
 {% endnote %}
 
 ### Syntax
 
 ``` js
-hexo.extend.processor.register([rule], fn);
+hexo.extend.processor.register(rule, function(file, callback){
+  // ...
+});
 ```
 
 Paramter | Description
@@ -223,6 +209,8 @@ Argument | Description
 `callback` | Callback function
 
 ### File data
+
+You can check [Box.File](/api/classes/Box.File.html) for more info.
 
 Property | Description
 --- | ---
@@ -264,27 +252,29 @@ file.renderSync([options]);
 
 ## Tag
 
-Tag helps you insert specified content in your post quickly.
+Tags are used in posts to help your insert snippets quickly.
 
 ### Syntax
 
 ``` js
-hexo.extend.tag.register(name, fn, [ends]);
+hexo.extend.tag.register(name, function(args, content, options){
+  // ...
+}, options);
 ```
 
 Parameter | Description
 --- | ---
 `name` | Tag name
 `fn` | Tag function
-`options` | Options
+`options` | Options (See below)
 
-`fn` is invoked with 2 arguments:
+`fn` is invoked with 3 arguments:
 
 Argument | Description
 --- | ---
 `args` | Arguments
-`content` | Content (Only available when the tag has end tag)
-`options` | Options
+`content` | Content (Only available when `options.end` is true)
+`options` | Swig options
 
 ### Options
 
@@ -315,84 +305,130 @@ hexo.extend.tag.register('pullquote', function(args, content, options){
 
 ## Console
 
-Console is the interface between Hexo and you.
+Consoles are the interface between Hexo and you.
 
 ### Syntax
 
 ``` js
-hexo.extend.console.register(name, desc, [options], fn);
+hexo.extend.console.register(name, desc, options, function(args, callback){
+  // ...
+});
 ```
 
 Parameter | Description
 --- | ---
-`name` | Console name (lowercase)
+`name` | Console name (must be in lowercase)
 `desc` | Console description
 `options` | Options
-`fn` | Console function. Invoked with a [Optimist] argument.
+`fn` | Console function
+
+`fn` is invoked with 2 arguments:
+
+Argument | Description
+--- | ---
+`args` | [Minimist] arguments
+`callback` | Callback function
 
 ### Options
 
 Option | Description
 --- | ---
-`init` | Display in a non-Hexo folder
-`debug` | Display in debug mode
-`alias` | Console alias
+`init` | Whether the console plugin should display in a non-Hexo folder.
+`debug` | Only display in debug mode.
+`alias` | The alias for the console plugin.
 
 ### Example
 
-``` bash
-$ hexo config
-```
-
 ``` js
-hexo.extend.console.register('config', 'Display configuration', function(args){
+hexo.extend.console.register('config', 'Display configuration', function(args, callback){
   console.log(hexo.config);
+  callback();
 });
 ```
 
 ## Migrator
 
-Migrator helps you migrate from other blog system to Hexo.
+Migrators are used to migrate from other system to Hexo.
 
 ### Syntax
 
 ``` js
-hexo.extend.migrator.register(name, fn);
+hexo.extend.migrator.register(name, function(args, callback){
+  // ...
+});
 ```
 
 Parameter | Description
 --- | ---
 `name` | Migrator name
-`fn` | Migrator function. Invoked with a [Minimist] argument.
+`fn` | Migrator function
+
+`fn` is invoked with 2 arguments:
+
+Argument | Description
+--- | ---
+`args` | [Minimist] arguments
+`callback` | Callback function
 
 ## Filter
 
-Filters are similar with tags, but more powerful and customizable. You can process any attributes such as titles and contents in posts. It's recommended to run asynchronous tasks in filters.
-
-There're two types of filters: **pre-filter** process uncompiled data, while **post-filter** process compiled data.
-
-{% iframe plugins/filter-flow.html 100% 40 %}
+Filters are used to modify certain data. Hexo passes data through filters and you can modify everything as long as it's provided. This concept is stolen from [WordPress](http://codex.wordpress.org/Plugin_API#Filters). Filter API is rewritten in 2.6 and more filter types are added.
 
 ### Syntax
 
 ``` js
-hexo.extend.filter.register([type], fn);
+hexo.extend.filter.register(type, function(){
+  // ...
+}, priority);
 ```
 
 Parameter | Description
 --- | ---
-`type` | Filter type. The value can be `pre` or `post` (Default).
-`fn` | Filter function. Invoked with a argument: post data.
+`type` | Filter type (See below)
+`fn` | Filter function (Arguments are depend on the filter type)
+`priority` | Priority of the filter (Default is 10)
 
-### Example
+### Post Filter
 
-Replaces `#username` in post content to a Twitter link.
+**before_post_render**
+
+Runs before posts are rendered by Markdown. For example, transform a title into titlecase:
 
 ``` js
-hexo.extend.filter.register('post', function(data, callback){
-  data.content = data.content.replace(/#(\d+)/, '<a href="http://twitter.com/$1">#$1</a>');
-
+hexo.extend.filter.register('before_post_render', function(data, callback){
+  data.title = hexo.util.titlecase(data.title);
   callback(null, data);
+});
+```
+
+**after_post_render**
+
+Runs after posts are rendered by Markdown. For example, replace `@username` to a Twitter profile link.
+
+``` js
+hexo.extend.filter.register('after_post_render', function(data, callback){
+  data.content = data.content.replace(/@(\d+)/, '<a href="http://twitter.com/$1">#$1</a>');
+  callback(null, data);
+});
+```
+
+**new_post_path**
+
+Runs when creating a post. Used to determine the file path of a post.
+
+``` js
+hexo.extend.filter.register('new_post_path', function(data, replace, callback){
+  // ...
+});
+```
+
+**post_permalink**
+
+Used to determine the permalink of a post.
+
+``` js
+hexo.extend.filter.register('post_permalink', function(data){
+  // ...
 });
 ```
 
