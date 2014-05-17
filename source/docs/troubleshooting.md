@@ -1,10 +1,10 @@
 title: Troubleshooting
 ---
-You may encounter some problems when using Hexo. The following are the solutions to the problems that people frequently asked. If you can't find the answer here, run again in debug mode and [report an issue](https://github.com/tommy351/hexo/issues/new) on GitHub.
+You may encounter some problems when using Hexo. The following are the solutions to the problems that people frequently asked. If you can't find the answer here, you can try to find the answer on [GitHub](https://github.com/tommy351/hexo/issues) or [Google Group](https://groups.google.com/group/hexo).
 
 ## YAML Parsing Error
 
-``` bash
+``` plain
 /usr/local/lib/node_modules/hexo/node_modules/yamljs/bin/yaml.js:1219
 throw new YamlParseException('Unable to parse.', this.getRealCurrentLineNb
 ^
@@ -21,7 +21,7 @@ bar:
 
 ## EMFILE Error
 
-``` bash
+``` plain
 Error: EMFILE, too many open files
 ```
 
@@ -33,7 +33,7 @@ $ ulimit -n 10000
 
 ## GitHub Deployment Problems
 
-``` bash
+``` plain
 fatal: 'username.github.io' does not appear to be a git repository
 ```
 
@@ -41,7 +41,7 @@ Make sure you have [set up git](https://help.github.com/articles/set-up-git) on 
 
 ## Server Problems
 
-``` bash
+``` plain
 Error: listen EADDRINUSE
 ```
 
@@ -53,14 +53,33 @@ $ hexo server -p 5000
 
 ## Plugin Installation Problems
 
-``` bash
+``` plain
 npm WARN package.json plugin-name@0.0.1 No read me data.
 ```
 
 This error comes out when you install a plugin which doesn't provide read me file. Don't be scared. This error won't cause any problems.
 
-``` bash
+``` plain
 npm ERR! node-waf configure build
 ```
 
 This error may occurred when you trying to install a plugin written in C, C++ or other non-JavaScript language. Make sure you have installed compiler on your computer.
+
+## Iterate Data Model on Jade or Swig
+
+Hexo uses [Warehouse] as data model. It's not an array so you have to transform them into to iterate. For more information about [Warehouse], see the [API](/api/warehouse/classes/Database.html).
+
+## Stylesheets Not Updated
+
+You may find that stylesheets updated in Hexo server but not applied to static files. It's because Hexo compares modified date of files when generating. You can clean cache to solve this problem.
+
+``` bash
+$ hexo clean
+```
+
+## Escape in Posts
+
+Hexo uses [Swig] to render posts. Contents wrapped with `{% raw %}{{ }}{% endraw %}` or `{% raw %}{% %}{% endraw %}` will be parsed and may cause problems. You can wrap sensitive contents with `raw` tag plugin.
+
+[Warehouse]: https://github.com/tommy351/warehouse
+[Swig]: http://paularmstrong.github.io/swig/

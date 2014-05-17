@@ -1,6 +1,6 @@
 title: Models
 ---
-Hexo store everything in data model. It's very important for you to know what's inside the data model.
+Hexo uses [Warehouse](https://github.com/tommy351/warehouse) to store everything. You can check the [API](/api/warehouse/classes/Database.html) and see the contents of data model below.
 
 ### Post
 
