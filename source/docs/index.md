@@ -1,6 +1,6 @@
 title: Documentation
 ---
-Welcome to the Hexo's documentation. This documentation will help you get started fast. If you get any problems when using Hexo, you can find the answer in [troubleshooting](troubleshooting.html) or you can ask me on [GitHub](https://github.com/tommy351/hexo/issues).
+Welcome to the Hexo's documentation. This documentation will help you get started fast. If you get any problems when using Hexo, you can find the answer in [troubleshooting](troubleshooting.html) or you can ask me on [GitHub](https://github.com/tommy351/hexo/issues) or [Google Group](https://groups.google.com/group/hexo).
 
 ## What's Hexo?
 

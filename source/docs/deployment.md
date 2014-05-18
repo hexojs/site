@@ -6,7 +6,7 @@ To deploy your site with Hexo, you only need one command.
 $ hexo deploy
 ```
 
-## GitHub
+## GitHub Pages
 
 Edit `_config.yml`.
 
@@ -36,12 +36,12 @@ $ rm -rf .deploy
 
 Create a file named `CNAME` in `source` folder with the following content.
 
-```
+``` plain
 example.com
 ```
 
 - **Top-level Domain:** Add A records: `192.30.252.153`, `192.30.252.154`.
-- **Subdomain**: Add CNAME record `blog.example.com`.
+- **Subdomain**: Add a CNAME record `blog.example.com`.
 
 Check [GitHub Pages](https://help.github.com/articles/setting-up-a-custom-domain-with-pages) for more info.
 

@@ -1,66 +1,43 @@
 title: Contributing
 ---
-It's great to hear you'd like to make Hexo more awesome! When modifying files, please keep the following in your mind.
+## Development
 
-**JavaScript:**
+Hexo welcomes you to join the development of Hexo. This document will help you through the process.
+
+### Before You Start
+
+Please follow the coding style:
 
 - Follow [Google JavaScript Style Guide](http://google-styleguide.googlecode.com/svn/trunk/javascriptguide.xml).
 - Use soft-tabs with a two space indent.
 - Don't put commas first.
 
-Example:
+### Workflow
 
-``` js
-var fs = require('fs'),
-  path = require('path');
+1. Fork the project.
+2. Clone the repository to your computer and install dependencies.
 
-var doSomething = function(callback){
-  callback();
-};
-```
+    ``` bash
+    $ git clone https://github.com/<username>/hexo.git
+    $ cd hexo
+    $ npm install
+    $ git submodule update --init
+    ```
 
+3. Create a feature branch for your change.
 
-**CSS:**
+    ``` bash
+    $ git checkout -b new_feature
+    ```
+    
+4. Start hacking. Don't forget to run tests.
+5. Push the branch:
 
-- Use soft-tabs with a two space indent.
-- Put spaces after `:` in property declarations.
-- Put mixin first.
-- Always use double quotations.
-- Flat structure.
-
-Example:
-
-``` css
-#foo
-  clearfix()
-  color: #444
-  background: url("background.png")
-```
-
-**HTML:**
-
-- Use soft-tabs with a two space indent.
-- Use double quotations unless in `<% code %>` tag.
-- Use HTML5 doctype.
-
-## Development
-
-1. Fork the Hexo repository.
-2. Clone the repository to your computer.
-
-	``` bash
-	$ git clone git://github.com/<username>/hexo.git
-	```
-
-3. Install dependencies.
-
-	``` bash
-	$ make install
-	```
-
-4. Create a new branch and start hacking.
-5. Push the branch.
-6. Create a pull request on GitHub.
+    ``` bash
+    $ git push origin new_feature
+    ```
+    
+6. Create a pull request against the `master` branch and describe the change.
 
 {% note warn Don't change version in package.json %}
 When making changes on Hexo, don't change version number in `package.json`.
@@ -68,24 +45,40 @@ When making changes on Hexo, don't change version number in `package.json`.
 
 ## Updating Documentation
 
-The Hexo documentation is open-source and you can find it on `site` branch of Hexo repository. Here's how you can make the documentation better:
+The Hexo documentation is open source and you can find the source code on [hexojs/site](https://github.com/hexojs/site). To update the documentation:
 
-1. Fork the Hexo repository.
-2. Clone the repository to your computer.
+1. Fork the project
+2. Clone the repository to your computer and install dependencies.
 
-	``` bash
-	$ git clone -b site git://github.com/<username>/hexo.git
-	```
+    ``` bash
+    $ git clone https://github.com/<username>/site.git
+    $ cd site
+    $ npm install
+    ```
+    
+3. Start editing the documentation. You can start the server for live previewing.
 
-3. Create a new branch and start editing.
-4. See live changes with `hexo server`.
-5. Push the branch.
-6. Create a pull request on GitHub.
+    ``` bash
+    $ hexo server
+    ```
+    
+4. Push the branch:
+5. Create a pull request against the `master` branch and describe the change.
 
-## Reporting an Issue
+## Reporting Issues
 
-When you come across problems, try to find the solution [here](troubleshooting.html). If the problem still exists, please do the following:
+When you encounter some problems when using Hexo, you can find the solutions in [Troubleshooting] or ask me on [GitHub](https://github.com/tommy351/hexo/issues) or [Google Group](https://groups.google.com/group/hexo). If you can't find the answer, please report it on GitHub.
 
-1. Run it again in debug mode.
-2. Run `hexo version` to check the version info
+1. Represent the problem in debug mode.
+
+    ``` bash
+    $ hexo --debug
+    ```
+
+2. Check the version info.
+
+    ``` bash
+    $ hexo version
+    ```
+    
 3. Post both debug message and version info on GitHub.

@@ -24,11 +24,10 @@ doc_sidebar:
     Variables: variables.html
     Pagination: pagination.html
     Helpers: helpers.html
-    i18n: i18n.html
+    Plugins: plugins.html
   Advanced:
     Models: models.html
     Events: events.html
-    Plugins: plugins.html
   Miscellaneous:
     Troubleshooting: troubleshooting.html
     Contributing: contributing.html

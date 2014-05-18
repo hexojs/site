@@ -10,31 +10,6 @@ hexo.on('ready', function(){
 });
 ```
 
-## Methods
-
-All methods except `emit` returns the emitter itself, so calls can be chained.
-
-### addListener(event, listener)
-### on(event, listener)
-
-Listens to the specific event.
-
-### once(event, listener)
-
-Listens to the specified event **only once**. After the event is fired, the listener will be removed.
-
-### removeListener(event, listener)
-
-Removes a listener from the specified event.
-
-### removeAllListeners([event])
-
-Removes all listeners.
-
-### emit(event, [arg1], [arg2], […])
-
-Fires the specified event. Returns `true` if event had listener, `false` otherwise.
-
 ## Events
 
 ### ready
@@ -72,6 +47,7 @@ Called after a new post file is created.
 Argument | Description
 --- | ---
 `path` | Absolute path of the post file
+`content` | Content of the post file
 
 ### server
 

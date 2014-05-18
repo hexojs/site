@@ -1,6 +1,6 @@
 title: Helpers
 ---
-Helpers help you inserts specified content in theme or processes contents in theme quickly.
+Helpers are used in templates to help you insert snippets quickly. You can see [Plugins](plugins.html#Helper) to learn how to build a helper plugin.
 
 ### css
 
@@ -482,9 +482,10 @@ Option | Description | Default
 `description` | Page description (`og:desription`) | Page excerpt or first 200 characters of the content
 `twitter_card` | Twitter card type (`twitter:card`) | summary
 `twitter_id` | Twitter ID (`twitter:creator`) |
+`twitter_site` | Twitter Site (`twitter:site`) |
 `google_plus` | Google+ profile link |
 `fb_admins` | Facebook admin ID |
-`fb_app_id` | Facebook App ID
+`fb_app_id` | Facebook App ID |
 
 ### toc
 

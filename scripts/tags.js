@@ -10,5 +10,5 @@ hexo.extend.tag.register('note', function(args, content){
     '<escape><blockquote class="note ' + className + '">' + header + '</escape>',
     content,
     '<escape></blockquote></escape>'
-  ].join('');
-}, true);
+  ].join('\n\n') + '\n';
+}, {ends: true, escape: false});

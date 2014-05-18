@@ -28,6 +28,10 @@ You should at least describe `name`, `version`, `main` in `package.json`. For ex
 }
 ```
 
+### Publishing
+
+You can publish your plugin to the [plugin list](https://github.com/tommy351/hexo/wiki/Plugins) on wiki.
+
 ## Generator
 
 Generators are used to generate static files based on processed source files.
