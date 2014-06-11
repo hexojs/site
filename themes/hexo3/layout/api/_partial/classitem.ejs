@@ -16,9 +16,9 @@
   </header>
   <div class="api-item-meta">
     <% if (data.overwritten_from){ %>
-      Inherited from <a href="<%- config.root %><%- data.overwritten_from.path %>#<%= type %>_<%- data.name %>"><%= data.overwritten_from.name %></a> but overwritten in:
+      Inherited from <a href="<%- url_for(data.overwritten_from.path) %>#<%= type %>_<%- data.name %>"><%= data.overwritten_from.name %></a> but overwritten in:
     <% } else if (data.extended_from){ %>
-      Inherited from <a href="<%- config.root %><%- data.extended_from.path %>#<%= type %>_<%- data.name %>"></a>:
+      Inherited from <a href="<%- url_for(data.extended_from.path) %>#<%= type %>_<%- data.name %>"></a>:
     <% } else { %>
       Defined in
     <% } %>

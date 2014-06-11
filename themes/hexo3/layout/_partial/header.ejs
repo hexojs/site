@@ -2,14 +2,14 @@
   <div class="outer">
     <div class="inner">
       <h1 id="logo-wrap">
-        <a href="<%- config.root %>" id="logo">Hexo</a>
+        <a href="<%- url_for() %>" id="logo">Hexo</a>
         <a id="main-nav-toggle"></a>
       </h1>
       <nav id="main-nav">
         <ul id="main-nav-list">
           <% _.each(theme.menu, function(menu, title){ %>
             <li class="main-nav-item">
-              <a href="<%= menu %>" class="main-nav-link<% if(is_current(menu)){ %> current<% } %>"><%= title %></a>
+              <a href="<%= url_for(menu) %>" class="main-nav-link<% if (is_current(menu)){ %> current<% } %>"><%= title %></a>
             </li>
           <% }); %>
         </ul>
