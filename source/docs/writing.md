@@ -91,18 +91,18 @@ tags:
 - Games
 ```
 
-Categories and tags may sound fimiliar in other systems, but they're totally different in Hexo. Categories have inhertiance and are ordered, which means `Foo, Bar` doesn't equal to `Bar, Foo`. Tags are unordered and flat.
+Categories and tags may sound familiar in other systems, but they're totally different in Hexo. Categories are hierarchical and ordered, which means `Foo, Bar` doesn't equal to `Bar, Foo`. Tags are unordered and flat.
 
 ## Excerpts
 
 You can hide parts of your post by adding `<!-- more -->` in the content. Index page will only show the post from the first to the first occurrence of `<!-- more -->`.
 
 ``` markdown
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur libero est, vulputate nec nibh sit amet, luctus placerat diam. Aliquam sit amet est arcu.
+...
 
 <!-- more -->
 
-Aenean sit amet mi tristique, luctus diam sit amet, pharetra justo. Quisque ac faucibus tellus, non viverra augue. Phasellus justo ligula, pharetra adipiscing vulputate eget, fringilla sit amet urna. Nunc aliquam fermentum est ac fringilla.
+...
 ```
 
 ## Code Highlighting
@@ -155,3 +155,13 @@ Variable | Description
 `layout` | Layout name
 `title` | Post title
 `date` | File created date
+
+## Asset Folder
+
+If you put all images and other assets in `source` folder. You can try to enable `post_asset_folder` setting.
+
+``` yaml
+post_asset_folder: true
+```
+
+After enabling this setting, a folder will be created when you create a new post. This folder is for you to put all asset files used in the post in. It would be much easier to use a image in a post.

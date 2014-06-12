@@ -28,7 +28,7 @@ Variable | Description
 `site.categories` | All categories
 `site.tags` | All tags
 
-### Page Vairables
+### Page Variables
 
 **Article (post, page, ...)**
 
@@ -45,7 +45,7 @@ Variable | Description
 `page.excerpt` | The processed excerpt of the article
 `page.source` | The path of the source file
 `page.full_source` | Full path of the source file
-`page.path` | The URL of the article without root URL. We usually use `config.root + page.path` in theme.
+`page.path` | The URL of the article without root URL. We usually use `url_for(page.path)` in theme.
 `page.permalink` | Full URL of the article
 `page.prev` | The previous post. `null` if the post is the first post.
 `page.next` | The next post. `null` if the post is the last post.
@@ -70,7 +70,7 @@ Variable | Description
 `page.prev_link` | The URL of previous page. `''` if the current page is the first.
 `page.next` | Next page number. `0` if the current page is the last.
 `page.next_link` | The URL of next page. `''` if the current page is the first.
-`page.path` | The URL of current page without root URL. We usually use `config.root + page.path` in theme.
+`page.path` | The URL of current page without root URL. We usually use `url_for(page.path)` in theme.
 
 **Archive (archive):** Same as `index` layout but add the following variables.
 

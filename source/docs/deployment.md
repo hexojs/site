@@ -22,7 +22,7 @@ Option | Description
 --- | ---
 `repo`, `repository` | GitHub repository URL (Better to use HTTPS)
 `branch` | The deployer will detect the branch to use automatically. You can also customize it on your own.
-`message` | Customize commit message (Default is `Site updated: {{ now('YYYY-MM-DD HH:mm:ss') }}`)
+`message` | Customize commit message (Default is `Site updated: {% raw %}{{ now('YYYY-MM-DD HH:mm:ss') }}{% endraw %}`)
 
 ### Remove
 
@@ -59,7 +59,7 @@ deploy:
 Option | Description
 --- | ---
 `repo`, `repository` | Heroku repository URL
-`message` | Customize commit message (Default is `Site updated: {{ now('YYYY-MM-DD HH:mm:ss') }}`)
+`message` | Customize commit message (Default is `Site updated: {% raw %}{{ now('YYYY-MM-DD HH:mm:ss') }}{% endraw %}`)
 
 ### Remove
 

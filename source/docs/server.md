@@ -1,8 +1,8 @@
 title: Server
 ---
-## Express
+## Built-in Server
 
-To start server, run the following command:
+Hexo uses [Connect] as the built-in server. To start server, run the following command:
 
 ``` bash
 $ hexo server
@@ -46,7 +46,7 @@ $ hexo server -d
 
 ### Logger
 
-To log requests of server, you can enable logger in `_config.yml`. Logger is always enabled in debug mode.
+To log requests of server, you can enable logger in `_config.yml`. Logger is always enabled in debug mode. You can check [morgan] for more info.
 
 ``` yaml
 logger: true
@@ -134,5 +134,7 @@ $ forever start app.js
 $ pm2 start app.js -x
 ```
 
+[Connect]: https://github.com/senchalabs/connect
+[morgan]: https://github.com/expressjs/morgan
 [Forever]: https://github.com/nodejitsu/forever
 [PM2]: https://github.com/Unitech/pm2

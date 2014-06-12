@@ -44,6 +44,8 @@ Setting | Description | Default
 `multi_thread` | Enable multi-thread generating | true
 `filename_case` | Transform filename into (1) lower case or (2) upper case | 0
 `render_drafts` | Serve drafts as normal posts in server | false
+`post_asset_folder` | Enables [Asset Folder](writing.html#Asset_Folder) | false
+`relative_link` | Uses relative link | false
 `highlight` | Code block settings |
 
 ### Category & Tag
@@ -130,6 +132,8 @@ max_open_file: 100
 multi_thread: true
 filename_case: 0
 render_drafts: false
+post_asset_folder: false
+relative_link: false
 highlight:
   enable: true
   line_number: true

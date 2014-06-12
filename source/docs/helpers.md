@@ -2,6 +2,14 @@ title: Helpers
 ---
 Helpers are used in templates to help you insert snippets quickly. You can see [Plugins](plugins.html#Helper) to learn how to build a helper plugin.
 
+### url_for
+
+Returns a url with the root path prefixed. You should use this helper instead of `config.root + path` since Hexo 2.7.
+
+``` js
+<%- url_for(path) %>
+```
+
 ### css
 
 Loads CSS files. `path` can be an array or a string. If `path` isn't prefixed with `/` or any protocol, it'll be prefixed with root URL. If you didn't add extension name `.css` after `path`, it'll be added.
@@ -113,10 +121,31 @@ Transforms a string into proper title caps.
 
 ### partial
 
-Loads other template files. You can define local variables in `local`.
+Loads other template files. You can define local variables in `locals`.
 
 ``` js
-<%- partial(layout, [locals], [only]) %>
+<%- partial(layout, [locals], [options]) %>
+```
+
+Option | Description | Default
+--- | --- | ---
+`cache` | Cache contents | `false`
+`only` | Strict local variables | `false`
+
+### fragment_cache
+
+Caches the contents in a fragment. It saves the contents within a fragment and serves the cache when the next request comes in.
+
+``` js
+<%- fragment_cache(id, fn);
+```
+
+**Examples:**
+
+``` js
+<%- fragment_cache('header', function(){
+  return '<header></header>';
+}) %>
 ```
 
 ### tagcloud
@@ -313,8 +342,14 @@ Truncates words after `length`.
 Inserts a link.
 
 ``` js
-<%- link_to(path, [text], [external]) %>
+<%- link_to(path, [text], [options]) %>
 ```
+
+Option | Description | Default
+--- | --- | ---
+external | Opens the link in a new tab | false
+class | Class name |
+id | ID |
 
 **Examples:**
 
@@ -325,7 +360,7 @@ Inserts a link.
 <%- link_to('http://www.google.com', 'Google') %>
 // <a href="http://www.google.com" title="Google">Google</a>
 
-<%- link_to('http://www.google.com', 'Google', true) %>
+<%- link_to('http://www.google.com', 'Google', {external: true}) %>
 // <a href="http://www.google.com" title="Google" target="_blank" rel="external">Google</a>
 ```
 
@@ -334,8 +369,17 @@ Inserts a link.
 Inserts a mail link.
 
 ``` js
-<%- mail_to(path, [text]) %>
+<%- mail_to(path, [text], [options]) %>
 ```
+
+Option | Description
+--- | ---
+class | Class name
+id | ID
+subject | Mail subject
+cc | CC
+bcc | BCC
+body | Mail contents
 
 **Examples:**
 
@@ -346,6 +390,43 @@ Inserts a mail link.
 <%- mail_to('a@abc.com', 'Email') %>
 // <a href="mailto:a@abc.com" title="Email">Email</a>
 ```
+
+### image_tag
+
+Inserts a image.
+
+``` js
+<%- image_tag(path, [options]) %>
+```
+
+Option | Description
+--- | ---
+alt | Alternative text of the image
+class | Class name
+id | ID
+width | Image width
+height | Image height
+
+### favicon_tag
+
+Inserts a favicon.
+
+``` js
+<%- favicon_tag(path) %>
+```
+
+### feed_tag
+
+Inserts a feed link.
+
+``` js
+<%- feed_tag(path, [options]) %>
+```
+
+Option | Description | Default
+--- | --- | ---
+title | Feed title |
+type | Feed type | atom
 
 ### list_categories
 

@@ -26,10 +26,10 @@ The most basic pagination is just two links: "Previous page" & "Next page". For 
 
 ```
 <% if (page.prev){ %>
-  <a href="<%- config.root %><%- page.prev_link %>">Prev</a>
+  <a href="<%- url_for(page.prev_link) %>">Prev</a>
 <% } %>
 <% if (page.next){ %>
-  <a href="<%- config.root %><%- page.next_link %>">Next</a>
+  <a href="<%- url_for(page.next_link) %>">Next</a>
 <% } %>
 ```
 

@@ -67,12 +67,6 @@ Layout | Description | Fallback
 `category` | Category archives layout | `archive`
 `tag` | Tag archives layout | `archive`
 
-Hexo supports **Layout** and **Partial**. Every template file use `layout.ejs` as layout by default. You can set `layout: false` in front-matter or delete `layout.ejs` to disable the layout.
-
-{% note info Customize layouts %}
-If you want to customize a layout for your posts. You have to add a new layout file in `layout` folder or it'll fallback to `post` layout. Page variables in the custom layout is same as `post` layout.
-{% endnote %}
-
 ### scripts
 
 Script folder. JavaScript files in this folder will be loaded when Hexo started. This feature requires Hexo 2.4 and above.
@@ -88,6 +82,80 @@ Files which are able to rendered by renderer plugins will be rendered, such as S
 {% note info Get config in Stylus File %}
 You can get global and theme configuration by using `hexo-config(key)` in stylus file.
 {% endnote %}
+
+## Layout
+
+Layout wraps a template to another layout template. A layout must contain `<%- body %>` so that it can show the contents of the template. For example:
+
+``` html index.ejs
+index
+```
+
+``` html layout.ejs
+<!DOCTYPE html>
+<html>
+  <body><%- body %></body>
+</html>
+```
+
+yields:
+
+``` html
+<!DOCTYPE html>
+<html>
+  <body>index</body>
+</html>
+```
+
+By default, every template file uses `layout.ejs` as the layout. You can specify other layouts in front-matter or use `false` to disable the layout. You can also use a layout in another layout to create nested layouts.
+
+## Partial
+
+Partial helps you share components across templates. For example:
+
+``` html _partial/header.ejs
+<header></header>
+```
+
+``` html index.ejs
+<%- partial('_partial/header') %>
+<div id="content"></div>
+```
+
+yields:
+
+```
+<header></header>
+<div id="content"></div>
+```
+
+You can pass data to partials by defining local variables:
+
+``` js
+<%- partial('_partial/header', {title: 'Hello World'}) %>
+```
+
+For more info, see [partial helper](helpers.html#partial).
+
+## Optimization
+
+If your theme is too complicated and too may source files needed to be generate. Generation performance may decrease a lot. Besides simplifying your theme, you can also try **Fragment Caching** introduced in Hexo 2.7.
+
+This feature is stolen from [Ruby on Rails](http://guides.rubyonrails.org/caching_with_rails.html#fragment-caching). It saves the contents within a fragment and serves the cache when the next request comes in. It can decrease database queries and make generation faster.
+
+It can be used in header, footer, sidebar or some static contents that won't be changed in your templates. For example:
+
+``` js
+<%- fragment_cache('header', function(){
+  return '<header></header>';
+});
+```
+
+It would be easier if you use partial:
+
+``` js
+<%- partial('header', {}, {cache: true});
+```
 
 ## Publishing
 

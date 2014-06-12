@@ -436,4 +436,18 @@ hexo.extend.filter.register('post_permalink', function(data){
 });
 ```
 
+**server_middleware**
+
+Adds a middleware to the server. `app` is an instance of the [Connect] server.
+
+``` js
+hexo.extend.filter.register('server_middleware', function(app){
+  app.use(function(req, res, next){
+    res.setHeader('X-Powered-By', 'Hexo');
+    next();
+  });
+});
+```
+
 [Minimist]: https://github.com/substack/minimist
+[Connect]: https://github.com/senchalabs/connect
