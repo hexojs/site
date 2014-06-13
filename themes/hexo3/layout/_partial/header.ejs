@@ -9,10 +9,11 @@
         <ul id="main-nav-list">
           <% _.each(theme.menu, function(menu, title){ %>
             <li class="main-nav-item">
-              <a href="<%= url_for(menu) %>" class="main-nav-link<% if (is_current(menu)){ %> current<% } %>"><%= title %></a>
+              <a href="<%= url_for(menu) %>" class="main-nav-link"><%= title %></a>
             </li>
           <% }); %>
         </ul>
+        <a href="https://github.com/<%- theme.github %>" id="github-btn" title="GitHub" target="_blank"></a>
         <a id="search-btn" class="st-search-launcher" title="Search"></a>
       </nav>
     </div>

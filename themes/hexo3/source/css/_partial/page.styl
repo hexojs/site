@@ -17,29 +17,13 @@ note-warn = hsl(0, 100%, 50%)
   color: #555
   font: 300 35px font-title
   text-shadow: 1px 0 #eee
+  line-height: 1em
 
 #page-edit-link
-  color: #aaa
-  text-shadow: 1px 0 #eee
-  width: 24px
-  height: @width
-  line-height: @width
-  text-align: center
-  text-decoration: none
-  transition: color 0.2s
-  position: absolute
-  top: 0
-  bottom: 0
-  right: 0
-  margin: auto
-  font-size: @width
-  &:hover
-    color: #888
+  @extend $banner-link
   &:before
     @extend $icon-font
     content: "\f040"
-  @media mq-mobile
-    display: none
 
 .page-content
   column(12)
@@ -183,45 +167,6 @@ $page-footer-link
     @extend $icon-font
     content: "\f061"
     padding-left: 10px
-
-#sidebar
-  column(3)
-  font-family: font-title
-  padding: 0 0 40px
-  @media mq-mobile
-    display: none
-
-.sidebar-title
-  display: block
-  margin: 40px 0 10px
-  color: color-blue
-  text-transform: uppercase
-  font-weight: bold
-  position: relative
-  padding-left: 20px
-  &:before
-    content: ""
-    width: 8px
-    height: 8px
-    background: color-blue
-    border-radius: 50%
-    position: absolute
-    top: 4px
-    left: 0
-
-.sidebar-link
-  color: #666
-  text-decoration: none
-  display: block
-  font-weight: 300
-  padding: 5px 15px
-  border-left: 2px solid color-border
-  margin-left: 3px
-  &:hover, &.current
-    color: color-blue
-  &.current
-    font-weight: bold
-    border-left-color: color-blue
 
 #page-mobile-menu
   width: 100%

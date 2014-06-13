@@ -72,24 +72,28 @@ logo-height = 30px
   margin: 10px
   @media mq-normal
     float: left
-    margin: 0 10px
+    margin: 0 15px
 
 .main-nav-link
   display: block
-  font-weight: 300
+  font-weight: bold
   text-transform: uppercase
   text-decoration: none
-  color: color-default
+  color: color-grey
   text-align: center
   padding: 10px 15px
   line-height: 1
   transition: 0.2s
-  &:hover, &:active, &.current
-    background: color-blue
-    color: #fff
-    border-radius: 4px
+  @media mq-normal
+    padding: 10px 0
+  &:hover, &:active
+    color: color-blue
+    @media mq-mobile
+      background: color-blue
+      color: #fff
+      border-radius: 4px
 
-#search-btn
+$header-btn
   float: left
   display: none
   width: 18px
@@ -100,11 +104,22 @@ logo-height = 30px
   cursor: pointer
   color: #999
   transition: color 0.2s
+  text-decoration: none
   &:hover
     color: color-blue
   &:before
-    @extend $icon-font
-    content: "\f002"
     font-size: @width
   @media mq-normal
     display: block
+
+#github-btn
+  @extend $header-btn
+  &:before
+    @extend $icon-font
+    content: "\f113"
+
+#search-btn
+  @extend $header-btn
+  &:before
+    @extend $icon-font
+    content: "\f002"

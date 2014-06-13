@@ -12,6 +12,26 @@ $icon-font
   -webkit-font-smoothing: antialiased
   -moz-osx-font-smoothing: grayscale
 
+$banner-link
+  color: #aaa
+  text-shadow: 1px 0 #eee
+  width: 24px
+  height: @width
+  line-height: @width
+  text-align: center
+  text-decoration: none
+  transition: color 0.2s
+  position: absolute
+  top: 0
+  bottom: 0
+  right: 0
+  margin: auto
+  font-size: @width
+  &:hover
+    color: #888
+  @media mq-mobile
+    display: none
+
 square(size)
   width: size
   height: size

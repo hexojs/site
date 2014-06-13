@@ -141,9 +141,9 @@ For more info, see [partial helper](helpers.html#partial).
 
 If your theme is too complicated and too may source files needed to be generate. Generation performance may decrease a lot. Besides simplifying your theme, you can also try **Fragment Caching** introduced in Hexo 2.7.
 
-This feature is stolen from [Ruby on Rails](http://guides.rubyonrails.org/caching_with_rails.html#fragment-caching). It saves the contents within a fragment and serves the cache when the next request comes in. It can decrease database queries and make generation faster.
+This feature is stolen from [Ruby on Rails](http://guides.rubyonrails.org/caching_with_rails.html#fragment-caching). It saves the contents within a fragment and serves the cache when the next request comes in. It can reduce database queries and make generation faster.
 
-It can be used in header, footer, sidebar or some static contents that won't be changed in your templates. For example:
+It can be used in header, footer, sidebar or static contents that won't be changed in your templates. For example:
 
 ``` js
 <%- fragment_cache('header', function(){

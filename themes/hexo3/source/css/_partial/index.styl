@@ -72,7 +72,9 @@ $banner-getting-started-font
     display: block
 
 .intro-wrap
-  padding: 40px 0
+  padding: 20px 0
+  @media mq-normal
+    padding: 40px 0
 
 .intro-feature-wrap
   column(12)
@@ -80,13 +82,16 @@ $banner-getting-started-font
     column(6)
 
 .intro-feature
-  padding: 40px 0 40px 50px
+  margin: 20px 0
+  padding-left: 50px
   position: relative
+  @media mq-normal
+    margin: 40px 0
   &:before
     @extend $icon-font
     font-size: 30px
     position: absolute
-    top: 40px
+    top: 0
     left: 0
     color: color-blue
 
@@ -119,11 +124,13 @@ $banner-getting-started-font
   line-height: 2em
 
 #intro-cmd-wrap
-  margin: 40px auto
+  margin: 20px auto
   max-width: 700px
   overflow: auto
   background: #eee
   padding: 15px 0
+  @media mq-normal
+    margin: 40px auto
 
 .intro-cmd-item
   line-height: 1.8
