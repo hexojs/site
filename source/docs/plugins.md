@@ -30,7 +30,7 @@ You should at least describe `name`, `version`, `main` in `package.json`. For ex
 
 ### Publishing
 
-You can publish your plugin to the [plugin list](https://github.com/tommy351/hexo/wiki/Plugins) on wiki.
+You can publish your plugin to the [plugin list](https://github.com/hexojs/hexo/wiki/Plugins) on wiki.
 
 ## Generator
 
@@ -81,7 +81,7 @@ hexo.extend.generator.register(function(locals, render, callback){
 
 ## Renderer
 
-Renderers are used to render contents. You can find available renderers in [plugin list](https://github.com/tommy351/hexo/wiki/Plugins#renderer).
+Renderers are used to render contents. You can find available renderers in [plugin list](https://github.com/hexojs/hexo/wiki/Plugins#renderer).
 
 ### Syntax
 

@@ -1,6 +1,6 @@
 title: Documentation
 ---
-Welcome to the Hexo's documentation. This documentation will help you get started fast. If you get any problems when using Hexo, you can find the answer in [troubleshooting](troubleshooting.html) or you can ask me on [GitHub](https://github.com/tommy351/hexo/issues) or [Google Group](https://groups.google.com/group/hexo).
+Welcome to the Hexo's documentation. This documentation will help you get started fast. If you get any problems when using Hexo, you can find the answer in [troubleshooting](troubleshooting.html) or you can ask me on [GitHub](https://github.com/hexojs/hexo/issues) or [Google Group](https://groups.google.com/group/hexo).
 
 ## What's Hexo?
 
@@ -8,7 +8,7 @@ Hexo is a fast, simple and powerful blog framework. It parses your posts with [M
 
 ## Installation
 
-It only takes few minutes for you to get Hexo ready. If you encounter any problems on installation and you can't find the solution here. Please [submit an issue](https://github.com/tommy351/hexo/issues) and I'll try to solve your problems.
+It only takes few minutes for you to get Hexo ready. If you encounter any problems on installation and you can't find the solution here. Please [submit an issue](https://github.com/hexojs/hexo/issues) and I'll try to solve your problems.
 
 ### Requirements
 

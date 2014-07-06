@@ -159,7 +159,7 @@ It would be easier if you use partial:
 
 ## Publishing
 
-You can publish your theme to the [theme list](https://github.com/tommy351/hexo/wiki/Themes) on wiki. Before publishing, you should test it with [Theme Unit Test](https://github.com/hexojs/hexo-theme-unit-test).
+You can publish your theme to the [theme list](https://github.com/hexojs/hexo/wiki/Themes) on wiki. Before publishing, you should test it with [Theme Unit Test](https://github.com/hexojs/hexo-theme-unit-test).
 
 [IETF format]: http://www.w3.org/International/articles/language-tags/
 [EJS]: https://github.com/visionmedia/ejs

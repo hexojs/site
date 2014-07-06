@@ -13,7 +13,7 @@ It can be used in header, footer, sidebar or static contents that won't be chang
 ``` js
 <%- fragment_cache('header', function(){
   return '<header></header>';
-});
+}); %>
 ```
 
 By using `fragment_cache` helper, contents in the function will be cached.

@@ -67,7 +67,7 @@ The Hexo documentation is open source and you can find the source code on [hexoj
 
 ## Reporting Issues
 
-When you encounter some problems when using Hexo, you can find the solutions in [Troubleshooting] or ask me on [GitHub](https://github.com/tommy351/hexo/issues) or [Google Group](https://groups.google.com/group/hexo). If you can't find the answer, please report it on GitHub.
+When you encounter some problems when using Hexo, you can find the solutions in [Troubleshooting] or ask me on [GitHub](https://github.com/hexojs/hexo/issues) or [Google Group](https://groups.google.com/group/hexo). If you can't find the answer, please report it on GitHub.
 
 1. Represent the problem in debug mode.
 

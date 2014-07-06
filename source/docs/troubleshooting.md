@@ -1,6 +1,6 @@
 title: Troubleshooting
 ---
-You may encounter some problems when using Hexo. The following are the solutions to the problems that people frequently asked. If you can't find the answer here, you can try to find the answer on [GitHub](https://github.com/tommy351/hexo/issues) or [Google Group](https://groups.google.com/group/hexo).
+You may encounter some problems when using Hexo. The following are the solutions to the problems that people frequently asked. If you can't find the answer here, you can try to find the answer on [GitHub](https://github.com/hexojs/hexo/issues) or [Google Group](https://groups.google.com/group/hexo).
 
 ## YAML Parsing Error
 
