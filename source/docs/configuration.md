@@ -45,7 +45,7 @@ Setting | Description | Default
 `filename_case` | Transform filename into (1) lower case or (2) upper case | 0
 `render_drafts` | Serve drafts as normal posts in server | false
 `post_asset_folder` | Enables [Asset Folder](writing.html#Asset_Folder) | false
-`relative_link` | Uses relative link | false
+`relative_link` | Make links relative to root folder | false
 `highlight` | Code block settings |
 
 ### Category & Tag
