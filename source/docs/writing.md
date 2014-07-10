@@ -10,13 +10,12 @@ $ hexo new [layout] <title>
 
 ### Layout
 
-Hexo has 3 default layouts: `post`, `page` and `draft`. Other layouts will be saved in `source/_posts` by default.
+Hexo has 2 default layouts: `post` and `page`. Other layouts will be saved in `source/_posts` by default.
 
 Layout | Destination
 --- | ---
 `post` (Default) | source/_posts
 `page` | source
-`draft` | source/_drafts
 
 {% note tip Don't process my posts! %}
 If you don't want your posts processed. You can set `layout: false` in front-matter.
@@ -30,9 +29,6 @@ $ hexo new "New Post"
 
 $ hexo new page "New Page"
 # => The file will be created at source/new-page/index.html
-
-$ hexo new draft "New Draft"
-# => The file will be created at source/_drafts/new-draft.md
 ```
 
 ### Filename

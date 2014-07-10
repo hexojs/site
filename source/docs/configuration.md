@@ -40,8 +40,6 @@ Setting | Description | Default
 `auto_spacing` | Add a space between eastern and western characters | false
 `titlecase` | Transform title into proper title case | false
 `external_link` | Open external links in new tab | true
-`max_open_file` | Maximum synchronous I/O when generating files | 100
-`multi_thread` | Enable multi-thread generating | true
 `filename_case` | Transform filename into (1) lower case or (2) upper case | 0
 `render_drafts` | Serve drafts as normal posts in server | false
 `post_asset_folder` | Enables [Asset Folder](writing.html#Asset_Folder) | false
@@ -128,8 +126,6 @@ new_post_name: :title.md
 default_layout: post
 auto_spacing: false
 titlecase: false
-max_open_file: 100
-multi_thread: true
 filename_case: 0
 render_drafts: false
 post_asset_folder: false

@@ -75,8 +75,10 @@ deploy:
   host: <host>
   user: <user>
   root: <root>
-  port: [port] # Default is 22
-  delete: [true|false] # Default is true
+  port: [port]
+  delete: [true|false]
+  verbose: [true|false]
+  ignore_errors: [true|false]
 ```
 
 Option | Description | Default
@@ -86,6 +88,8 @@ Option | Description | Default
 `root` | Root directory of remote host |
 `port` | Port | 22
 `delete` | Delete old files on remote host | true
+`verbose` | Display verbose messages | true
+`ignore_errors` | Ignore errors | false
 
 ## OpenShift DIY Cartridge
 

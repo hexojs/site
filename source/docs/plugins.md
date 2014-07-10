@@ -220,7 +220,7 @@ Property | Description
 --- | ---
 `source` | File source
 `path` | File relative path
-`type` | File event. The value can be `create`, `update` or `delete`.
+`type` | File event. The value can be `create`, `update`, `delete` or `skip`.
 `read` | Reads the file
 `readSync` | Reads the file synchronizedly
 `stat` | Gets the file status

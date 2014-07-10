@@ -36,7 +36,7 @@ Option | Description
 ## publish
 
 ``` bash
-$ hexo publish <filename>
+$ hexo publish [layout] <filename>
 ```
 
 Publishes a draft.

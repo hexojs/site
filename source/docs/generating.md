@@ -18,16 +18,6 @@ $ hexo generate --watch
 Hexo doesn't watch for configuration file changes. You have to restart Hexo to make the new configurations take effects.
 {% endnote %}
 
-### Multi-thread Generating
-
-Hexo supports multi-thread generating since 2.0. To enable this feature, edit `_config.yml`.
-
-``` yaml
-multi_thread: true
-```
-
-You can change how many threads to use. Just edit `multi_thread` with the number of threads. The number of threads is the number of CPU cores by default. It's not recommended to set any value higher than it.
-
 ### Deploy After Generating
 
 To deploy after generating, you can run one of the following commands. Both of them are equaled.

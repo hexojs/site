@@ -17,9 +17,16 @@ Variable | Description
 `:id` | Post ID
 `:category` | Categories. If the post is uncategorized, it'll be `category_dir` setting.
 
+You can define the default value of each variable in the permalink in `permalink_defaults` setting:
+
+``` yaml
+permalink_defaults:
+  lang: en
+```
+
 ### Examples
 
-Given a post named `hello-world.md` in `source/_posts` folder with   the following content.
+Given a post named `hello-world.md` in `source/_posts` folder with the following content.
 
 ``` yaml
 title: Hello World
@@ -34,3 +41,25 @@ Setting | Result
 `:year/:month/:day/:title/` | 2013/07/14/hello-world
 `:year-:month-:day-:title.html` | 2013-07-14-hello-world.html
 `:category/:title` | foo/bar/hello-world
+
+### Multi-language Support
+
+To create a multi-language site, you can modify `new_post_path` and `permalink` setting like this:
+
+``` yaml
+new_post_path: :lang/:title.md
+permalink: :lang/:title/
+```
+
+When you create a new post, the post will be saved to:
+
+``` bash
+$ hexo new "Hello World" --lang tw
+# => source/_posts/tw/Hello-World.md
+```
+
+and the URL will be:
+
+``` plain
+http://localhost:4000/tw/hello-world/
+```
