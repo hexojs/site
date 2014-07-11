@@ -9,6 +9,9 @@
     </div>
   <% } %>
   <% if (!index){ %>
+    <footer class="post-footer">
+      <%- partial('post/share') %>
+    </footer>
     <%- partial('comment') %>
   <% } %>
 </article>
