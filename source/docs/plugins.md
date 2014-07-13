@@ -39,10 +39,17 @@ Generators are used to generate static files based on processed source files.
 ### Syntax
 
 ``` js
-hexo.extend.generator.register(function(locals, render, callback){
+hexo.extend.generator.register(name, function(locals, render, callback){
   // ...
 });
 ```
+
+Parameter | Description
+--- | ---
+`name` | Generator name
+`fn` | Generator function
+
+`fn` is invoked with 3 arguments:
 
 Argument | Description
 --- | ---
