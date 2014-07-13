@@ -10,6 +10,14 @@ Returns a url with the root path prefixed. You should use this helper instead of
 <%- url_for(path) %>
 ```
 
+### relative_url
+
+Solves the relative URL from `from` to `to`.
+
+``` js
+<%- relative_url(from, to) %>
+```
+
 ### css
 
 Loads CSS files. `path` can be an array or a string. If `path` isn't prefixed with `/` or any protocol, it'll be prefixed with root URL. If you didn't add extension name `.css` after `path`, it'll be added.

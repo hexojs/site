@@ -14,6 +14,7 @@ doc_sidebar:
     Migration: migration.html
   Basic Usage:
     Writing: writing.html
+    Drafts: drafts.html
     Generating: generating.html
     Tag Plugins: tag-plugins.html
     Server: server.html
