@@ -62,8 +62,17 @@ Or you can download the [installer](http://nodejs.org/) and install it.
 
 ### Install Hexo
 
-Once all the requirements are installed, you can install Hexo with npm.
+Once all the requirements are installed, you can install Hexo with [Node Package Manager](https://www.npmjs.org/).
 
 ``` bash
 $ npm install -g hexo
 ```
+
+`-g` parameter will install Hexo package globally.
+
+{% note info Updating Hexo %}
+As any other [npm]((https://www.npmjs.org/)) package, you can update Hexo through `npm update` command.
+``` bash
+$ npm update -g hexo
+```
+{% endnote %}
