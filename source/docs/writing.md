@@ -18,7 +18,7 @@ Layout | Destination
 `page` | source
 
 {% note tip Don't process my posts! %}
-If you don't want your posts processed. You can set `layout: false` in front-matter.
+If you don't want your posts processed, you can set `layout: false` in front-matter.
 {% endnote %}
 
 ### Example
