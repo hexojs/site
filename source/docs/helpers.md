@@ -470,13 +470,14 @@ Option | Description | Default
 `style` | Style to display the tags list. `list` displays tags in an unordered list.  | list
 `separator` | Separator between tags. (Only works if `style` is `none`) | ,
 `class` | Class name of tags list. | tag
+`amount` | The number of tags to display (0 = unlimited) | 0
 
 ### list_archives
 
 Inserts a list of archives.
 
 ``` js
-<%- list_archive([options]) %>
+<%- list_archives([options]) %>
 ```
 
 Option | Description | Default
