@@ -6,7 +6,7 @@ title: Commands
 $ hexo init [folder]
 ```
 
-Setups a website. If `folder` isn't defined, Hexo will setup the website at the current directory.
+Initializes a website. If `folder` isn't defined, Hexo will set up the website in the current directory.
 
 ## new
 
@@ -14,7 +14,7 @@ Setups a website. If `folder` isn't defined, Hexo will setup the website at the 
 $ hexo new [layout] <title>
 ```
 
-Creates a new article. If `layout` isn't defined, it'll be `default_layout` setting. If the title is more than one word, wrap it with quotation marks.
+Creates a new article. If `layout` isn't defined, it'll equal the `default_layout` setting in [_config.yml](configuration.html). If the title is more than one word, wrap it with quotation marks.
 
 **Alias:** n
 
@@ -94,7 +94,7 @@ Option | Description
 $ hexo migrate <type>
 ```
 
-Migrates from other blog systems.
+[Migrates](migration.html) content from other blog systems.
 
 ## clean
 
@@ -136,7 +136,7 @@ Plugins and scripts won't be loaded in safe mode. You can try this when you enco
 $ hexo --debug
 ```
 
-Displays verbose messages in terminal and saves log in `debug.log`. When you get some problems, try to run Hexo again in debug mode and submit the messages to GitHub.
+Displays verbose messages in terminal and saves log in `debug.log`. When you get some problems, try to run Hexo again in debug mode and please [submit any errors to GitHub](https://github.com/hexojs/hexo/issues/new).
 
 ### Silent mode
 
@@ -144,7 +144,7 @@ Displays verbose messages in terminal and saves log in `debug.log`. When you get
 $ hexo --silent
 ```
 
-Hides output on console.
+Hides output to the console.
 
 ### Customize config file path
 

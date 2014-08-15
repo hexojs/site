@@ -4,20 +4,20 @@ Welcome to the Hexo's documentation. This documentation will help you get starte
 
 ## What's Hexo?
 
-Hexo is a fast, simple and powerful blog framework. It parses your posts with [Markdown](http://daringfireball.net/projects/markdown/) or other render engine and generates static files with the beautiful theme. All of these just take seconds.
+Hexo is a fast, simple and powerful blog framework. It parses your posts with [Markdown](http://daringfireball.net/projects/markdown/) (or other render engines) and generates static files with a beautiful theme in seconds.
 
 ## Installation
 
-It only takes few minutes for you to get Hexo ready. If you encounter any problems on installation and you can't find the solution here. Please [submit an issue](https://github.com/hexojs/hexo/issues) and I'll try to solve your problems.
+It only takes few minutes for you to get Hexo ready. If you encounter any problems on installation and you can't find the solution here, please [submit an issue](https://github.com/hexojs/hexo/issues) and I'll try to solve your problems.
 
 ### Requirements
 
-Installing Hexo is quite easy. However, there're something required before you get started.
+Installing Hexo is quite easy. However, there are some things required before you get started:
 
 - [Node.js](http://nodejs.org/)
 - [Git](http://git-scm.com/)
 
-If your computer has been installed the requirements above already. Congratulations! Just install Hexo with npm.
+If your computer already has the requirements above, congratulations! Just install Hexo with npm.
 
 ``` bash
 $ npm install -g hexo

@@ -1,6 +1,6 @@
 title: Configuration
 ---
-You can modify most of options in `_config.yml`.
+You can modify most options in `_config.yml`.
 
 ## Configuration
 
@@ -28,7 +28,7 @@ Setting | Description | Default
 `code_dir` | Include code directory | downloads/code
 
 {% note info Website in subdirectory %}
-If your website is put in subdirectory such as `http://yoursite.com/blog`.   Set `url` as `http://yoursite.com/blog` and `root` as `/blog/`.
+If your website is put in a subdirectory such as `http://yoursite.com/blog`, set `url` to `http://yoursite.com/blog` and set `root` to `/blog/`.
 {% endnote %}
 
 ### Writing
@@ -101,12 +101,12 @@ Setting | Description
 `exclude_generator` | Disabled generators (archive, category, home, page, post, tag)
 
 {% note warn YAML format %}
-Don't use tabs in configuration files, use spaces instead. Also, add a space after colons. Configuration files parsing error may cause Hexo can't run properly.
+Don't use tabs in configuration files, use spaces instead. Also, add a space after colons. Configuration file parsing errors may cause Hexo to not run properly.
 {% endnote %}
 
 ## Default Configuration
 
-``` yaml package.json
+``` yaml _config.yml
 title: Hexo
 subtitle:
 description:
