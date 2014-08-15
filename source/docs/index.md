@@ -55,7 +55,7 @@ $ wget -qO- https://raw.github.com/creationix/nvm/master/install.sh | sh
 Once installed, restart the terminal and run the following command to install Node.js.
 
 ``` bash
-$ nvm install 0.11
+$ nvm install 0.10
 ```
 
 Or you can download the [installer](http://nodejs.org/) and install it.
