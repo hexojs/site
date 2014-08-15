@@ -1,6 +1,6 @@
 title: Setup
 ---
-Once Hexo is installed, run the following command and hexo will build all files you need in the target folder.
+Once Hexo is installed, run the following command and Hexo will build all the files you need in the target folder.
 
 ``` bash
 $ hexo init <folder>
@@ -8,7 +8,7 @@ $ cd <folder>
 $ npm install
 ```
 
-After build, here's how the folder looks like:
+After build, here's what the project folder looks like:
 
 ``` plain
 .
@@ -24,11 +24,11 @@ After build, here's how the folder looks like:
 
 ### _config.yml
 
-Site [configuration](configuration.html) file. You can configure most of options here.
+Site [configuration](configuration.html) file. You can configure most options here.
 
 ### package.json
 
-Application data. EJS, Stylus and Markdown renderer are installed by default, you can uninstall them later.
+Application data. [EJS](http://embeddedjs.com/), [Stylus](http://learnboost.github.io/stylus/) and [Markdown](http://daringfireball.net/projects/markdown/) renderers are installed by default, you can uninstall them later.
 
 ``` json package.json
 {
@@ -49,11 +49,11 @@ Application data. EJS, Stylus and Markdown renderer are installed by default, yo
 
 ### scripts
 
-[Script](plugins.html) folder. Script is the easiest way to extend Hexo. JavaScript files in this folder will be executed automatically.
+[Script](plugins.html) folder. Scripts are the easiest way to extend Hexo. JavaScript files in this folder will be executed automatically.
 
 ### source
 
-Source folder is where you can put your content in. File or folder whose name is prefixed with `_` (underscore) and hidden files will be ignore except `_posts` folder. Markdown, HTML files will be processed and put into `public` folder, while other files will be copied.
+Source folder is where you can put your content. Files or folders whose names are prefixed with `_` (underscore) and hidden files will be ignored except `_posts` folder. Markdown and HTML files will be processed and put into `public` folder, while other files will simply be copied.
 
 ### themes
 
