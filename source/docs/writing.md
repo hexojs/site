@@ -91,7 +91,7 @@ Categories and tags may sound familiar in other systems, but they're totally dif
 
 ## Excerpts
 
-You can hide parts of your post by adding `<!-- more -->` in the content. Index page will only show the post from the first to the first occurrence of `<!-- more -->`.
+You can hide parts of your post by adding `<!-- more -->` in the content. Index page will only show the post from the first to the second occurrence of `<!-- more -->`.
 
 ``` markdown
 ...
