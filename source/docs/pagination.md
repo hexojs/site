@@ -41,4 +41,4 @@ To display pagination in number. You can use paginator helper. It helps you inse
 <%- paginator() %>
 ```
 
-For more info, see [Helpers](http://localhost:4000/docs/helpers.html#paginator).
+For more info, see [Helpers](/docs/helpers.html#paginator).
