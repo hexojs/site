@@ -44,10 +44,10 @@ Setting | Result
 
 ### Multi-language Support
 
-To create a multi-language site, you can modify `new_post_path` and `permalink` setting like this:
+To create a multi-language site, you can modify `new_post_name` and `permalink` setting like this:
 
 ``` yaml
-new_post_path: :lang/:title.md
+new_post_name: :lang/:title.md
 permalink: :lang/:title/
 ```
 
