@@ -2,15 +2,15 @@ title: Plugins
 ---
 ## Overview
 
-Hexo has a powerful plugin system. Most of built-in plugins are extensions of Hexo. This makes you easy to hook up your code.
+Hexo has a powerful plugin system. Most of the built-in plugins are extensions of Hexo. This makes it easy for you to hook up your code.
 
 ### Script
 
-If your code is simple, it's recommended to use a script. All you need to do is putting JavaScript files in `scripts` folder and they'll be loaded once Hexo is initialized.
+If your code is simple, it's recommended to use a script. All you need to do is put JavaScript files in the `scripts` folder and they'll be loaded once Hexo is initialized.
 
 ### Plugin
 
-If your code is complicated or you want to publish it to NPM registry, it's recommended to use a plugin. First, create a folder in `node_modules` folder. The name of the folder must be started with `hexo-` so it could be loaded by Hexo. The folder must be contained at least 2 files: One is the main program and the other is `package.json` describing the purpose and the dependencies of the plugin.
+If your code is complicated or you want to publish it to the NPM registry, it's recommended to use a plugin. First, create a folder in the`node_modules` folder. The name of the folder start with `hexo-` in order for Hexo to load it. The folder must contain at least 2 files: one is the main program and the other is `package.json`, which describes the plugin's purpose and dependencies.
 
 ``` plain
 .
@@ -18,7 +18,7 @@ If your code is complicated or you want to publish it to NPM registry, it's reco
 └── package.json
 ```
 
-You should at least describe `name`, `version`, `main` in `package.json`. For example:
+In `package.json`, you should at least fill out `name`, `version` and `main`. For example:
 
 ``` json package.json
 {
@@ -30,9 +30,9 @@ You should at least describe `name`, `version`, `main` in `package.json`. For ex
 
 ### Publishing
 
-You can publish your plugin to the [plugin list](https://github.com/hexojs/hexo/wiki/Plugins) on wiki.
+You can publish your plugin to the [plugin list](https://github.com/hexojs/hexo/wiki/Plugins) on the Hexo wiki.
 
-## Generator
+## Generators
 
 Generators are used to generate static files based on processed source files.
 
@@ -71,7 +71,7 @@ Argument | Description
 `layout` | Theme layout to use. This value can be an array or a string. When it's an array, Hexo'll use the first matched layout.
 `locals` | Page variables
 
-If you don't need to render contents with templates. You can bind contents on routes directly:
+If you don't need to render contents with templates, you can bind contents on routes directly:
 
 ``` js
 hexo.route.set('feed.xml', content);
@@ -88,7 +88,7 @@ hexo.extend.generator.register(function(locals, render, callback){
 
 ## Renderer
 
-Renderers are used to render contents. You can find available renderers in [plugin list](https://github.com/hexojs/hexo/wiki/Plugins#renderer).
+Renderers are used to render content. You can find available renderers in [plugin list](https://github.com/hexojs/hexo/wiki/Plugins#renderer).
 
 ### Syntax
 
@@ -167,9 +167,9 @@ hexo.extend.helper.register('js', function(path){
 // <script type="text/javascript" src="script.js"></script>
 ```
 
-## Deployer
+## Deployers
 
-Deployer plugin helps you deploy your site on web without complicated commands.
+Deployer plugins help you to deploy your site to the web without complicated commands.
 
 ### Syntax
 
@@ -261,9 +261,9 @@ file.render([options], callback);
 file.renderSync([options]);
 ```
 
-## Tag
+## Tags
 
-Tags are used in posts to help your insert snippets quickly.
+Tags are used in posts to help you insert snippets quickly.
 
 ### Syntax
 
@@ -314,7 +314,7 @@ hexo.extend.tag.register('pullquote', function(args, content, options){
 }, true);
 ```
 
-## Console
+## Consoles
 
 Consoles are the interface between Hexo and you.
 
@@ -357,9 +357,9 @@ hexo.extend.console.register('config', 'Display configuration', function(args, c
 });
 ```
 
-## Migrator
+## Migrators
 
-Migrators are used to migrate from other system to Hexo.
+Migrators are used to migrate from other systems to Hexo.
 
 ### Syntax
 
@@ -383,7 +383,7 @@ Argument | Description
 
 ## Filter
 
-Filters are used to modify certain data. Hexo passes data through filters and you can modify everything as long as it's provided. This concept is stolen from [WordPress](http://codex.wordpress.org/Plugin_API#Filters). Filter API is rewritten in 2.6 and more filter types are added.
+Filters are used to modify certain data. Hexo passes data through filters and you can modify everything as long as it's provided. This concept is stolen from [WordPress](http://codex.wordpress.org/Plugin_API#Filters). The filter API is rewritten in 2.6 and more filter types have been added.
 
 ### Syntax
 
@@ -403,7 +403,7 @@ Parameter | Description
 
 **before_post_render**
 
-Runs before posts are rendered by Markdown. For example, transform a title into titlecase:
+Runs before posts are rendered by Markdown. For example, to transform a title into titlecase:
 
 ``` js
 hexo.extend.filter.register('before_post_render', function(data, callback){
@@ -414,7 +414,7 @@ hexo.extend.filter.register('before_post_render', function(data, callback){
 
 **after_post_render**
 
-Runs after posts are rendered by Markdown. For example, replace `@username` to a Twitter profile link.
+Runs after posts are rendered by Markdown. For example, to replace `@username` with a Twitter profile link:
 
 ``` js
 hexo.extend.filter.register('after_post_render', function(data, callback){
