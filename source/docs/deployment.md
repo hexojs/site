@@ -163,6 +163,37 @@ deploy:
   message: "Commit message"
 ```
 
+## GitCafe Pages
+
+Edit `_config.yml`.
+
+``` yaml
+deploy:
+  type: gitcafe
+  repo: <repository url>
+  branch: [branch]
+  message: [message]
+```
+
+Option | Description
+--- | ---
+`repo`, `repository` | GitCafe repository URL (Better to use HTTPS)
+`branch` | The deployer will detect the branch to use automatically. You can also customize it on your own.
+`message` | Customize commit message (Default is `Site updated: {% raw %}{{ now('YYYY-MM-DD HH:mm:ss') }}{% endraw %}`)
+
+### Remove
+
+Remove `.deploy-gitcafe` folder.
+
+``` bash
+$ rm -rf .deploy-gitcafe
+```
+### Custom Domain
+
+Add your custom domain on https://gitcafe.com/<username>/<project>/custom_domains
+
+Check [GitCafe Pages](https://gitcafe.com/GitCafe/Help/wiki/Pages-%E7%9B%B8%E5%85%B3%E5%B8%AE%E5%8A%A9) for more info.
+
 ## Other Methods
 
 All generated files are saved in `public` folder. You can copy it to wherever you like.
