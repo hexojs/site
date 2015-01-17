@@ -1,91 +1,20 @@
-# Hexo Configuration
-## Docs: http://hexo.io/docs/configuration.html
-## Source: https://github.com/tommy351/hexo/
-
-# Site
 title: Hexo
-subtitle: Hexo is a fast, simple & powerful blog framework powered by Node.js.
-description: Hexo is a fast, simple & powerful blog framework powered by Node.js.
-author: SkyArrow
-email: tommy351@gmail.com
-language:
-
-# URL
-## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
+subtitle: "A fast, simple & powerful blog framework powered by Node.js."
+description: "Hexo is a fast, simple & powerful blog framework powered by Node.js."
 url: http://hexo.io
 root: /
 permalink: news/:year/:month/:day/:title/
-tag_dir: tags
 archive_dir: news
-category_dir: categories
 code_dir: downloads/code
-
-# Directory
-source_dir: source
-public_dir: public
-
-# Writing
 new_post_name: :year-:month-:day-:title.md # File name of new posts
-default_layout: post
-auto_spacing: false # Add spaces between asian characters and western characters
-titlecase: false # Transform title into titlecase
-external_link: true # Open external links in new tab
-max_open_file: 100
-multi_thread: true
-filename_case: 0
-render_drafts: false
 post_asset_folder: true
-relative_link: false
 highlight:
   enable: true
   line_number: false
-  tab_replace:
-
-# Category & Tag
-default_category: uncategorized
-category_map:
-tag_map:
-
-# Archives
-# 2: Paginate result
-# 1: Display result in same page
-archive: 2
-category: 2
-tag: 2
-
-# Server
-## Hexo uses Connect as a server
-## You can customize the logger format as defined in
-## http://www.senchalabs.org/connect/logger.html
-port: 4000
-server_ip: 0.0.0.0
-logger: false
-logger_format:
-
-# Date / Time format
-## Hexo uses Moment.js to parse and display date
-## You can customize the date format as defined in
-## http://momentjs.com/docs/#/displaying/format/
-date_format: MMM D YYYY
-time_format: H:mm:ss
-
-# Pagination
-## Set per_page to 0 to disable pagination
 per_page: 0
-pagination_dir: page
-
-# Disqus
 disqus_shortname: hexojs
-
-# Extensions
-## Plugins: https://github.com/tommy351/hexo/wiki/Plugins
-## Themes: https://github.com/tommy351/hexo/wiki/Themes
 theme: hexo3
-exclude_generator:
-- home
-
-# Deployment
-## Docs: http://hexo.io/docs/deployment.html
 deploy:
-  type: github
-  repo: https://github.com/hexojs/hexojs.github.io.git
+  type: git
+  repo: https://github.com/hexojs/hexojs.github.io
+  branch: auto-deploy-test

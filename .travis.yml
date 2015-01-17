@@ -1,0 +1,19 @@
+language: node_js
+
+node_js:
+  - "0.10"
+
+before_install:
+  - openssl aes-256-cbc -K $encrypted_06b8e90ac19b_key -iv $encrypted_06b8e90ac19b_iv
+    -in hexo_site_key.enc -out hexo_site_key -d
+  - mv hexo_site_key ~/.ssh/id_rsa
+  - chmod 600 ~/.ssh/id_rsa
+  - echo -e "Host github.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
+  - git config --global user.name "Tommy Chen"
+  - git config --global user.email tommy351@gmail.com
+  - npm install hexo@beta -g
+  - git clone https://github.com/hexojs/hexojs.github.io .deploy
+
+script:
+  - hexo generate
+  - hexo deploy
