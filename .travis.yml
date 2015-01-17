@@ -4,29 +4,17 @@ node_js:
   - "0.10"
 
 before_install:
-  # Decrypt SSH key
-  - openssl aes-256-cbc -K $encrypted_06b8e90ac19b_key -iv $encrypted_06b8e90ac19b_iv -in ssh_key.enc -out ssh_key -d
-  # Change the permission of SSH key
-  - chmod 600 ssh_key
-  # Start SSH agent
+  - openssl aes-256-cbc -K $encrypted_06b8e90ac19b_key -iv $encrypted_06b8e90ac19b_iv -in ssh_pub.enc -out ~/.ssh/id_rsa.pub -d
+  - openssl aes-256-cbc -K $encrypted_06b8e90ac19b_key -iv $encrypted_06b8e90ac19b_iv -in ssh_key.enc -out ~/.ssh/id_rsa -d
+  - chmod 600 ~/.ssh/id_rsa*
   - eval $(ssh-agent)
-  # Add SSH key
-  - echo $SSH_KEY_PASSPHRASE | ssh-add -p ssh_key
-  # Set SSH config
+  - ssh-add ~/.ssh/id_rsa
   - echo -e "Host github.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
-  # Set Git config
   - git config --global user.name "Tommy Chen"
   - git config --global user.email tommy351@gmail.com
-  # Install Hexo
   - npm install hexo@beta -g
-  # Clone hexojs.github.io repository from GitHub
   - git clone https://github.com/hexojs/hexojs.github.io .deploy
 
 script:
   - hexo generate
   - hexo deploy
-
-env:
-  global:
-    # Encrypted SSH passphrase
-    secure: MZV+SVujOd2KpZYX1M3/811HCiyqxVtZTydAQhD165GhPy/Jk93IJuykBjk+GWLwNJISXP2V4Q2DjWPFmw4OjytnFz4M5TgeV2AD696b1cGBVOLI4kFGR+Dm7G+QAOZM4jqch/PtB+Ri89YltibN6kL7Yi5V9i/zkafiyj9TwkA=
