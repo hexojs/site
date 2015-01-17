@@ -4,11 +4,11 @@ node_js:
   - "0.10"
 
 before_install:
-  - openssl aes-256-cbc -K $encrypted_06b8e90ac19b_key -iv $encrypted_06b8e90ac19b_iv -in ssh_key.enc -out ssh_key -d
-  - chmod 600 ssh_key
+  - openssl aes-256-cbc -K $encrypted_06b8e90ac19b_key -iv $encrypted_06b8e90ac19b_iv -in .travis/ssh_key.enc -out ~/.ssh/id_rsa -d
+  - chmod 600 ~/.ssh/id_rsa
   - eval $(ssh-agent)
-  - ssh-add ssh_key
-  - echo -e "Host github.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
+  - ssh-add ~/.ssh/id_rsa
+  - cp .travis/git_config ~/.ssh/config
   - git config --global user.name "Tommy Chen"
   - git config --global user.email tommy351@gmail.com
   - npm install hexo@beta -g
