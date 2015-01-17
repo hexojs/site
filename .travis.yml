@@ -7,6 +7,7 @@ before_install:
   - openssl aes-256-cbc -K $encrypted_06b8e90ac19b_key -iv $encrypted_06b8e90ac19b_iv
     -in ssh_key.enc -out ~/.ssh/id_rsa -d
   - chmod 600 ~/.ssh/id_rsa
+  - eval $(ssh-agent)
   - ssh-add ~/.ssh/id_rsa
   - echo -e "Host github.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
   - git config --global user.name "Tommy Chen"
