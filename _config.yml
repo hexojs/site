@@ -16,5 +16,5 @@ disqus_shortname: hexojs
 theme: hexo3
 deploy:
   type: git
-  repo: https://github.com/hexojs/hexojs.github.io
+  repo: git@github.com:hexojs/hexojs.github.io.git
   branch: auto-deploy-test
