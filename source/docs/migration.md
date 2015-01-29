@@ -38,9 +38,9 @@ First, install `hexo-migrator-wordpress` plugin.
 $ npm install hexo-migrator-wordpress --save
 ```
 
-Next, export the WordPress site's content using the Export tool the admin area (see [support page](http://en.support.wordpress.com/export/) for more details). Save the resulting xml file where you can access it from your Hexo installation.
+Export your WordPress in "Tools" → "Export" → "WordPress" in your dashboard (see [support page](http://en.support.wordpress.com/export/) for more details).
 
-Then run the following command to migrate all posts from the WordPress export. `source` can be the path or URL where the export xml is found.
+Execute the following command after installed. `source` is the file path or URL of WordPress export file.
 
 ``` bash
 $ hexo migrate wordpress <source>
