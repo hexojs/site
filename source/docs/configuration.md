@@ -12,8 +12,8 @@ Setting | Description
 `subtitle` | The subtitle of your website
 `description` | The description of your website
 `author` | Your name
-`email` | Your email address
-`language` | The language used in your website. Use [IETF format](http://www.w3.org/International/articles/language-tags/). (e.g. Traditional Chinese: `zh-TW`)
+`language` | The language used in your website.
+`timezone` | The timezone of your website. Hexo uses the setting on your computer by default. You can find the list of available timezones [here](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones).
 
 ### URL
 
@@ -22,14 +22,24 @@ Setting | Description | Default
 `url` | The URL of your website |
 `root` | The root directory of your website |
 `permalink` | The [permalink](permalinks.html) format of articles | :year/:month/:day/:title/
-`tag_dir` | Tag directory | tags
-`archive_dir` | Archive directory | archives
-`category_dir` | Category directory | categories
-`code_dir` | Include code directory | downloads/code
+`permalink_default` | Default values of each segment in permalink. |
 
 {% note info Website in subdirectory %}
 If your website is put in a subdirectory such as `http://yoursite.com/blog`, set `url` to `http://yoursite.com/blog` and set `root` to `/blog/`.
 {% endnote %}
+
+### Directory 
+
+Setting | Description | Default
+--- | --- | ---
+`source_dir` | Source folder. This folder is where you can put your content. | source
+`public_dir` | Public folder. This folder is where the generated files will be. | public
+`tag_dir` | Tag directory | tags
+`archive_dir` | Archive directory | archives
+`category_dir` | Category directory | categories
+`code_dir` | Include code directory | downloads/code
+`i18n_dir` | i18n directory | :lang
+`skip_render` | Skip render for specified paths. You can use glob expressions for path matching. |
 
 ### Writing
 
@@ -37,13 +47,13 @@ Setting | Description | Default
 --- | --- | ---
 `new_post_name` | The filename of the new post | :title.md
 `default_layout` | Default layout | post
-`auto_spacing` | Add a space between eastern and western characters | false
 `titlecase` | Transform title into proper title case | false
 `external_link` | Open external links in new tab | true
 `filename_case` | Transform filename into (1) lower case or (2) upper case | 0
-`render_drafts` | Serve drafts as normal posts in server | false
+`render_drafts` | Display drafts | false
 `post_asset_folder` | Enables [Asset Folder](writing.html#Asset_Folder) | false
 `relative_link` | Make links relative to root folder | false
+`future` | Display future posts | true
 `highlight` | Code block settings |
 
 ### Category & Tag
@@ -53,23 +63,6 @@ Setting | Description | Default
 `default_category` | Default category | uncategorized
 `category_map` | Category slugs |
 `tag_map` | Tag slugs |
-
-### Archives
-
-Setting | Description | Default
---- | --- | ---
-`archive` | 2: Enable pagination, 1: Disable pagination, 0: Fully disable | 2
-`category` | 2: Enable pagination, 1: Disable pagination, 0: Fully disable | 2
-`tag` | 2: Enable pagination, 1: Disable pagination, 0: Fully disable | 2
-
-### Server
-
-Setting | Description | Default
---- | --- | ---
-`port` | Server port | 4000
-`logger` | Display request info on the console. Always enabled in debug mode. | false
-`logger_format` | Logger format |
-`server_ip` | Customize server IP | 0.0.0.0
 
 ### Date / Time format
 
@@ -87,77 +80,9 @@ Setting | Description | Default
 `per_page` | The amount of the posts displayed in a single page (0 = Disable pagination) | 10
 `pagination_dir` | Pagination directory | page
 
-### Comment
-
-Setting | Description
---- | ---
-`disqus_shortname` | [Disqus](http://disqus.com/) shortname
-
 ### Extensions
 
 Setting | Description
 --- | ---
-`theme` | Current theme
-`exclude_generator` | Disabled generators (archive, category, home, page, post, tag)
-
-{% note warn YAML format %}
-Don't use tabs in configuration files, use spaces instead. Also, add a space after colons. Configuration file parsing errors may cause Hexo to not run properly.
-{% endnote %}
-
-## Default Configuration
-
-``` yaml _config.yml
-title: Hexo
-subtitle:
-description:
-author: John Doe
-email:
-language:
-
-url: http://yoursite.com
-root: /
-permalink: :year/:month/:day/:title/
-tag_dir: tags
-archive_dir: archives
-category_dir: categories
-code_dir: downloads/code
-
-new_post_name: :title.md
-default_layout: post
-auto_spacing: false
-titlecase: false
-filename_case: 0
-render_drafts: false
-post_asset_folder: false
-relative_link: false
-highlight:
-  enable: true
-  line_number: true
-  tab_replace:
-
-default_category: uncategorized
-category_map:
-tag_map:
-
-archive: 2
-category: 2
-tag: 2
-
-port: 4000
-logger: false
-logger_format:
-
-date_format: MMM D YYYY
-time_format: H:mm:ss
-
-per_page: 10
-pagination_dir: page
-
-disqus_shortname:
-
-theme: light
-exclude_generator:
-
-deploy:
-  type:
-```
+`theme` | Theme name. Set `false` to disable theme.
+`deploy` | Deployment setting.

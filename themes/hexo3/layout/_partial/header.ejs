@@ -2,19 +2,15 @@
   <div class="outer">
     <div class="inner">
       <h1 id="logo-wrap">
-        <a href="<%- url_for() %>" id="logo">Hexo</a>
+        <a href="<%- url_for(page.lang === 'en' ? '' : page.lang + '/') %>" id="logo">Hexo</a>
         <a id="main-nav-toggle"></a>
       </h1>
       <nav id="main-nav">
         <ul id="main-nav-list">
-          <% _.each(theme.menu, function(menu, title){ %>
-            <li class="main-nav-item">
-              <a href="<%= url_for(menu) %>" class="main-nav-link"><%= title %></a>
-            </li>
-          <% }); %>
+          <%- header_menu() %>
         </ul>
         <a href="https://github.com/<%- theme.github %>" id="github-btn" title="GitHub" target="_blank"></a>
-        <a id="search-btn" class="st-search-launcher" title="Search"></a>
+        <a id="search-btn" class="st-search-launcher" title="<%= __('menu.search') %>"></a>
       </nav>
     </div>
   </div>

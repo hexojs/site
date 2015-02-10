@@ -36,9 +36,14 @@ Application data. [EJS](http://embeddedjs.com/), [Stylus](http://learnboost.gith
   "version": "",
   "private": true,
   "dependencies": {
+    "hexo-generator-archive": "*",
+    "hexo-generator-category": "*",
+    "hexo-generator-index": "*",
+    "hexo-generator-tag": "*",
     "hexo-renderer-ejs": "*",
-    "hexo-renderer-stylus": "*",
-    "hexo-renderer-marked": "*"
+    "hexo-renderer-stylus": "^0.2.0",
+    "hexo-renderer-marked": "^0.2.0",
+    "hexo-server": "*"
   }
 }
 ```

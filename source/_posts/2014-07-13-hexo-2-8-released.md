@@ -8,7 +8,7 @@ Before Hexo 2.8, all source files have to be processed each time you use Hexo. I
 
 Generating was also changed in Hexo 2.8. You can check the elapsed time of each file in console now. However, I found multi-process generating didn't affect generating speed a lot. Thus, `multi_thread` and `max_open_file` setting are deprecated in Hexo 2.8.
 
-![](/news/2014/07/13/hexo-2-8-released/generate-console.png)
+{% asset_img generate-console.png %}
 
 ## Draft Publish
 

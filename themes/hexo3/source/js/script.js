@@ -45,13 +45,4 @@
   $('#main-nav-toggle').on('click', function(){
     $('#main-nav').toggleClass('on');
   });
-/*
-  $('.api-options input').on('change', function(){
-    var value = $(this).val(),
-      checked = $(this).prop('checked');
-
-    $('.api-item.' + value).css({
-      display: checked ? 'block' : 'none'
-    });
-  });*/
 })(jQuery);

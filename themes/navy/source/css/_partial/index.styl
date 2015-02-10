@@ -1,0 +1,103 @@
+#banner
+  color: rgba(255, 255, 255, 0.8)
+  text-align: center
+
+#banner-title
+  padding-top: 100px
+  font-weight: 300
+  font-size: 50px
+  text-align: center
+  font-family: font-title
+  line-height: 1.25
+
+#banner-start
+  text-align: center
+  padding: 60px
+  font-size: 18px
+
+#banner-start-command
+  background: lighten(color-navy, 10%)
+  font-family: font-mono
+  display: inline-block
+  padding: 15px 20px
+  &:before
+    content: "$"
+    opacity: 0.5
+    padding-right: 10px
+
+#banner-start-link
+  color: #fff
+  background: color-link
+  display: inline-block
+  padding: 15px
+  text-decoration: none
+  transition: 0.2s
+  &:hover
+    background: color-link-hover
+
+#banner-share
+  padding-bottom: 60px
+
+#intro-feature-list
+  clearfix()
+  padding-top: 20px
+
+.intro-feature-wrap
+  width: 50%
+  padding-top: 50px
+  float: left
+
+.intro-feature
+  padding: 0 20px 0 60px
+  position: relative
+
+.intro-feature-icon
+  position: absolute
+  top: 0
+  left: 15px
+  color: color-link
+  font-size: 24px
+
+.intro-feature-title
+  color: color-link
+  font-family: font-title
+  font-size: 24px
+
+.intro-feature-desc
+  margin: line-height 0
+  line-height: line-height
+
+#intro-cmd-wrap
+  max-width: 700px
+  background: #eee
+  margin: 50px auto
+  padding: 15px 0
+
+.intro-cmd-item
+  font-size: 16px
+  font-family: font-mono
+  line-height: 2
+  padding: 0 30px
+  &:before
+    content: "$"
+    color: color-link
+    padding-right: 15px
+
+#intro-get-started-wrap
+  text-align: center
+
+#intro-get-started-link
+  font-size: 18px
+  font-family: font-title
+  display: inline-block
+  color: color-link
+  text-decoration: none
+  margin-bottom: 60px
+  border: 3px solid
+  border-color: lighten(color-link, 20%)
+  padding: 12px 24px
+  position: relative
+  transition: 0.2s
+  &:hover
+    background: @border-color
+    color: #fff

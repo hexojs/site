@@ -123,7 +123,7 @@ deploy:
 Option | Description
 --- | --- | ---
 `repo`, `repository` | Repository URL and branch. Separated with a comma (`,`). The branch is `master` by default.
-`message` | Customize commit message (Default is `Site updated: {{ now('YYYY-MM-DD HH:mm:ss') }}`)
+`message` | Customize commit message (Default is `Site updated: {% raw %}{{ now('YYYY-MM-DD HH:mm:ss') }}{% endraw %}`)
 
 ## Batch Deploy
 

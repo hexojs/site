@@ -7,7 +7,7 @@ hexo.extend.tag.register('note', function(args, content){
     header += '<strong class="note-title">' + args.join(' ') + '</strong>';
   }
 
-  result += '<blockquote>' + header;
+  result += '<blockquote class="note ' + className + '">' + header;
   result += hexo.render.renderSync({text: content, engine: 'markdown'});
   result += '</blockquote>';
 
