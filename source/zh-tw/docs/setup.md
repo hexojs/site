@@ -35,6 +35,9 @@ $ npm install
   "name": "hexo-site",
   "version": "",
   "private": true,
+  "hexo": {
+    "version": ""
+  },
   "dependencies": {
     "hexo-renderer-ejs": "*",
     "hexo-renderer-stylus": "*",

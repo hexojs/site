@@ -29,14 +29,14 @@ title: 貢獻
     {% code %}
     $ git checkout -b new_feature
     {% endcode %}
-    
+
 4. 開始開發。
 5. 推送（push）分支。
 
     {% code %}
     $ git push origin new_feature
     {% endcode %}
-    
+
 6. 對 `master` 分支建立一個新的合併申請（pull request）並描述變更。
 
 ### 注意事項
@@ -60,13 +60,13 @@ Hexo 文件開放原始碼，您可以在 [hexojs/site] 找到原始碼，若要
     $ cd site
     $ npm install
     {% endcode %}
-    
+
 3. 開始編輯文件，您可透過伺服器預覽變更。
 
     {% code %}
     $ hexo server
     {% endcode %}
-    
+
 4. 推送（push）分支。
 5. 對 `master` 分支建立一個新的合併申請（pull request）並描述變更。
 
@@ -76,7 +76,7 @@ Hexo 文件開放原始碼，您可以在 [hexojs/site] 找到原始碼，若要
 
 1. 在 `source` 資料夾中建立一個新的語言資料夾（全小寫）。
 2. 把 `source` 資料夾中相關的檔案（Markdown 和模板檔案）複製到新的語言資料夾中。
-3. 在 `_data/language.yml` 中新增語言。
+3. 在 `source/_data/language.yml` 中新增語言。
 4. 在 `themes/navy/languages` 複製 `en.yml` 並命名為語言名稱（全小寫）。
 
 ## 回報問題
@@ -89,7 +89,7 @@ Hexo 文件開放原始碼，您可以在 [hexojs/site] 找到原始碼，若要
     {% code %}
     $ hexo version
     {% endcode %}
-    
+
 3. 把除錯資訊和版本資訊都貼到 GitHub。
 
 [hexojs/hexo]: https://github.com/hexojs/hexo

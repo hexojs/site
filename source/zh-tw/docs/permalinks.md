@@ -44,21 +44,21 @@ categories:
 
 ### 多語系支援
 
-To create a multi-language site, you can modify `new_post_name` and `permalink` setting like this:
+若要建立一個多語系的網站，您可修改 `new_post_name` 和 `permalink` 設定，如下：
 
 ``` yaml
 new_post_name: :lang/:title.md
 permalink: :lang/:title/
 ```
 
-When you create a new post, the post will be saved to:
+當您建立新文章時，文章會被儲存至：
 
 ``` bash
 $ hexo new "Hello World" --lang tw
 # => source/_posts/tw/Hello-World.md
 ```
 
-and the URL will be:
+而網址會是：
 
 ``` plain
 http://localhost:4000/tw/hello-world/
