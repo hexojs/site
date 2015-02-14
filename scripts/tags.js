@@ -1,3 +1,5 @@
+'use strict';
+
 hexo.extend.tag.register('note', function(args, content){
   var className = args.shift();
   var header = '';

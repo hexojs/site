@@ -18,9 +18,9 @@ before_install:
   - git config --global user.name "Tommy Chen"
   - git config --global user.email tommy351@gmail.com
   # Install Hexo
-  - npm install hexo@beta -g
+  - npm install hexo-cli -g
   # Clone the repository
-  - git clone https://github.com/hexojs/hexojs.github.io .deploy
+  - git clone https://github.com/hexojs/hexojs.github.io .deploy_git
 
 script:
   - hexo generate

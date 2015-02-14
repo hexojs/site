@@ -1,0 +1,7 @@
+- name: landscape
+  description: A brand new default theme for Hexo.
+  link: https://github.com/hexojs/hexo-theme-landscape
+  tags:
+    - official
+    - responsive
+    - widget

@@ -12,9 +12,9 @@
       </ul>
     </nav>
     <div id="lang-select-wrap">
-      <label id="lang-select-label"><i class="fa fa-globe"></i><span>{{ site.data.language[page.lang] }}</span></label>
+      <label id="lang-select-label"><i class="fa fa-globe"></i><span>{{ site.data.languages[page.lang] }}</span></label>
       <select id="lang-select" data-canonical="{{ page.canonical_path }}">
-        {% for lang in site.data.language %}
+        {% for lang in site.data.languages %}
           <option value="{{ loop.key }}"{% if page.lang === loop.key %} selected{% endif %}>{{ lang }}</option>
         {% endfor %}
       </select>

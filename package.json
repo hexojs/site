@@ -1,13 +1,14 @@
 {
   "name": "hexo-site",
-  "version": "3.0.0-rc.2",
+  "version": "0.0.0",
   "private": true,
   "hexo": {
-    "version": "3.0.0-rc.3"
+    "version": "3.0.0-rc.4"
   },
   "dependencies": {
     "cheerio": "^0.18.0",
-    "hexo-browsersync": "0.0.2",
+    "hexo": "3.0.0-rc.4",
+    "hexo-browsersync": "^0.1.0",
     "hexo-deployer-git": "0.0.3",
     "hexo-generator-archive": "0.0.2",
     "hexo-generator-feed": "^1.0.0",
@@ -17,6 +18,7 @@
     "hexo-renderer-marked": "^0.2.3",
     "hexo-renderer-stylus": "^0.2.0",
     "hexo-server": "^0.1.1",
-    "lodash": "^3.0.0"
+    "lodash": "^3.0.0",
+    "lunr": "^0.5.7"
   }
 }

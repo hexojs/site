@@ -3,6 +3,11 @@
 <!-- Scripts -->
 {{ js('js/raf-polyfill') }}
 {{ js('js/script') }}
+{% if page.layout === 'plugins' %}
+<!-- Plugin search -->
+<script src="//cdn.jsdelivr.net/lunr/0.5.7/lunr.min.js"></script>
+{{ js('js/plugins') }}
+{% endif %}
 {% if config.disqus_shortname %}
 <!-- Disqus -->
 <script>
