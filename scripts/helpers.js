@@ -131,7 +131,7 @@ hexo.extend.helper.register('lunr_index', function(data){
 
   return JSON.stringify(index.toJSON());
 });
-
+/*
 hexo.extend.helper.register('plugin_tag_cloud', function(data, options){
   options = options || {};
 
@@ -164,4 +164,4 @@ hexo.extend.helper.register('plugin_tag_cloud', function(data, options){
   });
 
   return $.html();
-});
+});*/

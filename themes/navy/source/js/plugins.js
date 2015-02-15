@@ -7,7 +7,7 @@
   var index = lunr.Index.load(window.SEARCH_INDEX);
 
   function updateCount(count){
-    $count.html(count + (count === 1 ? ' plugin' : ' plugins'));
+    $count.html(count + (count === 1 ? ' item' : ' items'));
   }
 
   function search(value){
