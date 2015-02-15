@@ -7,6 +7,7 @@ note-warn = hsl(0, 100%, 50%)
   position: relative
 
 #content-inner
+  clearfix()
   margin-left: sidebar-width
 
 .article-container
@@ -14,6 +15,7 @@ note-warn = hsl(0, 100%, 50%)
   width: 100%
 
 .article-inner
+  clearfix()
   margin-right: sidebar-width
 
 .article
@@ -69,6 +71,21 @@ note-warn = hsl(0, 100%, 50%)
   font-family: font-title
   font-size: 36px
   font-weight: 300
+  text-decoration: none
+  color: color-default
+  transition: 0.2s
+  a&:hover
+    color: color-link-hover
+  .post &
+    float: none
+
+.article-date
+  color: color-gray
+  text-decoration: none
+  display: inline-block
+  margin-top: 1em
+  &:hover
+    color: color-link-hover
 
 .article-edit-link
   float: right

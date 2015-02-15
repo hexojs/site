@@ -8,6 +8,10 @@ var lunr = require('lunr');
 
 var localizedPath = ['docs', 'api'];
 
+function startsWith(str, start){
+  return str.substring(0, start.length) === start;
+}
+
 hexo.extend.helper.register('page_nav', function(){
   var type = this.page.canonical_path.split('/')[0];
   var sidebar = this.site.data.sidebar[type];
@@ -131,37 +135,13 @@ hexo.extend.helper.register('lunr_index', function(data){
 
   return JSON.stringify(index.toJSON());
 });
-/*
-hexo.extend.helper.register('plugin_tag_cloud', function(data, options){
-  options = options || {};
 
-  var tags = {};
+hexo.extend.helper.register('canonical_path_for_nav', function(){
+  var path = this.page.canonical_path;
 
-  _.each(data, function(item){
-    _.each(item.tags, function(tag){
-      if (tags.hasOwnProperty(tag)){
-        tags[tag]++;
-      } else {
-        tags[tag] = 1;
-      }
-    });
-  });
-
-  var arr = [];
-
-  _.each(tags, function(length, name){
-    arr.push({
-      name: name,
-      length: length
-    });
-  });
-
-  var result = this.tag_cloud(arr, options);
-  var $ = cheerio.load(result, {decodeEntities: false});
-
-  $('a').each(function(){
-    $(this).attr('href', '#' + $(this).html());
-  });
-
-  return $.html();
-});*/
+  if (startsWith(path, 'docs/') || startsWith(path, 'api/')){
+    return path;
+  } else {
+    return '';
+  }
+});
