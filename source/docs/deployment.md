@@ -1,18 +1,41 @@
 title: Deployment
 ---
-To deploy your site with Hexo, you only need one command.
+Hexo provides a fasy and easy way for deployment. You only need one command to deploy your site to servers.
 
 ``` bash
 $ hexo deploy
 ```
 
-## GitHub Pages
-
-Edit `_config.yml`.
+Before we start, you have to modify settings in `_config.yml`. A valid deployment setting must come with `type` field. For example:
 
 ``` yaml
 deploy:
-  type: github
+  type: git
+```
+
+You can use multiple deployers. Hexo will execute each deployer in sequence.
+
+``` yaml
+deployer:
+- type: git
+  repo:
+- type: heroku
+  repo:
+```
+
+## Git
+
+Install [hexo-deployer-git].
+
+``` bash
+$ npm install hexo-deployer-git --save
+```
+
+Edit settings.
+
+``` yaml
+deploy:
+  type: git
   repo: <repository url>
   branch: [branch]
   message: [message]
@@ -20,34 +43,19 @@ deploy:
 
 Option | Description
 --- | ---
-`repo`, `repository` | GitHub repository URL (Better to use HTTPS)
-`branch` | The deployer will detect the branch to use automatically. You can also customize it on your own.
-`message` | Customize commit message (Default is `Site updated: {% raw %}{{ now('YYYY-MM-DD HH:mm:ss') }}{% endraw %}`)
-
-### Remove
-
-Remove `.deploy` folder.
-
-``` bash
-$ rm -rf .deploy
-```
-
-### Custom Domain
-
-Create a file named `CNAME` in `source` folder with the following content.
-
-``` plain
-example.com
-```
-
-- **Top-level Domain:** Add A records: `192.30.252.153`, `192.30.252.154`.
-- **Subdomain**: Add a CNAME record `blog.example.com`.
-
-Check [GitHub Pages](https://help.github.com/articles/setting-up-a-custom-domain-with-pages) for more info.
+`repo` | GitHub repository URL
+`branch` | Branch name. The deployer will detect branch automatically if you are using GitHub or GitCafe.
+`message` | Customize commit message (Default to `Site updated: {% raw %}{{ now('YYYY-MM-DD HH:mm:ss') }}{% endraw %}`)
 
 ## Heroku
 
-Edit `_config.yml`.
+Install [hexo-deployer-heroku].
+
+``` bash
+$ npm install hexo-deployer-heroku --save
+```
+
+Edit settings.
 
 ``` yaml
 deploy:
@@ -59,15 +67,17 @@ deploy:
 Option | Description
 --- | ---
 `repo`, `repository` | Heroku repository URL
-`message` | Customize commit message (Default is `Site updated: {% raw %}{{ now('YYYY-MM-DD HH:mm:ss') }}{% endraw %}`)
-
-### Remove
-
-Remove `.git`, `app.js` & `Procfile`.
+`message` | Customize commit message (Default to `Site updated: {% raw %}{{ now('YYYY-MM-DD HH:mm:ss') }}{% endraw %}`)
 
 ## Rsync
 
-Edit `_config.yml`.
+Install [hexo-deployer-rsync].
+
+``` bash
+$ npm install hexo-deployer-rsync --save
+```
+
+Edit settings.
 
 ``` yaml
 deploy:
@@ -91,78 +101,33 @@ Option | Description | Default
 `verbose` | Display verbose messages | true
 `ignore_errors` | Ignore errors | false
 
-## OpenShift DIY Cartridge
+## OpenShift
 
-Edit `_config.yml`.
+Install [hexo-deployer-openshift].
+
+``` bash
+$ npm install hexo-deployer-openshift --save
+```
+
+Edit settings.
 
 ``` yaml
 deploy:
   type: openshift
-  remote: <upstream git remote>
-  branch: [upstream git branch] # Default is master
-```
-
-Option | Description | Default
---- | --- | ---
-`remote` | Upstream Git remote |
-`branch` | Upstream Git branch | master
-
-## Git
-
-Edit `_config.yml`.
-
-``` yaml
-deploy:
-  type: git
+  repo: <repository url>
   message: [message]
-  repo:
-    github: <repository url>,[branch]
-    gitcafe: <repository url>,[branch]
 ```
 
 Option | Description
---- | --- | ---
-`repo`, `repository` | Repository URL and branch. Separated with a comma (`,`). The branch is `master` by default.
-`message` | Customize commit message (Default is `Site updated: {% raw %}{{ now('YYYY-MM-DD HH:mm:ss') }}{% endraw %}`)
-
-## Batch Deploy
-
-You can deploy your site to multiple destinations.
-
-``` yaml
-deploy:
-- type: github
-  repo: ...
-- type: heroku
-  repo: ...
-```
-
-## Commit message
-
-You can customize commit message in **github**, **heroku**, **git** deployer.
-
-Swig is availble in commit message. You can use `now(format)` to display deployment time. For example, the default message is `Site updated: {% raw %}{{ now('YYYY-MM-DD HH:mm:ss') }}{% endraw %}`:
-
-``` js
-Site updated: {% raw %}{{ now('YYYY-MM-DD HH:mm:ss') }}{% endraw %}
-// Site updated: 2014-05-12 00:02:25
-```
-
-Commit message can be set either in shell
-
-``` bash
-$ hexo deploy -m "Commit message"
-```
-
-or in `_config.yml`.
-
-``` yaml
-deploy:
-  type: github
-  repo: ...
-  message: "Commit message"
-```
+--- | ---
+`repo` | OpenShift repository URL
+`message` | Customize commit message (Default to `Site updated: {% raw %}{{ now('YYYY-MM-DD HH:mm:ss') }}{% endraw %}`)
 
 ## Other Methods
 
 All generated files are saved in `public` folder. You can copy it to wherever you like.
+
+[hexo-deployer-git]: https://github.com/hexojs/hexo-deployer-git
+[hexo-deployer-heroku]: https://github.com/hexojs/hexo-deployer-heroku
+[hexo-deployer-rsync]: https://github.com/hexojs/hexo-deployer-rsync
+[hexo-deployer-openshift]: https://github.com/hexojs/hexo-deployer-openshift

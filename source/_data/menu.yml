@@ -1,5 +1,5 @@
 docs: /docs/
-api: /api/
+# api: /api/
 news: /news/
 plugins: /plugins/
 themes: /themes/

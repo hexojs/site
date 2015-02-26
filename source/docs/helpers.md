@@ -1,6 +1,8 @@
 title: Helpers
 ---
-Helpers are used in templates to help you insert snippets quickly. You can see [Plugins](plugins.html#Helper) to learn how to build a helper plugin.
+Helpers are used in templates to help you insert snippets quickly.
+
+## URL
 
 ### url_for
 
@@ -12,11 +14,31 @@ Returns a url with the root path prefixed. You should use this helper instead of
 
 ### relative_url
 
-Solves the relative URL from `from` to `to`.
+Returns the relative URL from `from` to `to`.
 
 ``` js
 <%- relative_url(from, to) %>
 ```
+
+### gravatar
+
+Inserts a Gravatar image.
+
+``` js
+<%- gravatar(email, [size]);
+```
+
+**Examples:**
+
+``` js
+<%- gravatar('a@abc.com') %>
+// http://www.gravatar.com/avatar/b9b00e66c6b8a70f88c73cb6bdb06787
+
+<%- gravatar('a@abc.com', 40) %>
+// http://www.gravatar.com/avatar/b9b00e66c6b8a70f88c73cb6bdb06787?s=40
+```
+
+## HTML Tags
 
 ### css
 
@@ -56,42 +78,168 @@ Loads JavaScript files. `path` can be an array or a string. If `path` isn't pref
 // <script type="text/javascript" src="/gallery.js"></script>
 ```
 
-### Conditional Tags
+### link_to
 
-Conditional tags help you check the status of current page.
-
-Helper | Description
---- | ---
-`is_current(path, [strict])` | Checks if `path` matches the URL of current page.
-`is_home()` | Checks if the home page is being displayed
-`is_post()` | Checks if posts are being displayed
-`is_archive()` | Checks if archive pages are being displayed
-`is_year()` | Checks if yearly archive pages are being displayed
-`is_month()` | Checks if monthly archive pages are being displayed
-`is_category()` | Checks if category pages are being displayed
-`is_tag()` | Checks if tag pages are being displayed
-
-### gravatar
-
-Inserts a Gravatar image.
+Inserts a link.
 
 ``` js
-<%- gravatar(email, [size]);
+<%- link_to(path, [text], [options]) %>
 ```
+
+Option | Description | Default
+--- | --- | ---
+`external` | Opens the link in a new tab | false
+`class` | Class name |
+`id` | ID |
 
 **Examples:**
 
 ``` js
-<%- gravatar('a@abc.com') %>
-// http://www.gravatar.com/avatar/b9b00e66c6b8a70f88c73cb6bdb06787
+<%- link_to('http://www.google.com') %>
+// <a href="http://www.google.com" title="http://www.google.com">http://www.google.com</a>
 
-<%- gravatar('a@abc.com', 40) %>
-// http://www.gravatar.com/avatar/b9b00e66c6b8a70f88c73cb6bdb06787?s=40
+<%- link_to('http://www.google.com', 'Google') %>
+// <a href="http://www.google.com" title="Google">Google</a>
+
+<%- link_to('http://www.google.com', 'Google', {external: true}) %>
+// <a href="http://www.google.com" title="Google" target="_blank" rel="external">Google</a>
 ```
+
+### mail_to
+
+Inserts a mail link.
+
+``` js
+<%- mail_to(path, [text], [options]) %>
+```
+
+Option | Description
+--- | ---
+`class` | Class name
+`id` | ID
+`subject` | Mail subject
+`cc` | CC
+`bcc` | BCC
+`body` | Mail contents
+
+**Examples:**
+
+``` js
+<%- mail_to('a@abc.com') %>
+// <a href="mailto:a@abc.com" title="a@abc.com">a@abc.com</a>
+
+<%- mail_to('a@abc.com', 'Email') %>
+// <a href="mailto:a@abc.com" title="Email">Email</a>
+```
+
+### image_tag
+
+Inserts a image.
+
+``` js
+<%- image_tag(path, [options]) %>
+```
+
+Option | Description
+--- | ---
+`alt` | Alternative text of the image
+`class` | Class name
+`id` | ID
+`width` | Image width
+`height` | Image height
+
+### favicon_tag
+
+Inserts a favicon.
+
+``` js
+<%- favicon_tag(path) %>
+```
+
+### feed_tag
+
+Inserts a feed link.
+
+``` js
+<%- feed_tag(path, [options]) %>
+```
+
+Option | Description | Default
+--- | --- | ---
+`title` | Feed title |
+`type` | Feed type | atom
+
+### Conditional Tags
+
+### is_current
+
+Check whether `path` matches the URL of the current page. Use `strict` options to enable strict matching.
+
+``` js
+<%- is_current(path, [strict] %>
+```
+
+### is_home
+
+Check whether the current page is home page.
+
+``` js
+<%- is_home() %>
+```
+
+### is_post
+
+Check whether the current page is a post.
+
+``` js
+<%- is_post() %>
+```
+
+### is_archive
+
+Check whether the current page is a archive page.
+
+``` js
+<%- is_archive() %>
+```
+
+### is_year
+
+Check whether the current page is a yearly archive page.
+
+``` js
+<%- is_year() %>
+```
+
+### is_month
+
+Check whether the current page is a monthly archive page.
+
+``` js
+<%- is_month() %>
+```
+
+### is_category
+
+Check whether the current page is a category page.
+
+``` js
+<%- is_category() %>
+```
+
+### is_tag
+
+Check whether the current page is a tag page.
+
+``` js
+<%- is_tag() %>
+```
+
+## String Manipulating
 
 ### trim
 
-Clears all spaces in a string.
+Removes prefixing and trailing spaces of a string.
 
 ``` js
 <%- trim(string) %>
@@ -127,164 +275,6 @@ Transforms a string into proper title caps.
 # This is an Apple
 ```
 
-### partial
-
-Loads other template files. You can define local variables in `locals`.
-
-``` js
-<%- partial(layout, [locals], [options]) %>
-```
-
-Option | Description | Default
---- | --- | ---
-`cache` | Cache contents | `false`
-`only` | Strict local variables | `false`
-
-### fragment_cache
-
-Caches the contents in a fragment. It saves the contents within a fragment and serves the cache when the next request comes in.
-
-``` js
-<%- fragment_cache(id, fn);
-```
-
-**Examples:**
-
-``` js
-<%- fragment_cache('header', function(){
-  return '<header></header>';
-}) %>
-```
-
-### tagcloud
-
-Inserts a tag cloud.
-
-``` js
-<%- tagcloud([tags], [options]) %>
-```
-
-Option | Description | Default
---- | --- | ---
-`min_font` | Minimal font size | 10
-`max_font` | Maximum font size | 20
-`unit` | Unit of font size | px
-`amount` | Total amount of tags | 40
-`orderby` | Order of tags | name
-`order` | Sort order. `1`, `sac` as ascending; `-1`, `desc` as descending | 1
-`color` | Colorizes the tag cloud | false
-`start_color` | Start color. You can use hex (`#b700ff`), rgba (`rgba(183, 0, 255, 1)`), hsla (`hsla(283, 100%, 50%, 1)`) or [color keywords]. This option only works when `color` is true. |
-`end_color` | End color. You can use hex (`#b700ff`), rgba (`rgba(183, 0, 255, 1)`), hsla (`hsla(283, 100%, 50%, 1)`) or [color keywords]. This option only works when `color` is true. |
-
-### paginator
-
-Inserts a paginator.
-
-``` js
-<%- paginator(options) %>
-```
-
-Option | Description | Default
---- | --- | ---
-`base` | Base URL | /
-`format` | URL format | page/%d/
-`total` | Total amount of pages | 1
-`current` | Current page number | 0
-`prev_text` | The link text of previous page. Works only if `prev_next` is set to true. | Prev
-`next_text` | The link text of next page. Works only if `prev_next` is set to true. | Next
-`space` | The space text | &hellp;
-`prev_next` | Display previous and next links | true
-`end_size` | The number of pages displayed on the start and the end side | 1
-`mid_size` | The number of pages displayed between current page, but not including current page | 2
-`show_all` | Display all pages. If this is set true, `end_size` and `mid_size` will not works. | false
-
-### date
-
-Inserts formatted date. `date` can be unix time, ISO string, date object, or moment.js object. `format` is `date_format` setting by default.
-
-``` js
-<%- date(date, [format]) %>
-```
-
-**Examples:**
-
-``` js
-<%- date(Date.now()) %>
-// Jan 1, 2013
-
-<%- date(Date.now(), 'YYYY/M/D') %>
-// 2013/1/1
-```
-
-### date_xml
-
-Inserts date in XML format. `date` can be unix time, ISO string, date object, or moment.js object. `format` is `date_format` setting by default.
-
-``` js
-<%- date_xml(date) %>
-```
-
-**Examples:**
-
-``` js
-<%- date_xml(Date.now()) %>
-// 2013-01-01T00:00:00.000Z
-```
-
-### time
-
-Inserts formatted time. `date` can be unix time, ISO string, date object, or moment.js object. `format` is `time_format` setting by default.
-
-``` js
-<%- time(date, [format]) %>
-```
-
-**Examples:**
-
-``` js
-<%- time(Date.now()) %>
-// 13:05:12
-
-<%- time(Date.now(), 'h:mm:ss a') %>
-// 1:05:12 pm
-```
-
-### full_date
-
-Inserts formatted date and time. `date` can be unix time, ISO string, date object, or moment.js object. `format` is `date_format + time_format` setting by default.
-
-``` js
-<%- full_date(date, [format]) %>
-```
-
-**Examples:**
-
-``` js
-<%- full_date(new Date()) %>
-// Jan 1, 2013 0:00:00
-
-<%- full_date(new Date(), 'dddd, MMMM Do YYYY, h:mm:ss a') %>
-// Tuesday, January 1st 2013, 12:00:00 am
-```
-
-### moment
-
-[Moment.js] library.
-
-### search_form
-
-Inserts a Google search form.
-
-``` js
-<%- search_form(options) %>
-```
-
-Option | Description | Default
---- | --- | ---
-`class` | The class name of form | search-form
-`text` | Search hint word | Search
-`button` | Display search button. The value can be a boolean or a string. When the value is a string, it'll be the text of the button. | false
-
 ### markdown
 
 Renders a string with Markdown.
@@ -298,6 +288,14 @@ Renders a string with Markdown.
 ``` js
 <%- markdown('make me **strong**') %>
 // make me <strong>strong</strong>
+```
+
+### render
+
+Renders a string.
+
+``` js
+<%- render(str, engine, [options]) %>
 ```
 
 ### word_wrap
@@ -330,111 +328,113 @@ Truncates text after `length`.
 // Once upon a time
 ```
 
-### truncate_words
+## Templates
 
-Truncates words after `length`.
+### partial
 
-``` js
-<%- truncate_words(text, length) %>
-```
-
-**Examples:**
+Loads other template files. You can define local variables in `locals`.
 
 ``` js
-<%- truncate_words('Once upon a time in a world far far away', 4) %>
-// Once upon a time
-```
-
-### link_to
-
-Inserts a link.
-
-``` js
-<%- link_to(path, [text], [options]) %>
+<%- partial(layout, [locals], [options]) %>
 ```
 
 Option | Description | Default
 --- | --- | ---
-external | Opens the link in a new tab | false
-class | Class name |
-id | ID |
+`cache` | Cache contents (Use fragment cache) | `false`
+`only` | Strict local variables. Only use variables set in `locals` in templates. | `false`
+
+### fragment_cache
+
+Caches the contents in a fragment. It saves the contents within a fragment and serves the cache when the next request comes in.
+
+``` js
+<%- fragment_cache(id, fn);
+```
 
 **Examples:**
 
 ``` js
-<%- link_to('http://www.google.com') %>
-// <a href="http://www.google.com" title="http://www.google.com">http://www.google.com</a>
-
-<%- link_to('http://www.google.com', 'Google') %>
-// <a href="http://www.google.com" title="Google">Google</a>
-
-<%- link_to('http://www.google.com', 'Google', {external: true}) %>
-// <a href="http://www.google.com" title="Google" target="_blank" rel="external">Google</a>
+<%- fragment_cache('header', function(){
+  return '<header></header>';
+}) %>
 ```
 
-### mail_to
+## Date & Time
 
-Inserts a mail link.
+### date
+
+Inserts formatted date. `date` can be unix time, ISO string, date object, or [Moment.js] object. `format` is `date_format` setting by default.
 
 ``` js
-<%- mail_to(path, [text], [options]) %>
+<%- date(date, [format]) %>
 ```
-
-Option | Description
---- | ---
-class | Class name
-id | ID
-subject | Mail subject
-cc | CC
-bcc | BCC
-body | Mail contents
 
 **Examples:**
 
 ``` js
-<%- mail_to('a@abc.com') %>
-// <a href="mailto:a@abc.com" title="a@abc.com">a@abc.com</a>
+<%- date(Date.now()) %>
+// 2013-01-01
 
-<%- mail_to('a@abc.com', 'Email') %>
-// <a href="mailto:a@abc.com" title="Email">Email</a>
+<%- date(Date.now(), 'YYYY/M/D') %>
+// Jan 1 2013
 ```
 
-### image_tag
+### date_xml
 
-Inserts a image.
+Inserts date in XML format. `date` can be unix time, ISO string, date object, or [Moment.js] object.
 
 ``` js
-<%- image_tag(path, [options]) %>
+<%- date_xml(date) %>
 ```
 
-Option | Description
---- | ---
-alt | Alternative text of the image
-class | Class name
-id | ID
-width | Image width
-height | Image height
-
-### favicon_tag
-
-Inserts a favicon.
+**Examples:**
 
 ``` js
-<%- favicon_tag(path) %>
+<%- date_xml(Date.now()) %>
+// 2013-01-01T00:00:00.000Z
 ```
 
-### feed_tag
+### time
 
-Inserts a feed link.
+Inserts formatted time. `date` can be unix time, ISO string, date object, or [Moment.js] object. `format` is `time_format` setting by default.
 
 ``` js
-<%- feed_tag(path, [options]) %>
+<%- time(date, [format]) %>
 ```
 
-Option | Description | Default
---- | --- | ---
-title | Feed title |
-type | Feed type | atom
+**Examples:**
+
+``` js
+<%- time(Date.now()) %>
+// 13:05:12
+
+<%- time(Date.now(), 'h:mm:ss a') %>
+// 1:05:12 pm
+```
+
+### full_date
+
+Inserts formatted date and time. `date` can be unix time, ISO string, date object, or [Moment.js] object. `format` is `date_format + time_format` setting by default.
+
+``` js
+<%- full_date(date, [format]) %>
+```
+
+**Examples:**
+
+``` js
+<%- full_date(new Date()) %>
+// Jan 1, 2013 0:00:00
+
+<%- full_date(new Date(), 'dddd, MMMM Do YYYY, h:mm:ss a') %>
+// Tuesday, January 1st 2013, 12:00:00 am
+```
+
+### moment
+
+[Moment.js] library.
+
+## List
 
 ### list_categories
 
@@ -447,12 +447,13 @@ Inserts a list of all categories.
 Option | Description | Default
 --- | --- | ---
 `orderby` | Order of categories | name
-`order` | Sort of order. `1`, `asc` as ascending; `-1`, `desc` as descending | 1
-`show_count` | Display the total amount of posts for each category | true
-`style` | Style to display the categories list. `list` displays categories in an unordered list.  | list
-`separator` | Separator between categories. (Only works if `style` is `none`) | ,
-`depth` | Levels of categories to be displayed. `0` displays all categories and child categories; `-1` is same as `0` but displayed in flat; `1` displays only top level categories. | 0
-`class` | Class name of categories list. | category
+`order` | Sort of order. `1`, `asc` for ascending; `-1`, `desc` for descending | 1
+`show_count` | Display the number of posts for each category | true
+`style` | Style to display the category list. `list` displays categories in an unordered list.  | list
+`separator` | Separator between categories. (Only works if `style` is not `list`) | ,
+`depth` | Levels of categories to be displayed. `0` displays all categories and child categories; `-1` is simliar to `0` but displayed in flat; `1` displays only top level categories. | 0
+`class` | Class name of category list. | category
+`transform` | The function that changes the display of category name. |
 
 ### list_tags
 
@@ -465,11 +466,12 @@ Inserts a list of all tags.
 Option | Description | Default
 --- | --- | ---
 `orderby` | Order of categories | name
-`order` | Sort of order. `1`, `asc` as ascending; `-1`, `desc` as descending | 1
-`show_count` | Display the total amount of posts for each tag | true
-`style` | Style to display the tags list. `list` displays tags in an unordered list.  | list
-`separator` | Separator between tags. (Only works if `style` is `none`) | ,
-`class` | Class name of tags list. | tag
+`order` | Sort of order. `1`, `asc` for ascending; `-1`, `desc` for descending | 1
+`show_count` | Display the number of posts for each tag | true
+`style` | Style to display the tag list. `list` displays tags in an unordered list.  | list
+`separator` | Separator between categories. (Only works if `style` is not `list`) | ,
+`class` | Class name of tag list. | tag
+`transform` | The function that changes the display of category name. |
 `amount` | The number of tags to display (0 = unlimited) | 0
 
 ### list_archives
@@ -483,12 +485,13 @@ Inserts a list of archives.
 Option | Description | Default
 --- | --- | ---
 `type` | Type. This value can be `yearly` or `monthly`. | monthly
-`order` | Sort of order. `1`, `asc` as ascending; `-1`, `desc` as descending | 1
-`show_count` | Display the total amount of posts for each archive | true
+`order` | Sort of order. `1`, `asc` for ascending; `-1`, `desc` for descending | 1
+`show_count` | Display the number of posts for each archive | true
 `format` | Date format | MMMM YYYY
-`style` | Style to display the archives list. `list` displays archives in an unordered list.  | list
-`separator` | Separator between archives. (Only works if `style` is `none`) | ,
-`class` | Class name of archives list. | category
+`style` | Style to display the archive list. `list` displays archives in an unordered list.  | list
+`separator` | Separator between archives. (Only works if `style` is not `list`) | ,
+`class` | Class name of archive list. | archive
+`transform` | The function that changes the display of archive name. |
 
 ### list_posts
 
@@ -500,26 +503,71 @@ Inserts a list of posts.
 
 Option | Description | Default
 --- | --- | ---
-`ulClass` | Class name of the container |
-`liClass` | Class name of each item |
-`style` | Style to display the post list. `list` displays posts in an unordered list. | list
-`separator` | Separator between archives. (Only works if `style` is `none`) | ,
+`orderby` | Order of posts | date
+`order` | Sort of order. `1`, `asc` for ascending; `-1`, `desc` for descending | 1
+`style` | Style to display the post list. `list` displays posts in an unordered list.  | list
+`separator` | Separator between posts. (Only works if `style` is not `list`) | ,
 `class` | Class name of post list. | post
+`amount` | The number of posts to display (0 = unlimited) | 6
+`transform` | The function that changes the display of post name. |
 
-### get_posts
+### tagcloud
 
-Gets post data.
+Inserts a tag cloud.
 
 ``` js
-<% get_posts([options]) %>
+<%- tagcloud([tags], [options]) %>
 ```
 
 Option | Description | Default
 --- | --- | ---
-`count` | The number of posts | 6
-`orderby` | Order of posts | date
-`order` | Sort of order. `1`, `asc` as ascending; `-1`, `desc` as descending | -1
-`query` | Query conditions |
+`min_font` | Minimal font size | 10
+`max_font` | Maximum font size | 20
+`unit` | Unit of font size | px
+`amount` | Total amount of tags | 40
+`orderby` | Order of tags | name
+`order` | Sort order. `1`, `sac` as ascending; `-1`, `desc` as descending | 1
+`color` | Colorizes the tag cloud | false
+`start_color` | Start color. You can use hex (`#b700ff`), rgba (`rgba(183, 0, 255, 1)`), hsla (`hsla(283, 100%, 50%, 1)`) or [color keywords]. This option only works when `color` is true. |
+`end_color` | End color. You can use hex (`#b700ff`), rgba (`rgba(183, 0, 255, 1)`), hsla (`hsla(283, 100%, 50%, 1)`) or [color keywords]. This option only works when `color` is true. |
+
+## Miscellaneous
+
+### paginator
+
+Inserts a paginator.
+
+``` js
+<%- paginator(options) %>
+```
+
+Option | Description | Default
+--- | --- | ---
+`base` | Base URL | /
+`format` | URL format | page/%d/
+`total` | The number of pages | 1
+`current` | Current page number | 0
+`prev_text` | The link text of previous page. Works only if `prev_next` is set to true. | Prev
+`next_text` | The link text of next page. Works only if `prev_next` is set to true. | Next
+`space` | The space text | &hellp;
+`prev_next` | Display previous and next links | true
+`end_size` | The number of pages displayed on the start and the end side | 1
+`mid_size` | The number of pages displayed between current page, but not including current page | 2
+`show_all` | Display all pages. If this is set true, `end_size` and `mid_size` will not works. | false
+
+### search_form
+
+Inserts a Google search form.
+
+``` js
+<%- search_form(options) %>
+```
+
+Option | Description | Default
+--- | --- | ---
+`class` | The class name of form | search-form
+`text` | Search hint word | Search
+`button` | Display search button. The value can be a boolean or a string. When the value is a string, it'll be the text of the button. | false
 
 ### number_format
 
@@ -556,7 +604,7 @@ Option | Description | Default
 
 ### open_graph
 
-Inserts open graph data.
+Inserts [Open Graph] data.
 
 ``` js
 <%- open_graph([options]) %>
@@ -597,3 +645,5 @@ Option | Description | Default
 ```
 
 [color keywords]: http://www.w3.org/TR/css3-color/#svg-color
+[Moment.js]: http://momentjs.com/
+[Open Graph]: http://ogp.me/

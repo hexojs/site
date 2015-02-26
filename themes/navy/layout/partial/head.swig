@@ -1,6 +1,6 @@
 <head prefix="og: http://ogp.me/ns#">
   <meta charset="utf-8">
-  <title>{% if page.title %}{{ page.title }} | {% endif %}Hexo</title>
+  <title>{% if page.title %}{{ page.title }} | {% endif %}{{ config.title }}</title>
   <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="canonical" href="{{ canonical_url() }}">

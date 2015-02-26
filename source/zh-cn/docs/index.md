@@ -21,7 +21,7 @@ Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 [Markdown](h
 如果您的电脑中已经安装上述必备程序，那么恭喜您！接下来只需要使用 npm 即可完成 Hexo 的安装。
 
 ``` bash
-$ npm install -g hexo
+$ npm install -g hexo-cli
 ```
 
 如果您的电脑中尚未安装所需要的程序，请根据以下安装指示完成安装。
@@ -66,5 +66,5 @@ $ nvm install 0.10
 所有必备的应用程序安装完成后，即可使用 npm 安装 Hexo。
 
 ``` bash
-$ npm install -g hexo
+$ npm install -g hexo-cli
 ```

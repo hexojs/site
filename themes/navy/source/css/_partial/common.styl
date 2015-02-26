@@ -4,11 +4,19 @@ html
 *, *:before, *:after
   box-sizing: inherit
 
-input, button
+button
+input[type="reset"]
+input[type="button"]
+input[type="submit"]
   &::-moz-focus-inner
     padding: 0
     margin: 0
     border: 0
+
+input, button, select
+  margin: 0
+  padding: 0
+  border: 0
 
 body
   background: color-navy

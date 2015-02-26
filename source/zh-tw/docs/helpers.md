@@ -192,7 +192,7 @@ title: 輔助函數（Helpers）
 檢查目前是否為文章。
 
 ``` js
-<%- is_home() %>
+<%- is_post() %>
 ```
 
 ### is_archive
@@ -200,7 +200,7 @@ title: 輔助函數（Helpers）
 檢查目前是否為彙整頁面。
 
 ``` js
-<%- is_home() %>
+<%- is_archive() %>
 ```
 
 ### is_year
@@ -208,7 +208,7 @@ title: 輔助函數（Helpers）
 檢查目前是否為年度彙整頁面。
 
 ``` js
-<%- is_home() %>
+<%- is_year() %>
 ```
 
 ### is_month
@@ -216,7 +216,7 @@ title: 輔助函數（Helpers）
 檢查目前是否為每月彙整頁面。
 
 ``` js
-<%- is_home() %>
+<%- is_month() %>
 ```
 
 ### is_category
@@ -224,7 +224,7 @@ title: 輔助函數（Helpers）
 檢查目前是否為分類彙整頁面。
 
 ``` js
-<%- is_home() %>
+<%- is_category() %>
 ```
 
 ### is_tag
@@ -232,7 +232,7 @@ title: 輔助函數（Helpers）
 檢查目前是否為標籤彙整頁面。
 
 ``` js
-<%- is_home() %>
+<%- is_tag() %>
 ```
 
 ## 字串處理
@@ -373,10 +373,10 @@ title: 輔助函數（Helpers）
 
 ``` js
 <%- date(Date.now()) %>
-// Jan 1, 2013
+// 2013-01-01
 
-<%- date(Date.now(), 'YYYY/M/D') %>
-// 2013/1/1
+<%- date(Date.now(), 'MMM D YYYY') %>
+// Jan 1 2013
 ```
 
 ### date_xml
@@ -604,7 +604,7 @@ title: 輔助函數（Helpers）
 
 ### open_graph
 
-插入 open graph 資料。
+插入 [Open Graph] 資料。
 
 ``` js
 <%- open_graph([options]) %>
@@ -646,3 +646,4 @@ title: 輔助函數（Helpers）
 
 [顏色關鍵字]: http://www.w3.org/TR/css3-color/#svg-color
 [Moment.js]: http://momentjs.com/
+[Open Graph]: http://ogp.me/

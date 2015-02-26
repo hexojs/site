@@ -1,8 +1,6 @@
 title: Configuration
 ---
-You can modify most options in `_config.yml`.
-
-## Configuration
+You can modify most settings in `_config.yml`.
 
 ### Site
 
@@ -51,7 +49,7 @@ Setting | Description | Default
 `external_link` | Open external links in new tab | true
 `filename_case` | Transform filename into (1) lower case or (2) upper case | 0
 `render_drafts` | Display drafts | false
-`post_asset_folder` | Enables [Asset Folder](writing.html#Asset_Folder) | false
+`post_asset_folder` | Enables [Asset Folder](asset-folders.html) | false
 `relative_link` | Make links relative to root folder | false
 `future` | Display future posts | true
 `highlight` | Code block settings |

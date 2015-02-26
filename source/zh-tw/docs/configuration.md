@@ -2,7 +2,7 @@ title: 配置
 ---
 您可以在 `_config.yml` 中修改大部份的配置。
 
-## 網站
+### 網站
 
 設定 | 描述
 --- | ---
@@ -13,7 +13,7 @@ title: 配置
 `language` | 網站使用的語言
 `timezone` | 網站時區。Hexo 預設使用您電腦的時區。[時區列表](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones)
 
-## 網址
+### 網址
 
 設定 | 描述 | 預設值
 --- | --- | ---
@@ -26,7 +26,7 @@ title: 配置
 如果您的網站存放在子目錄中，例如 `http://yoursite.com/blog`，則請將您的 `url` 設為 `http://yoursite.com/blog` 並把 `root` 設為 `/blog/`。
 {% endnote %}
 
-## 目錄 
+### 目錄 
 
 設定 | 描述 | 預設值
 --- | --- | ---
@@ -39,7 +39,7 @@ title: 配置
 `i18n_dir` | 國際化（i18n）資料夾 | :lang
 `skip_render` | 跳過指定檔案的渲染，您可使用 glob 來配對路徑。 |
 
-## 寫作
+### 寫作
 
 設定 | 描述 | 預設值
 --- | --- | ---
@@ -55,7 +55,7 @@ title: 配置
 `future` | 顯示未來的文章 | true
 `highlight` | 程式碼區塊的設定 |
 
-## 分類 & 標籤
+### 分類 & 標籤
 
 設定 | 描述 | 預設值
 --- | --- | ---
@@ -63,7 +63,7 @@ title: 配置
 `category_map` | 分類別名 |
 `tag_map` | 標籤別名 |
 
-## 日期 / 時間格式
+### 日期 / 時間格式
 
 Hexo 使用 [Moment.js](http://momentjs.com/) 來解析和顯示時間。
 
@@ -72,14 +72,14 @@ Hexo 使用 [Moment.js](http://momentjs.com/) 來解析和顯示時間。
 `date_format` | 日期格式 | MMM D YYYY
 `time_format` | 時間格式 | H:mm:ss
 
-## 分頁
+### 分頁
 
 設定 | 描述 | 預設值
 --- | --- | ---
 `per_page` | 一頁顯示的文章量 (0 = 關閉分頁功能) | 10
 `pagination_dir` | 分頁目錄 | page
 
-## 擴充套件
+### 擴充套件
 
 設定 | 描述
 --- | ---

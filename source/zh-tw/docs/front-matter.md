@@ -21,7 +21,7 @@ date: 2013/7/13 20:46:25
 `categories` | 分類（不適用於分頁）|
 `permalink` | 覆蓋文章網址 |
 
-## 分類和標籤
+### 分類和標籤
 
 分類和標籤只有文章才支援，您可以在 Front-matter 中設定。在其他系統中，分類和標籤可能聽起來很接近，但是在 Hexo 中有著決定性的差別：分類是有順序和階層性的，也就是說 `Foo, Bar` 不等於 `Bar, Foo`；而標籤沒有順序和階層。
 
@@ -33,7 +33,7 @@ tags:
 - Games
 ```
 
-## JSON Front-matter
+### JSON Front-matter
 
 除了 YAML 外，你也可利用 JSON 來撰寫 Front-matter，只要將 `---` 代換成 `;;;` 即可。
 

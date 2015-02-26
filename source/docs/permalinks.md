@@ -4,7 +4,7 @@ You can specify the permalinks for your site in `_config.yml` or in the front-ma
 
 ### Variables
 
-Besides the following variables, you can use any attributes in the permalink since Hexo 2.5.
+Besides the following variables, you can use any attributes in the permalink.
 
 Variable | Description
 --- | ---
@@ -15,7 +15,7 @@ Variable | Description
 `:i_day` | Published day of posts (Without leading zeros)
 `:title` | Filename
 `:id` | Post ID
-`:category` | Categories. If the post is uncategorized, it'll be `category_dir` setting.
+`:category` | Categories. If the post is uncategorized, it'll be `default_category` setting.
 
 You can define the default value of each variable in the permalink in `permalink_defaults` setting:
 

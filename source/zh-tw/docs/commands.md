@@ -148,3 +148,11 @@ $ hexo --draft
 ```
 
 顯示 `source/_drafts` 資料夾中的草稿文章。
+
+### 自定 CWD
+
+``` bash
+$ hexo --cwd /path/to/cwd
+```
+
+自定目前工作目錄（Current working directory）的路徑。

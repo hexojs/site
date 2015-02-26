@@ -10,11 +10,10 @@ post_asset_folder: true
 
 ## 標籤外掛
 
-Hexo 3.0 新增了幾個外掛，讓您更方便的在文章內引用資產。
+Hexo 3 新增了幾個外掛，讓您更方便的在文章內引用資產。
 
-{% raw %}
-<figure class="highlight"><pre>{% asset_path slug %}
+```
+{% asset_path slug %}
 {% asset_img slug %}
 {% asset_link slug [title] %}
-</pre></figure>
-{% endraw %}
+```

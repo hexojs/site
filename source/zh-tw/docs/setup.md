@@ -33,26 +33,32 @@ $ npm install
 ``` json package.json
 {
   "name": "hexo-site",
-  "version": "",
+  "version": "0.0.0",
   "private": true,
   "hexo": {
     "version": ""
   },
   "dependencies": {
-    "hexo-renderer-ejs": "*",
-    "hexo-renderer-stylus": "*",
-    "hexo-renderer-marked": "*"
+    "hexo": "^3.0.0",
+    "hexo-generator-archive": "^0.1.0",
+    "hexo-generator-category": "^0.1.0",
+    "hexo-generator-index": "^0.1.0",
+    "hexo-generator-tag": "^0.1.0",
+    "hexo-renderer-ejs": "^0.1.0",
+    "hexo-renderer-stylus": "^0.2.0",
+    "hexo-renderer-marked": "^0.2.4",
+    "hexo-server": "^0.1.2"
   }
 }
 ```
 
 ### scaffolds
 
-[鷹架](writing.html) 資料夾。當您建立新文章時，Hexo 會根據 scaffold 來建立檔案。
+[鷹架](writing.html#鷹架（Scaffold）) 資料夾。當您建立新文章時，Hexo 會根據 scaffold 來建立檔案。
 
 ### scripts
 
-[腳本](plugins.html) 資料夾。腳本是擴充 Hexo 的最簡易方式，在此資料夾內的 JavaScript 檔案會被自動執行。
+[腳本](plugins.html#腳本（Scripts）) 資料夾。腳本是擴充 Hexo 的最簡易方式，在此資料夾內的 JavaScript 檔案會被自動執行。
 
 ### source
 

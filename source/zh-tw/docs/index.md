@@ -20,7 +20,7 @@ Hexo 是一個快速、簡單且強大的網誌框架。Hexo 使用 [Markdown](h
 若您的電腦已經安裝上述的必備軟體，那麼恭喜您！只需要透過 npm 即可完成 Hexo 的安裝。
 
 ``` bash
-$ npm install -g hexo
+$ npm install -g hexo-cli
 ```
 
 如果您的電腦尚未安裝必備軟體的話，請根據下列的安裝指示來完成安裝。
@@ -55,7 +55,7 @@ $ wget -qO- https://raw.github.com/creationix/nvm/master/install.sh | sh
 一旦安裝完成，重啟終端機並執行下列指令以安裝 Node.js。
 
 ``` bash
-$ nvm install 0.10
+$ nvm install 0.12
 ```
 
 或者您也可以下載 [安裝程式](http://nodejs.org/) 來安裝。
@@ -65,5 +65,5 @@ $ nvm install 0.10
 一旦所有的必備軟體都安裝完畢後，即可透過 npm 安裝 Hexo。
 
 ``` bash
-$ npm install -g hexo
+$ npm install -g hexo-cli
 ```
