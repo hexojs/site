@@ -32,7 +32,7 @@
   {{ open_graph({
     fb_admins: config.fb_admins,
     twitter_site: config.twitter,
-    image: url_for('logo.png')
+    image: config.url + url_for('logo.png')
   }) }}
   <!-- Google Analytics -->
   {{ partial('google_analytics') }}

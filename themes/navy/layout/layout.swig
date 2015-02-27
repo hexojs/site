@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="{{ page.lang }}">
 {{ partial('partial/head') }}
 <body class="{% if is_home() %}home{% endif %}">
   <div id="container">
