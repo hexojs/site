@@ -7,7 +7,7 @@
   },
   "dependencies": {
     "cheerio": "^0.18.0",
-    "hexo": "3.0.0-rc.4",
+    "hexo": "hexojs/hexo#dev",
     "hexo-browsersync": "^0.1.0",
     "hexo-deployer-git": "0.0.3",
     "hexo-generator-archive": "0.0.2",
