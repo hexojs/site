@@ -38,7 +38,9 @@ First, install `hexo-migrator-wordpress` plugin.
 $ npm install hexo-migrator-wordpress --save
 ```
 
-Once the plugin is installed, run the following command to migrate all posts from RSS. `source` can be the file path or URL.
+Export your WordPress in "Tools" → "Export" → "WordPress" in your dashboard (see [support page](http://en.support.wordpress.com/export/) for more details).
+
+Execute the following command after installed. `source` is the file path or URL of WordPress export file.
 
 ``` bash
 $ hexo migrate wordpress <source>
