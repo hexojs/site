@@ -2,7 +2,7 @@ title: Contributing
 ---
 ## Development
 
-Hexo welcomes you to join the development of Hexo. This document will help you through the process.
+We welcome you to join the development of Hexo. This document will help you through the process.
 
 ### Before You Start
 
@@ -14,71 +14,78 @@ Please follow the coding style:
 
 ### Workflow
 
-1. Fork the project.
+1. Fork [hexojs/hexo].
 2. Clone the repository to your computer and install dependencies.
 
-    ``` bash
+    {% code %}
     $ git clone https://github.com/<username>/hexo.git
     $ cd hexo
     $ npm install
     $ git submodule update --init
-    ```
+    {% endcode %}
 
-3. Create a feature branch for your change.
+3. Create a feature branch.
 
-    ``` bash
+    {% code %}
     $ git checkout -b new_feature
-    ```
+    {% endcode %}
     
-4. Start hacking. Don't forget to run tests.
+4. Start hacking.
 5. Push the branch:
 
-    ``` bash
+    {% code %}
     $ git push origin new_feature
-    ```
+    {% endcode %}
     
-6. Create a pull request against the `master` branch and describe the change.
+6. Create a pull request and describe the change.
 
-{% note warn Don't change version in package.json %}
-When making changes on Hexo, don't change version number in `package.json`.
-{% endnote %}
+### Notice
+
+- Don't modify version number in `package.json`.
+- Your pull request will only get merged when tests passed. Don't forget to run tests before submission.
+
+    {% code %}
+    $ npm test
+    {% endcode %}
 
 ## Updating Documentation
 
-The Hexo documentation is open source and you can find the source code on [hexojs/site](https://github.com/hexojs/site). To update the documentation:
+The Hexo documentation is open source and you can find the source code on [hexojs/site]. 
 
-1. Fork the project
+### Workflow
+
+1. Fork [hexojs/site]
 2. Clone the repository to your computer and install dependencies.
 
-    ``` bash
+    {% code %}
     $ git clone https://github.com/<username>/site.git
     $ cd site
     $ npm install
-    ```
+    {% endcode %}
     
 3. Start editing the documentation. You can start the server for live previewing.
 
-    ``` bash
+    {% code %}
     $ hexo server
-    ```
+    {% endcode %}
     
-4. Push the branch:
-5. Create a pull request against the `master` branch and describe the change.
+4. Push the branch.
+5. Create a pull request and describe the change.
+
+### Translating
+
+1. Add a new language folder in `source` folder. (All lower case)
+2. Copy Markdown and template files in `source` folder to the new language folder.
+3. Add the new language to `source/_data/language.yml`.
+4. Copy `en.yml` in `themes/navy/languages` and rename to the language name (all lower case).
 
 ## Reporting Issues
 
 When you encounter some problems when using Hexo, you can find the solutions in [Troubleshooting] or ask me on [GitHub](https://github.com/hexojs/hexo/issues) or [Google Group](https://groups.google.com/group/hexo). If you can't find the answer, please report it on GitHub.
 
-1. Represent the problem in debug mode.
-
-    ``` bash
-    $ hexo --debug
-    ```
-
-2. Check the version info.
-
-    ``` bash
-    $ hexo version
-    ```
-    
+1. Represent the problem in [debug mode](commands.html#Debug_mode).
+2. Run `hexo version` and check the version info.    
 3. Post both debug message and version info on GitHub.
+
+[hexojs/hexo]: https://github.com/hexojs/hexo
+[hexojs/site]: https://github.com/hexojs/site

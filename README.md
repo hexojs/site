@@ -1,5 +1,7 @@
 # Hexo Website
 
+[![Build Status](https://travis-ci.org/hexojs/site.svg)](https://travis-ci.org/hexojs/site)
+
 The website for Hexo. You can see the generated files at [hexojs/hexojs.github.io](https://github.com/hexojs/hexojs.github.io) repository.
 
 ## Getting started
@@ -15,7 +17,6 @@ $ npm install
 Generate:
 
 ``` bash
-$ gulp
 $ hexo generate
 ```
 
@@ -25,16 +26,15 @@ Run server:
 $ hexo server
 ```
 
-## Requirements
+## Contributors
 
-- [Hexo](http://hexo.io/)
+- English - [tommy351]
+- 正體中文 - [tommy351]
+- 简体中文 - [pinggod]
 
-	``` bash
-  $ npm install hexo -g
-  ```
+## License
 
-- [Gulp](http://gulpjs.com/)
+[CC BY 4.0](http://creativecommons.org/licenses/by/4.0/)
 
-	``` bash
-	$ npm install gulp -g
-	```
+[tommy351]: https://github.com/tommy351
+[pinggod]: https://github.com/pinggod

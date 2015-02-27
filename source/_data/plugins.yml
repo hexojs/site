@@ -1,0 +1,250 @@
+- name: hexo-server
+  description: Server module for Hexo.
+  link: https://github.com/hexojs/hexo-server
+  tags:
+    - official
+    - server
+    - console
+- name: hexo-cli
+  description: Command line interface for Hexo.
+  link: https://github.com/hexojs/hexo-cli
+  tags:
+    - official
+    - console
+    - cli
+- name: hexo-browsersync
+  description: BrowserSync plugin for Hexo.
+  link: https://github.com/hexojs/hexo-browsersync
+  tags:
+    - official
+    - browsersync
+    - server
+- name: hexo-renderer-less
+  description: Less renderer for Hexo.
+  link: https://github.com/hexojs/hexo-renderer-less
+  tags:
+    - official
+    - renderer
+    - less
+    - style
+    - css
+- name: hexo-generator-archive
+  description: Archive generator plugin for Hexo.
+  link: https://github.com/hexojs/hexo-generator-archive
+  tags:
+    - official
+    - generator
+    - archive
+- name: hexo-generator-category
+  description: Category generator plugin for Hexo.
+  link: https://github.com/hexojs/hexo-generator-category
+  tags:
+    - official
+    - generator
+    - category
+- name: hexo-generator-tag
+  description: Tag generator plugin for Hexo.
+  link: https://github.com/hexojs/hexo-generator-tag
+  tags:
+    - official
+    - generator
+    - tag
+- name: hexo-generator-index
+  description: Index generator plugin for Hexo.
+  link: https://github.com/hexojs/hexo-generator-index
+  tags:
+    - official
+    - generator
+    - index
+- name: hexo-renderer-marked
+  description: Markdown renderer for Hexo.
+  link: https://github.com/hexojs/hexo-renderer-marked
+  tags:
+    - official
+    - renderer
+    - markdown
+    - marked
+- name: hexo-autoprefixer
+  description: Autoprefixer plugin for Hexo.
+  link: https://github.com/hexojs/hexo-autoprefixer
+  tags:
+    - official
+    - filter
+    - css
+    - autoprefixer
+- name: hexo-clean-css
+  description: Minify CSS files with clean-css.
+  link: https://github.com/hexojs/hexo-clean-css
+  tags:
+    - official
+    - filter
+    - css
+    - cleancss
+    - minify
+- name: hexo-html-minifier
+  description: Minify HTML files with HTMLMinifier.
+  link: https://github.com/hexojs/hexo-html-minifier
+  tags:
+    - official
+    - filter
+    - html
+    - minify
+- name: hexo-uglify
+  description: Minify JavaScript files with UglifyJS.
+  link: https://github.com/hexojs/hexo-uglify
+  tags:
+    - official
+    - filter
+    - js
+    - uglify
+    - minify
+- name: hexo-notify
+  description: Notification plugins for Hexo.
+  link: https://github.com/hexojs/hexo-notify
+  tags:
+    - official
+    - notify
+- name: hexo-deployer-openshift
+  description: OpenShift deployer for Hexo.
+  link: https://github.com/hexojs/hexo-deployer-openshift
+  tags:
+    - official
+    - deployer
+    - openshift
+- name: hexo-deployer-heroku
+  description: Heroku deployer for Hexo.
+  link: https://github.com/hexojs/hexo-deployer-heroku
+  tags:
+    - official
+    - deployer
+    - heroku
+- name: hexo-deployer-git
+  description: Git deployer plugin for Hexo.
+  link: https://github.com/hexojs/hexo-deployer-git
+  tags:
+    - official
+    - deployer
+    - git
+- name: hexo-deployer-rsync
+  description: Rsync deployer plugin for Hexo.
+  link: https://github.com/hexojs/hexo-deployer-rsync
+  tags:
+    - official
+    - deployer
+    - rsync
+- name: hexo-generator-sitemap
+  description: Sitemap generator for Hexo.
+  link: https://github.com/hexojs/hexo-generator-sitemap
+  tags:
+    - official
+    - generator
+    - sitemap
+- name: hexo-generator-feed
+  description: Feed generator for Hexo.
+  link: https://github.com/hexojs/hexo-generator-feed
+  tags:
+    - official
+    - generator
+    - feed
+    - rss
+- name: hexo-renderer-stylus
+  description: Stylus renderer for Hexo.
+  link: https://github.com/hexojs/hexo-renderer-stylus
+  tags:
+    - official
+    - renderer
+    - css
+    - stylus
+- name: hexo-filter-auto-spacing
+  description: Add spaces between CJK characters and western characters.
+  link: https://github.com/hexojs/hexo-filter-auto-spacing
+  tags:
+    - official
+    - filter
+    - spacing
+- name: hexo-yuidoc
+  description: Generate YUIDoc with Hexo.
+  link: https://github.com/hexojs/hexo-yuidoc
+  tags:
+    - official
+    - generator
+    - yuidoc
+- name: hexo-migrator-wordpress
+  description: WordPress migrator for Hexo.
+  link: https://github.com/hexojs/hexo-migrator-wordpress
+  tags:
+    - official
+    - migrator
+    - wordpress
+- name: hexo-migrator-rss
+  description: RSS migrator for Hexo.
+  link: https://github.com/hexojs/hexo-migrator-rss
+  tags:
+    - official
+    - migrator
+    - rss
+- name: hexo-renderer-ejs
+  description: EJS renderer for Hexo.
+  link: https://github.com/hexojs/hexo-renderer-ejs
+  tags:
+    - official
+    - renderer
+    - ejs
+- name: hexo-renderer-jade
+  description: Jade renderer for Hexo.
+  link: https://github.com/hexojs/hexo-renderer-jade
+  tags:
+    - official
+    - renderer
+    - jade
+- name: hexo-renderer-haml
+  description: Haml renderer for Hexo.
+  link: https://github.com/hexojs/hexo-renderer-haml
+  tags:
+    - official
+    - renderer
+    - haml
+- name: hexo-renderer-dot
+  description: doT renderer for Hexo.
+  link: https://github.com/hexojs/hexo-renderer-dot
+  tags:
+    - official
+    - renderer
+    - dot
+- name: hexo-renderer-coffeescript
+  description: CoffeeScript renderer for Hexo.
+  link: https://github.com/hexojs/hexo-renderer-coffeescript
+  tags:
+    - official
+    - renderer
+    - coffeescript
+    - coffee
+- name: hexo-livereload
+  description: Livereload plugin for Hexo.
+  link: https://github.com/hexojs/hexo-livereload
+  tags:
+    - official
+    - server
+    - livereload
+- name: hexo-generator-alias
+  description: "Generate alias pages for redirecting to post, pages or URL."
+  link: https://github.com/hexojs/hexo-generator-alias
+  tags:
+    - official
+    - generator
+    - alias
+    - redirect
+- name: hexo-deployer-ftpsync
+  description: FTP deployer for Hexo.
+  link: https://github.com/hexojs/hexo-deployer-ftpsync
+  tags:
+    - official
+    - deployer
+    - ftp
+- name: hexo-migrator-blogger
+  description: Blogger migrator for Hexo.
+  link: https://github.com/hexojs/hexo-migrator-blogger
+  tags:
+    - official
+    - migrator
+    - blogger

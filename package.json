@@ -1,21 +1,36 @@
 {
-  "name": "hexo",
-  "version": "2.8.3",
+  "name": "hexo-site",
+  "version": "0.0.0",
   "private": true,
+  "hexo": {
+    "version": "3.0.0-rc.4"
+  },
   "dependencies": {
+    "cheerio": "^0.18.0",
+    "hexo": "hexojs/hexo#dev",
+    "hexo-browsersync": "^0.1.0",
+    "hexo-deployer-git": "0.0.3",
+    "hexo-generator-archive": "0.0.2",
+    "hexo-generator-feed": "^1.0.0",
+    "hexo-generator-sitemap": "^1.0.0",
     "hexo-renderer-ejs": "^0.1.0",
-    "hexo-renderer-marked": "^0.1.0",
-    "hexo-renderer-stylus": "^0.1.0",
     "hexo-renderer-jade": "^0.1.0",
-    "hexo-yuidoc": "^0.2.2",
-    "hexo-generator-sitemap": "^0.2.0",
-    "hexo-generator-feed": "^0.2.0"
+    "hexo-renderer-marked": "^0.2.3",
+    "hexo-renderer-stylus": "^0.2.0",
+    "hexo-server": "^0.1.1",
+    "lodash": "^3.0.0",
+    "lunr": "^0.5.7"
   },
   "devDependencies": {
-    "gulp": "^3.6.2",
-    "gulp-clean": "^0.2.4",
-    "gulp-yuidoc": "^0.1.2",
-    "gulp-shell": "^0.2.4",
-    "gulp-rename": "^1.2.0"
+    "gulp": "^3.8.11",
+    "gulp-html-minifier": "^0.1.6",
+    "gulp-if": "^1.2.5",
+    "gulp-load-plugins": "^0.8.0",
+    "gulp-minify-css": "^0.4.6",
+    "gulp-minify-html": "^1.0.0",
+    "gulp-rev": "^3.0.1",
+    "gulp-rev-replace": "^0.3.4",
+    "gulp-uglify": "^1.1.0",
+    "gulp-useref": "^1.1.1"
   }
 }

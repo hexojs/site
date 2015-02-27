@@ -16,8 +16,6 @@ $ hexo new [layout] <title>
 
 Creates a new article. If `layout` isn't defined, it'll equal the `default_layout` setting in [_config.yml](configuration.html). If the title is more than one word, wrap it with quotation marks.
 
-**Alias:** n
-
 ## generate
 
 ``` bash
@@ -25,8 +23,6 @@ $ hexo generate
 ```
 
 Generates static files.
-
-**Alias**: g
 
 Option | Description
 --- | ---
@@ -41,8 +37,6 @@ $ hexo publish [layout] <filename>
 
 Publishes a draft.
 
-**Alias**: p
-
 ## server
 
 ``` bash
@@ -51,14 +45,11 @@ $ hexo server
 
 Starts server.
 
-**Alias:** s
-
 Option | Description
 --- | ---
 `-p`, `--port` | Override default port
 `-s`, `--static` | Only serve static files
 `-l`, `--log` | Enable logger. Override logger format.
-`-d`, `--drafts` | Serve drafts as normal posts.
 
 ## deploy
 
@@ -68,13 +59,9 @@ $ hexo deploy
 
 Deploys your website.
 
-**Alias:** d
-
 Option | Description
 --- | ---
-`--setup` | Setup without deployment
 `-g`, `--generate` | Generate before deployment
-`-m`, `--message` | Customize commit message
 
 ## render
 
@@ -153,3 +140,19 @@ $ hexo --config custom.yml
 ```
 
 Customize config file path instead of `_config.yml`.
+
+### Display drafts
+
+``` bash
+$ hexo --draft
+```
+
+Display draft posts in `source/_drafts` folder.
+
+### Customize CWD
+
+``` bash
+$ hexo --cwd /path/to/cwd
+```
+
+Customize the path of current working directory.

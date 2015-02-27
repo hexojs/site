@@ -8,15 +8,11 @@ $ hexo generate
 
 ### Watch for File Changes
 
-Hexo can watch for file changes and regenerate files immediately.
+Hexo can watch for file changes and regenerate files immediately. Hexo will compare SHA1 checksum of files and only write if files changed.
 
 ``` bash
 $ hexo generate --watch
 ```
-
-{% note info Restart Hexo after configuration changed %}
-Hexo doesn't watch for configuration file changes. You have to restart Hexo to make the new configurations take effects.
-{% endnote %}
 
 ### Deploy After Generating
 

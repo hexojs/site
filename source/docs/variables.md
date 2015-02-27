@@ -9,17 +9,11 @@ Variable | Description
 `config` | Site configuration
 `theme` | Theme configuration. Inherits from site configuration.
 `_` (single underscore) | [Lodash](http://lodash.com/) library
-`__` (double underscores) | Internationalization (i18n) utility. See below for detail.
 `path` | Path of current page
 `url` | Full URL of current page
-
-{% note tip Custom Variables %}
-You can also use front-matter in layouts just like writing posts!
-{% endnote %}
+`env` | Environment variables
 
 ### Site Variables
-
-All of the following variables are [Data Model].
 
 Variable | Description
 --- | ---
@@ -42,7 +36,8 @@ Variable | Description
 `page.comments` | Comment enabled or not
 `page.layout` | Layout name.
 `page.content` | The full processed content of the article
-`page.excerpt` | The processed excerpt of the article
+`page.excerpt` | Article excerpt
+`page.more` | Contents except article excerpt
 `page.source` | The path of the source file
 `page.full_source` | Full path of the source file
 `page.path` | The URL of the article without root URL. We usually use `url_for(page.path)` in theme.
@@ -52,10 +47,6 @@ Variable | Description
 `page.raw` | The raw data of the article
 `page.photos` | The photos of the article (Used in gallery posts)
 `page.link` | The external link of the article (Used in link posts)
-
-{% note info Custom front-matter %}
-The front-matter in posts will be available in `page`.
-{% endnote %}
 
 **Home (index)**
 

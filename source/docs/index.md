@@ -20,7 +20,7 @@ Installing Hexo is quite easy. However, there are some things required before yo
 If your computer already has the requirements above, congratulations! Just install Hexo with npm.
 
 ``` bash
-$ npm install -g hexo
+$ npm install -g hexo-cli
 ```
 
 If not, please follow the following instructions to install all the requirements.
@@ -55,7 +55,7 @@ $ wget -qO- https://raw.github.com/creationix/nvm/master/install.sh | sh
 Once installed, restart the terminal and run the following command to install Node.js.
 
 ``` bash
-$ nvm install 0.10
+$ nvm install 0.12
 ```
 
 Or you can download the [installer](http://nodejs.org/) and install it.
@@ -65,5 +65,5 @@ Or you can download the [installer](http://nodejs.org/) and install it.
 Once all the requirements are installed, you can install Hexo with npm.
 
 ``` bash
-$ npm install -g hexo
+$ npm install -g hexo-cli
 ```

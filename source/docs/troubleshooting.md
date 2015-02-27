@@ -5,19 +5,20 @@ You may encounter some problems when using Hexo. The following are the solutions
 ## YAML Parsing Error
 
 ``` plain
-/usr/local/lib/node_modules/hexo/node_modules/yamljs/bin/yaml.js:1219
-throw new YamlParseException('Unable to parse.', this.getRealCurrentLineNb
-^
-YamlParseException: Unable to parse.
+JS-YAML: incomplete explicit mapping pair; a key node is missed at line 18, column 29:
+      last_updated: Last updated: %s
 ```
 
-When you encounter `YamlParseException`, check your configuration and front-matter in the post files. Make sure they are written in correct YAML format: use spaces instead of tabs and add a space before colons. For example:
+Wrap the string with quotations if it contains colons.
 
-``` yaml
-foo: 1
-bar:
-  baz: 2
+``` plain
+JS-YAML: bad indentation of a mapping entry at line 18, column 31:
+      last_updated:"Last updated: %s"
 ```
+
+Make sure you are using soft tab and add a space after colons.
+
+You can see [YAML Spec](http://www.yaml.org/spec/1.2/spec.html) for more info.
 
 ## EMFILE Error
 
@@ -31,13 +32,13 @@ Though Node.js has non-blocking I/O, the number of synchronous I/O is still limi
 $ ulimit -n 10000
 ```
 
-## GitHub Deployment Problems
+## Git Deployment Problems
 
 ``` plain
 fatal: 'username.github.io' does not appear to be a git repository
 ```
 
-Make sure you have [set up git](https://help.github.com/articles/set-up-git) on your computer and try to use HTTPS repository URL instead.
+Make sure you have [set up git](https://help.github.com/articles/set-up-git) on your computer or try to use HTTPS repository URL instead.
 
 ## Server Problems
 
@@ -45,19 +46,13 @@ Make sure you have [set up git](https://help.github.com/articles/set-up-git) on 
 Error: listen EADDRINUSE
 ```
 
-You may open Hexo server twice or there's other applications using the same port. Try to edit `port` setting or start Hexo server with `-p` flag.
+You may have started two Hexo server at the same time or there's another application using the same port. Try to edit `port` setting or start Hexo server with `-p` flag.
 
 ``` bash
 $ hexo server -p 5000
 ```
 
 ## Plugin Installation Problems
-
-``` plain
-npm WARN package.json plugin-name@0.0.1 No read me data.
-```
-
-This error comes out when you install a plugin which doesn't provide read me file. Don't be scared. This error won't cause any problems.
 
 ``` plain
 npm ERR! node-waf configure build
@@ -67,19 +62,31 @@ This error may occurred when you trying to install a plugin written in C, C++ or
 
 ## Iterate Data Model on Jade or Swig
 
-Hexo uses [Warehouse] as data model. It's not an array so you have to transform them into to iterate. For more information about [Warehouse], see the [API](/api/warehouse/classes/Database.html).
+Hexo uses [Warehouse] as data model. It's not an array so you have to transform them into to iterate.
 
-## Stylesheets Not Updated
+```
+{% for post in site.posts.toArray() %}
+{% endfor %}
+```
 
-You may find that stylesheets updated in Hexo server but not applied to static files. It's because Hexo compares modified date of files when generating. You can clean cache to solve this problem.
+## Data Not Updated
+
+Some data may not be updated, or generated files are same to the last version. You can clean the cache and try again.
 
 ``` bash
 $ hexo clean
 ```
 
-## Escape in Posts
+## Escape Contents
 
-Hexo uses [Swig] to render posts. Contents wrapped with `{% raw %}{{ }}{% endraw %}` or `{% raw %}{% %}{% endraw %}` will be parsed and may cause problems. You can wrap sensitive contents with `raw` tag plugin.
+Hexo uses [Nunjucks] to render posts (used [Swig] in old version, they shared a simliar syntax). Contents wrapped with `{% raw %}{{ }}{% endraw %}` or `{% raw %}{% %}{% endraw %}` will be parsed and may cause problems. You can wrap sensitive contents with `raw` tag plugin.
+
+```
+{% raw %}
+Hello {{ sensitive }}
+{% endraw %}
+```
 
 [Warehouse]: https://github.com/tommy351/warehouse
 [Swig]: http://paularmstrong.github.io/swig/
+[Nunjucks]: http://mozilla.github.io/nunjucks/

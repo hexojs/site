@@ -1,0 +1,86 @@
+header-padding-normal = 10px
+header-padding-max = 30px
+logo-size = 50px
+
+#header
+  position: relative
+  padding: header-padding-normal 0
+  .home &
+    padding: header-padding-max 0
+
+#header-inner
+  position: relative
+
+#logo-wrap
+  text-align: center
+
+#logo
+  hide-text()
+  background: url("images/logo.svg")
+  width: logo-size
+  height: logo-size
+  background-size: @width @height
+  display: inline-block
+  @media mq-normal
+    float: left
+
+#main-nav
+  display: none
+  float: left
+  padding-left: 30px
+  @media mq-normal
+    display: block
+
+.main-nav-item
+  float: left
+
+.main-nav-link
+  color: #fff
+  text-decoration: none
+  line-height: logo-size
+  opacity: 0.7
+  transition: 0.2s
+  font-family: font-title
+  text-transform: uppercase
+  display: block
+  padding: 0 20px
+  &:hover
+    opacity: 1
+    color: color-link-hover
+
+#search-btn-wrap
+  display: none
+  float: right
+  margin-right: 15px
+  @media mq-normal
+    display: block
+
+#search-btn
+  cursor: pointer
+
+#lang-select-wrap
+  display: none
+  position: relative
+  float: right
+  @media mq-normal
+    display: block
+
+#lang-select-label
+  color: #fff
+  opacity: 0.7
+  font-family: font-title
+  line-height: logo-size
+  span
+    padding-left: 8px
+  i
+    opacity: 0.7
+
+#lang-select
+  opacity: 0
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  -webkit-appearance: menulist-button
+  font-size: inherit

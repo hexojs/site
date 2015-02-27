@@ -24,7 +24,7 @@ After build, here's what the project folder looks like:
 
 ### _config.yml
 
-Site [configuration](configuration.html) file. You can configure most options here.
+Site [configuration](configuration.html) file. You can configure most settings here.
 
 ### package.json
 
@@ -33,23 +33,32 @@ Application data. [EJS](http://embeddedjs.com/), [Stylus](http://learnboost.gith
 ``` json package.json
 {
   "name": "hexo-site",
-  "version": "",
+  "version": "0.0.0",
   "private": true,
+  "hexo": {
+    "version": ""
+  },
   "dependencies": {
-    "hexo-renderer-ejs": "*",
-    "hexo-renderer-stylus": "*",
-    "hexo-renderer-marked": "*"
+    "hexo": "^3.0.0",
+    "hexo-generator-archive": "^0.1.0",
+    "hexo-generator-category": "^0.1.0",
+    "hexo-generator-index": "^0.1.0",
+    "hexo-generator-tag": "^0.1.0",
+    "hexo-renderer-ejs": "^0.1.0",
+    "hexo-renderer-stylus": "^0.2.0",
+    "hexo-renderer-marked": "^0.2.4",
+    "hexo-server": "^0.1.2"
   }
 }
 ```
 
 ### scaffolds
 
-[Scaffold](writing.html) folder. When you create a new post, Hexo will build the file based on the scaffold.
+[Scaffold](writing.html#Scaffolds) folder. When you create a new post, Hexo will build the file based on the scaffold.
 
 ### scripts
 
-[Script](plugins.html) folder. Scripts are the easiest way to extend Hexo. JavaScript files in this folder will be executed automatically.
+[Script](plugins.html#Scripts) folder. Scripts are the easiest way to extend Hexo. JavaScript files in this folder will be executed automatically.
 
 ### source
 
