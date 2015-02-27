@@ -8,33 +8,39 @@ note-warn = hsl(0, 100%, 50%)
 
 #content-inner
   clearfix()
-  margin-left: sidebar-width
+  @media mq-normal
+    margin-left: sidebar-width
 
 .article-container
-  float: right
-  width: 100%
+  @media mq-normal
+    float: right
+    width: 100%
 
 .article-inner
   clearfix()
-  margin-right: sidebar-width
+  @media mq-normal
+    margin-right: sidebar-width
 
 .article
   float: left
   width: 100%
   padding: 40px 0
 
-.article-toc
+#article-toc
+  display: none
   float: right
   width: sidebar-width
   margin-right: sidebar-width * -1
   opacity: 0.8
+  @media mq-normal
+    display: block
   &.fixed
     position: absolute
     top: 0
     bottom: 0
     right: sidebar-width
 
-.article-toc-inner
+#article-toc-inner
   @extend .inner
   overflow-x: hidden
   overflow-y: auto
@@ -51,7 +57,7 @@ note-warn = hsl(0, 100%, 50%)
   padding-left: 1em
   font-size: 0.9em
 
-.article-toc-top
+#article-toc-top
   margin-top: 2em
   font-size: 0.9em
   text-decoration: none
@@ -93,8 +99,11 @@ note-warn = hsl(0, 100%, 50%)
   font-size: 24px
   line-height: 36px
   transition: 0.2s
+  display: none
   &:hover
     color: color-link-hover
+  @media mq-normal
+    display: block
 
 .article-anchor
   margin-left: 10px

@@ -3,6 +3,11 @@
   padding: 40px 0
   color: rgba(255, 255, 255, 0.6)
   font-family: font-title
+  position: relative
+  background: color-navy
+  text-align: center
+  @media mq-normal
+    text-align: left
   a
     color: inherit
     text-decoration: none
@@ -12,14 +17,19 @@
 
 #footer-copyright
   line-height: 1.4
-  float: left
+  @media mq-normal
+    float: left
   a
     font-weight: bold
 
 #footer-links
-  float: right
+  margin-top: 1em
+  @media mq-normal
+    float: right
+    margin-top: 0
 
 .footer-link
   font-size: 30px
   margin-left: 20px
-  float: left
+  &:first-child
+    margin-left: 0

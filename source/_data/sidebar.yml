@@ -38,7 +38,6 @@ api:
     scaffolds: scaffolds.html
     themes: themes.html
   extensions:
-    overview: extensions.html
     console: console.html
     deployer: deployer.html
     filter: filter.html

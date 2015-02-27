@@ -23,8 +23,7 @@ before_install:
   - git clone https://github.com/hexojs/hexojs.github.io .deploy_git
 
 script:
-  - hexo generate
-  - hexo deploy
+  - hexo generate && gulp && hexo deploy
 
 branches:
   only:

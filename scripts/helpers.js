@@ -42,7 +42,7 @@ hexo.extend.helper.register('page_nav', function(){
   return result;
 });
 
-hexo.extend.helper.register('doc_sidebar', function(){
+hexo.extend.helper.register('doc_sidebar', function(className){
   var type = this.page.canonical_path.split('/')[0];
   var sidebar = this.site.data.sidebar[type];
   var path = pathFn.basename(this.path);
@@ -51,20 +51,20 @@ hexo.extend.helper.register('doc_sidebar', function(){
   var prefix = 'sidebar.' + type + '.';
 
   _.each(sidebar, function(menu, title){
-    result += '<strong class="sidebar-title">' + self.__(prefix + title) + '</strong>';
+    result += '<strong class="' + className + '-title">' + self.__(prefix + title) + '</strong>';
 
     _.each(menu, function(link, text){
-      var className = 'sidebar-link';
-      if (link === path) className += ' current';
+      var itemClass = className + '-link';
+      if (link === path) itemClass += ' current';
 
-      result += '<a href="' + link + '" class="' + className + '">' + self.__(prefix + text) + '</a>';
+      result += '<a href="' + link + '" class="' + itemClass + '">' + self.__(prefix + text) + '</a>';
     })
   });
 
   return result;
 });
 
-hexo.extend.helper.register('header_menu', function(){
+hexo.extend.helper.register('header_menu', function(className){
   var menu = this.site.data.menu;
   var result = '';
   var self = this;
@@ -74,8 +74,8 @@ hexo.extend.helper.register('header_menu', function(){
   _.each(menu, function(path, title){
     if (!isEnglish && ~localizedPath.indexOf(title)) path = lang + path;
 
-    result += '<li class="main-nav-item">';
-    result += '<a href="' + self.url_for(path) + '" class="main-nav-link">' + self.__('menu.' + title) + '</a>';
+    result += '<li class="' + className + '-item">';
+    result += '<a href="' + self.url_for(path) + '" class="' + className + '-link">' + self.__('menu.' + title) + '</a>';
     result += '</li>';
   });
 

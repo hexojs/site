@@ -1,14 +1,17 @@
-<!-- jQuery -->
-<script src="//cdn.jsdelivr.net/jquery/2.1.3/jquery.min.js"></script>
 <!-- Scripts -->
-{{ js('js/raf-polyfill') }}
-{{ js('js/script') }}
+<!-- build:js js/main.js -->
+{{ js('js/lang_select') }}
+{{ js('js/toc') }}
+{{ js('js/mobile_nav') }}
+<!-- endbuild -->
 {% if page.layout === 'plugins' %}
 <!-- Plugin search -->
 <script src="//cdn.jsdelivr.net/lunr/0.5.7/lunr.min.js"></script>
+<!-- build:js js/plugins.js -->
 {{ js('js/plugins') }}
+<!-- endbuild -->
 {% endif %}
-{% if config.disqus_shortname %}
+{% if page.comments and config.disqus_shortname %}
 <!-- Disqus -->
 <script>
   var disqus_shortname = '{{ config.disqus_shortname }}';
@@ -17,21 +20,17 @@
   {% endif %}
   (function(){
     var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-    dsq.src = '//go.disqus.com/{% if page.comments %}embed.js{% else %}count.js{% endif %}';
+    dsq.src = '//go.disqus.com/embed.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
   })();
 </script>
 {% endif %}
 <!-- Swiftype -->
-<script>
-var Swiftype = window.Swiftype || {};
-(function() {
-  Swiftype.key = '<%- config.swiftype_key %>';
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+  (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+  e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v1/st.js','_st');
 
-  /** DO NOT EDIT BELOW THIS LINE **/
-  var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
-  script.src = "//s.swiftypecdn.com/embed.js";
-  var entry = document.getElementsByTagName('script')[0];
-  document.getElementsByTagName('script')[0].parentNode.insertBefore(script, entry);
-}());
+  _st('install','{{ config.swiftype_key }}');
 </script>
