@@ -86,11 +86,6 @@ hexo.extend.helper.register('canonical_url', function(){
   return this.config.url + '/' + this.page.canonical_path;
 });
 
-hexo.extend.helper.register('get_url_host', function(path){
-  var data = url.parse(path);
-  return data ? data.host : path;
-});
-
 hexo.extend.helper.register('url_for_lang', function(path){
   var lang = this.page.lang;
   var url = this.url_for(path);
