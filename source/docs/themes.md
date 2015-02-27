@@ -32,7 +32,7 @@ See [templates](templates.html) for more info.
 
 ### scripts
 
-Script folder. JavaScript files in this folder will be loaded when Hexo started. For more info, see [Plugins](plugins.html).
+Script folder. JavaScript files in this folder will be loaded when Hexo started. For more info, see [plugins](plugins.html).
 
 ### source
 
@@ -44,7 +44,7 @@ If a file is able to be rendered, then it will be processed and save to `public`
 
 Once your theme has been done, you can consider to publish it to [theme list](/themes) to make more people use your theme. It's recommended to run the [theme unit test](https://github.com/hexojs/hexo-theme-unit-test) and ensure everything is working before you publishing. The steps to publish a theme is very simliar to [updating documentation](contributing.html#Updating_Documentation).
 
-1. Fork [hexojs/site](https://github.com/hexojs/site)
+1. Fork [hexojs/site]
 2. Clone the repository to your computer and install dependencies.
 
     {% code %}
@@ -53,7 +53,7 @@ Once your theme has been done, you can consider to publish it to [theme list](/t
     $ npm install
     {% endcode %}
 
-3. Edit `source/_data/theme.yml` and add your theme. For example:
+3. Edit `source/_data/themes.yml` and add your theme. For example:
 
     {% code %}
     - name: landscape
@@ -76,3 +76,4 @@ Once your theme has been done, you can consider to publish it to [theme list](/t
 [Swig]: http://paularmstrong.github.com/swig/
 [Haml]: https://github.com/hexojs/hexo-renderer-haml
 [Jade]: https://github.com/hexojs/hexo-renderer-jade
+[hexojs/site]: https://github.com/hexojs/site
