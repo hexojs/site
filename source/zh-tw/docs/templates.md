@@ -59,7 +59,7 @@ index
 
 ### 區域變數
 
-您可以在局部模板中指定區域變數，就能在局部模板中使用。
+您可以在模板中指定區域變數，就能在其他模板中使用。
 
 ``` html partial/header.ejs
 <h1 id="logo"><%= title></h1>
@@ -79,7 +79,7 @@ index
 
 ## 最佳化
 
-如果您的主題太過於複雜，或是需要產生的檔案量太過於龐大，可能會大幅降低效能，除了簡化主題外，您可以考慮 Hexo 2.7 新增的局部快取（Fragment Caching） 功能。
+如果您的主題太過於複雜，或是需要產生的檔案量太過於龐大，可能會大幅降低效能，除了簡化主題外，您可以考慮 Hexo 2.7 新增的局部快取（Fragment Caching）功能。
 
 本功能借鑑於 [Ruby on Rails](http://guides.rubyonrails.org/caching_with_rails.html#fragment-caching)，它儲存局部區塊的內容，下次便能直接使用快取內容，可以減少資料庫查詢並使產生速度更快。
 
