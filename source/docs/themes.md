@@ -36,7 +36,7 @@ Script folder. JavaScript files in this folder will be loaded when Hexo started.
 
 ### source
 
-Source folder. Asset files like CSS and Javascript files should be placed in this folder. File or folder whose name is prefixed with `_` (underscore) and hidden files will be ignored. 
+Source folder. Asset files like CSS and Javascript files should be placed in this folder. File or folder whose name is prefixed with `_` (underscore) and hidden files will be ignored.
 
 If a file is able to be rendered, then it will be processed and save to `public` folder, or it would be copy to `public` folder directly.
 
@@ -44,7 +44,7 @@ If a file is able to be rendered, then it will be processed and save to `public`
 
 Once your theme has been done, you can consider to publish it to [theme list](/themes) to make more people use your theme. It's recommended to run the [theme unit test](https://github.com/hexojs/hexo-theme-unit-test) and ensure everything is working before you publishing. The steps to publish a theme is very simliar to [updating documentation](contributing.html#Updating_Documentation).
 
-1. Fork [hexojs/site]
+1. Fork [hexojs/site](https://github.com/hexojs/site)
 2. Clone the repository to your computer and install dependencies.
 
     {% code %}
@@ -52,8 +52,8 @@ Once your theme has been done, you can consider to publish it to [theme list](/t
     $ cd site
     $ npm install
     {% endcode %}
-    
-3. Edit `source/_data/_plugins.yml` and add your theme. For example:
+
+3. Edit `source/_data/theme.yml` and add your theme. For example:
 
     {% code %}
     - name: landscape
@@ -68,7 +68,7 @@ Once your theme has been done, you can consider to publish it to [theme list](/t
         - one_column
     {% endcode %}
 
-4. Add a screenshot in `source/themes/screenshots` with same name. The picture must be 800X500 px and PNG format.    
+4. Add a screenshot in `source/themes/screenshots` with same name. The picture must be 800X500 px and PNG format.
 5. Push the branch.
 6. Create a pull request and describe the change.
 
