@@ -23,3 +23,12 @@
     - official
     - responsive
     - two_column
+- name: NexT
+  description: NexT is an elegant theme for Hexo.
+  link: https://github.com/iissnan/hexo-theme-next
+  preview: http://notes.iissnan.com/
+  tags:
+    - responsive
+    - one_column
+    - clean
+    - white
