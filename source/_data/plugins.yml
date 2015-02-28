@@ -248,3 +248,18 @@
     - official
     - migrator
     - blogger
+- name: hexo-renderer-markdown-it
+  description: Very fast Markdown renderer with support for CommonMark, GFM and more.
+  link: https://github.com/celsomiranda/hexo-renderer-markdown-it
+  tags:
+    - renderer
+    - markdown
+    - markdown-it
+- name: hexo-renderer-bourbon
+  description: An up-to-date node-sass wrapper for Hexo that includes Bourbon mixins.
+  link: https://github.com/celsomiranda/hexo-renderer-bourbon
+  tags:
+    - renderer
+    - sass
+    - libsass
+    - bourbon
