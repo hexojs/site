@@ -248,3 +248,10 @@
     - official
     - migrator
     - blogger
+- name: hexo-renderer-markdown-it
+  description: Very fast Markdown renderer with support for CommonMark, GFM and more.
+  link: https://github.com/celsomiranda/hexo-renderer-markdown-it
+  tags:
+    - renderer
+    - markdown
+    - markdown-it
