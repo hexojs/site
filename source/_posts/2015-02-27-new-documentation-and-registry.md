@@ -15,7 +15,7 @@ See the following articles for more info. Your plugin/theme will be published to
 
 ## Localization
 
-We have add two new languages of documentation: [Tranditional Chinese (正體中文)](http://hexo.io/zh-tw/) and [Simplified Chinese (简体中文)](http://hexo.io/zh-cn/). Thanks to [pinggod](https://github.com/pinggod) for the Simplified Chinese translation. We very welcome you to help us translating and make more people easier to get started with Hexo! For more info, see [translating documentation](/docs/contributing.html#Translating).
+We have add two new languages of documentation: [Tranditional Chinese (正體中文)](/zh-tw/) and [Simplified Chinese (简体中文)](/zh-cn/). Thanks to [pinggod](https://github.com/pinggod) for the Simplified Chinese translation. We very welcome you to help us translating and make more people easier to get started with Hexo! For more info, see [translating documentation](/docs/contributing.html#Translating).
 
 ## Where's API Documentation?
 
