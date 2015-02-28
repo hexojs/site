@@ -140,3 +140,11 @@ hexo.extend.helper.register('canonical_path_for_nav', function(){
     return '';
   }
 });
+
+hexo.extend.helper.register('disqus_lang', function(){
+  var lang = this.page.lang;
+  if (!~lang.indexOf('-')) return lang;
+
+  var split = lang.split('-');
+  return split[0] + '_' + split[1].toUpperCase();
+});

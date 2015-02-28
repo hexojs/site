@@ -15,8 +15,11 @@
 <!-- Disqus -->
 <script>
   var disqus_shortname = '{{ config.disqus_shortname }}';
+  var disqus_config = function(){
+    this.language = '{{ disqus_lang() }}';
+  };
   {% if page.permalink %}
-  var disqus_url = '{{ canonical_url() }}';
+  var disqus_url = '{{ url }}';
   {% endif %}
   (function(){
     var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
