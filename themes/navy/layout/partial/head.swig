@@ -4,7 +4,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Canonical links -->
-  <link rel="canonical" href="{{ canonical_url() }}">
+  <link rel="canonical" href="{{ url }}">
   <!-- Alternative links -->
   {% if page.layout == 'page' or page.layout == 'index' %}
     {% for lang in site.data.languages %}
@@ -40,6 +40,8 @@
     fb_admins: config.fb_admins,
     twitter_site: config.twitter
   }) }}
+  <!-- Swiftype -->
+  <meta class="swiftype" name="title" data-type="string" content="{{ page.title || config.title }}">
   <!-- Google Analytics -->
   {{ partial('google_analytics') }}
 </head>

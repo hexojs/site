@@ -1,3 +1,4 @@
 User-agent: *
-Sitemap: /sitemap.xml
-Disallow: /docs/plugins/filter-flow.html
+Disallow: /hexo-theme-landscape/*
+Disallow: /hexo-theme-light/*
+Disallow: /hexo-theme-phase/*
