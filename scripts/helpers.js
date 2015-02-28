@@ -144,10 +144,14 @@ hexo.extend.helper.register('canonical_path_for_nav', function(){
   }
 });
 
+hexo.extend.helper.register('lang_name', function(lang){
+  var data = this.site.data.languages[lang];
+  return data.name || data;
+});
+
 hexo.extend.helper.register('disqus_lang', function(){
   var lang = this.page.lang;
-  if (!~lang.indexOf('-')) return lang;
+  var data = this.site.data.languages[lang];
 
-  var split = lang.split('-');
-  return split[0] + '_' + split[1].toUpperCase();
+  return data.disqus_lang || lang;
 });

@@ -11,23 +11,6 @@
 {{ js('js/plugins') }}
 <!-- endbuild -->
 {% endif %}
-{% if page.comments and config.disqus_shortname %}
-<!-- Disqus -->
-<script>
-  var disqus_shortname = '{{ config.disqus_shortname }}';
-  var disqus_config = function(){
-    this.language = '{{ disqus_lang() }}';
-  };
-  {% if page.permalink %}
-  var disqus_url = '{{ url }}';
-  {% endif %}
-  (function(){
-    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-    dsq.src = '//go.disqus.com/embed.js';
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-  })();
-</script>
-{% endif %}
 <!-- Swiftype -->
 <script type="text/javascript">
   (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
