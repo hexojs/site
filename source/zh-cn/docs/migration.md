@@ -38,8 +38,26 @@ new_post_name: :year-:month-:day-:title.md
 $ npm install hexo-migrator-wordpress --save
 ```
 
-插件安装完成后，执行下列命令来迁移所有文章。`source` 可以是文件路径或网址。
+在 WordPress 仪表盘中导出数据("Tools" → "Export" → "WordPress")（详情参考[WP支持页面](http://en.support.wordpress.com/export/)）。
+
+插件安装完成后，执行下列命令来迁移所有文章。`source` 可以是 WordPress 导出的文件路径或网址。
 
 ``` bash
 $ hexo migrate wordpress <source>
+```
+
+## Joomla
+
+首先，安装 `hexo-migrator-joomla` 插件。
+
+```bash
+$ npm install hexo-migrator-joomla --save
+```
+
+使用 [J2XML](http://extensions.joomla.org/extensions/migration-a-conversion/data-import-a-export/12816?qh=YToxOntpOjA7czo1OiJqMnhtbCI7fQ%3D%3D) 组件导出 Joomla 文章。
+插件安装完成后，执行下列命令来迁移所有文章。`source` 可以是 Joomla 导出的文件路径或网址。
+
+
+```bash
+$ hexo migrate joomla <source>
 ```

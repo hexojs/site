@@ -192,7 +192,7 @@ title: 辅助函数（Helpers）
 检查目前是否为文章。
 
 ``` js
-<%- is_home() %>
+<%- is_post() %>
 ```
 
 ### is_archive
@@ -200,7 +200,7 @@ title: 辅助函数（Helpers）
 检查目前是否为存档页面。
 
 ``` js
-<%- is_home() %>
+<%- is_archive() %>
 ```
 
 ### is_year
@@ -208,7 +208,7 @@ title: 辅助函数（Helpers）
 检查目前是否为年度归档页面。
 
 ``` js
-<%- is_home() %>
+<%- is_year() %>
 ```
 
 ### is_month
@@ -216,7 +216,7 @@ title: 辅助函数（Helpers）
 检查目前是否为月度归档页面。
 
 ``` js
-<%- is_home() %>
+<%- is_month() %>
 ```
 
 ### is_category
@@ -224,7 +224,7 @@ title: 辅助函数（Helpers）
 检查目前是否为分类归档页面。
 
 ``` js
-<%- is_home() %>
+<%- is_category() %>
 ```
 
 ### is_tag
@@ -232,7 +232,7 @@ title: 辅助函数（Helpers）
 检查目前是否为标签归档页面。
 
 ``` js
-<%- is_home() %>
+<%- is_tag() %>
 ```
 
 ## 字符串处理
@@ -646,3 +646,4 @@ title: 辅助函数（Helpers）
 
 [颜色关键字]: http://www.w3.org/TR/css3-color/#svg-color
 [Moment.js]: http://momentjs.com/
+[Open Graph]: http://ogp.me/
