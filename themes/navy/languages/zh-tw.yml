@@ -40,7 +40,7 @@ sidebar:
     structure: 結構
     templates: 模版
     variables: 變數
-    helpers: 輔助變數
+    helpers: 輔助函數
     localization: 本地化 (i18n)
     plugins: 外掛
     miscellaneous: 其他
