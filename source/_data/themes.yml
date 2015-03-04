@@ -42,3 +42,11 @@
     - wordpress
     - elegant
     - hueman
+- name: carbon
+  description: Carbon is a simple theme using pjax for elegant loading.
+  link: https://github.com/icylogic/carbon
+  preview: https://blog.icylogic.net
+  tags:
+    - simple
+    - white & black
+    - pjax
