@@ -21,6 +21,8 @@ before_install:
   - npm install hexo-cli -g
   # Clone the repository
   - git clone https://github.com/hexojs/hexojs.github.io .deploy_git
+  # Install graphicsmagick
+  - sudo apt-get install graphicsmagick
 
 script:
   - hexo generate && gulp && hexo deploy
