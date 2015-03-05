@@ -263,3 +263,10 @@
     - sass
     - libsass
     - bourbon
+- name: hexo-migrator-joomla
+  description: Joomla migrator for Hexo.
+  link: https://github.com/welksonramos/hexo-migrator-joomla
+  tags:
+    - official
+    - joomla
+    - migrator
