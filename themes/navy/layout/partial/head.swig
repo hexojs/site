@@ -28,7 +28,7 @@
   <meta name="msapplication-TileColor" content="#2f83cd">
   <meta name="msapplication-TileImage" content="{{ url_for('icon/mstile-144x144.png') }}">
   <!-- CSS -->
-  <!-- build:css css/navy.css -->
+  <!-- build:css build/css/navy.css -->
   {{ css('css/navy') }}
   <!-- endbuild -->
   <link href="//fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css">

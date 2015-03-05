@@ -1,5 +1,5 @@
 <!-- Scripts -->
-<!-- build:js js/main.js -->
+<!-- build:js build/js/main.js -->
 {{ js('js/lang_select') }}
 {{ js('js/toc') }}
 {{ js('js/mobile_nav') }}
@@ -8,7 +8,7 @@
 {% if page.layout === 'plugins' %}
 <!-- Plugin search -->
 <script src="//cdn.jsdelivr.net/lunr/0.5.7/lunr.min.js"></script>
-<!-- build:js js/plugins.js -->
+<!-- build:js build/js/plugins.js -->
 {{ js('js/plugins') }}
 <!-- endbuild -->
 {% endif %}
