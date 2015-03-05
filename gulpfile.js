@@ -14,6 +14,15 @@ var htmlMinifierOptions = {
   minifyCSS: true
 };
 
+var dirs = {
+  public: 'public',
+  screenshots: 'public/themes/screenshots'
+};
+
+var paths = {
+  screenshots: dirs.screenshots + '/*'
+};
+
 gulp.task('useref', function(){
   var assets = $.useref.assets({
     searchPath: 'public'
@@ -33,4 +42,30 @@ gulp.task('useref', function(){
     .pipe(gulp.dest('public'));
 });
 
-gulp.task('default', ['useref']);
+gulp.task('screenshot:resize', function(){
+  var resizeOptions = {
+    width: 400,
+    height: 250,
+    crop: true
+  };
+
+  return gulp.src(paths.screenshots)
+    // Append "@2x" to the original images
+    .pipe($.rename({
+      suffix: '@2x'
+    }))
+    // Copy original images
+    .pipe(gulp.dest(dirs.screenshots))
+    // Resize images
+    .pipe($.imageResize(resizeOptions))
+    // Remove "@2x" in filename
+    .pipe($.rename(function(path){
+      path.basename = path.basename.replace('@2x', '');
+      return path;
+    }))
+    // Save resized images
+    .pipe(gulp.dest(dirs.screenshots))
+});
+
+gulp.task('screenshot', ['screenshot:resize']);
+gulp.task('default', ['useref', 'screenshot']);
