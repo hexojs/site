@@ -1,3 +1,10 @@
+- name: hexo-migrator-joomla
+  description: Joomla migrator for Hexo.
+  link: https://github.com/welksonramos/hexo-migrator-joomla
+  tags:
+    - official
+    - joomla
+    - migrator
 - name: hexo-server
   description: Server module for Hexo.
   link: https://github.com/hexojs/hexo-server
