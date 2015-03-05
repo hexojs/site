@@ -9,10 +9,8 @@
     {% endif %}
     <a href="{{ url_for(post.path) }}" class="article-date">{{ time_tag(post.date) }}</a>
   </header>
-  {% if is_post() or loop_index == 1 %}
-    <div class="article-content" itemprop="articleBody" data-swiftype-index="true">
-      {{ page_anchor(post.content) }}
-    </div>
-  {% endif %}
+  <div class="article-content" itemprop="articleBody" data-swiftype-index="true">
+    {{ page_anchor(post.content) }}
+  </div>
   {{ partial('partial/comment') }}
 </article>
