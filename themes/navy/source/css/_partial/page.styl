@@ -25,6 +25,8 @@ note-warn = hsl(0, 100%, 50%)
   float: left
   width: 100%
   padding: 40px 0
+  @media print
+    padding: 0
 
 #article-toc
   display: none
@@ -110,14 +112,18 @@ note-warn = hsl(0, 100%, 50%)
   display: none
   &:before
     content: "#"
+  @media print
+    display: none !important
   .article-heading:hover &
     display: inline-block
 
 .article-content
   line-height: line-height
   color: color-default
+  @media print
+    font-size: 12pt
   p, ol, ul, dl, table, blockquote, iframe, .highlight
-    margin: line-height 0
+    margin: 1em 0
   h1
     font-size: 2em
   h2
@@ -134,6 +140,12 @@ note-warn = hsl(0, 100%, 50%)
     &:hover
       color: color-link-hover
       text-decoration: underline
+    @media print
+      color: color-default
+      text-decoration: underline
+      &:after
+        content: " (" attr(href) ")"
+        font-size: 80%
   strong
     font-weight: bold
   em
@@ -195,13 +207,15 @@ note-warn = hsl(0, 100%, 50%)
 
 .article-footer
   clearfix()
-  margin: line-height 0
+  margin: 1em 0
   border-top: 1px solid color-border
   text-align: center
   color: color-gray
   line-height: 1em
   padding-top: 1em
   position: relative
+  @media print
+    display: none
 
 $article-footer-link
   color: color-link
@@ -212,6 +226,8 @@ $article-footer-link
   position: absolute
   &:hover
     color: color-link-hover
+  @media print
+    display: none
   span
     padding: 0 6px
 
@@ -225,3 +241,7 @@ $article-footer-link
 
 .article-footer-updated
   font-size: 0.9em
+
+#comments
+  @media print
+    display: none

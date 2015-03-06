@@ -21,8 +21,9 @@ input, button, select
   border: 0
 
 html, body
-  height: 100%
-  overflow: hidden
+  @media screen
+    height: 100%
+    overflow: hidden
 
 body
   background: color-navy
@@ -36,12 +37,14 @@ body
 
 .wrapper
   clearfix()
-  max-width: max-width
-  margin: 0 auto
+  @media screen
+    max-width: max-width
+    margin: 0 auto
 
 .inner
   clearfix()
-  padding: 0 gutter-width
+  @media screen
+    padding: 0 gutter-width
 
 #content-wrap
   background: #fff
