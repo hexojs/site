@@ -105,7 +105,7 @@ $ hexo list <type>
 $ hexo version
 ```
 
-顯示版本資訊ㄡ
+顯示版本資訊。
 
 ## 選項
 
