@@ -17,12 +17,16 @@ before_install:
   # Set Git config
   - git config --global user.name "Tommy Chen"
   - git config --global user.email tommy351@gmail.com
-  # Install Hexo
-  - npm install hexo-cli -g
   # Clone the repository
   - git clone https://github.com/hexojs/hexojs.github.io .deploy_git
+
+install:
+  # Install Hexo
+  - npm install hexo-cli -g
   # Install graphicsmagick
   - sudo apt-get install graphicsmagick
+  # Install dependencies
+  - npm install --no-optional
 
 script:
   - hexo generate && gulp && hexo deploy
