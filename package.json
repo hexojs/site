@@ -21,6 +21,7 @@
     "lunr": "^0.5.7"
   },
   "devDependencies": {
+    "autoprefixer-core": "^5.1.7",
     "gulp": "^3.8.11",
     "gulp-html-minifier": "^0.1.6",
     "gulp-if": "^1.2.5",
@@ -28,6 +29,7 @@
     "gulp-load-plugins": "^0.8.0",
     "gulp-minify-css": "^0.4.6",
     "gulp-minify-html": "^1.0.0",
+    "gulp-postcss": "^4.0.3",
     "gulp-rename": "^1.2.0",
     "gulp-rev": "^3.0.1",
     "gulp-rev-collector": "^0.1.4",
