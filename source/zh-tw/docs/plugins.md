@@ -28,20 +28,6 @@ Hexo 有強大的外掛系統，使您能輕鬆擴展功能而不用修改核心
 }
 ```
 
-### 開發
-
-Hexo 共有九種外掛，您可以在 API 頁面中獲得更多資訊：
-
-- Generator
-- Renderer
-- Helper
-- Deployer
-- Processor
-- Tag
-- Console
-- Migrator
-- Filter
-
 ### 工具
 
 您可善用 Hexo 提供的官方工具套件來加速開發：
