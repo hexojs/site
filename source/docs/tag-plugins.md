@@ -212,6 +212,25 @@ Inserts a Vimeo video in posts.
 {% vimeo video_id %}
 ```
 
+## Include Posts
+
+Include the link of other posts.
+
+```
+{% post_path slug %}
+{% post_link slug [title] %}
+```
+
+## Include Assets.
+
+Include the assets of posts.
+
+```
+{% asset_path slug %}
+{% asset_img slug %}
+{% asset_link slug [title] %}
+```
+
 ## Raw
 
 If there're some contents can't be processed in posts, you can wrapped it with `rawb` tag to avoid rendering errors.
