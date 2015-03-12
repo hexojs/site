@@ -58,3 +58,12 @@
     - bootstrap
     - simple
     - otaku
+- name: Jacman
+  description: A fresh looking and responsive theme for Hexo.
+  link: https://github.com/wuchong/jacman
+  preview: http://wuchong.me/jacman
+  tags:
+    - responsive
+    - two_column
+    - blue
+    - elegant
