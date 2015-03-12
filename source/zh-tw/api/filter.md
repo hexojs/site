@@ -6,6 +6,7 @@ title: 過濾器（Filter）
 
 ``` js
 hexo.extend.filter.register(type, function(){
+  // ...
 }, priority);
 ```
 

@@ -6,6 +6,7 @@ title: 產生器（Generator）
 
 ``` js
 hexo.extend.generator.register(name, function(locals){
+  // ...
 });
 ```
 

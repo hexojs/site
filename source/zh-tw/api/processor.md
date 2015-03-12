@@ -6,6 +6,7 @@ title: 處理器（Processor）
 
 ``` js
 hexo.extend.processor.register(rule, function(file){
+  // ...
 });
 ```
 

@@ -6,6 +6,7 @@ title: 輔助函數（Helper）
 
 ``` js
 hexo.extend.helper.register(name, function(){
+  // ...
 });
 ```
 

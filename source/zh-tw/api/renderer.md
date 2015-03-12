@@ -6,6 +6,7 @@ title: 渲染引擎（Renderer）
 
 ``` js
 hexo.extend.renderer.register(name, output, function(data, options){
+  // ...
 }, sync);
 ```
 

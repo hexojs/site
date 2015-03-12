@@ -6,6 +6,7 @@ title: 標籤外掛（Tag）
 
 ``` js
 hexo.extend.tag.register(name, function(args, content){
+  // ...
 }, options);
 ```
 
