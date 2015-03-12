@@ -270,3 +270,15 @@
     - official
     - joomla
     - migrator
+- name: hexo-renderer-yasr
+  description:A Stylus CSS renderer for Hexo that uses Nib, Axis, Rupture, Jeet and Autoprefixer with Sourcemaps.
+  link: https://github.com/celsomiranda/hexo-renderer-yasr
+  tags:
+    - renderer
+    - css
+    - stylus
+    - nib
+    - jeet
+    - rupture
+    - axis
+    - sourcemaps
