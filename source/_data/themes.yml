@@ -32,6 +32,16 @@
     - one_column
     - clean
     - white
+- name: Icarus
+  description: 'The blog theme you may fall in love with, coming to Hexo.'
+  link: https://github.com/ppoffice/hexo-theme-icarus
+  preview: https://ppoffice.github.io/hexo-theme-icarus
+  tags:
+    - responsive
+    - three_column
+    - clean
+    - flat
+    - light
 - name: Hueman
   description: A redesign of Alx's wordpress theme Hueman, ported to Hexo.
   link: https://github.com/ppoffice/hexo-theme-hueman
