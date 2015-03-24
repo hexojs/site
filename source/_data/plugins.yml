@@ -282,3 +282,18 @@
     - rupture
     - axis
     - sourcemaps
+- name: hexo-renderer-pandoc
+  description: A pandoc-flavored-markdown renderer for Hexo. Also supports rendering textile, reStructedText, etc.
+  link: https://github.com/wzpan/hexo-renderer-pandoc
+  tags:
+    - renderer
+    - pandoc
+    - markdown
+    - textile
+    - reStructedText
+- name: hexo-tag-bootstrap
+  description: hexo-tag-bootstrap is a collections of Hexo tag plugins, which wraps most Twitter-Bootstrap 3.1.1 components in a uniformed way.
+  link: https://github.com/wzpan/hexo-renderer-pandoc
+  tags:
+    - tag_plugins
+    - bootstrap

@@ -77,3 +77,24 @@
     - two_column
     - blue
     - elegant
+- name: Wixo
+  description: Turn your Hexo into a Wiki!
+  link: https://github.com/wzpan/hexo-theme-wixo
+  preview: http://wzpan.github.io/hexo-theme-wixo/
+  tags:
+    - wiki
+    - responsive
+    - simple
+    - tag_plugins
+    - bootstrap
+    - modal
+- name: Freemind
+  description: Fully taking advantages of Bootstrap.
+  link: https://github.com/wzpan/hexo-theme-freemind
+  preview: http://wzpan.github.io/hexo-theme-freemind/
+  tags:
+    - two_column
+    - responsive
+    - elegant
+    - tag_plugins
+    - bootstrap
