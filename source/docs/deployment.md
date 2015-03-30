@@ -1,6 +1,6 @@
 title: Deployment
 ---
-Hexo provides a fasy and easy way for deployment. You only need one command to deploy your site to servers.
+Hexo provides a fast and easy way for deployment. You only need one command to deploy your site to servers.
 
 ``` bash
 $ hexo deploy
