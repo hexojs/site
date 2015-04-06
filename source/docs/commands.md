@@ -115,7 +115,7 @@ Displays version information.
 $ hexo --safe
 ```
 
-Plugins and scripts won't be loaded in safe mode. You can try this if you encounter problems after installing a new plugin.
+Disables loading plugins and scripts. Try this if you encounter problems after installing a new plugin.
 
 ### Debug mode
 
@@ -123,7 +123,7 @@ Plugins and scripts won't be loaded in safe mode. You can try this if you encoun
 $ hexo --debug
 ```
 
-Displays verbose messages in terminal and logs to `debug.log`. If you encounter problems, try running Hexo in debug mode. Please [submit any errors to GitHub](https://github.com/hexojs/hexo/issues/new).
+Logs verbose messages to the terminal and to `debug.log`. Try this if you encounter any problems with Hexo. If you see errors, please [raise a GitHub issue](https://github.com/hexojs/hexo/issues/new).
 
 ### Silent mode
 
@@ -131,7 +131,7 @@ Displays verbose messages in terminal and logs to `debug.log`. If you encounter 
 $ hexo --silent
 ```
 
-Silences output to the console.
+Silences output to the terminal.
 
 ### Customize config file path
 
