@@ -1,23 +1,23 @@
 title: Documentation
 ---
-Welcome to the Hexo's documentation. This documentation will help you get started fast. If you get any problems when using Hexo, you can find the answer in [troubleshooting](troubleshooting.html) or you can ask me on [GitHub](https://github.com/hexojs/hexo/issues) or [Google Group](https://groups.google.com/group/hexo).
+Welcome to the Hexo documentation. If you encounter any problems when using Hexo, have a look at the  [troubleshooting guide](troubleshooting.html), raise an issue on [GitHub](https://github.com/hexojs/hexo/issues) or start a topic on the [Google Group](https://groups.google.com/group/hexo).
 
-## What's Hexo?
+## What is Hexo?
 
-Hexo is a fast, simple and powerful blog framework. It parses your posts with [Markdown](http://daringfireball.net/projects/markdown/) (or other render engines) and generates static files with a beautiful theme in seconds.
+Hexo is a fast, simple and powerful blog framework. You write posts in [Markdown](http://daringfireball.net/projects/markdown/) (or other languages) and Hexo generates static files with a beautiful theme in seconds.
 
 ## Installation
 
-It only takes few minutes for you to get Hexo ready. If you encounter any problems on installation and you can't find the solution here, please [submit an issue](https://github.com/hexojs/hexo/issues) and I'll try to solve your problems.
+It only takes few minutes to set up Hexo. If you encounter a problem and can't find the solution here, please [submit a GitHub issue](https://github.com/hexojs/hexo/issues) and I'll try to solve it.
 
 ### Requirements
 
-Installing Hexo is quite easy. However, there are some things required before you get started:
+Installing Hexo is quite easy. However, you do need to have a couple of other things installed first:
 
 - [Node.js](http://nodejs.org/)
 - [Git](http://git-scm.com/)
 
-If your computer already has the requirements above, congratulations! Just install Hexo with npm.
+If your computer already has these, congratulations! Just install Hexo with npm:
 
 ``` bash
 $ npm install -g hexo-cli
@@ -38,7 +38,7 @@ You may encounter some problems when compiling. Please install Xcode from App St
 
 ### Install Node.js
 
-The best way to install Node.js is installing with [nvm](https://github.com/creationix/nvm).
+The best way to install Node.js is with [nvm](https://github.com/creationix/nvm).
 
 cURL:
 
@@ -52,13 +52,13 @@ Wget:
 $ wget -qO- https://raw.github.com/creationix/nvm/master/install.sh | sh
 ```
 
-Once installed, restart the terminal and run the following command to install Node.js.
+Once nvm is installed, restart the terminal and run the following command to install Node.js.
 
 ``` bash
 $ nvm install 0.12
 ```
 
-Or you can download the [installer](http://nodejs.org/) and install it.
+Alternatively, download and run [the installer](http://nodejs.org/).
 
 ### Install Hexo
 
