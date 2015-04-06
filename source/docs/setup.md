@@ -1,6 +1,6 @@
 title: Setup
 ---
-Once Hexo is installed, run the following command and Hexo will build all the files you need in the target folder.
+Once Hexo is installed, run the following commands to initialise Hexo in the target `<folder>`.
 
 ``` bash
 $ hexo init <folder>
@@ -8,7 +8,7 @@ $ cd <folder>
 $ npm install
 ```
 
-After build, here's what the project folder looks like:
+Once initialised, here's what your project folder will look like:
 
 ``` plain
 .
@@ -28,7 +28,7 @@ Site [configuration](configuration.html) file. You can configure most settings h
 
 ### package.json
 
-Application data. [EJS](http://embeddedjs.com/), [Stylus](http://learnboost.github.io/stylus/) and [Markdown](http://daringfireball.net/projects/markdown/) renderers are installed by default, you can uninstall them later.
+Application data. The [EJS](http://embeddedjs.com/), [Stylus](http://learnboost.github.io/stylus/) and [Markdown](http://daringfireball.net/projects/markdown/) renderers are installed by default. If you want, you can uninstall them later.
 
 ``` json package.json
 {
@@ -54,16 +54,16 @@ Application data. [EJS](http://embeddedjs.com/), [Stylus](http://learnboost.gith
 
 ### scaffolds
 
-[Scaffold](writing.html#Scaffolds) folder. When you create a new post, Hexo will build the file based on the scaffold.
+[Scaffold](writing.html#Scaffolds) folder. When you create a new post, Hexo bases the new file on the scaffold.
 
 ### scripts
 
-[Script](plugins.html#Scripts) folder. Scripts are the easiest way to extend Hexo. JavaScript files in this folder will be executed automatically.
+[Script](plugins.html#Scripts) folder. Scripts are the easiest way to extend Hexo. JavaScript files in this folder are executed automatically.
 
 ### source
 
-Source folder is where you can put your content. Files or folders whose names are prefixed with `_` (underscore) and hidden files will be ignored except `_posts` folder. Markdown and HTML files will be processed and put into `public` folder, while other files will simply be copied.
+Source folder. This is where you put your site's content. Hexo ignores hidden files and files or folders whose names are prefixed with `_` (underscore) - except the `_posts` folder. Renderable files (e.g. Markdown, HTML) will be processed and put into the `public` folder, while other files will simply be copied.
 
 ### themes
 
-[Theme](themes.html) folder. Hexo will generate files based on the theme.
+[Theme](themes.html) folder. Hexo generates a static website by combining the site contents with the theme.
