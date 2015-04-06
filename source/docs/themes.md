@@ -1,6 +1,6 @@
 title: Themes
 ---
-It's easy to build a Hexo theme. You only have to create a new folder and modify `theme` setting in `_config.yml` and the theme will be changed. A theme may have the following structure:
+It's easy to build a Hexo theme - you just have to create a new folder. To start using your theme, modify the `theme` setting in your site's `_config.yml`. A theme may have the following structure:
 
 ``` plain
 .
@@ -13,7 +13,7 @@ It's easy to build a Hexo theme. You only have to create a new folder and modify
 
 ### _config.yml
 
-Theme configuration file. It'll be updated when changed automatically. You don't have to restart the server.
+Theme configuration file. You don't need to restart the server after changing this.
 
 ### languages
 
@@ -21,28 +21,28 @@ Language folder. See [localization (i18n)](localization.html) for more info.
 
 ### layout
 
-Layout folder. This folder is used to put template files of the theme. The appearance of your website is depended on templates. Hexo provides built-in [Swig] template engine. You can install plugins for [EJS], [Haml] or [Jade] support. Hexo choose template engines based on the extension name of files. For example:
+Layout folder. This folder contains the theme's template files, which define the appearance of your website. Hexo provides the [Swig] template engine. You can install plugins to support alternative engines such as [EJS], [Haml] or [Jade]. Hexo chooses the template engine based on the file extension of the template. For example:
 
 ``` plain
-EJS: layout.ejs
-Swig: layout.swig
+layout.ejs   - uses EJS
+layout.swig  - uses Swig
 ```
 
 See [templates](templates.html) for more info.
 
 ### scripts
 
-Script folder. JavaScript files in this folder will be loaded when Hexo started. For more info, see [plugins](plugins.html).
+Script folder. JavaScript files in this folder will be loaded when Hexo starts. For more info, see [plugins](plugins.html).
 
 ### source
 
-Source folder. Asset files like CSS and Javascript files should be placed in this folder. File or folder whose name is prefixed with `_` (underscore) and hidden files will be ignored.
+Source folder. Assets (e.g. CSS and JavaScript files) should be placed here. Hexo ignores hidden files and files or folders prefixed with `_` (underscore).
 
-If a file is able to be rendered, then it will be processed and save to `public` folder, or it would be copy to `public` folder directly.
+Files that can be rendered are processed and saved to the `public` folder. Other files are copied to the `public` folder directly.
 
 ### Publishing
 
-Once your theme has been done, you can consider to publish it to [theme list](/themes) to make more people use your theme. It's recommended to run the [theme unit test](https://github.com/hexojs/hexo-theme-unit-test) and ensure everything is working before you publishing. The steps to publish a theme is very simliar to [updating documentation](contributing.html#Updating_Documentation).
+Once your theme is complete, you can publish it to the [theme list](/themes). Before publishing, you should run the [theme unit test](https://github.com/hexojs/hexo-theme-unit-test) and ensure everything works. The steps for publishing a theme are very simliar to those for [updating documentation](contributing.html#Updating_Documentation).
 
 1. Fork [hexojs/site]
 2. Clone the repository to your computer and install dependencies.
@@ -68,7 +68,7 @@ Once your theme has been done, you can consider to publish it to [theme list](/t
         - one_column
     {% endcode %}
 
-4. Add a screenshot in `source/themes/screenshots` with same name. The picture must be 800X500 px and PNG format.
+4. Add a screenshot (with the same name as the theme) to `source/themes/screenshots`. It must be a 800*500px PNG.
 5. Push the branch.
 6. Create a pull request and describe the change.
 
