@@ -6,7 +6,7 @@ title: Commands
 $ hexo init [folder]
 ```
 
-Initializes a website. If `folder` isn't defined, Hexo will set up the website in the current directory.
+Initializes a website. If no `folder` is provided, Hexo will set up the website in the current directory.
 
 ## new
 
@@ -14,7 +14,7 @@ Initializes a website. If `folder` isn't defined, Hexo will set up the website i
 $ hexo new [layout] <title>
 ```
 
-Creates a new article. If `layout` isn't defined, it'll equal the `default_layout` setting in [_config.yml](configuration.html). If the title is more than one word, wrap it with quotation marks.
+Creates a new article. If no `layout` is provided, Hexo will use the `default_layout` from [_config.yml](configuration.html). If the `title` contains spaces, surround it with quotation marks.
 
 ## generate
 
@@ -26,7 +26,7 @@ Generates static files.
 
 Option | Description
 --- | ---
-`-d`, `--deploy` | Deploy after generate done
+`-d`, `--deploy` | Deploy after generation finishes
 `-w`, `--watch` | Watch file changes
 
 ## publish
@@ -43,7 +43,7 @@ Publishes a draft.
 $ hexo server
 ```
 
-Starts server.
+Starts a local server. By default, this is at `http://localhost:4000/`.
 
 Option | Description
 --- | ---
@@ -115,7 +115,7 @@ Displays version information.
 $ hexo --safe
 ```
 
-Plugins and scripts won't be loaded in safe mode. You can try this when you encounter some problems after installing a new plugin.
+Disables loading plugins and scripts. Try this if you encounter problems after installing a new plugin.
 
 ### Debug mode
 
@@ -123,7 +123,7 @@ Plugins and scripts won't be loaded in safe mode. You can try this when you enco
 $ hexo --debug
 ```
 
-Displays verbose messages in terminal and saves log in `debug.log`. When you get some problems, try to run Hexo again in debug mode and please [submit any errors to GitHub](https://github.com/hexojs/hexo/issues/new).
+Logs verbose messages to the terminal and to `debug.log`. Try this if you encounter any problems with Hexo. If you see errors, please [raise a GitHub issue](https://github.com/hexojs/hexo/issues/new).
 
 ### Silent mode
 
@@ -131,7 +131,7 @@ Displays verbose messages in terminal and saves log in `debug.log`. When you get
 $ hexo --silent
 ```
 
-Hides output to the console.
+Silences output to the terminal.
 
 ### Customize config file path
 
@@ -139,7 +139,7 @@ Hides output to the console.
 $ hexo --config custom.yml
 ```
 
-Customize config file path instead of `_config.yml`.
+Uses a custom config file (instead of `_config.yml`).
 
 ### Display drafts
 
@@ -147,7 +147,7 @@ Customize config file path instead of `_config.yml`.
 $ hexo --draft
 ```
 
-Display draft posts in `source/_drafts` folder.
+Displays draft posts (stored in the `source/_drafts` folder).
 
 ### Customize CWD
 
@@ -155,4 +155,4 @@ Display draft posts in `source/_drafts` folder.
 $ hexo --cwd /path/to/cwd
 ```
 
-Customize the path of current working directory.
+Customizes the path of current working directory.
