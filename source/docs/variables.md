@@ -24,7 +24,7 @@ Variable | Description
 
 ### Page Variables
 
-**Article (post, page, ...)**
+**Article (page, ...)**
 
 Variable | Description
 --- | ---
@@ -47,6 +47,12 @@ Variable | Description
 `page.raw` | The raw data of the article
 `page.photos` | The photos of the article (Used in gallery posts)
 `page.link` | The external link of the article (Used in link posts)
+
+**Post (post):** Same as `page` layout but add the following variables.
+
+Variable | Description
+--- | ---
+`page.published` | True if the post is not a draft
 
 **Home (index)**
 
