@@ -107,3 +107,11 @@
     - swig
     - scss
     - one_column
+- name: hexoThemeKacper
+  description: Suitable for products blog 
+  link: https://github.com/jaywcjlove/hexoThemeKacper
+  preview: http://JSlite.io
+  tags:
+    - bootstrap
+    - tag_plugins
+    - elegant
