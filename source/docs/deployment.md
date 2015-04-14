@@ -123,6 +123,40 @@ Option | Description
 `repo` | OpenShift repository URL
 `message` | Customize commit message (Default to `Site updated: {% raw %}{{ now('YYYY-MM-DD HH:mm:ss') }}{% endraw %}`)
 
+## FTPSync
+
+Install [hexo-deployer-ftpsync].
+
+``` bash
+$ npm install hexo-deployer-ftpsync --save
+```
+
+Edit settings.
+
+``` yaml
+deploy:
+  type: ftpsync
+  host: <host>
+  user: <user>
+  pass: <password>
+  remote: [remote]
+  port: [port]
+  ignore: [ignore]
+  connections: [connections]
+  verbose: [true|false]
+```
+
+Option | Description | Default
+--- | --- | ---
+`host` | Address of remote host |
+`user` | Username |
+`pass` | Password |
+`remote` | Root directory of remote host | `/`
+`port` | Port | 21
+`ignore` | Ignore the files on either host or remote |
+`connections` | Connections number | 1
+`verbose` | Display verbose messages | false
+
 ## Other Methods
 
 All generated files are saved in `public` folder. You can copy it to wherever you like.
@@ -131,3 +165,4 @@ All generated files are saved in `public` folder. You can copy it to wherever yo
 [hexo-deployer-heroku]: https://github.com/hexojs/hexo-deployer-heroku
 [hexo-deployer-rsync]: https://github.com/hexojs/hexo-deployer-rsync
 [hexo-deployer-openshift]: https://github.com/hexojs/hexo-deployer-openshift
+[hexo-deployer-ftpsync]: https://github.com/hexojs/hexo-deployer-ftpsync
