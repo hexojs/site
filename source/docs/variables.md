@@ -24,17 +24,15 @@ Variable | Description
 
 ### Page Variables
 
-**Article (page, ...)**
+**Article (page)**
 
 Variable | Description
 --- | ---
 `page.title` | Article title
 `page.date` | Article created date ([Moment.js] object)
 `page.updated` | Article last updated date ([Moment.js] object)
-`page.categories` | All categories of the article
-`page.tags` | All tags of the article
 `page.comments` | Comment enabled or not
-`page.layout` | Layout name.
+`page.layout` | Layout name
 `page.content` | The full processed content of the article
 `page.excerpt` | Article excerpt
 `page.more` | Contents except article excerpt
@@ -42,8 +40,8 @@ Variable | Description
 `page.full_source` | Full path of the source file
 `page.path` | The URL of the article without root URL. We usually use `url_for(page.path)` in theme.
 `page.permalink` | Full URL of the article
-`page.prev` | The previous post. `null` if the post is the first post.
-`page.next` | The next post. `null` if the post is the last post.
+`page.prev` | The previous post, `null` if the post is the first post
+`page.next` | The next post, `null` if the post is the last post
 `page.raw` | The raw data of the article
 `page.photos` | The photos of the article (Used in gallery posts)
 `page.link` | The external link of the article (Used in link posts)
@@ -53,6 +51,8 @@ Variable | Description
 Variable | Description
 --- | ---
 `page.published` | True if the post is not a draft
+`page.categories` | All categories of the post
+`page.tags` | All tags of the post
 
 **Home (index)**
 
