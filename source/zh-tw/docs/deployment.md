@@ -123,6 +123,40 @@ deploy:
 `repo` | OpenShift 儲存庫（Repository）網址
 `message` | 自定提交訊息 (預設是 `Site updated: {% raw %}{{ now('YYYY-MM-DD HH:mm:ss') }}{% endraw %}`)
 
+## FTPSync
+
+安裝 [hexo-deployer-ftpsync]。
+
+``` bash
+$ npm install hexo-deployer-ftpsync --save
+```
+
+修改設定。
+
+``` yaml
+deploy:
+  type: ftpsync
+  host: <host>
+  user: <user>
+  pass: <password>
+  remote: [remote]
+  port: [port]
+  ignore: [ignore]
+  connections: [connections]
+  verbose: [true|false]
+```
+
+選項 | 描述 | 預設值
+--- | --- | ---
+`host` | 遠端主機位址 |
+`user` | 使用者名稱 |
+`pass` | 密碼 |
+`remote` | 遠端主機的根目錄 | `/`
+`port` | 連接埠 | 21
+`ignore` | 忽略本機或遠端的檔案 |
+`connections` | 連接數 | 1
+`verbose` | 顯示除錯訊息 | false
+
 ## 其他方法
 
 Hexo 產生的所有檔案都放在 `public` 資料夾，您可以將它們拷貝到您喜歡的地方。
@@ -131,3 +165,4 @@ Hexo 產生的所有檔案都放在 `public` 資料夾，您可以將它們拷�
 [hexo-deployer-heroku]: https://github.com/hexojs/hexo-deployer-heroku
 [hexo-deployer-rsync]: https://github.com/hexojs/hexo-deployer-rsync
 [hexo-deployer-openshift]: https://github.com/hexojs/hexo-deployer-openshift
+[hexo-deployer-ftpsync]: https://github.com/hexojs/hexo-deployer-ftpsync
