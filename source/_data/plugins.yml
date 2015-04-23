@@ -305,7 +305,7 @@
     - spotify
     - widget
 - name: hexo-toc
-  description: Insert a markdown TOC(Table Of Content) before posts be rendered when an where a placeholer found.
+  description: Insert a markdown TOC(Table Of Content) before posts be rendered when and where a placeholer found.
   link: https://github.com/bubkoo/hexo-toc
   tags:
     - toc
