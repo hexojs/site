@@ -312,9 +312,10 @@
     - plantuml
     - uml
 - name: hexo-toc
-  description: Insert a TOC before markdown be rendered when a placeholder(<!-- toc -->) found in the markdown.
+  description: Insert a markdown TOC(Table Of Content) before posts be rendered when and where a placeholer found.
   link: https://github.com/bubkoo/hexo-toc
   tags:
     - toc
     - filter
     - markdown
+    - placeholder
