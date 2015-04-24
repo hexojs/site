@@ -14,6 +14,6 @@ Several tag plugins are added in Hexo 3 for you to include assets in posts more 
 
 ```
 {% asset_path slug %}
-{% asset_img slug %}
+{% asset_img slug [title] %}
 {% asset_link slug [title] %}
 ```

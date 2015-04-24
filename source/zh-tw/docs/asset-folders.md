@@ -14,6 +14,6 @@ Hexo 3 新增了幾個外掛，讓您更方便的在文章內引用資產。
 
 ```
 {% asset_path slug %}
-{% asset_img slug %}
+{% asset_img slug [title] %}
 {% asset_link slug [title] %}
 ```

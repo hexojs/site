@@ -227,7 +227,7 @@ Include the assets of posts.
 
 ```
 {% asset_path slug %}
-{% asset_img slug %}
+{% asset_img slug [title] %}
 {% asset_link slug [title] %}
 ```
 
