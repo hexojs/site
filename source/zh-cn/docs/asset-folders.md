@@ -14,7 +14,7 @@ Hexo 3.0 新增了几个插件，让您更方便的在文章内引用资源。
 
 {% raw %}
 <figure class="highlight"><pre>{% asset_path slug %}
-{% asset_img slug %}
+{% asset_img slug [title] %}
 {% asset_link slug [title] %}
 </pre></figure>
 {% endraw %}

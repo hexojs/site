@@ -81,7 +81,7 @@ Hexo 文件开放源代码，您可以在 [hexojs/site] 找到源代码，若要
 
 ## 反馈问题
 
-当您在使用 Hexo 时遇到问题，您可以尝试在 [问题解答](=troubleshooting.html) 中寻找解答，或是在 [GitHub](https://github.com/hexojs/hexo/issues) 或 [Google Group](https://groups.google.com/group/hexo) 上提问。提问时请务必附上以下信息：
+当您在使用 Hexo 时遇到问题，您可以尝试在 [问题解答](troubleshooting.html) 中寻找解答，或是在 [GitHub](https://github.com/hexojs/hexo/issues) 或 [Google Group](https://groups.google.com/group/hexo) 上提问。提问时请务必附上以下信息：
 
 1. 以 [调试模式](commands.html#调试模式) 再执行一次。
 2. 检查版本信息。
