@@ -1,14 +1,22 @@
 title: Front-matter
 ---
-Front-matter is a block wrapped with `---` in front of the file. For example:
+Front-matter is a block of YAML or JSON at the beginning of the file that is used to configure settings for your writings. Front-matter is terminated by three dashes when written in YAML or three semicolons when written in JSON.
 
+**YAML**
 ``` yaml
 title: Hello World
 date: 2013/7/13 20:46:25
 ---
 ```
 
-You can configure all post configuration in the front-matter. The following is predefined settings.
+**JSON**
+``` json
+"title": "Hello World",
+"date": "2013/7/13 20:46:25"
+;;;
+```
+
+### Settings & Their Default Values
 
 Setting | Description | Default
 --- | --- | ---
@@ -21,24 +29,18 @@ Setting | Description | Default
 `categories` | Categories (Not available for pages) |
 `permalink` | Overrides the default permalink of the post |
 
-### Categories & Tags
+#### Categories & Tags
 
-Categories and tags are only supported in posts. You can set them in front-matter. In other systems, categories and tags may sound fimiliar, but there's a definitive difference between them: categories are orderly and inherited, which means `Foo, Bar` doesn't equal to `Bar, Foo`; while tags don't have order and inhertiance.
+Categories and tags are only supported in posts. Categories apply to posts in order, creating a hierarchy of classifications and sub-classifications; tags sit at the same level with each other and do not care about how they are ordered.
+
+**Example**
 
 ``` yaml
 categories:
-- Diary
+- Sports
+- Baseball
 tags:
-- PS3
-- Games
-```
-
-### JSON Front-matter
-
-Besides YAML, you can write front-matter with JSON. Just replace `---` with `;;;`.
-
-``` json
-"title": "Hello World",
-"date": "2013/7/13 20:46:25"
-;;;
+- Injury
+- Fight
+- Shocking
 ```
