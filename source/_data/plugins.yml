@@ -328,3 +328,12 @@
     - extend
     - syntax
     - markdown
+- name: hexo-beautify
+  description: Beautify Hexo generated HTML, CSS and JS files, using js-beautify.
+  link: https://github.com/celsomiranda/hexo-beautify.git
+  tags:
+    - filter
+    - beautify
+    - html
+    - css
+    - js
