@@ -183,6 +183,13 @@
     - official
     - migrator
     - rss
+- name: hexo-migrator-github-issue
+  description: Github issue migrator for Hexo.
+  link: https://github.com/Yikun/hexo-migrator-github-issue
+  tags:
+    - migrator
+    - github
+    - issue
 - name: hexo-renderer-ejs
   description: EJS renderer for Hexo.
   link: https://github.com/hexojs/hexo-renderer-ejs
