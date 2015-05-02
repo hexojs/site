@@ -233,7 +233,7 @@ Include the assets of posts.
 
 ## Raw
 
-If there're some contents can't be processed in posts, you can wrapped it with `rawb` tag to avoid rendering errors.
+If there're some contents can't be processed in posts, you can wrap it with `raw` tag to avoid rendering errors.
 
 ```
 {% raw %}
