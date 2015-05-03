@@ -344,3 +344,13 @@
     - html
     - css
     - js
+- name: hexo-qiniu-sync
+  description: Sync static files to Qiniu CDN for you automatically
+  link: https://github.com/gyk001/hexo-qiniu-sync
+  tags:
+    - sync
+    - qiniu
+    - cdn
+    - image
+    - css
+    - js
