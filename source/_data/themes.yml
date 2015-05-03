@@ -115,3 +115,12 @@
     - bootstrap
     - tag_plugins
     - elegant
+- name: Tranquilpeak
+  description: 'A gorgeous responsive theme for Hexo blog framework'
+  link: https://github.com/LouisBarranqueiro/tranquilpeak-hexo-theme
+  preview: http://louisbarranqueiro.github.io/tranquilpeak-hexo-theme
+  tags:
+    - responsive
+    - gorgeous
+    - sidebar
+    - two_column
