@@ -176,7 +176,7 @@ title: 輔助函數（Helpers）
 檢查 `path` 是否符合目前頁面的網址。開啟 `strict` 選項啟用嚴格比對。
 
 ``` js
-<%- is_current(path, [strict] %>
+<%- is_current(path, [strict]) %>
 ```
 
 ### is_home

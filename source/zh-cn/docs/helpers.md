@@ -176,7 +176,7 @@ title: 辅助函数（Helpers）
 检查 `path` 是否符合目前页面的网址。开启 `strict` 选项启用严格比对。
 
 ``` js
-<%- is_current(path, [strict] %>
+<%- is_current(path, [strict]) %>
 ```
 
 ### is_home
