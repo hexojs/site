@@ -360,3 +360,12 @@
   tags:
     - excerpt
     - front-matter
+- name: hexo-github
+  description: Display a GitHub repositoy badge with timeline in your post to keep track of version difference.
+  link: https://github.com/akfish/hexo-github
+  tags:
+    - tag
+    - timeline
+    - badge
+    - github
+    - version control
