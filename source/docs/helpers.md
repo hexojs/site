@@ -176,7 +176,7 @@ Option | Description | Default
 Check whether `path` matches the URL of the current page. Use `strict` options to enable strict matching.
 
 ``` js
-<%- is_current(path, [strict] %>
+<%- is_current(path, [strict]) %>
 ```
 
 ### is_home
