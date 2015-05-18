@@ -108,7 +108,7 @@
     - scss
     - one_column
 - name: hexoThemeKacper
-  description: Suitable for products blog 
+  description: Suitable for products blog
   link: https://github.com/jaywcjlove/hexoThemeKacper
   preview: http://JSlite.io
   tags:
@@ -124,3 +124,13 @@
     - gorgeous
     - sidebar
     - two_column
+- name: Minos
+  description: A simple and retro styled Hexo theme, concentrated more on your ideas.
+  link: https://github.com/ppoffice/hexo-theme-minos
+  preview: http://ppoffice.github.io/hexo-theme-minos
+  tags:
+    - responsive
+    - one_column
+    - simple
+    - retro
+    - white
