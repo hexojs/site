@@ -66,7 +66,7 @@ Variable | Description
 `page.prev` | Previous page number. `0` if the current page is the first.
 `page.prev_link` | The URL of previous page. `''` if the current page is the first.
 `page.next` | Next page number. `0` if the current page is the last.
-`page.next_link` | The URL of next page. `''` if the current page is the first.
+`page.next_link` | The URL of next page. `''` if the current page is the last.
 `page.path` | The URL of current page without root URL. We usually use `url_for(page.path)` in theme.
 
 **Archive (archive):** Same as `index` layout but add the following variables.
