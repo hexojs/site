@@ -134,3 +134,13 @@
     - simple
     - retro
     - white
+- name: Foundation
+  description: A theme based on the Zurb Foundation 5 theme.
+  link: https://github.com/chrisjlee/hexo-theme-zurb-foundation
+  preview: http://chrisjlee.github.io/hexo-theme-zurb-foundation
+  tags:
+    - responsive
+    - mobile_first
+    - one_column
+    - simple
+    - white
