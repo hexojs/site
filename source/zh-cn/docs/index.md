@@ -33,7 +33,7 @@ $ npm install -g hexo-cli
 ### 安装 Git
 
 - Windows：下载并安装 [git](https://git-scm.com/download/win).
-- Mac：使用 [Homebrew](http://mxcl.github.com/homebrew/), [MacPorts](http://www.macports.org/) 或下载 [安装程序](http://code.google.com/p/git-osx-installer/) 安装。
+- Mac：使用 [Homebrew](http://mxcl.github.com/homebrew/), [MacPorts](http://www.macports.org/) 或下载 [安装程序](http://sourceforge.net/projects/git-osx-installer/) 安装。
 - Linux (Ubuntu, Debian)：`sudo apt-get install git-core`
 - Linux (Fedora, Red Hat, CentOS)：`sudo yum install git-core`
 
