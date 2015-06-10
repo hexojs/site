@@ -31,7 +31,7 @@ You may encounter some problems when compiling. Please install Xcode from App St
 
 ### Install Git
 
-- Windows: Download & install [msysgit](http://code.google.com/p/msysgit/).
+- Windows: Download & install [git](https://git-scm.com/download/win).
 - Mac: Install it with [Homebrew](http://mxcl.github.com/homebrew/), [MacPorts](http://www.macports.org/) or [installer](http://code.google.com/p/git-osx-installer/).
 - Linux (Ubuntu, Debian): `sudo apt-get install git-core`
 - Linux (Fedora, Red Hat, CentOS): `sudo yum install git-core`
