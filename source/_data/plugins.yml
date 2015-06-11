@@ -255,6 +255,13 @@
     - official
     - migrator
     - blogger
+- name: hexo-migrator-blogger
+  description: Blogger(blogspot.com) migrator for Hexo.
+  link: https://github.com/hr6r/hexo-migrator-blogger
+  tags:
+    - migrator
+    - blogger
+    - blogspot
 - name: hexo-renderer-markdown-it
   description: Very fast Markdown renderer with support for CommonMark, GFM and more.
   link: https://github.com/celsomiranda/hexo-renderer-markdown-it
