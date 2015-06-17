@@ -1,3 +1,10 @@
+- name: hexo-wordcount
+  description: Word Count Plugin for Hexo.
+  link: https://github.com/willin/hexo-wordcount
+  tags:
+    - wordcount
+    - count
+    - words
 - name: hexo-server
   description: Server module for Hexo.
   link: https://github.com/hexojs/hexo-server
