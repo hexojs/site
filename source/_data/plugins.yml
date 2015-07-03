@@ -263,12 +263,12 @@
     - deployer
     - ftp
 - name: hexo-migrator-blogger
-  description: Blogger migrator for Hexo.
-  link: https://github.com/hexojs/hexo-migrator-blogger
+  description: Blogger(blogspot.com) migrator for Hexo.
+  link: https://github.com/hr6r/hexo-migrator-blogger
   tags:
-    - official
     - migrator
     - blogger
+    - blogspot
 - name: hexo-renderer-markdown-it
   description: Very fast Markdown renderer with support for CommonMark, GFM and more.
   link: https://github.com/celsomiranda/hexo-renderer-markdown-it
