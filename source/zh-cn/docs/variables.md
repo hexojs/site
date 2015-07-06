@@ -29,8 +29,8 @@ title: 变量
 变量 | 描述
 --- | ---
 `page.title` | 文章标题
-`page.date` | 文章建立日期（[Moment.js] 物件）
-`page.updated` | 文章更新日期（[Moment.js] 物件）
+`page.date` | 文章建立日期（[Moment.js] 对象）
+`page.updated` | 文章更新日期（[Moment.js] 对象）
 `page.categories` | 文章分类
 `page.tags` | 文章标签
 `page.comments` | 留言是否开启
