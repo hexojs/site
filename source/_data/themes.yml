@@ -143,3 +143,12 @@
     - mobile_first
     - simple
     - white
+- name: simpleblock
+  description: A simple theme inspired by Twenty Twelve.
+  link: https://github.com/jysperm/hexo-theme-simpleblock
+  preview: https://jysperm.me
+  tags:
+    - responsive
+    - two_column
+    - simple
+    - light
