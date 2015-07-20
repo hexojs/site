@@ -5,6 +5,14 @@
     - wordcount
     - count
     - words
+- name: hexo-more-css
+  description: Compress CSS with more-css.
+  link: https://github.com/vseventer/hexo-more-css
+  tags:
+    - css
+    - filter
+    - minify
+    - more-css
 - name: hexo-ruby-character
   description: Ruby charater tag for Hexo, like <ruby>博客<rp> (</rp><rt>bó kè</rt><rp>) </rp></ruby>.
   link: https://github.com/JamesPan/hexo-ruby-character
