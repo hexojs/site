@@ -13,6 +13,14 @@
     - filter
     - minify
     - more-css
+- name: hexo-uncss
+  description: Remove unused styles from CSS with uncss.
+  link: https://github.com/vseventer/hexo-uncss
+  tags:
+    - css
+    - filter
+    - html
+    - uncss
 - name: hexo-ruby-character
   description: Ruby charater tag for Hexo, like <ruby>博客<rp> (</rp><rt>bó kè</rt><rp>) </rp></ruby>.
   link: https://github.com/JamesPan/hexo-ruby-character
