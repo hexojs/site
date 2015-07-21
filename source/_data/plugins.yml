@@ -424,3 +424,11 @@
     - deezer
     - music
     - widget
+- name: hexo-tag-flickr
+  description: Allows you to embed Flickr photo on your blog posts.
+  link: https://github.com/visioncan/hexo-tag-flickr
+  tags:
+    - tag
+    - flickr
+    - photo
+    - image
