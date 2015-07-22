@@ -1,7 +1,18 @@
 language: node_js
 
+sudo: false
+
 node_js:
   - "0.12"
+
+cache:
+  directories:
+    - node_modules
+
+addons:
+  apt:
+    packages:
+      - graphicsmagick
 
 before_install:
   # Decrypt the private key
@@ -23,8 +34,6 @@ before_install:
 install:
   # Install Hexo
   - npm install hexo-cli -g
-  # Install graphicsmagick
-  - sudo apt-get install graphicsmagick
   # Install dependencies
   - npm install --no-optional
 
