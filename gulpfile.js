@@ -2,7 +2,7 @@
 
 var gulp = require('gulp');
 var $ = require('gulp-load-plugins')();
-var autoprefixer = require('autoprefixer-core');
+var cssnano = require('cssnano');
 
 var htmlMinifierOptions = {
   removeComments: true,
@@ -28,9 +28,7 @@ gulp.task('useref', function(){
   return gulp.src('public/**/*.html')
     .pipe(assets)
     .pipe($.if('*.css', $.postcss([
-      autoprefixer({
-        browsers: ['last 2 versions', 'Firefox ESR']
-      })
+      cssnano()
     ])))
     .pipe($.if('*.css', $.minifyCss()))
     .pipe($.if('*.js', $.uglify()))
