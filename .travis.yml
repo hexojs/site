@@ -9,7 +9,6 @@ cache:
   apt: true
   directories:
     - node_modules
-    - .deploy_git
 
 addons:
   apt:
