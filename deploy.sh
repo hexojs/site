@@ -9,8 +9,8 @@ ssh-add ~/.ssh/id_rsa
 # Copy SSH config
 cp .travis/ssh_config ~/.ssh/config
 # Set Git config
-git config --global user.name "Tommy Chen"
-git config --global user.email tommy351@gmail.com
+git config --global user.name "Hexo Bot"
+git config --global user.email bot@hexo.io
 # Clone the repository
 git clone https://github.com/hexojs/hexojs.github.io .deploy_git
 # Deploy

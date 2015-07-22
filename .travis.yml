@@ -23,6 +23,6 @@ script:
 
 deploy:
   provider: script
-  script: .travis/deploy.sh
+  script: deploy.sh
   on:
     branch: master
