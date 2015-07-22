@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang }}">
 {{ partial('partial/head') }}
-<body class="{% if is_home() %}home{% endif %}">
+<body>
   <div id="container">
     {{ partial('partial/header') }}
     {{ body }}
