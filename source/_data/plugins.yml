@@ -5,6 +5,14 @@
     - wordcount
     - count
     - words
+- name: hexo-imagemin
+  description: Minify images with imagemin.
+  link: https://github.com/vseventer/hexo-imagemin
+  tags:
+    - assets
+    - filter
+    - imagemin
+    - images
 - name: hexo-more-css
   description: Compress CSS with more-css.
   link: https://github.com/vseventer/hexo-more-css
