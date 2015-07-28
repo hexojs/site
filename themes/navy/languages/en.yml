@@ -41,7 +41,7 @@ sidebar:
     templates: Templates
     variables: Variables
     helpers: Helpers
-    localization: Localization (i18n)
+    internationalization: Internationalization (i18n)
     plugins: Plugins
     miscellaneous: Miscellaneous
     troubleshooting: Troubleshooting

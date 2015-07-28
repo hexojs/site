@@ -41,7 +41,7 @@ sidebar:
     templates: 模版
     variables: 变量
     helpers: 辅助函数
-    localization: 本地化 (i18n)
+    internationalization: 国际化 (i18n)
     plugins: 插件
     miscellaneous: 其他
     troubleshooting: 问题解答

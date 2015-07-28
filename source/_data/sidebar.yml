@@ -20,7 +20,7 @@ docs:
     templates: templates.html
     variables: variables.html
     helpers: helpers.html
-    localization: localization.html
+    internationalization: internationalization.html
     plugins: plugins.html
   miscellaneous:
     troubleshooting: troubleshooting.html
