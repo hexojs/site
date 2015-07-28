@@ -1,6 +1,6 @@
-title: Localization (i18n)
+title: Internationalization (i18n)
 ---
-You can use localization to present your site in different languages. Please edit `language` setting in `_config.yml`. This is your default language. You can also set multiple languages to modify the order of default languages.
+You can use internationalization to present your site in different languages. Please edit `language` setting in `_config.yml`. This is your default language. You can also set multiple languages to modify the order of default languages.
 
 ``` yaml
 language: zh-tw
