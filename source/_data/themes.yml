@@ -154,9 +154,9 @@
     - light
 - name:yinwang
   description: Simplest View For Your Article Best.
-  lick: https://github.com/mickeyouyou/yinwang
+  link: https://github.com/mickeyouyou/yinwang
   preview: http://www.fzb.me
   tags:
     - responsive
-    - simple view
-    - beautifull chinese font
+    - simple
+    - chinese
