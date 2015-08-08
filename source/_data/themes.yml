@@ -124,6 +124,8 @@
     - gorgeous
     - sidebar
     - two_column
+    - one_column
+    - tag_plugins
 - name: Minos
   description: A simple and retro styled Hexo theme, concentrated more on your ideas.
   link: https://github.com/ppoffice/hexo-theme-minos
