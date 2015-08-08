@@ -170,6 +170,12 @@
     - official
     - deployer
     - rsync
+- name: hexo-deployer-s3
+  description: Amazon S3 deployer plugin for Hexo.
+  link: https://github.com/nt3rp/hexo-deployer-s3
+  tags:
+    - deployer
+    - s3
 - name: hexo-generator-sitemap
   description: Sitemap generator for Hexo.
   link: https://github.com/hexojs/hexo-generator-sitemap
