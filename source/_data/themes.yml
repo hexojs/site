@@ -164,7 +164,7 @@
     - chinese
 - name: zzoman2015
   description: Simplest Theme by ZZOMAN
-  link: https://github.com/hexojs/hexo-theme-zzoman2015
+  link: https://github.com/reumia/hexo-theme-zzoman2015
   preview: http://dev.zzoman.com
   tags:
   - simple
