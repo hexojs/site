@@ -183,6 +183,13 @@
     - official
     - generator
     - sitemap
+- name: hexo-generator-seo-friendly-sitemap
+  description: SEO friendly sitemap generator for Hexo. Generate separated sitemap files for pages, posts, categories, tags and add a XSL stylesheet.
+  link: https://github.com/ludoviclefevre/hexo-generator-seo-friendly-sitemap
+  tags:
+    - generator
+    - sitemap
+    - SEO
 - name: hexo-generator-feed
   description: Feed generator for Hexo.
   link: https://github.com/hexojs/hexo-generator-feed
