@@ -190,7 +190,7 @@ Inserts a link with `target="_blank"` attribute.
 
 ## Include Code
 
-Inserts code snippets in `source` folder.
+Inserts code snippets in `source/downloads/code` folder.
 
 ```
 {% include_code [title] [lang:language] path/to/file %}
