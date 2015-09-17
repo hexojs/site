@@ -467,3 +467,18 @@
     - flickr
     - photo
     - image
+- name: hexo-tag-vine
+  description: Embed your Vine videos in posts/pages.
+  link: https://github.com/welksonramos/hexo-tag-vine
+  tags:
+    - tag
+    - vine
+    - video
+    - social
+- name: hexo-tag-xvideos
+  description: Embed xvideos player in your posts/pages.
+  link: https://github.com/welksonramos/hexo-tag-xvideos
+  tags:
+    - tag
+    - xvideos
+    - video
