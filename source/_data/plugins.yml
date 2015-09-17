@@ -467,3 +467,10 @@
     - flickr
     - photo
     - image
+- name: hexo-hey
+  description: An admin plugin for Hexo.
+  link: https://github.com/nihgwu/hexo-hey
+  tags:
+    - admin
+    - dashboard
+    - editor
