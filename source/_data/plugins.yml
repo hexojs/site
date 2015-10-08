@@ -94,6 +94,12 @@
     - official
     - generator
     - index
+- name: hexo-generator-search
+  description: Generate search data for Hexo.
+  link: https://github.com/PaicHyperionDev/hexo-generator-search
+  tags:
+    - generator
+    - search
 - name: hexo-renderer-marked
   description: Markdown renderer for Hexo.
   link: https://github.com/hexojs/hexo-renderer-marked
