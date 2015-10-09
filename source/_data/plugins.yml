@@ -95,7 +95,7 @@
     - generator
     - index
 - name: hexo-generator-search
-  description: Generate search data for Hexo.
+  description: Search data generator for Hexo.
   link: https://github.com/PaicHyperionDev/hexo-generator-search
   tags:
     - generator
@@ -204,12 +204,6 @@
     - generator
     - feed
     - rss
-- name: hexo-generator-search
-  description: Search data generator for Hexo.
-  link: https://github.com/PaicHyperionDev/hexo-generator-search
-  tags:
-    - generator
-    - search
 - name: hexo-renderer-stylus
   description: Stylus renderer for Hexo.
   link: https://github.com/hexojs/hexo-renderer-stylus
