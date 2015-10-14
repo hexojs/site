@@ -23,9 +23,12 @@ Returns the relative URL from `from` to `to`.
 ### gravatar
 
 Inserts a Gravatar image.
+The [options] paramater can be excluded completely and you will get the default options.
+It can be a number which will then be passed on as the size paramater to Gravatar.
+Otherwise it can be an object which will be converted into a query string of parameters for Gravatar.
 
 ``` js
-<%- gravatar(email, [size]);
+<%- gravatar(email, [options]);
 ```
 
 **Examples:**
@@ -36,6 +39,9 @@ Inserts a Gravatar image.
 
 <%- gravatar('a@abc.com', 40) %>
 // http://www.gravatar.com/avatar/b9b00e66c6b8a70f88c73cb6bdb06787?s=40
+
+<%- gravatar('a@abc.com' {s: 40, d: 'http://example.com/image.png'}) %>
+// http://www.gravatar.com/avatar/b9b00e66c6b8a70f88c73cb6bdb06787?s=40&d=http%3A%2F%2Fexample.com%2Fimage.png
 ```
 
 ## HTML Tags
