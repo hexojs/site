@@ -171,14 +171,14 @@
   - responsive
   - one_column
   - korean
--name: Maupassant
- description: A simple Hexo template with great performance on different devices.
- link: https://github.com/tufu9441/maupassant-hexo
- preview: https://www.haomwei.com
- tags:
- - simple
- - responsive
- - two_column
- - white
- - jade
- - scss
+- name: Maupassant
+  description: A simple Hexo template with great performance on different devices.
+  link: https://github.com/tufu9441/maupassant-hexo
+  preview: https://www.haomwei.com
+  tags:
+  - simple
+  - responsive
+  - two_column
+  - white
+  - jade
+  - scss
