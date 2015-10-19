@@ -182,3 +182,13 @@
   - white
   - jade
   - scss
+- name: ttstyle
+  description: A three column theme for hexo.Responsive And SEO best.
+  link: https://github.com/tangkunyin/hexo-theme-ttstyle
+  preview: http://shuoit.net
+  tags:
+    - responsive
+    - simple
+    - seo
+    - chinese
+    - three_column
