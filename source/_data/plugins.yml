@@ -517,9 +517,9 @@
     - data
     - search
     - api
-- name: hexo-generate-niconico
+- name: hexo-tag-niconico
   description: Embed NicoNico seiga/douga in Hexo posts/pages.
-  link: https://github.com/kamiya555/hexo-generate-niconico
+  link: https://github.com/kamiya555/hexo-tag-niconico
   tags:
     - tag
     - niconico
