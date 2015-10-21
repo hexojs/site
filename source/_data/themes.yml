@@ -192,3 +192,13 @@
     - seo
     - chinese
     - three_column
+- name: jekyll
+  description: A hexo theme inspire by jekyllrb.com. 
+  link: https://github.com/pinggod/hexo-theme-jekyll
+  preview: http://pinggod.com/
+  tags:
+    - chinese
+    - jekyll
+    - dark
+    - jade
+    - scss
