@@ -200,3 +200,14 @@
     - 中文
     - jekyll
     - dark
+- name: Yelee
+  description: Another simple and elegant Hexo theme by MOxFIVE
+  link: https://github.com/MOxFIVE/hexo-theme-yelee
+  preview: http://moxfive.xyz
+  tags:
+    - responsive
+    - two_column
+    - toc
+    - elegant
+    - simple
+    - background_image
