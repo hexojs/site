@@ -319,6 +319,12 @@
     - renderer
     - markdown
     - markdown-it
+- name: hexo-renderer-org
+  description: Hexo renderer plugin for emacs org-mode.
+  link: https://github.com/CodeFalling/hexo-renderer-org
+  tags:
+    - renderer
+    - orgmode
 - name: hexo-renderer-bourbon
   description: An up-to-date node-sass wrapper for Hexo that includes Bourbon mixins.
   link: https://github.com/celsomiranda/hexo-renderer-bourbon
