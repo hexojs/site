@@ -20,7 +20,7 @@ date: 2013/7/13 20:46:25
 
 Setting | Description | Default
 --- | --- | ---
-`layout` | Layout | 
+`layout` | Layout |
 `title` | Title |
 `date` | Published date | File created date
 `updated` | Updated date | File updated date
@@ -31,7 +31,7 @@ Setting | Description | Default
 
 #### Categories & Tags
 
-Categories and tags are only supported in posts. Categories apply to posts in order, creating a hierarchy of classifications and sub-classifications; tags sit at the same level with each other and do not care about how they are ordered.
+Only posts support the use of categories and tags. Categories apply to posts in order, resulting in a hierarchy of classifications and sub-classifications. Tags are all defined on the same hierarchical level so the order in which they appear is not important.
 
 **Example**
 

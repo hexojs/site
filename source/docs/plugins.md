@@ -1,16 +1,16 @@
 title: Plugins
 ---
-Hexo has a powerful plugin system, which makes you easy to extend functions without modifying source code of the core module. There're two kinds of plugins in Hexo:
+Hexo has a powerful plugin system, which makes it easy to extend functions without modifying the source code of the core module. There are two kinds of plugins in Hexo:
 
 ### Script
 
-If your code is simple, it's recommended to use a script. All you need to do is putting JavaScript files in `scripts` folder and they'll be loaded once Hexo is initialized.
+If your plugin is relatively simple, it's recommended to use a script. All you need to do is put your JavaScript files in the `scripts` folder and Hexo will load them during initialization.
 
 ### Plugin
 
-If your code is complicated or you want to publish it to NPM registry, it's recommended to use a plugin. First, create a folder in `node_modules` folder. The name of the folder must be started with `hexo-` so it could be loaded by Hexo.
+If your code is complicated or if you want to publish it to the NPM registry, we recommend using a plugin. First, create a folder in the `node_modules` folder. The name of this folder must begin with `hexo-` or Hexo will ignore it.
 
-The folder must be contained at least 2 files: One is the main program and the other is `package.json` describing the purpose and the dependencies of the plugin.
+Your new folder must contain at least two files: one containing the actual JavaScript code and one `package.json` file that describes the purpose of the plugin and sets its dependencies.
 
 ``` plain
 .
@@ -18,7 +18,7 @@ The folder must be contained at least 2 files: One is the main program and the o
 └── package.json
 ```
 
-You should at least describe `name`, `version`, `main` in `package.json`. For example:
+At the very least, you should set the `name`, `version` and `main` entries in `package.json`. For example:
 
 ``` json package.json
 {
@@ -30,7 +30,7 @@ You should at least describe `name`, `version`, `main` in `package.json`. For ex
 
 ### Tools
 
-You can make use of the official tools provided by Hexo to accelerate development: 
+You can make use of the official tools provided by Hexo to accelerate development:
 
 - [hexo-fs]：File IO
 - [hexo-util]：Utilities
@@ -39,7 +39,7 @@ You can make use of the official tools provided by Hexo to accelerate developmen
 
 ### Publishing
 
-Once your plugin has been done, you can consider to publish it to [plugin list](/plugins) to make more people use your plugin. The steps to publish a plugin is very simliar to [updating documentation](contributing.html#Updating_Documentation).
+When your plugin is ready, you may consider publishing it to the [plugin list](/plugins) to invite other people to start using it. Publishing your own plugins is very similar to [updating documentation](contributing.html#Updating_Documentation).
 
 1. Fork [hexojs/site]
 2. Clone the repository to your computer and install dependencies.
@@ -49,7 +49,7 @@ Once your plugin has been done, you can consider to publish it to [plugin list](
     $ cd site
     $ npm install
     {% endcode %}
-    
+
 3. Edit `source/_data/_plugins.yml` and add your plugin. For example:
 
     {% code %}
@@ -61,7 +61,7 @@ Once your plugin has been done, you can consider to publish it to [plugin list](
         - server
         - console
     {% endcode %}
-    
+
 4. Push the branch.
 5. Create a pull request and describe the change.
 
