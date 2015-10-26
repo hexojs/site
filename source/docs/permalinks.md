@@ -15,9 +15,9 @@ Variable | Description
 `:i_day` | Published day of posts (Without leading zeros)
 `:title` | Filename
 `:id` | Post ID
-`:category` | Categories. If the post is uncategorized, it'll be `default_category` setting.
+`:category` | Categories. If the post is uncategorized, it will use the `default_category` value.
 
-You can define the default value of each variable in the permalink in `permalink_defaults` setting:
+You can define the default value of each variable in the permalink through the `permalink_defaults` setting:
 
 ``` yaml
 permalink_defaults:
@@ -26,7 +26,7 @@ permalink_defaults:
 
 ### Examples
 
-Given a post named `hello-world.md` in `source/_posts` folder with the following content.
+Given a post named `hello-world.md` in the `source/_posts` folder with the following content.
 
 ``` yaml
 title: Hello World
@@ -44,7 +44,7 @@ Setting | Result
 
 ### Multi-language Support
 
-To create a multi-language site, you can modify `new_post_name` and `permalink` setting like this:
+To create a multi-language site, you can modify the `new_post_name` and `permalink` settings like this:
 
 ``` yaml
 new_post_name: :lang/:title.md

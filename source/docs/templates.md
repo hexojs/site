@@ -1,10 +1,10 @@
 title: Templates
 ---
-Templates decide the presentation of your website. Every theme should contain at least a `index` template. The following is the corresponding template for each pages.
+Templates define the presentation of your website by describing what each page should look like. The table below shows the corresponding template for every available page. At the very least, a theme should contain an `index` template.
 
 Template | Page | Fallback
 --- | --- | ---
-`index` | Home page | 
+`index` | Home page |
 `post` | Posts | `index`
 `page` | Pages | `index`
 `archive` | Archives | `index`
@@ -13,7 +13,7 @@ Template | Page | Fallback
 
 ## Layouts
 
-If pages share simliar structure, for instance, two templates have header and footer. You can consider use "layout" to make two templates share the same structure. A layout file should be able to display the content of `body` variable so the content of templates can be displayed. For example:
+When pages share a similar structure - for instance, when two templates have both a header and a footer - you can consider using a `layout` to declare these structural similarities. Every layout file should contain a `body` variable to display the contents of the template in question. For example:
 
 ``` html index.ejs
 index
@@ -35,11 +35,11 @@ yields:
 </html>
 ```
 
-Every templates apply to `layout` template by default. You can specify other layouts in front-matter or `false` to disable it. You can even use other layouts in a layout to build a nested layout.
+By default, the `layout` template is used by all other templates. You can specify additional layouts in the front-matter or set it to `false` to disable it. It's even possible to build a complex nested structure by including more layout templates in your top layout.
 
 ## Partials
 
-Partials help you share components between templates, such as header, footer or sidebar. You can separate them into files and make maintenance more convenient. For example:
+Partials are useful for sharing components between your templates. Typical examples include headers, footers or sidebars. You may want to put your partials in separate files to make maintaining your website significantly more convenient. For example:
 
 
 ``` html partial/header.ejs
@@ -80,11 +80,11 @@ yields:
 
 ## Optimization
 
-If your theme is too complicated or there're too may files needed to be generate. Generation performance may decrease a lot. Besides simplifying your theme, you can also try Fragment Caching introduced in Hexo 2.7.
+If your theme is exceedingly complex or if the number of files to generate becomes too large, Hexo's file generation performance may begin to decrease considerably. Aside from simplifying your theme, you may also try Fragment Caching, which was introduced in Hexo 2.7.
 
-This feature is stolen from [Ruby on Rails](http://guides.rubyonrails.org/caching_with_rails.html#fragment-caching). It saves the contents within a fragment and serves the cache when the next request comes in. It can reduce database queries and make generation faster.
+This feature was borrowed from [Ruby on Rails](http://guides.rubyonrails.org/caching_with_rails.html#fragment-caching). It causes content to be saved as fragments and cached for when additional requests are made. This can reduce the number of database queries and can also speed up file generation.
 
-It can be used in header, footer, sidebar or static contents that won't be changed in your templates. For example:
+Fragment caching is best used for headers, footers, sidebars or other static content that is unlikely to change from template to template. For example:
 
 ``` js
 <%- fragment_cache('header', function(){
@@ -92,10 +92,10 @@ It can be used in header, footer, sidebar or static contents that won't be chang
 });
 ```
 
-It would be easier if you use partials:
+Though it may be easier to use partials:
 
 ``` js
 <%- partial('header', {}, {cache: true});
 ```
 
-However, don't use fragment caching with `relative_link` setting enabled. Because relative links may be different in each pages.
+Don't use fragment caching when the `relative_link` setting has been enabled. This may cause issues because relative links can and probably will be different depending on the pages they appear in.
