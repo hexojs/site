@@ -23,9 +23,7 @@ Returns the relative URL from `from` to `to`.
 ### gravatar
 
 Inserts a Gravatar image.
-The [options] paramater can be excluded completely and you will get the default options.
-It can be a number which will then be passed on as the size paramater to Gravatar.
-Otherwise it can be an object which will be converted into a query string of parameters for Gravatar.
+If you don't specify the [options] parameter, the default options will apply. Otherwise, you can set it to a number which will then be passed on as the size parameter to Gravatar. Finally, if you set it to an object, it will be converted into a query string of parameters for Gravatar.
 
 ``` js
 <%- gravatar(email, [options]);
@@ -48,7 +46,7 @@ Otherwise it can be an object which will be converted into a query string of par
 
 ### css
 
-Loads CSS files. `path` can be an array or a string. If `path` isn't prefixed with `/` or any protocol, it'll be prefixed with root URL. If you didn't add extension name `.css` after `path`, it'll be added.
+Loads CSS files. `path` can be an array or a string. If `path` isn't prefixed with `/` or any protocol, it'll get prefixed with the root URL. If you didn't add the `.css` extension after `path`, it will be added automatically.
 
 ``` js
 <%- css(path, ...) %>
@@ -67,7 +65,7 @@ Loads CSS files. `path` can be an array or a string. If `path` isn't prefixed wi
 
 ### js
 
-Loads JavaScript files. `path` can be an array or a string. If `path` isn't prefixed with `/` or any protocol, it'll be prefixed with root URL. If you didn't add extension name `.js` after `path`, it'll be added.
+Loads JavaScript files. `path` can be an array or a string. If `path` isn't prefixed with `/` or any protocol, it'll get prefixed with the root URL. If you didn't add the `.js` extension after `path`, it will be added automatically.
 
 ``` js
 <%- js(path, ...) %>
@@ -126,7 +124,7 @@ Option | Description
 `subject` | Mail subject
 `cc` | CC
 `bcc` | BCC
-`body` | Mail contents
+`body` | Mail content
 
 **Examples:**
 
@@ -140,7 +138,7 @@ Option | Description
 
 ### image_tag
 
-Inserts a image.
+Inserts an image.
 
 ``` js
 <%- image_tag(path, [options]) %>
@@ -203,7 +201,7 @@ Check whether the current page is a post.
 
 ### is_archive
 
-Check whether the current page is a archive page.
+Check whether the current page is an archive page.
 
 ``` js
 <%- is_archive() %>
@@ -241,7 +239,7 @@ Check whether the current page is a tag page.
 <%- is_tag() %>
 ```
 
-## String Manipulating
+## String Manipulation
 
 ### trim
 

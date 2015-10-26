@@ -1,6 +1,6 @@
 title: Internationalization (i18n)
 ---
-You can use internationalization to present your site in different languages. Please edit `language` setting in `_config.yml`. This is your default language. You can also set multiple languages to modify the order of default languages.
+You can use internationalization to present your site in different languages. The default language is set by modifying the `language` setting in `_config.yml`. You can also set multiple languages and modify the order of default languages.
 
 ``` yaml
 language: zh-tw
@@ -12,11 +12,11 @@ language:
 
 ### Language Files
 
-Language files can be a YAML or JSON file. They should be put into the `languages` folder in the theme. You can use [printf format](https://github.com/alexei/sprintf.js) in language files.
+Language files can be YAML or JSON files. You should put them into the `languages` folder in the theme. There is support for the [printf format](https://github.com/alexei/sprintf.js) in language files.
 
 ### Templates
 
-Use `__` or `_p` helpers in templates to get the translated strings. The former is for normal usage and the letter is for plural strings. For example:
+Use `__` or `_p` helpers in templates to get the translated strings. The former is for normal usage and the latter is for plural strings. For example:
 
 ``` yaml en.yml
 index:
@@ -38,13 +38,13 @@ index:
 
 ### Path
 
-You can set the language of pages in front-matter, or modify `i18n_dir` setting in `_config.yml` to enable Hexo detect automatically.
+You can set the language of pages in front-matter, or modify the `i18n_dir` setting in `_config.yml` to enable automatic detection by Hexo.
 
 ``` yaml
 i18n_dir: :lang
 ```
 
-The default value of `i18n_dir` setting is `:lang`, which means Hexo will detect the language with the first segment of URL. For example:
+The default value of `i18n_dir` setting is `:lang`, which means that Hexo will detect the language within the first segment of URL. For example:
 
 ``` plain
 /index.html => en
@@ -52,4 +52,4 @@ The default value of `i18n_dir` setting is `:lang`, which means Hexo will detect
 /zh-tw/index.html => zh-tw
 ```
 
-The string will only be served as a language when the language file exists. So `archives` in `/archives/index.html` (example 2) is not served as a language.
+The string will only be served as a language when the language file exists. So `archives` in `/archives/index.html` (example 2) will not get served as a language.
