@@ -1,10 +1,10 @@
 title: Box
 ---
-A box is a container used to processing files in a specified folder. There're two boxes in Hexo: `hexo.source` and `hexo.theme`. The former is used to process the `source` folder and the letter is used to process the theme folder.
+Box is a container used for processing files in a specified folder. Hexo uses two different boxes: `hexo.source` and `hexo.theme`. The former is used to process the `source` folder and the latter to process the `theme` folder.
 
 ## Load Files
 
-Box provides two methods for loading files: `process`, `watch`. The former is used to load all files in the folder; the letter do what `process` do and watch file changes continuously.
+Box provides two methods for loading files: `process` and `watch`. `process` loads all files in the folder. `watch` does the same, but also starts watching for file changes.
 
 ``` js
 box.process().then(function(){
@@ -18,7 +18,7 @@ box.watch().then(function(){
 
 ## Path Matching
 
-Box provides many ways for path matching. You can use a regular expression, a function or a pattern string like Express. For example:
+Box provides many ways for path matching. You can use a regular expression, a function or an Express-style pattern string. For example:
 
 ``` plain
 posts/:id => posts/89
@@ -29,7 +29,7 @@ See [util.Pattern] for more info.
 
 ## Processors
 
-A processor is a very important element in Box. It is used to process files. You can use the path matching above to restrict what should be processed by the processor. Use `addProcessor` to register a processor. 
+A processor is an essential element of Box and is used to process files. You can use path matching as described above to restrict what exactly the processor should process. Register a new processor with the `addProcessor` method.
 
 ``` js
 box.addProcessor('posts/:id', function(file){
@@ -37,7 +37,7 @@ box.addProcessor('posts/:id', function(file){
 });
 ```
 
-Box passes the content of processing files (`file`) to processors. You can read the information from this argument.
+Box passes the content of matched files to processors. This information can then be read straight from the `file` argument in the callback:
 
 Attribute | Description
 --- | ---

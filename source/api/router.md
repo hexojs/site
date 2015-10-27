@@ -4,7 +4,7 @@ The router saves all paths used in the site.
 
 ## Get a Path
 
-The `get` method returns a [Stream]. For example, save the data of a path to a specified destination.
+The `get` method returns a [Stream]. For example, to save the path data to a specified destination:
 
 ``` js
 var data = hexo.route.get('index.html');
@@ -15,7 +15,7 @@ data.pipe(dest);
 
 ## Set a Path
 
-You can use a string, a [Buffer] or a function in the `set` method.
+The `set` method takes a string, a [Buffer] or a function.
 
 ``` js
 // String
@@ -37,7 +37,7 @@ hexo.route.set('index.html', function(callback){
 });
 ```
 
-You can also set whether a path is modified so that we can ignore unchanged files when generating to make generation faster.
+You can also set a boolean for whether a path has been modified or not. This can speed up file generation as it allows for ignoring the unmodified files.
 
 ``` js
 hexo.route.set('index.html', {
@@ -62,7 +62,7 @@ hexo.route.list();
 
 ## Format a Path
 
-`format` method transforms a string to a valid path.
+The `format` method transforms a string to a valid path.
 
 ``` js
 hexo.route.format('archives/');
