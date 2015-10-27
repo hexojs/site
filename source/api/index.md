@@ -42,7 +42,7 @@ hexo.watch().then(function(){
 
 ## Execute Commands
 
-Any command can be called explicitly using the `call` method on the Hexo instance. Such a call takes two arguments: the name of the command, and an options argument. Different options are available for the different commands.
+Any console command can be called explicitly using the `call` method on the Hexo instance. Such a call takes two arguments: the name of the console command, and an options argument. Different options are available for the different console commands.
 
 ``` js
 hexo.call('generate', {}).then(function(){
@@ -52,7 +52,7 @@ hexo.call('generate', {}).then(function(){
 
 ## Exit
 
-You should call the `exit` method upon successful or unsuccessful completion of a command. This allows Hexo to exit gracefully and finish up important things such as saving the database.
+You should call the `exit` method upon successful or unsuccessful completion of a console command. This allows Hexo to exit gracefully and finish up important things such as saving the database.
 
 ``` js
 hexo.call('generate').then(function(){
