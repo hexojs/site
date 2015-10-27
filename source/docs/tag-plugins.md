@@ -1,10 +1,10 @@
 title: Tag Plugins
 ---
-Tag plugins are different from tags in posts. They're ported from Octopress and can help you insert specific contents in posts quickly.
+Tag plugins are different from post tags. They are ported from Octopress and provide a useful way for you to quickly add specific content to your posts.
 
 ## Block Quote
 
-Inserts quotes with author, source and title in posts.
+Perfect for adding quotes to your post, with optional author, source and title information.
 
 **Alias:** quote
 
@@ -14,9 +14,9 @@ content
 {% endblockquote %}
 ```
 
-### Example
+### Examples
 
-**No arguments given. Only output plain blockquote**
+**No arguments. Plain blockquote.**
 
 ```
 {% blockquote %}
@@ -66,7 +66,7 @@ Every interaction is both precious and an opportunity to delight.
 
 ## Code Block
 
-Inserts code snippets in posts.
+Useful feature for adding code snippets to your post.
 
 **Alias:** code
 
@@ -76,9 +76,9 @@ code snippet
 {% endcodeblock %}
 ```
 
-### Example
+### Examples
 
-**A normal code block**
+**A plain code block**
 
 ```
 {% codeblock %}
@@ -90,7 +90,7 @@ alert('Hello World!');
 alert('Hello World!');
 {% endcodeblock %}
 
-**Specify language**
+**Specifying the language**
 
 ```
 {% codeblock lang:objc %}
@@ -102,7 +102,7 @@ alert('Hello World!');
 [rectangle setX: 10 y: 10 width: 20 height: 20];
 {% endcodeblock %}
 
-**Add caption to code block**
+**Adding a caption to the code block**
 
 ```
 {% codeblock Array.map %}
@@ -114,7 +114,7 @@ array.map(callback[, thisArg])
 array.map(callback[, thisArg])
 {% endcodeblock %}
 
-**Add caption with an optional URL**
+**Adding a caption and a URL**
 
 ```
 {% codeblock _.compact http://underscorejs.org/#compact Underscore.js %}
@@ -130,17 +130,17 @@ _.compact([0, 1, false, 2, '', 3]);
 
 ## Backtick Code Block
 
-This plugin is same as code block, but in backtick style.
+This is identical to using a code block, but instead uses three backticks to delimit the block.
 
-{% code %}
-``` [language] [title] [url] [link text]
+{% raw %}
+&#96`` [language] [title] [url] [link text]
 code snippet
-```
-{% endcode %}
+&#96;``
+{% endraw %}
 
 ## Pull Quote
 
-This plugin helps you insert a pull quote in posts.
+To add pull quotes to your posts:
 
 ```
 {% pullquote [class] %}
@@ -150,7 +150,7 @@ content
 
 ## jsFiddle
 
-Embeds jsFiddle snippets in posts.
+To embed a jsFiddle snippet:
 
 ```
 {% jsfiddle shorttag [tabs] [skin] [width] [height] %}
@@ -158,7 +158,7 @@ Embeds jsFiddle snippets in posts.
 
 ## Gist
 
-Embeds Gist snippets in posts.
+To embed a Gist snippet:
 
 ```
 {% gist gist_id [filename] %}
@@ -166,7 +166,7 @@ Embeds Gist snippets in posts.
 
 ## iframe
 
-Embeds an iframe in posts.
+To embed an iframe:
 
 ```
 {% iframe url [width] [height] %}
@@ -174,7 +174,7 @@ Embeds an iframe in posts.
 
 ## Image
 
-Inserts an image in posts with specified size.
+Inserts an image with specified size.
 
 ```
 {% img [class names] /path/to/image [width] [height] [title text [alt text]] %}
@@ -196,9 +196,9 @@ Inserts code snippets in `source/downloads/code` folder.
 {% include_code [title] [lang:language] path/to/file %}
 ```
 
-## Youtube
+## YouTube
 
-Inserts a Youtube video in posts.
+Inserts a YouTube video.
 
 ```
 {% youtube video_id %}
@@ -206,7 +206,7 @@ Inserts a Youtube video in posts.
 
 ## Vimeo
 
-Inserts a Vimeo video in posts.
+Inserts a Vimeo video.
 
 ```
 {% vimeo video_id %}
@@ -214,7 +214,7 @@ Inserts a Vimeo video in posts.
 
 ## Include Posts
 
-Include the link of other posts.
+Include links to other posts.
 
 ```
 {% post_path slug %}
@@ -223,7 +223,7 @@ Include the link of other posts.
 
 ## Include Assets.
 
-Include the assets of posts.
+Include post assets.
 
 ```
 {% asset_path slug %}
@@ -233,7 +233,7 @@ Include the assets of posts.
 
 ## Raw
 
-If there're some contents can't be processed in posts, you can wrap it with `raw` tag to avoid rendering errors.
+If certain content is causing processing issues in your posts, wrap it with the `raw` tag to avoid rendering errors.
 
 ```
 {% raw %}

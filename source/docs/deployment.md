@@ -1,19 +1,19 @@
 title: Deployment
 ---
-Hexo provides a fast and easy way for deployment. You only need one command to deploy your site to servers.
+Hexo provides a fast and easy deployment strategy. You only need one single command to deploy your site to your servers.
 
 ``` bash
 $ hexo deploy
 ```
 
-Before we start, you have to modify settings in `_config.yml`. A valid deployment setting must come with `type` field. For example:
+Before your first deployment, you will have to modify some settings in `_config.yml`. A valid deployment setting must have a `type` field. For example:
 
 ``` yaml
 deploy:
   type: git
 ```
 
-You can use multiple deployers. Hexo will execute each deployer in sequence.
+You can use multiple deployers. Hexo will execute each deployer in order.
 
 ``` yaml
 deploy:
@@ -44,7 +44,7 @@ deploy:
 Option | Description
 --- | ---
 `repo` | GitHub repository URL
-`branch` | Branch name. The deployer will detect branch automatically if you are using GitHub or GitCafe.
+`branch` | Branch name. The deployer will automatically detect the branch automatically if you are using GitHub or GitCafe.
 `message` | Customize commit message (Default to `Site updated: {% raw %}{{ now('YYYY-MM-DD HH:mm:ss') }}{% endraw %}`)
 
 ## Heroku
@@ -159,7 +159,7 @@ Option | Description | Default
 
 ## Other Methods
 
-All generated files are saved in `public` folder. You can copy it to wherever you like.
+All generated files are saved in the `public` folder. You can copy them to wherever you like.
 
 [hexo-deployer-git]: https://github.com/hexojs/hexo-deployer-git
 [hexo-deployer-heroku]: https://github.com/hexojs/hexo-deployer-heroku

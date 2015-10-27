@@ -1,16 +1,16 @@
 title: Asset Folders
 ---
-Assets are non-post files in `source` folder, such as images, CSS or JavaScript files. Hexo provides a more convenient way to manage assets. To enable this, modify `post_asset_folder` setting.
+Assets are non-post files in the `source` folder, such as images, CSS or JavaScript files. Hexo provides a more convenient way to manage these assets. To enable asset management, set the `post_asset_folder` setting to true.
 
 ``` yaml
 post_asset_folder: true
 ```
 
-Once `post_asset_folder` setting is enabled, Hexo will create a folder with the same name as the new post. You can put all assets related to the post into the folder. So that you can use them more easily.
+When asset folder management is enabled, every time you create a new post, Hexo will create a folder with the same name. Put all your assets that are related to a certain post into the associated folder to use them in an easier and more convenient way.
 
 ## Tag Plugins
 
-Several tag plugins are added in Hexo 3 for you to include assets in posts more easily.
+The release of Hexo 3 saw several new tag plugins added which enable you to reference your assets more easily in posts.
 
 ```
 {% asset_path slug %}
