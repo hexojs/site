@@ -1,6 +1,6 @@
 title: Helper
 ---
-A helper helps you insert snippets to templates easily. It's ecommended to put complicated code in helpers intead of templates.
+A helper makes it easy to quickly add snippets to your templates. We recommend using helpers instead of templates when you're dealing with more complicated code.
 
 ## Synopsis
 

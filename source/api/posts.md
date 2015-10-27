@@ -11,15 +11,15 @@ Argument | Description
 `data` | Data
 `replace` | Replace existing files
 
-You can define the attributes of a post in data. Besides the following attributes, others will be appended to the front-matter too.
+The attributes of a post can be defined in `data`. The table below is not exhaustive. Additional attributes may be appended to the front-matter.
 
 Data | Description
 --- | ---
 `title` | Title
 `slug` | URL
-`layout` | Layout. Default to the `default_layout` setting.
+`layout` | Layout. Defaults to the `default_layout` setting.
 `path` | Path. Hexo builds the post path based on the `new_post_path` setting by default.
-`date` | Date. Default to the current date.
+`date` | Date. Defaults to the current date.
 
 ## Publish a Draft
 
@@ -32,12 +32,12 @@ Argument | Description
 `data` | Data
 `replace` | Replace existing files
 
-You can define the attributes of a post in data. Besides the following attributes, others will be appended to the front-matter too.
+The attributes of a post can be defined in `data`. The table below is not exhaustive. Additional attributes may be appended to the front-matter.
 
 Data | Description
 --- | ---
 `slug` | File name (Required)
-`layout` | Layout. Default to the `default_layout` setting.
+`layout` | Layout. Defaults to the `default_layout` setting.
 
 ## Render
 
@@ -50,10 +50,10 @@ Argument | Description
 `source` | Full path of a file (Optional)
 `data` | Data
 
-The data must contains the `content` attribute. If not, Hexo will try to read the original file. The execution steps of this function are:
+The data must contain the `content` attribute. If not, Hexo will try to read the original file. The execution steps of this function are as follows:
 
 - Execute `before_post_render` filters
-- Render with Markdown or other renderers (depends on the extension name)
+- Render with Markdown or other renderers (depending on the extension name)
 - Render with [Nunjucks]
 - Execute `after_post_render` filters
 

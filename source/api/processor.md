@@ -1,6 +1,6 @@
 title: Processor
 ---
-A processor is used to process source files in `source` folder.
+A processor is used to process source files in the `source` folder.
 
 ## Synopsis
 

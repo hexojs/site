@@ -455,7 +455,7 @@ Option | Description | Default
 `show_count` | Display the number of posts for each category | true
 `style` | Style to display the category list. `list` displays categories in an unordered list.  | list
 `separator` | Separator between categories. (Only works if `style` is not `list`) | ,
-`depth` | Levels of categories to be displayed. `0` displays all categories and child categories; `-1` is simliar to `0` but displayed in flat; `1` displays only top level categories. | 0
+`depth` | Levels of categories to be displayed. `0` displays all categories and child categories; `-1` is similar to `0` but displayed in flat; `1` displays only top level categories. | 0
 `class` | Class name of category list. | category
 `transform` | The function that changes the display of category name. |
 

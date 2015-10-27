@@ -1,6 +1,6 @@
 title: Deployer
 ---
-A deployer helps users deploy their site to a remote server fast without complicated commands.
+A deployer helps users quickly deploy their site to a remote server without complicated commands.
 
 ## Synopsis
 
@@ -10,4 +10,4 @@ hexo.extend.deployer.register(name, function(args){
 });
 ```
 
-An argument `args` will be passed into the function. It contains `deploy` setting in `_config.yml` and the input of users in the terminal.
+An argument `args` will be passed into the function. It contains the `deploy` value set in `_config.yml`, as well as the exact input users typed into their terminal.

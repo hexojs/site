@@ -10,7 +10,7 @@ hexo.extend.generator.register(name, function(locals){
 });
 ```
 
-An argument `locals` will be passed into the function, which equals to the [site variables](variables.html#Site_Variables). You should use this argument to get data of website and avoid accessing the database directly.
+A `locals` argument will get passed into the function, containing the [site variables](variables.html#Site_Variables). You should use this argument to get the website data, thereby avoiding having to access the database directly.
 
 ## Update Routes
 
@@ -21,7 +21,7 @@ hexo.extend.generator.register('test', function(locals){
     path: 'foo',
     data: 'foo'
   };
-  
+
   // Array
   return [
     {path: 'foo', data: 'foo'},
@@ -36,15 +36,15 @@ Attribute | Description
 `data` | Data
 `layout` | Layout. Specify the layouts for rendering. The value can be a string or an array. If it's ignored then the route will return `data` directly.
 
-When source files are updated, Hexo will execute all generators and rebuild routes. **Please return the data and do not access the router directly.**
+When the source files are updated, Hexo will execute all generators and rebuild the routes. **Please return the data and do not access the router directly.**
 
 ## Example
 
 ### Archive Page
 
-Create an archive page at `archives/index.html`. We pass all posts as data to the templates. This data equals to the `page` variable in templates.
+Create an archive page at `archives/index.html`. We pass all posts as data to the templates. This data is equivalent to the `page` variable in templates.
 
-Then, Set `layout` attribute to render with theme templates.  We set two layouts in this example. When `archive` layout does not exist, it will try `index` layout instead.
+Next, set the `layout` attribute to render with the theme templates. We're setting two layouts in this example: if the `archive` layout doesn't exist, the `index` layout will be used instead.
 
 ``` js
 hexo.extend.generator.register('archive', function(locals){
@@ -58,7 +58,7 @@ hexo.extend.generator.register('archive', function(locals){
 
 ### Archive Page with Pagination
 
-You can use the convenient official tool [hexo-pagination] to build archive pages with pagination easily.
+You can use the convenient official tool [hexo-pagination] to easily build archive pages with pagination.
 
 ``` js
 var pagination = require('hexo-pagination');
@@ -74,7 +74,7 @@ hexo.extend.generator.register('archive', function(locals){
 
 ### Generate All Posts
 
-Iterate all posts in `locals.posts` and create routes for all posts.
+Iterate over all posts in `locals.posts` and create routes for all the posts.
 
 ``` js
 hexo.extend.generator.register('post', function(locals){
@@ -90,7 +90,7 @@ hexo.extend.generator.register('post', function(locals){
 
 ### Copy Files
 
-This time we don't return a data but a function in `data` so that this route will build `fs.ReadStream` only when it's using.
+This time we don't return the data explicitly but instead set `data` to a function so the route will build `fs.ReadStream` only when needed.
 
 ``` js
 var fs = require('hexo-fs');

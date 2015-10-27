@@ -1,12 +1,12 @@
 title: API
 ---
-This documentation provides you more detailed API information and makes you easier to modify the source code of Hexo or write plugins. If you only want to search the basic usage of Hexo, please see [docs](../docs).
+This documentation provides more detailed information about the API and will be particularly helpful for people who want to modify the Hexo source code or write new plugins. If you are interested in more basic usage of Hexo, please refer to the [docs](../docs) instead.
 
-Before you start, please notice that this documentation is only for Hexo 3 and above.
+Please note that this documentation is only valid for Hexo 3 and above.
 
 ## Initialize
 
-First, we have to create a Hexo instance. The first argument is the root directory of the website, `base_dir`. The second argument is the initialization options. When you executing `init` method, Hexo will load plugins and configurations.
+First, we have to create a Hexo instance. A new instance takes two arguments: the root directory of the website, `base_dir`, and an object containing the initialization options. Next, we initialize this instance by calling the `init` method on it, which will then cause Hexo to load its configuration and plugins.
 
 ``` js
 var Hexo = require('hexo');
@@ -19,16 +19,16 @@ hexo.init().then(function(){
 
 Option | Description | Default
 --- | --- | ---
-`debug` | Enable debug mode. Display debug messages in the terminal and save `debug.log` in root directory. | `false`
+`debug` | Enable debug mode. Display debug messages in the terminal and save `debug.log` in the root directory. | `false`
 `safe` | Enable safe mode. Don't load any plugins. | `false`
 `silent` | Enable silent mode. Don't display any messages in the terminal. | `false`
 `config` | Specify the path of the configuration file. | `_config.yml`
 
 ## Load Files
 
-Hexo provides two methods for loading files: `load`, `watch`. The former is used to load all files in `source` folder and the theme data; the letter do what `load` do and watch file changes continuously.
+Hexo provides two methods for loading files: `load` and `watch`. `load` is used for loading all files in the `source` folder as well as the theme data. `watch` does the same things `load` does, but will also start watching for file changes continuously.
 
-What these both methods do is loading the list of files and passing files to the corresponding processors. After all files are processed, call generators to create routes.
+Both methods will load the list of files and pass them to the corresponding processors. After all files have been processed, they will call upon the generators to create the routes.
 
 ``` js
 hexo.load().then(function(){
@@ -42,7 +42,7 @@ hexo.watch().then(function(){
 
 ## Execute Commands
 
-You can use `call` method to call console. The first argument is the name of console. The second argument is the options, which depends on the console.
+Any console command can be called explicitly using the `call` method on the Hexo instance. Such a call takes two arguments: the name of the console command, and an options argument. Different options are available for the different console commands.
 
 ``` js
 hexo.call('generate', {}).then(function(){
@@ -52,7 +52,7 @@ hexo.call('generate', {}).then(function(){
 
 ## Exit
 
-When a command is finished, you should call `exit` method to let Hexo prepares for exiting, such as saving the database.
+You should call the `exit` method upon successful or unsuccessful completion of a console command. This allows Hexo to exit gracefully and finish up important things such as saving the database.
 
 ``` js
 hexo.call('generate').then(function(){

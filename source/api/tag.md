@@ -1,6 +1,6 @@
 title: Tag
 ---
-A tag helps users insert snippets to posts easily.
+A tag allows users to quickly and easily insert snippets into their posts.
 
 ## Synopsis
 
@@ -10,9 +10,9 @@ hexo.extend.tag.register(name, function(args, content){
 }, options);
 ```
 
-Two arguments will be passed into the tag function: `args` and `content`. The former is the argument passed into the tag plugin; the letter is the content wrapped in the tag plugin.
+Two arguments will be passed into the tag function: `args` and `content`. `args` contains the arguments passed into the tag plugin and `content` is the wrapped content from the tag plugin.
 
-Since async rendering was introduced in Hexo 3, we use [Nunjucks] for rendering. The behavior may be different from  [Swig].
+Since the introduction of asynchronous rendering in Hexo 3, we are using [Nunjucks] for rendering. The behavior may be somewhat different from that in [Swig].
 
 ## Options
 
@@ -39,7 +39,7 @@ hexo.extend.tag.register('youtube', function(args){
 
 ### With End Tags
 
-Insert a pull quote。
+Insert a pull quote.
 
 ``` js
 hexo.extend.tag.register('pullquote', function(args, content){
@@ -59,7 +59,7 @@ var pathFn = require('path');
 hexo.extend.tag.register('include_code', function(args){
   var filename = args[0];
   var path = pathFn.join(hexo.source_dir, filename);
-  
+
   return fs.readFile(path).then(function(content){
     return '<pre><code>' + content + '</code></pre>';
   });

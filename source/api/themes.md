@@ -1,6 +1,6 @@
 title: Themes
 ---
-Besides inheriting from [Box](box.html), `hexo.theme` saves templates.
+`hexo.theme` inherits from [Box](box.html), and also saves templates.
 
 ## Get a View
 
@@ -22,7 +22,7 @@ hexo.theme.removeView(path);
 
 ## View
 
-There're two methods for views: `render` and `renderSync`. These two methods are same but the former is synchronous and the letter asynchronous. So I only take `render` for example.
+Views have two methods: `render` and `renderSync`. These two methods are identical, but the former is asynchronous and the latter is synchronous. So for the sake of simplicity, we will only discuss `render` here.
 
 ``` js
 var view = hexo.theme.getView('layout.swig');
@@ -32,4 +32,4 @@ view.render({foo: 1, bar: 2}).then(function(result){
 });
 ```
 
-You can pass options in `render` method. `render` will try to process the template with the corresponding renderer and load [helpers](helper.html). When rendering done, it will try to find whether the layout exists. If `layout` is `false` or does not exist, it will return the result directly.
+You can pass options to the `render` method and it will try to process the template with the corresponding renderer and load the [helpers](helper.html). When rendering is complete, it will try to find whether a layout exists. If `layout` is `false` or if it doesn't exist, the result will be returned directly.

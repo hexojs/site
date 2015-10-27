@@ -1,6 +1,6 @@
 title: Renderer
 ---
-A renderer is used to render contents.
+A renderer is used to render content.
 
 ## Synopsis
 
@@ -12,15 +12,15 @@ hexo.extend.renderer.register(name, output, function(data, options){
 
 Argument | Description
 --- | ---
-`name` | Input extension name (lower case, without leading `.`)
-`output` | Output extension name (lower case, without leading `.`)
+`name` | Input filename extension (lower case, without leading `.`)
+`output` | Output filename extension (lower case, without leading `.`)
 `sync` | Sync mode
 
 Two arguments will be passed into the render function:
 
 Argument | Description
 --- | ---
-`data` | Include two attributes: file path `path` and file content `text`. `path` does not exist necessarily.
+`data` | Include two attributes: file path `path` and file content `text`. `path` won't necessarily exist.
 `option` | Options
 
 ## Example

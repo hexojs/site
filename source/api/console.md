@@ -1,6 +1,6 @@
 title: Console
 ---
-A console is the bridge between Hexo and users.
+The console forms the bridge between Hexo and its users. It registers and describes the available console commands.
 
 ## Synopsis
 
@@ -16,13 +16,13 @@ Argument | Description
 `desc` | Description
 `options`| Options
 
-An argument `args` will be passed into the functoin. This is the argument that users input in the terminal. It's parsed by [Minimist].
+An argument `args` will be passed into the function. This is the argument that users type into the terminal. It's parsed by [Minimist].
 
 ## Options
 
 ### usage
 
-The usage of a console. For example:
+The usage of a console command. For example:
 
 ``` js
 {usage: '[layout] <title>'}
@@ -31,7 +31,7 @@ The usage of a console. For example:
 
 ### arguments
 
-The description of each argument of a console. For example:
+The description of each argument of a console command. For example:
 
 ``` js
 {
@@ -44,7 +44,7 @@ The description of each argument of a console. For example:
 
 ### options
 
-The description of each option of a console. For example:
+The description of each option of a console command. For example:
 
 ``` js
 {
@@ -56,7 +56,7 @@ The description of each option of a console. For example:
 
 ### desc
 
-More detailed information about a console.
+More detailed information about a console command.
 
 ## Example
 
