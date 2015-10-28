@@ -17,7 +17,7 @@ Theme configuration file. Modifying this doesn't require a server restart.
 
 ### languages
 
-Language folder. See [localization (i18n)](localization.html) for more info.
+Language folder. See [internationalization (i18n)](internationalization.html) for more info.
 
 ### layout
 
