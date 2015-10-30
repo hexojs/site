@@ -319,17 +319,23 @@ Wraps text into lines no longer than `length`. `length` is 80 by default.
 
 ### truncate
 
-Truncates text after `length`.
+Truncates text after certain `length`. Default is 30 characters.
 
 ``` js
-<%- truncate(text, length) %>
+<%- truncate(text, [options]) %>
 ```
 
 **Examples:**
 
 ``` js
-<%- truncate('Once upon a time in a world far far away', 16) %>
-// Once upon a time
+<%- truncate('Once upon a time in a world far far away', {length: 17}) %>
+// Once upon a ti...
+
+<%- truncate('Once upon a time in a world far far away', {length: 17, separator: ' '} %>
+// Once upon a ti...
+
+<%- truncate('And they found that many people were sleeping better.', {length: 25, omission: '... (continued)'}) %>
+// And they f... (continued)
 ```
 
 ## Templates
