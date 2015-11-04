@@ -73,20 +73,20 @@ Variable | Description
 
 Variable | Description
 --- | ---
-`archive` | Equals `true`
-`year` | Archive year (4-digit)
-`month` | Archive month (2-digit without leading zeros)
+`page.archive` | Equals `true`
+`page.year` | Archive year (4-digit)
+`page.month` | Archive month (2-digit without leading zeros)
 
 **Category (category):** Same as `index` layout but add the following variables.
 
 Variable | Description
 --- | ---
-`category` | Category name
+`page.category` | Category name
 
 **Tag (tag):** Same as `index` layout but add the following variables.
 
 Variable | Description
 --- | ---
-`tag` | Tag name
+`page.tag` | Tag name
 
 [Moment.js]: http://momentjs.com/
