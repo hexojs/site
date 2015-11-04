@@ -331,8 +331,8 @@ Truncates text after certain `length`. Default is 30 characters.
 <%- truncate('Once upon a time in a world far far away', {length: 17}) %>
 // Once upon a ti...
 
-<%- truncate('Once upon a time in a world far far away', {length: 17, separator: ' '} %>
-// Once upon a ti...
+<%- truncate('Once upon a time in a world far far away', {length: 17, separator: ' '}) %>
+// Once upon a...
 
 <%- truncate('And they found that many people were sleeping better.', {length: 25, omission: '... (continued)'}) %>
 // And they f... (continued)
