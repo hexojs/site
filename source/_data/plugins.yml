@@ -30,7 +30,7 @@
     - html
     - uncss
 - name: hexo-ruby-character
-  description: Ruby charater tag for Hexo, like <ruby>博客<rp> (</rp><rt>bó kè</rt><rp>) </rp></ruby>.
+  description: Ruby character tag for Hexo, like <ruby>博客<rp> (</rp><rt>bó kè</rt><rp>) </rp></ruby>.
   link: https://github.com/JamesPan/hexo-ruby-character
   tags:
     - tag
@@ -306,7 +306,7 @@
     - deployer
     - ftp
 - name: hexo-migrator-blogger
-  description: Blogger(blogspot.com) migrator for Hexo.
+  description: Blogger (blogspot.com) migrator for Hexo.
   link: https://github.com/hr6r/hexo-migrator-blogger
   tags:
     - migrator
@@ -369,7 +369,7 @@
     - reStructedText
     - rst
 - name: hexo-tag-bootstrap
-  description: hexo-tag-bootstrap is a collections of Hexo tag plugins, which wraps most Twitter-Bootstrap 3.1.1 components in a uniformed way.
+  description: hexo-tag-bootstrap is a collection of Hexo tag plugins, which wraps most Twitter-Bootstrap 3.1.1 components in a uniform way.
   link: https://github.com/wzpan/hexo-tag-bootstrap
   tags:
     - tag_plugins
@@ -383,14 +383,14 @@
     - music
     - widget
 - name: hexo-tag-plantuml
-  description: hexo-tag-plantuml is a tag plugin of Hexo. It can work with plantuml to draw uml.
+  description: hexo-tag-plantuml is a tag plugin for Hexo. It can work with plantuml to draw uml.
   link: https://github.com/oohcoder/hexo-tag-plantuml
   tags:
     - tag_plugins
     - plantuml
     - uml
 - name: hexo-toc
-  description: Insert a markdown TOC(Table Of Content) before posts be rendered when and where a placeholer found.
+  description: Insert a markdown TOC (Table Of Contents) before posts are rendered when and where a placeholder is found.
   link: https://github.com/bubkoo/hexo-toc
   tags:
     - toc
@@ -532,7 +532,7 @@
     - video
     - image
 - name: hexo-easy-edit
-  description: Open posts from the commandline in your terminal or GUI editor using `hexo edit`
+  description: Open posts from the command line in your terminal or GUI editor using `hexo edit`
   link: https://github.com/greg-js/hexo-easy-edit
   tags:
     - console
