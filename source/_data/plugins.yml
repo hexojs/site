@@ -432,7 +432,7 @@
     - excerpt
     - front-matter
 - name: hexo-github
-  description: Display a GitHub repositoy badge with timeline in your post to keep track of version difference.
+  description: Display a GitHub repository badge with timeline in your post to keep track of version difference.
   link: https://github.com/akfish/hexo-github
   tags:
     - tag
@@ -531,4 +531,11 @@
     - niconico
     - video
     - image
-
+- name: hexo-easy-edit
+  description: Open posts from the commandline in your terminal or GUI editor using `hexo edit`
+  link: https://github.com/greg-js/hexo-easy-edit
+  tags:
+    - console
+    - cli
+    - editor
+    - admin
