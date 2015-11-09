@@ -539,3 +539,11 @@
     - cli
     - editor
     - admin
+- name: hexo-filter-fix-cjk-spacing
+  description: Join continuous CJK lines in markdown before rendering.
+  link: https://github.com/lotabout/hexo-filter-fix-cjk-spacing
+  tags:
+    - filter
+    - cjk
+    - spacing
+    - line
