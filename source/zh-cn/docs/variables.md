@@ -58,7 +58,7 @@ title: 变量
 `page.current_url` | 目前分页的网址
 `page.posts` | 本页文章
 `page.prev` | 上一页的页数。如果此页是第一页的话则为 `0`。
-`page.prev_link` | 上一页的连结。如果此页是第一页的话则为 `''`。
+`page.prev_link` | 上一页的网址。如果此页是第一页的话则为 `''`。
 `page.next` | 下一页的页数。如果此页是最后一页的话则为 `0`。
 `page.next_link` | 下一页的网址。如果此页是最后一页的话则为 `''`。
 `page.path` | 当前页面的路径（不含根目录）。我们通常在主题中使用 `url_for(page.path)`。
