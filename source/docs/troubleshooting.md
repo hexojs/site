@@ -60,6 +60,19 @@ npm ERR! node-waf configure build
 
 This error may occur when trying to install a plugin written in C, C++ or another non-JavaScript language. Make sure you have installed the right compiler on your computer.
 
+## Error with DTrace (Mac OS X)
+
+```plain
+{ [Error: Cannot find module './build/Release/DTraceProviderBindings'] code: 'MODULE_NOT_FOUND' }
+{ [Error: Cannot find module './build/default/DTraceProviderBindings'] code: 'MODULE_NOT_FOUND' }
+{ [Error: Cannot find module './build/Debug/DTraceProviderBindings'] code: 'MODULE_NOT_FOUND' }
+```
+
+DTrace install may have issue, use this:
+```sh
+$ npm install hexo --no-optional
+```
+
 ## Iterate Data Model on Jade or Swig
 
 Hexo uses [Warehouse] for its data model. It's not an array so you may have to transform objects into iterables.
