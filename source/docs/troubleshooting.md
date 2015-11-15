@@ -72,6 +72,7 @@ DTrace install may have issue, use this:
 ```sh
 $ npm install hexo --no-optional
 ```
+See [#1326](https://github.com/hexojs/hexo/issues/1326#issuecomment-113871796)
 
 ## Iterate Data Model on Jade or Swig
 
