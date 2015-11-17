@@ -226,17 +226,21 @@ Check whether the current page is a monthly archive page.
 ### is_category
 
 Check whether the current page is a category page.
+If a string is given as parameter, check whether the current page match the given category.
 
 ``` js
 <%- is_category() %>
+<%- is_category('hobby') %>
 ```
 
 ### is_tag
 
 Check whether the current page is a tag page.
+If a string is given as parameter, check whether the current page match the given tag.
 
 ``` js
 <%- is_tag() %>
+<%- is_tag('hobby') %>
 ```
 
 ## String Manipulation
