@@ -389,6 +389,14 @@
     - tag_plugins
     - plantuml
     - uml
+- name: hexo-tag-katex
+  description: Hexo Tag Plugin to support LaTeX using Katex library.
+  link: https://github.com/iamprasad88/hexo-tag-katex
+  tags:
+    - tag
+    - latex
+    - katex
+    - tex
 - name: hexo-toc
   description: Insert a markdown TOC (Table Of Contents) before posts are rendered when and where a placeholder is found.
   link: https://github.com/bubkoo/hexo-toc
