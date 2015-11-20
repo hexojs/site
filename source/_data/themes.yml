@@ -195,7 +195,7 @@
 - name: Jekyll
   description: A Hexo theme inspired by jekyllrb.com.
   link: https://github.com/pinggod/hexo-theme-jekyll
-  preview: http://pinggod.com
+  preview: https://github.com/pinggod/hexo-theme-jekyll
   tags:
     - 中文
     - jekyll
@@ -211,3 +211,11 @@
     - elegant
     - simple
     - background_image
+- name: Apollo
+  description: A Hexo theme inspired by http://cn.vuejs.org/.
+  link: https://github.com/pinggod/hexo-theme-apollo
+  preview: http://pinggod.com/
+  tags:
+    - 中文
+    - apollo
+    - light
