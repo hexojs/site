@@ -50,7 +50,7 @@ When your plugin is ready, you may consider publishing it to the [plugin list](/
     $ npm install
     {% endcode %}
 
-3. Edit `source/_data/_plugins.yml` and add your plugin. For example:
+3. Edit `source/_data/plugins.yml` and add your plugin. For example:
 
     {% code %}
     - name: hexo-server
