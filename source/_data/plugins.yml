@@ -567,3 +567,13 @@
     - bilibili
     - niconico
     - youtube
+- name: hexo-tag-githubimage
+  description: Inserts an image tag using a github content distribution.
+  link: https://github.com/wizicer/hexo-tag-githubimage/ 
+  tags:
+    - website
+    - blog
+    - hexo
+    - image
+    - embedded
+    - github
