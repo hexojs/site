@@ -1,6 +1,6 @@
 - name: hexo-helper-obfuscate
   description: Obfuscate strings using html entities. Handy against crawlers.
-  link: https://github.com/andrewpeterprifer/hexo-helper-obfuscate/ 
+  link: https://github.com/andrewpeterprifer/hexo-helper-obfuscate/
   tags:
     - helper
     - obfuscate
@@ -580,7 +580,7 @@
     - youtube
 - name: hexo-tag-githubimage
   description: Inserts an image tag using a github content distribution.
-  link: https://github.com/wizicer/hexo-tag-githubimage/ 
+  link: https://github.com/wizicer/hexo-tag-githubimage/
   tags:
     - website
     - blog
@@ -588,3 +588,14 @@
     - image
     - embedded
     - github
+- name: hexo-imgix
+  description: "Use the imgix API for image manipulation via a tag, filter and helper."
+  link: https://github.com/mshick/hexo-imgix/
+  tags:
+    - hexo
+    - imgix
+    - filter
+    - tag
+    - helper
+    - manipulation
+    - image
