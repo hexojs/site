@@ -15,7 +15,6 @@ Once initialised, here's what your project folder will look like:
 ├── _config.yml
 ├── package.json
 ├── scaffolds
-├── scripts
 ├── source
 |   ├── _drafts
 |   └── _posts
