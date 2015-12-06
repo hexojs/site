@@ -39,9 +39,6 @@ before_install:
   # Clone the repository
   - git clone https://github.com/hexojs/hexojs.github.io .deploy_git
 
-install:
-  - npm install --no-optional
-
 script:
   - npm run build && hexo deploy
 
