@@ -43,13 +43,13 @@ $ hexo publish [layout] <filename>
 $ hexo server
 ```
 
-启动服务器。
+启动服务器。默认情况下，访问网址为： `http://localhost:4000/`。
 
 选项 | 描述
 --- | ---
 `-p`, `--port` | 重设端口
 `-s`, `--static` | 只使用静态文件
-`-l`, `--log` | 启动日记记录，或覆盖记录格式
+`-l`, `--log` | 启动日记记录，使用覆盖记录格式
 
 ## deploy
 
@@ -61,12 +61,12 @@ $ hexo deploy
 
 参数 | 描述
 --- | ---
-`-g`, `--generate` | 部署网站前，需要预先生成静态文件
+`-g`, `--generate` | 部署之前预先生成静态文件
 
 ## render
 
 ``` bash
-$ hexo render <file> ...
+$ hexo render <file1> [file2] ...
 ```
 
 渲染文件。
@@ -81,7 +81,7 @@ $ hexo render <file> ...
 $ hexo migrate <type>
 ```
 
-从其他系统 [迁移内容](migration.html)。
+从其他博客系统 [迁移内容](migration.html)。
 
 ## clean
 
