@@ -19,7 +19,6 @@ addons:
       - ubuntu-toolchain-r-test
     packages:
       - g++-4.8
-      - libvips-dev
   ssh_known_hosts: github.com
 
 before_install:

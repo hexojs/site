@@ -39,22 +39,21 @@ gulp.task('screenshot:rev', function(){
 });
 
 gulp.task('screenshot:resize', ['screenshot:rev'], function(){
-  return gulp.src('public/build/screenshots/*.png')
-    .pipe($.responsive([
-      {
-        name: '*.png',
-        width: 400,
-        progressive: true
-      },
-      {
-        name: '*.png',
-        progressive: true,
-        rename: function(path){
-          path.basename += '@2x';
-          return path;
+  return gulp.src(dirs.screenshots + '/*.png')
+    .pipe($.responsive({
+      '*.png': [
+        {
+          width: 400,
+          progressive: true
+        },
+        {
+          progressive: true,
+          rename: {
+            suffix: '@2x'
+          }
         }
-      }
-    ]))
+      ]
+    }))
     .pipe(gulp.dest(dirs.screenshots));
 });
 
