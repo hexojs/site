@@ -13,6 +13,6 @@ cp .travis/ssh_config ~/.ssh/config
 git config --global user.name "Hexo Bot"
 git config --global user.email bot@hexo.io
 # Clone the repository
-git clone https://github.com/hexojs/hexojs.github.io .deploy_git
+git clone git@github.com:hexojs/hexojs.github.io.git .deploy_git
 # Deploy to GitHub
 npm run deploy
