@@ -9,7 +9,7 @@ var dirs = {
   screenshots: 'public/build/screenshots'
 };
 
-gulp.task('useref', function(){
+gulp.task('useref', ['screenshot'], function(){
   var assets = $.useref.assets({
     searchPath: 'public'
   });
@@ -39,27 +39,22 @@ gulp.task('screenshot:rev', function(){
 });
 
 gulp.task('screenshot:resize', ['screenshot:rev'], function(){
-  var resizeOptions = {
-    width: 400,
-    height: 250,
-    crop: true
-  };
-
   return gulp.src('public/build/screenshots/*.png')
-    // Append "@2x" to the original images
-    .pipe($.rename({
-      suffix: '@2x'
-    }))
-    // Copy original images
-    .pipe(gulp.dest(dirs.screenshots))
-    // Resize images
-    .pipe($.imageResize(resizeOptions))
-    // Remove "@2x" in filename
-    .pipe($.rename(function(path){
-      path.basename = path.basename.replace('@2x', '');
-      return path;
-    }))
-    // Save resized images
+    .pipe($.responsive([
+      {
+        name: '*.png',
+        width: 400,
+        progressive: true
+      },
+      {
+        name: '*.png',
+        progressive: true,
+        rename: function(path){
+          path.basename += '@2x';
+          return path;
+        }
+      }
+    ]))
     .pipe(gulp.dest(dirs.screenshots));
 });
 
