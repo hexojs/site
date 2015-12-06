@@ -4,17 +4,6 @@ var gulp = require('gulp');
 var $ = require('gulp-load-plugins')();
 var cssnano = require('cssnano');
 
-var htmlMinifierOptions = {
-  removeComments: true,
-  collapseWhitespace: true,
-  collapseBooleanAttributes: true,
-  removeScriptTypeAttributes: true,
-  removeStyleLinkTypeAttributes: true,
-  removeOptionalTags: true,
-  minifyJS: true,
-  minifyCSS: true
-};
-
 var dirs = {
   public: 'public',
   screenshots: 'public/build/screenshots'
@@ -27,10 +16,10 @@ gulp.task('useref', function(){
 
   return gulp.src('public/**/*.html')
     .pipe(assets)
+    .pipe($.uniqueFiles())
     .pipe($.if('*.css', $.postcss([
       cssnano()
     ])))
-    .pipe($.if('*.css', $.minifyCss()))
     .pipe($.if('*.js', $.uglify()))
     .pipe($.rev())
     .pipe(assets.restore())
@@ -38,7 +27,6 @@ gulp.task('useref', function(){
     .pipe($.revReplace({
       prefix: '/'
     }))
-    .pipe($.if('*.html', $.htmlMinifier(htmlMinifierOptions)))
     .pipe(gulp.dest('public'));
 });
 
