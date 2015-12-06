@@ -599,3 +599,10 @@
     - helper
     - manipulation
     - image
+- name: hexo-pdf
+  description: "Hexo tag to embed pdf in posts/pages."
+  link: https://github.com/superalsrk/hexo-pdf/
+  tags:
+    - hexo
+    - tag 
+    - pdf
