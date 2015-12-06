@@ -1,4 +1,4 @@
-# Hexo Website
+# Hexo Official Website
 
 [![Build Status](https://travis-ci.org/hexojs/site.svg?branch=master)](https://travis-ci.org/hexojs/site)
 
