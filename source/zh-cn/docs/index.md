@@ -56,7 +56,7 @@ $ wget -qO- https://raw.github.com/creationix/nvm/master/install.sh | sh
 安装完成后，重启终端并执行下列命令即可安装 Node.js。
 
 ``` bash
-$ nvm install 0.10
+$ nvm install 4
 ```
 
 或者您也可以下载 [应用程序](http://nodejs.org/) 来安装。
