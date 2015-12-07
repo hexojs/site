@@ -1,12 +1,12 @@
 title: 辅助函数（Helpers）
 ---
-辅助函数帮助您在模版中快速插入内容。
+辅助函数帮助您在模版中快速插入内容。辅助函数不能在源文件中使用。
 
 ## 网址
 
 ### url_for
 
-在路径前加上根路径，从 Hexo 2.7 开始您应该使用此函数，避免使用 `config.root + path`。
+在路径前加上根路径，从 Hexo 2.7 开始您应该使用此函数而不是 `config.root + path`。
 
 ``` js
 <%- url_for(path) %>
@@ -23,9 +23,10 @@ title: 辅助函数（Helpers）
 ### gravatar
 
 插入 Gravatar 图片。
+如果你不指定 `options` 参数，将会应用默认参数。否则，你可以将其设置为一个数字，这个数字将会作为 Gravatar 的大小参数。最后，如果你设置它一个对象，它将会被转换为 Gravatar 的一个查询字符串参数。
 
 ``` js
-<%- gravatar(email, [size]);
+<%- gravatar(email, [options]);
 ```
 
 **示例：**
@@ -36,6 +37,9 @@ title: 辅助函数（Helpers）
 
 <%- gravatar('a@abc.com', 40) %>
 // http://www.gravatar.com/avatar/b9b00e66c6b8a70f88c73cb6bdb06787?s=40
+
+<%- gravatar('a@abc.com' {s: 40, d: 'http://example.com/image.png'}) %>
+// http://www.gravatar.com/avatar/b9b00e66c6b8a70f88c73cb6bdb06787?s=40&d=http%3A%2F%2Fexample.com%2Fimage.png
 ```
 
 ## HTML 标签
@@ -222,17 +226,21 @@ title: 辅助函数（Helpers）
 ### is_category
 
 检查目前是否为分类归档页面。
+如果给定一个字符串作为参数，将会检查目前是否为指定分类。
 
 ``` js
 <%- is_category() %>
+<%- is_category('hobby') %>
 ```
 
 ### is_tag
 
 检查目前是否为标签归档页面。
+如果给定一个字符串作为参数，将会检查目前是否为指定标签。
 
 ``` js
 <%- is_tag() %>
+<%- is_tag('hobby') %>
 ```
 
 ## 字符串处理
@@ -324,8 +332,14 @@ title: 辅助函数（Helpers）
 **示例：**
 
 ``` js
-<%- truncate('Once upon a time in a world far far away', 16) %>
-// Once upon a time
+<%- truncate('Once upon a time in a world far far away', {length: 17}) %>
+// Once upon a ti...
+
+<%- truncate('Once upon a time in a world far far away', {length: 17, separator: ' '}) %>
+// Once upon a...
+
+<%- truncate('And they found that many people were sleeping better.', {length: 25, omission: '... (continued)'}) %>
+// And they f... (continued)
 ```
 
 ## 模板
@@ -373,10 +387,10 @@ title: 辅助函数（Helpers）
 
 ``` js
 <%- date(Date.now()) %>
-// Jan 1, 2013
+// 2013-01-01
 
 <%- date(Date.now(), 'YYYY/M/D') %>
-// 2013/1/1
+// Jan 1 2013
 ```
 
 ### date_xml
@@ -414,7 +428,7 @@ title: 辅助函数（Helpers）
 
 ### full_date
 
-插入格式化的日期和时间。`date` 可以是 UNIX 时间、ISO 字符串、Date 对象或 [Moment.js] 对象。`format` 默认为 `time_format` 配置信息。
+插入格式化的日期和时间。`date` 可以是 UNIX 时间、ISO 字符串、Date 对象或 [Moment.js] 对象。`format` 默认为 `date_format + time_format`。
 
 ``` js
 <%- full_date(date, [format]) %>
@@ -441,7 +455,7 @@ title: 辅助函数（Helpers）
 插入分类列表。
 
 ``` js
-<%- list_categories([categories], [options]) %>
+<%- list_categories([options]) %>
 ```
 
 参数 | 描述 | 默认值
@@ -453,14 +467,14 @@ title: 辅助函数（Helpers）
 `separator` | 分类间的分隔符号。只有在 `style` 不是 `list` 时有用。 | ,
 `depth` | 要显示的分类层级。`0` 显示所有层级的分类；`-1` 和 `0` 很类似，但是显示不分层级；`1` 只显示第一层的分类。 | 0
 `class` | 分类列表的 class 名称。 | category
-`transform` | 改变分类名称显示方法的函数 | 
+`transform` | 改变分类名称显示方法的函数 |
 
 ### list_tags
 
 插入标签列表。
 
 ``` js
-<%- list_tags([tags], [options]) %>
+<%- list_tags([options]) %>
 ```
 
 选项 | 描述 | 预设值
@@ -471,7 +485,7 @@ title: 辅助函数（Helpers）
 `style` | 标签列表的显示方式。使用 `list` 以无序列表（unordered list）方式显示。 | list
 `separator` | 标签间的分隔符号。只有在 `style` 不是 `list` 时有用。 | ,
 `class` | 标签列表的 class 名称。 | tag
-`transform` | 改变标签名称显示方法的函数 | 
+`transform` | 改变标签名称显示方法的函数 |
 `amount` | 要显示的标签数量（0 = 无限制） | 0
 
 ### list_archives
@@ -491,7 +505,7 @@ title: 辅助函数（Helpers）
 `style` | 归档列表的显示方式。使用 `list` 以无序列表（unordered list）方式显示。 | list
 `separator` | 归档间的分隔符号。只有在 `style` 不是 `list` 时有用。 | ,
 `class` | 归档列表的 class 名称。 | archive
-`transform` | 改变归档名称显示方法的函数 | 
+`transform` | 改变归档名称显示方法的函数 |
 
 ### list_posts
 
@@ -509,7 +523,7 @@ title: 辅助函数（Helpers）
 `separator` | 文章间的分隔符号。只有在 `style` 不是 `list` 时有用。 | ,
 `class` | 文章列表的 class 名称。 | post
 `amount` | 要显示的文章数量（0 = 无限制） | 6
-`transform` | 改变文章名称显示方法的函数 | 
+`transform` | 改变文章名称显示方法的函数 |
 
 ### tagcloud
 
