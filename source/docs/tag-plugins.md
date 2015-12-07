@@ -221,7 +221,7 @@ Include links to other posts.
 {% post_link slug [title] %}
 ```
 
-## Include Assets.
+## Include Assets
 
 Include post assets.
 
