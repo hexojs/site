@@ -77,7 +77,7 @@ index
 <div id="content">Home page</div>
 ```
 
-## 最佳化
+## 优化
 
 如果您的主题太过于复杂，或是需要生成的文件量太过于庞大，可能会大幅降低性能，除了简化主题外，您可以考虑 Hexo 2.7 新增的局部缓存（Fragment Caching） 功能。
 
