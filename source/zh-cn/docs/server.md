@@ -57,33 +57,6 @@ $ ln -s /path/to/myapp
 
 您的网站将会在 `http://myapp.dev` 下运行，网址根据链接名称而定。
 
-## Forever / PM2
-
-为了让 Hexo 服务保持链接，你可以使用 [Forever] 或 [PM2]。
-
-Hexo 从 2.5 版本开始，就可以运行在编程模式下，所以你可以在 JavaScript 中调用 Hexo，而不是使用 CLI。
-
-**1. 在你的站点文件夹中安装 Hexo。**
-
-``` bash
-$ npm install hexo --save
-```
-
-**2. 新建一个 JavaScript 文件并编写以下代码。**
-
-``` js app.js
-require('hexo').init({command: 'server'});
-```
-
-**3. 使用刚刚创建的 [Forever] 或 [PM2] 运行这个 JavaScript 文件。**
-
-PM2 的一个 [已知问题] 是，当停止运行脚本后，除非中断 PM2，否则端口不能自动释放。你必须在 fork 模式下运行脚本。
-
-``` bash
-$ forever start app.js
-$ pm2 start app.js -x
-```
-
 [hexo-server]: https://github.com/hexojs/hexo-server
 [Connect]: https://github.com/senchalabs/connect
 [morgan]: https://github.com/expressjs/morgan

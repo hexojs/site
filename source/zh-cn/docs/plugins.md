@@ -8,7 +8,9 @@ Hexo 有强大的插件系统，使您能轻松扩展功能而不用修改核心
 
 ### 插件（Packages）
 
-如果您的代码较复杂，或是您想要发布到 NPM 上，建议您编写插件。首先，在 `node_modules` 文件夹中建立文件夹，文件夹名称开头必须为 `hexo-`，如此一来 Hexo 才会在启动时载入。文件夹内至少要包含 2 个文件：一个是主程序，另一个是 `package.json`，描述插件的用途和所依赖的插件。
+如果您的代码较复杂，或是您想要发布到 NPM 上，建议您编写插件。首先，在 `node_modules` 文件夹中建立文件夹，文件夹名称开头必须为 `hexo-`，如此一来 Hexo 才会在启动时载入否则 Hexo 将会忽略它。
+
+文件夹内至少要包含 2 个文件：一个是主程序，另一个是 `package.json`，描述插件的用途和所依赖的插件。
 
 ``` plain
 .
@@ -25,20 +27,6 @@ Hexo 有强大的插件系统，使您能轻松扩展功能而不用修改核心
   "main": "index"
 }
 ```
-
-### 开发
-
-Hexo 共有九种插件，您可以在 API 页面中获得更多信息：
-
-- Generator
-- Renderer
-- Helper
-- Deployer
-- Processor
-- Tag
-- Console
-- Migrator
-- Filter
 
 ### 工具
 
@@ -75,7 +63,7 @@ Hexo 共有九种插件，您可以在 API 页面中获得更多信息：
     {% endcode %}
 
 4. 推送（push）分支。
-5. 建立一个新的合并申请（pull request）。
+5. 建立一个新的合并申请（pull request）并描述改动。
 
 [hexo-fs]: https://github.com/hexojs/hexo-fs
 [hexo-util]: https://github.com/hexojs/hexo-util
