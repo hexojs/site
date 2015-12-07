@@ -59,7 +59,7 @@ $ wget -qO- https://raw.github.com/creationix/nvm/master/install.sh | sh
 $ nvm install 4
 ```
 
-或者您也可以下载 [应用程序](http://nodejs.org/) 来安装。
+或者您也可以下载 [安装程序](http://nodejs.org/) 来安装。
 
 ### 安装 Hexo
 
