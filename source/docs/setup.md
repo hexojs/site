@@ -55,10 +55,6 @@ Application data. The [EJS](http://embeddedjs.com/), [Stylus](http://learnboost.
 
 [Scaffold](writing.html#Scaffolds) folder. When you create a new post, Hexo bases the new file on the scaffold.
 
-### scripts
-
-[Script](plugins.html#Scripts) folder. Scripts are the easiest way to extend Hexo. JavaScript files in this folder are executed automatically.
-
 ### source
 
 Source folder. This is where you put your site's content. Hexo ignores hidden files and files or folders whose names are prefixed with `_` (underscore) - except the `_posts` folder. Renderable files (e.g. Markdown, HTML) will be processed and put into the `public` folder, while other files will simply be copied.
