@@ -35,7 +35,7 @@ title: 配置
 `tag_dir` | 标签文件夹 | `tags`
 `archive_dir` | 归档文件夹 | `archives`
 `category_dir` | 分类文件夹 | `categories`
-`code_dir` | Include code 文件夹 | `downloads/code
+`code_dir` | Include code 文件夹 | `downloads/code`
 `i18n_dir` | 国际化（i18n）文件夹 | `:lang`
 `skip_render` | 跳过指定文件的渲染，您可使用 [glob 表达式](https://github.com/isaacs/node-glob)来匹配路径。 |
 
