@@ -211,3 +211,11 @@
     - elegant
     - simple
     - background_image
+- name: spfk
+  description: A simple solemn theme for Hexo
+  link: https://github.com/luuman/hexo-theme-spfk
+  preview: http://luuman.github.io/
+  tags:
+    - personality
+    - responsive
+    - simple
