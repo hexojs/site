@@ -193,9 +193,9 @@
     - chinese
     - three_column
 - name: Jekyll
-  description: A hexo theme inspire by jekyllrb.com. 
+  description: A Hexo theme inspired by jekyllrb.com.
   link: https://github.com/pinggod/hexo-theme-jekyll
-  preview: http://pinggod.com
+  preview: https://github.com/pinggod/hexo-theme-jekyll
   tags:
     - 中文
     - jekyll
@@ -211,11 +211,32 @@
     - elegant
     - simple
     - background_image
+- name: Apollo
+  description: A Hexo theme inspired by http://cn.vuejs.org/.
+  link: https://github.com/pinggod/hexo-theme-apollo
+  preview: http://pinggod.com/
+  tags:
+    - 中文
+    - apollo
+    - light
+- name: Freemind.386
+  description: Freemind.386 is a retro-style theme of Hexo.
+  link: https://github.com/blackshow/hexo-theme-freemind.386
+  preview: http://blackshow.me/
+  tags:
+    - bootstrap
+    - pixel_style
+    - responsive
+    - two_column
+    - tag_plugins
+    - retro
 - name: spfk
   description: A simple solemn theme for Hexo
   link: https://github.com/luuman/hexo-theme-spfk
   preview: http://luuman.github.io/
   tags:
-    - personality
-    - responsive
     - simple
+    - bootstrap
+    - responsive
+    - two_column
+    - personality
