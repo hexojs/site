@@ -6,10 +6,10 @@
           <div class="article">
             <div class="inner">
               <header class="article-header">
-                <h1 class="article-title" itemprop="name" data-swiftype-name="title" data-swiftype-type="string">{{ page.title }}</h1>
+                <h1 class="article-title" itemprop="name">{{ page.title }}</h1>
                 <a href="{{ raw_link(page.source) }}" class="article-edit-link" title="{{ __('page.improve') }}"><i class="fa fa-pencil"></i></a>
               </header>
-              <div class="article-content" itemprop="articleBody" data-swiftype-name="body" data-swiftype-type="text">
+              <div class="article-content" itemprop="articleBody">
                 {{ page_anchor(page.content) }}
               </div>
               <footer class="article-footer">

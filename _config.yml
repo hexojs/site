@@ -24,6 +24,8 @@ deploy:
 disqus_shortname: hexojs
 google_analytics: UA-4910098-10
 fb_admins: 100000247608790
-swiftype_key: EwN4HMy_KMxTK_GMjV1z
+algolia:
+  api_key: c3d5d4c995b5e0c2ffb5623900279a66
+  index_name: hexo
 twitter: hexojs
 github: hexojs/hexo
