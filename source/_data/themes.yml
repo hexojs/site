@@ -230,4 +230,12 @@
     - two_column
     - tag_plugins
     - retro
-
+- name: spfk
+  description: A simple solemn theme for Hexo
+  link: https://github.com/luuman/hexo-theme-spfk
+  preview: http://luuman.github.io/
+  tags:
+    - bootstrap
+    - responsive
+    - two_column
+    - personality
