@@ -614,3 +614,7 @@
     - filter 
     - minify
     - optimize
+    - html
+    - css
+    - js
+    - image
