@@ -606,3 +606,15 @@
     - hexo
     - tag 
     - pdf
+- name: hexo-all-minifier
+  description: "Minifier & Optimization plugin for Hexo, include HTML, CSS, JS and Image."
+  link: https://github.com/unhealthy/hexo-all-minifier
+  tags:
+    - hexo
+    - filter 
+    - minify
+    - optimize
+    - html
+    - css
+    - js
+    - image
