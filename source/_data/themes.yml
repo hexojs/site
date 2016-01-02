@@ -239,3 +239,13 @@
     - responsive
     - two_column
     - personality
+- name: Bootstrap-Blog
+  description: A simple Twitter Bootstrap blog theme for Hexo
+  link: https://github.com/cgmartin/hexo-theme-bootstrap-blog
+  preview: http://cgmartin.github.io/hexo-theme-bootstrap-blog/
+  tags:
+    - bootstrap
+    - simple
+    - responsive
+    - two_column
+
