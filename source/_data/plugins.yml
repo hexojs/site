@@ -230,13 +230,6 @@
     - official
     - filter
     - spacing
-- name: hexo-yuidoc
-  description: Generate YUIDoc with Hexo.
-  link: https://github.com/hexojs/hexo-yuidoc
-  tags:
-    - official
-    - generator
-    - yuidoc
 - name: hexo-migrator-wordpress
   description: WordPress migrator for Hexo.
   link: https://github.com/hexojs/hexo-migrator-wordpress
@@ -604,14 +597,14 @@
   link: https://github.com/superalsrk/hexo-pdf/
   tags:
     - hexo
-    - tag 
+    - tag
     - pdf
 - name: hexo-all-minifier
   description: "Minifier & Optimization plugin for Hexo, include HTML, CSS, JS and Image."
   link: https://github.com/unhealthy/hexo-all-minifier
   tags:
     - hexo
-    - filter 
+    - filter
     - minify
     - optimize
     - html
