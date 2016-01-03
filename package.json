@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "hexo": {
-    "version": "3.2.0-beta.2"
+    "version": "3.1.1"
   },
   "scripts": {
     "build": "hexo generate && gulp",
@@ -17,7 +17,7 @@
     "hexo-generator-feed": "^1.0.3",
     "hexo-generator-sitemap": "^1.0.1",
     "hexo-renderer-jade": "^0.1.0",
-    "hexo-renderer-marked": "^0.2.6",
+    "hexo-renderer-marked": "^0.2.8",
     "hexo-renderer-stylus": "^0.3.0",
     "hexo-server": "^0.1.2",
     "lodash": "^3.10.1",
@@ -36,8 +36,5 @@
     "gulp-uglify": "^1.5.1",
     "gulp-unique-files": "^0.1.2",
     "gulp-useref": "^2.1.0"
-  },
-  "optionalDependencies": {
-    "hexo-browsersync": "^0.2.0"
   }
 }
