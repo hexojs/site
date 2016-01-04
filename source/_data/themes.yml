@@ -52,6 +52,19 @@
     - wordpress
     - elegant
     - hueman
+- name: Flexy
+  description: Flexy is a modern theme for Hexo, written in Jade and Stylus using Flexbox.
+  link: https://github.com/sjaakvandenberg/flexy
+  preview: https://svdb.co/
+  tags:
+    - responsive
+    - flexbox
+    - two_column
+    - clean
+    - css3
+    - jade
+    - stylus
+    - translate3d
 - name: carbon
   description: Carbon is a simple theme using pjax for elegant loading.
   link: https://github.com/icylogic/carbon
