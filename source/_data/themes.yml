@@ -261,3 +261,12 @@
     - simple
     - responsive
     - two_column
+- name: Very-Simple
+  description: A black/white theme for Hexo which tend to be simple and elegant
+  link: https://github.com/lotabout/very-simple
+  preview: http://lotabout.github.io/very-simple/
+  tags:
+    - white & black
+    - flexbox
+    - simple
+    - responsive
