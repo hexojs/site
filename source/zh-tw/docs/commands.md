@@ -14,7 +14,7 @@ $ hexo init [folder]
 $ hexo new [layout] <title>
 ```
 
-建立一篇新的文章。如果沒有設定 `layout` 的話，則會使用 [_config.yml](configuration.html) 中的 `default_layout` 設定代替。如果標題包含空格的話，請使用引號括起來。
+建立一篇新的文章。如果沒有設定 `layout` 的話，則會使用 [_config.yml](docs/configuration.html) 中的 `default_layout` 設定代替。如果標題包含空格的話，請使用引號括起來。
 
 ## generate
 
@@ -81,7 +81,7 @@ $ hexo render <file> ...
 $ hexo migrate <type>
 ```
 
-從其他系統 [轉移內容](migration.html)。
+從其他系統 [轉移內容](docs/migration.html)。
 
 ## clean
 

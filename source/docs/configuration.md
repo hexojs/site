@@ -19,7 +19,7 @@ Setting | Description | Default
 --- | --- | ---
 `url` | The URL of your website |
 `root` | The root directory of your website |
-`permalink` | The [permalink](permalinks.html) format of articles | `:year/:month/:day/:title/`
+`permalink` | The [permalink](docs/permalinks.html) format of articles | `:year/:month/:day/:title/`
 `permalink_default` | Default values of each segment in permalink |
 
 {% note info Website in subdirectory %}
@@ -49,7 +49,7 @@ Setting | Description | Default
 `external_link` | Open external links in new tab? | `true`
 `filename_case` | Transform filenames to `1` lower case; `2` upper case | `0`
 `render_drafts` | Display drafts? | `false`
-`post_asset_folder` | Enable the [Asset Folder](asset-folders.html)? | `false`
+`post_asset_folder` | Enable the [Asset Folder](docs/asset-folders.html)? | `false`
 `relative_link` | Make links relative to the root folder? | `false`
 `future` | Display future posts? | `true`
 `highlight` | Code block settings |

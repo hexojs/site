@@ -63,7 +63,7 @@ Here is a list of filters used by Hexo.
 
 ### before_post_render
 
-Executed before a post is rendered. Refer to [post rendering](posts.html#Render) to learn the execution steps.
+Executed before a post is rendered. Refer to [post rendering](api/posts.html#Render) to learn the execution steps.
 
 For example, to transform the title to lower case:
 
@@ -76,7 +76,7 @@ hexo.extend.filter.register('before_post_render', function(data){
 
 ### after_post_render
 
-Executed after a post is rendered. Refer to [post rendering](posts.html#Render) to learn the execution steps.
+Executed after a post is rendered. Refer to [post rendering](api/posts.html#Render) to learn the execution steps.
 
 For example, to replace `@username` with a link to a Twitter profile:
 
@@ -162,7 +162,7 @@ hexo.extend.filter.register('post_permalink', function(data){
 
 ### after_render
 
-Executed after rendering finishes. You can see [rendering](rendering.html#after_render_Filters) for more info.
+Executed after rendering finishes. You can see [rendering](api/rendering.html#after_render_Filters) for more info.
 
 ### server_middleware
 

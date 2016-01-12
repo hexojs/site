@@ -31,7 +31,7 @@ hexo.extend.filter.register('test', function(data, arg1, arg2){
   // data === 'some data'
   // arg1 === 'foo'
   // arg2 === 'bar'
-  
+
   return 'something';
 });
 
@@ -63,7 +63,7 @@ hexo.extend.filter.unregister(type, filter);
 
 ### before_post_render
 
-在文章開始渲染前執行。您可參考 [文章渲染](posts.html#渲染) 以瞭解執行順序。
+在文章開始渲染前執行。您可參考 [文章渲染](api/posts.html#渲染) 以瞭解執行順序。
 
 舉例來說，把標題轉為小寫：
 
@@ -76,7 +76,7 @@ hexo.extend.filter.register('before_post_render', function(data){
 
 ### after_post_render
 
-在文章渲染完成後執行。您可參考 [文章渲染](posts.html#渲染) 以瞭解執行順序。
+在文章渲染完成後執行。您可參考 [文章渲染](api/posts.html#渲染) 以瞭解執行順序。
 
 舉例來說，把 `@username` 取代為 Twitter 的使用者連結。
 
@@ -162,7 +162,7 @@ hexo.extend.filter.register('post_permalink', function(data){
 
 ### after_render
 
-在渲染後執行，您可參考 [渲染](rendering.html#after_render_過濾器) 以瞭解更多資訊。
+在渲染後執行，您可參考 [渲染](api/rendering.html#after_render_過濾器) 以瞭解更多資訊。
 
 ### server_middleware
 
