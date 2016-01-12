@@ -64,40 +64,6 @@ lang-select-height = 40px
     .mobile-nav-on &
       transform: rotate(-45deg)
 
-#mobile-search-btn
-  position: absolute
-  top: 0
-  bottom: 0
-  right: gutter-width
-  margin: auto
-  width: toggle-width
-  height: @width
-  transition: 0.2s
-  opacity: 0.5
-  &:before, &:after
-    content: ""
-    position: absolute
-  &:before
-    width: 18px
-    height: @width
-    border-radius: 50%
-    border: toggle-line solid #fff
-    top: 0
-    left: 0
-  &:after
-    width: 9px
-    height: toggle-line
-    background: #fff
-    top: 15px
-    right: 0
-    border-radius: toggle-line
-    transform: rotate(45deg)
-    transform-origin: 0
-  &:active
-    opacity: 1
-  @media mq-normal
-    display: none
-
 .mobile-nav-link
   color: #fff
   text-decoration: none

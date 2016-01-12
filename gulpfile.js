@@ -4,33 +4,22 @@ var gulp = require('gulp');
 var $ = require('gulp-load-plugins')();
 var cssnano = require('cssnano');
 
-var htmlMinifierOptions = {
-  removeComments: true,
-  collapseWhitespace: true,
-  collapseBooleanAttributes: true,
-  removeScriptTypeAttributes: true,
-  removeStyleLinkTypeAttributes: true,
-  removeOptionalTags: true,
-  minifyJS: true,
-  minifyCSS: true
-};
-
 var dirs = {
   public: 'public',
   screenshots: 'public/build/screenshots'
 };
 
-gulp.task('useref', function(){
+gulp.task('useref', ['screenshot'], function(){
   var assets = $.useref.assets({
     searchPath: 'public'
   });
 
   return gulp.src('public/**/*.html')
     .pipe(assets)
+    .pipe($.uniqueFiles())
     .pipe($.if('*.css', $.postcss([
       cssnano()
     ])))
-    .pipe($.if('*.css', $.minifyCss()))
     .pipe($.if('*.js', $.uglify()))
     .pipe($.rev())
     .pipe(assets.restore())
@@ -38,7 +27,6 @@ gulp.task('useref', function(){
     .pipe($.revReplace({
       prefix: '/'
     }))
-    .pipe($.if('*.html', $.htmlMinifier(htmlMinifierOptions)))
     .pipe(gulp.dest('public'));
 });
 
@@ -51,27 +39,21 @@ gulp.task('screenshot:rev', function(){
 });
 
 gulp.task('screenshot:resize', ['screenshot:rev'], function(){
-  var resizeOptions = {
-    width: 400,
-    height: 250,
-    crop: true
-  };
-
-  return gulp.src('public/build/screenshots/*.png')
-    // Append "@2x" to the original images
-    .pipe($.rename({
-      suffix: '@2x'
+  return gulp.src(dirs.screenshots + '/*.png')
+    .pipe($.responsive({
+      '*.png': [
+        {
+          width: 400,
+          progressive: true
+        },
+        {
+          progressive: true,
+          rename: {
+            suffix: '@2x'
+          }
+        }
+      ]
     }))
-    // Copy original images
-    .pipe(gulp.dest(dirs.screenshots))
-    // Resize images
-    .pipe($.imageResize(resizeOptions))
-    // Remove "@2x" in filename
-    .pipe($.rename(function(path){
-      path.basename = path.basename.replace('@2x', '');
-      return path;
-    }))
-    // Save resized images
     .pipe(gulp.dest(dirs.screenshots));
 });
 

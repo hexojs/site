@@ -4,20 +4,23 @@
 {{ js('js/toc') }}
 {{ js('js/mobile_nav') }}
 <!-- endbuild -->
-<script src="//cdn.jsdelivr.net/retinajs/1.1.0/retina.min.js" async></script>
+<script src="https://cdn.jsdelivr.net/retinajs/1.3.0/retina.min.js" async></script>
 {% if page.layout === 'plugins' %}
 <!-- Plugin search -->
-<script src="//cdn.jsdelivr.net/lunr/0.5.7/lunr.min.js"></script>
+<script src="https://cdn.jsdelivr.net/lunr/0.6.0/lunr.min.js"></script>
 <!-- build:js build/js/plugins.js -->
 {{ js('js/plugins') }}
 <!-- endbuild -->
 {% endif %}
-<!-- Swiftype -->
+<!-- Algolia -->
+{% if config.algolia[page.lang] %}
+<script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script>
 <script type="text/javascript">
-  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
-  (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
-  e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
-  })(window,document,'script','//s.swiftypecdn.com/install/v1/st.js','_st');
-
-  _st('install','{{ config.swiftype_key }}');
+document.getElementById('search-input-wrap').classList.add('on');
+docsearch({
+  apiKey: '{{ config.algolia[page.lang].api_key }}',
+  indexName: '{{ config.algolia[page.lang].index_name }}',
+  inputSelector: '#search-input'
+});
 </script>
+{% endif %}

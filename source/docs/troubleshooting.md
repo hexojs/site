@@ -100,6 +100,16 @@ Hexo uses [Nunjucks] to render posts ([Swig] was used in older version, which sh
 Hello {{ sensitive }}
 {% endraw %}
 ```
+## ENOSPC Error (Linux)
+Sometimes when running the command `$ hexo server` it returns an error:
+```
+Error: watch ENOSPC ...
+```
+It can be fixed by running `$ npm dedupe` or, if that doesn't help, try the following in the Linux console:
+```
+$ echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
+```
+This will increase the limit for the number of files you can watch.
 
 [Warehouse]: https://github.com/tommy351/warehouse
 [Swig]: http://paularmstrong.github.io/swig/

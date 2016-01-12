@@ -1,4 +1,4 @@
-# Hexo Website
+# Hexo Official Website
 
 [![Build Status](https://travis-ci.org/hexojs/site.svg?branch=master)](https://travis-ci.org/hexojs/site)
 
@@ -28,9 +28,9 @@ $ hexo server
 
 ## Contributors
 
-- English - [tommy351]
-- 正體中文 - [tommy351]
-- 简体中文 - [pinggod]
+- English - [tommy351](https://github.com/tommy351)
+- 正體中文 - [tommy351](https://github.com/tommy351)
+- 简体中文 - [pinggod](https://github.com/pinggod), [Xuanwo](https://github.com/Xuanwo)
 
 ## License
 

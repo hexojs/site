@@ -9,7 +9,7 @@
     {% endif %}
     <a href="{{ url_for(post.path) }}" class="article-date">{{ time_tag(post.date) }}</a>
   </header>
-  <div class="article-content" itemprop="articleBody" data-swiftype-index="true">
+  <div class="article-content" itemprop="articleBody">
     {{ page_anchor(post.content) }}
   </div>
   {{ partial('partial/comment') }}

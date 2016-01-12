@@ -1,6 +1,6 @@
 title: 写作
 ---
-接下来，我们要在网站中建立第一篇文章，您可以直接从现有的示例文章「Hello World」改写，但我们更建议您学习 `new` 指令。
+你可以执行下列命令来创建一篇新文章。
 
 ``` bash
 $ hexo new [layout] <title>
@@ -8,7 +8,7 @@ $ hexo new [layout] <title>
 
 您可以在命令中指定文章的布局（layout），默认为 `post`，可以通过修改 `_config.yml` 中的 `default_layout` 参数来指定默认布局。
 
-## 布局（Layout）
+### 布局（Layout）
 
 Hexo 有三种默认布局：`post`、`page` 和 `draft`，它们分别对应不同的路径，而您自定义的其他布局和 `post` 相同，都将储存到 `source/_posts` 文件夹。
 
@@ -18,20 +18,24 @@ Hexo 有三种默认布局：`post`、`page` 和 `draft`，它们分别对应不
 `page` | `source`
 `draft` | `source/_drafts`
 
-## 文件名称
+{% note tip 不要处理我的文章 %}
+如果你不想你的文章被处理，你可以将 Front-Matter 中的`layout:` 设为 `false` 。
+{% endnote %}
+
+### 文件名称
 
 Hexo 默认以标题做为文件名称，但您可编辑 `new_post_name` 参数来改变默认的文件名称，举例来说，设为 `:year-:month-:day-:title.md` 可让您更方便的通过日期来管理文章。
 
 变量 | 描述
 --- | ---
-`:title` | 标题
-`:year` | 建立的年份（4 位数）
-`:month` | 建立的月份（2 位数）
-`:i_month` | 建立的月份（去掉开头的零）
-`:day` | 建立的日期（2 位数）
-`:i_day` | 建立的日期（去掉开头的零）
+`:title` | 标题（小写，空格将会被替换为短杠）
+`:year` | 建立的年份，比如， `2015`
+`:month` | 建立的月份（有前导零），比如， `04`
+`:i_month` | 建立的月份（无前导零），比如， `4`
+`:day` | 建立的日期（有前导零），比如， `07`
+`:i_day` | 建立的日期（无前导零），比如， `7`
 
-## 草稿
+### 草稿
 
 刚刚提到了 Hexo 的一种特殊布局：`draft`，这种布局在建立时会被保存到 `source/_drafts` 文件夹，您可通过 `publish` 命令将草稿移动到 `source/_posts` 文件夹，该命令的使用方式与 `new` 十分类似，您也可在命令中指定 `layout` 来指定布局。
 

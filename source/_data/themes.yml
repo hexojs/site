@@ -52,6 +52,19 @@
     - wordpress
     - elegant
     - hueman
+- name: Flexy
+  description: Flexy is a modern theme for Hexo, written in Jade and Stylus using Flexbox.
+  link: https://github.com/sjaakvandenberg/flexy
+  preview: https://svdb.co/
+  tags:
+    - responsive
+    - flexbox
+    - two_column
+    - clean
+    - css3
+    - jade
+    - stylus
+    - translate3d
 - name: carbon
   description: Carbon is a simple theme using pjax for elegant loading.
   link: https://github.com/icylogic/carbon
@@ -195,7 +208,7 @@
 - name: Jekyll
   description: A Hexo theme inspired by jekyllrb.com.
   link: https://github.com/pinggod/hexo-theme-jekyll
-  preview: http://pinggod.com
+  preview: https://github.com/pinggod/hexo-theme-jekyll
   tags:
     - 中文
     - jekyll
@@ -211,8 +224,54 @@
     - elegant
     - simple
     - background_image
+- name: Apollo
+  description: A Hexo theme inspired by http://cn.vuejs.org/.
+  link: https://github.com/pinggod/hexo-theme-apollo
+  preview: http://pinggod.com/
+  tags:
+    - 中文
+    - apollo
+    - light
+- name: Freemind.386
+  description: Freemind.386 is a retro-style theme of Hexo.
+  link: https://github.com/blackshow/hexo-theme-freemind.386
+  preview: http://blackshow.me/
+  tags:
+    - bootstrap
+    - pixel_style
+    - responsive
+    - two_column
+    - tag_plugins
+    - retro
+- name: spfk
+  description: A simple solemn theme for Hexo
+  link: https://github.com/luuman/hexo-theme-spfk
+  preview: http://luuman.github.io/
+  tags:
+    - bootstrap
+    - responsive
+    - two_column
+    - personality
+- name: Bootstrap-Blog
+  description: A simple Twitter Bootstrap blog theme for Hexo
+  link: https://github.com/cgmartin/hexo-theme-bootstrap-blog
+  preview: http://cgmartin.github.io/hexo-theme-bootstrap-blog/
+  tags:
+    - bootstrap
+    - simple
+    - responsive
+    - two_column
+- name: Very-Simple
+  description: A black/white theme for Hexo which tend to be simple and elegant
+  link: https://github.com/lotabout/very-simple
+  preview: http://lotabout.github.io/very-simple/
+  tags:
+    - white & black
+    - flexbox
+    - simple
+    - responsive
 - name: Corporate
-  description: A professional hexo theme based on the Corporate Frontend framework.
+  description: A professional Hexo theme based on the Corporate Frontend framework.
   link: https://github.com/ptsteadman/hexo-theme-corporate
   preview: http://hexotest.computerlab.io
   tags:

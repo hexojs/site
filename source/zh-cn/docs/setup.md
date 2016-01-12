@@ -16,7 +16,6 @@ $ npm install
 ├── _config.yml
 ├── package.json
 ├── scaffolds
-├── scripts
 ├── source
 |   ├── _drafts
 |   └── _posts
@@ -34,15 +33,21 @@ $ npm install
 ``` json package.json
 {
   "name": "hexo-site",
-  "version": "",
+  "version": "0.0.0",
   "private": true,
   "hexo": {
     "version": ""
   },
   "dependencies": {
-    "hexo-renderer-ejs": "*",
-    "hexo-renderer-stylus": "*",
-    "hexo-renderer-marked": "*"
+    "hexo": "^3.0.0",
+    "hexo-generator-archive": "^0.1.0",
+    "hexo-generator-category": "^0.1.0",
+    "hexo-generator-index": "^0.1.0",
+    "hexo-generator-tag": "^0.1.0",
+    "hexo-renderer-ejs": "^0.1.0",
+    "hexo-renderer-stylus": "^0.2.0",
+    "hexo-renderer-marked": "^0.2.4",
+    "hexo-server": "^0.1.2"
   }
 }
 ```
@@ -50,10 +55,6 @@ $ npm install
 ### scaffolds
 
 [模版](writing.html) 文件夹。当您新建文章时，Hexo 会根据 scaffold 来建立文件。
-
-### scripts
-
-[脚本](plugins.html) 文件夹。脚本是扩展 Hexo 最简易的方式，在此文件夹内的 JavaScript 文件会被自动执行。
 
 ### source
 

@@ -18,7 +18,7 @@ deploy:
 ``` yaml
 deploy:
 - type: git
-  repo: 
+  repo:
 - type: heroku
   repo:
 ```
@@ -45,7 +45,7 @@ deploy:
 --- | ---
 `repo` | 库（Repository）地址
 `branch` | 分支名称。如果您使用的是 GitHub 或 GitCafe 的话，程序会尝试自动检测。
-`message` | 自定提交信息 (默认为 `Site updated: {% raw %}{{ now('YYYY-MM-DD HH:mm:ss') }}{% endraw %}`)
+`message` | 自定义提交信息 (默认为 `Site updated: {% raw %}{{ now('YYYY-MM-DD HH:mm:ss') }}{% endraw %}`)
 
 ## Heroku
 

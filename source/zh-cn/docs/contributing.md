@@ -37,7 +37,7 @@ title: 贡献
     $ git push origin new_feature
     {% endcode %}
 
-6. 对 `master` 分支建立一个新的合并申请（pull request）并描述变动。
+6. 建立一个新的合并申请（pull request）并描述变动。
 
 ### 注意事项
 
@@ -48,9 +48,11 @@ title: 贡献
     $ npm test
     {% endcode %}
 
-## 更新文件
+## 更新文档
 
-Hexo 文件开放源代码，您可以在 [hexojs/site] 找到源代码，若要修改文件：
+Hexo 文档开放源代码，您可以在 [hexojs/site] 找到源代码。
+
+### 工作流程
 
 1. Fork [hexojs/site]
 2. 把库（repository）复制到电脑上，并安装所依赖的插件。
@@ -68,28 +70,21 @@ Hexo 文件开放源代码，您可以在 [hexojs/site] 找到源代码，若要
     {% endcode %}
 
 4. 推送（push）分支。
-5. 对 `master` 分支建立一个新的合并申请（pull request）并描述变动。
+5. 建立一个新的合并申请（pull request）并描述变动。
 
-## 翻译文件
-
-翻译文件的流程与上述的文件更新非常相似，如果要新增语言的话，请遵照以下步骤：
+### 翻译
 
 1. 在 `source` 资料夹中建立一个新的语言资料夹（全小写）。
 2. 把 `source` 资料夹中相关的文件（Markdown 和模板文件）复制到新的语言资料夹中。
 3. 在 `source/_data/language.yml` 中新增语言。
-4. 在 `themes/navy/languages` 复制 `en.yml` 并命名为语言名称（全小写）。
+4. 将 `en.yml` 复制到 `themes/navy/languages`中并命名为语言名称（全小写）。
 
 ## 反馈问题
 
-当您在使用 Hexo 时遇到问题，您可以尝试在 [问题解答](troubleshooting.html) 中寻找解答，或是在 [GitHub](https://github.com/hexojs/hexo/issues) 或 [Google Group](https://groups.google.com/group/hexo) 上提问。提问时请务必附上以下信息：
+当您在使用 Hexo 时遇到问题，您可以尝试在 [问题解答](troubleshooting.html) 中寻找解答，或是在 [GitHub](https://github.com/hexojs/hexo/issues) 或 [Google Group](https://groups.google.com/group/hexo) 上提问。如果你没有找答案，请在 Github 报告它。
 
-1. 以 [调试模式](commands.html#调试模式) 再执行一次。
-2. 检查版本信息。
-
-    {% code %}
-    $ hexo version
-    {% endcode %}
-
+1. 在 [调试模式](commands.html#调试模式) 中重现问题。
+2. 运行 `hexo version` 并检查版本信息。
 3. 把调试信息和版本信息都贴到 GitHub。
 
 [hexojs/hexo]: https://github.com/hexojs/hexo

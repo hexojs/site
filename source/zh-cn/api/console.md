@@ -20,7 +20,7 @@ hexo.extend.console.register(name, desc, options, function(args){
 
 ## 选项
 
-### usage
+### 用法
 
 控制台的操作方法，例如：
 
@@ -29,7 +29,7 @@ hexo.extend.console.register(name, desc, options, function(args){
 // hexo new [layout] <title>
 ```
 
-### arguments
+### 参数
 
 控制台各个参数的说明，例如：
 
@@ -42,7 +42,7 @@ hexo.extend.console.register(name, desc, options, function(args){
 }
 ```
 
-### options
+### 选项
 
 控制台的选项，例如：
 
@@ -54,7 +54,7 @@ hexo.extend.console.register(name, desc, options, function(args){
 }
 ```
 
-### desc
+### 描述
 
 控制台更详细的说明。
 

@@ -7,14 +7,16 @@ logo-size = 50px
   padding: header-padding-normal 0
   @media print
     display: none
-  .home &
-    padding: header-padding-max 0
 
 #header-inner
-  position: relative
+  display: flex
+  flex-flow: row nowrap
+  align-items: center
+  @media mq-mobile
+    justify-content: center
 
 #logo-wrap
-  text-align: center
+  flex: 0 logo-size
 
 #logo
   hide-text()
@@ -22,19 +24,14 @@ logo-size = 50px
   width: logo-size
   height: logo-size
   background-size: @width @height
-  display: inline-block
-  @media mq-normal
-    float: left
+  display: block
 
 #main-nav
   display: none
-  float: left
+  flex: 1 auto
   padding-left: 20px
   @media mq-normal
     display: block
-
-.main-nav-item
-  float: left
 
 .main-nav-link
   color: #fff
@@ -43,27 +40,36 @@ logo-size = 50px
   opacity: 0.7
   transition: 0.2s
   font-family: font-title
-  text-transform: uppercase
-  display: block
-  padding: 0 20px
+  display: inline-block
+  padding: 0 15px
   &:hover
     opacity: 1
     color: color-link-hover
 
-#search-btn-wrap
+#search-input-wrap
   display: none
-  float: right
-  margin-right: 15px
-  @media mq-normal
-    display: block
+  padding-left: 6px
+  padding-bottom: 8px
+  border-bottom: 1px solid color-gray
+  &.on
+    display: inline-block
 
-#search-btn
-  cursor: pointer
+#search-input-icon
+  color: #fff
+  padding-right: 0.5em
+  display: inline-block
+  opacity: 0.7
+
+#search-input
+  background: none
+  font-size: inherit
+  font-family: font-title
+  color: #fff
+  outline: none
 
 #lang-select-wrap
   display: none
   position: relative
-  float: right
   @media mq-normal
     display: block
 

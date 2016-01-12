@@ -60,6 +60,21 @@ npm ERR! node-waf configure build
 
 当您尝试安装以 C/C++ 或其他非 JavaScript 语言所编写的插件时，可能会遇到此类问题，请确认您已经在电脑上安装相对应的编译器。
 
+## DTrace 错误 （Mac OS X）
+
+```plain
+{ [Error: Cannot find module './build/Release/DTraceProviderBindings'] code: 'MODULE_NOT_FOUND' }
+{ [Error: Cannot find module './build/default/DTraceProviderBindings'] code: 'MODULE_NOT_FOUND' }
+{ [Error: Cannot find module './build/Debug/DTraceProviderBindings'] code: 'MODULE_NOT_FOUND' }
+```
+
+DTrace 安装可能有错误 , 使用下列命令:
+```sh
+$ npm install hexo --no-optional
+```
+参考 [#1326](https://github.com/hexojs/hexo/issues/1326#issuecomment-113871796)
+
+
 ## 在 Jade 或 Swig 遍历资料
 
 Hexo 使用 [Warehouse] 存储资料，它不是一般数组所以必须先进行类型转型才能遍历。
@@ -86,6 +101,18 @@ Hexo 使用 [Nunjucks] 来解析文章（旧版本使用 [Swig]，两者语法�
 Hello {{ sensitive }}
 {% endraw %}
 ```
+
+## ENOSPC 错误 （Linux）
+
+运行 `$ hexo server` 命令有时会返回这样的错误：
+```
+Error: watch ENOSPC ...
+```
+它可以用过运行 `$ npm dedupe` 来解决，如果不起作用的话，可以尝试在 Linux 终端中运行下列命令：
+```
+$ echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
+```
+这将会提高你能监视的文件数量。
 
 [Warehouse]: https://github.com/tommy351/warehouse
 [Swig]: http://paularmstrong.github.io/swig/

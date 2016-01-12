@@ -2,17 +2,19 @@ title: 标签插件（Tag Plugins）
 ---
 标签插件和 Front-matter 中的标签不同，它们是用于在文章中快速插入特定内容的插件。
 
-## Block Quote
+## 引用块
 
 在文章中插入引言，可包含作者、来源和标题。
 
-**捷径：** quote
+**别号：** quote
 
 ```
 {% blockquote [author[, source]] [link] [source_link_title] %}
 content
 {% endblockquote %}
 ```
+
+### 样例
 
 **没有提供参数，则只输出普通的 blockquote**
 
@@ -50,7 +52,7 @@ NEW: DevDocs now comes with syntax highlighting. http://devdocs.io
 NEW: DevDocs now comes with syntax highlighting. http://devdocs.io
 {% endblockquote %}
 
-**引用网路上的文章**
+**引用网络上的文章**
 
 ```
 {% blockquote Seth Godin http://sethgodin.typepad.com/seths_blog/2009/07/welcome-to-island-marketing.html Welcome to Island Marketing %}
@@ -62,17 +64,19 @@ Every interaction is both precious and an opportunity to delight.
 Every interaction is both precious and an opportunity to delight.
 {% endblockquote %}
 
-## Code Block
+## 代码块
 
 在文章中插入代码。
 
-**快捷方式：** code
+**别名：** code
 
 ```
 {% codeblock [title] [lang:language] [url] [link text] %}
 code snippet
 {% endcodeblock %}
 ```
+
+### 样例
 
 **普通的代码块**
 
@@ -124,15 +128,15 @@ _.compact([0, 1, false, 2, '', 3]);
 => [1, 2, 3]
 {% endcodeblock %}
 
-## Backtick Code Block
+## 反引号代码块
 
-另一种形式的代码块。
+另一种形式的代码块，不同的是它使用三个反引号来包裹。
 
-{% code %}
-``` [language] [title] [url] [link text]
+{% raw %}
+&#96`` [language] [title] [url] [link text]
 code snippet
-```
-{% endcode %}
+&#96;``
+{% endraw %}
 
 ## Pull Quote
 

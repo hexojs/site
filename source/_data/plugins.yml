@@ -1,3 +1,14 @@
+- name: hexo-helper-obfuscate
+  description: Obfuscate strings using html entities. Handy against crawlers.
+  link: https://github.com/andrewpeterprifer/hexo-helper-obfuscate/
+  tags:
+    - helper
+    - obfuscate
+    - encode
+    - email
+    - crawler
+    - entity
+    - entities
 - name: hexo-wordcount
   description: Word Count Plugin for Hexo.
   link: https://github.com/willin/hexo-wordcount
@@ -219,13 +230,6 @@
     - official
     - filter
     - spacing
-- name: hexo-yuidoc
-  description: Generate YUIDoc with Hexo.
-  link: https://github.com/hexojs/hexo-yuidoc
-  tags:
-    - official
-    - generator
-    - yuidoc
 - name: hexo-migrator-wordpress
   description: WordPress migrator for Hexo.
   link: https://github.com/hexojs/hexo-migrator-wordpress
@@ -389,6 +393,14 @@
     - tag_plugins
     - plantuml
     - uml
+- name: hexo-tag-katex
+  description: Hexo Tag Plugin to support LaTeX using Katex library.
+  link: https://github.com/iamprasad88/hexo-tag-katex
+  tags:
+    - tag
+    - latex
+    - katex
+    - tex
 - name: hexo-toc
   description: Insert a markdown TOC (Table Of Contents) before posts are rendered when and where a placeholder is found.
   link: https://github.com/bubkoo/hexo-toc
@@ -547,3 +559,63 @@
     - cjk
     - spacing
     - line
+- name: hexo-tag-owl
+  description: A media tag for Hexo 3.x
+  link: https://github.com/m80126colin/hexo-tag-owl
+  tags:
+    - tag
+    - image
+    - youku
+    - tudou
+    - vimeo
+    - bilibili
+    - niconico
+    - youtube
+- name: hexo-tag-githubimage
+  description: Inserts an image tag using a github content distribution.
+  link: https://github.com/wizicer/hexo-tag-githubimage/
+  tags:
+    - website
+    - blog
+    - hexo
+    - image
+    - embedded
+    - github
+- name: hexo-imgix
+  description: "Use the imgix API for image manipulation via a tag, filter and helper."
+  link: https://github.com/mshick/hexo-imgix/
+  tags:
+    - hexo
+    - imgix
+    - filter
+    - tag
+    - helper
+    - manipulation
+    - image
+- name: hexo-pdf
+  description: "Hexo tag to embed pdf in posts/pages."
+  link: https://github.com/superalsrk/hexo-pdf/
+  tags:
+    - hexo
+    - tag
+    - pdf
+- name: hexo-all-minifier
+  description: "Minifier & Optimization plugin for Hexo, include HTML, CSS, JS and Image."
+  link: https://github.com/unhealthy/hexo-all-minifier
+  tags:
+    - hexo
+    - filter
+    - minify
+    - optimize
+    - html
+    - css
+    - js
+    - image
+- name: hexo-autonofollow
+  description: "Adds nofollow attribute to all external links in your hexo blog posts automatically."
+  link: https://github.com/liuzc/hexo-autonofollow
+  tags:
+    - hexo-autonofollow
+    - SEO
+    - nofollow
+    - external
