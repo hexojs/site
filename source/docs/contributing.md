@@ -29,14 +29,14 @@ Please follow the coding style:
     {% code %}
     $ git checkout -b new_feature
     {% endcode %}
-    
+
 4. Start hacking.
 5. Push the branch:
 
     {% code %}
     $ git push origin new_feature
     {% endcode %}
-    
+
 6. Create a pull request and describe the change.
 
 ### Notice
@@ -50,7 +50,7 @@ Please follow the coding style:
 
 ## Updating Documentation
 
-The Hexo documentation is open source and you can find the source code on [hexojs/site]. 
+The Hexo documentation is open source and you can find the source code on [hexojs/site].
 
 ### Workflow
 
@@ -62,13 +62,13 @@ The Hexo documentation is open source and you can find the source code on [hexoj
     $ cd site
     $ npm install
     {% endcode %}
-    
+
 3. Start editing the documentation. You can start the server for live previewing.
 
     {% code %}
     $ hexo server
     {% endcode %}
-    
+
 4. Push the branch.
 5. Create a pull request and describe the change.
 
@@ -81,7 +81,7 @@ The Hexo documentation is open source and you can find the source code on [hexoj
 
 ## Reporting Issues
 
-When you encounter some problems when using Hexo, you can find the solutions in [Troubleshooting](troubleshooting.html) or ask me on [GitHub](https://github.com/hexojs/hexo/issues) or [Google Group](https://groups.google.com/group/hexo). If you can't find the answer, please report it on GitHub.
+When you encounter some problems when using Hexo, you can find the solutions in [Troubleshooting](docs/troubleshooting.html) or ask me on [GitHub](https://github.com/hexojs/hexo/issues) or [Google Group](https://groups.google.com/group/hexo). If you can't find the answer, please report it on GitHub.
 
 1. Represent the problem in [debug mode](commands.html#Debug_mode).
 2. Run `hexo version` and check the version info.    

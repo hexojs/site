@@ -19,14 +19,14 @@ title: 配置
 --- | --- | ---
 `url` | 網站的網址 |
 `root` | 網站的根目錄 |
-`permalink` | 文章 [永久連結](permalinks.html) 的格式 | :year/:month/:day/:title/
+`permalink` | 文章 [永久連結](docs/permalinks.html) 的格式 | :year/:month/:day/:title/
 `permalink_default` | 永久連結中各區段的預設值 |
 
 {% note info 網站存放在子目錄 %}
 如果您的網站存放在子目錄中，例如 `http://yoursite.com/blog`，則請將您的 `url` 設為 `http://yoursite.com/blog` 並把 `root` 設為 `/blog/`。
 {% endnote %}
 
-### 目錄 
+### 目錄
 
 設定 | 描述 | 預設值
 --- | --- | ---
@@ -50,7 +50,7 @@ title: 配置
 `external_link` | 在新頁籤中開啟連結 | true
 `filename_case` | 把檔案名稱轉換為 (1) 小寫或 (2) 大寫 | 0
 `render_drafts` | 顯示草稿 | false
-`post_asset_folder` | 啟動 [Asset 資料夾](asset-folders.html) | false
+`post_asset_folder` | 啟動 [Asset 資料夾](docs/asset-folders.html) | false
 `relative_link` | 把連結改為與根目錄的相對位址 | false
 `future` | 顯示未來的文章 | true
 `highlight` | 程式碼區塊的設定 |

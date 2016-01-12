@@ -17,7 +17,7 @@ title: 主題
 
 ### languages
 
-語言資料夾。請參見 [本地化 (i18n)](localization.html)。
+語言資料夾。請參見 [本地化 (i18n)](docs/localization.html)。
 
 ### layout
 
@@ -28,11 +28,11 @@ EJS: layout.ejs
 Swig: layout.swig
 ```
 
-您可參考 [模板](templates.html) 以獲得更多資訊。
+您可參考 [模板](docs/templates.html) 以獲得更多資訊。
 
 ### scripts
 
-腳本資料夾。在啟動時，Hexo 會載入此資料夾內的 JavaScript 檔案，請參見 [外掛](plugins.html) 以獲得更多資訊。
+腳本資料夾。在啟動時，Hexo 會載入此資料夾內的 JavaScript 檔案，請參見 [外掛](docs/plugins.html) 以獲得更多資訊。
 
 ### source
 
