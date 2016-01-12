@@ -543,9 +543,9 @@
     - niconico
     - video
     - image
-- name: hexo-easy-edit
-  description: Open posts from the command line in your terminal or GUI editor using `hexo edit`
-  link: https://github.com/greg-js/hexo-easy-edit
+- name: hexo-cli-extras
+  description: Unofficial CLI plugin for convenient editing, renaming, deleting, isolating and integrating posts and pages from the command line.
+  link: https://github.com/greg-js/hexo-cli-extras
   tags:
     - console
     - cli
