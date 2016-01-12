@@ -211,3 +211,13 @@
     - elegant
     - simple
     - background_image
+- name: Corporate
+  description: A professional hexo theme based on the Corporate Frontend framework.
+  link: https://github.com/ptsteadman/hexo-theme-corporate
+  preview: http://hexotest.computerlab.io
+  tags:
+    - responsive
+    - two_column
+    - light
+    - bootstrap
+    - metronic
