@@ -270,3 +270,13 @@
     - flexbox
     - simple
     - responsive
+- name: Corporate
+  description: A professional Hexo theme based on the Corporate Frontend framework.
+  link: https://github.com/ptsteadman/hexo-theme-corporate
+  preview: http://hexotest.computerlab.io
+  tags:
+    - responsive
+    - two_column
+    - light
+    - bootstrap
+    - metronic
