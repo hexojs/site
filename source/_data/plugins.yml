@@ -47,6 +47,13 @@
     - tag
     - ruby-character
     - pinyin
+- name: hexo-filter-indicate-the-source
+  description: Insert informations that can indicate the source of blog posts.
+  link: https://github.com/JamesPan/hexo-filter-indicate-the-source
+  tags:
+    - filter
+    - indicate-the-source
+    - anti-crawl
 - name: hexo-server
   description: Server module for Hexo.
   link: https://github.com/hexojs/hexo-server
