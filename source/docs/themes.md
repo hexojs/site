@@ -47,15 +47,15 @@ When you have finished building your theme, you can publish it to the [theme lis
 1. Fork [hexojs/site]
 2. Clone the repository to your computer and install dependencies.
 
-    {% code %}
+    ```shell
     $ git clone https://github.com/<username>/site.git
     $ cd site
     $ npm install
-    {% endcode %}
+    ```
 
 3. Edit `source/_data/themes.yml` and add your theme. For example:
 
-    {% code %}
+    ```yaml
     - name: landscape
       description: A brand new default theme for Hexo.
       link: https://github.com/hexojs/hexo-theme-landscape
@@ -66,7 +66,7 @@ When you have finished building your theme, you can publish it to the [theme lis
         - widget
         - two_column
         - one_column
-    {% endcode %}
+    ```
 
 4. Add a screenshot (with the same name as the theme) to `source/themes/screenshots`. It must be a 800*500px PNG.
 5. Push the branch.
