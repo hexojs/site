@@ -24,7 +24,7 @@ $ npm install
 
 ### _config.yml
 
-网站的 [配置](configuration.html) 信息，您可以在此配置大部分的参数。
+网站的 [配置](zh-cn/docs/configuration.html) 信息，您可以在此配置大部分的参数。
 
 ### package.json
 
@@ -54,7 +54,7 @@ $ npm install
 
 ### scaffolds
 
-[模版](writing.html) 文件夹。当您新建文章时，Hexo 会根据 scaffold 来建立文件。
+[模版](zh-cn/docs/writing.html) 文件夹。当您新建文章时，Hexo 会根据 scaffold 来建立文件。
 
 ### source
 
@@ -62,4 +62,4 @@ $ npm install
 
 ### themes
 
-[主题](themes.html) 文件夹。Hexo 会根据主题来生成静态页面。
+[主题](zh-cn/docs/themes.html) 文件夹。Hexo 会根据主题来生成静态页面。
