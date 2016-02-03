@@ -131,7 +131,7 @@
 - name: Tranquilpeak
   description: 'A gorgeous responsive theme for Hexo blog framework'
   link: https://github.com/LouisBarranqueiro/tranquilpeak-hexo-theme
-  preview: http://louisbarranqueiro.github.io/tranquilpeak-hexo-theme
+  preview: http://louisbarranqueiro.github.io/hexo-theme-tranquilpeak
   tags:
     - responsive
     - gorgeous
