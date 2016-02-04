@@ -287,3 +287,13 @@
   tags:
     - medium
     - material
+- name: LandFarZ
+  description: A blue-colored theme based on theme Light.
+  link: https://github.com/wizardforcel/hexo-theme-landfarz
+  preview: http://it-ebooks.flygon.net/
+  tags:
+    - responsive
+    - two_column
+    - chinese
+    - simple
+    - dark
