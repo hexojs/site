@@ -81,9 +81,9 @@ Hexo 文件開放原始碼，您可以在 [hexojs/site] 找到原始碼。
 
 ## 回報問題
 
-當您在使用 Hexo 時遭遇問題，您可試著在 [解決問題](docs/troubleshooting.html) 中尋找解答，或是在 [GitHub](https://github.com/hexojs/hexo/issues) 或 [Google Group](https://groups.google.com/group/hexo) 詢問。詢問時請務必附上以下資訊：
+當您在使用 Hexo 時遭遇問題，您可試著在 [解決問題](troubleshooting.html) 中尋找解答，或是在 [GitHub](https://github.com/hexojs/hexo/issues) 或 [Google Group](https://groups.google.com/group/hexo) 詢問。詢問時請務必附上以下資訊：
 
-1. 以 [除錯模式](docs/commands.html#除錯模式) 再執行一次。
+1. 以 [除錯模式](commands.html#除錯模式) 再執行一次。
 2. 執行 `hexo vesion` 並檢查版本資訊。
 3. 把除錯資訊和版本資訊都貼到 GitHub。
 

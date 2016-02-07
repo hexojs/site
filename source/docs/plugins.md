@@ -39,7 +39,7 @@ You can make use of the official tools provided by Hexo to accelerate developmen
 
 ### Publishing
 
-When your plugin is ready, you may consider publishing it to the [plugin list](/plugins) to invite other people to start using it. Publishing your own plugins is very similar to [updating documentation](docs/contributing.html#Updating_Documentation).
+When your plugin is ready, you may consider publishing it to the [plugin list](/plugins) to invite other people to start using it. Publishing your own plugins is very similar to [updating documentation](contributing.html#Updating_Documentation).
 
 1. Fork [hexojs/site]
 2. Clone the repository to your computer and install dependencies.

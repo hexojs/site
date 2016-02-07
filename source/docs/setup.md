@@ -23,7 +23,7 @@ Once initialised, here's what your project folder will look like:
 
 ### _config.yml
 
-Site [configuration](docs/configuration.html) file. You can configure most settings here.
+Site [configuration](configuration.html) file. You can configure most settings here.
 
 ### package.json
 
@@ -53,7 +53,7 @@ Application data. The [EJS](http://embeddedjs.com/), [Stylus](http://learnboost.
 
 ### scaffolds
 
-[Scaffold](docs/writing.html#Scaffolds) folder. When you create a new post, Hexo bases the new file on the scaffold.
+[Scaffold](writing.html#Scaffolds) folder. When you create a new post, Hexo bases the new file on the scaffold.
 
 ### source
 
@@ -61,4 +61,4 @@ Source folder. This is where you put your site's content. Hexo ignores hidden fi
 
 ### themes
 
-[Theme](docs/themes.html) folder. Hexo generates a static website by combining the site contents with the theme.
+[Theme](themes.html) folder. Hexo generates a static website by combining the site contents with the theme.

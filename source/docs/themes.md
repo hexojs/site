@@ -17,7 +17,7 @@ Theme configuration file. Modifying this doesn't require a server restart.
 
 ### languages
 
-Language folder. See [internationalization (i18n)](docs/internationalization.html) for more info.
+Language folder. See [internationalization (i18n)](internationalization.html) for more info.
 
 ### layout
 
@@ -32,7 +32,7 @@ See [templates](templates.html) for more info.
 
 ### scripts
 
-Script folder. Hexo will automatically load all JavaScript files in this folder during initialization. For more info, see [plugins](docs/plugins.html).
+Script folder. Hexo will automatically load all JavaScript files in this folder during initialization. For more info, see [plugins](plugins.html).
 
 ### source
 

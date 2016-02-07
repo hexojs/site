@@ -14,7 +14,7 @@ Initializes a website. If no `folder` is provided, Hexo will set up the website 
 $ hexo new [layout] <title>
 ```
 
-Creates a new article. If no `layout` is provided, Hexo will use the `default_layout` from [_config.yml](docs/configuration.html). If the `title` contains spaces, surround it with quotation marks.
+Creates a new article. If no `layout` is provided, Hexo will use the `default_layout` from [_config.yml](configuration.html). If the `title` contains spaces, surround it with quotation marks.
 
 ## generate
 
@@ -81,7 +81,7 @@ Option | Description
 $ hexo migrate <type>
 ```
 
-[Migrates](docs/migration.html) content from other blog systems.
+[Migrates](migration.html) content from other blog systems.
 
 ## clean
 
