@@ -635,3 +635,11 @@
     - generator
     - google
     - location
+- name: hexo-tag-youku
+  description: "A hexo tag for inserting youku video in your blog."
+  link: https://github.com/zhoulvjun/hexo-tag-youku
+  tags:
+    - hexo-tag-youku
+    - tag
+    - youku
+    - video
