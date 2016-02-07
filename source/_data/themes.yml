@@ -297,3 +297,11 @@
     - chinese
     - simple
     - dark
+- name: jane
+  description: A very simple theme for Hexo.
+  link: https://github.com/Alex-fun/hexo-theme-jane
+  preview: http://hejx.me
+  tags:
+    - chinese
+    - simple
+    - concise
