@@ -635,3 +635,12 @@
     - generator
     - google
     - location
+- name: hexo-tag-aplayer
+  description: "Embed aplayer in Hexo posts/pages."
+  link: https://github.com/grzhan/hexo-tag-aplayer
+  tags:
+    - hexo-tag-aplayer
+    - tag
+    - player
+    - aplayer
+    - music
