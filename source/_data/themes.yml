@@ -305,3 +305,10 @@
     - chinese
     - simple
     - concise
+- name: Weightless
+  description: A lightweight theme with minimal fuss
+  link: https://jerry.im/essays/2016/02/hexo-theme-weightless/
+  preview: https://jerry.im/essays/
+  tags:
+    - responsive
+    - light
