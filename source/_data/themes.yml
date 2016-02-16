@@ -111,6 +111,7 @@
     - elegant
     - tag_plugins
     - bootstrap
+    - color_themes
 - name: Simplest
   description: Very simple, written with swig & scss.
   link: https://github.com/dnxbf321/hexo-theme-simplest
