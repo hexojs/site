@@ -32,6 +32,12 @@ Though Node.js has non-blocking I/O, the maximum number of synchronous I/O is st
 $ ulimit -n 10000
 ```
 
+## `process out of memory`
+
+Increase Node.js heap memory size by changing `hexo-cli`.
+
+[Out of memory while generating a huge blog · Issue #1735 · hexojs/hexo](https://github.com/hexojs/hexo/issues/1735)
+
 ## Git Deployment Problems
 
 ``` plain
