@@ -35,10 +35,12 @@ $ ulimit -n 10000
 ## Git Deployment Problems
 
 ``` plain
+error: RPC failed; result=22, HTTP code = 403
+
 fatal: 'username.github.io' does not appear to be a git repository
 ```
 
-Make sure you have [set up git](https://help.github.com/articles/set-up-git) on your computer or try to use HTTPS repository URL instead.
+Make sure you have [set up git](https://help.github.com/articles/set-up-git) on your computer properly or try to use HTTPS repository URL instead.
 
 ## Server Problems
 
