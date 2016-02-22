@@ -200,6 +200,12 @@
   tags:
     - deployer
     - s3
+- name: hexo-deployer-ansible
+  description: Ansible deployer plugin for Hexo.
+  link: https://github.com/zyuyou/hexo-deployer-ansible
+  tags:
+    - deployer
+    - ansible
 - name: hexo-generator-sitemap
   description: Sitemap generator for Hexo.
   link: https://github.com/hexojs/hexo-generator-sitemap
