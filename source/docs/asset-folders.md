@@ -27,6 +27,7 @@ The correct way to reference the image will thus be to use tag plugin syntax rat
 
 ```
 {% asset_img example.jpg This is an example image %}
+{% asset_img "spaced asset.jpg" "spaced title" %}
 ```
 
 This way, the image will appear both inside the post and on index and archive pages.
