@@ -323,3 +323,12 @@
     - chinese
     - wordpress
     - light
+- name: indigo
+  description: Material Design theme for Hexo.
+  link: https://github.com/yscoder/hexo-theme-indigo
+  preview: http://www.imys.net/
+  tags:
+    - responsive
+    - chinese
+    - material
+    - less
