@@ -632,6 +632,14 @@
     - SEO
     - nofollow
     - external
+- name: hexo-auto-canonical
+  description: A generator automatically make canonical link for hexo.
+  link: https://github.com/HyunSeob/hexo-auto-canonical
+  tags:
+    - hexo-auto-canonical
+    - helper
+    - canonical
+    - SEO
 - name: hexo-generator-postmap
   description: "Generates a page with an embedded Google map, showing the locations of all geo-tagged posts and pages."
   link: https://github.com/jamiei/hexo-generator-postmap
