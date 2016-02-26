@@ -332,3 +332,14 @@
     - chinese
     - material
     - less
+- name: Simple
+  description: Simple & Fresh, written with jade & less.
+  link: https://github.com/chuguixin/Simple
+  preview: https://jser.it
+  tags:
+    - simple
+    - fresh
+    - responsive
+    - jade
+    - less
+    - one_column
