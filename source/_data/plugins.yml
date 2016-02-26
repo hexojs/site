@@ -465,6 +465,13 @@
     - badge
     - github
     - version control
+- name: hexo-math
+  description: Add MathJax support
+  link: https://github.com/akfish/hexo-math
+  tags:
+    - tag
+    - math
+    - MathJax
 - name: hexo-tag-googlemaps
   description: A hexo tag for google maps. Does much more than a simple embedded iFrame
   link: https://github.com/the-simian/hexo-tag-googlemaps
