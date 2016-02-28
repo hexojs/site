@@ -37,7 +37,7 @@ Setting | Description | Default
 `category_dir` | Category directory | `categories`
 `code_dir` | Include code directory | `downloads/code`
 `i18n_dir` | i18n directory | `:lang`
-`skip_render` | Paths not to be rendered. You can use [glob expressions](https://github.com/isaacs/node-glob) for path matching |
+`skip_render` | Paths not to be rendered. You can use [glob expressions](https://github.com/isaacs/minimatch) for path matching |
 
 ### Writing
 
