@@ -84,6 +84,6 @@ More info: [changelog], [benchmark results].
 [#1036]: https://github.com/hexojs/hexo/issues/1036
 [hexo-renderer-ejs]: https://github.com/hexojs/hexo-renderer-ejs
 [hexo-renderer-jade]: https://github.com/hexojs/hexo-renderer-jade
-[hexo-renderer-swig]: https://github.com/hexojs/hexo-renderer-ejs
+[hexo-renderer-swig]: https://github.com/hexojs/hexo-renderer-swig
 [changelog]: https://github.com/hexojs/hexo/releases
 [benchmark results]: https://docs.google.com/spreadsheets/d/1nLW3fPCtrkfMolz8UnUiKq5lqys6bIcZqrfksuvQHA0/edit?usp=sharing
