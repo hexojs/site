@@ -343,3 +343,13 @@
     - jade
     - less
     - one_column
+- name: Primer
+  description: Github Style Theme for Hexo
+  link: https://github.com/yumemor/hexo-theme-primer
+  preview: http://yumemor.github.io
+  tags:
+    - simple
+    - github
+    - responsive
+    - two_column
+    - one_column
