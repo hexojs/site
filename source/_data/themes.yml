@@ -335,7 +335,7 @@
 - name: Simple
   description: Simple & Fresh, written with jade & less.
   link: https://github.com/chuguixin/Simple
-  preview: https://jser.it
+  preview: http://jser.it
   tags:
     - simple
     - fresh
