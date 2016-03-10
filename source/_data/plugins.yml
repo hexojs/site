@@ -681,3 +681,10 @@
     - tag
     - echarts
     - chart
+- name: hexo-tag-admonition
+  description: "Tag plugin for inserting admonition in your blogl"
+  link: https://github.com/haishanh/hexo-tag-admonition
+  tags:
+    - hexo-tag-admonition
+    - tag
+    - admonition
