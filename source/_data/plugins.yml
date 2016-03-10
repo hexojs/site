@@ -681,3 +681,13 @@
     - tag
     - echarts
     - chart
+- name: hexo-featured-image
+  description: "A plugin that adds support for featured images in posts and json-content."
+  link: https://github.com/poacher2k/hexo-featured-image
+  tags:
+    - hexo-featured-image
+    - featured
+    - image
+    - json
+    - json-content
+
