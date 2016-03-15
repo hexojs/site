@@ -244,7 +244,6 @@
     - two_column
     - tag_plugins
     - retro
-<<<<<<< HEAD
 - name: spfk
   description: A simple solemn theme for Hexo
   link: https://github.com/luuman/hexo-theme-spfk
@@ -375,7 +374,6 @@
     - bootstrap
     - debonaire
     - responsive
-=======
 - name: Raytaylorism
   description: A Material Design theme of Hexo with powerful features.
   link: https://github.com/raytaylorlin/hexo-theme-raytaylorism
@@ -386,4 +384,3 @@
     - simple
     - 中文
 
->>>>>>> 05305147e4ed4a2f54d3244d97639ffe3209201c
