@@ -383,4 +383,14 @@
     - responsive
     - simple
     - 中文
-
+- name: CleanBlog
+  description: Fully featured, bootstrap blog for Hexo.
+  link: https://github.com/klugjo/hexo-theme-clean-blog
+  preview: http://www.codeblocq.com/assets/projects/hexo-theme-clean-blog/
+  tags:
+    - simple
+    - MIT
+    - responsive
+    - one_column
+    - elegant
+    - standard
