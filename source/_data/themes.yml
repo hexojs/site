@@ -364,3 +364,13 @@
     - responsive
     - two_column
     - 中文
+- name: Free2mind
+  description: A new debonaire theme for Hexo.
+  link: https://github.com/rudy-yuan/free2mind
+  preview: http://www.rudy-yuan.net
+  tags:
+    - simple
+    - 中文
+    - bootstrap
+    - debonaire
+    - responsive
