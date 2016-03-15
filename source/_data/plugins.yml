@@ -690,4 +690,10 @@
     - image
     - json
     - json-content
-
+- name: hexo-tag-admonition
+  description: "Tag plugin for inserting admonition in your blog."
+  link: https://github.com/haishanh/hexo-tag-admonition
+  tags:
+    - hexo-tag-admonition
+    - tag
+    - admonition
