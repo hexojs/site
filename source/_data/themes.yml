@@ -394,3 +394,12 @@
     - one_column
     - elegant
     - standard
+- name: Hacker
+  description: A simple theme inspired by Wordpress theme Hacker
+  link: https://github.com/CodeDaraW/Hacker
+  preview: http://blog.daraw.cn/
+  tags:
+    - responsive
+    - chinese
+    - wordpress
+    - simple
