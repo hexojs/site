@@ -697,3 +697,10 @@
     - hexo-tag-admonition
     - tag
     - admonition
+- name: hexo-addlink
+  description: "An plugin for adding current post link in hexo post page."
+  link: https://github.com/acwong00/hexo-addlink
+  tags:
+    - hexo-addlink
+    - filter
+    - post
