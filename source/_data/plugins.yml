@@ -505,6 +505,16 @@
     - flickr
     - photo
     - image
+- name: hexo-tag-imgurgal
+  description: Embed imgur galleries/albums
+  link: https://github.com/DrummerHead/hexo-tag-imgurgal
+  tags:
+    - tag
+    - imgur
+    - photos
+    - image
+    - gallery
+    - album
 - name: hexo-tag-vine
   description: Embed your Vine videos in posts/pages.
   link: https://github.com/welksonramos/hexo-tag-vine
