@@ -714,3 +714,10 @@
     - hexo-addlink
     - filter
     - post
+- name: hexo-tag-cloud
+  description: "Yet, another tag cloud plugin for hexo."
+  link: https://github.com/MikeCoder/hexo-tag-cloud
+  tags:
+    - hexo-tag-cloud
+    - tag
+    - cloud
