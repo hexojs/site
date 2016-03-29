@@ -364,14 +364,25 @@
     - responsive
     - two_column
     - 中文
-  - name: CleanBlog
-    description: Fully featured, bootstrap blog for Hexo.
-    link: https://github.com/klugjo/hexo-theme-clean-blog
-    preview: http://www.codeblocq.com/assets/projects/hexo-theme-clean-blog/
-    tags:
-      - simple
-      - MIT
-      - responsive
-      - one_column
-      - elegant
-      - standard
+- name: CleanBlog
+  description: Fully featured, bootstrap blog for Hexo.
+  link: https://github.com/klugjo/hexo-theme-clean-blog
+  preview: http://www.codeblocq.com/assets/projects/hexo-theme-clean-blog/
+  tags:
+    - simple
+    - MIT
+    - responsive
+    - one_column
+    - elegant
+    - standard
+- name: Magnetic
+  description: Full featured, visual blog for Hexo.
+  link: https://github.com/klugjo/hexo-theme-magnetic
+  preview: http://www.codeblocq.com/assets/projects/hexo-theme-magnetic/
+  tags:
+    - portfolio
+    - visual
+    - responsive
+    - three_column
+    - elegant
+    - standard
