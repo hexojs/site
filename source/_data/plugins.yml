@@ -721,3 +721,11 @@
     - hexo-tag-cloud
     - tag
     - cloud
+- name: hexo-critical-css
+  description: "Add critical css to your HTML for faster rendering pages."
+  link: https://github.com/john-whitley/hexo-critical-css
+  tags:
+    - hexo-critical-css
+    - css
+    - critical
+    - filter
