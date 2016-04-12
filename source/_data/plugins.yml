@@ -505,6 +505,16 @@
     - flickr
     - photo
     - image
+- name: hexo-tag-imgurgal
+  description: Embed imgur galleries/albums
+  link: https://github.com/DrummerHead/hexo-tag-imgurgal
+  tags:
+    - tag
+    - imgur
+    - photos
+    - image
+    - gallery
+    - album
 - name: hexo-tag-vine
   description: Embed your Vine videos in posts/pages.
   link: https://github.com/welksonramos/hexo-tag-vine
@@ -690,4 +700,40 @@
     - image
     - json
     - json-content
-
+- name: hexo-tag-admonition
+  description: "Tag plugin for inserting admonition in your blog."
+  link: https://github.com/haishanh/hexo-tag-admonition
+  tags:
+    - hexo-tag-admonition
+    - tag
+    - admonition
+- name: hexo-addlink
+  description: "An plugin for adding current post link in hexo post page."
+  link: https://github.com/acwong00/hexo-addlink
+  tags:
+    - hexo-addlink
+    - filter
+    - post
+- name: hexo-tag-cloud
+  description: "Yet, another tag cloud plugin for hexo."
+  link: https://github.com/MikeCoder/hexo-tag-cloud
+  tags:
+    - hexo-tag-cloud
+    - tag
+    - cloud
+- name: hexo-critical-css
+  description: "Add critical css to your HTML for faster rendering pages."
+  link: https://github.com/john-whitley/hexo-critical-css
+  tags:
+    - hexo-critical-css
+    - css
+    - critical
+    - filter
+- name: hexo-github-card
+  description: "Display a card for GitHub profile and repo in your hexo blog post."
+  link: https://github.com/Gisonrg/hexo-github-card
+  tags:
+    - tag
+    - github
+    - card
+    - profile

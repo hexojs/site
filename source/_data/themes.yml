@@ -364,6 +364,27 @@
     - responsive
     - two_column
     - 中文
+<<<<<<< HEAD
+=======
+- name: Free2mind
+  description: A new debonaire theme for Hexo.
+  link: https://github.com/rudy-yuan/free2mind
+  preview: http://www.rudy-yuan.net
+  tags:
+    - simple
+    - 中文
+    - bootstrap
+    - debonaire
+    - responsive
+- name: Raytaylorism
+  description: A Material Design theme of Hexo with powerful features.
+  link: https://github.com/raytaylorlin/hexo-theme-raytaylorism
+  preview: http://raytaylorlin.com/
+  tags:
+    - material
+    - responsive
+    - simple
+    - 中文
 - name: CleanBlog
   description: Fully featured, bootstrap blog for Hexo.
   link: https://github.com/klugjo/hexo-theme-clean-blog
@@ -397,3 +418,12 @@
     - three_column
     - elegant
     - standard
+- name: Hacker
+  description: A simple theme inspired by Wordpress theme Hacker
+  link: https://github.com/CodeDaraW/Hacker
+  preview: http://blog.daraw.cn/
+  tags:
+    - responsive
+    - chinese
+    - wordpress
+    - simple
