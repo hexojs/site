@@ -414,3 +414,12 @@
     - simple
     - less
     - ejs
+- name: even
+  description: A simple theme for Hexo blog framework
+  link: https://github.com/ahonn/hexo-theme-even
+  preview: http://www.ahonn.me/
+  tags:
+    - responsive
+    - simple
+    - less
+    - jade
