@@ -425,3 +425,23 @@
     - three_column
     - elegant
     - standard
+- name: MyFairLady
+  description: Girls pink heart hexo theme
+  link: https://github.com/yzzting/hexo-theme-MyFairLady
+  preview: http://www.yzz1995.cn/
+  tags:
+    - responsive
+    - chinese
+    - Grils pink
+    - simple
+    - less
+    - ejs
+- name: even
+  description: A simple theme for Hexo blog framework
+  link: https://github.com/ahonn/hexo-theme-even
+  preview: http://www.ahonn.me/
+  tags:
+    - responsive
+    - simple
+    - less
+    - jade
