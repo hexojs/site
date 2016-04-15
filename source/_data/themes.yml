@@ -403,6 +403,28 @@
     - chinese
     - wordpress
     - simple
+- name: Magnetic
+  description: Full featured, visual blog for Hexo.
+  link: https://github.com/klugjo/hexo-theme-magnetic
+  preview: http://www.codeblocq.com/assets/projects/hexo-theme-magnetic/
+  tags:
+    - portfolio
+    - visual
+    - responsive
+    - three_column
+    - elegant
+    - standard
+- name: Phantom
+  description: Full featured, visual blog for Hexo.
+  link: https://github.com/klugjo/hexo-theme-phantom
+  preview: http://www.codeblocq.com/assets/projects/hexo-theme-phantom/
+  tags:
+    - portfolio
+    - visual
+    - responsive
+    - three_column
+    - elegant
+    - standard
 - name: MyFairLady
   description: Girls pink heart hexo theme
   link: https://github.com/yzzting/hexo-theme-MyFairLady
