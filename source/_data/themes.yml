@@ -445,3 +445,14 @@
     - simple
     - less
     - jade
+- name: Pln
+  description: A plain theme for Hexo.
+  link: https://github.com/gaoryrt/hexo-theme-pln
+  preview: http://gaoryrt.com/
+  tags:
+    - responsive
+    - elegant
+    - white
+    - simple
+    - chinese
+    - one_column
