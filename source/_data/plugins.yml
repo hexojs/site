@@ -737,3 +737,12 @@
     - github
     - card
     - profile
+- name: hexo-autolinker
+  description: "Automatically create HTML links from URLs, emails, Twitter handles and more."
+  link: https://github.com/klugjo/hexo-autolinker
+  tags:
+    - hexo-autolinker
+    - hyperlink
+    - link
+    - email
+    - URL
