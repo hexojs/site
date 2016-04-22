@@ -200,6 +200,13 @@
   tags:
     - deployer
     - s3
+- name: hexo-deployer-s3-cloudfront
+  description: Amazon S3 and Cloudfront deployer plugin for Hexo.
+  link: https://github.com/Wouter33/hexo-deployer-s3-cloudfront
+  tags:
+    - deployer
+    - s3
+    - cloudfront
 - name: hexo-deployer-ansible
   description: Ansible deployer plugin for Hexo.
   link: https://github.com/zyuyou/hexo-deployer-ansible
