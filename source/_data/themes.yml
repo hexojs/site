@@ -467,3 +467,15 @@
     - elegant
     - standard
     - SEO
+- name: gstyle
+  description: a hexo theme with google style
+  link: https://github.com/wayou/hexo-theme-gstyle
+  preview: http://wayou.github.io/hexo-theme-gstyle/public/
+  tags:
+    - google
+    - responsive
+    - widget
+    - two_column
+    - one_column
+    - toc
+    - material

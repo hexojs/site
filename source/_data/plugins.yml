@@ -786,3 +786,18 @@
     - photos
     - gallery
     - tag
+- name: hexo-filter-pathfix
+  description: using absolute path for assets
+  link: https://github.com/wayou/hexo-filter-pathfix
+  tags:
+    - assets
+    - filter
+    - path
+    - tag
+- name: hexo-image-caption
+  description: add caption for images within posts
+  link: https://github.com/wayou/hexo-image-caption
+  tags:
+    - posts
+    - image
+    - caption
