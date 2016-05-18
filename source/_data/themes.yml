@@ -479,3 +479,14 @@
     - one_column
     - toc
     - material
+- name: Random
+  description: A hexo theme with random fullscreen background image.
+  link: https://github.com/stiekel/hexo-theme-random
+  preview: http://hexo-theme-random.herokuapp.com/
+  tags:
+    - responsive
+    - one_column
+    - background_image
+    - random
+    - iconfont
+    - modal
