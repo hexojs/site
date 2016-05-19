@@ -84,6 +84,12 @@
     - less
     - style
     - css
+- name: hexo-generator-amp
+  description: AMP (acccelerated mobile pages) page generator plugin for Hexo.
+  link: https://github.com/tea3/hexo-generator-amp
+  tags:
+    - generator
+    - amp
 - name: hexo-generator-archive
   description: Archive generator plugin for Hexo.
   link: https://github.com/hexojs/hexo-generator-archive
