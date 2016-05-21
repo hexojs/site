@@ -84,6 +84,13 @@
     - less
     - style
     - css
+- name: hexo-renderer-webpack
+  description: Webpack renderer for Hexo.
+  link: https://github.com/briangonzalez/hexo-renderer-webpack
+  tags:
+    - renderer
+    - js
+    - webpack
 - name: hexo-generator-amp
   description: AMP (acccelerated mobile pages) page generator plugin for Hexo.
   link: https://github.com/tea3/hexo-generator-amp
