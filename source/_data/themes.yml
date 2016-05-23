@@ -414,6 +414,15 @@
     - three_column
     - elegant
     - standard
+- name: Paperbox
+  description: A responsive paper-like theme for hexo blog.
+  link: https://github.com/sun11/hexo-theme-paperbox
+  preview: http://sun11.me/
+  tags:
+    - responsive
+    - widget
+    - two_column
+    - one_column
 - name: Phantom
   description: Full featured, visual blog for Hexo.
   link: https://github.com/klugjo/hexo-theme-phantom
