@@ -702,6 +702,15 @@
     - player
     - aplayer
     - music
+- name: hexo-tag-dplayer
+  description: "Embed dplayer in Hexo posts/pages."
+  link: https://github.com/NextMoe/hexo-tag-dplayer
+  tags:
+    - hexo-tag-dplayer
+    - tag
+    - player
+    - dplayer
+    - video
 - name: hexo-tag-youku
   description: "A hexo tag for inserting youku video in your blog."
   link: https://github.com/zhoulvjun/hexo-tag-youku
