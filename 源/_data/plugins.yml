@@ -699,7 +699,7 @@
   description: "Embed dplayer in Hexo posts/pages."
   link: https://github.com/NextMoe/hexo-tag-dplayer
   tags:
-    - hexo-tag-aplayer
+    - hexo-tag-dplayer
     - tag
     - player
     - dplayer
