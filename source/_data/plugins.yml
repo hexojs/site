@@ -836,3 +836,9 @@
   tags:
     - post
     - uuid
+- name: hexo-excerpt
+  description: automatic excerpt generator
+  link: https://github.com/chekun/hexo-excerpt
+  tags:
+    - post
+    - excerpt
