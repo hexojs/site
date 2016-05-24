@@ -736,6 +736,13 @@
     - image
     - json
     - json-content
+- name: hexo-url-image
+  description: "adding url_image in front-matter, then refer post.url_image in your templates;"
+  link: https://github.com/roybein/hexo-url-image
+  tags:
+    - hexo-url-image
+    - url
+    - image
 - name: hexo-tag-admonition
   description: "Tag plugin for inserting admonition in your blog."
   link: https://github.com/haishanh/hexo-tag-admonition
