@@ -849,3 +849,20 @@
   tags:
     - post
     - excerpt
+name: hexo-hrefmd
+  description: "set hexo can modfiy .md to html in links. |md链接支持"
+  link: https://github.com/rozbo/hexo-hrefmd
+  tags:
+    - href
+    - md
+    - 中文支持
+name: hexo-neat
+  description: "auto Minify html、js、css and make it neat"
+  link: https://github.com/rozbo/hexo-neat
+  tags:
+    - minify
+    - all in on
+    - 中文支持
+    - html
+    - js
+    - css
