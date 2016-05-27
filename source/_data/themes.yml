@@ -499,3 +499,16 @@
     - random
     - iconfont
     - modal
+- name: Anisina
+  description: A support qiniu image cdn , simple responsive theme for hexo
+  link: https://github.com/ehazon/ehazon.github.io/
+  preview: http://ehazon.github.io/
+  tags:
+    - qiniu_cdn
+    - wechat_title_img_custom
+    - responsive
+    - toc
+    - SEO
+    - fixed_nav
+    - 中文
+    - anisina
