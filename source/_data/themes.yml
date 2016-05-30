@@ -512,3 +512,12 @@
     - fixed_nav
     - 中文
     - anisina
+- name: Typescript
+  description: A mininal theme for Hexo.
+  link: https://github.com/artchen/hexo-theme-typescript
+  preview: http://otakism.org
+  tags:
+    - responsive
+    - one_column
+    - 中文
+    - typescript
