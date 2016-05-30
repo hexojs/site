@@ -521,3 +521,15 @@
     - one_column
     - 中文
     - typescript
+- name: Nova
+  description: A theme using swig template aimed to build github project site conveniently.
+  link: https://github.com/Jamling/hexo-theme-nova
+  preview: http://ieclipse.cn
+  tags:
+    - bootstrap
+    - responsive
+    - widget
+    - two_column
+    - three_column
+    - project layout
+    - multi-languages
