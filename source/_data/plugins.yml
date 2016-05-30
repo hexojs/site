@@ -866,3 +866,18 @@
     - html
     - js
     - css
+- name: hexo-generator-github
+  description: "Github generator for Hexo"
+  link: https://github.com/Jamling/hexo-generator-github
+  tags:
+    - github
+    - generator
+    - helper
+- name: hexo-generator-118n
+  description: "Multi-languages pages generator for Hexo"
+  link: https://github.com/Jamling/hexo-generator-i18n
+  tags:
+    - i18n
+    - generator
+    - helper
+
