@@ -501,8 +501,8 @@
     - modal
 - name: Anisina
   description: A support qiniu image cdn , simple responsive theme for hexo
-  link: https://github.com/ehazon/hexo-theme-Anisina
-  preview: http://ehazon.github.io/
+  link: https://github.com/haojen/hexo-theme-Anisina
+  preview: http://haojen.github.io/
   tags:
     - qiniu_cdn
     - wechat_title_img_custom
