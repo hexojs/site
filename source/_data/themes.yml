@@ -533,3 +533,12 @@
     - three_column
     - project layout
     - multi-languages
+- name: yujuan
+  description: A simple solemn theme for Hexo
+  link: https://github.com/smile-leaf-language/hexo-theme-yujuan
+  preview: http://smile-leaf-language.github.io/
+  tags:
+    - black
+    - responsive
+    - two_column
+    - personality
