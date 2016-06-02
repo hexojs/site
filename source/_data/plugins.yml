@@ -873,7 +873,7 @@
     - github
     - generator
     - helper
-- name: hexo-generator-118n
+- name: hexo-generator-i18n
   description: "Multi-languages pages generator for Hexo"
   link: https://github.com/Jamling/hexo-generator-i18n
   tags:
