@@ -887,4 +887,12 @@
     - encrypt
     - permission
     - private
-
+- name: hexo-tag-leaflet
+  description: Add a new tag to integrate leaflet based online maps.
+  link: https://github.com/ender74/hexo-tag-leaflet
+  tags:
+    - tag
+    - map
+    - leaflet
+    - osm
+    - tracks
