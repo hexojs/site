@@ -592,6 +592,17 @@
     - data
     - search
     - api
+- name: hexo-generator-json-feed
+  description: Generate a JSON file similar to RSS feed channel structure with posts contents for generic use or consumption.
+  link: https://github.com/alexbruno/hexo-generator-json-feed
+  tags:
+    - generator
+    - content
+    - json
+    - feed
+    - rss
+    - search
+    - api
 - name: hexo-tag-niconico
   description: Embed NicoNico seiga/douga in Hexo posts/pages.
   link: https://github.com/kamiya555/hexo-tag-niconico
