@@ -10,7 +10,7 @@ hexo.extend.generator.register(name, function(locals){
 });
 ```
 
-在函數中會傳入一個 `locals` 參數，等同於 [網站變數](variables.html#網站變數)，請盡量利用此參數取得網站資料，避免直接存取資料庫。
+在函數中會傳入一個 `locals` 參數，等同於 [網站變數](../docs/variables.html#網站變數)，請盡量利用此參數取得網站資料，避免直接存取資料庫。
 
 ## 更新路由
 
