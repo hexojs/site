@@ -8,7 +8,7 @@ Variable | Description
 `page` | Page specific information and custom variables set in front-matter.
 `config` | Site configuration
 `theme` | Theme configuration. Inherits from site configuration.
-`_` (single underscore) | [Lodash](https://lodash.com/){:target="_blank"} library
+`_` (single underscore) | [Lodash](https://lodash.com/  "Lodash" target="_blank") library
 `path` | Path of current page
 `url` | Full URL of current page
 `env` | Environment variables
