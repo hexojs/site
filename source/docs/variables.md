@@ -89,5 +89,4 @@ Variable | Description
 --- | ---
 `page.tag` | Tag name
 
-[Lodash]: (http://lodash.com/)
 [Moment.js]: http://momentjs.com/
