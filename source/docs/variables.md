@@ -59,7 +59,7 @@ Variable | Description
 Variable | Description
 --- | ---
 `page.per_page` | Posts displayed per page
-`page.total` | Total number of posts
+`page.total` | Total number of pages
 `page.current` | Current page number
 `page.current_url` | The URL of current page
 `page.posts` | Posts in this page ([Data Model])
