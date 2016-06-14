@@ -1,6 +1,6 @@
 title: Решение проблем
 ---
-В случае, если вы столкнулись с проблемами при использовании Hexo, существует эта страница со списком ответов на часто возникающие вопросы. Если эта страница не помогла, попробуйте поискать решение на [GitHub](https://github.com/hexojs/hexo/issues) или в нашей группе [Google Group](https://groups.google.com/group/hexo).
+Если вы столкнулись с проблемами при использовании Hexo, на этот случай существует эта страница со списком ответов на часто возникающие вопросы. Если она не помогла, попробуйте поискать решение на [GitHub](https://github.com/hexojs/hexo/issues) или в нашей группе [Google Group](https://groups.google.com/group/hexo).
 
 ## Ошибка обработки YAML
 
@@ -46,7 +46,7 @@ FATAL ERROR: CALL_AND_RETRY_LAST Allocation failed - process out of memory
 
 [Заканчивается память при создании большого блога · Issue #1735 · hexojs/hexo (eng)](https://github.com/hexojs/hexo/issues/1735)
 
-## Проблемы с Git деплоем
+## Проблемы с публикацией в Git
 
 ``` plain
 error: RPC failed; result=22, HTTP code = 403
@@ -54,7 +54,7 @@ error: RPC failed; result=22, HTTP code = 403
 fatal: 'username.github.io' does not appear to be a git repository
 ```
 
-Убедитесь, что вы настроили [set up git](https://help.github.com/articles/set-up-git/#setting-up-git) на своём компьютере или попробовать использовать вместо репозитория URL-адрес https.
+Убедитесь, что вы настроили [git](https://help.github.com/articles/set-up-git/#setting-up-git) на своём компьютере. Или, можно попробовать, использовать вместо репозитория URL-адрес https.
 
 ## Проблемы с сервером
 
@@ -93,7 +93,7 @@ $ npm install hexo --no-optional
 
 ## Iterate Data Model on Jade or Swig
 
-Hexo использует склад [Warehouse] для своей модели данных. Это не массив, так что можно использовать, для преобразовать объектов в итераторы.
+Hexo использует склад [Warehouse] для своей модели данных. Это не массив, так что его можно использовать, для преобразования списка объектов в итераторы.
 
 ```
 {% for post in site.posts.toArray() %}
@@ -110,7 +110,7 @@ $ hexo clean
 
 ## Содержимое не найдено
 
-Hexo использует [Nunjucks] для отображения сообщения ([Swig] использовался в предыдущей версии, который использует похожий синтаксис). Содержимое обернутое в `{% raw %}{{ }}{% endraw %}` или `{% raw %}{% %}{% endraw %}` поможет вам разобраться и может вызвать проблемы. Можно переносить конфиденциальные данные с `raw` плагином.
+Hexo использует [Nunjucks] для отображения сообщения ([Swig] использовался в предыдущей версии, он использует похожий синтаксис). Содержимое, обёрнутое, в `{% raw %}{{ }}{% endraw %}` или `{% raw %}{% %}{% endraw %}` поможет вам разобраться какая часть вызвала проблемы. Можно переносить конфиденциальные данные с `raw` плагином.
 
 ``` plain
 {% raw %}
@@ -132,7 +132,7 @@ Error: watch ENOSPC ...
 $ echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
 ```
 
-Это позволит увеличить лимит количества файлов, которые можно просматривать.
+Это позволит увеличить лимит количества файлов, которые можно просматривать одновременно.
 
 [Warehouse]: https://github.com/tommy351/warehouse
 [Swig]: http://paularmstrong.github.io/swig/
