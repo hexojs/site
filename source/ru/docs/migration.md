@@ -27,7 +27,7 @@ new_post_name: :year-:month-:day-:title.md
 
 ## Octopress
 
-ереместите все файлы из папки Octopress `source/_posts` в папку `source/_posts`.
+Переместите все файлы из папки Octopress `source/_posts` в папку `source/_posts`.
 
 Измените переменную `new_post_name` в `_config.yml`:
 
@@ -43,7 +43,7 @@ new_post_name: :year-:month-:day-:title.md
 $ npm install hexo-migrator-wordpress --save
 ```
 
-Экспортируйте WordPress сайт, зайдя в “Инструменты” → “Экспорт” → “Вордпресс” в панели WordPress (см. страницу [поддержки WordPress](http://en.support.wordpress.com/export/) для более подробной информации.
+Экспортируйте WordPress сайт, зайдя в “Инструменты” → “Экспорт” → “Wordplress” в панели WordPress (см. страницу [поддержки WordPress](http://en.support.wordpress.com/export/) для более подробной информации.
 
 Выполните:
 
