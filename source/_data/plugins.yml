@@ -907,3 +907,9 @@
     - leaflet
     - osm
     - tracks
+- name: hexo-tag-asciinema
+  description: Embed asciinema into your post
+  link: https://github.com/zenyai/hexo-tag-asciinema
+  tags:
+    - tag
+    - asciinema
