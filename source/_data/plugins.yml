@@ -913,3 +913,10 @@
   tags:
     - tag
     - asciinema
+- name: hexo-tag-kbd
+  description: Displays the keycaps in your post/page.
+  link: https://github.com/kamiya555/hexo-tag-kbd
+  tags:
+    - tag
+    - keycaps
+
