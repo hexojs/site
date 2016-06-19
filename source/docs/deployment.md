@@ -44,7 +44,7 @@ deploy:
 Option | Description
 --- | ---
 `repo` | GitHub repository URL
-`branch` | Branch name. The deployer will automatically detect the branch automatically if you are using GitHub or GitCafe.
+`branch` | Branch name. The deployer will detect the branch automatically if you are using GitHub or GitCafe.
 `message` | Customize commit message (Default to `Site updated: {% raw %}{{ now('YYYY-MM-DD HH:mm:ss') }}{% endraw %}`)
 
 ## Heroku
