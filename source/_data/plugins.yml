@@ -919,4 +919,10 @@
   tags:
     - tag
     - keycaps
-
+- name: hexo-generator-index-i18n
+  description: I18n index generator plugin for Hexo.
+  link: https://github.com/xcatliu/hexo-generator-index-i18n
+  tags:
+    - generator
+    - index
+    - i18n
