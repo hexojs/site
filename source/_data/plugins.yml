@@ -940,3 +940,11 @@
     - generator
     - archive
     - alphabet
+- name: hexo-generator-archive-alphabet-i18n
+  description: Generate i18n alphabetical archive for Hexo.
+  link: https://github.com/xcatliu/hexo-generator-archive-alphabet-i18n
+  tags:
+    - generator
+    - archive
+    - alphabet
+    - i18n
