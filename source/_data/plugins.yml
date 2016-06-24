@@ -948,3 +948,11 @@
     - archive
     - alphabet
     - i18n
+- name: hexo-tag-video_cn
+  description: A hexo plugin for inserting youku or tencent video in your site.
+  link: https://github.com/HmyBmny/hexo-tag-video_cn
+  tags:
+    - tag
+    - video
+    - youku 
+    - tencent video
