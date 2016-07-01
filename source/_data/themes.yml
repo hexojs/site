@@ -577,3 +577,13 @@
     - image
     - medium
     - lazyload
+
+- name: beautiful-hexo
+  description: A simple responsive beautiful theme.
+  link: https://github.com/twoyao/beautiful-hexo
+  preview: http://twoyao.cn/beautiful-hexo/
+  tags:
+    - responsive
+    - beautiful
+    - simple
+    - white
