@@ -956,3 +956,17 @@
     - video
     - youku 
     - tencent video
+- name: hexo-filter-date-from-git
+  description: Read git log and overwrite the front-matter properties `date` and `updated` for each posts.
+  link: https://github.com/xcatliu/hexo-filter-date-from-git
+  tags:
+    - date
+    - updated
+    - git
+- name: hexo-filter-author-from-git
+  description: Read git log and add the properties `author` and `contributors` for each posts.
+  link: https://github.com/xcatliu/hexo-filter-author-from-git
+  tags:
+    - author
+    - contributors
+    - git
