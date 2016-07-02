@@ -970,3 +970,10 @@
     - author
     - contributors
     - git
+- name: hexo-medium-image
+  description: A medium-like image lazyload plugin.
+  link: https://github.com/ele828/hexo-medium-image-plugin
+  tags:
+    - image
+    - medium
+    - lazyload
