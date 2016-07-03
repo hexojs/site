@@ -9,7 +9,7 @@ Hexo est un framework de blog rapide, simple et puissance. Vous écrivez vos art
 
 ## Installation
 
-Hexo ne prend que quelques minutes à configurer. Si vous rencontrez un problème et que vous ne trouvez pas de solution ici, s'il vous plaît [envoyer un Github issue](https://github.com/hexojs/issues) et j'essaierais de le résoudre.
+Hexo ne prend que quelques minutes à configurer. Si vous rencontrez un problème et que vous ne trouvez pas de solution ici, s'il vous plaît [envoyer un signalement de bug sur Github](https://github.com/hexojs/issues) et j'essaierais de le résoudre.
 
 ### Pré-requis
 
