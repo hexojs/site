@@ -954,7 +954,7 @@
   tags:
     - tag
     - video
-    - youku 
+    - youku
     - tencent video
 - name: hexo-filter-date-from-git
   description: Read git log and overwrite the front-matter properties `date` and `updated` for each posts.
@@ -983,3 +983,10 @@
   tags:
     - generator
     - index
+- name: hexo-algoliasearch
+  description: "A plugin to index posts of your Hexo blog on Algolia"
+  link: https://github.com/LouisBarranqueiro/hexo-algoliasearch
+  tags:
+    - algoliasearch
+    - algolia
+    - search
