@@ -1,6 +1,6 @@
 title: Writing
 ---
-To create a new post, you can run the following command:
+To create a new post or a new page, you can run the following command:
 
 ``` bash
 $ hexo new [layout] <title>
@@ -10,7 +10,7 @@ $ hexo new [layout] <title>
 
 ### Layout
 
-There are three default layouts in Hexo: `post`, `page` and `draft`. Each of them is saved to a different path. Custom layouts are saved to the `source/_posts` folder.
+There are three default layouts in Hexo: `post`, `page` and `draft`. Files created by each of them is saved to a different path. Newly created posts are saved to the `source/_posts` folder.
 
 Layout | Path
 --- | ---
