@@ -631,14 +631,18 @@
   description: A media tag for Hexo 3.x
   link: https://github.com/m80126colin/hexo-tag-owl
   tags:
+    - hexo
+    - blog
     - tag
-    - image
-    - youku
-    - tudou
-    - vimeo
-    - bilibili
-    - niconico
     - youtube
+    - niconico
+    - bilibili
+    - vimeo
+    - tudou
+    - youku
+    - tencent
+    - image
+    - giphy
 - name: hexo-tag-githubimage
   description: Inserts an image tag using a github content distribution.
   link: https://github.com/wizicer/hexo-tag-githubimage/
