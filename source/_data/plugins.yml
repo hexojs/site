@@ -1002,3 +1002,9 @@
     - filter
     - link
     - file
+- name: hexo-tag-embed
+  description: Insert an embed tag in your hexo blog.
+  link: https://github.com/brucelin/hexo-tag-embed
+  tags:
+    - tag
+    - embed
