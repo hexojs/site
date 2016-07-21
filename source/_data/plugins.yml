@@ -1020,3 +1020,10 @@
     - filter
     - link
     - file
+- name: hexo-prism-plugin
+  description: A plugin for code highlight by Prism.js
+  link: https://github.com/ele828/hexo-prism-plugin
+  tags:
+    - code
+    - highlight
+    - prism.js
