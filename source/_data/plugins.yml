@@ -1,3 +1,21 @@
+- name: hexo-generator-fragments
+  description: Generate paged html fragments for `Index`, `Category` and `Tag` pages, let `Hexo` support elegant ajax pagination.
+  link: https://github.com/mamboer/hexo-generator-fragments
+  tags:
+    - generator
+    - pagination
+    - ajax-pagination
+    - fragments
+- name: hexo-filter-cleanup
+  description: All in one. Minifier & Optimization plugin for Hexo. Inspired by `hexo-all-minifier` but including more features.
+  link: https://github.com/mamboer/hexo-filter-cleanup
+  tags:
+    - filter
+    - imagemin
+    - html-minifier
+    - uglify
+    - useref
+    - favicons
 - name: hexo-helper-obfuscate
   description: Obfuscate strings using html entities. Handy against crawlers.
   link: https://github.com/andrewpeterprifer/hexo-helper-obfuscate/
@@ -1002,6 +1020,20 @@
     - filter
     - link
     - file
+- name: hexo-prism-plugin
+  description: A plugin for code highlight by Prism.js
+  link: https://github.com/ele828/hexo-prism-plugin
+  tags:
+    - code
+    - highlight
+    - prism.js
+- name: hexo-generator-type
+  description: clasify hexo site.pages and create pagination list
+  link: https://github.com/callmelanmao/hexo-generator-type
+  tags:
+    - generator
+    - cliasify
+    - types
 - name: hexo-tag-embed
   description: Insert an embed tag in your hexo blog.
   link: https://github.com/brucelin/hexo-tag-embed
