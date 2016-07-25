@@ -588,3 +588,12 @@
     - simple
     - blue
     - futuristic
+- name: Pixel
+  description: A pixel level theme
+  link: https://github.com/callmelanmao/hexo-theme-pixel
+  preview: https://ideras.me
+  tags:
+    - pixel
+    - simple
+    - widget
+    - two_column
