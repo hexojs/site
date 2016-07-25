@@ -1027,3 +1027,10 @@
     - code
     - highlight
     - prism.js
+- name: hexo-generator-type
+  description: clasify hexo site.pages and create pagination list
+  link: https://github.com/callmelanmao/hexo-generator-type
+  tags:
+    - generator
+    - cliasify
+    - types
