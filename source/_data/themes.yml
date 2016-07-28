@@ -168,6 +168,16 @@
     - two_column
     - simple
     - light
+- name: LightOne
+  description: Remove the sidebar hexo default theme light.
+  link: https://github.com/caisiduo/hexo-theme-lightone
+  preview: https://caisiduo.xyz/
+  tags:
+    - gary
+    - simple
+    - light
+    - one_column
+    - white
 - name: yinwang
   description: Simplest View For Your Article Best.
   link: https://github.com/mickeyouyou/yinwang
