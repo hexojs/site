@@ -29,6 +29,7 @@ $ hexo server
 ## Contributors
 
 - English - [tommy351](https://github.com/tommy351)
+- Français - [dannycolin89](https://github.com/dannycolin89)
 - 正體中文 - [tommy351](https://github.com/tommy351)
 - 简体中文 - [pinggod](https://github.com/pinggod), [Xuanwo](https://github.com/Xuanwo)
 - Русский - [twirlfog](https://github.com/twirlfog)

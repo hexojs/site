@@ -1,4 +1,7 @@
 en: English
+fr:
+  name: Français
+  disqus_lang: fr
 zh-tw:
   name: 正體中文
   disqus_lang: zh_TW
