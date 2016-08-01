@@ -1,5 +1,5 @@
 - name: hexo-generator-fragments
-  description: Generate paged html fragments for `Index`, `Category` and `Tag` pages, let `Hexo` support elegant ajax pagination. 
+  description: Generate paged html fragments for `Index`, `Category` and `Tag` pages, let `Hexo` support elegant ajax pagination.
   link: https://github.com/mamboer/hexo-generator-fragments
   tags:
     - generator
@@ -1040,4 +1040,11 @@
   tags:
     - generator
     - cliasify
+    - types
+- name: hexo-tag-embed
+  description: Insert an embed tag in your hexo blog.
+  link: https://github.com/brucelin/hexo-tag-embed
+  tags:
+    - tag
+    - embed
     - types
