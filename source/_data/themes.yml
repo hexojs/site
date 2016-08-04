@@ -168,6 +168,16 @@
     - two_column
     - simple
     - light
+- name: LightOne
+  description: Remove the sidebar hexo default theme light.
+  link: https://github.com/caisiduo/hexo-theme-lightone
+  preview: https://caisiduo.xyz/
+  tags:
+    - gary
+    - simple
+    - light
+    - one_column
+    - white
 - name: yinwang
   description: Simplest View For Your Article Best.
   link: https://github.com/mickeyouyou/yinwang
@@ -445,15 +455,14 @@
     - simple
     - less
     - ejs
-- name: even
-  description: A simple theme for Hexo blog framework
+- name: Even
+  description: A simple theme for Hexo
   link: https://github.com/ahonn/hexo-theme-even
   preview: http://www.ahonn.me/
   tags:
     - responsive
     - simple
-    - less
-    - jade
+    - light
 - name: Pln
   description: A plain theme for Hexo.
   link: https://github.com/gaoryrt/hexo-theme-pln
@@ -588,3 +597,22 @@
     - simple
     - blue
     - futuristic
+- name: Pixel
+  description: A pixel level theme
+  link: https://github.com/callmelanmao/hexo-theme-pixel
+  preview: https://ideras.me
+  tags:
+    - pixel
+    - simple
+    - widget
+    - two_column
+- name: Typing
+  description: A pure and fresh Hexo theme.
+  link: https://github.com/geekplux/hexo-theme-typing
+  preview: http://geekplux.com
+  tags:
+    - responsive
+    - pure
+    - simple
+    - fresh
+    - white

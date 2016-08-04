@@ -1,3 +1,21 @@
+- name: hexo-generator-fragments
+  description: Generate paged html fragments for `Index`, `Category` and `Tag` pages, let `Hexo` support elegant ajax pagination.
+  link: https://github.com/mamboer/hexo-generator-fragments
+  tags:
+    - generator
+    - pagination
+    - ajax-pagination
+    - fragments
+- name: hexo-filter-cleanup
+  description: All in one. Minifier & Optimization plugin for Hexo. Inspired by `hexo-all-minifier` but including more features.
+  link: https://github.com/mamboer/hexo-filter-cleanup
+  tags:
+    - filter
+    - imagemin
+    - html-minifier
+    - uglify
+    - useref
+    - favicons
 - name: hexo-helper-obfuscate
   description: Obfuscate strings using html entities. Handy against crawlers.
   link: https://github.com/andrewpeterprifer/hexo-helper-obfuscate/
@@ -97,6 +115,13 @@
   tags:
     - generator
     - amp
+- name: hexo-related-popular-posts
+  description: A hexo plugin that generates a list of links to related posts and popular posts.
+  link: https://github.com/tea3/hexo-related-popular-posts
+  tags:
+    - popular
+    - related
+    - generator
 - name: hexo-generator-archive
   description: Archive generator plugin for Hexo.
   link: https://github.com/hexojs/hexo-generator-archive
@@ -631,14 +656,19 @@
   description: A media tag for Hexo 3.x
   link: https://github.com/m80126colin/hexo-tag-owl
   tags:
+    - hexo
+    - blog
     - tag
-    - image
-    - youku
-    - tudou
-    - vimeo
-    - bilibili
-    - niconico
+    - video
     - youtube
+    - niconico
+    - bilibili
+    - vimeo
+    - tudou
+    - youku
+    - tencent
+    - image
+    - giphy
 - name: hexo-tag-githubimage
   description: Inserts an image tag using a github content distribution.
   link: https://github.com/wizicer/hexo-tag-githubimage/
@@ -997,3 +1027,31 @@
     - filter
     - link
     - file
+- name: hexo-prism-plugin
+  description: A plugin for code highlight by Prism.js
+  link: https://github.com/ele828/hexo-prism-plugin
+  tags:
+    - code
+    - highlight
+    - prism.js
+- name: hexo-generator-type
+  description: clasify hexo site.pages and create pagination list
+  link: https://github.com/callmelanmao/hexo-generator-type
+  tags:
+    - generator
+    - cliasify
+    - types
+- name: hexo-tag-embed
+  description: Insert an embed tag in your hexo blog.
+  link: https://github.com/brucelin/hexo-tag-embed
+  tags:
+    - tag
+    - embed
+    - types
+- name: hexo-hanzi
+  description: Postrender your posts with hanzi (漢字標準格式).
+  link: https://github.com/lujjjh/hexo-hanzi
+  tags:
+    - filter
+    - hanzi
+    - han-css
