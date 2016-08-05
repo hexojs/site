@@ -68,7 +68,7 @@ Hexo uses [Moment.js](http://momentjs.com/) to process dates.
 
 Setting | Description | Default
 --- | --- | ---
-`date_format` | Date format | `MMM D YYYY`
+`date_format` | Date format | `YYYY-MM-DD`
 `time_format` | Time format | `H:mm:ss`
 
 ### Pagination
