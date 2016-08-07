@@ -1055,3 +1055,10 @@
     - filter
     - hanzi
     - han-css
+- name: hexo-generator-taxonomy
+  description: borrow taxonomy from hugo
+  link: https://github.com/callmelanmao/hexo-generator-taxonomy
+  tags:
+    - generator
+    - taxonomy
+    - awesome
