@@ -928,6 +928,18 @@
     - i18n
     - generator
     - helper
+- name: hexo-generator-index2
+  description: "Filtered index generator for Hexo"
+  link: https://github.com/Jamling/hexo-generator-index2
+  tags:
+    - generator
+    - index
+- name: hexo-filter-highlight
+  description: "Highlight plugin using highlight.js for Hexo"
+  link: https://github.com/Jamling/hexo-filter-highlight
+  tags:
+    - highlight
+    - 代码高亮
 - name: hexo-encrypt
   description: encrypt the content of your post(对你的文章内容进行加密)
   link: https://github.com/edolphin-ydf/hexo-encrypt
@@ -1007,12 +1019,6 @@
     - image
     - medium
     - lazyload
-- name: hexo-generator-index2
-  description: "Filtered index generator for Hexo"
-  link: https://github.com/Jamling/hexo-generator-index2
-  tags:
-    - generator
-    - index
 - name: hexo-algoliasearch
   description: "A plugin to index posts of your Hexo blog on Algolia"
   link: https://github.com/LouisBarranqueiro/hexo-algoliasearch
