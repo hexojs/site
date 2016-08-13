@@ -616,3 +616,12 @@
     - simple
     - fresh
     - white
+- name: Daily
+  description: Minimalism, simplicity and refined details
+  link: https://github.com/GallenHu/hexo-theme-Daily
+  preview: http://blog.hinpc.com
+  tags:
+    - simple
+    - responsive
+    - minimalism
+    - daily

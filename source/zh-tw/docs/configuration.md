@@ -69,7 +69,7 @@ Hexo 使用 [Moment.js](http://momentjs.com/) 來解析和顯示時間。
 
 設定 | 描述 | 預設值
 --- | --- | ---
-`date_format` | 日期格式 | MMM D YYYY
+`date_format` | 日期格式 | YYYY-MM-DD
 `time_format` | 時間格式 | H:mm:ss
 
 ### 分頁
