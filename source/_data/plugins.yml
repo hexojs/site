@@ -437,6 +437,14 @@
     - renderer
     - reStructedText
     - rst
+- name: hexo-tag-instagram
+  description: Embed instagram photo and movie tag plugin for Hexo.
+  link: https://github.com/tea3/hexo-tag-instagram
+  tags:
+    - tag_plugins
+    - instagram
+    - photo
+    - video
 - name: hexo-tag-bootstrap
   description: hexo-tag-bootstrap is a collection of Hexo tag plugins, which wraps most Twitter-Bootstrap 3.1.1 components in a uniform way.
   link: https://github.com/wzpan/hexo-tag-bootstrap
