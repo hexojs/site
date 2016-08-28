@@ -635,3 +635,13 @@
     - writing
     - big_header
     - simple
+- name: Aero-Dual
+  description: Minimal and responsive. Easy/automatic switch of dark and light theme style by simple configuation. Theme color change is also easy.
+  link: https://github.com/levblanc/hexo-theme-aero-dual
+  preview: https://levblanc.github.io/
+  tags:
+    - minimalism
+    - responsive
+    - easy_theme_style_switch
+    - easy_theme_color_switch
+    - 中文
