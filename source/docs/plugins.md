@@ -28,6 +28,8 @@ At the very least, you should set the `name`, `version` and `main` entries in `p
 }
 ```
 
+You'll also need to list your plugin as a dependency in the root `package.json` of your hexo instance in order for Hexo to detect and load it.
+
 ### Tools
 
 You can make use of the official tools provided by Hexo to accelerate development:

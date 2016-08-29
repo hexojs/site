@@ -8,7 +8,7 @@ Hexo is a fast, simple and powerful blog framework. You write posts in [Markdown
 
 ## Installation
 
-It only takes few minutes to set up Hexo. If you encounter a problem and can't find the solution here, please [submit a GitHub issue](https://github.com/hexojs/hexo/issues) and I'll try to solve it.
+It only takes a few minutes to set up Hexo. If you encounter a problem and can't find the solution here, please [submit a GitHub issue](https://github.com/hexojs/hexo/issues) and I'll try to solve it.
 
 ### Requirements
 
@@ -55,7 +55,7 @@ $ wget -qO- https://raw.github.com/creationix/nvm/master/install.sh | sh
 Once nvm is installed, restart the terminal and run the following command to install Node.js.
 
 ``` bash
-$ nvm install 4
+$ nvm install stable
 ```
 
 Alternatively, download and run [the installer](http://nodejs.org/).

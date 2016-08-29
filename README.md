@@ -31,6 +31,8 @@ $ hexo server
 - English - [tommy351](https://github.com/tommy351)
 - 正體中文 - [tommy351](https://github.com/tommy351)
 - 简体中文 - [pinggod](https://github.com/pinggod), [Xuanwo](https://github.com/Xuanwo)
+- Русский - [twirlfog](https://github.com/twirlfog)
+- 한국어 - [lazyrodi](https://github.com/lazyrodi)
 
 ## License
 

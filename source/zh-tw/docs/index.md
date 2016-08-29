@@ -55,7 +55,7 @@ $ wget -qO- https://raw.github.com/creationix/nvm/master/install.sh | sh
 一旦安裝完成，重啟終端機並執行下列指令以安裝 Node.js。
 
 ``` bash
-$ nvm install 4
+$ nvm install stable
 ```
 
 或者您也可以下載 [安裝程式](http://nodejs.org/) 來安裝。

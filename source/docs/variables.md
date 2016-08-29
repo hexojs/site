@@ -8,7 +8,7 @@ Variable | Description
 `page` | Page specific information and custom variables set in front-matter.
 `config` | Site configuration
 `theme` | Theme configuration. Inherits from site configuration.
-`_` (single underscore) | [Lodash](https://lodash.com/){:target="_blank"} library
+`_` (single underscore) | [Lodash](https://lodash.com/  "Lodash" target="_blank") library
 `path` | Path of current page
 `url` | Full URL of current page
 `env` | Environment variables
@@ -59,7 +59,7 @@ Variable | Description
 Variable | Description
 --- | ---
 `page.per_page` | Posts displayed per page
-`page.total` | Total number of posts
+`page.total` | Total number of pages
 `page.current` | Current page number
 `page.current_url` | The URL of current page
 `page.posts` | Posts in this page ([Data Model])
@@ -89,5 +89,4 @@ Variable | Description
 --- | ---
 `page.tag` | Tag name
 
-[Lodash]: (http://lodash.com/)
 [Moment.js]: http://momentjs.com/
