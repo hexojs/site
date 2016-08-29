@@ -500,15 +500,15 @@
     - iconfont
     - modal
 - name: Anisina
-  description: A support qiniu image cdn , simple responsive theme for hexo
+  description: A support qiniu cdn , simple responsive theme for hexo
   link: https://github.com/haojen/hexo-theme-Anisina
-  preview: http://haojen.github.io/
+  preview: https://haojen.github.io/
   tags:
     - qiniu_cdn
-    - wechat_title_img_custom
+    - pv_statistical
+    - mobile_browser_color_bar
     - responsive
     - toc
     - SEO
     - fixed_nav
     - 中文
-    - anisina
