@@ -73,7 +73,7 @@ When you have finished building your theme, you can publish it to the [theme lis
 6. Create a pull request and describe the change.
 
 [EJS]: https://github.com/hexojs/hexo-renderer-ejs
-[Swig]: http://paularmstrong.github.com/swig/
+[Swig]: https://github.com/paularmstrong/swig
 [Haml]: https://github.com/hexojs/hexo-renderer-haml
 [Jade]: https://github.com/hexojs/hexo-renderer-jade
 [hexojs/site]: https://github.com/hexojs/site
