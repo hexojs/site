@@ -1077,7 +1077,7 @@
     - taxonomy
     - awesome
 - name: hexo-blog-encrypt
-  description: "Yet, another hexo blog encrypt plugin"
+  description: "Yet, another blog encrypt plugin for hexo."
   link: https://github.com/MikeCoder/hexo-blog-encrypt
   tags:
     - encrypt
