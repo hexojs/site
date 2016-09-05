@@ -1076,3 +1076,10 @@
     - generator
     - taxonomy
     - awesome
+- name: hexo-blog-encrypt
+  description: "Yet, another blog encrypt plugin for hexo."
+  link: https://github.com/MikeCoder/hexo-blog-encrypt
+  tags:
+    - encrypt
+    - aes
+    - security
