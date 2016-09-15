@@ -35,7 +35,7 @@ $ hexo generate
 $ hexo publish [layout] <filename>
 ```
 
-Переносить черновик в публикуемую папку.
+Переносит черновик в публикуемую папку.
 
 ## server
 

@@ -173,7 +173,7 @@ Option | Description | Default
 `title` | Feed title |
 `type` | Feed type | atom
 
-### Conditional Tags
+## Conditional Tags
 
 ### is_current
 
