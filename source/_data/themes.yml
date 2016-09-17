@@ -682,3 +682,14 @@
     - SEO
     - jade
     - sass
+- name: Nuna
+  description: A pure, minimalism and elegant theme.
+  link: https://github.com/xwartz/hexo-theme-nuna
+  preview: https://xwartz.github.com/pupa
+  tags:
+    - minimalism
+    - elegant
+    - pure
+    - simple
+    - responsive
+    - nuna
