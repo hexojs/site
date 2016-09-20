@@ -1098,3 +1098,9 @@
   tags:
     - spoiler
     - tag
+- name: hexo-azuresearch
+  description: "Azure Search support for Hexo."
+  link: https://github.com/artchen/hexo-azuresearch
+  tags:
+    - azure
+    - search
