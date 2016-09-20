@@ -705,3 +705,12 @@
     - simple
     - responsive
     - nuna
+- name: Line
+  description: A responsive, neat and simple theme for Hexo.
+  link: https://github.com/zhaobao/hexo-theme-line
+  preview: http://blog.zhishoumowen.com
+  tags:
+    - responsive
+    - neat
+    - line
+    - light
