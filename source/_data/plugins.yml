@@ -1104,3 +1104,9 @@
   tags:
     - azure
     - search
+- name: hexo-tag-demo
+  description: "Create a demo area (html, css, javascript) in the post content."
+  link: https://github.com/laomao800/hexo-tag-demo
+  tags:
+    - tag
+    - demo
