@@ -697,7 +697,7 @@
 - name: Nuna
   description: A pure, minimalism and elegant theme.
   link: https://github.com/xwartz/hexo-theme-nuna
-  preview: https://xwartz.github.com/pupa
+  preview: https://xwartz.github.com/blog
   tags:
     - minimalism
     - elegant
