@@ -524,10 +524,11 @@
 - name: Typescript
   description: A mininal theme for Hexo.
   link: https://github.com/artchen/hexo-theme-typescript
-  preview: http://otakism.org
+  preview: https://otakism.com
   tags:
     - responsive
     - one_column
+    - search_support
     - 中文
     - typescript
 - name: Nova
