@@ -446,7 +446,7 @@
     - photo
     - video
 - name: hexo-tag-twentytwenty
-  description: Hexo tag to embed Image Comparison Slider Scripts. Image Comparison Slider depend on jQuery Twenty Twenty plugin. 
+  description: Hexo tag to embed Image Comparison Slider Scripts. Image Comparison Slider depend on jQuery Twenty Twenty plugin.
   link: https://github.com/tea3/hexo-tag-twentytwenty
   tags:
     - tag_plugins
@@ -1110,3 +1110,9 @@
   tags:
     - tag
     - demo
+- name: hexo-reading-time
+  description: Plugin that displays reading time for the article.
+  link: https://github.com/ierhyna/hexo-reading-time
+  tags:
+    - reading-time
+    - helper
