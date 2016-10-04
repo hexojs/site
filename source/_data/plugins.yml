@@ -785,6 +785,14 @@
     - tag
     - echarts
     - chart
+- name: hexo-tag-htmltag
+  description: "A Hexo tag for inserting arbitrary html tags (with attributes) into posts."
+  link: https://github.com/seangravener/hexo-tag-htmlTag
+  tags:
+    - hexo-tag-htmltag
+    - tag
+    - html
+    - code
 - name: hexo-featured-image
   description: "A plugin that adds support for featured images in posts and json-content."
   link: https://github.com/poacher2k/hexo-featured-image
