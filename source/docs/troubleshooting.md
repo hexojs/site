@@ -32,7 +32,7 @@ Though Node.js has non-blocking I/O, the maximum number of synchronous I/O is st
 $ ulimit -n 10000
 ```
 
-## `process out of memory`
+## Process Out of Memory
 
 When you encounter this error during generation:
 ```
