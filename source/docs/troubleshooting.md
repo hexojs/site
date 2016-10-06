@@ -116,7 +116,9 @@ Hexo uses [Nunjucks] to render posts ([Swig] was used in older version, which sh
 Hello {{ sensitive }}
 {% endraw %}
 ```
+
 ## ENOSPC Error (Linux)
+
 Sometimes when running the command `$ hexo server` it returns an error:
 ```
 Error: watch ENOSPC ...
@@ -126,6 +128,19 @@ It can be fixed by running `$ npm dedupe` or, if that doesn't help, try the foll
 $ echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
 ```
 This will increase the limit for the number of files you can watch.
+
+## EMPERM Error (Windows Subsystem for Linux)
+
+When running `$ hexo server` in a BashOnWindows environment, it returns the following error:
+```
+Error: watch /path/to/hexo/theme/ EMPERM
+```
+Unfortunately, WSL does not currently support filesystem watchers. Therefore, the live updating feature of hexo's server is currently unavailable. You can still run the server from a WSL environment by first generating the files and then running it as a static server:
+``` sh
+$ hexo generate
+$ hexo server -s
+```
+This is [a known BashOnWindows issue](https://github.com/Microsoft/BashOnWindows/issues/216), and on 15 Aug 2016, the Windows team said they would work on it. You can get progress updates and encourage them to prioritize it on [the issue's UserVoice suggestion page](https://wpdev.uservoice.com/forums/266908-command-prompt-console-bash-on-ubuntu-on-windo/suggestions/13469097-support-for-filesystem-watchers-like-inotify).
 
 [Warehouse]: https://github.com/tommy351/warehouse
 [Swig]: http://paularmstrong.github.io/swig/
