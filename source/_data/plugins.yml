@@ -1138,3 +1138,10 @@
     - apester
     - interactive
     - quiz
+- name: hexo-include
+  description: Include the raw contents of any file (html, text, etc) directly into post contents.
+  link: https://github.com/pipirt/hexo-include
+  tags:
+    - tag
+    - include
+    - insert
