@@ -1145,3 +1145,10 @@
     - tag
     - include
     - insert
+- name: hexo-render-pug
+  description: Pug template renderer for hexo, use pug template language.
+  link: https://github.com/maxknee/hexo-render-pug
+  tags:
+    - jade
+    - pug
+    - template
