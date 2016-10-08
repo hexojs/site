@@ -76,5 +76,5 @@ When you have finished building your theme, you can publish it to the [theme lis
 [Swig]: https://github.com/paularmstrong/swig
 [Haml]: https://github.com/hexojs/hexo-renderer-haml
 [Jade]: https://github.com/hexojs/hexo-renderer-jade
-[Pug]: https://github.com/maxknee/hexo-renderer-pug
+[Pug]: https://github.com/maxknee/hexo-render-pug
 [hexojs/site]: https://github.com/hexojs/site
