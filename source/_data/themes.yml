@@ -715,3 +715,13 @@
     - neat
     - line
     - light
+- name: Smackdown
+  description: A simple and cool theme for Hexo.
+  link: https://github.com/winnerweb/hexo-theme-smackdown
+  preview: http://winnerweb.github.io/blog
+  tags:
+    - responsive
+    - mobile
+    - seo
+    - simple
+    - coll
