@@ -1152,3 +1152,10 @@
     - jade
     - pug
     - template
+- name: hexo-algolia
+  description: Index posts and contents in [Algolia](https://www.algolia.com/) and offer a blazing fast search experience to your users.
+  link: https://npmjs.com/hexo-algolia
+  tags:
+    - search
+    - algolia
+    - index
