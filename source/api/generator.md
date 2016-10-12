@@ -50,7 +50,7 @@ Next, set the `layout` attribute to render with the theme templates. We're setti
 hexo.extend.generator.register('archive', function(locals){
   return {
     path: 'archives/index.html',
-    data: locals.posts,
+    data: locals,
     layout: ['archive', 'index']
   }
 });
