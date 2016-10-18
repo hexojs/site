@@ -734,3 +734,13 @@
     - gravatar
     - gallery
     - blog
+- name: Hiker
+  description: An attractive, exquisite theme for Hexo.
+  link: https://github.com/iTimeTraveler/hexo-theme-hiker
+  preview: https://itimetraveler.github.io/
+  tags:
+    - responsive
+    - beautiful
+    - blog
+    - two_column
+
