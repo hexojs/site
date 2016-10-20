@@ -363,6 +363,15 @@
     - responsive
     - two_column
     - one_column
+- name: varaint
+  description: The theme of a minimalist
+  link: https://github.com/yumemor/hexo-theme-varaint
+  preview: http://yumemor.github.io/hexo-theme-varaint
+  tags:
+    - simple
+    - github
+    - responsive
+    - one_column
 - name: Chan
   description: A super simple and elegant theme for Hexo.
   link: https://github.com/denjones/hexo-theme-chan
