@@ -524,10 +524,11 @@
 - name: Typescript
   description: A mininal theme for Hexo.
   link: https://github.com/artchen/hexo-theme-typescript
-  preview: http://otakism.org
+  preview: https://otakism.com
   tags:
     - responsive
     - one_column
+    - search_support
     - 中文
     - typescript
 - name: Nova
@@ -542,6 +543,14 @@
     - three_column
     - project layout
     - multi-languages
+- name: Noise
+  description: Noise description that no one should read.
+  link: https://github.com/lotabout/hexo-theme-noise
+  preview: http://lotabout.me/hexo-theme-noise/
+  tags:
+    - flexbox
+    - responsive
+    - white
 - name: yujuan
   description: A simple solemn theme for Hexo
   link: https://github.com/smile-leaf-language/hexo-theme-yujuan
@@ -645,3 +654,93 @@
     - easy_theme_style_switch
     - easy_theme_color_switch
     - 中文
+- name: Oishi
+  description: A pure, simple, white, and responsive theme, it's integrated some Chinese local third services, such as Baidu statistics, duoshuo, etc.
+  link: https://github.com/henryhuang/oishi
+  preview: https://henryhuang.github.io/oishi/
+  tags:
+    - simple
+    - pure
+    - responsive
+    - one_column
+    - white
+    - multi-languages
+    - 中文
+    - Chinese
+    - Portuguese
+- name: Overdose
+  description: '⚠ Caution: you could be overdosed with this theme.'
+  link: https://github.com/HyunSeob/hexo-theme-overdose
+  preview: http://hyunseob.github.io/
+  tags:
+    - simple
+    - minimalism
+    - beautiful
+    - responsive
+    - one_column
+    - Korean
+    - webfont
+    - SEO
+    - jade
+    - sass
+- name: Aloha
+  description: a pure, simple, and responsive theme, it use Semantic-UI, and integrated Algolia search engine.
+  link: https://github.com/henryhuang/hexo-theme-aloha
+  preview: http://huangyijie.com
+  tags:
+    - Semantic-UI
+    - pure
+    - responsive
+    - one_column
+    - multi-languages
+    - 中文
+    - Algolia
+- name: Nuna
+  description: A pure, minimalism and elegant theme.
+  link: https://github.com/xwartz/hexo-theme-nuna
+  preview: https://xwartz.github.com/blog
+  tags:
+    - minimalism
+    - elegant
+    - pure
+    - simple
+    - responsive
+    - nuna
+- name: Line
+  description: A responsive, neat and simple theme for Hexo.
+  link: https://github.com/zhaobao/hexo-theme-line
+  preview: http://blog.zhishoumowen.com
+  tags:
+    - responsive
+    - neat
+    - line
+    - light
+- name: Smackdown
+  description: A simple and cool theme for Hexo.
+  link: https://github.com/winnerweb/hexo-theme-smackdown
+  preview: http://winnerweb.github.io/blog
+  tags:
+    - responsive
+    - mobile
+    - seo
+    - simple
+    - coll
+- name: strata
+  description: A responsive full featured blog or portfolio theme.
+  link: https://github.com/livingos/hexo-theme-strata
+  preview: https://livingos.github.io/hexo-theme-strata/
+  tags:
+    - responsive
+    - gravatar
+    - gallery
+    - blog
+- name: Hiker
+  description: An attractive, exquisite theme for Hexo.
+  link: https://github.com/iTimeTraveler/hexo-theme-hiker
+  preview: https://itimetraveler.github.io/
+  tags:
+    - responsive
+    - beautiful
+    - blog
+    - two_column
+

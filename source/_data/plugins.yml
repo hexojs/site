@@ -445,6 +445,15 @@
     - instagram
     - photo
     - video
+- name: hexo-tag-twentytwenty
+  description: Hexo tag to embed Image Comparison Slider Scripts. Image Comparison Slider depend on jQuery Twenty Twenty plugin.
+  link: https://github.com/tea3/hexo-tag-twentytwenty
+  tags:
+    - tag_plugins
+    - image
+    - comparison
+    - slider
+    - twentytwenty
 - name: hexo-tag-bootstrap
   description: hexo-tag-bootstrap is a collection of Hexo tag plugins, which wraps most Twitter-Bootstrap 3.1.1 components in a uniform way.
   link: https://github.com/wzpan/hexo-tag-bootstrap
@@ -776,6 +785,14 @@
     - tag
     - echarts
     - chart
+- name: hexo-tag-htmltag
+  description: "A Hexo tag for inserting arbitrary html tags (with attributes) into posts."
+  link: https://github.com/seangravener/hexo-tag-htmlTag
+  tags:
+    - hexo-tag-htmltag
+    - tag
+    - html
+    - code
 - name: hexo-featured-image
   description: "A plugin that adds support for featured images in posts and json-content."
   link: https://github.com/poacher2k/hexo-featured-image
@@ -1076,3 +1093,69 @@
     - generator
     - taxonomy
     - awesome
+- name: hexo-blog-encrypt
+  description: "Yet, another blog encrypt plugin for hexo."
+  link: https://github.com/MikeCoder/hexo-blog-encrypt
+  tags:
+    - encrypt
+    - aes
+    - security
+- name: hexo-spoiler
+  description: "A tag plugin used to cover your text with shadow"
+  link: https://github.com/unnamed42/hexo-spoiler
+  tags:
+    - spoiler
+    - tag
+- name: hexo-azuresearch
+  description: "Azure Search support for Hexo."
+  link: https://github.com/artchen/hexo-azuresearch
+  tags:
+    - azure
+    - search
+- name: hexo-tag-demo
+  description: "Create a demo area (html, css, javascript) in the post content."
+  link: https://github.com/laomao800/hexo-tag-demo
+  tags:
+    - tag
+    - demo
+- name: hexo-reading-time
+  description: Plugin that displays reading time for the article.
+  link: https://github.com/ierhyna/hexo-reading-time
+  tags:
+    - reading-time
+    - helper
+- name: hexo-sliding-spoiler
+  description: "Hides content until the reveal area is pressed."
+  link: https://github.com/fletchto99/hexo-sliding-spoiler
+  tags:
+    - spoiler
+    - sliding
+    - hidden-content
+- name: hexo-tag-apester
+  description: Apester interactive tag plugin to include in Hexo page/post.
+  link: https://github.com/iamchathu/hexo-tag-apester
+  tags:
+    - apester
+    - interactive
+    - quiz
+- name: hexo-include
+  description: Include the raw contents of any file (html, text, etc) directly into post contents.
+  link: https://github.com/pipirt/hexo-include
+  tags:
+    - tag
+    - include
+    - insert
+- name: hexo-render-pug
+  description: Pug template renderer for hexo, use pug template language.
+  link: https://github.com/maxknee/hexo-render-pug
+  tags:
+    - jade
+    - pug
+    - template
+- name: hexo-algolia
+  description: Index posts and contents in [Algolia](https://www.algolia.com/) and offer a blazing fast search experience to your users.
+  link: https://npmjs.com/hexo-algolia
+  tags:
+    - search
+    - algolia
+    - index
