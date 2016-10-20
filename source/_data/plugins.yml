@@ -1159,3 +1159,10 @@
     - search
     - algolia
     - index
+- name: hexo-slack-notify
+  description: A Hexo plugin to Slack nofify
+  link: https://github.com/Plasma-Paris/hexo-slack-notify
+  tags:
+    - notify
+    - slack
+    - social
