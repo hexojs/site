@@ -1166,3 +1166,9 @@
     - notify
     - slack
     - social
+- name: hexo-baidu-url-submit
+  description: Hexo plugin to submit URLs of new posts to Baidu search engine
+  link: https://github.com/huiwang/hexo-baidu-url-submit
+  tages:
+    - baidu
+    - seo
