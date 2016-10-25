@@ -1,3 +1,12 @@
+- name: hexo-tag-html5video
+  description: Embed html5 video player and play videos stored in asset_path or elsewhere in public folder for Hexo.
+  link: https://github.com/stephenmkbrady/hexo-tag-html5
+  tags:
+    - tag_plugins
+    - mp4
+    - html5video
+    - webm    
+    - video
 - name: hexo-generator-fragments
   description: Generate paged html fragments for `Index`, `Category` and `Tag` pages, let `Hexo` support elegant ajax pagination.
   link: https://github.com/mamboer/hexo-generator-fragments
@@ -1159,3 +1168,16 @@
     - search
     - algolia
     - index
+- name: hexo-slack-notify
+  description: A Hexo plugin to Slack nofify
+  link: https://github.com/Plasma-Paris/hexo-slack-notify
+  tags:
+    - notify
+    - slack
+    - social
+- name: hexo-baidu-url-submit
+  description: Hexo plugin to submit URLs of new posts to Baidu search engine
+  link: https://github.com/huiwang/hexo-baidu-url-submit
+  tages:
+    - baidu
+    - seo
