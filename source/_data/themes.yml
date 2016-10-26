@@ -752,4 +752,12 @@
     - beautiful
     - blog
     - two_column
-
+- name: casual
+  description: A simple and cool hexo theme with Semantic UI in UI design
+  link: https://github.com/littlewin-wang/hexo-theme-casual
+  preview: http://littlewin.info/
+  tags:
+    - responsive
+    - comfortable 
+    - blog
+    - fresh
