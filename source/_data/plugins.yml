@@ -1181,3 +1181,10 @@
   tages:
     - baidu
     - seo
+- name: hexo-helper-page-languages
+  description: Hexo helper to get available languages on a page
+  link: https://github.com/polo2ro/hexo-helper-page-languages
+  tages:
+    - helper
+    - i18n
+    - languages
