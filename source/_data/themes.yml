@@ -761,3 +761,11 @@
     - comfortable 
     - blog
     - fresh
+- name: legend
+  description: A hexo theme with background video and audio.
+  link: https://github.com/iHongRen/legend
+  preview: https://ihongren.github.io/
+  tags:
+    - bg_video
+    - bg_audio
+    - simple
