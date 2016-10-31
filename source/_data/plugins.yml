@@ -1178,13 +1178,13 @@
 - name: hexo-baidu-url-submit
   description: Hexo plugin to submit URLs of new posts to Baidu search engine
   link: https://github.com/huiwang/hexo-baidu-url-submit
-  tages:
+  tags:
     - baidu
     - seo
 - name: hexo-helper-page-languages
   description: Hexo helper to get available languages on a page
   link: https://github.com/polo2ro/hexo-helper-page-languages
-  tages:
+  tags:
     - helper
     - i18n
     - languages
