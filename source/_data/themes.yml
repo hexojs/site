@@ -758,7 +758,7 @@
   preview: http://littlewin.info/
   tags:
     - responsive
-    - comfortable 
+    - comfortable
     - blog
     - fresh
 - name: legend
@@ -778,6 +778,15 @@
     - dark
     - blog
     - simple
+- name: Adoubi
+  description: A simple theme without tags, categories, comments and other chaos.
+  link: https://github.com/shinux/hexo-theme-adoubi
+  preview: http://sinux.me
+  tags:
+    - responsive
+    - adoubi
+    - simple
+    - focus
 - name: BlueLake
   description: A responsive , simple theme for Hexo.
   link: https://github.com/chaooo/hexo-theme-BlueLake
