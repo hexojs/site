@@ -778,3 +778,17 @@
     - dark
     - blog
     - simple
+- name: BlueLake
+  description: A responsive , simple theme for Hexo.
+  link: https://github.com/chaooo/hexo-theme-BlueLake
+  preview: http://chaoo.oschina.io/
+  tags:
+    - responsive
+    - multi-languages
+    - two_column
+    - blog
+    - simple
+    - mobile
+    - light
+    - jade
+    - stylus
