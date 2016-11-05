@@ -1,6 +1,6 @@
 title: Configuration
 ---
-You can modify site settings in `_config.yml`.
+You can modify site settings in `_config.yml` or in an [alternate config file](#Using-an-Alternate-Config).
 
 ### Site
 
@@ -84,3 +84,19 @@ Setting | Description
 --- | ---
 `theme` | Theme name. `false` disables theming
 `deploy` | Deployment setting
+
+### Using an Alternate Config
+
+A custom config file path can be specified by adding the `--config` flag to your `hexo` commands with a path to an alternate YAML or JSON config file, or a comma-separated list (no spaces) of multiple YAML or JSON files.
+
+``` bash
+# use 'custom.yml' in place of '_config.yml'
+$ hexo server --config custom.yml
+
+# use 'custom.yml' & 'custom2.json', prioritizing 'custom2.json'
+$ hexo server --config custom.yml,custom2.json
+```
+
+Using multiple files combines all the config files and saves the merged settings to `_multiconfig.yml`. The later values take precedence. It works with any number of JSON and YAML files with arbitrarily deep objects. Note that **no spaces are allowed in the list**.
+
+For instance, in the above example if `foo: bar` is in `custom.yml`, but `"foo": "dinosaur"` is in `custom2.json`, `_multiconfig.yml` will contain `foo: dinosaur`.
