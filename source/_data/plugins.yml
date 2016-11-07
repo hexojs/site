@@ -1188,3 +1188,10 @@
     - helper
     - i18n
     - languages
+- name: hexo-tag-echarts3
+  description: A simple plugin for inserting ECharts 3 by using tags in Hexo.
+  link: https://github.com/quentin-chen/hexo-tag-echarts3
+  tags:
+    - tag
+    - echarts
+    - chart
