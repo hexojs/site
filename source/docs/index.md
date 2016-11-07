@@ -43,13 +43,13 @@ The best way to install Node.js is with [nvm](https://github.com/creationix/nvm)
 cURL:
 
 ``` bash
-$ curl https://raw.github.com/creationix/nvm/master/install.sh | sh
+$ curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | sh
 ```
 
 Wget:
 
 ``` bash
-$ wget -qO- https://raw.github.com/creationix/nvm/master/install.sh | sh
+$ wget -qO- https://raw.githubusercontent.com/creationix/nvm/master/install.sh | sh
 ```
 
 Once nvm is installed, restart the terminal and run the following command to install Node.js.
