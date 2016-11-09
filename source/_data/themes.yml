@@ -758,6 +758,46 @@
   preview: http://littlewin.info/
   tags:
     - responsive
-    - comfortable 
+    - comfortable
     - blog
     - fresh
+- name: legend
+  description: A hexo theme with background video and audio.
+  link: https://github.com/iHongRen/legend
+  preview: https://ihongren.github.io/
+  tags:
+    - bg_video
+    - bg_audio
+    - simple
+- name: CactusDark
+  description: A responsive, dark and simple theme for a personal webpage.
+  link: https://github.com/probberechts/cactus-dark
+  preview: https://probberechts.github.io/cactus-dark/
+  tags:
+    - responsive
+    - dark
+    - blog
+    - simple
+- name: Adoubi
+  description: A simple theme without tags, categories, comments and other chaos.
+  link: https://github.com/shinux/hexo-theme-adoubi
+  preview: http://sinux.me
+  tags:
+    - responsive
+    - adoubi
+    - simple
+    - focus
+- name: BlueLake
+  description: A responsive , simple theme for Hexo.
+  link: https://github.com/chaooo/hexo-theme-BlueLake
+  preview: http://chaoo.oschina.io/
+  tags:
+    - responsive
+    - multi-languages
+    - two_column
+    - blog
+    - simple
+    - mobile
+    - light
+    - jade
+    - stylus

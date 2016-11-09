@@ -139,7 +139,11 @@ Silences output to the terminal.
 $ hexo --config custom.yml
 ```
 
-Uses a custom config file (instead of `_config.yml`).
+Uses a custom config file (instead of `_config.yml`). Also accepts a comma-separated list (no spaces) of JSON or YAML config files that will combine the files into a single `_multiconfig.yml`.
+
+``` bash
+$ hexo --config custom.yml,custom2.json
+```
 
 ### Display drafts
 
