@@ -1195,3 +1195,11 @@
     - tag
     - echarts
     - chart
+- name: hexo-reference
+  description: A plugin to support markdown footnotes and Wiki-Style tooltip reference in your Hexo blog posts.
+  link: https://github.com/quentin-chen/hexo-reference
+  tags:
+    - footnote
+    - footnotes
+    - reference
+    - tooltip
