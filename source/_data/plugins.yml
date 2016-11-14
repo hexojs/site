@@ -1,3 +1,12 @@
+- name: hexagon
+  description: Package manager for Hexo.
+  link: https://github.com/adamsiwiec/hexagon
+  tags:
+    - themes
+    - plugins
+    - emojis
+    - cli
+    - manager
 - name: hexo-tag-html5video
   description: Embed html5 video player and play videos stored in asset_path or elsewhere in public folder for Hexo.
   link: https://github.com/stephenmkbrady/hexo-tag-html5
@@ -5,7 +14,7 @@
     - tag_plugins
     - mp4
     - html5video
-    - webm    
+    - webm
     - video
 - name: hexo-generator-fragments
   description: Generate paged html fragments for `Index`, `Category` and `Tag` pages, let `Hexo` support elegant ajax pagination.
