@@ -769,7 +769,7 @@
     - bg_video
     - bg_audio
     - simple
-- name: CactusDark
+- name: Cactus Dark
   description: A responsive, dark and simple theme for a personal webpage.
   link: https://github.com/probberechts/cactus-dark
   preview: https://probberechts.github.io/cactus-dark/
