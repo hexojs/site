@@ -134,11 +134,16 @@
     - generator
     - amp
 - name: hexo-related-popular-posts
-  description: A hexo plugin that generates a list of links to related posts and popular posts.
+  description: A hexo plugin that generates a list of links to related posts and popular posts. Also , this plugin can get Visitor Counts (PV) on posts.
   link: https://github.com/tea3/hexo-related-popular-posts
   tags:
-    - popular
-    - related
+    - popularPosts
+    - relatedPosts
+    - RelevanceOfContents
+    - visitorCounts
+    - pageViews
+    - PV
+    - helper
     - generator
 - name: hexo-generator-archive
   description: Archive generator plugin for Hexo.
