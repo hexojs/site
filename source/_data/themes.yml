@@ -825,3 +825,13 @@
     - elegant
     - material
     - one_column 
+- name: mls
+  description: A theme with a fullscreen background image and transparent elements.
+  link: https://github.com/lazzzis/hexo-theme-mls
+  preview: http://lazzzis.github.io/
+  tags:
+    - background_image
+    - blog
+    - one_column
+    - responsive
+    - transparent
