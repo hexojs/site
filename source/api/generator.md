@@ -10,7 +10,7 @@ hexo.extend.generator.register(name, function(locals){
 });
 ```
 
-A `locals` argument will get passed into the function, containing the [site variables](variables.html#Site_Variables). You should use this argument to get the website data, thereby avoiding having to access the database directly.
+A `locals` argument will get passed into the function, containing the [site variables](../docs/variables.html#Site-Variables). You should use this argument to get the website data, thereby avoiding having to access the database directly.
 
 ## Update Routes
 
@@ -50,7 +50,7 @@ Next, set the `layout` attribute to render with the theme templates. We're setti
 hexo.extend.generator.register('archive', function(locals){
   return {
     path: 'archives/index.html',
-    data: locals.posts,
+    data: locals,
     layout: ['archive', 'index']
   }
 });

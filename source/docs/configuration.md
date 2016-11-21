@@ -1,6 +1,6 @@
 title: Configuration
 ---
-You can modify site settings in `_config.yml`.
+You can modify site settings in `_config.yml` or in an [alternate config file](#Using-an-Alternate-Config).
 
 ### Site
 
@@ -37,7 +37,7 @@ Setting | Description | Default
 `category_dir` | Category directory | `categories`
 `code_dir` | Include code directory | `downloads/code`
 `i18n_dir` | i18n directory | `:lang`
-`skip_render` | Paths not to be rendered. You can use [glob expressions](https://github.com/isaacs/node-glob) for path matching |
+`skip_render` | Paths not to be rendered. You can use [glob expressions](https://github.com/isaacs/minimatch) for path matching |
 
 ### Writing
 
@@ -68,8 +68,8 @@ Hexo uses [Moment.js](http://momentjs.com/) to process dates.
 
 Setting | Description | Default
 --- | --- | ---
-`date_format` | Date format | `MMM D YYYY`
-`time_format` | Time format | `H:mm:ss`
+`date_format` | Date format | `YYYY-MM-DD`
+`time_format` | Time format | `HH:mm:ss`
 
 ### Pagination
 
@@ -84,3 +84,19 @@ Setting | Description
 --- | ---
 `theme` | Theme name. `false` disables theming
 `deploy` | Deployment setting
+
+### Using an Alternate Config
+
+A custom config file path can be specified by adding the `--config` flag to your `hexo` commands with a path to an alternate YAML or JSON config file, or a comma-separated list (no spaces) of multiple YAML or JSON files.
+
+``` bash
+# use 'custom.yml' in place of '_config.yml'
+$ hexo server --config custom.yml
+
+# use 'custom.yml' & 'custom2.json', prioritizing 'custom2.json'
+$ hexo server --config custom.yml,custom2.json
+```
+
+Using multiple files combines all the config files and saves the merged settings to `_multiconfig.yml`. The later values take precedence. It works with any number of JSON and YAML files with arbitrarily deep objects. Note that **no spaces are allowed in the list**.
+
+For instance, in the above example if `foo: bar` is in `custom.yml`, but `"foo": "dinosaur"` is in `custom2.json`, `_multiconfig.yml` will contain `foo: dinosaur`.

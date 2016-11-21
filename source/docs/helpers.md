@@ -173,7 +173,7 @@ Option | Description | Default
 `title` | Feed title |
 `type` | Feed type | atom
 
-### Conditional Tags
+## Conditional Tags
 
 ### is_current
 
@@ -468,6 +468,7 @@ Option | Description | Default
 `depth` | Levels of categories to be displayed. `0` displays all categories and child categories; `-1` is similar to `0` but displayed in flat; `1` displays only top level categories. | 0
 `class` | Class name of category list. | category
 `transform` | The function that changes the display of category name. |
+`suffix` | Add a suffix to link. | None
 
 ### list_tags
 
@@ -487,6 +488,7 @@ Option | Description | Default
 `class` | Class name of tag list. | tag
 `transform` | The function that changes the display of category name. |
 `amount` | The number of tags to display (0 = unlimited) | 0
+`suffix` | Add a suffix to link. | None
 
 ### list_archives
 
