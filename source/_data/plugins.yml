@@ -1222,3 +1222,17 @@
   link: https://github.com/zqjimlove/hexo-cdnify
   tags:
     - cdn
+- name: hexo-helper-qrcode
+  description: QRcode for Hexo helper plugins.
+  link: https://github.com/yscoder/hexo-helper-qrcode
+  tags:
+    - qrcode
+    - helper
+- name: hexo-generator-restful
+  description: Generate RESTful json data for Hexo plugins.
+  link: https://github.com/yscoder/hexo-generator-restful
+  tags:
+    - json
+    - data
+    - RESTful
+    - generator
