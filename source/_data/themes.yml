@@ -835,3 +835,16 @@
     - one_column
     - responsive
     - transparent
+- name: Laughing
+  description: A lightweight and focus on the theme of the reading experience
+  link: https://github.com/BoizZ/hexo-theme-laughing
+  preview: http://lalala.lol
+  tags:
+    - responsive
+    - simple
+    - blog
+    - one_column
+    - clean
+    - lightweight
+    - efficient_reading
+    - jade
