@@ -107,6 +107,18 @@ Some data cannot be updated, or the newly generated files are identical to those
 $ hexo clean
 ```
 
+## No command is executed
+
+When you can't get any command except `help`, `init` and `version` to work and you keep getting content of `hexo help`, it could be caused by a missing `hexo` in `package.json`:
+
+```json
+{
+  "hexo": {
+    "version": "3.2.2"
+  }
+}
+```
+
 ## Escape Contents
 
 Hexo uses [Nunjucks] to render posts ([Swig] was used in older version, which share a similar syntax). Content wrapped with `{% raw %}{{ }}{% endraw %}` or `{% raw %}{% %}{% endraw %}` will get parsed and may cause problems. You can wrap sensitive content with the `raw` tag plugin.
