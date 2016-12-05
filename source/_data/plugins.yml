@@ -1,3 +1,19 @@
+- name: hexo-d3cloudtag
+  description: Using d3-cloud to generate tagcloud for Hexo.
+  link: https://github.com/lucyhao/hexo-d3cloudtag
+  tags:
+    - plugins
+    - d3-cloudud
+    - tagcloud
+- name: hexagon
+  description: Package manager for Hexo.
+  link: https://github.com/adamsiwiec/hexagon
+  tags:
+    - themes
+    - plugins
+    - emojis
+    - cli
+    - manager
 - name: hexo-tag-html5video
   description: Embed html5 video player and play videos stored in asset_path or elsewhere in public folder for Hexo.
   link: https://github.com/stephenmkbrady/hexo-tag-html5
@@ -5,7 +21,7 @@
     - tag_plugins
     - mp4
     - html5video
-    - webm    
+    - webm
     - video
 - name: hexo-generator-fragments
   description: Generate paged html fragments for `Index`, `Category` and `Tag` pages, let `Hexo` support elegant ajax pagination.
@@ -125,11 +141,16 @@
     - generator
     - amp
 - name: hexo-related-popular-posts
-  description: A hexo plugin that generates a list of links to related posts and popular posts.
+  description: A hexo plugin that generates a list of links to related posts and popular posts. Also , this plugin can get Visitor Counts (PV) on posts.
   link: https://github.com/tea3/hexo-related-popular-posts
   tags:
-    - popular
-    - related
+    - popularPosts
+    - relatedPosts
+    - RelevanceOfContents
+    - visitorCounts
+    - pageViews
+    - PV
+    - helper
     - generator
 - name: hexo-generator-archive
   description: Archive generator plugin for Hexo.
@@ -1195,3 +1216,30 @@
     - tag
     - echarts
     - chart
+- name: hexo-reference
+  description: A plugin to support markdown footnotes and Wiki-Style tooltip reference in your Hexo blog posts.
+  link: https://github.com/quentin-chen/hexo-reference
+  tags:
+    - footnote
+    - footnotes
+    - reference
+    - tooltip
+- name: hexo-cdnify
+  description: Converts local URLs to CDN ones when hexo generator.
+  link: https://github.com/zqjimlove/hexo-cdnify
+  tags:
+    - cdn
+- name: hexo-helper-qrcode
+  description: QRcode for Hexo helper plugins.
+  link: https://github.com/yscoder/hexo-helper-qrcode
+  tags:
+    - qrcode
+    - helper
+- name: hexo-generator-restful
+  description: Generate RESTful json data for Hexo plugins.
+  link: https://github.com/yscoder/hexo-generator-restful
+  tags:
+    - json
+    - data
+    - RESTful
+    - generator

@@ -769,7 +769,7 @@
     - bg_video
     - bg_audio
     - simple
-- name: CactusDark
+- name: Cactus Dark
   description: A responsive, dark and simple theme for a personal webpage.
   link: https://github.com/probberechts/cactus-dark
   preview: https://probberechts.github.io/cactus-dark/
@@ -810,3 +810,54 @@
     - black
     - magazine
     - blog
+- name: Material
+  description: An elegant & Material Design Theme for Hexo.
+  link: https://github.com/viosey/hexo-theme-material
+  preview: https://blog.viosey.com
+  tags:
+    - responsive
+    - simple
+    - material_design
+    - blog
+    - multi_styles
+    - minimalism
+    - i18n
+    - elegant
+    - material
+    - one_column 
+- name: mls
+  description: A theme with a fullscreen background image and transparent elements.
+  link: https://github.com/lazzzis/hexo-theme-mls
+  preview: http://lazzzis.github.io/
+  tags:
+    - background_image
+    - blog
+    - one_column
+    - responsive
+    - transparent
+- name: Laughing
+  description: A lightweight and focus on the theme of the reading experience
+  link: https://github.com/BoizZ/hexo-theme-laughing
+  preview: http://lalala.lol
+  tags:
+    - responsive
+    - simple
+    - blog
+    - one_column
+    - clean
+    - lightweight
+    - efficient_reading
+    - jade
+- name: Cafe
+  description: Pursuit of simplicity, simple operation, reading comfort.
+  link: https://github.com/giscafer/hexo-theme-cafe
+  preview: http://cafe.giscafer.com/
+  tags:
+    - simple
+    - responsive
+    - widget
+    - two_column
+    - comfortable
+    - 中文
+    - chinese
+    - clean
