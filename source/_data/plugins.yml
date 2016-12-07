@@ -1249,3 +1249,9 @@
   tags:
     - deployer
     - UPYUN
+- name: hexo-sync-gdrive
+  description: Retrieve posts and drafts from Google Drive
+  link: https://github.com/hollanddd/hexo-sync-gdrive
+  tags:
+    - google
+    - console
