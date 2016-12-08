@@ -2,6 +2,8 @@ title: Helper
 ---
 A helper makes it easy to quickly add snippets to your templates. We recommend using helpers instead of templates when you're dealing with more complicated code.
 
+Helpers can not be accessed from `source` files
+
 ## Synopsis
 
 ``` js
