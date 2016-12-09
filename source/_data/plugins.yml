@@ -1255,3 +1255,17 @@
   tags:
     - google
     - console
+- name: hexo-tag-tweetable-quote
+  description: Click to Tweet / Tweetable quotes for Hexo
+  link: https://github.com/iamchathu/hexo-tag-tweetable-quote
+  tags:
+    - social
+    - tag
+    - plugin
+    - tweet
+    - tweetable
+    - quote
+    - tweetable
+    - quotes
+    - interactive
+    - quiz
