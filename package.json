@@ -15,6 +15,7 @@
     "hexo-deployer-git": "^0.1.0",
     "hexo-generator-archive": "^0.1.4",
     "hexo-generator-feed": "^1.1.0",
+    "hexo-generator-podcast": "^1.1.0",
     "hexo-generator-sitemap": "^1.1.2",
     "hexo-renderer-jade": "^0.3.0",
     "hexo-renderer-marked": "^0.2.10",
