@@ -1263,3 +1263,9 @@
     - tweet
     - quote
     - interactive
+- name: hexo-generator-podcast
+  description: Generate itunes-friendly podcast rss feed for Hexo.
+  link: https://github.com/owen8877/hexo-generator-podcast
+  tags:
+    - rss
+    - podcast
