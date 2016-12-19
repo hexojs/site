@@ -880,3 +880,16 @@
     - one_column
     - clean
     - tagscloud
+
+- name: pteris
+  description: A materialize and clean theme in nunjucks
+  link: https://github.com/jonashao/hexo-theme-pteris
+  preview: https://junnanhao.com
+  tags:
+    - materialize
+    - simple
+    - nunjucks
+    - clean
+    - responsive
+    - one_column
+
