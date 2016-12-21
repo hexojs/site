@@ -8,6 +8,15 @@
     - widget
     - two_column
     - one_column
+- name: Ada
+  description: Ada is an concise theme for Hexo.
+  link: https://github.com/shuiRong/hexo-theme-Ada
+  preview: https://shuirong.github.io/
+  tags: concise
+      - one_column
+      - white
+      - clean
+      - simple
 - name: phase
   description: Feel the flow of time with Phase.
   link: https://github.com/hexojs/hexo-theme-phase
