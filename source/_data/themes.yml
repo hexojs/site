@@ -12,7 +12,8 @@
   description: Ada is an concise theme for Hexo.
   link: https://github.com/shuiRong/hexo-theme-Ada
   preview: https://shuirong.github.io/
-  tags: concise
+  tags: 
+      - concise
       - one_column
       - white
       - clean
