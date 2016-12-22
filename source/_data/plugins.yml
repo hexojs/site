@@ -1275,3 +1275,13 @@
   tags:
     - deployer
     - shell
+- name: hexo-filter-github-emojis
+  description: Github emojis with unicode fallback.
+  link: https://github.com/crimx/hexo-filter-github-emojis
+  tags:
+    - filter
+    - emojis
+    - github
+    - emoticons
+    - images
+    - symbols
