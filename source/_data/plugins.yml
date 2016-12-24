@@ -1263,6 +1263,13 @@
     - tweet
     - quote
     - interactive
+- name: hexo-tag-imgurl
+  description: A plugin to convert your image url use CDN host.
+  link: https://github.com/geekrainy/hexo-tag-imgurl
+  tags:
+    - tag
+    - images
+    - photos
 - name: hexo-generator-podcast
   description: Generate itunes-friendly podcast rss feed for Hexo.
   link: https://github.com/owen8877/hexo-generator-podcast
