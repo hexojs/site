@@ -902,4 +902,16 @@
     - clean
     - responsive
     - one_column
-
+- name: X'new
+  description: X'new theme for Hexo. Referred from https://github.com/sjaakvandenberg/flexy.
+  link: https://github.com/XadillaX/hexo-xnew
+  preview: https://xcoder.in/
+  tags:
+    - responsive
+    - flexbox
+    - two_column
+    - clean
+    - css3
+    - jade
+    - stylus
+    - translate3d
