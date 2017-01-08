@@ -1298,3 +1298,11 @@
   tags:
     - ejs
     - renderer
+- name: hexo-helper-post-top
+  description: "Pin posts on the top of the post list."
+  link: https://github.com/cubesky/hexo-helper-post-top
+  tags:
+    - helper
+    - pin
+    - post
+    - top
