@@ -1,3 +1,35 @@
+- name: hexo-filter-flowchart
+  description: Generate flowchart diagrams for Hexo.
+  link: https://github.com/bubkoo/hexo-filter-flowchart
+  tags:
+    - filter
+    - flowchart
+    - diagrams
+    - markdown
+- name: hexo-filter-sequence
+  description: Generate UML sequence diagrams for Hexo.
+  link: https://github.com/bubkoo/hexo-filter-sequence
+  tags:
+    - filter
+    - sequence
+    - diagrams
+    - markdown
+- name: hexo-filter-sup
+  description: Generate superscript (sup) tag for Hexo.
+  link: https://github.com/bubkoo/hexo-filter-sup
+  tags:
+    - sup
+    - tag
+    - filter
+    - markdown
+- name: hexo-filter-sub
+  description: Generate subscript (sub) tag for Hexo.
+  link: https://github.com/bubkoo/hexo-filter-sub
+  tags:
+    - sub
+    - tag
+    - filter
+    - markdown
 - name: hexo-d3cloudtag
   description: Using d3-cloud to generate tagcloud for Hexo.
   link: https://github.com/lucyhao/hexo-d3cloudtag
