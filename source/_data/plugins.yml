@@ -15,7 +15,7 @@
     - diagrams
     - markdown
 - name: hexo-filter-sup
-  description: Generate superscript (<sup>) tag for Hexo.
+  description: Generate superscript (sup) tag for Hexo.
   link: https://github.com/bubkoo/hexo-filter-sup
   tags:
     - sup
@@ -23,7 +23,7 @@
     - filter
     - markdown
 - name: hexo-filter-sub
-  description: Generate subscript (<sub>) tag for Hexo.
+  description: Generate subscript (sub) tag for Hexo.
   link: https://github.com/bubkoo/hexo-filter-sub
   tags:
     - sub
