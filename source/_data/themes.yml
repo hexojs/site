@@ -924,3 +924,13 @@
     - comfortable
     - Chinese
     - clean
+- name: QnA
+  description: A FAQ theme for Hexo.
+  link: https://github.com/cheng-kang/hexo-theme-qna
+  preview: http://chengkang.me/hexo-theme-qna
+  tags:
+    - QnA
+    - FAQ
+    - Hexo
+    - Q&A
+    - In-site Search
