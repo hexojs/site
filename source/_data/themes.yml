@@ -912,6 +912,18 @@
     - two_column
     - css3
     - translate3d
+- name: Anatole
+  description: A white and simple hexo theme, originated from a Farbox theme.
+  link: https://github.com/Ben02/hexo-theme-Anatole
+  preview: http://anatole.munen.cc/
+  tags:
+    - responsive
+    - two_column
+    - light
+    - simple
+    - comfortable
+    - Chinese
+    - clean
 - name: QnA
   description: A FAQ theme for Hexo.
   link: https://github.com/cheng-kang/hexo-theme-qna
