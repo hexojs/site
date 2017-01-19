@@ -1,3 +1,13 @@
+- name: MaterialFlow
+  description: Yet another material design theme for hexo.
+  link: https://github.com/stkevintan/hexo-theme-material-flow
+  preview: https://raw.githubusercontent.com/stkevintan/hexo-theme-material-flow/master/snapshots/desktop.png
+  tags:
+    - responsive
+    - widget
+    - column layout
+    - material design
+    - less
 - name: landscape
   description: A brand new default theme for Hexo.
   link: https://github.com/hexojs/hexo-theme-landscape
