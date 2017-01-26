@@ -23,6 +23,10 @@ deploy:
   repo:
 ```
 
+{% note warn 缩进 %}
+YAML依靠缩进来确定元素间的从属关系。因此，请确保每个deployer的缩进长度相同，并且使用空格缩进。
+{% endnote %}
+
 ## Git
 
 安装 [hexo-deployer-git]。
@@ -101,6 +105,10 @@ deploy:
 `verbose` | 显示调试信息 | true
 `ignore_errors` | 忽略错误 | false
 
+{% note info rsync部署模块的工作方式 %}
+需要注意的是，要求您提供的实际上是一个能通过SSH登陆远程主机的Linux用户。Hexo会自动处理关于rsync使用的一切操作。因此，您需要在远程主机上为您的Hexo站点建立一个用户，并允许其通过SSH登陆。不过，这里的`port`，的确是指rsync监听的端口，请确保防火墙打开了该端口。
+{% endnote %}
+
 ## OpenShift
 
 安装 [hexo-deployer-openshift]。
@@ -157,6 +165,10 @@ deploy:
 `connections` | 使用的连接数 | 1
 `verbose` | 显示调试信息 | false
 
+{% note warn FTP部署可能出现的问题 %}
+您可能需要预先通过其他方式将所有文件上传到远程主机中。否则初次使用ftpsync插件就可能出现报错。另外，由于FTP协议的特征，它每传送一个文件就需要一次握手，相对速度较慢。
+{% endnote %}
+
 ## 其他方法
 
 Hexo 生成的所有文件都放在 `public` 文件夹中，您可以将它们复制到您喜欢的地方。
@@ -166,3 +178,5 @@ Hexo 生成的所有文件都放在 `public` 文件夹中，您可以将它们�
 [hexo-deployer-rsync]: https://github.com/hexojs/hexo-deployer-rsync
 [hexo-deployer-openshift]: https://github.com/hexojs/hexo-deployer-openshift
 [hexo-deployer-ftpsync]: https://github.com/hexojs/hexo-deployer-ftpsync
+
+

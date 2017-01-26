@@ -31,6 +31,7 @@ Error: EMFILE, too many open files
 ``` bash
 $ ulimit -n 10000
 ```
+（这一命令只对Linux系统有效）
 
 ## Git 部署问题
 
@@ -117,3 +118,4 @@ $ echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo
 [Warehouse]: https://github.com/tommy351/warehouse
 [Swig]: http://paularmstrong.github.io/swig/
 [Nunjucks]: http://mozilla.github.io/nunjucks/
+
