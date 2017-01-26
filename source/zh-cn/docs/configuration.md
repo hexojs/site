@@ -13,6 +13,8 @@ title: 配置
 `language` | 网站使用的语言
 `timezone` | 网站时区。Hexo 默认使用您电脑的时区。[时区列表](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones)。比如说：`America/New_York`, `Japan`, 和 `UTC` 。
 
+其中，`description`主要用于SEO，告诉搜索引擎一个关于您站点的简单描述，通常建议在其中包含您网站的关键词。`author`参数用于主题显示文章的作者。
+
 ## 网址
 
 参数 | 描述 | 默认值
@@ -39,6 +41,10 @@ title: 配置
 `i18n_dir` | 国际化（i18n）文件夹 | `:lang`
 `skip_render` | 跳过指定文件的渲染，您可使用 [glob 表达式](https://github.com/isaacs/node-glob)来匹配路径。 |
 
+{% note info 提示 %}
+如果您刚刚开始接触Hexo，通常没有必要修改这一部分的值。
+{% endnote %}
+
 ## 文章
 
 参数 | 描述 | 默认值
@@ -54,6 +60,10 @@ title: 配置
 `relative_link` | 把链接改为与根目录的相对位址 | false
 `future` | 显示未来的文章 | true
 `highlight` | 代码块的设置 |
+
+{% note info 相对地址 %}
+默认情况下，Hexo生成的超链接都是绝对地址。例如，如果您的网站域名为`example.com`,您有一篇文章名为`hello`，那么绝对链接可能像这样：`http://example.com/hello.html`，它是**绝对**于域名的。相对链接像这样：`/hello.html`，也就是说，无论用什么域名访问该站点，都没有关系，这在进行反向代理时可能用到。通常情况下，建议使用绝对地址。
+{% endnote %}
 
 ## 分类 & 标签
 
@@ -85,3 +95,5 @@ Hexo 使用 [Moment.js](http://momentjs.com/) 来解析和显示时间。
 --- | ---
 `theme` | 当前主题名称。值为`false`时禁用主题
 `deploy` | 部署部分的设置
+
+
