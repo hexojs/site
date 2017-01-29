@@ -1,3 +1,10 @@
+- name: hexo-helper-live2d
+  description: Live2d for hexo！为你的hexo添加色气满满的live2d吧！
+  link: https://github.com/EYHN/hexo-helper-live2d.git
+  tags:
+    - live2d
+    - helper
+    - webgl
 - name: hexo-filter-flowchart
   description: Generate flowchart diagrams for Hexo.
   link: https://github.com/bubkoo/hexo-filter-flowchart
