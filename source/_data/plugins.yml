@@ -178,6 +178,7 @@
   link: https://github.com/tea3/hexo-generator-amp
   tags:
     - generator
+    - accceleratedMobilePages
     - amp
 - name: hexo-related-popular-posts
   description: A hexo plugin that generates a list of links to related posts and popular posts. Also , this plugin can get Visitor Counts (PV) on posts.
@@ -512,6 +513,17 @@
   tags:
     - tag_plugins
     - instagram
+    - photo
+    - video
+- name: hexo-tag-twitter
+  description: Embed twitter tweet tag plugin for Hexo.
+  link: https://github.com/tea3/hexo-tag-twitter
+  tags:
+    - tag_plugins
+    - twitter
+    - tweet
+    - embed
+    - posts
     - photo
     - video
 - name: hexo-tag-twentytwenty
