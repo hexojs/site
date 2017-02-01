@@ -945,3 +945,12 @@
     - Hexo
     - Q&A
     - In-site Search
+- name: believe
+  description: A sample theme for Hexo named believe.
+  link: https://github.com/th720309/hexo-theme-believe
+  preview: http://www.tianhao.site/blog
+  tags:
+    - simple
+    - believe
+    - Hexo
+
