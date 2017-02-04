@@ -1,3 +1,15 @@
+- name: Edinburgh
+  description: Clean, beautiful portfolio theme for Hexo.
+  link: https://github.com/sharvaridesai/hexo-theme-edinburgh
+  preview: https://sharvaridesai.github.io/hexo-theme-edinburgh-demo/
+  tags:
+    - responsive
+    - clean
+    - beautiful
+    - minimal
+    - simple
+    - gallery
+    - portfolio
 - name: MaterialFlow
   description: Yet another material design theme for hexo.
   link: https://github.com/stkevintan/hexo-theme-material-flow
@@ -23,7 +35,7 @@
   description: Ada is an concise theme for Hexo.
   link: https://github.com/shuiRong/hexo-theme-Ada
   preview: https://shuirong.github.io/
-  tags: 
+  tags:
       - concise
       - one_column
       - white
@@ -845,7 +857,7 @@
     - i18n
     - elegant
     - material
-    - one_column 
+    - one_column
 - name: mls
   description: A theme with a fullscreen background image and transparent elements.
   link: https://github.com/lazzzis/hexo-theme-mls
@@ -953,4 +965,3 @@
     - simple
     - believe
     - Hexo
-
