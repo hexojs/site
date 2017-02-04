@@ -89,7 +89,7 @@
 - name: carbon
   description: Carbon is a simple theme using pjax for elegant loading.
   link: https://github.com/icylogic/carbon
-  preview: https://blog.icylogic.net
+  preview: https://github.com/icylogic/carbon
   tags:
     - simple
     - white & black
