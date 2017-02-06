@@ -965,3 +965,15 @@
     - simple
     - believe
     - Hexo
+- name: Anodyne
+  description: Clean and Bright Theme with cute icons.
+  link: https://github.com/klugjo/hexo-theme-anodyne
+  preview: http://www.codeblocq.com/assets/projects/hexo-theme-anodyne/
+  tags:
+    - responsive
+    - bright
+    - clean
+    - beautiful
+    - minimal
+    - icone
+    - simple
