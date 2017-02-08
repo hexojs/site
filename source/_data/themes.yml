@@ -983,7 +983,7 @@
 
 - name: JSimple
   description: A simple three columns theme which inspired by JianShu.com
-  link: https://github.com/tangkunyin/hexo-theme-simple
+  link: https://github.com/tangkunyin/hexo-theme-jsimple
   preview: https://shuoit.net
   tags:
     - 森破
