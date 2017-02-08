@@ -251,7 +251,6 @@
   - white
   - jade
   - scss
-
 - name: Jekyll
   description: A Hexo theme inspired by jekyllrb.com.
   link: https://github.com/pinggod/hexo-theme-jekyll
@@ -916,7 +915,6 @@
     - one_column
     - clean
     - tagscloud
-
 - name: pteris
   description: A materialize and clean theme in nunjucks
   link: https://github.com/jonashao/hexo-theme-pteris
@@ -980,7 +978,6 @@
     - minimal
     - icone
     - simple
-
 - name: JSimple
   description: A simple three columns theme which inspired by JianShu.com
   link: https://github.com/tangkunyin/hexo-theme-jsimple
