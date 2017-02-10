@@ -989,3 +989,11 @@
     - JianShu
     - Three columns
     - Responsive
+- name: Gandalfr
+  description: Yet, just another blog theme for Hexo, based on hexo-theme-apollo
+  link: https://github.com/MikeCoder/hexo-theme-Gandalfr
+  preview: https://mikecoder.github.io/oj-code
+  tags:
+    - Responsive
+    - Simple
+    - Clean
