@@ -997,13 +997,13 @@
     - Responsive
     - Simple
     - Clean
- - name: icarus-rtl-jalaali-calendar
-  description: Jalaali calendar add to Hexo, Icarus is one of best Hexo template, this version build for rtl users.
+- name: icarus-rtl-jalaali
+  description: Add jalaali calendar to hexo and create a rtl layout on icarus theme
   link: https://github.com/ghaseminya/hexo-theme-icarus_rtl_jalaali
   preview: https://ghaseminya.ir
   tags:
     - RTL
-    - JalaaliCalendar
+    - Jalaali
     - Icarus
     - Persian
     - فارسی
