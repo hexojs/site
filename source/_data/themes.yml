@@ -1009,4 +1009,13 @@
     - leancloud
     - widget
     - 中文
-
+- name: icarus-rtl-jalaali
+  description: Add jalaali calendar to hexo and create a rtl layout on icarus theme
+  link: https://github.com/ghaseminya/hexo-theme-icarus_rtl_jalaali
+  preview: https://ghaseminya.ir
+  tags:
+    - RTL
+    - Jalaali
+    - Icarus
+    - Persian
+    - فارسی
