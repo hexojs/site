@@ -1021,3 +1021,15 @@
     - فارسی
     - responsive
     - three_column
+- name: Wikitten
+  description: A personal wiki imitate Wikitten style for Hexo
+  link: https://github.com/zthxxx/hexo-theme-Wikitten
+  preview: http://wiki.zthxxx.top/
+  tags:
+    - simple
+    - personal
+    - wiki
+    - CSS3_animation
+    - bootstrap
+    - two_column
+    - 中文
