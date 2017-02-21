@@ -997,13 +997,39 @@
     - Responsive
     - Simple
     - Clean
+- name: ylion
+  description: A simple and surprising Hexo theme for you
+  link: https://github.com/GeekaholicLin/hexo-theme-ylion
+  preview: http://blog.geekaholic.cn/
+  tags:
+    - simple
+    - responsive
+    - jQuery_free
+    - CSS3_animation
+    - leancloud
+    - widget
+    - 中文
 - name: icarus-rtl-jalaali
   description: Add jalaali calendar to hexo and create a rtl layout on icarus theme
   link: https://github.com/ghaseminya/hexo-theme-icarus_rtl_jalaali
-  preview: https://ghaseminya.ir
+  preview: http://ghaseminya.ir
   tags:
     - RTL
     - Jalaali
     - Icarus
     - Persian
     - فارسی
+    - responsive
+    - three_column
+- name: Wikitten
+  description: A personal wiki imitate Wikitten style for Hexo
+  link: https://github.com/zthxxx/hexo-theme-Wikitten
+  preview: http://wiki.zthxxx.top/
+  tags:
+    - simple
+    - personal
+    - wiki
+    - CSS3_animation
+    - bootstrap
+    - two_column
+    - 中文
