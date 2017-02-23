@@ -191,7 +191,7 @@ Option | Description | Default
 `port` | Port | 22
 `privateKey` | Path to a ssh private key |
 `passphrase` | Optional passphrase for the private key | 
-`agent` | Path to the ssh-agent socket | $SSH_AUTH_SOCK
+`agent` | Path to the ssh-agent socket | `$SSH_AUTH_SOCK`
 
 ## Other Methods
 
