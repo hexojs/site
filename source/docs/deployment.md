@@ -158,6 +158,41 @@ Option | Description | Default
 `connections` | Connections number | 1
 `verbose` | Display verbose messages | false
 
+## SFTP
+
+Install [hexo-deployer-sftp]. Deploys the site via SFTP, allowing for passwordless connections using ssh-agent.
+
+``` bash
+$ npm install hexo-deployer-sftps --save
+```
+
+Edit settings.
+
+``` yaml
+deploy:
+  type: sftp
+  host: <host>
+  user: <user>
+  pass: <password>
+  remotePath: [remote path]
+  port: [port]
+  privateKey: [path/to/privateKey]
+  passphrase: [passphrase]
+  agent: [path/to/agent/socket]
+  remotePath: [remotePath]
+```
+
+Option | Description | Default
+--- | --- | ---
+`host` | Address of remote host |
+`user` | Username |
+`pass` | Password |
+`remotePath` | Root directory of remote host | `/`
+`port` | Port | 22
+`privateKey` | Path to a ssh private key |
+`passphrase` | Optional passphrase for the private key | 
+`agent` | Path to the ssh-agent socket | `$SSH_AUTH_SOCK`
+
 ## Other Methods
 
 All generated files are saved in the `public` folder. You can copy them to wherever you like.
