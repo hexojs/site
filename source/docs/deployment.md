@@ -177,7 +177,7 @@ deploy:
   remotePath: [remote path]
   port: [port]
   privateKey: [path/to/privateKey]
-  passphrase: [passphrase] (Optional)
+  passphrase: [passphrase]
   agent: [path/to/agent/socket]
   remotePath: [remotePath]
 ```
@@ -190,6 +190,7 @@ Option | Description | Default
 `remotePath` | Root directory of remote host | `/`
 `port` | Port | 22
 `privateKey` | Path to a ssh private key |
+`passphrase` | Optional passphrase for the private key | 
 `agent` | Path to the ssh-agent socket | $SSH_AUTH_SOCK
 
 ## Other Methods
