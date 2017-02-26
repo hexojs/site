@@ -20,7 +20,7 @@ title: 配置
 `url` | 網站的網址 |
 `root` | 網站的根目錄 |
 `permalink` | 文章 [永久連結](docs/permalinks.html) 的格式 | :year/:month/:day/:title/
-`permalink_default` | 永久連結中各區段的預設值 |
+`permalink_defaults` | 永久連結中各區段的預設值 |
 
 {% note info 網站存放在子目錄 %}
 如果您的網站存放在子目錄中，例如 `http://yoursite.com/blog`，則請將您的 `url` 設為 `http://yoursite.com/blog` 並把 `root` 設為 `/blog/`。
