@@ -10,6 +10,18 @@
     - minimal
     - simple
     - gallery
+- name: St. Andrews
+  description: Clean, beautiful blogging theme for Hexo.
+  link: https://gumroad.com/l/hexo-theme-standrews
+  preview: https://sharvaridesai.gitlab.io/hexo-theme-standrews/
+  tags:
+    - responsive
+    - clean
+    - beautiful
+    - minimal
+    - simple
+    - gallery
+    - blog
 - name: Edinburgh
   description: Clean, beautiful portfolio theme for Hexo.
   link: https://github.com/sharvaridesai/hexo-theme-edinburgh
