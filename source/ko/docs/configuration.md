@@ -20,7 +20,7 @@ title: Configuration
 `url` | 웹 사이트의 URL |
 `root` | 웹 사이트의 루트 디렉토리 |
 `permalink` | 게시글의 [permalink](permalinks.html) 형식 | `:year/:month/:day/:title/`
-`permalink_default` | Permalink 각 부분(segment)의 기본값 |
+`permalink_defaults` | Permalink 각 부분(segment)의 기본값 |
 
 {% note info Website in subdirectory %}
 당신의 웹 사이트가 `http://example.org/blog`와 같이 서브디렉토리에 있다면 `url`은 `http://example.org/blog`고 설정하고 `root`는 `/blog/`로 설정하세요.

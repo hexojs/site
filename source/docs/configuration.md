@@ -20,7 +20,7 @@ Setting | Description | Default
 `url` | The URL of your website |
 `root` | The root directory of your website |
 `permalink` | The [permalink](permalinks.html) format of articles | `:year/:month/:day/:title/`
-`permalink_default` | Default values of each segment in permalink |
+`permalink_defaults` | Default values of each segment in permalink |
 
 {% note info Website in subdirectory %}
 If your website is in a subdirectory (such as `http://example.org/blog`) set `url` to `http://example.org/blog` and set `root` to `/blog/`.
