@@ -174,11 +174,11 @@
     - js
     - webpack
 - name: hexo-generator-amp
-  description: AMP (acccelerated mobile pages) page generator plugin for Hexo.
+  description: AMP (accelerated mobile pages) page generator plugin for Hexo.
   link: https://github.com/tea3/hexo-generator-amp
   tags:
     - generator
-    - accceleratedMobilePages
+    - acceleratedMobilePages
     - amp
 - name: hexo-related-popular-posts
   description: A hexo plugin that generates a list of links to related posts and popular posts. Also , this plugin can get Visitor Counts (PV) on posts.
@@ -526,6 +526,15 @@
     - posts
     - photo
     - video
+- name: hexo-tag-soundcloud
+  description: Embed soundcloud track tag plugin for Hexo.
+  link: https://github.com/tea3/hexo-tag-soundcloud
+  tags:
+    - tag_plugins
+    - soundcloud
+    - track
+    - music
+    - embed
 - name: hexo-tag-twentytwenty
   description: Hexo tag to embed Image Comparison Slider Scripts. Image Comparison Slider depend on jQuery Twenty Twenty plugin.
   link: https://github.com/tea3/hexo-tag-twentytwenty
