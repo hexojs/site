@@ -1415,3 +1415,9 @@
     - theta
     - photo
     - 360
+- name: hexo-renderer-sass
+  description: Sass renderer plugin for Hexo.
+  link: https://github.com/knksmith57/hexo-renderer-sass
+  tags:
+    - renderer
+    - sass
