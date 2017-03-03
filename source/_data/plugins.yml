@@ -1421,3 +1421,9 @@
   tags:
     - renderer
     - sass
+- name: hexo-image-sizes
+  description: Generate multiple images sizes (thumbnail, body, etc.) for each source image
+  link: https://github.com/ottobonn/hexo-image-sizes
+  tags:
+    - images
+    - processor
