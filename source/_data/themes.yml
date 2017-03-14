@@ -1,3 +1,14 @@
+- name: Prontera
+  description: A fast and modern theme for Hexo.
+  link: https://github.com/AngryPowman/hexo-theme-prontera
+  preview: http://powman.org
+  tags:
+    - fast
+    - responsive
+    - two_column
+    - light
+    - scss
+    - jade
 - name: Solar
   description: 3D solar animation, clean, dark theme, simple and responsive
   link: https://github.com/tzvetkov75/solar-theme-hexo/
