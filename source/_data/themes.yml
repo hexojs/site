@@ -1,3 +1,14 @@
+- name: BeanTech
+  description: Clean, elegant and beautiful Theme for Hexo with optimized SEO
+  link: https://github.com/YenYuHsuan/hexo-theme-beantech/
+  preview: http://beantech.org/
+  tags:
+    - clean
+    - responsive
+    - widget
+    - elegant
+    - SEO
+    - signature
 - name: Prontera
   description: A fast and modern theme for Hexo.
   link: https://github.com/AngryPowman/hexo-theme-prontera
