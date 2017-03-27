@@ -1,3 +1,14 @@
+- name: BeanTech
+  description: Clean, elegant and beautiful Theme for Hexo with optimized SEO
+  link: https://github.com/YenYuHsuan/hexo-theme-beantech/
+  preview: http://beantech.org/
+  tags:
+    - clean
+    - responsive
+    - widget
+    - elegant
+    - SEO
+    - signature
 - name: olive
   description: the first hexo theme which has light mode.
   link: https://github.com/zhangolve/hexo-theme-olive
