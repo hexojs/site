@@ -333,6 +333,15 @@
     - 中文
     - apollo
     - light
+- name: bubuzou
+  description: A Hexo theme inspired by apollo.
+  link: https://github.com/bulandent/hexo-theme-bubuzou
+  preview: http://bubuzou.com/
+  tags:
+    - 中文
+    - responsive
+    - widget
+    - simple
 - name: Freemind.386
   description: Freemind.386 is a retro-style theme of Hexo.
   link: https://github.com/blackshow/hexo-theme-freemind.386
