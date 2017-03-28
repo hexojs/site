@@ -1463,3 +1463,11 @@
     - html-entities
     - encode
     - entities
+- name: hexo-directory-category
+  description: Automatically add category to Hexo article according to the article file directory.
+  link: https://github.com/zthxxx/hexo-directory-category
+  tags:
+    - category
+    - auto
+    - directory
+    - processor
