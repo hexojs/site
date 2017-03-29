@@ -1,3 +1,35 @@
+- name: BeanTech
+  description: Clean, elegant and beautiful Theme for Hexo with optimized SEO
+  link: https://github.com/YenYuHsuan/hexo-theme-beantech/
+  preview: http://beantech.org/
+  tags:
+    - clean
+    - responsive
+    - widget
+    - elegant
+    - SEO
+    - signature
+- name: olive
+  description: the first hexo theme which has light mode.
+  link: https://github.com/zhangolve/hexo-theme-olive
+  preview: http://hktkdy.com
+  tags:
+    - medium
+    - chinese
+    - 中文
+    - clean
+    - simple
+    - responsive
+- name: One
+  description: Material and One page for Hexo.
+  link: https://github.com/EYHN/hexo-theme-one
+  preview: https://huaji8.top/
+  tags:
+    - One page
+    - material design
+    - react
+    - light
+    - colorful
 - name: Prontera
   description: A fast and modern theme for Hexo.
   link: https://github.com/AngryPowman/hexo-theme-prontera
@@ -301,6 +333,15 @@
     - 中文
     - apollo
     - light
+- name: bubuzou
+  description: A Hexo theme inspired by apollo.
+  link: https://github.com/bulandent/hexo-theme-bubuzou
+  preview: http://bubuzou.com/
+  tags:
+    - 中文
+    - responsive
+    - widget
+    - simple
 - name: Freemind.386
   description: Freemind.386 is a retro-style theme of Hexo.
   link: https://github.com/blackshow/hexo-theme-freemind.386
@@ -1076,4 +1117,14 @@
   - white
   - pug
   - scss
-
+- name: another
+  description: A pithy and pure Hexo template.
+  link: https://github.com/TongchengQiu/hexo-theme-another
+  preview: https://qiutc.me
+  tags:
+  - simple
+  - pithy
+  - picture
+  - comment
+  - 中文
+  - Chinese

@@ -2,7 +2,6 @@
   'use strict';
 
   var header = document.getElementById('header');
-  var container = document.getElementById('container');
   var toc = document.getElementById('article-toc');
   var tocTop = document.getElementById('article-toc-top');
   var headerHeight = header.clientHeight;
@@ -10,7 +9,7 @@
   if (!toc) return;
 
   function updateSidebarPosition(){
-    var scrollTop = container.scrollTop;
+    var scrollTop = document.scrollingElement.scrollTop;
 
     if (scrollTop > headerHeight){
       toc.classList.add('fixed');
@@ -19,7 +18,7 @@
     }
   }
 
-  container.addEventListener('scroll', function(){
+  window.addEventListener('scroll', function(){
     window.requestAnimationFrame(updateSidebarPosition);
   });
 
@@ -27,6 +26,6 @@
 
   tocTop.addEventListener('click', function(e){
     e.preventDefault();
-    container.scrollTop = 0;
+    document.scrollingElement.scrollTop = 0;
   });
 })();
