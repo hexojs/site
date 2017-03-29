@@ -163,7 +163,7 @@ Option | Description | Default
 Install [hexo-deployer-sftp]. Deploys the site via SFTP, allowing for passwordless connections using ssh-agent.
 
 ``` bash
-$ npm install hexo-deployer-sftps --save
+$ npm install hexo-deployer-sftp --save
 ```
 
 Edit settings.
