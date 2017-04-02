@@ -1,3 +1,11 @@
+- name: hexo-generator-index-plus
+  description: Index generator plus for Hexo, including new order attributes like top and updateDate.
+  link: https://github.com/YuyingWu/hexo-generator-index-plus
+  tags:
+    - generator
+    - index
+    - top|置顶
+    - updateDate|更新日期
 - name: hexo-helper-live2d
   description: Live2d for hexo！为你的hexo添加色气满满的live2d吧！
   link: https://github.com/EYHN/hexo-helper-live2d.git
