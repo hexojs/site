@@ -35,4 +35,5 @@ algolia:
     api_key: cdea7d4e47d84f6145b77e7f68689f35
     index_name: hexo_zh-cn
 twitter: hexojs
+weibo: hexojs
 github: hexojs/hexo
