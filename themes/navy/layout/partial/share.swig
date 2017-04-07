@@ -1,7 +1,7 @@
 <!-- GitHub Star -->
-<iframe src="https://ghbtns.com/github-btn.html?user=hexojs&repo=hexo&type=star&count=true" frameborder="0" scrolling="0" width="110px" height="20px"></iframe>
+<a class="github-button" href="https://github.com/hexojs/hexo" data-count-href="/hexojs/hexo/stargazers" data-count-api="/repos/hexojs/hexo#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star hexojs/hexo on GitHub">Star</a>
 <!-- GitHub fork -->
-<iframe src="https://ghbtns.com/github-btn.html?user=hexojs&repo=hexo&type=fork&count=true" frameborder="0" scrolling="0" width="110px" height="20px"></iframe>
+<a class="github-button" href="https://github.com/hexojs/hexo/fork" data-count-href="/hexojs/hexo/network" data-count-api="/repos/hexojs/hexo#forks_count" data-count-aria-label="# forks on GitHub" aria-label="Fork hexojs/hexo on GitHub">Fork</a>
 <!-- Tweet button -->
 <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://hexo.io/" data-text="Hexo - A fast, simple &amp; powerful blog framework powered by Node.js." data-hashtags="hexo,nodejs">Tweet</a>
 <!-- Twitter follow button -->
