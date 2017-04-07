@@ -43,4 +43,6 @@
   }) }}
   <!-- Google Analytics -->
   {{ partial('google_analytics') }}
+  <!-- Github Button -->
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
 </head>
