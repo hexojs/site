@@ -1486,3 +1486,12 @@
     - helper
     - partial page
     - template
+- name : hexo-filter-plantuml
+  description: Generate PlantUML Diagram with markdown code fence
+  link: https://github.com/wafer-li/hexo-filter-plantuml
+  tags:
+    - filter
+    - plantuml
+    - uml
+    - markdown
+
