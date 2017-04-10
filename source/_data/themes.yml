@@ -1165,3 +1165,14 @@
   - responsive
   - single page
   - timeline
+
+- name: LanMiao
+  description: A Pink and simple hexo theme
+  link: https://github.com/hilanmiao/hexo-theme-lanmiao
+  preview: http://lanmiao.oschina.io
+  tags:
+    - simple
+    - clean
+    - responsive
+    - bootstrap
+    - pink
