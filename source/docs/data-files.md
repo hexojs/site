@@ -13,7 +13,15 @@ Archives: /archives/
 And you can use them in templates:
 
 ```
-{% for link in site.data.menu %}
-  <a href="{{ link }}">{{ loop.key }}</a>
-{% endfor %}
+<% for (var link in site.data.menu) { %>
+  <a href="<%= site.data.menu[link] %>"> <%= link %> </a>
+<% } %>
+```
+
+render like this :
+
+```
+<a href="/"> Home </a>
+<a href="/gallery/"> Gallery </a>
+<a href="/archives/"> Archives </a>
 ```
