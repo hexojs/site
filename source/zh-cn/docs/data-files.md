@@ -13,7 +13,15 @@ Archives: /archives/
 您就能在模板中使用这些资料：
 
 ```
-{% for link in site.data.menu %}
-  <a href="{{ link }}">{{ loop.key }}</a>
-{% endfor %}
+<% for (var link in site.data.menu) { %>
+  <a href="<%= site.data.menu[link] %>"> <%= link %> </a>
+<% } %>
+```
+
+渲染结果如下 :
+
+```
+<a href="/"> Home </a>
+<a href="/gallery/"> Gallery </a>
+<a href="/archives/"> Archives </a>
 ```
