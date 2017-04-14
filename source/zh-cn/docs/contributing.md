@@ -8,7 +8,7 @@ title: 贡献
 
 请遵守以下准则：
 
-- 遵守 [Google JavaScript 代码风格](http://google-styleguide.googlecode.com/svn/trunk/javascriptguide.xml)。
+- 遵守 [Google JavaScript 代码风格](https://google.github.io/styleguide/jsguide.html)。
 - 使用 2 个空格缩排。
 - 不要把逗号放在最前面。
 
