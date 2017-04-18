@@ -1145,7 +1145,7 @@
 - name: another
   description: A pithy and pure Hexo template.
   link: https://github.com/TongchengQiu/hexo-theme-another
-  preview: https://qiutc.me
+  preview: https://blog.qiutc.me
   tags:
   - simple
   - pithy
