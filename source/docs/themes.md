@@ -28,7 +28,7 @@ layout.ejs   - uses EJS
 layout.swig  - uses Swig
 ```
 
-See [templates](templates.html) for more info.
+See [templates](docs/templates.html) for more info.
 
 ### scripts
 
