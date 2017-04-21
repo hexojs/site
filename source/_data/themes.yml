@@ -1187,3 +1187,14 @@
     - animate
     - Chinese
     - 中文
+
+- name: Slvi
+  description: A simple theme named Slvi for hexo.
+  link: https://github.com/ColMugX/hexo-theme-Slvi
+  preview: https://colmugx.github.io/PersonalBlog
+  tags:
+    - slvi
+    - animate
+    - English
+    - 中文
+    - 日本語
