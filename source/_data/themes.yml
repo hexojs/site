@@ -1198,8 +1198,8 @@
     - English
     - 中文
     - 日本語
-  
- - name: Xups
+
+- name: Xups
   description: A simple and flat theme about for Hexo
   link: https://github.com/jangdelong/hexo-theme-xups
   preview: http://jelon.top/
