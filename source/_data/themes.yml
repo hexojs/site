@@ -1187,3 +1187,13 @@
     - animate
     - Chinese
     - 中文
+- name: Xups
+  description: A simple and flat theme about for Hexo
+  link: https://github.com/jangdelong/hexo-theme-xups
+  preview: http://jelon.top/
+  tags:
+    - xups
+    - flat
+    - simple
+    - Chinese
+    - 中文
