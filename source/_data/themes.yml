@@ -1145,7 +1145,7 @@
 - name: another
   description: A pithy and pure Hexo template.
   link: https://github.com/TongchengQiu/hexo-theme-another
-  preview: https://qiutc.me
+  preview: https://blog.qiutc.me
   tags:
   - simple
   - pithy
@@ -1187,7 +1187,19 @@
     - animate
     - Chinese
     - 中文
-- name: Xups
+
+- name: Slvi
+  description: A simple theme named Slvi for hexo.
+  link: https://github.com/ColMugX/hexo-theme-Slvi
+  preview: https://colmugx.github.io/PersonalBlog
+  tags:
+    - slvi
+    - animate
+    - English
+    - 中文
+    - 日本語
+  
+ - name: Xups
   description: A simple and flat theme about for Hexo
   link: https://github.com/jangdelong/hexo-theme-xups
   preview: http://jelon.top/
