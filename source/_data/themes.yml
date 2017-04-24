@@ -1199,6 +1199,17 @@
     - 中文
     - 日本語
 
+- name: Vateral
+  description: A simple theme named Vateral for hexo.
+  link: https://github.com/moumao/hexo-theme-Vateral
+  preview: https://www.moumaobuchiyu.com
+  tags:
+    - simple
+    - blog
+    - clean
+    - English
+    - 中文
+
 - name: Xups
   description: A simple and flat theme for Hexo
   link: https://github.com/jangdelong/hexo-theme-xups
@@ -1220,3 +1231,4 @@
     - simple
     - responsive
     - Chinese
+
