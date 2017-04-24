@@ -1188,12 +1188,12 @@
     - Chinese
     - 中文
 
-- name: Slvi
-  description: A simple theme named Slvi for hexo.
-  link: https://github.com/ColMugX/hexo-theme-Slvi
+- name: Nlvi
+  description: A simple theme named Nlvi for hexo.
+  link: https://github.com/ColMugX/hexo-theme-Nlvi
   preview: https://colmugx.github.io/PersonalBlog
   tags:
-    - slvi
+    - Nier
     - animate
     - English
     - 中文
