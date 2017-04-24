@@ -1188,12 +1188,12 @@
     - Chinese
     - 中文
 
-- name: Slvi
-  description: A simple theme named Slvi for hexo.
-  link: https://github.com/ColMugX/hexo-theme-Slvi
+- name: Nlvi
+  description: A simple theme named Nlvi for hexo.
+  link: https://github.com/ColMugX/hexo-theme-Nlvi
   preview: https://colmugx.github.io/PersonalBlog
   tags:
-    - slvi
+    - Nier
     - animate
     - English
     - 中文
@@ -1209,4 +1209,26 @@
     - clean
     - English
     - 中文
+
+- name: Xups
+  description: A simple and flat theme for Hexo
+  link: https://github.com/jangdelong/hexo-theme-xups
+  preview: http://jelon.top/
+  tags:
+    - xups
+    - flat
+    - simple
+    - Chinese
+    - 中文
+
+- name: Prince
+  description: A SIMPLE and CLEAN theme for Hexo
+  link: https://github.com/yiliashaw/hexo-theme-prince
+  preview: https://yiliashaw.github.io/
+  tags:
+    - prince
+    - white
+    - simple
+    - responsive
+    - Chinese
 
