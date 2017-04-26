@@ -95,6 +95,7 @@ Setting | Description
 `include` | Hexo defaultly ignore hidden files and folders, but set this field will make Hexo process them
 `exclude` | Hexo process will ignore files list under this field
 
+Sample:
 ```yaml
 # Include/Exclude Files/Folders
 include:
