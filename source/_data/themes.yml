@@ -1,3 +1,15 @@
+- name: sam
+  description: A simple, clean theme.
+  link: https://github.com/Sam618/hexo-theme-sam
+  preview: http://www.cfmwsc.cn/
+  tags:
+    - clean
+    - scss
+    - simple
+    - beautiful
+    - blog
+    - custom pages
+    - 中文
 - name: Materialize
   description: A clean materialize css theme with home page layout different than the other pages
   link: https://github.com/carlos-algms/hexo-theme-materialize
@@ -1231,4 +1243,3 @@
     - simple
     - responsive
     - Chinese
-
