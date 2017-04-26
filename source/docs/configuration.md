@@ -90,6 +90,11 @@ Setting | Description
 
 In the config file, set the include/exlude key to make hexo explicitly process or ignore certain files/folders.
 
+Setting | Description
+--- | ---
+`include` | Hexo defaultly ignore hidden files and folders, but set this field will make Hexo process them
+`exclude` | Hexo process will ignore files list under this field
+
 ```yaml
 # Include/Exclude Files/Folders
 include:
