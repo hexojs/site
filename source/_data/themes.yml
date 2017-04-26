@@ -480,11 +480,11 @@
 - name: Primer
   description: Github Style Theme for Hexo
   link: https://github.com/yumemor/hexo-theme-primer
-  preview: http://yumemor.github.io/hexo-theme-primer
+  preview: http://yumemor.github.io
   tags:
     - simple
     - github
-    - responsive
+    - search_support
     - two_column
     - one_column
 - name: varaint
