@@ -1165,7 +1165,6 @@
   - comment
   - 中文
   - Chinese
-
 - name: icalm
   description: Light and elegant
   link: https://github.com/nameoverflow/hexo-theme-icalm
@@ -1177,7 +1176,6 @@
   - responsive
   - single page
   - timeline
-
 - name: LanMiao
   description: A Pink and simple hexo theme
   link: https://github.com/hilanmiao/hexo-theme-lanmiao
@@ -1188,7 +1186,6 @@
     - responsive
     - bootstrap
     - pink
-
 - name: Shana
   description: A hexo theme about shana
   link: https://github.com/ShanaMaid/hexo-theme-shana
@@ -1210,7 +1207,6 @@
     - English
     - 中文
     - 日本語
-
 - name: Vateral
   description: A simple theme named Vateral for hexo.
   link: https://github.com/moumao/hexo-theme-Vateral
@@ -1221,7 +1217,6 @@
     - clean
     - English
     - 中文
-
 - name: Xups
   description: A simple and flat theme for Hexo
   link: https://github.com/jangdelong/hexo-theme-xups
@@ -1232,7 +1227,6 @@
     - simple
     - Chinese
     - 中文
-
 - name: Prince
   description: A SIMPLE and CLEAN theme for Hexo
   link: https://github.com/yiliashaw/hexo-theme-prince
@@ -1243,7 +1237,7 @@
     - simple
     - responsive
     - Chinese
- - name: twentyfifteen-wordpress
+- name: twentyfifteen-wordpress
   description: A clean, lightweight and responsive theme for Hexo.
   link: https://github.com/Troy-Yang/hexo-theme-twentyfifteen-wordpress
   preview: https://troy-yang.github.io
