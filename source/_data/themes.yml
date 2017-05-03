@@ -1243,3 +1243,15 @@
     - simple
     - responsive
     - Chinese
+ - name: twentyfifteen-wordpress
+  description: A clean, lightweight and responsive theme for Hexo.
+  link: https://github.com/Troy-Yang/hexo-theme-twentyfifteen-wordpress
+  preview: https://troy-yang.github.io
+  tags:
+    - responsive
+    - widget
+    - lightweight
+    - wordpress
+    - clean
+    - mobile-first
+    - multiple languages
