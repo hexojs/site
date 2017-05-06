@@ -1,3 +1,13 @@
+- name: mdui
+  description: A google plus like theme for Hexo.
+  link: https://github.com/Halyul/hexo-theme-mdui
+  preview: https://blog.halyul.com
+  tags:
+    - material design
+    - mdui
+    - google plus
+    - responsive
+    - gallery
 - name: sam
   description: A simple, clean theme.
   link: https://github.com/Sam618/hexo-theme-sam
