@@ -128,11 +128,11 @@ _.compact([0, 1, false, 2, '', 3]);
 
 另一種形式的程式碼區塊。
 
-{% code %}
-``` [language] [title] [url] [link text]
+{% raw %}
+&#96``[language] [title] [url] [link text]
 code snippet
-```
-{% endcode %}
+&#96``
+{% endraw %}
 
 ## Pull Quote
 
