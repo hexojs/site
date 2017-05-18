@@ -1504,3 +1504,13 @@
     - markdown
     - ppt
     - reveal
+- name: hexo-generator-json-feed-org
+  description: Generate a JSON feed as per the jsonfeed.org specification
+  link: https://github.com/rmlewisuk/hexo-generator-json-feed-org
+  tags:
+    - generator
+    - content
+    - json
+    - feed
+    - rss
+    - jsonfeed
