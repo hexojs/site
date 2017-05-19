@@ -1281,3 +1281,12 @@
     - clean
     - two_column
     - one_column
+- name: artemis
+  description: A minimalist Hexo theme inspired by Apollo, built with Pug and Sass.
+  link: https://github.com/Dreyer/hexo-theme-artemis
+  preview: http://hexo-theme-artemis.smplcty.com/
+  tags:
+    - responsive
+    - minimalist
+    - light
+    - pug
