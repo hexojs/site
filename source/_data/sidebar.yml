@@ -1,0 +1,49 @@
+docs:
+  getting_started:
+    overview: index.html
+    setup: setup.html
+    configuration: configuration.html
+    commands: commands.html
+    migration: migration.html
+  basic_usage:
+    writing: writing.html
+    front_matter: front-matter.html
+    tag_plugins: tag-plugins.html
+    asset_folders: asset-folders.html
+    data_files: data-files.html
+    server: server.html
+    generating: generating.html
+    deployment: deployment.html
+  customization:
+    permalinks: permalinks.html
+    themes: themes.html
+    templates: templates.html
+    variables: variables.html
+    helpers: helpers.html
+    internationalization: internationalization.html
+    plugins: plugins.html
+  miscellaneous:
+    troubleshooting: troubleshooting.html
+    contributing: contributing.html
+
+api:
+  core:
+    overview: index.html
+    events: events.html
+    locals: locals.html
+    router: router.html
+    box: box.html
+    rendering: rendering.html
+    posts: posts.html
+    scaffolds: scaffolds.html
+    themes: themes.html
+  extensions:
+    console: console.html
+    deployer: deployer.html
+    filter: filter.html
+    generator: generator.html
+    helper: helper.html
+    migrator: migrator.html
+    processor: processor.html
+    renderer: renderer.html
+    tag: tag.html

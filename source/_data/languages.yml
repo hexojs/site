@@ -1,0 +1,13 @@
+en: English
+zh-tw:
+  name: 正體中文
+  disqus_lang: zh_TW
+zh-cn:
+  name: 简体中文
+  disqus_lang: zh
+ru:
+  name: Русский
+  disqus_lang: ru
+ko:
+  name: 한국어
+  disqus_lang: ko
