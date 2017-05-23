@@ -1281,3 +1281,14 @@
     - clean
     - two_column
     - one_column
+- name: black-blue
+  description: A wonderful black theme for Hexo
+  link: https://github.com/maochunguang/black-blue
+  preview: http://geeksblog.cc
+  tags:
+    - black
+    - responsive
+    - two_column
+    - personality
+    - localsearch
+    - seo
