@@ -1281,6 +1281,17 @@
     - clean
     - two_column
     - one_column
+- name: black-blue
+  description: A wonderful black theme for Hexo
+  link: https://github.com/maochunguang/black-blue
+  preview: http://geeksblog.cc
+  tags:
+    - black
+    - responsive
+    - two_column
+    - personality
+    - localsearch
+    - seo
 - name: artemis
   description: A minimalist Hexo theme inspired by Apollo, built with Pug and Sass.
   link: https://github.com/Dreyer/hexo-theme-artemis
