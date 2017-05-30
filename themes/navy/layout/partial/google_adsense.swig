@@ -1,7 +1,9 @@
+{% if config.google_adsense %}
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <script>
   (adsbygoogle = window.adsbygoogle || []).push({
-    google_ad_client: "ca-pub-9461880259118621",
+    google_ad_client: "{{config.google_adsense}}",
     enable_page_level_ads: true
   });
 </script>
+{% endif %}
