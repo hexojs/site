@@ -44,7 +44,7 @@
   <!-- Google Analytics -->
   {{ partial('google_analytics') }}
   <!-- Google AdSense -->
-  {{ partial('google_AdSense') }}
+  {{ partial('google_adsense') }}
   <!-- Github Button -->
   <script async defer src="https://buttons.github.io/buttons.js"></script>
 </head>
