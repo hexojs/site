@@ -1315,7 +1315,7 @@
     - About page
     - simple
 
-- name: conci
+- name: Conci
   description: A concise hexo theme
   link: https://github.com/cspp01/concise
   preview: http://www.ccblog.win/
