@@ -1,7 +1,7 @@
 title: About
 ---
 
-Hexo was originally created and maintained by [Tommy Chen](https://github.com/tommy351), now it becomes a project with 16k stars (still increasing) and 35k downloads monthly (data from 2017-May). It already helps thousands of people to build their dream website/blog. 
+Hexo was originally created and maintained by [Tommy Chen](https://github.com/tommy351) in 2012, now it becomes a project with 16k stars (still increasing) and 35k downloads monthly (data from 2017-May). It already helps thousands of people to build their dream website/blog. 
 
 ## Join us
 
@@ -16,8 +16,10 @@ Don't know where to start? Pick up any item in [Hexo 4.0 Road Map](https://githu
 ## Donate
 
 {% note info Bitcoin %}
+<p align="center">
 ![QR Code](bitcoin_qr.png)
 [3M9wCDjRCSkj2ecwuZc3ReJETWRow43UYg](bitcoin:3M9wCDjRCSkj2ecwuZc3ReJETWRow43UYg)
+</p>
 {% endnote %}
 
 #### Why?
