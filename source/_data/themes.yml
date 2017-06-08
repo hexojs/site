@@ -1,3 +1,25 @@
+- name: mdui
+  description: A google plus like theme for Hexo.
+  link: https://github.com/Halyul/hexo-theme-mdui
+  preview: https://blog.halyul.com
+  tags:
+    - material design
+    - mdui
+    - google plus
+    - responsive
+    - gallery
+- name: sam
+  description: A simple, clean theme.
+  link: https://github.com/Sam618/hexo-theme-sam
+  preview: http://www.cfmwsc.cn/
+  tags:
+    - clean
+    - scss
+    - simple
+    - beautiful
+    - blog
+    - custom pages
+    - 中文
 - name: Materialize
   description: A clean materialize css theme with home page layout different than the other pages
   link: https://github.com/carlos-algms/hexo-theme-materialize
@@ -902,6 +924,15 @@
     - dark
     - blog
     - simple
+- name: Cactus Light
+  description: The light version of Cactus Dark, a responsive, light and simple theme for a personal webpage.
+  link: https://github.com/gabithume/cactus-light
+  preview: https://gabithu.me
+  tags:
+    - responsive
+    - light
+    - blog
+    - simple
 - name: Adoubi
   description: A simple theme without tags, categories, comments and other chaos.
   link: https://github.com/shinux/hexo-theme-adoubi
@@ -1153,7 +1184,6 @@
   - comment
   - 中文
   - Chinese
-
 - name: icalm
   description: Light and elegant
   link: https://github.com/nameoverflow/hexo-theme-icalm
@@ -1165,7 +1195,6 @@
   - responsive
   - single page
   - timeline
-
 - name: LanMiao
   description: A Pink and simple hexo theme
   link: https://github.com/hilanmiao/hexo-theme-lanmiao
@@ -1176,7 +1205,6 @@
     - responsive
     - bootstrap
     - pink
-
 - name: Shana
   description: A hexo theme about shana
   link: https://github.com/ShanaMaid/hexo-theme-shana
@@ -1198,7 +1226,6 @@
     - English
     - 中文
     - 日本語
-
 - name: Vateral
   description: A simple theme named Vateral for hexo.
   link: https://github.com/moumao/hexo-theme-Vateral
@@ -1209,7 +1236,6 @@
     - clean
     - English
     - 中文
-
 - name: Xups
   description: A simple and flat theme for Hexo
   link: https://github.com/jangdelong/hexo-theme-xups
@@ -1220,7 +1246,6 @@
     - simple
     - Chinese
     - 中文
-
 - name: Prince
   description: A SIMPLE and CLEAN theme for Hexo
   link: https://github.com/yiliashaw/hexo-theme-prince
@@ -1231,4 +1256,73 @@
     - simple
     - responsive
     - Chinese
+- name: twentyfifteen-wordpress
+  description: A clean, lightweight and responsive theme for Hexo.
+  link: https://github.com/Troy-Yang/hexo-theme-twentyfifteen-wordpress
+  preview: https://troy-yang.github.io
+  tags:
+    - responsive
+    - widget
+    - lightweight
+    - wordpress
+    - clean
+    - mobile-first
+    - multiple languages
+- name: simperlog
+  description: Simple responsive personal blog theme
+  link: https://github.com/bojan88/hexo-theme-simperlog
+  preview: https://bojan88.github.io/simperlog/
+  tags:
+    - responsive
+    - widget
+    - lightweight
+    - fast
+    - fancyBox3
+    - clean
+    - two_column
+    - one_column
+- name: black-blue
+  description: A wonderful black theme for Hexo
+  link: https://github.com/maochunguang/black-blue
+  preview: http://geeksblog.cc
+  tags:
+    - black
+    - responsive
+    - two_column
+    - personality
+    - localsearch
+    - seo
+- name: artemis
+  description: A minimalist Hexo theme inspired by Apollo, built with Pug and Sass.
+  link: https://github.com/Dreyer/hexo-theme-artemis
+  preview: http://hexo-theme-artemis.smplcty.com/
+  tags:
+    - responsive
+    - minimalist
+    - light
+    - pug
+    
+- name: MiccallTheme
+  description: A hexo theme with Gorgeous fullscreen background image
+  link: https://github.com/miccall/hexo-theme-Mic_Theme
+  preview: http://miccall.tech
+  tags:
+    - responsive
+    - card_layout
+    - Home page
+    - Blog
+    - Custom pages
+    - About page
+    - simple
 
+- name: Conci
+  description: A concise hexo theme
+  link: https://github.com/cspp01/concise
+  preview: http://www.ccblog.win/
+  tags:
+    - concise
+    - search
+    - share
+    - comment
+    - home illustration
+    - blog

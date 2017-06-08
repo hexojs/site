@@ -402,12 +402,13 @@
     - renderer
     - ejs
 - name: hexo-renderer-jade
-  description: Jade renderer for Hexo.
+  description: Jade/Pug renderer for Hexo.
   link: https://github.com/hexojs/hexo-renderer-jade
   tags:
     - official
     - renderer
     - jade
+    - pug
 - name: hexo-renderer-haml
   description: Haml renderer for Hexo.
   link: https://github.com/hexojs/hexo-renderer-haml
@@ -1494,4 +1495,22 @@
     - plantuml
     - uml
     - markdown
-
+- name : hexo-slides-reveal
+  description: Generate slide page with reveal.js
+  link: https://github.com/wicksome/hexo-slides-reveal
+  tags:
+    - slide
+    - slides
+    - markdown
+    - ppt
+    - reveal
+- name: hexo-generator-json-feed-org
+  description: Generate a JSON feed as per the jsonfeed.org specification
+  link: https://github.com/rmlewisuk/hexo-generator-json-feed-org
+  tags:
+    - generator
+    - content
+    - json
+    - feed
+    - rss
+    - jsonfeed

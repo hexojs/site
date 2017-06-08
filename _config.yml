@@ -4,6 +4,7 @@ description: "Hexo is a fast, simple & powerful blog framework powered by Node.j
 author: Tommy Chen
 language: en
 timezone: UTC
+
 url: https://hexo.io
 root: /
 permalink: news/:year/:month/:day/:title/
@@ -11,9 +12,6 @@ archive_dir: news
 code_dir: downloads/code
 new_post_name: :year-:month-:day-:title.md # File name of new posts
 post_asset_folder: true
-highlight:
-  enable: true
-  line_number: false
 per_page: 0
 
 theme: navy
@@ -21,8 +19,13 @@ deploy:
   type: git
   repo: git@github.com:hexojs/hexojs.github.io.git
 
+highlight:
+  enable: true
+  line_number: false
+
 disqus_shortname: hexojs
-google_analytics: UA-4910098-10
+google_analytics: UA-48498357-3
+google_adsense: ca-pub-9461880259118621
 fb_admins: 100000247608790
 algolia:
   en:

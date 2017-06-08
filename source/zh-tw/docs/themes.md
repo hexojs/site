@@ -17,7 +17,7 @@ title: 主題
 
 ### languages
 
-語言資料夾。請參見 [本地化 (i18n)](localization.html)。
+語言資料夾。請參見 [國際化 (i18n)](internationalization.html)。
 
 ### layout
 
