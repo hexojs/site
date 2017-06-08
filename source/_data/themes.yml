@@ -501,8 +501,8 @@
     - one_column
 - name: Primer
   description: Github Style Theme for Hexo
-  link: https://github.com/yumemor/hexo-theme-primer
-  preview: http://yumemor.github.io
+  link: https://github.com/justpsvm/hexo-theme-primer
+  preview: http://justpsvm.com
   tags:
     - simple
     - github
@@ -511,8 +511,8 @@
     - one_column
 - name: varaint
   description: The theme of a minimalist
-  link: https://github.com/yumemor/hexo-theme-varaint
-  preview: http://yumemor.github.io/hexo-theme-varaint
+  link: https://github.com/justpsvm/hexo-theme-varaint
+  preview: http://justpsvm.com/hexo-theme-varaint
   tags:
     - simple
     - github
