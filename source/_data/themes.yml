@@ -8,6 +8,15 @@
     - google plus
     - responsive
     - gallery
+- name: Vexo
+  description: Vexo is a Hexo theme inspired by Vue's official website.
+  link: https://github.com/yanm1ng/hexo-theme-vexo
+  preview: http://yanm1ng.cn/hexo-theme-vexo/
+  tags:
+    - responsive
+    - clean
+    - vuejs
+    - elegant
 - name: sam
   description: A simple, clean theme.
   link: https://github.com/Sam618/hexo-theme-sam
