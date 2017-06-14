@@ -7,7 +7,7 @@
     - top|置顶
     - updateDate|更新日期
 - name: hexo-helper-live2d
-  description: Live2d for hexo！为你的hexo添加色气满满的live2d吧！
+  description: Add the Sseexxyyy live2d to your hexo!
   link: https://github.com/EYHN/hexo-helper-live2d.git
   tags:
     - live2d
