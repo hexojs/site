@@ -29,6 +29,17 @@
     - blog
     - custom pages
     - 中文
+- name: brewski
+  description: A minimal Hexo theme
+  link: https://github.com/tiaanduplessis/hexo-theme-brewski
+  preview: https://tiaanduplessis.github.io/hexo-theme-brewski-demo/
+  tags:
+    - clean
+    - simple
+    - minimal
+    - blog
+    - custom pages
+    - pjax
 - name: Materialize
   description: A clean materialize css theme with home page layout different than the other pages
   link: https://github.com/carlos-algms/hexo-theme-materialize
