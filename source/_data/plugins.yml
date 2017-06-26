@@ -1,3 +1,14 @@
+- name: hexo-asset-pipeline
+  description: A hexo plugin to minify/optimize HTML, CSS, JS and images. Supports revisioning of assets.
+  link: https://github.com/bhaskarmelkani/hexo-asset-pipeline
+  tags:
+    - filter
+    - imagemin
+    - html-minifier
+    - uglify
+    - clean-css
+    - revisioning
+    - versioning
 - name: hexo-generator-index-plus
   description: Index generator plus for Hexo, including new order attributes like top and updateDate.
   link: https://github.com/YuyingWu/hexo-generator-index-plus
