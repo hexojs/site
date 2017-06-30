@@ -1,3 +1,13 @@
+- name: hexo-include-markdown
+  description: This plugin for Hexo can easily load markdown files in Markdown.
+  link: https://github.com/tea3/hexo-include-markdown
+  tags:
+    - markdown
+    - import
+    - include
+    - partial
+    - load
+    - template
 - name: hexo-asset-pipeline
   description: A hexo plugin to minify/optimize HTML, CSS, JS and images. Supports revisioning of assets.
   link: https://github.com/bhaskarmelkani/hexo-asset-pipeline
