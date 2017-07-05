@@ -11,7 +11,7 @@
 - name: Vexo
   description: Vexo is a Hexo theme inspired by Vue's official website.
   link: https://github.com/yanm1ng/hexo-theme-vexo
-  preview: http://yanm1ng.cn/hexo-theme-vexo/
+  preview: https://yanm1ng.github.io
   tags:
     - responsive
     - clean
