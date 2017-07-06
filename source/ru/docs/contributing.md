@@ -8,7 +8,7 @@ title: Содействие
 
 Пожалуйста, следите за стилем написания кода:
 
-- Следуйте [Google JavaScript Style Guide](https://google.github.io/styleguide/javascriptguide.xml).
+- Следуйте [Google JavaScript Style Guide](https://google.github.io/styleguide/jsguide.html).
 - Используйте мягкие табы с двойным пробелом.
 - Не ставьте запятую в начале.
 
