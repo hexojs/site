@@ -8,7 +8,7 @@ title: 貢獻
 
 請遵守以下準則：
 
-- 遵守 [Google JavaScript 代碼風格](http://google-styleguide.googlecode.com/svn/trunk/javascriptguide.xml)。
+- 遵守 [Google JavaScript 代碼風格](https://google.github.io/styleguide/jsguide.html)。
 - 使用 2 個空格縮排。
 - 不要把逗號放在最前面。
 
@@ -81,7 +81,7 @@ Hexo 文件開放原始碼，您可以在 [hexojs/site] 找到原始碼。
 
 ## 回報問題
 
-當您在使用 Hexo 時遭遇問題，您可試著在 [解決問題](troubleshooting.html) 中尋找解答，或是在 [GitHub](https://github.com/hexojs/hexo/issues) 或 [Google Group](https://groups.google.com/group/hexo) 詢問。詢問時請務必附上以下資訊：
+當您使用 Hexo 遭遇問題時，可試著在 [解決問題](troubleshooting.html) 中尋找解答，或是在 [GitHub](https://github.com/hexojs/hexo/issues) 或 [Google Group](https://groups.google.com/group/hexo) 詢問。若找不到答案，請至 GitHub 回報。
 
 1. 以 [除錯模式](commands.html#除錯模式) 再執行一次。
 2. 執行 `hexo vesion` 並檢查版本資訊。
