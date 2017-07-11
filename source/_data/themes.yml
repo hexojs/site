@@ -120,6 +120,19 @@
     - minimal
     - simple
     - gallery
+- name: Milan
+  description: Beautiful, responsive e-commerce theme with built-in cart functionality.
+  link: https://gum.co/hexo-theme-milan
+  preview: https://sharvaridesai.gitlab.io/hexo-theme-milan/
+  tags:
+    - e-commerce
+    - shopping
+    - store
+    - cart
+    - responsive
+    - clean
+    - beautiful
+    - minimal
 - name: St. Andrews
   description: Clean, beautiful blogging theme for Hexo.
   link: https://gumroad.com/l/hexo-theme-standrews
@@ -1321,7 +1334,7 @@
     - minimalist
     - light
     - pug
-    
+
 - name: MiccallTheme
   description: A hexo theme with Gorgeous fullscreen background image
   link: https://github.com/miccall/hexo-theme-Mic_Theme
