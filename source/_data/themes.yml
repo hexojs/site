@@ -1383,3 +1383,18 @@
     - card
     - Pinghsu
     - customization
+- name: Claudia
+  description: Grace, simple theme for Hexo
+  link: https://github.com/Haojen/hexo-theme-Claudia
+  preview: https://haojen.github.io/Claudia-theme-blog/
+  tags:
+    - emoji
+    - math
+    - anisina
+    - flowchart
+    - blur
+    - black
+    - responsive
+    - grace
+    - 数学公式
+    - 中文使用文档
