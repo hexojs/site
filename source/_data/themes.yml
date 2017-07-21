@@ -1398,3 +1398,18 @@
     - grace
     - 数学公式
     - 中文使用文档
+- name: Clexy
+  description: Clexy, A clean and elegent theme for Hexo
+  link: https://github.com/mkkhedawat/clexy
+  preview: https://mkkhedawat.com/
+  tags:
+    - responsive
+    - flexbox
+    - two_column
+    - clean
+    - css3
+    - jade
+    - stylus
+    - prismjs
+    - simple
+    - blackandwhite
