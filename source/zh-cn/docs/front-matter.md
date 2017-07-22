@@ -36,8 +36,8 @@ tags:
 {% note warn 分类方法的分歧 %}
 如果您有过使用WordPress的经验，就很容易误解Hexo的分类方式。WordPress支持对一篇文章设置多个分类，而且这些分类可以是同级的，也可以是父子分类。但是Hexo不支持指定多个同级分类。下面的指定方法：
 categories:
-- Diary
-- Life
+\- Diary
+\- Life
 会使分类`Life`成为`Diary`的子分类，而不是并列分类。因此，有必要为您的文章选择尽可能准确的分类。
 {% endnote %}
 
