@@ -1557,3 +1557,15 @@
     - excerpt
     - abstract
     - description
+- name: hexo-codepen
+  description: A better version of hexo-tag-codepen with a valid HTML.
+  link: https://github.com/maliMirkec/hexo-tag-codepen
+  tags:
+    - tag
+    - codepen
+- name: hexo-caniuse
+  description: Hexo tag to embed code snippet from caniuse.
+  link: https://github.com/maliMirkec/hexo-caniuse
+  tags:
+    - tag
+    - caniuse
