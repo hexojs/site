@@ -1557,3 +1557,10 @@
     - excerpt
     - abstract
     - description
+- name: hexo-number-title
+  description: the hexo blog post url is displayed as a number.
+  link: https://github.com/hluglk/hexo-number-title
+  tags:
+    - permalink
+    - link
+    - 固定链接
