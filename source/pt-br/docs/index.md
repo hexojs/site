@@ -1,6 +1,8 @@
-title: Documentation
+title: Documentação
 ---
 Welcome to the Hexo documentation. If you encounter any problems when using Hexo, have a look at the  [troubleshooting guide](troubleshooting.html), raise an issue on [GitHub](https://github.com/hexojs/hexo/issues) or start a topic on the [Google Group](https://groups.google.com/group/hexo).
+
+Bem vindo à documentação do Hexo. Caso encontre algum problema quando estiver usando o Hexo,
 
 ## What is Hexo?
 
