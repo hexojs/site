@@ -2,7 +2,7 @@
 <!-- Markdown snippet -->
 [![Build Status](https://travis-ci.org/hexojs/site.svg?branch=master)](https://travis-ci.org/hexojs/site)
 
-No site da Hexo, você pode ver os arquivos gerados em [hexojs/hexojs.github.io](https://github.com/hexojs/hexojs.github.io) repository.
+No site do Hexo, você pode ver os arquivos gerados em [hexojs/hexojs.github.io](https://github.com/hexojs/hexojs.github.io) repository.
 
 ## Começando
 
