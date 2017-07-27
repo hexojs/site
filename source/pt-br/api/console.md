@@ -1,8 +1,8 @@
 title: Console
 ---
-The console forms the bridge between Hexo and its users. It registers and describes the available console commands.
+O console forma a ponte entre o Hexo e os usuários. Ele registra e descreve os comandos disponíveis do console.
 
-## Synopsis
+## Sinopse
 
 ``` js
 hexo.extend.console.register(name, desc, options, function(args){
@@ -10,19 +10,19 @@ hexo.extend.console.register(name, desc, options, function(args){
 });
 ```
 
-Argument | Description
+Argumento | Descrição
 --- | ---
-`name` | Name
-`desc` | Description
-`options`| Options
+`name` | Nome
+`desc` | Descrição
+`options`| Opções
 
-An argument `args` will be passed into the function. This is the argument that users type into the terminal. It's parsed by [Minimist].
+Um argumento `args` será passado para a função. Este é o argumento que os usuários digitam no terminal. Ele é analisado pelo [Minimist].
 
-## Options
+## Opções
 
 ### usage
 
-The usage of a console command. For example:
+O uso de um comando do console. Por exemplo:
 
 ``` js
 {usage: '[layout] <title>'}
@@ -31,7 +31,7 @@ The usage of a console command. For example:
 
 ### arguments
 
-The description of each argument of a console command. For example:
+A descrição de cada argumento de um comando do console. Por exemplo:
 
 ``` js
 {
@@ -44,7 +44,7 @@ The description of each argument of a console command. For example:
 
 ### options
 
-The description of each option of a console command. For example:
+A descrição de cada opção de um comando do console. Por exemplo:
 
 ``` js
 {
@@ -56,9 +56,9 @@ The description of each option of a console command. For example:
 
 ### desc
 
-More detailed information about a console command.
+Informações mais detalhadas sobre um comando do console.
 
-## Example
+## Exemplo
 
 ``` js
 hexo.extend.console.register('config', 'Display configuration', function(args){
