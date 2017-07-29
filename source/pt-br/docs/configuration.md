@@ -104,9 +104,8 @@ exclude:
   - .DS_Store
 ```
 
-### Using an Alternate Config
-
-A custom config file path can be specified by adding the `--config` flag to your `hexo` commands with a path to an alternate YAML or JSON config file, or a comma-separated list (no spaces) of multiple YAML or JSON files.
+### Usango outras alternativas de configuração
+Um caminho de arquivo de configuração personalizado pode ser especificado adicionando o sinalizador `--config` aos comandos `hexo` com um caminho para um arquivo de configuração YAML ou JSON alternativo ou uma lista separada por vírgulas (sem espaços) de múltiplos YAMLs ou JSON arquivos.
 
 ``` bash
 # use 'custom.yml' in place of '_config.yml'
@@ -116,7 +115,6 @@ $ hexo server --config custom.yml
 $ hexo server --config custom.yml,custom2.json
 ```
 
-Using multiple files combines all the config files and saves the merged settings to `_multiconfig.yml`. The later values take precedence. It works with any number of JSON and YAML files with arbitrarily deep objects. Note that **no spaces are allowed in the list**.
+ uso de vários arquivos combina todos os arquivos de configuração e salva as configurações mescladas para `_multiconfig.yml`. Os valores posteriores prevalecem. Ele funciona com qualquer número de arquivos JSON e YAML com objetos arbitrariamente profundos. Observe que **nenhum espaço é permitido na lista**.
 
-For instance, in the above example if `foo: bar` is in `custom.yml`, but `"foo": "dinosaur"` is in `custom2.json`, `_multiconfig.yml` will contain `foo: dinosaur`.
-
+Por exemplo, no exemplo acima se `foo: bar` estiver em `custom.yml`, mas `"foo": "dinosaur"` está em `custom2.json`, `_multiconfig.yml` conterá `foo: dinosaur`.
