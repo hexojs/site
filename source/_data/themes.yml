@@ -1413,3 +1413,17 @@
     - prismjs
     - simple
     - blackandwhite
+- name: MiHo
+  description: A single, Clean and responsive theme for Hexo.
+  link: https://github.com/WongMinHo/hexo-theme-miho
+  preview: http://blog.minhow.com
+  tags:
+    - simple
+    - clean
+    - blog
+    - responsive
+    - grace
+    - search
+    - comment
+    - Chinese
+    - 中文使用文档
