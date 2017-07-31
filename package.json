@@ -7,6 +7,7 @@
   },
   "scripts": {
     "build": "hexo generate && gulp",
+    "eslint": "eslint .",
     "deploy": "hexo deploy"
   },
   "dependencies": {
@@ -25,6 +26,8 @@
   },
   "devDependencies": {
     "cssnano": "^3.5.2",
+    "eslint": "^4.3.0",
+    "eslint-config-hexo": "^2.0.0",
     "gulp": "^3.9.1",
     "gulp-if": "^2.0.0",
     "gulp-load-plugins": "^1.2.0",
