@@ -31,7 +31,7 @@ gulp.task('useref', ['screenshot'], function() {
   return gulp.src('public/**/*.html')
     .pipe(assets)
     .pipe(gulpUniqueFiles())
-    .pipe(gulpIf('*.js', gulpCleanCSS()))
+    .pipe(gulpIf('*.css', gulpCleanCSS()))
     .pipe(gulpIf('*.js', gulpUglify()))
     .pipe(gulpRev())
     .pipe(assets.restore())
