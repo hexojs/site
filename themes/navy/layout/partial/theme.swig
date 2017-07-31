@@ -1,6 +1,6 @@
 <li class="plugin on">
   <div class="plugin-screenshot">
-    <img src="{{ url_for('themes/screenshots/' + plugin.name + '.png') }}" class="plugin-screenshot-img">
+    <img src="{{ url_for('themes/screenshots/' + plugin.name + '.png') }}" class="plugin-screenshot-img" alt="{{ plugin.name }}">
     {% if plugin.preview %}
     <a href="{{ plugin.preview }}" class="plugin-preview-link" target="_blank"><i class="fa fa-eye"></i></a>
     {% endif %}

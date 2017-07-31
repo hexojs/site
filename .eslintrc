@@ -1,0 +1,10 @@
+{
+  "extends": "hexo",
+  "root": true,
+  "rules": {
+    "strict": "off"
+  },
+  "env": {
+    "browser": true
+  }
+}

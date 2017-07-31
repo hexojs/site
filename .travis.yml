@@ -22,6 +22,7 @@ addons:
   ssh_known_hosts: github.com
 
 script:
+  - npm run eslint
   - npm run build
 
 deploy:
