@@ -1612,3 +1612,10 @@
   tags:
     - tag
     - caniuse
+- name: hexo-cloudinary
+  description: Hexo tag to add an image from Cloudinary - with srcset support.
+  link: https://github.com/maliMirkec/hexo-cloudinary
+  tags:
+    - tag
+    - image
+    - cloudinary
