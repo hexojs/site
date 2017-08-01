@@ -7,6 +7,8 @@
 {% if page.layout === 'plugins' %}
 <!-- Plugin search -->
 <script src="https://cdn.jsdelivr.net/lunr/0.6.0/lunr.min.js"></script>
+<!-- Lazy load -->
+<script async src="https://cdn.jsdelivr.net/lazysizes/3.0.0/lazysizes.min.js"></script>
 <!-- build:js build/js/plugins.js -->
 {{ js('js/plugins') }}
 <!-- endbuild -->

@@ -10,17 +10,13 @@ var gulpUniqueFiles = require('gulp-unique-files');
 var gulpUseRef = require('gulp-useref');
 var gulpCleanCSS = require('gulp-clean-css');
 var gulpResponsive = require('gulp-responsive');
-var gulpImgRetina = require('gulp-img-retina');
+var gulpCheerio = require('gulp-cheerio');
 var del = require('del');
+var rename = require('rename');
 
 var dirs = {
   public: 'public',
   screenshots: 'public/build/screenshots'
-};
-
-var retinaSuffix = {
-  1: '',
-  2: '@2x'
 };
 
 gulp.task('useref', ['screenshot'], function() {
@@ -55,15 +51,32 @@ gulp.task('screenshot:rev', ['screenshot:clean'], function() {
 });
 
 gulp.task('screenshot:revreplace', ['screenshot:rev'], function() {
+  var destDir = '/build/screenshots';
+
   return gulp.src([dirs.screenshots + '/rev-manifest.json', 'public/themes/index.html'])
     .pipe(gulpRevCollector({
       replaceReved: true,
       dirReplacements: {
-        '/themes/screenshots': '/build/screenshots'
+        '/themes/screenshots': destDir
       }
     }))
-    .pipe(gulpImgRetina({
-      suffix: retinaSuffix
+    .pipe(gulpCheerio(function($, file) {
+      $('img.plugin-screenshot-img.lazyload').each(function() {
+        var img = $(this);
+        var src = img.attr('data-src') || img.attr('data-org');
+        if (!src) return;
+
+        var jpgPath = replaceBackSlash(rename(src, {extname: '.jpg'}));
+        var jpg2xPath = replaceBackSlash(rename(jpgPath, {suffix: '@2x'}));
+        var srcset = [
+          jpgPath,
+          jpg2xPath + ' 2x'
+        ].join(', ');
+
+        img.attr('data-src', jpgPath)
+          .attr('data-srcset', srcset)
+          .attr('data-org', src);
+      });
     }))
     .pipe(gulp.dest('public/themes'));
 });
@@ -73,19 +86,30 @@ gulp.task('screenshot:resize', ['screenshot:rev'], function() {
     .pipe(gulpResponsive({
       '*.png': [
         {
-          width: 400
+          width: '50%',
+          rename: {
+            extname: '.jpg'
+          }
         },
         {
           rename: {
-            suffix: retinaSuffix[2]
+            suffix: '@2x',
+            extname: '.jpg'
           }
         }
       ]
     }, {
-      progressive: true
+      progressive: true,
+      format: 'jpeg',
+      quality: 70,
+      stats: false
     }))
     .pipe(gulp.dest(dirs.screenshots));
 });
 
 gulp.task('screenshot', ['screenshot:rev', 'screenshot:resize', 'screenshot:revreplace']);
 gulp.task('default', ['useref', 'screenshot']);
+
+function replaceBackSlash(str) {
+  return str.replace(/\\/g, '/');
+}
