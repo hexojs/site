@@ -1,3 +1,10 @@
+- name: hexo-lazyload-image
+  description: lazyload images support for Hexo.
+  link: https://github.com/Troy-Yang/hexo-lazyload-image
+  tags:
+    - lazyload
+    - images
+    - performance
 - name: hexo-include-markdown
   description: This plugin for Hexo can easily load markdown files in Markdown.
   link: https://github.com/tea3/hexo-include-markdown
