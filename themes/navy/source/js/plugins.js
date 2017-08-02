@@ -29,7 +29,7 @@
   }
 
   function search(value) {
-    var result = index.search(value);
+    var result = index.search('*' + value + '*');
     var len = result.length;
     var selected = {};
     var i = 0;
@@ -57,24 +57,10 @@
     updateCount(elements.length);
   }
 
-  function hashchange() {
-    var hash = location.hash.substring(1);
-    $input.value = hash;
-
-    if (hash) {
-      search(hash);
-    } else {
-      displayAll();
-    }
-  }
-
   $input.addEventListener('input', function() {
     var value = this.value;
 
     if (!value) return displayAll();
     search(value);
   });
-
-  window.addEventListener('hashchange', hashchange);
-  hashchange();
 }());
