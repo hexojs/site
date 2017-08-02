@@ -1427,3 +1427,11 @@
     - comment
     - Chinese
     - 中文使用文档
+- name: Only
+  description: Nothing strange. It's only a theme for Hexo.
+  link: https://github.com/lazzzis/hexo-theme-only
+  preview: https://lazzzis.github.io/hexo-theme-only
+  tags:
+    - One page
+    - responsive
+    - vuejs
