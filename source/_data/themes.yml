@@ -17,6 +17,21 @@
     - clean
     - vuejs
     - elegant
+- name: Rexo
+  description: Rexo is a minimally customized theme that supports RTL.
+  link: https://github.com/bluemix/hexo-theme-rexo
+  preview: https://bluemix.github.io
+  tags:
+    - responsive
+    - clean
+    - vuejs
+    - minimal
+    - emojis
+    - multilingual
+    - rtl
+    - arabic
+    - persian
+    - hebrew
 - name: sam
   description: A simple, clean theme.
   link: https://github.com/Sam618/hexo-theme-sam
