@@ -17,7 +17,7 @@
     - clean
     - vuejs
     - elegant
-- name: Rexo
+- name: rexo
   description: Rexo is a minimally customized theme that supports RTL.
   link: https://github.com/bluemix/hexo-theme-rexo
   preview: https://bluemix.github.io
