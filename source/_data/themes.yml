@@ -504,8 +504,8 @@
     - dark
 - name: jane
   description: A very simple theme for Hexo.
-  link: https://github.com/Alex-fun/hexo-theme-jane
-  preview: http://hejx.me
+  link: https://github.com/hejianxian/hexo-theme-jane
+  preview: http://hejx.space
   tags:
     - chinese
     - simple
@@ -1031,7 +1031,7 @@
 - name: mls
   description: A theme with a fullscreen background image and transparent elements.
   link: https://github.com/lazzzis/hexo-theme-mls
-  preview: http://lazzzis.github.io/
+  preview: http://lazzzis.github.io/hexo-theme-mls/
   tags:
     - background_image
     - blog
@@ -1442,3 +1442,11 @@
     - comment
     - Chinese
     - 中文使用文档
+- name: Only
+  description: Nothing strange. It's only a theme for Hexo.
+  link: https://github.com/lazzzis/hexo-theme-only
+  preview: https://lazzzis.github.io/hexo-theme-only
+  tags:
+    - One page
+    - responsive
+    - vuejs
