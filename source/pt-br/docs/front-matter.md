@@ -1,6 +1,7 @@
 title: Front-matter
 ---
-Front-matter is a block of YAML or JSON at the beginning of the file that is used to configure settings for your writings. Front-matter is terminated by three dashes when written in YAML or three semicolons when written in JSON.
+
+Front-matter é um bloco de YAML ou JSON no início do arquivo que é usado para configurar configurações para suas escritas. Front-matter é terminado por três traços quando escrito em YAML ou três ponto-e-vírgula quando escrito em JSON.
 
 **YAML**
 ``` yaml
@@ -16,24 +17,24 @@ date: 2013/7/13 20:46:25
 ;;;
 ```
 
-### Settings & Their Default Values
+### Configurações e seus valores padrão
 
-Setting | Description | Default
+Configuração | Descrição | Default
 --- | --- | ---
 `layout` | Layout |
 `title` | Title |
-`date` | Published date | File created date
-`updated` | Updated date | File updated date
-`comments` | Enables comment feature for the post | true
-`tags` | Tags (Not available for pages) |
-`categories` | Categories (Not available for pages) |
-`permalink` | Overrides the default permalink of the post |
+`date` | Data de publicação | Data criada no arquivo
+`updated` | Data atualizada | Data atualizada do arquivo
+`comments` | Habilita o recurso de comentário para a postagem | true
+`tags` | Tags (Não disponível para páginas)
+`categories` | Categorias (Não disponível para páginas) |
+`permalink` | Substitui o permalink padrão da postagem |
 
-#### Categories & Tags
+#### Categorias & Tags
 
-Only posts support the use of categories and tags. Categories apply to posts in order, resulting in a hierarchy of classifications and sub-classifications. Tags are all defined on the same hierarchical level so the order in which they appear is not important.
+Somente posts aceitam o uso de categorias e tags. As categorias aplicam-se a postagens em ordem, resultando em uma hierarquia de classificações e sub-classificações. As tags são todas definidas no mesmo nível hierárquico, de modo que a ordem em que aparecem não é importante.
 
-**Example**
+**Exemplo**
 
 ``` yaml
 categories:
