@@ -1450,3 +1450,16 @@
     - One page
     - responsive
     - vuejs
+- name: pure
+  description: Hexo theme pure. It's a pure theme for Hexo.
+  link: https://github.com/cofess/hexo-theme-pure
+  preview: http://blog.cofess.com/
+  tags:
+    - responsive
+    - pure
+    - nice
+    - clean
+    - simple
+    - blog
+    - two_column
+    - three_column
