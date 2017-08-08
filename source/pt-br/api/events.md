@@ -1,30 +1,30 @@
 title: Events
 ---
-Hexo inherits from [EventEmitter]. Use the `on` method to listen for events emitted by Hexo, and use the `emit` method to emit events. For more information, refer to the Node.js API documentation.
+O Hexo herda de [EventEmitter]. Use o método `on` para ouvir os eventos emitidos pelo Hexo, e use o método `emit` para emitir eventos. Para obter mais informações, consulte a documentação da API do Node.js.
 
 ### deployBefore
 
-Emitted before deployment begins.
+Emitido antes do deployment começar.
 
 ### deployAfter
 
-Emitted after deployment finishes.
+Emitido depois do deployment finalizado.
 
 ### exit
 
-Emitted before Hexo exits.
+Emitido antes de Hexo sair.
 
 ### generateBefore
 
-Emitted before generation begins.
+Emitido antes da geração começar.
 
 ### generateAfter
 
-Emitted after generation finishes.
+Emitido depois da geração finalizada.
 
 ### new
 
-Emitted after a new post has been created. This event returns the post data:
+Emitido depois de uma nova postagem ter sido criada. Este evento retorna os dados da postagem:
 
 ``` js
 hexo.on('new', function(post){
@@ -32,21 +32,22 @@ hexo.on('new', function(post){
 });
 ```
 
-Data | Description
+Dados | Descrição
 --- | ---
-`post.path` | Full path of the post file
-`post.content` | Content of the post file
+`post.path` | Caminho completo do arquivo da postagem
+`post.content` | Conteúdo do arquivo da postagem
 
 ### processBefore
 
-Emitted before processing begins. This event returns a path representing the root directory of the box.
+Emitido antes do início do processamento. Este evento retorna um caminho que representa o diretório raiz do box.
 
 ### processAfter
 
 Emitted after processing finishes. This event returns a path representing the root directory of the box.
+Emitido depois do processamento finalizado. Este evento retorna um caminho que representa o diretório raiz do box.
 
 ### ready
 
-Emitted after initialization finishes.
+Emitido depois da inicialização terminar.
 
 [EventEmitter]: http://nodejs.org/api/events.html
