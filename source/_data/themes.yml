@@ -1463,3 +1463,15 @@
     - blog
     - two_column
     - three_column
+- name: Archer
+  description: A smart and modern theme for Hexo.
+  link: https://github.com/fi3ework/hexo-theme-archer
+  preview: http://firework.studio
+  tags:
+    - fast
+    - single page
+    - sidebar
+    - responsive
+    - two_column
+    - Chinese
+    - English
