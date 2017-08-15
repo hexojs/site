@@ -1475,3 +1475,13 @@
     - two_column
     - Chinese
     - English
+- name: Replica
+  description: A github style replication theme for Hexo.
+  link: https://github.com/sabrinaluo/hexo-theme-replica
+  preview: http://sabrinaluo.github.io/tech
+  tags:
+    - github
+    - responsive
+    - geek
+    - blog
+    - post_calendar
