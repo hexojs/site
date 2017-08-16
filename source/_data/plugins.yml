@@ -1,3 +1,10 @@
+- name: hexo-tag-cplayer
+  description: A hexo plugin for cPlayer.
+  link: https://github.com/EYHN/hexo-tag-cplayer
+  tags:
+    - cplayer
+    - music
+    - audio
 - name: hexo-lazyload-image
   description: lazyload images support for Hexo.
   link: https://github.com/Troy-Yang/hexo-lazyload-image
