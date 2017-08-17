@@ -1639,3 +1639,9 @@
   tags:
     - github
     - issue
+- name: hexo-tag-ossimg
+  description: Publish your post images to AliyunOSS..
+  link: https://github.com/chenxuefei-pp/hexo-tag-ossimg
+  tags:
+    - aliyun
+    - oss
