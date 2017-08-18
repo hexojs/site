@@ -1485,3 +1485,13 @@
     - geek
     - blog
     - post_calendar
+- name: cube
+  description: A Hexo Theme inspired by DIYgod wordpress theme
+  link: https://github.com/ZEROKISEKI/hexo-theme-cube
+  preview: http://sora1.coding.me
+  tags:
+    - cube
+    - responsive
+    - two_column
+    - light
+    - individuation
