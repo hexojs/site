@@ -1,3 +1,13 @@
+- name: Slice
+  description: A Simple & Beautiful SinglePaged Theme for Hexo.
+  link: https://github.com/NHibiki/hexo-theme-slice
+  preview: https://slice.nekoyu.cc
+  tags:
+    - Flat
+    - SinglePaged
+    - Music Plug-ined
+    - Welcome Page
+    - Responsive
 - name: mdui
   description: A google plus like theme for Hexo.
   link: https://github.com/Halyul/hexo-theme-mdui
