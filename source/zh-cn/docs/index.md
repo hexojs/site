@@ -33,9 +33,13 @@ $ npm install -g hexo-cli
 ### 安装 Git
 
 - Windows：下载并安装 [git](https://git-scm.com/download/win).
-- Mac：使用 [Homebrew](http://mxcl.github.com/homebrew/), [MacPorts](http://www.macports.org/) 或下载 [安装程序](http://sourceforge.net/projects/git-osx-installer/) 安装。
+- Mac：使用 [Homebrew](http://mxcl.github.com/homebrew/), [MacPorts](http://www.macports.org/) ：`brew install git`;或下载 [安装程序](http://sourceforge.net/projects/git-osx-installer/) 安装。
 - Linux (Ubuntu, Debian)：`sudo apt-get install git-core`
 - Linux (Fedora, Red Hat, CentOS)：`sudo yum install git-core`
+
+{% note warn Windows 用户 %}
+由于众所周知的原因，从上面的链接下载git for windows最好挂上一个代理，否则下载速度十分缓慢。也可以参考[这个页面](https://github.com/waylau/git-for-win)，收录了存储于百度云的下载地址。
+{% endnote %}
 
 ### 安装 Node.js
 
@@ -60,7 +64,10 @@ $ nvm install stable
 ```
 
 或者您也可以下载 [安装程序](http://nodejs.org/) 来安装。
-
+{% note info Windows 用户 %}
+对于windows用户来说，建议使用安装程序进行安装。安装时，请勾选**Add to PATH**选项。
+另外，您也可以使用**Git Bash**，这是git for windows自带的一组程序，提供了Linux风格的shell，在该环境下，您可以直接用上面提到的命令来安装Node.js。打开它的方法很简单，在任意位置单击右键，选择“Git Bash Here”即可。由于Hexo的很多操作都涉及到命令行，您可以考虑始终使用**Git Bash**来进行操作。
+{% endnote %}
 ### 安装 Hexo
 
 所有必备的应用程序安装完成后，即可使用 npm 安装 Hexo。
@@ -68,3 +75,5 @@ $ nvm install stable
 ``` bash
 $ npm install -g hexo-cli
 ```
+
+

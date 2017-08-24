@@ -13,7 +13,7 @@ Archives: /archives/
 И можно использовать их в шаблонах:\
 
 ```
-{% for link in site.data.menu %}
-  <a href="{{ link }}">{{ loop.key }}</a>
-{% endfor %}
+<% for (var link in site.data.menu) { %>
+  <a href="<%= site.data.menu[link] %>"> <%= link %> </a>
+<% } %>
 ```

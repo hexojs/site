@@ -15,7 +15,6 @@ $ npm install
 ├── _config.yml
 ├── package.json
 ├── scaffolds
-├── scripts
 ├── source
 |   ├── _drafts
 |   └── _posts
@@ -55,10 +54,6 @@ $ npm install
 ### scaffolds
 
 [鷹架](writing.html#鷹架（Scaffold）) 資料夾。當您建立新文章時，Hexo 會根據 scaffold 來建立檔案。
-
-### scripts
-
-[腳本](plugins.html#腳本（Scripts）) 資料夾。腳本是擴充 Hexo 的最簡易方式，在此資料夾內的 JavaScript 檔案會被自動執行。
 
 ### source
 
