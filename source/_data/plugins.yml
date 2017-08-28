@@ -1658,6 +1658,13 @@
   tags:
     - renderer
     - mustache
+- name: hexo-light-gallery
+  description: Generate gallery using light gallery for Hexo 图片预览 照片墙
+  link: https://github.com/lzane/hexo-light-gallery
+  tags:
+    - gallery
+    - photo
+    - lightgallery
 - name: hexo-minecraft-templates
   description: Add Minecraft related contents into your blog with simple tag.
   link:
