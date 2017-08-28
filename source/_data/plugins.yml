@@ -1658,3 +1658,9 @@
   tags:
     - renderer
     - mustache
+- name: hexo-minecraft-templates
+  description: Add Minecraft related contents into your blog with simple tag.
+  link:
+    - tag
+    - generator
+    - minecraft
