@@ -1,3 +1,10 @@
+- name: hexo-deployer-cos
+  description: Tencent Cloud Object Storage (COS) plugin of Hexo.
+  link: https://github.com/sdlzhd/hexo-deployer-cos
+  tags:
+    - official
+    - deployer
+    - cos
 - name: hexo-tag-cplayer
   description: A hexo plugin for cPlayer.
   link: https://github.com/EYHN/hexo-tag-cplayer
@@ -1658,3 +1665,9 @@
     - gallery
     - photo
     - lightgallery
+- name: hexo-minecraft-templates
+  description: Add Minecraft related contents into your blog with simple tag.
+  link:
+    - tag
+    - generator
+    - minecraft
