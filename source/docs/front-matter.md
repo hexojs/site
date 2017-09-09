@@ -44,3 +44,15 @@ tags:
 - Fight
 - Shocking
 ```
+
+If you want to apply multiple category hierarchies, use a list of names instead of a single name. If Hexo sees any categories defined this way on a post, it will treat each category for that post as its own independent hierarchy.
+
+**Example**
+
+``` yaml
+categories:
+- [Sports, Baseball]
+- [MLB, American League, Boston Red Sox]
+- [MLB, American League, New York Yankees]
+- Rivalries
+```
