@@ -1514,3 +1514,11 @@
     - responsive
     - fast
     - beautiful
+- name: Icer
+  description: A simple theme for Hexo.
+  link: https://github.com/GGICE/hexo-icer
+  preview: https://ice.gs
+  tags:
+    - simple
+    - one_column
+    - beautiful
