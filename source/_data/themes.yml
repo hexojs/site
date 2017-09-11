@@ -1522,3 +1522,11 @@
     - simple
     - one_column
     - beautiful
+- name: Melody
+  description: A simple & beautiful & fast theme for Hexo
+  link: https://github.com/Molunerfinn/hexo-theme-melody
+  preview: https://molunerfinn.com
+  tags:
+    - simple
+    - beautiful
+    - fast
