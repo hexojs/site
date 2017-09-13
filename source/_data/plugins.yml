@@ -1,3 +1,11 @@
+- name: hexo-lazyload
+  description: lazyload images support for Hexo with IntersectionObserver API.
+  link: https://github.com/Robin-front/hexo-lazyload
+  tags:
+    - lazyload
+    - images
+    - performance
+    - IntersectionObserver
 - name: hexo-deployer-cos
   description: Tencent Cloud Object Storage (COS) plugin of Hexo.
   link: https://github.com/sdlzhd/hexo-deployer-cos
@@ -1594,7 +1602,7 @@
     - jsonfeed
 - name: hexo-douban
   description: Generate douban pages of books and movies for Hexo.
-  link: https://github.com/mythsman/hexo-douban 
+  link: https://github.com/mythsman/hexo-douban
   tags:
     - generator
     - books
