@@ -7,7 +7,7 @@
     - Bulma.io
     - clean
     - simple
-	- thumb image
+    - thumb image
 - name: Slice
   description: A Simple & Beautiful SinglePaged Theme for Hexo.
   link: https://github.com/NHibiki/hexo-theme-slice
