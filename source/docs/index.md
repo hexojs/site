@@ -10,6 +10,8 @@ Hexo is a fast, simple and powerful blog framework. You write posts in [Markdown
 
 It only takes a few minutes to set up Hexo. If you encounter a problem and can't find the solution here, please [submit a GitHub issue](https://github.com/hexojs/hexo/issues) and I'll try to solve it.
 
+{% youtube ARted4RniaU %}
+
 ### Requirements
 
 Installing Hexo is quite easy. However, you do need to have a couple of other things installed first:
