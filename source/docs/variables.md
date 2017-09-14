@@ -1,5 +1,8 @@
 title: Variables
 ---
+
+{% youtube T9oAax-IRw0 %}
+
 ### Global Variables
 
 Variable | Description | Type
