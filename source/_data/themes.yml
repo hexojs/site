@@ -1,3 +1,13 @@
+- name: Goyangin
+  description: A Simple theme for HEXO with Bulma Framework CSS
+  link: https://github.com/devgexx/goyangin
+  preview: http://goyangin.0x3g.com/
+  tags:
+    - responsive
+    - Bulma.io
+    - clean
+    - simple
+	- thumb image
 - name: Slice
   description: A Simple & Beautiful SinglePaged Theme for Hexo.
   link: https://github.com/NHibiki/hexo-theme-slice
