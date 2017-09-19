@@ -1,3 +1,12 @@
+- name: Skapp
+  description: A simple & beautiful & fast theme for Hexo
+  link: https://github.com/Mrminfive/hexo-theme-skapp
+  preview: http://blog.minfive.com/
+  tags:
+    - simple
+    - beautiful
+    - fast
+    - 中文
 - name: Goyangin
   description: A Simple theme for HEXO with Bulma Framework CSS
   link: https://github.com/devgexx/goyangin
@@ -1540,3 +1549,13 @@
     - simple
     - beautiful
     - fast
+
+- name: Skapp
+  description: A simple & beautiful & fast theme for Hexo
+  link: https://github.com/Mrminfive/hexo-theme-skapp
+  preview: http://blog.minfive.com/
+  tags:
+    - simple
+    - beautiful
+    - fast
+    - 中文
