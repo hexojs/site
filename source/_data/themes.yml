@@ -1549,3 +1549,14 @@
     - simple
     - beautiful
     - fast
+- name: Typography
+  description: Rediscover the beauty of typography.
+  link: https://github.com/SumiMakito/hexo-theme-typography
+  preview: https://blog.keep.moe
+  tags:
+    - simple
+    - beautiful
+    - light
+    - fast
+    - disqus
+    - livere
