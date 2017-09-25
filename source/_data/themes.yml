@@ -1560,3 +1560,14 @@
     - fast
     - disqus
     - livere
+- name: Polk
+  description: Simple blog theme for Hexo, focused on articles.
+  link: https://github.com/chunqiuyiyu/hexo-theme-polk
+  preview: http://www.chunqiuyiyu.com/
+  tags:
+    - simple
+    - responsive
+    - one_column
+    - light
+    - 中文
+    - minimalism
