@@ -1694,3 +1694,9 @@
     - tag
     - bible
     - scripture
+- name: hexo-generator-mip
+  description: Generate MIP specification tags
+  link: https://github.com/xuexb/hexo-generator-mip
+  tags:
+    - mip
+    - generator
