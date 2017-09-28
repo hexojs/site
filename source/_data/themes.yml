@@ -1,3 +1,14 @@
+- name: hannah
+  description: A simple & beautiful & fast theme for Hexo
+  link: https://github.com/objectyan/hexo-theme-hannah.git
+  preview: http://objectyan.me
+  tags:
+    - simple
+    - beautiful
+    - fast
+    - 中文
+    - responsive
+    - bootstrap
 - name: Skapp
   description: A simple & beautiful & fast theme for Hexo
   link: https://github.com/Mrminfive/hexo-theme-skapp
