@@ -71,12 +71,14 @@
     - flowchart
     - diagrams
     - markdown
-- name: hexo-filter-inline-images
-  description: Inlines images in HTML for Hexo.
-  link: https://github.com/stephencroberts/hexo-filter-inline-images
+- name: hexo-filter-inline-assets
+  description: Inlines images, JS, and CSS in HTML for Hexo.
+  link: https://github.com/stephencroberts/hexo-filter-inline-assets
   tags:
     - filter
     - images
+    - javascript
+    - css
     - html
 - name: hexo-filter-sequence
   description: Generate UML sequence diagrams for Hexo.
