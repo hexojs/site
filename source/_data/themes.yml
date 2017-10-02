@@ -814,6 +814,14 @@
     - elegant
     - one_column
     - white
+- name: ztopic
+  description: A simple responsive theme for Hexo.
+  link: https://github.com/wa-ri/hexo-theme-ztopic
+  preview: http://zccblog.cn/
+  tags:
+    - responsive
+    - simple
+    - scss
 - name: concise
   description: A beautiful and simple theme for hexo
   link: https://github.com/HmyBmny/hexo-theme-concise
