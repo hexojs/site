@@ -1702,3 +1702,9 @@
   tags:
     - mip
     - generator
+- name: hexo-global-license
+  description: A generator for Hexo that adds a license statement to every page
+  link: https://github.com/sbanwart/hexo-global-license
+  tags:
+    - generator
+    - license
