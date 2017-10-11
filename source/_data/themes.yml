@@ -1,3 +1,14 @@
+- name: Chiangmai
+  description: A hexo theme inspired by Chiangmai City
+  link: https://github.com/stunstunstun/hexo-theme-chiangmai
+  preview: https://www.holaxprogramming.com/
+  tags:
+    - simple
+    - responsive
+    - fast
+    - pug
+    - facebook
+    - minimal
 - name: hannah
   description: A simple & beautiful & fast theme for Hexo
   link: https://github.com/objectyan/hexo-theme-hannah.git
