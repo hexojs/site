@@ -1708,3 +1708,10 @@
   tags:
     - generator
     - license
+- name: hexo-disqus-prxoy
+  description: Auto detect accessibility of disqus comments for Chinese users and proxy disqus if needed (解决Disuqs不能访问的代理插件)
+  link: https://github.com/ciqulover/disqus-proxy
+  tags:
+    - disqus
+    - proxy
+    - vps
