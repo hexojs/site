@@ -1601,3 +1601,13 @@
     - light
     - 中文
     - minimalism
+- name: blairos
+  description: A simple & beautiful & fast theme for Hexo, focused on articles.
+  link: https://github.com/52binge/hexo-theme-blairos
+  preview: https://52binge.github.io
+  tags:
+    - simple
+    - beautiful
+    - light
+    - fast
+    - disqus
