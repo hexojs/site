@@ -1,3 +1,12 @@
+- name: Nayo
+  description: A clean theme for Hexo.
+  link: https://github.com/Lemonreds/hexo-theme-Nayo
+  preview: http://synch.site
+  tags:
+    - white
+    - clean
+    - simple
+    - responsive
 - name: Chiangmai
   description: A hexo theme inspired by Chiangmai City
   link: https://github.com/stunstunstun/hexo-theme-chiangmai
