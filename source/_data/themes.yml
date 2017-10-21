@@ -1620,3 +1620,15 @@
     - light
     - fast
     - disqus
+- name: artemisX
+  description: A simple theme based on artemis, add new feature and new style.
+  link: https://github.com/wwwuxt/hexo-theme-artemisX
+  preview: http://wwwuxt.cc/
+  tags:
+    - simple
+    - responsive
+    - light
+    - blog
+    - fast
+    - long-term developing
+    - maintaining
