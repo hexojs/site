@@ -1722,3 +1722,9 @@
     - excerpt
     - auto-excerpt
     - read-more
+- name: hexo-gfycat
+  description: Gfycat embedding tag for hexo.
+  link: https://github.com/zbicin/hexo-gfycat
+  tags:
+    - tag
+    - gfycat
