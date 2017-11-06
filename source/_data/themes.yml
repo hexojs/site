@@ -1657,3 +1657,18 @@
     - swagger-ui
     - swagger
     - responsive
+- name: mellow
+  description: A material design theme for hexo.Clean and fast.
+  link: https://github.com/codefine/hexo-theme-mellow
+  preview: http://blog.lujingtao.com/
+  tags:
+    - material design
+    - clean
+    - fast
+    - less
+    - ejs
+    - simple
+    - beautiful
+    - blog
+    - custom pages
+    - 中文
