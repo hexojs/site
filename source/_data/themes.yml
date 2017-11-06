@@ -1544,7 +1544,7 @@
 - name: Archer
   description: A smart and modern theme for Hexo.
   link: https://github.com/fi3ework/hexo-theme-archer
-  preview: http://firework.studio
+  preview: http://firework.studio/archer-demo
   tags:
     - fast
     - single page
