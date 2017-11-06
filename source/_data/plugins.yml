@@ -1722,6 +1722,12 @@
     - excerpt
     - auto-excerpt
     - read-more
+- name: hexo-gfycat
+  description: Gfycat embedding tag for hexo.
+  link: https://github.com/zbicin/hexo-gfycat
+  tags:
+    - tag
+    - gfycat
 - name: hexo-pwa
   description: A plugin make your site as a PWA, can be added to home screen and can work offline
   link: https://github.com/lavas-project/hexo-pwa
