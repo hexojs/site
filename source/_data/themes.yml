@@ -1,3 +1,12 @@
+- name: Aath
+  description: A hexo theme inspired by zhihu and juejin
+  link: https://github.com/lewis-geek/hexo-theme-Aath
+  preview: http://lewis.suclub.cn/
+  tags: 
+    - white
+    - chinese
+    - simple
+    - responsive
 - name: mellow
   description: Material Design theme for Hexo.
   link: https://github.com/codefine/hexo-theme-mellow
