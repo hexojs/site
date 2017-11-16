@@ -181,6 +181,15 @@
     - react
     - light
     - colorful
+- name: Inside
+  description: Clean and one page theme for Hexo.
+  link: https://github.com/elmorec/hexo-theme-inside
+  preview: https://blog.oniuo.com/
+  tags:
+    - One page
+    - angular
+    - clean
+    - SPA
 - name: Prontera
   description: A fast and modern theme for Hexo.
   link: https://github.com/AngryPowman/hexo-theme-prontera
