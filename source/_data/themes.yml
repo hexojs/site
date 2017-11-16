@@ -184,7 +184,7 @@
 - name: Inside
   description: Clean and one page theme for Hexo.
   link: https://github.com/elmorec/hexo-theme-inside
-  preview: https://blog.oniuo.com/
+  preview: http://blog.oniuo.com/
   tags:
     - One page
     - angular
