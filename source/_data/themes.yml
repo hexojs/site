@@ -189,7 +189,6 @@
     - One page
     - angular
     - clean
-    - SPA
 - name: Prontera
   description: A fast and modern theme for Hexo.
   link: https://github.com/AngryPowman/hexo-theme-prontera
