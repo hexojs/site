@@ -43,6 +43,7 @@ hexo.watch().then(function(){
 ## Execute Commands
 
 Any console command can be called explicitly using the `call` method on the Hexo instance. Such a call takes two arguments: the name of the console command, and an options argument. Different options are available for the different console commands.
+> Both the arguments are mandatory. Pass an empty object `{}`, if you dont want to provide any options. 
 
 ``` js
 hexo.call('generate', {}).then(function(){
