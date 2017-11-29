@@ -1692,6 +1692,17 @@
     - light
     - swagger
     - responsive
+- name: octo
+  description: A port of the Octopress 2 'classic' theme to Hexo
+  link: https://github.com/jbreckmckye/hexo-theme-octo
+  preview: http://www.breck-mckye.com
+  tags:
+    - octopress
+    - responsive
+    - google analytics
+    - disqus
+    - readability
+    - monochrome
 - name: nebula
   description: A simple, clean, dark theme for Hexo.
   link: https://github.com/Suolawangzai/hexo-theme-nebula
