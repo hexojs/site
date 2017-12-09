@@ -1,5 +1,6 @@
 title: Documentação
 ---
+
 Bem-vindo à documentação do Hexo. Se você encontrar algum problema ao usar o Hexo, dê uma olhada no  [guia de solução de problemas](troubleshooting.html), abra uma issue no [GitHub](https://github.com/hexojs/hexo/issues) ou inicie um tópico no [Google Group](https://groups.google.com/group/hexo).
 
 ## O que é o Hexo?
@@ -9,6 +10,8 @@ O Hexo é uma ferramenta simples, rápida e poderosa para criação blog. Você 
 ## Instalação
 
 Demora apenas alguns minutos para configurar o Hexo. Se você encontrar um problema e não conseguir encontrar a solução aqui, por favor [abra uma issue no GitHub](https://github.com/hexojs/hexo/issues) e vamos tentar resolvê-lo.
+
+{% youtube ARted4RniaU %}
 
 ### Requerimentos
 

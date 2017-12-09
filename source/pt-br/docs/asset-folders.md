@@ -6,6 +6,8 @@ Os recursos, ou assets, são arquivos (imagens, CSS, JavaScript e etc) usados pa
 
 ## Diretório de Recursos por Postagem
 
+{% youtube feIDVQ2tz0o %}
+
 Para os usuários que esperam exibir imagens e/ou outros recursos regularmente, e para aqueles que preferem separar seus recursos por publicação, o Hexo também fornece uma maneira mais organizada de fazer este gerenciamento. Para ativar o gerenciamento de recursos por publicação, defina a configuração `post_asset_folder` no arquivo `_config.yml` como o valor `true`.
 
 ``` yaml _config.yml

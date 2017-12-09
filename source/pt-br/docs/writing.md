@@ -1,5 +1,8 @@
 title: Escrevendo
 ---
+
+{% youtube AIqBubK6ZLc %}
+
 Para criar uma nova postagem ou uma nova página, você pode rodar o seguinte comando:
 
 ``` bash

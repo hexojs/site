@@ -3,6 +3,8 @@ title: Templates
 
 Os templates definem a apresentação do seu site, descrevendo o que cada página deve ser semelhante. A tabela abaixo mostra o modelo correspondente para cada página disponível. No mínimo, um tema deve conter um modelo de `index`.
 
+{% youtube mb65bQ4iUc4 %}
+
 Template | Página | Fallback
 --- | --- | ---
 `index` | Home |
@@ -41,7 +43,6 @@ Por padrão, o modelo de `layout` é usado por todos os outros modelos. Você po
 ## Partials
 
 Os partials são úteis para compartilhar componentes entre seus modelos. Exemplos típicos incluem cabeçalhos, rodapés ou barras laterais. Você pode querer colocar seus partials em arquivos separados para tornar a manutenção do seu site significativamente mais conveniente. Por exemplo:
-
 
 ``` html partial/header.ejs
 <h1 id="logo"><%= config.title %></h1>

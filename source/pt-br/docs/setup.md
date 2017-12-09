@@ -1,5 +1,8 @@
 title: Setup
 ---
+
+{% youtube 0m2HnATkHOk %}
+
 Uma vez instalado o Hexo, execute os seguintes comandos para inicializar um site com Hexo em um diretório `<folder>`.
 
 ``` bash
