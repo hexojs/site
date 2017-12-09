@@ -3,7 +3,7 @@ title: Temas
 
 {% youtube 5ROIU_9dYe4 %}
 
-É fácil construir um tema Hexo - você só precisa criar uma nova pasta. Para começar a usar seu tema, modifique a configuração do `theme` `_config.yml` do seu site. Um tema deve ter a seguinte estrutura:
+É fácil construir um tema para o Hexo - você só precisa criar um no diretório. Para começar a usar o seu tema, modifique a configuração `theme` do arquivo `_config.yml` do seu site. Um tema deve ter a seguinte estrutura:
 
 ``` plain
 .
@@ -16,38 +16,38 @@ title: Temas
 
 ### _config.yml
 
-Arquivo de configuração do tema. Modificando isso não requer uma reinicialização do servidor.
+Arquivo de configuração do tema. Modificações neste arquivo não requerem uma reinicialização do servidor.
 
 ### languages
 
-Pasta de idioma. Consulte [internacionalização (i18n)](internationalization.html) para obter mais informações.
+Diretório de idiomas. Veja [internacionalização (i18n)](internationalization.html) para obter mais informações.
 
 ### layout
 
-Layout folder. Esta pasta contém os arquivos de modelo do tema, que definem a aparência do seu site. O Hexo fornece o mecanismo do modelo [Swig] por padrão, mas você pode instalar plugins adicionais para suportar mecanismos alternativos, como [EJS], [Haml], [Jade] ou [Pug]. Hexo escolhe o mecanismo do modelo com base na extensão do arquivo do modelo. Por exemplo:
+Diretório de layouts. Este diretório contém os arquivos de template do tema, que definem a aparência do seu site. O Hexo fornece o mecanismo de template [Swig] por padrão, mas você pode instalar plugins adicionais para suportar mecanismos alternativos, como [EJS], [Haml], [Jade] ou [Pug]. O Hexo escolhe o mecanismo de template com base na extensão do arquivo deste. Por exemplo:
 
 ``` plain
 layout.ejs   - uses EJS
 layout.swig  - uses Swig
 ```
 
-Veja [templates](templates.html) para mais informações.
+Veja [templates](templates.html) para obter mais informações.
 
 ### scripts
 
-Pasta de script. O Hexo carregará automaticamente todos os arquivos JavaScript nesta pasta durante a inicialização. Para mais informações, veja [plugins] (plugins.html).
+Diretório de scripts. O Hexo carregará automaticamente todos os arquivos JavaScript deste diretório durante a inicialização. Para mais informações, veja [plugins](plugins.html).
 
 ### source
 
-Pasta de origem. Coloque seus recursos (por exemplo, arquivos CSS e JavaScript) aqui. Hexo ignora arquivos ocultos e arquivos ou pastas com prefixo `_` (sublinhado).
+Diretório com os fontes do tema. Os assets (arquivos CSS e JavaScript por exemplo) ficam aqui. O Hexo ignora arquivos ocultos e arquivos ou diretórios com prefixo `_` (sublinhado).
 
-O Hexo processará e salvará todos os arquivos renderizáveis na pasta `public`. Os arquivos não renderizáveis serão copiados diretamente para a pasta `public`.
+O Hexo processará e salvará todos os arquivos renderizáveis no diretório `public`. Os arquivos não renderizáveis serão copiados diretamente para o diretório `public`.
 
 ### Publicando
 
-Quando você terminar de criar seu tema, você pode publicá-lo na [lista de temas](/themes). Antes de fazer isso, você deve executar o [teste da unidade do tema](https://github.com/hexojs/hexo-theme-unit-test) para garantir que tudo funcione. As etapas para publicar um tema são muito semelhantes às de [documentação de atualização](contributing.html#Updating_Documentation).
+Quando você terminar de criar seu tema, você pode publicá-lo na [lista de temas](/themes). Antes de fazer isso, você deve executar o [teste da unidade do tema](https://github.com/hexojs/hexo-theme-unit-test) para ter certeza de que tudo está funcionando corretamente. As etapas para publicar um tema são muito semelhantes às de [atualizar a documentação](contributing.html#Updating_Documentation).
 
-1. Fork [hexojs/site]
+1. Faça um fork [hexojs/site]
 2. Clone o repositório no seu computador e instale dependências.
 
     ```shell
@@ -56,11 +56,11 @@ Quando você terminar de criar seu tema, você pode publicá-lo na [lista de tem
     $ npm install
     ```
 
-3. Edite `source/_data/themes.yml` e adicione seu tema. Por exemplo:
+3. Edite o arquivo `source/_data/themes.yml` e adicione seu tema. Por exemplo:
 
     ```yaml
-    - name: panorama
-      description: Um novo tema padrão para a Hexo.
+    - name: landscape
+      description: A brand new default theme for Hexo.
       link: https://github.com/hexojs/hexo-theme-landscape
       preview: http://hexo.io/hexo-theme-landscape
       tags:
@@ -71,8 +71,8 @@ Quando você terminar de criar seu tema, você pode publicá-lo na [lista de tem
         - one_column
     ```
 
-4. Adicione uma captura de tela (com o mesmo nome do tema) para `source/themes/screenshots`.  Deve ser um PNG de 800 * 500px.
-5. Push o branch.
+4. Adicione um print de tela (com o mesmo nome do tema) no diretório `source/themes/screenshots`. Deve ser um arquivo PNG com resolução de 800x500 pixels.
+5. Faça um push para o seu repositório remoto.
 6. Crie um pull request e descreva as mudanças.
 
 [EJS]: https://github.com/hexojs/hexo-renderer-ejs
