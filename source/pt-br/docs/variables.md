@@ -1,5 +1,8 @@
 title: Variáveis
 ---
+
+{% youtube T9oAax-IRw0 %}
+
 ### Variáveis globais
 
 Variáveis | Descrição | Tipo
@@ -45,7 +48,6 @@ Variáveis | Descrição | Tipo
 `page.raw` | Os dados brutos do artigo | ???
 `page.photos` | As fotos do artigo (Usado em posts da galeria) | array de ???
 `page.link` | O link externo do artigo (Usado em postagens de link) | `string`
-
 
 **Post (`post`):** O mesmo que o layout `page` mas adicione as seguintes variáveis.
 

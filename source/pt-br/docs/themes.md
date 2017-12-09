@@ -1,5 +1,8 @@
 title: Temas
 ---
+
+{% youtube 5ROIU_9dYe4 %}
+
 É fácil construir um tema Hexo - você só precisa criar uma nova pasta. Para começar a usar seu tema, modifique a configuração do `theme` `_config.yml` do seu site. Um tema deve ter a seguinte estrutura:
 
 ``` plain

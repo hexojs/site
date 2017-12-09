@@ -1,5 +1,6 @@
 title: Configuração
 ---
+
 Você pode modificar as configurações do site em `_config.yml` ou em um [arquivo de configuração alternativo](#Usando-uma-Configuracao-Alternativa).
 
 ### Site
@@ -35,7 +36,7 @@ Configuração | Descrição | Padrão
 `tag_dir` | Diretório de tags | `tags`
 `archive_dir` | Diretório de archives | `archives`
 `category_dir` | Diretório de categorias | `categories`
-`code_dir` | Diretório de código | `downloads/code`
+`code_dir` | Diretório de código (subdiretório de `source_dir`) | `downloads/code`
 `i18n_dir` | Diretório de internacionalização (i18n) | `:lang`
 `skip_render` | Caminhos que não devem ser renderizados. Você pode usar [expressões globais](https://github.com/isaacs/minimatch) para fazer correspondência de caminho |
 

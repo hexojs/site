@@ -1,6 +1,9 @@
 title: Tag Plugins
 ---
+
 As Tag Plugins são diferentes das tags de postagem. Elas são portadas pela Octopress e fornecem uma maneira útil para você adicionar rapidamente conteúdo específico às suas postagens.
+
+{% youtube I07XMi7MHd4 %}
 
 ## Bloco de Citação
 
@@ -239,4 +242,16 @@ Se determinado conteúdo estiver causando problemas de processamento em suas pos
 {% raw %}
 content
 {% endraw %}
+```
+
+## Trecho de Postagem
+
+Use o texto colocado antes da marcação `<!-- more -->` como um trecho da publicação.
+
+**Exemplo:**
+
+```
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+<!-- more -->
+Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 ```
