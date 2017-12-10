@@ -1,10 +1,11 @@
 title: Box
 ---
+
 Box é um container usado para processar arquivos em um diretório específico. O Hexo usa dois Boxes diferentes: `hexo.source` e` hexo.theme`. O primeiro é usado para processar o diretório `source` e o segundo para processar o diretório `theme`.
 
-## Carregar Arquivos (Load Files)
+## Carregar Arquivos
 
-O Box fornece dois métodos para carregar arquivos: `process` e` watch`. `Process` carrega todos os arquivos no diretório. `Watch` faz o mesmo, mas também começa a observar as alterações nos arquivos.
+O Box fornece dois métodos para carregar arquivos: `process` e` watch`. `process` carrega todos os arquivos no diretório. `watch` faz o mesmo, mas também começa a assistir as mudanças nos arquivos.
 
 ``` js
 box.process().then(function(){
@@ -12,7 +13,7 @@ box.process().then(function(){
 });
 
 box.watch().then(function(){
-  // Você pode chamar box.unwatch() depois de parar o observador.
+  // You can call box.unwatch() later to stop watching.
 });
 ```
 
@@ -27,9 +28,9 @@ posts/*path => posts/2015/title
 
 Veja [util.Pattern] para mais informações.
 
-## Processadores (Processors)
+## Processors
 
-Um processor é um elemento essencial do Box e é usado para processar arquivos. Você pode usar o path matching conforme descrito acima para restringir o que exatamente o processor deve processar. Registre um novo processor com o método `addProcessor`.
+Um `processor` é um elemento essencial do Box e é usado para processar arquivos. Você pode usar o path matching conforme descrito acima para restringir o que exatamente o `processor` deve processar. Registre um novo `processor` com o método `addProcessor`.
 
 ``` js
 box.addProcessor('posts/:id', function(file){

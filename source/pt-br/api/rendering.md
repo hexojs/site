@@ -1,6 +1,7 @@
-title: Rendering
+title: Renderização
 ---
-Existem dois métodos para renderizar arquivos ou strings no Hexo: o método `hexo.render.render` assíncrono e o método` hexo.render.renderSync` síncrono. Os dois métodos são bastante semelhantes, desta forma, apenas o método `hexo.render.render` assíncrono será um pouco mais discutido nos parágrafos abaixo.
+
+Existem dois métodos para renderizar arquivos ou strings no Hexo: o método assíncrono `hexo.render.render` e o método síncrono `hexo.render.renderSync`. Os dois métodos são bastante semelhantes, desta forma, apenas o método `hexo.render.render` assíncrono será um pouco mais discutido nos parágrafos abaixo.
 
 ## Renderizar uma String
 
@@ -14,7 +15,7 @@ hexo.render.render({text: 'example', engine: 'swig'}).then(function(result){
 
 ## Renderizar um Arquivo
 
-Ao renderizar um arquivo, não é necessário especificar uma `engine` porque o Hexo detectará automaticamente o mecanismo de renderização mais apropriado com base na extensão do arquivo. Mas se for a caso, você também pode definir explicitamente a `engine'.
+Ao renderizar um arquivo, não é necessário especificar uma `engine` porque o Hexo detectará automaticamente o mecanismo de renderização mais apropriado com base na extensão do arquivo. Mas se for a caso, você também pode definir explicitamente a `engine`.
 
 ``` js
 hexo.render.render({path: 'path/to/file.swig'}).then(function(result){
@@ -47,7 +48,7 @@ hexo.extend.filter.register('after_render:js', function(str, data){
 
 ## Verificar se um Arquivo é Renderizável
 
-Você pode usar o método `isRenderable` ou` isRenderableSync` para verificar se um caminho de arquivo é renderizável. O retorno do método será `true` apenas se um renderizador correspondente for registrado.
+Você pode usar o método `isRenderable` ou `isRenderableSync` para verificar se um caminho de arquivo é renderizável. O retorno do método será `true` apenas se um renderizador correspondente for registrado.
 
 ``` js
 hexo.render.isRenderable('layout.swig') // true

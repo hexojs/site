@@ -1,5 +1,6 @@
 title: Events
 ---
+
 O Hexo herda de [EventEmitter]. Use o método `on` para ouvir os eventos emitidos pelo Hexo, e use o método `emit` para emitir eventos. Para obter mais informações, consulte a documentação da API do Node.js.
 
 ### deployBefore
@@ -43,7 +44,7 @@ Emitido antes do início do processamento. Este evento retorna um caminho que re
 
 ### processAfter
 
-Emitido depois do processamento finalizado. Este evento retorna um caminho que representa o diretório raiz do box.
+Emitido depois do processamento finalizado. Este evento retorna um caminho que representa o diretório raiz do `box`.
 
 ### ready
 

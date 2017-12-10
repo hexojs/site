@@ -1,6 +1,7 @@
 title: Router
 ---
-O router salva todos os caminhos usados no site.
+
+O `router` salva todos os caminhos usados no site.
 
 ## Obter um Caminho
 
@@ -37,7 +38,7 @@ hexo.route.set('index.html', function(callback){
 });
 ```
 
-Você também pode definir um booleano para indicar se o caminho foi modificado ou não. Isso pode acelerar a geração de arquivos, pois permite ignorar os arquivos não modificados.
+Você também pode definir um booleano para indicar se um caminho foi modificado ou não. Isso pode acelerar a geração de arquivos, pois permite ignorar os arquivos não modificados.
 
 ``` js
 hexo.route.set('index.html', {
