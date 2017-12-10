@@ -1728,3 +1728,16 @@
     - simple
     - google analytics
     - disqus
+- name: simple-japanese
+  description: Hexo blog theme. it makes Japanese more readable and beautiful.
+  link: https://github.com/mitsuruog/hexo-theme-simple-japanese
+  preview: https://blog.mitsuruog.info/
+  tags:
+    - responsive
+    - widget
+    - two_column
+    - light
+    - simple
+    - beautiful
+    - google analytics
+    - Japanese
