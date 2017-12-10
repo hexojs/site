@@ -1,6 +1,7 @@
 title: Processor
 ---
-Um `processor` é utilizado para processar os arquivos fonte contidos na pasta `source`.
+
+Um `processor` é utilizado para processar os arquivos fontes contidos no diretório `source`.
 
 ## Resumo
 

@@ -1,6 +1,7 @@
 title: Helper
 ---
-Um helper facilita a adição de snippets aos seus templates. Recomendamos usar helpers em vez de templates quando estiver lidando com código mais complicado.
+
+Um helper facilita a adição de snippets (trechos de código) aos seus templates. Recomendamos usar helpers em vez de templates quando estiver lidando com código mais complicado.
 
 Os Helpers não podem ser acessados nos arquivos de `source`.
 

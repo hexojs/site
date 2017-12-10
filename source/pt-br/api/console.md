@@ -1,8 +1,9 @@
 title: Console
 ---
-O console forma a ponte entre o Hexo e os usuários. Ele registra e descreve os comandos disponíveis do console.
 
-## Sinopse
+O `console` forma a ponte entre o Hexo e os usuários. Ele registra e descreve os comandos disponíveis para o terminal.
+
+## Resumo
 
 ``` js
 hexo.extend.console.register(name, desc, options, function(args){
@@ -22,7 +23,7 @@ Um argumento `args` será passado para a função. Este é o argumento que os us
 
 ### usage
 
-O uso de um comando do console. Por exemplo:
+O uso de um comando de terminal. Por exemplo:
 
 ``` js
 {usage: '[layout] <title>'}
@@ -31,7 +32,7 @@ O uso de um comando do console. Por exemplo:
 
 ### arguments
 
-A descrição de cada argumento de um comando do console. Por exemplo:
+A descrição de cada argumento de um comando de terminal. Por exemplo:
 
 ``` js
 {
@@ -44,7 +45,7 @@ A descrição de cada argumento de um comando do console. Por exemplo:
 
 ### options
 
-A descrição de cada opção de um comando do console. Por exemplo:
+A descrição de cada opção de um comando de terminal. Por exemplo:
 
 ``` js
 {
@@ -56,7 +57,7 @@ A descrição de cada opção de um comando do console. Por exemplo:
 
 ### desc
 
-Informações mais detalhadas sobre um comando do console.
+Informações mais detalhadas sobre um comando de terminal.
 
 ## Exemplo
 

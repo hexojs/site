@@ -1,6 +1,7 @@
-title: Renderizador
+title: Renderer
 ---
-Um renderizador é utilizado para render conteúdos.
+
+Um `renderer` é utilizado para renderizar conteúdos.
 
 ## Resumo
 

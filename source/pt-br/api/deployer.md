@@ -1,8 +1,9 @@
 title: Deployer
 ---
-Um deployer ajuda os usuários a implantar o seu site rapidamente em um servidor remoto sem comandos complicados.
 
-## Sinopse
+Um `deployer` ajuda os usuários a implantar o seu site rapidamente em um servidor remoto sem comandos complicados.
+
+## Resumo
 
 ``` js
 hexo.extend.deployer.register(name, function(args){

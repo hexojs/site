@@ -1,6 +1,7 @@
 title: Tag
 ---
-Uma tag permite que os usuários insiram, de forma rápida e fácil, snippets dentro de suas postagens.
+
+Uma tag permite que os usuários insiram, de forma rápida e fácil, snippets (trechos de código) dentro de suas postagens.
 
 ## Resumo
 
@@ -10,19 +11,19 @@ hexo.extend.tag.register(name, function(args, content){
 }, options);
 ```
 
-Dois argumentos serão passados para dentro da função: `args` e `content`. `args` contém os argumentos passados o plugin tag e `content` é o conteúdo envolvido do plugin tag.
+Dois argumentos serão passados para dentro da função: `args` e `content`. `args` contém os argumentos passados para o tag plugin e `content` é o conteúdo envolvido do tag plugin.
 
-Desde a introdução da rederização assíncrona, na versão 3 do Hexo, estamos usando o [Nunjucks] para renderização. O comportamento pode ser um pouco diferente do [Swig].
+Desde a introdução da renderização assíncrona, na versão 3 do Hexo, estamos usando o [Nunjucks] para renderização. O comportamento pode ser um pouco diferente do [Swig].
 
-## ## Opções
+## Opções
 
 ### ends
 
-Use tags end. Esta opção é `false` por padrão.
+Use as tags end. Esta opção é `false` por padrão.
 
 ### async
 
-Habilita o modo assíncrono. Esta opção é `false` por padrão.
+Habilite o modo assíncrono. Esta opção é `false` por padrão.
 
 ## Exemplos
 

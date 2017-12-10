@@ -1,7 +1,7 @@
-title: Filtro
+title: Filter
 ---
-Um filtro pode ser utilizado para modificar alguns dados. Hexo passa dados para filtros em sequência e os filtros, então, modificam esses dados um após o outro. Este é o mesmo conceito utilizado pelo [WordPress](http://codex.wordpress.org/Plugin_API#Filters).
 
+Um `filter` (filtro) pode ser utilizado para modificar alguns dados. O Hexo passa os dados para filtros em sequência e os filtros, então, modificam esses dados um após o outro. Este é o mesmo conceito utilizado pelo [WordPress](http://codex.wordpress.org/Plugin_API#Filters).
 
 ## Resumo
 
@@ -11,7 +11,7 @@ hexo.extend.filter.register(type, function(){
 }, priority);
 ```
 
-Você pode definir uma prioridade específica para cada filtro (parâmetro `priority` no exemplo acima). Uma prioridade mais baixa significa que o filtro será executado primeiro. A prioridade padrão é 10. 
+Você pode definir uma prioridade específica para cada filtro (parâmetro `priority` no exemplo acima). Uma prioridade mais baixa significa que o filtro será executado primeiro. A prioridade padrão é 10.
 
 ## Executar Filtros
 
@@ -64,7 +64,7 @@ Abaixo são listados os filtros utilizados pelo Hexo.
 
 ### before_post_render
 
-Executado antes de um post ser renderizado. Verificar a seção [post_rendering](posts.html#Render) para saber mais sobre as etapas de execução. 
+Executado antes de uma postagem ser renderizada. Verificar a seção [Renderizar](posts.html#Renderizar) para saber mais sobre as etapas de execução.
 
 Por exemplo, para se transformar um título em _caixa baixa_:
 
@@ -77,7 +77,7 @@ hexo.extend.filter.register('before_post_render', function(data){
 
 ### after_post_render
 
-Executado após o post ser renderizado. Verificar a seção [post rendering](posts.html#Render) para saber mais sobre as etapas de execução.  
+Executado após a postagem ser renderizado. Verificar a seção [Renderizar](posts.html#Renderizar) para saber mais sobre as etapas de execução.
 
 Por exemplo, para substituir `@username` por um link para o perfil do Twitter:
 
@@ -120,7 +120,7 @@ hexo.extend.filter.register('after_generate', function(){
 
 ### template_locals
 
-Modifica [local variables](../docs/variables.html) nos templates.
+Modifica as [variáveis locais](../docs/variables.html) nos templates.
 
 Por exemplo, para adicionar a hora atual às variáveis locais dos templates:
 
@@ -143,7 +143,7 @@ hexo.extend.filter.register('after_init', function(){
 
 ### new_post_path
 
-Executado ao criar um post para determinar o caminho dos novos posts.
+Executado ao criar uma postagem para determinar o caminho das novas postagens.
 
 ``` js
 hexo.extend.filter.register('new_post_path', function(data, replace){
@@ -153,7 +153,7 @@ hexo.extend.filter.register('new_post_path', function(data, replace){
 
 ### post_permalink
 
-Usado para determinar os permalinks dos posts.
+Usado para determinar os links permanentes das postagens.
 
 ``` js
 hexo.extend.filter.register('post_permalink', function(data){
@@ -163,13 +163,13 @@ hexo.extend.filter.register('post_permalink', function(data){
 
 ### after_render
 
-Executado após a renderização ser terminada. Mais informações podem ser encontradas em [rendering](rendering.html#after_render_Filters).
+Executado após a renderização ser terminada. Mais informações podem ser encontradas na seção de [renderização](rendering.html#Filtros-after-render).
 
 ### server_middleware
 
 Adiciona um middleware ao servidor. `app` é uma instância de [Connect].
 
-Por exemplo, para adicionar `X-Powered-By: Hexo` ao cabeçalho de resposta: 
+Por exemplo, para adicionar `X-Powered-By: Hexo` ao cabeçalho de resposta:
 
 ``` js
 hexo.extend.filter.register('server_middleware', function(app){
