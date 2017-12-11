@@ -1741,3 +1741,16 @@
     - beautiful
     - google analytics
     - Japanese
+
+- name: hexo-theme-grace
+  description: A simple and grace theme for hexo.
+  link: https://github.com/buhuo00/hexo-theme-grace
+  preview: https://www.buhuoblog.com/
+  tags:
+    - simple
+    - grace
+    - disqus
+    - easy
+    - RSS
+    - 中文
+    - English
