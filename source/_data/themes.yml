@@ -86,6 +86,16 @@
     - google plus
     - responsive
     - gallery
+- name: Purely
+  description: Hexo theme. Pure!
+  link: https://github.com/geekrainy/hexo-theme-purely
+  preview: http://theme-purely.rainylog.com
+  tags:
+    - simple
+    - purely
+    - clean
+    - minimal
+    - line
 - name: Vexo
   description: Vexo is a Hexo theme inspired by Vue's official website.
   link: https://github.com/yanm1ng/hexo-theme-vexo
