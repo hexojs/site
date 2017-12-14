@@ -1764,3 +1764,13 @@
     - RSS
     - 中文
     - English
+- name: microb
+  description: A very simple theme use pure css and less js.
+  link: https://github.com/microacup/hexo-theme-micorb
+  preview: http://blog.meiqiu.me/
+  tags:
+    - simple
+    - pure
+    - zepto
+    - 极简
+    - Minimalist    
