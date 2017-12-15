@@ -1783,3 +1783,13 @@
     - company
     - react
     - responsive
+
+- name: Toki
+  description: A simple but elegant theme.
+  link: https://github.com/Vevlins/hexo-theme-toki
+  preview: https://vevlins.github.io/
+  tags:
+    - one_column
+    - elegant
+    - simple
+    - responsive
