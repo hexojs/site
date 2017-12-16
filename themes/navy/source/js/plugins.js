@@ -29,7 +29,7 @@
   }
 
   function search(value) {
-    var result = index.search('*' + value + '*');
+    var result = index.search('*' + value + '* ' + value);
     var len = result.length;
     var selected = {};
     var i = 0;
