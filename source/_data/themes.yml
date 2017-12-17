@@ -1089,7 +1089,7 @@
 - name: Cactus White
   description: A white version of Cactus Dark, responsive, clean and simple theme for a personal webpage.
   link: https://github.com/sergodeeva/cactus-white
-  preview: https://sergodeeva.github.io/
+  preview: https://sergodeeva.github.io/cactus-white/
   tags:
     - responsive
     - white
