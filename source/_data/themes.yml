@@ -1086,6 +1086,16 @@
     - light
     - blog
     - simple
+- name: Cactus White
+  description: A white version of Cactus Dark, responsive, clean and simple theme for a personal webpage.
+  link: https://github.com/sergodeeva/cactus-white
+  preview: https://sergodeeva.github.io/cactus-white/
+  tags:
+    - responsive
+    - white
+    - clean
+    - blog
+    - simple    
 - name: Adoubi
   description: A simple theme without tags, categories, comments and other chaos.
   link: https://github.com/shinux/hexo-theme-adoubi
