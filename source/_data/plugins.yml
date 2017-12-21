@@ -1758,4 +1758,11 @@
     - reference
     - footnote
     - footnotes
-    
+- name: hexo-custom-fields
+  description: A Hexo plugin that allows the default Markdown source files to be used as custom fields.
+  link: https://github.com/loehnertz/hexo-custom-fields
+  tags:
+    - custom-fields
+    - custom
+    - fields
+    - markdown
