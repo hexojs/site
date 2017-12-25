@@ -50,7 +50,7 @@ Next, set the `layout` attribute to render with the theme templates. We're setti
 hexo.extend.generator.register('archive', function(locals){
   return {
     path: 'archives/index.html',
-    data: locals.posts,
+    data: locals,
     layout: ['archive', 'index']
   }
 });
@@ -64,7 +64,8 @@ You can use the convenient official tool [hexo-pagination] to easily build archi
 var pagination = require('hexo-pagination');
 
 hexo.extend.generator.register('archive', function(locals){
-  return pagination('archives/index.html', locals.posts, {
+  // hexo-pagination makes an index.html for the /archives route
+  return pagination('archives', locals.posts, {
     perPage: 10,
     layout: ['archive', 'index'],
     data: {}

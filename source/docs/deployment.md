@@ -43,9 +43,10 @@ deploy:
 
 Option | Description
 --- | ---
-`repo` | GitHub repository URL
+`repo` | GitHub/Bitbucket/Coding/GitLab repository URL
 `branch` | Branch name. The deployer will detect the branch automatically if you are using GitHub or GitCafe.
 `message` | Customize commit message (Default to `Site updated: {% raw %}{{ now('YYYY-MM-DD HH:mm:ss') }}{% endraw %}`)
+
 
 ## Heroku
 
@@ -156,6 +157,41 @@ Option | Description | Default
 `ignore` | Ignore the files on either host or remote |
 `connections` | Connections number | 1
 `verbose` | Display verbose messages | false
+
+## SFTP
+
+Install [hexo-deployer-sftp]. Deploys the site via SFTP, allowing for passwordless connections using ssh-agent.
+
+``` bash
+$ npm install hexo-deployer-sftp --save
+```
+
+Edit settings.
+
+``` yaml
+deploy:
+  type: sftp
+  host: <host>
+  user: <user>
+  pass: <password>
+  remotePath: [remote path]
+  port: [port]
+  privateKey: [path/to/privateKey]
+  passphrase: [passphrase]
+  agent: [path/to/agent/socket]
+  remotePath: [remotePath]
+```
+
+Option | Description | Default
+--- | --- | ---
+`host` | Address of remote host |
+`user` | Username |
+`pass` | Password |
+`remotePath` | Root directory of remote host | `/`
+`port` | Port | 22
+`privateKey` | Path to a ssh private key |
+`passphrase` | Optional passphrase for the private key | 
+`agent` | Path to the ssh-agent socket | `$SSH_AUTH_SOCK`
 
 ## Other Methods
 

@@ -1,6 +1,6 @@
 title: 文件
 ---
-歡迎使用 Hexo，此文件將幫助您快速開始使用。如果您在使用途中遇到任何問題，您可以在 [解決問題](docs/troubleshooting.html) 中找到解答，或者也可以在 [GitHub](https://github.com/hexojs/hexo/issues) 或 [Google Group](https://groups.google.com/group/hexo) 上詢問。
+歡迎使用 Hexo，此文件將幫助您快速開始使用。如果您在使用途中遇到任何問題，您可以在 [解決問題](troubleshooting.html) 中找到解答，或者也可以在 [GitHub](https://github.com/hexojs/hexo/issues) 或 [Google Group](https://groups.google.com/group/hexo) 上詢問。
 
 ## 什麼是 Hexo？
 
@@ -38,18 +38,18 @@ $ npm install -g hexo-cli
 
 ### 安裝 Node.js
 
-安裝 Node.js 的最佳方式是透過 [nvm](https://github.com/creationix/nvm)。
+安裝 Node.js 的最佳方式是透過 [Node Version Manager](https://github.com/creationix/nvm)。感謝 nvm 的開發者提供簡易自動安裝的腳本指令：
 
 cURL:
 
 ``` bash
-$ curl https://raw.github.com/creationix/nvm/master/install.sh | sh
+$ curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash
 ```
 
 Wget:
 
 ``` bash
-$ wget -qO- https://raw.github.com/creationix/nvm/master/install.sh | sh
+$ wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash
 ```
 
 一旦安裝完成，重啟終端機並執行下列指令以安裝 Node.js。
@@ -62,7 +62,7 @@ $ nvm install stable
 
 ### 安裝 Hexo
 
-一旦所有的必備軟體都安裝完畢後，即可透過 npm 安裝 Hexo。
+一旦所有的必備軟體都安裝完畢後，即可透過 npm 安裝 Hexo：
 
 ``` bash
 $ npm install -g hexo-cli

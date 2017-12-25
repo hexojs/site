@@ -1,5 +1,6 @@
 title: 指令
 ---
+
 ## init
 
 ``` bash
@@ -28,6 +29,11 @@ $ hexo generate
 --- | ---
 `-d`, `--deploy` | 文件生成后立即部署网站
 `-w`, `--watch` | 监视文件变动
+
+该命令可以简写为
+```bash
+$ hexo g
+```
 
 ## publish
 
@@ -63,6 +69,11 @@ $ hexo deploy
 --- | ---
 `-g`, `--generate` | 部署之前预先生成静态文件
 
+该命令可以简写为：
+```bash
+$ hexo d
+```
+
 ## render
 
 ``` bash
@@ -90,6 +101,8 @@ $ hexo clean
 ```
 
 清除缓存文件 (`db.json`) 和已生成的静态文件 (`public`)。
+
+在某些情况（尤其是更换主题后），如果发现您对站点的更改无论如何也不生效，您可能需要运行该命令。
 
 ## list
 
@@ -156,3 +169,4 @@ $ hexo --cwd /path/to/cwd
 ```
 
 自定义当前工作目录（Current working directory）的路径。
+

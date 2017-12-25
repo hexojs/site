@@ -1,5 +1,8 @@
 title: Themes
 ---
+
+{% youtube 5ROIU_9dYe4 %}
+
 It's easy to build a Hexo theme - you just have to create a new folder. To start using your theme, modify the `theme` setting in your site's `_config.yml`. A theme should have the following structure:
 
 ``` plain
@@ -21,7 +24,7 @@ Language folder. See [internationalization (i18n)](internationalization.html) fo
 
 ### layout
 
-Layout folder. This folder contains the theme's template files, which define the appearance of your website. Hexo provides the [Swig] template engine by default, but you can easily install additional plugins to support alternative engines such as [EJS], [Haml] or [Jade]. Hexo chooses the template engine based on the file extension of the template. For example:
+Layout folder. This folder contains the theme's template files, which define the appearance of your website. Hexo provides the [Swig] template engine by default, but you can easily install additional plugins to support alternative engines such as [EJS], [Haml], [Jade], or [Pug]. Hexo chooses the template engine based on the file extension of the template. For example:
 
 ``` plain
 layout.ejs   - uses EJS
@@ -76,4 +79,5 @@ When you have finished building your theme, you can publish it to the [theme lis
 [Swig]: https://github.com/paularmstrong/swig
 [Haml]: https://github.com/hexojs/hexo-renderer-haml
 [Jade]: https://github.com/hexojs/hexo-renderer-jade
+[Pug]: https://github.com/maxknee/hexo-render-pug
 [hexojs/site]: https://github.com/hexojs/site

@@ -563,7 +563,7 @@ title: 辅助函数（Helpers）
 `current` | 目前页数 | 0
 `prev_text` | 上一页链接的文字。仅在 `prev_next` 设定开启时才有用。 | Prev
 `next_text` | 下一页链接的文字。仅在 `prev_next` 设定开启时才有用。 | Next
-`space` | 空白文字 | &hellp;
+`space` | 空白文字 | &hellip;
 `prev_next` | 显示上一页和下一页的链接 | true
 `end_size` | 显示于两侧的页数 | 1
 `mid_size` | 显示于中间的页数 | 2
@@ -661,3 +661,5 @@ title: 辅助函数（Helpers）
 [颜色关键字]: http://www.w3.org/TR/css3-color/#svg-color
 [Moment.js]: http://momentjs.com/
 [Open Graph]: http://ogp.me/
+
+

@@ -2,6 +2,8 @@ title: Helpers
 ---
 Helpers are used in templates to help you insert snippets quickly.  Helpers cannot be used in source files.
 
+{% youtube Uc53pW0GJHU %}
+
 ## URL
 
 ### url_for
@@ -653,6 +655,7 @@ Option | Description | Default
 --- | --- | ---
 `class` | Class name | toc
 `list_number` | Displays list number | true
+`max_depth` | Maximum heading depth of generated toc | 6
 
 **Examples:**
 

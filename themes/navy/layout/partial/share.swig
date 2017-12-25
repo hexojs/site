@@ -1,11 +1,10 @@
-<!-- GitHub Star -->
-<iframe src="https://ghbtns.com/github-btn.html?user=hexojs&repo=hexo&type=star&count=true" frameborder="0" scrolling="0" width="110px" height="20px"></iframe>
+<!-- GitHub star -->
+<a class="github-button" href="https://github.com/hexojs/hexo" data-icon="octicon-star" data-show-count="true" aria-label="Star hexojs/hexo on GitHub">Star</a>
 <!-- GitHub fork -->
-<iframe src="https://ghbtns.com/github-btn.html?user=hexojs&repo=hexo&type=fork&count=true" frameborder="0" scrolling="0" width="110px" height="20px"></iframe>
-<!-- Tweet button -->
-<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://hexo.io/" data-text="Hexo - A fast, simple &amp; powerful blog framework powered by Node.js." data-hashtags="hexo,nodejs">Tweet</a>
+<a class="github-button" href="https://github.com/hexojs/hexo/fork" data-icon="octicon-repo-forked" data-show-count="true" aria-label="Fork hexojs/hexo on GitHub">Fork</a><!-- Tweet button -->
 <!-- Twitter follow button -->
-<a href="https://twitter.com/hexojs" class="twitter-follow-button" data-show-count="false">Follow @hexojs</a>
-<script>
-window.twttr=(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};if(d.getElementById(id))return;js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);t._e=[];t.ready=function(f){t._e.push(f);};return t;}(document,"script","twitter-wjs"));
-</script>
+<a href="https://twitter.com/hexojs" class="twitter-follow-button" data-show-count="true">Follow @hexojs</a>
+<!-- Github Button -->
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+<!-- Twitter share button -->
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>

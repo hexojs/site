@@ -8,7 +8,7 @@ We welcome you to join the development of Hexo. This document will help you thro
 
 Please follow the coding style:
 
-- Follow [Google JavaScript Style Guide](https://google.github.io/styleguide/javascriptguide.xml).
+- Follow [Google JavaScript Style Guide](https://google.github.io/styleguide/jsguide.html).
 - Use soft-tabs with a two space indent.
 - Don't put commas first.
 

@@ -3,7 +3,7 @@ language: node_js
 sudo: false
 
 node_js:
-  - "4"
+  - "node"
 
 cache:
   apt: true
@@ -22,6 +22,7 @@ addons:
   ssh_known_hosts: github.com
 
 script:
+  - npm run eslint
   - npm run build
 
 deploy:

@@ -45,7 +45,9 @@ $ npm install hexo-migrator-wordpress --save
 ``` bash
 $ hexo migrate wordpress <source>
 ```
-
+{% note warn 注意 %}
+这个插件并不能完美地实现WordPress->Hexo的数据转换，尤其是在处理WordPress的分类方面存在问题（见[Front-matter中的分类与标签](https://hexo.io/zh-cn/docs/front-matter.html)）。因此，建议您在迁移完成后，手工审阅所有生成的markdown文件，检查其中是否有错误。对于文章数量较大的WordPress站点，这项工作可能要花很长的时间。
+{% endnote %}
 ## Joomla
 
 首先，安装 `hexo-migrator-joomla` 插件。
@@ -61,3 +63,4 @@ $ npm install hexo-migrator-joomla --save
 ```bash
 $ hexo migrate joomla <source>
 ```
+
