@@ -86,6 +86,16 @@
     - google plus
     - responsive
     - gallery
+- name: Purely
+  description: Hexo theme. Pure!
+  link: https://github.com/geekrainy/hexo-theme-purely
+  preview: http://theme-purely.rainylog.com
+  tags:
+    - simple
+    - purely
+    - clean
+    - minimal
+    - line
 - name: Vexo
   description: Vexo is a Hexo theme inspired by Vue's official website.
   link: https://github.com/yanm1ng/hexo-theme-vexo
@@ -1076,6 +1086,16 @@
     - light
     - blog
     - simple
+- name: Cactus White
+  description: A white version of Cactus Dark, responsive, clean and simple theme for a personal webpage.
+  link: https://github.com/sergodeeva/cactus-white
+  preview: https://sergodeeva.github.io/cactus-white/
+  tags:
+    - responsive
+    - white
+    - clean
+    - blog
+    - simple    
 - name: Adoubi
   description: A simple theme without tags, categories, comments and other chaos.
   link: https://github.com/shinux/hexo-theme-adoubi
@@ -1728,3 +1748,76 @@
     - simple
     - google analytics
     - disqus
+- name: simple-japanese
+  description: Hexo blog theme. it makes Japanese more readable and beautiful.
+  link: https://github.com/mitsuruog/hexo-theme-simple-japanese
+  preview: https://blog.mitsuruog.info/
+  tags:
+    - responsive
+    - widget
+    - two_column
+    - light
+    - simple
+    - beautiful
+    - google analytics
+    - Japanese
+
+- name: hexo-theme-grace
+  description: A simple and grace theme for hexo.
+  link: https://github.com/buhuo00/hexo-theme-grace
+  preview: https://www.buhuoblog.com/
+  tags:
+    - simple
+    - grace
+    - disqus
+    - easy
+    - RSS
+    - 中文
+    - English
+- name: microb
+  description: A very simple theme use pure css and less js.
+  link: https://github.com/microacup/hexo-theme-micorb
+  preview: http://blog.meiqiu.me/
+  tags:
+    - simple
+    - pure
+    - zepto
+    - 极简
+    - Minimalist    
+- name: React
+  description: Material design multipurpose theme.
+  link: https://github.com/NoahDragon/hexo-theme-react
+  preview: https://noahdragon.github.io/hexo-theme-react/
+  tags:
+    - single_page
+    - company
+    - react
+    - responsive
+
+- name: Toki
+  description: A simple but elegant theme.
+  link: https://github.com/Vevlins/hexo-theme-toki
+  preview: https://vevlins.github.io/
+  tags:
+    - one_column
+    - elegant
+    - simple
+    - responsive
+
+- name: Lite
+  description: Keep Calm, Light and Writing, using Vue.js and Typescript.
+  link: https://github.com/HeskeyBaozi/hexo-theme-lite
+  preview: https://heskeybaozi.github.io/
+  tags:
+    - light
+    - vue
+    - typescript
+    - responsive
+- name: Sw-blog
+  description: Transparent theme, with station search
+  link: https://github.com/WinMin/Sw-blog
+  preview: http://bestwing.me/
+  tags:
+    - transparence
+    - responsive
+    - search
