@@ -1,3 +1,12 @@
+- name: cold
+  description: A super cool theme for Hexo
+  link: https://github.com/yudaren007007/hexo-theme-cold
+  preview: http://www.yujunren.com/blog/
+  tags:
+    - cool
+    - responsive
+    - chinese
+    - simple
 - name: Aath
   description: A hexo theme inspired by zhihu and juejin
   link: https://github.com/lewis-geek/hexo-theme-Aath
