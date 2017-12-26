@@ -837,9 +837,8 @@
   tags:
     - responsive
     - one_column
-    - search_support
+    - search
     - 中文
-    - typescript
 - name: Nova
   description: A theme using swig template aimed to build github project site conveniently.
   link: https://github.com/Jamling/hexo-theme-nova
@@ -1830,3 +1829,12 @@
     - transparence
     - responsive
     - search
+- name: Element
+  description: Another minimal theme for Hexo.
+  link: https://github.com/artchen/hexo-theme-element
+  preview: https://artifact.me
+  tags:
+    - responsive
+    - one_column
+    - search
+    - minimalism
