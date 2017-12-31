@@ -1113,7 +1113,7 @@
     - white
     - clean
     - blog
-    - simple    
+    - simple
 - name: Adoubi
   description: A simple theme without tags, categories, comments and other chaos.
   link: https://github.com/shinux/hexo-theme-adoubi
@@ -1801,7 +1801,7 @@
     - pure
     - zepto
     - 极简
-    - Minimalist    
+    - Minimalist
 - name: React
   description: Material design multipurpose theme.
   link: https://github.com/NoahDragon/hexo-theme-react
@@ -1858,4 +1858,12 @@
     - two_column
     - zanblog
     - mygalgame
-
+- name: Empty Light
+description: A Clean And Dark Theme For Hexo
+link: https://github.com/varctrl/hexo-theme-empty-light
+preview: http://varctrl.me
+tags:
+  - simple
+  - not responsive
+  - Bulma css
+  - clean
