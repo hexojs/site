@@ -1787,3 +1787,13 @@
     - post
     - seo
     - promotion
+- name: hexo-blogroll
+  description: Show latest articles of your favorite blogs   
+  link: https://github.com/huiwang/hexo-blogroll
+  tags:
+    - blog
+    - blogroll
+    - automatic
+    - rss
+    - feed
+    - atom
