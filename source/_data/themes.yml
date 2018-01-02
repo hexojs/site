@@ -1,3 +1,22 @@
+- name: Space Cadet
+  description: A modern, purple-accented Bootstrap 4 blog theme for Hexo.
+  link: https://github.com/azigler/hexo-theme-space-cadet
+  preview: https://www.andrewzigler.com/blog
+  tags:
+    - bootstrap
+    - responsive
+    - modern
+    - two_column
+    - purple
+- name: cold
+  description: A super cool theme for Hexo
+  link: https://github.com/yudaren007007/hexo-theme-cold
+  preview: http://www.yujunren.com/blog/
+  tags:
+    - cool
+    - responsive
+    - chinese
+    - simple
 - name: Aath
   description: A hexo theme inspired by zhihu and juejin
   link: https://github.com/lewis-geek/hexo-theme-Aath
@@ -828,9 +847,8 @@
   tags:
     - responsive
     - one_column
-    - search_support
+    - search
     - 中文
-    - typescript
 - name: Nova
   description: A theme using swig template aimed to build github project site conveniently.
   link: https://github.com/Jamling/hexo-theme-nova
@@ -1095,7 +1113,7 @@
     - white
     - clean
     - blog
-    - simple    
+    - simple
 - name: Adoubi
   description: A simple theme without tags, categories, comments and other chaos.
   link: https://github.com/shinux/hexo-theme-adoubi
@@ -1783,7 +1801,7 @@
     - pure
     - zepto
     - 极简
-    - Minimalist    
+    - Minimalist
 - name: React
   description: Material design multipurpose theme.
   link: https://github.com/NoahDragon/hexo-theme-react
@@ -1821,3 +1839,38 @@
     - transparence
     - responsive
     - search
+- name: Element
+  description: Another minimal theme for Hexo.
+  link: https://github.com/artchen/hexo-theme-element
+  preview: https://artifact.me
+  tags:
+    - responsive
+    - one_column
+    - search
+    - minimalism
+- name: gal
+  description: https://mygalgame.com wordpress theme for hexo
+  link: https://github.com/ZEROKISEKI/hexo-theme-gal
+  preview: http://sora3.coding.me
+  tags:
+    - bootstrap
+    - responsive
+    - two_column
+    - zanblog
+    - mygalgame
+- name: Empty Light
+  description: A Clean And Dark Theme For Hexo
+  link: https://github.com/varctrl/hexo-theme-empty-light
+  preview: http://varctrl.me
+  tags:
+    - simple
+    - not responsive
+    - Bulma css
+    - clean
+- name: Terminal
+  description: A simple and clean theme for Hexo
+  link: https://github.com/lazysheep666/terminal_theme
+  preview: http://yanghaolan.cn
+  tags: 
+    - simple  
+    - clean
