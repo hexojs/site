@@ -1867,3 +1867,10 @@ tags:
   - not responsive
   - Bulma css
   - clean
+- name: Terminal
+  description: A simple and clean theme for Hexo
+  link: https://github.com/lazysheep666/terminal_theme
+  preview: http://yanghaolan.cn
+  tags: 
+    - simple  
+    - clean
