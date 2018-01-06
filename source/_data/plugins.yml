@@ -1797,3 +1797,11 @@
     - rss
     - feed
     - atom
+- name: hexo-symbols-count-time
+  description: Symbols count and time to read for articles.
+  link: https://github.com/theme-next/hexo-symbols-count-time
+  tags:
+    - helper
+    - count
+    - symbols
+    - time2read
