@@ -1,5 +1,8 @@
 title: Themes
 ---
+
+{% youtube 5ROIU_9dYe4 %}
+
 It's easy to build a Hexo theme - you just have to create a new folder. To start using your theme, modify the `theme` setting in your site's `_config.yml`. A theme should have the following structure:
 
 ``` plain

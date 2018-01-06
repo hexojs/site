@@ -2,6 +2,8 @@ title: Helpers
 ---
 Helpers are used in templates to help you insert snippets quickly.  Helpers cannot be used in source files.
 
+{% youtube Uc53pW0GJHU %}
+
 ## URL
 
 ### url_for

@@ -5,3 +5,4 @@ node_modules/
 db.json
 public/
 .deploy*/
+package-lock.json
