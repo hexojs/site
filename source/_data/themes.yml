@@ -1874,3 +1874,15 @@
   tags: 
     - simple  
     - clean
+
+- name: Dev Dark
+  description: A simple dark theme, responsive and light for Hexo
+  link: https://github.com/codermarcos/dev-dark-theme
+  preview: http://dev-dark-theme.codermarcos.com/
+  tags:
+    - dark
+    - dev
+    - simple
+    - responsive
+    - light
+    - developer
