@@ -1899,3 +1899,14 @@
     - responsive
     - light
     - developer
+
+- name: Lemon-Lime
+  description: A refreshing theme for Hexo
+  link: https://github.com/huan555/lemon-lime
+  preview: http://rachelqiu.com
+  tags: 
+    - responsive 
+    - aloglia_search
+    - wordcount
+    - viewcount
+    - i18n
