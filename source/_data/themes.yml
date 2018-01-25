@@ -1412,9 +1412,9 @@
 - name: Nlvi
   description: A simple theme named Nlvi for hexo.
   link: https://github.com/ColMugX/hexo-theme-Nlvi
-  preview: https://colmugx.github.io/PersonalBlog
+  preview: https://colmugx.github.io/banderole/
   tags:
-    - Nier
+    - horizontal&vertical
     - animate
     - English
     - 中文
