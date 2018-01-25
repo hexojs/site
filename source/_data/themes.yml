@@ -10,7 +10,6 @@
     - disqus
     - syntax-highligting
     - font-awesome
-    -
 - name: bulxo
   description: A simple, modern, beautiful theme with Bulma for Hexo
   link: https://github.com/polebug/hexo-theme-bulxo
