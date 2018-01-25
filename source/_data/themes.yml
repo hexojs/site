@@ -1,3 +1,16 @@
+- name: A-RSnippet
+  description: A beautiful and comprehensive responsive theme for Hexo. The goal is to achieve as many functionalities as possible.
+  link: https://github.com/huyingjie/hexo-theme-A-RSnippet
+  preview: http://arsnippet.yingjiehu.com/
+  tags:
+    - responsive
+    - bootstrap
+    - google-analytics
+    - portfolio
+    - disqus
+    - syntax-highligting
+    - font-awesome
+    -
 - name: bulxo
   description: A simple, modern, beautiful theme with Bulma for Hexo
   link: https://github.com/polebug/hexo-theme-bulxo
@@ -1884,8 +1897,8 @@
   description: A simple and clean theme for Hexo
   link: https://github.com/lazysheep666/terminal_theme
   preview: http://yanghaolan.cn
-  tags: 
-    - simple  
+  tags:
+    - simple
     - clean
 
 - name: Dev Dark
