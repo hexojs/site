@@ -123,7 +123,7 @@ Por exemplo, no exemplo acima se `foo: bar` estiver em `custom.yml`, mas `"foo":
 
 ### Configurando uma substituição de tema
 
-Os temas Hexo são projetos independentes, com arquivos `_config.yml` separados.
+Os temas no Hexo são projetos independentes, com arquivos `_config.yml` separados.
 
 Em vez de buscar um tema e manter uma ramificação personalizada com suas configurações, você pode configurá-lo a partir do arquivo de configuração principal do seu site.
 
