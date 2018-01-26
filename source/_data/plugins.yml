@@ -1749,15 +1749,28 @@
     - hint
     - tooltip
     - text
-- name: hexo-tippy
-  description: A hexo plugin to add tooltips to your blog posts using tippy. Supporting rich text.
-  link: https://github.com/RichardYan314/hexo-tippy
+- name: hexo-markdown-it-tippy
+  description: A hexo plugin to add tooltips to your blog posts using tippy. Supporting rich text. This is the markdown-it edition.
+  link: https://github.com/RichardYan314/hexo-markdown-it-tippy
   tags:
     - tooltip
     - hint
     - reference
     - footnote
     - footnotes
+    - markdown-it
+    - markdown
+- name: hexo-pandoc-tippy
+  description: A hexo plugin to add tooltips to your blog posts using tippy. Supporting rich text. This is the pandoc edition.
+  link: https://github.com/RichardYan314/hexo-pandoc-tippy
+  tags:
+    - tooltip
+    - hint
+    - reference
+    - footnote
+    - footnotes
+    - pandoc
+    - markdown
 - name: hexo-custom-fields
   description: A Hexo plugin that allows the default Markdown source files to be used as custom fields.
   link: https://github.com/loehnertz/hexo-custom-fields
@@ -1766,3 +1779,29 @@
     - custom
     - fields
     - markdown
+- name: hexo-recommended-posts
+  description: Recommended posts to promote your blog with both internal and external links   
+  link: https://github.com/huiwang/hexo-recommended-posts
+  tags:
+    - recommend
+    - post
+    - seo
+    - promotion
+- name: hexo-blogroll
+  description: Show latest articles of your favorite blogs   
+  link: https://github.com/huiwang/hexo-blogroll
+  tags:
+    - blog
+    - blogroll
+    - automatic
+    - rss
+    - feed
+    - atom
+- name: hexo-filter-optimize
+  description: A hexo plugin that optimize the pages loading speed.
+  link: https://github.com/theme-next/hexo-filter-optimize
+  tags:
+    - optimize
+    - lazyload
+    - inline
+    - bundle
