@@ -84,7 +84,7 @@ Configuração | Descrição | Padrão
 Configuração | Descrição
 --- | ---
 `theme` | Nome do tema. `false` desabilita o tema
-`theme_config` | Configuração do tema. Inclui quaisquer configurações de tema personalizado sob esta chave para substituir os padrões do tema
+`theme_config` | Configuração do tema. Inclui quaisquer configurações de tema personalizado sob esta chave para substituir os padrões do tema.
 `deploy` | Configuração de implantação
 
 ### Incluir/Excluir Arquivos ou Diretórios
@@ -121,11 +121,11 @@ O uso de vários arquivos combina todos os arquivos de configuração e salva as
 
 Por exemplo, no exemplo acima se `foo: bar` estiver em `custom.yml`, mas `"foo": "dinosaur"` estiver em `custom2.json`, `_multiconfig.yml` irá conter `foo: dinosaur`.
 
-### Configurando uma substituição de tema
+### Sobrescrevendo as Configurações do Tema
 
-Os temas no Hexo são projetos independentes, com arquivos `_config.yml` separados.
+Os temas do Hexo são projetos independentes, com arquivos `_config.yml` separados.
 
-Em vez de buscar um tema e manter uma ramificação personalizada com suas configurações, você pode configurá-lo a partir do arquivo de configuração principal do seu site.
+Em vez de dar fork em um tema e manter uma branch personalizada com suas configurações, você pode configurá-lo a partir do arquivo de configuração principal do seu site.
 
 Exemplo de configuração:
 
@@ -141,7 +141,7 @@ bio: "Some generic bio"
 logo: "a-cool-image.png"
 ```
 
-Resultado do `theme` configurado:
+Resultado da configuração do tema:
 
 ```json
 {
