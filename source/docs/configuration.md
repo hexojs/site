@@ -149,4 +149,3 @@ Resulting theme configuration:
   logo: "a-cool-image.png"
 }
 ```
-
