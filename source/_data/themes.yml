@@ -32,6 +32,16 @@
     - modern
     - two_column
     - purple
+- name: Twitter Bootstrap
+  description: Suited for coding. Green accented. Bootstrapped based. With disqus support.
+  link: https://github.com/philippkeller/hexo-theme-twbootstrap
+  preview: http://hexo-example.s3-website.eu-central-1.amazonaws.com/
+  tags:
+    - bootstrap
+    - green
+    - white
+    - disqus
+    - offline
 - name: cold
   description: A super cool theme for Hexo
   link: https://github.com/yudaren007007/hexo-theme-cold
