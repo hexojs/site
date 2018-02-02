@@ -1812,3 +1812,10 @@
     - renderer
     - markdown
     - markdown-it
+- name: hexo-migrator-gists
+  description: GithubGist migrator plugin for Hexo.
+  link: https://github.com/xujiaao/hexo-migrator-gists
+  tags:
+    - migrator
+    - github
+    - gist
