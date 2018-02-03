@@ -3,6 +3,7 @@
   <title>{% if page.title %}{{ page.title }} | {% endif %}{{ config.title }}</title>
   <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="Hexo">
   <!-- Canonical links -->
   <link rel="canonical" href="{{ url }}">
   <!-- Alternative links -->
