@@ -156,6 +156,6 @@ hexo.extend.helper.register('disqus_lang', function() {
 });
 
 hexo.extend.helper.register('hexo_version', function() {
-  return this.version;
+  return this.env.version;
 });
 
