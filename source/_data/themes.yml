@@ -1427,3 +1427,16 @@
     - comment
     - Chinese
     - 中文使用文档
+- name: SB
+  description: Clean and simple theme for Hexo blog framework
+  link: https://github.com/maliMirkec/hexo-theme-sb
+  preview: https://www.silvestarbistrovic.from.hr
+  tags:
+    - clean
+    - simple
+    - pink
+    - responsive
+    - blog
+    - one_column
+    - comment
+    - social
