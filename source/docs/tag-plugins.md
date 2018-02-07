@@ -2,6 +2,8 @@ title: Tag Plugins
 ---
 Tag plugins are different from post tags. They are ported from Octopress and provide a useful way for you to quickly add specific content to your posts.
 
+{% youtube I07XMi7MHd4 %}
+
 ## Block Quote
 
 Perfect for adding quotes to your post, with optional author, source and title information.
@@ -239,4 +241,17 @@ If certain content is causing processing issues in your posts, wrap it with the 
 {% raw %}
 content
 {% endraw %}
+```
+
+
+## Post Excerpt
+
+Use text placed before the `<!-- more -->` tag as an excerpt for the post.
+
+**Examples:**
+
+``` 
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+<!-- more -->
+Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 ```

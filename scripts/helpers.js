@@ -124,13 +124,13 @@ hexo.extend.helper.register('lunr_index', function(data) {
     this.field('tags', {boost: 50});
     this.field('description');
     this.ref('id');
+
+    _.sortBy(data, 'name').forEach((item, i) => {
+      this.add(_.assign({ id: i }, item));
+    });
   });
 
-  _.sortBy(data, 'name').forEach(function(item, i) {
-    index.add(_.assign({id: i}, item));
-  });
-
-  return JSON.stringify(index.toJSON());
+  return JSON.stringify(index);
 });
 
 hexo.extend.helper.register('canonical_path_for_nav', function() {
@@ -154,3 +154,8 @@ hexo.extend.helper.register('disqus_lang', function() {
 
   return data.disqus_lang || lang;
 });
+
+hexo.extend.helper.register('hexo_version', function() {
+  return this.env.version;
+});
+

@@ -6,6 +6,8 @@ Generating static files with Hexo is quite easy and fast.
 $ hexo generate
 ```
 
+{% youtube viEJQPVCoLU %}
+
 ### Watch for File Changes
 
 Hexo can watch for file changes and regenerate files immediately. Hexo will compare the SHA1 checksum of your files and only write if file changes are detected.

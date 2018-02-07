@@ -1,5 +1,8 @@
 title: Variables
 ---
+
+{% youtube T9oAax-IRw0 %}
+
 ### Global Variables
 
 Variable | Description | Type
@@ -62,7 +65,7 @@ Variable | Description | Type
 `page.total` | Total number of pages | `number`
 `page.current` | Current page number | `number`
 `page.current_url` | The URL of current page | `string`
-`page.posts` | Posts in this page ([Data Model]) | ??? (what is Data Model?)
+`page.posts` | Posts in this page ([Data Model](https://hexo.io/warehouse/)) | `object`
 `page.prev` | Previous page number. `0` if the current page is the first. | `number`
 `page.prev_link` | The URL of previous page. `''` if the current page is the first. | `string`
 `page.next` | Next page number. `0` if the current page is the last. | `number`

@@ -35,7 +35,7 @@ Setting | Description | Default
 `tag_dir` | Tag directory | `tags`
 `archive_dir` | Archive directory | `archives`
 `category_dir` | Category directory | `categories`
-`code_dir` | Include code directory | `downloads/code`
+`code_dir` | Include code directory (subdirectory of `source_dir`) | `downloads/code`
 `i18n_dir` | i18n directory | `:lang`
 `skip_render` | Paths not to be rendered. You can use [glob expressions](https://github.com/isaacs/minimatch) for path matching |
 
@@ -83,6 +83,7 @@ Setting | Description | Default
 Setting | Description
 --- | ---
 `theme` | Theme name. `false` disables theming
+`theme_config` | Theme configuration. Include any custom theme settings under this key to override theme defaults.
 `deploy` | Deployment setting
 
 
@@ -120,3 +121,31 @@ Using multiple files combines all the config files and saves the merged settings
 
 For instance, in the above example if `foo: bar` is in `custom.yml`, but `"foo": "dinosaur"` is in `custom2.json`, `_multiconfig.yml` will contain `foo: dinosaur`.
 
+### Overriding Theme Config
+
+Hexo themes are independent projects, with separate `_config.yml` files.
+
+Instead of forking a theme, and maintaining a custom branch with your settings, you can configure it from your site's primary configuration file.
+
+Example configuration:
+
+```yml
+# _config.yml
+theme_config:
+  bio: "My awesome bio"
+```
+
+```yml
+# themes/my-theme/_config.yml
+bio: "Some generic bio"
+logo: "a-cool-image.png"
+```
+
+Resulting theme configuration:
+
+```json
+{
+  bio: "My awesome bio",
+  logo: "a-cool-image.png"
+}
+```

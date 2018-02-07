@@ -1,3 +1,134 @@
+- name: A-RSnippet
+  description: A beautiful and comprehensive responsive theme for Hexo. The goal is to achieve as many functionalities as possible.
+  link: https://github.com/huyingjie/hexo-theme-A-RSnippet
+  preview: http://arsnippet.yingjiehu.com/
+  tags:
+    - responsive
+    - bootstrap
+    - google-analytics
+    - portfolio
+    - disqus
+    - syntax-highligting
+    - font-awesome
+- name: bulxo
+  description: A simple, modern, beautiful theme with Bulma for Hexo
+  link: https://github.com/polebug/hexo-theme-bulxo
+  preview: http://polebug.github.io
+  tags:
+    - Bulma
+    - simple
+    - beautiful
+    - modern
+    - free
+    - creative
+    - fast
+- name: Space Cadet
+  description: A modern, purple-accented Bootstrap 4 blog theme for Hexo.
+  link: https://github.com/azigler/hexo-theme-space-cadet
+  preview: https://www.andrewzigler.com/blog
+  tags:
+    - bootstrap
+    - responsive
+    - modern
+    - two_column
+    - purple
+- name: Twitter Bootstrap
+  description: Suited for coding. Green accented. Bootstrapped based. With disqus support.
+  link: https://github.com/philippkeller/hexo-theme-twbootstrap
+  preview: http://hexo-example.s3-website.eu-central-1.amazonaws.com/
+  tags:
+    - bootstrap
+    - green
+    - white
+    - disqus
+    - offline
+- name: cold
+  description: A super cool theme for Hexo
+  link: https://github.com/yudaren007007/hexo-theme-cold
+  preview: http://www.yujunren.com/blog/
+  tags:
+    - cool
+    - responsive
+    - chinese
+    - simple
+- name: Aath
+  description: A hexo theme inspired by zhihu and juejin
+  link: https://github.com/lewis-geek/hexo-theme-Aath
+  preview: http://lewis.suclub.cn/
+  tags:
+    - white
+    - chinese
+    - simple
+    - responsive
+- name: mellow
+  description: Material Design theme for Hexo.
+  link: https://github.com/codefine/hexo-theme-mellow
+  preview: http://blog.lujingtao.com/
+  tags:
+    - responsive
+    - chinese
+    - material
+    - less
+- name: Nayo
+  description: A clean theme for Hexo.
+  link: https://github.com/Lemonreds/hexo-theme-Nayo
+  preview: http://synch.site
+  tags:
+    - white
+    - clean
+    - simple
+    - responsive
+- name: Chiangmai
+  description: A hexo theme inspired by Chiangmai City
+  link: https://github.com/stunstunstun/hexo-theme-chiangmai
+  preview: https://www.holaxprogramming.com/
+  tags:
+    - simple
+    - responsive
+    - fast
+    - pug
+    - facebook
+    - minimal
+- name: hannah
+  description: A simple & beautiful & fast theme for Hexo
+  link: https://github.com/objectyan/hexo-theme-hannah.git
+  preview: http://objectyan.me
+  tags:
+    - simple
+    - beautiful
+    - fast
+    - 中文
+    - responsive
+    - bootstrap
+- name: Skapp
+  description: A simple & beautiful & fast theme for Hexo
+  link: https://github.com/Mrminfive/hexo-theme-skapp
+  preview: http://blog.minfive.com/
+  tags:
+    - simple
+    - beautiful
+    - fast
+    - 中文
+- name: Goyangin
+  description: A Simple theme for HEXO with Bulma Framework CSS
+  link: https://github.com/devgexx/goyangin
+  preview: http://goyangin.0x3g.com/
+  tags:
+    - responsive
+    - Bulma.io
+    - clean
+    - simple
+    - thumb image
+- name: Slice
+  description: A Simple & Beautiful SinglePaged Theme for Hexo.
+  link: https://github.com/NHibiki/hexo-theme-slice
+  preview: https://slice.nekoyu.cc
+  tags:
+    - Flat
+    - SinglePaged
+    - Music Plug-ined
+    - Welcome Page
+    - Responsive
 - name: mdui
   description: A google plus like theme for Hexo.
   link: https://github.com/Halyul/hexo-theme-mdui
@@ -8,6 +139,16 @@
     - google plus
     - responsive
     - gallery
+- name: Purely
+  description: Hexo theme. Pure!
+  link: https://github.com/geekrainy/hexo-theme-purely
+  preview: http://theme-purely.rainylog.com
+  tags:
+    - simple
+    - purely
+    - clean
+    - minimal
+    - line
 - name: Vexo
   description: Vexo is a Hexo theme inspired by Vue's official website.
   link: https://github.com/yanm1ng/hexo-theme-vexo
@@ -17,6 +158,21 @@
     - clean
     - vuejs
     - elegant
+- name: rexo
+  description: Rexo is a minimally customized theme that supports RTL.
+  link: https://github.com/bluemix/hexo-theme-rexo
+  preview: https://bluemix.github.io
+  tags:
+    - responsive
+    - clean
+    - vuejs
+    - minimal
+    - emojis
+    - multilingual
+    - rtl
+    - arabic
+    - persian
+    - hebrew
 - name: sam
   description: A simple, clean theme.
   link: https://github.com/Sam618/hexo-theme-sam
@@ -97,6 +253,14 @@
     - react
     - light
     - colorful
+- name: Inside
+  description: Clean and one page theme for Hexo.
+  link: https://github.com/elmorec/hexo-theme-inside
+  preview: http://blog.oniuo.com/
+  tags:
+    - One page
+    - angular
+    - clean
 - name: Prontera
   description: A fast and modern theme for Hexo.
   link: https://github.com/AngryPowman/hexo-theme-prontera
@@ -284,14 +448,15 @@
 - name: Freemind
   description: Fully taking advantages of Bootstrap.
   link: https://github.com/wzpan/hexo-theme-freemind
-  preview: http://wzpan.github.io/hexo-theme-freemind/
+  preview: http://wzpan.github.io/hexo-theme-freemind-blog/
   tags:
     - two_column
     - responsive
-    - elegant
     - tag_plugins
     - bootstrap
     - color_themes
+    - search
+    - comment
 - name: Simplest
   description: Very simple, written with swig & scss.
   link: https://github.com/dnxbf321/hexo-theme-simplest
@@ -716,9 +881,8 @@
   tags:
     - responsive
     - one_column
-    - search_support
+    - search
     - 中文
-    - typescript
 - name: Nova
   description: A theme using swig template aimed to build github project site conveniently.
   link: https://github.com/Jamling/hexo-theme-nova
@@ -758,6 +922,14 @@
     - elegant
     - one_column
     - white
+- name: ztopic
+  description: A simple responsive theme for Hexo.
+  link: https://github.com/wa-ri/hexo-theme-ztopic
+  preview: http://zccblog.cn/
+  tags:
+    - responsive
+    - simple
+    - scss
 - name: concise
   description: A beautiful and simple theme for hexo
   link: https://github.com/HmyBmny/hexo-theme-concise
@@ -966,6 +1138,16 @@
     - light
     - blog
     - simple
+- name: Cactus White
+  description: A white version of Cactus Dark, responsive, clean and simple theme for a personal webpage.
+  link: https://github.com/sergodeeva/cactus-white
+  preview: https://sergodeeva.github.io/cactus-white/
+  tags:
+    - responsive
+    - white
+    - clean
+    - blog
+    - simple
 - name: Adoubi
   description: A simple theme without tags, categories, comments and other chaos.
   link: https://github.com/shinux/hexo-theme-adoubi
@@ -1016,7 +1198,7 @@
 - name: mls
   description: A theme with a fullscreen background image and transparent elements.
   link: https://github.com/lazzzis/hexo-theme-mls
-  preview: http://lazzzis.github.io/
+  preview: http://lazzzis.github.io/hexo-theme-mls/
   tags:
     - background_image
     - blog
@@ -1252,9 +1434,9 @@
 - name: Nlvi
   description: A simple theme named Nlvi for hexo.
   link: https://github.com/ColMugX/hexo-theme-Nlvi
-  preview: https://colmugx.github.io/PersonalBlog
+  preview: https://colmugx.github.io/banderole/
   tags:
-    - Nier
+    - horizontal&vertical
     - animate
     - English
     - 中文
@@ -1440,3 +1622,333 @@
     - one_column
     - comment
     - social
+- name: Only
+  description: Nothing strange. It's only a theme for Hexo.
+  link: https://github.com/lazzzis/hexo-theme-only
+  preview: https://lazzzis.github.io/hexo-theme-only
+  tags:
+    - One page
+    - responsive
+    - vuejs
+- name: pure
+  description: Hexo theme pure. It's a pure theme for Hexo.
+  link: https://github.com/cofess/hexo-theme-pure
+  preview: http://blog.cofess.com/
+  tags:
+    - responsive
+    - pure
+    - nice
+    - clean
+    - simple
+    - blog
+    - two_column
+    - three_column
+- name: Archer
+  description: A smart and modern theme for Hexo.
+  link: https://github.com/fi3ework/hexo-theme-archer
+  preview: https://fi3ework.github.io/archer-demo
+  tags:
+    - fast
+    - single page
+    - sidebar
+    - responsive
+    - two_column
+    - Chinese
+    - English
+- name: Replica
+  description: A github style replication theme for Hexo.
+  link: https://github.com/sabrinaluo/hexo-theme-replica
+  preview: http://sabrinaluo.github.io/tech
+  tags:
+    - github
+    - responsive
+    - geek
+    - blog
+    - post_calendar
+- name: cube
+  description: A Hexo Theme inspired by DIYgod wordpress theme
+  link: https://github.com/ZEROKISEKI/hexo-theme-cube
+  preview: http://sora1.coding.me
+  tags:
+    - cube
+    - responsive
+    - two_column
+    - light
+    - individuation
+- name: Asnippet
+  description: A simple and interesting theme for Hexo.
+  link: https://github.com/shenliyang/hexo-theme-snippet
+  preview: https://shenliyang.github.io/
+  tags:
+    - simple
+    - responsive
+    - fast
+    - beautiful
+- name: Icer
+  description: A simple theme for Hexo.
+  link: https://github.com/GGICE/hexo-icer
+  preview: https://ice.gs
+  tags:
+    - simple
+    - one_column
+    - beautiful
+- name: Melody
+  description: A simple & beautiful & fast theme for Hexo
+  link: https://github.com/Molunerfinn/hexo-theme-melody
+  preview: https://molunerfinn.com
+  tags:
+    - simple
+    - beautiful
+    - fast
+- name: Typography
+  description: Rediscover the beauty of typography.
+  link: https://github.com/SumiMakito/hexo-theme-typography
+  preview: https://blog.keep.moe
+  tags:
+    - simple
+    - beautiful
+    - light
+    - fast
+    - disqus
+    - livere
+- name: Polk
+  description: Simple blog theme for Hexo, focused on articles.
+  link: https://github.com/chunqiuyiyu/hexo-theme-polk
+  preview: http://www.chunqiuyiyu.com/
+  tags:
+    - simple
+    - responsive
+    - one_column
+    - light
+    - 中文
+    - minimalism
+- name: blairos
+  description: A simple & beautiful & fast theme for Hexo, focused on articles.
+  link: https://github.com/52binge/hexo-theme-blairos
+  preview: https://52binge.github.io
+  tags:
+    - simple
+    - beautiful
+    - light
+    - fast
+    - disqus
+- name: artemisX
+  description: A simple theme based on artemis, add new feature and new style.
+  link: https://github.com/wwwuxt/hexo-theme-artemisX
+  preview: http://wwwuxt.cc/
+  tags:
+    - simple
+    - responsive
+    - light
+    - blog
+    - fast
+    - long-term developing
+    - maintaining
+- name: Concise
+  description: A simple theme based on hexo-theme-landscape.
+  link: https://github.com/Sanonz/hexo-theme-concise
+  preview: https://sanonz.github.io/
+  tags:
+    - simple
+    - responsive
+    - light
+    - blog
+    - fast
+    - disqus
+- name: doc
+  description: A documentation theme for the Hexo blog framework.
+  link: https://github.com/zalando-incubator/hexo-theme-doc
+  preview: https://zalando-incubator.github.io/hexo-theme-doc
+  tags:
+    - documentation
+    - docs
+    - documentation-tool
+    - api-documentation
+    - api-docs
+    - rest-api-documentation
+    - swagger-ui
+    - swagger
+    - responsive
+- name: tomotoes
+  description: A simple theme based on indigo, add new feature and new style.
+  link: https://github.com/tomotoes/hexo-theme-tomotoes
+  preview: http:/tomotoes.com/
+  tags:
+    - fast
+    - light
+    - swagger
+    - responsive
+- name: octo
+  description: A port of the Octopress 2 'classic' theme to Hexo
+  link: https://github.com/jbreckmckye/hexo-theme-octo
+  preview: http://www.breck-mckye.com
+  tags:
+    - octopress
+    - responsive
+    - google analytics
+    - disqus
+    - readability
+    - monochrome
+- name: nebula
+  description: A simple, clean, dark theme for Hexo.
+  link: https://github.com/Suolawangzai/hexo-theme-nebula
+  preview: https://suolawangzai.github.io
+  tags:
+    - responsive
+    - simple
+    - easy to use
+    - visitor counts
+    - disqus
+    - share
+    - in-post gallery
+    - google analytics
+- name: wind
+  description: A light and pure theme for Hexo, in this complicated world.
+  link: https://github.com/Lonezj/hexo-theme-wind
+  preview: http://blog.mrdays.tech/
+  tags:
+    - responsive
+    - widget
+    - one_column
+    - light
+    - simple
+    - google analytics
+    - disqus
+- name: simple-japanese
+  description: Hexo blog theme. it makes Japanese more readable and beautiful.
+  link: https://github.com/mitsuruog/hexo-theme-simple-japanese
+  preview: https://blog.mitsuruog.info/
+  tags:
+    - responsive
+    - widget
+    - two_column
+    - light
+    - simple
+    - beautiful
+    - google analytics
+    - Japanese
+
+- name: hexo-theme-grace
+  description: A simple and grace theme for hexo.
+  link: https://github.com/buhuo00/hexo-theme-grace
+  preview: https://www.buhuoblog.com/
+  tags:
+    - simple
+    - grace
+    - disqus
+    - easy
+    - RSS
+    - 中文
+    - English
+- name: microb
+  description: A very simple theme use pure css and less js.
+  link: https://github.com/microacup/hexo-theme-micorb
+  preview: http://blog.meiqiu.me/
+  tags:
+    - simple
+    - pure
+    - zepto
+    - 极简
+    - Minimalist
+- name: React
+  description: Material design multipurpose theme.
+  link: https://github.com/NoahDragon/hexo-theme-react
+  preview: https://noahdragon.github.io/hexo-theme-react/
+  tags:
+    - single_page
+    - company
+    - react
+    - responsive
+
+- name: Toki
+  description: A simple but elegant theme.
+  link: https://github.com/Vevlins/hexo-theme-toki
+  preview: https://vevlins.github.io/
+  tags:
+    - one_column
+    - elegant
+    - simple
+    - responsive
+
+- name: Lite
+  description: Keep Calm, Light and Writing, using Vue.js and Typescript.
+  link: https://github.com/HeskeyBaozi/hexo-theme-lite
+  preview: https://heskeybaozi.github.io/
+  tags:
+    - light
+    - vue
+    - typescript
+    - responsive
+- name: Sw-blog
+  description: Transparent theme, with station search
+  link: https://github.com/WinMin/Sw-blog
+  preview: http://bestwing.me/
+  tags:
+    - transparence
+    - responsive
+    - search
+- name: Element
+  description: Another minimal theme for Hexo.
+  link: https://github.com/artchen/hexo-theme-element
+  preview: https://artifact.me
+  tags:
+    - responsive
+    - one_column
+    - search
+    - minimalism
+- name: gal
+  description: https://mygalgame.com wordpress theme for hexo
+  link: https://github.com/ZEROKISEKI/hexo-theme-gal
+  preview: http://sora3.coding.me
+  tags:
+    - bootstrap
+    - responsive
+    - two_column
+    - zanblog
+    - mygalgame
+- name: Empty Light
+  description: A Clean And Dark Theme For Hexo
+  link: https://github.com/varctrl/hexo-theme-empty-light
+  preview: http://varctrl.me
+  tags:
+    - simple
+    - not responsive
+    - Bulma css
+    - clean
+- name: Terminal
+  description: A simple and clean theme for Hexo
+  link: https://github.com/lazysheep666/terminal_theme
+  preview: http://yanghaolan.cn
+  tags:
+    - simple
+    - clean
+- name: Dev Dark
+  description: A simple dark theme, responsive and light for Hexo
+  link: https://github.com/codermarcos/dev-dark-theme
+  preview: http://dev-dark-theme.codermarcos.com/
+  tags:
+    - dark
+    - dev
+    - simple
+    - responsive
+    - light
+    - developer
+- name: Lemon-Lime
+  description: A refreshing theme for Hexo
+  link: https://github.com/huan555/lemon-lime
+  preview: http://rachelqiu.com
+  tags:
+    - responsive
+    - aloglia_search
+    - wordcount
+    - viewcount
+    - i18n
+- name: simple-black
+  description: A simple and black hexo theme.
+  link: https://github.com/yunfeihe/simple-black
+  preview: http://yunfeihe.me
+  tags:
+    - simple
+    - black
+    - two_column
+    - clean
