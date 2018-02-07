@@ -1609,6 +1609,19 @@
     - comment
     - Chinese
     - 中文使用文档
+- name: SB
+  description: Clean and simple theme for Hexo blog framework
+  link: https://github.com/maliMirkec/hexo-theme-sb
+  preview: https://www.silvestarbistrovic.from.hr
+  tags:
+    - clean
+    - simple
+    - pink
+    - responsive
+    - blog
+    - one_column
+    - comment
+    - social
 - name: Only
   description: Nothing strange. It's only a theme for Hexo.
   link: https://github.com/lazzzis/hexo-theme-only
@@ -1909,7 +1922,6 @@
   tags:
     - simple
     - clean
-
 - name: Dev Dark
   description: A simple dark theme, responsive and light for Hexo
   link: https://github.com/codermarcos/dev-dark-theme
@@ -1921,7 +1933,6 @@
     - responsive
     - light
     - developer
-
 - name: Lemon-Lime
   description: A refreshing theme for Hexo
   link: https://github.com/huan555/lemon-lime
@@ -1932,7 +1943,6 @@
     - wordcount
     - viewcount
     - i18n
-
 - name: simple-black
   description: A simple and black hexo theme.
   link: https://github.com/yunfeihe/simple-black
