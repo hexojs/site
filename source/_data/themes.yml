@@ -1952,3 +1952,13 @@
     - black
     - two_column
     - clean
+- name: codeteenager
+  description: A flat topic for an exclusive programmer of Hexo.
+  link: https://github.com/codeteenager/hexo-theme-codeteenager
+  preview: http://www.codeteenager.cn
+  tags:
+    - Delayering
+    - responsive
+    - widget
+    - developer
+    - simple
