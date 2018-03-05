@@ -1833,3 +1833,10 @@
   tags:
     - helper
     - gitter
+- name: hexo-fontawesome
+  description: A utility function which helps to inline Font Awesome SVG files.
+  link: https://github.com/ertrzyiks/hexo-fontawesome
+  tags:
+    - helper
+    - fontawesome
+    - awesome
