@@ -1963,3 +1963,12 @@
     - widget
     - developer
     - simple
+- name: syefe
+  description: An imitation of Baidu EFE template.
+  link: https://github.com/smallyunet/hexo-theme-syefe
+  preview: https://smallyunet.github.io/hexo-theme-syefe
+  tags:
+    - responsive
+    - one_column
+    - Baidu EFE
+    - simple
