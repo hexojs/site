@@ -1780,7 +1780,7 @@
     - fields
     - markdown
 - name: hexo-recommended-posts
-  description: Recommended posts to promote your blog with both internal and external links   
+  description: Recommended posts to promote your blog with both internal and external links
   link: https://github.com/huiwang/hexo-recommended-posts
   tags:
     - recommend
@@ -1788,7 +1788,7 @@
     - seo
     - promotion
 - name: hexo-blogroll
-  description: Show latest articles of your favorite blogs   
+  description: Show latest articles of your favorite blogs
   link: https://github.com/huiwang/hexo-blogroll
   tags:
     - blog
@@ -1840,3 +1840,10 @@
     - helper
     - fontawesome
     - awesome
+- name: hexo-admin-ehc
+  description: hexo-admin enhanced version for image uploading/inserting with picker.
+  link: https://github.com/lwz7512/hexo-admin-ehc
+  tags:
+    - admin
+    - editor
+    - imagepicker
