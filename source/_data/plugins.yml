@@ -1797,6 +1797,49 @@
     - rss
     - feed
     - atom
+- name: hexo-filter-optimize
+  description: A hexo plugin that optimize the pages loading speed.
+  link: https://github.com/theme-next/hexo-filter-optimize
+  tags:
+    - optimize
+    - lazyload
+    - inline
+    - bundle
+- name: hexo-renderer-markdown
+  description: Markdown-it renderer plugin for Hexo.
+  link: https://github.com/niemingzhao/hexo-renderer-markdown
+  tags:
+    - renderer
+    - markdown
+    - markdown-it
+- name: hexo-migrator-gists
+  description: GithubGist migrator plugin for Hexo.
+  link: https://github.com/xujiaao/hexo-migrator-gists
+  tags:
+    - migrator
+    - github
+    - gist
+
+- name: hexo-baidu-url-push
+  description: A hexo plugin, using Baidu JS automatic link push method, submit links to Baidu
+  link: https://github.com/XmGao/hexo-baidu-url-push
+  tags:
+    - baidu
+    - seo
+    - url
+- name: hexo-gitter
+  description: A plugin for Hexo that adds Gitter to every page.
+  link: https://github.com/wshunli/hexo-gitter
+  tags:
+    - helper
+    - gitter
+- name: hexo-fontawesome
+  description: A utility function which helps to inline Font Awesome SVG files.
+  link: https://github.com/ertrzyiks/hexo-fontawesome
+  tags:
+    - helper
+    - fontawesome
+    - awesome
 - name: hexo-admin-ehc
   description: hexo-admin enhanced version for image uploading/inserting with picker.
   link: https://github.com/lwz7512/hexo-admin-ehc

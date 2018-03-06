@@ -178,7 +178,6 @@ deploy:
   privateKey: [path/to/privateKey]
   passphrase: [passphrase]
   agent: [path/to/agent/socket]
-  remotePath: [remotePath]
 ```
 
 Opção | Descrição | Padrão
