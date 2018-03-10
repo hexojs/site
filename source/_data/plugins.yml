@@ -1161,6 +1161,11 @@
   tags:
     - tag
     - asciinema
+- name: hexo-filter-asciinema
+  description: A simple plugin which can embed asciinema-player in your article with local file.
+  link: https://github.com/mythsman/hexo-filter-asciinema
+  tags:
+    - asciinema  
 - name: hexo-tag-kbd
   description: Displays the keycaps in your post/page.
   link: https://github.com/kamiya555/hexo-tag-kbd
