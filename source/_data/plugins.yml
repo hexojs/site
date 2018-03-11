@@ -1852,3 +1852,12 @@
     - admin
     - editor
     - imagepicker
+
+- name: hexo-filter-responsive-images
+  description: Generate mutliple version of images for responsive blogs.
+  link: https://github.com/hexojs/hexo-responsive-images
+  tags:
+    - images
+    - responsive
+    - resize
+    - thumbnails
