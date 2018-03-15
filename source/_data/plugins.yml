@@ -1852,7 +1852,19 @@
     - admin
     - editor
     - imagepicker
-
+- name: hexo-deployer-netlify
+  description: Netlify (netlify.com) deployer plugin for Hexo
+  link: https://github.com/piktaszuikis/hexo-deployer-netlify
+  tags:
+    - deployer
+    - netlify
+- name: hexo-deployer-getforge
+  description: Forge (getforge.com) deployer for Hexo.
+  link: https://github.com/piktaszuikis/hexo-deployer-getforge
+  tags:
+    - deployer
+    - forge
+    - getforge
 - name: hexo-filter-responsive-images
   description: Generate mutliple version of images for responsive blogs.
   link: https://github.com/hexojs/hexo-responsive-images
