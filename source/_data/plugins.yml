@@ -1840,7 +1840,7 @@
     - gitter
 - name: hexo-fontawesome
   description: A utility function which helps to inline Font Awesome SVG files.
-  link: https://github.com/ertrzyiks/hexo-fontawesome
+  link: https://github.com/hexojs/hexo-fontawesome
   tags:
     - helper
     - fontawesome
@@ -1865,3 +1865,11 @@
     - deployer
     - forge
     - getforge
+- name: hexo-filter-responsive-images
+  description: Generate mutliple version of images for responsive blogs.
+  link: https://github.com/hexojs/hexo-responsive-images
+  tags:
+    - images
+    - responsive
+    - resize
+    - thumbnails
