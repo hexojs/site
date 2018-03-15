@@ -1879,3 +1879,13 @@
   tags:
     - permalink
     - transliteration
+- name: hexo-breadcrumb
+  description: Generate breadcrumb navigation with microdata markup.
+  link: https://github.com/msudgh/hexo-breadcrumb
+  tags:
+    - seo
+    - breadcrumb
+    - navigation
+    - generator
+    - microdata
+    - json-ld
