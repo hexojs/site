@@ -1840,7 +1840,7 @@
     - gitter
 - name: hexo-fontawesome
   description: A utility function which helps to inline Font Awesome SVG files.
-  link: https://github.com/ertrzyiks/hexo-fontawesome
+  link: https://github.com/hexojs/hexo-fontawesome
   tags:
     - helper
     - fontawesome
