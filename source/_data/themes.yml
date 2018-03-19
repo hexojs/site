@@ -1816,8 +1816,8 @@
     - google analytics
 - name: wind
   description: A light and pure theme for Hexo, in this complicated world.
-  link: https://github.com/Lonezj/hexo-theme-wind
-  preview: http://blog.mrdays.tech/
+  link: https://github.com/voezy/hexo-theme-wind
+  preview: https://blog.voezy.com/
   tags:
     - responsive
     - widget
