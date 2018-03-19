@@ -46,7 +46,7 @@ Setting | Description | Default
 `new_post_name` | The filename format for new posts | `:title.md`
 `default_layout` | Default layout | `post`
 `titlecase` | Transform titles into title case? | `false`
-`external_link` | Open external links in new tab? | `true`
+`external_link` | Open external links in a new tab? | `true`
 `filename_case` | Transform filenames to `1` lower case; `2` upper case | `0`
 `render_drafts` | Display drafts? | `false`
 `post_asset_folder` | Enable the [Asset Folder](asset-folders.html)? | `false`
@@ -75,7 +75,7 @@ Setting | Description | Default
 
 Setting | Description | Default
 --- | --- | ---
-`per_page` | The amount of the posts displayed on a single page. `0` disables pagination | `10`
+`per_page` | The amount of posts displayed on a single page. `0` disables pagination | `10`
 `pagination_dir` | Pagination directory | `page`
 
 ### Extensions
@@ -83,16 +83,17 @@ Setting | Description | Default
 Setting | Description
 --- | ---
 `theme` | Theme name. `false` disables theming
-`deploy` | Deployment setting
+`theme_config` | Theme configuration. Include any custom theme settings under this key to override theme defaults.
+`deploy` | Deployment settings
 
 
 ### Include/Exclude Files or Folders
 
-In the config file, set the include/exlude key to make hexo explicitly process or ignore certain files/folders.
+In the config file, set the include/exclude key to make hexo explicitly process or ignore certain files/folders.
 
 Setting | Description
 --- | ---
-`include` | Hexo defaultly ignore hidden files and folders, but set this field will make Hexo process them
+`include` | Hexo by default ignores hidden files and folders, but setting this field will make Hexo process them
 `exclude` | Hexo process will ignore files list under this field
 
 Sample:
@@ -120,3 +121,31 @@ Using multiple files combines all the config files and saves the merged settings
 
 For instance, in the above example if `foo: bar` is in `custom.yml`, but `"foo": "dinosaur"` is in `custom2.json`, `_multiconfig.yml` will contain `foo: dinosaur`.
 
+### Overriding Theme Config
+
+Hexo themes are independent projects, with separate `_config.yml` files.
+
+Instead of forking a theme, and maintaining a custom branch with your settings, you can configure it from your site's primary configuration file.
+
+Example configuration:
+
+```yml
+# _config.yml
+theme_config:
+  bio: "My awesome bio"
+```
+
+```yml
+# themes/my-theme/_config.yml
+bio: "Some generic bio"
+logo: "a-cool-image.png"
+```
+
+Resulting theme configuration:
+
+```json
+{
+  bio: "My awesome bio",
+  logo: "a-cool-image.png"
+}
+```

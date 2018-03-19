@@ -1161,6 +1161,11 @@
   tags:
     - tag
     - asciinema
+- name: hexo-filter-asciinema
+  description: A simple plugin which can embed asciinema-player in your article with local file.
+  link: https://github.com/mythsman/hexo-filter-asciinema
+  tags:
+    - asciinema
 - name: hexo-tag-kbd
   description: Displays the keycaps in your post/page.
   link: https://github.com/kamiya555/hexo-tag-kbd
@@ -1797,6 +1802,49 @@
     - rss
     - feed
     - atom
+- name: hexo-filter-optimize
+  description: A hexo plugin that optimize the pages loading speed.
+  link: https://github.com/theme-next/hexo-filter-optimize
+  tags:
+    - optimize
+    - lazyload
+    - inline
+    - bundle
+- name: hexo-renderer-markdown
+  description: Markdown-it renderer plugin for Hexo.
+  link: https://github.com/niemingzhao/hexo-renderer-markdown
+  tags:
+    - renderer
+    - markdown
+    - markdown-it
+- name: hexo-migrator-gists
+  description: GithubGist migrator plugin for Hexo.
+  link: https://github.com/xujiaao/hexo-migrator-gists
+  tags:
+    - migrator
+    - github
+    - gist
+
+- name: hexo-baidu-url-push
+  description: A hexo plugin, using Baidu JS automatic link push method, submit links to Baidu
+  link: https://github.com/XmGao/hexo-baidu-url-push
+  tags:
+    - baidu
+    - seo
+    - url
+- name: hexo-gitter
+  description: A plugin for Hexo that adds Gitter to every page.
+  link: https://github.com/wshunli/hexo-gitter
+  tags:
+    - helper
+    - gitter
+- name: hexo-fontawesome
+  description: A utility function which helps to inline Font Awesome SVG files.
+  link: https://github.com/hexojs/hexo-fontawesome
+  tags:
+    - helper
+    - fontawesome
+    - awesome
 - name: hexo-admin-ehc
   description: hexo-admin enhanced version for image uploading/inserting with picker.
   link: https://github.com/lwz7512/hexo-admin-ehc
@@ -1804,3 +1852,40 @@
     - admin
     - editor
     - imagepicker
+- name: hexo-deployer-netlify
+  description: Netlify (netlify.com) deployer plugin for Hexo
+  link: https://github.com/piktaszuikis/hexo-deployer-netlify
+  tags:
+    - deployer
+    - netlify
+- name: hexo-deployer-getforge
+  description: Forge (getforge.com) deployer for Hexo.
+  link: https://github.com/piktaszuikis/hexo-deployer-getforge
+  tags:
+    - deployer
+    - forge
+    - getforge
+- name: hexo-filter-responsive-images
+  description: Generate mutliple version of images for responsive blogs.
+  link: https://github.com/hexojs/hexo-responsive-images
+  tags:
+    - images
+    - responsive
+    - resize
+    - thumbnails
+- name: hexo-permalink-pinyin
+  description: A Hexo plugin which convert Chinese title to transliterate permalink.
+  link: https://github.com/viko16/hexo-permalink-pinyin
+  tags:
+    - permalink
+    - transliteration
+- name: hexo-breadcrumb
+  description: Generate breadcrumb navigation with microdata markup.
+  link: https://github.com/msudgh/hexo-breadcrumb
+  tags:
+    - seo
+    - breadcrumb
+    - navigation
+    - generator
+    - microdata
+    - json-ld

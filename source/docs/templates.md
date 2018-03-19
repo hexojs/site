@@ -65,7 +65,7 @@ yields:
 You can define local variables in templates and use them in other templates.
 
 ``` html partial/header.ejs
-<h1 id="logo"><%= title></h1>
+<h1 id="logo"><%= title %></h1>
 ```
 
 ``` html index.ejs

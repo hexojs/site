@@ -1,3 +1,38 @@
+- name: mono
+  description: An extremely simple and customizable blog theme for Hexo
+  link: https://github.com/problem233/hexo-theme-mono
+  preview: https:/problem233.github.io/
+  tags:
+    - light
+    - elegant
+    - monochrome
+    - responsive
+    - customizable
+    - 中文
+- name: A-RSnippet
+  description: A beautiful and comprehensive responsive theme for Hexo. The goal is to achieve as many functionalities as possible.
+  link: https://github.com/huyingjie/hexo-theme-A-RSnippet
+  preview: http://arsnippet.yingjiehu.com/
+  tags:
+    - responsive
+    - bootstrap
+    - google-analytics
+    - portfolio
+    - disqus
+    - syntax-highligting
+    - font-awesome
+- name: bulxo
+  description: A simple, modern, beautiful theme with Bulma for Hexo
+  link: https://github.com/polebug/hexo-theme-bulxo
+  preview: http://polebug.github.io
+  tags:
+    - Bulma
+    - simple
+    - beautiful
+    - modern
+    - free
+    - creative
+    - fast
 - name: Space Cadet
   description: A modern, purple-accented Bootstrap 4 blog theme for Hexo.
   link: https://github.com/azigler/hexo-theme-space-cadet
@@ -8,6 +43,16 @@
     - modern
     - two_column
     - purple
+- name: Twitter Bootstrap
+  description: Suited for coding. Green accented. Bootstrapped based. With disqus support.
+  link: https://github.com/philippkeller/hexo-theme-twbootstrap
+  preview: http://hexo-example.s3-website.eu-central-1.amazonaws.com/
+  tags:
+    - bootstrap
+    - green
+    - white
+    - disqus
+    - offline
 - name: cold
   description: A super cool theme for Hexo
   link: https://github.com/yudaren007007/hexo-theme-cold
@@ -311,7 +356,7 @@
 - name: Ada
   description: Ada is an concise theme for Hexo.
   link: https://github.com/shuiRong/hexo-theme-Ada
-  preview: https://shuirong.github.io/
+  preview: https://fervent-bell-d9130f.netlify.com/
   tags:
       - concise
       - one_column
@@ -1086,13 +1131,14 @@
     - bg_video
     - bg_audio
     - simple
-- name: Cactus Dark
-  description: A responsive, dark and simple theme for a personal webpage.
-  link: https://github.com/probberechts/cactus-dark
-  preview: https://probberechts.github.io/cactus-dark/
+- name: Cactus
+  description: A responsive, clean and simple theme for a personal webpage.
+  link: https://github.com/probberechts/hexo-theme-cactus
+  preview: https://probberechts.github.io/hexo-theme-cactus/
   tags:
     - responsive
     - dark
+    - light
     - blog
     - simple
 - name: Cactus Light
@@ -1400,9 +1446,9 @@
 - name: Nlvi
   description: A simple theme named Nlvi for hexo.
   link: https://github.com/ColMugX/hexo-theme-Nlvi
-  preview: https://colmugx.github.io/PersonalBlog
+  preview: https://colmugx.github.io/banderole/
   tags:
-    - Nier
+    - horizontal&vertical
     - animate
     - English
     - 中文
@@ -1575,6 +1621,19 @@
     - comment
     - Chinese
     - 中文使用文档
+- name: SB
+  description: Clean and simple theme for Hexo blog framework
+  link: https://github.com/maliMirkec/hexo-theme-sb
+  preview: https://www.silvestarbistrovic.from.hr
+  tags:
+    - clean
+    - simple
+    - pink
+    - responsive
+    - blog
+    - one_column
+    - comment
+    - social
 - name: Only
   description: Nothing strange. It's only a theme for Hexo.
   link: https://github.com/lazzzis/hexo-theme-only
@@ -1599,7 +1658,7 @@
 - name: Archer
   description: A smart and modern theme for Hexo.
   link: https://github.com/fi3ework/hexo-theme-archer
-  preview: http://firework.studio/archer-demo
+  preview: https://fi3ework.github.io/archer-demo
   tags:
     - fast
     - single page
@@ -1757,8 +1816,8 @@
     - google analytics
 - name: wind
   description: A light and pure theme for Hexo, in this complicated world.
-  link: https://github.com/Lonezj/hexo-theme-wind
-  preview: http://blog.mrdays.tech/
+  link: https://github.com/voezy/hexo-theme-wind
+  preview: https://blog.voezy.com/
   tags:
     - responsive
     - widget
@@ -1872,10 +1931,9 @@
   description: A simple and clean theme for Hexo
   link: https://github.com/lazysheep666/terminal_theme
   preview: http://yanghaolan.cn
-  tags: 
-    - simple  
+  tags:
+    - simple
     - clean
-
 - name: Dev Dark
   description: A simple dark theme, responsive and light for Hexo
   link: https://github.com/codermarcos/dev-dark-theme
@@ -1887,3 +1945,50 @@
     - responsive
     - light
     - developer
+- name: Lemon-Lime
+  description: A refreshing theme for Hexo
+  link: https://github.com/huan555/lemon-lime
+  preview: http://rachelqiu.com
+  tags:
+    - responsive
+    - aloglia_search
+    - wordcount
+    - viewcount
+    - i18n
+- name: simple-black
+  description: A simple and black hexo theme.
+  link: https://github.com/yunfeihe/simple-black
+  preview: http://yunfeihe.me
+  tags:
+    - simple
+    - black
+    - two_column
+    - clean
+- name: codeteenager
+  description: A flat topic for an exclusive programmer of Hexo.
+  link: https://github.com/codeteenager/hexo-theme-codeteenager
+  preview: http://www.codeteenager.cn
+  tags:
+    - Delayering
+    - responsive
+    - widget
+    - developer
+    - simple
+- name: syefe
+  description: An imitation of Baidu EFE template.
+  link: https://github.com/smallyunet/hexo-theme-syefe
+  preview: https://smallyunet.github.io/hexo-theme-syefe
+  tags:
+    - responsive
+    - one_column
+    - Baidu EFE
+    - simple
+- name: curry
+  description: A beautiful theme with reference to Bear's reading experience.
+  link: https://github.com/gary-Shen/hexo-theme-curry
+  preview: http://www.garyshen.com
+  tags:
+    - responsive
+    - bear
+    - beautiful
+    - simple
