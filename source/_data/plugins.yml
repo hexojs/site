@@ -1165,7 +1165,7 @@
   description: A simple plugin which can embed asciinema-player in your article with local file.
   link: https://github.com/mythsman/hexo-filter-asciinema
   tags:
-    - asciinema  
+    - asciinema
 - name: hexo-tag-kbd
   description: Displays the keycaps in your post/page.
   link: https://github.com/kamiya555/hexo-tag-kbd
@@ -1889,6 +1889,17 @@
     - generator
     - microdata
     - json-ld
+- name: hexo-html-syncer
+  description: Download article by url, then conver to post
+  link: https://github.com/lwz7512/hexo-html-syncer
+  tags:
+    - webpage
+    - synchronize
+    - post
+    - cli
+    - html
+    - markdown
+    - console
 - name: hexo-tag-link-preview
   description: Embed a link preview on your Hexo article.
   link: https://github.com/minamo173/hexo-tag-link-preview
