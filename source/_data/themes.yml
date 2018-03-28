@@ -2006,3 +2006,15 @@
     - bear
     - beautiful
     - simple
+- name: Lap
+  description: A beautiful and clean theme for Hexo, with station search and easy comment.
+  link: https://github.com/BosenY/Lap
+  preview: https://boseny.me
+  tags:
+    - beautiful
+    - search
+    - simple
+    - 中文
+    - English
+    - easy
+    - comment
