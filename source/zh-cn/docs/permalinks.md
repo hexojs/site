@@ -14,6 +14,7 @@ title: 永久链接（Permalinks）
 `:day` | 文章的发表日期 (2 位数)
 `:i_day` | 文章的发表日期（去掉开头的零）
 `:title` | 文件名称
+`:post_title` | 文章标题
 `:id` | 文章 ID
 `:category` | 分类。如果文章没有分类，则是 `default_category` 配置信息。
 
