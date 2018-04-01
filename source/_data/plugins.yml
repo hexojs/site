@@ -1810,6 +1810,14 @@
     - rss
     - feed
     - atom
+- name: hexo-symbols-count-time
+  description: Symbols count and time to read for articles.
+  link: https://github.com/theme-next/hexo-symbols-count-time
+  tags:
+    - helper
+    - count
+    - symbols
+    - time2read
 - name: hexo-filter-optimize
   description: A hexo plugin that optimize the pages loading speed.
   link: https://github.com/theme-next/hexo-filter-optimize

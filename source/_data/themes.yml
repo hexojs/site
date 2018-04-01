@@ -393,14 +393,16 @@
     - responsive
     - two_column
 - name: NexT
-  description: NexT is an elegant theme for Hexo.
-  link: https://github.com/iissnan/hexo-theme-next
-  preview: http://notes.iissnan.com/
+  description: NexT is an elegant and powerful theme for Hexo.
+  link: https://github.com/theme-next/hexo-theme-next
+  preview: https://theme-next.org
   tags:
     - responsive
     - one_column
+    - two_column
     - clean
     - white
+    - elegant
 - name: Icarus
   description: 'The blog theme you may fall in love with, coming to Hexo.'
   link: https://github.com/ppoffice/hexo-theme-icarus
