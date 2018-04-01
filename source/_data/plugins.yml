@@ -1918,3 +1918,13 @@
     - preview
     - image
     - ogp
+- name: hexo-auto-category
+  description: Generates categories automatically by folder name
+  link: https://github.com/xu-song/hexo-auto-category
+  tags:
+    - auto
+    - generation
+    - categories
+    - folder
+    - directory
+    - structure
