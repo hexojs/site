@@ -3,6 +3,8 @@ title: Helpers
 
 Os Helpers são usados em templates para ajudá-lo a inserir snippets (trechos de código) rapidamente. Os helpers não podem ser usados em arquivos de source (arquivos de postagem em Markdown por exemplo).
 
+Você pode usar os helpers padrões do Hexo ou [criar seus próprios helpers personalizados](../api/helper.html).
+
 {% youtube Uc53pW0GJHU %}
 
 ## URL

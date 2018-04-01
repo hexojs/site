@@ -24,3 +24,9 @@ hexo.extend.helper.register('js', function(path){
 <%- js('script.js') %>
 // <script type="text/javascript" src="script.js"></script>
 ```
+
+## FAQ
+
+### Where to place custom helper?
+
+Place it under `themes/<yourtheme>/scripts`
