@@ -1883,7 +1883,7 @@
     - getforge
 - name: hexo-filter-responsive-images
   description: Generate mutliple version of images for responsive blogs.
-  link: https://github.com/hexojs/hexo-responsive-images
+  link: https://github.com/hexojs/hexo-filter-responsive-images
   tags:
     - images
     - responsive
