@@ -1936,3 +1936,9 @@
     - folder
     - directory
     - structure
+- name: hexo-deployer-ipfs
+  description: this is plugin for hexo to deploy static sites to ipfs network.
+  link: https://github.com/IamGabrielWu/hexo-deployer-ipfs
+  tags:
+    - official
+    - deployer
