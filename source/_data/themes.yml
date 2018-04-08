@@ -1,3 +1,13 @@
+- name: nullptr
+  description: A simple but pleasant theme! Rainbow theme!
+  link: https://github.com/higuoxing/hexo-theme-nullptr
+  preview: https://higuoxing.com
+  tags:
+    - Awesome color
+    - English
+    - 中文
+    - Self configurable
+    - Rainbow list
 - name: ARIA
   description: No more simple/simpler/simplest theme, no more ugly theme. You'll need this beautiful but elegant one which is inspired by Kalafina's song ARIA.
   link: https://github.com/AlynxZhou/hexo-theme-aria
