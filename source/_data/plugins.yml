@@ -1936,3 +1936,10 @@
     - folder
     - directory
     - structure
+- name: hexo-filter-hide-content
+  description: Hide some content for Hexo.
+  link: https://github.com/mmhy/hexo-filter-hide-content
+  tags:
+    - filter
+    - hide
+    - content
