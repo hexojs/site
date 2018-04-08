@@ -1,3 +1,13 @@
+- name: nullptr
+  description: A simple but pleasant theme! Rainbow theme!
+  link: https://github.com/higuoxing/hexo-theme-nullptr
+  preview: https://higuoxing.com
+  tags:
+    - Awesome color
+    - English
+    - 中文
+    - Self configurable
+    - Rainbow list
 - name: ARIA
   description: No more simple/simpler/simplest theme, no more ugly theme. You'll need this beautiful but elegant one which is inspired by Kalafina's song ARIA.
   link: https://github.com/AlynxZhou/hexo-theme-aria
@@ -12,6 +22,19 @@
     - Font Awesome
     - CSS Animation
     - Double Columns
+- name: Corazon
+  description: A simple theme for hexo.I hope i can maintain for a long time.
+  link: https://github.com/littleee/corazon
+  preview: http://littleee.com
+  tags:
+    - 中文
+    - English
+    - Responsive
+    - Simple
+    - Syntax Highligting
+    - Font Awesome
+    - CSS Animation
+    - Be better
 - name: mono
   description: An extremely simple and customizable blog theme for Hexo
   link: https://github.com/problem233/hexo-theme-mono
