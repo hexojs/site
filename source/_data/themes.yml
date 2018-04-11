@@ -2063,3 +2063,12 @@
     - simple
     - search
     - responsive
+- name: classless
+  description: The Classless templates and themes implemented in Hexo.
+  link: https://github.com/fiatjaf/classless-hexo
+  preview: https://classless.alhur.es/
+  tags:
+    - multiple themes
+    - blog
+    - personal
+    - not extensible
