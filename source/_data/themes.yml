@@ -9,16 +9,17 @@
     - Self configurable
     - Rainbow list
 - name: ARIA
-  description: No more simple/simpler/simplest theme, no more ugly theme. You'll need this beautiful but elegant one which is inspired by Kalafina's song ARIA.
+  description: Inspired by Kalafina's song ARIA.
   link: https://github.com/AlynxZhou/hexo-theme-aria
   preview: https://sh.alynx.xyz/
   tags:
     - 中文
     - English
     - Responsive
+    - Local Search
     - Disqus
     - Hypercomments
-    - Syntax Highligting
+    - Syntax Highlighting
     - Font Awesome
     - CSS Animation
     - Double Columns
