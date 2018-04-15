@@ -2073,3 +2073,16 @@
     - blog
     - personal
     - not extensible
+- name: AirCloud
+  description: A light and clean hexo theme.
+  link: https://github.com/aircloud/hexo-theme-aircloud
+  preview: http://niexiaotao.cn/
+  tags:
+    - responsive
+    - blog
+    - personal
+    - English
+    - 中文
+    - 中文使用文档
+    - design
+    - beautiful    
