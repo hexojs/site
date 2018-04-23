@@ -1,3 +1,14 @@
+- name: hexo-theme-smash
+  description: A colorful React-like hexo theme!
+  link: https://github.com/bbbbx/hexo-theme-smash
+  preview: http://venusworld.cn/hexo-theme-smash
+  tags:
+    - colorful
+    - English
+    - 中文
+    - React-like
+    - simple
+    - responsive
 - name: nullptr
   description: A simple but pleasant theme! Rainbow theme!
   link: https://github.com/higuoxing/hexo-theme-nullptr
