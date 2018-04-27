@@ -1949,3 +1949,9 @@
     - filter
     - hide
     - content
+- name: hexo-infinite-scroll
+  description: A loading plugin with simple effect for hexo.
+  link: https://github.com/FrontendSophie/hexo-infinite-scroll
+  tags:
+    - infinite-scroll
+    - loading
