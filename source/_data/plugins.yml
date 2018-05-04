@@ -1949,3 +1949,11 @@
     - filter
     - hide
     - content
+- name: hexo-generator-search-zip
+  description: Compressed search data(zip) generator for Hexo.
+  link: https://github.com/SuperKieran/hexo-generator-search-zip
+  tags:
+    - search
+    - generator
+    - zip
+    - compress
