@@ -65,7 +65,7 @@ yields:
 Você pode definir variáveis locais em um template e usá-las em outros templates.
 
 ``` html partial/header.ejs
-<h1 id="logo"><%= title></h1>
+<h1 id="logo"><%= title %></h1>
 ```
 
 ``` html index.ejs

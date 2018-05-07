@@ -28,6 +28,8 @@ Opção | Descrição
 --- | ---
 `-d`, `--deploy` | Faz o deploy após os arquivos estáticos serem gerados
 `-w`, `--watch` | Assiste alterações no aquivo
+`-b`, `--bail` | Levanta um erro se qualquer exceção não tratada for lançada durante o processo de geração dos arquivos
+`-f`, `--force` | Regeneração forçada
 
 ## publish
 

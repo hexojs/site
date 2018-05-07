@@ -2096,4 +2096,13 @@
     - 中文
     - 中文使用文档
     - design
-    - beautiful    
+    - beautiful
+- name: Dxx
+  description: A sample hexo theme.
+  link: https://github.com/fuzhouxxdong/hexo-theme-dxx
+  preview: https://shakalaka.xyz/hexo-theme-dxx/
+  tags:
+    - simple
+    - beautiful
+    - English
+

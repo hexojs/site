@@ -1,3 +1,10 @@
+- name: hexo-tag-color-block
+  description: Create a color block easily on Hexo
+  link: https://github.com/patrick330602/hexo-tag-color-block
+  tags:
+    - tag
+    - color
+    - colorblock
 - name: hexo-filter-mermaid-diagrams
   description: mermaid diagrams for Hexo.
   link: https://github.com/webappdevelp/hexo-filter-mermaid-diagrams
@@ -1942,6 +1949,14 @@
   tags:
     - official
     - deployer
+- name: hexo-generator-search-zip
+  description: Compressed search data (zip) generator for Hexo.
+  link: https://github.com/SuperKieran/hexo-generator-search-zip
+  tags:
+    - search
+    - generator
+    - zip
+    - compress
 - name: hexo-filter-hide-content
   description: Hide some content for Hexo.
   link: https://github.com/mmhy/hexo-filter-hide-content
@@ -1955,3 +1970,10 @@
   tags:
     - infinite-scroll
     - loading
+- name: hexo-filter-lqip
+  description: Generate Low-Quality Image Placeholders for lazy loaded images in themes
+  link: https://github.com/hexojs/hexo-filter-lqip
+  tags:
+    - images
+    - placeholder
+    - optimize
