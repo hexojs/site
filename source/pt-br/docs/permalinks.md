@@ -15,6 +15,7 @@ Variável | Descrição
 `:day` | Dia da publicação da postagem (2 dígitos)
 `:i_day` | Dia da publicação da postagem (sem zero à esquerda)
 `:title` | Nome do arquivo (sem sua extensão)
+`:post_title` | Título da postagem
 `:id` | ID da postagem
 `:category` | Categorias. Se a postagem não possuir uma categoria, será usado o valor de `default_category`.
 
