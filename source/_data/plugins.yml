@@ -1,3 +1,10 @@
+- name: hexo-tag-color-block
+  description: Create a color block easily on Hexo
+  link: https://github.com/patrick330602/hexo-tag-color-block
+  tags:
+    - tag
+    - color
+    - colorblock
 - name: hexo-filter-mermaid-diagrams
   description: mermaid diagrams for Hexo.
   link: https://github.com/webappdevelp/hexo-filter-mermaid-diagrams
