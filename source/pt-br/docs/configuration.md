@@ -85,11 +85,11 @@ Configuração | Descrição
 --- | ---
 `theme` | Nome do tema. `false` desabilita o tema
 `theme_config` | Configuração do tema. Inclui quaisquer configurações de tema personalizado sob esta chave para substituir os padrões do tema.
-`deploy` | Configuração de implantação
+`deploy` | Configurações de implantação
 
 ### Incluir/Excluir Arquivos ou Diretórios
 
-No arquivo de configuração, defina a chave de include/exlude para que o hexo processe ou ignore, explicitamente, determinados arquivos/diretórios.
+No arquivo de configuração, defina a chave de include/exclude para que o hexo processe ou ignore, explicitamente, determinados arquivos/diretórios.
 
 Configuração | Descrição
 --- | ---
