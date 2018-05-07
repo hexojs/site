@@ -1964,6 +1964,12 @@
     - filter
     - hide
     - content
+- name: hexo-infinite-scroll
+  description: A loading plugin with simple effect for hexo.
+  link: https://github.com/FrontendSophie/hexo-infinite-scroll
+  tags:
+    - infinite-scroll
+    - loading
 - name: hexo-filter-lqip
   description: Generate Low-Quality Image Placeholders for lazy loaded images in themes
   link: https://github.com/hexojs/hexo-filter-lqip
