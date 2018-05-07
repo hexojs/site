@@ -1942,6 +1942,14 @@
   tags:
     - official
     - deployer
+- name: hexo-generator-search-zip
+  description: Compressed search data (zip) generator for Hexo.
+  link: https://github.com/SuperKieran/hexo-generator-search-zip
+  tags:
+    - search
+    - generator
+    - zip
+    - compress
 - name: hexo-filter-hide-content
   description: Hide some content for Hexo.
   link: https://github.com/mmhy/hexo-filter-hide-content
