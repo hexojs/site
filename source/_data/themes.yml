@@ -2096,7 +2096,20 @@
     - 中文
     - 中文使用文档
     - design
-    - beautiful
+    - beautiful    
+- name: Autumn
+  description: Recreate one classic and elegant wordpress theme — button.
+  link: https://github.com/FrontendSophie/hexo-theme-autumn
+  preview: http://ssnowy.coding.me/demo-autumn/
+  tags:
+    - responsive
+    - English
+    - 中文
+    - 日本語
+    - typography
+    - elegant
+    - orange
+    - infinite scroll
 - name: Dxx
   description: A sample hexo theme.
   link: https://github.com/fuzhouxxdong/hexo-theme-dxx
