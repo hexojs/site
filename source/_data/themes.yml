@@ -2105,4 +2105,11 @@
     - simple
     - beautiful
     - English
-
+- name: zhl
+  description: A sample and clean hexo theme.
+  link: https://github.com/lizehongss/hexo-theme-zhl
+  preview: https://lizehongss.github.io/
+  tags: 
+    - clean
+    - 中文
+    - easy to use
