@@ -380,6 +380,17 @@
     - simple
     - gallery
     - blog
+- name: lightime
+  description: Inspired by Hugo theme Cactus.
+  link: https://github.com/caisiduo/hexo-theme-lightime
+  preview: https://caisiduo.github.io/hexo-theme-lightime
+  tags:
+    - Simple
+    - one_column
+    - Light
+    - clean
+    - Instantclick
+    - gitment
 - name: Edinburgh
   description: Clean, beautiful portfolio theme for Hexo.
   link: https://github.com/sharvaridesai/hexo-theme-edinburgh
