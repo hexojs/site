@@ -1,3 +1,14 @@
+- name: hexo-theme-Minami
+  description: A Clear and Light Theme for Hexo
+  link: https://github.com/nanqinlang/hexo-theme-Minami
+  preview: https://preview.sometimesnaive.org
+  tags:
+    - Clear
+    - Light
+    - Simple
+    - Custimiziable
+    - Freedom
+
 - name: hexo-theme-smash
   description: A colorful React-like hexo theme!
   link: https://github.com/bbbbx/hexo-theme-smash
