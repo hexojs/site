@@ -2107,7 +2107,7 @@
     - 中文
     - 中文使用文档
     - design
-    - beautiful    
+    - beautiful
 - name: Autumn
   description: Recreate one classic and elegant wordpress theme — button.
   link: https://github.com/FrontendSophie/hexo-theme-autumn
@@ -2133,7 +2133,18 @@
   description: A sample and clean hexo theme.
   link: https://github.com/lizehongss/hexo-theme-zhl
   preview: https://lizehongss.github.io/
-  tags: 
+  tags:
     - clean
     - 中文
     - easy to use
+- name: pandollo
+  description: A clean and minimal theme for Hexo, inspired by Panda Syntax theme and Hexo Apollo theme.
+  link: https://github.com/lyndonoc/hexo-theme-pandollo
+  preview: https://lyndonoc.github.io/
+  tags:
+    - minimal
+    - simple
+    - sass
+    - pug
+    - panda
+    - apollo
