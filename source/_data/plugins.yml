@@ -1984,3 +1984,10 @@
     - renderer
     - js
     - webpack
+- name: hexo-tag-autogallery
+  description: Generates automatically a gallery from provided directory's contents and using given layout.
+  link: https://www.npmjs.com/package/hexo-tag-autogallery
+  tags:
+    - tag
+    - gallery
+    - autogallery
