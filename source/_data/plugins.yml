@@ -417,6 +417,13 @@
     - official
     - generator
     - sitemap
+- name: hexo-seo-link-visualizer
+  description: Analyze link and visualize the site structure for Hexo.
+  link: https://github.com/tea3/hexo-seo-link-visualizer
+  tags:
+    - analyze
+    - structure
+    - SEO
 - name: hexo-generator-seo-friendly-sitemap
   description: SEO friendly sitemap generator for Hexo. Generate separated sitemap files for pages, posts, categories, tags and add a XSL stylesheet.
   link: https://github.com/ludoviclefevre/hexo-generator-seo-friendly-sitemap
