@@ -2148,3 +2148,12 @@
     - pug
     - panda
     - apollo
+- name: diaspora
+  description: A clean and responsive theme for Hexo
+  link: https://github.com/Fechin/hexo-theme-diaspora
+  preview: http://fech.in
+  tags:
+    - clean
+    - responsive
+    - 中文
+    - beautiful
