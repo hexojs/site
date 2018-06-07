@@ -1034,7 +1034,7 @@
 - name: beautiful-hexo
   description: A simple responsive beautiful theme.
   link: https://github.com/twoyao/beautiful-hexo
-  preview: http://twoyao.cn/beautiful-hexo/
+  preview: http://twoyao.github.io/beautiful-hexo/
   tags:
     - responsive
     - beautiful
