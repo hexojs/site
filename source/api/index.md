@@ -52,7 +52,7 @@ hexo.call('generate', {}).then(function(){
 
 ``` js
 hexo.call('list', { _: ['post'] }).then(function() {
-  console.log(arguments);
+  // ...
 })
 ```
 
