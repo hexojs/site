@@ -14,3 +14,6 @@ ko:
 pt-br:
   name: Português (Brasil)
   disqus_lang: pt-br
+ja:
+  name: 日本語
+  disqus_lang: ja
