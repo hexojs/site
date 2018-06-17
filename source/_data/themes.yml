@@ -2148,3 +2148,17 @@
     - pug
     - panda
     - apollo
+
+- name: dawn
+  description: Hexo theme dawn. It's a dawn theme for Hexo.
+  link: https://github.com/Ruffianjiang/hexo-theme-dawn
+  preview: https://lossingdawn.top/
+  tags:
+    - responsive
+    - pure
+    - dawn
+    - clean
+    - 中文
+    - easy to use
+    - two_column
+    - three_column
