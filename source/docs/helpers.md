@@ -490,7 +490,7 @@ Option | Description | Default
 `style` | Style to display the tag list. `list` displays tags in an unordered list.  | list
 `separator` | Separator between categories. (Only works if `style` is not `list`) | ,
 `class` | Class name of tag list. | tag
-`transform` | The function that changes the display of category name. |
+`transform` | The function that changes the display of tag name. |
 `amount` | The number of tags to display (0 = unlimited) | 0
 `suffix` | Add a suffix to link. | None
 
