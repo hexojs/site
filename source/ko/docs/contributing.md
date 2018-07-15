@@ -8,7 +8,7 @@ title: Contributing
 
 아래의 코딩 스타일을 지켜주세요.
 
-- [Google JavaScript Style Guide](https://google.github.io/styleguide/javascriptguide.xml)를 따릅니다.
+- [Google JavaScript Style Guide](https://google.github.io/styleguide/jsguide.html)를 따릅니다.
 - 두 개의 공백을 사용한 soft-tab을 사용합니다.
 - 콤마로 시작하지 마세요.
 
