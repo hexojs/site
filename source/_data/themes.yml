@@ -2168,3 +2168,15 @@
     - responsive
     - 中文
     - beautiful
+- name: Siberia
+  description: A beautiful and scalable theme for Hexo.
+  link: https://github.com/hpcslag/hexo-theme-siberia
+  preview: https://hpcslag.github.io/hexo-theme-siberia/demo/
+  tags:
+    - Initium
+    - 中文
+    - English
+    - 日本語
+    - science
+    - beautiful
+    - scalable
