@@ -70,6 +70,15 @@ Option | Description
 `repo`, `repository` | Heroku repository URL
 `message` | Customize commit message (Default to `Site updated: {% raw %}{{ now('YYYY-MM-DD HH:mm:ss') }}{% endraw %}`)
 
+## Netlify
+First, create an account on [Netlify](https://app.netlify.com/signup).
+
+There are two different ways to deploy your sites on Netlify.
+
+1. Add a [Deploy to Netlify Button](https://www.netlify.com/docs/deploy-button/) to deploy your sites with one click.
+
+2. Use [netlifyctl](https://github.com/netlify/netlifyctl) to manage and deploy sites on Netlify without leaving your terminal.
+
 ## Rsync
 
 Install [hexo-deployer-rsync].
