@@ -50,6 +50,12 @@ hexo.call('generate', {}).then(function(){
 });
 ```
 
+``` js
+hexo.call('list', { _: ['post'] }).then(function() {
+  // ...
+})
+```
+
 ## Exit
 
 You should call the `exit` method upon successful or unsuccessful completion of a console command. This allows Hexo to exit gracefully and finish up important things such as saving the database.
