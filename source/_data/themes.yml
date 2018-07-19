@@ -30,6 +30,15 @@
     - 中文
     - Self configurable
     - Rainbow list
+- name: Cxo
+  description: A cool ，simple & beautiful theme for Hexo. 
+  link: https://github.com/Longlongyu/hexo-theme-Cxo
+  preview: https://longlongyu.github.io/
+  tags:
+    - cool
+    - 中文
+    - simple
+    - beautiful
 - name: ARIA
   description: Inspired by Kalafina's song ARIA.
   link: https://github.com/AlynxZhou/hexo-theme-aria
