@@ -2168,6 +2168,16 @@
     - responsive
     - 中文
     - beautiful
+- name: Staunch
+  description: A clean and focus on words theme for Hexo
+  link: https://github.com/staunchkai/hexo-theme-staunch
+  preview: http://staunchkai.com
+  tags:
+    - clean
+    - focus on words
+    - 中文
+    - beautiful
+    - simple
 - name: Siberia
   description: A beautiful and scalable theme for Hexo.
   link: https://github.com/hpcslag/hexo-theme-siberia
