@@ -76,59 +76,62 @@ Option | Description
 
 Go to https://app.netlify.com/signup and select your preferred signup method. This will likely be a hosted Git provider, although you also have the option to sign up with an email address.
 
-There are two different ways to deploy your sites on Netlify.
+There are two different ways to deploy your sites on Netlify. The most common way is to use the web UI. The following examples use GitHub, but other git providers will follow a similar process.
 
-1. Use the web UI
-   
-   The following examples use GitHub, but other git providers will follow a similar process.
-  ### Create a Netlify account
-  
-  ![step 1: sign up](deployment/sign_up.png)
-  
-  Selecting GitHub will bring up an authorization modal for authentication.
-  
-  ![step 2: GitHub authentication](deployment/github_auth.png)
+1. Create a Netlify account
 
-  ### Create a new site with continuous deployment
-  You’re now already a Netlify member and should be brought to your new dashboard. Select “New site from git.”
-  ![step 3: Create a new site from git](deployment/create_new_site.png)
-  
-  Netlify will then start walking you through the steps necessary for continuous deployment. First, you’ll need to select your git provider again, but this time you are giving Netlify added permissions to your repositories.
-  
-  ![step 4: Select Git provider to give Netlify permissions to repositories](deployment/auth_to_repo.png)
+![step 1: sign up](deployment/sign_up.png)
 
-  And then again with the GitHub authorization window:
+Selecting GitHub will bring up an authorization modal for authentication.
 
+![step 2: GitHub authentication](deployment/github_auth.png)
 
-  ![step 5: GitHub authentication for repositories](deployment/github_auth_repo.png)
+2. Create a new site with continuous deployment
 
-  Select the repo you want to use for continuous deployment. If you have a large number of repositories, you can filter through them in real time using repo search:
-  
-  ![step 6: Find repo](deployment/link_repo.png)
+You’re now already a Netlify member and should be brought to your new dashboard. Select “New site from git.”
 
-  Once selected, you’ll be brought to a screen for basic setup. Here you can select the branch you wanted published, your build command, and your publish (i.e. deploy) directory. 
-  
-  ![step 7: Deployment configurations](deployment/deployment_config.png)
+![step 3: Create a new site from git](deployment/create_new_site.png)
 
-  The publish directory should mirror that of what you’ve set in your site configuration, the default of which is `public`. 
+Netlify will then start walking you through the steps necessary for continuous deployment. First, you’ll need to select your git provider again, but this time you are giving Netlify added permissions to your repositories.
 
-  ### Build and Deploy Site
-  Once you click on the `Deploy site` button, Netlify will start building and deploying your site.
-  You'll be taken to the site dashboard. You should see some yellow text on the "Hero Card" indicating that your site is being deployed in progress.
-  
-  ![step 8: Deploy in progress](deployment/deploy_in_progress.png)
+![step 4: Select Git provider to give Netlify permissions to repositories](deployment/auth_to_repo.png)
 
-  Once the build is finished—this should only take a few seconds–you should now see an auto generated URL of your site in green. 
+And then again with the GitHub authorization window:
 
-  ![step 9: Finish deployment](deployment/finish_deployment.png)
+![step 5: GitHub authentication for repositories](deployment/github_auth_repo.png)
 
-  You can update the URL in “Domain Settings.”
+Select the repo you want to use for continuous deployment. If you have a large number of repositories, you can filter through them in real time using repo search:
 
-  ![step 10: Customize subdomain](deployment/update_subdomain.png)
+![step 6: Find repo](deployment/link_repo.png)
 
-  Now every time you push changes to your hosted git repository, Netlify will rebuild and redeploy your site automatically.
+Once selected, you’ll be brought to a screen for basic setup. Here you can select the branch you wanted published, your build command, and your publish (i.e. deploy) directory. 
 
-2. Alternatively, you can use [netlifyctl](https://github.com/netlify/netlifyctl) to manage and deploy sites on Netlify without leaving your terminal.
+![step 7: Deployment configurations](deployment/deployment_config.png)
+
+The publish directory should mirror that of what you’ve set in your site configuration, the default of which is "public". 
+
+3. Build and Deploy Site
+
+Once you click on the "Deploy site" button, Netlify will start building and deploying your site.
+You'll be taken to the site dashboard. You should see some yellow text on the "Hero Card" indicating that your site is being deployed in progress.
+
+![step 8: Deploy in progress](deployment/deploy_in_progress.png)
+
+Once the build is finished—this should only take a few seconds–you should now see an auto generated URL of your site in green. 
+
+![step 9: Finish deployment](deployment/finish_deployment.png)
+
+Under your site's "Overview", you'll find the "Production Deploys" section and "Deploy Preview" section side by side. One of the most helpful features of Netlify is "Deploy Preview". It allows you and your team to preview changes from a branch deploy before publishing your site.
+
+![step 10: Deploy preview](deployment/deploy_overview.png)
+
+You can customize the subdomain URL under "Domain Settings" to make it look better before you add a domain. You can add or buy domain under https://app.netlify.com/account/dns.
+
+![step 11: Customize subdomain](deployment/update_subdomain.png)
+
+Now every time you push changes to your hosted git repository, Netlify will rebuild and redeploy your site automatically.
+
+Alternatively, you can use [netlifyctl](https://github.com/netlify/netlifyctl) to manage and deploy sites on Netlify without leaving your terminal.
 
 You can also add a [Deploy to Netlify Button](https://www.netlify.com/docs/deploy-button/) in your README.file to allow others to create a copy of your repository and be deployed to Netlify via one click.
 
