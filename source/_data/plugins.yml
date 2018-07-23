@@ -2004,6 +2004,19 @@
   tags:
     - tag
     - codepen
+- name: hexo-tag-garminconnect
+  description: Embed Garmin connect activity in your blog.
+  link: https://github.com/alexmufatti/hexo-tag-garminconnect
+  tags:
+    - tag_plugins
+    - garmin
+    - connect
+    - sport
+    - activity
+    - running
+    - cycling
+    - gis
+    - gps
 - name: hexo-typora-image
   description: hexo ♥️  typora plugin monorepo. zero configuration. fix image path issue.
   link: https://github.com/deptno/hexo-typora-plugins

@@ -30,6 +30,15 @@
     - 中文
     - Self configurable
     - Rainbow list
+- name: Cxo
+  description: A cool ，simple & beautiful theme for Hexo. 
+  link: https://github.com/Longlongyu/hexo-theme-Cxo
+  preview: https://longlongyu.github.io/
+  tags:
+    - cool
+    - 中文
+    - simple
+    - beautiful
 - name: ARIA
   description: Inspired by Kalafina's song ARIA.
   link: https://github.com/AlynxZhou/hexo-theme-aria
@@ -1034,7 +1043,7 @@
 - name: beautiful-hexo
   description: A simple responsive beautiful theme.
   link: https://github.com/twoyao/beautiful-hexo
-  preview: http://twoyao.cn/beautiful-hexo/
+  preview: http://twoyao.github.io/beautiful-hexo/
   tags:
     - responsive
     - beautiful
@@ -2168,3 +2177,25 @@
     - responsive
     - 中文
     - beautiful
+- name: Staunch
+  description: A clean and focus on words theme for Hexo
+  link: https://github.com/staunchkai/hexo-theme-staunch
+  preview: http://staunchkai.com
+  tags:
+    - clean
+    - focus on words
+    - 中文
+    - beautiful
+    - simple
+- name: Siberia
+  description: A beautiful and scalable theme for Hexo.
+  link: https://github.com/hpcslag/hexo-theme-siberia
+  preview: https://hpcslag.github.io/hexo-theme-siberia/demo/
+  tags:
+    - Initium
+    - 中文
+    - English
+    - 日本語
+    - science
+    - beautiful
+    - scalable
