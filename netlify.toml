@@ -1,5 +1,5 @@
 [build]
-  command = "hexo generate"
+  command = "npm run build"
   publish = "/public"
 
 [[redirects]]
