@@ -2199,3 +2199,16 @@
     - science
     - beautiful
     - scalable
+
+- name: Suka
+  description: A Modern and Simple Theme for Hexo, with a lot of powerful features.
+  link: https://theme.suka.moe
+  preview: https://theme.suka.moe/demo/
+  tags:
+    - modern
+    - simple
+    - powerful
+    - responsive
+    - minimalism
+    - clean
+    - one_column
