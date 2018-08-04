@@ -20,6 +20,36 @@ Make sure you are using soft tabs and add a space after colons.
 
 You can see [YAML Spec](http://www.yaml.org/spec/1.2/spec.html) for more info.
 
+## unexpected token: #
+
+```plain
+12:59:37.334 FATAL Something's wrong. Maybe you can find the solution here: http://hexo.io/docs/troubleshooting.html
+Template render error: (unknown path) [Line 10, Column 95]
+  unexpected token: #
+    at Object._prettifyError (/Users/ubuntuvim/git/xcoding/node_modules/nunjucks/src/lib.js:36:11)
+    at Template.render (/Users/ubuntuvim/git/xcoding/node_modules/nunjucks/src/environment.js:524:21)
+    at Environment.renderString (/Users/ubuntuvim/git/xcoding/node_modules/nunjucks/src/environment.js:362:17)
+    at Promise (/Users/ubuntuvim/git/xcoding/node_modules/hexo/lib/extend/tag.js:66:9)
+    at Promise._execute (/Users/ubuntuvim/git/xcoding/node_modules/bluebird/js/release/debuggability.js:303:9)
+    at Promise._resolveFromExecutor (/Users/ubuntuvim/git/xcoding/node_modules/bluebird/js/release/promise.js:483:18)
+    at new Promise (/Users/ubuntuvim/git/xcoding/node_modules/bluebird/js/release/promise.js:79:10)
+    at Tag.render (/Users/ubuntuvim/git/xcoding/node_modules/hexo/lib/extend/tag.js:64:10)
+    at Object.tagFilter [as onRenderEnd] (/Users/ubuntuvim/git/xcoding/node_modules/hexo/lib/hexo/post.js:230:16)
+    at Promise.then.then.result (/Users/ubuntuvim/git/xcoding/node_modules/hexo/lib/hexo/render.js:65:19)
+    at tryCatcher (/Users/ubuntuvim/git/xcoding/node_modules/bluebird/js/release/util.js:16:23)
+    at Promise._settlePromiseFromHandler (/Users/ubuntuvim/git/xcoding/node_modules/bluebird/js/release/promise.js:512:31)
+    at Promise._settlePromise (/Users/ubuntuvim/git/xcoding/node_modules/bluebird/js/release/promise.js:569:18)
+    at Promise._settlePromise0 (/Users/ubuntuvim/git/xcoding/node_modules/bluebird/js/release/promise.js:614:10)
+    at Promise._settlePromises (/Users/ubuntuvim/git/xcoding/node_modules/bluebird/js/release/promise.js:693:18)
+    at Async._drainQueue (/Users/ubuntuvim/git/xcoding/node_modules/bluebird/js/release/async.js:133:16)
+    at Async._drainQueues (/Users/ubuntuvim/git/xcoding/node_modules/bluebird/js/release/async.js:143:10)
+    at Immediate.Async.drainQueues (/Users/ubuntuvim/git/xcoding/node_modules/bluebird/js/release/async.js:17:14)
+    at runCallback (timers.js:651:20)
+    at tryOnImmediate (timers.js:624:5)
+    at processImmediate [as _immediateCallback] (timers.js:596:5)
+
+```
+
 ## EMFILE Error
 
 ``` plain
