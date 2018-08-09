@@ -2199,3 +2199,15 @@
     - science
     - beautiful
     - scalable
+- name: iLiKE
+  description: A clean and responsive theme for Hexo.
+  link: https://github.com/CaiChenghan/iLiKE
+  preview: https://caichenghan.github.io
+  tags:
+    - clean
+    - responsive
+    - 中文
+    - English
+    - 日本語
+    - beautiful
+    - scalable
