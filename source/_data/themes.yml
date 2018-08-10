@@ -2213,7 +2213,18 @@
     - science
     - beautiful
     - scalable
-
+- name: Material-X
+  description: a material design theme for hexo.
+  link: https://github.com/xaoxuu/hexo-theme-material-x
+  preview: https://blog.xaoxuu.com
+  tags:
+    - material design
+    - responsive
+    - widget
+    - less
+    - beautiful
+    - clean
+    - simple
 - name: iLiKE
   description: A clean and responsive theme for Hexo.
   link: https://github.com/CaiChenghan/iLiKE
@@ -2226,7 +2237,6 @@
     - 日本語
     - beautiful
     - scalable
-
 - name: Suka
   description: A Modern and Simple Theme for Hexo, with a lot of powerful features.
   link: https://theme.suka.moe
