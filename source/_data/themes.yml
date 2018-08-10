@@ -30,6 +30,15 @@
     - 中文
     - Self configurable
     - Rainbow list
+- name: Cxo
+  description: A cool ，simple & beautiful theme for Hexo.
+  link: https://github.com/Longlongyu/hexo-theme-Cxo
+  preview: https://longlongyu.github.io/
+  tags:
+    - cool
+    - 中文
+    - simple
+    - beautiful
 - name: ARIA
   description: Inspired by Kalafina's song ARIA.
   link: https://github.com/AlynxZhou/hexo-theme-aria
@@ -380,6 +389,17 @@
     - simple
     - gallery
     - blog
+- name: lightime
+  description: Inspired by Hugo theme Cactus.
+  link: https://github.com/caisiduo/hexo-theme-lightime
+  preview: https://caisiduo.github.io/hexo-theme-lightime
+  tags:
+    - Simple
+    - one_column
+    - Light
+    - clean
+    - Instantclick
+    - gitment
 - name: Edinburgh
   description: Clean, beautiful portfolio theme for Hexo.
   link: https://github.com/sharvaridesai/hexo-theme-edinburgh
@@ -406,7 +426,7 @@
 - name: landscape
   description: A brand new default theme for Hexo.
   link: https://github.com/hexojs/hexo-theme-landscape
-  preview: http://hexo.io/hexo-theme-landscape
+  preview: https://hexojs.github.io/hexo-theme-landscape/
   tags:
     - official
     - responsive
@@ -426,14 +446,14 @@
 - name: phase
   description: Feel the flow of time with Phase.
   link: https://github.com/hexojs/hexo-theme-phase
-  preview: http://hexo.io/hexo-theme-phase
+  preview: https://hexojs.github.io/hexo-theme-phase
   tags:
     - official
     - one_column
 - name: light
   description: Default theme for Hexo.
   link: https://github.com/hexojs/hexo-theme-light
-  preview: http://hexo.io/hexo-theme-light
+  preview: https://hexojs.github.io/hexo-theme-light
   tags:
     - official
     - responsive
@@ -1023,7 +1043,7 @@
 - name: beautiful-hexo
   description: A simple responsive beautiful theme.
   link: https://github.com/twoyao/beautiful-hexo
-  preview: http://twoyao.cn/beautiful-hexo/
+  preview: http://twoyao.github.io/beautiful-hexo/
   tags:
     - responsive
     - beautiful
@@ -2124,7 +2144,7 @@
 - name: Dxx
   description: A sample hexo theme.
   link: https://github.com/fuzhouxxdong/hexo-theme-dxx
-  preview: https://shakalaka.xyz/hexo-theme-dxx/
+  preview: https://fuzhouxxdong.github.io/hexo-theme-dxx/
   tags:
     - simple
     - beautiful
@@ -2148,7 +2168,6 @@
     - pug
     - panda
     - apollo
-
 - name: dawn
   description: Hexo theme dawn. It's a dawn theme for Hexo.
   link: https://github.com/Ruffianjiang/hexo-theme-dawn
@@ -2162,3 +2181,47 @@
     - easy to use
     - two_column
     - three_column
+- name: Diaspora
+  description: A clean and responsive theme for Hexo
+  link: https://github.com/Fechin/hexo-theme-diaspora
+  preview: http://fech.in
+  tags:
+    - clean
+    - simple
+    - responsive
+    - 中文
+    - beautiful
+- name: Staunch
+  description: A clean and focus on words theme for Hexo
+  link: https://github.com/staunchkai/hexo-theme-staunch
+  preview: http://staunchkai.com
+  tags:
+    - clean
+    - focus on words
+    - 中文
+    - beautiful
+    - simple
+- name: Siberia
+  description: A beautiful and scalable theme for Hexo.
+  link: https://github.com/hpcslag/hexo-theme-siberia
+  preview: https://hpcslag.github.io/hexo-theme-siberia/demo/
+  tags:
+    - Initium
+    - 中文
+    - English
+    - 日本語
+    - science
+    - beautiful
+    - scalable
+- name: iLiKE
+  description: A clean and responsive theme for Hexo.
+  link: https://github.com/CaiChenghan/iLiKE
+  preview: https://caichenghan.github.io
+  tags:
+    - clean
+    - responsive
+    - 中文
+    - English
+    - 日本語
+    - beautiful
+    - scalable

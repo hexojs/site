@@ -23,6 +23,7 @@ Option | Description | Default
 `safe` | Enable safe mode. Don't load any plugins. | `false`
 `silent` | Enable silent mode. Don't display any messages in the terminal. | `false`
 `config` | Specify the path of the configuration file. | `_config.yml`
+`draft` / `drafts`| Enable to add drafts to the posts list.<br> example: when you use `hexo.locals.get('posts')` | `render_drafts` of _config.yml 
 
 ## Load Files
 
@@ -48,6 +49,12 @@ Any console command can be called explicitly using the `call` method on the Hexo
 hexo.call('generate', {}).then(function(){
   // ...
 });
+```
+
+``` js
+hexo.call('list', { _: ['post'] }).then(function() {
+  // ...
+})
 ```
 
 ## Exit

@@ -165,6 +165,16 @@ hexo.extend.filter.register('post_permalink', function(data){
 
 Executado após a renderização ser terminada. Mais informações podem ser encontradas na seção de [renderização](rendering.html#Filtros-after-render).
 
+### after_clean
+
+Executados após os arquivos serem gerados e o cache ser removido com o comando `hexo clean`.
+
+``` js
+hexo.extend.filter.register('after_clean', function(){
+  // remove some other temporary files
+});
+```
+
 ### server_middleware
 
 Adiciona um middleware ao servidor. `app` é uma instância de [Connect].

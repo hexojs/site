@@ -417,6 +417,13 @@
     - official
     - generator
     - sitemap
+- name: hexo-seo-link-visualizer
+  description: Analyze link and visualize the site structure for Hexo.
+  link: https://github.com/tea3/hexo-seo-link-visualizer
+  tags:
+    - analyze
+    - structure
+    - SEO
 - name: hexo-generator-seo-friendly-sitemap
   description: SEO friendly sitemap generator for Hexo. Generate separated sitemap files for pages, posts, categories, tags and add a XSL stylesheet.
   link: https://github.com/ludoviclefevre/hexo-generator-seo-friendly-sitemap
@@ -834,6 +841,16 @@
     - rss
     - search
     - api
+- name: hexo-generator-slidehtml
+  description: A hexo plugin to generate slide html when build / generating hexo project.
+  link: https://github.com/jackey8616/hexo-generator-slidehtml
+  tags:
+    - generator
+    - content
+    - revealjs
+    - markdown
+    - slide
+    - slides
 - name: hexo-tag-niconico
   description: Embed NicoNico seiga/douga in Hexo posts/pages.
   link: https://github.com/kamiya555/hexo-tag-niconico
@@ -1984,3 +2001,30 @@
     - renderer
     - js
     - webpack
+- name: hexo-tag-autogallery
+  description: Generates automatically a gallery from provided directory's contents and using given layout.
+  link: https://www.npmjs.com/package/hexo-tag-autogallery
+  tags:
+    - tag
+    - gallery
+    - autogallery
+- name: hexo-codepen-v2
+  description: An even better version of hexo-codepen.
+  link: https://github.com/bibixx/hexo-tag-codepen
+  tags:
+    - tag
+    - codepen
+- name: hexo-tag-garminconnect
+  description: Embed Garmin connect activity in your blog.
+  link: https://github.com/alexmufatti/hexo-tag-garminconnect
+  tags:
+    - tag_plugins
+    - garmin
+    - connect
+    - sport
+    - activity
+    - running
+    - cycling
+    - gis
+    - gps
+
