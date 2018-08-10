@@ -31,7 +31,7 @@
     - Self configurable
     - Rainbow list
 - name: Cxo
-  description: A cool ，simple & beautiful theme for Hexo. 
+  description: A cool ，simple & beautiful theme for Hexo.
   link: https://github.com/Longlongyu/hexo-theme-Cxo
   preview: https://longlongyu.github.io/
   tags:
@@ -426,7 +426,7 @@
 - name: landscape
   description: A brand new default theme for Hexo.
   link: https://github.com/hexojs/hexo-theme-landscape
-  preview: http://hexo.io/hexo-theme-landscape
+  preview: https://hexojs.github.io/hexo-theme-landscape/
   tags:
     - official
     - responsive
@@ -446,14 +446,14 @@
 - name: phase
   description: Feel the flow of time with Phase.
   link: https://github.com/hexojs/hexo-theme-phase
-  preview: http://hexo.io/hexo-theme-phase
+  preview: https://hexojs.github.io/hexo-theme-phase
   tags:
     - official
     - one_column
 - name: light
   description: Default theme for Hexo.
   link: https://github.com/hexojs/hexo-theme-light
-  preview: http://hexo.io/hexo-theme-light
+  preview: https://hexojs.github.io/hexo-theme-light
   tags:
     - official
     - responsive
@@ -2197,6 +2197,19 @@
     - English
     - 日本語
     - science
+    - beautiful
+    - scalable
+
+- name: iLiKE
+  description: A clean and responsive theme for Hexo.
+  link: https://github.com/CaiChenghan/iLiKE
+  preview: https://caichenghan.github.io
+  tags:
+    - clean
+    - responsive
+    - 中文
+    - English
+    - 日本語
     - beautiful
     - scalable
 
