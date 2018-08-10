@@ -979,7 +979,7 @@
 - name: Nova
   description: A theme using swig template aimed to build github project site conveniently.
   link: https://github.com/Jamling/hexo-theme-nova
-  preview: http://ieclipse.cn
+  preview: https://www.ieclipse.cn
   tags:
     - bootstrap
     - responsive
