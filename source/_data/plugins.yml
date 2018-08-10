@@ -841,6 +841,16 @@
     - rss
     - search
     - api
+- name: hexo-generator-slidehtml
+  description: A hexo plugin to generate slide html when build / generating hexo project.
+  link: https://github.com/jackey8616/hexo-generator-slidehtml
+  tags:
+    - generator
+    - content
+    - revealjs
+    - markdown
+    - slide
+    - slides
 - name: hexo-tag-niconico
   description: Embed NicoNico seiga/douga in Hexo posts/pages.
   link: https://github.com/kamiya555/hexo-tag-niconico

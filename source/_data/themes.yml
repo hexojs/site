@@ -2168,12 +2168,26 @@
     - pug
     - panda
     - apollo
-- name: diaspora
+- name: dawn
+  description: Hexo theme dawn. It's a dawn theme for Hexo.
+  link: https://github.com/Ruffianjiang/hexo-theme-dawn
+  preview: https://lossingdawn.top/
+  tags:
+    - responsive
+    - pure
+    - dawn
+    - clean
+    - 中文
+    - easy to use
+    - two_column
+    - three_column
+- name: Diaspora
   description: A clean and responsive theme for Hexo
   link: https://github.com/Fechin/hexo-theme-diaspora
   preview: http://fech.in
   tags:
     - clean
+    - simple
     - responsive
     - 中文
     - beautiful
@@ -2211,3 +2225,27 @@
     - beautiful
     - clean
     - simple
+- name: iLiKE
+  description: A clean and responsive theme for Hexo.
+  link: https://github.com/CaiChenghan/iLiKE
+  preview: https://caichenghan.github.io
+  tags:
+    - clean
+    - responsive
+    - 中文
+    - English
+    - 日本語
+    - beautiful
+    - scalable
+- name: Suka
+  description: A Modern and Simple Theme for Hexo, with a lot of powerful features.
+  link: https://theme.suka.moe
+  preview: https://theme.suka.moe/demo/
+  tags:
+    - modern
+    - simple
+    - powerful
+    - responsive
+    - minimalism
+    - clean
+    - one_column
