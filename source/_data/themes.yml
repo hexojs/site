@@ -2249,3 +2249,13 @@
     - minimalism
     - clean
     - one_column
+- name: hexo-theme-ele
+  description: An elegant Hexo theme for pure reading, thinking and writing.
+  link: https://github.com/voyax/hexo-theme-ele
+  preview: https://www.voyax.me
+  tags:
+    - clear
+    - elegant
+    - simple
+    - reading
+    - responsive
