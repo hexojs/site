@@ -2040,6 +2040,14 @@
     - html5
     - CDN
     - Cloudinary
+- name: hexo-undraft
+  description: enhanced experience of publishing posts
+  link: https://github.com/joejztang/hexo-undraft
+  tags:
+    - publish
+    - drafts
+    - posts
+    - cli
 - name: hexo-renderer-ts 
   description: Hexo renderer for typescript files. 
   link: https://github.com/OpportunityLiu/hexo-renderer-ts
