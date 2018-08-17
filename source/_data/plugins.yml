@@ -2048,3 +2048,11 @@
     - drafts
     - posts
     - cli
+- name: hexo-renderer-ts 
+  description: Hexo renderer for typescript files. 
+  link: https://github.com/OpportunityLiu/hexo-renderer-ts
+  tags:
+    - typescript
+    - js
+    - ts
+    - renderer
