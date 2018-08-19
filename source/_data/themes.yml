@@ -2259,3 +2259,19 @@
     - simple
     - reading
     - responsive
+- name: Yearn
+  description: A responsive and simple theme for Hexo.
+  link: https://github.com/Youthink/hexo-themes-yearn
+  preview: https://hufangyun.com
+  tags:
+    - responsive
+    - two_column
+    - reading
+    - simple
+    - clean
+    - sass
+    - webpack
+    - Chinese
+    - English
+    - 中文
+    - 中文使用文档
