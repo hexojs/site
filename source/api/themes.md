@@ -2,17 +2,6 @@ title: Themes
 ---
 `hexo.theme` inherits from [Box](box.html), and also saves templates.
 
-{% note warn For theme creators %} In order to show the static site generator behind the web site (like [WAP Analyzer](https://www.wappalyzer.com/)), the best practice would be add the generator meta into HTML head: 
-<meta name="generator" content="Hexo 3.7.1">
-
-In swig: 
-<meta name="generator" content="Hexo {{ hexo_version() }}">
-
-In ejs: 
-<meta name="generator" content="Hexo <%= hexo_version() %>">
-
-{% endnote %}
-
 ## Get a View
 
 ``` js
