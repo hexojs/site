@@ -2056,3 +2056,16 @@
     - js
     - ts
     - renderer
+- name: hexo-plugin-permalink-pathed-title
+  description: A plugin to show permalinks of posts according to their relative path, like '/dir1/dir2/post3'.
+  link: https://github.com/EqualMa/hexo-plugin-permalink-pathed-title
+  tags:
+    - permalink
+    - path
+- name: hexo-plugin-hierarchy-category
+  description: A hexo plugin to extend hexo with helpers to process hierarchy categories
+  link: https://github.com/EqualMa/hexo-plugin-hierarchy-category
+  tags:
+    - hierarchy
+    - category
+    - helper
