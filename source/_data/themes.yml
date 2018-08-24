@@ -1806,15 +1806,15 @@
     - disqus
     - livere
 - name: Polk
-  description: Simple blog theme for Hexo, focused on articles.
+  description: Simple blog theme for Hexo, focusing on articles.
   link: https://github.com/chunqiuyiyu/hexo-theme-polk
-  preview: http://www.chunqiuyiyu.com/
+  preview: https://github.com/chunqiuyiyu/hexo-theme-polk
   tags:
     - simple
     - responsive
     - one_column
     - light
-    - 中文
+    - Chinese
     - minimalism
 - name: blairos
   description: A simple & beautiful & fast theme for Hexo, focused on articles.
@@ -2275,3 +2275,13 @@
     - English
     - 中文
     - 中文使用文档
+- name: Samljen
+  description: Another simple blog theme for Hexo, inspired by Choo.
+  link: https://github.com/chunqiuyiyu/hexo-theme-samljen
+  preview: https://www.chunqiuyiyu.com/
+  tags:
+    - simple
+    - responsive
+    - one_column
+    - light
+    - pink
