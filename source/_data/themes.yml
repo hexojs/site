@@ -1407,6 +1407,16 @@
     - minimal
     - icone
     - simple
+- name: Minidyne
+  description: Minimalistic Theme
+  link: https://github.com/tomap/hexo-theme-minidyne
+  preview: https://hexo-theme-minidyne-demo.netlify.com/
+  tags:
+    - static
+    - no-dependency
+    - no-javascript
+    - minimal
+    - one_column
 - name: JSimple
   description: A simple three columns theme which inspired by JianShu.com
   link: https://github.com/tangkunyin/hexo-theme-jsimple
