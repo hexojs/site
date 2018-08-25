@@ -12,7 +12,7 @@
 - name: hexo-theme-smash
   description: A colorful React-like hexo theme!
   link: https://github.com/bbbbx/hexo-theme-smash
-  preview: http://venusworld.cn/hexo-theme-smash
+  preview: https://bbbbx.github.io/hexo-theme-smash/
   tags:
     - colorful
     - English
@@ -20,16 +20,6 @@
     - React-like
     - simple
     - responsive
-- name: nullptr
-  description: A simple but pleasant theme! Rainbow theme!
-  link: https://github.com/higuoxing/hexo-theme-nullptr
-  preview: https://higuoxing.com
-  tags:
-    - Awesome color
-    - English
-    - 中文
-    - Self configurable
-    - Rainbow list
 - name: Cxo
   description: A cool ，simple & beautiful theme for Hexo.
   link: https://github.com/Longlongyu/hexo-theme-Cxo
@@ -415,7 +405,7 @@
 - name: MaterialFlow
   description: Yet another material design theme for hexo.
   link: https://github.com/stkevintan/hexo-theme-material-flow
-  preview: http://keyin.me
+  preview: https://kntan.coding.me/kntan/
   tags:
     - responsive
     - widget
@@ -731,7 +721,7 @@
 - name: Again
   description: Medium like, but more awesome
   link: https://github.com/DrakeLeung/hexo-theme-again
-  preview: http://drakeleung.github.io/blog/
+  preview: https://www.lyyourc.com/
   tags:
     - medium
     - material
@@ -755,8 +745,8 @@
     - concise
 - name: Weightless
   description: A lightweight theme with minimal fuss
-  link: https://jerry.im/essays/2016/02/hexo-theme-weightless/
-  preview: https://jerry.im/essays/
+  link: https://git.fm/zllovesuki/hexo-theme-weightless
+  preview: https://zllovesuki.personal.git.fm/essays/
   tags:
     - responsive
     - light
@@ -793,7 +783,7 @@
 - name: Primer
   description: Github Style Theme for Hexo
   link: https://github.com/justpsvm/hexo-theme-primer
-  preview: http://justpsvm.com
+  preview: http://justpsvm.github.io/hexo-theme-primer/
   tags:
     - simple
     - github
@@ -996,15 +986,6 @@
     - flexbox
     - responsive
     - white
-- name: yujuan
-  description: A simple solemn theme for Hexo
-  link: https://github.com/smile-leaf-language/hexo-theme-yujuan
-  preview: http://smile-leaf-language.github.io/
-  tags:
-    - black
-    - responsive
-    - two_column
-    - personality
 - name: hollow
   description: A pure and elegant theme for Hexo.
   link: https://github.com/zchen9/hexo-theme-hollow
@@ -1059,15 +1040,6 @@
     - simple
     - blue
     - futuristic
-- name: Pixel
-  description: A pixel level theme
-  link: https://github.com/callmelanmao/hexo-theme-pixel
-  preview: https://ideras.me
-  tags:
-    - pixel
-    - simple
-    - widget
-    - two_column
 - name: Typing
   description: A pure and fresh Hexo theme.
   link: https://github.com/geekplux/hexo-theme-typing
@@ -1081,7 +1053,7 @@
 - name: Daily
   description: Minimalism, simplicity and refined details
   link: https://github.com/GallenHu/hexo-theme-Daily
-  preview: http://blog.hinpc.com
+  preview: https://hinpc.github.io/Daily/
   tags:
     - simple
     - responsive
@@ -1171,7 +1143,7 @@
 - name: Smackdown
   description: A simple and cool theme for Hexo.
   link: https://github.com/winnerweb/hexo-theme-smackdown
-  preview: http://winnerweb.github.io/blog
+  preview: https://blog.smackgg.cn/
   tags:
     - responsive
     - mobile
@@ -1199,7 +1171,7 @@
 - name: casual
   description: A simple and cool hexo theme
   link: https://github.com/littlewin-wang/hexo-theme-casual
-  preview: http://littlewin.info/
+  preview: https://github.com/littlewin-wang/hexo-theme-casual
   tags:
     - responsive
     - comfortable
@@ -1226,7 +1198,7 @@
 - name: Cactus Light
   description: The light version of Cactus Dark, a responsive, light and simple theme for a personal webpage.
   link: https://github.com/gabithume/cactus-light
-  preview: https://gabithu.me
+  preview: http://gabithu.me/
   tags:
     - responsive
     - light
@@ -1410,7 +1382,7 @@
 - name: JSimple
   description: A simple three columns theme which inspired by JianShu.com
   link: https://github.com/tangkunyin/hexo-theme-jsimple
-  preview: https://shuoit.net
+  preview: http://shuoit.net
   tags:
     - 森破
     - JSimple
@@ -1453,7 +1425,7 @@
 - name: Wikitten
   description: A personal wiki imitate Wikitten style for Hexo
   link: https://github.com/zthxxx/hexo-theme-Wikitten
-  preview: http://wiki.zthxxx.top/
+  preview: http://wiki.zthxxx.me/
   tags:
     - simple
     - personal
@@ -2000,7 +1972,7 @@
     - two_column
     - zanblog
     - mygalgame
-- name: Empty Light
+- name: Empty-Light
   description: A Clean And Dark Theme For Hexo
   link: https://github.com/varctrl/hexo-theme-empty-light
   preview: http://varctrl.me
