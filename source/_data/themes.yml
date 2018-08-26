@@ -1,3 +1,14 @@
+- name: Annie
+  description: Annie is a simple theme for Hexo. If you like literature and poetry, it might suit you!
+  link: https://github.com/Sariay/hexo-theme-Annie
+  preview: https://sariay.github.io/
+  tags:
+    - 中文
+    - simple
+    - cool
+    - literature
+    - single Column
+
 - name: hexo-theme-Minami
   description: A Clear and Light Theme for Hexo
   link: https://github.com/nanqinlang/hexo-theme-Minami
