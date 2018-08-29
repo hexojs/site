@@ -13,7 +13,7 @@ Archives: /archives/
 템플릿 안에서는 다음과 같이 사용할 수 있습니다.
 
 ```
-{% for link in site.data.menu %}
-  <a href="{{ link }}">{{ loop.key }}</a>
-{% endfor %}
+<% for (var link in site.data.menu) { %>
+  <a href="<%= site.data.menu[link] %>"> <%= link %> </a>
+<% } %>
 ```

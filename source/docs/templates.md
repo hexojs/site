@@ -2,6 +2,8 @@ title: Templates
 ---
 Templates define the presentation of your website by describing what each page should look like. The table below shows the corresponding template for every available page. At the very least, a theme should contain an `index` template.
 
+{% youtube mb65bQ4iUc4 %}
+
 Template | Page | Fallback
 --- | --- | ---
 `index` | Home page |
@@ -63,7 +65,7 @@ yields:
 You can define local variables in templates and use them in other templates.
 
 ``` html partial/header.ejs
-<h1 id="logo"><%= title></h1>
+<h1 id="logo"><%= title %></h1>
 ```
 
 ``` html index.ejs

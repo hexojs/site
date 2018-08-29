@@ -164,6 +164,16 @@ hexo.extend.filter.register('post_permalink', function(data){
 
 Executed after rendering finishes. You can see [rendering](rendering.html#after_render_Filters) for more info.
 
+### after_clean
+
+Executed after generated files and cache are removed with `hexo clean` command.
+
+``` js
+hexo.extend.filter.register('after_clean', function(){
+  // remove some other temporary files
+});
+```
+
 ### server_middleware
 
 Add middleware to the server. `app` is a [Connect] instance.

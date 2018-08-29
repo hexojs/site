@@ -2,6 +2,10 @@ title: Helpers
 ---
 Helpers are used in templates to help you insert snippets quickly.  Helpers cannot be used in source files.
 
+You could easily [write your own custom helper](https://hexo.io/api/helper.html) or use our ready-made helpers.
+
+{% youtube Uc53pW0GJHU %}
+
 ## URL
 
 ### url_for
@@ -486,7 +490,7 @@ Option | Description | Default
 `style` | Style to display the tag list. `list` displays tags in an unordered list.  | list
 `separator` | Separator between categories. (Only works if `style` is not `list`) | ,
 `class` | Class name of tag list. | tag
-`transform` | The function that changes the display of category name. |
+`transform` | The function that changes the display of tag name. |
 `amount` | The number of tags to display (0 = unlimited) | 0
 `suffix` | Add a suffix to link. | None
 
@@ -653,6 +657,7 @@ Option | Description | Default
 --- | --- | ---
 `class` | Class name | toc
 `list_number` | Displays list number | true
+`max_depth` | Maximum heading depth of generated toc | 6
 
 **Examples:**
 

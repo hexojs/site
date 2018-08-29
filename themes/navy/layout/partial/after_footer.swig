@@ -1,14 +1,16 @@
 <!-- Scripts -->
+<!-- Cookie -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.0/js.cookie.min.js"></script>
 <!-- build:js build/js/main.js -->
 {{ js('js/lang_select') }}
-{{ js('js/scrollingelement') }}
 {{ js('js/toc') }}
 {{ js('js/mobile_nav') }}
 <!-- endbuild -->
-<script src="https://cdn.jsdelivr.net/retinajs/1.3.0/retina.min.js" async></script>
 {% if page.layout === 'plugins' %}
 <!-- Plugin search -->
-<script src="https://cdn.jsdelivr.net/lunr/0.6.0/lunr.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.1/lunr.min.js"></script>
+<!-- Lazy load -->
+<script async src="https://cdn.jsdelivr.net/lazysizes/3.0.0/lazysizes.min.js"></script>
 <!-- build:js build/js/plugins.js -->
 {{ js('js/plugins') }}
 <!-- endbuild -->

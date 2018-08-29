@@ -154,6 +154,28 @@ $ hexo server -s
 ```
 This is [a known BashOnWindows issue](https://github.com/Microsoft/BashOnWindows/issues/216), and on 15 Aug 2016, the Windows team said they would work on it. You can get progress updates and encourage them to prioritize it on [the issue's UserVoice suggestion page](https://wpdev.uservoice.com/forums/266908-command-prompt-console-bash-on-ubuntu-on-windo/suggestions/13469097-support-for-filesystem-watchers-like-inotify).
 
+## Template render error
+
+Sometimes when running the command `$ hexo generate` it returns an error:
+```
+FATAL Something's wrong. Maybe you can find the solution here: http://hexo.io/docs/troubleshooting.html
+Template render error: (unknown path)
+```
+It means that there are some unrecognizable words in your file.There are two possibilities One is your new page/post, and the other one is `_config.yml`.
+In `_config.yml`, don't forget add whitespace before a list in hash. There is the wiki page about [YAML](https://en.wikipedia.org/wiki/YAML).
+The error one:
+```
+plugins:
+- hexo-generator-feed
+- hexo-generator-sitemap
+```
+The correct one:
+```
+plugins:
+  - hexo-generator-feed
+  - hexo-generator-sitemap
+```
+
 [Warehouse]: https://github.com/tommy351/warehouse
 [Swig]: http://paularmstrong.github.io/swig/
 [Nunjucks]: http://mozilla.github.io/nunjucks/

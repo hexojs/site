@@ -14,6 +14,7 @@ Variable | Description
 `:day` | Published day of posts (2-digit)
 `:i_day` | Published day of posts (Without leading zeros)
 `:title` | Filename
+`:post_title` | Post title
 `:id` | Post ID
 `:category` | Categories. If the post is uncategorized, it will use the `default_category` value.
 
