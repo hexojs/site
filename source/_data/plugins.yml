@@ -1,3 +1,13 @@
+- name: hexo-tag-douban
+  description: Douban Tag for Hexo, you can easily add a Douban card of book, movie or music into your posts.
+  link: https://github.com/YuyingWu/hexo-tag-douban
+  tags:
+    - douban
+    - tag
+    - markdown
+    - tag_plugins
+    - plugins
+    - 豆瓣
 - name: hexo-generator-index-plus
   description: Index generator plus for Hexo, including new order attributes like top and updateDate.
   link: https://github.com/YuyingWu/hexo-generator-index-plus
