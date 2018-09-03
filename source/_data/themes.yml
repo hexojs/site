@@ -2277,3 +2277,13 @@
     - cool
     - literature
     - single Column
+- name: still
+  description: Still is a minimal, pure colored theme inspired by farbox and hexo-theme-apollo.
+  link: https://github.com/JeremyFan/hexo-theme-still
+  preview: http://jeremyfan.name/blog/
+  tags:
+    - responsive
+    - minimal
+    - pure
+    - clean
+    - single Column
