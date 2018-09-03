@@ -2267,6 +2267,17 @@
     - one_column
     - light
     - pink
+- name: Stage
+  description: A refreshing and comfortable theme for Hexo.
+  link: https://github.com/markyong/hexo-theme-stage
+  preview: https://markyong.github.io
+  tags:
+    - refreshing
+    - comfortable
+    - simple
+    - green
+    - responsive
+    - water
 - name: Annie
   description: Annie is a simple theme for Hexo. If you like literature and poetry, it might suit you!
   link: https://github.com/Sariay/hexo-theme-Annie
