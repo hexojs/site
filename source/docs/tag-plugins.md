@@ -223,6 +223,12 @@ Include links to other posts.
 {% post_link slug [title] %}
 ```
 
+You can ignore permalink and folder information, like languages and dates, when using this tag. 
+
+For instance: `{% raw %}{% post_link how-to-bake-a-cake %}{% endraw %}`.
+
+This will work as long as the post has in the front matter `title: How to bake a cake`, even if the post is located at `source/posts/2015-02-my-family-holiday` and has permalink `2018/en/how-to-bake-a-cake`.
+
 ## Include Assets
 
 Include post assets.
