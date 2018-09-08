@@ -42,6 +42,7 @@ Option | Description
 `repo` | GitHub/Bitbucket/Coding/GitLab repository URL
 `branch` | Branch name. The deployer will detect the branch automatically if you are using GitHub or GitCafe.
 `message` | Customize commit message (Default to `Site updated: {% raw %}{{ now('YYYY-MM-DD HH:mm:ss') }}{% endraw %}`)
+4. Upload your site: `./node_modules/.bin/hexo clean && ./node_modules/.bin/hexo deploy`
 3. On Github/BitBucket/Gitlab go to your repository settngs and change your main branch from `master` to `published` (or whatever you called it in your _config.yml). Now your site will show as your account's homepage.
 
 ### How does it work exactly?
