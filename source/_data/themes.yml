@@ -2173,6 +2173,15 @@
     - responsive
     - 中文
     - beautiful
+- name: Cicada
+  description: A concise and retro theme for Hexo.
+  link: https://github.com/Kexin-Li/hexo-theme-cicada
+  preview: https://kexin-li.github.io/
+  tags:
+    - retro
+    - responsive
+    - portfolio
+    - consise
 - name: Staunch
   description: A clean and focus on words theme for Hexo
   link: https://github.com/staunchkai/hexo-theme-staunch
