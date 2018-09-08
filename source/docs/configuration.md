@@ -37,7 +37,7 @@ Setting | Description | Default
 `category_dir` | Category directory | `categories`
 `code_dir` | Include code directory (subdirectory of `source_dir`) | `downloads/code`
 `i18n_dir` | i18n directory | `:lang`
-`skip_render` | Paths not to be rendered. You can use [glob expressions](https://github.com/isaacs/minimatch) for path matching |
+`skip_render` | Paths that will be copied to `public` raw, without being rendered. You can use [glob expressions](https://github.com/isaacs/minimatch) for path matching.<br /><br />For example, `skip_render: mypage/**/*` will output `source/mypage/index.html` and `source/mypage/code.js` without altering them. |
 
 ### Writing
 

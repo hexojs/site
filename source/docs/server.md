@@ -55,7 +55,7 @@ $ cd ~/.pow
 $ ln -s /path/to/myapp
 ```
 
-Your website will be up and running at `http://myapp.dev`. The URL is based on the name of the symlink.
+Your website will be up and running at `http://myapp.test`. The URL is based on the name of the symlink.
 
 [hexo-server]: https://github.com/hexojs/hexo-server
 [Pow]: http://pow.cx/

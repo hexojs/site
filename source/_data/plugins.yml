@@ -1,3 +1,13 @@
+- name: hexo-tag-douban
+  description: Douban Tag for Hexo, you can easily add a Douban card of book, movie or music into your posts.
+  link: https://github.com/YuyingWu/hexo-tag-douban
+  tags:
+    - douban
+    - tag
+    - markdown
+    - tag_plugins
+    - plugins
+    - 豆瓣
 - name: hexo-tag-color-block
   description: Create a color block easily on Hexo
   link: https://github.com/patrick330602/hexo-tag-color-block
@@ -841,6 +851,16 @@
     - rss
     - search
     - api
+- name: hexo-generator-slidehtml
+  description: A hexo plugin to generate slide html when build / generating hexo project.
+  link: https://github.com/jackey8616/hexo-generator-slidehtml
+  tags:
+    - generator
+    - content
+    - revealjs
+    - markdown
+    - slide
+    - slides
 - name: hexo-tag-niconico
   description: Embed NicoNico seiga/douga in Hexo posts/pages.
   link: https://github.com/kamiya555/hexo-tag-niconico
@@ -2004,3 +2024,58 @@
   tags:
     - tag
     - codepen
+- name: hexo-tag-garminconnect
+  description: Embed Garmin connect activity in your blog.
+  link: https://github.com/alexmufatti/hexo-tag-garminconnect
+  tags:
+    - tag_plugins
+    - garmin
+    - connect
+    - sport
+    - activity
+    - running
+    - cycling
+    - gis
+    - gps
+- name: hexo-tag-optimized-gif
+  description: With the help of Cloudinary, using smaller looping video as your animated gif is possible.
+  link: https://github.com/zyzyz/hexo-tag-optimized-gif
+  tags:
+    - gif
+    - video
+    - optimization
+    - mp4
+    - webm
+    - size
+    - html5
+    - CDN
+    - Cloudinary
+- name: hexo-undraft
+  description: enhanced experience of publishing posts
+  link: https://github.com/joejztang/hexo-undraft
+  tags:
+    - publish
+    - drafts
+    - posts
+    - cli
+- name: hexo-renderer-ts 
+  description: Hexo renderer for typescript files. 
+  link: https://github.com/OpportunityLiu/hexo-renderer-ts
+  tags:
+    - typescript
+    - js
+    - ts
+    - renderer
+- name: hexo-plugin-permalink-pathed-title
+  description: A plugin to show permalinks of posts according to their relative path, like '/dir1/dir2/post3'.
+  link: https://github.com/EqualMa/hexo-plugin-permalink-pathed-title
+  tags:
+    - permalink
+    - path
+- name: hexo-plugin-hierarchy-category
+  description: A hexo plugin to extend hexo with helpers to process hierarchy categories
+  link: https://github.com/EqualMa/hexo-plugin-hierarchy-category
+  tags:
+    - hierarchy
+    - category
+    - helper
