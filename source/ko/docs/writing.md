@@ -37,7 +37,7 @@ Placeholder | 설명
 
 ### Draft
 
-이전에, 우리는 Hexo의 특별한 레이아웃에 대해 언급한 적이 있습니다. 바로 `draft`입니다. Post는 이 레이아웃으로 초기화되며 `source/_drafts`폴더에 저장됩니다. 당신은 `publish` 명령어를 통해 draft를 `source/_posts`폴더로 옮길 수 있습니다. `publish`는 `new` 명령어와 비슷하게 동작합니다.
+이전에, 우리는 Hexo의 특별한 레이아웃에 대해 언급한 적이 있습니다. 바로 `draft`입니다. 이 레이아웃으로 초기화된 포스트는 `source/_drafts`폴더에 저장됩니다. 당신은 `publish` 명령어를 통해 draft를 `source/_posts`폴더로 옮길 수 있습니다. `publish`는 `new` 명령어와 비슷하게 동작합니다.
 
 ``` bash
 $ hexo publish [layout] <title>
