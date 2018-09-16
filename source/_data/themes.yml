@@ -2307,3 +2307,13 @@
     - pure
     - clean
     - single Column
+- name: Matery
+  description: A beautiful hexo blog theme with material design and responsive design.
+  link: https://github.com/blinkfox/hexo-theme-matery
+  preview: https://blinkfox.github.io/
+  tags:
+    - Material design
+    - Waterfalls flow
+    - Responsive
+    - Beautiful
+    - 中文
