@@ -1,3 +1,14 @@
+- name: A-Boy
+  description: A Clear and Light Theme for Hexo
+  link: https://github.com/huweihuang/hexo-theme-huweihuang
+  preview: https://www.huweihuang.com/
+  tags:
+    - Clear
+    - Light
+    - Simple
+    - Custimiziable
+    - Freedom
+
 - name: hexo-theme-Minami
   description: A Clear and Light Theme for Hexo
   link: https://github.com/nanqinlang/hexo-theme-Minami
