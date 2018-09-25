@@ -2079,3 +2079,9 @@
     - hierarchy
     - category
     - helper
+- name: hexo-deployer-huaweicloud-obs
+  description: Huaweicloud obs deployer plugin of Hexo.
+  link: https://github.com/RuanXinyu/hexo-deployer-huaweicloud-obs
+  tags:
+    - deployer
+    - huaweicloud-obs
