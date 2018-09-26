@@ -1,3 +1,14 @@
+- name: A-Boy
+  description: A Clear and Light Theme for Hexo
+  link: https://github.com/huweihuang/hexo-theme-huweihuang
+  preview: https://www.huweihuang.com/
+  tags:
+    - Clear
+    - Light
+    - Simple
+    - Custimiziable
+    - Freedom
+
 - name: hexo-theme-Minami
   description: A Clear and Light Theme for Hexo
   link: https://github.com/nanqinlang/hexo-theme-Minami
@@ -8,7 +19,19 @@
     - Simple
     - Custimiziable
     - Freedom
-
+- name: Amber
+  description: A boostrap blog theme for Hexo
+  link: https://github.com/Mitscherlich/hexo-theme-amber.git
+  preview: https://mitscherlich.me/
+  tags:
+    - bootstrap
+    - English
+    - 中文
+    - Vue.js
+    - SPA
+    - PWA
+    - Font Awesome
+    - Google Analytics
 - name: hexo-theme-smash
   description: A colorful React-like hexo theme!
   link: https://github.com/bbbbx/hexo-theme-smash

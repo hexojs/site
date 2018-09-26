@@ -1,3 +1,9 @@
+- name: hexo-fbcomments
+  description: Add Facebook comments to your posts
+  link: https://github.com/RichardJECooke/hexo-fbcomments
+  tags:
+    - comments
+    - facebook
 - name: hexo-tag-douban
   description: Douban Tag for Hexo, you can easily add a Douban card of book, movie or music into your posts.
   link: https://github.com/YuyingWu/hexo-tag-douban
@@ -2058,8 +2064,8 @@
     - drafts
     - posts
     - cli
-- name: hexo-renderer-ts 
-  description: Hexo renderer for typescript files. 
+- name: hexo-renderer-ts
+  description: Hexo renderer for typescript files.
   link: https://github.com/OpportunityLiu/hexo-renderer-ts
   tags:
     - typescript
@@ -2085,3 +2091,10 @@
   tags:
     - deployer
     - huaweicloud-obs
+- name: hexo-tag-vimhighlight
+  description: A tag to highlight code using vim
+  link: https://github.com/ppwwyyxx/hexo-tag-vimhighlight
+  tags:
+    - highlight
+    - code
+    - vim
