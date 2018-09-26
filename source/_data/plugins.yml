@@ -2085,6 +2085,12 @@
     - hierarchy
     - category
     - helper
+- name: hexo-deployer-huaweicloud-obs
+  description: Huaweicloud obs deployer plugin of Hexo.
+  link: https://github.com/RuanXinyu/hexo-deployer-huaweicloud-obs
+  tags:
+    - deployer
+    - huaweicloud-obs
 - name: hexo-tag-vimhighlight
   description: A tag to highlight code using vim
   link: https://github.com/ppwwyyxx/hexo-tag-vimhighlight
