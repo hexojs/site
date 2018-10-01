@@ -21,12 +21,13 @@
     - Freedom
 - name: Amber
   description: A boostrap blog theme for Hexo
-  link: https://github.com/Mitscherlich/hexo-theme-amber.git
+  link: https://github.com/Mitscherlich/hexo-theme-amber
   preview: https://mitscherlich.me/
   tags:
     - bootstrap
     - English
     - 中文
+    - TypeScript
     - Vue.js
     - SPA
     - PWA
