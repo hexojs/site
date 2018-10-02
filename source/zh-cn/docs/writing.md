@@ -1,5 +1,8 @@
 title: 写作
 ---
+
+{% youtube A_a-qFhDgKs %}
+
 你可以执行下列命令来创建一篇新文章。
 
 ``` bash
