@@ -17,25 +17,25 @@ Por favor, siga o estilo de codificação:
 1. Faça um fork [hexojs/hexo].
 2. Clone o repositório no seu computador e instale as dependências.
 
-    {% code %}
+    ```
     $ git clone https://github.com/<username>/hexo.git
     $ cd hexo
     $ npm install
     $ git submodule update --init
-    {% endcode %}
+    ```
 
 3. Crie um branch para a feature a ser desenvolvida.
 
-    {% code %}
+    ```
     $ git checkout -b new_feature
-    {% endcode %}
+    ```
 
 4. Comece a implementação.
 5. Faça o push da branch para seu repositório remoto:
 
-    {% code %}
+    ```
     $ git push origin new_feature
-    {% endcode %}
+    ```
 
 6. Crie um pull request e descreva as mudanças.
 
@@ -44,9 +44,9 @@ Por favor, siga o estilo de codificação:
 - Não modifique o número da versão no arquivo `package.json`.
 - Seu pedido de pull request só será aceito quando os testes tiverem passado. Não se esqueça de executar testes antes da submissão.
 
-    {% code %}
+    ```
     $ npm test
-    {% endcode %}
+    ```
 
 ## Atualizando a Documentação
 
@@ -57,17 +57,17 @@ A documentação do Hexo é de código aberto e você pode encontrar o código-f
 1. Faça um fork [hexojs/site]
 2. Clone o repositório no seu computador e instale as dependências.
 
-    {% code %}
+    ```
     $ git clone https://github.com/<username>/site.git
     $ cd site
     $ npm install
-    {% endcode %}
+    ```
 
 3. Comece a editar a documentação. Você pode iniciar o servidor para a visualização das mudanças em tempo real.
 
-    {% code %}
+    ```
     $ hexo server
-    {% endcode %}
+    ```
 
 4. Faça o push da branch para seu repositório remoto:
 5. Crie um pull request e descreva as mudanças.
