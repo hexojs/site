@@ -166,7 +166,7 @@
 - name: Nayo
   description: A clean theme for Hexo.
   link: https://github.com/Lemonreds/hexo-theme-Nayo
-  preview: http://synch.site
+  preview: https://lemonreds.github.io/
   tags:
     - white
     - clean
