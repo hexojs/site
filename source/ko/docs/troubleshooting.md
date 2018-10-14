@@ -128,6 +128,6 @@ $ echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo
 ```
 이 명령어는 감시(watch)할 수 있는 파일의 개수 제한을 증가시킵니다.
 
-[Warehouse]: https://github.com/tommy351/warehouse
+[Warehouse]: https://github.com/hexojs/warehouse
 [Swig]: http://paularmstrong.github.io/swig/
 [Nunjucks]: http://mozilla.github.io/nunjucks/
