@@ -348,13 +348,14 @@
     - light
     - colorful
 - name: Inside
-  description: Clean and one page theme for Hexo.
+  description: Flat and clean theme for Hexo ❤️.
   link: https://github.com/elmorec/hexo-theme-inside
-  preview: http://blog.oniuo.com/
+  preview: https://blog.oniuo.com/
   tags:
-    - One page
-    - angular
+    - flat
     - clean
+    - SPA
+    - Angular
 - name: Prontera
   description: A fast and modern theme for Hexo.
   link: https://github.com/AngryPowman/hexo-theme-prontera
