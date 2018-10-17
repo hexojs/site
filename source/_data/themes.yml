@@ -1,11 +1,11 @@
 - name: Gradient
   description: Gradient is clean and modern hexo theme.
   link: https://github.com/RandomAdversary/Gradient
-  preview: https://randomadversary.com/Gradient/
+  preview: https://randomadversary.github.io/Gradient/
   tags:
     - modern
     - clean
-    - Simple
+    - simple
     - gradient
     - responsive
 
