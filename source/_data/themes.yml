@@ -2342,3 +2342,13 @@
     - Responsive
     - Beautiful
     - 中文
+- name: Clover
+  description: A real simple theme for Hexo.
+  link: https://github.com/esappear/hexo-theme-clover
+  preview: https://clovertuan.github.io/
+  tags:
+    - simple
+    - pure
+    - light
+    - design
+    - one_column
