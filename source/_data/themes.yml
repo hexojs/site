@@ -2352,3 +2352,11 @@
     - light
     - design
     - one_column
+- name: hexo-theme-yinwang
+  description: An imitation of yinwang's blog.
+  link: https://github.com/smallyunet/hexo-theme-yinwang
+  preview: https://blog.smallyu.net
+  tags:
+    - responsive
+    - yinwang
+    - simple
