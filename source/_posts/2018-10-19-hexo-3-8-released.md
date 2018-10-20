@@ -16,11 +16,9 @@ More info: [changelog]
 [changelog]: https://github.com/hexojs/hexo/releases
 [#3124]: https://github.com/hexojs/hexo/issues/3124
 [#3117]: https://github.com/hexojs/hexo/issues/3117
-
 [#3118]: https://github.com/hexojs/hexo/issues/3118
 [#3122]: https://github.com/hexojs/hexo/issues/3122
 [#3129]: https://github.com/hexojs/hexo/issues/3129
-
 [#3102]: https://github.com/hexojs/hexo/issues/3102
 [#3276]: https://github.com/hexojs/hexo/issues/3276
 [#3284]: https://github.com/hexojs/hexo/issues/3284
