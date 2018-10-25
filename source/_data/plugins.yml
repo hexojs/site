@@ -2098,3 +2098,10 @@
     - highlight
     - code
     - vim
+- name: hexo-deployer-ftpupload
+  description: This plugin can upload your blog via ftp.
+  link: https://github.com/abcdGJJ/hexo-deployer-ftpupload
+  tags:
+    - official
+    - deployer
+    - ftp
