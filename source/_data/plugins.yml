@@ -2110,3 +2110,10 @@
     - compress
     - gzip
     - brotli
+- name: hexo-nofollow
+  description: Add SEO-friendly nofollow attribute to all external links in your posts. A more updated version of hexo-autonofollow.
+  link: https://github.com/weyusi/hexo-nofollow
+  tags:
+    - SEO
+    - nofollow
+    - external
