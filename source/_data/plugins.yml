@@ -1,3 +1,13 @@
+- name: hexo-workbox
+  description: A plugin for giving your app offline caching as a progressive enhancement using service workers.
+  link: https://github.com/josex2r/hexo-workbox
+  tags:
+    - pwa
+    - offline
+    - service
+    - workers
+    - cache
+    - workbox
 - name: hexo-fbcomments
   description: Add Facebook comments to your posts
   link: https://github.com/RichardJECooke/hexo-fbcomments
