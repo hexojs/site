@@ -1,3 +1,14 @@
+- name: Gradient
+  description: Gradient is clean and modern hexo theme.
+  link: https://github.com/RandomAdversary/Gradient
+  preview: https://randomadversary.github.io/Gradient/
+  tags:
+    - modern
+    - clean
+    - simple
+    - gradient
+    - responsive
+
 - name: A-Boy
   description: A Clear and Light Theme for Hexo
   link: https://github.com/huweihuang/hexo-theme-huweihuang
@@ -19,6 +30,7 @@
     - Simple
     - Custimiziable
     - Freedom
+
 - name: Amber
   description: A boostrap blog theme for Hexo
   link: https://github.com/Mitscherlich/hexo-theme-amber
@@ -2360,3 +2372,12 @@
     - responsive
     - yinwang
     - simple
+- name: Sky
+  description: a concise theme for hexo
+  link: https://github.com/iJinxin/hexo-theme-sky
+  preview: https://ijinxin.github.io/
+  tags:
+    - 中文
+    - English
+    - concise
+    - responsive
