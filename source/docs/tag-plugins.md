@@ -208,10 +208,10 @@ Inserts a YouTube video.
 
 ## Vimeo
 
-Inserts a Vimeo video.
+Inserts a responsive or specified size Vimeo video.
 
 ```
-{% vimeo video_id %}
+{% vimeo video_id [width] [height] %}
 ```
 
 ## Include Posts
