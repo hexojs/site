@@ -76,7 +76,7 @@ Option | Description
 
 There are two different ways to deploy your sites on Netlify. The most common way is to use the web UI. Go to the [create a new site page](https://app.netlify.com/start), select your project repo from GitHub, GitLab, or Bitbucket, and follow the prompts.
 
-Alternatively, you can use [netlifyctl](https://github.com/netlify/netlifyctl) to manage and deploy sites on Netlify without leaving your terminal.
+Alternatively, you can use Netlify's [Node based CLI](https://www.netlify.com/docs/cli/) tool to manage and deploy sites on Netlify without leaving your terminal.
 
 You can also add a [Deploy to Netlify Button](https://www.netlify.com/docs/deploy-button/) in your README.file to allow others to create a copy of your repository and be deployed to Netlify via one click.
 

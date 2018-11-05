@@ -115,7 +115,7 @@ $ echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo
 ```
 这将会提高你能监视的文件数量。
 
-[Warehouse]: https://github.com/tommy351/warehouse
+[Warehouse]: https://github.com/hexojs/warehouse
 [Swig]: http://paularmstrong.github.io/swig/
 [Nunjucks]: http://mozilla.github.io/nunjucks/
 

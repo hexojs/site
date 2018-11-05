@@ -1,3 +1,13 @@
+- name: hexo-workbox
+  description: A plugin for giving your app offline caching as a progressive enhancement using service workers.
+  link: https://github.com/josex2r/hexo-workbox
+  tags:
+    - pwa
+    - offline
+    - service
+    - workers
+    - cache
+    - workbox
 - name: hexo-fbcomments
   description: Add Facebook comments to your posts
   link: https://github.com/RichardJECooke/hexo-fbcomments
@@ -2098,3 +2108,22 @@
     - highlight
     - code
     - vim
+- name: hexo-yam
+  description: Yet Another Minifier. Minify and compress html, js and css. Support gzip and brotli compressions.
+  link: https://github.com/weyusi/hexo-yam
+  tags:
+    - filter
+    - minify
+    - html
+    - js
+    - css
+    - compress
+    - gzip
+    - brotli
+- name: hexo-nofollow
+  description: Add SEO-friendly nofollow attribute to all external links in your posts. A more updated version of hexo-autonofollow.
+  link: https://github.com/weyusi/hexo-nofollow
+  tags:
+    - SEO
+    - nofollow
+    - external

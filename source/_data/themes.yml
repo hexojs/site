@@ -1,3 +1,14 @@
+- name: Gradient
+  description: Gradient is clean and modern hexo theme.
+  link: https://github.com/RandomAdversary/Gradient
+  preview: https://randomadversary.github.io/Gradient/
+  tags:
+    - modern
+    - clean
+    - simple
+    - gradient
+    - responsive
+
 - name: A-Boy
   description: A Clear and Light Theme for Hexo
   link: https://github.com/huweihuang/hexo-theme-huweihuang
@@ -19,6 +30,7 @@
     - Simple
     - Custimiziable
     - Freedom
+
 - name: Amber
   description: A boostrap blog theme for Hexo
   link: https://github.com/Mitscherlich/hexo-theme-amber
@@ -348,13 +360,14 @@
     - light
     - colorful
 - name: Inside
-  description: Clean and one page theme for Hexo.
+  description: Flat and clean theme for Hexo ❤️.
   link: https://github.com/elmorec/hexo-theme-inside
-  preview: http://blog.oniuo.com/
+  preview: https://blog.oniuo.com/
   tags:
-    - One page
-    - angular
+    - flat
     - clean
+    - SPA
+    - Angular
 - name: Prontera
   description: A fast and modern theme for Hexo.
   link: https://github.com/AngryPowman/hexo-theme-prontera
@@ -484,15 +497,16 @@
     - white
     - elegant
 - name: Icarus
-  description: 'The blog theme you may fall in love with, coming to Hexo.'
+  description: 'A simple, delicate, and modern theme for the static site generator Hexo.'
   link: https://github.com/ppoffice/hexo-theme-icarus
   preview: https://ppoffice.github.io/hexo-theme-icarus
   tags:
     - responsive
-    - three_column
-    - clean
-    - flat
+    - modern
     - light
+    - card
+    - single_column
+    - multi_column
 - name: Hueman
   description: A redesign of Alx's wordpress theme Hueman, ported to Hexo.
   link: https://github.com/ppoffice/hexo-theme-hueman
@@ -2342,7 +2356,7 @@
     - Beautiful
     - 中文
 - name: yanchangyou
-  description: A simple and easy read theme that flow Next
+  description: A simple and easy read theme that inspired by Next
   link: https://github.com/yanchangyou/blog.321zou.com
   preview: http://blog.321zou.com
   tags:
@@ -2350,5 +2364,30 @@
     - easy read
     - Next
     - 中文
-~
-~
+- name: Clover
+  description: A real simple theme for Hexo.
+  link: https://github.com/esappear/hexo-theme-clover
+  preview: https://clovertuan.github.io/
+  tags:
+    - simple
+    - pure
+    - light
+    - design
+    - one_column
+- name: hexo-theme-yinwang
+  description: An imitation of yinwang's blog.
+  link: https://github.com/smallyunet/hexo-theme-yinwang
+  preview: https://blog.smallyu.net
+  tags:
+    - responsive
+    - yinwang
+    - simple
+- name: Sky
+  description: a concise theme for hexo
+  link: https://github.com/iJinxin/hexo-theme-sky
+  preview: https://ijinxin.github.io/
+  tags:
+    - 中文
+    - English
+    - concise
+    - responsive
