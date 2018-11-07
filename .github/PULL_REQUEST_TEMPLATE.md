@@ -1,3 +1,5 @@
+- [ ] Read the [theme publishing doc](https://hexo.io/docs/themes#Publishing) or [plugin publishing doc](https://hexo.io/docs/plugins#Publishing).
+
 <!-- 
     Thank you for publishing your work on Hexo site!
     
