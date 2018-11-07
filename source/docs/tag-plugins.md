@@ -208,10 +208,10 @@ Inserts a YouTube video.
 
 ## Vimeo
 
-Inserts a Vimeo video.
+Inserts a responsive or specified size Vimeo video.
 
 ```
-{% vimeo video_id %}
+{% vimeo video_id [width] [height] %}
 ```
 
 ## Include Posts
@@ -219,15 +219,32 @@ Inserts a Vimeo video.
 Include links to other posts.
 
 ```
-{% post_path slug %}
-{% post_link slug [title] %}
+{% post_path filename %}
+{% post_link filename [optional text] %}
 ```
 
 You can ignore permalink and folder information, like languages and dates, when using this tag. 
 
 For instance: `{% raw %}{% post_link how-to-bake-a-cake %}{% endraw %}`.
 
-This will work as long as the post has in the front matter `title: How to bake a cake`, even if the post is located at `source/posts/2015-02-my-family-holiday` and has permalink `2018/en/how-to-bake-a-cake`.
+This will work as long as the filename of the post is `how-to-bake-a-cake.md`, even if the post is located at `source/posts/2015-02-my-family-holiday` and has permalink `2018/en/how-to-bake-a-cake`.
+
+You can customize the text to display, instead of displaying the post's title. Using `post_path` inside Markdown syntax `[]()` is not supported.
+
+For instance:
+
+**Display title of the post.**
+
+`{% raw %}{% post_link 2018-10-19-hexo-3-8-released %}{% endraw %}`
+
+{% post_link 2018-10-19-hexo-3-8-released %}
+
+**Display custom text.**
+
+`{% raw %}{% post_link 2018-10-19-hexo-3-8-released 'Link to a post' %}{% endraw %}`
+
+{% post_link 2018-10-19-hexo-3-8-released 'Link to a post' %}
+
 
 ## Include Assets
 

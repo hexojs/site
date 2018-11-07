@@ -497,15 +497,16 @@
     - white
     - elegant
 - name: Icarus
-  description: 'The blog theme you may fall in love with, coming to Hexo.'
+  description: 'A simple, delicate, and modern theme for the static site generator Hexo.'
   link: https://github.com/ppoffice/hexo-theme-icarus
   preview: https://ppoffice.github.io/hexo-theme-icarus
   tags:
     - responsive
-    - three_column
-    - clean
-    - flat
+    - modern
     - light
+    - card
+    - single_column
+    - multi_column
 - name: Hueman
   description: A redesign of Alx's wordpress theme Hueman, ported to Hexo.
   link: https://github.com/ppoffice/hexo-theme-hueman
@@ -2354,6 +2355,15 @@
     - Responsive
     - Beautiful
     - 中文
+- name: yanchangyou
+  description: A simple and easy read theme that inspired by Next
+  link: https://github.com/yanchangyou/blog.321zou.com
+  preview: http://blog.321zou.com
+  tags:
+    - simple
+    - easy read
+    - Next
+    - 中文
 - name: Clover
   description: A real simple theme for Hexo.
   link: https://github.com/esappear/hexo-theme-clover
@@ -2364,6 +2374,14 @@
     - light
     - design
     - one_column
+- name: hexo-theme-yinwang
+  description: An imitation of yinwang's blog.
+  link: https://github.com/smallyunet/hexo-theme-yinwang
+  preview: https://blog.smallyu.net
+  tags:
+    - responsive
+    - yinwang
+    - simple
 - name: Sky
   description: a concise theme for hexo
   link: https://github.com/iJinxin/hexo-theme-sky
