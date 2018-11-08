@@ -2,6 +2,8 @@ title: 配置
 ---
 您可以在 `_config.yml` 中修改大部份的配置。
 
+{% youtube 5bL8b5ulUD4 %}
+
 ## 网站
 
 参数 | 描述
