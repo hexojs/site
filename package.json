@@ -15,10 +15,12 @@
     "hexo": "github:hexojs/hexo",
     "hexo-deployer-git": "^0.3.1",
     "hexo-generator-archive": "^0.1.4",
-    "hexo-generator-feed": "^1.1.0",
-    "hexo-generator-sitemap": "^1.1.2",
+    "hexo-generator-feed": "^1.2.2",
+    "hexo-generator-sitemap": "^1.2.0",
+    "hexo-render-pug": "^2.0.0",
     "hexo-renderer-jade": "^0.4.1",
     "hexo-renderer-marked": "^0.2.10",
+    "hexo-renderer-pug": "0.0.5",
     "hexo-renderer-stylus": "^0.3.1",
     "hexo-server": "^0.2.0",
     "lodash": "^4.5.1",
@@ -45,11 +47,14 @@
     "rename": "^1.0.4"
   },
   "husky": {
-    "hooks": {  
+    "hooks": {
       "pre-commit": "lint-staged"
     }
   },
   "lint-staged": {
-    "*.{png,jpeg,jpg,gif,svg}": ["imagemin-lint-staged", "git add"]
+    "*.{png,jpeg,jpg,gif,svg}": [
+      "imagemin-lint-staged",
+      "git add"
+    ]
   }
 }
