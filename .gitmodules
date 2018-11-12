@@ -1,0 +1,3 @@
+[submodule "themes/hexo-hive"]
+  path = themes/hexo-hive
+  url = https://github.com/farnaziifz/hexo-hive.git
