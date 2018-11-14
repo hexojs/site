@@ -2393,7 +2393,7 @@
     - responsive
 - name: Hive
   description: a minimalist theme for hexo
-  link: https://github.com/farnaziifz/hexo-hive
+  link: https://github.com/farnaziifz/hive-hexo
   preview: http://51.68.177.152/
   tags:
     - minimalist
