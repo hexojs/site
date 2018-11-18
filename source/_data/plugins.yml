@@ -2120,3 +2120,10 @@
     - SEO
     - nofollow
     - external
+- name: hexo-graphviz
+  description: Hexo plugin for rendering Graphviz plots
+  link: https://github.com/sounak98/hexo-graphviz
+  tags:
+    - filter
+    - graphviz
+    - graph
