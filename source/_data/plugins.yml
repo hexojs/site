@@ -1322,19 +1322,12 @@
     - code
     - highlight
     - prism.js
-- name: hexo-generator-type
+- name: hexo-generator-type2
   description: clasify hexo site.pages and create pagination list
-  link: https://github.com/callmelanmao/hexo-generator-type
+  link: https://github.com/imcmy/hexo-generator-type2
   tags:
     - generator
     - cliasify
-    - types
-- name: hexo-tag-embed
-  description: Insert an embed tag in your hexo blog.
-  link: https://github.com/brucelin/hexo-tag-embed
-  tags:
-    - tag
-    - embed
     - types
 - name: hexo-hanzi
   description: Postrender your posts with hanzi (漢字標準格式).
@@ -1345,7 +1338,7 @@
     - han-css
 - name: hexo-generator-taxonomy
   description: borrow taxonomy from hugo
-  link: https://github.com/callmelanmao/hexo-generator-taxonomy
+  link: https://www.npmjs.com/package/hexo-generator-taxonomy
   tags:
     - generator
     - taxonomy
@@ -1893,7 +1886,7 @@
 
 - name: hexo-baidu-url-push
   description: A hexo plugin, using Baidu JS automatic link push method, submit links to Baidu
-  link: https://github.com/XmGao/hexo-baidu-url-push
+  link: https://www.npmjs.com/package/hexo-baidu-url-push
   tags:
     - baidu
     - seo
