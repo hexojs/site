@@ -2391,3 +2391,14 @@
     - English
     - concise
     - responsive
+- name: Hive
+  description: a minimalist theme for hexo
+  link: https://github.com/farnaziifz/hive-hexo
+  preview: https://farnaziifz.github.io/
+  tags:
+    - minimalist
+    - English
+    - Persian
+    - Pug
+    - Sass
+    - responsive
