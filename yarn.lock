@@ -3678,9 +3678,9 @@ lru-cache@^4.0.1:
     pseudomap "^1.0.2"
     yallist "^2.1.2"
 
-lunr@2.3.1:
-  version "2.3.1"
-  resolved "https://registry.yarnpkg.com/lunr/-/lunr-2.3.1.tgz#113616a2b602ddc10932a7bf8a4e6e57ebfecdf2"
+lunr@2.3.5:
+  version "2.3.5"
+  resolved "https://registry.yarnpkg.com/lunr/-/lunr-2.3.5.tgz#7b510bad57e948dfb99a71fdff00c1bf9171bdda"
 
 make-iterator@^1.0.0:
   version "1.0.1"
