@@ -11,7 +11,7 @@
     "deploy": "hexo deploy"
   },
   "dependencies": {
-    "cheerio": "^0.20.0",
+    "cheerio": "^0.22.0",
     "hexo": "github:hexojs/hexo",
     "hexo-deployer-git": "^0.3.1",
     "hexo-generator-archive": "^0.1.4",
