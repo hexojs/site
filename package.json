@@ -45,11 +45,14 @@
     "rename": "^1.0.4"
   },
   "husky": {
-    "hooks": {  
+    "hooks": {
       "pre-commit": "lint-staged"
     }
   },
   "lint-staged": {
-    "*.{png,jpeg,jpg,gif,svg}": ["imagemin-lint-staged", "git add"]
+    "*.{png,jpeg,jpg,gif,svg}": [
+      "imagemin-lint-staged",
+      "git add"
+    ]
   }
 }
