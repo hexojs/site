@@ -1,3 +1,15 @@
+
+- name: hexo-theme-Ocean
+  description: Ocean is a mobile-enabled Hexo theme based on the features in Hexo's default theme landscape. 
+  link: https://github.com/zhwangart/hexo-theme-ocean
+  preview: https://zhwangart.github.io/
+  tags:
+    - Ocean
+    - Simple
+    - Light
+    - Gallery
+    - 中文
+
 - name: Gradient
   description: Gradient is clean and modern hexo theme.
   link: https://github.com/RandomAdversary/Gradient
