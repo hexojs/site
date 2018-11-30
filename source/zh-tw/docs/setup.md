@@ -1,5 +1,8 @@
 title: 建立
 ---
+
+{% youtube iJv4N5EdKJ4 %}
+
 一旦 Hexo 完成後，請執行下列指令，Hexo 會在指定資料夾中建立所有您需要的檔案。
 
 ``` bash
