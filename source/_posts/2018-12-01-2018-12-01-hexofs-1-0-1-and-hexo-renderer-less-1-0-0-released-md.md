@@ -2,7 +2,7 @@
 title: Official plugin hexo-fs 1.0.1 & hexo-renderer-less 1.0.0 Released!!
 ---
 
-We released official plugins hexo-fs & hexo-renderer-less new version.
+We released a new version of the official plugins hexo-fs & hexo-renderer-less.
 
 ## hexo-fs 1.0.1
 
