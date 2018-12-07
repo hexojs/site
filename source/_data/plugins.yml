@@ -274,6 +274,14 @@
     - less
     - style
     - css
+- name: hexo-renderer-postcss2
+  description: PostCSS renderer for Hexo.
+  link: https://github.com/chuangker/hexo-renderer-postcss
+  tags:
+    - renderer
+    - postcss
+    - style
+    - css
 - name: hexo-renderer-webpack
   description: Webpack renderer for Hexo.
   link: https://github.com/briangonzalez/hexo-renderer-webpack
