@@ -1,6 +1,20 @@
+- name: BMW
+  description: BMW is not only clean but also very powerful theme.
+  link: https://github.com/dongyuanxin/theme-bmw
+  preview: https://godbmw.com/
+  tags:
+    - fast
+    - powerful
+    - clean
+    - one_column
+    - custom
+    - music
+    - comment
+    - more_plugins
+    - 中文
 
 - name: hexo-theme-Ocean
-  description: Ocean is a mobile-enabled Hexo theme based on the features in Hexo's default theme landscape. 
+  description: Ocean is a mobile-enabled Hexo theme based on the features in Hexo's default theme landscape.
   link: https://github.com/zhwangart/hexo-theme-ocean
   preview: https://zhwangart.github.io/
   tags:
@@ -477,11 +491,11 @@
   link: https://github.com/shuiRong/hexo-theme-Ada
   preview: https://fervent-bell-d9130f.netlify.com/
   tags:
-      - concise
-      - one_column
-      - white
-      - clean
-      - simple
+    - concise
+    - one_column
+    - white
+    - clean
+    - simple
 - name: phase
   description: Feel the flow of time with Phase.
   link: https://github.com/hexojs/hexo-theme-phase
@@ -509,7 +523,7 @@
     - white
     - elegant
 - name: Icarus
-  description: 'A simple, delicate, and modern theme for the static site generator Hexo.'
+  description: "A simple, delicate, and modern theme for the static site generator Hexo."
   link: https://github.com/ppoffice/hexo-theme-icarus
   preview: https://ppoffice.github.io/hexo-theme-icarus
   tags:
@@ -608,7 +622,7 @@
     - tag_plugins
     - elegant
 - name: Tranquilpeak
-  description: 'A gorgeous responsive theme for Hexo blog framework'
+  description: "A gorgeous responsive theme for Hexo blog framework"
   link: https://github.com/LouisBarranqueiro/tranquilpeak-hexo-theme
   preview: http://louisbarranqueiro.github.io/hexo-theme-tranquilpeak
   tags:
@@ -669,21 +683,21 @@
   link: https://github.com/reumia/hexo-theme-zzoman2015
   preview: http://dev.zzoman.com
   tags:
-  - simple
-  - responsive
-  - one_column
-  - korean
+    - simple
+    - responsive
+    - one_column
+    - korean
 - name: Maupassant
   description: A simple Hexo template with great performance on different devices.
   link: https://github.com/tufu9441/maupassant-hexo
   preview: https://www.haomwei.com
   tags:
-  - simple
-  - responsive
-  - two_column
-  - white
-  - jade
-  - scss
+    - simple
+    - responsive
+    - two_column
+    - white
+    - jade
+    - scss
 - name: Jekyll
   description: A Hexo theme inspired by jekyllrb.com.
   link: https://github.com/pinggod/hexo-theme-jekyll
@@ -1144,7 +1158,7 @@
     - Chinese
     - Portuguese
 - name: Overdose
-  description: '⚠ Caution: you could be overdosed with this theme.'
+  description: "⚠ Caution: you could be overdosed with this theme."
   link: https://github.com/HyunSeob/hexo-theme-overdose
   preview: http://hyunseob.github.io/
   tags:
@@ -1509,33 +1523,33 @@
   link: https://github.com/Simlesos/hexo-theme-chord
   preview: https://imhzq.com
   tags:
-  - simple
-  - responsive
-  - white
-  - pug
-  - scss
+    - simple
+    - responsive
+    - white
+    - pug
+    - scss
 - name: another
   description: A pithy and pure Hexo template.
   link: https://github.com/TongchengQiu/hexo-theme-another
   preview: https://blog.qiutc.me
   tags:
-  - simple
-  - pithy
-  - picture
-  - comment
-  - 中文
-  - Chinese
+    - simple
+    - pithy
+    - picture
+    - comment
+    - 中文
+    - Chinese
 - name: icalm
   description: Light and elegant
   link: https://github.com/nameoverflow/hexo-theme-icalm
   preview: https://hcyue.me
   tags:
-  - light
-  - elegant
-  - monochrome
-  - responsive
-  - single page
-  - timeline
+    - light
+    - elegant
+    - monochrome
+    - responsive
+    - single page
+    - timeline
 - name: LanMiao
   description: A Pink and simple hexo theme
   link: https://github.com/hilanmiao/hexo-theme-lanmiao
