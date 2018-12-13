@@ -2,6 +2,8 @@ title: 文件
 ---
 歡迎使用 Hexo，此文件將幫助您快速開始使用。如果您在使用途中遇到任何問題，您可以在 [解決問題](troubleshooting.html) 中找到解答，或者也可以在 [GitHub](https://github.com/hexojs/hexo/issues) 或 [Google Group](https://groups.google.com/group/hexo) 上詢問。
 
+{% youtube bCj0iVVqkSg %}
+
 ## 什麼是 Hexo？
 
 Hexo 是一個快速、簡單且強大的網誌框架。Hexo 使用 [Markdown](http://daringfireball.net/projects/markdown/)（或其他渲染引擎）解析您的文章，並在幾秒鐘內，透過漂亮的主題產生靜態檔案。
