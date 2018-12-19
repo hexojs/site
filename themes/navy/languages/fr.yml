@@ -27,7 +27,7 @@ sidebar:
     migration: Migration
     basic_usage: Utilisation de base
     writing: Écriture
-    front_matter: Matière Première
+    front_matter: Métadonnées
     tag_plugins: Tag Plugins
     asset_folders: Dossier de ressources
     data_files: Fichiers de données
@@ -38,7 +38,7 @@ sidebar:
     permalinks: Permaliens
     themes: Thèmes
     structure: Structure
-    templates: Modèles
+    templates: Gabarits
     variables: Variables
     helpers: Assistants
     internationalization: Internationalisation (i18n)
@@ -50,9 +50,9 @@ sidebar:
     core: Noyau
     overview: Aperçu
     events: Évènements
-    locals: Locals
+    locals: Variables locales
     router: Routeur
-    box: Boîte
+    box: Box
     rendering: Rendu
     posts: Messages
     scaffolds: Échafaudages
