@@ -12,7 +12,7 @@
     - comment
     - more_plugins
     - 中文
-    
+
 - name: hexo-theme-Ocean
   description: Ocean is a mobile-enabled Hexo theme based on the features in Hexo's default theme landscape. 
   link: https://github.com/zhwangart/hexo-theme-ocean
