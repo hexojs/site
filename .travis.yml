@@ -7,12 +7,8 @@ node_js:
 
 cache:
   apt: true
-  yarn: true
   directories:
     - node_modules
-
-install:
-  - yarn install --pure-lockfile
 
 script:
   - npm run eslint
