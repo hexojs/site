@@ -14,7 +14,7 @@
     - 中文
 
 - name: hexo-theme-Ocean
-  description: Ocean is a mobile-enabled Hexo theme based on the features in Hexo's default theme landscape. 
+  description: Ocean is a mobile-enabled Hexo theme based on the features in Hexo's default theme landscape.
   link: https://github.com/zhwangart/hexo-theme-ocean
   preview: https://zhwangart.github.io/
   tags:
@@ -1723,7 +1723,7 @@
 - name: Clexy
   description: Clexy, A clean and elegent theme for Hexo
   link: https://github.com/mkkhedawat/clexy
-  preview: https://mkkhedawat.com/
+  preview: https://mkkhedawat.github.io/
   tags:
     - responsive
     - flexbox
