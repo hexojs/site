@@ -46,7 +46,7 @@ Option | Description
 4. On Github/BitBucket/Gitlab go to your repository settngs and change your main branch from `master` to `published` (or whatever you called it in your _config.yml). Now your site will show as your account's homepage.
 
 ### How does it work exactly?
-Your repository will have a **master** branch when you first made it. Keep working on this branch to create your site. When you deploy Hexo will create, or update, a new branch on the remote site (called **published** in the config above). Deployment won't create a new branch locally, nor will it mess with your existing source code in the master branch locally or on the remote. You still need to keep pushing commits to the master branch manually to the remote server to keep your site backed up.
+Your repository will have a **master** branch when you first made it. Keep working on this branch to create your site. When you deploy Hexo will create, or update, a new branch on the remote site (called **published** in the config above). Deployment won't create a new branch locally, nor will it mess with your existing source code in the master branch locally or on the remote. You still need to keep pushing commits to the master branch manually to the remote server to keep your site backed up. In addition, if you are using a CNAME file to customize your Github Pages domain name, you need to put the CNAME file under `source_dir` so that Hexo can push it to the published branch.
 
 ## Heroku
 
@@ -212,3 +212,4 @@ All generated files are saved in the `public` folder. You can copy them to where
 [hexo-deployer-rsync]: https://github.com/hexojs/hexo-deployer-rsync
 [hexo-deployer-openshift]: https://github.com/hexojs/hexo-deployer-openshift
 [hexo-deployer-ftpsync]: https://github.com/hexojs/hexo-deployer-ftpsync
+[hexo-deployer-sftp]: https://github.com/lucascaro/hexo-deployer-sftp
