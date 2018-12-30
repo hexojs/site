@@ -1,3 +1,12 @@
+- name: zero
+  description: Just for fun.
+  link: https://github.com/loveminimal/hexo-theme-zero
+  preview: https://bebetter.tech/
+  tags:
+    - fast
+    - pure
+    - 中文
+
 - name: BMW
   description: BMW is not only clean but also very powerful theme.
   link: https://github.com/dongyuanxin/theme-bmw
