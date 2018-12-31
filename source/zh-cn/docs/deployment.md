@@ -2,6 +2,8 @@ title: 部署
 ---
 Hexo 提供了快速方便的一键部署功能，让您只需一条命令就能将网站部署到服务器上。
 
+<iframe src="//player.bilibili.com/player.html?aid=39529741&cid=69445520&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+
 ``` bash
 $ hexo deploy
 ```
