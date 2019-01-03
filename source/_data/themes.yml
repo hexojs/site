@@ -1,3 +1,13 @@
+- name: Life
+  description: 记录生活，为写作而生！
+  link: https://github.com/WeicMa/Hexo-Theme-Life
+  preview: https://github.com/WeicMa/Hexo-Theme-Life
+  tags:
+    - 多配色
+    - valine
+    - life
+    - 中文
+
 - name: zero
   description: Just for fun.
   link: https://github.com/loveminimal/hexo-theme-zero
