@@ -685,7 +685,7 @@
     - slider
     - twentytwenty
 - name: hexo-tag-bootstrap
-  description: hexo-tag-bootstrap is a collection of Hexo tag plugins, which wraps most Twitter-Bootstrap 3.1.1 components in a uniform way.
+  description: hexo-tag-bootstrap is a collection of Hexo tag plugins, which wraps most Twitter-Bootstrap 4 components in a uniform way.
   link: https://github.com/wzpan/hexo-tag-bootstrap
   tags:
     - tag_plugins
