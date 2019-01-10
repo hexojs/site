@@ -1,3 +1,15 @@
+- name: Material-T
+  description: Born to be elegant.
+  link: https://github.com/invom/Material-T
+  preview: https://invom.cc
+  tags:
+    - Material Design
+    - responsive
+    - fresh
+    - elegant
+    - chinese
+    - 中文
+
 - name: Life
   description: 记录生活，为写作而生！
   link: https://github.com/WeicMa/Hexo-Theme-Life
