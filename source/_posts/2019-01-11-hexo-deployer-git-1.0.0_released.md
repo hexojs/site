@@ -1,6 +1,6 @@
 ---
 title: Official plugin hexo-deployer-git 1.0.0 Released!!
-date: 2019-01-01 22:13
+date: 2019-01-11 22:13
 ---
 
 We released a new version of the official plugins [hexo-deployer-git](https://github.com/hexojs/hexo-deployer-git)
