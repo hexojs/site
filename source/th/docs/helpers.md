@@ -35,7 +35,7 @@ default  แล้วคุณก็สามารถตั้งค่า opti
 object นั้นจะถูกเปลี่ยนไปเป็น query string
 
 ``` js
-<%- gravatar(email, [options]);
+<%- gravatar(email, [options]) %>
 ```
 
 **ยกตัวอย่างเช่น:**
