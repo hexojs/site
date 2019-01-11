@@ -25,7 +25,7 @@ title: 輔助函數（Helpers）
 插入 Gravatar 圖片。
 
 ``` js
-<%- gravatar(email, [size]);
+<%- gravatar(email, [size]) %>
 ```
 
 **範例：**

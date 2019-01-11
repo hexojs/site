@@ -26,7 +26,7 @@ Gravatar 이미지를 삽입합니다.
 [options] 파라미터를 지정하지 않은 경우, 기본 값이 적용됩니다. [options] 파라미터를 지정할 경우 숫자로 크기를 지정하여 Gravatar에 전달할 수 있습니다. 또 다른 방법으로, object를 설정할 경우 Gravatar를 위한 query string으로 변환됩니다.
 
 ``` js
-<%- gravatar(email, [options]);
+<%- gravatar(email, [options]) %>
 ```
 
 **예시:**

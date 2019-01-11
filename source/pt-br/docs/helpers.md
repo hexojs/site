@@ -31,7 +31,7 @@ Insere uma imagem do Gravatar.
 Se você não especificar o parâmetro [options], as opções padrão serão aplicadas. Caso contrário, você pode configurá-lo para um número que será passado como parâmetro de tamanho para o Gravatar. Finalmente, se você configurá-lo para um objeto, ele será convertido em uma string de consulta de parâmetros para o Gravatar.
 
 ``` js
-<%- gravatar(email, [options]);
+<%- gravatar(email, [options]) %>
 ```
 
 **Exemplos:**
