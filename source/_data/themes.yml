@@ -2447,3 +2447,11 @@
     - Pug
     - Sass
     - responsive
+- name: ANTIQUITY
+  description: A Chinese antiquity theme for Hexo.
+  link: https://github.com/yiluyanxia/hexo-theme-antiquity
+  preview: https://yiluyanxia.site
+  tags:
+    - antiquity
+    - responsive
+    - widget
