@@ -51,7 +51,6 @@
   description: Tencent Cloud Object Storage (COS) plugin of Hexo.
   link: https://github.com/sdlzhd/hexo-deployer-cos
   tags:
-    - official
     - deployer
     - cos
 - name: hexo-tag-cplayer
@@ -616,7 +615,6 @@
   description: Joomla migrator for Hexo.
   link: https://github.com/welksonramos/hexo-migrator-joomla
   tags:
-    - official
     - joomla
     - migrator
 - name: hexo-renderer-yasr
@@ -1619,7 +1617,6 @@
   description: Top and Index generator plugin for Hexo.
   link: https://github.com/amlove2/hexo-generator-topindex
   tags:
-    - official
     - generator
     - index
     - top|置顶
@@ -1909,6 +1906,7 @@
   description: A utility function which helps to inline Font Awesome SVG files.
   link: https://github.com/hexojs/hexo-fontawesome
   tags:
+    - official
     - helper
     - fontawesome
     - awesome
@@ -1936,6 +1934,7 @@
   description: Generate mutliple version of images for responsive blogs.
   link: https://github.com/hexojs/hexo-filter-responsive-images
   tags:
+    - official
     - images
     - responsive
     - resize
@@ -1991,7 +1990,6 @@
   description: this is plugin for hexo to deploy static sites to ipfs network.
   link: https://github.com/IamGabrielWu/hexo-deployer-ipfs
   tags:
-    - official
     - deployer
 - name: hexo-generator-search-zip
   description: Compressed search data (zip) generator for Hexo.
@@ -2018,6 +2016,7 @@
   description: Generate Low-Quality Image Placeholders for lazy loaded images in themes
   link: https://github.com/hexojs/hexo-filter-lqip
   tags:
+    - official
     - images
     - placeholder
     - optimize
