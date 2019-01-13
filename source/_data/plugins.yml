@@ -2134,6 +2134,11 @@
     - filter
     - graphviz
     - graph
+- name: hexo-tag-config
+  description: A hexo tag for insert configuration file values to your post/page
+  link: https://github.com/YoshinoriN/hexo-tag-config
+  tags:
+    - config
 - name: hexo-hook
   description: A webhook plugin for hexo to generate static file when the remote post repository is updated.
   link: https://github.com/alycat-Yan/hexo-hook
