@@ -2467,3 +2467,11 @@
     - antiquity
     - responsive
     - widget
+- name: Sally
+  description: A simple & beautiful theme for Hexo
+  link: https://github.com/Tony5t4rk/hexo-theme-sally
+  preview: https://tony5t4rk.github.io/
+  tags:
+    - simple
+    - beautiful
+    - easy read
