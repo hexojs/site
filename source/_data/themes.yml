@@ -1,3 +1,14 @@
+- name: Mokusei
+  description: A dark theme for Hexo.
+  link: https://github.com/shijuuu/hexo-theme-mokusei
+  preview: https://blog.shijukun.com/
+  tags:
+    - dark
+    - light
+    - widget
+    - three_column
+    - clean
+
 - name: Material-T
   description: Born to be elegant.
   link: https://github.com/invom/Material-T
