@@ -2467,3 +2467,12 @@
     - antiquity
     - responsive
     - widget
+- name: SuperSimplePlus
+  description: A Super Simple Hexo Theme.
+  link: https://github.com/luasenvy/hexo-theme-super-simple-plus
+  preview: https://www.op-src.com/
+  tags:
+    - responsive
+    - minimalist
+    - classic
+    - fast
