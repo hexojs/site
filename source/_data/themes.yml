@@ -2467,3 +2467,13 @@
     - antiquity
     - responsive
     - widget
+- name: Pinghsu
+  description: A light, beautiful and responsive theme for Hexo transplanted from Typecho theme Pinghsu.
+  link: https://github.com/cccyb/hexo-theme-pinghsu
+  preview: https://chenyubo.me
+  tags:
+    - responsive
+    - light
+    - clean
+    - three_column
+    - one_column
