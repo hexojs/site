@@ -2146,3 +2146,16 @@
     - webhook
     - generate
     - git
+- name: hexo-nanoid
+  description: Use popular NanoID to generate abbreviated post links.
+  link: https://github.com/cowsay-blog/hexo-nanoid
+  tags:
+    - permalink
+    - link
+- name: hexo-tag-gdemo
+  description: glorious-demo tag plugin for Hexo
+  link: https://github.com/heowc/hexo-tag-gdemo
+  tags:
+    - tag
+    - demo
+    - glorious-demo
