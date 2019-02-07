@@ -878,7 +878,7 @@
 - name: Primer
   description: Github Style Theme for Hexo
   link: https://github.com/justpsvm/hexo-theme-primer
-  preview: http://justpsvm.github.io/hexo-theme-primer/
+  preview: https://github.la
   tags:
     - simple
     - github
@@ -888,7 +888,7 @@
 - name: varaint
   description: The theme of a minimalist
   link: https://github.com/justpsvm/hexo-theme-varaint
-  preview: http://justpsvm.com/hexo-theme-varaint
+  preview: https://github.la/hexo-theme-varaint
   tags:
     - simple
     - github
@@ -2467,6 +2467,14 @@
     - antiquity
     - responsive
     - widget
+- name: Utone
+  description: A pure and minimalist theme for Hexo.
+  link: https://github.com/shixiaohu2206/hexo-theme-utone
+  preview: https://shixiaohu2206.github.io/
+  tags:
+    - 中文
+    - pure
+    - minimalist
 - name: Amorfati
   description: A responsive simple theme for Hexo.
   link: https://github.com/mulder21c/hexo-theme-amorfati
@@ -2478,4 +2486,4 @@
     - Pug
     - Sass
     - SEO
-    - Simple
+    - Simple    
