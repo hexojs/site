@@ -878,7 +878,7 @@
 - name: Primer
   description: Github Style Theme for Hexo
   link: https://github.com/justpsvm/hexo-theme-primer
-  preview: http://justpsvm.github.io/hexo-theme-primer/
+  preview: https://github.la
   tags:
     - simple
     - github
@@ -888,7 +888,7 @@
 - name: varaint
   description: The theme of a minimalist
   link: https://github.com/justpsvm/hexo-theme-varaint
-  preview: http://justpsvm.com/hexo-theme-varaint
+  preview: https://github.la/hexo-theme-varaint
   tags:
     - simple
     - github
