@@ -1,7 +1,7 @@
 - name: zero
   description: Just for fun.
   link: https://github.com/loveminimal/hexo-theme-zero
-  preview: http://blog.comecow.com/
+  preview: https://blog.comecow.com/
   tags:
     - fast
     - pure
