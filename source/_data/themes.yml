@@ -1,3 +1,14 @@
+- name: Mokusei
+  description: A dark theme for Hexo.
+  link: https://github.com/shijuuu/hexo-theme-mokusei
+  preview: https://blog.shijukun.com/
+  tags:
+    - dark
+    - light
+    - widget
+    - three_column
+    - clean
+
 - name: Material-T
   description: Born to be elegant.
   link: https://github.com/invom/Material-T
@@ -23,7 +34,7 @@
 - name: zero
   description: Just for fun.
   link: https://github.com/loveminimal/hexo-theme-zero
-  preview: https://bebetter.tech/
+  preview: https://blog.comecow.com/
   tags:
     - fast
     - pure
@@ -878,7 +889,7 @@
 - name: Primer
   description: Github Style Theme for Hexo
   link: https://github.com/justpsvm/hexo-theme-primer
-  preview: http://justpsvm.github.io/hexo-theme-primer/
+  preview: https://github.la
   tags:
     - simple
     - github
@@ -888,7 +899,7 @@
 - name: varaint
   description: The theme of a minimalist
   link: https://github.com/justpsvm/hexo-theme-varaint
-  preview: http://justpsvm.com/hexo-theme-varaint
+  preview: https://github.la/hexo-theme-varaint
   tags:
     - simple
     - github
@@ -2476,3 +2487,23 @@
     - minimalist
     - classic
     - fast
+- name: Utone
+  description: A pure and minimalist theme for Hexo.
+  link: https://github.com/shixiaohu2206/hexo-theme-utone
+  preview: https://shixiaohu2206.github.io/
+  tags:
+    - 中文
+    - pure
+    - minimalist
+- name: Amorfati
+  description: A responsive simple theme for Hexo.
+  link: https://github.com/mulder21c/hexo-theme-amorfati
+  preview: https://mulder21c.github.io/hexo-theme-amorfati/
+  tags:
+    - Responsive
+    - Korean
+    - 한국어
+    - Pug
+    - Sass
+    - SEO
+    - Simple    

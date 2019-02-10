@@ -2152,3 +2152,26 @@
   tags:
     - permalink
     - link
+- name: hexo-tag-gdemo
+  description: glorious-demo tag plugin for Hexo
+  link: https://github.com/heowc/hexo-tag-gdemo
+  tags:
+    - tag
+    - demo
+    - glorious-demo
+- name: hexo-oembed
+  description: embed oEmbed item on your Hexo article.
+  link: https://github.com/hinastory/hexo-oembed
+  tags:
+    - tag
+    - oembed
+    - youtube
+    - slideshare
+    - speakerdeck
+    - twitter
+    - vimeo
+    - codepen
+    - pixiv
+    - instagram
+    - flickr
+    - gyazo

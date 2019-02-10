@@ -16,12 +16,13 @@ Argument | Description
 `output` | Output filename extension (lower case, without leading `.`)
 `sync` | Sync mode
 
-Two arguments will be passed into the render function:
+Three arguments will be passed into the render function:
 
 Argument | Description
 --- | ---
 `data` | Include two attributes: file path `path` and file content `text`. `path` won't necessarily exist.
 `option` | Options
+`callback` | Callback function of two parameters `err`, `value`.
 
 ## Example
 
