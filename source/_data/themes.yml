@@ -2486,3 +2486,15 @@
     - 中文
     - pure
     - minimalist
+- name: Amorfati
+  description: A responsive simple theme for Hexo.
+  link: https://github.com/mulder21c/hexo-theme-amorfati
+  preview: https://mulder21c.github.io/hexo-theme-amorfati/
+  tags:
+    - Responsive
+    - Korean
+    - 한국어
+    - Pug
+    - Sass
+    - SEO
+    - Simple    
