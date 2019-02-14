@@ -2507,3 +2507,12 @@
     - Sass
     - SEO
     - Simple    
+- name: Fan
+  description: A dark theme for Hexo.
+  link: https://github.com/fan-lv/Fan
+  preview: https://www.lvfan.xyz/
+  tags:
+    - 中文
+    - dark
+    - Pug
+    - Stylus
