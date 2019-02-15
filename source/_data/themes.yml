@@ -2507,3 +2507,12 @@
     - Sass
     - SEO
     - Simple    
+- name: Notebook
+  description: A pure theme put your articles in order.
+  link: https://github.com/ufresh2013/hexo-theme-notebook
+  preview: https://ufresh2013.github.io/
+  tags:
+    - responsive
+    - pure
+    - categories
+    - search
