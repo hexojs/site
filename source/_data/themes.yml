@@ -2507,7 +2507,7 @@
     - Sass
     - SEO
     - Simple    
-- name: Snark
+- name: snark
   description: A dark theme with lofter style for Hexo.
   link: https://github.com/Litreily/hexo-theme-snark
   preview: https://www.litreily.top/
