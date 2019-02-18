@@ -2507,3 +2507,14 @@
     - Sass
     - SEO
     - Simple    
+- name: Tsu
+  description: A light and simple theme for Hexo.
+  link: https://github.com/zjx137/hexo-theme-Tsu
+  preview: https://zjx137.github.io/
+  tags:
+    - simple
+    - responsive
+    - widget
+    - two_column
+    - light
+    - 中文
