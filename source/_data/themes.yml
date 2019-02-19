@@ -2506,7 +2506,16 @@
     - Pug
     - Sass
     - SEO
-    - Simple    
+    - Simple
+- name: Fan
+  description: A dark theme for Hexo.
+  link: https://github.com/fan-lv/Fan
+  preview: https://www.lvfan.xyz/
+  tags:
+    - 中文
+    - dark
+    - Pug
+    - Stylus
 - name: snark
   description: A dark theme with lofter style for Hexo.
   link: https://github.com/Litreily/hexo-theme-snark
