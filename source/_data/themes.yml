@@ -1,3 +1,12 @@
+- name: mintin
+  description: A simple them for hexo.
+  link: https://github.com/kevinjobs/hexo-theme-mintin
+  preview: https://kevinjobs.github.io/
+  tags:
+    - simple
+    - light
+    - clean
+
 - name: Mokusei
   description: A dark theme for Hexo.
   link: https://github.com/shijuuu/hexo-theme-mokusei
