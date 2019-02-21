@@ -2506,7 +2506,7 @@
     - Pug
     - Sass
     - SEO
-    - Simple    
+    - Simple
 - name: Tsu
   description: A light and simple theme for Hexo.
   link: https://github.com/zjx137/hexo-theme-Tsu
@@ -2518,3 +2518,21 @@
     - two_column
     - light
     - 中文
+- name: Fan
+  description: A dark theme for Hexo.
+  link: https://github.com/fan-lv/Fan
+  preview: https://www.lvfan.xyz/
+  tags:
+    - 中文
+    - dark
+    - Pug
+    - Stylus
+- name: snark
+  description: A dark theme with lofter style for Hexo.
+  link: https://github.com/Litreily/hexo-theme-snark
+  preview: https://www.litreily.top/
+  tags:
+    - responsive
+    - simple
+    - cool
+    - lightweight
