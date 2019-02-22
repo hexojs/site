@@ -30,7 +30,7 @@ Site [configuration](configuration.html) file. You can configure most settings h
 
 ### package.json
 
-Application data. The [EJS](http://embeddedjs.com/), [Stylus](http://learnboost.github.io/stylus/) and [Markdown](http://daringfireball.net/projects/markdown/) renderers are installed by default. If you want, you can uninstall them later.
+Application data. The [EJS](https://www.ejs.co/), [Stylus](http://learnboost.github.io/stylus/) and [Markdown](http://daringfireball.net/projects/markdown/) renderers are installed by default. If you want, you can uninstall them later.
 
 ``` json package.json
 {
