@@ -30,7 +30,7 @@ $ npm install
 
 ### package.json
 
-應用程式資料。[EJS](http://embeddedjs.com/), [Stylus](http://learnboost.github.io/stylus/) 和 [Markdown](http://daringfireball.net/projects/markdown/) renderer 已預設安裝，您可以稍後移除。
+應用程式資料。[EJS](https://www.ejs.co/), [Stylus](http://learnboost.github.io/stylus/) 和 [Markdown](http://daringfireball.net/projects/markdown/) renderer 已預設安裝，您可以稍後移除。
 
 ``` json package.json
 {
