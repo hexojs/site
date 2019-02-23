@@ -31,7 +31,7 @@ $ npm install
 
 ### package.json
 
-ข้อมูลของแอป. renderer ของ [EJS](http://embeddedjs.com/)  [Stylus](http://learnboost.github.io/stylus/) และ  [Markdown](http://daringfireball.net/projects/markdown/) 
+ข้อมูลของแอป. renderer ของ [EJS](https://www.ejs.co/)  [Stylus](http://learnboost.github.io/stylus/) และ  [Markdown](http://daringfireball.net/projects/markdown/) 
 จะติดตั้ง by default คุณสามารถลยออก renderer พวกนี้ได้ในเวลาภายหลัง
 
 ``` json package.json
