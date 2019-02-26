@@ -544,12 +544,22 @@ Option | Description | Default
 `min_font` | Minimal font size | 10
 `max_font` | Maximum font size | 20
 `unit` | Unit of font size | px
-`amount` | Total amount of tags | 40
+`amount` | Total amount of tags | unlimited
 `orderby` | Order of tags | name
 `order` | Sort order. `1`, `sac` as ascending; `-1`, `desc` as descending | 1
 `color` | Colorizes the tag cloud | false
 `start_color` | Start color. You can use hex (`#b700ff`), rgba (`rgba(183, 0, 255, 1)`), hsla (`hsla(283, 100%, 50%, 1)`) or [color keywords]. This option only works when `color` is true. |
 `end_color` | End color. You can use hex (`#b700ff`), rgba (`rgba(183, 0, 255, 1)`), hsla (`hsla(283, 100%, 50%, 1)`) or [color keywords]. This option only works when `color` is true. |
+
+**Examples:**
+
+``` js
+// Default options
+<%- tagcloud() %>
+
+// Limit number of tags to 30
+<%- tagcloud({amount: 30}) %>
+```
 
 ## Miscellaneous
 
