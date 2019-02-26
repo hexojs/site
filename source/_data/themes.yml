@@ -52,7 +52,7 @@
 - name: BMW
   description: BMW is not only clean but also very powerful theme.
   link: https://github.com/dongyuanxin/theme-bmw
-  preview: https://godbmw.com/
+  preview: https://godbmw.com/theme-bmw/
   tags:
     - fast
     - powerful
@@ -2545,3 +2545,16 @@
     - simple
     - cool
     - lightweight
+- name: AD
+  description: Art Design is a modern theme for current screen and browser. It supports to lock passage without plugins!
+  link: https://github.com/dongyuanxin/theme-ad
+  preview: https://godbmw.com/
+  tags:
+    - modern
+    - art
+    - social
+    - custom
+    - multi_column
+    - mobile
+    - secrecy
+    - 中文
