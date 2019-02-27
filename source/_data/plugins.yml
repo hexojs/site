@@ -1,5 +1,5 @@
 - name: hexo-tag-nomnoml
-  description: Draw UML and other diagrams using the nomnoml syntax
+  description: Draw UML and other diagrams using the nomnoml syntax.
   link: https://github.com/TobiasNickel/hexo-tag-nomnoml
   tags:
     - diagram
