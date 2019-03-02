@@ -1,3 +1,8 @@
+- name: hexo-twitter-auto-publish
+  description: Auto publish posts and pages on Twitter.
+  link: https://github.com/studioLaCosaNostra/hexo-twitter-auto-publish
+  tags:
+    - twitter
 - name: hexo-tag-nomnoml
   description: Draw UML and other diagrams using the nomnoml syntax.
   link: https://github.com/TobiasNickel/hexo-tag-nomnoml
