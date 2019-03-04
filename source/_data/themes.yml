@@ -315,7 +315,7 @@
 - name: mdui
   description: A google plus like theme
   link: https://github.com/Halyul/hexo-theme-mdui
-  preview: https://blog.halyul.com
+  preview: https://github.com/Halyul/hexo-theme-mdui
   tags:
     - material design
     - mdui
