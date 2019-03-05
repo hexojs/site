@@ -1643,7 +1643,7 @@
 - name: Xups
   description: A simple and flat theme
   link: https://github.com/jangdelong/hexo-theme-xups
-  preview: http://jelon.top/
+  preview: https://jelon.info/
   tags:
     - xups
     - flat
