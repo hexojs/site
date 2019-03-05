@@ -25,28 +25,28 @@ deploy:
 
 ## Git
 
-Install [hexo-deployer-git].
-
+1. Install [hexo-deployer-git].
 ``` bash
 $ npm install hexo-deployer-git --save
 ```
-
-Edit settings.
-
-``` yaml
+2. Edit **_config.yml** (with example values shown below as comments):
+```yaml
 deploy:
-  type: git
-  repo: <repository url>
-  branch: [branch]
-  message: [message]
+  type: git   
+  repo: <repository url>  #https://bitbucket.org/JohnSmith/johnsmith.bitbucket.io
+  branch: [branch] #published
+  message: [message]  #leave this blank
 ```
-
 Option | Description
 --- | ---
 `repo` | GitHub/Bitbucket/Coding/GitLab repository URL
 `branch` | Branch name. The deployer will detect the branch automatically if you are using GitHub or GitCafe.
 `message` | Customize commit message (Default to `Site updated: {% raw %}{{ now('YYYY-MM-DD HH:mm:ss') }}{% endraw %}`)
+3. Upload your site: `./node_modules/.bin/hexo clean && ./node_modules/.bin/hexo deploy` (or `hexo clean && hexo deploy` if you installed Hexo globally).
+4. On Github/BitBucket/Gitlab go to your repository settngs and change your main branch from `master` to `published` (or whatever you called it in your _config.yml). Now your site will show as your account's homepage.
 
+### How does it work exactly?
+Your repository will have a **master** branch when you first made it. Keep working on this branch to create your site. When you deploy Hexo will create, or update, a new branch on the remote site (called **published** in the config above). Deployment won't create a new branch locally, nor will it mess with your existing source code in the master branch locally or on the remote. You still need to keep pushing commits to the master branch manually to the remote server to keep your site backed up. In addition, if you are using a CNAME file to customize your Github Pages domain name, you need to put the CNAME file under `source_dir` so that Hexo can push it to the published branch.
 
 ## Heroku
 
@@ -69,6 +69,17 @@ Option | Description
 --- | ---
 `repo`, `repository` | Heroku repository URL
 `message` | Customize commit message (Default to `Site updated: {% raw %}{{ now('YYYY-MM-DD HH:mm:ss') }}{% endraw %}`)
+
+## Netlify
+
+[Netlify](https://www.netlify.com/) provides continuous deployment (Git-triggered builds), an intelligent global CDN, full DNS (including custom domains), automated HTTPS, asset acceleration, and a lot more. It is a unified platform that automates your code to create high-performant, easily maintainable sites and web apps.
+
+There are two different ways to deploy your sites on Netlify. The most common way is to use the web UI. Go to the [create a new site page](https://app.netlify.com/start), select your project repo from GitHub, GitLab, or Bitbucket, and follow the prompts.
+
+Alternatively, you can use Netlify's [Node based CLI](https://www.netlify.com/docs/cli/) tool to manage and deploy sites on Netlify without leaving your terminal.
+
+You can also add a [Deploy to Netlify Button](https://www.netlify.com/docs/deploy-button/) in your README.file to allow others to create a copy of your repository and be deployed to Netlify via one click.
+
 
 ## Rsync
 
@@ -179,7 +190,6 @@ deploy:
   privateKey: [path/to/privateKey]
   passphrase: [passphrase]
   agent: [path/to/agent/socket]
-  remotePath: [remotePath]
 ```
 
 Option | Description | Default
@@ -202,3 +212,4 @@ All generated files are saved in the `public` folder. You can copy them to where
 [hexo-deployer-rsync]: https://github.com/hexojs/hexo-deployer-rsync
 [hexo-deployer-openshift]: https://github.com/hexojs/hexo-deployer-openshift
 [hexo-deployer-ftpsync]: https://github.com/hexojs/hexo-deployer-ftpsync
+[hexo-deployer-sftp]: https://github.com/lucascaro/hexo-deployer-sftp

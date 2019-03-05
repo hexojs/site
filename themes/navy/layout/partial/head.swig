@@ -43,6 +43,11 @@
   }) }}
   <!-- Google Analytics -->
   {{ partial('google_analytics') }}
-  <!-- Github Button -->
-  <script async defer src="https://buttons.github.io/buttons.js"></script>
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script>
+     (adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: "ca-pub-6482217598104186",
+          enable_page_level_ads: true
+     });
+  </script>
 </head>

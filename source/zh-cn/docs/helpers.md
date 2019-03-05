@@ -26,7 +26,7 @@ title: 辅助函数（Helpers）
 如果你不指定 `options` 参数，将会应用默认参数。否则，你可以将其设置为一个数字，这个数字将会作为 Gravatar 的大小参数。最后，如果你设置它一个对象，它将会被转换为 Gravatar 的一个查询字符串参数。
 
 ``` js
-<%- gravatar(email, [options]);
+<%- gravatar(email, [options]) %>
 ```
 
 **示例：**

@@ -11,3 +11,9 @@ ru:
 ko:
   name: 한국어
   disqus_lang: ko
+pt-br:
+  name: Português (Brasil)
+  disqus_lang: pt-br
+th:
+  name: ภาษาไทย
+  disqus_lang: th

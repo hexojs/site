@@ -1,5 +1,8 @@
 title: 建立
 ---
+
+{% youtube iJv4N5EdKJ4 %}
+
 一旦 Hexo 完成後，請執行下列指令，Hexo 會在指定資料夾中建立所有您需要的檔案。
 
 ``` bash
@@ -15,7 +18,6 @@ $ npm install
 ├── _config.yml
 ├── package.json
 ├── scaffolds
-├── scripts
 ├── source
 |   ├── _drafts
 |   └── _posts
@@ -28,7 +30,7 @@ $ npm install
 
 ### package.json
 
-應用程式資料。[EJS](http://embeddedjs.com/), [Stylus](http://learnboost.github.io/stylus/) 和 [Markdown](http://daringfireball.net/projects/markdown/) renderer 已預設安裝，您可以稍後移除。
+應用程式資料。[EJS](https://www.ejs.co/), [Stylus](http://learnboost.github.io/stylus/) 和 [Markdown](http://daringfireball.net/projects/markdown/) renderer 已預設安裝，您可以稍後移除。
 
 ``` json package.json
 {
@@ -55,10 +57,6 @@ $ npm install
 ### scaffolds
 
 [鷹架](writing.html#鷹架（Scaffold）) 資料夾。當您建立新文章時，Hexo 會根據 scaffold 來建立檔案。
-
-### scripts
-
-[腳本](plugins.html#腳本（Scripts）) 資料夾。腳本是擴充 Hexo 的最簡易方式，在此資料夾內的 JavaScript 檔案會被自動執行。
 
 ### source
 

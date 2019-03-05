@@ -2,6 +2,10 @@ title: Helpers
 ---
 Helpers are used in templates to help you insert snippets quickly.  Helpers cannot be used in source files.
 
+You could easily [write your own custom helper](https://hexo.io/api/helper.html) or use our ready-made helpers.
+
+{% youtube Uc53pW0GJHU %}
+
 ## URL
 
 ### url_for
@@ -26,7 +30,7 @@ Inserts a Gravatar image.
 If you don't specify the [options] parameter, the default options will apply. Otherwise, you can set it to a number which will then be passed on as the size parameter to Gravatar. Finally, if you set it to an object, it will be converted into a query string of parameters for Gravatar.
 
 ``` js
-<%- gravatar(email, [options]);
+<%- gravatar(email, [options]) %>
 ```
 
 **Examples:**
@@ -486,7 +490,7 @@ Option | Description | Default
 `style` | Style to display the tag list. `list` displays tags in an unordered list.  | list
 `separator` | Separator between categories. (Only works if `style` is not `list`) | ,
 `class` | Class name of tag list. | tag
-`transform` | The function that changes the display of category name. |
+`transform` | The function that changes the display of tag name. |
 `amount` | The number of tags to display (0 = unlimited) | 0
 `suffix` | Add a suffix to link. | None
 
@@ -540,12 +544,22 @@ Option | Description | Default
 `min_font` | Minimal font size | 10
 `max_font` | Maximum font size | 20
 `unit` | Unit of font size | px
-`amount` | Total amount of tags | 40
+`amount` | Total amount of tags | unlimited
 `orderby` | Order of tags | name
 `order` | Sort order. `1`, `sac` as ascending; `-1`, `desc` as descending | 1
 `color` | Colorizes the tag cloud | false
 `start_color` | Start color. You can use hex (`#b700ff`), rgba (`rgba(183, 0, 255, 1)`), hsla (`hsla(283, 100%, 50%, 1)`) or [color keywords]. This option only works when `color` is true. |
 `end_color` | End color. You can use hex (`#b700ff`), rgba (`rgba(183, 0, 255, 1)`), hsla (`hsla(283, 100%, 50%, 1)`) or [color keywords]. This option only works when `color` is true. |
+
+**Examples:**
+
+``` js
+// Default options
+<%- tagcloud() %>
+
+// Limit number of tags to 30
+<%- tagcloud({amount: 30}) %>
+```
 
 ## Miscellaneous
 
@@ -653,6 +667,7 @@ Option | Description | Default
 --- | --- | ---
 `class` | Class name | toc
 `list_number` | Displays list number | true
+`max_depth` | Maximum heading depth of generated toc | 6
 
 **Examples:**
 

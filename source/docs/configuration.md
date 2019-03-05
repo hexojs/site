@@ -35,9 +35,9 @@ Setting | Description | Default
 `tag_dir` | Tag directory | `tags`
 `archive_dir` | Archive directory | `archives`
 `category_dir` | Category directory | `categories`
-`code_dir` | Include code directory | `downloads/code`
+`code_dir` | Include code directory (subdirectory of `source_dir`) | `downloads/code`
 `i18n_dir` | i18n directory | `:lang`
-`skip_render` | Paths not to be rendered. You can use [glob expressions](https://github.com/isaacs/minimatch) for path matching |
+`skip_render` | Paths that will be copied to `public` raw, without being rendered. You can use [glob expressions](https://github.com/isaacs/minimatch) for path matching.<br /><br />For example, `skip_render: mypage/**/*` will output `source/mypage/index.html` and `source/mypage/code.js` without altering them. |
 
 ### Writing
 
@@ -46,7 +46,7 @@ Setting | Description | Default
 `new_post_name` | The filename format for new posts | `:title.md`
 `default_layout` | Default layout | `post`
 `titlecase` | Transform titles into title case? | `false`
-`external_link` | Open external links in new tab? | `true`
+`external_link` | Open external links in a new tab? | `true`
 `filename_case` | Transform filenames to `1` lower case; `2` upper case | `0`
 `render_drafts` | Display drafts? | `false`
 `post_asset_folder` | Enable the [Asset Folder](asset-folders.html)? | `false`
@@ -75,7 +75,7 @@ Setting | Description | Default
 
 Setting | Description | Default
 --- | --- | ---
-`per_page` | The amount of the posts displayed on a single page. `0` disables pagination | `10`
+`per_page` | The amount of posts displayed on a single page. `0` disables pagination | `10`
 `pagination_dir` | Pagination directory | `page`
 
 ### Extensions
@@ -83,7 +83,27 @@ Setting | Description | Default
 Setting | Description
 --- | ---
 `theme` | Theme name. `false` disables theming
-`deploy` | Deployment setting
+`theme_config` | Theme configuration. Include any custom theme settings under this key to override theme defaults.
+`deploy` | Deployment settings
+
+
+### Include/Exclude Files or Folders
+
+In the config file, set the include/exclude key to make hexo explicitly process or ignore certain files/folders.
+
+Setting | Description
+--- | ---
+`include` | Hexo by default ignores hidden files and folders, but setting this field will make Hexo process them
+`exclude` | Hexo process will ignore files list under this field
+
+Sample:
+```yaml
+# Include/Exclude Files/Folders
+include:
+  - .nojekyll
+exclude:
+  - .DS_Store
+```
 
 ### Using an Alternate Config
 
@@ -100,3 +120,32 @@ $ hexo server --config custom.yml,custom2.json
 Using multiple files combines all the config files and saves the merged settings to `_multiconfig.yml`. The later values take precedence. It works with any number of JSON and YAML files with arbitrarily deep objects. Note that **no spaces are allowed in the list**.
 
 For instance, in the above example if `foo: bar` is in `custom.yml`, but `"foo": "dinosaur"` is in `custom2.json`, `_multiconfig.yml` will contain `foo: dinosaur`.
+
+### Overriding Theme Config
+
+Hexo themes are independent projects, with separate `_config.yml` files.
+
+Instead of forking a theme, and maintaining a custom branch with your settings, you can configure it from your site's primary configuration file.
+
+Example configuration:
+
+```yml
+# _config.yml
+theme_config:
+  bio: "My awesome bio"
+```
+
+```yml
+# themes/my-theme/_config.yml
+bio: "Some generic bio"
+logo: "a-cool-image.png"
+```
+
+Resulting theme configuration:
+
+```json
+{
+  bio: "My awesome bio",
+  logo: "a-cool-image.png"
+}
+```

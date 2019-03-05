@@ -1,0 +1,11 @@
+{
+  "extends": "hexo",
+  "root": true,
+  "rules": {
+    "strict": "off",
+    "node/no-unpublished-require": "off"
+  },
+  "env": {
+    "browser": true
+  }
+}

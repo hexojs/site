@@ -87,6 +87,6 @@ Hello {{ sensitive }}
 {% endraw %}
 ```
 
-[Warehouse]: https://github.com/tommy351/warehouse
+[Warehouse]: https://github.com/hexojs/warehouse
 [Swig]: http://paularmstrong.github.io/swig/
 [Nunjucks]: http://mozilla.github.io/nunjucks/

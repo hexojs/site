@@ -6,6 +6,8 @@ Assets are non-post files in the `source` folder, such as images, CSS or JavaScr
 
 ## Post Asset Folder
 
+{% youtube feIDVQ2tz0o %}
+
 For users who expect to regularly serve images and/or other assets, and for those who prefer to separate their assets on a post-per-post basis, Hexo also provides a more organized way to manage assets. This slightly more involved, but very convenient approach to asset management can be turned on by setting the `post_asset_folder` setting in `_config.yml` to true.
 
 ``` yaml _config.yml

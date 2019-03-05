@@ -28,6 +28,8 @@ Option | Description
 --- | ---
 `-d`, `--deploy` | Deploy after generation finishes
 `-w`, `--watch` | Watch file changes
+`-b`, `--bail` | Raise an error if any unhandled exception is thrown during generation
+`-f`, `--force` | Force regenerate
 
 ## publish
 

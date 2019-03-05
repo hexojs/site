@@ -38,8 +38,30 @@ new_post_name: :year-:month-:day-:title.md
 $ npm install hexo-migrator-wordpress --save
 ```
 
-一旦外掛安裝完成，執行下列指令來轉移所有文章。`source` 可以是檔案路徑或網址。
+由 WordPress 儀表板的 "工具" → "匯出" → "WordPress" 匯出網站資料 (詳情請參見 [WordPress 支援頁](http://en.support.wordpress.com/export/))。
+
+接著執行：
 
 ``` bash
 $ hexo migrate wordpress <source>
 ```
+
+`source` 為 WordPress 匯出檔案的路徑或網址：
+
+## Joomla
+
+首先，安裝 `hexo-migrator-joomla` 外掛
+
+```bash
+$ npm install hexo-migrator-joomla --save
+```
+
+並使用 [J2XML](http://extensions.joomla.org/extensions/migration-a-conversion/data-import-a-export/12816?qh=YToxOntpOjA7czo1OiJqMnhtbCI7fQ%3D%3D) 元件匯出你的 Joomla 文章。
+
+接著執行：
+
+```bash
+$ hexo migrate joomla <source>
+```
+
+`source` 為 Joomla 匯出檔案的路徑或網址。

@@ -1,5 +1,8 @@
 title: Front-matter
 ---
+
+{% youtube pfD6FCZdW4Q %}
+
 Front-matter is a block of YAML or JSON at the beginning of the file that is used to configure settings for your writings. Front-matter is terminated by three dashes when written in YAML or three semicolons when written in JSON.
 
 **YAML**
@@ -43,4 +46,16 @@ tags:
 - Injury
 - Fight
 - Shocking
+```
+
+If you want to apply multiple category hierarchies, use a list of names instead of a single name. If Hexo sees any categories defined this way on a post, it will treat each category for that post as its own independent hierarchy.
+
+**Example**
+
+``` yaml
+categories:
+- [Sports, Baseball]
+- [MLB, American League, Boston Red Sox]
+- [MLB, American League, New York Yankees]
+- Rivalries
 ```

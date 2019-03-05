@@ -1,3 +1,33 @@
 [build]
-  command = "hexo generate"
+  command = "npm run build"
   publish = "/public"
+
+[[redirects]]
+  from = "/"
+  to = "/zh-tw/"
+  status = 302
+  conditions = {Language = ["zh-tw", "zh-hk"]}
+
+[[redirects]]
+  from = "/"
+  to = "/zh-cn/"
+  status = 302
+  conditions = {Language = ["zh", "zh-cn"]}
+
+[[redirects]]
+  from = "/"
+  to = "/ru/"
+  status = 302
+  conditions = {Language = ["ru"]}
+
+[[redirects]]
+  from = "/"
+  to = "/ko/"
+  status = 302
+  conditions = {Language = ["ko"]}
+
+[[redirects]]
+  from = "/"
+  to = "/pt-br/"
+  status = 302
+  conditions = {Language = ["pt-br"]}

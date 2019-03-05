@@ -48,6 +48,7 @@ Increase Node.js heap memory size by changing the first line of `hexo-cli` (`whi
 
 ## Git Deployment Problems
 
+### RPC failed
 ``` plain
 error: RPC failed; result=22, HTTP code = 403
 
@@ -55,6 +56,19 @@ fatal: 'username.github.io' does not appear to be a git repository
 ```
 
 Make sure you have [set up git](https://help.github.com/articles/set-up-git) on your computer properly or try to use HTTPS repository URL instead.
+
+### Error: ENOENT: no such file or directory
+If you get an error like `Error: ENOENT: no such file or directory` it's probably due to to mixing uppercase and lowercase letters in your tags, categories, or filenames. Git cannot automatically merge this change so it breaks the automatic branching.
+
+To fix this, try
+1. Check every tag's and category's case and make sure they are the same.
+1. Commit
+1. Clean and build: `./node_modules/.bin/hexo clean && ./node_modules/.bin/hexo generate`
+1. Manually copy the public folder to your desktop
+1. Switch branch from your master branch to your deployment branch locally
+1. Copy the contents of the public folder from your desktop into the deployment branch
+1. Commit. You should see any merge conflicts appear that you can manually resolve.
+1. Switch back to your master branch and deploy normally: `./node_modules/.bin/hexo deploy`
 
 ## Server Problems
 
@@ -161,7 +175,7 @@ Sometimes when running the command `$ hexo generate` it returns an error:
 FATAL Something's wrong. Maybe you can find the solution here: http://hexo.io/docs/troubleshooting.html
 Template render error: (unknown path)
 ```
-It means that there are some unrecognizable words in your file.There are two possibilities One is your new page/post, and the other one is `_config.yml`.
+It means that there are some unrecognizable words in your file, e.g. invisible zero width characters. There are two possibilities One is your new page/post, and the other one is `_config.yml`.
 In `_config.yml`, don't forget add whitespace before a list in hash. There is the wiki page about [YAML](https://en.wikipedia.org/wiki/YAML).
 The error one:
 ```
@@ -176,6 +190,6 @@ plugins:
   - hexo-generator-sitemap
 ```
 
-[Warehouse]: https://github.com/tommy351/warehouse
+[Warehouse]: https://github.com/hexojs/warehouse
 [Swig]: http://paularmstrong.github.io/swig/
 [Nunjucks]: http://mozilla.github.io/nunjucks/

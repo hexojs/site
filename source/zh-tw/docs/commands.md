@@ -1,5 +1,8 @@
 title: 指令
 ---
+
+{% youtube bJBsW4b5WME %}
+
 ## init
 
 ``` bash
@@ -43,7 +46,7 @@ $ hexo publish [layout] <filename>
 $ hexo server
 ```
 
-啟動伺服器。
+啟動伺服器，預設是 `http://localhost:4000/`。
 
 選項 | 描述
 --- | ---
@@ -66,7 +69,7 @@ $ hexo deploy
 ## render
 
 ``` bash
-$ hexo render <file> ...
+$ hexo render <file> [file2] ...
 ```
 
 渲染檔案。
@@ -133,13 +136,17 @@ $ hexo --silent
 
 隱藏終端機的訊息。
 
-### 自定配置檔的路徑
+### 自訂配置檔的路徑
 
 ``` bash
 $ hexo --config custom.yml
 ```
 
-自訂配置檔的路徑而不是使用 `_config.yml`。
+自訂配置檔的路徑而不是使用 `_config.yml`。此參數也接受以逗號分隔的 JSON 或 YAML 檔列表字串 (不得含有空格)，它們將會被合併產生一個 `_multiconfig.yml`。
+
+``` bash
+$ hexo --config custom.yml,custom2.json
+```
 
 ### 顯示草稿
 
@@ -155,4 +162,4 @@ $ hexo --draft
 $ hexo --cwd /path/to/cwd
 ```
 
-自定目前工作目錄（Current working directory）的路徑。
+自訂目前工作目錄（Current working directory）的路徑。

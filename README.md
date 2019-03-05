@@ -2,7 +2,7 @@
 <!-- Markdown snippet -->
 [![Build Status](https://travis-ci.org/hexojs/site.svg?branch=master)](https://travis-ci.org/hexojs/site)
 
-The website for Hexo. You can see the generated files at [hexojs/hexojs.github.io](https://github.com/hexojs/hexojs.github.io) repository.
+The website for Hexo.
 
 ## Getting started
 
@@ -33,6 +33,8 @@ $ hexo server
 - 简体中文 - [pinggod](https://github.com/pinggod), [Xuanwo](https://github.com/Xuanwo)
 - Русский - [twirlfog](https://github.com/twirlfog)
 - 한국어 - [lazyrodi](https://github.com/lazyrodi)
+- Deutschland - [philippnagel](https://github.com/philippnagel)
+- Portuguese (Brazilian) - [lucianobarauna](https://github.com/lucianobarauna), [ramonsantos](https://github.com/ramonsantos), [MathMesquita](https://github.com/MathMesquita), [pedrorezende](https://github.com/pedrorezende), [gregoryfm](https://github.com/gregoryfm)
 
 ## License
 

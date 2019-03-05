@@ -1,0 +1,69 @@
+menu:
+  docs: Docs
+  api: API
+  news: Nouvelles
+  plugins: Plugins
+  themes: Thèmes
+  search: Chercher
+
+index:
+  get_started: Commençer
+
+page:
+  contents: Contenus
+  back_to_top: Retour au début
+  improve: Améliorer ce document
+  prev: Précédent
+  next: Suivant
+  last_updated: "Dernière mise à jour : %s"
+
+sidebar:
+  docs:
+    getting_started: Premier pas
+    overview: Vue d'ensemble
+    setup: Installation
+    configuration: Configuration
+    commands: Commandes
+    migration: Migration
+    basic_usage: Utilisation de base
+    writing: Écriture
+    front_matter: Métadonnées
+    tag_plugins: Tag Plugins
+    asset_folders: Dossier de ressources
+    data_files: Fichiers de données
+    server: Serveur
+    generating: Génération
+    deployment: Déploiement
+    customization: Personnalisation
+    permalinks: Permaliens
+    themes: Thèmes
+    structure: Structure
+    templates: Gabarits
+    variables: Variables
+    helpers: Assistants
+    internationalization: Internationalisation (i18n)
+    plugins: Plugins
+    miscellaneous: Divers
+    troubleshooting: Dépannage
+    contributing: Contribuer
+  api:
+    core: Noyau
+    overview: Aperçu
+    events: Évènements
+    locals: Variables locales
+    router: Routeur
+    box: Box
+    rendering: Rendu
+    posts: Messages
+    scaffolds: Échafaudages
+    themes: Thèmes
+    extensions: Extensions
+    console: Console
+    deployer: Déployer
+    filter: Filtre
+    generator: Générateur
+    helper: Assistant
+    migrator: Migrateur
+    processor: Processeur
+    renderer: Rendu
+    tag: Tag

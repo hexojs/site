@@ -2,6 +2,8 @@ title: Tag Plugins
 ---
 Tag plugins are different from post tags. They are ported from Octopress and provide a useful way for you to quickly add specific content to your posts.
 
+{% youtube I07XMi7MHd4 %}
+
 ## Block Quote
 
 Perfect for adding quotes to your post, with optional author, source and title information.
@@ -206,10 +208,10 @@ Inserts a YouTube video.
 
 ## Vimeo
 
-Inserts a Vimeo video.
+Inserts a responsive or specified size Vimeo video.
 
 ```
-{% vimeo video_id %}
+{% vimeo video_id [width] [height] %}
 ```
 
 ## Include Posts
@@ -217,9 +219,32 @@ Inserts a Vimeo video.
 Include links to other posts.
 
 ```
-{% post_path slug %}
-{% post_link slug [title] %}
+{% post_path filename %}
+{% post_link filename [optional text] %}
 ```
+
+You can ignore permalink and folder information, like languages and dates, when using this tag. 
+
+For instance: `{% raw %}{% post_link how-to-bake-a-cake %}{% endraw %}`.
+
+This will work as long as the filename of the post is `how-to-bake-a-cake.md`, even if the post is located at `source/posts/2015-02-my-family-holiday` and has permalink `2018/en/how-to-bake-a-cake`.
+
+You can customize the text to display, instead of displaying the post's title. Using `post_path` inside Markdown syntax `[]()` is not supported.
+
+For instance:
+
+**Display title of the post.**
+
+`{% raw %}{% post_link 2018-10-19-hexo-3-8-released %}{% endraw %}`
+
+{% post_link 2018-10-19-hexo-3-8-released %}
+
+**Display custom text.**
+
+`{% raw %}{% post_link 2018-10-19-hexo-3-8-released 'Link to a post' %}{% endraw %}`
+
+{% post_link 2018-10-19-hexo-3-8-released 'Link to a post' %}
+
 
 ## Include Assets
 
@@ -239,4 +264,17 @@ If certain content is causing processing issues in your posts, wrap it with the 
 {% raw %}
 content
 {% endraw %}
+```
+
+
+## Post Excerpt
+
+Use text placed before the `<!-- more -->` tag as an excerpt for the post.
+
+**Examples:**
+
+``` 
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+<!-- more -->
+Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 ```
