@@ -2208,3 +2208,10 @@
     - categories
     - tags
     - abbrlink
+- name: hexo-tag-details
+  description: HTML5 details tag on your Hexo article
+  link: https://github.com/hinastory/hexo-tag-details
+  tags:
+    - tag
+    - details
+    - summary
