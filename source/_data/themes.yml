@@ -437,15 +437,15 @@
     - light
     - colorful
 - name: Inside
-  description: ❤️ SPA, flat and clean theme for Hexo.
+  description: ❤️ SPA, flat and clean theme.
   link: https://github.com/elmorec/hexo-theme-inside
   preview: https://blog.oniuo.com/
   tags:
     - responsive
     - flat
     - clean
-    - spa
-    - pwa
+    - SPA
+    - PWA
     - angular
 - name: Prontera
   description: A fast and modern theme
