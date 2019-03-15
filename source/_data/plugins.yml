@@ -1082,6 +1082,14 @@
     - hexo-tag-cloud
     - tag
     - cloud
+- name: hexo-tag-mtime
+  description: "Embed a movie card on your Hexo article, used mtime API."
+  link: https://github.com/mayuko2012/hexo-tag-mtime
+  tags:
+    - tag
+    - hexo
+    - plugin
+    - moive
 - name: hexo-critical-css
   description: "Add critical css to your HTML for faster rendering pages."
   link: https://github.com/john-whitley/hexo-critical-css
