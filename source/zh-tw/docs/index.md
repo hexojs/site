@@ -2,7 +2,7 @@ title: 文件
 ---
 歡迎使用 Hexo，此文件將幫助您快速開始使用。如果您在使用途中遇到任何問題，您可以在 [解決問題](troubleshooting.html) 中找到解答，或者也可以在 [GitHub](https://github.com/hexojs/hexo/issues) 或 [Google Group](https://groups.google.com/group/hexo) 上詢問。
 
-{% youtube bCj0iVVqkSg %}
+{% youtube PsXWbI2Mqu0 %}
 
 ## 什麼是 Hexo？
 
