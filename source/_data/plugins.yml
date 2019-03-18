@@ -1916,6 +1916,13 @@
   tags:
     - helper
     - gitter
+- name: hexo-tag-mplayer
+  description: A simple plugin for inserting cPlayer by using tags in Hexo.
+  link: https://github.com/wshunli/hexo-tag-mplayer
+  tags:
+    - tag
+    - music
+    - cPlayer
 - name: hexo-fontawesome
   description: A utility function which helps to inline Font Awesome SVG files.
   link: https://github.com/hexojs/hexo-fontawesome
