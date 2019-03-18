@@ -1,7 +1,7 @@
 title: 寫作
 ---
 
-{% youtube A_a-qFhDgKs %}
+{% youtube HLJ9jJy7CMg %}
 
 接下來，我們要在網誌中建立第一篇新文章，您可以直接從現有的範例文章「Hello World」改寫，但我們更建議您學習 `new` 指令。
 
