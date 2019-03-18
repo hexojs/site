@@ -62,7 +62,7 @@ gulp.task('screenshot:revreplace', ['screenshot:rev'], function() {
         var src = img.attr('data-src') || img.attr('data-org');
         if (!src) return;
 
-        var jpgPath = replaceBackSlash(rename(src, {extname: '.jpeg'}));
+        var jpgPath = replaceBackSlash(rename(src, {extname: '.jpg'}));
         var jpg2xPath = replaceBackSlash(rename(jpgPath, {suffix: '@2x'}));
         var srcset = [
           jpgPath,
