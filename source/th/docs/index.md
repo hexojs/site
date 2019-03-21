@@ -55,13 +55,13 @@ $ npm install -g hexo-cli
 cURL:
 
 ``` bash
-$ curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
+$ curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | bash
 ```
 
 Wget:
 
 ``` bash
-$ wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
+$ wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | bash
 ```
 
 เมื่อเสร็จการติดตั้ง nvm เปิด terminal ใหม่และรันคำสั่งต่อไปเพื่อติดตั้ง Node.js
