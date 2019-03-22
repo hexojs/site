@@ -47,13 +47,13 @@ Felizmente, os criadores do nvm fornecem um script simples que instala automatic
 cURL:
 
 ``` bash
-$ curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
+$ curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | bash
 ```
 
 Wget:
 
 ``` bash
-$ wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
+$ wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | bash
 ```
 
 Uma vez que o nvm esteja instalado, reinicie o terminal e execute o seguinte comando para instalar o Node.js:
