@@ -8,6 +8,7 @@ front-matter เป็น block ของ YAML หรือ JSON ท่ีอย
 
 **YAML**
 ``` yaml
+---
 title: Hello World
 date: 2013/7/13 20:46:25
 ---

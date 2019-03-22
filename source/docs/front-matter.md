@@ -7,6 +7,7 @@ Front-matter is a block of YAML or JSON at the beginning of the file that is use
 
 **YAML**
 ``` yaml
+---
 title: Hello World
 date: 2013/7/13 20:46:25
 ---

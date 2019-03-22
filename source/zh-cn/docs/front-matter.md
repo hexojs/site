@@ -6,6 +6,7 @@ title: Front-matter
 Front-matter 是文件最上方以 `---` 分隔的区域，用于指定个别文件的变量，举例来说：
 
 ``` yaml
+---
 title: Hello World
 date: 2013/7/13 20:46:25
 ---

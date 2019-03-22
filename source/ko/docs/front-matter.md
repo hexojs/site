@@ -4,6 +4,7 @@ Front-matter는 파일 시작 시 작성하는 YAML 또는 JSON 구역입니다.
 
 **YAML**
 ``` yaml
+---
 title: Hello World
 date: 2013/7/13 20:46:25
 ---
