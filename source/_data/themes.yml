@@ -2321,7 +2321,7 @@
 - name: Material-X
   description: a material design theme
   link: https://github.com/xaoxuu/hexo-theme-material-x
-  preview: https://blog.xaoxuu.com
+  preview: https://xaoxuu.com/blog
   tags:
     - material design
     - responsive
