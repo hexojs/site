@@ -2574,3 +2574,12 @@
     - clean
     - pure
     - ejs    
+- name: flex-block
+  description: A simple block blog style based on a flex layout
+  link: https://github.com/miiiku/flex-block
+  preview: https://miiiku.xyz
+  tags:
+    - simple
+    - block
+    - image
+    - responsive
