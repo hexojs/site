@@ -1,5 +1,8 @@
 title: Contributing
 ---
+
+We welcome you to join the development of Hexo. 🤗
+
 ## 개발
 
 우리는 당신이 Hexo의 개발에 참여하는 것을 환영합니다. 이 문서는 당신의 개발 프로세스에 도움을 줄 겁니다.
@@ -47,6 +50,10 @@ title: Contributing
     {% code %}
     $ npm test
     {% endcode %}
+
+## Updating official-plugins
+
+Also, we welcome PR or issue to [official-plugins](https://github.com/hexojs). 🤗
 
 ## 문서의 갱신
 

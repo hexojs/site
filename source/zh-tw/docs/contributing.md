@@ -1,5 +1,8 @@
 title: 貢獻
 ---
+
+We welcome you to join the development of Hexo. 🤗
+
 ## 開發
 
 我們非常歡迎您加入 Hexo 的開發，這份文件將幫助您了解開發流程。
@@ -47,6 +50,10 @@ title: 貢獻
     {% code %}
     $ npm test
     {% endcode %}
+
+## Updating official-plugins
+
+Also, we welcome PR or issue to [official-plugins](https://github.com/hexojs). 🤗
 
 ## 更新文件
 
