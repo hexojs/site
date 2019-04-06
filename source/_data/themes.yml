@@ -1,3 +1,16 @@
+- name: Griddy
+  description: Hexo theme for artist & photographer showing their work
+  link: https://github.com/sira313/hexo-theme-griddy
+  preview: https://aflasio.netlify.com
+  tags:
+    - simple
+    - visual
+    - three_column
+    - clean
+    - portfolio
+    - responsive
+    - bulma
+
 - name: mintin
   description: A simple theme
   link: https://github.com/kevinjobs/hexo-theme-mintin
