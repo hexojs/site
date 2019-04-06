@@ -1,3 +1,4 @@
+---
 title: Console
 ---
 Console은 Hexo와 사용자 간의 교두보 역할을 합니다. 사용 가능한 console 명령어를 등록하고 설명합니다.

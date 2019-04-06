@@ -1,3 +1,4 @@
+---
 title: Migrator
 ---
 Migrator는 다른 시스템을 사용하던 사용자가 Hexo로의 마이그레이션을 할 수 있게 도와줍니다.

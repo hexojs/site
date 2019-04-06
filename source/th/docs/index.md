@@ -1,3 +1,4 @@
+---
 title: Documentation
 ---
 ยินดีต้อนรับเข้าสู่ documentation ของ hexo ถ้าคุณพบเจอปัญหาใดๆเวลาใช้ hexo 

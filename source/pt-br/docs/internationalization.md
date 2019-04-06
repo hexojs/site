@@ -1,3 +1,4 @@
+---
 title: Internacionalização (i18n)
 ---
 Você pode usar a internacionalização para apresentar seu site em diferentes idiomas. O idioma padrão é definido modificando a configuração `language` em `_config.yml`. Você também pode definir vários idiomas e modificar a ordem dos idiomas padrão.

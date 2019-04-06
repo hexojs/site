@@ -1,3 +1,4 @@
+---
 title: Configuration
 ---
 `_config.yml` 파일의 사이트 환경 설정을 수정할 수 있습니다.

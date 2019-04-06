@@ -1,3 +1,4 @@
+---
 title: Posts
 ---
 ## Create a New Post

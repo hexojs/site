@@ -1,3 +1,4 @@
+---
 title: 資產資料夾
 ---
 資產（Asset）代表 `source` 資料夾中除了文章以外的所有檔案，例如圖片、CSS、JS 檔案等。Hexo 提供了一種更方便管理 Asset 的設定：`post_asset_folder`。

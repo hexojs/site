@@ -1,3 +1,4 @@
+---
 title: Helper
 ---
 helper ทำให้ผู้ใช้เพิ่ม snippet เข้า template ของตนได้ง่ายขึ้น. เมื่อต้องจัดการ code ท่ีซับซ้อนขึ้น การใช้ helper จะสะดวกกว่าท่ีใช้ template ผู้ใช้จะเข้าถึง helper โดยไฟล์ `source` ไม่ได้

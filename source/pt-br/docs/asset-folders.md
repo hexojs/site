@@ -1,3 +1,4 @@
+---
 title: Diretórios de Recursos (Asset)
 ---
 ## Diretório Global de Recursos

@@ -1,3 +1,4 @@
+---
 title: Internationalization (i18n)
 ---
 당신의 웹 사이트를 서로 다른 언어로 표시하기 위해 internationalization을 사용할 수 있습니다. 기본 언어의 변경은 `_config.yml` 파일의 `language`를 수정하면 됩니다. 다중 언어를 설정할 수도 있고 기본 언어의 순서를 수정할 수도 있습니다.

@@ -1,3 +1,4 @@
+---
 title: Asset Folders
 ---
 ## 전역 Asset 폴더

@@ -1,3 +1,4 @@
+---
 title: 配置
 ---
 您可以在 `_config.yml` 或 [替代配置檔](#Using-an-Alternate-Config) 中修改網站配置。

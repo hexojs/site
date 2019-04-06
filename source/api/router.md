@@ -1,3 +1,4 @@
+---
 title: Router
 ---
 The router saves all paths used in the site.

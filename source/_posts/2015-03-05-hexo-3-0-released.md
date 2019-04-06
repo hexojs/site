@@ -1,3 +1,4 @@
+---
 title: Hexo 3.0 Released
 ---
 Hexo 3.0 has finally come out! After four beta and four RC versions, Hexo 3 become more stable and more powerful. Thanks for the contributors and testers! 

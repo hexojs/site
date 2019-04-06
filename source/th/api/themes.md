@@ -1,3 +1,4 @@
+---
 title: Themes
 ---
 `hexo.theme` สืบทอดจาก [Box](box.html) และสร้าง template ได้

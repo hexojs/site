@@ -1,3 +1,4 @@
+---
 title: Permalinks
 ---
 You can specify the permalinks for your site in `_config.yml` or in the front-matter for each post.

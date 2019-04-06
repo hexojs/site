@@ -1,3 +1,4 @@
+---
 title: Documentation
 ---
 Hexo 문서에 오신 것을 환영합니다. Hexo 사용 중 문제가 발생한다면 [troubleshooting guide](troubleshooting.html)를 살펴보세요. 이슈가 발생했다면 [GitHub](https://github.com/hexojs/hexo/issues) 또는 [Google Group](https://groups.google.com/group/hexo) 에 내용을 등록해 주세요.

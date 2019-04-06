@@ -1,3 +1,4 @@
+---
 title: Asset Folders
 ---
 ## Global Asset Folder

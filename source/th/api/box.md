@@ -1,3 +1,4 @@
+---
 title: Box
 ---
 box เป็น container ที่ใช้มาจัดการไฟล์ภายใน folder เฉพาะ Hexo ใช้ box ที่แตกต่างกันสองตัว ซึ้งก็คือ `hexo.source` และ `hexo.theme` ตัวแรกใช้มาจัดการ folder `source` และตัวท่ีสองใช้มาจัดการ folder `theme` 

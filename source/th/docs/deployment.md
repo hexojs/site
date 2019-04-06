@@ -1,3 +1,4 @@
+---
 title: Deployment
 ---
 hexo สนับสนุนวิธีรวดเร็วและเรียบง่ายสำหรับ deployment คุณ deploy 

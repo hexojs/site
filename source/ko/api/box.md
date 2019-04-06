@@ -1,3 +1,4 @@
+---
 title: Box
 ---
 Box는 특정 폴더 안의 파일들을 처리하기 위해 사용되는 컨테이너 입니다. Hexo는 `hexo.source`와 `hexo.theme` 두 가지 종류의 Box를 사용합니다: `hexo.source`는 `source` 폴더를 처리할 때 사용되고 `hexo.theme`는 `theme` 폴더를 처리할 때 사용됩니다.

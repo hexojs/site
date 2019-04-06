@@ -1,3 +1,4 @@
+---
 title: Интернационализация (i18n)
 ---
 [Что такое: i18n](https://ru.wiktionary.org/wiki/i18n)

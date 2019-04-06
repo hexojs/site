@@ -1,3 +1,4 @@
+---
 title: Setup
 ---
 Hexo를 설치했다면, 타겟 `<folder>`의 Hexo를 초기화하기 위해 아래의 명령을 수행하세요.

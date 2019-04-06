@@ -1,3 +1,4 @@
+---
 title: Variables
 ---
 ### 전역 변수
