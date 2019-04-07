@@ -14,7 +14,7 @@ Hexo는 눈 깜박할 새에 설치할 수 있습니다. 설치 시 문제가 �
 
 Hexo의 설치는 꽤 쉽습니다. 하지만, 설치 전에 몇 가지 요구사항이 있습니다.
 
-- [Node.js](http://nodejs.org/)
+- [Node.js](http://nodejs.org/) (Should be at least nodejs 6.9)
 - [Git](http://git-scm.com/)
 
 컴퓨터에 이미 이런 것들이 설치되어 있다면, 축하드립니다! 이제 npm을 이용하여 Hexo를 설치하기만 하면 됩니다.
