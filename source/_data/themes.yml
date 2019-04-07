@@ -32,15 +32,13 @@
     - clean
 
 - name: Material-T
-  description: Born to be elegant
-  link: https://github.com/invom/Material-T
-  preview: https://invom.cc
+  description: Born to be elegant.
+  link: https://github.com/0x2E/Material-T
+  preview: https://0x2e.github.io/
   tags:
     - Material Design
     - responsive
-    - fresh
     - elegant
-    - chinese
     - 中文
 
 - name: Life
