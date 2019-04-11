@@ -1,5 +1,8 @@
 title: Содействие
 ---
+
+We welcome you to join the development of Hexo. 🤗
+
 ## Разработчикам
 
 Мы рады желающим присоединится к развитию Hexo. Этот документ поможет вам начать.
@@ -47,6 +50,10 @@ title: Содействие
     {% code %}
     $ npm test
     {% endcode %}
+
+## Updating official-plugins
+
+Also, we welcome PR or issue to [official-plugins](https://github.com/hexojs). 🤗
 
 ## Обновление документации
 

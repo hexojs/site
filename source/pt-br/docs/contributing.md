@@ -1,5 +1,8 @@
 title: Contribuindo
 ---
+
+We welcome you to join the development of Hexo. 🤗
+
 ## Desenvolvimento
 
 Nós damos o parabéns a você por se juntar ao desenvolvimento do Hexo. Este documento irá ajudá-lo através do processo.
@@ -47,6 +50,10 @@ Por favor, siga o estilo de codificação:
     ```
     $ npm test
     ```
+
+## Updating official-plugins
+
+Also, we welcome PR or issue to [official-plugins](https://github.com/hexojs). 🤗
 
 ## Atualizando a Documentação
 
