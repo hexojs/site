@@ -2596,3 +2596,14 @@
     - block
     - image
     - responsive
+- name: mdm
+  description: 一款Hexo炒鸡好看的MaterialDesign风格主题，确定不进来瞧瞧？
+  link: https://github.com/TonyChenn/hexo-theme-mdm
+  preview: https://tonychenn.cn/
+  tags:
+    - simple
+    - clear
+    - easy
+    - Material
+    - MaterialDesign
+    - beautiful
