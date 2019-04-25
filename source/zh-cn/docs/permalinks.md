@@ -1,3 +1,4 @@
+---
 title: 永久链接（Permalinks）
 ---
 您可以在 `_config.yml` 配置中调整网站的永久链接或者在每篇文章的 Front-matter 中指定。

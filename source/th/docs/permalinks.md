@@ -1,3 +1,4 @@
+---
 title: Permalinks
 ---
 คุณสามารถตั้งค่า permalink ของเว็บไซตืตนในไฟล์ `_config.yml` หรือใน 

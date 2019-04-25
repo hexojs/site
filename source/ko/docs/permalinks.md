@@ -1,3 +1,4 @@
+---
 title: Permalinks
 ---
 `_config.yml` 파일 또는 각 포스트의 front-matter에 permalink의 형식을 지정할 수 있습니다.

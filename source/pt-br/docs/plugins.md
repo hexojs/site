@@ -1,3 +1,4 @@
+---
 title: Plugins
 ---
 O Hexo possui um poderoso sistema de plugins, o que facilita a extensão das funcionalidades sem modificar o código-fonte do módulo central. Existem dois tipos de plugins no Hexo:

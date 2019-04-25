@@ -1,3 +1,4 @@
+---
 title: Troubleshooting
 ---
 ถ้าหากว่าคุณพบเจอปัญหาเมื่อใช้  hexo   

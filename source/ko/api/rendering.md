@@ -1,3 +1,4 @@
+---
 title: Rendering
 ---
 Hexo에서 파일 또는 문자열을 렌더링 하기위해 두 가지의 메소드를 사용할 수 있습니다. 비동기 메소드인 `hexo.render.render`와 동기 메소드인 `hexo.render.renderSync`입니다. 두 가지의 메소드는 매우 유사하기 때문에 이 문서에서는 비동기 메소드인 `hexo.render.render` 에 대해 알아보겠습니다.

@@ -1,3 +1,4 @@
+---
 title: Tag
 ---
 A tag allows users to quickly and easily insert snippets into their posts.

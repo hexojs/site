@@ -1,3 +1,4 @@
+---
 title: Configuration
 ---
 คุณสามารถแก้ไขการตั้งค่าของเว็บไซต์ใน `_config.yml` หรือในไฟล์ [alternate config file](#Using-an-Alternate-Config)

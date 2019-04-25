@@ -1,3 +1,4 @@
+---
 title: Local Variables
 ---
 지역 변수는 템플릿의 `site` 변수처럼 템플릿 렌더링을 위해 사용됩니다.

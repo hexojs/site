@@ -1,3 +1,4 @@
+---
 title: Console
 ---
 console เป็นสะพานระหว่าง Hexo และผู้ใช้ของมัน และ console บันทึกและอธิบายคำสั่ง console ที่มีอยู่ 

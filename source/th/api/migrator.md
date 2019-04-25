@@ -1,3 +1,4 @@
+---
 title: Migrator
 ---
 migrator ช่วยให้ผู้ใช้ย้าย data จากระบบอื่นมาเข้า hexo

@@ -1,3 +1,4 @@
+---
 title: Troubleshooting
 ---
 Hexo 사용 중에 문제가 발생할 경우, 이 문서에 있는 해결책을 확인해 보세요. 자주 발생하는 문제에 대해 정리해 두었습니다. 만약 이 문서에서 해결 방안을 찾지 못하였다면 [GitHub](https://github.com/hexojs/hexo/issues) 또는 [Google Group](https://groups.google.com/group/hexo)을 검색해 보세요.

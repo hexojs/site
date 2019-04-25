@@ -1,3 +1,4 @@
+---
 title: 渲染
 ---
 在 Hexo 中，有兩個方法可用於渲染檔案或字串，分別是非同步的 `hexo.render.render` 和同步的 `hexo.render.renderSync`，這兩個方法的使用方式十分類似，因此以下僅舉非同步的 `hexo.render.render` 為例。

@@ -1,3 +1,4 @@
+---
 title: Deployer
 ---
 deployer เป็นตัวช่วยให้ผู้ใช้ deploy เว็บไซต์ไปถึง remote server โดยไม่ต้องใช้คำสั่งซับซ้อน

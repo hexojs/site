@@ -1,3 +1,4 @@
+---
 title: Generator
 ---
 generator สร้าง route บนพื้นฐานของไฟล์ท่ีได้จัดการ

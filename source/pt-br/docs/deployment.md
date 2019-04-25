@@ -1,3 +1,4 @@
+---
 title: Implantação
 ---
 O Hexo fornece uma estratégia de implantação (deployment) rápida e fácil. Você só precisa de um único comando para implantar seu site no servidor.

@@ -1,3 +1,4 @@
+---
 title: Generator
 ---
 Generator는 처리된 파일들을 기준으로 경로(route)를 생성합니다.

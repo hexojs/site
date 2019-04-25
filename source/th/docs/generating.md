@@ -1,3 +1,4 @@
+---
 title: Generating
 ---
 การ generate ไฟล์คงท่ีใน hexo จะค่อนข้างรวดเร็วและง่าย

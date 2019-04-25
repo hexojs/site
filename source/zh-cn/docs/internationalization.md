@@ -1,3 +1,4 @@
+---
 title: 国际化（i18n）
 ---
 若要让您的网站以不同语言呈现，您可使用国际化（internationalization）功能。请先在 `_config.yml` 中调整 `language` 设定，这代表的是预设语言，您也可设定多个语言来调整预设语言的顺位。

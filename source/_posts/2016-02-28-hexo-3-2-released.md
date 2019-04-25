@@ -1,3 +1,4 @@
+---
 title: Hexo 3.2 Released
 ---
 It has been a long time that Hexo is poor at handling large website. ([#710], [#1124], [#283], [#1187], [#550], [#1769], etc.) We tried hard to solve this problem and there're several improvements in Hexo 3.2.

@@ -1,3 +1,4 @@
+---
 title: 主题
 ---
 `hexo.theme` 除了继承 [Box](box.html) 外，还具有存储模板的功能。

@@ -1,3 +1,4 @@
+---
 title: 事件
 ---
 Hexo 继承了 [EventEmitter]，您可以用 `on` 方法监听 Hexo 所发布的事件，也可以使用 `emit` 方法对 Hexo 发布事件，更详细的说明请参阅 Node.js 的 API。

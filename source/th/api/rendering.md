@@ -1,3 +1,4 @@
+---
 title: Rendering
 ---
 มีทั้งหมดสองวิธีสำหรับการ render ไฟล์หรือ string ใน hexo : `hexo.render.render`ท่ีเป็น asynchronous และวิธี `hexo.render.renderSync` ท่ีเป็น  synchronous เนื่องจากว่าสองวิธีนี้คล้ายกันมาก ก็เลยมีการอธิบายแต่ `hexo.render.render` ท่ีเป็นวิธี asynchronous เท่านั้นในย่อหน้าต่อไป

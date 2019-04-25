@@ -1,3 +1,4 @@
+---
 title: Events
 ---
 Hexo는 [EventEmitter]를 상속합니다. `on` 메소드를 사용하여 Hexo가 emit한 이벤트를 listen할 수 있습니다. 그리고 `emit`메소드를 사용하여 이벤트를 emit합니다. 더 자세한 정보는 Node.js API 문서를 참고해 주시기 바랍니다.

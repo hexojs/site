@@ -1,3 +1,4 @@
+---
 title: Internationalization (i18n)
 ---
 คุณสามารถใช้ internationalization มาโชว์ไซต์ของคุณด้วยภาษาต่างๆ ภาษา dafault 
