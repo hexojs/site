@@ -19,7 +19,7 @@ var dirs = {
   screenshots: 'public/build/screenshots'
 };
 
-gulp.task('useref', ['screenshot'], function() {
+gulp.task('useref', function() {
   return gulp.src('public/**/*.html')
     .pipe(gulpUniqueFiles())
     .pipe(gulpIf('*.css', gulpCleanCSS()))
@@ -34,11 +34,11 @@ gulp.task('useref', ['screenshot'], function() {
     .pipe(gulp.dest('public'));
 });
 
-gulp.task('screenshot:clean', function() {
+gulp.task('clean', function() {
   return del([dirs.screenshots + '/**/*']);
 });
 
-gulp.task('screenshot:rev', ['screenshot:clean'], function() {
+gulp.task('rev', function() {
   return gulp.src('public/themes/screenshots/*.png')
     .pipe(gulpRev())
     .pipe(gulp.dest(dirs.screenshots))
@@ -46,7 +46,7 @@ gulp.task('screenshot:rev', ['screenshot:clean'], function() {
     .pipe(gulp.dest(dirs.screenshots));
 });
 
-gulp.task('screenshot:revreplace', ['screenshot:rev'], function() {
+gulp.task('revreplace', function() {
   var destDir = '/build/screenshots';
 
   return gulp.src([dirs.screenshots + '/rev-manifest.json', 'public/themes/index.html'])
@@ -77,7 +77,7 @@ gulp.task('screenshot:revreplace', ['screenshot:rev'], function() {
     .pipe(gulp.dest('public/themes'));
 });
 
-gulp.task('screenshot:resize', ['screenshot:rev'], function() {
+gulp.task('resize', function() {
   return gulp.src(dirs.screenshots + '/*.png')
     .pipe(gulpResponsive({
       '*.png': [
@@ -103,8 +103,8 @@ gulp.task('screenshot:resize', ['screenshot:rev'], function() {
     .pipe(gulp.dest(dirs.screenshots));
 });
 
-gulp.task('screenshot', ['screenshot:rev', 'screenshot:resize', 'screenshot:revreplace']);
-gulp.task('default', ['useref', 'screenshot']);
+gulp.task('default',
+  gulp.series('clean', 'rev', gulp.parallel('resize', 'revreplace'), 'useref'));
 
 function replaceBackSlash(str) {
   return str.replace(/\\/g, '/');
