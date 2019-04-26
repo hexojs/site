@@ -38,7 +38,7 @@ Setting | Description | Default
 `category_dir` | Category directory | `categories`
 `code_dir` | Include code directory (subdirectory of `source_dir`) | `downloads/code`
 `i18n_dir` | i18n directory | `:lang`
-`skip_render` | Paths that will be copied to `public` raw, without being rendered. You can use [glob expressions](https://github.com/isaacs/minimatch) for path matching.<br /><br />For example, `skip_render: mypage/**/*` will output `source/mypage/index.html` and `source/mypage/code.js` without altering them. |
+`skip_render` | Paths that will be copied to `public` raw, without being rendered. You can use [glob expressions](https://github.com/isaacs/minimatch) for path matching.<br /><br />For example, `skip_render: "mypage/**/*"` will output `source/mypage/index.html` and `source/mypage/code.js` without altering them.<br />This also can be used to exclude posts, `skip_render: "_posts/test-post.md"` will ignore the `source/_posts/test-post.md`.|
 
 ### Writing
 
@@ -90,21 +90,46 @@ Setting | Description
 
 ### Include/Exclude Files or Folders
 
-In the config file, set the include/exclude key to make hexo explicitly process or ignore certain files/folders.
+In the config file, set the include/exclude key to make hexo explicitly process or ignore certain files/folders. You can use [glob expressions](https://github.com/isaacs/minimatch) for path matching.
 
 Setting | Description
 --- | ---
-`include` | Hexo by default ignores hidden files and folders, but setting this field will make Hexo process them
-`exclude` | Hexo process will ignore files list under this field
+`include` | Hexo by default ignores hidden files and folders (including files and folders with a name that start with an underscore, with an exception*), but setting this field will make Hexo process them.
+`exclude` | Hexo process will ignore files list under this field.
 
-Sample:
+Examples:
 ```yaml
 # Include/Exclude Files/Folders
 include:
-  - .nojekyll
+  - ".nojekyll"
+  # Include 'source/css/_typing.css'.
+  - "css/_typing.css"
+  # Include any file in 'source/_css/'.
+  - "_css/*"
+  # Include any file and subfolder in 'source/_css/'.
+  - "_css/**/*"
+  
 exclude:
-  - .DS_Store
+  # Exclude 'source/js/test.js'.
+  - "js/test.js"
+  # Exclude any file in 'source/js/'.
+  - "js/*"
+  # Exclude any file and subfolder in 'source/js/'.
+  - "js/**/*"
+  # Exclude any file with filename that starts with 'test' in 'source/js/'.
+  - "js/test*"
+  # Exclude any file with filename that starts with 'test' in 'source/js/' and its subfolders.
+  - "js/**/test*"
+  # Do not use this to exclude posts or .md files in the 'source/_posts/'.
+  # Use skip_render for that. Or prepend an underscore to the filename.
+  # - "_posts/hello-world.md" # Does not work.
 ```
+
+Each value in the list must be enclosed with single/double quotes.
+
+`include:` and `exclude:` do not apply to the `themes/` folder. Prepend an underscore to the files or folders name in that folder to exclude them.
+
+* Notable exception is the `source/_posts` folder, but any file or folder with a name that start with an underscore under that folder would still be ignored. Using `include:` rule in that folder is not recommended.
 
 ### Using an Alternate Config
 
