@@ -28,7 +28,7 @@ $ npm install
 
 ### package.json
 
-Данные приложений. [EJS](https://www.ejs.co/), [Stylus](http://learnboost.github.io/stylus/) и [Markdown](http://daringfireball.net/projects/markdown/)  обработчики устанавливаются по умолчанию. При желании можно удалить их позже.
+Данные приложений. [EJS](https://ejs.co/), [Stylus](http://learnboost.github.io/stylus/) и [Markdown](http://daringfireball.net/projects/markdown/)  обработчики устанавливаются по умолчанию. При желании можно удалить их позже.
 
 ``` json package.json
 {
