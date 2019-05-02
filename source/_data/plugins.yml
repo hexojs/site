@@ -2230,3 +2230,12 @@
     - tag
     - details
     - summary
+- name: hexo-migrator-web
+  description: Hexo Migrator plugin for common Web pages
+  link: https://github.com/TechQuery/hexo-migrator-web
+  tags:
+    - migrator
+    - web
+    - common
+    - headless
+    - browser
