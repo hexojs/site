@@ -2239,3 +2239,9 @@
     - common
     - headless
     - browser
+- name: hexo-tag-qrcode
+  description: A Hexo plugin that generates a qrcode image and inserts it into a post.
+  link: https://github.com/jsweibo/hexo-tag-qrcode
+  tags:
+    - tag
+    - qrcode
