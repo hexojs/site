@@ -1,3 +1,13 @@
+- name: Mango
+  description: Simple & Light Theme
+  link: https://github.com/mango-tree/hexo-theme-mango
+  preview: https://mango-tree.github.io/
+  tags:
+    - responsive
+    - simple
+    - light
+    - clean
+
 - name: Sakura
   description: A beautiful theme
   link: https://github.com/honjun/hexo-theme-sakura
