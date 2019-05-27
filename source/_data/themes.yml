@@ -2627,3 +2627,13 @@
     - Customizable
     - Sticky
     - Slideshow
+- name: A-Technology
+  description: 科技感十足的博客啦
+  link: https://github.com/guxuelong/hexo-theme-technology/
+  preview: https://www.madelove.top/
+  tags:
+    - technology
+    - responsive
+    - widget
+    - cool
+    - css3
