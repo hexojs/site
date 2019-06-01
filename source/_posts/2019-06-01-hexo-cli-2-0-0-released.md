@@ -1,5 +1,5 @@
 ---
-title: hexo-cli Released!!
+title: hexo-cli 2.0.0 Released!!
 date: 2019-06-01 15:40
 ---
 
