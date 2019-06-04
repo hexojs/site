@@ -2638,3 +2638,15 @@
     - Customizable
     - Sticky
     - Slideshow
+- name: Butterfly
+  description: A simple & beautiful & fast theme
+  link: https://github.com/jerryc127/hexo-theme-butterfly
+  preview: https://jerryc.me/
+  tags:
+    - Sidebar
+    - Responsive
+    - Customizable
+    - Sticky
+    - Slideshow
+    - 中文
+    - beautiful
