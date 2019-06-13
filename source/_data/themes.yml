@@ -1,3 +1,13 @@
+- name: stun
+  description: A beautiful & simple theme
+  link: https://github.com/liuyib/hexo-theme-stun
+  preview: https://liuyib.github.io/
+  tags:
+    - responsive
+    - beautiful
+    - simple
+    - two_column
+
 - name: default
   description: An elegant Material Design theme for Hexo, based on MDUI.
   link: https://github.com/niemingzhao/niemingzhao.github.io/tree/theme
@@ -2629,3 +2639,15 @@
     - Customizable
     - Sticky
     - Slideshow
+- name: Butterfly
+  description: A simple & beautiful & fast theme
+  link: https://github.com/jerryc127/hexo-theme-butterfly
+  preview: https://jerryc.me/
+  tags:
+    - Sidebar
+    - Responsive
+    - Customizable
+    - Sticky
+    - Slideshow
+    - 中文
+    - beautiful
