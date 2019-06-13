@@ -227,7 +227,7 @@
 - name: mono
   description: An extremely simple and customizable blog theme
   link: https://github.com/problem233/hexo-theme-mono
-  preview: https:/problem233.github.io/
+  preview: https://problem233.github.io/
   tags:
     - light
     - elegant
