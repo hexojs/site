@@ -62,7 +62,10 @@ gulp.task('revreplace', function() {
         const src = img.attr('data-src') || img.attr('data-org');
         if (!src) return;
 
-        const jpgPath = replaceBackSlash(rename(src, {extname: '.jpeg'}));
+        // url encode the image path to handle cases where there is a space in image name
+        const srcEncoded = encodeURIComponent(src);
+
+        const jpgPath = replaceBackSlash(rename(srcEncoded, {extname: '.jpeg'}));
         const jpg2xPath = replaceBackSlash(rename(jpgPath, {suffix: '@2x'}));
         const srcset = [
           jpgPath,
@@ -71,7 +74,7 @@ gulp.task('revreplace', function() {
 
         img.attr('data-src', jpgPath)
           .attr('data-srcset', srcset)
-          .attr('data-org', src);
+          .attr('data-org', srcEncoded);
       });
     }))
     .pipe(gulp.dest('public/themes'));
