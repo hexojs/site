@@ -63,7 +63,7 @@ gulp.task('revreplace', function() {
         if (!src) return;
 
         // url encode the image path to handle cases where there is a space in image name
-        const srcEncoded = src.replace(" ", "%20");
+        const srcEncoded = src.replace(' ', '%20');
 
         const jpgPath = replaceBackSlash(rename(srcEncoded, {extname: '.jpeg'}));
         const jpg2xPath = replaceBackSlash(rename(jpgPath, {suffix: '@2x'}));
