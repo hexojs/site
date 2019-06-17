@@ -2651,3 +2651,14 @@
     - Slideshow
     - 中文
     - beautiful
+- name: Aa-Lx
+  description: A light & simple & elegant theme
+  link: https://github.com/blleng/hexo-theme-lx
+  preview: https://lx.blleng.cn
+  tags:
+    - Sidebar
+    - Responsive
+    - simple
+    - modern
+    - clean
+    - 中文
