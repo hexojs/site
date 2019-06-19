@@ -2651,3 +2651,13 @@
     - Slideshow
     - 中文
     - beautiful
+- name: Geektutu
+  description: A fast theme with light color
+  link: https://github.com/geektutu/hexo-theme-geektutu
+  preview: https://geektutu.com/
+  tags:
+    - Sidebar
+    - Responsive
+    - 中文
+    - Beautiful
+    - Qrcode
