@@ -2651,3 +2651,13 @@
     - Slideshow
     - 中文
     - beautiful
+- name: Technology
+  description: A technology theme
+  link: https://github.com/guxuelong/hexo-theme-technology/
+  preview: https://www.madelove.top/
+  tags:
+    - technology
+    - responsive
+    - widget
+    - cool
+    - css3 
