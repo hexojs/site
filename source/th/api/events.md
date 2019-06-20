@@ -54,4 +54,4 @@ directory ของ box
 
 ส่งออกไปหลังการจบลงของ initialization
 
-[EventEmitter]: http://nodejs.org/api/events.html
+[EventEmitter]: https://nodejs.org/dist/latest/docs/api/events.html
