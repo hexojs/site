@@ -475,6 +475,24 @@ Option | Description | Default
 `transform` | The function that changes the display of category name. |
 `suffix` | Add a suffix to link. | None
 
+**Examples:**
+
+``` js
+<%- list_categories(post.categories, {
+  class: 'post-category',
+  transform(str) {
+    return titlecase(str);
+  }
+}) %>
+
+<%- list_categories(post.categories, {
+  class: 'post-category',
+  transform(str) {
+    return str.toUpperCase();
+  }
+}) %>
+```
+
 ### list_tags
 
 Inserts a list of all tags.
@@ -491,7 +509,7 @@ Option | Description | Default
 `style` | Style to display the tag list. `list` displays tags in an unordered list.  | list
 `separator` | Separator between categories. (Only works if `style` is not `list`) | ,
 `class` | Class name of tag list. | tag
-`transform` | The function that changes the display of tag name. |
+`transform` | The function that changes the display of tag name. See examples in [list_categories](#list-categories). |
 `amount` | The number of tags to display (0 = unlimited) | 0
 `suffix` | Add a suffix to link. | None
 
@@ -512,7 +530,7 @@ Option | Description | Default
 `style` | Style to display the archive list. `list` displays archives in an unordered list.  | list
 `separator` | Separator between archives. (Only works if `style` is not `list`) | ,
 `class` | Class name of archive list. | archive
-`transform` | The function that changes the display of archive name. |
+`transform` | The function that changes the display of archive name. See examples in [list_categories](#list-categories). |
 
 ### list_posts
 
@@ -530,7 +548,7 @@ Option | Description | Default
 `separator` | Separator between posts. (Only works if `style` is not `list`) | ,
 `class` | Class name of post list. | post
 `amount` | The number of posts to display (0 = unlimited) | 6
-`transform` | The function that changes the display of post name. |
+`transform` | The function that changes the display of post name. See examples in [list_categories](#list-categories). |
 
 ### tagcloud
 
