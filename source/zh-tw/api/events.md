@@ -50,4 +50,4 @@ hexo.on('new', function(post){
 
 在初始化完成後發佈。
 
-[EventEmitter]: http://nodejs.org/api/events.html
+[EventEmitter]: https://nodejs.org/dist/latest/docs/api/events.html
