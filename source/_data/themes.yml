@@ -2618,7 +2618,7 @@
     - simple
     - clean
     - pure
-    - ejs    
+    - ejs
 - name: flex-block
   description: A simple block blog style based on a flex layout
   link: https://github.com/miiiku/flex-block
@@ -2660,4 +2660,15 @@
     - responsive
     - widget
     - cool
-    - css3 
+    - css3
+- name: Chic
+  description: An elegant,powerful,easy-to-read responsive Hexo theme.
+  link: https://github.com/Sirice19/hexo-theme-Chic
+  preview: https://sirice19.github.io/hexo-theme-Chic/
+  tags:
+    - Responsive
+    - Customizable
+    - Light/dark mode
+    - Elegant
+    - Cover
+    - Easy-to-read    
