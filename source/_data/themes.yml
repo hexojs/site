@@ -2694,3 +2694,13 @@
     - Elegant
     - Cover
     - Easy-to-read
+
+- name: Book
+  description: A simple, elegant, book-like hexo theme with some useful features.
+  link: https://github.com/kaiiiz/hexo-theme-book
+  preview: https://kaiiiz.github.io/hexo-theme-book-demo/
+  tags:
+    - Responsive
+    - Customizable
+    - Simple
+    - Elegant
