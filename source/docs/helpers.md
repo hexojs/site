@@ -204,6 +204,14 @@ Check whether the current page is a post.
 <%- is_post() %>
 ```
 
+### is_page
+
+Check whether the current page is a page.
+
+``` js
+<%- is_page() %>
+```
+
 ### is_archive
 
 Check whether the current page is an archive page.
