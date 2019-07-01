@@ -2224,3 +2224,9 @@
     - markdown
     - tag_plugins
     - renderer
+- name: hexo-lunar-calendar
+  description: Lunar calendar for hexo
+  link: https://github.com/inchei/hexo-lunar-calendar
+  tags: 
+    - date
+    - calendar
