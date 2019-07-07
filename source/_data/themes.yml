@@ -2685,8 +2685,8 @@
     - css3
 - name: Chic
   description: An elegant,powerful,easy-to-read responsive Hexo theme.
-  link: https://github.com/Sirice19/hexo-theme-Chic
-  preview: https://sirice19.github.io/hexo-theme-Chic/
+  link: https://github.com/Siricee/hexo-theme-Chic
+  preview: https://siricee.github.io/hexo-theme-Chic/
   tags:
     - Responsive
     - Customizable
@@ -2694,6 +2694,7 @@
     - Elegant
     - Cover
     - Easy-to-read
+    - MathJax support
 
 - name: Book
   description: A simple, elegant, book-like hexo theme with some useful features.
