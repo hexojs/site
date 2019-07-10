@@ -2706,13 +2706,13 @@
     - Simple
     - Elegant
 - name: Vanilla
-  description: A fast and plain theme
+  description: Vanilla is a plain theme
   link: https://github.com/snovey/hexo-theme-vanilla
   preview: https://snovey.github.io
   tags:
-    - fast
     - responsive
     - elegant
+    - white
     - simple
     - chinese
     - one_column
