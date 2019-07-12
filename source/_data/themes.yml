@@ -2660,7 +2660,7 @@
     - responsive
     - widget
     - cool
-    - css3 
+    - css3
 - name: Geektutu
   description: A fast theme with light color
   link: https://github.com/geektutu/hexo-theme-geektutu
@@ -2716,3 +2716,16 @@
     - simple
     - chinese
     - one_column
+
+- name: 3-hexo
+  description: Three sections, simple and convenient, like evernote
+  link: https://github.com/yelog/hexo-theme-3-hexo
+  preview: https://yelog.org
+  tags:
+    - Convenient
+    - Responsive
+    - Simple
+    - 3-hexo
+    - Easy
+    - Beautiful
+    - Evernote
