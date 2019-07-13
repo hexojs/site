@@ -29,20 +29,20 @@ deploy:
 
 ## Git
 
-安裝 [hexo-deployer-git]。
+1. 安裝 [hexo-deployer-git]。
 
 ``` bash
 $ npm install hexo-deployer-git --save
 ```
 
-修改設定。
+2. 修改_config.yml設定(下面的註解顯示了參數的範例)。
 
 ``` yaml
 deploy:
   type: git
-  repo: <repository url>
-  branch: [branch]
-  message: [message]
+  repo: <repository url> #https://bitbucket.org/JohnSmith/johnsmith.bitbucket.io
+  branch: [branch] #published
+  message: [message] #leave this blank
 ```
 
 選項 | 描述
@@ -50,6 +50,9 @@ deploy:
 `repo` | 儲存庫（Repository）網址
 `branch` | 分支名稱。如果您使用的是 GitHub 或 GitCafe 的話，程式會嘗試自動偵測。
 `message` | 自定提交訊息 (預設是 `Site updated: {% raw %}{{ now('YYYY-MM-DD HH:mm:ss') }}{% endraw %}`)
+
+3. 上傳你的網站`./node_modules/.bin/hexo clean && ./node_modules/.bin/hexo deploy` (或 `hexo clean && hexo deploy`，如果你把HEXO安裝在本機的話).
+4. 在Github/BitBucket/Gitlab前往妳的repo設定，並將你的主要分支從`master`設為`published`(或著任何你在_config.yml裡設定的名子)。現在你的網站就是你的帳號首頁。
 
 ## Heroku
 

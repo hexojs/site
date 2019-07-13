@@ -227,7 +227,7 @@
 - name: mono
   description: An extremely simple and customizable blog theme
   link: https://github.com/problem233/hexo-theme-mono
-  preview: https:/problem233.github.io/
+  preview: https://problem233.github.io/
   tags:
     - light
     - elegant
@@ -2540,15 +2540,6 @@
     - antiquity
     - responsive
     - widget
-- name: SuperSimplePlus
-  description: A Super Simple Theme
-  link: https://github.com/luasenvy/hexo-theme-super-simple-plus
-  preview: https://www.op-src.com/
-  tags:
-    - responsive
-    - minimalist
-    - classic
-    - fast
 - name: Utone
   description: A pure and minimalist theme
   link: https://github.com/shixiaohu2206/hexo-theme-utone
@@ -2627,7 +2618,7 @@
     - simple
     - clean
     - pure
-    - ejs    
+    - ejs
 - name: flex-block
   description: A simple block blog style based on a flex layout
   link: https://github.com/miiiku/flex-block
@@ -2648,6 +2639,15 @@
     - Customizable
     - Sticky
     - Slideshow
+- name: xoxo-plus
+  description: A Simple Template
+  link: https://github.com/fooying/hexo-theme-xoxo-plus
+  preview: https://www.fooying.com
+  tags:
+    - 中文
+    - simple
+    - blog
+    - responsive
 - name: Butterfly
   description: A simple & beautiful & fast theme
   link: https://github.com/jerryc127/hexo-theme-butterfly
@@ -2672,3 +2672,68 @@
     - Mathjax support
     - 中文
     - Simple
+- name: Technology
+  description: A technology theme
+  link: https://github.com/guxuelong/hexo-theme-technology/
+  preview: https://www.madelove.top/
+  tags:
+    - technology
+    - responsive
+    - widget
+    - cool
+    - css3 
+- name: Geektutu
+  description: A fast theme with light color
+  link: https://github.com/geektutu/hexo-theme-geektutu
+  preview: https://geektutu.com/
+  tags:
+    - Sidebar
+    - Responsive
+    - 中文
+    - Beautiful
+    - Qrcode
+- name: Aa-Lx
+  description: A light & simple & elegant theme
+  link: https://github.com/blleng/hexo-theme-lx
+  preview: https://lx.blleng.cn
+  tags:
+    - Sidebar
+    - Responsive
+    - simple
+    - modern
+    - clean
+    - 中文
+    - css3
+- name: Chic
+  description: An elegant,powerful,easy-to-read responsive Hexo theme.
+  link: https://github.com/Siricee/hexo-theme-Chic
+  preview: https://siricee.github.io/hexo-theme-Chic/
+  tags:
+    - Responsive
+    - Customizable
+    - Light/dark mode
+    - Elegant
+    - Cover
+    - Easy-to-read
+    - MathJax support
+
+- name: Book
+  description: A simple, elegant, book-like hexo theme with some useful features.
+  link: https://github.com/kaiiiz/hexo-theme-book
+  preview: https://kaiiiz.github.io/hexo-theme-book-demo/
+  tags:
+    - Responsive
+    - Customizable
+    - Simple
+    - Elegant
+- name: Vanilla
+  description: A fast and plain theme
+  link: https://github.com/snovey/hexo-theme-vanilla
+  preview: https://snovey.github.io
+  tags:
+    - fast
+    - responsive
+    - elegant
+    - simple
+    - chinese
+    - one_column

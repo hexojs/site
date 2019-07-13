@@ -38,13 +38,13 @@ If you don't specify the [options] parameter, the default options will apply. Ot
 
 ``` js
 <%- gravatar('a@abc.com') %>
-// http://www.gravatar.com/avatar/b9b00e66c6b8a70f88c73cb6bdb06787
+// https://www.gravatar.com/avatar/b9b00e66c6b8a70f88c73cb6bdb06787
 
 <%- gravatar('a@abc.com', 40) %>
-// http://www.gravatar.com/avatar/b9b00e66c6b8a70f88c73cb6bdb06787?s=40
+// https://www.gravatar.com/avatar/b9b00e66c6b8a70f88c73cb6bdb06787?s=40
 
-<%- gravatar('a@abc.com' {s: 40, d: 'http://example.com/image.png'}) %>
-// http://www.gravatar.com/avatar/b9b00e66c6b8a70f88c73cb6bdb06787?s=40&d=http%3A%2F%2Fexample.com%2Fimage.png
+<%- gravatar('a@abc.com' {s: 40, d: 'https://via.placeholder.com/150'}) %>
+// https://www.gravatar.com/avatar/b9b00e66c6b8a70f88c73cb6bdb06787?s=40&d=https%3A%2F%2Fvia.placeholder.com%2F150
 ```
 
 ## HTML Tags
@@ -202,6 +202,14 @@ Check whether the current page is a post.
 
 ``` js
 <%- is_post() %>
+```
+
+### is_page
+
+Check whether the current page is a page.
+
+``` js
+<%- is_page() %>
 ```
 
 ### is_archive
@@ -475,6 +483,24 @@ Option | Description | Default
 `transform` | The function that changes the display of category name. |
 `suffix` | Add a suffix to link. | None
 
+**Examples:**
+
+``` js
+<%- list_categories(post.categories, {
+  class: 'post-category',
+  transform(str) {
+    return titlecase(str);
+  }
+}) %>
+
+<%- list_categories(post.categories, {
+  class: 'post-category',
+  transform(str) {
+    return str.toUpperCase();
+  }
+}) %>
+```
+
 ### list_tags
 
 Inserts a list of all tags.
@@ -491,7 +517,7 @@ Option | Description | Default
 `style` | Style to display the tag list. `list` displays tags in an unordered list.  | list
 `separator` | Separator between categories. (Only works if `style` is not `list`) | ,
 `class` | Class name of tag list. | tag
-`transform` | The function that changes the display of tag name. |
+`transform` | The function that changes the display of tag name. See examples in [list_categories](#list-categories). |
 `amount` | The number of tags to display (0 = unlimited) | 0
 `suffix` | Add a suffix to link. | None
 
@@ -512,7 +538,7 @@ Option | Description | Default
 `style` | Style to display the archive list. `list` displays archives in an unordered list.  | list
 `separator` | Separator between archives. (Only works if `style` is not `list`) | ,
 `class` | Class name of archive list. | archive
-`transform` | The function that changes the display of archive name. |
+`transform` | The function that changes the display of archive name. See examples in [list_categories](#list-categories). |
 
 ### list_posts
 
@@ -530,7 +556,7 @@ Option | Description | Default
 `separator` | Separator between posts. (Only works if `style` is not `list`) | ,
 `class` | Class name of post list. | post
 `amount` | The number of posts to display (0 = unlimited) | 6
-`transform` | The function that changes the display of post name. |
+`transform` | The function that changes the display of post name. See examples in [list_categories](#list-categories). |
 
 ### tagcloud
 
