@@ -2639,6 +2639,15 @@
     - Customizable
     - Sticky
     - Slideshow
+- name: xoxo-plus
+  description: A Simple Template
+  link: https://github.com/fooying/hexo-theme-xoxo-plus
+  preview: https://www.fooying.com
+  tags:
+    - 中文
+    - simple
+    - blog
+    - responsive
 - name: Butterfly
   description: A simple & beautiful & fast theme
   link: https://github.com/jerryc127/hexo-theme-butterfly
@@ -2651,6 +2660,18 @@
     - Slideshow
     - 中文
     - beautiful
+- name: Adagio
+  description: A simple, elegant, calm, responsive theme with applause button, math support, and much more.
+  link: https://github.com/Hanlin-Dong/hexo-theme-adagio
+  preview: http://www.hanlindong.com
+  tags:
+    - Responsive
+    - Picture banner
+    - Applause-easy button
+    - Valine comments
+    - Mathjax support
+    - 中文
+    - Simple
 - name: Technology
   description: A technology theme
   link: https://github.com/guxuelong/hexo-theme-technology/
@@ -2685,8 +2706,8 @@
     - css3
 - name: Chic
   description: An elegant,powerful,easy-to-read responsive Hexo theme.
-  link: https://github.com/Sirice19/hexo-theme-Chic
-  preview: https://sirice19.github.io/hexo-theme-Chic/
+  link: https://github.com/Siricee/hexo-theme-Chic
+  preview: https://siricee.github.io/hexo-theme-Chic/
   tags:
     - Responsive
     - Customizable
@@ -2694,3 +2715,25 @@
     - Elegant
     - Cover
     - Easy-to-read
+    - MathJax support
+
+- name: Book
+  description: A simple, elegant, book-like hexo theme with some useful features.
+  link: https://github.com/kaiiiz/hexo-theme-book
+  preview: https://kaiiiz.github.io/hexo-theme-book-demo/
+  tags:
+    - Responsive
+    - Customizable
+    - Simple
+    - Elegant
+- name: Vanilla
+  description: A fast and plain theme
+  link: https://github.com/snovey/hexo-theme-vanilla
+  preview: https://snovey.github.io
+  tags:
+    - fast
+    - responsive
+    - elegant
+    - simple
+    - chinese
+    - one_column
