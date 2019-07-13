@@ -63,7 +63,7 @@ $ hexo new "你好世界" --lang tw
 # => URL: http://localhost:4000/tw/你好世界/
 ```
 
-You can define the default value of permalink variables in `permalink_defaults` setting. For example, we define the defualt language as English.
+You can define the default value of permalink variables in `permalink_defaults` setting. For example, we define the default language as English.
 
 ``` yaml
 permalink_defaults:

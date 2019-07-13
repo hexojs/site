@@ -1,25 +1,25 @@
 'use strict';
 
-var gulp = require('gulp');
-var gulpIf = require('gulp-if');
-var gulpRev = require('gulp-rev');
-var gulpRevCollector = require('gulp-rev-collector');
-var gulpRevReplace = require('gulp-rev-replace');
-var gulpUglify = require('gulp-uglify');
-var gulpUniqueFiles = require('gulp-unique-files');
-var gulpUseRef = require('gulp-useref');
-var gulpCleanCSS = require('gulp-clean-css');
-var gulpResponsive = require('gulp-responsive');
-var gulpCheerio = require('gulp-cheerio');
-var del = require('del');
-var rename = require('rename');
+const gulp = require('gulp');
+const gulpIf = require('gulp-if');
+const gulpRev = require('gulp-rev');
+const gulpRevCollector = require('gulp-rev-collector');
+const gulpRevReplace = require('gulp-rev-replace');
+const gulpUglify = require('gulp-uglify');
+const gulpUniqueFiles = require('gulp-unique-files');
+const gulpUseRef = require('gulp-useref');
+const gulpCleanCSS = require('gulp-clean-css');
+const gulpResponsive = require('gulp-responsive');
+const gulpCheerio = require('gulp-cheerio');
+const del = require('del');
+const rename = require('rename');
 
-var dirs = {
+const dirs = {
   public: 'public',
   screenshots: 'public/build/screenshots'
 };
 
-gulp.task('useref', ['screenshot'], function() {
+gulp.task('useref', function() {
   return gulp.src('public/**/*.html')
     .pipe(gulpUniqueFiles())
     .pipe(gulpIf('*.css', gulpCleanCSS()))
@@ -34,11 +34,11 @@ gulp.task('useref', ['screenshot'], function() {
     .pipe(gulp.dest('public'));
 });
 
-gulp.task('screenshot:clean', function() {
+gulp.task('clean', function() {
   return del([dirs.screenshots + '/**/*']);
 });
 
-gulp.task('screenshot:rev', ['screenshot:clean'], function() {
+gulp.task('rev', function() {
   return gulp.src('public/themes/screenshots/*.png')
     .pipe(gulpRev())
     .pipe(gulp.dest(dirs.screenshots))
@@ -46,8 +46,8 @@ gulp.task('screenshot:rev', ['screenshot:clean'], function() {
     .pipe(gulp.dest(dirs.screenshots));
 });
 
-gulp.task('screenshot:revreplace', ['screenshot:rev'], function() {
-  var destDir = '/build/screenshots';
+gulp.task('revreplace', function() {
+  const destDir = '/build/screenshots';
 
   return gulp.src([dirs.screenshots + '/rev-manifest.json', 'public/themes/index.html'])
     .pipe(gulpRevCollector({
@@ -58,26 +58,29 @@ gulp.task('screenshot:revreplace', ['screenshot:rev'], function() {
     }))
     .pipe(gulpCheerio(function($, file) {
       $('img.plugin-screenshot-img.lazyload').each(function() {
-        var img = $(this);
-        var src = img.attr('data-src') || img.attr('data-org');
+        const img = $(this);
+        const src = img.attr('data-src') || img.attr('data-org');
         if (!src) return;
 
-        var jpgPath = replaceBackSlash(rename(src, {extname: '.jpeg'}));
-        var jpg2xPath = replaceBackSlash(rename(jpgPath, {suffix: '@2x'}));
-        var srcset = [
+        // url encode the image path to handle cases where there is a space in image name
+        const srcEncoded = encodeURI(src);
+
+        const jpgPath = replaceBackSlash(rename(srcEncoded, {extname: '.jpeg'}));
+        const jpg2xPath = replaceBackSlash(rename(jpgPath, {suffix: '@2x'}));
+        const srcset = [
           jpgPath,
           jpg2xPath + ' 2x'
         ].join(', ');
 
         img.attr('data-src', jpgPath)
           .attr('data-srcset', srcset)
-          .attr('data-org', src);
+          .attr('data-org', srcEncoded);
       });
     }))
     .pipe(gulp.dest('public/themes'));
 });
 
-gulp.task('screenshot:resize', ['screenshot:rev'], function() {
+gulp.task('resize', function() {
   return gulp.src(dirs.screenshots + '/*.png')
     .pipe(gulpResponsive({
       '*.png': [
@@ -103,8 +106,8 @@ gulp.task('screenshot:resize', ['screenshot:rev'], function() {
     .pipe(gulp.dest(dirs.screenshots));
 });
 
-gulp.task('screenshot', ['screenshot:rev', 'screenshot:resize', 'screenshot:revreplace']);
-gulp.task('default', ['useref', 'screenshot']);
+gulp.task('default',
+  gulp.series('clean', 'rev', gulp.parallel('resize', 'revreplace'), 'useref'));
 
 function replaceBackSlash(str) {
   return str.replace(/\\/g, '/');

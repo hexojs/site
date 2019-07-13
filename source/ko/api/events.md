@@ -50,4 +50,4 @@ hexo.on('new', function(post){
 
 초기화 과정이 완료된 후 emit합니다.
 
-[EventEmitter]: http://nodejs.org/api/events.html
+[EventEmitter]: https://nodejs.org/dist/latest/docs/api/events.html

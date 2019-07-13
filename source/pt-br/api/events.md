@@ -51,4 +51,4 @@ Emitido depois do processamento finalizado. Este evento retorna um caminho que r
 
 Emitido depois da inicialização terminar.
 
-[EventEmitter]: http://nodejs.org/api/events.html
+[EventEmitter]: https://nodejs.org/dist/latest/docs/api/events.html

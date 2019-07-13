@@ -37,6 +37,14 @@ tags:
 - PS3
 - Games
 ```
+此外我們可以透過 list 來對一篇文章同時定義多個分類。
+
+``` yaml
+categories:
+- [Diary, PlayStation]
+- [Diary, Games]
+- [Life]
+```
 
 ### JSON Front-matter
 
