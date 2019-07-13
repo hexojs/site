@@ -2054,6 +2054,18 @@
     - cycling
     - gis
     - gps
+- name: hexo-tag-strava
+  description: Embed Strava activity in your blog.
+  link: https://github.com/alexmufatti/hexo-tag-strava
+  tags:
+    - tag_plugins
+    - strava
+    - sport
+    - activity
+    - running
+    - cycling
+    - gis
+    - gps
 - name: hexo-tag-optimized-gif
   description: With the help of Cloudinary, using smaller looping video as your animated gif is possible.
   link: https://github.com/zyzyz/hexo-tag-optimized-gif
