@@ -2639,6 +2639,15 @@
     - Customizable
     - Sticky
     - Slideshow
+- name: xoxo-plus
+  description: A Simple Template
+  link: https://github.com/fooying/hexo-theme-xoxo-plus
+  preview: https://www.fooying.com
+  tags:
+    - 中文
+    - simple
+    - blog
+    - responsive
 - name: Butterfly
   description: A simple & beautiful & fast theme
   link: https://github.com/jerryc127/hexo-theme-butterfly
