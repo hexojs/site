@@ -33,6 +33,7 @@ Setting | Description | Default
 `tags` | Tags (Not available for pages) |
 `categories` | Categories (Not available for pages) |
 `permalink` | Overrides the default permalink of the post |
+`keywords ` | The keywords that only used in meta tag and Open Graph (not recommended) |
 
 #### Categories & Tags
 
