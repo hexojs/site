@@ -2750,3 +2750,13 @@
     - Easy
     - Beautiful
     - Evernote
+- name: Materialized
+  description: A cool materialized theme for Hexo.
+  link: https://github.com/code004Accepted/hexo-theme-materialized
+  preview: https://code004.ml/hexo-theme-materialized
+  tags:
+    - material
+    - beautiful
+    - elegant
+    - clean
+    - simple
