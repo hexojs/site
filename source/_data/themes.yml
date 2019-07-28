@@ -2750,3 +2750,17 @@
     - Easy
     - Beautiful
     - Evernote
+
+- name: Nexmoe
+  description: A special Hexo theme
+  link: https://github.com/nexmoe/hexo-theme-nexmoe
+  preview: https://nexmoe.com/
+  tags:
+    - Sidebar
+    - 中文
+    - Internationalization
+    - Shadow
+    - Light box
+    - Album
+    - Links
+    - Cover Picture
