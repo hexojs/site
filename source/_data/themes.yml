@@ -2764,3 +2764,22 @@
     - Album
     - Links
     - Cover Picture
+
+- name: Yilia-plus
+  description: A simple and elegant theme for hexo.
+  link: https://github.com/JoeyBling/hexo-theme-yilia-plus
+  preview: https://joeybling.github.io/
+  tags:
+    - 中文
+    - hexo-theme-yilia-plus
+    - hexo-theme-yilia
+    - gitment
+    - 码云评论
+    - 网易云音乐
+    - Cover Picture
+    - 不蒜子统计
+    - Sidebar
+    - Copyright
+    - Mobile
+    - Simple
+    
