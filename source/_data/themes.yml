@@ -2781,3 +2781,12 @@
     - Mobile
     - Simple
     
+- name: Yin
+  description: 非学无以广才，非志无以成学
+  link: https://github.com/Yin-Hongwei/hexo-theme-Yin
+  preview: https://yin-hongwei.github.io/
+  tags:
+    - sleep
+    - music
+    - movie
+    - motion
