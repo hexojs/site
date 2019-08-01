@@ -1,0 +1,74 @@
+// Theme Global Color
+$theme-color = #49B1F5
+$theme-header-text-color =  #EEEEEE
+$theme-footer-text-color = #EEEEEE
+
+//Colors
+$color-border = #ddd
+$color-link = #258fb8
+$color-white = #FFFFFF
+$color-grey = #999
+$light-grey = #EEEEEE
+$color-light-black = #3B3A3A
+$color-blue = #95d1f7
+$color-light-blue = #2aa3ef
+$color-light-green = #53a19f
+$color-mobile-nav-background = #191919
+$a-hover-color = #82AAFF
+$img-border-color = #eaeefb
+
+// Fonts
+$font-sans = -apple-system, BlinkMacSystemFont,
+        "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
+        "Fira Sans", "Droid Sans", "Helvetica Neue",
+        sans-serif
+$font-mono = "Source Code Pro", Consolas, Monaco, Menlo, Consolas, monospace
+$code-font = consolas, Menlo, "PingFang SC", "Microsoft YaHei", monospace, Helvetica Neue For Number
+$font-family = Lato, Helvetica Neue For Number, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Helvetica Neue, Helvetica, Arial, sans-serif
+$font-black = #4C4948
+$font-color = #1F2D3D
+$font-size = 14px
+
+// Global Variables
+$rem = 20px
+$text-line-height = 2
+$line-height = 1.6em
+
+// page
+$content-width = 700px
+$iframe-height = (700 / 16 * 9)px
+$content-large-width = 900px
+$iframe-large-height = (900 / 16 * 9)px
+$a-link-color = $theme-link-color
+$img-border-padding = 4px
+
+// Header
+$logo-size = 40px
+$subtitle-size = 16px
+$banner-height = 300px
+$banner-url = "images/banner.jpg"
+
+$sidebar = hexo-config("sidebar")
+
+//Layout
+$block-margin = 50px
+$article-padding = 20px
+$mobile-nav-width = 280px
+$main-column = 9
+$sidebar-column = 3
+
+if $sidebar and $sidebar isnt bottom
+  $_sidebar-column = $sidebar-column
+else
+  $_sidebar-column = 0
+
+// Grids
+$column-width = 80px
+$gutter-width = 20px
+$columns = $main-column + $_sidebar-column
+
+// Media queries
+$sm = 768px
+$bg = 1024px
+$md = 1300px
+$lg = 1450px

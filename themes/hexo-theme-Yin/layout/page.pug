@@ -1,0 +1,12 @@
+extends includes/layout.pug
+
+block content
+  if page.type === 'tags'
+    article#tag
+      h1.tag-title= '标签'
+      .tag-cloud-tags!= list_tags()
+  else
+    article#page
+      h1= page.title
+      .article-container!= page.content
+    include includes/partial/pagination.pug

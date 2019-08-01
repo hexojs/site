@@ -1,0 +1,32 @@
+- var pageTitle = config.title || ''
+
+- var pageDescription = page.description || page.title || config.description || ''
+- var pageKeywords = (config.keywords || []).join(',')
+- if (page.tags && page.tags.data) pageKeywords = page.tags.data.map(function(tag) {return tag.name;}).join(',')
+- if (page.keywords) pageKeywords = page.keywords.join(',')
+- var pageAuthor = config.email ? config.author + ',' + config.email : config.author
+- var pageCopyright = config.copyright || config.author
+
+doctype html
+html(lang=config.language)
+  head
+    include partial/head.pug
+
+  body
+    include partial/header.pug
+
+    article#content-outer
+      section#content-inner
+        if body
+          div!= body
+        else
+          block content
+
+    include partial/footer.pug
+  each item in theme.cdn.js
+    if item !== undefined
+      script(src=url_for(item))
+  if theme.scripts !== undefined && theme.scripts.length > 0
+    //- scripts list from config.yml
+    each url in theme.scripts
+      script(src=url defer)

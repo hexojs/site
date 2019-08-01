@@ -1,0 +1,55 @@
+- let postDate = page.posts.data.sort(function postSort(a,b) {
+  //-console.log(b.updated)
+  - if(a.top && b.top) {
+    - if(a.top == b.top) {
+      - if(theme.display_updated) {
+        - return b.updated - a.updated
+      - }
+      - return b.date - a.date
+    - }
+    - return b.top - a.top
+  - } else if(a.top && !b.top) {
+    - return -1
+  - } else if(!a.top && b.top) {
+    - return 1
+  - } else if (theme.display_updated) {
+    - return b.updated - a.updated
+  - }
+  - return b.date - a.date
+- })
+if page.posts.length > 0
+  section#recent-posts
+    each post in postDate
+      .recent-post-item
+        - let link = post.link || post.path
+        .post-title
+          - if (post.top) {
+            a.fa.fa-toggle-up.stick-top(href=url_for(link))= post.title || _p('no_title')
+          - } else {
+            a(href=url_for(link))= post.title || _p('no_title')
+          - }
+        - if (post.date) {
+          span.post-time
+            time(datetime=post.date.toJSON())= date(post.date, date_format)
+        - }
+        - if (post.tags.length>0) {
+          span.recent-post-tags!= partial('./includes/partial/tag',{currPost: post,className: 'post-tag'})
+        - }
+        if (post.abstract)
+          .recent-post-abstract
+            p.fa.fa-chain #{post.abstract}
+        - let truncateLength = typeof theme.truncate_length === 'number' ? theme.truncate_length : 300
+        if post.excerpt || (post.photos && post.photos[0])
+          - let content = ''
+          if post.photos && post.photos[0]
+            - content += '<p><img src="' + post.photos[0] + '" alt="' + post.photos[1] + '"></p>'
+          if post.excerpt
+            - content += post.excerpt
+          .recent-post-content!= content
+        else if truncateLength
+          - const content = strip_html(post.content)
+          - let expert = content.substring(0, truncateLength)
+          - content.length > truncateLength ? expert += ' ...' : ''
+          .recent-post-content!= expert
+        .read-more
+          a.more(href=url_for(link) + '#more')= _p('ReadMore')

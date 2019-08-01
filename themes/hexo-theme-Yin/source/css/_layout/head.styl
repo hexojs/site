@@ -1,0 +1,136 @@
+#header
+  position: relative
+  background-color: $color-light-blue
+  background-attachment: fixed
+  background-position: center
+  background-size: cover
+
+#navbar
+  position: absolute
+  top: 0
+  z-index: 99
+  width: 100%
+  padding: 10px 35px
+  font-size: 18px
+  transition: all 0.2s ease-in-out
+
+  .nav-left
+    float: left
+
+  .nav-right
+    float: right
+
+  .toggle-menu
+    display: none
+    padding-top: 0.5rem
+    color: $theme-header-text-color
+    cursor: pointer
+    transition: all 0.2s ease-in-out
+
+    &:hover
+      color: $color-white
+
+  a
+    color: $theme-header-text-color
+
+    &:hover
+      color: $color-white
+
+  #site-name
+    text-shadow: 0.1rem 0.1rem 0.2rem rgba(0, 0, 0, 0.15)
+    font-weight: bold
+    cursor: pointer
+
+  .site-page
+    position: relative
+    margin-left: 0.6rem
+    padding-bottom: 0.3rem
+    text-shadow: 0.05rem 0.05rem 0.1rem rgba(0, 0, 0, 0.3)
+    font-size: 0.7rem
+    cursor: pointer
+
+    &::after
+      position: absolute
+      bottom: 0
+      left: 0
+      z-index: -1
+      width: 0
+      height: 3px
+      background-color: lighten($theme-color, 30%)
+      content: ""
+      transition: all 0.3s ease-in-out
+
+    &:hover
+      &::after
+        width: 100%
+
+#site-info
+  padding: 10rem 1rem
+
+#site-title,
+#site-sub-title
+  color: $theme-header-text-color
+  text-align: center
+  text-shadow: 0.1rem 0.1rem 0.2rem rgba(0, 0, 0, 0.15)
+  line-height: 1.5
+
+#site-title
+  font-weight: bold
+  font-size: 1.3rem
+
+#site-sub-title
+  font-size: 0.8rem
+
+#site-social-icons
+  margin: 0 auto
+  width: 15rem
+  text-align: center
+
+  .social-icon
+    margin: 0 0.5rem
+    color: $theme-header-text-color
+    text-shadow: 0.1rem 0.1rem 0.2rem rgba(0, 0, 0, 0.15)
+    font-size: 1.4rem
+    cursor: pointer
+
+    &:hover
+      color: $color-white
+
+@media screen and (min-width: $sm)
+  #site-title
+    font-size: 2rem
+
+  #site-sub-title
+    font-size: 1.2rem
+
+@media screen and (max-width: $sm)
+  #header
+    background-attachment: local
+
+  #navbar
+    padding: 10px 0.8rem
+
+    .toggle-menu
+      display: block
+
+    .menus
+      position: absolute
+      top: 3rem
+      right: 0.8rem
+      display: none
+      width: 8rem
+      background-color: alpha($color-white, 0.9)
+      box-shadow: 0 0 4px rgba(0, 0, 0, 0.27)
+
+      a
+        display: block
+        margin-left: 0
+        padding-top: 0.3rem
+        padding-bottom: 0.3rem
+        padding-left: 0.6rem
+        color: $font-black
+        text-shadow: none
+        font-size: 0.8rem
+
+        &:hover
+          color: $color-light-blue

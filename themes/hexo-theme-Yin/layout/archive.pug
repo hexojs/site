@@ -1,0 +1,8 @@
+extends includes/layout.pug
+
+block content
+  include ./includes/mixins/article-sort.pug
+  #archive
+    h1.article-sort-title= '存档'
+    +articleSort(page.posts)
+  include includes/partial/pagination.pug

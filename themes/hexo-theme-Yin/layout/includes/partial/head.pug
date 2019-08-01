@@ -1,0 +1,17 @@
+meta(charset='UTF-8')
+meta(http-equiv="X-UA-Compatible" content="IE=edge")
+meta(name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1")
+meta(name="description" content=pageDescription)
+meta(name="keywords" content=pageKeywords)
+meta(name="author" content=pageAuthor)
+meta(name="copyright" content=pageCopyright)
+title= pageTitle
+link(rel="icon", href=url_for('/favicon.ico'))
+//link(rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css")
+if theme.stylesheets !== undefined && theme.stylesheets.length > 0
+  //- stylesheets list from _config.yml
+  each url in theme.stylesheets
+    link(rel='stylesheet', href=url)
+each item in theme.cdn.css
+  if item !== undefined
+    link(rel='stylesheet', href=item)

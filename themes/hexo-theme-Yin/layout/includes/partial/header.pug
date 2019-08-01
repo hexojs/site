@@ -1,0 +1,13 @@
+- var top_img = '/img/005.jpg'
+- var bg_img = `background-image: url(${top_img})`
+header#header(style=bg_img)
+  include nav.pug
+
+  #site-info
+    #site-title= config.title
+    #site-sub-title= config.subtitle
+    if(theme.social)
+      #site-social-icons
+        each url, icon in theme.social
+         a.social-icon(href=url target="_blank")
+           i(class="fa-" + icon + " fa" )

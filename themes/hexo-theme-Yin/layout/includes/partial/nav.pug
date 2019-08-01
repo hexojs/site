@@ -1,0 +1,8 @@
+nav#navbar
+  span.nav-left
+    a#site-name(href=url_for('/')) #[=config.title]
+  i.fa.fa-bars.toggle-menu.nav-right(aria-hidden="true")
+
+  span.nav-right.menus
+    each url, label in theme.menu
+      a.site-page(href=url)= label

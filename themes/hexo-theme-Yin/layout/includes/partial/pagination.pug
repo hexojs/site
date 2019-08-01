@@ -1,0 +1,20 @@
+-
+  var options = {
+    prev_text: '上一页',
+    next_text: '下一页',
+    mid_size: 1
+  }
+nav#pagination
+  if(!is_post())
+    .pagination
+      !=paginator(options)
+  else
+    if(page.prev)
+     .prev-post.pull-left
+        a(href=url_for(page.prev.path))
+          span=page.prev.title
+    if(page.next)
+      .next-post.pull-right
+        a(href=url_for(page.next.path))
+          span=page.next.title
+

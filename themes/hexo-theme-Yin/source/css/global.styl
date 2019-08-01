@@ -1,0 +1,100 @@
+html
+  font-size: $rem
+
+body
+  margin: 0
+  padding: 0
+  position: relative
+  display: flex
+  flex-direction: column
+  min-height: 100%
+  background-color: #fff
+  color: $font-black
+  font-size: $font-size
+  font-family: $font-family
+  line-height: $text-line-height
+  -webkit-text-size-adjust: 100%
+
+html, body, #container
+  height: 100%
+
+a
+  text-decoration: none
+  color: $color-light-black
+
+  img, video
+    max-width: 100%
+    height: auto
+    display: block
+    margin: auto
+    padding: $img-border-padding
+    border: 1px solid $img-border-color
+    transition: all 0.2s
+
+h1, h2, h3, h4, h5, h6, p, div
+  margin 0
+
+*
+  box-sizing: border-box
+
+table
+  overflow: auto
+  width: 100%
+  border-spacing: 0
+  border-collapse: collapse
+
+.outer
+  clearfix()
+  max-width: ($column-width + $gutter-width) * $columns + $gutter-width
+  margin: 0 auto
+  padding: 0 $gutter-width
+
+.inner
+  column($columns)
+
+.left, .alignleft
+  float: left
+
+.right, .alignright
+  float: right
+
+.clear
+  clear: both
+
+@media screen and (min-width: $sm)
+  #recent-posts
+    width: 60%
+  #tag
+  #archive
+    width 60%
+  #page
+    .article-container
+      p:nth-of-type(1)
+        width 11rem
+        right: 2rem
+
+@media screen and (min-width: $sm) and (max-width: $bg)
+  #recent-posts
+    width: 70%
+  #tag
+  #archive
+    width 70%
+  #page
+    .article-container
+      p:nth-of-type(1)
+        width 10rem
+        bottom 1rem
+
+@media screen and (max-width: $bg)
+  #recent-posts
+    width: 100%
+  #tag
+  #archive
+    width 90%
+  #page
+    .article-container
+      p:nth-of-type(1)
+        width: w = 9rem
+        bottom: 1rem
+        left: 50%
+        margin-left: -(w / 2)
