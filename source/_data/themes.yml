@@ -75,13 +75,15 @@
     - clean
 
 - name: Material-T
-  description: Born to be elegant.
+  description: An elegant and light theme
   link: https://github.com/0x2E/Material-T
-  preview: https://0x2e.github.io/
+  preview: https://github.com/0x2E/Material-T
   tags:
     - Material Design
     - responsive
     - elegant
+    - light
+    - one_column
     - 中文
 
 - name: Life
