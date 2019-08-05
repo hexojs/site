@@ -20,11 +20,7 @@ Installing Hexo is quite easy. However, you do need to have a couple of other th
 - [Node.js](http://nodejs.org/) (Should be at least nodejs 6.9)
 - [Git](http://git-scm.com/)
 
-If your computer already has these, congratulations! Just install Hexo with npm:
-
-``` bash
-$ npm install -g hexo-cli
-```
+If your computer already has these, congratulations! You can skip to the [Hexo installation](#Install-Hexo) step.
 
 If not, please follow the following instructions to install all the requirements.
 
@@ -71,3 +67,22 @@ Once all the requirements are installed, you can install Hexo with npm:
 ``` bash
 $ npm install -g hexo-cli
 ```
+
+### Advanced installation and usage
+
+Advanced users may prefer to install and use `hexo` package instead.
+
+``` bash
+$ npm install hexo
+```
+
+Once installed, you can run Hexo in two ways:
+
+1. `npx hexo <command>`
+2. Linux users can set relative path of `node_modules/` folder:
+
+  ``` bash
+  echo 'PATH="$PATH:./node_modules/.bin"' >> ~/.profile
+  ```
+
+  then run Hexo using `hexo <command>`
