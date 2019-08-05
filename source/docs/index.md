@@ -41,19 +41,19 @@ You may encounter some problems when compiling. Please install Xcode from App St
 
 ### Install Node.js
 
-The best way to install Node.js is with [Node Version Manager](https://github.com/creationix/nvm).
+The best way to install Node.js is with [Node Version Manager](https://github.com/nvm-sh/nvm).
 Thankfully the creators of nvm provide a simple script that automatically installs nvm:
 
 cURL:
 
 ``` bash
-$ curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | bash
+$ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
 ```
 
 Wget:
 
 ``` bash
-$ wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | bash
+$ wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
 ```
 
 Once nvm is installed, restart the terminal and run the following command to install Node.js:
@@ -62,7 +62,7 @@ Once nvm is installed, restart the terminal and run the following command to ins
 $ nvm install stable
 ```
 
-Alternatively, download and run [the installer](http://nodejs.org/).
+Alternatively, download and run [the installer](http://nodejs.org/). Most Linux distributions  ship Node.js in their default repository. [NodeSource](https://github.com/nodesource/distributions) third-party repo usually ships more up-to-date Node.js.
 
 ### Install Hexo
 
