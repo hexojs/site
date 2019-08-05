@@ -62,7 +62,7 @@ Once nvm is installed, restart the terminal and run the following command to ins
 $ nvm install stable
 ```
 
-Alternatively, download and run [the installer](http://nodejs.org/).
+Alternatively, download and run [the installer](http://nodejs.org/). Most Linux distributions  ship Node.js in their default repository. [NodeSource](https://github.com/nodesource/distributions) third-party repo usually ships more up-to-date Node.js.
 
 ### Install Hexo
 
