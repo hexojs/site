@@ -92,7 +92,7 @@ Setting | Description
 
 ### Include/Exclude Files or Folders
 
-In the config file, set the include/exclude key to make hexo explicitly process or ignore certain files/folders. You can use [glob expressions](https://github.com/isaacs/minimatch) for path matching.
+In the config file, set the include/exclude key to make hexo explicitly process or ignore certain files/folders. You can use [glob expressions](https://github.com/micromatch/micromatch#extended-globbing) for path matching.
 
 Setting | Description
 --- | ---
