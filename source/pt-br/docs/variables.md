@@ -12,7 +12,7 @@ Variável | Descrição | Tipo
 `page` | Informações específicas da página e  variáveis personalizadas definidas no front-matter. | `object`; veja [Variáveis da Página]
 `config` | Configuração do site. | `object` (arquivo `_config` do seu site)
 `theme` | Configuração do tema. Herda a configuração do site. | `object` (arquivo `_config` do seu tema)
-`_` (sublinhado) | Biblioteca Lodash | veja a documentação do [Lodash](https://lodash.com/  "Lodash" target="_blank")
+`_` (sublinhado) | Biblioteca Lodash | veja a documentação do [Lodash](https://lodash.com/  'Lodash')
 `path` | Caminho da página atual | `string`
 `url` | URL completa da página atual | `string`
 `env` | Variáveis de ambiente | ???

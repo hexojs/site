@@ -4,7 +4,7 @@ title: Setup
 
 {% youtube 0m2HnATkHOk %}
 
-Once Hexo is installed, run the following commands to initialise Hexo in the target `<folder>`.
+Once Hexo is installed, run the following commands to initialize Hexo in the target `<folder>`.
 
 ``` bash
 $ hexo init <folder>
@@ -12,7 +12,7 @@ $ cd <folder>
 $ npm install
 ```
 
-Once initialised, here's what your project folder will look like:
+Once initialized, here's what your project folder will look like:
 
 ``` plain
 .

@@ -674,7 +674,7 @@ Option | Description | Default
 `url` | Page URL (`og:url`) | `url`
 `image` | Page cover (`og:image`) | First image in the content
 `site_name` | Site name (`og:site_name`) | `config.title`
-`description` | Page description (`og:desription`) | Page excerpt or first 200 characters of the content
+`description` | Page description (`og:description`) | Page excerpt or first 200 characters of the content
 `twitter_card` | Twitter card type (`twitter:card`) | summary
 `twitter_id` | Twitter ID (`twitter:creator`) |
 `twitter_site` | Twitter Site (`twitter:site`) |
