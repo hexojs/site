@@ -87,6 +87,7 @@ Setting | Description
 `theme` | Theme name. `false` disables theming
 `theme_config` | Theme configuration. Include any custom theme settings under this key to override theme defaults.
 `deploy` | Deployment settings
+`meta_generator` | [Meta generator](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta#Attributes) tag. `false` disables injection of the tag.
 
 
 ### Include/Exclude Files or Folders
