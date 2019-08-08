@@ -51,13 +51,13 @@ $ npm install -g hexo-cli
 cURL:
 
 ``` bash
-$ curl https://raw.github.com/creationix/nvm/v0.33.11/install.sh | sh
+$ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | sh
 ```
 
 Wget:
 
 ``` bash
-$ wget -qO- https://raw.github.com/creationix/nvm/v0.33.11/install.sh | sh
+$ wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | sh
 ```
 
 安装完成后，重启终端并执行下列命令即可安装 Node.js。

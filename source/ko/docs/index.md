@@ -44,13 +44,13 @@ Node.js는 [nvm](https://github.com/nvm-sh/nvm)을 통해 설치하는 것이 �
 cURL:
 
 ``` bash
-$ curl https://raw.github.com/creationix/nvm/v0.33.11/install.sh | sh
+$ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | sh
 ```
 
 Wget:
 
 ``` bash
-$ wget -qO- https://raw.github.com/creationix/nvm/v0.33.11/install.sh | sh
+$ wget -qO-https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | sh
 ```
 
 nvm이 설치되어 있다면, 터미널을 재시작하고 아래 명령어를 수행하세요.
