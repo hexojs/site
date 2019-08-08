@@ -220,7 +220,7 @@ deploy:
 $ npm i -g now
 ```
 
-2. Deploy with a single command:
+2. Deploy with a single command inside the project directory:
 
 ```bash
 now
