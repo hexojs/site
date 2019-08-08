@@ -15,7 +15,7 @@ Hexo-это быстрый, простой и мощный фреймворк б
 
 Установка Hexo довольно проста. Однако, сперва, нужно установить пару вещей:
 
-- [Node.js](http://nodejs.org/) (Should be at least nodejs 6.9)
+- [Node.js](http://nodejs.org/) (Should be at least Node.js 8.6)
 - [Git](http://git-scm.com/)
 
 Если всё это уже есть, поздравляю! Просто установите Hexo с помощью npm:
