@@ -33,6 +33,10 @@ $ npm install -g hexo-cli
 您在编译时可能会遇到问题，请先到 App Store 安装 Xcode，Xcode 完成后，启动并进入 **Preferences -> Download -> Command Line Tools -> Install** 安装命令行工具。
 {% endnote %}
 
+{% note warn For Mac / Linux 用户 %}
+如果你是 macOS 用户，或者是通过软件管理器从默认软件仓库安装 Node.js 的 Linux 用户，在使用 npm 的 `-g` 参数时可能会遇到一些权限相关的问题。请遵循 [由 npmjs 发布的指导](https://docs.npmjs.com/resolving-eacces-permissions-errors-when-installing-packages-globally) 修复该问题，**并且不要使用 root、sudo 等方法覆盖权限**
+{% endnote %}
+
 ### 安装 Git
 
 - Windows：下载并安装 [git](https://git-scm.com/download/win).
