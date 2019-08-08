@@ -621,7 +621,7 @@ title: 輔助函數（Helpers）
 `url` | 頁面網址 (`og:url`) | `url`
 `image` | 頁面圖片 (`og:image`) | 內容中的圖片
 `site_name` | 網站名稱 (`og:site_name`) | `config.title`
-`description` | 頁面描述 (`og:desription`) | 內容摘要或前 200 字
+`description` | 頁面描述 (`og:description`) | 內容摘要或前 200 字
 `twitter_card` | Twitter 卡片類型 (`twitter:card`) | summary
 `twitter_id` | Twitter ID (`twitter:creator`) |
 `twitter_site` | Twitter 網站 (`twitter:site`) |

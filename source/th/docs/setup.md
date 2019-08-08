@@ -4,7 +4,7 @@ title: Setup
 
 {% youtube 0m2HnATkHOk %}
 
-เมื่อติดตั้ง hexo แล้ว รันคำสั่งต่อไปเพื่อ initialise hexo ใน `<folder>`
+เมื่อติดตั้ง hexo แล้ว รันคำสั่งต่อไปเพื่อ initialize hexo ใน `<folder>`
 
 ``` bash
 $ hexo init <folder>
