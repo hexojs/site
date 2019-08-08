@@ -39,7 +39,7 @@ $ npm install -g hexo-cli
 
 ### Node.js를 설치하세요
 
-Node.js는 [nvm](https://github.com/creationix/nvm)을 통해 설치하는 것이 가장 좋습니다.
+Node.js는 [nvm](https://github.com/nvm-sh/nvm)을 통해 설치하는 것이 가장 좋습니다.
 
 cURL:
 

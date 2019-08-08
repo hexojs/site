@@ -39,7 +39,7 @@ $ npm install -g hexo-cli
 
 ### Установка Node.js
 
-Лучший способ установить Node.js это [nvm](https://github.com/creationix/nvm).
+Лучший способ установить Node.js это [nvm](https://github.com/nvm-sh/nvm).
 
 cURL:
 

@@ -46,7 +46,7 @@ $ npm install -g hexo-cli
 
 ### 安装 Node.js
 
-安装 Node.js 的最佳方式是使用 [nvm](https://github.com/creationix/nvm)。
+安装 Node.js 的最佳方式是使用 [nvm](https://github.com/nvm-sh/nvm)。
 
 cURL:
 
