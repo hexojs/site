@@ -99,5 +99,5 @@ Hexo 使用 [Moment.js](http://momentjs.com/) 来解析和显示时间。
 --- | ---
 `theme` | 当前主题名称。值为`false`时禁用主题
 `deploy` | 部署部分的设置
-
+`meta_generator` | [Meta generator](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/meta#%E5%B1%9E%E6%80%A7) 标签。 值为 `false` 时 Hexo 不会在头部插入该标签
 
