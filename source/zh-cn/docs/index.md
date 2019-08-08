@@ -46,7 +46,7 @@ $ npm install -g hexo-cli
 
 ### 安装 Node.js
 
-安装 Node.js 的最佳方式是使用 [nvm](https://github.com/nvm-sh/nvm)。
+安装 Node.js 的最佳方式是使用 [nvm](https://github.com/nvm-sh/nvm)。nvm 的开发者提供了一个自动安装 nvm 的简单脚本：
 
 cURL:
 
@@ -67,10 +67,16 @@ $ nvm install stable
 ```
 
 或者您也可以下载 [安装程序](http://nodejs.org/) 来安装。
+
 {% note info Windows 用户 %}
 对于windows用户来说，建议使用安装程序进行安装。安装时，请勾选**Add to PATH**选项。
 另外，您也可以使用**Git Bash**，这是git for windows自带的一组程序，提供了Linux风格的shell，在该环境下，您可以直接用上面提到的命令来安装Node.js。打开它的方法很简单，在任意位置单击右键，选择“Git Bash Here”即可。由于Hexo的很多操作都涉及到命令行，您可以考虑始终使用**Git Bash**来进行操作。
 {% endnote %}
+
+{% note info Linux 用户 %}
+大部分 Linux 发行版都会在它们的默认软件包仓库中分发 Node.js。第三方仓库 [NodeSource](https://github.com/nodesource/distributions) 通常能分发最新版本的 Node.js。
+{% endnote %}
+
 ### 安装 Hexo
 
 所有必备的应用程序安装完成后，即可使用 npm 安装 Hexo。
