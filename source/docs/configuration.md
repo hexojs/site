@@ -133,7 +133,7 @@ exclude:
   - "js/test*"
   # Exclude any file with filename that starts with 'test' in 'source/js/' and its subfolders.
   - "js/**/test*"
-  # Do not use this to exclude posts or .md files in the 'source/_posts/'.
+  # Do not use this to exclude posts in the 'source/_posts/'.
   # Use skip_render for that. Or prepend an underscore to the filename.
   # - "_posts/hello-world.md" # Does not work.
 ```
