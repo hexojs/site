@@ -193,7 +193,7 @@ Inserts a link with `target="_blank"` attribute.
 
 ## Include Code
 
-Inserts code snippets in `source/downloads/code` folder.
+Inserts code snippets in `source/downloads/code` folder. The folder location can be specified through the `code_dir` option in the config.
 
 ```
 {% include_code [title] [lang:language] path/to/file %}
