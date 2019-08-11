@@ -142,7 +142,7 @@ Error: watch /path/to/hexo/theme/ EMPERM
 
 这是由于你使用的 WSL 版本不支持监听文件系统改动。 最新版的 WSL 已经解决了这一问题。
 
-您也仍然可以通过先使用 `hexo g` 生成文件然后将其作为静态服务器运行来从WSL环境运行服务器：
+您也仍然可以通过先使用 `hexo g` 生成文件然后将其作为静态服务器运行来从 WSL 环境运行服务器：
 
 ```sh
 $ hexo generate
@@ -162,7 +162,7 @@ Template render error: (unknown path)
 
 这表明你的文件中存在一些不可被识别的字符，比如不可见的零宽度字符。有可能你的新文章存在这个问题，或者你在修改配置文件时导致了这个错误。
 
-检查你的 `_config.yml` 文件中是否漏掉了列表前的空格。你可以查阅 Wikipedia 中 [YAML](https://en.wikipedia.org/wiki/YAML) 相关页面来学习 YAML 语法。
+检查你的 `_config.yml` 文件中是否漏掉了列表前的空格。你可以查阅 Wikipedia 中 [YAML](https://zh.wikipedia.org/wiki/YAML) 相关页面来学习 YAML 语法。
 
 这个是错误的：
 

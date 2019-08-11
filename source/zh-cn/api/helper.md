@@ -27,7 +27,7 @@ hexo.extend.helper.register('js', function(path){
 
 ### custom helper 应该放在哪里？
 
-放置在 `themes/<yourtheme>/scripts` 目录中
+放置在 `themes/<yourtheme>/scripts` 目录中。
 
 ### 如何在我的 custom helper 中使用另外一个已经注册的 helper？
 
