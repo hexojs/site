@@ -43,7 +43,7 @@ title: 配置
 `category_dir` | 分类文件夹 | `categories`
 `code_dir` | Include code 文件夹 | `downloads/code`
 `i18n_dir` | 国际化（i18n）文件夹 | `:lang`
-`skip_render` | 跳过指定文件的渲染，您可使用 [glob 表达式](https://github.com/micromatch/micromatch#extended-globbing)来匹配路径。 |
+`skip_render` | 跳过指定文件的渲染。匹配到的文件将会被不做改动的复制到 `public` 目录中。，您可使用 [glob 表达式](https://github.com/micromatch/micromatch#extended-globbing)来匹配路径。<br/><br/>例如，`skip_render: "mypage/**/*"` 将会把 `source/mypage/index.html` 和 `source/mypage/code.js` 直接复制为 `public/mypage/index.html` 和 `public/mypage/code.js`。<br/>你也可以用这种方法来跳过对指定 markdown 文件的渲染，如 `skip_render: "_posts/test-post.md"` 将不会把 `source/_posts/test-post.md` 渲染成 HTML，但 markdown 文件并不会被复制到 `public`。 |
 
 {% note info 提示 %}
 如果您刚刚开始接触Hexo，通常没有必要修改这一部分的值。
