@@ -38,7 +38,7 @@ title: Configuration
 `category_dir` | 카테고리 디렉토리 | `categories`
 `code_dir` | Code 디렉토리 | `downloads/code`
 `i18n_dir` | i18n 디렉토리 | `:lang`
-`skip_render` | 렌더링하지 않을 경로. 경로 매칭을 위해 [glob expressions](https://github.com/isaacs/minimatch)를 사용할 수 있습니다. |
+`skip_render` | 렌더링하지 않을 경로. 경로 매칭을 위해 [glob expressions](https://github.com/micromatch/micromatch#extended-globbing)를 사용할 수 있습니다. |
 
 ### Writing
 

@@ -42,19 +42,19 @@ Você pode encontrar alguns problemas ao compilar. Instale o Xcode da App Store 
 
 ### Instalando o Node.js
 
-A melhor maneira de instalar o Node.js é com o [Node Version Manager](https://github.com/creationix/nvm).
+A melhor maneira de instalar o Node.js é com o [Node Version Manager](https://github.com/nvm-sh/nvm).
 Felizmente, os criadores do nvm fornecem um script simples que instala automaticamente o nvm:
 
 cURL:
 
 ``` bash
-$ curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | bash
+$ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
 ```
 
 Wget:
 
 ``` bash
-$ wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | bash
+$ wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
 ```
 
 Uma vez que o nvm esteja instalado, reinicie o terminal e execute o seguinte comando para instalar o Node.js:

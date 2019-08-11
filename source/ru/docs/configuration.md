@@ -38,7 +38,7 @@ title: Конфигурация
 `category_dir` | Папка с категориями | `categories`
 `code_dir` | Папка с кодом | `downloads/code`
 `i18n_dir` | Папка  i18n | `:lang`
-`skip_render` | Пути, которые исключены из обработки. Можно использовать [глобальные выражения](https://github.com/isaacs/minimatch) для определения путей |
+`skip_render` | Пути, которые исключены из обработки. Можно использовать [глобальные выражения](https://github.com/micromatch/micromatch#extended-globbing) для определения путей |
 
 ### Написание
 

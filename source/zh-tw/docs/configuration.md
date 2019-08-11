@@ -41,7 +41,7 @@ title: 配置
 `category_dir` | 分類資料夾 | `categories`
 `code_dir` | Include code 資料夾 | `downloads/code`
 `i18n_dir` | 國際化（i18n）資料夾 | `:lang`
-`skip_render` | 跳過指定檔案的渲染，您可使用 [glob 表達式](https://github.com/isaacs/minimatch) 來配對路徑 |
+`skip_render` | 跳過指定檔案的渲染，您可使用 [glob 表達式](https://github.com/micromatch/micromatch#extended-globbing) 來配對路徑 |
 
 ### 寫作
 

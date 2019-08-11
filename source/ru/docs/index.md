@@ -39,18 +39,18 @@ $ npm install -g hexo-cli
 
 ### Установка Node.js
 
-Лучший способ установить Node.js это [nvm](https://github.com/creationix/nvm).
+Лучший способ установить Node.js это [nvm](https://github.com/nvm-sh/nvm).
 
 cURL:
 
 ``` bash
-$ curl https://raw.github.com/creationix/nvm/v0.33.11/install.sh | sh
+$ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | sh
 ```
 
 Wget:
 
 ``` bash
-$ wget -qO- https://raw.github.com/creationix/nvm/v0.33.11/install.sh | sh
+$ wget -qO-https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | sh
 ```
 
 После установки nvm запустите терминал и выполните следующую команду для установки Node.js.

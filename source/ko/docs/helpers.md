@@ -634,7 +634,7 @@ Google 검색 form을 삽입합니다.
 `url` | 페이지 URL (`og:url`) | `url`
 `image` | 페이지 커버 (`og:image`) | First image in the content
 `site_name` | 사이트 이름 (`og:site_name`) | `config.title`
-`description` | 페이지 설명 (`og:desription`) | Page excerpt or first 200 characters of the content
+`description` | 페이지 설명 (`og:description`) | Page excerpt or first 200 characters of the content
 `twitter_card` | Twitter card type (`twitter:card`) | summary
 `twitter_id` | Twitter ID (`twitter:creator`) |
 `twitter_site` | Twitter Site (`twitter:site`) |

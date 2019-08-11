@@ -43,7 +43,7 @@ title: 配置
 `category_dir` | 分类文件夹 | `categories`
 `code_dir` | Include code 文件夹 | `downloads/code`
 `i18n_dir` | 国际化（i18n）文件夹 | `:lang`
-`skip_render` | 跳过指定文件的渲染，您可使用 [glob 表达式](https://github.com/isaacs/node-glob)来匹配路径。 |
+`skip_render` | 跳过指定文件的渲染，您可使用 [glob 表达式](https://github.com/micromatch/micromatch#extended-globbing)来匹配路径。 |
 
 {% note info 提示 %}
 如果您刚刚开始接触Hexo，通常没有必要修改这一部分的值。
@@ -99,5 +99,5 @@ Hexo 使用 [Moment.js](http://momentjs.com/) 来解析和显示时间。
 --- | ---
 `theme` | 当前主题名称。值为`false`时禁用主题
 `deploy` | 部署部分的设置
-
+`meta_generator` | [Meta generator](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/meta#%E5%B1%9E%E6%80%A7) 标签。 值为 `false` 时 Hexo 不会在头部插入该标签
 

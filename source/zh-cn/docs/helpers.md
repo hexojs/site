@@ -632,7 +632,7 @@ title: 辅助函数（Helpers）
 `url` | 页面网址 (`og:url`) | `url`
 `image` | 页面图片 (`og:image`) | 内容中的图片
 `site_name` | 网站名称 (`og:site_name`) | `config.title`
-`description` | 页面描述 (`og:desription`) | 内容摘要或前 200 字
+`description` | 页面描述 (`og:description`) | 内容摘要或前 200 字
 `twitter_card` | Twitter 卡片类型 (`twitter:card`) | summary
 `twitter_id` | Twitter ID (`twitter:creator`) |
 `twitter_site` | Twitter 网站 (`twitter:site`) |
