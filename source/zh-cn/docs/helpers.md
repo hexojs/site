@@ -477,6 +477,24 @@ title: 辅助函数（Helpers）
 `depth` | 要显示的分类层级。`0` 显示所有层级的分类；`-1` 和 `0` 很类似，但是显示不分层级；`1` 只显示第一层的分类。 | 0
 `class` | 分类列表的 class 名称。 | category
 `transform` | 改变分类名称显示方法的函数 |
+`suffix` | 为链接添加前缀 | None
+
+**用例:**
+
+``` js
+<%- list_categories(post.categories, {
+  class: 'post-category',
+  transform(str) {
+    return titlecase(str);
+  }
+}) %>
+ <%- list_categories(post.categories, {
+  class: 'post-category',
+  transform(str) {
+    return str.toUpperCase();
+  }
+}) %>
+```
 
 ### list_tags
 
@@ -494,8 +512,9 @@ title: 辅助函数（Helpers）
 `style` | 标签列表的显示方式。使用 `list` 以无序列表（unordered list）方式显示。 | list
 `separator` | 标签间的分隔符号。只有在 `style` 不是 `list` 时有用。 | ,
 `class` | 标签列表的 class 名称。 | tag
-`transform` | 改变标签名称显示方法的函数 |
+`transform` | 改变标签名称显示方法的函数。请查看 [list_categories](#list-categories) 中给出的例子 |
 `amount` | 要显示的标签数量（0 = 无限制） | 0
+`suffix` | 为链接添加前缀 | None
 
 ### list_archives
 
@@ -514,7 +533,7 @@ title: 辅助函数（Helpers）
 `style` | 归档列表的显示方式。使用 `list` 以无序列表（unordered list）方式显示。 | list
 `separator` | 归档间的分隔符号。只有在 `style` 不是 `list` 时有用。 | ,
 `class` | 归档列表的 class 名称。 | archive
-`transform` | 改变归档名称显示方法的函数 |
+`transform` | 改变归档名称显示方法的函数。请查看 [list_categories](#list-categories) 中给出的例子 |
 
 ### list_posts
 
@@ -532,7 +551,7 @@ title: 辅助函数（Helpers）
 `separator` | 文章间的分隔符号。只有在 `style` 不是 `list` 时有用。 | ,
 `class` | 文章列表的 class 名称。 | post
 `amount` | 要显示的文章数量（0 = 无限制） | 6
-`transform` | 改变文章名称显示方法的函数 |
+`transform` | 改变文章名称显示方法的函数。请查看 [list_categories](#list-categories) 中给出的例子 |
 
 ### tagcloud
 
