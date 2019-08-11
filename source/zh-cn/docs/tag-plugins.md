@@ -178,7 +178,7 @@ content
 在文章中插入指定大小的图片。
 
 ```
-{% img [class names] /path/to/image [width] [height] [title text [alt text]] %}
+{% img [class names] /path/to/image [width] [height] "title text 'alt text'" %}
 ```
 
 ## Link
