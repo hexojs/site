@@ -8,7 +8,7 @@
     - [ ] `preview` URL is correct.
     - [ ] `preview` URL web site is rendered correctly.
     - [ ] Add a screenshot to `source/themes/screenshots`.
-    - [ ] Screenshot file name with the same as `name`.
+    - [ ] Screenshot filename is same as value of `name`.
     - [ ] Screenshot size is `800 * 500`.
     - [ ] Screenshot file format is `png`.
 - [ ] I want to publish my plugin on Hexo official website.
