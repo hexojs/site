@@ -179,11 +179,26 @@ $ hexo --silent
 
 ### 自定义配置文件的路径
 
-``` bash
-$ hexo --config custom.yml
+```bash
+# use 'custom.yml' in place of '_config.yml'
+$ hexo server --config custom.yml
+
+# use 'custom.yml' & 'custom2.json', prioritizing 'custom2.json'
+$ hexo generate --config custom.yml,custom2.json,custom3.yml
 ```
 
-自定义配置文件的路径，执行后将不再使用 `_config.yml`。
+自定义配置文件的路径，指定这个参数后将不再使用默认的 `_config.yml`。
+你可以使用一个 YAML 或 JSON 文件的路径，也可以使用逗号分隔（无空格）的多个 YAML 或 JSON 文件的路径。例如：
+
+```bash
+# use 'custom.yml' in place of '_config.yml'
+$ hexo server --config custom.yml
+
+# use 'custom.yml' & 'custom2.json', prioritizing 'custom3.yml', then 'custom2.json'
+$ hexo generate --config custom.yml,custom2.json,custom3.yml
+```
+
+当你指定了多个配置文件以后，Hexo 会按顺序将这部分配置文件合并成一个 `_multiconfig.yml`。如果遇到重复的配置，排在后面的文件的配置会覆盖排在前面的文件的配置。这个原则适用于任意数量、任意深度的 YAML 和 JSON 文件。
 
 ### 显示草稿
 

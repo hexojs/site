@@ -98,6 +98,7 @@ Hexo 使用 [Moment.js](http://momentjs.com/) 来解析和显示时间。
 参数 | 描述
 --- | ---
 `theme` | 当前主题名称。值为`false`时禁用主题
+`theme_config` | 主题的配置文件。在这里放置的配置会覆盖主题目录下的 _config.yml 中的配置
 `deploy` | 部署部分的设置
 `meta_generator` | [Meta generator](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/meta#%E5%B1%9E%E6%80%A7) 标签。 值为 `false` 时 Hexo 不会在头部插入该标签
 
@@ -136,4 +137,54 @@ exclude:
   - "js/**/test*"
   # 不要用 exclude 来忽略 markdown 文件。你应该使用 'skip_render'，或者在 markdown 文件的文件名之前加一个 '_'
   # 如果你在这里配置一个 - "_posts/hello-world.md" 是没有用的。
+```
+
+### 使用代替配置文件
+
+可以在 hexo-cli 中使用 `--config` 参数来指定自定义配置文件的路径。你可以使用一个 YAML 或 JSON 文件的路径，也可以使用逗号分隔（无空格）的多个 YAML 或 JSON 文件的路径。例如：
+
+```bash
+# use 'custom.yml' in place of '_config.yml'
+$ hexo server --config custom.yml
+
+# use 'custom.yml' & 'custom2.json', prioritizing 'custom3.yml', then 'custom2.json'
+$ hexo generate --config custom.yml,custom2.json,custom3.yml
+```
+
+当你指定了多个配置文件以后，Hexo 会按顺序将这部分配置文件合并成一个 `_multiconfig.yml`。如果遇到重复的配置，排在后面的文件的配置会覆盖排在前面的文件的配置。这个原则适用于任意数量、任意深度的 YAML 和 JSON 文件。
+
+例如，使用 `--options` 指定了两个自定义配置文件：
+
+```
+$ hexo generate --config custom.yml,custom2.json
+```
+
+如果 `custom.yml` 中指定了 `foo: bar`，在 custom2.json 中指定了 `"foo": "dinosaur"`，那么在 `_multiconfig.yml` 中你会得到 `foo: dinosaur`。
+
+### 覆盖主题配置
+
+通常情况下，Hexo 主题是一个独立的项目，并拥有一个独立的 `_config.yml` 配置文件。
+你可以在站点的 `_config.yml` 配置文件中配置你的主题，这样你就不需要 fork 一份主题并维护主题独立的配置文件。
+
+以下是一个覆盖主题配置的例子：
+
+ ```yml
+# _config.yml
+theme_config:
+  bio: "My awesome bio"
+```
+
+ ```yml
+# themes/my-theme/_config.yml
+bio: "Some generic bio"
+logo: "a-cool-image.png"
+```
+
+最终主题配置的输出是：
+
+ ```json
+{
+  bio: "My awesome bio",
+  logo: "a-cool-image.png"
+}
 ```
