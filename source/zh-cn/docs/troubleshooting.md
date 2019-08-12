@@ -36,11 +36,19 @@ $ ulimit -n 10000
 
 ## Git 部署问题
 
+### RPC failed
+
 ``` plain
+error: RPC failed; result=22, HTTP code = 403
+
 fatal: 'username.github.io' does not appear to be a git repository
 ```
 
 请确认您已经在电脑上 [配置 git](https://help.github.com/articles/set-up-git)，或改用 HTTPS 库（repository）地址。
+
+### Error: ENOENT: no such file or directory
+
+如果你遇到了这个错误，有可能是你的文件名、分类或者标签的名字混淆了大写和小写，你可以尝试检查每一个标签和分类的名称，是否大小写一致来修复这一问题。
 
 ## 服务器问题
 
