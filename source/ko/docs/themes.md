@@ -74,7 +74,7 @@ Hexo는 모든 렌더링 가능한 파일들을 처리한 후 `public` 폴더에
 6. 변경사항에 대한 설명을 포함하여 Pull request를 생성합니다.
 
 [EJS]: https://github.com/hexojs/hexo-renderer-ejs
-[Swig]: http://paularmstrong.github.com/swig/
+[Swig]: https://github.com/paularmstrong/swig
 [Haml]: https://github.com/hexojs/hexo-renderer-haml
 [Jade]: https://github.com/hexojs/hexo-renderer-jade
 [hexojs/site]: https://github.com/hexojs/site
