@@ -42,8 +42,10 @@ We released a new version of the official plugins [hexo-util] & [hexo-renderer-m
 ### Refactor
 - ES6 [#97] [#104]
 
+
 [hexo-util]: https://github.com/hexojs/hexo-util
 [hexo-renderer-marked]: https://github.com/hexojs/hexo-renderer-marked
+
 [#61]: https://github.com/hexojs/hexo-util/pull/61
 [#45]: https://github.com/hexojs/hexo-util/pull/45
 [#58]: https://github.com/hexojs/hexo-util/pull/58
@@ -56,7 +58,7 @@ We released a new version of the official plugins [hexo-util] & [hexo-renderer-m
 [#46]: https://github.com/hexojs/hexo-util/pull/46
 [#70]: https://github.com/hexojs/hexo-util/pull/70
 
-[#98]: https://github.com/hexojs/hexo-renderer-marked/pull/70
+[#98]: https://github.com/hexojs/hexo-renderer-marked/pull/98
 [#102]: https://github.com/hexojs/hexo-renderer-marked/pull/102
 [changelog]: https://github.com/markedjs/marked/releases/tag/v0.7.0
 [#106]: https://github.com/hexojs/hexo-renderer-marked/pull/106
