@@ -332,7 +332,7 @@ title: 辅助函数（Helpers）
 
 ### truncate
 
-移除超过 `length` 长度的字符串。
+移除超过 `length` 长度的字符串。`length` 的默认值是 30。
 
 ``` js
 <%- truncate(text, length) %>

@@ -191,7 +191,7 @@ content
 
 ## Include Code
 
-插入 `source` 文件夹内的代码文件。
+插入 `source/downloads/code` 文件夹内的代码文件。`source/downloads/code` 不是固定的，取决于你在配置文件中 `code_dir` 的配置。
 
 ```
 {% include_code [title] [lang:language] path/to/file %}
