@@ -84,7 +84,7 @@ Hexo 使用 [Moment.js](http://momentjs.com/) 来解析和显示时间。
 参数 | 描述 | 默认值
 --- | --- | ---
 `date_format` | 日期格式 | `YYYY-MM-DD`
-`time_format` | 时间格式 | `H:mm:ss`
+`time_format` | 时间格式 | `HH:mm:ss`
 
 ## 分页
 
