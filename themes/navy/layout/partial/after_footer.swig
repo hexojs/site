@@ -1,6 +1,6 @@
 <!-- Scripts -->
 <!-- Cookie -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.0/js.cookie.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/js-cookie@2.2.0"></script>
 <!-- build:js build/js/main.js -->
 {{ js('js/lang_select') }}
 {{ js('js/toc') }}
@@ -8,7 +8,7 @@
 <!-- endbuild -->
 {% if page.layout === 'plugins' %}
 <!-- Plugin search -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.6/lunr.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lunr@2.3.6"></script>
 <!-- Lazy load -->
 <script async src="https://cdn.jsdelivr.net/lazysizes/3.0.0/lazysizes.min.js"></script>
 <!-- build:js build/js/plugins.js -->
