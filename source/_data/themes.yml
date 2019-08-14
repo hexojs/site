@@ -2377,7 +2377,7 @@
 - name: Material-X
   description: a material design theme
   link: https://github.com/xaoxuu/hexo-theme-material-x
-  preview: https://xaoxuu.com/blog
+  preview: https://xaoxuu.com
   tags:
     - material design
     - responsive
@@ -2782,4 +2782,14 @@
     - Copyright
     - Mobile
     - Simple
-    
+
+- name: Resume
+  description: a material design theme
+  link: https://github.com/xaoxuu/hexo-theme-resume
+  preview: https://mxclub.github.io/resume/
+  tags:
+    - resume
+    - 简历
+    - beautiful
+    - clean
+    - simple
