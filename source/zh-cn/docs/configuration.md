@@ -43,7 +43,19 @@ title: 配置
 `category_dir` | 分类文件夹 | `categories`
 `code_dir` | Include code 文件夹，`source_dir` 下的子目录 | `downloads/code`
 `i18n_dir` | 国际化（i18n）文件夹 | `:lang`
-`skip_render` | 跳过指定文件的渲染。匹配到的文件将会被不做改动的复制到 `public` 目录中。，您可使用 [glob 表达式](https://github.com/micromatch/micromatch#extended-globbing)来匹配路径。<br/><br/>例如，`skip_render: "mypage/**/*"` 将会把 `source/mypage/index.html` 和 `source/mypage/code.js` 直接复制为 `public/mypage/index.html` 和 `public/mypage/code.js`。<br/>你也可以用这种方法来跳过对指定 markdown 文件的渲染，如 `skip_render: "_posts/test-post.md"` 将不会把 `source/_posts/test-post.md` 渲染成 HTML，但 markdown 文件并不会被复制到 `public`。 |
+`skip_render` | 跳过指定文件的渲染。匹配到的文件将会被不做改动的复制到 `public` 目录中。您可使用 [glob 表达式](https://github.com/micromatch/micromatch#extended-globbing)来匹配路径。 |
+
+例如：
+
+Examples:
+
+``` yaml
+skip_render: "mypage/**/*"
+# 将会直接将 `source/mypage/index.html` 和 `source/mypage/code.js` 不做改动地输出到 'public' 目录
+# 你也可以用这种方法来跳过对指定文章文件的渲染
+skip_render: "_posts/test-post.md"
+# 这将会忽略对 'test-post.md' 的渲染
+```
 
 {% note info 提示 %}
 如果您刚刚开始接触Hexo，通常没有必要修改这一部分的值。
@@ -135,9 +147,13 @@ exclude:
   - "js/test*"
   # 不包括 'source/js/' 及其子目录中任何以 'test' 开头的文件
   - "js/**/test*"
-  # 不要用 exclude 来忽略 markdown 文件。你应该使用 'skip_render'，或者在 markdown 文件的文件名之前加一个 '_'
-  # 如果你在这里配置一个 - "_posts/hello-world.md" 是没有用的。
+  # 不要用 exclude 来忽略 'source/_posts/' 中的文件。你应该使用 'skip_render'，或者在要忽略的文件的文件名之前加一个下划线 '_'
+  # 在这里配置一个 - "_posts/hello-world.md" 是没有用的。
 ```
+
+列表中的每一项都必须用单引号或双引号包裹起来。
+
+`include` 和 `exclude` 并不适用于 `themes/` 目录下的文件。如果需要忽略 `themes/` 目录下的部分文件或文件夹，可以在文件名之前添加下划线 `_`。
 
 ### 使用代替配置文件
 

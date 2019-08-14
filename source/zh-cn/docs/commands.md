@@ -28,7 +28,7 @@ $ hexo new "post title with whitespace"
 --- | ---
 `-p`, `--path` | 自定义新文章的路径
 `-r`, `--replace` | 如果存在同名文章，将其替换
-`-s`, `--slug` | 文章的 Slug，作为 markdown 文件的文件名和发布后的 URL
+`-s`, `--slug` | 文章的 Slug，作为新文章的文件名和发布后的 URL
 
 默认情况下，Hexo 会使用文章的标题来决定 markdown 文件的路径。对于独立页面来说，Hexo 会创建一个以标题为名字的目录，并在目录中放置一个 `index.md` 文件。你可以使用 `--path` 参数来覆盖上述行为、自行决定文件的目录：
 
@@ -180,10 +180,10 @@ $ hexo --silent
 ### 自定义配置文件的路径
 
 ```bash
-# use 'custom.yml' in place of '_config.yml'
+# 使用 custom.yml 代替默认的 _config.yml
 $ hexo server --config custom.yml
 
-# use 'custom.yml' & 'custom2.json', prioritizing 'custom2.json'
+# 使用 custom.yml 和 custom2.json，其中 custom2.json 优先级更高
 $ hexo generate --config custom.yml,custom2.json,custom3.yml
 ```
 
@@ -191,10 +191,10 @@ $ hexo generate --config custom.yml,custom2.json,custom3.yml
 你可以使用一个 YAML 或 JSON 文件的路径，也可以使用逗号分隔（无空格）的多个 YAML 或 JSON 文件的路径。例如：
 
 ```bash
-# use 'custom.yml' in place of '_config.yml'
+# 使用 custom.yml 代替默认的 _config.yml
 $ hexo server --config custom.yml
 
-# use 'custom.yml' & 'custom2.json', prioritizing 'custom3.yml', then 'custom2.json'
+# 使用 custom.yml, custom2.json 和 custom3.yml，其中 custom3.yml 优先级最高，其次是 custom2.json
 $ hexo generate --config custom.yml,custom2.json,custom3.yml
 ```
 
