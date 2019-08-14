@@ -631,7 +631,7 @@ title: Помощники
 `url` | URL-адрес страницы (`og:url`) | `url`
 `image` | Обложка страницы (`og:image`) | First image in the content
 `site_name` | Имя сайта (`og:site_name`) | `config.title`
-`description` | Описание страницы (`og:desription`) | Page excerpt or first 200 characters of the content
+`description` | Описание страницы (`og:description`) | Page excerpt or first 200 characters of the content
 `twitter_card` | Карточка Twitter (`twitter:card`) | summary
 `twitter_id` | Twitter ID (`twitter:creator`) |
 `twitter_site` | Сайт Twitter (`twitter:site`) |

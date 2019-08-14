@@ -9,7 +9,7 @@ title: 变量
 `page` | 针对该页面的内容以及 front-matter 所设定的变量。
 `config` | 网站配置
 `theme` | 主题配置。继承自网站配置。
-`_` (单下划线) | [Lodash] 函数库
+`_` (单下划线) | [Lodash](https://lodash.com/  'Lodash') 函数库
 `path` | 当前页面的路径（不含根路径）
 `url` | 当前页面的完整网址
 `env` | 环境变量

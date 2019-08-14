@@ -41,18 +41,18 @@ $ npm install -g hexo-cli
 
 ### 安裝 Node.js
 
-安裝 Node.js 的最佳方式是透過 [Node Version Manager](https://github.com/creationix/nvm)。感謝 nvm 的開發者提供簡易自動安裝的腳本指令：
+安裝 Node.js 的最佳方式是透過 [Node Version Manager](https://github.com/nvm-sh/nvm)。感謝 nvm 的開發者提供簡易自動安裝的腳本指令：
 
 cURL:
 
 ``` bash
-$ curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | bash
+$ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
 ```
 
 Wget:
 
 ``` bash
-$ wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | bash
+$ wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
 ```
 
 一旦安裝完成，重啟終端機並執行下列指令以安裝 Node.js。

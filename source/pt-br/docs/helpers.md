@@ -639,7 +639,7 @@ Opção | Descrição | Padrão
 `url` | URL da página (`og:url`) | `url`
 `image` | Capa da página (`og:image`) | Primeira imagem no conteúdo
 `site_name` | Nome do site (`og:site_name`) | `config.title`
-`description`| Descrição da página (`og:desription`) | Trecho da página ou os 200 primeiros caracteres do conteúdo
+`description`| Descrição da página (`og:description`) | Trecho da página ou os 200 primeiros caracteres do conteúdo
 `twitter_card` | Tipo de Twitter card (`twitter:card`) | summary
 `twitter_id` | Twitter ID (`twitter:creator`) |
 `twitter_site` | Site do Twitter (`twitter:site`) |

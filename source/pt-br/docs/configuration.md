@@ -39,7 +39,7 @@ Configuração | Descrição | Padrão
 `category_dir` | Diretório de categorias | `categories`
 `code_dir` | Diretório de código (subdiretório de `source_dir`) | `downloads/code`
 `i18n_dir` | Diretório de internacionalização (i18n) | `:lang`
-`skip_render` | Caminhos que não devem ser renderizados. Você pode usar [expressões globais](https://github.com/isaacs/minimatch) para fazer correspondência de caminho |
+`skip_render` | Caminhos que não devem ser renderizados. Você pode usar [expressões globais](https://github.com/micromatch/micromatch#extended-globbing) para fazer correspondência de caminho |
 
 ### Escrita
 

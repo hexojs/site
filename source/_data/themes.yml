@@ -75,13 +75,15 @@
     - clean
 
 - name: Material-T
-  description: Born to be elegant.
+  description: An elegant and light theme
   link: https://github.com/0x2E/Material-T
-  preview: https://0x2e.github.io/
+  preview: https://github.com/0x2E/Material-T
   tags:
     - Material Design
     - responsive
     - elegant
+    - light
+    - one_column
     - 中文
 
 - name: Life
@@ -1755,7 +1757,7 @@
 - name: artemis
   description: A minimalist theme inspired by Apollo, built with Pug and Sass
   link: https://github.com/Dreyer/hexo-theme-artemis
-  preview: http://hexo-theme-artemis.smplcty.com/
+  preview: https://hexo-theme-artemis.netlify.com
   tags:
     - responsive
     - minimalist
@@ -2375,7 +2377,7 @@
 - name: Material-X
   description: a material design theme
   link: https://github.com/xaoxuu/hexo-theme-material-x
-  preview: https://xaoxuu.com/blog
+  preview: https://xaoxuu.com
   tags:
     - material design
     - responsive
@@ -2737,7 +2739,16 @@
     - simple
     - chinese
     - one_column
-
+- name: Materialized
+  description: A cool materialized theme for Hexo.
+  link: https://github.com/theme-materialized/hexo-theme-materialized
+  preview: https://theme-materialized.github.io/
+  tags:
+    - material
+    - beautiful
+    - elegant
+    - clean
+    - simple
 - name: 3-hexo
   description: Three sections, simple and convenient, like evernote
   link: https://github.com/yelog/hexo-theme-3-hexo
@@ -2750,13 +2761,43 @@
     - Easy
     - Beautiful
     - Evernote
-- name: Materialized
-  description: A cool materialized theme for Hexo.
-  link: https://github.com/theme-materialized/hexo-theme-materialized
-  preview: https://theme-materialized.github.io/
+- name: Nexmoe
+  description: A special Hexo theme
+  link: https://github.com/nexmoe/hexo-theme-nexmoe
+  preview: https://nexmoe.com/
   tags:
-    - material
+    - Sidebar
+    - 中文
+    - Internationalization
+    - Shadow
+    - Light box
+    - Album
+    - Links
+    - Cover Picture
+
+- name: Yilia-plus
+  description: A simple and elegant theme for hexo.
+  link: https://github.com/JoeyBling/hexo-theme-yilia-plus
+  preview: https://joeybling.github.io/
+  tags:
+    - 中文
+    - gitment
+    - 码云评论
+    - 网易云音乐
+    - Cover Picture
+    - 不蒜子统计
+    - Sidebar
+    - Copyright
+    - Mobile
+    - Simple
+
+- name: Resume
+  description: a material design theme
+  link: https://github.com/xaoxuu/hexo-theme-resume
+  preview: https://mxclub.github.io/resume/
+  tags:
+    - resume
+    - 简历
     - beautiful
-    - elegant
     - clean
     - simple
