@@ -220,7 +220,17 @@ deploy:
 $ npm i -g now
 ```
 
-2. Deploy with a single command at the root of the project directory:
+2. Add a build script to your `package.json` file:
+
+```
+{
+  "scripts": {
+    "build: "hexo deploy"
+  }
+}
+```
+
+3. Deploy with a single command at the root of the project directory:
 
 ```bash
 now
