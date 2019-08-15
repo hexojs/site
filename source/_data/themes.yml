@@ -2793,3 +2793,12 @@
     - beautiful
     - clean
     - simple
+
+- name: fun
+  description: a responsive design theme
+  link: https://github.com/homeant/hexo-theme-fun
+  preview: https://fun.tianhui.xin
+  tags:
+    - responsive
+    - clean
+    - simple
