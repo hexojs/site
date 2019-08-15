@@ -63,7 +63,7 @@ index
 您可以在局部模板中指定局部变量并使用。
 
 ``` html partial/header.ejs
-<h1 id="logo"><%= title></h1>
+<h1 id="logo"><%= title %></h1>
 ```
 
 ``` html index.ejs

@@ -54,7 +54,7 @@ We welcome you to join the development of Hexo. 🤗
 
 ## Updating official-plugins
 
-Also, we welcome PR or issue to [official-plugins](https://github.com/hexojs). 🤗
+我们也欢迎给 [Hexo 官方插件](https://github.com/hexojs) 提交 PR 和 Issue 🤗
 
 ## 更新文档
 
