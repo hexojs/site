@@ -3,7 +3,7 @@ title: 配置
 ---
 您可以在 `_config.yml` 中修改大部分的配置。
 
-{% youtube A0Enyn70jKU %}
+{% youtube 5bL8b5ulUD4 %}
 
 ## 网站
 
