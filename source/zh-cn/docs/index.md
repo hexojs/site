@@ -8,7 +8,7 @@ title: 文档
 
 Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 [Markdown](http://daringfireball.net/projects/markdown/)（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。
 
-{% youtube PsXWbI2Mqu0 %}
+{% youtube bCj0iVVqkSg %}
 
 ## 安装
 
@@ -31,6 +31,10 @@ $ npm install -g hexo-cli
 
 {% note warn Mac 用户 %}
 您在编译时可能会遇到问题，请先到 App Store 安装 Xcode，Xcode 完成后，启动并进入 **Preferences -> Download -> Command Line Tools -> Install** 安装命令行工具。
+{% endnote %}
+
+{% note warn For Mac / Linux 用户 %}
+如果你是 macOS 用户，或者是通过软件管理器从默认软件仓库安装 Node.js 的 Linux 用户，在使用 npm 的 `-g` 参数时可能会遇到一些权限相关的问题。请遵循 [由 npmjs 发布的指导](https://docs.npmjs.com/resolving-eacces-permissions-errors-when-installing-packages-globally) 修复该问题，**并且不要使用 root、sudo 等方法覆盖权限**
 {% endnote %}
 
 ### 安装 Git

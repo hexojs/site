@@ -2,7 +2,7 @@
 title: 指令
 ---
 
-{% youtube mgdXi5npArQ %}
+{% youtube bJBsW4b5WME %}
 
 ## init
 
