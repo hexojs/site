@@ -12,7 +12,7 @@ Setting | Description
 `description` | The description of your website
 `keywords` | The keywords of your website. Separate multiple keywords with commas `,`.
 `author` | Your name
-`language` | The language of your website. Use a [2-lettter ISO-639-1 code](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes). Default is `en`.
+`language` | The language of your website. Use a [2-lettter ISO-639-1 code](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) or optionally [its variant](/docs/internationalization). Default is `en`.
 `timezone` | The timezone of your website. Hexo uses the setting on your computer by default. You can find the list of available timezones [here](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones). Some examples are `America/New_York`, `Japan`, and `UTC`.
 
 ### URL
@@ -39,7 +39,18 @@ Setting | Description | Default
 `category_dir` | Category directory | `categories`
 `code_dir` | Include code directory (subdirectory of `source_dir`) | `downloads/code`
 `i18n_dir` | i18n directory | `:lang`
-`skip_render` | Paths that will be copied to `public` raw, without being rendered. You can use [glob expressions](https://github.com/micromatch/micromatch#extended-globbing) for path matching.<br /><br />For example, `skip_render: "mypage/**/*"` will output `source/mypage/index.html` and `source/mypage/code.js` without altering them.<br />This also can be used to exclude posts, `skip_render: "_posts/test-post.md"` will ignore the `source/_posts/test-post.md`.|
+`skip_render` | Paths that will be copied to `public` raw, without being rendered. You can use [glob expressions](https://github.com/micromatch/micromatch#extended-globbing) for path matching.
+
+Examples:
+
+``` yaml
+skip_render: "mypage/**/*"
+# will output `source/mypage/index.html` and `source/mypage/code.js` without altering them.
+
+## This also can be used to exclude posts,
+skip_render: "_posts/test-post.md" 
+# will ignore the `source/_posts/test-post.md`.
+```
 
 ### Writing
 
@@ -122,7 +133,7 @@ exclude:
   - "js/test*"
   # Exclude any file with filename that starts with 'test' in 'source/js/' and its subfolders.
   - "js/**/test*"
-  # Do not use this to exclude posts or .md files in the 'source/_posts/'.
+  # Do not use this to exclude posts in the 'source/_posts/'.
   # Use skip_render for that. Or prepend an underscore to the filename.
   # - "_posts/hello-world.md" # Does not work.
 ```

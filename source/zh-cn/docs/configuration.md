@@ -3,7 +3,7 @@ title: 配置
 ---
 您可以在 `_config.yml` 中修改大部分的配置。
 
-{% youtube A0Enyn70jKU %}
+{% youtube 5bL8b5ulUD4 %}
 
 ## 网站
 
@@ -41,9 +41,21 @@ title: 配置
 `tag_dir` | 标签文件夹 | `tags`
 `archive_dir` | 归档文件夹 | `archives`
 `category_dir` | 分类文件夹 | `categories`
-`code_dir` | Include code 文件夹 | `downloads/code`
+`code_dir` | Include code 文件夹，`source_dir` 下的子目录 | `downloads/code`
 `i18n_dir` | 国际化（i18n）文件夹 | `:lang`
-`skip_render` | 跳过指定文件的渲染，您可使用 [glob 表达式](https://github.com/micromatch/micromatch#extended-globbing)来匹配路径。 |
+`skip_render` | 跳过指定文件的渲染。匹配到的文件将会被不做改动的复制到 `public` 目录中。您可使用 [glob 表达式](https://github.com/micromatch/micromatch#extended-globbing)来匹配路径。 |
+
+例如：
+
+Examples:
+
+``` yaml
+skip_render: "mypage/**/*"
+# 将会直接将 `source/mypage/index.html` 和 `source/mypage/code.js` 不做改动地输出到 'public' 目录
+# 你也可以用这种方法来跳过对指定文章文件的渲染
+skip_render: "_posts/test-post.md"
+# 这将会忽略对 'test-post.md' 的渲染
+```
 
 {% note info 提示 %}
 如果您刚刚开始接触Hexo，通常没有必要修改这一部分的值。
@@ -84,7 +96,7 @@ Hexo 使用 [Moment.js](http://momentjs.com/) 来解析和显示时间。
 参数 | 描述 | 默认值
 --- | --- | ---
 `date_format` | 日期格式 | `YYYY-MM-DD`
-`time_format` | 时间格式 | `H:mm:ss`
+`time_format` | 时间格式 | `HH:mm:ss`
 
 ## 分页
 
@@ -98,6 +110,97 @@ Hexo 使用 [Moment.js](http://momentjs.com/) 来解析和显示时间。
 参数 | 描述
 --- | ---
 `theme` | 当前主题名称。值为`false`时禁用主题
+`theme_config` | 主题的配置文件。在这里放置的配置会覆盖主题目录下的 _config.yml 中的配置
 `deploy` | 部署部分的设置
 `meta_generator` | [Meta generator](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/meta#%E5%B1%9E%E6%80%A7) 标签。 值为 `false` 时 Hexo 不会在头部插入该标签
 
+### 包括或不包括目录和文件
+
+在 Hexo 配置文件中，通过设置 include/exclude 可以让 Hexo 进行处理或忽略某些目录和文件夹。你可以使用 [glob 表达式](https://github.com/isaacs/minimatch) 对目录和文件进行匹配。
+
+参数 | 描述
+--- | ---
+`include` | Hexo 默认会忽略隐藏文件和文件夹（包括名称以下划线和 `.` 开头的文件和文件夹，Hexo 的 `_posts` 和 `_data` 等目录除外）。通过设置此字段将使 Hexo 处理他们并将它们复制到 `source` 目录下。
+`exclude` | Hexo 会忽略这些文件和目录
+
+举例：
+
+```yaml
+# Include/Exclude Files/Folders
+include:
+  - ".nojekyll"
+  # 包括 'source/css/_typing.css'
+  - "css/_typing.css"
+  # 包括 'source/_css/' 中的任何文件，但不包括子目录及其其中的文件。
+  - "_css/*"
+  # 包含 'source/_css/' 中的任何文件和子目录下的任何文件
+  - "_css/**/*"
+
+exclude:
+  # 不包括 'source/js/test.js'
+  - "js/test.js"
+  # 不包括 'source/js/' 中的文件、但包括子目录下的所有目录和文件
+  - "js/*"
+  # 不包括 'source/js/' 中的文件和子目录下的任何文件
+  - "js/**/*"
+  # 不包括 'source/js/' 目录下的所有文件名以 'test' 开头的文件，但包括其它文件和子目录下的单文件
+  - "js/test*"
+  # 不包括 'source/js/' 及其子目录中任何以 'test' 开头的文件
+  - "js/**/test*"
+  # 不要用 exclude 来忽略 'source/_posts/' 中的文件。你应该使用 'skip_render'，或者在要忽略的文件的文件名之前加一个下划线 '_'
+  # 在这里配置一个 - "_posts/hello-world.md" 是没有用的。
+```
+
+列表中的每一项都必须用单引号或双引号包裹起来。
+
+`include` 和 `exclude` 并不适用于 `themes/` 目录下的文件。如果需要忽略 `themes/` 目录下的部分文件或文件夹，可以在文件名之前添加下划线 `_`。
+
+### 使用代替配置文件
+
+可以在 hexo-cli 中使用 `--config` 参数来指定自定义配置文件的路径。你可以使用一个 YAML 或 JSON 文件的路径，也可以使用逗号分隔（无空格）的多个 YAML 或 JSON 文件的路径。例如：
+
+```bash
+# use 'custom.yml' in place of '_config.yml'
+$ hexo server --config custom.yml
+
+# use 'custom.yml' & 'custom2.json', prioritizing 'custom3.yml', then 'custom2.json'
+$ hexo generate --config custom.yml,custom2.json,custom3.yml
+```
+
+当你指定了多个配置文件以后，Hexo 会按顺序将这部分配置文件合并成一个 `_multiconfig.yml`。如果遇到重复的配置，排在后面的文件的配置会覆盖排在前面的文件的配置。这个原则适用于任意数量、任意深度的 YAML 和 JSON 文件。
+
+例如，使用 `--options` 指定了两个自定义配置文件：
+
+```
+$ hexo generate --config custom.yml,custom2.json
+```
+
+如果 `custom.yml` 中指定了 `foo: bar`，在 custom2.json 中指定了 `"foo": "dinosaur"`，那么在 `_multiconfig.yml` 中你会得到 `foo: dinosaur`。
+
+### 覆盖主题配置
+
+通常情况下，Hexo 主题是一个独立的项目，并拥有一个独立的 `_config.yml` 配置文件。
+你可以在站点的 `_config.yml` 配置文件中配置你的主题，这样你就不需要 fork 一份主题并维护主题独立的配置文件。
+
+以下是一个覆盖主题配置的例子：
+
+ ```yml
+# _config.yml
+theme_config:
+  bio: "My awesome bio"
+```
+
+ ```yml
+# themes/my-theme/_config.yml
+bio: "Some generic bio"
+logo: "a-cool-image.png"
+```
+
+最终主题配置的输出是：
+
+ ```json
+{
+  bio: "My awesome bio",
+  logo: "a-cool-image.png"
+}
+```

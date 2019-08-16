@@ -178,7 +178,7 @@ content
 在文章中插入指定大小的图片。
 
 ```
-{% img [class names] /path/to/image [width] [height] [title text [alt text]] %}
+{% img [class names] /path/to/image [width] [height] "title text 'alt text'" %}
 ```
 
 ## Link
@@ -191,7 +191,7 @@ content
 
 ## Include Code
 
-插入 `source` 文件夹内的代码文件。
+插入 `source/downloads/code` 文件夹内的代码文件。`source/downloads/code` 不是固定的，取决于你在配置文件中 `code_dir` 的配置。
 
 ```
 {% include_code [title] [lang:language] path/to/file %}
@@ -241,3 +241,31 @@ content
 content
 {% endraw %}
 ```
+
+## 文章摘要和截断
+
+在文章中使用 `<!-- more -->`，那么 `<!-- more -->` 之前的文字将会被视为摘要。首页中将只出现这部分文字，同时这部分文字也会出现在正文之中。
+
+例如：
+
+```
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+<!-- more -->
+Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+```
+
+首页中将只会出现
+
+```
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+```
+
+正文中则会出现
+
+```
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+```
+
+注意，摘要可能会被 Front Matter 中的 `excerpt` 覆盖。

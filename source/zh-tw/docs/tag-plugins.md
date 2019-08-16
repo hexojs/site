@@ -187,7 +187,7 @@ content
 
 ## Include Code
 
-插入 `source` 資料夾內的程式檔。
+插入 `source/downloads/code` 資料夾內的程式檔，資料夾取决于你在配置文件中 `code_dir` 的配置。
 
 ```
 {% include_code [title] [lang:language] path/to/file %}

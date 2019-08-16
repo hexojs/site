@@ -370,6 +370,15 @@
     - renderer
     - markdown
     - kramed
+- name: hexo-renderer-unified
+  description: Markdown renderer plugin for Hexo - based on Unified.
+  link: https://github.com/TitiAlone/hexo-renderer-unified
+  tags:
+    - renderer
+    - markdown
+    - unified
+    - remark
+    - rehype
 - name: hexo-autoprefixer
   description: Autoprefixer plugin for Hexo.
   link: https://github.com/hexojs/hexo-autoprefixer
@@ -2123,7 +2132,7 @@
     - vim
 - name: hexo-yam
   description: Yet Another Minifier. Minify and compress html, js and css. Support gzip and brotli compressions.
-  link: https://github.com/weyusi/hexo-yam
+  link: https://github.com/curbengh/hexo-yam
   tags:
     - filter
     - minify
@@ -2135,7 +2144,7 @@
     - brotli
 - name: hexo-nofollow
   description: Add SEO-friendly nofollow attribute to all external links in your posts. A more updated version of hexo-autonofollow.
-  link: https://github.com/weyusi/hexo-nofollow
+  link: https://github.com/curbengh/hexo-nofollow
   tags:
     - SEO
     - nofollow
