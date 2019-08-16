@@ -2774,7 +2774,6 @@
     - Album
     - Links
     - Cover Picture
-
 - name: Yilia-plus
   description: A simple and elegant theme for hexo.
   link: https://github.com/JoeyBling/hexo-theme-yilia-plus
@@ -2790,7 +2789,6 @@
     - Copyright
     - Mobile
     - Simple
-
 - name: Resume
   description: a material design theme
   link: https://github.com/xaoxuu/hexo-theme-resume
@@ -2801,3 +2799,16 @@
     - beautiful
     - clean
     - simple
+- name: cold-stone
+  description: A simple, clean, text-based Hexo blog theme.
+  link: https://github.com/xrr2016/hexo-theme-cold-stone
+  preview: https://coldstone.fun
+  tags:
+    - light weight
+    - night mode
+    - responsive
+    - PWA support
+    - utteranc comment
+    - english/chinese
+    - easy config
+
