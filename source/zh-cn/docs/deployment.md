@@ -2,7 +2,7 @@
 title: 部署
 ---
 
-{% youtube B0yVJ46CTR8 %}
+{% youtube ZIltKlkG4S0 %}
 
 Hexo 提供了快速方便的一键部署功能，让您只需一条命令就能将网站部署到服务器上。
 
@@ -52,16 +52,24 @@ deploy:
 参数 | 描述
 --- | ---
 `repo` | 库（Repository）地址
-`branch` | 分支名称。如果您使用的是 GitHub 或 GitCafe 的话，程序会尝试自动检测。
+`branch` | 分支名称。如果不指定，则默认值为 master
 `message` | 自定义提交信息 (默认为 `Site updated: {% raw %}{{ now('YYYY-MM-DD HH:mm:ss') }}{% endraw %}`)
 
-生成站点文件并推送至远程库。执行`hexo clean && hexo deploy`命令。前者清除站点文件，后者重新生成站点文件并将之推送到指定的库分支。（如果您的Hexo是局部安装，则需要执行`./node_modules/.bin/hexo clean && ./node_modules/.bin/hexo deploy`。）
+生成站点文件并推送至远程库。执行 `hexo clean && hexo deploy` 命令（如果您并未全局安装 Hexo Cli，则需要执行 `./node_modules/.bin/hexo clean && ./node_modules/.bin/hexo deploy`）
 
 登入 Github/BitBucket/Gitlab，请在库设置（Repository Settings）中将默认分支设置为`_config.yml`配置中的分支名称。稍等片刻，您的站点就会显示在您的Github Pages中。
 
 ### 这一切是如何发生的？
 
-当初次新建一个库的时候，库将自动包含一个**master**分支。请在这个分支下进行写作和各种配置来完善您的网页。当执行`hexo deploy`时，Hexo会创建或更新另外一个用于部署的分支，这个分支就是`_config.yml`配置文件中指定的分支。Hexo会将生成的站点文件推送至该分支下，并且**完全覆盖**该分支下的已有内容。因此，部署分支应当不同于写作分支。（一个推荐的方式是把master作为写作分支，另外使用public分支作为部署分支。）值得注意的是，`hexo deploy`并不会对本地或远程的写作分支进行任何操作，因此依旧需要手动推送写作分支的所有改动以实现版本控制。此外，如果您的Github Pages需要使用CNAME文件**自定义域名**，请将CNAME文件置于写作分支的`source_dir`目录下，只有这样`hexo deploy`才能将CNAME文件一并推送至部署分支。
+当执行 `hexo deploy` 时，Hexo 会将 `public` 目录中的文件和目录推送至 `_config.yml` 中指定的远端仓库和分支中，并且**完全覆盖**该分支下的已有内容。
+
+{% note warn For 使用 Git 管理站点目录的用户 %}
+由于 Hexo 的部署默认使用分支 `master`，所以如果你同时正在使用 Git 管理你的站点目录，你应当注意你的部署分支应当不同于写作分支。
+一个好的实践是将站点目录和 Pages 分别存放在两个不同的 Git 仓库中，可以有效避免相互覆盖。
+Hexo 在部署你的站点生成的文件时并不会更新你的站点目录。因此你应该手动提交并推送你的写作分支。
+{% endnote %}
+
+此外，如果您的 Github Pages 需要使用 CNAME 文件**自定义域名**，请将 CNAME 文件置于 `source` 目录下，只有这样 `hexo deploy` 才能将 CNAME 文件一并推送至部署分支。
 
 ## Heroku
 

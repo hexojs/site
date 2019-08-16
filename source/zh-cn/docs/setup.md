@@ -2,7 +2,7 @@
 title: 建站
 ---
 
-{% youtube xvIRGmKWpFM %}
+{% youtube 2oxWnm8E-mc %}
 
 
 安装 Hexo 完成后，请执行下列命令，Hexo 将会在指定文件夹中新建所需要的文件。

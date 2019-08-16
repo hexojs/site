@@ -370,6 +370,15 @@
     - renderer
     - markdown
     - kramed
+- name: hexo-renderer-unified
+  description: Markdown renderer plugin for Hexo - based on Unified.
+  link: https://github.com/TitiAlone/hexo-renderer-unified
+  tags:
+    - renderer
+    - markdown
+    - unified
+    - remark
+    - rehype
 - name: hexo-autoprefixer
   description: Autoprefixer plugin for Hexo.
   link: https://github.com/hexojs/hexo-autoprefixer
