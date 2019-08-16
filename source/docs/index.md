@@ -28,6 +28,10 @@ If not, please follow the following instructions to install all the requirements
 You may encounter some problems when compiling. Please install Xcode from App Store first. After Xcode is installed, open Xcode and go to **Preferences -> Download -> Command Line Tools -> Install** to install command line tools.
 {% endnote %}
 
+{% note warn For Mac / Linux users %}
+If you are a macOS user, or a Linux user who install Node.js through your package manager with default repository, you might run into some permission error when using `npm install -g`. Please follow [the guide provided by npmjs](https://docs.npmjs.com/resolving-eacces-permissions-errors-when-installing-packages-globally) to solve the issue, AND DO NOT USE ROOT USER OR SUDO TO OVERRIDE.
+{% endnote %}
+
 ### Install Git
 
 - Windows: Download & install [git](https://git-scm.com/download/win).
@@ -58,7 +62,7 @@ Once nvm is installed, restart the terminal and run the following command to ins
 $ nvm install stable
 ```
 
-Alternatively, download and run [the installer](http://nodejs.org/). Most Linux distributions  ship Node.js in their default repository. [NodeSource](https://github.com/nodesource/distributions) third-party repo usually ships more up-to-date Node.js.
+Alternatively, download and run [the installer](http://nodejs.org/). Most Linux distributions ship Node.js in their default repository. [NodeSource](https://github.com/nodesource/distributions) third-party repo usually ships more up-to-date Node.js.
 
 ### Install Hexo
 
