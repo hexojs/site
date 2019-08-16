@@ -2783,6 +2783,17 @@
     - Mobile
     - Simple
 
+- name: Resume
+  description: a material design theme
+  link: https://github.com/xaoxuu/hexo-theme-resume
+  preview: https://mxclub.github.io/resume/
+  tags:
+    - resume
+    - 简历
+    - beautiful
+    - clean
+    - simple
+
 - name: cold-stone
   description: A simple, clean, text-based Hexo blog theme.
   link: https://github.com/xrr2016/hexo-theme-cold-stone
