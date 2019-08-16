@@ -2739,7 +2739,16 @@
     - simple
     - chinese
     - one_column
-
+- name: Materialized
+  description: A cool materialized theme for Hexo.
+  link: https://github.com/theme-materialized/hexo-theme-materialized
+  preview: https://theme-materialized.github.io/
+  tags:
+    - material
+    - beautiful
+    - elegant
+    - clean
+    - simple
 - name: 3-hexo
   description: Three sections, simple and convenient, like evernote
   link: https://github.com/yelog/hexo-theme-3-hexo
@@ -2752,7 +2761,6 @@
     - Easy
     - Beautiful
     - Evernote
-
 - name: Nexmoe
   description: A special Hexo theme
   link: https://github.com/nexmoe/hexo-theme-nexmoe
