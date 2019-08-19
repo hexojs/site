@@ -568,6 +568,18 @@
     - renderer
     - coffeescript
     - coffee
+- name: hexo-renderer-babelify
+  description: ES6 renderer for Hexo with babel & browserify.
+  link: https://github.com/benavern/hexo-renderer-babelify
+  tags:
+    - renderer
+    - javascript
+    - js
+    - es6
+    - es2015
+    - babel
+    - babelify
+    - browserify
 - name: hexo-livereload
   description: Livereload plugin for Hexo.
   link: https://github.com/hexojs/hexo-livereload
