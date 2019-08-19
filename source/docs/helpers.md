@@ -61,11 +61,11 @@ Loads CSS files. `path` can be an array or a string. If `path` isn't prefixed wi
 
 ``` js
 <%- css('style.css') %>
-// <link rel="stylesheet" href="/style.css" type="text/css">
+// <link rel="stylesheet" href="/style.css">
 
 <%- css(['style.css', 'screen.css']) %>
-// <link rel="stylesheet" href="/style.css" type="text/css">
-// <link rel="stylesheet" href="/screen.css" type="text/css">
+// <link rel="stylesheet" href="/style.css">
+// <link rel="stylesheet" href="/screen.css">
 ```
 
 ### js
@@ -80,11 +80,11 @@ Loads JavaScript files. `path` can be an array or a string. If `path` isn't pref
 
 ``` js
 <%- js('script.js') %>
-// <script type="text/javascript" src="/script.js"></script>
+// <script src="/script.js"></script>
 
 <%- js(['script.js', 'gallery.js']) %>
-// <script type="text/javascript" src="/script.js"></script>
-// <script type="text/javascript" src="/gallery.js"></script>
+// <script src="/script.js"></script>
+// <script src="/gallery.js"></script>
 ```
 
 ### link_to
