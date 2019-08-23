@@ -273,7 +273,7 @@ title: 辅助函数（Helpers）
 **示例：**
 
 ``` js
-<%- strip_html('It's not <b>important</b> anymore!') %>
+<%- strip_html('It\'s not <b>important</b> anymore!') %>
 // It's not important anymore!
 ```
 

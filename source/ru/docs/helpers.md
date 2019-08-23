@@ -264,7 +264,7 @@ title: Помощники
 **Примеры:**
 
 ``` js
-<%- strip_html('It's not <b>important</b> anymore!') %>
+<%- strip_html('It\'s not <b>important</b> anymore!') %>
 // It's not important anymore!
 ```
 
