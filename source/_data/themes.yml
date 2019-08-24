@@ -2811,8 +2811,6 @@
     - utteranc comment
     - english/chinese
     - easy config
-
-
 - name: fun
   description: a responsive design theme
   link: https://github.com/homeant/hexo-theme-fun
@@ -2821,3 +2819,16 @@
     - responsive
     - clean
     - simple
+- name: A-Huhu
+  description: A simple and constantly revise theme.
+  link: https://github.com/shixiaohu2206/hexo-theme-huhu
+  preview: https://blog.utone.xyz
+  tags:
+    - 中文 
+    - Simple
+    - google-analytics
+    - leetcode
+    - baidu-tongji
+    - seo
+    - light
+    - cdn
