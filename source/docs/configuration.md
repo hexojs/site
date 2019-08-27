@@ -65,7 +65,13 @@ Setting | Description | Default
 `post_asset_folder` | Enable the [Asset Folder](asset-folders.html)? | `false`
 `relative_link` | Make links relative to the root folder? | `false`
 `future` | Display future posts? | `true`
-`highlight` | Code block settings |
+`highlight` | Code block syntax highlight settings, by default this feature is powered by the highlight.js library |
+`highlight.enable` | Enable syntax highlight | `true`
+`highlight.auto_detect` | Enable auto-detection if no language is specified | `false`
+`highlight.line_number` | Display line number | `true`
+`highlight.tab_replace` | ??? | `''`
+
+
 
 ### Category & Tag
 
