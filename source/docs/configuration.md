@@ -69,8 +69,7 @@ Setting | Description | Default
 `highlight.enable` | Enable syntax highlight | `true`
 `highlight.auto_detect` | Enable auto-detection if no language is specified | `false`
 `highlight.line_number` | Display line number | `true`
-`highlight.tab_replace` | Replace tabs by n space(s), if the string is empty tabs won't be replaced | `''`
-
+`highlight.tab_replace` | Replace tabs by n space(s); if the value is empty, tabs won't be replaced | `''`
 
 
 ### Category & Tag
