@@ -2277,3 +2277,9 @@
     - options
     - parameters
     - customization
+- name: hexo-fun-time
+  description: A plugin for hexo. Insert fun time into posts.
+  link: https://github.com/Drunkman/hexo-fun-time
+  tags:
+    - fun_time
+    - tag
