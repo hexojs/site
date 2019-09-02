@@ -28,7 +28,7 @@ Returns the relative URL from `from` to `to`.
 ### gravatar
 
 Inserts a Gravatar image.
-If you don't specify the [options] parameter, the default options will apply. Otherwise, you can set it to a number which will then be passed on as the size parameter to Gravatar. Finally, if you set it to an object, it will be converted into a query string of parameters for Gravatar.
+If you didn't specify the [options] parameter, the default options will apply. Otherwise, you can set it to a number which will then be passed on as the size parameter to Gravatar. Finally, if you set it to an object, it will be converted into a query string of parameters for Gravatar.
 
 ``` js
 <%- gravatar(email, [options]) %>
@@ -568,12 +568,12 @@ Inserts a tag cloud.
 
 Option | Description | Default
 --- | --- | ---
-`min_font` | Minimal font size | 10
+`min_font` | Minimum font size | 10
 `max_font` | Maximum font size | 20
 `unit` | Unit of font size | px
 `amount` | Total amount of tags | unlimited
 `orderby` | Order of tags | name
-`order` | Sort order. `1`, `sac` as ascending; `-1`, `desc` as descending | 1
+`order` | Sort order. `1`, `asc` as ascending; `-1`, `desc` as descending | 1
 `color` | Colorizes the tag cloud | false
 `start_color` | Start color. You can use hex (`#b700ff`), rgba (`rgba(183, 0, 255, 1)`), hsla (`hsla(283, 100%, 50%, 1)`) or [color keywords]. This option only works when `color` is true. |
 `end_color` | End color. You can use hex (`#b700ff`), rgba (`rgba(183, 0, 255, 1)`), hsla (`hsla(283, 100%, 50%, 1)`) or [color keywords]. This option only works when `color` is true. |
@@ -610,7 +610,7 @@ Option | Description | Default
 `prev_next` | Display previous and next links | true
 `end_size` | The number of pages displayed on the start and the end side | 1
 `mid_size` | The number of pages displayed between current page, but not including current page | 2
-`show_all` | Display all pages. If this is set true, `end_size` and `mid_size` will not works. | false
+`show_all` | Display all pages. If this is set to true, `end_size` and `mid_size` will not work. | false
 
 ### search_form
 
@@ -624,7 +624,7 @@ Option | Description | Default
 --- | --- | ---
 `class` | The class name of form | search-form
 `text` | Search hint word | Search
-`button` | Display search button. The value can be a boolean or a string. When the value is a string, it'll be the text of the button. | false
+`button` | Display search button. The value can be a boolean or a string. If the value is a string, it'll be the text of the button. | false
 
 ### number_format
 
