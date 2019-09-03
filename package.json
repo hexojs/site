@@ -21,7 +21,7 @@
     "hexo-renderer-jade": "^0.4.1",
     "hexo-renderer-marked": "^2.0.0",
     "hexo-renderer-stylus": "^0.3.1",
-    "hexo-server": "^0.3.3",
+    "hexo-server": "^1.0.0",
     "hexo-uglify": "^0.0.5",
     "lodash": "^4.17.11",
     "lunr": "2.3.6"
