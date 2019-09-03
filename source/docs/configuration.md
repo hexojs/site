@@ -147,7 +147,7 @@ Each value in the list must be enclosed with single/double quotes.
 
 `include:` and `exclude:` do not apply to the `themes/` folder. Prepend an underscore to the files or folders name in that folder to exclude them.
 
-* Notable exception is the `source/_posts` folder, but any file or folder with a name that start with an underscore under that folder would still be ignored. Using `include:` rule in that folder is not recommended.
+* Notable exception is the `source/_posts` folder, but any file or folder with a name that starts with an underscore under that folder would still be ignored. Using `include:` rule in that folder is not recommended.
 
 ### Using an Alternate Config
 
@@ -185,7 +185,7 @@ bio: "Some generic bio"
 logo: "a-cool-image.png"
 ```
 
-Resulting theme configuration:
+Resulting in theme configuration:
 
 ```json
 {

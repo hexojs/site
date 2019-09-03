@@ -89,7 +89,7 @@ $ hexo server -p 5000
 npm ERR! node-waf configure build
 ```
 
-This error may occur when trying to install a plugin written in C, C++ or another non-JavaScript language. Make sure you have installed the right compiler on your computer.
+This error may occur when trying to install a plugin written in C, C++ or other non-JavaScript languages. Make sure you have installed the right compiler on your computer.
 
 ## Error with DTrace (Mac OS X)
 
