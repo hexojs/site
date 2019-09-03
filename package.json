@@ -16,7 +16,7 @@
     "hexo-clean-css": "^0.0.3",
     "hexo-deployer-git": "^2.0.0",
     "hexo-generator-archive": "^0.1.4",
-    "hexo-generator-feed": "^1.1.0",
+    "hexo-generator-feed": "^2.0.0",
     "hexo-generator-sitemap": "^1.1.2",
     "hexo-renderer-jade": "^0.4.1",
     "hexo-renderer-marked": "^2.0.0",
