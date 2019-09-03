@@ -26,7 +26,7 @@ date: 2013/7/13 20:46:25
 Setting | Description | Default
 --- | --- | ---
 `layout` | Layout |
-`title` | Title. Defaults to filename if none is given (posts only) |
+`title` | Title | Defaults to filename if none is given (posts only)
 `date` | Published date | File created date
 `updated` | Updated date | File updated date
 `comments` | Enables comment feature for the post | true
