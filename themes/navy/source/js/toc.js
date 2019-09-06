@@ -2,11 +2,14 @@
   'use strict';
 
   var header = document.getElementById('header');
+  var headerHeight = header.clientHeight;
   var toc = document.getElementById('article-toc');
   var tocTop = document.getElementById('article-toc-top');
-  var headerHeight = header.clientHeight;
 
   if (!toc) return;
+
+  var footerHeight = document.getElementById('footer').clientHeight;
+  document.getElementById('article-toc-inner').style['margin-bottom'] = footerHeight + 'px';
 
   function updateSidebarPosition() {
     var scrollTop = document.scrollingElement.scrollTop;
