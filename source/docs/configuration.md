@@ -99,7 +99,7 @@ Setting | Description | Default
 
 Setting | Description | Default
 --- | --- | ---
-`per_page` | Number of posts displayed on a single page. `0` disables pagination | `10`
+`per_page` | Number of posts displayed on each page. `0` disables pagination | `10`
 `pagination_dir` | URL format | `page`
 
 Examples:
