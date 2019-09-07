@@ -1,5 +1,5 @@
 ---
-title: Official plugin hexo-generator-tag 1.0.0, hexo-renderer-ejs 1.0.0 & hexo-renderer-stylus 1.0.0 released
+title: Official plugin hexo-generator-tag 1.0.0, hexo-renderer-ejs 1.0.0 & hexo-renderer-stylus 1.1.0 released
 ---
 
 We released a new version of the official plugins [hexo-generator-tag], [hexo-renderer-ejs] and [hexo-renderer-stylus].
@@ -44,6 +44,11 @@ We released a new version of the official plugins [hexo-generator-tag], [hexo-re
 - chore(package): delete jscs [#26](https://github.com/hexojs/hexo-renderer-stylus/pull/26)
 - remove useless file from npm module [#27]
 
+## hexo-renderer-stylus 1.1.0
+
+### Feature
+- feat: configurable plugins [#38]
+
 [hexo-generator-tag]: https://github.com/hexojs/hexo-generator-tag
 [hexo-renderer-ejs]: https://github.com/hexojs/hexo-renderer-ejs
 [hexo-renderer-stylus]: https://github.com/hexojs/hexo-renderer-stylus
@@ -64,3 +69,4 @@ We released a new version of the official plugins [hexo-generator-tag], [hexo-re
 [#13]: https://github.com/hexojs/hexo-renderer-stylus/pull/13
 [#34]: https://github.com/hexojs/hexo-renderer-stylus/pull/34
 [#27]: https://github.com/hexojs/hexo-renderer-stylus/pull/27
+[#38]: https://github.com/hexojs/hexo-renderer-stylus/pull/38
