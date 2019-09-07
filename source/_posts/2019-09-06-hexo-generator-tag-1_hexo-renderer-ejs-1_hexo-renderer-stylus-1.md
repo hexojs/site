@@ -14,7 +14,7 @@ We released a new version of the official plugins [hexo-generator-tag], [hexo-re
 
 ### Refactor
 - refactor(package): use Object.assign instead of object-assign package [#14]
-- refactor(ES2015): use let/const & arrow-return [#16)
+- refactor(ES2015): use let/const & arrow-return [#16]
 - refactor: es6-fy [#26](https://github.com/hexojs/hexo-generator-tag/pull/26)
 
 ## hexo-renderer-ejs 1.0.0
@@ -38,7 +38,7 @@ We released a new version of the official plugins [hexo-generator-tag], [hexo-re
 - upgrade dependencies and make it be compatible with node v6 [#13]
 
 ### Refactor
-- refactor: es6-fy [#34)
+- refactor: es6-fy [#34]
 
 ### Housekeeping
 - chore(package): delete jscs [#26](https://github.com/hexojs/hexo-renderer-stylus/pull/26)
@@ -61,5 +61,6 @@ We released a new version of the official plugins [hexo-generator-tag], [hexo-re
 [#10]: https://github.com/hexojs/hexo-renderer-ejs/pull/10
 
 [#33]: https://github.com/hexojs/hexo-renderer-stylus/pull/33
+[#13]: https://github.com/hexojs/hexo-renderer-stylus/pull/13
 [#34]: https://github.com/hexojs/hexo-renderer-stylus/pull/34
 [#27]: https://github.com/hexojs/hexo-renderer-stylus/pull/27
