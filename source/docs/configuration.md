@@ -72,6 +72,9 @@ Setting | Description | Default
 `highlight.tab_replace` | Replace tabs by n space(s); if the value is empty, tabs won't be replaced | `''`
 
 ### Home page setting
+
+Setting | Description | Default
+--- | --- | ---
 `index_generator` | Generate an archive of posts, powered by [hexo-generator-index](https://github.com/hexojs/hexo-generator-index) |
 `index_generator.path` | Root path for your blog's index page | `''`
 `index_generator.per_page` | Posts displayed per page. | `10`
