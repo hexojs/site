@@ -99,8 +99,17 @@ Setting | Description | Default
 
 Setting | Description | Default
 --- | --- | ---
-`per_page` | The amount of posts displayed on a single page. `0` disables pagination | `10`
-`pagination_dir` | Pagination directory | `page`
+`per_page` | Number of posts displayed on a single page. `0` disables pagination | `10`
+`pagination_dir` | URL format | `page`
+
+Examples:
+``` yaml
+pagination_dir: 'page'
+# http://yoursite.com/page/2
+
+pagination_dir: 'awesome-page'
+# http://yoursite.com/awesome-page/2
+```
 
 ### Extensions
 
