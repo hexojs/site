@@ -1,3 +1,10 @@
+- name: hexo-canonical-link
+  description: Add custom canonical links to your pages.
+  link: https://github.com/tarunbatra/hexo-canonical-link
+  tags:
+    - canonical
+    - seo
+    - source
 - name: hexo-twitter-auto-publish
   description: Auto publish posts and pages on Twitter.
   link: https://github.com/studioLaCosaNostra/hexo-twitter-auto-publish
