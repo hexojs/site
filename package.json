@@ -22,7 +22,7 @@
     "hexo-renderer-marked": "^2.0.0",
     "hexo-renderer-stylus": "^1.0.0",
     "hexo-server": "^1.0.0",
-    "hexo-uglify": "^0.0.5",
+    "hexo-uglify": "^1.0.0",
     "lodash": "^4.17.11",
     "lunr": "2.3.6"
   },
