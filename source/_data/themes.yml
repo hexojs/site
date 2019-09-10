@@ -74,17 +74,16 @@
     - three_columns
     - clean
 
-- name: Material-T
+- name: Fluid
   description: An elegant and light theme
-  link: https://github.com/0x2E/Material-T
-  preview: https://github.com/0x2E/Material-T
+  link: https://github.com/fluid-dev/hexo-theme-fluid
+  preview: https://github.com/fluid-dev/hexo-theme-fluid
   tags:
     - Material Design
     - responsive
     - elegant
     - light
-    - one_column
-    - 中文
+    - i18n
 
 - name: Life
   description: 记录生活，为写作而生！
