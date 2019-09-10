@@ -13,7 +13,7 @@ You can install this plugin using the command below:
 $ npm i hexo-filter-nofollow --save
 ```
 
-And add configuration to your hexo's `_config.yml`:
+and enable it through your hexo's `_config.yml`:
 
 ``` yaml
 nofollow:
