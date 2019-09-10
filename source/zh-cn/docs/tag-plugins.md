@@ -194,8 +194,13 @@ content
 插入 `source/downloads/code` 文件夹内的代码文件。`source/downloads/code` 不是固定的，取决于你在配置文件中 `code_dir` 的配置。
 
 ```
-{% include_code [title] [lang:language] path/to/file %}
+{% include_code [title] [lang:language] [from:line] [to:line] path/to/file %}
 ```
+
+通过 `[from:line]` 和 `[to:line]`，你可以仅仅包含文件的一部分，比如，`[from:10] [to:21]` 只会包含文件的第 10 行（包括）
+到文件的第 21 行（不包括），两者都是可选的，`from` 默认为 `1` 而 `to` 默认问文件行数加 1，也就是说，只指定 `[from:10]` 则会
+包含第 10 行直到文件结束，而只指定 `[to:21` 则会包含文件开始直到第 21 行（不包含）为止。
+
 
 ## Youtube
 

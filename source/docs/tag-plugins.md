@@ -196,8 +196,14 @@ Inserts a link with `target="_blank"` attribute.
 Inserts code snippets in `source/downloads/code` folder. The folder location can be specified through the `code_dir` option in the config.
 
 ```
-{% include_code [title] [lang:language] path/to/file %}
+{% include_code [title] [lang:language] [from:line] [to:line] path/to/file %}
 ```
+
+By `[from:line]` and `[to:line]`, you can just include part of the file, for example,
+`[from:10] [to:21]` will include line 10 (inclusive) to line 21 (exclusive) of the file,
+both of them are optional and `from` defaults to `1` while `to` defaults to the length of
+the file + 1, that said, only specifying `[from:10]` will include from line 10 to the end of the file,
+and only specifying `[to:21]` will include from the beginning to line 21 (exclusive)
 
 ## YouTube
 
