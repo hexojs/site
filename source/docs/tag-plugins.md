@@ -199,11 +199,37 @@ Inserts code snippets in `source/downloads/code` folder. The folder location can
 {% include_code [title] [lang:language] [from:line] [to:line] path/to/file %}
 ```
 
-By `[from:line]` and `[to:line]`, you can just include part of the file, for example,
-`[from:10] [to:21]` will include line 10 (inclusive) to line 21 (exclusive) of the file,
-both of them are optional and `from` defaults to `1` while `to` defaults to the length of
-the file + 1, that said, only specifying `[from:10]` will include from line 10 to the end of the file,
-and only specifying `[to:21]` will include from the beginning to line 21 (exclusive)
+### Examples
+
+**Embed the whole content of test.js**
+
+```
+{% include_code lang:javascript test.js %}
+```
+
+**Embed line 3 only**
+
+```
+{% include_code lang:javascript from:3 to:3 test.js %}
+```
+
+**Embed line 5(inclusive) to 8(exclusive)**
+
+```
+{% include_code lang:javascript from:5 to:8 test.js %}
+```
+
+**Embed line 5(inclusive) to the end of file**
+
+```
+{% include_code lang:javascript from:5 test.js %}
+```
+
+**Embed line 1 to 8(exclusive)**
+
+```
+{% include_code lang:javascript to:8 test.js %}
+```
 
 ## YouTube
 
