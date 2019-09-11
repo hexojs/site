@@ -197,10 +197,37 @@ content
 {% include_code [title] [lang:language] [from:line] [to:line] path/to/file %}
 ```
 
-通过 `[from:line]` 和 `[to:line]`，你可以仅仅包含文件的一部分，比如，`[from:10] [to:21]` 只会包含文件的第 10 行（包括）
-到文件的第 21 行（不包括），两者都是可选的，`from` 默认为 `1` 而 `to` 默认问文件行数加 1，也就是说，只指定 `[from:10]` 则会
-包含第 10 行直到文件结束，而只指定 `[to:21` 则会包含文件开始直到第 21 行（不包含）为止。
+### 样例
 
+**嵌入 test.js 文件全文**
+
+```
+{% include_code lang:javascript test.js %}
+```
+
+**只嵌入第 3 行**
+
+```
+{% include_code lang:javascript from:3 to:3 test.js %}
+```
+
+**嵌入第 5 行（包括）至第 8 行（不包括）**
+
+```
+{% include_code lang:javascript from:5 to:8 test.js %}
+```
+
+**嵌入第 5 行（包括）至文件结束**
+
+```
+{% include_code lang:javascript from:5 test.js %}
+```
+
+**嵌入第 1 行至第  行（不包括）**
+
+```
+{% include_code lang:javascript to:8 test.js %}
+```
 
 ## Youtube
 
