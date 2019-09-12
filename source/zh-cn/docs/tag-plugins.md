@@ -211,19 +211,19 @@ content
 {% include_code lang:javascript from:3 to:3 test.js %}
 ```
 
-**嵌入第 5 行（包括）至第 8 行（不包括）**
+**嵌入第 5 行至第 8 行**
 
 ```
 {% include_code lang:javascript from:5 to:8 test.js %}
 ```
 
-**嵌入第 5 行（包括）至文件结束**
+**嵌入第 5 行至文件结束**
 
 ```
 {% include_code lang:javascript from:5 test.js %}
 ```
 
-**嵌入第 1 行至第  行（不包括）**
+**嵌入第 1 行至第 8 行**
 
 ```
 {% include_code lang:javascript to:8 test.js %}
