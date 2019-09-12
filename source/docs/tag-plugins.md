@@ -213,19 +213,19 @@ Inserts code snippets in `source/downloads/code` folder. The folder location can
 {% include_code lang:javascript from:3 to:3 test.js %}
 ```
 
-**Embed line 5(inclusive) to 8(exclusive)**
+**Embed line 5 to 8**
 
 ```
 {% include_code lang:javascript from:5 to:8 test.js %}
 ```
 
-**Embed line 5(inclusive) to the end of file**
+**Embed line 5 to the end of file**
 
 ```
 {% include_code lang:javascript from:5 test.js %}
 ```
 
-**Embed line 1 to 8(exclusive)**
+**Embed line 1 to 8**
 
 ```
 {% include_code lang:javascript to:8 test.js %}
