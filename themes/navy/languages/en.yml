@@ -34,6 +34,7 @@ sidebar:
     server: Server
     generating: Generating
     deployment: Deployment
+    other_deployments: Other Deployments
     customization: Customization
     permalinks: Permalinks
     themes: Themes
