@@ -34,6 +34,7 @@ sidebar:
     server: Server
     generating: Generating
     deployment: Deployment
+    github_pages: GitHub Pages
     other_deployments: Other Deployments
     customization: Customization
     permalinks: Permalinks
