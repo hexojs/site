@@ -2,9 +2,7 @@
 title: GitHub Pages
 ---
 
-[Travis CI](https://travis-ci.com/) is free for open source repository, meaning your repository's `master` branch has to be public. Please skip to the [Private repository](#Private-repository) section if you prefer to keep the repo private, or prefer not to upload your source folder to GitHub.
-
-## Deploy to GitHub Pages using Travis CI
+In this tutorial, we use [Travis CI](https://travis-ci.com/) to deploy Github Pages. It is free for open source repository, meaning your repository's `master` branch has to be public. Please skip to the [Private repository](#Private-repository) section if you prefer to keep the repo private, or prefer not to upload your source folder to GitHub.
 
 1. Create a repo named <b>*username*.github.io</b>, where username is your username on GitHub. If you have already uploaded to other repo, rename the repo instead.
 2. Push the files of your Hexo folder to the repository. The `public/` folder is not (and should not be) uploaded by default, make sure the `.gitignore` file contains `public/` line. The folder structure should be roughly similar to [this repo](https://github.com/hexojs/hexo-starter), without the `.gitmodules` file.
@@ -34,8 +32,9 @@ deploy:
     branch: master
   local-dir: public
 ```
-9. In your GitHub repo's setting, navigate to "GitHub Pages" section and change Source is **gh-pages branch**.
-10. Check the webpage at your-username.github.io.
+9. Once Travis CI finish the deployment, the generated pages can be found in the `gh-pages` branch of your repository
+10. In your GitHub repo's setting, navigate to "GitHub Pages" section and change Source to **gh-pages branch**.
+11. Check the webpage at *username*.github.io.
 
 ### Project page
 
@@ -47,9 +46,9 @@ If you prefer to have a project page on GitLab:
 
 ## Private repository
 
-This section only applies to private repo, ignore the following if your repo is public.
+This section only applies to private repo.
 
-1. Create a repo named <b>*username*.github.io</b>, where username is your username on GitHub. If you have already uploaded to other repo, rename the repo instead. _(Skip to step 3 if you prefer not to upload your source folder on GitHub at all)_
+1. Create a repo named <b>*username*.github.io</b>, where username is your username on GitHub. If you have already uploaded to other repo, rename the repo instead. _(Skip to step 3 if you prefer not to upload your source folder to GitHub at all)_
 2. Push the files of your Hexo folder to the repository. The `public/` folder is not (and should not be) uploaded by default, make sure the `.gitignore` file contains `public/` line. The folder structure should be roughly similar to [this repo](https://github.com/hexojs/hexo-starter), without the `.gitmodules` file.
 3. Run `hexo generate` and copy the `public/` folder to somewhere else (in your workstation).
 4. Create a new `gh-pages` git branch from your Hexo folder, we recommend creating an orphan branch (to create a new branch without commit history):
@@ -71,9 +70,7 @@ $ git push origin gh-pages
 $ git checkout master
 ```
 
-## Useful links:
-
-More info:
+## Useful links
 
 - [GitHub Pages](https://help.github.com/categories/github-pages-basics/)
 - [Travis CI Docs](https://docs.travis-ci.com/user/tutorial/)
