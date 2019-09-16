@@ -2154,13 +2154,6 @@
     - compress
     - gzip
     - brotli
-- name: hexo-nofollow
-  description: Add SEO-friendly nofollow attribute to all external links in your posts. A more updated version of hexo-autonofollow.
-  link: https://github.com/curbengh/hexo-nofollow
-  tags:
-    - SEO
-    - nofollow
-    - external
 - name: hexo-graphviz
   description: Hexo plugin for rendering Graphviz plots
   link: https://github.com/sounak98/hexo-graphviz
