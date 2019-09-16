@@ -265,7 +265,7 @@ Feed 링크를 삽입합니다.
 **예시:**
 
 ``` js
-<%- strip_html('It's not <b>important</b> anymore!') %>
+<%- strip_html('It\'s not <b>important</b> anymore!') %>
 // It's not important anymore!
 ```
 
