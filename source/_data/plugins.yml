@@ -2277,3 +2277,9 @@
     - options
     - parameters
     - customization
+- name: hexo-fun-time
+  description: A tag plugin to insert random Mandarin jokes in a post.
+  link: https://github.com/Drunkman/hexo-fun-time
+  tags:
+    - joke
+    - tag
