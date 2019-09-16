@@ -194,7 +194,39 @@ content
 插入 `source/downloads/code` 文件夹内的代码文件。`source/downloads/code` 不是固定的，取决于你在配置文件中 `code_dir` 的配置。
 
 ```
-{% include_code [title] [lang:language] path/to/file %}
+{% include_code [title] [lang:language] [from:line] [to:line] path/to/file %}
+```
+
+### 样例
+
+**嵌入 test.js 文件全文**
+
+```
+{% include_code lang:javascript test.js %}
+```
+
+**只嵌入第 3 行**
+
+```
+{% include_code lang:javascript from:3 to:3 test.js %}
+```
+
+**嵌入第 5 行至第 8 行**
+
+```
+{% include_code lang:javascript from:5 to:8 test.js %}
+```
+
+**嵌入第 5 行至文件结束**
+
+```
+{% include_code lang:javascript from:5 test.js %}
+```
+
+**嵌入第 1 行至第 8 行**
+
+```
+{% include_code lang:javascript to:8 test.js %}
 ```
 
 ## Youtube

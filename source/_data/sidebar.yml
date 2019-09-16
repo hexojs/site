@@ -13,7 +13,8 @@ docs:
     data_files: data-files.html
     server: server.html
     generating: generating.html
-    deployment: deployment.html
+  deployment:
+    other_deployments: deployment.html
   customization:
     permalinks: permalinks.html
     themes: themes.html

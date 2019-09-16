@@ -2154,13 +2154,6 @@
     - compress
     - gzip
     - brotli
-- name: hexo-nofollow
-  description: Add SEO-friendly nofollow attribute to all external links in your posts. A more updated version of hexo-autonofollow.
-  link: https://github.com/curbengh/hexo-nofollow
-  tags:
-    - SEO
-    - nofollow
-    - external
 - name: hexo-graphviz
   description: Hexo plugin for rendering Graphviz plots
   link: https://github.com/sounak98/hexo-graphviz
@@ -2286,3 +2279,23 @@
     - nofollow
     - SEO
     - external
+- name: hexo-filter-image
+  description: 自动为hexo中的图片映射绝对路径 | Automatically maps absolute paths to images in hexo
+  link: https://github.com/JoeyBling/hexo-filter-image
+  tags:
+    - filter
+    - image
+    - path
+    - asset
+- name: hexo-native-lazy-load
+  description: Add native lazy load to hexo page as well as optional fallback.
+  link: https://github.com/fengkx/hexo-native-lazy-load
+  tags:
+    - lazyload
+    - optimize
+- name: hexo-fun-time
+  description: A tag plugin to insert random Mandarin jokes in a post.
+  link: https://github.com/Drunkman/hexo-fun-time
+  tags:
+    - joke
+    - tag
