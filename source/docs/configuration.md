@@ -48,7 +48,7 @@ skip_render: "mypage/**/*"
 # will output `source/mypage/index.html` and `source/mypage/code.js` without altering them.
 
 ## This also can be used to exclude posts,
-skip_render: "_posts/test-post.md" 
+skip_render: "_posts/test-post.md"
 # will ignore the `source/_posts/test-post.md`.
 ```
 
@@ -71,6 +71,15 @@ Setting | Description | Default
 `highlight.line_number` | Display line number | `true`
 `highlight.tab_replace` | Replace tabs by n space(s); if the value is empty, tabs won't be replaced | `''`
 
+### Home page setting
+
+Setting | Description | Default
+--- | --- | ---
+`index_generator` | Generate an archive of posts, powered by [hexo-generator-index](https://github.com/hexojs/hexo-generator-index) |
+`index_generator.path` | Root path for your blog's index page | `''`
+`index_generator.per_page` | Posts displayed per page. | `10`
+`index_generator.order_by` | Posts order. Order by descending date (new to old) by default. | `-date`
+`index_generator.pagination_dir` | URL format, see [Pagination](#Pagination) setting below | `page`
 
 ### Category & Tag
 
@@ -93,8 +102,17 @@ Setting | Description | Default
 
 Setting | Description | Default
 --- | --- | ---
-`per_page` | The amount of posts displayed on a single page. `0` disables pagination | `10`
-`pagination_dir` | Pagination directory | `page`
+`per_page` | Number of posts displayed on each page. `0` disables pagination | `10`
+`pagination_dir` | URL format | `page`
+
+Examples:
+``` yaml
+pagination_dir: 'page'
+# http://yoursite.com/page/2
+
+pagination_dir: 'awesome-page'
+# http://yoursite.com/awesome-page/2
+```
 
 ### Extensions
 
@@ -126,7 +144,7 @@ include:
   - "_css/*"
   # Include any file and subfolder in 'source/_css/'.
   - "_css/**/*"
-  
+
 exclude:
   # Exclude 'source/js/test.js'.
   - "js/test.js"

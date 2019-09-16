@@ -18,7 +18,7 @@ Demora apenas alguns minutos para configurar o Hexo. Se você encontrar um probl
 
 Instalar o Hexo é bastante fácil. No entanto, você precisa ter algumas outras coisas instaladas primeiro:
 
-- [Node.js](http://nodejs.org/) (Should be at least nodejs 6.9)
+- [Node.js](http://nodejs.org/) (Should be at least Node.js 8.6, recommends 10.0 or higher)
 - [Git](http://git-scm.com/)
 
 Se o seu computador já possui estes, parabéns! Basta instalar o Hexo com o npm:
