@@ -8,16 +8,8 @@ We released a new hexo official plugin: [hexo-filter-nofollow]
 
 You can install this plugin using the command below:
 
-
 ``` bash
 $ npm i hexo-filter-nofollow --save
-```
-
-and enable it through your hexo's `_config.yml`:
-
-``` yaml
-nofollow:
-  enable: true
 ```
 
 More configurations please checkout the [README of hexo-filter-nofollow](https://github.com/hexojs/hexo-filter-nofollow/blob/master/README.md)
