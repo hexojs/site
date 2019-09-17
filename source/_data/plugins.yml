@@ -2270,6 +2270,15 @@
     - options
     - parameters
     - customization
+- name: hexo-filter-nofollow
+  description: Add nofollow attribute to all external links automatically.
+  link: https://github.com/hexojs/hexo-filter-nofollow/
+  tags:
+    - official
+    - filter
+    - nofollow
+    - SEO
+    - external
 - name: hexo-filter-image
   description: 自动为hexo中的图片映射绝对路径 | Automatically maps absolute paths to images in hexo
   link: https://github.com/JoeyBling/hexo-filter-image
