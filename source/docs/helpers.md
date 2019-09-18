@@ -30,7 +30,7 @@ Returns the relative URL from `from` to `to`.
 Returns a url with the `config.url` prefixed. Output is encoded automatically.
 
 ``` js
-<%- url_for(path) %>
+<%- full_url_for(path) %>
 ```
 
 **Examples:**
