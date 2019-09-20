@@ -87,4 +87,4 @@ $ git checkout master
 - [GitHub Pages 使用文檔](https://help.github.com/categories/github-pages-basics/)
 - [Travis CI 使用文檔](https://docs.travis-ci.com/user/tutorial/)
 - [Awesome Hexo](https://github.com/hexojs/awesome-hexo)
-- [在百度上搜索 "Hexo GitHub"](https://www.baidu.com/s?wd=Hexo%20GitHub)
+- [在Google上搜索 "Hexo GitHub"](https://www.google.com/search?q=hexo+github)
