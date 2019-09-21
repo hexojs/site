@@ -13,7 +13,9 @@ docs:
     data_files: data-files.html
     server: server.html
     generating: generating.html
-    deployment: deployment.html
+  deployment:
+    github_pages: github-pages.html
+    other_deployments: other-deployments.html
   customization:
     permalinks: permalinks.html
     themes: themes.html
