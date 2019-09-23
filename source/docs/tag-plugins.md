@@ -264,6 +264,8 @@ This will work as long as the filename of the post is `how-to-bake-a-cake.md`, e
 
 You can customize the text to display, instead of displaying the post's title. Using `post_path` inside Markdown syntax `[]()` is not supported.
 
+Post's title and custom text are escaped by default. You can use the `escape` option to disable escaping.
+
 For instance:
 
 **Display title of the post.**
@@ -277,10 +279,6 @@ For instance:
 `{% raw %}{% post_link 2018-10-19-hexo-3-8-released 'Link to a post' %}{% endraw %}`
 
 {% post_link 2018-10-19-hexo-3-8-released 'Link to a post' %}
-
-The text of the post's title and the custom title is escaped by default. You can use the `escape` option to disable escaping.
-
-For instance:
 
 **Escape title.**
 
