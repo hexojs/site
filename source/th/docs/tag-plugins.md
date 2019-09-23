@@ -222,7 +222,7 @@ content
 
 ```
 {% post_path filename %}
-{% post_link filename [optional text] %}
+{% post_link filename [optional text] [escape] %}
 ```
 
 เวลาใช้แท็กนี้ ข้อมูล permalink และ folder เช่น ภาษาและวันเดือนปี จะถูกละเลย
@@ -259,7 +259,7 @@ content
 ```
 {% asset_path slug %}
 {% asset_img slug [title] %}
-{% asset_link slug [title] %}
+{% asset_link slug [title] [escape] %}
 ```
 
 ## Raw

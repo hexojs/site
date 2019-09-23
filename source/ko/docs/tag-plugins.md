@@ -219,7 +219,7 @@ Vimeo video를 포함시킬 수 있습니다.
 
 ```
 {% post_path slug %}
-{% post_link slug [title] %}
+{% post_link slug [title] [escape] %}
 ```
 
 ## Include Assets
@@ -229,7 +229,7 @@ Vimeo video를 포함시킬 수 있습니다.
 ```
 {% asset_path slug %}
 {% asset_img slug [title] %}
-{% asset_link slug [title] %}
+{% asset_link slug [title] [escape] %}
 ```
 
 ## Raw

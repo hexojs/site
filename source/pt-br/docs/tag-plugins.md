@@ -222,7 +222,7 @@ Incluir links para outras postagens.
 
 ```
 {% post_path slug %}
-{% post_link slug [title] %}
+{% post_link slug [title] [escape] %}
 ```
 
 ## Incluir Assets
@@ -232,7 +232,7 @@ Incluir assets de postagem.
 ```
 {% asset_path slug %}
 {% asset_img slug [title] %}
-{% asset_link slug [title] %}
+{% asset_link slug [title] [escape] %}
 ```
 
 ## Raw
