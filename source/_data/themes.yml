@@ -2831,3 +2831,12 @@
     - seo
     - light
     - cdn
+- name: A-Daydream
+  description: A simple and clean theme for Hexo.
+  link: https://github.com/maybeeee/hexo-theme-A-Daydream
+  preview: https://maybeeee.github.io/
+  tags:
+    - simple
+    - pug
+    - light
+    - 中文
