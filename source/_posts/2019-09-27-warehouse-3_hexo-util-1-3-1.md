@@ -38,12 +38,12 @@ We released a new version of the official plugins [warehouse] & [hexo-util].
 
 ## hexo-util 1.2.0
 
-## Feature
+### Feature
 - add gravatar() [#81]
 - add url_for() & relative_url() [#82]
 - add full_url_for() [#84]
 
-## Fix
+### Fix
 - fix(encodeURL): support hash/anchor, auth and port number [#85]
 
 [warehouse]: https://github.com/hexojs/warehouse
