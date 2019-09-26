@@ -268,15 +268,15 @@ For instance:
 
 **Display title of the post.**
 
-`{% raw %}{% post_link 2018-10-19-hexo-3-8-released %}{% endraw %}`
+`{% raw %}{% post_link hexo-3-8-released %}{% endraw %}`
 
-{% post_link 2018-10-19-hexo-3-8-released %}
+{% post_link hexo-3-8-released %}
 
 **Display custom text.**
 
-`{% raw %}{% post_link 2018-10-19-hexo-3-8-released 'Link to a post' %}{% endraw %}`
+`{% raw %}{% post_link hexo-3-8-released 'Link to a post' %}{% endraw %}`
 
-{% post_link 2018-10-19-hexo-3-8-released 'Link to a post' %}
+{% post_link hexo-3-8-released 'Link to a post' %}
 
 
 ## Include Assets
