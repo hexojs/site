@@ -31,3 +31,10 @@
   to = "/pt-br/"
   status = 302
   conditions = {Language = ["pt-br"]}
+
+[build.processing.css]
+  bundle = false
+  minify = false
+[build.processing.js]
+  bundle = false
+  minify = false
