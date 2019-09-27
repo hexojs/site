@@ -36,7 +36,7 @@ sidebar:
     deployment: Implantação
     github_pages: GitHub Pages
     gitlab_pages: GitLab Pages
-    other_deployments: Other Deployments
+    one_command_deployment: One-Command Deployment
     customization: Customização
     permalinks: Links Permanentes
     themes: Temas

@@ -36,7 +36,7 @@ sidebar:
     deployment: 部署
     github_pages: GitHub Pages
     gitlab_pages: GitLab Pages
-    other_deployments: Other Deployments
+    one_command_deployment: One-Command Deployment
     customization: 自定义
     permalinks: 永久链接
     themes: 主题
