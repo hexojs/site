@@ -34,6 +34,9 @@ sidebar:
     server: Serveur
     generating: Génération
     deployment: Déploiement
+    github_pages: GitHub Pages
+    gitlab_pages: GitLab Pages
+    other_deployments: Other Deployments
     customization: Personnalisation
     permalinks: Permaliens
     themes: Thèmes

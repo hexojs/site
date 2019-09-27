@@ -35,6 +35,7 @@ sidebar:
     generating: Generating
     deployment: Deployment
     github_pages: GitHub Pages
+    gitlab_pages: GitLab Pages
     other_deployments: Other Deployments
     customization: Customization
     permalinks: Permalinks

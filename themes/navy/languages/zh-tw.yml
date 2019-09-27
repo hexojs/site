@@ -34,6 +34,9 @@ sidebar:
     server: 伺服器
     generating: 產生檔案
     deployment: 佈署
+    github_pages: GitHub Pages
+    gitlab_pages: GitLab Pages
+    other_deployments: Other Deployments
     customization: 自定
     permalinks: 永久連結
     themes: 主題
