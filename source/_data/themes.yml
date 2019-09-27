@@ -2831,3 +2831,10 @@
     - seo
     - light
     - cdn
+- name: a-nice
+  description: A simple and constantly revise theme.
+  link: https://github.com/shixiaohu2206/hexo-theme-huhu
+  preview: https://blog.utone.xyz
+  tags:
+    - 中文 
+    - Simple
