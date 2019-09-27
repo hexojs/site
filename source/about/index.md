@@ -2,7 +2,10 @@
 title: About
 ---
 
-Hexo was originally created and maintained by [Tommy Chen](https://github.com/tommy351) in 2012, now it becomes a project with 28k stars (still increasing), 37k downloads per month and used by 55K repositories (data from 2019-Aug). It already helps thousands of people to build their dream website/blog.
+[![github stars](https://img.shields.io/github/stars/hexojs/hexo?style=for-the-badge&color=0e83cd)](https://github.com/hexojs/hexo)
+[![npm stats](https://img.shields.io/npm/dm/hexo?style=for-the-badge&color=0e83cd&label=npm%20downloads)](https://www.npmjs.com/package/hexo)
+
+Hexo was originally created and maintained by [Tommy Chen](https://github.com/tommy351) in 2012. It already helps thousands of people to build their dream website/blog.
 
 ## Join us
 
