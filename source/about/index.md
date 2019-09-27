@@ -18,12 +18,7 @@ Don't know where to start? Pick up any item in [Hexo Roadmap](https://github.com
 
 [![Backers](https://opencollective.com/hexo/tiers/backers.svg?avatarHeight=60&width=600)](https://opencollective.com/hexo)
 
-{% note info Bitcoin %}
-<p align="center">
-![QR Code](bitcoin_qr.png)
-[3M9wCDjRCSkj2ecwuZc3ReJETWRow43UYg](bitcoin:3M9wCDjRCSkj2ecwuZc3ReJETWRow43UYg)
-</p>
-{% endnote %}
+[![QR Code](bitcoin_qr.png)](bitcoin:3M9wCDjRCSkj2ecwuZc3ReJETWRow43UYg)
 
 #### Why?
 
