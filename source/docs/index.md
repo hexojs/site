@@ -15,7 +15,7 @@ It only takes a few minutes to set up Hexo. If you encounter a problem and can't
 
 ### Requirements
 
-Installing Hexo is quite easy. However, you do need to have a couple of other things installed first:
+Installing Hexo is quite easy and only requires the following beforehand:
 
 - [Node.js](http://nodejs.org/) (Should be at least Node.js 8.6, recommends 10.0 or higher)
 - [Git](http://git-scm.com/)
@@ -59,7 +59,7 @@ $ wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | ba
 Once nvm is installed, restart the terminal and run the following command to install Node.js:
 
 ``` bash
-$ nvm install stable
+$ nvm install node
 ```
 
 Alternatively, download and run [the installer](http://nodejs.org/). Most Linux distributions ship Node.js in their default repository. [NodeSource](https://github.com/nodesource/distributions) third-party repo usually ships more up-to-date Node.js.
