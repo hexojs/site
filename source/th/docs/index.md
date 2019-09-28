@@ -68,7 +68,7 @@ $ wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | ba
 เมื่อเสร็จการติดตั้ง nvm เปิด terminal ใหม่และรันคำสั่งต่อไปเพื่อติดตั้ง Node.js
 
 ``` bash
-$ nvm install stable
+$ nvm install node
 ```
 
 นอกจากนี้ยังดาวน์โหลดและรัน [the installer](http://nodejs.org/) ได้

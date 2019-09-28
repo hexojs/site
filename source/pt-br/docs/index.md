@@ -60,7 +60,7 @@ $ wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | ba
 Uma vez que o nvm esteja instalado, reinicie o terminal e execute o seguinte comando para instalar o Node.js:
 
 ``` bash
-$ nvm install stable
+$ nvm install node
 ```
 
 Alternativamente, é possível baixar e executar [o instalador do Node.js](http://nodejs.org/).

@@ -56,7 +56,7 @@ $ wget -qO-https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | sh
 nvm이 설치되어 있다면, 터미널을 재시작하고 아래 명령어를 수행하세요.
 
 ``` bash
-$ nvm install stable
+$ nvm install node
 ```
 
 이런 방법 대신, [installer](http://nodejs.org/)를 다운로드 받아서 설치하는 방법도 있습니다.
