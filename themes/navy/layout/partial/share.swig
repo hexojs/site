@@ -5,6 +5,6 @@
 <!-- Twitter follow button -->
 <a href="https://twitter.com/hexojs" class="twitter-follow-button" data-show-count="true">Follow @hexojs</a>
 <!-- Github Button -->
-<script async defer src="https://buttons.github.io/buttons.js"></script>
+<script async defer src="https://cdn.jsdelivr.net/npm/github-buttons@2.2.10/dist/buttons.min.js"></script>
 <!-- Twitter share button -->
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
