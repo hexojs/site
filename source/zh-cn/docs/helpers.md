@@ -10,7 +10,42 @@ title: 辅助函数（Helpers）
 在路径前加上根路径，从 Hexo 2.7 开始您应该使用此函数而不是 `config.root + path`。
 
 ``` js
-<%- url_for(path) %>
+<%- url_for(path, [option]) %>
+```
+
+Option | Description | Default
+--- | --- | ---
+`relative` | 是否输出相对链接 | `config.relative_link` 的值
+
+**示例：**
+
+``` yml
+_config.yml
+root: /blog/ # example
+```
+
+``` js
+<%- url_for('/a/path') %>
+// /blog/a/path
+```
+
+Relative link, follows `relative_link` option by default
+e.g. post/page path is '/foo/bar/index.html'
+
+``` yml
+_config.yml
+relative_link: true
+```
+
+``` js
+<%- url_for('/css/style.css') %>
+// ../../css/style.css
+/* Override option
+ * you could also disable it to output a non-relative link,
+ * even when `relative_link` is enabled and vice versa.
+ */
+<%- url_for('/css/style.css', {relative: false}) %>
+// /css/style.css
 ```
 
 ### relative_url
