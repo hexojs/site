@@ -4,7 +4,7 @@ menu:
   news: 新闻
   plugins: 插件
   themes: 主题
-  about: About
+  about: 关于
   search: 搜索
 
 index:
@@ -37,7 +37,7 @@ sidebar:
     deployment: 部署
     github_pages: GitHub Pages
     gitlab_pages: GitLab Pages
-    one_command_deployment: One-Command Deployment
+    one_command_deployment: 一键部署
     customization: 自定义
     permalinks: 永久链接
     themes: 主题
