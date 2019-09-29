@@ -28,7 +28,7 @@ pages:
 5. *username*.gitlab.io should be up and running, once GitLab CI finishes the deployment job,
 6. (Optional) If you wish to inspect the generated site assets (html, css, js, etc), they can be found in the [job artifact](https://docs.gitlab.com/ee/user/project/pipelines/job_artifacts.html).
 
-### Project page
+## Project page
 
 If you prefer to have a project page on GitLab:
 
