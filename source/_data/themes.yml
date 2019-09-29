@@ -1,3 +1,11 @@
+- name: Lights
+  description: A simple theme
+  link: https://github.com/F0r3at/Lights/
+  preview: https://getpass.cn/
+  tags:
+    - responsive
+    - simple
+    - one_column
 - name: stun
   description: A beautiful & simple theme
   link: https://github.com/liuyib/hexo-theme-stun
