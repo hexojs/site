@@ -1,5 +1,5 @@
 ---
-title: Official plugins warehouse 3.0.0 & hexo-util 1.3.1 released
+title: Official plugins warehouse 3.0.0 & hexo-util 1.2.0, 1.3.0, 1.3.1 released
 ---
 
 We released a new version of the official plugins [warehouse] & [hexo-util].
