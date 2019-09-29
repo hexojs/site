@@ -36,7 +36,7 @@ deploy:
 10. In your GitHub repo's setting, navigate to "GitHub Pages" section and change Source to **gh-pages branch**.
 11. Check the webpage at *username*.github.io.
 
-### Project page
+## Project page
 
 If you prefer to have a project page on GitLab:
 

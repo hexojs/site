@@ -38,7 +38,7 @@ deploy:
 10. 在 GitHub 中前往妳的 repository 的設置頁面，修改 `GitHub Pages` 的部署分支為 `gh-pages`。
 11. 前往 `https://<妳的 GitHub 用戶名>.github.io` 查看妳的站點是否可以訪問。這可能需要壹些時間。
 
-### Project page
+## Project page
 
 如果妳更希望妳的站點部署在 `<妳的 GitHub 用戶名>.github.io` 的子目錄中，妳的 repository 需要直接命名為子目錄的名字，這樣妳的站點可以通過 `https://<妳的 GitHub 用戶名>.github.io/<repository 的名字>` 訪問。妳需要檢查妳的 Hexo 配置文件，將 `url` 修改為 `https://<妳的 GitHub 用戶名>.github.io/<repository 的名字>`、將 `root` 的值修改為 `/<repository 的名字>/`
 
