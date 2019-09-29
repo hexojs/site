@@ -58,7 +58,7 @@ $ wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | ba
 一旦安裝完成，重啟終端機並執行下列指令以安裝 Node.js。
 
 ``` bash
-$ nvm install stable
+$ nvm install node
 ```
 
 或者您也可以下載 [安裝程式](http://nodejs.org/) 來安裝。
