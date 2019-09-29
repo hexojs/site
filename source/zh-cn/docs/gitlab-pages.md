@@ -1,11 +1,14 @@
 ---
-title: GitLab Pages
+title: 将 Hexo 部署到 GitLab Pages
 ---
 
-1. Create a new repository named <b>*username*.gitlab.io</b>, where username is your username on GitLab. If you have already uploaded to other repo, rename the repo instead.
-2. Enable Shared Runners via `Settings -> CI / CD -> Shared Runners`.
-3. Push the files of your Hexo folder to the repository. The `public/` folder is not (and should not be) uploaded by default, make sure the `.gitignore` file contains `public/` line. The folder structure should be roughly similar to [this repo](https://gitlab.com/pages/hexo).
-4. Add `.gitlab-ci.yml` file to your repo (alongside _config.yml & package.json) with the following content:
+在本教程中，我们将会使用 GitLab CI 将 Hexo 博客部署到 GitLab Pages 上。
+
+1. 新建一个 repository。如果你希望你的站点能通过 `<你的 GitLab 用户名>.gitlab.io` 域名访问，你的 repository 应该直接命名为 `<你的 GitLab 用户名>.gitlab.io`。
+2. 如果你使用的是 Self-Host 的 GitLab，你需要在 `Settings -> CI / CD -> Shared Runners` 启用 GitLab CI。
+3. 将你的 Hexo 站点文件夹推送到 repository 中。默认情况下不应该 `public` 目录将不会被推送到 repository 中，你应该检查 `.gitignore` 文件中是否包含 `public` 一行，如果没有请加上。
+4. 在你的站点文件夹中新建 `.gitlab-ci.yml` 文件：
+
 ``` yml
 image: node:10-alpine # use nodejs v10 LTS
 cache:
@@ -25,19 +28,21 @@ pages:
   only:
     - master
 ```
-5. *username*.gitlab.io should be up and running, once GitLab CI finishes the deployment job,
-6. (Optional) If you wish to inspect the generated site assets (html, css, js, etc), they can be found in the [job artifact](https://docs.gitlab.com/ee/user/project/pipelines/job_artifacts.html).
+
+5. GitLab CI 应该会自动开始运行，构建成功以后你应该可以在 `https://<你的 GitLab 用户名>.gitlab.io` 查看你的网站。
+6. (可选) 如果你需要查看生成的文件，可以在 [job artifact](https://docs.gitlab.com/ee/user/project/pipelines/job_artifacts.html) 中找到。
 
 ## Project page
 
-If you prefer to have a project page on GitLab:
+如果你更希望你的站点部署在 `<你的 GitLab 用户名>.gitlab.io` 的子目录中，你的 repository 需要直接命名为子目录的名字，这样你的站点可以通过 `https://<你的 GitLab 用户名>.gitlab.io/<repository 的名字>` 访问。你需要检查你的 Hexo 配置文件，将 `url` 的值修改为 `https://<你的 GitLab 用户名>.gitlab.io/<repository 的名字>`、将 `root` 的值修改为 `/<repository 的名字>/`
 
-1. Go to `Settings -> General -> Advanced -> Change path`. Change the value to a name, so the website is available at <b>username.gitlab.io/*name*</b>. It can be any name, like *blog* or *hexo*.
-2. Edit **_config.yml**, change the `root:` value from `""` to `"name"`.
-3. Commit and push.
-
+{% note info %}
+请注意，以上教程翻译自 Hexo 文档英文版，仅做参考；译者在翻译过程中发现很多语焉不详的内容。通过搜索引擎可以找到更多教程。
+也欢迎更多有志之士前来改善 Hexo 文档，不胜感激。
+{% endnote %}
 
 ## Useful links
 
-- [GitLab Pages](https://docs.gitlab.com/ee/user/project/pages/index.html)
-- [GitLab CI Docs](https://docs.gitlab.com/ee/ci/README.html)
+- [GitLab Pages 相关文档](https://docs.gitlab.com/ee/user/project/pages/index.html)
+- [GitLab CI 相关文档](https://docs.gitlab.com/ee/ci/README.html)
+- [在百度上搜索 "Hexo GitLab"](https://www.baidu.com/s?wd=Hexo%20GitLab)
