@@ -15,7 +15,8 @@ docs:
     generating: generating.html
   deployment:
     github_pages: github-pages.html
-    other_deployments: other-deployments.html
+    gitlab_pages: gitlab-pages.html
+    one_command_deployment: one-command-deployment.html
   customization:
     permalinks: permalinks.html
     themes: themes.html

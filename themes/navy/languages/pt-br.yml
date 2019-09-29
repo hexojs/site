@@ -35,6 +35,9 @@ sidebar:
     server: Servidor
     generating: Gerando
     deployment: Implantação
+    github_pages: GitHub Pages
+    gitlab_pages: GitLab Pages
+    one_command_deployment: One-Command Deployment
     customization: Customização
     permalinks: Links Permanentes
     themes: Temas
