@@ -4,6 +4,7 @@
 
 - [ ] I want to publish my theme on Hexo official website.
     - [ ] I have read the [theme publishing doc](https://hexo.io/docs/themes#Publishing).
+    - [ ] `name` is unique.
     - [ ] `link` URL is correct.
     - [ ] `preview` URL is correct.
     - [ ] `preview` URL web site is rendered correctly.
@@ -11,11 +12,10 @@
     - [ ] Screenshot filename is same as value of `name`.
     - [ ] Screenshot size is `800 * 500`.
     - [ ] Screenshot file format is `png`.
-    - [ ] My theme `name` is unique (not duplicate)
 - [ ] I want to publish my plugin on Hexo official website.
     - [ ] I have read the [plugin publishing doc](https://hexo.io/docs/plugins#Publishing).
+    - [ ] `name` is unique.
     - [ ] `link` URL is correct.
-    - [ ] My plugin `name` is unique (not duplicate)
 - [ ] Others (Update, fix, translation, etc...)
 
 <!-- 
