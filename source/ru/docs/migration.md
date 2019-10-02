@@ -9,8 +9,7 @@ title: Миграция
 $ npm install hexo-migrator-rss --save
 ```
 
-После установки плагина запустите следующую команду для миграции всех постов в RSS. `source`
-Once the plugin is installed, run the following command to migrate all posts from RSS. `source` может быть путём к файлу или URL ссылкой.
+После установки плагина запустите следующую команду для миграции всех постов в RSS. `source` может быть путём к файлу или URL ссылкой.
 
 ``` bash
 $ hexo migrate rss <source>
@@ -52,7 +51,7 @@ $ npm install hexo-migrator-wordpress --save
 $ hexo migrate wordpress <source>
 ```
 
-Где `source`, это путь или URL файла экспортированного из WordPress.
+Где `source` — это путь или URL файла экспортированного из WordPress.
 
 ## Joomla
 
@@ -70,4 +69,4 @@ $ npm install hexo-migrator-joomla --save
 $ hexo migrate joomla <source>
 ```
 
-Где `source`, это путь или URL файла экспортированного из Joomla.
+Где `source` — это путь или URL файла экспортированного из Joomla.
