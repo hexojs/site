@@ -1,5 +1,5 @@
 menu:
-  docs: Docs
+  docs: Документация
   api: API
   news: Новости
   plugins: Плагины
@@ -29,7 +29,7 @@ sidebar:
     basic_usage: Основы
     writing: Написание
     front_matter: Шапка файла
-    tag_plugins: Плагины тэгов
+    tag_plugins: Плагины тегов
     asset_folders: Папки с материалами
     data_files: Файлы с данными
     server: Сервер
@@ -37,7 +37,7 @@ sidebar:
     deployment: Публикация
     github_pages: GitHub Pages
     gitlab_pages: GitLab Pages
-    one_command_deployment: One-Command Deployment
+    one_command_deployment: Размещение одной командой
     customization: Кастомизация
     permalinks: Постоянные ссылки
     themes: Темы
@@ -45,7 +45,7 @@ sidebar:
     templates: Шаблоны
     variables: Переменные
     helpers: Помощники
-    internationalization: Интернацинализация (i18n)
+    internationalization: Интернационализация (i18n)
     plugins: Плагины
     miscellaneous: Разное
     troubleshooting: Решение проблем
@@ -70,4 +70,4 @@ sidebar:
     migrator: Мигратор
     processor: Обработчик
     renderer: Рендер
-    tag: Тэг
+    tag: Тег
