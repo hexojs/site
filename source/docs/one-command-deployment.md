@@ -225,7 +225,7 @@ $ npm i -g now
 ```json
 {
   "scripts": {
-    "build: "hexo generate"
+    "build": "hexo generate"
   }
 }
 ```
