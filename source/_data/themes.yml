@@ -1170,7 +1170,7 @@
 - name: ztopic
   description: A simple responsive theme
   link: https://github.com/wa-ri/hexo-theme-ztopic
-  preview: http://zccblog.cn/
+  preview: https://wa-ri.github.io/
   tags:
     - responsive
     - simple
