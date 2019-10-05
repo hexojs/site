@@ -63,7 +63,7 @@ $ nvm install node
 ```
 
 {% note info For Windows users %}
-We recommend to use [Node Version Switcher](https://github.com/jasongin/nvs/) on Windows, which has similar command-line syntax with nvm and can be installed through provided Windows Installer (MSI) package.
+We recommend to use [Node Version Switcher](https://github.com/jasongin/nvs/) as an alternative to nvm on Windows, which has similar command-line syntax with nvm and can be installed through provided Windows Installer (MSI) package.
 {% endnote %}
 
 Alternatively, download and run [the installer](http://nodejs.org/). Most Linux distributions ship Node.js in their default repository. [NodeSource](https://github.com/nodesource/distributions) third-party repo usually ships more up-to-date Node.js.

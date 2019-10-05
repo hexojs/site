@@ -60,7 +60,7 @@ $ nvm install node
 ```
 
 {% note info For Windows users %}
-We recommend to use [Node Version Switcher](https://github.com/jasongin/nvs/) on Windows, which has similar command-line syntax with nvm and can be installed through provided Windows Installer (MSI) package.
+We recommend to use [Node Version Switcher](https://github.com/jasongin/nvs/) as an alternative to nvm on Windows, which has similar command-line syntax with nvm and can be installed through provided Windows Installer (MSI) package.
 {% endnote %}
 
 이런 방법 대신, [installer](http://nodejs.org/)를 다운로드 받아서 설치하는 방법도 있습니다.
