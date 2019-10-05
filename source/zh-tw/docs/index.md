@@ -61,6 +61,10 @@ $ wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | ba
 $ nvm install node
 ```
 
+{% note info Windows 用户 %}
+對於 Windows 用戶我們推薦使用 [Node Version Switcher](https://github.com/jasongin/nvs/)，其具有和 nvm 相似的命令行語法，並且可以通過 Windows Installer (MSI) 安裝包進行安裝。
+{% endnote %}
+
 或者您也可以下載 [安裝程式](http://nodejs.org/) 來安裝。
 
 ### 安裝 Hexo
