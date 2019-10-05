@@ -35,38 +35,17 @@ If you are a macOS user, or a Linux user who install Node.js through your packag
 ### Install Git
 
 - Windows: Download & install [git](https://git-scm.com/download/win).
-- Mac: Install it with [Homebrew](http://mxcl.github.com/homebrew/), [MacPorts](http://www.macports.org/) or [installer](http://sourceforge.net/projects/git-osx-installer/).
+- Mac: Install it with [Homebrew](https://brew.sh/), [MacPorts](http://www.macports.org/) or [installer](http://sourceforge.net/projects/git-osx-installer/).
 - Linux (Ubuntu, Debian): `sudo apt-get install git-core`
 - Linux (Fedora, Red Hat, CentOS): `sudo yum install git-core`
 
 ### Install Node.js
 
-The best way to install Node.js is with [Node Version Manager](https://github.com/nvm-sh/nvm).
-Thankfully the creators of nvm provide a simple script that automatically installs nvm:
+- Windows: Install it with [nvs](https://github.com/jasongin/nvs/) (recommended) or [nvm](https://github.com/nvm-sh/nvm).
+- Mac: Install it with [Homebrew](https://brew.sh/), [MacPorts](http://www.macports.org/), [nvs](https://github.com/jasongin/nvs/) or [nvm](https://github.com/nvm-sh/nvm).
+- Linux: Install it with [nvs](https://github.com/jasongin/nvs/), [nvm](https://github.com/nvm-sh/nvm) or [NodeSource](https://github.com/nodesource/distributions)
 
-cURL:
-
-``` bash
-$ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
-```
-
-Wget:
-
-``` bash
-$ wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
-```
-
-Once nvm is installed, restart the terminal and run the following command to install Node.js:
-
-``` bash
-$ nvm install node
-```
-
-{% note info For Windows users %}
-We recommend to use [Node Version Switcher](https://github.com/jasongin/nvs/) as an alternative to nvm on Windows, which has similar command-line syntax with nvm and can be installed through provided Windows Installer (MSI) package.
-{% endnote %}
-
-Alternatively, download and run [the installer](http://nodejs.org/). Most Linux distributions ship Node.js in their default repository. [NodeSource](https://github.com/nodesource/distributions) third-party repo usually ships more up-to-date Node.js.
+Alternatively, download and run the [official installer](https://nodejs.org/en/download/) provided by Node.js.
 
 ### Install Hexo
 
