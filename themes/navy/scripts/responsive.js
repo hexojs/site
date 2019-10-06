@@ -2,14 +2,18 @@
 
 'use strict';
 
+const { createHash } = require('crypto');
+const { full_url_for, url_for } = require('hexo-util');
 const sharp = require('sharp');
 
-function pngToJpg() {
+async function responsive() {
   const { route } = this;
   const routeList = route.list();
   const pngFiles = routeList.filter((path) => path.endsWith('.png'));
+  const htmlFiles = routeList.filter((path) => path.endsWith('.html'));
+  const pngToJpg = {};
 
-  return Promise.all(pngFiles.map((path) => {
+  await Promise.all(pngFiles.map((path) => {
     return new Promise((resolve, reject) => {
       const assetPath = route.get(path);
       const assetData = [];
@@ -29,8 +33,37 @@ function pngToJpg() {
               .resize({ width: Math.round(metadata.width / 2) })
               .toBuffer();
 
-            route.set(path.replace(/\.png$/, '.jpg'), halfJpeg);
-            resolve(route.set(path.replace(/\.png$/, '@2x.jpg'), jpeg));
+            const pngHash = createHash('sha1').update(input).digest('hex').slice(0, 10);
+            const jpegHash = createHash('sha1').update(jpeg).digest('hex').slice(0, 10);
+            const halfJpegHash = createHash('sha1').update(halfJpeg).digest('hex').slice(0, 10);
+            const halfJpegPath = path.replace(/\.png$/, `-${jpegHash}.jpg`);
+
+            pngToJpg[url_for.call(this, path)] = url_for.call(this, halfJpegPath);
+            pngToJpg[full_url_for.call(this, path)] = full_url_for.call(this, halfJpegPath);
+            route.set(path.replace(/\.png$/, `-${pngHash}.png`), input);
+            route.set(halfJpegPath, halfJpeg);
+            resolve(route.set(path.replace(/\.png$/, `-${halfJpegHash}@2x.jpg`), jpeg));
+          } catch (err) {
+            reject(err);
+          }
+        }
+      });
+    });
+  }));
+
+  return Promise.all(htmlFiles.map((path) => {
+    return new Promise((resolve, reject) => {
+      const assetPath = route.get(path);
+      const assetData = [];
+      assetPath.on('data', (chunk) => assetData.push(chunk));
+      assetPath.on('end', async() => {
+        if (assetData.length) {
+          try {
+            const result = assetData.join().replace(/(src|content)=['"](.*?)['"]/gi, (str, attr, value) => str.replace(value, (img) => {
+              if (pngToJpg[img]) return pngToJpg[img];
+              return img;
+            }));
+            resolve(route.set(path, result));
           } catch (err) {
             reject(err);
           }
@@ -40,4 +73,4 @@ function pngToJpg() {
   }));
 }
 
-hexo.extend.filter.register('after_generate', pngToJpg);
+hexo.extend.filter.register('after_generate', responsive);
