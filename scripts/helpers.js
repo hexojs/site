@@ -2,63 +2,61 @@
 
 'use strict';
 
-var pathFn = require('path');
-var _ = require('lodash');
-var cheerio = require('cheerio');
-var lunr = require('lunr');
+const { basename } = require('path');
+require('hexo-util')
+const _ = require('lodash');
+const cheerio = require('cheerio');
+const lunr = require('lunr');
+const full_url_for = hexo.extend.helper.get('full_url_for').bind(hexo);
 
-var localizedPath = ['docs', 'api'];
-
-function startsWith(str, start) {
-  return str.substring(0, start.length) === start;
-}
+const localizedPath = ['docs', 'api'];
 
 hexo.extend.helper.register('page_nav', function() {
-  var type = this.page.canonical_path.split('/')[0];
-  var sidebar = this.site.data.sidebar[type];
-  var path = pathFn.basename(this.path);
-  var list = {};
-  var prefix = 'sidebar.' + type + '.';
+  const type = this.page.canonical_path.split('/')[0];
+  const sidebar = this.site.data.sidebar[type];
+  const path = basename(this.path);
+  const list = {};
+  const prefix = 'sidebar.' + type + '.';
 
-  for (var i in sidebar) {
-    for (var j in sidebar[i]) {
+  for (let i in sidebar) {
+    for (let j in sidebar[i]) {
       list[sidebar[i][j]] = j;
     }
   }
 
-  var keys = Object.keys(list);
-  var index = keys.indexOf(path);
-  var result = '';
+  const keys = Object.keys(list);
+  const index = keys.indexOf(path);
+  let result = '';
 
   if (index > 0) {
-    result += '<a href="' + keys[index - 1] + '" class="article-footer-prev" title="' + this.__(prefix + list[keys[index - 1]]) + '">'
-      + '<i class="fa fa-chevron-left"></i><span>' + this.__('page.prev') + '</span></a>';
+    result += `<a href="${keys[index - 1]}" class="article-footer-prev" title="${this.__(prefix + list[keys[index - 1]])}"><i class="fa fa-chevron-left"></i><span>${this.__('page.prev')}</span></a>`;
   }
 
   if (index < keys.length - 1) {
     result += '<a href="' + keys[index + 1] + '" class="article-footer-next" title="' + this.__(prefix + list[keys[index + 1]]) + '">'
       + '<span>' + this.__('page.next') + '</span><i class="fa fa-chevron-right"></i></a>';
+    result += `<a href="${keys[index + 1]}" class="article-footer-next" title="${this.__(prefix + list[keys[index + 1]])}"><span>${this.__('page.next')}</span><i class="fa fa-chevron-right"></i></a>`;
   }
 
   return result;
 });
 
 hexo.extend.helper.register('doc_sidebar', function(className) {
-  var type = this.page.canonical_path.split('/')[0];
-  var sidebar = this.site.data.sidebar[type];
-  var path = pathFn.basename(this.path);
-  var result = '';
-  var self = this;
-  var prefix = 'sidebar.' + type + '.';
+  const type = this.page.canonical_path.split('/')[0];
+  const sidebar = this.site.data.sidebar[type];
+  const path = basename(this.path);
+  let result = '';
+  const self = this;
+  const prefix = 'sidebar.' + type + '.';
 
-  _.each(sidebar, function(menu, title) {
-    result += '<strong class="' + className + '-title">' + self.__(prefix + title) + '</strong>';
+  _.each(sidebar, (menu, title) => {
+    result += `<strong class="${className}-title">${self.__(prefix + title)}</strong>`;
 
-    _.each(menu, function(link, text) {
-      var itemClass = className + '-link';
+    _.each(menu, (link, text) => {
+      let itemClass = className + '-link';
       if (link === path) itemClass += ' current';
 
-      result += '<a href="' + link + '" class="' + itemClass + '">' + self.__(prefix + text) + '</a>';
+      result += `<a href="${link}" class="${itemClass}">${self.__(prefix + text)}</a>`;
     });
   });
 
@@ -66,60 +64,58 @@ hexo.extend.helper.register('doc_sidebar', function(className) {
 });
 
 hexo.extend.helper.register('header_menu', function(className) {
-  var menu = this.site.data.menu;
-  var result = '';
-  var self = this;
-  var lang = this.page.lang;
-  var isEnglish = lang === 'en';
+  const menu = this.site.data.menu;
+  let result = '';
+  const self = this;
+  const lang = this.page.lang;
+  const isEnglish = lang === 'en';
 
-  _.each(menu, function(path, title) {
+  _.each(menu, (path, title) => {
     if (!isEnglish && ~localizedPath.indexOf(title)) path = lang + path;
 
-    result += '<a href="' + self.url_for(path) + '" class="' + className + '-link">' + self.__('menu.' + title) + '</a>';
+    result += `<a href="${self.url_for(path)}" class="${className}-link">${self.__('menu.' + title)}</a>`;
   });
 
   return result;
 });
 
 hexo.extend.helper.register('canonical_url', function(lang) {
-  var path = this.page.canonical_path;
+  let path = this.page.path;
   if (lang && lang !== 'en') path = lang + '/' + path;
 
-  return this.config.url + '/' + path;
+  return full_url_for(path);
 });
 
 hexo.extend.helper.register('url_for_lang', function(path) {
-  var lang = this.page.lang;
-  var url = this.url_for(path);
+  const lang = this.page.lang;
+  let url = this.url_for(path);
 
   if (lang !== 'en' && url[0] === '/') url = '/' + lang + url;
 
   return url;
 });
 
-hexo.extend.helper.register('raw_link', function(path) {
-  return 'https://github.com/hexojs/site/edit/master/source/' + path;
-});
+hexo.extend.helper.register('raw_link', (path) => `https://github.com/hexojs/site/edit/master/source/${path}`);
 
 hexo.extend.helper.register('page_anchor', function(str) {
-  var $ = cheerio.load(str, {decodeEntities: false});
-  var headings = $('h1, h2, h3, h4, h5, h6');
+  const $ = cheerio.load(str, {decodeEntities: false});
+  const headings = $('h1, h2, h3, h4, h5, h6');
 
   if (!headings.length) return str;
 
   headings.each(function() {
-    var id = $(this).attr('id');
+    const id = $(this).attr('id');
 
     $(this)
       .addClass('article-heading')
-      .append('<a class="article-anchor" href="#' + id + '" aria-hidden="true"></a>');
+      .append(`<a class="article-anchor" href="#${id}" aria-hidden="true"></a>`);
   });
 
   return $.html();
 });
 
 hexo.extend.helper.register('lunr_index', function(data) {
-  var index = lunr(function() {
+  const index = lunr(function() {
     this.field('name', {boost: 10});
     this.field('tags', {boost: 50});
     this.field('description');
@@ -133,24 +129,22 @@ hexo.extend.helper.register('lunr_index', function(data) {
   return JSON.stringify(index);
 });
 
+// Will be replace with full_url_for after hexo v4 release
 hexo.extend.helper.register('canonical_path_for_nav', function() {
-  var path = this.page.canonical_path;
+  const path = this.page.canonical_path;
 
-  if (startsWith(path, 'docs/') || startsWith(path, 'api/')) {
-    return path;
-  }
+  if (path.startsWith('docs/') || path.startsWith('api/')) return path;
   return '';
-
 });
 
 hexo.extend.helper.register('lang_name', function(lang) {
-  var data = this.site.data.languages[lang];
+  const data = this.site.data.languages[lang];
   return data.name || data;
 });
 
 hexo.extend.helper.register('disqus_lang', function() {
-  var lang = this.page.lang;
-  var data = this.site.data.languages[lang];
+  const lang = this.page.lang;
+  const data = this.site.data.languages[lang];
 
   return data.disqus_lang || lang;
 });
