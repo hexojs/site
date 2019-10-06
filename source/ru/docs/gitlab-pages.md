@@ -2,10 +2,10 @@
 title: GitLab Pages
 ---
 
-1. Create a new repository named <b>*username*.gitlab.io</b>, where username is your username on GitLab. If you have already uploaded to other repo, rename the repo instead.
-2. Enable Shared Runners via `Settings -> CI / CD -> Shared Runners`.
-3. Push the files of your Hexo folder to the repository. The `public/` folder is not (and should not be) uploaded by default, make sure the `.gitignore` file contains `public/` line. The folder structure should be roughly similar to [this repo](https://gitlab.com/pages/hexo).
-4. Add `.gitlab-ci.yml` file to your repo (alongside _config.yml & package.json) with the following content:
+1. Создайте новый репозиторий под названием <b>*username*.gitlab.io</b>, где `username` — ваше имя пользователя GitLab. Если вы уже загрузили файлы в репозиторий с другим названием, просто переименуйте его.
+2. Включите возможность Shared Runners через настройки `Settings -> CI / CD -> Shared Runners`.
+3. Запушьте файлы вашей папки Hexo в этот репозиторий. Папка `public/` не должна загружаться по умолчанию, проверьте, что файл `.gitignore` содержит строку `public/`. Структура папки должна быть такой же, как в [этом репозитории](https://gitlab.com/pages/hexo).
+4. Добавьте файл `.gitlab-ci.yml` в ваш репозиторий (рядом с _config.yml & package.json) со следующий контентом:
 ``` yml
 image: node:10-alpine # use nodejs v10 LTS
 cache:
@@ -25,19 +25,19 @@ pages:
   only:
     - master
 ```
-5. *username*.gitlab.io should be up and running, once GitLab CI finishes the deployment job,
-6. (Optional) If you wish to inspect the generated site assets (html, css, js, etc), they can be found in the [job artifact](https://docs.gitlab.com/ee/user/project/pipelines/job_artifacts.html).
+5. *username*.gitlab.io должен заработать, как только GitLab CI закончит деплоb,
+6. (Опфионально) Если вы хотите проверить содержимое папок с материалами (html, css, js и т.д.), они могут быть найдены в разделе [job artifact](https://docs.gitlab.com/ee/user/project/pipelines/job_artifacts.html).
 
-## Project page
+### Страница проекта
 
-If you prefer to have a project page on GitLab:
+Если вы препочитаете страницу проекта на GitLab:
 
-1. Go to `Settings -> General -> Advanced -> Change path`. Change the value to a name, so the website is available at <b>username.gitlab.io/*name*</b>. It can be any name, like *blog* or *hexo*.
-2. Edit **_config.yml**, change the `root:` value from `""` to `"name"`.
-3. Commit and push.
+1. Перейдите в насйтроки `Settings -> General -> Advanced -> Change path`. Измените значение на имя так, чтобы сайт был доступен по адресу <b>username.gitlab.io/*name*</b>. Это может быть любое слово, как *blog* или *hexo*.
+2. Редактируйте **_config.yml**, изменив значение `root:` с `""` на `"name"`.
+3. Закоммитьте и запушьте.
 
 
-## Useful links
+## Полезные ссылки
 
 - [GitLab Pages](https://docs.gitlab.com/ee/user/project/pages/index.html)
-- [GitLab CI Docs](https://docs.gitlab.com/ee/ci/README.html)
+- [Документация GitLab CI](https://docs.gitlab.com/ee/ci/README.html)

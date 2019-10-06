@@ -70,6 +70,10 @@ $ wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | sh
 $ nvm install node
 ```
 
+{% note info Windows 用户 %}
+对于 Windows 用户我们推荐使用 [nvs](https://github.com/jasongin/nvs/) 而不是 nvm。nvs 具有和 nvm 相似的命令行语法，并且可以通过 Windows Installer (MSI) 安装包进行安装。
+{% endnote %}
+
 或者您也可以下载 [安装程序](http://nodejs.org/) 来安装。
 
 {% note info Windows 用户 %}

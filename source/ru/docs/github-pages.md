@@ -2,16 +2,16 @@
 title: GitHub Pages
 ---
 
-In this tutorial, we use [Travis CI](https://travis-ci.com/) to deploy Github Pages. It is free for open source repository, meaning your repository's `master` branch has to be public. Please skip to the [Private repository](#Private-repository) section if you prefer to keep the repo private, or prefer not to upload your source folder to GitHub.
+В этом туториале мы используем [Travis CI](https://travis-ci.com/) для деплоя в Github Pages. Travis CI бесплатен для репозиториев с открытым исходным кодом, то есть ветка `master` вашего репозитория должна быть публичной. Пожалуйста, перейдите в описание [Приватного репозитория](#Private-repository), если вы предпочитаете не открывать свой исходный код, либо откажитесь от загрузки своих файлов на GitHub.
 
-1. Create a repo named <b>*username*.github.io</b>, where username is your username on GitHub. If you have already uploaded to other repo, rename the repo instead.
-2. Push the files of your Hexo folder to the repository. The `public/` folder is not (and should not be) uploaded by default, make sure the `.gitignore` file contains `public/` line. The folder structure should be roughly similar to [this repo](https://github.com/hexojs/hexo-starter), without the `.gitmodules` file.
-3. Add [Travis CI](https://github.com/marketplace/travis-ci) to your account.
-4. Go to [Applications settings](https://github.com/settings/installations), configure Travis CI to have access to the repo.
-5. You'll be redirected to Travis page.
-6. On a new tab, generate a [new token](https://github.com/settings/tokens) with **repo** scopes. Note down the token value.
-7. On the Travis page, go to your repo's setting. Under **Environment Variables**, put **GH_TOKEN** as name and paste the token onto value. Click Add to save it.
-8. Add `.travis.yml` file to your repo (alongside _config.yml & package.json) with the following content:
+1. Создайте репозиторий с названием <b>*username*.github.io</b>, где `username` — ваше имя пользователя GitHub. Если вы уже загрузили файлы в репозиторий с другим названием, просто переименуйте его.
+2. Запушьте файлы вашей папки Hexo в этот репозиторий. Папка `public/` не должна загружаться по умолчанию, проверьте, что файл `.gitignore` содержит строку `public/`. Структура папки должна быть такой же, как в [этом репозитории](https://github.com/hexojs/hexo-starter), без файла `.gitmodules`.
+3. Добавьте [Travis CI](https://github.com/marketplace/travis-ci) в свой аккаунт.
+4. Зайдите на страницу [Настроек приложения](https://github.com/settings/installations), сконфигурируйте Travis CI, чтобы оно имело доступ к репозиторию.
+5. Вас перенаправят на страницу Travis.
+6. В новой вкладке сгенерируйте [новый токен](https://github.com/settings/tokens) с областью видимости **repo**. Запишите значение токена.
+7. На странице Travis зайдите в настройки репозитория. В поле **Environment Variables**, вставьте **GH_TOKEN** в качестве имени и токен в качестве значения. Нажмите `Add` для сохранения.
+8. Добавьте файл `.travis.yml` в свой репозиторий (рядом с _config.yml & package.json) со следующим контентом:
 ```yml
 sudo: false
 language: node_js
@@ -32,45 +32,45 @@ deploy:
     branch: master
   local-dir: public
 ```
-9. Once Travis CI finish the deployment, the generated pages can be found in the `gh-pages` branch of your repository
-10. In your GitHub repo's setting, navigate to "GitHub Pages" section and change Source to **gh-pages branch**.
-11. Check the webpage at *username*.github.io.
+9. Как только Travis CI завершит деплой, сгенерированные страницы появятся в ветке `gh-pages` вашего репо.
+10. В настройках своего репозитория GitHub перейдите в раздел "GitHub Pages" и измените `Source` на **ветку gh-pages**.
+11. Проверьте страницу на *username*.github.io.
 
-## Project page
+### Страница проекта
 
-If you prefer to have a project page on GitLab:
+Если вы препочитаете страницу проекта на GitHub:
 
-1. Navigate to your repo on GitHub. Go to the **Settings** tab. Change the **Repository name** so your blog is available at <b>username.github.io/*repository*</b>,  **repository** can be any name, like *blog* or *hexo*.
-2. Edit your **_config.yml**, change the `root:` value to the `/<repository>/` (must starts and ends with a slash, without the brackets).
-3. Commit and push.
+1. Перейдите на страницу своего репо на GitHub. Откройте таб **Settings**. Измените **Repository name**, чтобы ваш блог был доступен на <b>username.github.io/*repository*</b>, **repository** может быть любым словом, как *blog* или *hexo*.
+2. Редактируйте файл **_config.yml**, изменив значение `root:` на `/<repository>/` (должно начинаться и заканчиваться косой чертой).
+3. Закоммитьте и запушьте.
 
-## Private repository
+## Приватный репозиторий
 
-This section only applies to private repo.
+Это инстуркция только для приватных репозиториев.
 
-1. Create a repo named <b>*username*.github.io</b>, where username is your username on GitHub. If you have already uploaded to other repo, rename the repo instead. _(Skip to step 3 if you prefer not to upload your source folder to GitHub at all)_
-2. Push the files of your Hexo folder to the repository. The `public/` folder is not (and should not be) uploaded by default, make sure the `.gitignore` file contains `public/` line. The folder structure should be roughly similar to [this repo](https://github.com/hexojs/hexo-starter), without the `.gitmodules` file.
-3. Run `hexo generate` and copy the `public/` folder to somewhere else (in your workstation).
-4. Create a new `gh-pages` git branch from your Hexo folder, we recommend creating an orphan branch (to create a new branch without commit history):
+1. Создайте репозиторий с названием <b>*username*.github.io</b>, где `username` — ваше имя пользователя GitHub. Если вы уже загрузили файлы в репозиторий с другим названием, просто переименуйте его. _(Перейдите к шагу 3, если предпочитаете на загружать свои файлы на GitHub)_
+2. Запушьте файлы вашей папки Hexo в этот репозиторий. Папка `public/` не должна загружаться по умолчанию, проверьте, что файл `.gitignore` содержит строку `public/`. Структура папки должна быть такой же, как в [этом репозитории](https://github.com/hexojs/hexo-starter), без файла `.gitmodules`.
+3. Запустите команду `hexo generate` и скопируйте папку `public/` куда-то ещё (на своеё рабочей машине).
+4. Создайте новую ветку `gh-pages` в вашей папке Hexo, Мы рекомендуем создание ветки-"сироты" (чтобы создать новую ветку без истории коммитов):
 ``` bash
 $ git checkout --orphan gh-pages
 ```
-5. Remove everything including any hidden files **except** the `.git/` folder. Fret not, those files are still residing at the master branch.
-6. Move the _content_ of the `public/` folder back.
-7. Commit and push the gh-pages branch.
+5. Удалите всё, включая скрытые файлы, **кроме** папки `.git/`. Не волнуйтесь, эти файлы всё ещё находятся в ветке master.
+6. Переместите _содержимое_ папки `public/` обратно.
+7. Закоммитьте и запушьте ветку gh-pages.
 ``` bash
 $ git add .
 $ git commit -a -m "Initial commit"
 $ git push origin gh-pages
 ```
-8. In your repo's setting, navigate to "GitHub Pages" section and change Source is **gh-pages branch**.
-9. Check the webpage at your-username.github.io.
-10. To navigate back to your source folder,
+8. В настройках своего репозитория GitHub перейдите в раздел "GitHub Pages" и измените `Source` на **ветку gh-pages**.
+9. Проверьте страницу на *username*.github.io.
+10. Перейдите обратно в папку своего исходного кода,
 ``` bash
 $ git checkout master
 ```
 
-## Useful links
+## Полезные ссылки
 
 - [GitHub Pages](https://help.github.com/categories/github-pages-basics/)
-- [Travis CI Docs](https://docs.travis-ci.com/user/tutorial/)
+- [Документация Travis CI](https://docs.travis-ci.com/user/tutorial/)

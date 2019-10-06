@@ -76,12 +76,6 @@ $ git checkout master
 
 11. 你的 Hexo 站点文件就回来了。
 
-{% note info %}
-请注意，以上教程翻译自 Hexo 文档英文版，仅做参考；译者在翻译过程中发现很多语焉不详的内容。
-在 [Awesome Hexo](https://github.com/hexojs/awesome-hexo) 中收录有一些在 GitHub 部署 Hexo 的教程。通过搜索引擎可以找到更多教程。
-也欢迎更多有志之士前来改善 Hexo 文档，不胜感激。
-{% endnote %}
-
 ## 有用的参考链接
 
 - [GitHub Pages 使用文档](https://help.github.com/categories/github-pages-basics/)

@@ -46,7 +46,7 @@ If you prefer to have a project page on GitLab:
 
 ## Private repository
 
-This section only applies to private repo.
+This section only applies to private repo. Alternatively, you could also opt for `hexo deploy` one-command deployment ([instruction](/docs/one-command-deployment)), instead of using the following approach.
 
 1. Create a repo named <b>*username*.github.io</b>, where username is your username on GitHub. If you have already uploaded to other repo, rename the repo instead. _(Skip to step 3 if you prefer not to upload your source folder to GitHub at all)_
 2. Push the files of your Hexo folder to the repository. The `public/` folder is not (and should not be) uploaded by default, make sure the `.gitignore` file contains `public/` line. The folder structure should be roughly similar to [this repo](https://github.com/hexojs/hexo-starter), without the `.gitmodules` file.
