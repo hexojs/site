@@ -36,11 +36,6 @@ pages:
 
 如果你更希望你的站点部署在 `<你的 GitLab 用户名>.gitlab.io` 的子目录中，你的 repository 需要直接命名为子目录的名字，这样你的站点可以通过 `https://<你的 GitLab 用户名>.gitlab.io/<repository 的名字>` 访问。你需要检查你的 Hexo 配置文件，将 `url` 的值修改为 `https://<你的 GitLab 用户名>.gitlab.io/<repository 的名字>`、将 `root` 的值修改为 `/<repository 的名字>/`
 
-{% note info %}
-请注意，以上教程翻译自 Hexo 文档英文版，仅做参考；译者在翻译过程中发现很多语焉不详的内容。通过搜索引擎可以找到更多教程。
-也欢迎更多有志之士前来改善 Hexo 文档，不胜感激。
-{% endnote %}
-
 ## Useful links
 
 - [GitLab Pages 相关文档](https://docs.gitlab.com/ee/user/project/pages/index.html)
