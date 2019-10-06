@@ -6,7 +6,6 @@ const gulpRevCollector = require('gulp-rev-collector');
 const gulpRevReplace = require('gulp-rev-replace');
 const gulpUniqueFiles = require('gulp-unique-files');
 const gulpUseRef = require('gulp-useref');
-const gulpResponsive = require('gulp-responsive');
 const gulpCheerio = require('gulp-cheerio');
 const del = require('del');
 const rename = require('rename');
@@ -75,34 +74,8 @@ gulp.task('revreplace', function() {
     .pipe(gulp.dest('public/themes'));
 });
 
-gulp.task('resize', function() {
-  return gulp.src(dirs.screenshots + '/*.png')
-    .pipe(gulpResponsive({
-      '*.png': [
-        {
-          width: '50%',
-          rename: {
-            extname: '.jpg'
-          }
-        },
-        {
-          rename: {
-            suffix: '@2x',
-            extname: '.jpg'
-          }
-        }
-      ]
-    }, {
-      progressive: true,
-      format: 'jpeg',
-      quality: 70,
-      stats: false
-    }))
-    .pipe(gulp.dest(dirs.screenshots));
-});
-
 gulp.task('default',
-  gulp.series('clean', 'rev', gulp.parallel('resize', 'revreplace'), 'useref'));
+  gulp.series('clean', 'rev', 'revreplace', 'useref'));
 
 function replaceBackSlash(str) {
   return str.replace(/\\/g, '/');
