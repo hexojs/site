@@ -2,8 +2,7 @@
 
 'use strict';
 
-const Lipo = require('lipo');
-const lipo = new Lipo();
+const sharp = require('sharp');
 
 function pngToJpg() {
   const { route } = this;
@@ -19,16 +18,15 @@ function pngToJpg() {
         if (assetData.length) {
           try {
             const input = Buffer.concat(assetData);
-            const jpeg = await lipo(input)
+            const jpeg = await sharp(input)
               .jpeg({
                 progressive: true,
                 quality: 70
               })
               .toBuffer();
-            const metadata = await lipo(input).metadata();
-            const halfJpeg = await lipo(input)
-              .resize(Math.round(metadata.width / 2))
-              .jpeg()
+            const metadata = await sharp(jpeg).metadata();
+            const halfJpeg = await sharp(jpeg)
+              .resize({ width: Math.round(metadata.width / 2) })
               .toBuffer();
 
             route.set(path.replace(/\.png$/, '.jpg'), halfJpeg);
