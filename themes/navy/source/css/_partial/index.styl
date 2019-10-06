@@ -45,6 +45,45 @@
   @media mq-normal
     display: block
 
+#intro-news-list
+  background-color: #10171e
+  margin: -1px 0
+
+#intro-news-flex
+  display: flex
+  flex-flow: column
+  @media mq-normal
+    flex-flow: row wrap
+
+.intro-news-wrap
+  padding: 36px 30px
+  @media mq-normal
+    flex: 0 0 50%
+  @media screen and (min-width: 960px)
+    flex: 0 0 25%
+
+.intro-news-wrap
+.intro-news-wrap:focus
+.intro-news-wrap:visited
+  text-decoration: none
+
+.intro-news-wrap:hover
+  text-decoration: none
+  background-color: #25a1f0
+
+.intro-news-time
+  font-size: 14px
+  color: #888
+
+.intro-news-wrap:hover .intro-news-time
+  color: #ddd
+
+.intro-news-title
+  padding-top: 4px
+  font-size: 15px
+  line-height: 1.2;
+  color: #fff
+
 #intro-feature-list
   padding-top: 20px
   display: flex
@@ -54,6 +93,9 @@
 
 .intro-feature-wrap
   padding-top: 20px
+  @media mq-tablet
+    flex: 0 0 50%
+    padding-top: 50px
   @media mq-normal
     flex: 0 0 50%
     padding-top: 50px
