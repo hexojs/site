@@ -49,5 +49,8 @@
       "imagemin-lint-staged",
       "git add"
     ]
+  },
+  "engines": {
+    "node": ">=8.6.0"
   }
 }
