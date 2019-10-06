@@ -9,8 +9,7 @@ const sharp = require('sharp');
 async function responsive() {
   const { route } = this;
   const routeList = route.list();
-  const pngFiles = routeList.filter((path) => path.endsWith('.png'));
-  const htmlFiles = routeList.filter((path) => path.endsWith('.html'));
+  const pngFiles = routeList.filter((path) => path.startsWith('themes') && path.endsWith('.png'));
   const pngToJpg = {};
 
   await Promise.all(pngFiles.map((path) => {
@@ -39,7 +38,6 @@ async function responsive() {
             const halfJpegPath = path.replace(/\.png$/, `-${jpegHash}.jpg`);
 
             pngToJpg[url_for.call(this, path)] = url_for.call(this, halfJpegPath);
-            pngToJpg[full_url_for.call(this, path)] = full_url_for.call(this, halfJpegPath);
             route.set(path.replace(/\.png$/, `-${pngHash}.png`), input);
             route.set(halfJpegPath, halfJpeg);
             resolve(route.set(path.replace(/\.png$/, `-${halfJpegHash}@2x.jpg`), jpeg));
@@ -51,7 +49,7 @@ async function responsive() {
     });
   }));
 
-  return Promise.all(htmlFiles.map((path) => {
+  return Promise.all(['themes/index.html'].map((path) => {
     return new Promise((resolve, reject) => {
       const assetPath = route.get(path);
       const assetData = [];
