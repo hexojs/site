@@ -59,7 +59,7 @@ async function responsive() {
       assetPath.on('end', async() => {
         if (assetData.length) {
           try {
-            const result = assetData.join().replace(/(src|content)=['"](.*?)['"]/gi, (str, attr, value) => str.replace(value, (img) => {
+            const result = assetData.join().replace(/src=['"](.*?)['"]/gi, (str, value) => str.replace(value, (img) => {
               if (pngToJpg[img]) return pngToJpg[img];
               return img;
             }));
