@@ -28,10 +28,6 @@ If not, please follow the following instructions to install all the requirements
 You may encounter some problems when compiling. Please install Xcode from App Store first. After Xcode is installed, open Xcode and go to **Preferences -> Download -> Command Line Tools -> Install** to install command line tools.
 {% endnote %}
 
-{% note warn For Mac / Linux users %}
-If you are a macOS user, or a Linux user who install Node.js through your package manager with default repository, you might run into some permission error when using `npm install -g`. Please follow [the guide provided by npmjs](https://docs.npmjs.com/resolving-eacces-permissions-errors-when-installing-packages-globally) to solve the issue, AND DO NOT USE ROOT USER OR SUDO TO OVERRIDE.
-{% endnote %}
-
 ### Install Git
 
 - Windows: Download & install [git](https://git-scm.com/download/win).
@@ -47,6 +43,10 @@ If you are a macOS user, or a Linux user who install Node.js through your packag
 - Linux (other): Install it through respective package manager (if Node.js >= 10.0 is available) or use the installation scripts mentioned in Windows.
 
 Alternatively, download and run the [official installer](https://nodejs.org/en/download/) provided by Node.js.
+
+{% note warn Mac / Linux %}
+If you encounter permission error when trying to install Hexo, please follow the workaround [provided by npmjs](https://docs.npmjs.com/resolving-eacces-permissions-errors-when-installing-packages-globally), overriding with root/sudo is highly discouraged.
+{% endnote %}
 
 ### Install Hexo
 
