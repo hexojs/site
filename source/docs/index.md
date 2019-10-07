@@ -37,7 +37,7 @@ You may encounter some problems when compiling. Please install Xcode from App St
 
 ### Install Node.js
 
-- Windows: Install it with [nvs](https://github.com/jasongin/nvs/) (recommended) or [nvm](https://github.com/nvm-sh/nvm). (Either also recommended for Mac and Linux to avoid possible permission issue)
+- Windows: Install it with [nvs](https://github.com/jasongin/nvs/) (recommended), [nvm](https://github.com/nvm-sh/nvm) or [Chocolatey](https://chocolatey.org/). (nvs is also recommended for Mac and Linux to avoid possible permission issue)
 - Mac: Install it with [Homebrew](https://brew.sh/) or [MacPorts](http://www.macports.org/).
 - Linux (DEB/RPM-based): Install it with [NodeSource](https://github.com/nodesource/distributions).
 - Linux (other): Install it through respective package manager (if Node.js >= 10.0 is available) or use the installation scripts mentioned in Windows.
@@ -45,7 +45,7 @@ You may encounter some problems when compiling. Please install Xcode from App St
 Alternatively, download and run the [official installer](https://nodejs.org/en/download/) provided by Node.js.
 
 {% note warn Mac / Linux %}
-If you encounter permission error when trying to install Hexo, please follow the workaround [provided by npmjs](https://docs.npmjs.com/resolving-eacces-permissions-errors-when-installing-packages-globally), overriding with root/sudo is highly discouraged.
+If you encounter permission error when trying to install Hexo, please follow the workaround [provided by npmjs](https://docs.npmjs.com/resolving-eacces-permissions-errors-when-installing-packages-globally); overriding with root/sudo is highly discouraged.
 {% endnote %}
 
 ### Install Hexo
