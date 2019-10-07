@@ -1,15 +1,15 @@
 ---
 title: Documentation
 ---
-Welcome to the Hexo documentation. If you encounter any problems when using Hexo, have a look at the  [troubleshooting guide](troubleshooting.html), raise an issue on [GitHub](https://github.com/hexojs/hexo/issues) or start a topic on the [Google Group](https://groups.google.com/group/hexo).
+Welcome to the Hexo documentation. If you encounter any problems when using Hexo, have a look at the [troubleshooting guide](troubleshooting.html), raise an issue on [GitHub](https://github.com/hexojs/hexo/issues) or start a topic on the [Google Group](https://groups.google.com/group/hexo).
 
 ## What is Hexo?
 
-Hexo is a fast, simple and powerful blog framework. You write posts in [Markdown](http://daringfireball.net/projects/markdown/) (or other languages) and Hexo generates static files with a beautiful theme in seconds.
+Hexo is a fast, simple and powerful blog framework. You write posts in [Markdown](http://daringfireball.net/projects/markdown/) (or other markup languages) and Hexo generates static files with a beautiful theme in seconds.
 
 ## Installation
 
-It only takes a few minutes to set up Hexo. If you encounter a problem and can't find the solution here, please [submit a GitHub issue](https://github.com/hexojs/hexo/issues) and I'll try to solve it.
+It only takes a few minutes to set up Hexo. If you encounter a problem and can't find the solution here, please [submit a GitHub issue](https://github.com/hexojs/hexo/issues) and we'll help.
 
 {% youtube ARted4RniaU %}
 
@@ -39,18 +39,17 @@ You may encounter some problems when compiling. Please install Xcode from App St
 
 - Windows: simply download and run the [official installer](https://nodejs.org/en/download/) provided by Node.js.
 - Mac: Besides the [official installer](https://nodejs.org/en/download/), you can install it with [Homebrew](https://brew.sh/) or [MacPorts](http://www.macports.org/).
-- Linux: install with your package manager since most Linux distributions ship Node.js in their default repository. [NodeSource](https://github.com/nodesource/distributions) third-party repo usually ships more up-to-date Node.js.
+- Linux: Follow the [installation instructions](https://github.com/nodesource/distributions#installation-instructions) provided by Nodesource.
 
 {% note info For Windows users %}
 When install Node.js using official installer, make sure **Add to PATH** is checked.
 {% endnote %}
 
 {% note warn For Mac / Linux users %}
-If you are a macOS user, or a Linux user who install Node.js through your package manager with default repository, you might run into some permission error when using `npm install -g`. Please follow [the guide provided by npmjs](https://docs.npmjs.com/resolving-eacces-permissions-errors-when-installing-packages-globally) to solve the issue, AND DO NOT USE ROOT USER OR SUDO TO OVERRIDE.
+If you are a macOS user, or a Linux user who install Node.js through your package manager with default repository, you might encounter `EACCES` error when using `npm install -g`. Please follow [the guide provided by npmjs](https://docs.npmjs.com/resolving-eacces-permissions-errors-when-installing-packages-globally) to solve the issue. OVERRIDING WITH ROOT OR SUDO IS HIGHLY DISCOURAGED.
 {% endnote %}
 
-Alternatively, you can install Node.js using [nvm](https://github.com/nvm-sh/nvm) (recommends for Mac & Linux) or [nvs](https://github.com/jasongin/nvs/) (recommends for Windows).
-
+Alternatively, you can install Node.js through [package manager](https://nodejs.org/en/download/package-manager/), or using [nvm](https://github.com/nvm-sh/nvm) (recommends for Mac & Linux) or [nvs](https://github.com/jasongin/nvs/) (recommends for Windows).
 
 ### Install Hexo
 
