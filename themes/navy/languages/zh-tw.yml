@@ -9,6 +9,8 @@ menu:
 
 index:
   get_started: 開始使用
+  theme_intro: Powerful and robust theming system that capable of making any website. Writing your theme using many template engines.
+  theme_link: Check out the Hexo themes
 
 page:
   contents: 目錄

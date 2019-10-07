@@ -9,6 +9,8 @@ menu:
 
 index:
   get_started: 开始使用
+  theme_intro: 强大而健壮的主题系统能够制作任何网站，使用许多模板引擎编写主题
+  theme_link: 查看 Hexo 的主题
 
 page:
   contents: 目录
