@@ -6,7 +6,7 @@
     "version": "3.9.0"
   },
   "scripts": {
-    "build": "hexo generate && gulp",
+    "build": "hexo generate",
     "eslint": "eslint .",
     "deploy": "hexo deploy"
   },
