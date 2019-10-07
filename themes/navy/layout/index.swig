@@ -24,3 +24,21 @@
     </div>
   </div>
 </div>
+<div id="theme-wrap">
+  <div class="wrapper">
+    <div class="inner theme-wrapper">
+      <div class="theme-thumbnail">
+        <div class="theme-thumbnail-container">
+          <img src="/themes/screenshots/landscape.png">
+        </div>
+      </div>
+      <div class="theme-intro">
+        <div class="theme-intro-container">
+          <h2 class="theme-intro-title">{{ site.data.themes.length }} Themes</h2>
+          <p class="theme-intro-text">Powerful and robust theming system that capable of making any website. Writing your template using many template engines.</p>
+          <a href="themes/" id="theme-link">Check out the Hexo themes</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
