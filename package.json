@@ -29,15 +29,11 @@
     "sharp": "^0.23.1"
   },
   "devDependencies": {
-    "del": "^5.1.0",
     "eslint": "^6.0.1",
     "eslint-config-hexo": "^3.0.0",
-    "gulp": "^4.0.0",
-    "gulp-cheerio": "^0.6.2",
     "husky": "^3.0.2",
     "imagemin-lint-staged": "^0.4.0",
-    "lint-staged": "^9.2.0",
-    "rename": "^1.0.4"
+    "lint-staged": "^9.2.0"
   },
   "husky": {
     "hooks": {
