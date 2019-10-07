@@ -41,7 +41,7 @@ If you are a macOS user, or a Linux user who install Node.js through your packag
 
 ### Install Node.js
 
-- Windows: Install it with [nvs](https://github.com/jasongin/nvs/) (recommended) or [nvm](https://github.com/nvm-sh/nvm). (Either also support Mac and Linux)
+- Windows: Install it with [nvs](https://github.com/jasongin/nvs/) (recommended) or [nvm](https://github.com/nvm-sh/nvm). (Either also recommended for Mac and Linux to avoid possible permission issue)
 - Mac: Install it with [Homebrew](https://brew.sh/) or [MacPorts](http://www.macports.org/).
 - Linux (DEB/RPM-based): Install it with [NodeSource](https://github.com/nodesource/distributions).
 - Linux (other): Install it through respective package manager (if Node.js >= 10.0 is available) or use the installation scripts mentioned in Windows.
