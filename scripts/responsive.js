@@ -70,7 +70,7 @@ async function responsive() {
                 return img;
               });
 
-              if (attr === 'data-src') {
+              if (attr === 'data-src' && alt.length > 0) {
                 const png = updatePng[value] ? updatePng[value].png : value;
                 const jpg = updatePng[value] ? updatePng[value].jpg : value;
                 const jpg2x = updatePng[value] ? updatePng[value].jpg2x : value;
