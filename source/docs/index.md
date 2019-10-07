@@ -28,10 +28,6 @@ If not, please follow the following instructions to install all the requirements
 You may encounter some problems when compiling. Please install Xcode from App Store first. After Xcode is installed, open Xcode and go to **Preferences -> Download -> Command Line Tools -> Install** to install command line tools.
 {% endnote %}
 
-{% note warn For Mac / Linux users %}
-If you are a macOS user, or a Linux user who install Node.js through your package manager with default repository, you might run into some permission error when using `npm install -g`. Please follow [the guide provided by npmjs](https://docs.npmjs.com/resolving-eacces-permissions-errors-when-installing-packages-globally) to solve the issue, AND DO NOT USE ROOT USER OR SUDO TO OVERRIDE.
-{% endnote %}
-
 ### Install Git
 
 - Windows: Download & install [git](https://git-scm.com/download/win).
@@ -41,12 +37,20 @@ If you are a macOS user, or a Linux user who install Node.js through your packag
 
 ### Install Node.js
 
-- Windows: Install it with [nvs](https://github.com/jasongin/nvs/) (recommended) or [nvm](https://github.com/nvm-sh/nvm). (Either also support Mac and Linux)
-- Mac: Install it with [Homebrew](https://brew.sh/) or [MacPorts](http://www.macports.org/).
-- Linux (DEB/RPM-based): Install it with [NodeSource](https://github.com/nodesource/distributions).
-- Linux (other): Install it through respective package manager (if Node.js >= 10.0 is available) or use the installation scripts mentioned in Windows.
+- Windows: simply download and run the [official installer](https://nodejs.org/en/download/) provided by Node.js.
+- Mac: Besides the [official installer](https://nodejs.org/en/download/), you can install it with [Homebrew](https://brew.sh/) or [MacPorts](http://www.macports.org/).
+- Linux: install with your package manager since most Linux distributions ship Node.js in their default repository. [NodeSource](https://github.com/nodesource/distributions) third-party repo usually ships more up-to-date Node.js.
 
-Alternatively, download and run the [official installer](https://nodejs.org/en/download/) provided by Node.js.
+{% note info For Windows users %}
+When install Node.js using official installer, make sure **Add to PATH** is checked.
+{% endnote %}
+
+{% note warn For Mac / Linux users %}
+If you are a macOS user, or a Linux user who install Node.js through your package manager with default repository, you might run into some permission error when using `npm install -g`. Please follow [the guide provided by npmjs](https://docs.npmjs.com/resolving-eacces-permissions-errors-when-installing-packages-globally) to solve the issue, AND DO NOT USE ROOT USER OR SUDO TO OVERRIDE.
+{% endnote %}
+
+Alternatively, you can install Node.js using [nvm](https://github.com/nvm-sh/nvm) (recommends for Mac & Linux) or [nvs](https://github.com/jasongin/nvs/) (recommends for Windows).
+
 
 ### Install Hexo
 
