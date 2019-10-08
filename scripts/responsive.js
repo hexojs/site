@@ -33,11 +33,9 @@ async function responsive() {
               .toBuffer();
 
             const pngHash = createHash('sha1').update(input).digest('hex').slice(0, 10);
-            const jpegHash = createHash('sha1').update(jpeg).digest('hex').slice(0, 10);
-            const halfJpegHash = createHash('sha1').update(halfJpeg).digest('hex').slice(0, 10);
             const pngPath = path.replace(/\.png$/, `-${pngHash}.png`);
-            const jpeg2xPath = path.replace(/\.png$/, `-${jpegHash}@2x.jpg`);
-            const jpegPath = path.replace(/\.png$/, `-${halfJpegHash}.jpg`);
+            const jpeg2xPath = path.replace(/\.png$/, `-${pngHash}@2x.jpg`);
+            const jpegPath = path.replace(/\.png$/, `-${pngHash}.jpg`);
             const validPath = url_for.call(this, path);
             const validPngPath = url_for.call(this, pngPath);
             const validJpg2xPath = url_for.call(this, jpeg2xPath);
