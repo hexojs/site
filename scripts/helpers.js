@@ -3,8 +3,6 @@
 'use strict';
 
 const { basename } = require('path');
-require('hexo-util')
-const _ = require('lodash');
 const cheerio = require('cheerio');
 const lunr = require('lunr');
 const full_url_for = hexo.extend.helper.get('full_url_for').bind(hexo);
@@ -49,16 +47,16 @@ hexo.extend.helper.register('doc_sidebar', function(className) {
   const self = this;
   const prefix = 'sidebar.' + type + '.';
 
-  _.each(sidebar, (menu, title) => {
-    result += `<strong class="${className}-title">${self.__(prefix + title)}</strong>`;
+  for (let [title, menu] of Object.entries(sidebar)) {
+    result += '<strong class="' + className + '-title">' + self.__(prefix + title) + '</strong>';
 
-    _.each(menu, (link, text) => {
-      let itemClass = className + '-link';
+    for (let [text, link] of Object.entries(menu)) {
+      var itemClass = className + '-link';
       if (link === path) itemClass += ' current';
 
-      result += `<a href="${link}" class="${itemClass}">${self.__(prefix + text)}</a>`;
-    });
-  });
+      result += '<a href="' + link + '" class="' + itemClass + '">' + self.__(prefix + text) + '</a>';
+    }
+  }
 
   return result;
 });
@@ -70,11 +68,11 @@ hexo.extend.helper.register('header_menu', function(className) {
   const lang = this.page.lang;
   const isEnglish = lang === 'en';
 
-  _.each(menu, (path, title) => {
+  for (let [title, path] of Object.entries(menu)) {
     if (!isEnglish && ~localizedPath.indexOf(title)) path = lang + path;
 
     result += `<a href="${self.url_for(path)}" class="${className}-link">${self.__('menu.' + title)}</a>`;
-  });
+  }
 
   return result;
 });
@@ -121,8 +119,20 @@ hexo.extend.helper.register('lunr_index', function(data) {
     this.field('description');
     this.ref('id');
 
-    _.sortBy(data, 'name').forEach((item, i) => {
-      this.add(_.assign({ id: i }, item));
+    const sortBy = (key) => {
+      return (a, b) => {
+        if (a[key] > b[key]) {
+          return 1;
+        } else if (b[key] > a[key]) {
+          return -1;
+        }
+        return 0;
+      };
+    };
+
+    data.concat().sort(sortBy('name')).forEach((item, i) => {
+      const object = Object.assign({}, { id: i }, item);
+      this.add(object);
     });
   });
 
