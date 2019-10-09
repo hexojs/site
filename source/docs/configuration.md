@@ -12,7 +12,7 @@ Setting | Description
 `description` | The description of your website
 `keywords` | The keywords of your website. Separate multiple keywords with commas `,`.
 `author` | Your name
-`language` | The language of your website. Use a [2-lettter ISO-639-1 code](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) or optionally [its variant](/docs/internationalization). Default is `en`.
+`language` | The language of your website. Use a [2-letter ISO-639-1 code](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) or optionally [its variant](/docs/internationalization). Default is `en`.
 `timezone` | The timezone of your website. Hexo uses the setting on your computer by default. You can find the list of available timezones [here](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones). Some examples are `America/New_York`, `Japan`, and `UTC`.
 
 ### URL
@@ -70,6 +70,7 @@ Setting | Description | Default
 `highlight.auto_detect` | Enable auto-detection if no language is specified | `false`
 `highlight.line_number` | Display line number | `true`
 `highlight.tab_replace` | Replace tabs by n space(s); if the value is empty, tabs won't be replaced | `''`
+`use_date_for_updated` | Use the date of the post as date of update if no updated date is provided. Useful when the file's dates are meaningless (especially when using git) | `true`  
 
 ### Home page setting
 

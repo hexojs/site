@@ -58,6 +58,11 @@ title: 配置
 `relative_link` | 把連結改為與根目錄的相對位址 | `false`
 `future` | 顯示未來的文章 | `true`
 `highlight` | 程式碼區塊的設定 |
+`highlight.enable` | Enable syntax highlight | `true`
+`highlight.auto_detect` | Enable auto-detection if no language is specified | `false`
+`highlight.line_number` | Display line number | `true`
+`highlight.tab_replace` | Replace tabs by n space(s); if the value is empty, tabs won't be replaced | `''`
+`use_date_for_updated` | Use the date of the post as date of update if no updated date is provided. Useful when the file's dates are meaningless (especially when using git) | `true`  
 
 ### 分類 & 標籤
 
