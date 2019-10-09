@@ -10,7 +10,7 @@ hexo.extend.filter.register(type, function(){
 }, priority);
 ```
 
-You can define the `priority`. Lower `priority` means that it will be executed first. The default `priority` is 10.
+You can define the `priority`. Lower `priority` means that it will be executed first. The default `priority` is 10. We recommend using user-configurable priority value that user can specify in the config, e.g. `hexo.config.your_plugin.priority`.
 
 ## Execute Filters
 
