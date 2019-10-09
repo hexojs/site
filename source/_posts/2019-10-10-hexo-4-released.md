@@ -37,7 +37,7 @@ To upgrade to Hexo v4, change the following line in your package.json,
   * Add `meta_generator: false` to config to disable
 - feat(generator): allow limit parallel generation [#3665]
   * If you experience "Out of memory" issue, try lowering the value in `hexo g --concurrency <number>`
-- Use date instead of file mtime for updated date [#3235]
+- Option to use date instead of file mtime for updated date [#3235]
   * If you prefer not to use file modification time in the `post.updated` variable, set `use_date_for_updated: true` in config
 - feat(list_tags): add Schema "keywords" and Microdata "tag" [#3678]
 - feat(permalink_variable): add pretty_urls option to remove index.html from url [#3691]
