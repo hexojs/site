@@ -57,13 +57,13 @@ async function responsive() {
       assetPath.on('end', async() => {
         if (assetData.length) {
           try {
-            const result = assetData.join().replace(/<img data-src=['"](.*?)['"](.*?)>/gi, (imgTag, value, alt) => {
+            const result = assetData.join().replace(/<img (src|data-src)=['"](.*?)['"](.*?)>/gi, (imgTag, attr, value, alt) => {
               imgTag = imgTag.replace(value, (img) => {
                 if (updatePng[img]) return updatePng[img].jpg;
                 return img;
               });
 
-              if (alt.length > 0) {
+              if (attr === 'data-src' && alt.length > 0) {
                 const png = value;
                 const jpg = updatePng[value] ? updatePng[value].jpg : value;
                 const jpg2x = updatePng[value] ? updatePng[value].jpg2x : value;
