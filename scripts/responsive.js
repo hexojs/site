@@ -69,7 +69,7 @@ async function responsive() {
                 const jpg2x = updatePng[value] ? updatePng[value].jpg2x : value;
 
                 imgTag = imgTag.replace(alt, (postAlt) => {
-                  postAlt += ` data-srcset="${jpg}, ${jpg2x} 2x" data-org="${png}" sizes="360px" srcset="${jpg}, ${jpg2x} 2x" src="${jpg}"`;
+                  postAlt += ` data-srcset="${jpg}, ${jpg2x} 2x" data-org="${png}"`;
                   return postAlt;
                 });
               }
