@@ -56,14 +56,31 @@ relative_link: true
 <%- relative_url(from, to) %>
 ```
 
+**示例：**
+
+``` js
+<%- relative_url('foo/bar/', 'css/style.css') %>
+// ../../css/style.css
+```
+
 ### gravatar
 
-插入 Gravatar 图片。
+根据邮箱地址返回 Gravatar 头像 URL。
+
 如果你不指定 `options` 参数，将会应用默认参数。否则，你可以将其设置为一个数字，这个数字将会作为 Gravatar 的大小参数。最后，如果你设置它一个对象，它将会被转换为 Gravatar 的一个查询字符串参数。
 
 ``` js
 <%- gravatar(email, [options]) %>
 ```
+
+参数 | 描述 | 默认值
+--- | --- | ---
+`s` | 图片大小 | 80
+`d` | 默认头像 |
+`f` | 强制使用默认图象 |
+`r` | 头像等级限制 |
+
+访问 [Gravatar](https://en.gravatar.com/site/implement/images/) 了解更多。
 
 **示例：**
 
