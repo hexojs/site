@@ -861,6 +861,15 @@
     - two_columns
     - tag_plugins
     - retro
+- name: spfk
+  description: A simple solemn theme
+  link: https://github.com/luuman/hexo-theme-spfk
+  preview: http://luuman.github.io/
+  tags:
+    - black
+    - responsive
+    - two_columns
+    - personality
 - name: Bootstrap-Blog
   description: A simple Twitter Bootstrap blog theme
   link: https://github.com/cgmartin/hexo-theme-bootstrap-blog
