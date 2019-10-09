@@ -101,4 +101,7 @@ Embora seja mais fácil usar partials:
 <%- partial('header', {}, {cache: true});
 ```
 
-Não use o `Fragment Caching` quando a configuração de `relative_link` estiver habilitada. Isso pode causar problemas porque os links relativos podem e provavelmente serão diferentes dependendo das páginas em que aparecem.
+{% note warn %}
+`fragment_cache()` will cache render result, and output cached result in other pages. This is only supposed to enabled for partial that will be same across different pages. If partial probably will be different depending on the pages they appear in, then `fragment_cache()` shouldn't be enabled for it.
+For example, fragment_cache should be disabled if `relative_link` has been enabled in the config, because relative links can and probably will be different depending on the pages they appear in.
+{% endnote %}

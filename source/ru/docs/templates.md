@@ -99,4 +99,7 @@ index
 <%- partial('header', {}, {cache: true});
 ```
 
-Не используйте кэширование фрагментов, когда `relative_link` включён в настройках. Это может вызвать проблемы, потому что относительные ссылки, могут и, вероятнее всего, будут отличаться на разных страницах.
+{% note warn %}
+`fragment_cache()` will cache render result, and output cached result in other pages. This is only supposed to enabled for partial that will be same across different pages. If partial probably will be different depending on the pages they appear in, then `fragment_cache()` shouldn't be enabled for it.
+For example, fragment_cache should be disabled if `relative_link` has been enabled in the config, because relative links can and probably will be different depending on the pages they appear in.
+{% endnote %}

@@ -98,4 +98,7 @@ Fragment caching은 header, footer, sidebar, 다른 정적인 컨텐츠를 사�
 <%- partial('header', {}, {cache: true});
 ```
 
-`relative_link`가 활성화 상태일 때에는 fragment caching을 사용하지 마세요. 사용하게 되면 이슈가 발생할 수 있습니다. 왜냐하면 상대 링크는 표시되는 페이지에 따라 다를 수도 있기 때문입니다.
+{% note warn %}
+`fragment_cache()` will cache render result, and output cached result in other pages. This is only supposed to enabled for partial that will be same across different pages. If partial probably will be different depending on the pages they appear in, then `fragment_cache()` shouldn't be enabled for it.
+For example, fragment_cache should be disabled if `relative_link` has been enabled in the config, because relative links can and probably will be different depending on the pages they appear in.
+{% endnote %}

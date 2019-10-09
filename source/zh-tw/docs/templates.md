@@ -98,4 +98,7 @@ index
 <%- partial('header', {}, {cache: true});
 ```
 
-但是，如果您開啟了 `relative_link` 設定的話，請勿使用局部快取功能，因為相對連結在每個頁面可能不同。
+{% note warn %}
+`fragment_cache()` will cache render result, and output cached result in other pages. This is only supposed to enabled for partial that will be same across different pages. If partial probably will be different depending on the pages they appear in, then `fragment_cache()` shouldn't be enabled for it.
+For example, fragment_cache should be disabled if `relative_link` has been enabled in the config, because relative links can and probably will be different depending on the pages they appear in.
+{% endnote %}
