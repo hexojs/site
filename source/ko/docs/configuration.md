@@ -47,7 +47,10 @@ title: Configuration
 `new_post_name` | 새 포스트의 파일명 형식 | `:title.md`
 `default_layout` | 기본 레이아웃 | `post`
 `titlecase` | 제목을 제목에 맞는 대/소문자로 변경할 것인지 선택 | `false`
-`external_link` | 외부 링크를 새 탭에서 열 것인지 선택 | `true`
+`external_link` | 외부 링크를 새 탭에서 열 것인지 선택
+`external_link.enable` | 외부 링크를 새 탭에서 열 것인지 선택 | `true`
+`external_link.field` | Applies to the whole `site` or `post` only | `site`
+`external_link.exclude` | Exclude hostname. Specify subdomain when applicable, including `www` | `[]`
 `filename_case` | 파일명을 소문자(`1`) 또는 대문자(`2`)로 변경 | `0`
 `render_drafts` | Draft 문서를 표시할 것인지 선택 | `false`
 `post_asset_folder` | [Asset 폴더](asset-folders.html)를 활성화 할 것인지 선택 | `false`
