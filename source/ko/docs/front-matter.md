@@ -23,7 +23,7 @@ date: 2013/7/13 20:46:25
 설정 | 설명 | 기본 값
 --- | --- | ---
 `layout` | 레이아웃 |
-`title` | 타이틀 |
+`title` | 타이틀 | Filename (posts only)
 `date` | 발행일 | 파일이 생성된 날짜
 `updated` | 갱신일 | 파일이 업로드된 날짜
 `comments` | 포스트에서 comment 기능을 사용할지 여부 | true
