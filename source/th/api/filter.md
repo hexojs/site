@@ -60,6 +60,28 @@ hexo.execFilterSync(type, data, options);
 hexo.extend.filter.unregister(type, filter);
 ```
 
+**Example**
+
+``` js
+// Unregister a filter which is registered with named function
+
+const filter = (data) => {
+  data = 'something';
+  return data;
+};
+hexo.extend.filter.register('example', filter);
+
+hexo.extend.filter.unregister('example', filter);
+```
+
+``` js
+// Unregister a filter which is registered with commonjs module
+
+hexo.extend.filter.register('example', require('path/to/filter'));
+
+hexo.extend.filter.unregister('example', require('path/to/filter'));
+```
+
 ## Filter List
 
 ต่อไปเป็นตารางของ filter ท่ีใช้ใน hexo

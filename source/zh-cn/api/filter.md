@@ -57,6 +57,28 @@ hexo.execFilterSync(type, data, options);
 hexo.extend.filter.unregister(type, filter);
 ```
 
+**示例**
+
+``` js
+// 移除一个使用具名函数注册的过滤器
+
+const filter = (data) => {
+  data = 'something';
+  return data;
+};
+hexo.extend.filter.register('example', filter);
+
+hexo.extend.filter.unregister('example', filter);
+```
+
+``` js
+// 移除一个使用 CommonJS 模块注册的过滤器
+
+hexo.extend.filter.register('example', require('path/to/filter'));
+
+hexo.extend.filter.unregister('example', require('path/to/filter'));
+```
+
 ## 过滤器列表
 
 以下是 Hexo 所使用的过滤器。
