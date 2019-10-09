@@ -51,7 +51,7 @@ hexo.extend.helper.register('doc_sidebar', function(className) {
     result += '<strong class="' + className + '-title">' + self.__(prefix + title) + '</strong>';
 
     for (let [text, link] of Object.entries(menu)) {
-      var itemClass = className + '-link';
+      let itemClass = className + '-link';
       if (link === path) itemClass += ' current';
 
       result += '<a href="' + link + '" class="' + itemClass + '">' + self.__(prefix + text) + '</a>';
