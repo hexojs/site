@@ -2,7 +2,7 @@
 
 'use strict';
 
-const { url_for } = require('hexo-util');
+const url_for = hexo.extend.helper.get('url_for').bind(hexo);
 const sharp = require('sharp');
 
 async function responsive() {
@@ -33,9 +33,9 @@ async function responsive() {
 
             const jpeg2xPath = path.replace(/\.png$/, '@2x.jpg');
             const jpegPath = path.replace(/\.png$/, '.jpg');
-            const validPath = url_for.call(this, path);
-            const validJpg2xPath = url_for.call(this, jpeg2xPath);
-            const validJpgPath = url_for.call(this, jpegPath);
+            const validPath = url_for(path);
+            const validJpg2xPath = url_for(jpeg2xPath);
+            const validJpgPath = url_for(jpegPath);
 
             updatePng[validPath] = { 'jpg2x': validJpg2xPath, 'jpg': validJpgPath };
 
