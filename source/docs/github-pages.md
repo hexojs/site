@@ -46,10 +46,10 @@ If you prefer to have a project page on GitLab:
 
 ## Private repository
 
-The following instruction is adapted from [one-command deployment](/docs/one-command-deployment) docs.
+The following instruction is adapted from [one-command deployment](/docs/one-command-deployment) page.
 
-1. Install [hexo-deployer-git](https://github.com/hexojs/hexo-deployer-git)
-2. Add the following configurations to **_config.yml** (remove existing lines if any)
+1. Install [hexo-deployer-git](https://github.com/hexojs/hexo-deployer-git).
+2. Add the following configurations to **_config.yml**, (remove existing lines if any)
 
   ``` yml
   deploy:
