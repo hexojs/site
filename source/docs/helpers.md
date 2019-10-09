@@ -46,8 +46,8 @@ relative_link: true
 // ../../css/style.css
 
 /* Override option
- * you could also enable it to output a relative link,
- * even when `relative_link` is disabled and vice versa.
+ * you could also disable it to output a non-relative link,
+ * even when `relative_link` is enabled and vice versa.
  */
 <%- url_for('/css/style.css', {relative: false}) %>
 // /css/style.css
