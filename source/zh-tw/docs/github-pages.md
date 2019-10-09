@@ -62,8 +62,7 @@ The following instruction is adapted from [one-command deployment](/docs/one-com
 4. Check the webpage at *username*.github.io.
 
 {% note info Windows 用戶 %}
-請註意，以上教程翻譯自 Hexo 文檔英文版，僅做參考；譯者在翻譯過程中發現很多語焉不詳的內容。
-在 [Awesome Hexo](https://github.com/hexojs/awesome-hexo) 中收錄有壹些在 GitHub 部署 Hexo 的教程。通過搜索引擎可以找到更多教程。
+在 [Awesome Hexo](https://github.com/hexojs/awesome-hexo) 中收錄有壹些在 GitHub 部署 Hexo 更仔細的教程。通過搜索引擎可以找到更多教程。
 也歡迎更多有誌之士前來改善 Hexo 文檔，不勝感激。
 {% endnote %}
 
