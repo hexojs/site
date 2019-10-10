@@ -864,7 +864,7 @@
 - name: spfk
   description: A simple solemn theme
   link: https://github.com/luuman/hexo-theme-spfk
-  preview: http://luuman.github.io/
+  preview: https://blog.luuman.club/
   tags:
     - black
     - responsive
