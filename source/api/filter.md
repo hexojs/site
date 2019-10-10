@@ -62,13 +62,13 @@ hexo.extend.filter.unregister(type, filter);
 ``` js
 // Unregister a filter which is registered with named function
 
-const filter = (data) => {
+const filterFn = (data) => {
   data = 'something';
   return data;
 };
-hexo.extend.filter.register('example', filter);
+hexo.extend.filter.register('example', filterFn);
 
-hexo.extend.filter.unregister('example', filter);
+hexo.extend.filter.unregister('example', filterFn);
 ```
 
 ``` js
