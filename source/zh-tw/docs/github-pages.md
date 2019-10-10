@@ -45,40 +45,24 @@ deploy:
 
 ## Private repository
 
-由於在 Private Repository 啟用 Travis CI 需要付費，因此妳可能需要自己構建。
+The following instruction is adapted from [one-command deployment](/docs/one-command-deployment) page.
 
-1. 新建壹個 repository。如果妳希望妳的站點能通過 `<妳的 GitHub 用戶名>.github.io` 域名訪問，妳的 repository 應該直接命名為 `<妳的 GitHub 用戶名>.github.io`。如果妳不想上傳妳的 Hexo 站點文件夾到 GitHub 請直接跳到第三步。
-2. 將妳的 Hexo 站點文件夾推送到 GitHub，默認情況下不應該 `public` 目錄將不會被推送到 repository 中，妳應該檢查 `.gitignore` 文件中是否包含 `public` 壹行，如果沒有請加上。
-3. 執行 `hexo g` 生成站點目錄，並將生成的 `public` 復制到別處。
-4. 在 Hexo 站點目錄下新建壹個 `gh-pages` 分支，我們推薦創建壹個 orphan 分支（壹個幹凈的、沒有任何 commit 歷史的分支）：
+1. Install [hexo-deployer-git](https://github.com/hexojs/hexo-deployer-git).
+2. Add the following configurations to **_config.yml**, (remove existing lines if any)
 
-```bash
-$ git checkoud --orphan gh-pages
-```
+  ``` yml
+  deploy:
+    type: git
+    repo: https://github.com/<username>/<project>
+    # example, https://github.com/hexojs/hexojs.github.io
+    branch: gh-pages
+  ```
 
-5. 將 Hexo 站點文件夾下除了 `.git` 以外的任何文件和目錄全部刪除（不要擔心，它們還能被找回來的）
-6. 找到之前復制到別處的的 `public` 目錄，將其中的的所有文件復制回 Hexo 站點文件夾。
-7. 使用以下指令發布站點
-
-``` bash
-$ git add .
-$ git commit -a -m "Initial commit"
-$ git push origin gh-pages
-```
-
-8. 前往妳的 GitHub 的 repository 設置頁面，將 **GitHub Pages** 的部署分支設置為 `gh-paghes` 分支。
-9. 前往 `https://<妳的 GitHub 用戶名>.github.io` 查看妳的站點是否可以訪問。這可能需要壹些時間。
-10. 回到妳的 Hexo 站點文件夾，使用下面指令
-
-``` bash
-$ git checkout master
-```
-
-11. 妳的 Hexo 站點文件就回來了。
+3. Run `hexo clean && hexo deploy`.
+4. Check the webpage at *username*.github.io.
 
 {% note info Windows 用戶 %}
-請註意，以上教程翻譯自 Hexo 文檔英文版，僅做參考；譯者在翻譯過程中發現很多語焉不詳的內容。
-在 [Awesome Hexo](https://github.com/hexojs/awesome-hexo) 中收錄有壹些在 GitHub 部署 Hexo 的教程。通過搜索引擎可以找到更多教程。
+在 [Awesome Hexo](https://github.com/hexojs/awesome-hexo) 中收錄有壹些在 GitHub 部署 Hexo 更仔細的教程。通過搜索引擎可以找到更多教程。
 也歡迎更多有誌之士前來改善 Hexo 文檔，不勝感激。
 {% endnote %}
 
