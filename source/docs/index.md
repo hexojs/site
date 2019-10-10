@@ -41,13 +41,19 @@ Node.js provides [official installer](https://nodejs.org/en/download/) for most 
 
 Alternative installation methods:
 
-- Windows: Install it with [nvs](https://github.com/jasongin/nvs/) (recommended), [nvm](https://github.com/nvm-sh/nvm) or [Chocolatey](https://chocolatey.org/). (nvs is also recommended for Mac and Linux to avoid possible permission issue)
+- Windows: Install it with [nvs](https://github.com/jasongin/nvs/) (recommended) or [nvm](https://github.com/nvm-sh/nvm).
 - Mac: Install it with [Homebrew](https://brew.sh/) or [MacPorts](http://www.macports.org/).
 - Linux (DEB/RPM-based): Install it with [NodeSource](https://github.com/nodesource/distributions).
-- Linux (other): Install it through respective package manager (if Node.js >= 10.0 is available) or use nvs/nvm.
+- Others: Install it through respective package manager. Refer to [the guide](https://nodejs.org/en/download/package-manager/) provided by Node.js.
+
+nvs is also recommended for Mac and Linux to avoid possible permission issue.
+
+{% note info Windows %}
+If you use the official installer, make sure **Add to PATH** is checked (it's checked by default).
+{% endnote %}
 
 {% note warn Mac / Linux %}
-If you encounter permission error when trying to install Hexo, please follow the workaround [provided by npmjs](https://docs.npmjs.com/resolving-eacces-permissions-errors-when-installing-packages-globally); overriding with root/sudo is highly discouraged.
+If you encounter `EACCES` permission error when trying to install Hexo, please follow [the workaround](https://docs.npmjs.com/resolving-eacces-permissions-errors-when-installing-packages-globally) provided by npmjs; overriding with root/sudo is highly discouraged.
 {% endnote %}
 
 ### Install Hexo
