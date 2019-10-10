@@ -102,6 +102,6 @@ Though it may be easier to use partials:
 ```
 
 {% note warn %}
-`fragment_cache()` will cache render result, and output cached result in other pages. This is only supposed to enabled for partial that will be same across different pages. If partial probably will be different depending on the pages they appear in, then `fragment_cache()` shouldn't be enabled for it.
-For example, fragment_cache should be disabled if `relative_link` has been enabled in the config, because relative links can and probably will be different depending on the pages they appear in.
+`fragment_cache()` will cache the rendered result and output the cached result to other pages. This should only be used on partials that are expected **not** to change across different pages. Otherwise, it should **not** be enabled.
+For example, it should be disabled when `relative_link` is enabled in the config. This is because relative links may appear differently across pages.
 {% endnote %}
