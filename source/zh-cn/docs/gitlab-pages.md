@@ -5,9 +5,8 @@ title: 将 Hexo 部署到 GitLab Pages
 在本教程中，我们将会使用 GitLab CI 将 Hexo 博客部署到 GitLab Pages 上。
 
 1. 新建一个 repository。如果你希望你的站点能通过 `<你的 GitLab 用户名>.gitlab.io` 域名访问，你的 repository 应该直接命名为 `<你的 GitLab 用户名>.gitlab.io`。
-2. 如果你使用的是 Self-Host 的 GitLab，你需要在 `Settings -> CI / CD -> Shared Runners` 启用 GitLab CI。
-3. 将你的 Hexo 站点文件夹推送到 repository 中。默认情况下不应该 `public` 目录将不会被推送到 repository 中，你应该检查 `.gitignore` 文件中是否包含 `public` 一行，如果没有请加上。
-4. 在你的站点文件夹中新建 `.gitlab-ci.yml` 文件：
+2. 将你的 Hexo 站点文件夹推送到 repository 中。默认情况下不应该 `public` 目录将不会被推送到 repository 中，你应该检查 `.gitignore` 文件中是否包含 `public` 一行，如果没有请加上。
+3. 在你的站点文件夹中新建 `.gitlab-ci.yml` 文件：
 
 ``` yml
 image: node:10-alpine # use nodejs v10 LTS
@@ -31,6 +30,10 @@ pages:
 
 5. GitLab CI 应该会自动开始运行，构建成功以后你应该可以在 `https://<你的 GitLab 用户名>.gitlab.io` 查看你的网站。
 6. (可选) 如果你需要查看生成的文件，可以在 [job artifact](https://docs.gitlab.com/ee/user/project/pipelines/job_artifacts.html) 中找到。
+
+{% note info %}
+在 GitLab.com 上，GitLab CI 是默认启用的。如果你使用的是自托管的 GitLab，你可能需要在 `Settings -> CI / CD -> Shared Runners` 启用 GitLab CI。
+{% endnote %}
 
 ## Project page
 
