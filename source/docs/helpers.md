@@ -75,7 +75,7 @@ Returns the gravatar image url from an email.
 If you didn't specify the [options] parameter, the default options will apply. Otherwise, you can set it to a number which will then be passed on as the size parameter to Gravatar. Finally, if you set it to an object, it will be converted into a query string of parameters for Gravatar.
 
 ``` js
-<%- gravatar(email, [options] %>
+<%- gravatar(email, [options]) %>
 ```
 
 Option | Description | Default
