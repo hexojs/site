@@ -1,10 +1,9 @@
 <!-- GitHub star -->
-<a class="github-button" href="https://github.com/hexojs/hexo" data-icon="octicon-star" data-show-count="true" aria-label="Star hexojs/hexo on GitHub">Star</a>
+<a href="https://github.com/hexojs/hexo" target="_blank" aria-label="Star hexojs/hexo on GitHub"><img src="https://img.shields.io/github/stars/hexojs/hexo?style=social" alt="Star"></a>
 <!-- GitHub fork -->
-<a class="github-button" href="https://github.com/hexojs/hexo/fork" data-icon="octicon-repo-forked" data-show-count="true" aria-label="Fork hexojs/hexo on GitHub">Fork</a><!-- Tweet button -->
+<a href="https://github.com/hexojs/hexo" target="_blank" aria-label="Fork hexojs/hexo on GitHub"><img src="https://img.shields.io/github/forks/hexojs/hexo?style=social" alt="Fork"></a>
+<!-- NPM Download -->
+<a href="https://www.npmjs.com/package/hexo" target="_blank" aria-label="Hexo on NPM"><img src ="https://img.shields.io/npm/dm/hexo?logo=npm&style=social" alt="NPM Downloads"></a>
 <!-- Twitter follow button -->
-<a href="https://twitter.com/hexojs" class="twitter-follow-button" data-show-count="true">Follow @hexojs</a>
-<!-- Github Button -->
-<script async defer src="https://cdn.jsdelivr.net/npm/github-buttons@2.2.10/dist/buttons.min.js"></script>
-<!-- Twitter share button -->
-<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<a href="https://twitter.com/hexojs" target="_blank" aria-label="Follow Hexo on Twiitter"><img src="https://img.shields.io/twitter/follow/hexojs?style=social" alt="Follow @hexojs"></a>
+
