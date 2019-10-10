@@ -46,29 +46,21 @@ If you prefer to have a project page on GitLab:
 
 ## Private repository
 
-This section only applies to private repo. Alternatively, you could also opt for `hexo deploy` one-command deployment ([instruction](/docs/one-command-deployment)), instead of using the following approach.
+The following instruction is adapted from [one-command deployment](/docs/one-command-deployment) page.
 
-1. Create a repo named <b>*username*.github.io</b>, where username is your username on GitHub. If you have already uploaded to other repo, rename the repo instead. _(Skip to step 3 if you prefer not to upload your source folder to GitHub at all)_
-2. Push the files of your Hexo folder to the repository. The `public/` folder is not (and should not be) uploaded by default, make sure the `.gitignore` file contains `public/` line. The folder structure should be roughly similar to [this repo](https://github.com/hexojs/hexo-starter), without the `.gitmodules` file.
-3. Run `hexo generate` and copy the `public/` folder to somewhere else (in your workstation).
-4. Create a new `gh-pages` git branch from your Hexo folder, we recommend creating an orphan branch (to create a new branch without commit history):
-``` bash
-$ git checkout --orphan gh-pages
-```
-5. Remove everything including any hidden files **except** the `.git/` folder. Fret not, those files are still residing at the master branch.
-6. Move the _content_ of the `public/` folder back.
-7. Commit and push the gh-pages branch.
-``` bash
-$ git add .
-$ git commit -a -m "Initial commit"
-$ git push origin gh-pages
-```
-8. In your repo's setting, navigate to "GitHub Pages" section and change Source is **gh-pages branch**.
-9. Check the webpage at your-username.github.io.
-10. To navigate back to your source folder,
-``` bash
-$ git checkout master
-```
+1. Install [hexo-deployer-git](https://github.com/hexojs/hexo-deployer-git).
+2. Add the following configurations to **_config.yml**, (remove existing lines if any)
+
+  ``` yml
+  deploy:
+    type: git
+    repo: https://github.com/<username>/<project>
+    # example, https://github.com/hexojs/hexojs.github.io
+    branch: gh-pages
+  ```
+
+3. Run `hexo clean && hexo deploy`.
+4. Check the webpage at *username*.github.io.
 
 ## Useful links
 

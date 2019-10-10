@@ -2313,3 +2313,10 @@
     - hide
     - unlisted
     - private
+- name: hexo-canonical-link
+  description: Set canonical link for pages, with support for external links.
+  link: https://github.com/tarunbatra/hexo-canonical-link
+  tags:
+    - canonical
+    - seo
+    - source

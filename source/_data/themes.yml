@@ -1989,7 +1989,7 @@
     - fast
     - long-term developing
     - maintaining
-- name: Concise
+- name: Concise-theme
   description: A simple theme based on theme landscape
   link: https://github.com/Sanonz/hexo-theme-concise
   preview: https://sanonz.github.io/

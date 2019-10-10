@@ -45,36 +45,21 @@ deploy:
 
 ## Private repository
 
-由于在 Private Repository 启用 Travis CI 需要付费，因此你可能需要自己构建。
+The following instruction is adapted from [one-command deployment](/docs/one-command-deployment) page.
 
-1. 新建一个 repository。如果你希望你的站点能通过 `<你的 GitHub 用户名>.github.io` 域名访问，你的 repository 应该直接命名为 `<你的 GitHub 用户名>.github.io`。如果你不想上传你的 Hexo 站点文件夹到 GitHub 请直接跳到第三步。
-2. 将你的 Hexo 站点文件夹推送到 GitHub，默认情况下不应该 `public` 目录将不会被推送到 repository 中，你应该检查 `.gitignore` 文件中是否包含 `public` 一行，如果没有请加上。
-3. 执行 `hexo g` 生成站点目录，并将生成的 `public` 复制到别处。
-4. 在 Hexo 站点目录下新建一个 `gh-pages` 分支，我们推荐创建一个 orphan 分支（一个干净的、没有任何 commit 历史的分支）：
+1. Install [hexo-deployer-git](https://github.com/hexojs/hexo-deployer-git).
+2. Add the following configurations to **_config.yml**, (remove existing lines if any)
 
-```bash
-$ git checkoud --orphan gh-pages
-```
+  ``` yml
+  deploy:
+    type: git
+    repo: https://github.com/<username>/<project>
+    # example, https://github.com/hexojs/hexojs.github.io
+    branch: gh-pages
+  ```
 
-5. 将 Hexo 站点文件夹下除了 `.git` 以外的任何文件和目录全部删除（不要担心，它们还能被找回来的）
-6. 找到之前复制到别处的的 `public` 目录，将其中的的所有文件复制回 Hexo 站点文件夹。
-7. 使用以下指令发布站点
-
-``` bash
-$ git add .
-$ git commit -a -m "Initial commit"
-$ git push origin gh-pages
-```
-
-8. 前往你的 GitHub 的 repository 设置页面，将 **GitHub Pages** 的部署分支设置为 `gh-paghes` 分支。
-9. 前往 `https://<你的 GitHub 用户名>.github.io` 查看你的站点是否可以访问。这可能需要一些时间。
-10. 回到你的 Hexo 站点文件夹，使用下面指令
-
-``` bash
-$ git checkout master
-```
-
-11. 你的 Hexo 站点文件就回来了。
+3. Run `hexo clean && hexo deploy`.
+4. Check the webpage at *username*.github.io.
 
 {% note info Windows 用户 %}
 在 [Awesome Hexo](https://github.com/hexojs/awesome-hexo) 中收录有一些在 GitHub 部署 Hexo 更仔细的教程。通过搜索引擎可以找到更多教程。
