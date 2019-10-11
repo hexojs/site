@@ -58,20 +58,20 @@ async function responsive() {
         if (assetData.length) {
           try {
             const result = assetData.join().replace(/<img (src|data-src)=['"](.*?)['"](.*?)>/gi, (imgTag, attr, value, alt) => {
-              imgTag = imgTag.replace(value, (img) => {
-                if (updatePng[img]) return updatePng[img].jpg;
-                return img;
-              });
+              if (Object.prototype.hasOwnProperty.call(updatePng, value)) {
+                const jpg = updatePng[value].jpg;
 
-              if (attr === 'data-src' && alt.length > 0) {
-                const png = value;
-                const jpg = updatePng[value] ? updatePng[value].jpg : value;
-                const jpg2x = updatePng[value] ? updatePng[value].jpg2x : value;
+                imgTag = imgTag.replace(value, jpg);
 
-                imgTag = imgTag.replace(alt, (postAlt) => {
-                  postAlt += ` data-srcset="${jpg}, ${jpg2x} 2x" data-org="${png}"`;
-                  return postAlt;
-                });
+                if (attr === 'data-src' && alt.length > 0) {
+                  const png = value;
+                  const jpg2x = updatePng[value].jpg2x;
+
+                  imgTag = imgTag.replace(alt, (postAlt) => {
+                    postAlt += ` data-srcset="${jpg}, ${jpg2x} 2x" data-org="${png}"`;
+                    return postAlt;
+                  });
+                }
               }
 
               return imgTag;
