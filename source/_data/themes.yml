@@ -2830,3 +2830,15 @@
     - seo
     - light
     - cdn
+- name: A-Obsidian
+  description: A dark Hexo theme, it's responsive, simple but elegant.
+  link: https://github.com/TriDiamond/hexo-theme-obsidian
+  preview: https://tridiamond.tech
+  tags:
+    - 中文 
+    - responsive
+    - elegan
+    - google-analytics
+    - seo
+    - dark
+    - clean
