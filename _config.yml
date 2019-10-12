@@ -15,9 +15,6 @@ post_asset_folder: true
 per_page: 0
 
 theme: navy
-deploy:
-  type: git
-  repo: git@github.com:hexojs/hexojs.github.io.git
 
 highlight:
   enable: true
