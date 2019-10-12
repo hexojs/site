@@ -316,6 +316,13 @@
     - generator
     - acceleratedMobilePages
     - amp
+- name: hexo-auto-link-checker
+  description: This plugin for Hexo can automatically detects broken links.
+  link: https://github.com/tea3/hexo-auto-link-checker
+  tags:
+    - link
+    - brokenLinks
+    - request
 - name: hexo-related-popular-posts
   description: A hexo plugin that generates a list of links to related posts and popular posts. Also , this plugin can get Visitor Counts (PV) on posts.
   link: https://github.com/tea3/hexo-related-popular-posts
