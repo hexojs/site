@@ -2842,3 +2842,27 @@
     - seo
     - dark
     - clean
+- name: A-Obsidian
+  description: A dark Hexo theme, it's responsive, simple but elegant.
+  link: https://github.com/TriDiamond/hexo-theme-obsidian
+  preview: https://tridiamond.tech
+  tags:
+    - 中文 
+    - responsive
+    - elegan
+    - google-analytics
+    - seo
+    - dark
+    - clean
+- name: Soul
+  description: An independently designed, dark-style theme.
+  link: https://github.com/callmesoul/hexo-theme-soul/tree/master
+  preview: https://callmesoul.cn
+  tags:
+    - 中文 
+    - responsive
+    - dark
+    - design
+    - seo
+    - 设计
+    - literary
