@@ -57,7 +57,7 @@ async function responsive() {
       assetPath.on('end', async() => {
         if (assetData.length) {
           try {
-            const result = assetData.join().replace(/<img (src|data-src)=['"](.*?)['"](.*?)>/gi, (imgTag, attr, value, alt) => {
+            const result = assetData.join('').replace(/<img (src|data-src)=['"](.*?)['"](.*?)>/gi, (imgTag, attr, value, alt) => {
               if (Object.prototype.hasOwnProperty.call(updatePng, value)) {
                 const jpg = updatePng[value].jpg;
 
