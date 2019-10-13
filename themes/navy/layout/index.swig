@@ -39,3 +39,21 @@
     </div>
   </div>
 </div>
+<div id="theme-wrap">
+  <div class="wrapper">
+    <div class="inner theme-wrapper">
+      <div class="theme-thumbnail">
+        <div class="theme-thumbnail-container">
+          <img src="/themes/screenshots/landscape.png">
+        </div>
+      </div>
+      <div class="theme-intro">
+        <div class="theme-intro-container">
+          <h2 class="theme-intro-title">{{ site.data.themes.length }} {{ __('menu.themes') }}</h2>
+          <p class="theme-intro-text">{{ __('index.theme_intro') }}</p>
+          <a href="themes/" id="theme-link">{{ __('index.theme_link') }}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
