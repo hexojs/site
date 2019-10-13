@@ -38,7 +38,7 @@ deploy:
 
 ### Project page
 
-If you prefer to have a project page on GitLab:
+If you prefer to have a project page on GitHub:
 
 1. Navigate to your repo on GitHub. Go to the **Settings** tab. Change the **Repository name** so your blog is available at <b>username.github.io/*repository*</b>,  **repository** can be any name, like *blog* or *hexo*.
 2. Edit your **_config.yml**, change the `root:` value to the `/<repository>/` (must starts and ends with a slash, without the brackets).
