@@ -116,6 +116,7 @@ caching ของ fragment จะเหมาะสมท่ีสุดกั�
 <%- partial('header', {}, {cache: true});
 ```
 
-เมื่อเปิดใช้ `relative_link` แล้วกรุณาอย่าใช้ fragment caching 
-เพราะว่ามันจะทำให้ issue เกิดขึ้นและ relative link 
-จะแตกต่างกับเพจจริงๆท่ีมันชี้ให้
+{% note warn %}
+`fragment_cache()` will cache the rendered result and output the cached result to other pages. This should only be used on partials that are expected **not** to change across different pages. Otherwise, it should **not** be enabled.
+For example, it should be disabled when `relative_link` is enabled in the config. This is because relative links may appear differently across pages.
+{% endnote %}
