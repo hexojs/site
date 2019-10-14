@@ -2716,7 +2716,6 @@
     - Cover
     - Easy-to-read
     - MathJax support
-
 - name: Book
   description: A simple, elegant, book-like hexo theme with some useful features.
   link: https://github.com/kaiiiz/hexo-theme-book
@@ -2842,3 +2841,15 @@
     - seo
     - dark
     - clean
+- name: Soul
+  description: An independently designed, dark-style theme.
+  link: https://github.com/callmesoul/hexo-theme-soul/tree/master
+  preview: https://callmesoul.cn
+  tags:
+    - 中文 
+    - responsive
+    - dark
+    - design
+    - seo
+    - 设计
+    - literary
