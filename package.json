@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "cheerio": "^0.22.0",
-    "hexo": "github:hexojs/hexo",
+    "hexo": "hexojs/hexo#79bdc9548752acfba89b26dec2c532c9346a1380",
     "hexo-clean-css": "^1.0.0",
     "hexo-filter-nofollow": "^2.0.2",
     "hexo-generator-archive": "^1.0.0",
