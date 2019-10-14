@@ -31,8 +31,6 @@ hexo.extend.helper.register('page_nav', function() {
   }
 
   if (index < keys.length - 1) {
-    result += '<a href="' + keys[index + 1] + '" class="article-footer-next" title="' + this.__(prefix + list[keys[index + 1]]) + '">'
-      + '<span>' + this.__('page.next') + '</span><i class="fa fa-chevron-right"></i></a>';
     result += `<a href="${keys[index + 1]}" class="article-footer-next" title="${this.__(prefix + list[keys[index + 1]])}"><span>${this.__('page.next')}</span><i class="fa fa-chevron-right"></i></a>`;
   }
 
@@ -47,14 +45,15 @@ hexo.extend.helper.register('doc_sidebar', function(className) {
   const self = this;
   const prefix = 'sidebar.' + type + '.';
 
-  for (let [title, menu] of Object.entries(sidebar)) {
-    result += '<strong class="' + className + '-title">' + self.__(prefix + title) + '</strong>';
+  for (const menu of Object.keys(sidebar)) {
+    result += '<strong class="' + className + '-title">' + self.__(prefix + menu) + '</strong>';
 
-    for (let [text, link] of Object.entries(menu)) {
+    for (const title of Object.keys(sidebar[menu])) {
+      const link = sidebar[menu][title];
       let itemClass = className + '-link';
       if (link === path) itemClass += ' current';
 
-      result += '<a href="' + link + '" class="' + itemClass + '">' + self.__(prefix + text) + '</a>';
+      result += '<a href="' + link + '" class="' + itemClass + '">' + self.__(prefix + title) + '</a>';
     }
   }
 
@@ -68,7 +67,8 @@ hexo.extend.helper.register('header_menu', function(className) {
   const lang = this.page.lang;
   const isEnglish = lang === 'en';
 
-  for (let [title, path] of Object.entries(menu)) {
+  for (const title of Object.keys(menu)) {
+    let path = menu[title];
     if (!isEnglish && ~localizedPath.indexOf(title)) path = lang + path;
 
     result += `<a href="${self.url_for(path)}" class="${className}-link">${self.__('menu.' + title)}</a>`;
