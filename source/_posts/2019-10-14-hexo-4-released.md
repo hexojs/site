@@ -13,11 +13,11 @@ To upgrade to Hexo v4, change the following line in your package.json,
 
 - chore: drop Node 6 [#3598]
 - fix post_link, asset_link when title contains unescaped html charaters [#3704]
-  * Affects `asset_link`, `post_link` [tag plugins](https://hexo.io/docs/tag-plugins]
-  * If you want to retain unescaped characters, set `false` to the final argument `{% asset_link 'filename 'title' 'false' %}
+  * Affects `asset_link`, `post_link` [tag plugins](https://hexo.io/docs/tag-plugins)
+  * If you want to retain unescaped characters, set `false` to the final argument `{% asset_link 'filename 'title' 'false' %}`
 - fix: encode permalink by default [#3708]
   * If you currently use `encodeURI(post.permalink)` (including `permalink` of page, tag & category variables), there are three options:
-    1. Use `encodeURI(decodeURI(post.permalink))` for backward-compatibility with hexo v3.9 (and older]
+    1. Use `encodeURI(decodeURI(post.permalink))` for backward-compatibility with hexo v3.9 (and older)
     2. Use [`encodeURL()`](https://github.com/hexojs/hexo-util#encodeurlstr) function provided by hexo-util, it is backward-compatible
     3. Drop `encodeURI()` function, this breaks backward-compatibility
   * If you want to use the variables in decoded form,
@@ -55,19 +55,22 @@ To upgrade to Hexo v4, change the following line in your package.json,
 - fix: external_link should use after_render [#3675]
   * added `field` and `exclude` options, see [#3675] for guide.
 
-## Fix
+## Performance
 
-- fix: set english as default [#3654]
 - perf(meta_generator): drop cheerio [#3671]
 - perf(open_graph): drop cheerio and use regex [#3680]
 - perf(external_link): drop cheerio and use regex [#3685]
+- perf(cache): enforce caching across modes [#3756]
+
+## Fix
+
+- fix: set english as default [#3654]
 - Use filename when title is not specified in the front-matter [#3672]
 - fix: ignore categories / tags with zero posts [#3624]
 - fix(open_graph): remove index.html from url [#3661]
 - fix(helpers, tag plugins): encode url by default [#3710]
   * Refer to [#3708] for guide on decoding.
 - fix(open_graph): percent-encode url, not html escape [#3686]
-- perf(cache): Improve cache, Reduce Memory Usages [#3756]
 - fix: Allow backtick code block in "blockquote" tag plugin [#2321]
 - fix: Correct processing of backtick code block on blockquote [#3765]
 
@@ -91,7 +94,9 @@ To upgrade to Hexo v4, change the following line in your package.json,
 [#3708]: https://github.com/hexojs/hexo/pull/3708
 [#3728]: https://github.com/hexojs/hexo/pull/3728
 [#3612]: https://github.com/hexojs/hexo/pull/3612
+[#3538]: https://github.com/hexojs/hexo/pull/3538
 [#3653]: https://github.com/hexojs/hexo/pull/3653
+[#3665]: https://github.com/hexojs/hexo/pull/3665
 [#3235]: https://github.com/hexojs/hexo/pull/3235
 [#3678]: https://github.com/hexojs/hexo/pull/3678
 [#3691]: https://github.com/hexojs/hexo/pull/3691
@@ -109,6 +114,7 @@ To upgrade to Hexo v4, change the following line in your package.json,
 [#3686]: https://github.com/hexojs/hexo/pull/3686
 [#3756]: https://github.com/hexojs/hexo/pull/3756
 [#2321]: https://github.com/hexojs/hexo/pull/2321
+[#3765]: https://github.com/hexojs/hexo/pull/3765
 [#3541]: https://github.com/hexojs/hexo/pull/3541
 [#3534]: https://github.com/hexojs/hexo/pull/3534
 [#3608]: https://github.com/hexojs/hexo/pull/3608
