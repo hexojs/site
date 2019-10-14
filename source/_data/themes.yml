@@ -2716,7 +2716,6 @@
     - Cover
     - Easy-to-read
     - MathJax support
-
 - name: Book
   description: A simple, elegant, book-like hexo theme with some useful features.
   link: https://github.com/kaiiiz/hexo-theme-book
@@ -2726,7 +2725,6 @@
     - Customizable
     - Simple
     - Elegant
-    
 - name: Vanilla
   description: A fast and plain theme
   link: https://github.com/snovey/hexo-theme-vanilla
@@ -2738,7 +2736,6 @@
     - simple
     - chinese
     - one_column
-    
 - name: Materialized
   description: A cool materialized theme for Hexo.
   link: https://github.com/theme-materialized/hexo-theme-materialized
@@ -2749,7 +2746,6 @@
     - elegant
     - clean
     - simple
-    
 - name: 3-hexo
   description: Three sections, simple and convenient, like evernote
   link: https://github.com/yelog/hexo-theme-3-hexo
@@ -2762,7 +2758,6 @@
     - Easy
     - Beautiful
     - Evernote
-    
 - name: Nexmoe
   description: A special Hexo theme
   link: https://github.com/nexmoe/hexo-theme-nexmoe
@@ -2776,7 +2771,6 @@
     - Album
     - Links
     - Cover Picture
-    
 - name: Yilia-plus
   description: A simple and elegant theme for hexo.
   link: https://github.com/JoeyBling/hexo-theme-yilia-plus
@@ -2792,7 +2786,6 @@
     - Copyright
     - Mobile
     - Simple
-    
 - name: Resume
   description: a material design theme
   link: https://github.com/xaoxuu/hexo-theme-resume
@@ -2803,7 +2796,6 @@
     - beautiful
     - clean
     - simple
-    
 - name: cold-stone
   description: A simple, clean, text-based Hexo blog theme.
   link: https://github.com/xrr2016/hexo-theme-cold-stone
@@ -2816,7 +2808,6 @@
     - utteranc comment
     - english/chinese
     - easy config
-    
 - name: fun
   description: a responsive design theme
   link: https://github.com/homeant/hexo-theme-fun
@@ -2825,7 +2816,6 @@
     - responsive
     - clean
     - simple
-    
 - name: A-Huhu
   description: A simple and constantly revise theme.
   link: https://github.com/shixiaohu2206/hexo-theme-huhu
@@ -2839,7 +2829,6 @@
     - seo
     - light
     - cdn
-    
 - name: A-Obsidian
   description: A dark Hexo theme, it's responsive, simple but elegant.
   link: https://github.com/TriDiamond/hexo-theme-obsidian
@@ -2852,7 +2841,6 @@
     - seo
     - dark
     - clean
-    
 - name: Soul
   description: An independently designed, dark-style theme.
   link: https://github.com/callmesoul/hexo-theme-soul/tree/master
