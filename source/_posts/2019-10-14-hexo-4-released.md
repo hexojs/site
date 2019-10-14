@@ -73,6 +73,7 @@ To upgrade to Hexo v4, change the following line in your package.json,
 - fix(open_graph): percent-encode url, not html escape [#3686]
 - fix: Allow backtick code block in "blockquote" tag plugin [#2321]
 - fix: Correct processing of backtick code block on blockquote [#3765]
+- fix: prevent inserting extra new line character into the end of backtick code block [#3768]
 
 ## Dependency
 
@@ -115,6 +116,7 @@ To upgrade to Hexo v4, change the following line in your package.json,
 [#3756]: https://github.com/hexojs/hexo/pull/3756
 [#2321]: https://github.com/hexojs/hexo/pull/2321
 [#3765]: https://github.com/hexojs/hexo/pull/3765
+[#3768]: https://github.com/hexojs/hexo/pull/3768
 [#3541]: https://github.com/hexojs/hexo/pull/3541
 [#3534]: https://github.com/hexojs/hexo/pull/3534
 [#3608]: https://github.com/hexojs/hexo/pull/3608
