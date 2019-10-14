@@ -2,7 +2,7 @@
 title: 部署
 ---
 
-{% youtube ZIltKlkG4S0 %}
+{% youtube B0yVJ46CTR8 %}
 
 Hexo 提供了快速方便的一键部署功能，让您只需一条命令就能将网站部署到服务器上。
 

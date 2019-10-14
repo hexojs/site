@@ -7,14 +7,13 @@
   },
   "scripts": {
     "build": "hexo generate",
-    "eslint": "eslint .",
-    "deploy": "hexo deploy"
+    "eslint": "eslint ."
   },
   "dependencies": {
     "cheerio": "^0.22.0",
     "hexo": "github:hexojs/hexo",
     "hexo-clean-css": "^1.0.0",
-    "hexo-deployer-git": "^2.0.0",
+    "hexo-filter-nofollow": "^2.0.2",
     "hexo-generator-archive": "^1.0.0",
     "hexo-generator-feed": "^2.0.0",
     "hexo-generator-sitemap": "^1.1.2",
@@ -23,7 +22,6 @@
     "hexo-renderer-stylus": "^1.0.0",
     "hexo-server": "^1.0.0",
     "hexo-uglify": "^1.0.0",
-    "lodash": "^4.17.11",
     "lunr": "2.3.7",
     "sharp": "^0.23.1"
   },

@@ -9,6 +9,8 @@ menu:
 
 index:
   get_started: 開始使用
+  theme_intro: Choose from a huge library of spectacular, feature-packed and customizable themes. Create your own using any compatible template engines.
+  theme_link: Explore themes
 
 page:
   contents: 目錄

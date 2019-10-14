@@ -2,7 +2,7 @@
 title: 佈署
 ---
 
-{% youtube ZIltKlkG4S0 %}
+{% youtube B0yVJ46CTR8 %}
 
 Hexo 提供了快速方便的一鍵佈署功能，讓您只需一個指令就能將網站佈署到伺服器上。
 
