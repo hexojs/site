@@ -69,6 +69,7 @@ To upgrade to Hexo v4, change the following line in your package.json,
 - fix(open_graph): percent-encode url, not html escape [#3686]
 - perf(cache): Improve cache, Reduce Memory Usages [#3756]
 - fix: Allow backtick code block in "blockquote" tag plugin [#2321]
+- fix: Correct processing of backtick code block on blockquote [#3765]
 
 ## Dependency
 
