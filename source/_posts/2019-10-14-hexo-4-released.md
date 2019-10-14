@@ -68,6 +68,7 @@ To upgrade to Hexo v4, change the following line in your package.json,
 - Use filename when title is not specified in the front-matter [#3672]
 - fix: ignore categories / tags with zero posts [#3624]
 - fix(open_graph): remove index.html from url [#3661]
+- fix(open_graph): remove duplicate twitter card tags [#3668]
 - fix(helpers, tag plugins): encode url by default [#3710]
   * Refer to [#3708] for guide on decoding.
 - fix(open_graph): percent-encode url, not html escape [#3686]
@@ -102,6 +103,7 @@ To upgrade to Hexo v4, change the following line in your package.json,
 [#3678]: https://github.com/hexojs/hexo/pull/3678
 [#3691]: https://github.com/hexojs/hexo/pull/3691
 [#3661]: https://github.com/hexojs/hexo/pull/3661
+[#3668]: https://github.com/hexojs/hexo/pull/3668
 [#3701]: https://github.com/hexojs/hexo/pull/3701
 [#3675]: https://github.com/hexojs/hexo/pull/3675
 [#3654]: https://github.com/hexojs/hexo/pull/3654
