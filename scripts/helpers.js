@@ -47,6 +47,8 @@ hexo.extend.helper.register('doc_sidebar', function(className) {
   const self = this;
   const prefix = 'sidebar.' + type + '.';
 
+  if (typeof sidebar === 'undefined') return;
+
   for (let [title, menu] of Object.entries(sidebar)) {
     result += '<strong class="' + className + '-title">' + self.__(prefix + title) + '</strong>';
 
