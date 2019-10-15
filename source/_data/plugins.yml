@@ -1901,7 +1901,7 @@
     - helper
     - count
     - symbols
-    - time2read
+    - reading-time
 - name: hexo-filter-optimize
   description: A hexo plugin that optimize the pages loading speed.
   link: https://github.com/theme-next/hexo-filter-optimize
@@ -1910,6 +1910,12 @@
     - lazyload
     - inline
     - bundle
+- name: hexo-generator-searchdb
+  description: Yet another search data generator for Hexo with more features.
+  link: https://github.com/theme-next/hexo-generator-searchdb
+  tags:
+    - generator
+    - search
 - name: hexo-renderer-markdown
   description: Markdown-it renderer plugin for Hexo.
   link: https://github.com/niemingzhao/hexo-renderer-markdown
@@ -2327,3 +2333,17 @@
     - canonical
     - seo
     - source
+- name: hexo-generator-indexed
+  description: Index generator plugin for Hexo, support more Front-matter parameters like sticky and hide.
+  link: https://github.com/stevenjoezhang/hexo-generator-indexed
+  tags:
+    - generator
+    - index
+    - sticky
+- name: hexo-filter-mathjax
+  description: Server side MathJax renderer plugin for Hexo. No front-end scripts are required.
+  link: https://github.com/stevenjoezhang/hexo-filter-mathjax
+  tags:
+    - filter
+    - math
+    - MathJax
