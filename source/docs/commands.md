@@ -53,6 +53,7 @@ Option | Description
 `-w`, `--watch` | Watch file changes
 `-b`, `--bail` | Raise an error if any unhandled exception is thrown during generation
 `-f`, `--force` | Force regenerate
+`-c`, `--concurrency` | Maximum number of files to be generated in parallel. Default is infinity
 
 ## publish
 
