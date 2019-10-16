@@ -251,7 +251,7 @@ content
 
 ```
 {% post_path slug %}
-{% post_link slug [title] %}
+{% post_link slug [title] [escape] %}
 ```
 
 在使用此标签时可以忽略文章文件所在的路径或者文章的永久链接信息、如语言、日期。
@@ -279,7 +279,7 @@ content
 ```
 {% asset_path slug %}
 {% asset_img slug [title] %}
-{% asset_link slug [title] %}
+{% asset_link slug [title] [escape] %}
 ```
 
 ## Raw

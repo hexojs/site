@@ -253,16 +253,18 @@ Include links to other posts.
 
 ```
 {% post_path filename %}
-{% post_link filename [optional text] %}
+{% post_link filename [optional text] [escape] %}
 ```
 
-You can ignore permalink and folder information, like languages and dates, when using this tag. 
+You can ignore permalink and folder information, like languages and dates, when using this tag.
 
 For instance: `{% raw %}{% post_link how-to-bake-a-cake %}{% endraw %}`.
 
 This will work as long as the filename of the post is `how-to-bake-a-cake.md`, even if the post is located at `source/posts/2015-02-my-family-holiday` and has permalink `2018/en/how-to-bake-a-cake`.
 
 You can customize the text to display, instead of displaying the post's title. Using `post_path` inside Markdown syntax `[]()` is not supported.
+
+Post's title and custom text are escaped by default. You can use the `escape` option to disable escaping.
 
 For instance:
 
@@ -278,6 +280,19 @@ For instance:
 
 {% post_link hexo-3-8-released 'Link to a post' %}
 
+**Escape title.**
+
+```
+{% post_link hexo-4-0-released 'How to use <b> tag in title' %}
+```
+{% post_link hexo-3-9-released 'How to use <b> tag in title' %}
+
+**Do not escape title.**
+
+```
+{% post_link hexo-4-0-released '<b>bold</b> custom title' false %}
+```
+{% post_link hexo-3-9-released '<b>bold</b> custom title' false %}
 
 ## Include Assets
 
@@ -286,7 +301,7 @@ Include post assets.
 ```
 {% asset_path slug %}
 {% asset_img slug [title] %}
-{% asset_link slug [title] %}
+{% asset_link slug [title] [escape] %}
 ```
 
 ## Raw
@@ -306,7 +321,7 @@ Use text placed before the `<!-- more -->` tag as an excerpt for the post. `exce
 
 **Examples:**
 
-``` 
+```
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 <!-- more -->
 Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
