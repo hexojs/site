@@ -14,7 +14,7 @@ Variable | Description | Type
 `theme` | Theme configuration. Inherits from site configuration. | `object` (your theme's _config file)
 `_` (single underscore) | Lodash library | see [Lodash](https://lodash.com/  'Lodash') documentation
 `path` | Path of current page | `string`
-`url` | Full (encoded) URL of current page | `string`
+`url` | Full URL of current page | `string`
 `env` | Environment variables | ???
 
 ### Site Variables
