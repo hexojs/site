@@ -21,7 +21,7 @@ Option | Description | Default
 
 ``` yml
 _config.yml
-root: /blog/ # example
+root: /blog/
 ```
 
 ``` js
@@ -29,8 +29,8 @@ root: /blog/ # example
 // /blog/a/path
 ```
 
-Relative link, follows `relative_link` option by default
-e.g. post/page path is '/foo/bar/index.html'
+是否输出相对链接，默认遵循配置文件中 `relative_link` 的值
+例如， post/page 的相对路径值可能是 `/foo/bar/index.html`
 
 ``` yml
 _config.yml
@@ -40,9 +40,8 @@ relative_link: true
 ``` js
 <%- url_for('/css/style.css') %>
 // ../../css/style.css
-/* Override option
- * you could also disable it to output a non-relative link,
- * even when `relative_link` is enabled and vice versa.
+/* 覆盖配置
+ * 即使配置文件中启用了 relative_link，你也可以使用 relative 参数禁用相对链接输出，反之亦然
  */
 <%- url_for('/css/style.css', {relative: false}) %>
 // /css/style.css
