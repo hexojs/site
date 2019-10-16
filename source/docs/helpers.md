@@ -25,6 +25,26 @@ Returns the relative URL from `from` to `to`.
 <%- relative_url(from, to) %>
 ```
 
+### full_url_for
+
+Returns a url with the `config.url` prefixed. Output is encoded automatically.
+
+``` js
+<%- full_url_for(path) %>
+```
+
+**Examples:**
+
+``` yml
+_config.yml
+url: https://example.com/blog # example
+```
+
+``` js
+<%- full_url_for('/a/path') %>
+// https://example.com/blog/a/path
+```
+
 ### gravatar
 
 Inserts a Gravatar image.

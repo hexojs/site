@@ -43,6 +43,26 @@ title: 辅助函数（Helpers）
 // https://www.gravatar.com/avatar/b9b00e66c6b8a70f88c73cb6bdb06787?s=40&d=https%3A%2F%2Fvia.placeholder.com%2F150
 ```
 
+### full_url_for
+
+在路径前加上根路径和域名。输出会被自动转码。
+
+``` js
+<%- full_url_for(path) %>
+```
+
+**示例：**
+
+``` yml
+_config.yml
+url: https://example.com/blog # example
+```
+
+``` js
+<%- full_url_for('/a/path') %>
+// https://example.com/blog/a/path
+```
+
 ## HTML 标签
 
 ### css
