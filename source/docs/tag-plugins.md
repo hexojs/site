@@ -302,7 +302,7 @@ content
 
 ## Post Excerpt
 
-Use text placed before the `<!-- more -->` tag as an excerpt for the post.
+Use text placed before the `<!-- more -->` tag as an excerpt for the post. `excerpt:` value in the [front-matter](/docs/front-matter#Settings-amp-Their-Default-Values), if specified, will take precedent.
 
 **Examples:**
 
