@@ -13,7 +13,7 @@ title: 辅助函数（Helpers）
 <%- url_for(path, [option]) %>
 ```
 
-Option | Description | Default
+参数 | 描述 | 默认值
 --- | --- | ---
 `relative` | 是否输出相对链接 | `config.relative_link` 的值
 
