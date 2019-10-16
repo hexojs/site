@@ -70,7 +70,10 @@ Setting | Description | Default
 `new_post_name` | The filename format for new posts | `:title.md`
 `default_layout` | Default layout | `post`
 `titlecase` | Transform titles into title case? | `false`
-`external_link` | Open external links in a new tab? | `true`
+`external_link` | Open external links in a new tab? |
+`external_link.enable` | Open external links in a new tab? | `true`
+`external_link.field` | Applies to the whole `site` or `post` only | `site`
+`external_link.exclude` | Exclude hostname. Specify subdomain when applicable, including `www` | `[]`
 `filename_case` | Transform filenames to `1` lower case; `2` upper case | `0`
 `render_drafts` | Display drafts? | `false`
 `post_asset_folder` | Enable the [Asset Folder](asset-folders.html)? | `false`

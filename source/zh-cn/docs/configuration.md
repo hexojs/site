@@ -79,6 +79,9 @@ skip_render: "_posts/test-post.md"
 `auto_spacing` | 在中文和英文之间加入空格 | false
 `titlecase` | 把标题转换为 title case | false
 `external_link` | 在新标签中打开链接 | true
+`external_link.enable` | 在新标签中打开链接 | `true`
+`external_link.field` | Applies to the whole `site` or `post` only | `site`
+`external_link.exclude` | Exclude hostname. Specify subdomain when applicable, including `www` | `[]`
 `filename_case` | 把文件名称转换为 (1) 小写或 (2) 大写 | 0
 `render_drafts` | 显示草稿 | false
 `post_asset_folder` | 启动 [Asset 文件夹](asset-folders.html) | false

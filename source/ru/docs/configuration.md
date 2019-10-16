@@ -48,6 +48,9 @@ title: Конфигурация
 `default_layout` | Макет по умолчанию | `post`
 `titlecase` | Преобразовать заголовки в заглавные буквы? | `false`
 `external_link` | Открывать внешние ссылки в новой вкладке? | `true`
+`external_link.enable` | Открывать внешние ссылки в новой вкладке? | `true`
+`external_link.field` | Applies to the whole `site` or `post` only | `site`
+`external_link.exclude` | Exclude hostname. Specify subdomain when applicable, including `www` | `[]`
 `filename_case` | Преобразовать имена файлов в `1` нижний регистр; `2` верхний регистр | `0`
 `render_drafts` | Отображать черновики? | `false`
 `post_asset_folder` | Включать [папку с материалами](asset-folders.html)? | `false`
