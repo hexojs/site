@@ -10,7 +10,41 @@ title: 辅助函数（Helpers）
 在路径前加上根路径，从 Hexo 2.7 开始您应该使用此函数而不是 `config.root + path`。
 
 ``` js
-<%- url_for(path) %>
+<%- url_for(path, [option]) %>
+```
+
+参数 | 描述 | 默认值
+--- | --- | ---
+`relative` | 是否输出相对链接 | `config.relative_link` 的值
+
+**示例：**
+
+``` yml
+_config.yml
+root: /blog/
+```
+
+``` js
+<%- url_for('/a/path') %>
+// /blog/a/path
+```
+
+是否输出相对链接，默认遵循配置文件中 `relative_link` 的值
+例如， post/page 的相对路径值可能是 `/foo/bar/index.html`
+
+``` yml
+_config.yml
+relative_link: true
+```
+
+``` js
+<%- url_for('/css/style.css') %>
+// ../../css/style.css
+/* 覆盖配置
+ * 即使配置文件中启用了 relative_link，你也可以使用 relative 参数禁用相对链接输出，反之亦然
+ */
+<%- url_for('/css/style.css', {relative: false}) %>
+// /css/style.css
 ```
 
 ### relative_url
@@ -21,14 +55,31 @@ title: 辅助函数（Helpers）
 <%- relative_url(from, to) %>
 ```
 
+**示例：**
+
+``` js
+<%- relative_url('foo/bar/', 'css/style.css') %>
+// ../../css/style.css
+```
+
 ### gravatar
 
-插入 Gravatar 图片。
+根据邮箱地址返回 Gravatar 头像 URL。
+
 如果你不指定 `options` 参数，将会应用默认参数。否则，你可以将其设置为一个数字，这个数字将会作为 Gravatar 的大小参数。最后，如果你设置它一个对象，它将会被转换为 Gravatar 的一个查询字符串参数。
 
 ``` js
 <%- gravatar(email, [options]) %>
 ```
+
+参数 | 描述 | 默认值
+--- | --- | ---
+`s` | 图片大小 | 80
+`d` | 默认头像 |
+`f` | 强制使用默认图象 |
+`r` | 头像等级限制 |
+
+访问 [Gravatar](https://en.gravatar.com/site/implement/images/) 了解更多。
 
 **示例：**
 
