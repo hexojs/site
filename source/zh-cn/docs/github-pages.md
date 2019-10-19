@@ -38,7 +38,7 @@ deploy:
 10. 在 GitHub 中前往你的 repository 的设置页面，修改 `GitHub Pages` 的部署分支为 `gh-pages`。
 11. 前往 `https://<你的 GitHub 用户名>.github.io` 查看你的站点是否可以访问。这可能需要一些时间。
 
-### Project page
+## Project page
 
 如果你更希望你的站点部署在 `<你的 GitHub 用户名>.github.io` 的子目录中，你的 repository 需要直接命名为子目录的名字，这样你的站点可以通过 `https://<你的 GitHub 用户名>.github.io/<repository 的名字>` 访问。你需要检查你的 Hexo 配置文件，将 `url` 修改为 `https://<你的 GitHub 用户名>.github.io/<repository 的名字>`、将 `root` 的值修改为 `/<repository 的名字>/`
 
@@ -60,11 +60,6 @@ The following instruction is adapted from [one-command deployment](/docs/one-com
 
 3. Run `hexo clean && hexo deploy`.
 4. Check the webpage at *username*.github.io.
-
-{% note info Windows 用户 %}
-在 [Awesome Hexo](https://github.com/hexojs/awesome-hexo) 中收录有一些在 GitHub 部署 Hexo 更仔细的教程。通过搜索引擎可以找到更多教程。
-也欢迎更多有志之士前来改善 Hexo 文档，不胜感激。
-{% endnote %}
 
 ## 有用的参考链接
 
