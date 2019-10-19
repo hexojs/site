@@ -76,6 +76,7 @@ Hexo использует [Moment.js](http://momentjs.com/) для работы 
 --- | --- | ---
 `date_format` | Формат даты | `YYYY-MM-DD`
 `time_format` | Формат времени | `HH:mm:ss`
+`use_date_for_updated` | Use the date of the post in [`post.updated`](/ru/docs/variables#Переменные-страницы) if no updated date is provided in the front-matter. Typically used with Git workflow | `true`  
 
 ### Разбивка на страницы
 

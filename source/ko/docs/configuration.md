@@ -76,6 +76,7 @@ Hexo는 날짜 처리 시 [Moment.js](http://momentjs.com/)를 사용합니다.
 --- | --- | ---
 `date_format` | 날짜 형식 | `YYYY-MM-DD`
 `time_format` | 시간 형식 | `HH:mm:ss`
+`use_date_for_updated` | Use the date of the post in [`post.updated`](/ko/docs/variables#페이지 변수) if no updated date is provided in the front-matter. Typically used with Git workflow | `true`  
 
 ### Pagination
 

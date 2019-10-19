@@ -77,6 +77,7 @@ Configuração | Descrição | Padrão
 --- | --- | ---
 `date_format` | Formato de data | `YYYY-MM-DD`
 `time_format` | Formado de hora | `HH:mm:ss`
+`use_date_for_updated` | Use the date of the post in [`post.updated`](/pt-br/docs/variables#Variaveis-da-Pagina) if no updated date is provided in the front-matter. Typically used with Git workflow | `true`  
 
 ### Paginação
 

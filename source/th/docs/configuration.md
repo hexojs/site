@@ -77,6 +77,7 @@ Setting | Description | Default
 --- | --- | ---
 `date_format` | Date format | `YYYY-MM-DD`
 `time_format` | Time format | `HH:mm:ss`
+`use_date_for_updated` | Use the date of the post in [`post.updated`](/th/docs/variables#Page-Variables) if no updated date is provided in the front-matter. Typically used with Git workflow | `true`  
 
 ### Pagination
 

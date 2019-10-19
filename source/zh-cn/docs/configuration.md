@@ -102,6 +102,7 @@ Hexo 使用 [Moment.js](http://momentjs.com/) 来解析和显示时间。
 --- | --- | ---
 `date_format` | 日期格式 | `YYYY-MM-DD`
 `time_format` | 时间格式 | `HH:mm:ss`
+`use_date_for_updated` | Use the date of the post in [`post.updated`](/zh-cn/docs/variables#页面变量) if no updated date is provided in the front-matter. Typically used with Git workflow | `true`  
 
 ## 分页
 
