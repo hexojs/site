@@ -57,6 +57,10 @@ title: Configuration
 `relative_link` | 루트 폴더에 대한 상대 경로로 링크를 만들 것인지 선택 | `false`
 `future` | 미래의 포스트를 표시할 것인지 선택 | `true`
 `highlight` | Code block의 설정 |
+`highlight.enable` | Enable syntax highlight | `true`
+`highlight.auto_detect` | Enable auto-detection if no language is specified | `false`
+`highlight.line_number` | Display line number | `true`
+`highlight.tab_replace` | Replace tabs by n space(s); if the value is empty, tabs won't be replaced | `''`
 
 ### Category & Tag
 
@@ -74,6 +78,7 @@ Hexo는 날짜 처리 시 [Moment.js](http://momentjs.com/)를 사용합니다.
 --- | --- | ---
 `date_format` | 날짜 형식 | `YYYY-MM-DD`
 `time_format` | 시간 형식 | `HH:mm:ss`
+`use_date_for_updated` | Use the date of the post in [`post.updated`](/ko/docs/variables#페이지 변수) if no updated date is provided in the front-matter. Typically used with Git workflow | `true`  
 
 ### Pagination
 

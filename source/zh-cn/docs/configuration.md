@@ -88,6 +88,10 @@ skip_render: "_posts/test-post.md"
 `relative_link` | 把链接改为与根目录的相对位址 | false
 `future` | 显示未来的文章 | true
 `highlight` | 代码块的设置 |
+`highlight.enable` | Enable syntax highlight | `true`
+`highlight.auto_detect` | Enable auto-detection if no language is specified | `false`
+`highlight.line_number` | Display line number | `true`
+`highlight.tab_replace` | Replace tabs by n space(s); if the value is empty, tabs won't be replaced | `''`
 
 {% note info 相对地址 %}
 默认情况下，Hexo生成的超链接都是绝对地址。例如，如果您的网站域名为`example.com`,您有一篇文章名为`hello`，那么绝对链接可能像这样：`http://example.com/hello.html`，它是**绝对**于域名的。相对链接像这样：`/hello.html`，也就是说，无论用什么域名访问该站点，都没有关系，这在进行反向代理时可能用到。通常情况下，建议使用绝对地址。
@@ -109,6 +113,7 @@ Hexo 使用 [Moment.js](http://momentjs.com/) 来解析和显示时间。
 --- | --- | ---
 `date_format` | 日期格式 | `YYYY-MM-DD`
 `time_format` | 时间格式 | `HH:mm:ss`
+`use_date_for_updated` | Use the date of the post in [`post.updated`](/zh-cn/docs/variables#页面变量) if no updated date is provided in the front-matter. Typically used with Git workflow | `true`  
 
 ## 分页
 

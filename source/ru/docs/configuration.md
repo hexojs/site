@@ -57,6 +57,10 @@ title: Конфигурация
 `relative_link` | Создание ссылок относительно корневой папки? | `false`
 `future` | Отображать будущие посты? | `true`
 `highlight` | Настройки блоков кода |
+`highlight.enable` | Enable syntax highlight | `true`
+`highlight.auto_detect` | Enable auto-detection if no language is specified | `false`
+`highlight.line_number` | Display line number | `true`
+`highlight.tab_replace` | Replace tabs by n space(s); if the value is empty, tabs won't be replaced | `''`
 
 ### Категории и теги
 
@@ -74,6 +78,7 @@ Hexo использует [Moment.js](http://momentjs.com/) для работы 
 --- | --- | ---
 `date_format` | Формат даты | `YYYY-MM-DD`
 `time_format` | Формат времени | `HH:mm:ss`
+`use_date_for_updated` | Use the date of the post in [`post.updated`](/ru/docs/variables#Переменные-страницы) if no updated date is provided in the front-matter. Typically used with Git workflow | `true`  
 
 ### Разбивка на страницы
 

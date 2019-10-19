@@ -12,7 +12,7 @@ Setting | Description
 `description` | The description of your website
 `keywords` | The keywords of your website. Separate multiple keywords with commas `,`.
 `author` | Your name
-`language` | The language of your website. Use a [2-lettter ISO-639-1 code](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) or optionally [its variant](/docs/internationalization). Default is `en`.
+`language` | The language of your website. Use a [2-letter ISO-639-1 code](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) or optionally [its variant](/docs/internationalization). Default is `en`.
 `timezone` | The timezone of your website. Hexo uses the setting on your computer by default. You can find the list of available timezones [here](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones). Some examples are `America/New_York`, `Japan`, and `UTC`.
 
 ### URL
@@ -111,6 +111,7 @@ Setting | Description | Default
 --- | --- | ---
 `date_format` | Date format | `YYYY-MM-DD`
 `time_format` | Time format | `HH:mm:ss`
+`use_date_for_updated` | Use the date of the post in [`post.updated`](/docs/variables#Page-Variables) if no updated date is provided in the front-matter. Typically used with Git workflow | `true`  
 
 ### Pagination
 
