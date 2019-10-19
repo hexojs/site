@@ -3,7 +3,7 @@ title: 配置
 ---
 您可以在 `_config.yml` 或 [替代配置檔](#Using-an-Alternate-Config) 中修改網站配置。
 
-{% youtube 5bL8b5ulUD4 %}
+{% youtube A0Enyn70jKU %}
 
 ### 網站
 
@@ -52,6 +52,9 @@ title: 配置
 `auto_spacing` | 在西方文字與東方文字中加入空白 | `false`
 `titlecase` | 把標題轉換為 title case | `false`
 `external_link` | 在新頁籤中開啟連結 | `true`
+`external_link.enable` | 在新頁籤中開啟連結 | `true`
+`external_link.field` | Applies to the whole `site` or `post` only | `site`
+`external_link.exclude` | Exclude hostname. Specify subdomain when applicable, including `www` | `[]`
 `filename_case` | 把檔案名稱轉換為: `1` 小寫或 `2` 大寫 | `0`
 `render_drafts` | 顯示草稿 | `false`
 `post_asset_folder` | 啟動 [Asset 資料夾](asset-folders.html) | `false`

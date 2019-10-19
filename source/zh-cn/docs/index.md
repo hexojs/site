@@ -8,7 +8,7 @@ title: 文档
 
 Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 [Markdown](http://daringfireball.net/projects/markdown/)（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。
 
-{% youtube bCj0iVVqkSg %}
+{% youtube PsXWbI2Mqu0 %}
 
 ## 安装
 
@@ -16,9 +16,9 @@ Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 [Markdown](h
 
 ### 安装前提
 
-安装 Hexo 相当简单。然而在安装前，您必须检查电脑中是否已安装下列应用程序：
+安装 Hexo 相当简单，只需要先安装下列应用程序即可：
 
-- [Node.js](http://nodejs.org/) (Should be at least nodejs 6.9)
+- [Node.js](http://nodejs.org/) (Node.js 版本需不低于 8.6，建议使用 Node.js 10.0 及以上版本)
 - [Git](http://git-scm.com/)
 
 如果您的电脑中已经安装上述必备程序，那么恭喜您！接下来只需要使用 npm 即可完成 Hexo 的安装。
@@ -67,8 +67,12 @@ $ wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | sh
 安装完成后，重启终端并执行下列命令即可安装 Node.js。
 
 ``` bash
-$ nvm install stable
+$ nvm install node
 ```
+
+{% note info Windows 用户 %}
+对于 Windows 用户我们推荐使用 [nvs](https://github.com/jasongin/nvs/) 而不是 nvm。nvs 具有和 nvm 相似的命令行语法，并且可以通过 Windows Installer (MSI) 安装包进行安装。
+{% endnote %}
 
 或者您也可以下载 [安装程序](http://nodejs.org/) 来安装。
 

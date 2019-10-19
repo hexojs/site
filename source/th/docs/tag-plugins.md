@@ -222,7 +222,7 @@ content
 
 ```
 {% post_path filename %}
-{% post_link filename [optional text] %}
+{% post_link filename [optional text] [escape] %}
 ```
 
 เวลาใช้แท็กนี้ ข้อมูล permalink และ folder เช่น ภาษาและวันเดือนปี จะถูกละเลย
@@ -241,15 +241,15 @@ content
 
 **โชว์หัวข้อโพสต์**
 
-`{% raw %}{% post_link 2018-10-19-hexo-3-8-released %}{% endraw %}`
+`{% raw %}{% post_link hexo-3-8-released %}{% endraw %}`
 
-{% post_link 2018-10-19-hexo-3-8-released %}
+{% post_link hexo-3-8-released %}
 
 **โชว์ text ท่ีตั้งค่าด้วยตน**
 
-`{% raw %}{% post_link 2018-10-19-hexo-3-8-released 'Link to a post' %}{% endraw %}`
+`{% raw %}{% post_link hexo-3-8-released 'Link to a post' %}{% endraw %}`
 
-{% post_link 2018-10-19-hexo-3-8-released 'Link to a post' %}
+{% post_link hexo-3-8-released 'Link to a post' %}
 
 
 ## Include Assets
@@ -259,7 +259,7 @@ content
 ```
 {% asset_path slug %}
 {% asset_img slug [title] %}
-{% asset_link slug [title] %}
+{% asset_link slug [title] [escape] %}
 ```
 
 ## Raw

@@ -10,7 +10,7 @@ hexo.extend.filter.register(type, function(){
 }, priority);
 ```
 
-You can define the `priority`. Lower `priority` means that it will be executed first. The default `priority` is 10.
+You can define the `priority`. Lower `priority` means that it will be executed first. The default `priority` is 10. We recommend using user-configurable priority value that user can specify in the config, e.g. `hexo.config.your_plugin.priority`.
 
 ## Execute Filters
 
@@ -55,6 +55,28 @@ hexo.execFilterSync(type, data, options);
 
 ``` js
 hexo.extend.filter.unregister(type, filter);
+```
+
+**Example**
+
+``` js
+// Unregister a filter which is registered with named function
+
+const filterFn = (data) => {
+  data = 'something';
+  return data;
+};
+hexo.extend.filter.register('example', filterFn);
+
+hexo.extend.filter.unregister('example', filterFn);
+```
+
+``` js
+// Unregister a filter which is registered with commonjs module
+
+hexo.extend.filter.register('example', require('path/to/filter'));
+
+hexo.extend.filter.unregister('example', require('path/to/filter'));
 ```
 
 ## Filter List

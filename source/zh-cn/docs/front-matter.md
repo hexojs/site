@@ -2,7 +2,7 @@
 title: Front-matter
 ---
 
-{% youtube 2oxWnm8E-mc %}
+{% youtube Rl48Yk4A_V8 %}
 
 Front-matter 是文件最上方以 `---` 分隔的区域，用于指定个别文件的变量，举例来说：
 
@@ -18,7 +18,7 @@ date: 2013/7/13 20:46:25
 参数 | 描述 | 默认值
 --- | --- | ---
 `layout` | 布局 | 
-`title` | 标题 |
+`title` | 标题 | 文章的文件名
 `date` | 建立日期 | 文件建立日期
 `updated` | 更新日期 | 文件更新日期
 `comments` | 开启文章的评论功能 | true

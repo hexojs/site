@@ -3,7 +3,7 @@ title: 配置
 ---
 您可以在 `_config.yml` 中修改大部分的配置。
 
-{% youtube 5bL8b5ulUD4 %}
+{% youtube A0Enyn70jKU %}
 
 ## 网站
 
@@ -27,10 +27,21 @@ title: 配置
 `root` | 网站根目录 |
 `permalink` | 文章的 [永久链接](permalinks.html) 格式 | `:year/:month/:day/:title/`
 `permalink_defaults` | 永久链接中各部分的默认值 |
+`pretty_urls` | 改写 [`permalink`](/zh-cn/docs/variables.html) 的值来美化 URL |
+`pretty_urls.trailing_index` | 是否在永久链接中保留尾部的 `index.html`，设置为 `false` 时去除 | `true`
 
 {% note info 网站存放在子目录 %}
 如果您的网站存放在子目录中，例如 `http://yoursite.com/blog`，则请将您的 `url` 设为 `http://yoursite.com/blog` 并把 `root` 设为 `/blog/`。
 {% endnote %}
+
+例如：
+
+``` yaml
+# 比如，一个页面的永久链接是 http://example.com/foo/bar/index.html
+pretty_urls:
+  trailing_index: false
+# 此时页面的永久链接会变为 http://example.com/foo/bar/
+```
 
 ## 目录
 
@@ -46,8 +57,6 @@ title: 配置
 `skip_render` | 跳过指定文件的渲染。匹配到的文件将会被不做改动的复制到 `public` 目录中。您可使用 [glob 表达式](https://github.com/micromatch/micromatch#extended-globbing)来匹配路径。 |
 
 例如：
-
-Examples:
 
 ``` yaml
 skip_render: "mypage/**/*"
@@ -70,6 +79,9 @@ skip_render: "_posts/test-post.md"
 `auto_spacing` | 在中文和英文之间加入空格 | false
 `titlecase` | 把标题转换为 title case | false
 `external_link` | 在新标签中打开链接 | true
+`external_link.enable` | 在新标签中打开链接 | `true`
+`external_link.field` | Applies to the whole `site` or `post` only | `site`
+`external_link.exclude` | Exclude hostname. Specify subdomain when applicable, including `www` | `[]`
 `filename_case` | 把文件名称转换为 (1) 小写或 (2) 大写 | 0
 `render_drafts` | 显示草稿 | false
 `post_asset_folder` | 启动 [Asset 文件夹](asset-folders.html) | false

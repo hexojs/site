@@ -5,64 +5,56 @@ Welcome to the Hexo documentation. If you encounter any problems when using Hexo
 
 ## What is Hexo?
 
-Hexo is a fast, simple and powerful blog framework. You write posts in [Markdown](http://daringfireball.net/projects/markdown/) (or other languages) and Hexo generates static files with a beautiful theme in seconds.
+Hexo is a fast, simple and powerful blog framework. You write posts in [Markdown](http://daringfireball.net/projects/markdown/) (or other markup languages) and Hexo generates static files with a beautiful theme in seconds.
 
 ## Installation
 
-It only takes a few minutes to set up Hexo. If you encounter a problem and can't find the solution here, please [submit a GitHub issue](https://github.com/hexojs/hexo/issues) and I'll try to solve it.
+It only takes a few minutes to set up Hexo. If you encounter a problem and can't find the solution here, please [submit a GitHub issue](https://github.com/hexojs/hexo/issues) and we'll help.
 
 {% youtube ARted4RniaU %}
 
 ### Requirements
 
-Installing Hexo is quite easy. However, you do need to have a couple of other things installed first:
+Installing Hexo is quite easy and only requires the following beforehand:
 
-- [Node.js](http://nodejs.org/) (Should be at least nodejs 6.9)
+- [Node.js](http://nodejs.org/) (Should be at least Node.js 8.6, recommends 10.0 or higher)
 - [Git](http://git-scm.com/)
 
 If your computer already has these, congratulations! You can skip to the [Hexo installation](#Install-Hexo) step.
 
 If not, please follow the following instructions to install all the requirements.
 
+### Install Git
+
+- Windows: Download & install [git](https://git-scm.com/download/win).
+- Mac: Install it with [Homebrew](https://brew.sh/), [MacPorts](http://www.macports.org/) or [installer](http://sourceforge.net/projects/git-osx-installer/).
+- Linux (Ubuntu, Debian): `sudo apt-get install git-core`
+- Linux (Fedora, Red Hat, CentOS): `sudo yum install git-core`
+
 {% note warn For Mac users %}
 You may encounter some problems when compiling. Please install Xcode from App Store first. After Xcode is installed, open Xcode and go to **Preferences -> Download -> Command Line Tools -> Install** to install command line tools.
 {% endnote %}
 
-{% note warn For Mac / Linux users %}
-If you are a macOS user, or a Linux user who install Node.js through your package manager with default repository, you might run into some permission error when using `npm install -g`. Please follow [the guide provided by npmjs](https://docs.npmjs.com/resolving-eacces-permissions-errors-when-installing-packages-globally) to solve the issue, AND DO NOT USE ROOT USER OR SUDO TO OVERRIDE.
-{% endnote %}
-
-### Install Git
-
-- Windows: Download & install [git](https://git-scm.com/download/win).
-- Mac: Install it with [Homebrew](http://mxcl.github.com/homebrew/), [MacPorts](http://www.macports.org/) or [installer](http://sourceforge.net/projects/git-osx-installer/).
-- Linux (Ubuntu, Debian): `sudo apt-get install git-core`
-- Linux (Fedora, Red Hat, CentOS): `sudo yum install git-core`
-
 ### Install Node.js
 
-The best way to install Node.js is with [Node Version Manager](https://github.com/nvm-sh/nvm).
-Thankfully the creators of nvm provide a simple script that automatically installs nvm:
+Node.js provides [official installer](https://nodejs.org/en/download/) for most platforms.
 
-cURL:
+Alternative installation methods:
 
-``` bash
-$ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
-```
+- Windows: Install it with [nvs](https://github.com/jasongin/nvs/) (recommended) or [nvm](https://github.com/nvm-sh/nvm).
+- Mac: Install it with [Homebrew](https://brew.sh/) or [MacPorts](http://www.macports.org/).
+- Linux (DEB/RPM-based): Install it with [NodeSource](https://github.com/nodesource/distributions).
+- Others: Install it through respective package manager. Refer to [the guide](https://nodejs.org/en/download/package-manager/) provided by Node.js.
 
-Wget:
+nvs is also recommended for Mac and Linux to avoid possible permission issue.
 
-``` bash
-$ wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
-```
+{% note info Windows %}
+If you use the official installer, make sure **Add to PATH** is checked (it's checked by default).
+{% endnote %}
 
-Once nvm is installed, restart the terminal and run the following command to install Node.js:
-
-``` bash
-$ nvm install stable
-```
-
-Alternatively, download and run [the installer](http://nodejs.org/). Most Linux distributions ship Node.js in their default repository. [NodeSource](https://github.com/nodesource/distributions) third-party repo usually ships more up-to-date Node.js.
+{% note warn Mac / Linux %}
+If you encounter `EACCES` permission error when trying to install Hexo, please follow [the workaround](https://docs.npmjs.com/resolving-eacces-permissions-errors-when-installing-packages-globally) provided by npmjs; overriding with root/sudo is highly discouraged.
+{% endnote %}
 
 ### Install Hexo
 

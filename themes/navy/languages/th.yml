@@ -4,10 +4,13 @@ menu:
   news: ข่าวสาร
   plugins: ปลั๊กอิน
   themes: ธีม
+  about: About
   search: ค้นหา
 
 index:
   get_started: เริ่มต้นใช้งาน
+  theme_intro: Choose from a huge library of spectacular, feature-packed and customizable themes. Create your own using any compatible template engines.
+  theme_link: Explore themes
 
 page:
   contents: Contents
@@ -34,6 +37,9 @@ sidebar:
     server: Server
     generating: Generating
     deployment: Deployment
+    github_pages: GitHub Pages
+    gitlab_pages: GitLab Pages
+    one_command_deployment: One-Command Deployment
     customization: Customization
     permalinks: Permalinks
     themes: Themes

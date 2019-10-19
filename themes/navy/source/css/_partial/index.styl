@@ -2,15 +2,25 @@
   color: rgba(255, 255, 255, 0.8)
   text-align: center
 
-#banner-title
-  padding-top: 20px
-  font-size: 40px
+#banner-title,
+.theme-intro-title
   line-height: 1.15
   font-weight: 300
   font-family: font-title
+  font-size: 40px
+  @media mq-normal
+    font-size: 50px
+
+#banner-title
+  padding-top: 20px
   @media mq-normal
     padding-top: 100px
-    font-size: 50px
+
+.theme-intro-title
+  margin-bottom: 24px
+  padding-top: 24px
+  @media mq-normal
+    padding-top: 0
 
 #banner-start
   text-align: center
@@ -45,6 +55,40 @@
   @media mq-normal
     display: block
 
+#intro-news-list
+  background-color: darken(color-navy, 10%)
+  margin: -1px 0
+
+#intro-news-flex
+  display: flex
+  flex-flow: column
+  @media mq-normal
+    flex-flow: row wrap
+
+.intro-news-wrap
+  padding: 24px 30px
+  text-decoration: none
+  &:hover
+    background-color: color-link-hover
+  @media mq-normal
+    flex: 0 0 50%
+    padding: 36px 30px
+  @media screen and (min-width: 960px)
+    flex: 0 0 25%
+
+.intro-news-time
+  font-size: 14px
+  color: rgba(255,255,255,.6)
+
+.intro-news-wrap:hover .intro-news-time
+  color: rgba(255,255,255,.8)
+
+.intro-news-title
+  padding-top: 4px
+  font-size: 15px
+  line-height: 1.2;
+  color: #fff
+
 #intro-feature-list
   padding-top: 20px
   display: flex
@@ -54,6 +98,9 @@
 
 .intro-feature-wrap
   padding-top: 20px
+  @media mq-tablet
+    flex: 0 0 50%
+    padding-top: 50px
   @media mq-normal
     flex: 0 0 50%
     padding-top: 50px
@@ -108,17 +155,79 @@
   text-align: center
 
 #intro-get-started-link
+#theme-link
   font-size: 18px
   font-family: font-title
   display: inline-block
-  color: color-link
   text-decoration: none
   margin: 40px 0
   border: 3px solid
-  border-color: lighten(color-link, 20%)
   padding: 12px 24px
   position: relative
   transition: 0.2s
+
+#intro-get-started-link
+  color: color-link
+  border-color: lighten(color-link, 20%)
   &:hover
     background: @border-color
     color: #fff
+
+#theme-link
+  color: color-border
+  border-color: color-border
+  &:hover
+    background: @border-color
+    color: lighten(color-navy, 10%)
+
+#theme-wrap
+  background: lighten(color-navy, 10%)
+  border-top: 1px solid #161d24
+  border-bottom: 1px solid #161d24
+  margin: -1px 0
+  padding: 32px
+  @media mq-tablet
+    padding: 64px 64px
+  @media mq-normal
+    padding: 96px 64px
+
+.theme-wrapper
+  display: flex
+  flex-wrap: wrap
+  color: rgba(255, 255, 255, 0.8)
+
+.theme-thumbnail
+  width: 100%
+  @media mq-normal
+    order: 0
+    width: 50%
+
+.theme-thumbnail-container
+  margin-right: auto
+  margin-left: auto
+  width: 90%
+
+.theme-thumbnail img
+  max-width: 100%
+  box-shadow: 6px 6px 12px 0 rgba(0,0,0,.4)
+
+.theme-intro
+  width: 100%
+  @media mq-normal
+    width: 50%
+
+.theme-intro-container
+  margin-right: auto
+  margin-left: auto
+  text-align: center
+  @media mq-normal
+    width: 80%
+
+.theme-intro-text
+  color: rgba(255, 255, 255, 0.6)
+  line-height: 1.5
+  font-size: 16px
+  @media mq-tablet
+    font-size: 18px
+  @media mq-normal
+    font-size: 20px

@@ -1,7 +1,7 @@
 title: 指令
 ---
 
-{% youtube bJBsW4b5WME %}
+{% youtube mgdXi5npArQ %}
 
 ## init
 

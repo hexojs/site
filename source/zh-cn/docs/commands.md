@@ -2,7 +2,7 @@
 title: 指令
 ---
 
-{% youtube bJBsW4b5WME %}
+{% youtube mgdXi5npArQ %}
 
 ## init
 
@@ -60,6 +60,7 @@ $ hexo generate
 `-w`, `--watch` | 监视文件变动
 `-b`, `--bail` | 生成过程中如果发生任何未处理的异常则抛出异常
 `-f`, `--force` | 强制重新生成文件<br>Hexo 引入了差分机制，如果 `public` 目录存在，那么 `hexo g` 只会重新生成改动的文件。<br>使用该参数的效果接近 `hexo clean && hexo generate`
+`-c`, `--concurrency` | 最大同时生成文件的数量，默认无限制
 
 该命令可以简写为
 ```bash

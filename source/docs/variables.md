@@ -43,7 +43,7 @@ Variable | Description | Type
 `page.source` | The path of the source file | `string`
 `page.full_source` | Full path of the source file | `string`
 `page.path` | The URL of the article without root URL. We usually use `url_for(page.path)` in theme. | `string`
-`page.permalink` | Full URL of the article | `string`
+`page.permalink` | Full (encoded) URL of the article | `string`
 `page.prev` | The previous post, `null` if the post is the first post | ???
 `page.next` | The next post, `null` if the post is the last post | ???
 `page.raw` | The raw data of the article | ???

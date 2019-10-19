@@ -215,7 +215,7 @@ content
 
 ```
 {% post_path slug %}
-{% post_link slug [title] %}
+{% post_link slug [title] [escape] %}
 ```
 
 ## 引用資產
@@ -225,7 +225,7 @@ content
 ```
 {% asset_path slug %}
 {% asset_img slug [title] %}
-{% asset_link slug [title] %}
+{% asset_link slug [title] [escape] %}
 ```
 
 ## Raw

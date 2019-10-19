@@ -1,3 +1,11 @@
+- name: Lights
+  description: A simple theme
+  link: https://github.com/F0r3at/Lights/
+  preview: https://f0r3at.github.io
+  tags:
+    - responsive
+    - simple
+    - one_column
 - name: stun
   description: A beautiful & simple theme
   link: https://github.com/liuyib/hexo-theme-stun
@@ -853,15 +861,6 @@
     - two_columns
     - tag_plugins
     - retro
-- name: spfk
-  description: A simple solemn theme
-  link: https://github.com/luuman/hexo-theme-spfk
-  preview: http://luuman.github.io/
-  tags:
-    - black
-    - responsive
-    - two_columns
-    - personality
 - name: Bootstrap-Blog
   description: A simple Twitter Bootstrap blog theme
   link: https://github.com/cgmartin/hexo-theme-bootstrap-blog
@@ -1171,7 +1170,7 @@
 - name: ztopic
   description: A simple responsive theme
   link: https://github.com/wa-ri/hexo-theme-ztopic
-  preview: http://zccblog.cn/
+  preview: https://wa-ri.github.io/
   tags:
     - responsive
     - simple
@@ -1990,7 +1989,7 @@
     - fast
     - long-term developing
     - maintaining
-- name: Concise
+- name: Concise-theme
   description: A simple theme based on theme landscape
   link: https://github.com/Sanonz/hexo-theme-concise
   preview: https://sanonz.github.io/
@@ -2717,7 +2716,6 @@
     - Cover
     - Easy-to-read
     - MathJax support
-
 - name: Book
   description: A simple, elegant, book-like hexo theme with some useful features.
   link: https://github.com/kaiiiz/hexo-theme-book
@@ -2831,3 +2829,27 @@
     - seo
     - light
     - cdn
+- name: A-Obsidian
+  description: A dark Hexo theme, it's responsive, simple but elegant.
+  link: https://github.com/TriDiamond/hexo-theme-obsidian
+  preview: https://tridiamond.me
+  tags:
+    - 中文 
+    - responsive
+    - elegan
+    - google-analytics
+    - seo
+    - dark
+    - clean
+- name: Soul
+  description: An independently designed, dark-style theme.
+  link: https://github.com/callmesoul/hexo-theme-soul/tree/master
+  preview: https://callmesoul.cn
+  tags:
+    - 中文 
+    - responsive
+    - dark
+    - design
+    - seo
+    - 设计
+    - literary

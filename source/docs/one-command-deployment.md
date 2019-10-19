@@ -1,5 +1,5 @@
 ---
-title: Other Deployments
+title: One-Command Deployment
 ---
 
 Hexo provides a fast and easy deployment strategy. You only need one single command to deploy your site to your servers.
@@ -222,10 +222,10 @@ $ npm i -g now
 
 2. Add a build script to your `package.json` file:
 
-```
+```json
 {
   "scripts": {
-    "build: "hexo deploy"
+    "build": "hexo generate"
   }
 }
 ```
@@ -235,6 +235,10 @@ $ npm i -g now
 ```bash
 now
 ```
+
+Alternatively, you can click the deploy button below to create a new project:
+
+[![Deploy Now](https://zeit.co/button)](https://zeit.co/new/hexo)
 
 ## Other Methods
 

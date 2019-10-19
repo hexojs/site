@@ -26,14 +26,15 @@ date: 2013/7/13 20:46:25
 Setting | Description | Default
 --- | --- | ---
 `layout` | Layout |
-`title` | Title |
+`title` | Title | Filename (posts only)
 `date` | Published date | File created date
 `updated` | Updated date | File updated date
 `comments` | Enables comment feature for the post | true
 `tags` | Tags (Not available for pages) |
 `categories` | Categories (Not available for pages) |
 `permalink` | Overrides the default permalink of the post |
-`keywords ` | The keywords that only used in meta tag and Open Graph (not recommended) |
+`keywords` | The keywords that only used in meta tag and Open Graph (not recommended) |
+`excerpt` | Page excerpt in plain text. Use [this plugin](https://hexo.io/docs/tag-plugins#Post-Excerpt) to format the text |
 
 #### Categories & Tags
 

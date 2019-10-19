@@ -251,8 +251,26 @@ content
 
 ```
 {% post_path slug %}
-{% post_link slug [title] %}
+{% post_link slug [title] [escape] %}
 ```
+
+在使用此标签时可以忽略文章文件所在的路径或者文章的永久链接信息、如语言、日期。
+
+例如，在文章中使用 `{% raw %}{% post_link how-to-bake-a-cake %}{% endraw %}` 时，只需有一个名为 `how-to-bake-a-cake.md` 的文章文件即可。即使这个文件位于站点文件夹的 `source/posts/2015-02-my-family-holiday` 目录下、或者文章的永久链接是 `2018/en/how-to-bake-a-cake`，都没有影响。
+
+默认链接文字是文章的标题，你也可以自定义要显示的文本。此时不应该使用 Markdown 语法 `[]()`。
+
+**链接使用文章的标题**
+
+`{% raw %}{% post_link hexo-3-8-released %}{% endraw %}`
+
+{% post_link hexo-3-8-released %}
+
+**链接使用自定义文字**
+
+`{% raw %}{% post_link hexo-3-8-released '通往文章的链接' %}{% endraw %}`
+
+{% post_link hexo-3-8-released '通往文章的链接' %}
 
 ## 引用资源
 
@@ -261,7 +279,7 @@ content
 ```
 {% asset_path slug %}
 {% asset_img slug [title] %}
-{% asset_link slug [title] %}
+{% asset_link slug [title] [escape] %}
 ```
 
 ## Raw

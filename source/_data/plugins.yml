@@ -1,3 +1,10 @@
+- name: hexo-asset
+  description: Asset path format, fix original markdown image path when enabling post_asset_folder
+  link: https://github.com/cnzsb/hexo-asset
+  tags:
+    - asset
+    - image
+    - path
 - name: hexo-twitter-auto-publish
   description: Auto publish posts and pages on Twitter.
   link: https://github.com/studioLaCosaNostra/hexo-twitter-auto-publish
@@ -309,6 +316,13 @@
     - generator
     - acceleratedMobilePages
     - amp
+- name: hexo-auto-link-checker
+  description: This plugin for Hexo can automatically detects broken links.
+  link: https://github.com/tea3/hexo-auto-link-checker
+  tags:
+    - link
+    - brokenLinks
+    - request
 - name: hexo-related-popular-posts
   description: A hexo plugin that generates a list of links to related posts and popular posts. Also , this plugin can get Visitor Counts (PV) on posts.
   link: https://github.com/tea3/hexo-related-popular-posts
@@ -1887,7 +1901,7 @@
     - helper
     - count
     - symbols
-    - time2read
+    - reading-time
 - name: hexo-filter-optimize
   description: A hexo plugin that optimize the pages loading speed.
   link: https://github.com/theme-next/hexo-filter-optimize
@@ -1896,6 +1910,12 @@
     - lazyload
     - inline
     - bundle
+- name: hexo-generator-searchdb
+  description: Yet another search data generator for Hexo with more features.
+  link: https://github.com/theme-next/hexo-generator-searchdb
+  tags:
+    - generator
+    - search
 - name: hexo-renderer-markdown
   description: Markdown-it renderer plugin for Hexo.
   link: https://github.com/niemingzhao/hexo-renderer-markdown
@@ -2154,13 +2174,6 @@
     - compress
     - gzip
     - brotli
-- name: hexo-nofollow
-  description: Add SEO-friendly nofollow attribute to all external links in your posts. A more updated version of hexo-autonofollow.
-  link: https://github.com/curbengh/hexo-nofollow
-  tags:
-    - SEO
-    - nofollow
-    - external
 - name: hexo-graphviz
   description: Hexo plugin for rendering Graphviz plots
   link: https://github.com/sounak98/hexo-graphviz
@@ -2277,3 +2290,60 @@
     - options
     - parameters
     - customization
+- name: hexo-filter-nofollow
+  description: Add nofollow attribute to all external links automatically.
+  link: https://github.com/hexojs/hexo-filter-nofollow/
+  tags:
+    - official
+    - filter
+    - nofollow
+    - SEO
+    - external
+- name: hexo-filter-image
+  description: 自动为hexo中的图片映射绝对路径 | Automatically maps absolute paths to images in hexo
+  link: https://github.com/JoeyBling/hexo-filter-image
+  tags:
+    - filter
+    - image
+    - path
+    - asset
+- name: hexo-native-lazy-load
+  description: Add native lazy load to hexo page as well as optional fallback.
+  link: https://github.com/fengkx/hexo-native-lazy-load
+  tags:
+    - lazyload
+    - optimize
+- name: hexo-fun-time
+  description: A tag plugin to insert random Mandarin jokes in a post.
+  link: https://github.com/Drunkman/hexo-fun-time
+  tags:
+    - joke
+    - tag
+- name: hexo-hide-posts
+  description: A plugin to hide specific posts from your Hexo blog and make them only accessible by links.
+  link: https://github.com/printempw/hexo-hide-posts
+  tags:
+    - hide
+    - unlisted
+    - private
+- name: hexo-canonical-link
+  description: Set canonical link for pages, with support for external links.
+  link: https://github.com/tarunbatra/hexo-canonical-link
+  tags:
+    - canonical
+    - seo
+    - source
+- name: hexo-generator-indexed
+  description: Index generator plugin for Hexo, support more Front-matter parameters like sticky and hide.
+  link: https://github.com/stevenjoezhang/hexo-generator-indexed
+  tags:
+    - generator
+    - index
+    - sticky
+- name: hexo-filter-mathjax
+  description: Server side MathJax renderer plugin for Hexo. No front-end scripts are required.
+  link: https://github.com/stevenjoezhang/hexo-filter-mathjax
+  tags:
+    - filter
+    - math
+    - MathJax

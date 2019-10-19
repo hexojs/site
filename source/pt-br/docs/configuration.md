@@ -48,7 +48,10 @@ Configuração | Descrição | Padrão
 `new_post_name` | O formato do nome do arquivo para novas postagens | `:title.md`
 `default_layout` | Layout padrão | `post`
 `titlecase` | Transformar títulos em maiúsculo? | `false`
-`external_link` | Abrir links externos em uma nova aba? | `true`
+`external_link` | Abrir links externos em uma nova aba?
+`external_link.enable` | Abrir links externos em uma nova aba? | `true`
+`external_link.field` | Applies to the whole `site` or `post` only | `site`
+`external_link.exclude` | Exclude hostname. Specify subdomain when applicable, including `www` | `[]`
 `filename_case` | Converter nomes de arquivos para minúsculos `1`; maiúsculos `2` | `0`
 `render_drafts` | Exibir rascunhos? | `false`
 `post_asset_folder` | Ativar o [diretório de Asset](asset-folders.html)? | `false`
