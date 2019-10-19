@@ -11,10 +11,46 @@ You could easily [write your own custom helper](https://hexo.io/api/helper.html)
 
 ### url_for
 
-Returns a url with the root path prefixed. You should use this helper instead of `config.root + path` since Hexo 2.7.
+Returns a url with the root path prefixed. Output is encoded automatically.
 
 ``` js
-<%- url_for(path) %>
+<%- url_for(path, [option]) %>
+```
+
+Option | Description | Default
+--- | --- | ---
+`relative` | Output relative link | Value of `config.relative_link`
+
+**Examples:**
+
+``` yml
+_config.yml
+root: /blog/ # example
+```
+
+``` js
+<%- url_for('/a/path') %>
+// /blog/a/path
+```
+
+Relative link, follows `relative_link` option by default
+e.g. post/page path is '/foo/bar/index.html'
+
+``` yml
+_config.yml
+relative_link: true
+```
+
+``` js
+<%- url_for('/css/style.css') %>
+// ../../css/style.css
+
+/* Override option
+ * you could also disable it to output a non-relative link,
+ * even when `relative_link` is enabled and vice versa.
+ */
+<%- url_for('/css/style.css', {relative: false}) %>
+// /css/style.css
 ```
 
 ### relative_url
@@ -23,6 +59,13 @@ Returns the relative URL from `from` to `to`.
 
 ``` js
 <%- relative_url(from, to) %>
+```
+
+**Examples:**
+
+``` js
+<%- relative_url('foo/bar/', 'css/style.css') %>
+// ../../css/style.css
 ```
 
 ### full_url_for
@@ -47,12 +90,22 @@ url: https://example.com/blog # example
 
 ### gravatar
 
-Inserts a Gravatar image.
+Returns the gravatar image url from an email.
+
 If you didn't specify the [options] parameter, the default options will apply. Otherwise, you can set it to a number which will then be passed on as the size parameter to Gravatar. Finally, if you set it to an object, it will be converted into a query string of parameters for Gravatar.
 
 ``` js
 <%- gravatar(email, [options]) %>
 ```
+
+Option | Description | Default
+--- | --- | ---
+`s` | Output image size | 80
+`d` | Default image |
+`f` | Force default |
+`r` | Rating |
+
+More info: [Gravatar](https://en.gravatar.com/site/implement/images/)
 
 **Examples:**
 
