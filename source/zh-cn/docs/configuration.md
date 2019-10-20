@@ -54,7 +54,7 @@ pretty_urls:
 `category_dir` | 分类文件夹 | `categories`
 `code_dir` | Include code 文件夹，`source_dir` 下的子目录 | `downloads/code`
 `i18n_dir` | 国际化（i18n）文件夹 | `:lang`
-`skip_render` | 跳过指定文件的渲染。匹配到的文件将会被不做改动的复制到 `public` 目录中。您可使用 [glob 表达式](https://github.com/micromatch/micromatch#extended-globbing)来匹配路径。 |
+`skip_render` | 跳过指定文件的渲染。匹配到的文件将会被不做改动地复制到 `public` 目录中。您可使用 [glob 表达式](https://github.com/micromatch/micromatch#extended-globbing)来匹配路径。 |
 
 例如：
 
@@ -67,7 +67,7 @@ skip_render: "_posts/test-post.md"
 ```
 
 {% note info 提示 %}
-如果您刚刚开始接触Hexo，通常没有必要修改这一部分的值。
+如果您刚刚开始接触 Hexo，通常没有必要修改这一部分的值。
 {% endnote %}
 
 ## 文章
