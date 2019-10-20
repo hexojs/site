@@ -19,7 +19,7 @@ and rename all `*.jade` files to `*.pug`.
 - Final release, this plugin has been deprecated and replaced by [hexo-renderer-pug] [#35]
 - chore: drop node 6 [#29]
 
-### Dependency
+### Dependencies
 - Update eslint requirement from ^5.9.0 to ^6.1.0 [#28]
 - Update mocha requirement from ^5.2.0 to ^6.0.1 [#25]
 - chore(package): delete jscs & update eslint-config-hexo to 3.0.0 [#22]
