@@ -2,7 +2,7 @@
 title: Official plugins hexo-renderer-jade 0.5.0 & hexo-renderer-pug 1.0.0 released
 ---
 
-Since the upstream [jade] package has been replaced by [pug] package and no longer maintained, we've decided to deprecate [hexo-renderer-jade](https://github.com/hexojs/hexo-renderer-jade) and replace it with [hexo-renderer-pug].
+Since the upstream [jade] package has been replaced by [pug] package and no longer maintained, we've decided to deprecate [hexo-renderer-jade] and replace it with [hexo-renderer-pug].
 
 To migrate, update your "package.json",
 
@@ -16,7 +16,7 @@ and rename all `*.jade` files to `*.pug`.
 ## hexo-renderer-jade 0.5.0
 
 ### Breaking change
-- Final release, this plugin has been deprecated and replaced by [hexo-renderer-pug](https://github.com/hexojs/hexo-renderer-pug) [#35]
+- Final release, this plugin has been deprecated and replaced by [hexo-renderer-pug] [#35]
 - chore: drop node 6 [#29]
 
 ### Dependency
