@@ -88,7 +88,7 @@ skip_render: "_posts/test-post.md"
 `relative_link` | 把链接改为与根目录的相对位址 | false
 `future` | 显示未来的文章 | true
 `highlight` | 代码块的设置 |
-`highlight.enable` | 开启语法高亮 | `true`
+`highlight.enable` | 开启代码块高亮 | `true`
 `highlight.auto_detect` | 如果未指定语言，则启用自动检测 | `false`
 `highlight.line_number` | 显示行数 | `true`
 `highlight.tab_replace` | 用 n 个空格替换 tabs；如果值为空，则不会替换 tabs | `''`
