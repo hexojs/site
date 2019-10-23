@@ -80,7 +80,7 @@ skip_render: "_posts/test-post.md"
 `titlecase` | 把标题转换为 title case | false
 `external_link` | 在新标签中打开链接 | true
 `external_link.enable` | 在新标签中打开链接 | `true`
-`external_link.field` | 适用于整个网站或仅文章 | `site`
+`external_link.field` | 对整个网站（`site`）生效或仅对文章（`post`）生效 | `site`
 `external_link.exclude` | Exclude hostname. Specify subdomain when applicable, including `www` | `[]`
 `filename_case` | 把文件名称转换为 (1) 小写或 (2) 大写 | 0
 `render_drafts` | 显示草稿 | false
