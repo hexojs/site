@@ -609,6 +609,42 @@ Option | Description | Default
 `end_size` | The number of pages displayed on the start and the end side | 1
 `mid_size` | The number of pages displayed between current page, but not including current page | 2
 `show_all` | Display all pages. If this is set true, `end_size` and `mid_size` will not works. | false
+`escape` | Escape HTML tags | true
+
+**Examples:**
+
+``` js
+<%- paginator({
+  prev_text: '<',
+  next_text: '>'
+}) %>
+```
+
+``` html
+<!-- Rendered as -->
+<a href="/1/">&lt;</a>
+<a href="/1/">1</a>
+2
+<a href="/3/">3</a>
+<a href="/3/">&gt;</a>
+```
+
+``` js
+<%- paginator({
+  prev_text: '<i class="fa fa-angle-left"></i>',
+  next_text: '<i class="fa fa-angle-right"></i>',
+  escape: false
+}) %>
+```
+
+``` html
+<!-- Rendered as -->
+<a href="/1/"><i class="fa fa-angle-left"></i></a>
+<a href="/1/">1</a>
+2
+<a href="/3/">3</a>
+<a href="/3/"><i class="fa fa-angle-right"></i></a>
+```
 
 ### search_form
 
