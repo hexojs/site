@@ -54,7 +54,7 @@ pretty_urls:
 `category_dir` | 分类文件夹 | `categories`
 `code_dir` | Include code 文件夹，`source_dir` 下的子目录 | `downloads/code`
 `i18n_dir` | 国际化（i18n）文件夹 | `:lang`
-`skip_render` | 跳过指定文件的渲染。匹配到的文件将会被不做改动的复制到 `public` 目录中。您可使用 [glob 表达式](https://github.com/micromatch/micromatch#extended-globbing)来匹配路径。 |
+`skip_render` | 跳过指定文件的渲染。匹配到的文件将会被不做改动地复制到 `public` 目录中。您可使用 [glob 表达式](https://github.com/micromatch/micromatch#extended-globbing)来匹配路径。 |
 
 例如：
 
@@ -67,7 +67,7 @@ skip_render: "_posts/test-post.md"
 ```
 
 {% note info 提示 %}
-如果您刚刚开始接触Hexo，通常没有必要修改这一部分的值。
+如果您刚刚开始接触 Hexo，通常没有必要修改这一部分的值。
 {% endnote %}
 
 ## 文章
@@ -80,7 +80,7 @@ skip_render: "_posts/test-post.md"
 `titlecase` | 把标题转换为 title case | false
 `external_link` | 在新标签中打开链接 | true
 `external_link.enable` | 在新标签中打开链接 | `true`
-`external_link.field` | Applies to the whole `site` or `post` only | `site`
+`external_link.field` | 对整个网站（`site`）生效或仅对文章（`post`）生效 | `site`
 `external_link.exclude` | Exclude hostname. Specify subdomain when applicable, including `www` | `[]`
 `filename_case` | 把文件名称转换为 (1) 小写或 (2) 大写 | 0
 `render_drafts` | 显示草稿 | false
@@ -88,13 +88,13 @@ skip_render: "_posts/test-post.md"
 `relative_link` | 把链接改为与根目录的相对位址 | false
 `future` | 显示未来的文章 | true
 `highlight` | 代码块的设置 |
-`highlight.enable` | Enable syntax highlight | `true`
-`highlight.auto_detect` | Enable auto-detection if no language is specified | `false`
-`highlight.line_number` | Display line number | `true`
-`highlight.tab_replace` | Replace tabs by n space(s); if the value is empty, tabs won't be replaced | `''`
+`highlight.enable` | 开启代码块高亮 | `true`
+`highlight.auto_detect` | 如果未指定语言，则启用自动检测 | `false`
+`highlight.line_number` | 显示行数 | `true`
+`highlight.tab_replace` | 用 n 个空格替换 tabs；如果值为空，则不会替换 tabs | `''`
 
 {% note info 相对地址 %}
-默认情况下，Hexo生成的超链接都是绝对地址。例如，如果您的网站域名为`example.com`,您有一篇文章名为`hello`，那么绝对链接可能像这样：`http://example.com/hello.html`，它是**绝对**于域名的。相对链接像这样：`/hello.html`，也就是说，无论用什么域名访问该站点，都没有关系，这在进行反向代理时可能用到。通常情况下，建议使用绝对地址。
+默认情况下，Hexo 生成的超链接都是绝对地址。例如，如果您的网站域名为 `example.com`,您有一篇文章名为 `hello`，那么绝对链接可能像这样：`http://example.com/hello.html`，它是**绝对**于域名的。相对链接像这样：`/hello.html`，也就是说，无论用什么域名访问该站点，都没有关系，这在进行反向代理时可能用到。通常情况下，建议使用绝对地址。
 {% endnote %}
 
 ## 分类 & 标签
@@ -127,7 +127,7 @@ Hexo 使用 [Moment.js](http://momentjs.com/) 来解析和显示时间。
 参数 | 描述
 --- | ---
 `theme` | 当前主题名称。值为`false`时禁用主题
-`theme_config` | 主题的配置文件。在这里放置的配置会覆盖主题目录下的 _config.yml 中的配置
+`theme_config` | 主题的配置文件。在这里放置的配置会覆盖主题目录下的 `_config.yml` 中的配置
 `deploy` | 部署部分的设置
 `meta_generator` | [Meta generator](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/meta#%E5%B1%9E%E6%80%A7) 标签。 值为 `false` 时 Hexo 不会在头部插入该标签
 
