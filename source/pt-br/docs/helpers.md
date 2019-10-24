@@ -576,6 +576,42 @@ Opção | Descrição | Padrão
 `end_size` | O número de páginas exibidas no início e no final | 1
 `mid_size` | O número de páginas exibidas entre a página atual, mas não incluindo a página atual | 2
 `show_all` | Exibir todas as páginas. Se isso for definido como `true`, `end_size` e` mid_size` não irão funcionar. | false
+`escape` | Escape HTML tags | true
+
+**Examples:**
+
+``` js
+<%- paginator({
+  prev_text: '<',
+  next_text: '>'
+}) %>
+```
+
+``` html
+<!-- Rendered as -->
+<a href="/1/">&lt;</a>
+<a href="/1/">1</a>
+2
+<a href="/3/">3</a>
+<a href="/3/">&gt;</a>
+```
+
+``` js
+<%- paginator({
+  prev_text: '<i class="fa fa-angle-left"></i>',
+  next_text: '<i class="fa fa-angle-right"></i>',
+  escape: false
+}) %>
+```
+
+``` html
+<!-- Rendered as -->
+<a href="/1/"><i class="fa fa-angle-left"></i></a>
+<a href="/1/">1</a>
+2
+<a href="/3/">3</a>
+<a href="/3/"><i class="fa fa-angle-right"></i></a>
+```
 
 ### search_form
 

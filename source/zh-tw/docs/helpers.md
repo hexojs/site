@@ -558,6 +558,42 @@ title: 輔助函數（Helpers）
 `end_size` | 顯示於兩側的頁數 | 1
 `mid_size` | 顯示於中間的頁數 | 2
 `show_all` | 顯示所有頁數。如果開啟此設定的話，`end_size` 和 `mid_size` 就沒用了。 | false
+`escape` | Escape HTML tags | true
+
+**Examples:**
+
+``` js
+<%- paginator({
+  prev_text: '<',
+  next_text: '>'
+}) %>
+```
+
+``` html
+<!-- Rendered as -->
+<a href="/1/">&lt;</a>
+<a href="/1/">1</a>
+2
+<a href="/3/">3</a>
+<a href="/3/">&gt;</a>
+```
+
+``` js
+<%- paginator({
+  prev_text: '<i class="fa fa-angle-left"></i>',
+  next_text: '<i class="fa fa-angle-right"></i>',
+  escape: false
+}) %>
+```
+
+``` html
+<!-- Rendered as -->
+<a href="/1/"><i class="fa fa-angle-left"></i></a>
+<a href="/1/">1</a>
+2
+<a href="/3/">3</a>
+<a href="/3/"><i class="fa fa-angle-right"></i></a>
+```
 
 ### search_form
 
