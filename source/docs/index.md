@@ -82,3 +82,20 @@ Once installed, you can run Hexo in two ways:
   ```
 
   then run Hexo using `hexo <command>`
+
+### Compatibility
+
+If you are stuck with older Node.js, you can consider installing a past version of Hexo.
+
+Please note we do not provide bugfixes to past versions of Hexo.
+
+We highly recommend to always install the [latest version](https://www.npmjs.com/package/hexo?activeTab=versions) of Hexo and the [recommended version](#Requirements) of Node.js, whenever possible.
+
+Hexo version | Minimum Node.js version
+--- | ---
+4.1+ | 8.10
+4.0 | 8.6
+3.3 - 3.9 | 6.9
+3.2 - 3.3 | 0.12
+3.0 - 3.1 | 0.10 or iojs
+0.0.1 - 2.8 | 0.10 only
