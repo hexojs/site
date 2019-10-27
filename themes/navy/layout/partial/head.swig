@@ -41,6 +41,7 @@
     fb_admins: config.fb_admins,
     twitter_site: config.twitter
   }) }}
+  <meta property="article:tag" content="advocate, charity, crowdfunding, Healthcare, hospitals, Medical Bills, Medicare, negotiate, uninsured">
   <!-- Google Analytics -->
   {{ partial('google_analytics') }}
   <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
