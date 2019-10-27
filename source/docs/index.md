@@ -98,4 +98,4 @@ Hexo version | Minimum Node.js version
 3.3 - 3.9 | 6.9
 3.2 - 3.3 | 0.12
 3.0 - 3.1 | 0.10 or iojs
-0.0.1 - 2.8 | 0.10 only
+0.0.1 - 2.8 | 0.10
