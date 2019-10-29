@@ -81,7 +81,7 @@ skip_render: "_posts/test-post.md"
 `external_link` | 在新标签中打开链接 | true
 `external_link.enable` | 在新标签中打开链接 | `true`
 `external_link.field` | Applies to the whole `site` or `post` only | `site`
-`external_link.exclude` | Exclude hostname. Specify subdomain when applicable, including `www` | `[]`
+`external_link.exclude` | 需要排除的域名。主域名和子域名如 `www` 需分别配置 | `[]`
 `filename_case` | 把文件名称转换为 (1) 小写或 (2) 大写 | 0
 `render_drafts` | 显示草稿 | false
 `post_asset_folder` | 启动 [Asset 文件夹](asset-folders.html) | false
@@ -113,7 +113,7 @@ Hexo 使用 [Moment.js](http://momentjs.com/) 来解析和显示时间。
 --- | --- | ---
 `date_format` | 日期格式 | `YYYY-MM-DD`
 `time_format` | 时间格式 | `HH:mm:ss`
-`use_date_for_updated` | Use the date of the post in [`post.updated`](/zh-cn/docs/variables#页面变量) if no updated date is provided in the front-matter. Typically used with Git workflow | `true`  
+`use_date_for_updated` | 启用以后，如果 Front Matter 中没有指定 `updated`， [`post.updated`](/zh-cn/docs/variables#页面变量) 将会使用 `date` 的值而不是文件的创建时间。在 Git 工作流中这个选项会很有用 | `true`  
 
 ## 分页
 
