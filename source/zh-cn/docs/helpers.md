@@ -667,6 +667,42 @@ url: https://example.com/blog # example
 `end_size` | 显示于两侧的页数 | 1
 `mid_size` | 显示于中间的页数 | 2
 `show_all` | 显示所有页数。如果开启此参数的话，`end_size` 和 `mid_size` 就没用了。 | false
+`escape` | Escape HTML tags | true
+
+**Examples:**
+
+``` js
+<%- paginator({
+  prev_text: '<',
+  next_text: '>'
+}) %>
+```
+
+``` html
+<!-- Rendered as -->
+<a href="/1/">&lt;</a>
+<a href="/1/">1</a>
+2
+<a href="/3/">3</a>
+<a href="/3/">&gt;</a>
+```
+
+``` js
+<%- paginator({
+  prev_text: '<i class="fa fa-angle-left"></i>',
+  next_text: '<i class="fa fa-angle-right"></i>',
+  escape: false
+}) %>
+```
+
+``` html
+<!-- Rendered as -->
+<a href="/1/"><i class="fa fa-angle-left"></i></a>
+<a href="/1/">1</a>
+2
+<a href="/3/">3</a>
+<a href="/3/"><i class="fa fa-angle-right"></i></a>
+```
 
 ### search_form
 

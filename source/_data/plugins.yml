@@ -2273,7 +2273,7 @@
 - name: hexo-lunar-calendar
   description: Lunar calendar for hexo
   link: https://github.com/inchei/hexo-lunar-calendar
-  tags: 
+  tags:
     - date
     - calendar
 - name: hexo-tag-youtube-responsive
@@ -2347,3 +2347,10 @@
     - filter
     - math
     - MathJax
+- name: hexo-generator-random
+  description: Help you generate a random page to locate a random post in your hexo blog.
+  link: https://github.com/Drew233/hexo-generator-random
+  tags:
+    - generator
+    - post
+    - random   

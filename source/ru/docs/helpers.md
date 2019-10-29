@@ -568,6 +568,42 @@ title: Помощники
 `end_size` | Количество страниц, отображаемых с начала и конца. | 1
 `mid_size` | Количество страниц, отображаемых от текущей страницы. Текущая страница не включена. | 2
 `show_all` | Отобразить все страницы. Если установлено в `true`, `end_size` и `mid_size` не работают. | false
+`escape` | Escape HTML tags | true
+
+**Examples:**
+
+``` js
+<%- paginator({
+  prev_text: '<',
+  next_text: '>'
+}) %>
+```
+
+``` html
+<!-- Rendered as -->
+<a href="/1/">&lt;</a>
+<a href="/1/">1</a>
+2
+<a href="/3/">3</a>
+<a href="/3/">&gt;</a>
+```
+
+``` js
+<%- paginator({
+  prev_text: '<i class="fa fa-angle-left"></i>',
+  next_text: '<i class="fa fa-angle-right"></i>',
+  escape: false
+}) %>
+```
+
+``` html
+<!-- Rendered as -->
+<a href="/1/"><i class="fa fa-angle-left"></i></a>
+<a href="/1/">1</a>
+2
+<a href="/3/">3</a>
+<a href="/3/"><i class="fa fa-angle-right"></i></a>
+```
 
 ### search_form
 
