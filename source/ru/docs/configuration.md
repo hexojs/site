@@ -78,7 +78,7 @@ Hexo использует [Moment.js](http://momentjs.com/) для работы 
 --- | --- | ---
 `date_format` | Формат даты | `YYYY-MM-DD`
 `time_format` | Формат времени | `HH:mm:ss`
-`use_date_for_updated` | Use the date of the post in [`post.updated`](/ru/docs/variables#Переменные-страницы) if no updated date is provided in the front-matter. Typically used with Git workflow | `true`  
+`use_date_for_updated` | Use the date of the post in [`post.updated`](/ru/docs/variables#Переменные-страницы) if no updated date is provided in the front-matter. Typically used with Git workflow | `true`
 
 ### Разбивка на страницы
 
@@ -93,3 +93,103 @@ Hexo использует [Moment.js](http://momentjs.com/) для работы 
 --- | ---
 `theme` | Имя темы. `false` отключает применение тем
 `deploy` | Параметры публикации
+`meta_generator` | [Meta generator](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta#Attributes) tag. `false` disables injection of the tag.
+
+### Incluir/Excluir Arquivos ou Diretórios
+
+No arquivo de configuração, defina a chave de include/exclude para que o hexo processe ou ignore, explicitamente, determinados arquivos/diretórios.
+
+`include` and `exclude` options only apply to the `source/` folder, whereas `ignore` option applies to all folders.
+
+Configuração | Descrição
+--- | ---
+`include` | Por padrão, o Hexo ignora os arquivos e diretórios ocultos, mas configurar este campo fará com que o Hexo os processe também
+`exclude` | O Hexo irá ignorar os arquivos e diretórios listados abaixo deste campo
+`ignore` | Ignore files/folders
+
+Exemplo:
+```yaml
+# Incluir/Excluir Arquivos/Diretórios
+include:
+  - ".nojekyll"
+  # Include 'source/css/_typing.css'.
+  - "css/_typing.css"
+  # Include any file in 'source/_css/'.
+  - "_css/*"
+  # Include any file and subfolder in 'source/_css/'.
+  - "_css/**/*"
+
+exclude:
+  # Exclude 'source/js/test.js'.
+  - "js/test.js"
+  # Exclude any file in 'source/js/'.
+  - "js/*"
+  # Exclude any file and subfolder in 'source/js/'.
+  - "js/**/*"
+  # Exclude any file with filename that starts with 'test' in 'source/js/'.
+  - "js/test*"
+  # Exclude any file with filename that starts with 'test' in 'source/js/' and its subfolders.
+  - "js/**/test*"
+  # Do not use this to exclude posts in the 'source/_posts/'.
+  # Use skip_render for that. Or prepend an underscore to the filename.
+  # - "_posts/hello-world.md" # Does not work.
+
+ignore:
+  # Ignore any folder named 'foo'.
+  - "**/foo"
+  # Ignore 'foo' folder in 'themes/' only.
+  - "**/themes/*/foo"
+  # Same as above, but applies to every subfolders of 'themes/'.
+  - "**/themes/**/foo"
+```
+
+Each value in the list must be enclosed with single/double quotes.
+
+`include:` and `exclude:` do not apply to the `themes/` folder. Either use `ignore:` or alternatively, prepend an underscore to the file/folder name to exclude.
+
+\* Notable exception is the `source/_posts` folder, but any file or folder with a name that starts with an underscore under that folder would still be ignored. Using `include:` rule in that folder is not recommended.
+
+### Usando uma Configuração Alternativa
+
+Um arquivo de configuração personalizado pode ser especificado adicionando o sinalizador `--config` aos comandos do `hexo` com o caminho para o arquivo alternativo de configuração YAML ou JSON, ou até mesmo uma lista separada por vírgulas (sem espaços) de múltiplos arquivos YAML ou JSON.
+
+``` bash
+# usando 'custom.yml' no lugar de '_config.yml'
+$ hexo server --config custom.yml
+
+# usando 'custom.yml' e 'custom2.json', priorizando 'custom2.json'
+$ hexo server --config custom.yml,custom2.json
+```
+
+O uso de vários arquivos combina todos os arquivos de configuração e salva as configurações mescladas para `_multiconfig.yml`. Os valores posteriores prevalecem. Este recurso funciona com qualquer quantidade de arquivos JSON e YAML com objetos arbitrariamente profundos. Observe que **nenhum espaço é permitido na lista**.
+
+Por exemplo, no exemplo acima se `foo: bar` estiver em `custom.yml`, mas `"foo": "dinosaur"` estiver em `custom2.json`, `_multiconfig.yml` irá conter `foo: dinosaur`.
+
+### Sobrescrevendo as Configurações do Tema
+
+Os temas do Hexo são projetos independentes, com arquivos `_config.yml` separados.
+
+Em vez de dar fork em um tema e manter uma branch personalizada com suas configurações, você pode configurá-lo a partir do arquivo de configuração principal do seu site.
+
+Exemplo de configuração:
+
+```yml
+# _config.yml
+theme_config:
+  bio: "My awesome bio"
+```
+
+```yml
+# themes/my-theme/_config.yml
+bio: "Some generic bio"
+logo: "a-cool-image.png"
+```
+
+Resultado da configuração do tema:
+
+```json
+{
+  bio: "My awesome bio",
+  logo: "a-cool-image.png"
+}
+```
