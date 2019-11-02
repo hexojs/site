@@ -57,3 +57,23 @@
     </div>
   </div>
 </div>
+
+<div id="plugin-wrap">
+  <div class="wrapper">
+    <div class="inner plugin-wrapper">
+      <div class="plugin-thumbnail">
+        <div class="plugin-thumbnail-container">
+          <img src="/img/carbon.svg">
+        </div>
+      </div>
+      <div class="plugin-intro">
+        <div class="plugin-intro-container">
+          <h2 class="plugin-intro-title">Powerful API</h2>
+          <p class="plugin-intro-text">Features powerful APIs for limitless extensibility. Easily integrate with your existing toolchains (Babel, UglifyJS, PostCSS, HTMLMinifier and many others).</p>
+          <a href="/plugins/" class="plugin-link">Explore Plugins</a>
+          <a href="/plugins/" class="plugin-link">View API docs</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
