@@ -221,8 +221,8 @@ content
 รวมลิงก์ของโพสต์อื่นๆเข้าไปใน  block:
 
 ```
-{% post_path filename %}
-{% post_link filename [optional text] [escape] %}
+{% post_path slug %}
+{% post_link slug [title] [escape] %}
 ```
 
 เวลาใช้แท็กนี้ ข้อมูล permalink และ folder เช่น ภาษาและวันเดือนปี จะถูกละเลย
@@ -236,6 +236,8 @@ content
 แทนท่ีจะแสดงให้เห็นหัวข้อโพสต์  คุณสามารถตั้งค่าว่าอะไรของ text 
 จะโชว์ให้เห็นได้ดัวยการตั้งค่า `post_path` ส่วน syntax ท่ีเป็น `[]()` 
 จะไม่สนับสนุนโดย hexo ในท่ีนี่
+
+Post's title and custom text are escaped by default. You can use the `escape` option to disable escaping.
 
 ยกตัวอย่างเช่น:
 
@@ -251,6 +253,19 @@ content
 
 {% post_link hexo-3-8-released 'Link to a post' %}
 
+**Escape title.**
+
+```
+{% post_link hexo-4-released 'How to use <b> tag in title' %}
+```
+{% post_link hexo-4-released 'How to use <b> tag in title' %}
+
+**Do not escape title.**
+
+```
+{% post_link hexo-4-released '<b>bold</b> custom title' false %}
+```
+{% post_link hexo-4-released '<b>bold</b> custom title' false %}
 
 ## Include Assets
 

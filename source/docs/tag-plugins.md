@@ -252,8 +252,8 @@ Inserts a responsive or specified size Vimeo video.
 Include links to other posts.
 
 ```
-{% post_path filename %}
-{% post_link filename [optional text] [escape] %}
+{% post_path slug %}
+{% post_link slug [title] [escape] %}
 ```
 
 You can ignore permalink and folder information, like languages and dates, when using this tag.
