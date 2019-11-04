@@ -2870,3 +2870,12 @@
     - cool
     - hexo-theme
     - Simple
+- name: Starry
+  description: A responsive starry theme for Hexo.
+  link: https://github.com/meethigher/hexo-theme-starry
+  preview: https://meethigher.top/
+  tags:
+    - responsive
+    - rem
+    - simple
+    - pure
