@@ -260,6 +260,8 @@ content
 
 默认链接文字是文章的标题，你也可以自定义要显示的文本。此时不应该使用 Markdown 语法 `[]()`。
 
+默认对文章的标题和自定义标题里的特殊字符进行转义。可以使用`escape`选项，禁止对特殊字符进行转义。
+
 **链接使用文章的标题**
 
 `{% raw %}{% post_link hexo-3-8-released %}{% endraw %}`
@@ -271,6 +273,20 @@ content
 `{% raw %}{% post_link hexo-3-8-released '通往文章的链接' %}{% endraw %}`
 
 {% post_link hexo-3-8-released '通往文章的链接' %}
+
+**对标题的特殊字符进行转义**
+
+```
+{% post_link hexo-4-released 'How to use <b> tag in title' %}
+```
+{% post_link hexo-4-released 'How to use <b> tag in title' %}
+
+**禁止对标题的特殊字符进行转义**
+
+```
+{% post_link hexo-4-released '<b>bold</b> custom title' false %}
+```
+{% post_link hexo-4-released '<b>bold</b> custom title' false %}
 
 ## 引用资源
 
