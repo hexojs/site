@@ -218,8 +218,8 @@ Vimeo video를 포함시킬 수 있습니다.
 다른 포스트의 링크를 포함시킬 수 있습니다.
 
 ```
-{% post_path slug %}
-{% post_link slug [title] [escape] %}
+{% post_path filename %}
+{% post_link filename [title] [escape] %}
 ```
 
 You can ignore permalink and folder information, like languages and dates, when using this tag.
@@ -265,9 +265,9 @@ For instance:
 포스트의 asset을 포함시킬 수 있습니다.
 
 ```
-{% asset_path slug %}
-{% asset_img slug [title] %}
-{% asset_link slug [title] [escape] %}
+{% asset_path filename %}
+{% asset_img filename [title] %}
+{% asset_link filename [title] [escape] %}
 ```
 
 ## Raw

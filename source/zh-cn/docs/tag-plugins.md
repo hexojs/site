@@ -250,8 +250,8 @@ content
 引用其他文章的链接。
 
 ```
-{% post_path slug %}
-{% post_link slug [title] [escape] %}
+{% post_path filename %}
+{% post_link filename [title] [escape] %}
 ```
 
 在使用此标签时可以忽略文章文件所在的路径或者文章的永久链接信息、如语言、日期。
@@ -293,9 +293,9 @@ content
 引用文章的资源。
 
 ```
-{% asset_path slug %}
-{% asset_img slug [title] %}
-{% asset_link slug [title] [escape] %}
+{% asset_path filename %}
+{% asset_img filename [title] %}
+{% asset_link filename [title] [escape] %}
 ```
 
 ## Raw
