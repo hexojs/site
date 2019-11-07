@@ -2144,6 +2144,30 @@
     - js
     - ts
     - renderer
+- name: hexo-plugin-gitalk
+  description: Hexo 整合 gitalk 组件实现博客评论功能
+  link: https://github.com/snowdreams1006/hexo-plugin-gitalk
+  tags:
+    - hexo-plugin-gitalk
+    - gitbook-plugin-mygitalk
+    - mygitalk
+    - gitalk
+    - gitment
+    - discuss
+    - comment
+    - issues
+    - github
+    - gitbook
+    - hexo
+- name: hexo-plugin-readmore
+  description: Hexo 整合 OpenWrite 平台的 readmore 插件,实现博客的每一篇文章自动增加阅读更多效果,关注公众号后方可解锁全站文章,从而实现博客流量导流到微信公众号粉丝目的.
+  link: https://github.com/snowdreams1006/hexo-plugin-readmore
+  tags:
+    - hexo-plugin-readmore
+    - gitbook-plugin-readmore
+    - gitbook-plugin-openwrite
+    - openwrite
+    - readmore
 - name: hexo-plugin-permalink-pathed-title
   description: A plugin to show permalinks of posts according to their relative path, like '/dir1/dir2/post3'.
   link: https://github.com/EqualMa/hexo-plugin-permalink-pathed-title
