@@ -2505,7 +2505,7 @@
 - name: Clover
   description: A real simple theme
   link: https://github.com/esappear/hexo-theme-clover
-  preview: https://clovertuan.github.io/
+  preview: https://esappear.github.io/clover/
   tags:
     - simple
     - pure
