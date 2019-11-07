@@ -221,8 +221,8 @@ content
 รวมลิงก์ของโพสต์อื่นๆเข้าไปใน  block:
 
 ```
-{% post_path slug %}
-{% post_link slug [title] [escape] %}
+{% post_path filename %}
+{% post_link filename [title] [escape] %}
 ```
 
 เวลาใช้แท็กนี้ ข้อมูล permalink และ folder เช่น ภาษาและวันเดือนปี จะถูกละเลย
@@ -272,9 +272,9 @@ Post's title and custom text are escaped by default. You can use the `escape` op
 รวม post asset อยู่ใน block
 
 ```
-{% asset_path slug %}
-{% asset_img slug [title] %}
-{% asset_link slug [title] [escape] %}
+{% asset_path filename %}
+{% asset_img filename [title] %}
+{% asset_link filename [title] [escape] %}
 ```
 
 ## Raw
