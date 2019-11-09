@@ -135,10 +135,13 @@ Hexo 使用 [Moment.js](http://momentjs.com/) 来解析和显示时间。
 
 在 Hexo 配置文件中，通过设置 include/exclude 可以让 Hexo 进行处理或忽略某些目录和文件夹。你可以使用 [glob 表达式](https://github.com/isaacs/minimatch) 对目录和文件进行匹配。
 
+`include` and `exclude` options only apply to the `source/` folder, whereas `ignore` option applies to all folders.
+
 参数 | 描述
 --- | ---
 `include` | Hexo 默认会忽略隐藏文件和文件夹（包括名称以下划线和 `.` 开头的文件和文件夹，Hexo 的 `_posts` 和 `_data` 等目录除外）。通过设置此字段将使 Hexo 处理他们并将它们复制到 `source` 目录下。
 `exclude` | Hexo 会忽略这些文件和目录
+`ignore` | Ignore files/folders
 
 举例：
 
@@ -166,11 +169,19 @@ exclude:
   - "js/**/test*"
   # 不要用 exclude 来忽略 'source/_posts/' 中的文件。你应该使用 'skip_render'，或者在要忽略的文件的文件名之前加一个下划线 '_'
   # 在这里配置一个 - "_posts/hello-world.md" 是没有用的。
+
+ignore:
+  # Ignore any folder named 'foo'.
+  - "**/foo"
+  # Ignore 'foo' folder in 'themes/' only.
+  - "**/themes/*/foo"
+  # Same as above, but applies to every subfolders of 'themes/'.
+  - "**/themes/**/foo"
 ```
 
 列表中的每一项都必须用单引号或双引号包裹起来。
 
-`include` 和 `exclude` 并不适用于 `themes/` 目录下的文件。如果需要忽略 `themes/` 目录下的部分文件或文件夹，可以在文件名之前添加下划线 `_`。
+`include` 和 `exclude` 并不适用于 `themes/` 目录下的文件。如果需要忽略 `themes/` 目录下的部分文件或文件夹，可以使用 `ignore` 或在文件名之前添加下划线 `_`。
 
 ### 使用代替配置文件
 
