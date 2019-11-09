@@ -14,6 +14,7 @@ docs:
     server: server.html
     generating: generating.html
   deployment:
+    deployment: deployment.html
     github_pages: github-pages.html
     gitlab_pages: gitlab-pages.html
     one_command_deployment: one-command-deployment.html
