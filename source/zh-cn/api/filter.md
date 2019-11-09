@@ -10,7 +10,7 @@ hexo.extend.filter.register(type, function(){
 }, priority);
 ```
 
-您可以指定过滤器的优先级 `priority`，`priority` 值越低，过滤器会越早执行，默认的 `priority` 是 10。
+您可以指定过滤器的优先级 `priority`，`priority` 值越低，过滤器会越早执行，默认的 `priority` 是 10。我们建议提供配置选项如 `hexo.config.your_plugin.priority`、让用户自行决定过滤器的优先级。
 
 ## 执行过滤器
 

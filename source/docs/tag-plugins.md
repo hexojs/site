@@ -253,7 +253,7 @@ Include links to other posts.
 
 ```
 {% post_path filename %}
-{% post_link filename [optional text] [escape] %}
+{% post_link filename [title] [escape] %}
 ```
 
 You can ignore permalink and folder information, like languages and dates, when using this tag.
@@ -283,25 +283,25 @@ For instance:
 **Escape title.**
 
 ```
-{% post_link hexo-4-0-released 'How to use <b> tag in title' %}
+{% post_link hexo-4-released 'How to use <b> tag in title' %}
 ```
-{% post_link hexo-3-9-released 'How to use <b> tag in title' %}
+{% post_link hexo-4-released 'How to use <b> tag in title' %}
 
 **Do not escape title.**
 
 ```
-{% post_link hexo-4-0-released '<b>bold</b> custom title' false %}
+{% post_link hexo-4-released '<b>bold</b> custom title' false %}
 ```
-{% post_link hexo-3-9-released '<b>bold</b> custom title' false %}
+{% post_link hexo-4-released '<b>bold</b> custom title' false %}
 
 ## Include Assets
 
 Include post assets.
 
 ```
-{% asset_path slug %}
-{% asset_img slug [title] %}
-{% asset_link slug [title] [escape] %}
+{% asset_path filename %}
+{% asset_img filename [title] %}
+{% asset_link filename [title] [escape] %}
 ```
 
 ## Raw

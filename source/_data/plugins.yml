@@ -1060,6 +1060,14 @@
     - tag
     - echarts
     - chart
+- name: hexo-tag-abcjs
+  description: "A hexo tag for rendering abc music notation on your blog posts."
+  link: https://github.com/maiwenan/hexo-tag-abcjs
+  tags:
+    - tag
+    - abcjs
+    - notation
+    - piano
 - name: hexo-tag-htmltag
   description: "A Hexo tag for inserting arbitrary html tags (with attributes) into posts."
   link: https://github.com/seangravener/hexo-tag-htmlTag
@@ -2136,6 +2144,20 @@
     - js
     - ts
     - renderer
+- name: hexo-plugin-gitalk
+  description: Blog comments based on gitalk implementation
+  link: https://github.com/snowdreams1006/hexo-plugin-gitalk
+  tags:
+    - gitalk
+    - gitment
+    - discuss
+    - comment
+- name: hexo-plugin-readmore
+  description: Add read-more button for blog articles, follow WeChat public number to unlock the right to read, achieve the purpose of drainage.
+  link: https://github.com/snowdreams1006/hexo-plugin-readmore
+  tags:
+    - readmore
+    - openwrite
 - name: hexo-plugin-permalink-pathed-title
   description: A plugin to show permalinks of posts according to their relative path, like '/dir1/dir2/post3'.
   link: https://github.com/EqualMa/hexo-plugin-permalink-pathed-title
@@ -2353,4 +2375,16 @@
   tags:
     - generator
     - post
-    - random   
+    - random
+- name: hexo-unique-post-path
+  description: This plug-in helps Hexo create new posts with unique auto-generated paths.
+  link: https://github.com/dailyrandomphoto/hexo-unique-post-path
+  tags:
+    - generate
+    - unique
+    - path
+    - permalink
+    - id
+    - random
+    - date
+    - sequence

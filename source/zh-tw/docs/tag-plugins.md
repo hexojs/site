@@ -214,18 +214,56 @@ content
 引用其他文章的連結。
 
 ```
-{% post_path slug %}
-{% post_link slug [title] [escape] %}
+{% post_path filename %}
+{% post_link filename [title] [escape] %}
 ```
+
+You can ignore permalink and folder information, like languages and dates, when using this tag.
+
+For instance: `{% raw %}{% post_link how-to-bake-a-cake %}{% endraw %}`.
+
+This will work as long as the filename of the post is `how-to-bake-a-cake.md`, even if the post is located at `source/posts/2015-02-my-family-holiday` and has permalink `2018/en/how-to-bake-a-cake`.
+
+You can customize the text to display, instead of displaying the post's title. Using `post_path` inside Markdown syntax `[]()` is not supported.
+
+Post's title and custom text are escaped by default. You can use the `escape` option to disable escaping.
+
+For instance:
+
+**Display title of the post.**
+
+`{% raw %}{% post_link hexo-3-8-released %}{% endraw %}`
+
+{% post_link hexo-3-8-released %}
+
+**Display custom text.**
+
+`{% raw %}{% post_link hexo-3-8-released 'Link to a post' %}{% endraw %}`
+
+{% post_link hexo-3-8-released 'Link to a post' %}
+
+**Escape title.**
+
+```
+{% post_link hexo-4-released 'How to use <b> tag in title' %}
+```
+{% post_link hexo-4-released 'How to use <b> tag in title' %}
+
+**Do not escape title.**
+
+```
+{% post_link hexo-4-released '<b>bold</b> custom title' false %}
+```
+{% post_link hexo-4-released '<b>bold</b> custom title' false %}
 
 ## 引用資產
 
 引用文章的資產。
 
 ```
-{% asset_path slug %}
-{% asset_img slug [title] %}
-{% asset_link slug [title] [escape] %}
+{% asset_path filename %}
+{% asset_img filename [title] %}
+{% asset_link filename [title] [escape] %}
 ```
 
 ## Raw

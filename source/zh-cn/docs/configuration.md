@@ -15,7 +15,7 @@ title: 配置
 `keywords` | 网站的关键词。使用半角逗号 `,` 分隔多个关键词。
 `author` | 您的名字
 `language` | 网站使用的语言
-`timezone` | 网站时区。Hexo 默认使用您电脑的时区。[时区列表](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones)。比如说：`America/New_York`, `Japan`, 和 `UTC` 。
+`timezone` | 网站时区。Hexo 默认使用您电脑的时区。请参考 [时区列表](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) 进行设置，如 `America/New_York`, `Japan`, 和 `UTC` 。一般的，对于中国大陆地区可以使用 `Asia/Shanghai`。
 
 其中，`description`主要用于SEO，告诉搜索引擎一个关于您站点的简单描述，通常建议在其中包含您网站的关键词。`author`参数用于主题显示文章的作者。
 
@@ -81,7 +81,7 @@ skip_render: "_posts/test-post.md"
 `external_link` | 在新标签中打开链接 | true
 `external_link.enable` | 在新标签中打开链接 | `true`
 `external_link.field` | 对整个网站（`site`）生效或仅对文章（`post`）生效 | `site`
-`external_link.exclude` | Exclude hostname. Specify subdomain when applicable, including `www` | `[]`
+`external_link.exclude` | 需要排除的域名。主域名和子域名如 `www` 需分别配置 | `[]`
 `filename_case` | 把文件名称转换为 (1) 小写或 (2) 大写 | 0
 `render_drafts` | 显示草稿 | false
 `post_asset_folder` | 启动 [Asset 文件夹](asset-folders.html) | false
@@ -113,7 +113,7 @@ Hexo 使用 [Moment.js](http://momentjs.com/) 来解析和显示时间。
 --- | --- | ---
 `date_format` | 日期格式 | `YYYY-MM-DD`
 `time_format` | 时间格式 | `HH:mm:ss`
-`use_date_for_updated` | Use the date of the post in [`post.updated`](/zh-cn/docs/variables#页面变量) if no updated date is provided in the front-matter. Typically used with Git workflow | `true`
+`use_date_for_updated` | 启用以后，如果 Front Matter 中没有指定 `updated`， [`post.updated`](/zh-cn/docs/variables#页面变量) 将会使用 `date` 的值而不是文件的创建时间。在 Git 工作流中这个选项会很有用 | `true`  
 
 ## 分页
 

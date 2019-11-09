@@ -233,6 +233,36 @@ deploy:
 `passphrase` | （可省略）ssh私钥的密码短语 | 
 `agent` | ssh套接字的目录地址 | `$SSH_AUTH_SOCK`
 
+## ZEIT Now
+
+[ZEIT Now](https://zeit.co) 是一个托管静态网站和 Serverless APIs 的云平台。你可以一键将你的 Hexo 网站部署到 ZEIT Now、并使用自己的域名或者由 ZEIT Now 提供的免费子域名 `now.sh`。
+
+1. 安装 [Now CLI](https://zeit.co/download):
+
+```bash
+$ npm i -g now
+```
+
+2. 在 `package.json` 中添加 npm script:
+
+```json
+{
+  "scripts": {
+    "build": "hexo generate"
+  }
+}
+```
+
+3. 在 Hexo 所在目录执行下述指令：
+
+```bash
+now
+```
+
+你也可以使用下面的按钮在 ZEIT Now 创建一个 Hexo 项目。
+
+[![Deploy Now](https://zeit.co/button)](https://zeit.co/new/hexo)
+
 ## 其他方法
 
 Hexo 生成的所有文件都放在 `public` 文件夹中，您可以将它们复制到您喜欢的地方。

@@ -2505,7 +2505,7 @@
 - name: Clover
   description: A real simple theme
   link: https://github.com/esappear/hexo-theme-clover
-  preview: https://clovertuan.github.io/
+  preview: https://esappear.github.io/clover/
   tags:
     - simple
     - pure
@@ -2861,3 +2861,21 @@
     - seo
     - 设计
     - literary
+- name: Yin
+  description: A Simple Theme for hexo.
+  link: https://github.com/Yin-Hongwei/hexo-theme-Yin
+  preview: https://yin-hongwei.github.io/
+  tags:
+    - Beautiful
+    - cool
+    - hexo-theme
+    - Simple
+- name: Starry
+  description: A responsive starry theme for Hexo.
+  link: https://github.com/meethigher/hexo-theme-starry
+  preview: https://meethigher.top/
+  tags:
+    - responsive
+    - rem
+    - simple
+    - pure

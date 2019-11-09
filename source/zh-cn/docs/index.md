@@ -12,7 +12,7 @@ Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 [Markdown](h
 
 ## 安装
 
-安装 Hexo 只需几分钟时间，若您在安装过程中遇到问题或无法找到解决方式，请[提交问题](https://github.com/hexojs/hexo/issues)，我会尽力解决您的问题。
+安装 Hexo 只需几分钟时间，若您在安装过程中遇到问题或无法找到解决方式，请[提交问题](https://github.com/hexojs/hexo/issues)，我们会尽力解决您的问题。
 
 ### 安装前提
 
@@ -21,68 +21,44 @@ Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 [Markdown](h
 - [Node.js](http://nodejs.org/) (Node.js 版本需不低于 8.6，建议使用 Node.js 10.0 及以上版本)
 - [Git](http://git-scm.com/)
 
-如果您的电脑中已经安装上述必备程序，那么恭喜您！接下来只需要使用 npm 即可完成 Hexo 的安装。
-
-``` bash
-$ npm install -g hexo-cli
-```
+如果您的电脑中已经安装上述必备程序，那么恭喜您！你可以直接前往 [安装 Hexo](#安装-Hexo) 步骤。
 
 如果您的电脑中尚未安装所需要的程序，请根据以下安装指示完成安装。
-
-{% note warn Mac 用户 %}
-您在编译时可能会遇到问题，请先到 App Store 安装 Xcode，Xcode 完成后，启动并进入 **Preferences -> Download -> Command Line Tools -> Install** 安装命令行工具。
-{% endnote %}
-
-{% note warn For Mac / Linux 用户 %}
-如果你是 macOS 用户，或者是通过软件管理器从默认软件仓库安装 Node.js 的 Linux 用户，在使用 npm 的 `-g` 参数时可能会遇到一些权限相关的问题。请遵循 [由 npmjs 发布的指导](https://docs.npmjs.com/resolving-eacces-permissions-errors-when-installing-packages-globally) 修复该问题，**并且不要使用 root、sudo 等方法覆盖权限**
-{% endnote %}
 
 ### 安装 Git
 
 - Windows：下载并安装 [git](https://git-scm.com/download/win).
-- Mac：使用 [Homebrew](http://mxcl.github.com/homebrew/), [MacPorts](http://www.macports.org/) ：`brew install git`;或下载 [安装程序](http://sourceforge.net/projects/git-osx-installer/) 安装。
+- Mac：使用 [Homebrew](http://mxcl.github.com/homebrew/), [MacPorts](http://www.macports.org/) 或者下载 [安装程序](http://sourceforge.net/projects/git-osx-installer/)。
 - Linux (Ubuntu, Debian)：`sudo apt-get install git-core`
 - Linux (Fedora, Red Hat, CentOS)：`sudo yum install git-core`
 
-{% note warn Windows 用户 %}
-由于众所周知的原因，从上面的链接下载git for windows最好挂上一个代理，否则下载速度十分缓慢。也可以参考[这个页面](https://github.com/waylau/git-for-win)，收录了存储于百度云的下载地址。
+{% note warn Mac 用户 %}
+如果在编译时可能会遇到问题，请先到 App Store 安装 Xcode，Xcode 完成后，启动并进入 **Preferences -> Download -> Command Line Tools -> Install** 安装命令行工具。
+{% endnote %}
+
+{% note info Windows 用户 %}
+对于中国大陆地区用户，可以前往 [淘宝 Git for Windows 镜像](https://npm.taobao.org/mirrors/git-for-windows/) 下载 git 安装包。
 {% endnote %}
 
 ### 安装 Node.js
 
-安装 Node.js 的最佳方式是使用 [nvm](https://github.com/nvm-sh/nvm)。nvm 的开发者提供了一个自动安装 nvm 的简单脚本：
+Node.js 为大多数平台提供了官方的 [安装程序](https://nodejs.org/en/download/)。对于中国大陆地区用户，可以前往 [淘宝 Node.js 镜像](https://npm.taobao.org/mirrors/node) 下载。
 
-cURL:
+其它的安装方法：
 
-``` bash
-$ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | sh
-```
+- Windows：通过 [nvs](https://github.com/jasongin/nvs/)（推荐）或者[nvm](https://github.com/nvm-sh/nvm) 安装。
+- Mac：使用 [Homebrew](https://brew.sh/) 或 [MacPorts](http://www.macports.org/) 安装。
+- Linux（DEB/RPM-based）：从 [NodeSource](https://github.com/nodesource/distributions) 安装。
+- 其它：使用相应的软件包管理器进行安装，可以参考由 Node.js 提供的 [指导](https://nodejs.org/en/download/package-manager/)
 
-Wget:
-
-``` bash
-$ wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | sh
-```
-
-安装完成后，重启终端并执行下列命令即可安装 Node.js。
-
-``` bash
-$ nvm install node
-```
+对于 Mac 和 Linux 同样建议使用 nvs 或者 nvm，以避免可能会出现的权限问题。
 
 {% note info Windows 用户 %}
-对于 Windows 用户我们推荐使用 [nvs](https://github.com/jasongin/nvs/) 而不是 nvm。nvs 具有和 nvm 相似的命令行语法，并且可以通过 Windows Installer (MSI) 安装包进行安装。
+使用 Node.js 官方安装程序时，请确保勾选 **Add to PATH** 选项（默认已勾选）
 {% endnote %}
 
-或者您也可以下载 [安装程序](http://nodejs.org/) 来安装。
-
-{% note info Windows 用户 %}
-对于windows用户来说，建议使用安装程序进行安装。安装时，请勾选**Add to PATH**选项。
-另外，您也可以使用**Git Bash**，这是git for windows自带的一组程序，提供了Linux风格的shell，在该环境下，您可以直接用上面提到的命令来安装Node.js。打开它的方法很简单，在任意位置单击右键，选择“Git Bash Here”即可。由于Hexo的很多操作都涉及到命令行，您可以考虑始终使用**Git Bash**来进行操作。
-{% endnote %}
-
-{% note info Linux 用户 %}
-大部分 Linux 发行版都会在它们的默认软件包仓库中分发 Node.js。第三方仓库 [NodeSource](https://github.com/nodesource/distributions) 通常能分发最新版本的 Node.js。
+{% note warn For Mac / Linux 用户 %}
+如果在尝试安装 Hexo 的过程中出现 `EACCES` 权限错误，请遵循 [由 npmjs 发布的指导](https://docs.npmjs.com/resolving-eacces-permissions-errors-when-installing-packages-globally) 修复该问题。强烈建议 **不要** 使用 root、sudo 等方法覆盖权限
 {% endnote %}
 
 ### 安装 Hexo
@@ -93,4 +69,20 @@ $ nvm install node
 $ npm install -g hexo-cli
 ```
 
+### 进阶安装和使用
+
+对于熟悉 npm 的进阶用户，可以仅局部安装 `hexo` 包。
+
+``` bash
+$ npm install hexo
+```
+
+安装以后，可以使用以下两种方式执行 Hexo：
+
+1. `npx hexo <command>`
+2. 将 Hexo 所在的目录下的 `node_modules` 添加到环境变量之中即可直接使用 `hexo <command>`：
+
+  ``` bash
+  echo 'PATH="$PATH:./node_modules/.bin"' >> ~/.profile
+  ```
 
