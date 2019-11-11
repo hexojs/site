@@ -1,3 +1,12 @@
+- name: A-Snail
+  description: A beautiful hexo theme
+  link: https://github.com/dusign/hexo-theme-snail
+  preview: https://www.dusign.net
+  tags: 
+    - beautiful
+    - simple
+    - light
+    - star
 - name: Hermes 
   description: Opinionated fork of the Apollo theme
   link: https://github.com/claymcleod/hexo-theme-hermes
