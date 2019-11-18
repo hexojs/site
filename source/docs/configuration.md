@@ -84,6 +84,8 @@ Setting | Description | Default
 `highlight.auto_detect` | Enable auto-detection if no language is specified | `false`
 `highlight.line_number` | Display line number | `true`
 `highlight.tab_replace` | Replace tabs by n space(s); if the value is empty, tabs won't be replaced | `''`
+`highlight.wrap` | Wrap the code block in [`<table>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table)<br>_This option is always enabled if `line_number` is enabled_ | `true`
+`highlight.hljs` | Use the `hljs-*` prefix for CSS classes<br>_Enabling this option will also enable `wrap` option_ | `false`
 
 ### Home page setting
 
