@@ -47,12 +47,12 @@ deploy:
   message: [message] #leave this blank
 ```
 
-| Option    | Description | Default
-| --------- | --- |
-| `repo`    | URL of the target repository |
-| `branch`  | Branch name. | `gh-pages` (GitHub)<br>`coding-pages` (Coding.net)<br>`master` (others)
-| `message` | Customize commit message. Defaults to `Site updated: {% raw %}{{ now('YYYY-MM-DD HH:mm:ss') }}{% endraw %}` |
-| `token`   | Optional token value to authenticate with the repo. Prefix with `$` to read token from environment variable |
+| Option | Description | Default |
+|--------|-------------|---------|
+| `repo`    | URL of the target repository                                                                                |                                                                         |
+| `branch`  | Branch name.                                                                                                | `gh-pages` (GitHub)<br>`coding-pages` (Coding.net)<br>`master` (others) |
+| `message` | Customize commit message. Defaults to `Site updated: {% raw %}{{ now('YYYY-MM-DD HH:mm:ss') }}{% endraw %}` |                                                                         |
+| `token`   | Optional token value to authenticate with the repo. Prefix with `$` to read token from environment variable |                                                                         |
 
 3. Deploy your site `hexo clean && hexo deploy`.
   - You will be prompted with username and password of the target repository, unless you authenticate with a token or ssh key.
