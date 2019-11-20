@@ -2879,7 +2879,7 @@
     - rem
     - simple
     - pure
-- name: hexo-theme-clean-dark
+- name: clean-dark
   description: A Simple Clean Dark Theme for Hexo
   link: https://github.com/howardliu-cn/hexo-theme-clean-dark
   preview: https://www.howardliu.cn
