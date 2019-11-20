@@ -2,13 +2,15 @@
 title: One-Command Deployment
 ---
 
-Hexo provides a fast and easy deployment strategy. You only need one single command to deploy your site to your servers.
+Hexo provides a fast and easy deployment strategy. You only need one single command to deploy your site to your server.
 
 ```bash
 $ hexo deploy
 ```
 
-Before your first deployment, you will have to modify some settings in `_config.yml`. A valid deployment setting must have a `type` field. For example:
+Install the necessary plugin(s) that is compatible with the deployment method provided by your server/repository.
+
+Deployment is usually configured through **\_config.yml**. A valid configuration must have the `type` field. For example:
 
 ```yaml
 deploy:
@@ -24,6 +26,8 @@ deploy:
 - type: heroku
   repo:
 ```
+
+Refer to the [Plugins](https://hexo.io/plugins/) list for more deployment plugins.
 
 ## Git
 
@@ -43,18 +47,17 @@ deploy:
   message: [message] #leave this blank
 ```
 
-| Option    | Description                                                                                                 |
-| --------- | ----------------------------------------------------------------------------------------------------------- |
-| `repo`    | GitHub/Bitbucket/Coding/GitLab repository URL                                                               |
-| `branch`  | Branch name. The deployer will detect the branch automatically if you are using GitHub or GitCafe.          |
-| `message` | Customize commit message (Default to `Site updated: {% raw %}{{ now('YYYY-MM-DD HH:mm:ss') }}{% endraw %}`) |
+| Option    | Description | Default
+| --------- | --- |
+| `repo`    | URL of the target repository |
+| `branch`  | Branch name. | `gh-pages` (GitHub)<br>`coding-pages` (Coding.net)<br>`master` (others)
+| `message` | Customize commit message. Defaults to `Site updated: {% raw %}{{ now('YYYY-MM-DD HH:mm:ss') }}{% endraw %}` |
+| `token`   | Optional token value to authenticate with the repo. Prefix with `$` to read token from environment variable |
 
-3. Upload your site: `./node_modules/.bin/hexo clean && ./node_modules/.bin/hexo deploy` (or `hexo clean && hexo deploy` if you installed Hexo globally).
-4. On Github/BitBucket/Gitlab go to your repository settings and change your main branch from `master` to `published` (or whatever you called it in your \_config.yml). Now your site will show as your account's homepage.
-
-### How does it work exactly?
-
-Your repository will have a **master** branch when you first made it. Keep working on this branch to create your site. When you deploy Hexo will create, or update, a new branch on the remote site (called **published** in the config above). Deployment won't create a new branch locally, nor will it mess with your existing source code in the master branch locally or on the remote. You still need to keep pushing commits to the master branch manually to the remote server to keep your site backed up. In addition, if you are using a CNAME file to customize your Github Pages domain name, you need to put the CNAME file under `source_dir` so that Hexo can push it to the published branch.
+3. Deploy your site `hexo clean && hexo deploy`.
+  - You will be prompted with username and password of the target repository, unless you authenticate with a token or ssh key.
+  - hexo-deployer-git does not store your username and password. Use [git-credential-cache](https://git-scm.com/docs/git-credential-cache) to store them temporarily.
+4. Navigate to your repository settings and change the "Pages" branch to `gh-pages` (or the branch specified in your config). The deployed site should be live on the link shown on the "Pages" setting.
 
 ## Heroku
 
