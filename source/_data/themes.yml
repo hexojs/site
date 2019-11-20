@@ -2830,7 +2830,7 @@
   link: https://github.com/shixiaohu2206/hexo-theme-huhu
   preview: https://blog.utone.xyz
   tags:
-    - 中文 
+    - 中文
     - Simple
     - google-analytics
     - leetcode
@@ -2843,7 +2843,7 @@
   link: https://github.com/TriDiamond/hexo-theme-obsidian
   preview: https://tridiamond.me
   tags:
-    - 中文 
+    - 中文
     - responsive
     - elegan
     - google-analytics
@@ -2855,7 +2855,7 @@
   link: https://github.com/callmesoul/hexo-theme-soul/tree/master
   preview: https://callmesoul.cn
   tags:
-    - 中文 
+    - 中文
     - responsive
     - dark
     - design
@@ -2880,3 +2880,17 @@
     - rem
     - simple
     - pure
+- name: clean-dark
+  description: A Simple Clean Dark Theme for Hexo
+  link: https://github.com/howardliu-cn/hexo-theme-clean-dark
+  preview: https://www.howardliu.cn
+  tags:
+    - hexo-theme
+    - clean-dark
+    - Responsive
+    - Customizable
+    - Simple
+    - Elegant
+    - 中文
+    - 阅读数统计
+    - 回复
