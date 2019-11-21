@@ -24,29 +24,37 @@ deploy:
   repo:
 ```
 
+Refer to the [Plugins](https://hexo.io/plugins/) list for more deployment plugins.
+
 ## Git
 
-Instale o pacote [hexo-deployer-git].
+1. Install [hexo-deployer-git].
 
-``` bash
+```bash
 $ npm install hexo-deployer-git --save
 ```
 
-Editando as configurações.
+2. Edit **\_config.yml** (with example values shown below as comments):
 
-``` yaml
+```yaml
 deploy:
   type: git
-  repo: <repository url>
+  repo: <repository url> #https://bitbucket.org/JohnSmith/johnsmith.bitbucket.io
   branch: [branch]
   message: [message]
 ```
 
-Opção | Descrição
---- | ---
-`repo` | URL do repositório GitHub/Bitbucket/Coding/GitLab
-`branch` | Nome do branch. O implantador detectará o branch automaticamente se estiver usando o GitHub ou GitCafe.
-`message` | Customiza a mensagem de commit (O padrão é `Site updated: {% raw %}{{ now('YYYY-MM-DD HH:mm:ss') }}{% endraw %}`)
+Option | Description | Default
+--- | --- | ---
+`repo` | URL of the target repository |
+`branch` | Branch name. | `gh-pages` (GitHub)<br>`coding-pages` (Coding.net)<br>`master` (others)
+`message` | Customize commit message. | `Site updated: {% raw %}{{ now('YYYY-MM-DD HH:mm:ss') }}{% endraw %}`
+`token` | Optional token value to authenticate with the repo. Prefix with `$` to read token from environment variable
+
+3. Deploy your site `hexo clean && hexo deploy`.
+  - You will be prompted with username and password of the target repository, unless you authenticate with a token or ssh key.
+  - hexo-deployer-git does not store your username and password. Use [git-credential-cache](https://git-scm.com/docs/git-credential-cache) to store them temporarily.
+4. Navigate to your repository settings and change the "Pages" branch to `gh-pages` (or the branch specified in your config). The deployed site should be live on the link shown on the "Pages" setting.
 
 ## Heroku
 
