@@ -25,7 +25,7 @@ We have released a new version of the official plugins [hexo-util], [hexo-genera
   * For background, see [hexojs/hexo#3833] & [hexojs/hexo#3846]
 - Remove unnecessary new line `<br>` element from codeblock [#132]
 - Handle underscore sign in [`permalink()`] [#139]
-- Applies `pretty_url.trailing_index` [option](https://hexo.io/docs/configuration#URL) to `url_for()` and `full_url_for()`, to remove the trailing `index.html` from links. [#134]
+- Applies `pretty_urls.trailing_index` [option](https://hexo.io/docs/configuration#URL) to `url_for()` and `full_url_for()`, to remove the trailing `index.html` from links. [#134]
 - Replace [node-html-entities] with [`escapeHTML()`] in [`highlight()`] [#129]
   * `escapeHTML()` escapes more characters compared to node-html-entities.
   * This also means more unsafe characters are now escaped in codeblock
