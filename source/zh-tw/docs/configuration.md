@@ -61,6 +61,10 @@ title: 配置
 `relative_link` | 把連結改為與根目錄的相對位址 | `false`
 `future` | 顯示未來的文章 | `true`
 `highlight` | 程式碼區塊的設定 |
+`highlight.enable` | Enable syntax highlight | `true`
+`highlight.auto_detect` | Enable auto-detection if no language is specified | `false`
+`highlight.line_number` | Display line number | `true`
+`highlight.tab_replace` | Replace tabs by n space(s); if the value is empty, tabs won't be replaced | `''`
 
 ### 分類 & 標籤
 
@@ -78,6 +82,7 @@ Hexo 使用 [Moment.js](http://momentjs.com/) 來解析和顯示時間。
 --- | --- | ---
 `date_format` | 日期格式 | `YYYY-MM-DD`
 `time_format` | 時間格式 | `HH:mm:ss`
+`use_date_for_updated` | Use the date of the post in [`post.updated`](/zh-tw/docs/variables#頁面變數) if no updated date is provided in the front-matter. Typically used with Git workflow | `true`
 
 ### 分頁
 
@@ -98,19 +103,52 @@ Hexo 使用 [Moment.js](http://momentjs.com/) 來解析和顯示時間。
 
 Hexo 會根據配置檔中 `include` / `exlude` 欄位設定，了解要 處理/忽略 哪些特定的檔案或資料夾。
 
+`include` and `exclude` options only apply to the `source/` folder, whereas `ignore` option applies to all folders.
+
 設定 | 描述
 --- | ---
 `include` | Hexo 預設會忽略隱藏檔與隱藏資料夾，但列在這個欄位中的檔案，Hexo 仍然會去處理
 `exclude` | 列在這裡的檔案將會被 Hexo 忽略
+`ignore` | Ignore files/folders
 
 範例:
 ```yaml
 # 包含/排除 檔案或資料夾
 include:
-  - .nojekyll
+  - ".nojekyll"
+  # 包括 'source/css/_typing.css'
+  - "css/_typing.css"
+  # 包括 'source/_css/' 中的任何文件，但不包括子目录及其其中的文件。
+  - "_css/*"
+  # 包含 'source/_css/' 中的任何文件和子目录下的任何文件
+  - "_css/**/*"
+
 exclude:
-  - .DS_Store
+  # 不包括 'source/js/test.js'
+  - "js/test.js"
+  # 不包括 'source/js/' 中的文件、但包括子目录下的所有目录和文件
+  - "js/*"
+  # 不包括 'source/js/' 中的文件和子目录下的任何文件
+  - "js/**/*"
+  # 不包括 'source/js/' 目录下的所有文件名以 'test' 开头的文件，但包括其它文件和子目录下的单文件
+  - "js/test*"
+  # 不包括 'source/js/' 及其子目录中任何以 'test' 开头的文件
+  - "js/**/test*"
+  # 不要用 exclude 来忽略 'source/_posts/' 中的文件。你应该使用 'skip_render'，或者在要忽略的文件的文件名之前加一个下划线 '_'
+  # 在这里配置一个 - "_posts/hello-world.md" 是没有用的。
+
+ignore:
+  # Ignore any folder named 'foo'.
+  - "**/foo"
+  # Ignore 'foo' folder in 'themes/' only.
+  - "**/themes/*/foo"
+  # Same as above, but applies to every subfolders of 'themes/'.
+  - "**/themes/**/foo"
 ```
+
+列表中的每一項都必須用單引號或雙引號包裹起來。
+
+`include` 和 `exclude` 並不適用於 `themes/` 目錄下的文件。如果需要忽略 `themes/` 目錄下的部分文件或文件夾，可以使用 `ignore` 或在文件名之前添加下劃線 `_`。
 
 ### 使用替代配置檔
 

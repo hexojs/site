@@ -12,7 +12,7 @@ Setting | Description
 `description` | The description of your website
 `keywords` | The keywords of your website. Separate multiple keywords with commas `,`.
 `author` | Your name
-`language` | The language of your website. Use a [2-lettter ISO-639-1 code](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) or optionally [its variant](/docs/internationalization). Default is `en`.
+`language` | The language of your website. Use a [2-letter ISO-639-1 code](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) or optionally [its variant](/docs/internationalization). Default is `en`.
 `timezone` | The timezone of your website. Hexo uses the setting on your computer by default. You can find the list of available timezones [here](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones). Some examples are `America/New_York`, `Japan`, and `UTC`.
 
 ### URL
@@ -111,6 +111,7 @@ Setting | Description | Default
 --- | --- | ---
 `date_format` | Date format | `YYYY-MM-DD`
 `time_format` | Time format | `HH:mm:ss`
+`use_date_for_updated` | Use the date of the post in [`post.updated`](/docs/variables#Page-Variables) if no updated date is provided in the front-matter. Typically used with Git workflow | `true`
 
 ### Pagination
 
@@ -140,12 +141,15 @@ Setting | Description
 
 ### Include/Exclude Files or Folders
 
-In the config file, set the include/exclude key to make hexo explicitly process or ignore certain files/folders. You can use [glob expressions](https://github.com/micromatch/micromatch#extended-globbing) for path matching.
+Use the following options to explicitly process or ignore certain files/folders. Support [glob expressions](https://github.com/micromatch/micromatch#extended-globbing) for path matching.
+
+`include` and `exclude` options only apply to the `source/` folder, whereas `ignore` option applies to all folders.
 
 Setting | Description
 --- | ---
-`include` | Hexo by default ignores hidden files and folders (including files and folders with a name that start with an underscore, with an exception*), but setting this field will make Hexo process them.
-`exclude` | Hexo process will ignore files list under this field.
+`include` | Include hidden files (including files/folders with a name that start with an underscore, with an exception*)
+`exclude` | Exclude files/folders
+`ignore` | Ignore files/folders
 
 Examples:
 ```yaml
@@ -173,13 +177,21 @@ exclude:
   # Do not use this to exclude posts in the 'source/_posts/'.
   # Use skip_render for that. Or prepend an underscore to the filename.
   # - "_posts/hello-world.md" # Does not work.
+
+ignore:
+  # Ignore any folder named 'foo'.
+  - "**/foo"
+  # Ignore 'foo' folder in 'themes/' only.
+  - "**/themes/*/foo"
+  # Same as above, but applies to every subfolders of 'themes/'.
+  - "**/themes/**/foo"
 ```
 
 Each value in the list must be enclosed with single/double quotes.
 
-`include:` and `exclude:` do not apply to the `themes/` folder. Prepend an underscore to the files or folders name in that folder to exclude them.
+`include:` and `exclude:` do not apply to the `themes/` folder. Either use `ignore:` or alternatively, prepend an underscore to the file/folder name to exclude.
 
-* Notable exception is the `source/_posts` folder, but any file or folder with a name that starts with an underscore under that folder would still be ignored. Using `include:` rule in that folder is not recommended.
+\* Notable exception is the `source/_posts` folder, but any file or folder with a name that starts with an underscore under that folder would still be ignored. Using `include:` rule in that folder is not recommended.
 
 ### Using an Alternate Config
 

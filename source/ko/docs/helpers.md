@@ -571,6 +571,42 @@ Paginator를 삽입합니다.
 `end_size` | 시작/종료 측에 페이지의 개수를 표시합니다. | 1
 `mid_size` | 현재 페이지의 양쪽에 페이지의 개수를 표시합니다. 현재 페이지는 포함하지 않은 개수입니다. | 2
 `show_all` | 모든 페이지를 표시합니다. true로 설정되어있다면, `end_size`와 `mid_size`는 동작하지 않습니다. | false
+`escape` | Escape HTML tags | true
+
+**Examples:**
+
+``` js
+<%- paginator({
+  prev_text: '<',
+  next_text: '>'
+}) %>
+```
+
+``` html
+<!-- Rendered as -->
+<a href="/1/">&lt;</a>
+<a href="/1/">1</a>
+2
+<a href="/3/">3</a>
+<a href="/3/">&gt;</a>
+```
+
+``` js
+<%- paginator({
+  prev_text: '<i class="fa fa-angle-left"></i>',
+  next_text: '<i class="fa fa-angle-right"></i>',
+  escape: false
+}) %>
+```
+
+``` html
+<!-- Rendered as -->
+<a href="/1/"><i class="fa fa-angle-left"></i></a>
+<a href="/1/">1</a>
+2
+<a href="/3/">3</a>
+<a href="/3/"><i class="fa fa-angle-right"></i></a>
+```
 
 ### search_form
 

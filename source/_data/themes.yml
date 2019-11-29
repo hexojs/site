@@ -1,3 +1,21 @@
+- name: A-Snail
+  description: A beautiful hexo theme
+  link: https://github.com/dusign/hexo-theme-snail
+  preview: https://www.dusign.net
+  tags: 
+    - beautiful
+    - simple
+    - light
+    - star
+- name: Hermes 
+  description: Updated, opinionated continuation of the Apollo theme
+  link: https://github.com/claymcleod/hexo-theme-hermes
+  preview: https://claymcleod.github.io/hexo-theme-hermes/
+  tags:
+    - responsive
+    - one_column
+    - apollo
+    - light
 - name: Lights
   description: A simple theme
   link: https://github.com/F0r3at/Lights/
@@ -2497,7 +2515,7 @@
 - name: Clover
   description: A real simple theme
   link: https://github.com/esappear/hexo-theme-clover
-  preview: https://clovertuan.github.io/
+  preview: https://esappear.github.io/clover/
   tags:
     - simple
     - pure
@@ -2821,7 +2839,7 @@
   link: https://github.com/shixiaohu2206/hexo-theme-huhu
   preview: https://blog.utone.xyz
   tags:
-    - 中文 
+    - 中文
     - Simple
     - google-analytics
     - leetcode
@@ -2834,7 +2852,7 @@
   link: https://github.com/TriDiamond/hexo-theme-obsidian
   preview: https://tridiamond.me
   tags:
-    - 中文 
+    - 中文
     - responsive
     - elegan
     - google-analytics
@@ -2846,15 +2864,47 @@
   link: https://github.com/callmesoul/hexo-theme-soul/tree/master
   preview: https://callmesoul.cn
   tags:
-    - 中文 
+    - 中文
     - responsive
     - dark
     - design
     - seo
     - 设计
     - literary
+- name: Yin
+  description: A Simple Theme for hexo.
+  link: https://github.com/Yin-Hongwei/hexo-theme-Yin
+  preview: https://yin-hongwei.github.io/
+  tags:
+    - Beautiful
+    - cool
+    - hexo-theme
+    - Simple
+- name: Starry
+  description: A responsive starry theme for Hexo.
+  link: https://github.com/meethigher/hexo-theme-starry
+  preview: https://meethigher.top/
+  tags:
+    - responsive
+    - rem
+    - simple
+    - pure
+- name: clean-dark
+  description: A Simple Clean Dark Theme for Hexo
+  link: https://github.com/howardliu-cn/hexo-theme-clean-dark
+  preview: https://www.howardliu.cn
+  tags:
+    - hexo-theme
+    - clean-dark
+    - Responsive
+    - Customizable
+    - Simple
+    - Elegant
+    - 中文
+    - 阅读数统计
+    - 回复
 - name: Mdm
-  description:  A material design theme,with dark-mode.Suitable for PC & Phone
+  description:  A material design theme, with dark mode. Suitable for PC & Phone
   link: https://github.com/TonyChenn/mdm
   preview: https://tonychenn.cn
   tags:

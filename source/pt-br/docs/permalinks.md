@@ -41,7 +41,7 @@ categories:
 
 Definição | Resultado
 --- | ---
-`:year/:month/:day/:title/` | 2013/07/14/hello-world
+`:year/:month/:day/:title/` | 2013/07/14/hello-world/
 `:year-:month-:day-:title.html` | 2013-07-14-hello-world.html
 `:category/:title` | foo/bar/hello-world
 

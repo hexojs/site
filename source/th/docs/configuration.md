@@ -24,7 +24,7 @@ Setting | Description | Default
 `permalink_defaults` | Default values of each segment in permalink |
 
 {% note info Website in subdirectory %}
-ถ้าเว็บไซต์ของคุณอยู่ใน subdirectory (เช่น `http://example.org/blog` ) 
+ถ้าเว็บไซต์ของคุณอยู่ใน subdirectory (เช่น `http://example.org/blog` )
 ตั้งค่า `url` เป็น `http://example.org/blog` และตั้งค่า `root` เป็น `/blog/`
 {% endnote %}
 
@@ -58,6 +58,10 @@ Setting | Description | Default
 `relative_link` | Make links relative to the root folder? | `false`
 `future` | Display future posts? | `true`
 `highlight` | Code block settings |
+`highlight.enable` | Enable syntax highlight | `true`
+`highlight.auto_detect` | Enable auto-detection if no language is specified | `false`
+`highlight.line_number` | Display line number | `true`
+`highlight.tab_replace` | Replace tabs by n space(s); if the value is empty, tabs won't be replaced | `''`
 
 ### Category & Tag
 
@@ -75,6 +79,7 @@ Setting | Description | Default
 --- | --- | ---
 `date_format` | Date format | `YYYY-MM-DD`
 `time_format` | Time format | `HH:mm:ss`
+`use_date_for_updated` | Use the date of the post in [`post.updated`](/th/docs/variables#Page-Variables) if no updated date is provided in the front-matter. Typically used with Git workflow | `true`
 
 ### Pagination
 
@@ -90,31 +95,69 @@ Setting | Description
 `theme` | Theme name. `false` disables theming
 `theme_config` | Theme configuration. Include any custom theme settings under this key to override theme defaults.
 `deploy` | Deployment settings
+`meta_generator` | [Meta generator](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta#Attributes) tag. `false` disables injection of the tag.
 
 
 ### Include/Exclude Files or Folders
 
-ในไฟล์การตั้างค่า ตั้งค่า include/exclude ได้เพื่อทำให้ hexo 
+ในไฟล์การตั้างค่า ตั้งค่า include/exclude ได้เพื่อทำให้ hexo
 จัดการหรือละเลยไฟล์หรือ  folder เฉพาะ
+
+`include` and `exclude` options only apply to the `source/` folder, whereas `ignore` option applies to all folders.
+
 Setting | Description
 --- | ---
 `include` | Hexo by default ignores hidden files and folders, but setting this field will make Hexo process them
 `exclude` | Hexo process will ignore files list under this field
+`ignore` | Ignore files/folders
 
 ตัวอย่าง:
 ```yaml
 # Include/Exclude Files/Folders
 include:
-  - .nojekyll
+  - ".nojekyll"
+  # Include 'source/css/_typing.css'.
+  - "css/_typing.css"
+  # Include any file in 'source/_css/'.
+  - "_css/*"
+  # Include any file and subfolder in 'source/_css/'.
+  - "_css/**/*"
+
 exclude:
-  - .DS_Store
+  # Exclude 'source/js/test.js'.
+  - "js/test.js"
+  # Exclude any file in 'source/js/'.
+  - "js/*"
+  # Exclude any file and subfolder in 'source/js/'.
+  - "js/**/*"
+  # Exclude any file with filename that starts with 'test' in 'source/js/'.
+  - "js/test*"
+  # Exclude any file with filename that starts with 'test' in 'source/js/' and its subfolders.
+  - "js/**/test*"
+  # Do not use this to exclude posts in the 'source/_posts/'.
+  # Use skip_render for that. Or prepend an underscore to the filename.
+  # - "_posts/hello-world.md" # Does not work.
+
+ignore:
+  # Ignore any folder named 'foo'.
+  - "**/foo"
+  # Ignore 'foo' folder in 'themes/' only.
+  - "**/themes/*/foo"
+  # Same as above, but applies to every subfolders of 'themes/'.
+  - "**/themes/**/foo"
 ```
+
+Each value in the list must be enclosed with single/double quotes.
+
+`include:` and `exclude:` do not apply to the `themes/` folder. Either use `ignore:` or alternatively, prepend an underscore to the file/folder name to exclude.
+
+\* Notable exception is the `source/_posts` folder, but any file or folder with a name that starts with an underscore under that folder would still be ignored. Using `include:` rule in that folder is not recommended.
 
 ### Using an Alternate Config
 
-path ของไฟล์การตั้งค่าจะถูกตั้งค่าได้โดยการเพิ่ม flag `--config` หลังคำสั่ง 
-path นั้นสามารถชี้ถึงไฟล์การตั้งค่าท่ีมีรูปแบบเป็น YAML หรือ JSON 
-หรือมีหมวกไฟล์ท่ีตัดรายชื่อด้วยเครื่องหมายจุลภาค 
+path ของไฟล์การตั้งค่าจะถูกตั้งค่าได้โดยการเพิ่ม flag `--config` หลังคำสั่ง
+path นั้นสามารถชี้ถึงไฟล์การตั้งค่าท่ีมีรูปแบบเป็น YAML หรือ JSON
+หรือมีหมวกไฟล์ท่ีตัดรายชื่อด้วยเครื่องหมายจุลภาค
 
 ``` bash
 # use 'custom.yml' in place of '_config.yml'
@@ -124,10 +167,10 @@ $ hexo server --config custom.yml
 $ hexo server --config custom.yml,custom2.json
 ```
 
-การใช้ไฟล์ต่างๆจะทำให้เกิดการเปลี่ยนแปลงของไฟล์การตั้งค่าและ 
-การเปลี่ยนแปลงนั้นจะถูกบันทึกอยู่ในไฟล์ `_multiconfig.yml`  
-สำหรับการตั้งค่า parameter เดียวกันนั้น value ท่ีอยู่ตัวหลังจะเกิดผล  
-ไม่ว่ามีไฟล์ JSON และ YAML เป็นจำนวนเท่าไร ก็ปฏิบัติตามกฏอย่างนี้ 
+การใช้ไฟล์ต่างๆจะทำให้เกิดการเปลี่ยนแปลงของไฟล์การตั้งค่าและ
+การเปลี่ยนแปลงนั้นจะถูกบันทึกอยู่ในไฟล์ `_multiconfig.yml`
+สำหรับการตั้งค่า parameter เดียวกันนั้น value ท่ีอยู่ตัวหลังจะเกิดผล
+ไม่ว่ามีไฟล์ JSON และ YAML เป็นจำนวนเท่าไร ก็ปฏิบัติตามกฏอย่างนี้
 มีสิ่งท่ีต้องระวังคือ **no spaces are allowed in the list**
 
 
@@ -137,9 +180,9 @@ $ hexo server --config custom.yml,custom2.json
 
 ### Overriding Theme Config
 
-ธีมของ hexo เป็น project ที่ไม่พึ่งพาไฟล์อื่นๆใน  hexo และธีมนั้นจะมีไฟล์   
-`_config.yml` ของตน แม้ว่าธีมนั้นมีไฟล์การตั้งค่าของตน  
-แต่คุณก็ยังสามารถตั้งค่าได้ในไฟล์ `_config.yml`  ท่ีอยู่ใน root repository ของ 
+ธีมของ hexo เป็น project ที่ไม่พึ่งพาไฟล์อื่นๆใน  hexo และธีมนั้นจะมีไฟล์
+`_config.yml` ของตน แม้ว่าธีมนั้นมีไฟล์การตั้งค่าของตน
+แต่คุณก็ยังสามารถตั้งค่าได้ในไฟล์ `_config.yml`  ท่ีอยู่ใน root repository ของ
 hexo
 
 
