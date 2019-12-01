@@ -794,6 +794,10 @@ Option | Description | Default
 `updated` | Article modified time | `page.updated` if existed
 `language` | Article language | `page.lang` or `config.language`
 
+{% note warn %}
+`og:locale` tag won't be added if given `language` is not in 'language_TERRITORY' format. [`og:locale` documents](https://ogp.me/#optional).
+{% endnote %}
+
 ### toc
 
 Parses all heading tags (h1~h6) in the content and inserts a table of contents.
