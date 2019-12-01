@@ -42,17 +42,17 @@ $ npm install hexo-deployer-git --save
 ```yaml
 deploy:
   type: git
-  repo: <repository url> #https://bitbucket.org/JohnSmith/johnsmith.bitbucket.io
-  branch: [branch] #published
-  message: [message] #leave this blank
+  repo: <repository url> # https://bitbucket.org/JohnSmith/johnsmith.bitbucket.io
+  branch: [branch]
+  message: [message]
 ```
 
-| Option | Description | Default |
-|--------|-------------|---------|
-| `repo`    | URL of the target repository                                                                                |                                                                         |
-| `branch`  | Branch name.                                                                                                | `gh-pages` (GitHub)<br>`coding-pages` (Coding.net)<br>`master` (others) |
-| `message` | Customize commit message. Defaults to `Site updated: {% raw %}{{ now('YYYY-MM-DD HH:mm:ss') }}{% endraw %}` |                                                                         |
-| `token`   | Optional token value to authenticate with the repo. Prefix with `$` to read token from environment variable |                                                                         |
+Option | Description | Default
+--- | --- | ---
+`repo` | URL of the target repository |
+`branch` | Branch name. | `gh-pages` (GitHub)<br>`coding-pages` (Coding.net)<br>`master` (others)
+`message` | Customize commit message. | `Site updated: {% raw %}{{ now('YYYY-MM-DD HH:mm:ss') }}{% endraw %}`
+`token` | Optional token value to authenticate with the repo. Prefix with `$` to read token from environment variable
 
 3. Deploy your site `hexo clean && hexo deploy`.
   - You will be prompted with username and password of the target repository, unless you authenticate with a token or ssh key.

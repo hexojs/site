@@ -27,37 +27,41 @@ deploy:
   repo:
 ```
 
+Refer to the [Plugins](https://hexo.io/plugins/) list for more deployment plugins.
+
 {% note warn 缩进 %}
 YAML依靠缩进来确定元素间的从属关系。因此，请确保每个deployer的缩进长度相同，并且使用空格缩进。
 {% endnote %}
 
 ## Git
 
-安装 [hexo-deployer-git]。
+1. 安装 [hexo-deployer-git]。
 
 ``` bash
 $ npm install hexo-deployer-git --save
 ```
 
-修改配置。
+2. 修改配置。
 
 ``` yaml
 deploy:
   type: git
   repo: <repository url> #https://bitbucket.org/JohnSmith/johnsmith.bitbucket.io
-  branch: [branch] #published
+  branch: [branch]
   message: [message]
 ```
 
-参数 | 描述
---- | ---
-`repo` | 库（Repository）地址
-`branch` | 分支名称。如果不指定，则默认值为 master
-`message` | 自定义提交信息 (默认为 `Site updated: {% raw %}{{ now('YYYY-MM-DD HH:mm:ss') }}{% endraw %}`)
+参数 | 描述 | 默认
+--- | --- | ---
+`repo` | 库（Repository）地址 |
+`branch` | 分支名称 | `gh-pages` (GitHub)<br>`coding-pages` (Coding.net)<br>`master` (others)
+`message` | 自定义提交信息 | `Site updated: {% raw %}{{ now('YYYY-MM-DD HH:mm:ss') }}{% endraw %}`)
+`token` | Optional token value to authenticate with the repo. Prefix with `$` to read token from environment variable
 
-生成站点文件并推送至远程库。执行 `hexo clean && hexo deploy` 命令（如果您并未全局安装 Hexo Cli，则需要执行 `./node_modules/.bin/hexo clean && ./node_modules/.bin/hexo deploy`）
-
-登入 Github/BitBucket/Gitlab，请在库设置（Repository Settings）中将默认分支设置为`_config.yml`配置中的分支名称。稍等片刻，您的站点就会显示在您的Github Pages中。
+3. 生成站点文件并推送至远程库。执行 `hexo clean && hexo deploy`。
+  - You will be prompted with username and password of the target repository, unless you authenticate with a token or ssh key.
+  - hexo-deployer-git does not store your username and password. Use [git-credential-cache](https://git-scm.com/docs/git-credential-cache) to store them temporarily.
+4. 登入 Github/BitBucket/Gitlab，请在库设置（Repository Settings）中将默认分支设置为`_config.yml`配置中的分支名称。稍等片刻，您的站点就会显示在您的Github Pages中。
 
 ### 这一切是如何发生的？
 
@@ -230,7 +234,7 @@ deploy:
 `remotePath` | 远程主机的根目录 | `/`
 `port` | 端口 | 22
 `privateKey` | ssh私钥的目录地址 |
-`passphrase` | （可省略）ssh私钥的密码短语 | 
+`passphrase` | （可省略）ssh私钥的密码短语 |
 `agent` | ssh套接字的目录地址 | `$SSH_AUTH_SOCK`
 
 ## ZEIT Now
