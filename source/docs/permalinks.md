@@ -14,6 +14,8 @@ Variable | Description
 `:i_month` | Published month of posts (Without leading zeros)
 `:day` | Published day of posts (2-digit)
 `:i_day` | Published day of posts (Without leading zeros)
+`:hour` | Published hour of posts (2-digit)
+`:minute` | Published minute of posts (2-digit)
 `:title` | Filename
 `:post_title` | Post title
 `:id` | Post ID

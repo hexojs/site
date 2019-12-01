@@ -14,6 +14,8 @@ title: 永久連結（Permalinks）
 `:i_month` | 文章的發表月份（去掉開頭的零）
 `:day` | 文章的發表日期 (2 位數)
 `:i_day` | 文章的發表日期（去掉開頭的零）
+`:hour` | 文章發表時的小時 (2 位數)
+`:minute` | 文章發表時的分鐘 (2 位數)
 `:title` | 檔案名稱
 `:id` | 文章 ID
 `:category` | 分類。如果文章沒有分類，則是 `default_category` 設定。
