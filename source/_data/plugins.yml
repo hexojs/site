@@ -1,3 +1,8 @@
+- name: hexo-simple-image
+  description: Simple to use markdown tag import image.
+  link: https://github.com/Aragakiiii/hexo-simple-image
+  tags:
+    - image
 - name: hexo-asset
   description: Asset path format, fix original markdown image path when enabling post_asset_folder
   link: https://github.com/cnzsb/hexo-asset
