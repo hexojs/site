@@ -46,7 +46,7 @@ title: 輔助函數（Helpers）
 
 ### css
 
-載入 CSS 檔案。`path` 可以是陣列或字串，如果 `path` 開頭不是 `/` 或任何協議，則會自動加上根路徑；如果後面沒有加上 `.css` 副檔名的話，也會自動加上。
+載入 CSS 檔案。`path` 可以是陣列或字串，如果 `path` 開頭不是 `/` 或任何協議，則會自動加上根路徑；如果後面沒有加上 `.css` 副檔名的話，也會自動加上。Use object type for custom attributes.
 
 ``` js
 <%- css(path, ...) %>
@@ -61,11 +61,18 @@ title: 輔助函數（Helpers）
 <%- css(['style.css', 'screen.css']) %>
 // <link rel="stylesheet" href="/style.css">
 // <link rel="stylesheet" href="/screen.css">
+
+<%- css({ href: 'style.css', integrity: 'foo' }) %>
+// <link rel="stylesheet" href="/style.css" integrity="foo">
+
+<%- css([{ href: 'style.css', integrity: 'foo' }, { href: 'screen.css', integrity: 'bar' }]) %>
+// <link rel="stylesheet" href="/style.css" integrity="foo">
+// <link rel="stylesheet" href="/screen.css" integrity="bar">
 ```
 
 ### js
 
-載入 JavaScript 檔案。`path` 可以是陣列或字串，如果 `path` 開頭不是 `/` 或任何協議，則會自動加上根路徑；如果後面沒有加上 `.js` 副檔名的話，也會自動加上。
+載入 JavaScript 檔案。`path` 可以是陣列或字串，如果 `path` 開頭不是 `/` 或任何協議，則會自動加上根路徑；如果後面沒有加上 `.js` 副檔名的話，也會自動加上。Use object type for custom attributes.
 
 ``` js
 <%- js(path, ...) %>
@@ -80,6 +87,13 @@ title: 輔助函數（Helpers）
 <%- js(['script.js', 'gallery.js']) %>
 // <script src="/script.js"></script>
 // <script src="/gallery.js"></script>
+
+<%- js({ src: 'script.js', integrity: 'foo' }) %>
+// <script src="/script.js" integrity="foo"></script>
+
+<%- js([{ src: 'script.js', integrity: 'foo' }, { src: 'gallery.js', integrity: 'bar' }]) %>
+// <script src="/script.js" integrity="foo"></script>
+// <script src="/gallery.js" integrity="bar"></script>
 ```
 
 ### link_to

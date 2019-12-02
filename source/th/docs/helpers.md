@@ -57,9 +57,10 @@ object นั้นจะถูกเปลี่ยนไปเป็น query 
 ### css
 
 โหลดไฟล์ CSS  `path` นั้นเป็น array หรือ string ได้  ถ้า `path` นั้นไม่มี `/`
-  หรือ protocol ใดๆ เป็นคำนำหน้า มันจะมี root URL เป็นคำนำหน้า 
-  ถ้าคุณไม่ได้เพิ่ม extension ท่ีเป็น `.css`  หลัง `path`  extension 
-  นั้นจะถูกเพิ่มให้ไฟล์โดยอัตโนมัติ
+หรือ protocol ใดๆ เป็นคำนำหน้า มันจะมี root URL เป็นคำนำหน้า 
+ถ้าคุณไม่ได้เพิ่ม extension ท่ีเป็น `.css`  หลัง `path`  extension 
+นั้นจะถูกเพิ่มให้ไฟล์โดยอัตโนมัติ
+Use object type for custom attributes.
 
 ``` js
 <%- css(path, ...) %>
@@ -74,6 +75,13 @@ object นั้นจะถูกเปลี่ยนไปเป็น query 
 <%- css(['style.css', 'screen.css']) %>
 // <link rel="stylesheet" href="/style.css">
 // <link rel="stylesheet" href="/screen.css">
+
+<%- css({ href: 'style.css', integrity: 'foo' }) %>
+// <link rel="stylesheet" href="/style.css" integrity="foo">
+
+<%- css([{ href: 'style.css', integrity: 'foo' }, { href: 'screen.css', integrity: 'bar' }]) %>
+// <link rel="stylesheet" href="/style.css" integrity="foo">
+// <link rel="stylesheet" href="/screen.css" integrity="bar">
 ```
 
 ### js
@@ -82,6 +90,7 @@ object นั้นจะถูกเปลี่ยนไปเป็น query 
 นั้นไม่มี `/` หรือ protocol ใดๆ เป็นคำนำหน้า มันจะมี root URL เป็นคำนำหน้า 
 ถ้าคุณไม่ได้เพิ่ม extension ท่ีเป็น `.js`  หลัง `path`  extension 
 นั้นจะถูกเพิ่มให้ไฟล์โดยอัตโนมัติ
+Use object type for custom attributes.
 
 ``` js
 <%- js(path, ...) %>
@@ -96,6 +105,13 @@ object นั้นจะถูกเปลี่ยนไปเป็น query 
 <%- js(['script.js', 'gallery.js']) %>
 // <script src="/script.js"></script>
 // <script src="/gallery.js"></script>
+
+<%- js({ src: 'script.js', integrity: 'foo' }) %>
+// <script src="/script.js" integrity="foo"></script>
+
+<%- js([{ src: 'script.js', integrity: 'foo' }, { src: 'gallery.js', integrity: 'bar' }]) %>
+// <script src="/script.js" integrity="foo"></script>
+// <script src="/gallery.js" integrity="bar"></script>
 ```
 
 ### link_to
