@@ -2926,3 +2926,15 @@
     - color-config
     - 中文
     - English
+- name: A-Ayer
+  description: A Clean and Beautiful Theme for Hexo, also responsive.
+  link: https://github.com/Shen-Yu/hexo-theme-ayer
+  preview: https://shen-yu.gitee.io/
+  tags:
+    - 中文
+    - clean
+    - Beautiful
+    - Responsive
+    - Gallery
+    - Valine
+    - English
