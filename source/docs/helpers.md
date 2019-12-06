@@ -166,8 +166,8 @@ Loads JavaScript files. `path` can be a string, an array, an object or an array 
 // <script src="/script.js"></script>
 // <script src="/gallery.js"></script>
 
-<%- js({ src: 'script.js', integrity: 'foo' }) %>
-// <script src="/script.js" integrity="foo"></script>
+<%- js({ src: 'script.js', integrity: 'foo', async: true }) %>
+// <script src="/script.js" integrity="foo" async></script>
 
 <%- js([{ src: 'script.js', integrity: 'foo' }, { src: 'gallery.js', integrity: 'bar' }]) %>
 // <script src="/script.js" integrity="foo"></script>
