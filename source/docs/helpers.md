@@ -790,8 +790,8 @@ Option | Description | Default
 `google_plus` | Google+ profile link |
 `fb_admins` | Facebook admin ID |
 `fb_app_id` | Facebook App ID |
-`date` | Article published date | `page.date` if existed
-`updated` | Article modified time | `page.updated` if existed
+`date` | Article published date | `page.date` if exists
+`updated` | Article modified time | `page.updated` if exists
 `language` | Article language | `page.lang` or `config.language`
 
 {% note warn %}

@@ -761,10 +761,10 @@ url: https://example.com/blog # example
 
 参数 | 描述 | 默认值
 --- | --- | ---
-`title` | 页面标题 (`og:title`) | `page.title`
-`type` | 页面类型 (`og:type`) | blog
+`title` | 页面标题 (`og:title`) | `page.title` 或 `config.title`
+`type` | 页面类型 (`og:type`) | `article` 或 `website` 取决于 `if_post()`
 `url` | 页面网址 (`og:url`) | `url`
-`image` | 页面图片 (`og:image`) | 内容中的图片
+`image` | 页面图片 (`og:image`) | 内容中的每一张图片
 `site_name` | 网站名称 (`og:site_name`) | `config.title`
 `description` | 页面描述 (`og:description`) | 内容摘要或前 200 字
 `twitter_card` | Twitter 卡片类型 (`twitter:card`) | summary
@@ -773,6 +773,13 @@ url: https://example.com/blog # example
 `google_plus` | Google+ 个人资料链接 |
 `fb_admins` | Facebook 管理者 ID |
 `fb_app_id` | Facebook 应用程序 ID |
+`date` | 文章发布日期 | 如果 `page.date` 存在则使用这个值
+`updated` | 文章修改日期 | 如果 `page.updated` 存在则使用这个值
+`language` | 文章使用的语言 | `page.lang` 或 `config.language`
+
+{% note warn %}
+如果 `language` 的值不使用 'language_TERRITORY' 格式，则 `og:locale` 标签不会被添加。[`og:locale` 文档](https://ogp.me/#optional)
+{% endnote %}
 
 ### toc
 

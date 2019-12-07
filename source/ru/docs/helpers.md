@@ -662,10 +662,10 @@ title: Помощники
 
 Опция | Описание | Значение по умолчанию
 --- | --- | ---
-`title` | Заголовок страницы (`og:title`) | `page.title`
-`type` | Тип страницы (`og:type`) | blog
+`title` | Заголовок страницы (`og:title`) | `page.title` or `config.title`
+`type` | Тип страницы (`og:type`) | `article` or `website` based on `if_post()`.
 `url` | URL-адрес страницы (`og:url`) | `url`
-`image` | Обложка страницы (`og:image`) | Первое изображение в контенте
+`image` | Обложка страницы (`og:image`) | Every image in the content
 `site_name` | Имя сайта (`og:site_name`) | `config.title`
 `description` | Описание страницы (`og:description`) | Отрывок страницы или первые 200 символов содержимого
 `twitter_card` | Карточка Twitter (`twitter:card`) | Краткое изложение
@@ -674,6 +674,14 @@ title: Помощники
 `google_plus` | Ссылка на профиль Google+ |
 `fb_admins` | Facebook ID администратора |
 `fb_app_id` | Facebook ID приложения |
+`date` | Article published date | `page.date` if exists
+`updated` | Article modified time | `page.updated` if exists
+`language` | Article language | `page.lang` or `config.language`
+
+{% note warn %}
+`og:locale` tag won't be added if given `language` is not in 'language_TERRITORY' format. [`og:locale` documents](https://ogp.me/#optional).
+{% endnote %}
+
 
 ### toc
 

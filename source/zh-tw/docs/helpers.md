@@ -652,10 +652,10 @@ title: 輔助函數（Helpers）
 
 選項 | 描述 | 預設值
 --- | --- | ---
-`title` | 頁面標題 (`og:title`) | `page.title`
-`type` | 頁面類型 (`og:type`) | blog
+`title` | 頁面標題 (`og:title`) | `page.title` 或 `config.title`
+`type` | 頁面類型 (`og:type`) | `article` 或 `website` 取決於 `if_post()`
 `url` | 頁面網址 (`og:url`) | `url`
-`image` | 頁面圖片 (`og:image`) | 內容中的圖片
+`image` | 頁面圖片 (`og:image`) | 內容中的每一張圖片
 `site_name` | 網站名稱 (`og:site_name`) | `config.title`
 `description` | 頁面描述 (`og:description`) | 內容摘要或前 200 字
 `twitter_card` | Twitter 卡片類型 (`twitter:card`) | summary
@@ -664,6 +664,13 @@ title: 輔助函數（Helpers）
 `google_plus` | Google+ 個人資料連結 |
 `fb_admins` | Facebook 管理者 ID |
 `fb_app_id` | Facebook 應用程式 ID |
+`date` | 文章發佈日期 | 如果 `page.date` 存在則使用這個值
+`updated` | 文章修改日期 | 如果 `page.updated` 存在則使用這個值
+`language` | 文章使用的語言 | `page.lang` 或 `config.language`
+
+{% note warn %}
+如果 `language` 的值不使用 'language_TERRITORY' 格式，則 `og:locale` 標籤不會被添加。 [`og:locale` 文檔](https://ogp.me/#optional)
+{% endnote %}
 
 ### toc
 

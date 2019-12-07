@@ -703,10 +703,10 @@ Option | Description | Default
 
 Option | Description | Default
 --- | --- | ---
-`title` | Page title (`og:title`) | `page.title`
-`type` | Page type (`og:type`) | blog
+`title` | Page title (`og:title`) | `page.title` or `config.title`
+`type` | Page type (`og:type`) | `article` or `website` based on `if_post()`.
 `url` | Page URL (`og:url`) | `url`
-`image` | Page cover (`og:image`) | First image in the content
+`image` | Page cover (`og:image`) | Every image in the content
 `site_name` | Site name (`og:site_name`) | `config.title`
 `description` | Page description (`og:description`) | Page excerpt or first 200 characters of the content
 `twitter_card` | Twitter card type (`twitter:card`) | summary
@@ -715,6 +715,13 @@ Option | Description | Default
 `google_plus` | Google+ profile link |
 `fb_admins` | Facebook admin ID |
 `fb_app_id` | Facebook App ID |
+`date` | Article published date | `page.date` if exists
+`updated` | Article modified time | `page.updated` if exists
+`language` | Article language | `page.lang` or `config.language`
+
+{% note warn %}
+`og:locale` tag won't be added if given `language` is not in 'language_TERRITORY' format. [`og:locale` documents](https://ogp.me/#optional).
+{% endnote %}
 
 ### toc
 
