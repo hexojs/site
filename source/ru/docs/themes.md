@@ -75,7 +75,7 @@ Hexo будет сохранять все обработанные файлы в
 6. Создайте запрос на слияние с описанием изменений.
 
 [EJS]: https://github.com/hexojs/hexo-renderer-ejs
-[Swig]: https://github.com/paularmstrong/swig
+[Swig]: https://github.com/node-swig/swig-templates
 [Haml]: https://github.com/hexojs/hexo-renderer-haml
 [Jade]: https://github.com/hexojs/hexo-renderer-jade
 [hexojs/site]: https://github.com/hexojs/site
