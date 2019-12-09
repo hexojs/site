@@ -77,7 +77,7 @@ Quando você terminar de criar seu tema, você pode publicá-lo na [lista de tem
 6. Crie um pull request e descreva as mudanças.
 
 [EJS]: https://github.com/hexojs/hexo-renderer-ejs
-[Swig]: https://github.com/paularmstrong/swig
+[Swig]: https://github.com/node-swig/swig-templates
 [Haml]: https://github.com/hexojs/hexo-renderer-haml
 [Jade]: https://github.com/hexojs/hexo-renderer-jade
 [Pug]: https://github.com/maxknee/hexo-render-pug

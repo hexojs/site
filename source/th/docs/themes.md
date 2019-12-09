@@ -85,7 +85,7 @@ hexo จะจัดการและบันทึกไฟล์ทั้ง
 6. Create a pull request and describe the change.
 
 [EJS]: https://github.com/hexojs/hexo-renderer-ejs
-[Swig]: https://github.com/paularmstrong/swig
+[Swig]: https://github.com/node-swig/swig-templates
 [Haml]: https://github.com/hexojs/hexo-renderer-haml
 [Jade]: https://github.com/hexojs/hexo-renderer-jade
 [Pug]: https://github.com/maxknee/hexo-render-pug
