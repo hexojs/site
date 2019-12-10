@@ -61,10 +61,12 @@ title: 配置
 `relative_link` | 把連結改為與根目錄的相對位址 | `false`
 `future` | 顯示未來的文章 | `true`
 `highlight` | 程式碼區塊的設定 |
-`highlight.enable` | Enable syntax highlight | `true`
-`highlight.auto_detect` | Enable auto-detection if no language is specified | `false`
-`highlight.line_number` | Display line number | `true`
-`highlight.tab_replace` | Replace tabs by n space(s); if the value is empty, tabs won't be replaced | `''`
+`highlight.enable` | 開啟代碼塊高亮 | `true`
+`highlight.auto_detect` | 如果未指定語言，則啟用自動檢測 | `false`
+`highlight.line_number` | 顯示行數<br>_Enabling this option will also enable `wrap` option_ | `true`
+`highlight.tab_replace` | 用 n 個空格替換 tabs；如果值為空，則不會替換 tabs | `''`
+`highlight.wrap` | Wrap the code block in [`<table>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table) | `true`
+`highlight.hljs` | Use the `hljs-*` prefix for CSS classes | `false`
 
 ### 分類 & 標籤
 

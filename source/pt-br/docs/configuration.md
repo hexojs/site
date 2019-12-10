@@ -60,8 +60,10 @@ Configuração | Descrição | Padrão
 `highlight` | Configurações de bloco de código |
 `highlight.enable` | Enable syntax highlight | `true`
 `highlight.auto_detect` | Enable auto-detection if no language is specified | `false`
-`highlight.line_number` | Display line number | `true`
+`highlight.line_number` | Display line number<br>_Enabling this option will also enable `wrap` option_ | `true`
 `highlight.tab_replace` | Replace tabs by n space(s); if the value is empty, tabs won't be replaced | `''`
+`highlight.wrap` | Wrap the code block in [`<table>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table) | `true`
+`highlight.hljs` | Use the `hljs-*` prefix for CSS classes | `false`
 
 ### Categoria & Tag
 

@@ -90,8 +90,10 @@ skip_render: "_posts/test-post.md"
 `highlight` | 代码块的设置 |
 `highlight.enable` | 开启代码块高亮 | `true`
 `highlight.auto_detect` | 如果未指定语言，则启用自动检测 | `false`
-`highlight.line_number` | 显示行数 | `true`
+`highlight.line_number` | 显示行数<br>_Enabling this option will also enable `wrap` option_ | `true`
 `highlight.tab_replace` | 用 n 个空格替换 tabs；如果值为空，则不会替换 tabs | `''`
+`highlight.wrap` | Wrap the code block in [`<table>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table) | `true`
+`highlight.hljs` | Use the `hljs-*` prefix for CSS classes | `false`
 
 {% note info 相对地址 %}
 默认情况下，Hexo 生成的超链接都是绝对地址。例如，如果您的网站域名为 `example.com`,您有一篇文章名为 `hello`，那么绝对链接可能像这样：`http://example.com/hello.html`，它是**绝对**于域名的。相对链接像这样：`/hello.html`，也就是说，无论用什么域名访问该站点，都没有关系，这在进行反向代理时可能用到。通常情况下，建议使用绝对地址。
