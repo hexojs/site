@@ -10,6 +10,7 @@ title: Hexo 4.1.0 Released
   * `en-GB` is valid
   * Not all locales are supported (e.g. `en-AU` is not valid), see [official list](https://developers.facebook.com/docs/messenger-platform/messenger-profile/supported-locales/)
   * Dash (e.g. "en-GB") must be used for multilingual support, dash is automatically transformed to underscore (e.g. "en_GB") in `og:locale`
+  * Verify the corresponding file exists in the `languages/` folder of installed theme before changing the `language:` config
 
 ### Features
 - Support adding hour and minute to post permalink [#3629]
