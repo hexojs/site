@@ -687,7 +687,7 @@ Opção | Descrição | Padrão
 `language` | Article language | `page.lang` or `config.language`
 
 {% note warn %}
-`og:locale` tag won't be added if given `language` is not in 'language_TERRITORY' format. Refer to the [official list](https://developers.facebook.com/docs/messenger-platform/messenger-profile/supported-locales/) of valid locales.
+`og:locale` tag won't be added if given `language` is not in 'language-TERRITORY' (_dash must be used for multilingual support, dash is automatically transformed to underscore in `og:locale`_) format. Refer to the [official list](https://developers.facebook.com/docs/messenger-platform/messenger-profile/supported-locales/) of valid locales.
 {% endnote %}
 
 ### toc

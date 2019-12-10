@@ -778,7 +778,7 @@ url: https://example.com/blog # example
 `language` | 文章使用的语言 | `page.lang` 或 `config.language`
 
 {% note warn %}
-如果 `language` 的值不使用 'language_TERRITORY' 格式，则 `og:locale` 标签不会被添加。[`og:locale` 文档](https://ogp.me/#optional)
+如果 `language` 的值不使用 'language-TERRITORY' 格式 (_dash must be used for multilingual support, dash is automatically transformed to underscore in `og:locale`_)，则 `og:locale` 标签不会被添加。[`og:locale` 文档](https://developers.facebook.com/docs/messenger-platform/messenger-profile/supported-locales/)
 {% endnote %}
 
 ### toc
