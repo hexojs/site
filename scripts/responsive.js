@@ -8,14 +8,14 @@ const sharp = require('sharp');
 async function responsive() {
   const { route } = this;
   const routeList = route.list();
-  const pngFiles = routeList.filter((path) => path.startsWith('themes') && path.endsWith('.png'));
+  const pngFiles = routeList.filter(path => path.startsWith('themes') && path.endsWith('.png'));
   const updatePng = {};
 
-  await Promise.all(pngFiles.map((path) => {
+  await Promise.all(pngFiles.map(path => {
     return new Promise((resolve, reject) => {
       const assetPath = route.get(path);
       const assetData = [];
-      assetPath.on('data', (chunk) => assetData.push(chunk));
+      assetPath.on('data', chunk => assetData.push(chunk));
       assetPath.on('end', async() => {
         if (assetData.length) {
           try {
@@ -49,11 +49,11 @@ async function responsive() {
     });
   }));
 
-  return Promise.all(['themes/index.html'].map((path) => {
+  return Promise.all(['themes/index.html'].map(path => {
     return new Promise((resolve, reject) => {
       const assetPath = route.get(path);
       const assetData = [];
-      assetPath.on('data', (chunk) => assetData.push(chunk));
+      assetPath.on('data', chunk => assetData.push(chunk));
       assetPath.on('end', async() => {
         if (assetData.length) {
           try {
@@ -67,7 +67,7 @@ async function responsive() {
                   const png = value;
                   const jpg2x = updatePng[value].jpg2x;
 
-                  imgTag = imgTag.replace(alt, (postAlt) => {
+                  imgTag = imgTag.replace(alt, postAlt => {
                     postAlt += ` data-srcset="${jpg}, ${jpg2x} 2x" data-org="${png}"`;
                     return postAlt;
                   });
