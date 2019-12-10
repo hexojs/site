@@ -5,10 +5,12 @@ title: Hexo 4.1.0 Released
 ### Breaking changes
 - Requires Node 8.10 or above [#3778]
   * Node 8 is going to be deprecated in [less than a month](https://github.com/nodejs/Release/blob/master/README.md), we strongly urge to upgrade to Node 10 or newer
-- `og:locale` [Open Graph](https://ogp.me/) tag won't be inserted if `language:` (in config, front-matter of post/page or [`open_graph()`](/docs/helpers#open-graph) helper) is not in `language_TERRITORY` format, otherwise it assumes `en_US` value [#3808]
+- `og:locale` [Open Graph](https://ogp.me/) tag won't be inserted if `language:` (in config, front-matter of post/page or [`open_graph()`](/docs/helpers#open-graph) helper) is not in `language-TERRITORY` format [#3808]
   * `en` is invalid
-  * `en_GB` is valid
-  * Not all locales are supported (e.g. `en_AU` is not valid), see [official list](https://developers.facebook.com/docs/messenger-platform/messenger-profile/supported-locales/)
+  * `en-GB` is valid
+  * Not all locales are supported (e.g. `en-AU` is not valid), see [official list](https://developers.facebook.com/docs/messenger-platform/messenger-profile/supported-locales/)
+  * Dash (e.g. "en-GB") must be used for multilingual support, dash is automatically transformed to underscore (e.g. "en_GB") in `og:locale`
+  * Verify the corresponding file exists in the `languages/` folder of installed theme before changing the `language:` config
 
 ### Features
 - Support adding hour and minute to post permalink [#3629]
@@ -30,7 +32,7 @@ title: Hexo 4.1.0 Released
   <%- meta_generator() %>
   ```
   * would output `<meta name="generator" content="Hexo 4.1.0">`
-  * Hexo 3.9.0+ inserts the tag automatically; to get the performance benefit, [`meta_generator:`](/docs/configuration#Extensions) option needs to be disabled,
+  * Hexo 3.9.0+ inserts the tag automatically; to get the performance benefit (of the `meta_generator` helper), [`meta_generator:`](/docs/configuration#Extensions) option should be disabled,
   ``` yml
   _config.yml
   meta_generator: false
