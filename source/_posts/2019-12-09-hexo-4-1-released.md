@@ -97,7 +97,7 @@ title: Hexo 4.1.0 Released
 - Further reduces lodash usage [#3786], [#3788], [#3790], [#3785], [#3809], [#3791], [#3810], [#3826], [#3867], [#3845]
 - Remove unnecessary file at the end of unit test [#3792]
 - Add funding source to npm [#3851]
-- Update bump strip-ansi from 5.2.0 to 6.0.0 [#3852]
+- Update strip-ansi from 5.2.0 to 6.0.0 [#3852]
 - Update chalk from 2.4.2 to 3.0.0 [#3853]
 
 [#3778]: https://github.com/hexojs/hexo/pull/3778
