@@ -682,7 +682,7 @@ Google 검색 form을 삽입합니다.
 `language` | Article language | `page.lang` or `config.language`
 
 {% note warn %}
-`og:locale` tag won't be added if given `language` is not in 'language_TERRITORY' format. [`og:locale` documentation](https://ogp.me/#optional).
+`og:locale` tag won't be added if given `language` is not in 'language_TERRITORY' format. Refer to the [official list](https://developers.facebook.com/docs/messenger-platform/messenger-profile/supported-locales/) of valid locales.
 {% endnote %}
 
 
