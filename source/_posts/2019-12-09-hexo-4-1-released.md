@@ -5,7 +5,7 @@ title: Hexo 4.1.0 Released
 ### Breaking changes
 - Requires Node 8.10 or above [#3778]
   * Node 8 is going to be deprecated in [less than a month](https://github.com/nodejs/Release/blob/master/README.md), we strongly urge to upgrade to Node 10 or newer
-- `og:locale` Open Graph tag won't be inserted if `language:` (in config, front-matter of post/page or [`open_graph()`](/docs/helpers#open-graph) helper) is not in `language_TERRITORY` format, otherwise it assumes `en_US` value [#3808]
+- `og:locale` [Open Graph](https://ogp.me/) tag won't be inserted if `language:` (in config, front-matter of post/page or [`open_graph()`](/docs/helpers#open-graph) helper) is not in `language_TERRITORY` format, otherwise it assumes `en_US` value [#3808]
   * `en` is invalid
   * `en_GB` is valid
   * Not all locales are supported (e.g. `en_AU` is not valid), see [official list](https://developers.facebook.com/docs/messenger-platform/messenger-profile/supported-locales/)
@@ -70,7 +70,7 @@ title: Hexo 4.1.0 Released
 
 ### Fixes
 - Retain blank lines in a codeblock attached in blockquote [#3770]
-- Replaced deprecated `og_updated_time` [Open Graph](https://ogp.me/) tag with `article:modified_time` [#3674]
+- Replaced deprecated `og_updated_time` Open Graph tag with `article:modified_time` [#3674]
 - Replaced deprecated `keywords` Open Graph tag with `article:tag` [#3805]
 - meta_generator tag should be inserted into `<head>` that spans multiple lines [#3778]
 - No longer clear database `db.json` when running `hexo new` or `hexo --help` [#3793]
