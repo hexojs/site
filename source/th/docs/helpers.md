@@ -704,7 +704,7 @@ Option | Description | Default
 Option | Description | Default
 --- | --- | ---
 `title` | Page title (`og:title`) | `page.title` or `config.title`
-`type` | Page type (`og:type`) | `article` or `website` based on `if_post()`.
+`type` | Page type (`og:type`) | `article` (post) or `website` (page).
 `url` | Page URL (`og:url`) | `url`
 `image` | Page cover (`og:image`) | Every image in the content
 `site_name` | Site name (`og:site_name`) | `config.title`
@@ -720,7 +720,7 @@ Option | Description | Default
 `language` | Article language | `page.lang` or `config.language`
 
 {% note warn %}
-`og:locale` tag won't be added if given `language` is not in 'language_TERRITORY' format. [`og:locale` documents](https://ogp.me/#optional).
+`og:locale` tag won't be added if given `language` is not in 'language_TERRITORY' format. [`og:locale` documentation](https://ogp.me/#optional).
 {% endnote %}
 
 ### toc

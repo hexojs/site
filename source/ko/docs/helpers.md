@@ -666,7 +666,7 @@ Google 검색 form을 삽입합니다.
 옵션 | 설명 | 기본 값
 --- | --- | ---
 `title` | 페이지 제목 (`og:title`) | `page.title` or `config.title`
-`type` | 페이지 형태 (`og:type`) | `article` or `website` based on `if_post()`.
+`type` | 페이지 형태 (`og:type`) | `article` (post) or `website` (page).
 `url` | 페이지 URL (`og:url`) | `url`
 `image` | 페이지 커버 (`og:image`) | Every image in the content
 `site_name` | 사이트 이름 (`og:site_name`) | `config.title`
@@ -682,7 +682,7 @@ Google 검색 form을 삽입합니다.
 `language` | Article language | `page.lang` or `config.language`
 
 {% note warn %}
-`og:locale` tag won't be added if given `language` is not in 'language_TERRITORY' format. [`og:locale` documents](https://ogp.me/#optional).
+`og:locale` tag won't be added if given `language` is not in 'language_TERRITORY' format. [`og:locale` documentation](https://ogp.me/#optional).
 {% endnote %}
 
 

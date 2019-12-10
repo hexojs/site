@@ -671,7 +671,7 @@ Insere dados do [Open Graph].
 Opção | Descrição | Padrão
 --- | --- | ---
 `title` | Título da página (`og:title`) | `page.title` or `config.title`
-`type` | Page type (`og:type`) | `article` or `website` based on `if_post()`.
+`type` | Page type (`og:type`) | `article` (post) or `website` (page).
 `url` | URL da página (`og:url`) | `url`
 `image` | Capa da página (`og:image`) | Every image in the content
 `site_name` | Nome do site (`og:site_name`) | `config.title`
@@ -687,7 +687,7 @@ Opção | Descrição | Padrão
 `language` | Article language | `page.lang` or `config.language`
 
 {% note warn %}
-`og:locale` tag won't be added if given `language` is not in 'language_TERRITORY' format. [`og:locale` documents](https://ogp.me/#optional).
+`og:locale` tag won't be added if given `language` is not in 'language_TERRITORY' format. [`og:locale` documentation](https://ogp.me/#optional).
 {% endnote %}
 
 ### toc
