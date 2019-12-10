@@ -47,7 +47,7 @@ title: Помощники
 
 ### css
 
-Загружает CSS-файлы. `path` может быть массивом или строкой. Если путь не начинается с префикса `/` или с любого протокола, то будет начинаться с корневого URL-адреса. Если не добавить `.css` в конце пути, он будет подставлен автоматически.
+Загружает CSS-файлы. `path` может быть массивом или строкой. Если путь не начинается с префикса `/` или с любого протокола, то будет начинаться с корневого URL-адреса. Если не добавить `.css` в конце пути, он будет подставлен автоматически. Use object type for custom attributes.
 
 ``` js
 <%- css(path, ...) %>
@@ -62,11 +62,18 @@ title: Помощники
 <%- css(['style.css', 'screen.css']) %>
 // <link rel="stylesheet" href="/style.css">
 // <link rel="stylesheet" href="/screen.css">
+
+<%- css({ href: 'style.css', integrity: 'foo' }) %>
+// <link rel="stylesheet" href="/style.css" integrity="foo">
+
+<%- css([{ href: 'style.css', integrity: 'foo' }, { href: 'screen.css', integrity: 'bar' }]) %>
+// <link rel="stylesheet" href="/style.css" integrity="foo">
+// <link rel="stylesheet" href="/screen.css" integrity="bar">
 ```
 
 ### js
 
-Загружает JavaScript файлы. `path` может быть массивом или строкой. Если путь не начинается с префикса `/` или с любого протокола, то будет начинаться с корневого URL-адреса. Если не добавить `.js` в конце пути, он будет подставлен автоматически.
+Загружает JavaScript файлы. `path` может быть массивом или строкой. Если путь не начинается с префикса `/` или с любого протокола, то будет начинаться с корневого URL-адреса. Если не добавить `.js` в конце пути, он будет подставлен автоматически. Use object type for custom attributes.
 
 ``` js
 <%- js(path, ...) %>
@@ -81,6 +88,13 @@ title: Помощники
 <%- js(['script.js', 'gallery.js']) %>
 // <script src="/script.js"></script>
 // <script src="/gallery.js"></script>
+
+<%- js({ src: 'script.js', integrity: 'foo', async: true }) %>
+// <script src="/script.js" integrity="foo" async></script>
+
+<%- js([{ src: 'script.js', integrity: 'foo' }, { src: 'gallery.js', integrity: 'bar' }]) %>
+// <script src="/script.js" integrity="foo"></script>
+// <script src="/gallery.js" integrity="bar"></script>
 ```
 
 ### link_to

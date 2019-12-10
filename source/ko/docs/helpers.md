@@ -47,7 +47,7 @@ Gravatar 이미지를 삽입합니다.
 
 ### css
 
-CSS 파일들을 불러옵니다. `path`에는 문자열(string) 또는 배열(array)을 사용할 수 있습니다. 만약 `path`가 `/` 또는 프로토콜명으로 시작하지 않는다면, 루트 URL이 접두어로 붙습니다. `path` 뒤에 `.css` 파일을 기입하지 않으면 자동으로 추가합니다.
+CSS 파일들을 불러옵니다. `path`에는 문자열(string) 또는 배열(array)을 사용할 수 있습니다. 만약 `path`가 `/` 또는 프로토콜명으로 시작하지 않는다면, 루트 URL이 접두어로 붙습니다. `path` 뒤에 `.css` 파일을 기입하지 않으면 자동으로 추가합니다. Use object type for custom attributes.
 
 ``` js
 <%- css(path, ...) %>
@@ -62,11 +62,18 @@ CSS 파일들을 불러옵니다. `path`에는 문자열(string) 또는 배열(a
 <%- css(['style.css', 'screen.css']) %>
 // <link rel="stylesheet" href="/style.css">
 // <link rel="stylesheet" href="/screen.css">
+
+<%- css({ href: 'style.css', integrity: 'foo' }) %>
+// <link rel="stylesheet" href="/style.css" integrity="foo">
+
+<%- css([{ href: 'style.css', integrity: 'foo' }, { href: 'screen.css', integrity: 'bar' }]) %>
+// <link rel="stylesheet" href="/style.css" integrity="foo">
+// <link rel="stylesheet" href="/screen.css" integrity="bar">
 ```
 
 ### js
 
-JavaScript 파일들을 불러옵니다. `path`에는 문자열(string) 또는 배열(array)을 사용할 수 있습니다. 만약 `path`가 `/` 또는 프로토콜명으로 시작하지 않는다면, 루트 URL이 접두어로 붙습니다. `path` 뒤에 `.js` 파일을 기입하지 않으면 자동으로 추가합니다.
+JavaScript 파일들을 불러옵니다. `path`에는 문자열(string) 또는 배열(array)을 사용할 수 있습니다. 만약 `path`가 `/` 또는 프로토콜명으로 시작하지 않는다면, 루트 URL이 접두어로 붙습니다. `path` 뒤에 `.js` 파일을 기입하지 않으면 자동으로 추가합니다. Use object type for custom attributes.
 
 ``` js
 <%- js(path, ...) %>
@@ -81,6 +88,13 @@ JavaScript 파일들을 불러옵니다. `path`에는 문자열(string) 또는 �
 <%- js(['script.js', 'gallery.js']) %>
 // <script src="/script.js"></script>
 // <script src="/gallery.js"></script>
+
+<%- js({ src: 'script.js', integrity: 'foo', async: true }) %>
+// <script src="/script.js" integrity="foo" async></script>
+
+<%- js([{ src: 'script.js', integrity: 'foo' }, { src: 'gallery.js', integrity: 'bar' }]) %>
+// <script src="/script.js" integrity="foo"></script>
+// <script src="/gallery.js" integrity="bar"></script>
 ```
 
 ### link_to
