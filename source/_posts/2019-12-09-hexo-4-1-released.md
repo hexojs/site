@@ -32,7 +32,7 @@ title: Hexo 4.1.0 Released
   <%- meta_generator() %>
   ```
   * would output `<meta name="generator" content="Hexo 4.1.0">`
-  * Hexo 3.9.0+ inserts the tag automatically; to get the performance benefit, [`meta_generator:`](/docs/configuration#Extensions) option needs to be disabled,
+  * Hexo 3.9.0+ inserts the tag automatically; to get the performance benefit (of the `meta_generator` helper), [`meta_generator:`](/docs/configuration#Extensions) option should be disabled,
   ``` yml
   _config.yml
   meta_generator: false
