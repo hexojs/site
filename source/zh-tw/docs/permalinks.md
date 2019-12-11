@@ -17,7 +17,7 @@ title: 永久連結（Permalinks）
 `:hour` | 文章發表時的小時 (2 位數)
 `:minute` | 文章發表時的分鐘 (2 位數)
 `:title` | 檔案名稱
-`:id` | 文章 ID
+`:id` | 文章 ID (_not persistent across [cache reset](/zh-tw/docs/commands#clean)_)
 `:category` | 分類。如果文章沒有分類，則是 `default_category` 設定。
 
 您可在 `permalink_defaults` 設定中調整永久連結中各變數的預設值：

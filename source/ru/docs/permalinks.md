@@ -17,7 +17,7 @@ title: Постоянные ссылки
 `:hour` | Published hour of posts (2-digit)
 `:minute` | Published minute of posts (2-digit)
 `:title` | Имя файла
-`:id` | ID поста
+`:id` | ID поста (_not persistent across [cache reset](/ru/docs/commands#clean)_)
 `:category` | Категории. Если категория поста не указана, возьмётся значение по умолчанию из `default_category`.
 
 Можно определить значение по умолчанию для переменной постоянной ссылки, задав значение `permalink_defaults` в конфигурации:
