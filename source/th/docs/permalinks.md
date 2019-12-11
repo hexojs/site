@@ -17,7 +17,7 @@ Variable | Description
 `:i_day` | Published day of posts (Without leading zeros)
 `:title` | Filename
 `:post_title` | Post title
-`:id` | Post ID
+`:id` | Post ID (_not persistent across [cache reset](/th/docs/commands#clean)_)
 `:category` | Categories. If the post is uncategorized, it will use the `default_category` value.
 
 ตุณสามารถตั้งค่า default value ของทุก variable ใน permalink โดยตั้งค่า 

@@ -16,7 +16,7 @@ title: 永久链接（Permalinks）
 `:i_day` | 文章的发表日期（去掉开头的零）
 `:title` | 文件名称
 `:post_title` | 文章标题
-`:id` | 文章 ID
+`:id` | 文章 ID (_not persistent across [cache reset](/zh-cn/docs/commands#clean)_)
 `:category` | 分类。如果文章没有分类，则是 `default_category` 配置信息。
 
 您可在 `permalink_defaults` 参数下调整永久链接中各变量的默认值：

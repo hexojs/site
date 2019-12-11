@@ -16,7 +16,7 @@ Variable | Description
 `:i_day` | Published day of posts (Without leading zeros)
 `:title` | Filename
 `:post_title` | Post title
-`:id` | Post ID
+`:id` | Post ID (_not persistent across [cache reset](/docs/commands#clean)_)
 `:category` | Categories. If the post is uncategorized, it will use the `default_category` value.
 
 You can define the default value of each variable in the permalink through the `permalink_defaults` setting:
