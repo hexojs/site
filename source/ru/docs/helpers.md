@@ -716,6 +716,8 @@ Inserts [generator tag](https://developer.mozilla.org/en-US/docs/Web/HTML/Elemen
 --- | --- | ---
 `class` | Имя класса | toc
 `list_number` | Отображать нумерацию | true
+`min_depth` | Минимальная глубина курса генерируемого ток | 1
+`max_depth` | Максимальная глубина курса генерируемого ток | 6
 
 **Примеры:**
 

@@ -759,7 +759,8 @@ Option | Description | Default
 --- | --- | ---
 `class` | Class name | toc
 `list_number` | Displays list number | true
-`max_depth` | Maximum heading depth of generated toc | 6
+`min_depth` | ความลึกหัวข้อต่ำสุดของ toc ที่สร้างขึ้น | 1
+`max_depth` | ความลึกหัวเรื่องสูงสุดของ toc ที่สร้างขึ้น | 6
 
 **ยกตัวอย่างเช่น:**
 

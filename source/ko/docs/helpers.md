@@ -719,6 +719,8 @@ Inserts [generator tag](https://developer.mozilla.org/en-US/docs/Web/HTML/Elemen
 --- | --- | ---
 `class` | Class명 | toc
 `list_number` | 목록 번호를 표시합니다. | true
+`min_depth` | 생성 된 toc의 최소 제목 깊이 | 1
+`max_depth` | 생성 된 toc의 최대 제목 깊이 | 6
 
 **예시:**
 
