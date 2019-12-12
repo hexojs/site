@@ -6,9 +6,7 @@ node_js:
   - "10"
 
 cache:
-  apt: true
-  directories:
-    - node_modules
+  npm: true
 
 script:
   - npm run eslint
