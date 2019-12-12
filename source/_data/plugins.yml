@@ -2420,8 +2420,8 @@
     - qiniu
     - 七牛云
 - name: hexo-renderer-scss
-  description: "A hexo plugin for node-scss"
-  link: https://github.com/o2team/hexo-renderer-scss
+  description: A hexo plugin for node-scss
+  link: https://github.com/mamboer/hexo-renderer-scss
   tags:
     - renderer
     - scss
