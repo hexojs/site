@@ -27,8 +27,9 @@ title: 配置
 `root` | 网站根目录 |
 `permalink` | 文章的 [永久链接](permalinks.html) 格式 | `:year/:month/:day/:title/`
 `permalink_defaults` | 永久链接中各部分的默认值 |
-`pretty_urls` | 改写 [`permalink`](/zh-cn/docs/variables.html) 的值来美化 URL |
+`pretty_urls` | 改写 [`permalink`](variables.html) 的值来美化 URL |
 `pretty_urls.trailing_index` | 是否在永久链接中保留尾部的 `index.html`，设置为 `false` 时去除 | `true`
+`pretty_urls.trailing_html` | 是否在永久链接中保留尾部的 `.html`, 设置为 `false` 时去除 (_对尾部的 `index.html`无效_)  | `true`
 
 {% note info 网站存放在子目录 %}
 如果您的网站存放在子目录中，例如 `http://yoursite.com/blog`，则请将您的 `url` 设为 `http://yoursite.com/blog` 并把 `root` 设为 `/blog/`。

@@ -23,8 +23,9 @@ Setting | Description | Default
 `root` | The root directory of your website |
 `permalink` | The [permalink](permalinks.html) format of articles | `:year/:month/:day/:title/`
 `permalink_defaults` | Default values of each segment in permalink |
-`pretty_urls` | Rewrite the [`permalink`](/docs/variables) variables to pretty URLs |
+`pretty_urls` | Rewrite the [`permalink`](variables.html) variables to pretty URLs |
 `pretty_urls.trailing_index` | Trailing `index.html`, set to `false` to remove it  | `true`
+`pretty_urls.trailing_html` | Trailing `.html`, set to `false` to remove it (_does not apply to trailing `index.html`_)  | `true`
 
 {% note info Website in subdirectory %}
 If your website is in a subdirectory (such as `http://example.org/blog`) set `url` to `http://example.org/blog` and set `root` to `/blog/`.
