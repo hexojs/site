@@ -80,7 +80,7 @@ We have released a bugfix release for [hexo], and new version of official hexo p
 ### Fix
 - Retain [legacy](https://nodejs.org/docs/latest-v8.x/api/url.html#url_legacy_url_api) URL API [#19]
   * Contrary to the pull request's description, Node 8 actually does support the newer [WHATWG URL](https://nodejs.org/docs/latest-v8.x/api/url.html#url_the_whatwg_url_api) API.
-  * However, it is later found that migrating completely to the newer API caused performance regression, so for now hexo uses a mixture of legacy and newer API. [hexojs/hexo#3833](https://github.com/hexojs/hexo/issues/3833), [hexojs/hexo#3846](https://github.com/hexojs/hexo/issues/3833)
+  * However, it is later found that migrating completely to the newer API caused performance regression, so for now hexo uses a mixture of legacy and newer API. [hexojs/hexo#3833](https://github.com/hexojs/hexo/issues/3833), [hexojs/hexo#3846](https://github.com/hexojs/hexo/issues/3846)
 
 [#23]: https://github.com/hexojs/eslint-config-hexo/pull/23
 [#22]: https://github.com/hexojs/eslint-config-hexo/pull/22
