@@ -2938,3 +2938,12 @@
     - Gallery
     - Valine
     - English
+- name: zhaoo
+  description: A simple theme for Hexo.
+  link: https://github.com/izhaoo/hexo-theme-zhaoo
+  preview: https://www.izhaoo.com
+  tags:
+    - responsive
+    - fast
+    - clean
+    - simple
