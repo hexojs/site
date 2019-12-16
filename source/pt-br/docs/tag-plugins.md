@@ -191,7 +191,7 @@ Para incorporar um iframe:
 Insere uma imagem com tamanho especificado.
 
 ```
-{% img [class names] /path/to/image [width] [height] [title text [alt text]] %}
+{% img [class names] /path/to/image [width] [height] '"title text" "alt text"' %}
 ```
 
 ## Link

@@ -190,7 +190,7 @@ To embed an iframe:
 Inserts an image with specified size.
 
 ```
-{% img [class names] /path/to/image [width] [height] "title text 'alt text'" %}
+{% img [class names] /path/to/image [width] [height] '"title text" "alt text"' %}
 ```
 
 ## Link
