@@ -23,6 +23,9 @@ Configuração | Descrição | Padrão
 `root` | O diretório raiz do seu site |
 `permalink` | O formato de [permalink](permalinks.html) dos artigos | `:year/:month/:day/:title/`
 `permalink_defaults` | Valores padrão de cada segmento no permalink |
+`pretty_urls` | Rewrite the [`permalink`](variables.html) variables to pretty URLs |
+`pretty_urls.trailing_index` | Trailing `index.html`, set to `false` to remove it  | `true`
+`pretty_urls.trailing_html` | Trailing `.html`, set to `false` to remove it (_does not apply to trailing `index.html`_)  | `true`
 
 {% note info Site em subdiretório %}
 Se o seu site estiver em um subdiretório (como por exemplo `http://example.org/blog`) defina `url` para `http://example.org/blog` e defina `root` para `/blog/`.

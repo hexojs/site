@@ -22,6 +22,9 @@ title: Конфигурация
 `root` | Корневая папка сайта |
 `permalink` | [Постоянная ссылка](permalinks.html) используются ссылки на статьи | `:year/:month/:day/:title/`
 `permalink_defaults` | Значение по умолчанию для каждого сегмента постоянной ссылки |
+`pretty_urls` | Rewrite the [`permalink`](variables.html) variables to pretty URLs |
+`pretty_urls.trailing_index` | Trailing `index.html`, set to `false` to remove it  | `true`
+`pretty_urls.trailing_html` | Trailing `.html`, set to `false` to remove it (_does not apply to trailing `index.html`_)  | `true`
 
 {% note info Сайт в подпапке %}
 Если ваш сайт располагается в поддиректории (к примеру `http://example.org/blog`) поменяйте значение `url` на `http://example.org/blog` и установите переменной `root` значение `/blog/`.

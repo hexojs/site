@@ -25,6 +25,9 @@ title: 配置
 `root` | 網站的根目錄 |
 `permalink` | 文章 [永久連結](permalinks.html) 的格式 | `:year/:month/:day/:title/`
 `permalink_defaults` | `permalink` 中各區段的預設值 |
+`pretty_urls` | 改寫 [`permalink`](variables.html) 的值來美化 URL |
+`pretty_urls.trailing_index` | 是否在永久鏈接中保留尾部的 `index.html`，設置為 `false` 時去除 | `true`
+`pretty_urls.trailing_html` | 是否在永久鏈接中保留尾部的 `.html`, 設置為 `false` 時去除 (_對尾部的 `index.html`無效_) | `true`
 
 {% note info 網站存放在子目錄 %}
 如果您的網站存放在子目錄中，例如 `http://example.org/blog`，請將您的 `url` 設為 `http://example.org/blog` 並把 `root` 設為 `/blog/`。
