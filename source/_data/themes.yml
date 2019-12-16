@@ -2940,8 +2940,8 @@
     - English
 - name: zhaoo
   description: A simple theme for Hexo.
-  link: https://www.izhaoo.com
-  preview: https://github.com/izhaoo/hexo-theme-zhaoo
+  link: https://github.com/izhaoo/hexo-theme-zhaoo
+  preview: https://www.izhaoo.com
   tags:
     - responsive
     - fast
