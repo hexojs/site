@@ -188,7 +188,7 @@ iframe을 포함시킬 수 있습니다.
 이미지의 사이즈를 지정하여 포함시킬 수 있습니다.
 
 ```
-{% img [class names] /path/to/image [width] [height] [title text [alt text]] %}
+{% img [class names] /path/to/image [width] [height] '"title text" "alt text"' %}
 ```
 
 ## Link
