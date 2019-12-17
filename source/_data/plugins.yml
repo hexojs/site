@@ -2419,3 +2419,11 @@
     - delopyer
     - qiniu
     - 七牛云
+- name: hexo-tag-wikipedia
+  description: Embed content from Wikipedia.
+  link: https://github.com/tuanna-hsp/hexo-tag-wikipedia
+  tags:
+    - hexo
+    - wikipedia
+    - tag
+    - extracts
