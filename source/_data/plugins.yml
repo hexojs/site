@@ -2427,3 +2427,10 @@
     - wikipedia
     - tag
     - extracts
+- name: hexo-images-watermark
+  description: Article image watermark.
+  link: https://github.com/SpiritLing/hexo-images-watermark
+  tags:
+    - hexo
+    - images
+    - watermark
