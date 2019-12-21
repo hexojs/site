@@ -833,6 +833,7 @@ Option | Description | Default
 `class` | Class name | toc
 `list_number` | Displays list number | true
 `max_depth` | Maximum heading depth of generated toc | 6
+`min_depth` | Minimum heading depth of generated toc | 1
 
 **Examples:**
 
