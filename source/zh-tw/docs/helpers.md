@@ -706,6 +706,8 @@ Inserts [generator tag](https://developer.mozilla.org/en-US/docs/Web/HTML/Elemen
 --- | --- | ---
 `class` | Class 名稱 | toc
 `list_number` | 顯示編號 | true
+`max_depth` | 生成 TOC 的最大深度 | 6
+`min_depth` | 生成 TOC 的最小深度 | 1
 
 **範例：**
 
