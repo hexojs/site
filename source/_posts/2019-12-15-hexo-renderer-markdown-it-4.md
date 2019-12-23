@@ -1,5 +1,5 @@
 ---
-title: Official plugin hexo-renderer-markdown-it released
+title: Official plugin hexo-renderer-markdown-it 4.0.0 released
 ---
 
 We have released a new version of the official plugin [hexo-renderer-markdown-it]
