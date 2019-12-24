@@ -2,7 +2,7 @@
 title: Speed is the Key - How We Make Hexo 30% Faster
 ---
 
-> Originally written in [Simplified Chinese](https://blog.skk.moe/post/how-we-make-hexo-4-2-faster/) by Sukka, one of the current Hexo development team member, and translated into English by himself.
+> Originally written by [Sukka](https://github.com/SukkaW) (one of the current Hexo development team member) in [Simplified Chinese](https://blog.skk.moe/post/how-we-make-hexo-4-2-faster/)  and translated into English by himself.
 
 Speed is always the key to Hexo. 3 years ago, [Hexo 3.2 speeds up generation speed by 2x](https://hexo.io/news/2016/02/28/hexo-3-2-released/) through templates precompilation. And we are now at Hexo 4.2, with several performance improvements we successfully make the generation speed 30% faster compared to Hexo 3.2.
 
