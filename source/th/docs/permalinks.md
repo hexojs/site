@@ -19,8 +19,9 @@ Variable | Description
 `:minute` | Published minute of posts (2-digit)
 `:title` | Filename
 `:post_title` | Post title
-`:id` | Post ID (_not persistent across [cache reset](/th/docs/commands#clean)_)
+`:hash` | Hash value of filename, date and time (12-alphanumeric)
 `:category` | Categories. If the post is uncategorized, it will use the `default_category` value.
+`:id` | Post ID (_not persistent across [cache reset](/th/docs/commands#clean)_)
 
 ตุณสามารถตั้งค่า default value ของทุก variable ใน permalink โดยตั้งค่า 
 `permalink_defaults`:

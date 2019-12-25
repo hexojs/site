@@ -18,8 +18,9 @@ title: 永久链接（Permalinks）
 `:minute` | 文章发表时的分钟 (2 位数)
 `:title` | 文件名称
 `:post_title` | 文章标题
-`:id` | 文章 ID (_not persistent across [cache reset](/zh-cn/docs/commands#clean)_)
+`:hash` | Hash value of filename, date and time (12-alphanumeric)
 `:category` | 分类。如果文章没有分类，则是 `default_category` 配置信息。
+`:id` | 文章 ID (_not persistent across [cache reset](/zh-cn/docs/commands#clean)_)
 
 您可在 `permalink_defaults` 参数下调整永久链接中各变量的默认值：
 

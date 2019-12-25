@@ -18,8 +18,9 @@ Variable | Description
 `:minute` | Published minute of posts (2-digit)
 `:title` | Filename
 `:post_title` | Post title
-`:id` | Post ID (_not persistent across [cache reset](/docs/commands#clean)_)
+`:hash` | Hash value of filename, date and time (12-alphanumeric)
 `:category` | Categories. If the post is uncategorized, it will use the `default_category` value.
+`:id` | Post ID (_not persistent across [cache reset](/docs/commands#clean)_)
 
 You can define the default value of each variable in the permalink through the `permalink_defaults` setting:
 

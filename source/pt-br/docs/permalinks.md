@@ -19,8 +19,9 @@ Variável | Descrição
 `:minute` | Published minute of posts (2-digit)
 `:title` | Nome do arquivo (sem sua extensão)
 `:post_title` | Título da postagem
-`:id` | ID da postagem (_not persistent across [cache reset](/pt-br/docs/commands#clean)_)
+`:hash` | Hash value of filename, date and time (12-alphanumeric)
 `:category` | Categorias. Se a postagem não possuir uma categoria, será usado o valor de `default_category`.
+`:id` | ID da postagem (_not persistent across [cache reset](/pt-br/docs/commands#clean)_)
 
 Você pode definir o valor padrão de cada variável do permalink através da definição `permalink_defaults`:
 
