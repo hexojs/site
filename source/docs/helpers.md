@@ -781,7 +781,7 @@ Option | Description | Default
 `title` | Page title (`og:title`) | `page.title` or `config.title`
 `type` | Page type (`og:type`) | `article` (post) or `website` (page).
 `url` | Page URL (`og:url`) | `url`
-`image` / `images` | Page cover (`og:image`) | Every image in the content
+`image` | `images` | Page cover (`og:image`) | Every image in the content
 `site_name` | Site name (`og:site_name`) | `config.title`
 `description` | Page description (`og:description`) | Page excerpt or first 200 characters of the content
 `twitter_card` | Twitter card type (`twitter:card`) | summary
