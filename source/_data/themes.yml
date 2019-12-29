@@ -2955,6 +2955,16 @@
     - fast
     - clean
     - simple
+- name: July
+  description: A minimalist, focused writing Hexo theme.
+  link: https://github.com/wisp-x/hexo-theme-july
+  preview: https://github.com/wisp-x/hexo-theme-july
+  tags:
+    - hexo-theme
+    - responsive
+    - minimalism
+    - simple
+    - en
 - name: Freemind.bithack
   description: A dark , pixel art theme for Hexo.
   link: https://github.com/Ares-X/hexo-theme-freemind.bithack
