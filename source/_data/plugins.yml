@@ -2427,3 +2427,18 @@
     - scss
     - css
     - style
+- name: hexo-tag-wikipedia
+  description: Embed content from Wikipedia.
+  link: https://github.com/tuanna-hsp/hexo-tag-wikipedia
+  tags:
+    - hexo
+    - wikipedia
+    - tag
+    - extracts
+- name: hexo-images-watermark
+  description: Article image watermark.
+  link: https://github.com/SpiritLing/hexo-images-watermark
+  tags:
+    - hexo
+    - images
+    - watermark

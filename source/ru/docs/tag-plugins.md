@@ -188,7 +188,7 @@ content
 Вставляет картинку с заданными размерами.
 
 ```
-{% img [class names] /path/to/image [width] [height] [title text [alt text]] %}
+{% img [class names] /path/to/image [width] [height] '"title text" "alt text"' %}
 ```
 
 ## Ссылка

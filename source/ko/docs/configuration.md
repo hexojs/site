@@ -22,6 +22,9 @@ title: Configuration
 `root` | 웹 사이트의 루트 디렉토리 |
 `permalink` | 게시글의 [permalink](permalinks.html) 형식 | `:year/:month/:day/:title/`
 `permalink_defaults` | Permalink 각 부분(segment)의 기본값 |
+`pretty_urls` | Rewrite the [`permalink`](variables.html) variables to pretty URLs |
+`pretty_urls.trailing_index` | Trailing `index.html`, set to `false` to remove it  | `true`
+`pretty_urls.trailing_html` | Trailing `.html`, set to `false` to remove it (_does not apply to trailing `index.html`_)  | `true`
 
 {% note info Website in subdirectory %}
 당신의 웹 사이트가 `http://example.org/blog`와 같이 서브디렉토리에 있다면 `url`은 `http://example.org/blog`고 설정하고 `root`는 `/blog/`로 설정하세요.

@@ -725,6 +725,7 @@ Opção | Descrição | Padrão
 `class` | Nome da classe | toc
 `list_number` | Exibe o número da lista | true
 `max_depth` | Profundidade máxima do cabeçalho gerado | 6
+`min_depth` | Minimum heading depth of generated toc | 1
 
 **Exemplos:**
 

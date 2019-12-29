@@ -2938,3 +2938,31 @@
     - Gallery
     - Valine
     - English
+- name: Crisp-Minimal-Resume
+  description: A minimalist resume template for Hexo
+  link: https://github.com/crispgm/resume/tree/master/port-hexo
+  preview: https://crispgm.github.io/resume-hexo-example/
+  tags:
+    - resume
+    - responsive
+    - minimal
+- name: zhaoo
+  description: A simple theme for Hexo.
+  link: https://github.com/izhaoo/hexo-theme-zhaoo
+  preview: https://www.izhaoo.com
+  tags:
+    - responsive
+    - fast
+    - clean
+    - simple
+- name: Freemind.bithack
+  description: A dark , pixel art theme for Hexo.
+  link: https://github.com/Ares-X/hexo-theme-freemind.bithack
+  preview: https://ares-x.com
+  tags:
+    - dark
+    - fast
+    - clean
+    - pixel art
+    - 中文
+    - simple
