@@ -60,7 +60,7 @@ title: 变量
 变量 | 描述 | 类型
 --- | --- | ---
 `page.per_page` | 每页显示的文章数量 | `number`
-`page.total` | 总文章数 | `number`
+`page.total` | 总页数 | `number`
 `page.current` | 目前页数 | `number`
 `page.current_url` | 目前分页的网址 | `string`
 `page.posts` | 本页文章 ([Data Model](https://hexojs.github.io/warehouse/)) | `object`
