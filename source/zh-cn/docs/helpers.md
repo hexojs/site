@@ -400,6 +400,15 @@ url: https://example.com/blog # example
 <%- render(str, engine, [options]) %>
 ```
 
+**示例：**
+
+``` js
+<%- render('p(class="example") Test', 'pug'); %>
+// <p class="example">Test</p>
+```
+
+有关更多详细信息，请参见[渲染](https://hexo.io/zh-cn/api/rendering.html)。
+
 ### word_wrap
 
 使每行的字符串长度不超过 `length`。`length` 预设为 80。

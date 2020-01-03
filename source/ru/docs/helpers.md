@@ -320,6 +320,15 @@ title: Помощники
 <%- render(str, engine, [options]) %>
 ```
 
+**Примеры:**
+
+``` js
+<%- render('p(class="example") Test', 'pug'); %>
+// <p class="example">Test</p>
+```
+
+См. [Rendering](https://hexo.io/ru/api/rendering.html) для более подробной информации.
+
 ### word_wrap
 
 Переносит строки длиннее указанного в `length` количества символов. `length` равняется 80 по умолчанию.
