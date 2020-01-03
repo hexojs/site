@@ -323,7 +323,7 @@ title: 輔助函數（Helpers）
 // <p class="example">Test</p>
 ```
 
-有關更多詳細信息，請參見[渲染](https://hexo.io/zh-tw/api/rendering.html)。
+See [Rendering](https://hexo.io/zh-tw/api/rendering.html) for more details. 
 
 ### word_wrap
 
