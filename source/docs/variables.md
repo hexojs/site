@@ -54,9 +54,9 @@ Variable | Description | Type
 
 Variable | Description | Type
 --- | --- | ---
-`page.published` | True if the post is not a draft | `boolean`
-`page.categories` | All categories of the post | `array` of ???
-`page.tags` | All tags of the post | `array` of ???
+`post.published` | True if the post is not a draft | `boolean`
+`post.categories` | All categories of the post | `array` of ???
+`post.tags` | All tags of the post | `array` of ???
 
 **Home (`index`)**
 
