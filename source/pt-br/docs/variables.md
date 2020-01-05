@@ -54,9 +54,9 @@ Variável | Descrição | Tipo
 
 Variável | Descrição | Tipo
 --- | --- | ---
-`page.published` | Verdadeiro se a postagem não for um rascunho | `boolean`
-`page.categories` | Todas as categorias da postagem | `array` de ???
-`page.tags` | Todas as tags da postagem | `array` de ???
+`post.published` | Verdadeiro se a postagem não for um rascunho | `boolean`
+`post.categories` | Todas as categorias da postagem | `array` de ???
+`post.tags` | Todas as tags da postagem | `array` de ???
 
 **Home (`index`)**
 
