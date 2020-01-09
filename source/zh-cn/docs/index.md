@@ -28,6 +28,7 @@ Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 [Markdown](h
 ### 安装 Git
 
 - Windows：下载并安装 [git](https://git-scm.com/download/win).
+  - 中国大陆地区用户：[淘宝 Git for Windows 镜像](https://npm.taobao.org/mirrors/git-for-windows/) 
 - Mac：使用 [Homebrew](http://mxcl.github.com/homebrew/), [MacPorts](http://www.macports.org/) 或者下载 [安装程序](http://sourceforge.net/projects/git-osx-installer/)。
 - Linux (Ubuntu, Debian)：`sudo apt-get install git-core`
 - Linux (Fedora, Red Hat, CentOS)：`sudo yum install git-core`
@@ -36,20 +37,17 @@ Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 [Markdown](h
 如果在编译时可能会遇到问题，请先到 App Store 安装 Xcode，Xcode 完成后，启动并进入 **Preferences -> Download -> Command Line Tools -> Install** 安装命令行工具。
 {% endnote %}
 
-{% note info Windows 用户 %}
-对于中国大陆地区用户，可以前往 [淘宝 Git for Windows 镜像](https://npm.taobao.org/mirrors/git-for-windows/) 下载 git 安装包。
-{% endnote %}
-
 ### 安装 Node.js
 
-Node.js 为大多数平台提供了官方的 [安装程序](https://nodejs.org/en/download/)。对于中国大陆地区用户，可以前往 [淘宝 Node.js 镜像](https://npm.taobao.org/mirrors/node) 下载。
+Node.js 为大多数平台提供了官方的 [安装程序](https://nodejs.org/en/download/)。
+> 中国大陆地区用户：[淘宝 Node.js 镜像](https://npm.taobao.org/mirrors/node)
 
 其它的安装方法：
 
 - Windows：通过 [nvs](https://github.com/jasongin/nvs/)（推荐）或者[nvm](https://github.com/nvm-sh/nvm) 安装。
 - Mac：使用 [Homebrew](https://brew.sh/) 或 [MacPorts](http://www.macports.org/) 安装。
 - Linux（DEB/RPM-based）：从 [NodeSource](https://github.com/nodesource/distributions) 安装。
-- 其它：使用相应的软件包管理器进行安装，可以参考由 Node.js 提供的 [指导](https://nodejs.org/en/download/package-manager/)
+- 其它：使用相应的软件包管理器进行安装，可以参考由 Node.js 提供的 [指导](https://nodejs.org/zh-cn/download/package-manager/)
 
 对于 Mac 和 Linux 同样建议使用 nvs 或者 nvm，以避免可能会出现的权限问题。
 
@@ -57,13 +55,17 @@ Node.js 为大多数平台提供了官方的 [安装程序](https://nodejs.org/e
 使用 Node.js 官方安装程序时，请确保勾选 **Add to PATH** 选项（默认已勾选）
 {% endnote %}
 
-{% note warn For Mac / Linux 用户 %}
+{% note warn Mac / Linux 用户 %}
 如果在尝试安装 Hexo 的过程中出现 `EACCES` 权限错误，请遵循 [由 npmjs 发布的指导](https://docs.npmjs.com/resolving-eacces-permissions-errors-when-installing-packages-globally) 修复该问题。强烈建议 **不要** 使用 root、sudo 等方法覆盖权限
 {% endnote %}
 
 ### 安装 Hexo
 
 所有必备的应用程序安装完成后，即可使用 npm 安装 Hexo。
+> 中国大陆地区用户建议使用 cnpm 替代 npm，则以后涉及 npm 命令应均由 cnpm 替代。
+> ```
+> npm install -g cnpm --registry=https://registry.npm.taobao.org
+> ```
 
 ``` bash
 $ npm install -g hexo-cli
