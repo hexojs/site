@@ -27,8 +27,12 @@ Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 [Markdown](h
 
 ### 安装 Git
 
-- Windows：下载并安装 [git](https://git-scm.com/download/win).
-  - 中国大陆地区用户：[淘宝 Git for Windows 镜像](https://npm.taobao.org/mirrors/git-for-windows/) 
+- Windows：下载并安装 [git](https://git-scm.com/download/win)。
+
+{% note info Windows 用户 %}	
+对于中国大陆地区用户，可以前往 [淘宝 Git for Windows 镜像](https://npm.taobao.org/mirrors/git-for-windows/) 下载 git 安装包。
+{% endnote %}
+
 - Mac：使用 [Homebrew](http://mxcl.github.com/homebrew/), [MacPorts](http://www.macports.org/) 或者下载 [安装程序](http://sourceforge.net/projects/git-osx-installer/)。
 - Linux (Ubuntu, Debian)：`sudo apt-get install git-core`
 - Linux (Fedora, Red Hat, CentOS)：`sudo yum install git-core`
