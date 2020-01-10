@@ -40,7 +40,9 @@ Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 [Markdown](h
 ### 安装 Node.js
 
 Node.js 为大多数平台提供了官方的 [安装程序](https://nodejs.org/en/download/)。
-> 中国大陆地区用户：[淘宝 Node.js 镜像](https://npm.taobao.org/mirrors/node)
+{% note info 中国大陆地区用户 %}
+ 中国大陆地区的用户可以前往淘宝提供的 [Node.js 镜像](https://npm.taobao.org/mirrors/node) 下载。
+{% endnote %}
 
 其它的安装方法：
 
@@ -87,4 +89,3 @@ $ npm install hexo
   ``` bash
   echo 'PATH="$PATH:./node_modules/.bin"' >> ~/.profile
   ```
-
