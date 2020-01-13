@@ -17,6 +17,14 @@
     - [ ] `name` is unique.
     - [ ] `link` URL is correct.
 - [ ] Others (Update, fix, translation, etc...)
+    - Languages:
+    - [ ] `en` English
+    - [ ] `ko` Korean
+    - [ ] `pt-br` Brazilian Portuguese
+    - [ ] `ru` Russian
+    - [ ] `th` Thai
+    - [ ] `zh-cn` simplified Chinese
+    - [ ] `zh-tw` traditional Chinese
 
 <!-- 
     Thank you for publishing your work on Hexo site!
