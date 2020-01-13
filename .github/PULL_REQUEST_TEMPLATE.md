@@ -21,7 +21,7 @@
     - [ ] `en` English
     - [ ] `ko` Korean
     - [ ] `pt-br` Brazilian Portuguese
-    - [ ] `ru` Thai
+    - [ ] `ru` Russian
     - [ ] `th` Thai
     - [ ] `zh-cn` simplified Chinese
     - [ ] `zh-tw` traditional Chinese
