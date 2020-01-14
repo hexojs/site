@@ -2955,6 +2955,16 @@
     - fast
     - clean
     - simple
+- name: July
+  description: A minimalist, focused writing Hexo theme.
+  link: https://github.com/wisp-x/hexo-theme-july
+  preview: https://github.com/wisp-x/hexo-theme-july
+  tags:
+    - hexo-theme
+    - responsive
+    - minimalism
+    - simple
+    - en
 - name: Freemind.bithack
   description: A dark , pixel art theme for Hexo.
   link: https://github.com/Ares-X/hexo-theme-freemind.bithack
@@ -2966,3 +2976,32 @@
     - pixel art
     - 中文
     - simple
+- name: AcetoLog
+  description: A beautiful & simple theme.
+  link: https://github.com/iGuan7u/Acetolog
+  preview: https://iguan7u.cn
+  tags:
+    - Wordbase
+    - 中文
+    - fase
+    - tiny
+- name: Tree
+  description: A simple tree directory theme for Hexo.
+  link: https://github.com/wujun234/hexo-theme-tree
+  preview: https://wujun234.github.io/
+  tags:
+    - 中文
+    - tiny
+    - hexo-theme
+    - simple
+- name: Geek
+  description: A very simple theme of hexo blog geek.
+  link: https://github.com/sanjinhub/hexo-theme-geek
+  preview: https://github.com/sanjinhub/hexo-theme-geek
+  tags:
+    - 中文
+    - geek
+    - hexo-theme
+    - simple
+    - dark
+    - Beautiful
