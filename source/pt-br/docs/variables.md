@@ -23,8 +23,8 @@ Variável | Descrição | Tipo
 --- | --- | ---
 `site.posts` | Todos as postagens | `array` de objetos `post`
 `site.pages` | Todas as páginas | `array` de objetos `page`
-`site.categories` | Todas as categorias | `array` de ???
-`site.tags` | Todas as tags | `array` de ???
+`site.categories` | Todas as categorias | `array` de `string`
+`site.tags` | Todas as tags | `array` de `string`
 
 ### Variáveis da Página
 
@@ -55,8 +55,8 @@ Variável | Descrição | Tipo
 Variável | Descrição | Tipo
 --- | --- | ---
 `page.published` | Verdadeiro se a postagem não for um rascunho | `boolean`
-`page.categories` | Todas as categorias da postagem | `array` de ???
-`page.tags` | Todas as tags da postagem | `array` de ???
+`page.categories` | Todas as categorias da postagem | `array` de `string`
+`page.tags` | Todas as tags da postagem | `array` de `string`
 
 **Home (`index`)**
 

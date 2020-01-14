@@ -23,8 +23,8 @@ Variable | Description | Type
 --- | --- | ---
 `site.posts` | All posts | `array` of `post` objects
 `site.pages` | All pages | `array` of `page` objects
-`site.categories` | All categories | `array` of ???
-`site.tags` | All tags | `array` of ???
+`site.categories` | All categories | `array` of `string`
+`site.tags` | All tags | `array` of `string`
 
 ### Page Variables
 
@@ -55,8 +55,8 @@ Variable | Description | Type
 Variable | Description | Type
 --- | --- | ---
 `page.published` | True if the post is not a draft | `boolean`
-`page.categories` | All categories of the post | `array` of ???
-`page.tags` | All tags of the post | `array` of ???
+`page.categories` | All categories of the post | `array` of `string`
+`page.tags` | All tags of the post | `array` of `string`
 
 **หน้าหลัก (`index`)**
 
