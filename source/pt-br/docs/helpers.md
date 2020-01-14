@@ -326,14 +326,14 @@ Renderiza uma string.
 <%- render(str, engine, [options]) %>
 ```
 
-**Exemplos:**
+**Examples:**
 
 ``` js
 <%- render('p(class="example") Test', 'pug'); %>
 // <p class="example">Test</p>
 ```
 
-Consulte [Renderização](https://hexo.io/pt-br/api/rendering.html) para obter mais detalhes.
+See [Rendering](https://hexo.io/pt-br/api/rendering) for more details.
 
 ### word_wrap
 

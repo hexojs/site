@@ -400,14 +400,14 @@ url: https://example.com/blog # example
 <%- render(str, engine, [options]) %>
 ```
 
-**示例：**
+**Examples:**
 
 ``` js
 <%- render('p(class="example") Test', 'pug'); %>
 // <p class="example">Test</p>
 ```
 
-有关更多详细信息，请参见[渲染](https://hexo.io/zh-cn/api/rendering.html)。
+See [Rendering](https://hexo.io/zh-cn/api/rendering) for more details.
 
 ### word_wrap
 

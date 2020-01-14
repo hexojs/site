@@ -321,14 +321,14 @@ Markdown에 맞게 문자열을 렌더링합니다.
 <%- render(str, engine, [options]) %>
 ```
 
-**예:**
+**Examples:**
 
 ``` js
 <%- render('p(class="example") Test', 'pug'); %>
 // <p class="example">Test</p>
 ```
 
-자세한 내용은 [렌더링](https://hexo.io/ko/api/rendering.html)을 참조하십시오.
+See [Rendering](https://hexo.io/ko/api/rendering) for more details.
 
 ### word_wrap
 

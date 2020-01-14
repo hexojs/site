@@ -316,14 +316,14 @@ title: 輔助函數（Helpers）
 <%- render(str, engine, [options]) %>
 ```
 
-**範例：**
+**Examples:**
 
 ``` js
 <%- render('p(class="example") Test', 'pug'); %>
 // <p class="example">Test</p>
 ```
 
-See [Rendering](https://hexo.io/zh-tw/api/rendering.html) for more details. 
+See [Rendering](https://hexo.io/zh-twapi/rendering) for more details.
 
 ### word_wrap
 

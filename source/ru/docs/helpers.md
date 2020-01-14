@@ -320,14 +320,14 @@ title: Помощники
 <%- render(str, engine, [options]) %>
 ```
 
-**Примеры:**
+**Examples:**
 
 ``` js
 <%- render('p(class="example") Test', 'pug'); %>
 // <p class="example">Test</p>
 ```
 
-См. [Rendering](https://hexo.io/ru/api/rendering.html) для более подробной информации.
+See [Rendering](https://hexo.io/ru/api/rendering) for more details.
 
 ### word_wrap
 

@@ -342,14 +342,14 @@ Renders a string.
 <%- render(str, engine, [options]) %>
 ```
 
-**ยกตัวอย่างเช่น:**
+**Examples:**
 
 ``` js
 <%- render('p(class="example") Test', 'pug'); %>
 // <p class="example">Test</p>
 ```
 
-ดู [Rendering](https://hexo.io/th/api/rendering.html) สำหรับรายละเอียดเพิ่มเติม
+See [Rendering](https://hexo.io/th/api/rendering) for more details.
 
 ### word_wrap
 
