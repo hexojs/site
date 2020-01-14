@@ -10,9 +10,23 @@ title: Configuration
 `title` | 웹 사이트의 제목
 `subtitle` | 웹 사이트의 부제
 `description` | 웹 사이트에 대한 설명
+`keywords` | The keywords of your website. Put multiple keywords as an array (see examples).
 `author` | 작성자 이름
 `language` | 웹 사이트의 주 사용언어. [2-lettter ISO-639-1 code](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) 참조. 기본값은 `en`.
 `timezone` | 웹 사이트에서 사용하는 timezone. Hexo는 기본적으로 PC의 시간값을 사용합니다. 사용 가능한 timezone의 종류는 [여기](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones)에서 확인할 수 있습니다. 다음과 같은 형식으로 사용하세요. `America/New_York`, `Japan`, `UTC`.
+
+Examples:
+
+``` yaml
+# Array with unordered list style
+keywords:
+- documentation
+- markdown
+- custom
+- staticgen
+# Array with square brackets style
+keywords: [documentation, markdown, custom, staticgen]
+```
 
 ### URL
 
