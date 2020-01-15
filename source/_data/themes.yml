@@ -2,12 +2,12 @@
   description: A beautiful hexo theme
   link: https://github.com/dusign/hexo-theme-snail
   preview: https://www.dusign.net
-  tags: 
+  tags:
     - beautiful
     - simple
     - light
     - star
-- name: Hermes 
+- name: Hermes
   description: Updated, opinionated continuation of the Apollo theme
   link: https://github.com/claymcleod/hexo-theme-hermes
   preview: https://claymcleod.github.io/hexo-theme-hermes/
@@ -241,7 +241,7 @@
 - name: Corazon
   description: A simple theme. I hope I can maintain for a long time
   link: https://github.com/littleee/corazon
-  preview: http://littleee.com
+  preview: https://littleee.github.io/
   tags:
     - 中文
     - English
