@@ -7,6 +7,17 @@
     - simple
     - light
     - star
+- name: Lightx
+  description: A concise and elegant hexo theme
+  link: https://github.com/songquanpeng/hexo-theme-lightx
+  preview: https://www.iometa.cn/
+  tags:
+    - light
+    - simple
+    - concise
+    - elegant
+    - ejs
+    - English
 - name: Hermes
   description: Updated, opinionated continuation of the Apollo theme
   link: https://github.com/claymcleod/hexo-theme-hermes
