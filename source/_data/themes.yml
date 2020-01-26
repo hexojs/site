@@ -1,3 +1,14 @@
+- name: Mtics-Resume
+  description: A simple and minimal hexo resume theme
+  link: https://github.com/mtics/hexo-mtics-resume
+  preview: https://mtics.netlify.com/
+  tags:
+    - resume
+    - 简历
+    - responsive
+    - clean
+    - simple
+
 - name: A-Snail
   description: A beautiful hexo theme
   link: https://github.com/dusign/hexo-theme-snail
