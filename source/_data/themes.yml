@@ -7,6 +7,17 @@
     - simple
     - light
     - star
+- name: Type
+  description: A material design hexo theme
+  link: https://github.com/aiokr/hexo-theme-type
+  preview: https://blog.itypen.com/
+  tags:
+    - material
+    - simple
+    - gallery
+    - single column
+    - ejs
+    - scss
 - name: Lightx
   description: A concise and elegant hexo theme
   link: https://github.com/songquanpeng/hexo-theme-lightx
