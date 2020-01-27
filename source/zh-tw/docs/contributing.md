@@ -10,7 +10,7 @@ We welcome you to join the development of Hexo. 🤗
 
 ### 開始之前
 
-Please read [Contributor Covenant Code of Conduct](https://github.com/hexojs/hexo/blob/master/CODE_OF_CONDUCT.md) first.
+請先閱讀 [Contributor Covenant Code of Conduct](https://github.com/hexojs/hexo/blob/master/CODE_OF_CONDUCT.md)。
 
 請遵守以下準則：
 
@@ -18,7 +18,7 @@ Please read [Contributor Covenant Code of Conduct](https://github.com/hexojs/hex
 - 使用 2 個空格縮排。
 - 不要把逗號放在最前面。
 
-Also, Hexo has its own [ESLint config](https://github.com/hexojs/eslint-config-hexo), so please make sure your contribution will make ESLint happy.
+此外，Hexo 有 [ESLint 設定](https://github.com/hexojs/eslint-config-hexo)，因此請務必確認您的貢獻能夠通過 ESLint。
 
 ### 工作流程
 
@@ -97,7 +97,7 @@ $ hexo server
 當您使用 Hexo 遭遇問題時，可試著在 [解決問題](troubleshooting.html) 中尋找解答，或是在 [GitHub](https://github.com/hexojs/hexo/issues) 或 [Google Group](https://groups.google.com/group/hexo) 詢問。若找不到答案，請至 GitHub 回報。
 
 1. 以 [除錯模式](commands.html#除錯模式) 再執行一次。
-2. 在 GitHub 上提交新 Issue 時，請按照問題模板中的步驟提供調試消息和版本資訊。
+2. 在 GitHub 上提交新 Issue 時，請按照問題模板中的步驟提供除錯資訊和版本資訊。
 
 [hexojs/hexo]: https://github.com/hexojs/hexo
 [hexojs/site]: https://github.com/hexojs/site
