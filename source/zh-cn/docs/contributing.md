@@ -18,7 +18,7 @@ We welcome you to join the development of Hexo. 🤗
 - 缩进使用 2 个空格。
 - 不要把逗号放在最前面。
 
-另外，Hexo 拥有自己的 [ESLint配置](https://github.com/hexojs/eslint-config-hexo)，因此请确保您的贡献能够通过 ESLint。
+另外，Hexo 拥有自己的 [ESLint 配置](https://github.com/hexojs/eslint-config-hexo)，因此请确保您的贡献能够通过 ESLint。
 
 ### 工作流
 
