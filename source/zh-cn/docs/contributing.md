@@ -2,7 +2,7 @@
 title: 贡献
 ---
 
-We welcome you to join the development of Hexo. 🤗
+我们非常欢迎您加入 Hexo 的开发。 🤗
 
 ## 开发
 
@@ -52,7 +52,7 @@ We welcome you to join the development of Hexo. 🤗
     $ npm test
     {% endcode %}
 
-## Updating official-plugins
+## 更新 Hexo 官方插件
 
 我们也欢迎给 [Hexo 官方插件](https://github.com/hexojs) 提交 PR 和 Issue 🤗
 
