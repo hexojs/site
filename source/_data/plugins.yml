@@ -2444,3 +2444,9 @@
     - audio
     - video
     - bilibili
+- name: hexo-tag-photozoom
+  description: A hexo tag plugin for image zooming, with a zooming effect similar to Medium.
+  link: https://github.com/SSARCandy/hexo-tag-photozoom
+  tags:
+    - tag
+    - images
