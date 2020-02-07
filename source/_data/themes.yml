@@ -3045,3 +3045,14 @@
   tags:
     - cheatsheets
     - well-designed
+- name: yun
+  description: A powerful & simple & fast theme for Hexo.
+  link: https://github.com/YunYouJun/hexo-theme-yun
+  preview: https://yunyoujun.cn
+  tags:
+    - responsive
+    - yun
+    - dark
+    - simple
+    - fast
+    - cloud
