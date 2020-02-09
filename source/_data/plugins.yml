@@ -2458,3 +2458,10 @@
     - bilibili
     - bangumi
     - anime
+- name: hexo-steam-games
+  description: Generate pages of steam games for Hexo | 为 Hexo 添加 steam 游戏库页面
+  link: https://github.com/HCLonely/hexo-steam-games
+  tags:
+    - generator
+    - steam
+    - game
