@@ -2458,6 +2458,12 @@
     - bilibili
     - bangumi
     - anime
+- name: hexo-douban-getter
+  description: Display the data of books, movies, musics, games you marked in Douban.
+  link: https://github.com/hqweay/hexo-douban-getter.git
+  tags:
+    - douban
+    - 豆瓣
 - name: hexo-steam-games
   description: Generate pages of steam games for Hexo | 为 Hexo 添加 steam 游戏库页面
   link: https://github.com/HCLonely/hexo-steam-games
