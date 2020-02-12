@@ -694,7 +694,7 @@ Inserts [generator tag](https://developer.mozilla.org/en-US/docs/Web/HTML/Elemen
 `title` | Заголовок страницы (`og:title`) | `page.title`
 `type` | Тип страницы (`og:type`) | blog
 `url` | URL-адрес страницы (`og:url`) | `url`
-`image` | Обложка страницы (`og:image`) | Первое изображение в контенте
+`image` | Обложка страницы (`og:image`) | All images in the content
 `site_name` | Имя сайта (`og:site_name`) | `config.title`
 `description` | Описание страницы (`og:description`) | Отрывок страницы или первые 200 символов содержимого
 `twitter_card` | Карточка Twitter (`twitter:card`) | Краткое изложение

@@ -737,7 +737,7 @@ Option | Description | Default
 `title` | Page title (`og:title`) | `page.title`
 `type` | Page type (`og:type`) | blog
 `url` | Page URL (`og:url`) | `url`
-`image` | Page cover (`og:image`) | First image in the content
+`image` | Page images (`og:image`) | All images in the content
 `site_name` | Site name (`og:site_name`) | `config.title`
 `description` | Page description (`og:description`) | Page excerpt or first 200 characters of the content
 `twitter_card` | Twitter card type (`twitter:card`) | summary
