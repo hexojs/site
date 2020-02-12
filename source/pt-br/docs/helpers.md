@@ -702,7 +702,7 @@ Opção | Descrição | Padrão
 `title` | Título da página (`og:title`) | `page.title`
 `type` | Tipo de página (`og:type`) | blog
 `url` | URL da página (`og:url`) | `url`
-`image` | Capa da página (`og:image`) | Primeira imagem no conteúdo
+`image` | Capa da página (`og:image`) | All images in the content
 `site_name` | Nome do site (`og:site_name`) | `config.title`
 `description`| Descrição da página (`og:description`) | Trecho da página ou os 200 primeiros caracteres do conteúdo
 `twitter_card` | Tipo de Twitter card (`twitter:card`) | summary

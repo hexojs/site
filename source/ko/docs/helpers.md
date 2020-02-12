@@ -697,7 +697,7 @@ Inserts [generator tag](https://developer.mozilla.org/en-US/docs/Web/HTML/Elemen
 `title` | 페이지 제목 (`og:title`) | `page.title`
 `type` | 페이지 형태 (`og:type`) | blog
 `url` | 페이지 URL (`og:url`) | `url`
-`image` | 페이지 커버 (`og:image`) | First image in the content
+`image` | 페이지 커버 (`og:image`) | All images in the content
 `site_name` | 사이트 이름 (`og:site_name`) | `config.title`
 `description` | 페이지 설명 (`og:description`) | Page excerpt or first 200 characters of the content
 `twitter_card` | Twitter card type (`twitter:card`) | summary
