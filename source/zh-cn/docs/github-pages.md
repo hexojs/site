@@ -45,10 +45,10 @@ deploy:
 
 ## Private repository
 
-The following instruction is adapted from [one-command deployment](/docs/one-command-deployment) page.
+以下教程改编自 [one-command deployment](/docs/one-command-deployment) 页面。
 
-1. Install [hexo-deployer-git](https://github.com/hexojs/hexo-deployer-git).
-2. Add the following configurations to **_config.yml**, (remove existing lines if any)
+1. 安装 [hexo-deployer-git](https://github.com/hexojs/hexo-deployer-git)；
+2. 将以下配置项添加到 **_config.yml**（删除现有行（如果有的话））；
 
   ``` yml
   deploy:
@@ -58,8 +58,8 @@ The following instruction is adapted from [one-command deployment](/docs/one-com
     branch: gh-pages
   ```
 
-3. Run `hexo clean && hexo deploy`.
-4. Check the webpage at *username*.github.io.
+3. 执行 `hexo clean && hexo deploy`；
+4. 检查 *username*.github.io 上的网页。
 
 ## 有用的参考链接
 
