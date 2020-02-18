@@ -47,7 +47,7 @@ deploy:
 
 以下教程改编自 [one-command deployment](/docs/one-command-deployment) 页面。
 
-1. 安装 [hexo-deployer-git](https://github.com/hexojs/hexo-deployer-git)；
+1. 安装 [hexo-deployer-git](https://github.com/hexojs/hexo-deployer-git)
 2. 将以下配置项添加到 **_config.yml**（删除现有行（如果有的话））；
 
   ``` yml
