@@ -1,3 +1,15 @@
+- name: Mustom
+  description: A simple theme with simple design (card/flow) and simple functions (home/archive)
+  link: https://github.com/jinyaoMa/hexo-theme-mustom
+  preview: https://ma-jinyao.cn
+  tags:
+    - 卡片
+    - 较简约
+    - responsive
+    - pjax
+    - pwa
+    - 中文
+
 - name: Mtics-Resume
   description: A simple and minimal hexo resume theme
   link: https://github.com/mtics/hexo-mtics-resume
