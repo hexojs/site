@@ -48,7 +48,7 @@ deploy:
 以下教程改编自 [one-command deployment](/docs/one-command-deployment) 页面。
 
 1. 安装 [hexo-deployer-git](https://github.com/hexojs/hexo-deployer-git)
-2. 将以下配置项添加到 **_config.yml**（删除现有行（如果有的话））；
+2. 将以下配置项添加到 **_config.yml**（删除现有的相关冲突配置（如果有的话））
 
   ``` yml
   deploy:
@@ -58,7 +58,7 @@ deploy:
     branch: gh-pages
   ```
 
-3. 执行 `hexo clean && hexo deploy`；
+3. 执行 `hexo clean && hexo deploy`
 4. 检查 *username*.github.io 上的网页。
 
 ## 有用的参考链接
