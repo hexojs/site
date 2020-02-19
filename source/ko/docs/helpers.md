@@ -500,10 +500,28 @@ XML 형식의 날짜를 삽입합니다. `date`는 unix time, ISO string, date o
 `show_count` | 각 태그 별 포스트의 번호를 표시합니다. | true
 `style` | 태그 목록 표시의 스타일. `list`는 태그 목록을 순서없이 표시합니다.  | list
 `separator` | 태그 별 구분자. (`style`이 `list`가 아닐 때만 동작합니다.) | ,
-`class` | 태그 목록의 Class명. | tag
+`class` | Class name of tag list (string) or customize each tag's class (object, see below). | tag
 `transform` | 태그 이름의 표시 방식을 변경하는 기능. |
 `amount` | 표시되는 태그의 개수. (0 = 무한대) | 0
 `suffix` | 링크에 접미사를 붙입니다. | None
+
+Class advanced customization:
+
+Option | Description | Default
+--- | --- | ---
+`class.ul` | `<ul>` class name (only for style `list`) | `tag-list` (list style)
+`class.li` | `<li>` class name (only for style `list`) | `tag-list-item` (list style)
+`class.a` | `<a>` class name | `tag-list-link` (list style) `tag-link` (normal style)
+`class.count` | `<span>` class name where the tag counter is stored (only when `show_count` is `true`) | `tag-list-count` (list style) `tag-count` (normal style)
+
+Examples:
+
+```ejs
+<%- list_tags(site.tags, {class: 'classtest', style: false, separator: ' | '}) %>
+<%- list_tags(site.tags, {class: 'classtest', style: 'list'}) %>
+<%- list_tags(site.tags, {class: {ul: 'ululul', li: 'lilili', a: 'aaa', count: 'ccc'}, style: false, separator: ' | '}) %>
+<%- list_tags(site.tags, {class: {ul: 'ululul', li: 'lilili', a: 'aaa', count: 'ccc'}, style: 'list'}) %>
+```
 
 ### list_archives
 
