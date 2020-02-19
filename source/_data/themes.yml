@@ -3056,3 +3056,14 @@
     - simple
     - fast
     - cloud
+- name: A-ASR
+  description: A Simple & Rich theme for Hexo.
+  link: https://github.com/removeif/hexo-theme-icarus-removeif
+  preview: https://removeif.github.io/removeif-demo/
+  tags:
+    - responsive
+    - practical
+    - dark
+    - simple
+    - fast
+    - latest-comment
