@@ -2472,9 +2472,12 @@
     - steam
     - game
 - name: hexo-deployer-cos-cdn
-  description: Tencent COS deployment and CDN refresh plugin of Hexo | 将博客发布到腾讯COS并刷新CDN缓存
+  description: Tencent COS deployment and CDN refresh plugin of Hexo | 将博客发布到腾讯云、阿里云对象存储并刷新CDN缓存
   link: https://github.com/lxl80/hexo-deployer-cos-cdn
   tags:
     - deployer
+    - tencent
     - cos
     - cdn
+    - aliyun
+    - oss
