@@ -3056,3 +3056,14 @@
     - simple
     - fast
     - cloud
+- name: 1-Dearmsdan
+  description: It gives people a sense of emptiness.
+  link: https://github.com/ZHD99/hexo-theme-dearmsdan
+  preview: https://www.dearmsdan.com/
+  tags:
+    - hexo-theme
+    - beautiful
+    - bootstrap
+    - dearmsdan
+    - 中文
+
