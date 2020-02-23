@@ -12,23 +12,10 @@ title: 配置
 `title` | 網站標題
 `subtitle` | 網站副標題
 `description` | 網站描述
-`keywords` | The keywords of your website. Put multiple keywords as an array (see examples).
+`keywords` | The keywords of your website. Separate multiple keywords with commas `,` in a string or as an array.
 `author` | 您的名字
 `language` | 網站使用的語言，參考 [2-lettter ISO-639-1 code](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes)，預設為 `en`
 `timezone` | 網站時區，Hexo 預設使用您電腦的時區，您可以在 [時區列表](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) 尋找適當的時區，例如 `America/New_York` 、 `Japan` 與 `UTC`
-
-Examples:
-
-``` yaml
-# Array with unordered list style
-keywords:
-- documentation
-- markdown
-- custom
-- staticgen
-# Array with square brackets style
-keywords: [documentation, markdown, custom, staticgen]
-```
 
 ### 網址
 
