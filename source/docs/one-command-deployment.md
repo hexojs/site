@@ -200,6 +200,7 @@ deploy:
   privateKey: [path/to/privateKey]
   passphrase: [passphrase]
   agent: [path/to/agent/socket]
+  forceUpload: [boolean]
 ```
 
 | Option       | Description                             | Default          |
@@ -212,6 +213,7 @@ deploy:
 | `privateKey` | Path to a ssh private key               |
 | `passphrase` | Optional passphrase for the private key |
 | `agent`      | Path to the ssh-agent socket            | `$SSH_AUTH_SOCK` |
+| `forceUpload`| Force uploading all files vs only new ones | `false`       |
 
 ## ZEIT Now
 
