@@ -1,3 +1,14 @@
+- name: Meadow
+  description: Meadow is a Material Designed Hexo theme based on MDUI.
+  link: https://github.com/kb1000fx/hexo-theme-meadow
+  preview: https://garybear.cn/
+  tags:
+    - Material Design
+    - MDUI
+    - responsive
+    - ejs
+    - simple
+
 - name: Mtics-Resume
   description: A simple and minimal hexo resume theme
   link: https://github.com/mtics/hexo-mtics-resume
@@ -3056,6 +3067,15 @@
     - simple
     - fast
     - cloud
+- name: A-Quark
+  description: A simple but powerful theme for Hexo.
+  link: https://github.com/pcrab/hexo-theme-quark
+  preview: https://pcrab.ml
+  tags:
+    - 中文
+    - hexo-theme
+    - simple
+    - clean
 - name: 1-Dearmsdan
   description: It gives people a sense of emptiness.
   link: https://github.com/ZHD99/hexo-theme-dearmsdan
@@ -3066,4 +3086,3 @@
     - bootstrap
     - dearmsdan
     - 中文
-
