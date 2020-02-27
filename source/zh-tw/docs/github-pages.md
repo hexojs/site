@@ -11,7 +11,7 @@ title: 在GitHub Pages上部署Hexo
 5. 系統會重定向Travis頁面。否則，請[按此](https://travis-ci.com/)手動前往。
 6. 在瀏覽器添加新頁面，[按此](https://github.com/settings/tokens)，允許資料庫的權限generate(產生)一個全新的Token，將請該Token數值記下。
 7. 前往Travis CI的Github Pages資料庫目錄，在設定頁面中的**Environment Variables**下，建立`GH_TOKEN`一列，把剛才記下的**Token**填在**Value**中。最後點選**Add**儲存。
-8. 在儲存庫目錄中新增Travis.yml:
+8. 在儲存庫目錄中新增`Travis.yml`:
 
 ```yml
 sudo: false
@@ -35,7 +35,7 @@ deploy:
 ```
 
 9. Travis CI完成部署後，新的文件會被推送到GitHub Pages儲存庫的gh-pages分支。
-10. 在GitHub Pages儲存庫設定頁，把gh-pages更改至Source。
+10. 在GitHub Pages儲存庫設定頁，把`gh-pages`更改至Source。
 11. 瀏覽`<GitHub 用戶名>.github.io`檢查你的網站能否運作。
 
 ## 專案頁面
