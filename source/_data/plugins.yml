@@ -2488,3 +2488,11 @@
     - utility
     - web-push-notification
     - notification
+- name: hexo-online-server
+  description: Edit and publish articles online | 在线编辑、发布文章
+  link: https://github.com/HCLonely/hexo-online-server
+  tags:
+    - online
+    - server
+    - editor
+    - preview
