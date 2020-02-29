@@ -1,4 +1,4 @@
-- name: Meadow
+﻿- name: Meadow
   description: Meadow is a Material Designed Hexo theme based on MDUI.
   link: https://github.com/kb1000fx/hexo-theme-meadow
   preview: https://garybear.cn/
@@ -3076,3 +3076,13 @@
     - hexo-theme
     - simple
     - clean
+
+- name: Minimalist
+  description: A minimalist style of pure green Hexo theme
+  link: https://github.com/CN-DXTZ/hexo-theme-Minimalist
+  preview: https://cn-dxtz.github.io
+  tags:
+    - Minimalist/极简
+    - pure green
+    - simple, quick and clean
+    - zh-CN/Chinese/中文
