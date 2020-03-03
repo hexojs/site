@@ -8,7 +8,6 @@
     - one_page
     - light
     - responsive
-
 - name: Mtics-Resume
   description: A simple and minimal hexo resume theme
   link: https://github.com/mtics/hexo-mtics-resume
