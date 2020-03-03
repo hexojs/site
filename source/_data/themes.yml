@@ -1,3 +1,13 @@
+- name: Navy
+  description: A Hexo theme.
+  link: https://github.com/lh1me/hexo-theme-navy
+  preview: https://linhong.me/
+  tags:
+    - navy
+    - simple
+    - responsive
+    - 简约
+
 - name: Meadow
   description: Meadow is a Material Designed Hexo theme based on MDUI.
   link: https://github.com/kb1000fx/hexo-theme-meadow
