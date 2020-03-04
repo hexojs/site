@@ -2496,3 +2496,10 @@
     - server
     - editor
     - preview
+- name: hexo-cldnry
+  description: Hexo tag to add an image from Cloudinary using Cloudinary SDK.
+  link: https://github.com/maliMirkec/hexo-cldnry
+  tags:
+    - tag
+    - image
+    - cloudinary
