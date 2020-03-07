@@ -32,7 +32,7 @@ deploy:
     branch: master
   local-dir: public
 ```
-Note that if you want to customse the source branch and the target branch. You could do as followings:
+Note that if you want to customise the source branch and the target branch. You could do as followings:
 ```yml
 sudo: false
 language: node_js
