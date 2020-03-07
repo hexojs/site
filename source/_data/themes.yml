@@ -3085,9 +3085,9 @@
     - elegant
     - clear
     - responsive
-- name: Wordkit
+- name: WordKit
   description: A Hexo Theme Based on UIKit Front-end Framework.
-  link: https://github.com/ThusFun/hexo-theme-uikit
+  link: https://github.com/ThusFun/hexo-theme-wordkit
   preview: https://hexo-wordkit.thus.fun/
   tags:
     - simple
