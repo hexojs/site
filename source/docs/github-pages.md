@@ -32,6 +32,30 @@ deploy:
     branch: master
   local-dir: public
 ```
+Note that if you want to customse the source branch and the target branch. You could do as followings:
+```yml
+sudo: false
+language: node_js
+node_js:
+  - 10 # use nodejs v10 LTS
+cache: npm
+branches:
+  only:
+    - hexo-source # <- the branch where your source codes are
+script:
+  - hexo generate
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: $GH_TOKEN
+  keep-history: true
+  target_branch：master # <- the branch where your generated static files go
+  on:
+    branch: hexo-source # <- the branch where your source codes are
+  local-dir: public
+```
+
+
 9. Once Travis CI finish the deployment, the generated pages can be found in the `gh-pages` branch of your repository
 10. In your GitHub repo's setting, navigate to "GitHub Pages" section and change Source to **gh-pages branch**.
 11. Check the webpage at *username*.github.io.
