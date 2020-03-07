@@ -3085,3 +3085,14 @@
     - elegant
     - clear
     - responsive
+- name: Wordkit
+  description: A Hexo Theme Based on UIKit Front-end Framework.
+  link: https://github.com/ThusFun/hexo-theme-uikit
+  preview: https://hexo-wordkit.thus.fun/
+  tags:
+    - simple
+    - clear
+    - responsive
+    - UIKit
+    - 中文
+    - Chinese
