@@ -669,11 +669,11 @@
   link: https://github.com/shuiRong/hexo-theme-Ada
   preview: https://fervent-bell-d9130f.netlify.com/
   tags:
-      - concise
-      - one_column
-      - white
-      - clean
-      - simple
+    - concise
+    - one_column
+    - white
+    - clean
+    - simple
 - name: phase
   description: Feel the flow of time with Phase
   link: https://github.com/hexojs/hexo-theme-phase
@@ -861,21 +861,21 @@
   link: https://github.com/reumia/hexo-theme-zzoman2015
   preview: http://dev.zzoman.com
   tags:
-  - simple
-  - responsive
-  - one_column
-  - korean
+    - simple
+    - responsive
+    - one_column
+    - korean
 - name: Maupassant
   description: A simple theme with great performance on different devices
   link: https://github.com/tufu9441/maupassant-hexo
   preview: https://www.haomwei.com
   tags:
-  - simple
-  - responsive
-  - two_columns
-  - white
-  - jade
-  - scss
+    - simple
+    - responsive
+    - two_columns
+    - white
+    - jade
+    - scss
 - name: Jekyll
   description: A theme inspired by jekyllrb.com
   link: https://github.com/pinggod/hexo-theme-jekyll
@@ -1327,7 +1327,7 @@
     - Chinese
     - Portuguese
 - name: Overdose
-  description: '⚠ Caution: you could be overdosed with this theme.'
+  description: "⚠ Caution: you could be overdosed with this theme."
   link: https://github.com/HyunSeob/hexo-theme-overdose
   preview: http://hyunseob.github.io/
   tags:
@@ -1690,33 +1690,33 @@
   link: https://github.com/Simlesos/hexo-theme-chord
   preview: https://imhzq.com
   tags:
-  - simple
-  - responsive
-  - white
-  - pug
-  - scss
+    - simple
+    - responsive
+    - white
+    - pug
+    - scss
 - name: another
   description: A pithy and pure template
   link: https://github.com/TongchengQiu/hexo-theme-another
   preview: https://blog.qiutc.me
   tags:
-  - simple
-  - pithy
-  - picture
-  - comment
-  - 中文
-  - Chinese
+    - simple
+    - pithy
+    - picture
+    - comment
+    - 中文
+    - Chinese
 - name: icalm
   description: Light and elegant
   link: https://github.com/nameoverflow/hexo-theme-icalm
   preview: https://hcyue.me
   tags:
-  - light
-  - elegant
-  - monochrome
-  - responsive
-  - single_page
-  - timeline
+    - light
+    - elegant
+    - monochrome
+    - responsive
+    - single_page
+    - timeline
 - name: LanMiao
   description: A Pink and simple theme
   link: https://github.com/hilanmiao/hexo-theme-lanmiao
@@ -2667,7 +2667,7 @@
 - name: orange
   description: A simple theme for recording life.
   link: https://github.com/Orange-way/hexo-theme-orange
-  preview:  https://orange-way.github.io/
+  preview: https://orange-way.github.io/
   tags:
     - simple
     - responsive
@@ -2948,7 +2948,7 @@
     - 阅读数统计
     - 回复
 - name: Mdm
-  description:  A material design theme, with dark mode. Suitable for PC & Phone
+  description: A material design theme, with dark mode. Suitable for PC & Phone
   link: https://github.com/TonyChenn/mdm
   preview: https://tonychenn.cn
   tags:
