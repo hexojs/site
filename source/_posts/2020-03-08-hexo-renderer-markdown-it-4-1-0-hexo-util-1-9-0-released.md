@@ -52,7 +52,7 @@ markdown:
 
 ### Dependencies
 
-- chore(deps-dev): bump mocha from 6.2.2 to 7.0.0 @dependabot-preview [#173]
+- chore(deps-dev): bump mocha from 6.2.2 to 7.0.0 [#173]
 
 [#177]: https://github.com/hexojs/hexo-util/pull/177
 [#172]: https://github.com/hexojs/hexo-util/pull/172
