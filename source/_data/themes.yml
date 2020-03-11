@@ -2754,17 +2754,17 @@
     - 中文
     - Beautiful
     - Qrcode
-- name: Aa-Lx
+- name: A-Chief-Lx
   description: A light & simple & elegant theme
   link: https://github.com/blleng/hexo-theme-lx
   preview: https://lx.blleng.cn
   tags:
-    - Sidebar
-    - Responsive
+    - sidebar
+    - responsive
     - simple
     - modern
     - clean
-    - 中文
+    - Chinese
     - css3
 - name: Chic
   description: An elegant,powerful,easy-to-read responsive Hexo theme.
