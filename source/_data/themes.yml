@@ -1,3 +1,16 @@
+- name: Aomori
+  description: A Hexo Theme.
+  link: https://github.com/lh1me/hexo-theme-aomori
+  preview: https://linhong.me/
+  tags:
+    - fast
+    - clean
+    - two_column
+    - widget
+    - responsive
+    - SEO
+    - 中文
+
 - name: Meadow
   description: Meadow is a Material Designed Hexo theme based on MDUI.
   link: https://github.com/kb1000fx/hexo-theme-meadow
