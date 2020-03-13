@@ -2434,18 +2434,18 @@
     - science
     - beautiful
     - scalable
-- name: Material-X
-  description: a material design theme
-  link: https://github.com/xaoxuu/hexo-theme-material-x
-  preview: https://xaoxuu.com
+- name: Volantis
+  description: A Wonderful Theme for Hexo
+  link: https://github.com/xaoxuu/hexo-theme-volantis
+  preview: https://volantis.js.org/
   tags:
-    - material design
     - responsive
     - widget
-    - less
     - beautiful
     - clean
-    - simple
+    - 模块化布局
+    - 高自由度
+    - 卡片风格
 - name: iLiKE
   description: A clean and responsive theme
   link: https://github.com/CaiChenghan/iLiKE
