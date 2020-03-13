@@ -35,6 +35,7 @@ markdown:
 - feat(prism): add data-language attribute [@SukkaW](https://github.com/SukkaW) [#177]
 - feat(prism): add mark & firstLine option support [@SukkaW](https://github.com/SukkaW) [#172]
 - feat: bring up prism highlight support [@SukkaW](https://github.com/SukkaW) [#168]
+    - Laying the groundwork for the planned support of [prism](https://prismjs.com/) highlight library in the upcoming Hexo v5, in addition to the current [highlight.js](https://highlightjs.org/) library.
 
 ### Fixes
 
