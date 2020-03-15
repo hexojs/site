@@ -4,10 +4,13 @@ menu:
   news: Nouvelles
   plugins: Plugins
   themes: Thèmes
+  about: About
   search: Chercher
 
 index:
   get_started: Commençer
+  theme_intro: Choose from a huge library of spectacular, feature-packed and customizable themes. Create your own using any compatible template engines.
+  theme_link: Explore themes
 
 page:
   contents: Contenus
@@ -34,6 +37,9 @@ sidebar:
     server: Serveur
     generating: Génération
     deployment: Déploiement
+    github_pages: GitHub Pages
+    gitlab_pages: GitLab Pages
+    one_command_deployment: One-Command Deployment
     customization: Personnalisation
     permalinks: Permaliens
     themes: Thèmes

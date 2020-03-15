@@ -13,11 +13,11 @@ code_dir: downloads/code
 new_post_name: :year-:month-:day-:title.md # File name of new posts
 post_asset_folder: true
 per_page: 0
+pretty_urls:
+  trailing_index: false
+  trailing_html: false
 
 theme: navy
-deploy:
-  type: git
-  repo: git@github.com:hexojs/hexojs.github.io.git
 
 highlight:
   enable: true

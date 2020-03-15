@@ -36,11 +36,19 @@ $ ulimit -n 10000
 
 ## Git 部署问题
 
+### RPC failed
+
 ``` plain
+error: RPC failed; result=22, HTTP code = 403
+
 fatal: 'username.github.io' does not appear to be a git repository
 ```
 
 请确认您已经在电脑上 [配置 git](https://help.github.com/articles/set-up-git)，或改用 HTTPS 库（repository）地址。
+
+### Error: ENOENT: no such file or directory
+
+如果你遇到了这个错误，有可能是你的文件名、分类或者标签的名字混淆了大写和小写，你可以尝试检查每一个标签和分类的名称，是否大小写一致来修复这一问题。
 
 ## 服务器问题
 
@@ -94,6 +102,18 @@ Hexo 使用 [Warehouse] 存储资料，它不是一般数组所以必须先进�
 $ hexo clean
 ```
 
+## 命令没有执行
+
+如果你除了 `hexo help`、`hexo init` 和 `hexo version` 以外不能执行任何命令、并且你的任何命令都只返回了 `hexo help` 的内容，这可能是由于 `package.json` 中缺乏 `hexo` 字段导致的。
+
+```json
+{
+  "hexo": {
+    "version": "3.9.0"
+  }
+}
+```
+
 ## 泄露（Escape）内容
 
 Hexo 使用 [Nunjucks] 来解析文章（旧版本使用 [Swig]，两者语法类似），内容若包含 `{% raw %}{{ }}{% endraw %}` 或 `{% raw %}{% %}{% endraw %}` 可能导致解析错误，您可以用 `raw` 标签包裹来避免潜在问题发生。
@@ -120,3 +140,54 @@ $ echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo
 [Swig]: http://paularmstrong.github.io/swig/
 [Nunjucks]: http://mozilla.github.io/nunjucks/
 
+## EMPERM Error (Windows Subsystem for Linux)
+
+在执行 `hexo server` 后返回如下错误：
+
+```
+Error: watch /path/to/hexo/theme/ EMPERM	
+```
+
+这是由于你使用的 WSL 版本不支持监听文件系统改动。 最新版的 WSL 已经解决了这一问题。
+
+您也仍然可以通过先使用 `hexo g` 生成文件然后将其作为静态服务器运行来从 WSL 环境运行服务器：
+
+```sh
+$ hexo generate
+$ hexo server -s
+```
+
+关于 WSL 的这一 Issue 请前往 https://github.com/Microsoft/BashOnWindows/issues/216 查看。目前这一问题已经得到了解决。
+
+## 模板渲染错误
+
+有的时候你在执行 `hexo generate` 时会返回以下错误信息：
+
+```
+FATAL Something's wrong. Maybe you can find the solution here: http://hexo.io/docs/troubleshooting.html
+Template render error: (unknown path)
+```
+
+这表明你的文件中存在一些不可被识别的字符，比如不可见的零宽度字符。有可能你的新文章存在这个问题，或者你在修改配置文件时导致了这个错误。
+
+检查你的 `_config.yml` 文件中是否漏掉了列表前的空格。你可以查阅 Wikipedia 中 [YAML](https://zh.wikipedia.org/wiki/YAML) 相关页面来学习 YAML 语法。
+
+这个是错误的：
+
+```yaml
+plugins:
+- hexo-generator-feed
+- hexo-generator-sitemap
+```
+
+正确的应该是这样：
+
+```yaml
+plugins:
+  - hexo-generator-feed
+  - hexo-generator-sitemap
+```
+
+[Warehouse]: https://github.com/hexojs/warehouse
+[Swig]: http://paularmstrong.github.io/swig/
+[Nunjucks]: http://mozilla.github.io/nunjucks/

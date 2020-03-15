@@ -34,20 +34,20 @@ Gravatar 이미지를 삽입합니다.
 
 ``` js
 <%- gravatar('a@abc.com') %>
-// http://www.gravatar.com/avatar/b9b00e66c6b8a70f88c73cb6bdb06787
+// https://www.gravatar.com/avatar/b9b00e66c6b8a70f88c73cb6bdb06787
 
 <%- gravatar('a@abc.com', 40) %>
-// http://www.gravatar.com/avatar/b9b00e66c6b8a70f88c73cb6bdb06787?s=40
+// https://www.gravatar.com/avatar/b9b00e66c6b8a70f88c73cb6bdb06787?s=40
 
-<%- gravatar('a@abc.com' {s: 40, d: 'http://example.com/image.png'}) %>
-// http://www.gravatar.com/avatar/b9b00e66c6b8a70f88c73cb6bdb06787?s=40&d=http%3A%2F%2Fexample.com%2Fimage.png
+<%- gravatar('a@abc.com' {s: 40, d: 'https://via.placeholder.com/150'}) %>
+// https://www.gravatar.com/avatar/b9b00e66c6b8a70f88c73cb6bdb06787?s=40&d=https%3A%2F%2Fvia.placeholder.com%2F150
 ```
 
 ## HTML Tags
 
 ### css
 
-CSS 파일들을 불러옵니다. `path`에는 문자열(string) 또는 배열(array)을 사용할 수 있습니다. 만약 `path`가 `/` 또는 프로토콜명으로 시작하지 않는다면, 루트 URL이 접두어로 붙습니다. `path` 뒤에 `.css` 파일을 기입하지 않으면 자동으로 추가합니다.
+CSS 파일들을 불러옵니다. `path`에는 문자열(string) 또는 배열(array)을 사용할 수 있습니다. 만약 `path`가 `/` 또는 프로토콜명으로 시작하지 않는다면, 루트 URL이 접두어로 붙습니다. `path` 뒤에 `.css` 파일을 기입하지 않으면 자동으로 추가합니다. Use object type for custom attributes.
 
 ``` js
 <%- css(path, ...) %>
@@ -57,16 +57,23 @@ CSS 파일들을 불러옵니다. `path`에는 문자열(string) 또는 배열(a
 
 ``` js
 <%- css('style.css') %>
-// <link rel="stylesheet" href="/style.css" type="text/css">
+// <link rel="stylesheet" href="/style.css">
 
 <%- css(['style.css', 'screen.css']) %>
-// <link rel="stylesheet" href="/style.css" type="text/css">
-// <link rel="stylesheet" href="/screen.css" type="text/css">
+// <link rel="stylesheet" href="/style.css">
+// <link rel="stylesheet" href="/screen.css">
+
+<%- css({ href: 'style.css', integrity: 'foo' }) %>
+// <link rel="stylesheet" href="/style.css" integrity="foo">
+
+<%- css([{ href: 'style.css', integrity: 'foo' }, { href: 'screen.css', integrity: 'bar' }]) %>
+// <link rel="stylesheet" href="/style.css" integrity="foo">
+// <link rel="stylesheet" href="/screen.css" integrity="bar">
 ```
 
 ### js
 
-JavaScript 파일들을 불러옵니다. `path`에는 문자열(string) 또는 배열(array)을 사용할 수 있습니다. 만약 `path`가 `/` 또는 프로토콜명으로 시작하지 않는다면, 루트 URL이 접두어로 붙습니다. `path` 뒤에 `.js` 파일을 기입하지 않으면 자동으로 추가합니다.
+JavaScript 파일들을 불러옵니다. `path`에는 문자열(string) 또는 배열(array)을 사용할 수 있습니다. 만약 `path`가 `/` 또는 프로토콜명으로 시작하지 않는다면, 루트 URL이 접두어로 붙습니다. `path` 뒤에 `.js` 파일을 기입하지 않으면 자동으로 추가합니다. Use object type for custom attributes.
 
 ``` js
 <%- js(path, ...) %>
@@ -76,11 +83,18 @@ JavaScript 파일들을 불러옵니다. `path`에는 문자열(string) 또는 �
 
 ``` js
 <%- js('script.js') %>
-// <script type="text/javascript" src="/script.js"></script>
+// <script src="/script.js"></script>
 
 <%- js(['script.js', 'gallery.js']) %>
-// <script type="text/javascript" src="/script.js"></script>
-// <script type="text/javascript" src="/gallery.js"></script>
+// <script src="/script.js"></script>
+// <script src="/gallery.js"></script>
+
+<%- js({ src: 'script.js', integrity: 'foo', async: true }) %>
+// <script src="/script.js" integrity="foo" async></script>
+
+<%- js([{ src: 'script.js', integrity: 'foo' }, { src: 'gallery.js', integrity: 'bar' }]) %>
+// <script src="/script.js" integrity="foo"></script>
+// <script src="/gallery.js" integrity="bar"></script>
 ```
 
 ### link_to
@@ -107,7 +121,7 @@ JavaScript 파일들을 불러옵니다. `path`에는 문자열(string) 또는 �
 // <a href="http://www.google.com" title="Google">Google</a>
 
 <%- link_to('http://www.google.com', 'Google', {external: true}) %>
-// <a href="http://www.google.com" title="Google" target="_blank" rel="external">Google</a>
+// <a href="http://www.google.com" title="Google" target="_blank" rel="noopener">Google</a>
 ```
 
 ### mail_to
@@ -265,7 +279,7 @@ Feed 링크를 삽입합니다.
 **예시:**
 
 ``` js
-<%- strip_html('It's not <b>important</b> anymore!') %>
+<%- strip_html('It\'s not <b>important</b> anymore!') %>
 // It's not important anymore!
 ```
 
@@ -571,6 +585,42 @@ Paginator를 삽입합니다.
 `end_size` | 시작/종료 측에 페이지의 개수를 표시합니다. | 1
 `mid_size` | 현재 페이지의 양쪽에 페이지의 개수를 표시합니다. 현재 페이지는 포함하지 않은 개수입니다. | 2
 `show_all` | 모든 페이지를 표시합니다. true로 설정되어있다면, `end_size`와 `mid_size`는 동작하지 않습니다. | false
+`escape` | Escape HTML tags | true
+
+**Examples:**
+
+``` js
+<%- paginator({
+  prev_text: '<',
+  next_text: '>'
+}) %>
+```
+
+``` html
+<!-- Rendered as -->
+<a href="/1/">&lt;</a>
+<a href="/1/">1</a>
+2
+<a href="/3/">3</a>
+<a href="/3/">&gt;</a>
+```
+
+``` js
+<%- paginator({
+  prev_text: '<i class="fa fa-angle-left"></i>',
+  next_text: '<i class="fa fa-angle-right"></i>',
+  escape: false
+}) %>
+```
+
+``` html
+<!-- Rendered as -->
+<a href="/1/"><i class="fa fa-angle-left"></i></a>
+<a href="/1/">1</a>
+2
+<a href="/3/">3</a>
+<a href="/3/"><i class="fa fa-angle-right"></i></a>
+```
 
 ### search_form
 
@@ -619,6 +669,21 @@ Google 검색 form을 삽입합니다.
 // 12,345/67
 ```
 
+### meta_generator
+
+Inserts [generator tag](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta).
+
+``` js
+<%- meta_generator() %>
+```
+
+**Examples:**
+
+``` js
+<%- meta_generator() %>
+// <meta name="generator" content="Hexo 4.0.0">
+```
+
 ### open_graph
 
 [Open Graph] 데이터를 삽입합니다.
@@ -632,9 +697,9 @@ Google 검색 form을 삽입합니다.
 `title` | 페이지 제목 (`og:title`) | `page.title`
 `type` | 페이지 형태 (`og:type`) | blog
 `url` | 페이지 URL (`og:url`) | `url`
-`image` | 페이지 커버 (`og:image`) | First image in the content
+`image` | 페이지 커버 (`og:image`) | All images in the content
 `site_name` | 사이트 이름 (`og:site_name`) | `config.title`
-`description` | 페이지 설명 (`og:desription`) | Page excerpt or first 200 characters of the content
+`description` | 페이지 설명 (`og:description`) | Page excerpt or first 200 characters of the content
 `twitter_card` | Twitter card type (`twitter:card`) | summary
 `twitter_id` | Twitter ID (`twitter:creator`) |
 `twitter_site` | Twitter Site (`twitter:site`) |
@@ -654,6 +719,8 @@ Google 검색 form을 삽입합니다.
 --- | --- | ---
 `class` | Class명 | toc
 `list_number` | 목록 번호를 표시합니다. | true
+`max_depth` | Maximum heading depth of generated toc | 6
+`min_depth` | Minimum heading depth of generated toc | 1
 
 **예시:**
 

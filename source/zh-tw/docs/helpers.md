@@ -33,17 +33,20 @@ title: 輔助函數（Helpers）
 
 ``` js
 <%- gravatar('a@abc.com') %>
-// http://www.gravatar.com/avatar/b9b00e66c6b8a70f88c73cb6bdb06787
+// https://www.gravatar.com/avatar/b9b00e66c6b8a70f88c73cb6bdb06787
 
 <%- gravatar('a@abc.com', 40) %>
-// http://www.gravatar.com/avatar/b9b00e66c6b8a70f88c73cb6bdb06787?s=40
+// https://www.gravatar.com/avatar/b9b00e66c6b8a70f88c73cb6bdb06787?s=40
+
+<%- gravatar('a@abc.com' {s: 40, d: 'https://via.placeholder.com/150'}) %>
+// https://www.gravatar.com/avatar/b9b00e66c6b8a70f88c73cb6bdb06787?s=40&d=https%3A%2F%2Fvia.placeholder.com%2F150
 ```
 
 ## HTML 標籤
 
 ### css
 
-載入 CSS 檔案。`path` 可以是陣列或字串，如果 `path` 開頭不是 `/` 或任何協議，則會自動加上根路徑；如果後面沒有加上 `.css` 副檔名的話，也會自動加上。
+載入 CSS 檔案。`path` 可以是陣列或字串，如果 `path` 開頭不是 `/` 或任何協議，則會自動加上根路徑；如果後面沒有加上 `.css` 副檔名的話，也會自動加上。Use object type for custom attributes.
 
 ``` js
 <%- css(path, ...) %>
@@ -53,16 +56,23 @@ title: 輔助函數（Helpers）
 
 ``` js
 <%- css('style.css') %>
-// <link rel="stylesheet" href="/style.css" type="text/css">
+// <link rel="stylesheet" href="/style.css">
 
 <%- css(['style.css', 'screen.css']) %>
-// <link rel="stylesheet" href="/style.css" type="text/css">
-// <link rel="stylesheet" href="/screen.css" type="text/css">
+// <link rel="stylesheet" href="/style.css">
+// <link rel="stylesheet" href="/screen.css">
+
+<%- css({ href: 'style.css', integrity: 'foo' }) %>
+// <link rel="stylesheet" href="/style.css" integrity="foo">
+
+<%- css([{ href: 'style.css', integrity: 'foo' }, { href: 'screen.css', integrity: 'bar' }]) %>
+// <link rel="stylesheet" href="/style.css" integrity="foo">
+// <link rel="stylesheet" href="/screen.css" integrity="bar">
 ```
 
 ### js
 
-載入 JavaScript 檔案。`path` 可以是陣列或字串，如果 `path` 開頭不是 `/` 或任何協議，則會自動加上根路徑；如果後面沒有加上 `.js` 副檔名的話，也會自動加上。
+載入 JavaScript 檔案。`path` 可以是陣列或字串，如果 `path` 開頭不是 `/` 或任何協議，則會自動加上根路徑；如果後面沒有加上 `.js` 副檔名的話，也會自動加上。Use object type for custom attributes.
 
 ``` js
 <%- js(path, ...) %>
@@ -72,11 +82,18 @@ title: 輔助函數（Helpers）
 
 ``` js
 <%- js('script.js') %>
-// <script type="text/javascript" src="/script.js"></script>
+// <script src="/script.js"></script>
 
 <%- js(['script.js', 'gallery.js']) %>
-// <script type="text/javascript" src="/script.js"></script>
-// <script type="text/javascript" src="/gallery.js"></script>
+// <script src="/script.js"></script>
+// <script src="/gallery.js"></script>
+
+<%- js({ src: 'script.js', integrity: 'foo', async: true }) %>
+// <script src="/script.js" integrity="foo" async></script>
+
+<%- js([{ src: 'script.js', integrity: 'foo' }, { src: 'gallery.js', integrity: 'bar' }]) %>
+// <script src="/script.js" integrity="foo"></script>
+// <script src="/gallery.js" integrity="bar"></script>
 ```
 
 ### link_to
@@ -103,7 +120,7 @@ title: 輔助函數（Helpers）
 // <a href="http://www.google.com" title="Google">Google</a>
 
 <%- link_to('http://www.google.com', 'Google', {external: true}) %>
-// <a href="http://www.google.com" title="Google" target="_blank" rel="external">Google</a>
+// <a href="http://www.google.com" title="Google" target="_blank" rel="noopener">Google</a>
 ```
 
 ### mail_to
@@ -257,7 +274,7 @@ title: 輔助函數（Helpers）
 **範例：**
 
 ``` js
-<%- strip_html('It's not <b>important</b> anymore!') %>
+<%- strip_html('It\'s not <b>important</b> anymore!') %>
 // It's not important anymore!
 ```
 
@@ -555,6 +572,42 @@ title: 輔助函數（Helpers）
 `end_size` | 顯示於兩側的頁數 | 1
 `mid_size` | 顯示於中間的頁數 | 2
 `show_all` | 顯示所有頁數。如果開啟此設定的話，`end_size` 和 `mid_size` 就沒用了。 | false
+`escape` | Escape HTML tags | true
+
+**Examples:**
+
+``` js
+<%- paginator({
+  prev_text: '<',
+  next_text: '>'
+}) %>
+```
+
+``` html
+<!-- Rendered as -->
+<a href="/1/">&lt;</a>
+<a href="/1/">1</a>
+2
+<a href="/3/">3</a>
+<a href="/3/">&gt;</a>
+```
+
+``` js
+<%- paginator({
+  prev_text: '<i class="fa fa-angle-left"></i>',
+  next_text: '<i class="fa fa-angle-right"></i>',
+  escape: false
+}) %>
+```
+
+``` html
+<!-- Rendered as -->
+<a href="/1/"><i class="fa fa-angle-left"></i></a>
+<a href="/1/">1</a>
+2
+<a href="/3/">3</a>
+<a href="/3/"><i class="fa fa-angle-right"></i></a>
+```
 
 ### search_form
 
@@ -603,6 +656,21 @@ title: 輔助函數（Helpers）
 // 12,345/67
 ```
 
+### meta_generator
+
+Inserts [generator tag](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta).
+
+``` js
+<%- meta_generator() %>
+```
+
+**Examples:**
+
+``` js
+<%- meta_generator() %>
+// <meta name="generator" content="Hexo 4.0.0">
+```
+
 ### open_graph
 
 插入 [Open Graph] 資料。
@@ -618,7 +686,7 @@ title: 輔助函數（Helpers）
 `url` | 頁面網址 (`og:url`) | `url`
 `image` | 頁面圖片 (`og:image`) | 內容中的圖片
 `site_name` | 網站名稱 (`og:site_name`) | `config.title`
-`description` | 頁面描述 (`og:desription`) | 內容摘要或前 200 字
+`description` | 頁面描述 (`og:description`) | 內容摘要或前 200 字
 `twitter_card` | Twitter 卡片類型 (`twitter:card`) | summary
 `twitter_id` | Twitter ID (`twitter:creator`) |
 `twitter_site` | Twitter 網站 (`twitter:site`) |
@@ -638,6 +706,8 @@ title: 輔助函數（Helpers）
 --- | --- | ---
 `class` | Class 名稱 | toc
 `list_number` | 顯示編號 | true
+`max_depth` | 生成 TOC 的最大深度 | 6
+`min_depth` | 生成 TOC 的最小深度 | 1
 
 **範例：**
 

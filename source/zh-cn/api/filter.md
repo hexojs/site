@@ -10,7 +10,7 @@ hexo.extend.filter.register(type, function(){
 }, priority);
 ```
 
-您可以指定过滤器的优先级 `priority`，`priority` 值越低，过滤器会越早执行，默认的 `priority` 是 10。
+您可以指定过滤器的优先级 `priority`，`priority` 值越低，过滤器会越早执行，默认的 `priority` 是 10。我们建议提供配置选项如 `hexo.config.your_plugin.priority`、让用户自行决定过滤器的优先级。
 
 ## 执行过滤器
 
@@ -55,6 +55,28 @@ hexo.execFilterSync(type, data, options);
 
 ``` js
 hexo.extend.filter.unregister(type, filter);
+```
+
+**示例**
+
+``` js
+// 移除一个使用具名函数注册的过滤器
+
+const filterFn = (data) => {
+  data = 'something';
+  return data;
+};
+hexo.extend.filter.register('example', filterFn);
+
+hexo.extend.filter.unregister('example', filterFn);
+```
+
+``` js
+// 移除一个使用 CommonJS 模块注册的过滤器
+
+hexo.extend.filter.register('example', require('path/to/filter'));
+
+hexo.extend.filter.unregister('example', require('path/to/filter'));
 ```
 
 ## 过滤器列表

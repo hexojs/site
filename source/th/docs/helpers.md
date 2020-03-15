@@ -43,13 +43,13 @@ object นั้นจะถูกเปลี่ยนไปเป็น query 
 
 ``` js
 <%- gravatar('a@abc.com') %>
-// http://www.gravatar.com/avatar/b9b00e66c6b8a70f88c73cb6bdb06787
+// https://www.gravatar.com/avatar/b9b00e66c6b8a70f88c73cb6bdb06787
 
 <%- gravatar('a@abc.com', 40) %>
-// http://www.gravatar.com/avatar/b9b00e66c6b8a70f88c73cb6bdb06787?s=40
+// https://www.gravatar.com/avatar/b9b00e66c6b8a70f88c73cb6bdb06787?s=40
 
-<%- gravatar('a@abc.com' {s: 40, d: 'http://example.com/image.png'}) %>
-// http://www.gravatar.com/avatar/b9b00e66c6b8a70f88c73cb6bdb06787?s=40&d=http%3A%2F%2Fexample.com%2Fimage.png
+<%- gravatar('a@abc.com' {s: 40, d: 'https://via.placeholder.com/150'}) %>
+// https://www.gravatar.com/avatar/b9b00e66c6b8a70f88c73cb6bdb06787?s=40&d=https%3A%2F%2Fvia.placeholder.com%2F150
 ```
 
 ## HTML Tags
@@ -57,9 +57,10 @@ object นั้นจะถูกเปลี่ยนไปเป็น query 
 ### css
 
 โหลดไฟล์ CSS  `path` นั้นเป็น array หรือ string ได้  ถ้า `path` นั้นไม่มี `/`
-  หรือ protocol ใดๆ เป็นคำนำหน้า มันจะมี root URL เป็นคำนำหน้า 
-  ถ้าคุณไม่ได้เพิ่ม extension ท่ีเป็น `.css`  หลัง `path`  extension 
-  นั้นจะถูกเพิ่มให้ไฟล์โดยอัตโนมัติ
+หรือ protocol ใดๆ เป็นคำนำหน้า มันจะมี root URL เป็นคำนำหน้า 
+ถ้าคุณไม่ได้เพิ่ม extension ท่ีเป็น `.css`  หลัง `path`  extension 
+นั้นจะถูกเพิ่มให้ไฟล์โดยอัตโนมัติ
+Use object type for custom attributes.
 
 ``` js
 <%- css(path, ...) %>
@@ -69,11 +70,18 @@ object นั้นจะถูกเปลี่ยนไปเป็น query 
 
 ``` js
 <%- css('style.css') %>
-// <link rel="stylesheet" href="/style.css" type="text/css">
+// <link rel="stylesheet" href="/style.css">
 
 <%- css(['style.css', 'screen.css']) %>
-// <link rel="stylesheet" href="/style.css" type="text/css">
-// <link rel="stylesheet" href="/screen.css" type="text/css">
+// <link rel="stylesheet" href="/style.css">
+// <link rel="stylesheet" href="/screen.css">
+
+<%- css({ href: 'style.css', integrity: 'foo' }) %>
+// <link rel="stylesheet" href="/style.css" integrity="foo">
+
+<%- css([{ href: 'style.css', integrity: 'foo' }, { href: 'screen.css', integrity: 'bar' }]) %>
+// <link rel="stylesheet" href="/style.css" integrity="foo">
+// <link rel="stylesheet" href="/screen.css" integrity="bar">
 ```
 
 ### js
@@ -82,6 +90,7 @@ object นั้นจะถูกเปลี่ยนไปเป็น query 
 นั้นไม่มี `/` หรือ protocol ใดๆ เป็นคำนำหน้า มันจะมี root URL เป็นคำนำหน้า 
 ถ้าคุณไม่ได้เพิ่ม extension ท่ีเป็น `.js`  หลัง `path`  extension 
 นั้นจะถูกเพิ่มให้ไฟล์โดยอัตโนมัติ
+Use object type for custom attributes.
 
 ``` js
 <%- js(path, ...) %>
@@ -91,11 +100,18 @@ object นั้นจะถูกเปลี่ยนไปเป็น query 
 
 ``` js
 <%- js('script.js') %>
-// <script type="text/javascript" src="/script.js"></script>
+// <script src="/script.js"></script>
 
 <%- js(['script.js', 'gallery.js']) %>
-// <script type="text/javascript" src="/script.js"></script>
-// <script type="text/javascript" src="/gallery.js"></script>
+// <script src="/script.js"></script>
+// <script src="/gallery.js"></script>
+
+<%- js({ src: 'script.js', integrity: 'foo', async: true }) %>
+// <script src="/script.js" integrity="foo" async></script>
+
+<%- js([{ src: 'script.js', integrity: 'foo' }, { src: 'gallery.js', integrity: 'bar' }]) %>
+// <script src="/script.js" integrity="foo"></script>
+// <script src="/gallery.js" integrity="bar"></script>
 ```
 
 ### link_to
@@ -122,7 +138,7 @@ Option | Description | Default
 // <a href="http://www.google.com" title="Google">Google</a>
 
 <%- link_to('http://www.google.com', 'Google', {external: true}) %>
-// <a href="http://www.google.com" title="Google" target="_blank" rel="external">Google</a>
+// <a href="http://www.google.com" title="Google" target="_blank" rel="noopener">Google</a>
 ```
 
 ### mail_to
@@ -284,7 +300,7 @@ Option | Description | Default
 **ยกตัวอย่างเช่น:**
 
 ``` js
-<%- strip_html('It's not <b>important</b> anymore!') %>
+<%- strip_html('It\'s not <b>important</b> anymore!') %>
 // It's not important anymore!
 ```
 
@@ -609,6 +625,42 @@ Option | Description | Default
 `end_size` | The number of pages displayed on the start and the end side | 1
 `mid_size` | The number of pages displayed between current page, but not including current page | 2
 `show_all` | Display all pages. If this is set true, `end_size` and `mid_size` will not works. | false
+`escape` | Escape HTML tags | true
+
+**Examples:**
+
+``` js
+<%- paginator({
+  prev_text: '<',
+  next_text: '>'
+}) %>
+```
+
+``` html
+<!-- Rendered as -->
+<a href="/1/">&lt;</a>
+<a href="/1/">1</a>
+2
+<a href="/3/">3</a>
+<a href="/3/">&gt;</a>
+```
+
+``` js
+<%- paginator({
+  prev_text: '<i class="fa fa-angle-left"></i>',
+  next_text: '<i class="fa fa-angle-right"></i>',
+  escape: false
+}) %>
+```
+
+``` html
+<!-- Rendered as -->
+<a href="/1/"><i class="fa fa-angle-left"></i></a>
+<a href="/1/">1</a>
+2
+<a href="/3/">3</a>
+<a href="/3/"><i class="fa fa-angle-right"></i></a>
+```
 
 ### search_form
 
@@ -657,6 +709,21 @@ Option | Description | Default
 // 12,345/67
 ```
 
+### meta_generator
+
+Inserts [generator tag](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta).
+
+``` js
+<%- meta_generator() %>
+```
+
+**Examples:**
+
+``` js
+<%- meta_generator() %>
+// <meta name="generator" content="Hexo 4.0.0">
+```
+
 ### open_graph
 
 เสียบข้อมูล [Open Graph] เข้า:
@@ -670,9 +737,9 @@ Option | Description | Default
 `title` | Page title (`og:title`) | `page.title`
 `type` | Page type (`og:type`) | blog
 `url` | Page URL (`og:url`) | `url`
-`image` | Page cover (`og:image`) | First image in the content
+`image` | Page images (`og:image`) | All images in the content
 `site_name` | Site name (`og:site_name`) | `config.title`
-`description` | Page description (`og:desription`) | Page excerpt or first 200 characters of the content
+`description` | Page description (`og:description`) | Page excerpt or first 200 characters of the content
 `twitter_card` | Twitter card type (`twitter:card`) | summary
 `twitter_id` | Twitter ID (`twitter:creator`) |
 `twitter_site` | Twitter Site (`twitter:site`) |
@@ -693,6 +760,7 @@ Option | Description | Default
 `class` | Class name | toc
 `list_number` | Displays list number | true
 `max_depth` | Maximum heading depth of generated toc | 6
+`min_depth` | Minimum heading depth of generated toc | 1
 
 **ยกตัวอย่างเช่น:**
 

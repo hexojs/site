@@ -14,8 +14,10 @@ title: Permalinks
 `:i_month` | 포스트를 배포한 월 (앞에 붙는 0은 생략)
 `:day` | 포스트를 배포한 날 (2-digit)
 `:i_day` | 포스트를 배포한 날 (앞에 붙는 0은 생략)
+`:hour` | Published hour of posts (2-digit)
+`:minute` | Published minute of posts (2-digit)
 `:title` | 파일명
-`:id` | 포스트 ID
+`:id` | 포스트 ID (_not persistent across [cache reset](/ko/docs/commands#clean)_)
 `:category` | 포스트가 속한 카테고리. 지정하지 않으면 `default_category` 값을 사용합니다.
 
 Permalink 내의 각 변수의 기본 값을 `permalink_defaults` 설정을 통해 정의할 수 있습니다.
@@ -39,9 +41,9 @@ categories:
 
 설정 | 결과
 --- | ---
-`:year/:month/:day/:title/` | 2013/07/14/hello-world
+`:year/:month/:day/:title/` | 2013/07/14/hello-world/
 `:year-:month-:day-:title.html` | 2013-07-14-hello-world.html
-`:category/:title` | foo/bar/hello-world
+`:category/:title/` | foo/bar/hello-world/
 
 ### 다국어 지원
 

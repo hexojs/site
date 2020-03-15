@@ -39,20 +39,20 @@ Se você não especificar o parâmetro [options], as opções padrão serão apl
 
 ``` js
 <%- gravatar('a@abc.com') %>
-// http://www.gravatar.com/avatar/b9b00e66c6b8a70f88c73cb6bdb06787
+// https://www.gravatar.com/avatar/b9b00e66c6b8a70f88c73cb6bdb06787
 
 <%- gravatar('a@abc.com', 40) %>
-// http://www.gravatar.com/avatar/b9b00e66c6b8a70f88c73cb6bdb06787?s=40
+// https://www.gravatar.com/avatar/b9b00e66c6b8a70f88c73cb6bdb06787?s=40
 
-<%- gravatar('a@abc.com' {s: 40, d: 'http://example.com/image.png'}) %>
-// http://www.gravatar.com/avatar/b9b00e66c6b8a70f88c73cb6bdb06787?s=40&d=http%3A%2F%2Fexample.com%2Fimage.png
+<%- gravatar('a@abc.com' {s: 40, d: 'https://via.placeholder.com/150'}) %>
+// https://www.gravatar.com/avatar/b9b00e66c6b8a70f88c73cb6bdb06787?s=40&d=https%3A%2F%2Fvia.placeholder.com%2F150
 ```
 
 ## HTML Tags
 
 ### css
 
-Carrega arquivos CSS. Onde `path` pode ser um array ou uma string. Se `path` não for prefixado com `/` ou com qualquer protocolo, ele será prefixado com a URL raiz. Se você não adicionar a extensão `.css` após `path`, ela será adicionada automaticamente.
+Carrega arquivos CSS. Onde `path` pode ser um array ou uma string. Se `path` não for prefixado com `/` ou com qualquer protocolo, ele será prefixado com a URL raiz. Se você não adicionar a extensão `.css` após `path`, ela será adicionada automaticamente. Use object type for custom attributes.
 
 ``` js
 <%- css(path, ...) %>
@@ -62,16 +62,23 @@ Carrega arquivos CSS. Onde `path` pode ser um array ou uma string. Se `path` nã
 
 ``` js
 <%- css('style.css') %>
-// <link rel="stylesheet" href="/style.css" type="text/css">
+// <link rel="stylesheet" href="/style.css">
 
 <%- css(['style.css', 'screen.css']) %>
-// <link rel="stylesheet" href="/style.css" type="text/css">
-// <link rel="stylesheet" href="/screen.css" type="text/css">
+// <link rel="stylesheet" href="/style.css">
+// <link rel="stylesheet" href="/screen.css">
+
+<%- css({ href: 'style.css', integrity: 'foo' }) %>
+// <link rel="stylesheet" href="/style.css" integrity="foo">
+
+<%- css([{ href: 'style.css', integrity: 'foo' }, { href: 'screen.css', integrity: 'bar' }]) %>
+// <link rel="stylesheet" href="/style.css" integrity="foo">
+// <link rel="stylesheet" href="/screen.css" integrity="bar">
 ```
 
 ### js
 
-Carrega arquivos JavaScript. O `path` pode ser uma array ou uma string. Se `path` não for prefixado com `/` ou com qualquer protocolo, ele será prefixado com a URL raiz. Se você não adicionar a extensão `.js` após `path`, ela será adicionada automaticamente.
+Carrega arquivos JavaScript. O `path` pode ser uma array ou uma string. Se `path` não for prefixado com `/` ou com qualquer protocolo, ele será prefixado com a URL raiz. Se você não adicionar a extensão `.js` após `path`, ela será adicionada automaticamente. Use object type for custom attributes.
 
 ``` js
 <%- js(path, ...) %>
@@ -81,11 +88,18 @@ Carrega arquivos JavaScript. O `path` pode ser uma array ou uma string. Se `path
 
 ``` js
 <%- js('script.js') %>
-// <script type="text/javascript" src="/script.js"></script>
+// <script src="/script.js"></script>
 
 <%- js(['script.js', 'gallery.js']) %>
-// <script type="text/javascript" src="/script.js"></script>
-// <script type="text/javascript" src="/gallery.js"></script>
+// <script src="/script.js"></script>
+// <script src="/gallery.js"></script>
+
+<%- js({ src: 'script.js', integrity: 'foo', async: true }) %>
+// <script src="/script.js" integrity="foo" async></script>
+
+<%- js([{ src: 'script.js', integrity: 'foo' }, { src: 'gallery.js', integrity: 'bar' }]) %>
+// <script src="/script.js" integrity="foo"></script>
+// <script src="/gallery.js" integrity="bar"></script>
 ```
 
 ### link_to
@@ -112,7 +126,7 @@ Opção | Descrição | Padrão
 // <a href="http://www.google.com" title="Google">Google</a>
 
 <%- link_to('http://www.google.com', 'Google', {external: true}) %>
-// <a href="http://www.google.com" title="Google" target="_blank" rel="external">Google</a>
+// <a href="http://www.google.com" title="Google" target="_blank" rel="noopener">Google</a>
 ```
 
 ### mail_to
@@ -576,6 +590,42 @@ Opção | Descrição | Padrão
 `end_size` | O número de páginas exibidas no início e no final | 1
 `mid_size` | O número de páginas exibidas entre a página atual, mas não incluindo a página atual | 2
 `show_all` | Exibir todas as páginas. Se isso for definido como `true`, `end_size` e` mid_size` não irão funcionar. | false
+`escape` | Escape HTML tags | true
+
+**Examples:**
+
+``` js
+<%- paginator({
+  prev_text: '<',
+  next_text: '>'
+}) %>
+```
+
+``` html
+<!-- Rendered as -->
+<a href="/1/">&lt;</a>
+<a href="/1/">1</a>
+2
+<a href="/3/">3</a>
+<a href="/3/">&gt;</a>
+```
+
+``` js
+<%- paginator({
+  prev_text: '<i class="fa fa-angle-left"></i>',
+  next_text: '<i class="fa fa-angle-right"></i>',
+  escape: false
+}) %>
+```
+
+``` html
+<!-- Rendered as -->
+<a href="/1/"><i class="fa fa-angle-left"></i></a>
+<a href="/1/">1</a>
+2
+<a href="/3/">3</a>
+<a href="/3/"><i class="fa fa-angle-right"></i></a>
+```
 
 ### search_form
 
@@ -624,6 +674,21 @@ Opção | Descrição | Padrão
 // 12,345/67
 ```
 
+### meta_generator
+
+Inserts [generator tag](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta).
+
+``` js
+<%- meta_generator() %>
+```
+
+**Examples:**
+
+``` js
+<%- meta_generator() %>
+// <meta name="generator" content="Hexo 4.0.0">
+```
+
 ### open_graph
 
 Insere dados do [Open Graph].
@@ -637,9 +702,9 @@ Opção | Descrição | Padrão
 `title` | Título da página (`og:title`) | `page.title`
 `type` | Tipo de página (`og:type`) | blog
 `url` | URL da página (`og:url`) | `url`
-`image` | Capa da página (`og:image`) | Primeira imagem no conteúdo
+`image` | Capa da página (`og:image`) | All images in the content
 `site_name` | Nome do site (`og:site_name`) | `config.title`
-`description`| Descrição da página (`og:desription`) | Trecho da página ou os 200 primeiros caracteres do conteúdo
+`description`| Descrição da página (`og:description`) | Trecho da página ou os 200 primeiros caracteres do conteúdo
 `twitter_card` | Tipo de Twitter card (`twitter:card`) | summary
 `twitter_id` | Twitter ID (`twitter:creator`) |
 `twitter_site` | Site do Twitter (`twitter:site`) |
@@ -660,6 +725,7 @@ Opção | Descrição | Padrão
 `class` | Nome da classe | toc
 `list_number` | Exibe o número da lista | true
 `max_depth` | Profundidade máxima do cabeçalho gerado | 6
+`min_depth` | Minimum heading depth of generated toc | 1
 
 **Exemplos:**
 

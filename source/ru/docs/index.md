@@ -5,7 +5,7 @@ title: Документация
 
 ## Что есть Hexo?
 
-Hexo-это быстрый, простой и мощный фреймворк блогов. Вы пишите посты в [Markdown](http://daringfireball.net/projects/markdown/) (или других языках) и Hexo генерирует статические файлы с красивой темой в считанные секунды.
+Hexo — это быстрый, простой и мощный фреймворк для блога. Вы пишите посты в [Markdown](http://daringfireball.net/projects/markdown/) (или других языках), и Hexo генерирует статические файлы с красивой темой в считанные секунды.
 
 ## Установка
 
@@ -13,9 +13,9 @@ Hexo-это быстрый, простой и мощный фреймворк б
 
 ### Требования
 
-Установка Hexo довольно проста. Однако, сперва, нужно установить пару вещей:
+Установка Hexo довольно проста. Однако сперва нужно установить пару вещей:
 
-- [Node.js](http://nodejs.org/) (Should be at least nodejs 6.9)
+- [Node.js](http://nodejs.org/) (Версия должна быть как минимум Node.js 8.10, рекомендовано использовать 10.0 или выше)
 - [Git](http://git-scm.com/)
 
 Если всё это уже есть, поздравляю! Просто установите Hexo с помощью npm:
@@ -27,7 +27,7 @@ $ npm install -g hexo-cli
 Если нет, выполните следующие действия, чтобы установить всё, что требуется.
 
 {% note warn Для пользователей Mac %}
-Вы можете столкнуться с проблемами при компиляции. Пожалуйста, сначала установите Xcode из магазина App Store. После установки, откройте xcode и перейти в **Настройки -> Загрузки -> Командная строка -> Установить** (**Preferences -> Download -> Command Line Tools -> Install**), чтобы установить утилиту командной строки.
+Вы можете столкнуться с проблемами при компиляции. Пожалуйста, сначала установите Xcode из магазина App Store. После установки откройте xcode и перейдите в **Настройки -> Загрузки -> Командная строка -> Установить** (**Preferences -> Download -> Command Line Tools -> Install**), чтобы установить утилиту командной строки.
 {% endnote %}
 
 ### Установка Git
@@ -39,25 +39,29 @@ $ npm install -g hexo-cli
 
 ### Установка Node.js
 
-Лучший способ установить Node.js это [nvm](https://github.com/creationix/nvm).
+Лучший способ установить Node.js это [nvm](https://github.com/nvm-sh/nvm).
 
 cURL:
 
 ``` bash
-$ curl https://raw.github.com/creationix/nvm/v0.33.11/install.sh | sh
+$ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | sh
 ```
 
 Wget:
 
 ``` bash
-$ wget -qO- https://raw.github.com/creationix/nvm/v0.33.11/install.sh | sh
+$ wget -qO-https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | sh
 ```
 
 После установки nvm запустите терминал и выполните следующую команду для установки Node.js.
 
 ``` bash
-$ nvm install stable
+$ nvm install node
 ```
+
+{% note info For Windows users %}
+We recommend to use [Node Version Switcher](https://github.com/jasongin/nvs/) as an alternative to nvm on Windows, which has similar command-line syntax with nvm and can be installed through provided Windows Installer (MSI) package.
+{% endnote %}
 
 Или скачать и установить [установщик](http://nodejs.org/).
 

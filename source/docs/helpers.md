@@ -11,10 +11,46 @@ You could easily [write your own custom helper](https://hexo.io/api/helper.html)
 
 ### url_for
 
-Returns a url with the root path prefixed. You should use this helper instead of `config.root + path` since Hexo 2.7.
+Returns a url with the root path prefixed. Output is encoded automatically.
 
 ``` js
-<%- url_for(path) %>
+<%- url_for(path, [option]) %>
+```
+
+Option | Description | Default
+--- | --- | ---
+`relative` | Output relative link | Value of `config.relative_link`
+
+**Examples:**
+
+``` yml
+_config.yml
+root: /blog/ # example
+```
+
+``` js
+<%- url_for('/a/path') %>
+// /blog/a/path
+```
+
+Relative link, follows `relative_link` option by default
+e.g. post/page path is '/foo/bar/index.html'
+
+``` yml
+_config.yml
+relative_link: true
+```
+
+``` js
+<%- url_for('/css/style.css') %>
+// ../../css/style.css
+
+/* Override option
+ * you could also disable it to output a non-relative link,
+ * even when `relative_link` is enabled and vice versa.
+ */
+<%- url_for('/css/style.css', {relative: false}) %>
+// /css/style.css
 ```
 
 ### relative_url
@@ -25,33 +61,70 @@ Returns the relative URL from `from` to `to`.
 <%- relative_url(from, to) %>
 ```
 
+**Examples:**
+
+``` js
+<%- relative_url('foo/bar/', 'css/style.css') %>
+// ../../css/style.css
+```
+
+### full_url_for
+
+Returns a url with the `config.url` prefixed. Output is encoded automatically.
+
+``` js
+<%- full_url_for(path) %>
+```
+
+**Examples:**
+
+``` yml
+_config.yml
+url: https://example.com/blog # example
+```
+
+``` js
+<%- full_url_for('/a/path') %>
+// https://example.com/blog/a/path
+```
+
 ### gravatar
 
-Inserts a Gravatar image.
-If you don't specify the [options] parameter, the default options will apply. Otherwise, you can set it to a number which will then be passed on as the size parameter to Gravatar. Finally, if you set it to an object, it will be converted into a query string of parameters for Gravatar.
+Returns the gravatar image url from an email.
+
+If you didn't specify the [options] parameter, the default options will apply. Otherwise, you can set it to a number which will then be passed on as the size parameter to Gravatar. Finally, if you set it to an object, it will be converted into a query string of parameters for Gravatar.
 
 ``` js
 <%- gravatar(email, [options]) %>
 ```
 
+Option | Description | Default
+--- | --- | ---
+`s` | Output image size | 80
+`d` | Default image |
+`f` | Force default |
+`r` | Rating |
+
+More info: [Gravatar](https://en.gravatar.com/site/implement/images/)
+
 **Examples:**
 
 ``` js
 <%- gravatar('a@abc.com') %>
-// http://www.gravatar.com/avatar/b9b00e66c6b8a70f88c73cb6bdb06787
+// https://www.gravatar.com/avatar/b9b00e66c6b8a70f88c73cb6bdb06787
 
 <%- gravatar('a@abc.com', 40) %>
-// http://www.gravatar.com/avatar/b9b00e66c6b8a70f88c73cb6bdb06787?s=40
+// https://www.gravatar.com/avatar/b9b00e66c6b8a70f88c73cb6bdb06787?s=40
 
-<%- gravatar('a@abc.com' {s: 40, d: 'http://example.com/image.png'}) %>
-// http://www.gravatar.com/avatar/b9b00e66c6b8a70f88c73cb6bdb06787?s=40&d=http%3A%2F%2Fexample.com%2Fimage.png
+<%- gravatar('a@abc.com' {s: 40, d: 'https://via.placeholder.com/150'}) %>
+// https://www.gravatar.com/avatar/b9b00e66c6b8a70f88c73cb6bdb06787?s=40&d=https%3A%2F%2Fvia.placeholder.com%2F150
 ```
 
 ## HTML Tags
 
 ### css
 
-Loads CSS files. `path` can be an array or a string. If `path` isn't prefixed with `/` or any protocol, it'll get prefixed with the root URL. If you didn't add the `.css` extension after `path`, it will be added automatically.
+Loads CSS files. `path` can be an array or a string. `path` can be a string, an array, an object or an array of objects. [`/<root>/`](/docs/configuration#URL) value is prepended while `.css` extension is appended to the `path` automatically. Use object type for custom attributes.
 
 ``` js
 <%- css(path, ...) %>
@@ -61,16 +134,23 @@ Loads CSS files. `path` can be an array or a string. If `path` isn't prefixed wi
 
 ``` js
 <%- css('style.css') %>
-// <link rel="stylesheet" href="/style.css" type="text/css">
+// <link rel="stylesheet" href="/style.css">
 
 <%- css(['style.css', 'screen.css']) %>
-// <link rel="stylesheet" href="/style.css" type="text/css">
-// <link rel="stylesheet" href="/screen.css" type="text/css">
+// <link rel="stylesheet" href="/style.css">
+// <link rel="stylesheet" href="/screen.css">
+
+<%- css({ href: 'style.css', integrity: 'foo' }) %>
+// <link rel="stylesheet" href="/style.css" integrity="foo">
+
+<%- css([{ href: 'style.css', integrity: 'foo' }, { href: 'screen.css', integrity: 'bar' }]) %>
+// <link rel="stylesheet" href="/style.css" integrity="foo">
+// <link rel="stylesheet" href="/screen.css" integrity="bar">
 ```
 
 ### js
 
-Loads JavaScript files. `path` can be an array or a string. If `path` isn't prefixed with `/` or any protocol, it'll get prefixed with the root URL. If you didn't add the `.js` extension after `path`, it will be added automatically.
+Loads JavaScript files. `path` can be a string, an array, an object or an array of objects. [`/<root>/`](/docs/configuration#URL) value is prepended while `.js` extension is appended to the `path` automatically. Use object type for custom attributes.
 
 ``` js
 <%- js(path, ...) %>
@@ -80,11 +160,18 @@ Loads JavaScript files. `path` can be an array or a string. If `path` isn't pref
 
 ``` js
 <%- js('script.js') %>
-// <script type="text/javascript" src="/script.js"></script>
+// <script src="/script.js"></script>
 
 <%- js(['script.js', 'gallery.js']) %>
-// <script type="text/javascript" src="/script.js"></script>
-// <script type="text/javascript" src="/gallery.js"></script>
+// <script src="/script.js"></script>
+// <script src="/gallery.js"></script>
+
+<%- js({ src: 'script.js', integrity: 'foo', async: true }) %>
+// <script src="/script.js" integrity="foo" async></script>
+
+<%- js([{ src: 'script.js', integrity: 'foo' }, { src: 'gallery.js', integrity: 'bar' }]) %>
+// <script src="/script.js" integrity="foo"></script>
+// <script src="/gallery.js" integrity="bar"></script>
 ```
 
 ### link_to
@@ -111,7 +198,7 @@ Option | Description | Default
 // <a href="http://www.google.com" title="Google">Google</a>
 
 <%- link_to('http://www.google.com', 'Google', {external: true}) %>
-// <a href="http://www.google.com" title="Google" target="_blank" rel="external">Google</a>
+// <a href="http://www.google.com" title="Google" target="_blank" rel="noopener">Google</a>
 ```
 
 ### mail_to
@@ -204,6 +291,14 @@ Check whether the current page is a post.
 <%- is_post() %>
 ```
 
+### is_page
+
+Check whether the current page is a page.
+
+``` js
+<%- is_page() %>
+```
+
 ### is_archive
 
 Check whether the current page is an archive page.
@@ -269,7 +364,7 @@ Sanitizes all HTML tags in a string.
 **Examples:**
 
 ``` js
-<%- strip_html('It's not <b>important</b> anymore!') %>
+<%- strip_html('It\'s not <b>important</b> anymore!') %>
 // It's not important anymore!
 ```
 
@@ -475,6 +570,24 @@ Option | Description | Default
 `transform` | The function that changes the display of category name. |
 `suffix` | Add a suffix to link. | None
 
+**Examples:**
+
+``` js
+<%- list_categories(post.categories, {
+  class: 'post-category',
+  transform(str) {
+    return titlecase(str);
+  }
+}) %>
+
+<%- list_categories(post.categories, {
+  class: 'post-category',
+  transform(str) {
+    return str.toUpperCase();
+  }
+}) %>
+```
+
 ### list_tags
 
 Inserts a list of all tags.
@@ -491,7 +604,7 @@ Option | Description | Default
 `style` | Style to display the tag list. `list` displays tags in an unordered list.  | list
 `separator` | Separator between categories. (Only works if `style` is not `list`) | ,
 `class` | Class name of tag list. | tag
-`transform` | The function that changes the display of tag name. |
+`transform` | The function that changes the display of tag name. See examples in [list_categories](#list-categories). |
 `amount` | The number of tags to display (0 = unlimited) | 0
 `suffix` | Add a suffix to link. | None
 
@@ -512,7 +625,7 @@ Option | Description | Default
 `style` | Style to display the archive list. `list` displays archives in an unordered list.  | list
 `separator` | Separator between archives. (Only works if `style` is not `list`) | ,
 `class` | Class name of archive list. | archive
-`transform` | The function that changes the display of archive name. |
+`transform` | The function that changes the display of archive name. See examples in [list_categories](#list-categories). |
 
 ### list_posts
 
@@ -530,7 +643,7 @@ Option | Description | Default
 `separator` | Separator between posts. (Only works if `style` is not `list`) | ,
 `class` | Class name of post list. | post
 `amount` | The number of posts to display (0 = unlimited) | 6
-`transform` | The function that changes the display of post name. |
+`transform` | The function that changes the display of post name. See examples in [list_categories](#list-categories). |
 
 ### tagcloud
 
@@ -542,12 +655,12 @@ Inserts a tag cloud.
 
 Option | Description | Default
 --- | --- | ---
-`min_font` | Minimal font size | 10
+`min_font` | Minimum font size | 10
 `max_font` | Maximum font size | 20
 `unit` | Unit of font size | px
 `amount` | Total amount of tags | unlimited
 `orderby` | Order of tags | name
-`order` | Sort order. `1`, `sac` as ascending; `-1`, `desc` as descending | 1
+`order` | Sort order. `1`, `asc` as ascending; `-1`, `desc` as descending | 1
 `color` | Colorizes the tag cloud | false
 `start_color` | Start color. You can use hex (`#b700ff`), rgba (`rgba(183, 0, 255, 1)`), hsla (`hsla(283, 100%, 50%, 1)`) or [color keywords]. This option only works when `color` is true. |
 `end_color` | End color. You can use hex (`#b700ff`), rgba (`rgba(183, 0, 255, 1)`), hsla (`hsla(283, 100%, 50%, 1)`) or [color keywords]. This option only works when `color` is true. |
@@ -584,7 +697,43 @@ Option | Description | Default
 `prev_next` | Display previous and next links | true
 `end_size` | The number of pages displayed on the start and the end side | 1
 `mid_size` | The number of pages displayed between current page, but not including current page | 2
-`show_all` | Display all pages. If this is set true, `end_size` and `mid_size` will not works. | false
+`show_all` | Display all pages. If this is set to true, `end_size` and `mid_size` will not work | false
+`escape` | Escape HTML tags | true
+
+**Examples:**
+
+``` js
+<%- paginator({
+  prev_text: '<',
+  next_text: '>'
+}) %>
+```
+
+``` html
+<!-- Rendered as -->
+<a href="/1/">&lt;</a>
+<a href="/1/">1</a>
+2
+<a href="/3/">3</a>
+<a href="/3/">&gt;</a>
+```
+
+``` js
+<%- paginator({
+  prev_text: '<i class="fa fa-angle-left"></i>',
+  next_text: '<i class="fa fa-angle-right"></i>',
+  escape: false
+}) %>
+```
+
+``` html
+<!-- Rendered as -->
+<a href="/1/"><i class="fa fa-angle-left"></i></a>
+<a href="/1/">1</a>
+2
+<a href="/3/">3</a>
+<a href="/3/"><i class="fa fa-angle-right"></i></a>
+```
 
 ### search_form
 
@@ -598,7 +747,7 @@ Option | Description | Default
 --- | --- | ---
 `class` | The class name of form | search-form
 `text` | Search hint word | Search
-`button` | Display search button. The value can be a boolean or a string. When the value is a string, it'll be the text of the button. | false
+`button` | Display search button. The value can be a boolean or a string. If the value is a string, it'll be the text of the button. | false
 
 ### number_format
 
@@ -633,6 +782,21 @@ Option | Description | Default
 // 12,345/67
 ```
 
+### meta_generator
+
+Inserts [generator tag](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta).
+
+``` js
+<%- meta_generator() %>
+```
+
+**Examples:**
+
+``` js
+<%- meta_generator() %>
+// <meta name="generator" content="Hexo 4.0.0">
+```
+
 ### open_graph
 
 Inserts [Open Graph] data.
@@ -646,9 +810,9 @@ Option | Description | Default
 `title` | Page title (`og:title`) | `page.title`
 `type` | Page type (`og:type`) | blog
 `url` | Page URL (`og:url`) | `url`
-`image` | Page cover (`og:image`) | First image in the content
+`image` | Page images (`og:image`) | All images in the content
 `site_name` | Site name (`og:site_name`) | `config.title`
-`description` | Page description (`og:desription`) | Page excerpt or first 200 characters of the content
+`description` | Page description (`og:description`) | Page excerpt or first 200 characters of the content
 `twitter_card` | Twitter card type (`twitter:card`) | summary
 `twitter_id` | Twitter ID (`twitter:creator`) |
 `twitter_site` | Twitter Site (`twitter:site`) |
@@ -669,6 +833,7 @@ Option | Description | Default
 `class` | Class name | toc
 `list_number` | Displays list number | true
 `max_depth` | Maximum heading depth of generated toc | 6
+`min_depth` | Minimum heading depth of generated toc | 1
 
 **Examples:**
 

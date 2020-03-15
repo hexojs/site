@@ -12,6 +12,7 @@ title: 配置
 `title` | 網站標題
 `subtitle` | 網站副標題
 `description` | 網站描述
+`keywords` | 網站的關鍵詞。使用半角逗號 `,` 分隔多個關鍵詞。
 `author` | 您的名字
 `language` | 網站使用的語言，參考 [2-lettter ISO-639-1 code](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes)，預設為 `en`
 `timezone` | 網站時區，Hexo 預設使用您電腦的時區，您可以在 [時區列表](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) 尋找適當的時區，例如 `America/New_York` 、 `Japan` 與 `UTC`
@@ -24,6 +25,9 @@ title: 配置
 `root` | 網站的根目錄 |
 `permalink` | 文章 [永久連結](permalinks.html) 的格式 | `:year/:month/:day/:title/`
 `permalink_defaults` | `permalink` 中各區段的預設值 |
+`pretty_urls` | 改寫 [`permalink`](variables.html) 的值來美化 URL |
+`pretty_urls.trailing_index` | 是否在永久鏈接中保留尾部的 `index.html`，設置為 `false` 時去除 | `true`
+`pretty_urls.trailing_html` | 是否在永久鏈接中保留尾部的 `.html`, 設置為 `false` 時去除 (_對尾部的 `index.html`無效_) | `true`
 
 {% note info 網站存放在子目錄 %}
 如果您的網站存放在子目錄中，例如 `http://example.org/blog`，請將您的 `url` 設為 `http://example.org/blog` 並把 `root` 設為 `/blog/`。
@@ -40,7 +44,7 @@ title: 配置
 `category_dir` | 分類資料夾 | `categories`
 `code_dir` | Include code 資料夾 | `downloads/code`
 `i18n_dir` | 國際化（i18n）資料夾 | `:lang`
-`skip_render` | 跳過指定檔案的渲染，您可使用 [glob 表達式](https://github.com/isaacs/minimatch) 來配對路徑 |
+`skip_render` | 跳過指定檔案的渲染，您可使用 [glob 表達式](https://github.com/micromatch/micromatch#extended-globbing) 來配對路徑 |
 
 ### 寫作
 
@@ -51,12 +55,21 @@ title: 配置
 `auto_spacing` | 在西方文字與東方文字中加入空白 | `false`
 `titlecase` | 把標題轉換為 title case | `false`
 `external_link` | 在新頁籤中開啟連結 | `true`
+`external_link.enable` | 在新頁籤中開啟連結 | `true`
+`external_link.field` | Applies to the whole `site` or `post` only | `site`
+`external_link.exclude` | Exclude hostname. Specify subdomain when applicable, including `www` | `[]`
 `filename_case` | 把檔案名稱轉換為: `1` 小寫或 `2` 大寫 | `0`
 `render_drafts` | 顯示草稿 | `false`
 `post_asset_folder` | 啟動 [Asset 資料夾](asset-folders.html) | `false`
 `relative_link` | 把連結改為與根目錄的相對位址 | `false`
 `future` | 顯示未來的文章 | `true`
 `highlight` | 程式碼區塊的設定 |
+`highlight.enable` | 開啟代碼塊高亮 | `true`
+`highlight.auto_detect` | 如果未指定語言，則啟用自動檢測 | `false`
+`highlight.line_number` | 顯示行數<br>_Enabling this option will also enable `wrap` option_ | `true`
+`highlight.tab_replace` | 用 n 個空格替換 tabs；如果值為空，則不會替換 tabs | `''`
+`highlight.wrap` | Wrap the code block in [`<table>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table) | `true`
+`highlight.hljs` | Use the `hljs-*` prefix for CSS classes | `false`
 
 ### 分類 & 標籤
 
@@ -74,6 +87,7 @@ Hexo 使用 [Moment.js](http://momentjs.com/) 來解析和顯示時間。
 --- | --- | ---
 `date_format` | 日期格式 | `YYYY-MM-DD`
 `time_format` | 時間格式 | `HH:mm:ss`
+`use_date_for_updated` | Use the date of the post in [`post.updated`](/zh-tw/docs/variables#頁面變數) if no updated date is provided in the front-matter. Typically used with Git workflow | `true`
 
 ### 分頁
 
@@ -94,19 +108,52 @@ Hexo 使用 [Moment.js](http://momentjs.com/) 來解析和顯示時間。
 
 Hexo 會根據配置檔中 `include` / `exlude` 欄位設定，了解要 處理/忽略 哪些特定的檔案或資料夾。
 
+`include` and `exclude` options only apply to the `source/` folder, whereas `ignore` option applies to all folders.
+
 設定 | 描述
 --- | ---
 `include` | Hexo 預設會忽略隱藏檔與隱藏資料夾，但列在這個欄位中的檔案，Hexo 仍然會去處理
 `exclude` | 列在這裡的檔案將會被 Hexo 忽略
+`ignore` | Ignore files/folders
 
 範例:
 ```yaml
 # 包含/排除 檔案或資料夾
 include:
-  - .nojekyll
+  - ".nojekyll"
+  # 包括 'source/css/_typing.css'
+  - "css/_typing.css"
+  # 包括 'source/_css/' 中的任何文件，但不包括子目录及其其中的文件。
+  - "_css/*"
+  # 包含 'source/_css/' 中的任何文件和子目录下的任何文件
+  - "_css/**/*"
+
 exclude:
-  - .DS_Store
+  # 不包括 'source/js/test.js'
+  - "js/test.js"
+  # 不包括 'source/js/' 中的文件、但包括子目录下的所有目录和文件
+  - "js/*"
+  # 不包括 'source/js/' 中的文件和子目录下的任何文件
+  - "js/**/*"
+  # 不包括 'source/js/' 目录下的所有文件名以 'test' 开头的文件，但包括其它文件和子目录下的单文件
+  - "js/test*"
+  # 不包括 'source/js/' 及其子目录中任何以 'test' 开头的文件
+  - "js/**/test*"
+  # 不要用 exclude 来忽略 'source/_posts/' 中的文件。你应该使用 'skip_render'，或者在要忽略的文件的文件名之前加一个下划线 '_'
+  # 在这里配置一个 - "_posts/hello-world.md" 是没有用的。
+
+ignore:
+  # Ignore any folder named 'foo'.
+  - "**/foo"
+  # Ignore 'foo' folder in 'themes/' only.
+  - "**/themes/*/foo"
+  # Same as above, but applies to every subfolders of 'themes/'.
+  - "**/themes/**/foo"
 ```
+
+列表中的每一項都必須用單引號或雙引號包裹起來。
+
+`include` 和 `exclude` 並不適用於 `themes/` 目錄下的文件。如果需要忽略 `themes/` 目錄下的部分文件或文件夾，可以使用 `ignore` 或在文件名之前添加下劃線 `_`。
 
 ### 使用替代配置檔
 

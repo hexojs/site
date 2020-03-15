@@ -73,7 +73,7 @@ layout.swig  - 使用 Swig
 6. 建立一个新的合并申请（pull request）并描述改动。
 
 [EJS]: https://github.com/hexojs/hexo-renderer-ejs
-[Swig]: http://paularmstrong.github.com/swig/
+[Swig]: https://github.com/node-swig/swig-templates
 [Haml]: https://github.com/hexojs/hexo-renderer-haml
 [Jade]: https://github.com/hexojs/hexo-renderer-jade
 [hexojs/site]: https://github.com/hexojs/site

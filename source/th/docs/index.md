@@ -23,7 +23,7 @@ hexo เป็นกรอบบล็อกท่ีรวดเร็ว เ�
 
 การติดตั้ง hexo เป็นเรื่องง่ายๆ แต่คุณต้องการติดตั้งบางสิ่งก่อน:
 
-- [Node.js](http://nodejs.org/) (Should be at least nodejs 6.9)
+- [Node.js](http://nodejs.org/) (Should be at least Node.js 8.10, recommends 10.0 or higher)
 - [Git](http://git-scm.com/)
 
 ถ้าคุณติดตั้งสองสิ่งนี้อยู่แล้วในคอม ขอแสดงความยินดี คุณจะติดตั้ง hexo ด้วย npm ได้อย่างนี้:
@@ -50,26 +50,30 @@ $ npm install -g hexo-cli
 
 ### Install Node.js
 
-วิธีดีท่ีสุดสำหรับการติดตั้ง Node.js คือ [Node Version Manager](https://github.com/creationix/nvm)
+วิธีดีท่ีสุดสำหรับการติดตั้ง Node.js คือ [Node Version Manager](https://github.com/nvm-sh/nvm)
 ขอบคุณ ผู้ประดิษฐ์ nvm ท่ีได้แนะนำวิธีเรียบง่ายท่ีติดตั้ง nvm ได้โดยอัตโนมัติ
 
 cURL:
 
 ``` bash
-$ curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | bash
+$ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
 ```
 
 Wget:
 
 ``` bash
-$ wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | bash
+$ wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
 ```
 
 เมื่อเสร็จการติดตั้ง nvm เปิด terminal ใหม่และรันคำสั่งต่อไปเพื่อติดตั้ง Node.js
 
 ``` bash
-$ nvm install stable
+$ nvm install node
 ```
+
+{% note info For Windows users %}
+We recommend to use [Node Version Switcher](https://github.com/jasongin/nvs/) as an alternative to nvm on Windows, which has similar command-line syntax with nvm and can be installed through provided Windows Installer (MSI) package.
+{% endnote %}
 
 นอกจากนี้ยังดาวน์โหลดและรัน [the installer](http://nodejs.org/) ได้
 

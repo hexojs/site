@@ -9,7 +9,7 @@ title: 變數
 `page` | 針對該頁面的資訊以及 front-matter 所設定的變數。
 `config` | 網站配置
 `theme` | 主題配置。繼承自網站配置。
-`_` (單底線) | [Lodash] 函式庫
+`_` (單底線) | [Lodash](https://lodash.com/  'Lodash') 函式庫
 `path` | 目前頁面的路徑（不含根路徑）
 `url` | 目前頁面的完整網址
 `env` | 環境變數

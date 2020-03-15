@@ -4,10 +4,13 @@ menu:
   news: 新闻
   plugins: 插件
   themes: 主题
+  about: 关于
   search: 搜索
 
 index:
   get_started: 开始使用
+  theme_intro: 在众多美观、强大、可定制的主题中选择；使用任何兼容的模板引擎创建自己的主题。
+  theme_link: 探索主题
 
 page:
   contents: 目录
@@ -34,6 +37,9 @@ sidebar:
     server: 服务器
     generating: 生成器
     deployment: 部署
+    github_pages: GitHub Pages
+    gitlab_pages: GitLab Pages
+    one_command_deployment: 一键部署
     customization: 自定义
     permalinks: 永久链接
     themes: 主题

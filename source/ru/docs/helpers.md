@@ -24,7 +24,7 @@ title: Помощники
 ### gravatar
 
 Вставка изображения с Gravatar.
-Если не указать в параметрах будет применена опция по умолчанию. Иначе можно установить число, которое будет передаваться в качестве параметра размера изображения, получаемого с Gravatar. Наконец, если установить его ссылкой на объект, он будет преобразован в строку запроса параметров для Gravatar.
+Если не указать в параметрах, будет применена опция по умолчанию. Иначе можно установить число, которое будет передаваться в качестве параметра размера изображения, получаемого с Gravatar. Наконец, если установить его ссылкой на объект, он будет преобразован в строку запроса параметров для Gravatar.
 
 ``` js
 <%- gravatar(email, [options]) %>
@@ -34,20 +34,20 @@ title: Помощники
 
 ``` js
 <%- gravatar('a@abc.com') %>
-// http://www.gravatar.com/avatar/b9b00e66c6b8a70f88c73cb6bdb06787
+// https://www.gravatar.com/avatar/b9b00e66c6b8a70f88c73cb6bdb06787
 
 <%- gravatar('a@abc.com', 40) %>
-// http://www.gravatar.com/avatar/b9b00e66c6b8a70f88c73cb6bdb06787?s=40
+// https://www.gravatar.com/avatar/b9b00e66c6b8a70f88c73cb6bdb06787?s=40
 
-<%- gravatar('a@abc.com' {s: 40, d: 'http://example.com/image.png'}) %>
-// http://www.gravatar.com/avatar/b9b00e66c6b8a70f88c73cb6bdb06787?s=40&d=http%3A%2F%2Fexample.com%2Fimage.png
+<%- gravatar('a@abc.com' {s: 40, d: 'https://via.placeholder.com/150'}) %>
+// https://www.gravatar.com/avatar/b9b00e66c6b8a70f88c73cb6bdb06787?s=40&d=https%3A%2F%2Fvia.placeholder.com%2F150
 ```
 
-## HTML тэги
+## HTML теги
 
 ### css
 
-Загружает CSS-файлы. `path` может быть массивом или строкой. Если путь не начинается префиксом `/` или любым протоколом, то будет начинаться с корневого URL-адреса. Если не добавить `.css`, в конце пути, он будет подставлен автоматически.
+Загружает CSS-файлы. `path` может быть массивом или строкой. Если путь не начинается с префикса `/` или с любого протокола, то будет начинаться с корневого URL-адреса. Если не добавить `.css` в конце пути, он будет подставлен автоматически. Use object type for custom attributes.
 
 ``` js
 <%- css(path, ...) %>
@@ -57,16 +57,23 @@ title: Помощники
 
 ``` js
 <%- css('style.css') %>
-// <link rel="stylesheet" href="/style.css" type="text/css">
+// <link rel="stylesheet" href="/style.css">
 
 <%- css(['style.css', 'screen.css']) %>
-// <link rel="stylesheet" href="/style.css" type="text/css">
-// <link rel="stylesheet" href="/screen.css" type="text/css">
+// <link rel="stylesheet" href="/style.css">
+// <link rel="stylesheet" href="/screen.css">
+
+<%- css({ href: 'style.css', integrity: 'foo' }) %>
+// <link rel="stylesheet" href="/style.css" integrity="foo">
+
+<%- css([{ href: 'style.css', integrity: 'foo' }, { href: 'screen.css', integrity: 'bar' }]) %>
+// <link rel="stylesheet" href="/style.css" integrity="foo">
+// <link rel="stylesheet" href="/screen.css" integrity="bar">
 ```
 
 ### js
 
-Загружает JavaScript файлы. `path` может быть массивом или строкой. Если путь не начинается префиксом `/` или любым протоколом, то будет начинаться с корневого URL-адреса. Если не добавить `.js`, в конце пути, он будет подставлен автоматически.
+Загружает JavaScript файлы. `path` может быть массивом или строкой. Если путь не начинается с префикса `/` или с любого протокола, то будет начинаться с корневого URL-адреса. Если не добавить `.js` в конце пути, он будет подставлен автоматически. Use object type for custom attributes.
 
 ``` js
 <%- js(path, ...) %>
@@ -76,11 +83,18 @@ title: Помощники
 
 ``` js
 <%- js('script.js') %>
-// <script type="text/javascript" src="/script.js"></script>
+// <script src="/script.js"></script>
 
 <%- js(['script.js', 'gallery.js']) %>
-// <script type="text/javascript" src="/script.js"></script>
-// <script type="text/javascript" src="/gallery.js"></script>
+// <script src="/script.js"></script>
+// <script src="/gallery.js"></script>
+
+<%- js({ src: 'script.js', integrity: 'foo', async: true }) %>
+// <script src="/script.js" integrity="foo" async></script>
+
+<%- js([{ src: 'script.js', integrity: 'foo' }, { src: 'gallery.js', integrity: 'bar' }]) %>
+// <script src="/script.js" integrity="foo"></script>
+// <script src="/gallery.js" integrity="bar"></script>
 ```
 
 ### link_to
@@ -91,7 +105,7 @@ title: Помощники
 <%- link_to(path, [text], [options]) %>
 ```
 
-Опции | Описание | Умолчание
+Опции | Описание | Значение по умолчанию
 --- | --- | ---
 `external` | Открывает ссылку в новой вкладке | false
 `class` | Имя класса |
@@ -107,7 +121,7 @@ title: Помощники
 // <a href="http://www.google.com" title="Google">Google</a>
 
 <%- link_to('http://www.google.com', 'Google', {external: true}) %>
-// <a href="http://www.google.com" title="Google" target="_blank" rel="external">Google</a>
+// <a href="http://www.google.com" title="Google" target="_blank" rel="noopener">Google</a>
 ```
 
 ### mail_to
@@ -169,7 +183,7 @@ title: Помощники
 <%- feed_tag(path, [options]) %>
 ```
 
-Опции | Описание | Умолчание
+Опции | Описание | Значение по умолчанию
 --- | --- | ---
 `title` | Имя канала |
 `type` | Тип канала | atom
@@ -236,7 +250,7 @@ title: Помощники
 
 ### is_tag
 
-Проверить, является ли текущая страница страницей тэга. Если строка содержит параметр, проверяется, соответствует ли текущая страница заданному тэгу.
+Проверить, является ли текущая страница страницей тега. Если строка содержит параметр, проверяется, соответствует ли текущая страница заданному тегу.
 
 ``` js
 <%- is_tag() %>
@@ -264,7 +278,7 @@ title: Помощники
 **Примеры:**
 
 ``` js
-<%- strip_html('It's not <b>important</b> anymore!') %>
+<%- strip_html('It\'s not <b>important</b> anymore!') %>
 // It's not important anymore!
 ```
 
@@ -352,7 +366,7 @@ title: Помощники
 <%- partial(layout, [locals], [options]) %>
 ```
 
-Опция | Описание | Умолчание
+Опция | Описание | Значение по умолчанию
 --- | --- | ---
 `cache` | Кэшировать содержимое (Использовать кэш фрагментов.) | `false`
 `only` | Строгие локальные переменные. Использовать только указанные в шаблоне переменные `locals`. | `false`
@@ -377,7 +391,7 @@ title: Помощники
 
 ### date
 
-Вставляет отформатированную дату. `date` может быть в формате времени Unix, строки ISO, объекта date, или [Moment.js] объекта. Параметр `format` по умолчанию равен  `date_format`.
+Вставляет отформатированную дату. `date` может быть в формате времени Unix, строки ISO, объекта date, или [Moment.js] объекта. Параметр `format` по умолчанию равен `date_format`.
 
 ``` js
 <%- date(date, [format]) %>
@@ -395,7 +409,7 @@ title: Помощники
 
 ### date_xml
 
-Вставляет дату в формате XML. `date` может быть в формате времени Unix, строки ISO, объекта date, или [Moment.js] объекта.
+Вставляет дату в формате XML. `date` может быть в формате времени Unix, строки ISO, объекта date или [Moment.js] объекта.
 
 ``` js
 <%- date_xml(date) %>
@@ -410,7 +424,7 @@ title: Помощники
 
 ### time
 
-Вставляет отформатированное время. `date` может быть в формате времени Unix, строки ISO, объекта date, или [Moment.js] объекта. Параметр `format` по умолчанию равен  `time_format`.
+Вставляет отформатированное время. `date` может быть в формате времени Unix, строки ISO, объекта date или [Moment.js] объекта. Параметр `format` по умолчанию равен  `time_format`.
 
 ``` js
 <%- time(date, [format]) %>
@@ -428,7 +442,7 @@ title: Помощники
 
 ### full_date
 
-Вставляет отформатированные дату и время. `date` может быть в формате времени Unix, строки ISO, объекта date, или [Moment.js] объекта. Параметр `format` по умолчанию равен  `date_format + time_format`.
+Вставляет отформатированные дату и время. `date` может быть в формате времени Unix, строки ISO, объекта date или [Moment.js] объекта. Параметр `format` по умолчанию равен `date_format + time_format`.
 
 ``` js
 <%- full_date(date, [format]) %>
@@ -458,10 +472,10 @@ title: Помощники
 <%- list_categories([options]) %>
 ```
 
-Опция | Описание | Умолчание
+Опция | Описание | Значение по умолчанию
 --- | --- | ---
 `orderby` | Упорядочивание категорий | name
-`order` | Порядок сортировки. `1`, `asc` для сортировки по увеличению; `-1`, `desc` для сортировки по уменьшению | 1
+`order` | Порядок сортировки. `1`, `asc` для сортировки по возрастанию; `-1`, `desc` для сортировки по убыванию | 1
 `show_count` | Отображать количество постов для каждой категории | true
 `style` | Стиль показа списка категорий. `list` отображает категории в неупорядоченном списке.  | list
 `separator` | Разделитель категорий. (Работает если только стиль `style` не задан как `list`) | ,
@@ -471,22 +485,22 @@ title: Помощники
 
 ### list_tags
 
-Вставка списка всех тэгов.
+Вставка списка всех тегов.
 
 ``` js
 <%- list_tags([options]) %>
 ```
 
-Опция | Описание | Умолчание
+Опция | Описание | Значение по умолчанию
 --- | --- | ---
 `orderby` | Сортировать по категориям | name
-`order` | Порядок сортировки. `1`, `asc` по увеличению; `-1`, `desc` по уменьшению | 1
-`show_count` | Отображать количество постов для каждого тэга. | true
-`style` | Стиль показа списка тэгов. `list` отображает категории в неупорядоченном списке. | list
-`separator` | Разделитель тэгов. (Работает если только стиль `style` не задан как `list`) | ,
-`class` | Имя класса списка тэгов. | tag
+`order` | Порядок сортировки. `1`, `asc` по возрастанию; `-1`, `desc` по убыванию | 1
+`show_count` | Отображать количество постов для каждого тега. | true
+`style` | Стиль показа списка тегов. `list` отображает категории в неупорядоченном списке. | list
+`separator` | Разделитель тегов. (Работает если только стиль `style` не задан как `list`) | ,
+`class` | Имя класса списка тегов. | tag
 `transform` | Функция, позволяющая изменить отображаемое имя категории. |
-`amount` | Ограничение количества отображаемых тэгов (0 = неограниченно) | 0
+`amount` | Ограничение количества отображаемых тегов (0 = неограниченно) | 0
 
 ### list_archives
 
@@ -496,10 +510,10 @@ title: Помощники
 <%- list_archives([options]) %>
 ```
 
-Опция | Описание | Умолчание
+Опция | Описание | Значение по умолчанию
 --- | --- | ---
-`type` | Тип. Значение может быть года `yearly` или месяца `monthly`. | monthly
-`order` | Порядок сортировки. `1`, `asc` по увеличению; `-1`, `desc` по уменьшению | 1
+`type` | Тип. Значение может быть год `yearly` или месяц `monthly`. | monthly
+`order` | Порядок сортировки. `1`, `asc` по возрастанию; `-1`, `desc` по убывантю | 1
 `show_count` | Отобразить количество сообщений для каждого архива | true
 `format` | Формат даты | MMMM YYYY
 `style` | Стиль показа списка архивов. `list` отображает категории в неупорядоченном списке.  | list
@@ -515,10 +529,10 @@ title: Помощники
 <%- list_posts([options]) %>
 ```
 
-Опция | Описание | Умолчание
+Опция | Описание | Значение по умолчанию
 --- | --- | ---
 `orderby` | Сортировка постов | date
-`order` | Порядок сортировки. `1`, `asc` по увеличению; `-1`, `desc` по убыванию | 1
+`order` | Порядок сортировки. `1`, `asc` по возрастанию; `-1`, `desc` по убыванию | 1
 `style` | Стиль показа списка постов. `list` отображает категории в неупорядоченном списке.  | list
 `separator` | Разделитель постов. (Работает если только стиль `style` не задан как `list`) | ,
 `class` | Имя класса списка постов. | post
@@ -527,21 +541,21 @@ title: Помощники
 
 ### tagcloud
 
-Облако тэгов.
+Облако тегов.
 
 ``` js
 <%- tagcloud([tags], [options]) %>
 ```
 
-Опция | Описание | Умолчание
+Опция | Описание | Значение по умолчанию
 --- | --- | ---
 `min_font` | Минимальный размер шрифта | 10
 `max_font` | Максимальный размер шрифта | 20
 `unit` | Единица измерения размера шрифта | px
-`amount` | Общая сумма тэгов | 40
-`orderby` | Упорядочить по тэгу | name
-`order` | Порядок сортировки. `1`, `asc` по увеличению; `-1`, `desc` по убыванию | 1
-`color` | Цветное облако тэгов | false
+`amount` | Общая сумма тегов | 40
+`orderby` | Упорядочить по тегу | name
+`order` | Порядок сортировки. `1`, `asc` по возрастанию; `-1`, `desc` по убыванию | 1
+`color` | Цветное облако тегов | false
 `start_color` | Стартовый цвет. Можно использовать hex (`#b700ff`), rgba (`rgba(183, 0, 255, 1)`), hsla (`hsla(283, 100%, 50%, 1)`) или [имена цветов]. Эта опция работает только если `color` установлен в `true`. |
 `end_color` | Конечный цвет. Можно использовать hex (`#b700ff`), rgba (`rgba(183, 0, 255, 1)`), hsla (`hsla(283, 100%, 50%, 1)`) или [имена цветов]. Эта опция работает только если `color` установлен в `true`. |
 
@@ -555,7 +569,7 @@ title: Помощники
 <%- paginator(options) %>
 ```
 
-Опция | Описание | Умолчание
+Опция | Описание | Значение по умолчанию
 --- | --- | ---
 `base` | Базовый URL-адрес | /
 `format` | Формат URL-адреса | page/%d/
@@ -565,9 +579,45 @@ title: Помощники
 `next_text` | Ссылка на следующую страницу. Работает только если `prev_next` имеет значение `true`. | Next
 `space` | Пространство в тексте | &hellp;
 `prev_next` | Отображает ссылки на предыдущую и следующую страницы | true
-`end_size` | Количество страниц, отображаемых с начало и конца. | 1
+`end_size` | Количество страниц, отображаемых с начала и конца. | 1
 `mid_size` | Количество страниц, отображаемых от текущей страницы. Текущая страница не включена. | 2
 `show_all` | Отобразить все страницы. Если установлено в `true`, `end_size` и `mid_size` не работают. | false
+`escape` | Escape HTML tags | true
+
+**Examples:**
+
+``` js
+<%- paginator({
+  prev_text: '<',
+  next_text: '>'
+}) %>
+```
+
+``` html
+<!-- Rendered as -->
+<a href="/1/">&lt;</a>
+<a href="/1/">1</a>
+2
+<a href="/3/">3</a>
+<a href="/3/">&gt;</a>
+```
+
+``` js
+<%- paginator({
+  prev_text: '<i class="fa fa-angle-left"></i>',
+  next_text: '<i class="fa fa-angle-right"></i>',
+  escape: false
+}) %>
+```
+
+``` html
+<!-- Rendered as -->
+<a href="/1/"><i class="fa fa-angle-left"></i></a>
+<a href="/1/">1</a>
+2
+<a href="/3/">3</a>
+<a href="/3/"><i class="fa fa-angle-right"></i></a>
+```
 
 ### search_form
 
@@ -577,11 +627,11 @@ title: Помощники
 <%- search_form(options) %>
 ```
 
-Опции | Описание | Умолчание
+Опции | Описание | Значение по умолчанию
 --- | --- | ---
-`class` | Имя класса форма | search-form
+`class` | Имя класса формы | search-form
 `text` | Подсказка поиска | Search
-`button` | Отображать кнопку поиска. Значение может быть логическим или строковым. Если значение - строка, тогда она подставится в текст кнопки. | false
+`button` | Отображать кнопку поиска. Значение может быть логическим или строковым. Если значение — строка, тогда она подставится в текст кнопки. | false
 
 ### number_format
 
@@ -591,7 +641,7 @@ title: Помощники
 <%- number_format(number, [options]) %>
 ```
 
-Опция | Описание | Умолчание
+Опция | Описание | Значение по умолчанию
 --- | --- | ---
 `precision` | Точность чисел. Значение можно установить в `false` или неотрицательное целое число. | false
 `delimiter` | Разделитель тысяч | ,
@@ -616,6 +666,21 @@ title: Помощники
 // 12,345/67
 ```
 
+### meta_generator
+
+Inserts [generator tag](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta).
+
+``` js
+<%- meta_generator() %>
+```
+
+**Examples:**
+
+``` js
+<%- meta_generator() %>
+// <meta name="generator" content="Hexo 4.0.0">
+```
+
 ### open_graph
 
 Вставляет график [Open Graph].
@@ -624,15 +689,15 @@ title: Помощники
 <%- open_graph([options]) %>
 ```
 
-Опция | Описание | Умолчание
+Опция | Описание | Значение по умолчанию
 --- | --- | ---
 `title` | Заголовок страницы (`og:title`) | `page.title`
 `type` | Тип страницы (`og:type`) | blog
 `url` | URL-адрес страницы (`og:url`) | `url`
-`image` | Обложка страницы (`og:image`) | First image in the content
+`image` | Обложка страницы (`og:image`) | All images in the content
 `site_name` | Имя сайта (`og:site_name`) | `config.title`
-`description` | Описание страницы (`og:desription`) | Page excerpt or first 200 characters of the content
-`twitter_card` | Карточка Twitter (`twitter:card`) | summary
+`description` | Описание страницы (`og:description`) | Отрывок страницы или первые 200 символов содержимого
+`twitter_card` | Карточка Twitter (`twitter:card`) | Краткое изложение
 `twitter_id` | Twitter ID (`twitter:creator`) |
 `twitter_site` | Сайт Twitter (`twitter:site`) |
 `google_plus` | Ссылка на профиль Google+ |
@@ -647,10 +712,12 @@ title: Помощники
 <%- toc(str, [options]) %>
 ```
 
-Опция | Описание | Умолчание
+Опция | Описание | Значение по умолчанию
 --- | --- | ---
 `class` | Имя класса | toc
 `list_number` | Отображать нумерацию | true
+`max_depth` | Maximum heading depth of generated toc | 6
+`min_depth` | Minimum heading depth of generated toc | 1
 
 **Примеры:**
 
@@ -658,6 +725,6 @@ title: Помощники
 <%- toc(page.content) %>
 ```
 
-[имена цветов]: http://www.w3.org/TR/css3-color/#svg-color
+[Имена цветов]: http://www.w3.org/TR/css3-color/#svg-color
 [Moment.js]: http://momentjs.com/
 [Open Graph]: http://ogp.me/

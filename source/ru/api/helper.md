@@ -15,11 +15,11 @@ hexo.extend.helper.register(name, function(){
 
 ``` js
 hexo.extend.helper.register('js', function(path){
-  return '<script type="text/javascript" src="' + path + '"></script>';
+  return '<script src="' + path + '"></script>';
 });
 ```
 
 ``` js
 <%- js('script.js') %>
-// <script type="text/javascript" src="script.js"></script>
+// <script src="script.js"></script>
 ```

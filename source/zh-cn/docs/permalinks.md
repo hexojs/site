@@ -14,9 +14,11 @@ title: 永久链接（Permalinks）
 `:i_month` | 文章的发表月份（去掉开头的零）
 `:day` | 文章的发表日期 (2 位数)
 `:i_day` | 文章的发表日期（去掉开头的零）
+`:hour` | 文章发表时的小时 (2 位数)
+`:minute` | 文章发表时的分钟 (2 位数)
 `:title` | 文件名称
 `:post_title` | 文章标题
-`:id` | 文章 ID
+`:id` | 文章 ID (_not persistent across [cache reset](/zh-cn/docs/commands#clean)_)
 `:category` | 分类。如果文章没有分类，则是 `default_category` 配置信息。
 
 您可在 `permalink_defaults` 参数下调整永久链接中各变量的默认值：
@@ -40,9 +42,9 @@ categories:
 
 参数 | 结果
 --- | ---
-`:year/:month/:day/:title/` | 2013/07/14/hello-world
+`:year/:month/:day/:title/` | 2013/07/14/hello-world/
 `:year-:month-:day-:title.html` | 2013-07-14-hello-world.html
-`:category/:title` | foo/bar/hello-world
+`:category/:title/` | foo/bar/hello-world/
 
 ### 多语种支持
 

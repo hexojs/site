@@ -15,7 +15,7 @@ Hexo는 눈 깜박할 새에 설치할 수 있습니다. 설치 시 문제가 �
 
 Hexo의 설치는 꽤 쉽습니다. 하지만, 설치 전에 몇 가지 요구사항이 있습니다.
 
-- [Node.js](http://nodejs.org/) (Should be at least nodejs 6.9)
+- [Node.js](http://nodejs.org/) (Should be at least Node.js 8.10, recommends 10.0 or higher)
 - [Git](http://git-scm.com/)
 
 컴퓨터에 이미 이런 것들이 설치되어 있다면, 축하드립니다! 이제 npm을 이용하여 Hexo를 설치하기만 하면 됩니다.
@@ -39,25 +39,29 @@ $ npm install -g hexo-cli
 
 ### Node.js를 설치하세요
 
-Node.js는 [nvm](https://github.com/creationix/nvm)을 통해 설치하는 것이 가장 좋습니다.
+Node.js는 [nvm](https://github.com/nvm-sh/nvm)을 통해 설치하는 것이 가장 좋습니다.
 
 cURL:
 
 ``` bash
-$ curl https://raw.github.com/creationix/nvm/v0.33.11/install.sh | sh
+$ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | sh
 ```
 
 Wget:
 
 ``` bash
-$ wget -qO- https://raw.github.com/creationix/nvm/v0.33.11/install.sh | sh
+$ wget -qO-https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | sh
 ```
 
 nvm이 설치되어 있다면, 터미널을 재시작하고 아래 명령어를 수행하세요.
 
 ``` bash
-$ nvm install stable
+$ nvm install node
 ```
+
+{% note info For Windows users %}
+We recommend to use [Node Version Switcher](https://github.com/jasongin/nvs/) as an alternative to nvm on Windows, which has similar command-line syntax with nvm and can be installed through provided Windows Installer (MSI) package.
+{% endnote %}
 
 이런 방법 대신, [installer](http://nodejs.org/)를 다운로드 받아서 설치하는 방법도 있습니다.
 

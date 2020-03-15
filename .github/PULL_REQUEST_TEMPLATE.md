@@ -1,4 +1,30 @@
-- [ ] Read the [theme publishing doc](https://hexo.io/docs/themes#Publishing) or [plugin publishing doc](https://hexo.io/docs/plugins#Publishing).
+## Check List
+
+**Please read and check followings before submitting a PR.**
+
+- [ ] I want to publish my theme on Hexo official website.
+    - [ ] I have read the [theme publishing doc](https://hexo.io/docs/themes#Publishing).
+    - [ ] `name` is unique.
+    - [ ] `link` URL is correct.
+    - [ ] `preview` URL is correct.
+    - [ ] `preview` URL web site is rendered correctly.
+    - [ ] Add a screenshot to `source/themes/screenshots`.
+    - [ ] Screenshot filename is same as value of `name`.
+    - [ ] Screenshot size is `800 * 500`.
+    - [ ] Screenshot file format is `png`.
+- [ ] I want to publish my plugin on Hexo official website.
+    - [ ] I have read the [plugin publishing doc](https://hexo.io/docs/plugins#Publishing).
+    - [ ] `name` is unique.
+    - [ ] `link` URL is correct.
+- [ ] Others (Update, fix, translation, etc...)
+    - Languages:
+    - [ ] `en` English
+    - [ ] `ko` Korean
+    - [ ] `pt-br` Brazilian Portuguese
+    - [ ] `ru` Russian
+    - [ ] `th` Thai
+    - [ ] `zh-cn` simplified Chinese
+    - [ ] `zh-tw` traditional Chinese
 
 <!-- 
     Thank you for publishing your work on Hexo site!

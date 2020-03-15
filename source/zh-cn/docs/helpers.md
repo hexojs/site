@@ -10,7 +10,41 @@ title: 辅助函数（Helpers）
 在路径前加上根路径，从 Hexo 2.7 开始您应该使用此函数而不是 `config.root + path`。
 
 ``` js
-<%- url_for(path) %>
+<%- url_for(path, [option]) %>
+```
+
+参数 | 描述 | 默认值
+--- | --- | ---
+`relative` | 是否输出相对链接 | `config.relative_link` 的值
+
+**示例：**
+
+``` yml
+_config.yml
+root: /blog/
+```
+
+``` js
+<%- url_for('/a/path') %>
+// /blog/a/path
+```
+
+是否输出相对链接，默认遵循配置文件中 `relative_link` 的值
+例如， post/page 的相对路径值可能是 `/foo/bar/index.html`
+
+``` yml
+_config.yml
+relative_link: true
+```
+
+``` js
+<%- url_for('/css/style.css') %>
+// ../../css/style.css
+/* 覆盖配置
+ * 即使配置文件中启用了 relative_link，你也可以使用 relative 参数禁用相对链接输出，反之亦然
+ */
+<%- url_for('/css/style.css', {relative: false}) %>
+// /css/style.css
 ```
 
 ### relative_url
@@ -21,33 +55,70 @@ title: 辅助函数（Helpers）
 <%- relative_url(from, to) %>
 ```
 
+**示例：**
+
+``` js
+<%- relative_url('foo/bar/', 'css/style.css') %>
+// ../../css/style.css
+```
+
 ### gravatar
 
-插入 Gravatar 图片。
+根据邮箱地址返回 Gravatar 头像 URL。
+
 如果你不指定 `options` 参数，将会应用默认参数。否则，你可以将其设置为一个数字，这个数字将会作为 Gravatar 的大小参数。最后，如果你设置它一个对象，它将会被转换为 Gravatar 的一个查询字符串参数。
 
 ``` js
 <%- gravatar(email, [options]) %>
 ```
 
+参数 | 描述 | 默认值
+--- | --- | ---
+`s` | 图片大小 | 80
+`d` | 默认头像 |
+`f` | 强制使用默认图象 |
+`r` | 头像等级限制 |
+
+访问 [Gravatar](https://en.gravatar.com/site/implement/images/) 了解更多。
+
 **示例：**
 
 ``` js
 <%- gravatar('a@abc.com') %>
-// http://www.gravatar.com/avatar/b9b00e66c6b8a70f88c73cb6bdb06787
+// https://www.gravatar.com/avatar/b9b00e66c6b8a70f88c73cb6bdb06787
 
 <%- gravatar('a@abc.com', 40) %>
-// http://www.gravatar.com/avatar/b9b00e66c6b8a70f88c73cb6bdb06787?s=40
+// https://www.gravatar.com/avatar/b9b00e66c6b8a70f88c73cb6bdb06787?s=40
 
-<%- gravatar('a@abc.com' {s: 40, d: 'http://example.com/image.png'}) %>
-// http://www.gravatar.com/avatar/b9b00e66c6b8a70f88c73cb6bdb06787?s=40&d=http%3A%2F%2Fexample.com%2Fimage.png
+<%- gravatar('a@abc.com' {s: 40, d: 'https://via.placeholder.com/150'}) %>
+// https://www.gravatar.com/avatar/b9b00e66c6b8a70f88c73cb6bdb06787?s=40&d=https%3A%2F%2Fvia.placeholder.com%2F150
+```
+
+### full_url_for
+
+在路径前加上根路径和域名。输出会被自动转码。
+
+``` js
+<%- full_url_for(path) %>
+```
+
+**示例：**
+
+``` yml
+_config.yml
+url: https://example.com/blog # example
+```
+
+``` js
+<%- full_url_for('/a/path') %>
+// https://example.com/blog/a/path
 ```
 
 ## HTML 标签
 
 ### css
 
-载入 CSS 文件。`path` 可以是数组或字符串，如果 `path` 开头不是 `/` 或任何协议，则会自动加上根路径；如果后面没有加上 `.css` 扩展名的话，也会自动加上。
+载入 CSS 文件。`path` 可以是数组或字符串，如果 `path` 开头不是 `/` 或任何协议，则会自动加上根路径；如果后面没有加上 `.css` 扩展名的话，也会自动加上。Use object type for custom attributes.
 
 ``` js
 <%- css(path, ...) %>
@@ -57,16 +128,23 @@ title: 辅助函数（Helpers）
 
 ``` js
 <%- css('style.css') %>
-// <link rel="stylesheet" href="/style.css" type="text/css">
+// <link rel="stylesheet" href="/style.css">
 
 <%- css(['style.css', 'screen.css']) %>
-// <link rel="stylesheet" href="/style.css" type="text/css">
-// <link rel="stylesheet" href="/screen.css" type="text/css">
+// <link rel="stylesheet" href="/style.css">
+// <link rel="stylesheet" href="/screen.css">
+
+<%- css({ href: 'style.css', integrity: 'foo' }) %>
+// <link rel="stylesheet" href="/style.css" integrity="foo">
+
+<%- css([{ href: 'style.css', integrity: 'foo' }, { href: 'screen.css', integrity: 'bar' }]) %>
+// <link rel="stylesheet" href="/style.css" integrity="foo">
+// <link rel="stylesheet" href="/screen.css" integrity="bar">
 ```
 
 ### js
 
-载入 JavaScript 文件。`path` 可以是数组或字符串，如果 `path` 开头不是 `/` 或任何协议，则会自动加上根路径；如果后面没有加上 `.js` 扩展名的话，也会自动加上。
+载入 JavaScript 文件。`path` 可以是数组或字符串，如果 `path` 开头不是 `/` 或任何协议，则会自动加上根路径；如果后面没有加上 `.js` 扩展名的话，也会自动加上。Use object type for custom attributes.
 
 ``` js
 <%- js(path, ...) %>
@@ -76,11 +154,18 @@ title: 辅助函数（Helpers）
 
 ``` js
 <%- js('script.js') %>
-// <script type="text/javascript" src="/script.js"></script>
+// <script src="/script.js"></script>
 
 <%- js(['script.js', 'gallery.js']) %>
-// <script type="text/javascript" src="/script.js"></script>
-// <script type="text/javascript" src="/gallery.js"></script>
+// <script src="/script.js"></script>
+// <script src="/gallery.js"></script>
+
+<%- js({ src: 'script.js', integrity: 'foo', async: true }) %>
+// <script src="/script.js" integrity="foo" async></script>
+
+<%- js([{ src: 'script.js', integrity: 'foo' }, { src: 'gallery.js', integrity: 'bar' }]) %>
+// <script src="/script.js" integrity="foo"></script>
+// <script src="/gallery.js" integrity="bar"></script>
 ```
 
 ### link_to
@@ -107,7 +192,7 @@ title: 辅助函数（Helpers）
 // <a href="http://www.google.com" title="Google">Google</a>
 
 <%- link_to('http://www.google.com', 'Google', {external: true}) %>
-// <a href="http://www.google.com" title="Google" target="_blank" rel="external">Google</a>
+// <a href="http://www.google.com" title="Google" target="_blank" rel="noopener">Google</a>
 ```
 
 ### mail_to
@@ -186,7 +271,7 @@ title: 辅助函数（Helpers）
 
 ### is_home
 
-检查目前是否为首页。
+检查当前页面是否为首页。
 
 ``` js
 <%- is_home() %>
@@ -194,15 +279,23 @@ title: 辅助函数（Helpers）
 
 ### is_post
 
-检查目前是否为文章。
+检查当前页面是否为文章。
 
 ``` js
 <%- is_post() %>
 ```
 
+### is_page
+
+检查当前页面是否为独立页面。
+
+``` js
+<%- is_page() %>
+```
+
 ### is_archive
 
-检查目前是否为存档页面。
+检查当前页面是否为存档页面。
 
 ``` js
 <%- is_archive() %>
@@ -210,7 +303,7 @@ title: 辅助函数（Helpers）
 
 ### is_year
 
-检查目前是否为年度归档页面。
+检查当前页面是否为年度归档页面。
 
 ``` js
 <%- is_year() %>
@@ -218,7 +311,7 @@ title: 辅助函数（Helpers）
 
 ### is_month
 
-检查目前是否为月度归档页面。
+检查当前页面是否为月度归档页面。
 
 ``` js
 <%- is_month() %>
@@ -226,7 +319,7 @@ title: 辅助函数（Helpers）
 
 ### is_category
 
-检查目前是否为分类归档页面。
+检查当前页面是否为分类归档页面。
 如果给定一个字符串作为参数，将会检查目前是否为指定分类。
 
 ``` js
@@ -236,7 +329,7 @@ title: 辅助函数（Helpers）
 
 ### is_tag
 
-检查目前是否为标签归档页面。
+检查当前页面是否为标签归档页面。
 如果给定一个字符串作为参数，将会检查目前是否为指定标签。
 
 ``` js
@@ -265,7 +358,7 @@ title: 辅助函数（Helpers）
 **示例：**
 
 ``` js
-<%- strip_html('It's not <b>important</b> anymore!') %>
+<%- strip_html('It\'s not <b>important</b> anymore!') %>
 // It's not important anymore!
 ```
 
@@ -324,7 +417,7 @@ title: 辅助函数（Helpers）
 
 ### truncate
 
-移除超过 `length` 长度的字符串。
+移除超过 `length` 长度的字符串。`length` 的默认值是 30。
 
 ``` js
 <%- truncate(text, length) %>
@@ -469,6 +562,24 @@ title: 辅助函数（Helpers）
 `depth` | 要显示的分类层级。`0` 显示所有层级的分类；`-1` 和 `0` 很类似，但是显示不分层级；`1` 只显示第一层的分类。 | 0
 `class` | 分类列表的 class 名称。 | category
 `transform` | 改变分类名称显示方法的函数 |
+`suffix` | 为链接添加前缀 | None
+
+**用例:**
+
+``` js
+<%- list_categories(post.categories, {
+  class: 'post-category',
+  transform(str) {
+    return titlecase(str);
+  }
+}) %>
+ <%- list_categories(post.categories, {
+  class: 'post-category',
+  transform(str) {
+    return str.toUpperCase();
+  }
+}) %>
+```
 
 ### list_tags
 
@@ -486,8 +597,9 @@ title: 辅助函数（Helpers）
 `style` | 标签列表的显示方式。使用 `list` 以无序列表（unordered list）方式显示。 | list
 `separator` | 标签间的分隔符号。只有在 `style` 不是 `list` 时有用。 | ,
 `class` | 标签列表的 class 名称。 | tag
-`transform` | 改变标签名称显示方法的函数 |
+`transform` | 改变标签名称显示方法的函数。请查看 [list_categories](#list-categories) 中给出的例子 |
 `amount` | 要显示的标签数量（0 = 无限制） | 0
+`suffix` | 为链接添加前缀 | None
 
 ### list_archives
 
@@ -506,7 +618,7 @@ title: 辅助函数（Helpers）
 `style` | 归档列表的显示方式。使用 `list` 以无序列表（unordered list）方式显示。 | list
 `separator` | 归档间的分隔符号。只有在 `style` 不是 `list` 时有用。 | ,
 `class` | 归档列表的 class 名称。 | archive
-`transform` | 改变归档名称显示方法的函数 |
+`transform` | 改变归档名称显示方法的函数。请查看 [list_categories](#list-categories) 中给出的例子 |
 
 ### list_posts
 
@@ -524,7 +636,7 @@ title: 辅助函数（Helpers）
 `separator` | 文章间的分隔符号。只有在 `style` 不是 `list` 时有用。 | ,
 `class` | 文章列表的 class 名称。 | post
 `amount` | 要显示的文章数量（0 = 无限制） | 6
-`transform` | 改变文章名称显示方法的函数 |
+`transform` | 改变文章名称显示方法的函数。请查看 [list_categories](#list-categories) 中给出的例子 |
 
 ### tagcloud
 
@@ -569,6 +681,42 @@ title: 辅助函数（Helpers）
 `end_size` | 显示于两侧的页数 | 1
 `mid_size` | 显示于中间的页数 | 2
 `show_all` | 显示所有页数。如果开启此参数的话，`end_size` 和 `mid_size` 就没用了。 | false
+`escape` | Escape HTML tags | true
+
+**Examples:**
+
+``` js
+<%- paginator({
+  prev_text: '<',
+  next_text: '>'
+}) %>
+```
+
+``` html
+<!-- Rendered as -->
+<a href="/1/">&lt;</a>
+<a href="/1/">1</a>
+2
+<a href="/3/">3</a>
+<a href="/3/">&gt;</a>
+```
+
+``` js
+<%- paginator({
+  prev_text: '<i class="fa fa-angle-left"></i>',
+  next_text: '<i class="fa fa-angle-right"></i>',
+  escape: false
+}) %>
+```
+
+``` html
+<!-- Rendered as -->
+<a href="/1/"><i class="fa fa-angle-left"></i></a>
+<a href="/1/">1</a>
+2
+<a href="/3/">3</a>
+<a href="/3/"><i class="fa fa-angle-right"></i></a>
+```
 
 ### search_form
 
@@ -617,6 +765,21 @@ title: 辅助函数（Helpers）
 // 12,345/67
 ```
 
+### meta_generator
+
+Inserts [generator tag](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta).
+
+``` js
+<%- meta_generator() %>
+```
+
+**Examples:**
+
+``` js
+<%- meta_generator() %>
+// <meta name="generator" content="Hexo 4.0.0">
+```
+
 ### open_graph
 
 插入 open graph 资源。
@@ -632,7 +795,7 @@ title: 辅助函数（Helpers）
 `url` | 页面网址 (`og:url`) | `url`
 `image` | 页面图片 (`og:image`) | 内容中的图片
 `site_name` | 网站名称 (`og:site_name`) | `config.title`
-`description` | 页面描述 (`og:desription`) | 内容摘要或前 200 字
+`description` | 页面描述 (`og:description`) | 内容摘要或前 200 字
 `twitter_card` | Twitter 卡片类型 (`twitter:card`) | summary
 `twitter_id` | Twitter ID (`twitter:creator`) |
 `twitter_site` | Twitter 网站 (`twitter:site`) |
@@ -652,6 +815,8 @@ title: 辅助函数（Helpers）
 --- | --- | ---
 `class` | Class 名称 | toc
 `list_number` | 显示编号 | true
+`max_depth` | 生成 TOC 的最大深度 | 6
+`min_depth` | 生成 TOC 的最小深度 | 1
 
 **示例：**
 

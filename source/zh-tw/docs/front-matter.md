@@ -18,13 +18,14 @@ date: 2013/7/13 20:46:25
 設定 | 描述 | 預設值
 --- | --- | ---
 `layout` | 佈局 | 
-`title` | 標題 |
+`title` | 標題 | 文章的檔案名
 `date` | 建立日期 | 檔案建立日期
 `updated` | 更新日期 | 檔案更新日期
 `comments` | 開啟文章的留言功能 | true
 `tags` | 標籤（不適用於分頁） |
 `categories` | 分類（不適用於分頁）|
 `permalink` | 覆蓋文章網址 |
+`keywords` | 僅用在 meta 和 Open Graph 的關鍵詞（不建議使用） |
 
 ### 分類和標籤
 
@@ -36,6 +37,14 @@ categories:
 tags:
 - PS3
 - Games
+```
+此外我們可以透過 list 來對一篇文章同時定義多個分類。
+
+``` yaml
+categories:
+- [Diary, PlayStation]
+- [Diary, Games]
+- [Life]
 ```
 
 ### JSON Front-matter

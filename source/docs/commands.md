@@ -31,7 +31,7 @@ hexo new page --path about/me "About me"
 
 will create `source/about/me.md` file with the title "About me" set in the front matter.
 
-Please note that the title is mandatory. For example, this will not have the behaviour you might expect:
+Please note that the title is mandatory. For example, this will not result in the behaviour you might expect:
 
 ```bash
 hexo new page --path about/me
@@ -53,6 +53,7 @@ Option | Description
 `-w`, `--watch` | Watch file changes
 `-b`, `--bail` | Raise an error if any unhandled exception is thrown during generation
 `-f`, `--force` | Force regenerate
+`-c`, `--concurrency` | Maximum number of files to be generated in parallel. Default is infinity
 
 ## publish
 

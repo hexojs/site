@@ -15,9 +15,11 @@ Variável | Descrição
 `:i_month` | Mês da publicação da postagem (sem zero à esquerda)
 `:day` | Dia da publicação da postagem (2 dígitos)
 `:i_day` | Dia da publicação da postagem (sem zero à esquerda)
+`:hour` | Published hour of posts (2-digit)
+`:minute` | Published minute of posts (2-digit)
 `:title` | Nome do arquivo (sem sua extensão)
 `:post_title` | Título da postagem
-`:id` | ID da postagem
+`:id` | ID da postagem (_not persistent across [cache reset](/pt-br/docs/commands#clean)_)
 `:category` | Categorias. Se a postagem não possuir uma categoria, será usado o valor de `default_category`.
 
 Você pode definir o valor padrão de cada variável do permalink através da definição `permalink_defaults`:
@@ -41,9 +43,9 @@ categories:
 
 Definição | Resultado
 --- | ---
-`:year/:month/:day/:title/` | 2013/07/14/hello-world
+`:year/:month/:day/:title/` | 2013/07/14/hello-world/
 `:year-:month-:day-:title.html` | 2013-07-14-hello-world.html
-`:category/:title` | foo/bar/hello-world
+`:category/:title/` | foo/bar/hello-world/
 
 ### Suporte Multi-idioma
 

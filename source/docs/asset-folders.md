@@ -19,7 +19,7 @@ With asset folder management enabled, Hexo will create a folder every time you m
 
 ## Tag Plugins For Relative Path Referencing
 
-Referencing images or other assets using normal markdown syntax and relative paths may cause them to display incorrectly on archive or index pages. Plugins have been created by the community to address this issue in Hexo 2. However, with the release of Hexo 3, several new tag plugins were added to core. These enable you to reference your assets more easily in posts:
+Referencing images or other assets using normal markdown syntax and relative paths may lead to incorrect display on archive or index pages. Plugins have been created by the community to address this issue in Hexo 2. However, with the release of Hexo 3, several new tag plugins were added to core. These enable you to reference your assets more easily in posts:
 
 ```
 {% asset_path slug %}
@@ -29,7 +29,7 @@ Referencing images or other assets using normal markdown syntax and relative pat
 
 For example, with post asset folders enabled, if you place an image `example.jpg` into your asset folder, it will *not* appear on the index page if you reference it using a relative path with regular `![](/example.jpg)` markdown syntax (however, it will work as expected in the post itself).
 
-The correct way to reference the image will thus be to use tag plugin syntax rather than markdown:
+The correct way to reference the image will thus be using tag plugin syntax rather than markdown:
 
 ```
 {% asset_img example.jpg This is an example image %}

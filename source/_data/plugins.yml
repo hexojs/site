@@ -1,3 +1,15 @@
+- name: hexo-simple-image
+  description: Simple to use markdown tag import image.
+  link: https://github.com/Aragakiiii/hexo-simple-image
+  tags:
+    - image
+- name: hexo-asset
+  description: Asset path format, fix original markdown image path when enabling post_asset_folder
+  link: https://github.com/cnzsb/hexo-asset
+  tags:
+    - asset
+    - image
+    - path
 - name: hexo-twitter-auto-publish
   description: Auto publish posts and pages on Twitter.
   link: https://github.com/studioLaCosaNostra/hexo-twitter-auto-publish
@@ -309,6 +321,13 @@
     - generator
     - acceleratedMobilePages
     - amp
+- name: hexo-auto-link-checker
+  description: This plugin for Hexo can automatically detects broken links.
+  link: https://github.com/tea3/hexo-auto-link-checker
+  tags:
+    - link
+    - brokenLinks
+    - request
 - name: hexo-related-popular-posts
   description: A hexo plugin that generates a list of links to related posts and popular posts. Also , this plugin can get Visitor Counts (PV) on posts.
   link: https://github.com/tea3/hexo-related-popular-posts
@@ -370,6 +389,15 @@
     - renderer
     - markdown
     - kramed
+- name: hexo-renderer-unified
+  description: Markdown renderer plugin for Hexo - based on Unified.
+  link: https://github.com/TitiAlone/hexo-renderer-unified
+  tags:
+    - renderer
+    - markdown
+    - unified
+    - remark
+    - rehype
 - name: hexo-autoprefixer
   description: Autoprefixer plugin for Hexo.
   link: https://github.com/hexojs/hexo-autoprefixer
@@ -559,6 +587,18 @@
     - renderer
     - coffeescript
     - coffee
+- name: hexo-renderer-babelify
+  description: ES6 renderer for Hexo with babel & browserify.
+  link: https://github.com/benavern/hexo-renderer-babelify
+  tags:
+    - renderer
+    - javascript
+    - js
+    - es6
+    - es2015
+    - babel
+    - babelify
+    - browserify
 - name: hexo-livereload
   description: Livereload plugin for Hexo.
   link: https://github.com/hexojs/hexo-livereload
@@ -654,7 +694,7 @@
     - reStructedText
 - name: hexo-renderer-restructuredtext
   description: Renderer for restructuredtext using Docutils
-  link: https://gitlab.com/mcepl/hexo-renderer-restructuredtext.git
+  link: https://gitlab.com/mcepl/hexo-renderer-restructuredtext
   tags:
     - renderer
     - reStructedText
@@ -925,7 +965,6 @@
   description: A media tag for Hexo 3.x
   link: https://github.com/m80126colin/hexo-tag-owl
   tags:
-    - hexo
     - blog
     - tag
     - video
@@ -944,7 +983,6 @@
   tags:
     - website
     - blog
-    - hexo
     - image
     - embedded
     - github
@@ -952,7 +990,6 @@
   description: "Use the imgix API for image manipulation via a tag, filter and helper."
   link: https://github.com/mshick/hexo-imgix/
   tags:
-    - hexo
     - imgix
     - filter
     - tag
@@ -963,14 +1000,12 @@
   description: "Hexo tag to embed pdf in posts/pages."
   link: https://github.com/superalsrk/hexo-pdf/
   tags:
-    - hexo
     - tag
     - pdf
 - name: hexo-all-minifier
   description: "Minifier & Optimization plugin for Hexo, include HTML, CSS, JS and Image."
   link: https://github.com/unhealthy/hexo-all-minifier
   tags:
-    - hexo
     - filter
     - minify
     - optimize
@@ -982,7 +1017,6 @@
   description: "Adds nofollow attribute to all external links in your hexo blog posts automatically."
   link: https://github.com/liuzc/hexo-autonofollow
   tags:
-    - hexo-autonofollow
     - SEO
     - nofollow
     - external
@@ -990,7 +1024,6 @@
   description: A generator automatically make canonical link for hexo.
   link: https://github.com/HyunSeob/hexo-auto-canonical
   tags:
-    - hexo-auto-canonical
     - helper
     - canonical
     - SEO
@@ -998,7 +1031,6 @@
   description: "Generates a page with an embedded Google map, showing the locations of all geo-tagged posts and pages."
   link: https://github.com/jamiei/hexo-generator-postmap
   tags:
-    - hexo-generator-postmap
     - maps
     - generator
     - google
@@ -1007,7 +1039,6 @@
   description: "Embed aplayer in Hexo posts/pages."
   link: https://github.com/grzhan/hexo-tag-aplayer
   tags:
-    - hexo-tag-aplayer
     - tag
     - player
     - aplayer
@@ -1016,7 +1047,6 @@
   description: "Embed dplayer in Hexo posts/pages."
   link: https://github.com/NextMoe/hexo-tag-dplayer
   tags:
-    - hexo-tag-dplayer
     - tag
     - player
     - dplayer
@@ -1025,7 +1055,6 @@
   description: "A hexo tag for inserting youku video in your blog."
   link: https://github.com/zhoulvjun/hexo-tag-youku
   tags:
-    - hexo-tag-youku
     - tag
     - youku
     - video
@@ -1033,15 +1062,21 @@
   description: "A hexo tag for inserting echarts chart in your blog."
   link: https://github.com/zhoulvjun/hexo-tag-echarts
   tags:
-    - hexo-tag-echarts
     - tag
     - echarts
     - chart
+- name: hexo-tag-abcjs
+  description: "A hexo tag for rendering abc music notation on your blog posts."
+  link: https://github.com/maiwenan/hexo-tag-abcjs
+  tags:
+    - tag
+    - abcjs
+    - notation
+    - piano
 - name: hexo-tag-htmltag
   description: "A Hexo tag for inserting arbitrary html tags (with attributes) into posts."
   link: https://github.com/seangravener/hexo-tag-htmlTag
   tags:
-    - hexo-tag-htmltag
     - tag
     - html
     - code
@@ -1049,7 +1084,6 @@
   description: "A plugin that adds support for featured images in posts and json-content."
   link: https://github.com/poacher2k/hexo-featured-image
   tags:
-    - hexo-featured-image
     - featured
     - image
     - json
@@ -1058,28 +1092,24 @@
   description: "adding url_image in front-matter, then refer post.url_image in your templates;"
   link: https://github.com/roybein/hexo-url-image
   tags:
-    - hexo-url-image
     - url
     - image
 - name: hexo-tag-admonition
   description: "Tag plugin for inserting admonition in your blog."
   link: https://github.com/haishanh/hexo-tag-admonition
   tags:
-    - hexo-tag-admonition
     - tag
     - admonition
 - name: hexo-addlink
   description: "An plugin for adding current post link in hexo post page."
   link: https://github.com/acwong00/hexo-addlink
   tags:
-    - hexo-addlink
     - filter
     - post
 - name: hexo-tag-cloud
   description: "Yet, another tag cloud plugin for hexo."
   link: https://github.com/MikeCoder/hexo-tag-cloud
   tags:
-    - hexo-tag-cloud
     - tag
     - cloud
 - name: hexo-tag-mtime
@@ -1087,14 +1117,12 @@
   link: https://github.com/mayuko2012/hexo-tag-mtime
   tags:
     - tag
-    - hexo
     - plugin
     - moive
 - name: hexo-critical-css
   description: "Add critical css to your HTML for faster rendering pages."
   link: https://github.com/john-whitley/hexo-critical-css
   tags:
-    - hexo-critical-css
     - css
     - critical
     - filter
@@ -1110,7 +1138,6 @@
   description: "Automatically create HTML links from URLs, emails, Twitter handles and more."
   link: https://github.com/klugjo/hexo-autolinker
   tags:
-    - hexo-autolinker
     - hyperlink
     - link
     - email
@@ -1432,13 +1459,13 @@
     - template
 - name: hexo-algolia
   description: Index posts and contents in [Algolia](https://www.algolia.com/) and offer a blazing fast search experience to your users.
-  link: https://npmjs.com/hexo-algolia
+  link: https://github.com/oncletom/hexo-algolia
   tags:
     - search
     - algolia
     - index
 - name: hexo-slack-notify
-  description: A Hexo plugin to Slack nofify
+  description: A Hexo plugin to Slack notify
   link: https://github.com/Plasma-Paris/hexo-slack-notify
   tags:
     - notify
@@ -1887,7 +1914,7 @@
     - helper
     - count
     - symbols
-    - time2read
+    - reading-time
 - name: hexo-filter-optimize
   description: A hexo plugin that optimize the pages loading speed.
   link: https://github.com/theme-next/hexo-filter-optimize
@@ -1896,6 +1923,12 @@
     - lazyload
     - inline
     - bundle
+- name: hexo-generator-searchdb
+  description: Yet another search data generator for Hexo with more features.
+  link: https://github.com/theme-next/hexo-generator-searchdb
+  tags:
+    - generator
+    - search
 - name: hexo-renderer-markdown
   description: Markdown-it renderer plugin for Hexo.
   link: https://github.com/niemingzhao/hexo-renderer-markdown
@@ -2028,13 +2061,6 @@
     - generator
     - zip
     - compress
-- name: hexo-filter-hide-content
-  description: Hide some content for Hexo.
-  link: https://github.com/mmhy/hexo-filter-hide-content
-  tags:
-    - filter
-    - hide
-    - content
 - name: hexo-infinite-scroll
   description: A loading plugin with simple effect for hexo.
   link: https://github.com/FrontendSophie/hexo-infinite-scroll
@@ -2082,6 +2108,18 @@
     - cycling
     - gis
     - gps
+- name: hexo-tag-strava
+  description: Embed Strava activity in your blog.
+  link: https://github.com/alexmufatti/hexo-tag-strava
+  tags:
+    - tag_plugins
+    - strava
+    - sport
+    - activity
+    - running
+    - cycling
+    - gis
+    - gps
 - name: hexo-tag-optimized-gif
   description: With the help of Cloudinary, using smaller looping video as your animated gif is possible.
   link: https://github.com/zyzyz/hexo-tag-optimized-gif
@@ -2111,6 +2149,20 @@
     - js
     - ts
     - renderer
+- name: hexo-plugin-gitalk
+  description: Blog comments based on gitalk implementation
+  link: https://github.com/snowdreams1006/hexo-plugin-gitalk
+  tags:
+    - gitalk
+    - gitment
+    - discuss
+    - comment
+- name: hexo-plugin-readmore
+  description: Add read-more button for blog articles, follow WeChat public number to unlock the right to read, achieve the purpose of drainage.
+  link: https://github.com/snowdreams1006/hexo-plugin-readmore
+  tags:
+    - readmore
+    - openwrite
 - name: hexo-plugin-permalink-pathed-title
   description: A plugin to show permalinks of posts according to their relative path, like '/dir1/dir2/post3'.
   link: https://github.com/EqualMa/hexo-plugin-permalink-pathed-title
@@ -2139,7 +2191,7 @@
     - vim
 - name: hexo-yam
   description: Yet Another Minifier. Minify and compress html, js and css. Support gzip and brotli compressions.
-  link: https://github.com/weyusi/hexo-yam
+  link: https://github.com/curbengh/hexo-yam
   tags:
     - filter
     - minify
@@ -2149,13 +2201,6 @@
     - compress
     - gzip
     - brotli
-- name: hexo-nofollow
-  description: Add SEO-friendly nofollow attribute to all external links in your posts. A more updated version of hexo-autonofollow.
-  link: https://github.com/weyusi/hexo-nofollow
-  tags:
-    - SEO
-    - nofollow
-    - external
 - name: hexo-graphviz
   description: Hexo plugin for rendering Graphviz plots
   link: https://github.com/sounak98/hexo-graphviz
@@ -2245,6 +2290,227 @@
   tags:
     - tag
     - qrcode
+- name: hexo-stop-tag-plugins
+  description: Disable tag plugins for all markdown posts
+  link: https://github.com/think-in-universe/hexo-stop-tag-plugins
+  tags:
+    - markdown
+    - tag_plugins
+    - renderer
+- name: hexo-lunar-calendar
+  description: Lunar calendar for hexo
+  link: https://github.com/inchei/hexo-lunar-calendar
+  tags:
+    - date
+    - calendar
+- name: hexo-tag-youtube-responsive
+  description: Hexo tag to embed a Youtube player that auto resizes with your responsive layout with many customization options to control the player.
+  link: https://github.com/quocvu/hexo-tag-youtube-responsive
+  tags:
+    - tag_plugins
+    - youtube
+    - widget
+    - videos
+    - playlist
+    - responsive
+    - auto-resize
+    - options
+    - parameters
+    - customization
+- name: hexo-filter-nofollow
+  description: Add nofollow attribute to all external links automatically.
+  link: https://github.com/hexojs/hexo-filter-nofollow/
+  tags:
+    - official
+    - filter
+    - nofollow
+    - SEO
+    - external
+- name: hexo-filter-image
+  description: 自动为hexo中的图片映射绝对路径 | Automatically maps absolute paths to images in hexo
+  link: https://github.com/JoeyBling/hexo-filter-image
+  tags:
+    - filter
+    - image
+    - path
+    - asset
+- name: hexo-native-lazy-load
+  description: Add native lazy load to hexo page as well as optional fallback.
+  link: https://github.com/fengkx/hexo-native-lazy-load
+  tags:
+    - lazyload
+    - optimize
+- name: hexo-fun-time
+  description: A tag plugin to insert random Mandarin jokes in a post.
+  link: https://github.com/Drunkman/hexo-fun-time
+  tags:
+    - joke
+    - tag
+- name: hexo-hide-posts
+  description: A plugin to hide specific posts from your Hexo blog and make them only accessible by links.
+  link: https://github.com/printempw/hexo-hide-posts
+  tags:
+    - hide
+    - unlisted
+    - private
+- name: hexo-canonical-link
+  description: Set canonical link for pages, with support for external links.
+  link: https://github.com/tarunbatra/hexo-canonical-link
+  tags:
+    - canonical
+    - seo
+    - source
+- name: hexo-generator-indexed
+  description: Index generator plugin for Hexo, support more Front-matter parameters like sticky and hide.
+  link: https://github.com/stevenjoezhang/hexo-generator-indexed
+  tags:
+    - generator
+    - index
+    - sticky
+- name: hexo-filter-mathjax
+  description: Server side MathJax renderer plugin for Hexo. No front-end scripts are required.
+  link: https://github.com/stevenjoezhang/hexo-filter-mathjax
+  tags:
+    - filter
+    - math
+    - MathJax
+- name: hexo-generator-random
+  description: Help you generate a random page to locate a random post in your hexo blog.
+  link: https://github.com/Drew233/hexo-generator-random
+  tags:
+    - generator
+    - post
+    - random
+- name: hexo-unique-post-path
+  description: This plug-in helps Hexo create new posts with unique auto-generated paths.
+  link: https://github.com/dailyrandomphoto/hexo-unique-post-path
+  tags:
+    - generate
+    - unique
+    - path
+    - permalink
+    - id
+    - random
+    - date
+    - sequence
+- name: hexo-easy-tags-plugin
+  description: A Hexo plugin that automatically corrects tag names.
+  link: https://github.com/dailyrandomphoto/hexo-easy-tags-plugin
+  tags:
+    - tags
+    - tag-name
+    - case-insensitive
+    - transform
+    - lowercase
+    - slug
+- name: hexo-git-username-coauthor
+  description: A Hexo plugin that give your post an default author/coauthor from git user name.
+  link: https://github.com/peixin/hexo-git-username-coauthor
+  tags:
+    - hexo
+    - author
+    - coauthors
+    - git-username
+- name: hexo-deployer-qiniucloud2
+  description: Qiniu Cloud deployer plugin of Hexo.
+  link: https://github.com/howardliu-cn/hexo-deployer-qiniucloud2
+  tags:
+    - hexo
+    - delopyer
+    - qiniu
+    - 七牛云
+- name: hexo-tag-wikipedia
+  description: Embed content from Wikipedia.
+  link: https://github.com/tuanna-hsp/hexo-tag-wikipedia
+  tags:
+    - hexo
+    - wikipedia
+    - tag
+    - extracts
+- name: hexo-images-watermark
+  description: Article image watermark.
+  link: https://github.com/SpiritLing/hexo-images-watermark
+  tags:
+    - hexo
+    - images
+    - watermark
+- name: hexo-tag-mmedia
+  description: Embed media in Hexo posts/pages.
+  link: https://github.com/MonoLogueChi/hexo-tag-mmedia
+  tags:
+    - tag
+    - aplayer
+    - dplayer
+    - audio
+    - video
+    - bilibili
+- name: hexo-tag-photozoom
+  description: A hexo tag plugin for image zooming, with a zooming effect similar to Medium.
+  link: https://github.com/SSARCandy/hexo-tag-photozoom
+  tags:
+    - tag
+    - images
+- name: hexo-bilibili-bangumi
+  description: Generate pages of bilibili bangumis for Hexo | 为 Hexo 添加哔哩哔哩番剧页面
+  link: https://github.com/HCLonely/hexo-bilibili-bangumi
+  tags:
+    - generator
+    - bilibili
+    - bangumi
+    - anime
+- name: hexo-douban-getter
+  description: Display the data of books, movies, musics, games you marked in Douban.
+  link: https://github.com/hqweay/hexo-douban-getter.git
+  tags:
+    - douban
+    - 豆瓣
+- name: hexo-steam-games
+  description: Generate pages of steam games for Hexo | 为 Hexo 添加 steam 游戏库页面
+  link: https://github.com/HCLonely/hexo-steam-games
+  tags:
+    - generator
+    - steam
+    - game
+- name: hexo-deployer-cos-cdn
+  description: Deploy Hexo to Aliyun OSS, Tencent COS, etc. and purge the CDN cache | 将博客发布到腾讯、阿里等云对象存储并刷新CDN缓存
+  link: https://github.com/lxl80/hexo-deployer-cos-cdn
+  tags:
+    - deployer
+    - tencent
+    - cos
+    - cdn
+    - aliyun
+    - oss
+- name: hexo-web-push-notification
+  description: A hexo plugin help you automatically notify readers new post update. | 这个插件帮助你向读者自动推送你最新的文章。
+  link: https://github.com/glazec/hexo-web-push-notification
+  tags:
+    - utility
+    - web-push-notification
+    - notification
+- name: hexo-online-server
+  description: Edit and publish articles online | 在线编辑、发布文章
+  link: https://github.com/HCLonely/hexo-online-server
+  tags:
+    - online
+    - server
+    - editor
+    - preview
+- name: hexo-cldnry
+  description: Hexo tag to add an image from Cloudinary using Cloudinary SDK.
+  link: https://github.com/maliMirkec/hexo-cldnry
+  tags:
+    - tag
+    - image
+    - cloudinary
+- name: hexo-tag-steamgame
+  description: Embed steam game in Hexo posts/pages. | 在Hexo博客中嵌入steam游戏。
+  link: https://github.com/HCLonely/hexo-tag-steamgame
+  tags:
+    - tag
+    - steam
+    - game
+    - embed
 - name: hexo-image-link
   description: Convert the markdown image path to asset_img syntax, to make the image display both in typora and hexo. 
   link: https://github.com/cocowool/hexo-image-link

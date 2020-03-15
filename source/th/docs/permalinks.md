@@ -15,9 +15,11 @@ Variable | Description
 `:i_month` | Published month of posts (Without leading zeros)
 `:day` | Published day of posts (2-digit)
 `:i_day` | Published day of posts (Without leading zeros)
+`:hour` | Published hour of posts (2-digit)
+`:minute` | Published minute of posts (2-digit)
 `:title` | Filename
 `:post_title` | Post title
-`:id` | Post ID
+`:id` | Post ID (_not persistent across [cache reset](/th/docs/commands#clean)_)
 `:category` | Categories. If the post is uncategorized, it will use the `default_category` value.
 
 ตุณสามารถตั้งค่า default value ของทุก variable ใน permalink โดยตั้งค่า 
@@ -42,9 +44,9 @@ categories:
 
 Setting | Result
 --- | ---
-`:year/:month/:day/:title/` | 2013/07/14/hello-world
+`:year/:month/:day/:title/` | 2013/07/14/hello-world/
 `:year-:month-:day-:title.html` | 2013-07-14-hello-world.html
-`:category/:title` | foo/bar/hello-world
+`:category/:title/` | foo/bar/hello-world/
 
 ### Multi-language Support
 

@@ -1,7 +1,7 @@
 ---
 title: События
 ---
-Hexo унаследован от сборщика событий [EventEmitter]. Используйте метод `on` для просмотра событий Hexo, и метод `emit` для генерации событий. Более подробную информацию смотрите в документации Node.js API.
+Hexo унаследован от сборщика событий [EventEmitter]. Используйте метод `on` для просмотра событий Hexo и метод `emit` для генерации событий. Более подробную информацию смотрите в документации Node.js API.
 
 ### deployBefore
 
@@ -50,4 +50,4 @@ hexo.on('new', function(post){
 
 Генерируется после инициализации.
 
-[EventEmitter]: http://nodejs.org/api/events.html
+[EventEmitter]: https://nodejs.org/dist/latest/docs/api/events.html

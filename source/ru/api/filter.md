@@ -25,7 +25,7 @@ hexo.extend.filter.execSync(type, data, options);
 `context` | Контекст
 `args` | Аргументы. Должны быть в виде массива.
 
-Первый аргумент, передаваемый в каждый фильтр - `data`. Данные `data`, передаваемые в следующий фильтр могут быть изменены путем возврата нового значения. Если же ничего не возвращается, данные остаются без изменений. Вы даже можете использовать аргументы, чтобы указать другие аргументы в фильтрах. Например:
+Первый аргумент, передаваемый в каждый фильтр, это `data`. Данные `data`, передаваемые в следующий фильтр, могут быть изменены путем возврата нового значения. Если же ничего не возвращается, данные остаются без изменений. Вы даже можете использовать аргументы, чтобы указать другие аргументы в фильтрах. Например:
 
 ``` js
 hexo.extend.filter.register('test', function(data, arg1, arg2){
@@ -58,6 +58,28 @@ hexo.execFilterSync(type, data, options);
 hexo.extend.filter.unregister(type, filter);
 ```
 
+**Example**
+
+``` js
+// Unregister a filter which is registered with named function
+
+const filterFn = (data) => {
+  data = 'something';
+  return data;
+};
+hexo.extend.filter.register('example', filterFn);
+
+hexo.extend.filter.unregister('example', filterFn);
+```
+
+``` js
+// Unregister a filter which is registered with commonjs module
+
+hexo.extend.filter.register('example', require('path/to/filter'));
+
+hexo.extend.filter.unregister('example', require('path/to/filter'));
+```
+
 ## Список фильтров
 
 Здесь находится список фильтров, используемых в Hexo.
@@ -66,7 +88,7 @@ hexo.extend.filter.unregister(type, filter);
 
 Выполняется перед началом обработки поста. См. [post rendering](posts.html#Render) для изучения этапов обработки.
 
-Например, перевести название в Нижний регистр:
+Например, перевести название в нижний регистр:
 
 ``` js
 hexo.extend.filter.register('before_post_render', function(data){
@@ -153,7 +175,7 @@ hexo.extend.filter.register('new_post_path', function(data, replace){
 
 ### post_permalink
 
-Выполняется при создании поста, для определения пути постоянной ссылки.
+Выполняется при создании поста для определения пути постоянной ссылки.
 
 ``` js
 hexo.extend.filter.register('post_permalink', function(data){

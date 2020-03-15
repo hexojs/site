@@ -75,10 +75,20 @@ Funcionalidade útil para adicionar trechos de código à sua postagem.
 **Alias:** code (Código-fonte)
 
 ```
-{% codeblock [title] [lang:language] [url] [link text] %}
+{% codeblock [title] [lang:language] [url] [link text] [additional options] %}
 code snippet
 {% endcodeblock %}
 ```
+
+Specify additional options in `option:value` format, e.g. `line_number:false first_line:5`.
+
+Extra Options | Description | Default
+--- | --- | ---
+`line_number` | Show line number | `true`
+`highlight` | Enable code highlighting | `true`
+`first_line` | Specify the first line number | `1`
+`mark` | Line highlight specific line(s), each value separated by a comma. Specify number range using a dash<br>Example: `mark:1,4-7,10` will mark line 1, 4 to 7 and 10. |
+`wrap` | Wrap the code block in [`<table>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table) | `true`
 
 ### Exemplos
 
@@ -181,7 +191,7 @@ Para incorporar um iframe:
 Insere uma imagem com tamanho especificado.
 
 ```
-{% img [class names] /path/to/image [width] [height] [title text [alt text]] %}
+{% img [class names] /path/to/image [width] [height] '"title text" "alt text"' %}
 ```
 
 ## Link
@@ -221,18 +231,56 @@ Insere um vídeo do Vimeo.
 Incluir links para outras postagens.
 
 ```
-{% post_path slug %}
-{% post_link slug [title] %}
+{% post_path filename %}
+{% post_link filename [title] [escape] %}
 ```
+
+You can ignore permalink and folder information, like languages and dates, when using this tag.
+
+For instance: `{% raw %}{% post_link how-to-bake-a-cake %}{% endraw %}`.
+
+This will work as long as the filename of the post is `how-to-bake-a-cake.md`, even if the post is located at `source/posts/2015-02-my-family-holiday` and has permalink `2018/en/how-to-bake-a-cake`.
+
+You can customize the text to display, instead of displaying the post's title. Using `post_path` inside Markdown syntax `[]()` is not supported.
+
+Post's title and custom text are escaped by default. You can use the `escape` option to disable escaping.
+
+For instance:
+
+**Display title of the post.**
+
+`{% raw %}{% post_link hexo-3-8-released %}{% endraw %}`
+
+{% post_link hexo-3-8-released %}
+
+**Display custom text.**
+
+`{% raw %}{% post_link hexo-3-8-released 'Link to a post' %}{% endraw %}`
+
+{% post_link hexo-3-8-released 'Link to a post' %}
+
+**Escape title.**
+
+```
+{% post_link hexo-4-released 'How to use <b> tag in title' %}
+```
+{% post_link hexo-4-released 'How to use <b> tag in title' %}
+
+**Do not escape title.**
+
+```
+{% post_link hexo-4-released '<b>bold</b> custom title' false %}
+```
+{% post_link hexo-4-released '<b>bold</b> custom title' false %}
 
 ## Incluir Assets
 
 Incluir assets de postagem.
 
 ```
-{% asset_path slug %}
-{% asset_img slug [title] %}
-{% asset_link slug [title] %}
+{% asset_path filename %}
+{% asset_img filename [title] %}
+{% asset_link filename [title] [escape] %}
 ```
 
 ## Raw

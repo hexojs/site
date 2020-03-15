@@ -76,10 +76,20 @@ Every interaction is both precious and an opportunity to delight.
 **นามแฝง:** code
 
 ```
-{% codeblock [title] [lang:language] [url] [link text] %}
+{% codeblock [title] [lang:language] [url] [link text] [additional options] %}
 code snippet
 {% endcodeblock %}
 ```
+
+Specify additional options in `option:value` format, e.g. `line_number:false first_line:5`.
+
+Extra Options | Description | Default
+--- | --- | ---
+`line_number` | Show line number | `true`
+`highlight` | Enable code highlighting | `true`
+`first_line` | Specify the first line number | `1`
+`mark` | Line highlight specific line(s), each value separated by a comma. Specify number range using a dash<br>Example: `mark:1,4-7,10` will mark line 1, 4 to 7 and 10. |
+`wrap` | Wrap the code block in [`<table>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table) | `true`
 
 ### Examples
 
@@ -181,7 +191,7 @@ content
 เสียบรูปภาพที่มีขนาดเฉพาะเข้า:
 
 ```
-{% img [class names] /path/to/image [width] [height] [title text [alt text]] %}
+{% img [class names] /path/to/image [width] [height] '"title text" "alt text"' %}
 ```
 
 ## Link
@@ -222,7 +232,7 @@ content
 
 ```
 {% post_path filename %}
-{% post_link filename [optional text] %}
+{% post_link filename [title] [escape] %}
 ```
 
 เวลาใช้แท็กนี้ ข้อมูล permalink และ folder เช่น ภาษาและวันเดือนปี จะถูกละเลย
@@ -237,29 +247,44 @@ content
 จะโชว์ให้เห็นได้ดัวยการตั้งค่า `post_path` ส่วน syntax ท่ีเป็น `[]()` 
 จะไม่สนับสนุนโดย hexo ในท่ีนี่
 
+Post's title and custom text are escaped by default. You can use the `escape` option to disable escaping.
+
 ยกตัวอย่างเช่น:
 
 **โชว์หัวข้อโพสต์**
 
-`{% raw %}{% post_link 2018-10-19-hexo-3-8-released %}{% endraw %}`
+`{% raw %}{% post_link hexo-3-8-released %}{% endraw %}`
 
-{% post_link 2018-10-19-hexo-3-8-released %}
+{% post_link hexo-3-8-released %}
 
 **โชว์ text ท่ีตั้งค่าด้วยตน**
 
-`{% raw %}{% post_link 2018-10-19-hexo-3-8-released 'Link to a post' %}{% endraw %}`
+`{% raw %}{% post_link hexo-3-8-released 'Link to a post' %}{% endraw %}`
 
-{% post_link 2018-10-19-hexo-3-8-released 'Link to a post' %}
+{% post_link hexo-3-8-released 'Link to a post' %}
 
+**Escape title.**
+
+```
+{% post_link hexo-4-released 'How to use <b> tag in title' %}
+```
+{% post_link hexo-4-released 'How to use <b> tag in title' %}
+
+**Do not escape title.**
+
+```
+{% post_link hexo-4-released '<b>bold</b> custom title' false %}
+```
+{% post_link hexo-4-released '<b>bold</b> custom title' false %}
 
 ## Include Assets
 
 รวม post asset อยู่ใน block
 
 ```
-{% asset_path slug %}
-{% asset_img slug [title] %}
-{% asset_link slug [title] %}
+{% asset_path filename %}
+{% asset_img filename [title] %}
+{% asset_link filename [title] [escape] %}
 ```
 
 ## Raw

@@ -22,6 +22,9 @@ title: Configuration
 `root` | 웹 사이트의 루트 디렉토리 |
 `permalink` | 게시글의 [permalink](permalinks.html) 형식 | `:year/:month/:day/:title/`
 `permalink_defaults` | Permalink 각 부분(segment)의 기본값 |
+`pretty_urls` | Rewrite the [`permalink`](variables.html) variables to pretty URLs |
+`pretty_urls.trailing_index` | Trailing `index.html`, set to `false` to remove it  | `true`
+`pretty_urls.trailing_html` | Trailing `.html`, set to `false` to remove it (_does not apply to trailing `index.html`_)  | `true`
 
 {% note info Website in subdirectory %}
 당신의 웹 사이트가 `http://example.org/blog`와 같이 서브디렉토리에 있다면 `url`은 `http://example.org/blog`고 설정하고 `root`는 `/blog/`로 설정하세요.
@@ -38,7 +41,7 @@ title: Configuration
 `category_dir` | 카테고리 디렉토리 | `categories`
 `code_dir` | Code 디렉토리 | `downloads/code`
 `i18n_dir` | i18n 디렉토리 | `:lang`
-`skip_render` | 렌더링하지 않을 경로. 경로 매칭을 위해 [glob expressions](https://github.com/isaacs/minimatch)를 사용할 수 있습니다. |
+`skip_render` | 렌더링하지 않을 경로. 경로 매칭을 위해 [glob expressions](https://github.com/micromatch/micromatch#extended-globbing)를 사용할 수 있습니다. |
 
 ### Writing
 
@@ -47,13 +50,22 @@ title: Configuration
 `new_post_name` | 새 포스트의 파일명 형식 | `:title.md`
 `default_layout` | 기본 레이아웃 | `post`
 `titlecase` | 제목을 제목에 맞는 대/소문자로 변경할 것인지 선택 | `false`
-`external_link` | 외부 링크를 새 탭에서 열 것인지 선택 | `true`
+`external_link` | 외부 링크를 새 탭에서 열 것인지 선택
+`external_link.enable` | 외부 링크를 새 탭에서 열 것인지 선택 | `true`
+`external_link.field` | Applies to the whole `site` or `post` only | `site`
+`external_link.exclude` | Exclude hostname. Specify subdomain when applicable, including `www` | `[]`
 `filename_case` | 파일명을 소문자(`1`) 또는 대문자(`2`)로 변경 | `0`
 `render_drafts` | Draft 문서를 표시할 것인지 선택 | `false`
 `post_asset_folder` | [Asset 폴더](asset-folders.html)를 활성화 할 것인지 선택 | `false`
 `relative_link` | 루트 폴더에 대한 상대 경로로 링크를 만들 것인지 선택 | `false`
 `future` | 미래의 포스트를 표시할 것인지 선택 | `true`
 `highlight` | Code block의 설정 |
+`highlight.enable` | Enable syntax highlight | `true`
+`highlight.auto_detect` | Enable auto-detection if no language is specified | `false`
+`highlight.line_number` | Display line number<br>_Enabling this option will also enable `wrap` option_ | `true`
+`highlight.tab_replace` | Replace tabs by n space(s); if the value is empty, tabs won't be replaced | `''`
+`highlight.wrap` | Wrap the code block in [`<table>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table) | `true`
+`highlight.hljs` | Use the `hljs-*` prefix for CSS classes | `false`
 
 ### Category & Tag
 
@@ -70,7 +82,8 @@ Hexo는 날짜 처리 시 [Moment.js](http://momentjs.com/)를 사용합니다.
 설정 | 설명 | 기본값
 --- | --- | ---
 `date_format` | 날짜 형식 | `YYYY-MM-DD`
-`time_format` | 시간 형식 | `H:mm:ss`
+`time_format` | 시간 형식 | `HH:mm:ss`
+`use_date_for_updated` | Use the date of the post in [`post.updated`](/ko/docs/variables#페이지 변수) if no updated date is provided in the front-matter. Typically used with Git workflow | `true`
 
 ### Pagination
 
@@ -85,3 +98,104 @@ Hexo는 날짜 처리 시 [Moment.js](http://momentjs.com/)를 사용합니다.
 --- | ---
 `theme` | 테마명. `false`라면 테마를 끕니다.
 `deploy` | Deployment 설정
+`meta_generator` | [Meta generator](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta#Attributes) tag. `false` disables injection of the tag.
+
+
+### Include/Exclude Files or Folders
+
+Use the following options to explicitly process or ignore certain files/folders. Support [glob expressions](https://github.com/micromatch/micromatch#extended-globbing) for path matching.
+
+`include` and `exclude` options only apply to the `source/` folder, whereas `ignore` option applies to all folders.
+
+Setting | Description
+--- | ---
+`include` | Include hidden files (including files/folders with a name that start with an underscore, with an exception*)
+`exclude` | Exclude files/folders
+`ignore` | Ignore files/folders
+
+Examples:
+```yaml
+# Include/Exclude Files/Folders
+include:
+  - ".nojekyll"
+  # Include 'source/css/_typing.css'.
+  - "css/_typing.css"
+  # Include any file in 'source/_css/'.
+  - "_css/*"
+  # Include any file and subfolder in 'source/_css/'.
+  - "_css/**/*"
+
+exclude:
+  # Exclude 'source/js/test.js'.
+  - "js/test.js"
+  # Exclude any file in 'source/js/'.
+  - "js/*"
+  # Exclude any file and subfolder in 'source/js/'.
+  - "js/**/*"
+  # Exclude any file with filename that starts with 'test' in 'source/js/'.
+  - "js/test*"
+  # Exclude any file with filename that starts with 'test' in 'source/js/' and its subfolders.
+  - "js/**/test*"
+  # Do not use this to exclude posts in the 'source/_posts/'.
+  # Use skip_render for that. Or prepend an underscore to the filename.
+  # - "_posts/hello-world.md" # Does not work.
+
+ignore:
+  # Ignore any folder named 'foo'.
+  - "**/foo"
+  # Ignore 'foo' folder in 'themes/' only.
+  - "**/themes/*/foo"
+  # Same as above, but applies to every subfolders of 'themes/'.
+  - "**/themes/**/foo"
+```
+
+Each value in the list must be enclosed with single/double quotes.
+
+`include:` and `exclude:` do not apply to the `themes/` folder. Either use `ignore:` or alternatively, prepend an underscore to the file/folder name to exclude.
+
+\* Notable exception is the `source/_posts` folder, but any file or folder with a name that starts with an underscore under that folder would still be ignored. Using `include:` rule in that folder is not recommended.
+
+### Using an Alternate Config
+
+A custom config file path can be specified by adding the `--config` flag to your `hexo` commands with a path to an alternate YAML or JSON config file, or a comma-separated list (no spaces) of multiple YAML or JSON files.
+
+``` bash
+# use 'custom.yml' in place of '_config.yml'
+$ hexo server --config custom.yml
+
+# use 'custom.yml' & 'custom2.json', prioritizing 'custom2.json'
+$ hexo server --config custom.yml,custom2.json
+```
+
+Using multiple files combines all the config files and saves the merged settings to `_multiconfig.yml`. The later values take precedence. It works with any number of JSON and YAML files with arbitrarily deep objects. Note that **no spaces are allowed in the list**.
+
+For instance, in the above example if `foo: bar` is in `custom.yml`, but `"foo": "dinosaur"` is in `custom2.json`, `_multiconfig.yml` will contain `foo: dinosaur`.
+
+### Overriding Theme Config
+
+Hexo themes are independent projects, with separate `_config.yml` files.
+
+Instead of forking a theme, and maintaining a custom branch with your settings, you can configure it from your site's primary configuration file.
+
+Example configuration:
+
+```yml
+# _config.yml
+theme_config:
+  bio: "My awesome bio"
+```
+
+```yml
+# themes/my-theme/_config.yml
+bio: "Some generic bio"
+logo: "a-cool-image.png"
+```
+
+Resulting in theme configuration:
+
+```json
+{
+  bio: "My awesome bio",
+  logo: "a-cool-image.png"
+}
+```

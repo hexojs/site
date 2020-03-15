@@ -17,7 +17,7 @@ Hexo 是一個快速、簡單且強大的網誌框架。Hexo 使用 [Markdown](h
 
 安裝 Hexo 相當簡單；然而，在安裝前您必須先檢查下列您的電腦是否已經安裝下列軟體：
 
-- [Node.js](http://nodejs.org/) (Should be at least nodejs 6.9)
+- [Node.js](http://nodejs.org/) (Node.js 版本需不低於8.10，建議使用 Node.js 10.0 及以上版本)
 - [Git](http://git-scm.com/)
 
 若您的電腦已經安裝上述的必備軟體，那麼恭喜您！只需要透過 npm 即可完成 Hexo 的安裝。
@@ -41,25 +41,29 @@ $ npm install -g hexo-cli
 
 ### 安裝 Node.js
 
-安裝 Node.js 的最佳方式是透過 [Node Version Manager](https://github.com/creationix/nvm)。感謝 nvm 的開發者提供簡易自動安裝的腳本指令：
+安裝 Node.js 的最佳方式是透過 [Node Version Manager](https://github.com/nvm-sh/nvm)。感謝 nvm 的開發者提供簡易自動安裝的腳本指令：
 
 cURL:
 
 ``` bash
-$ curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | bash
+$ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
 ```
 
 Wget:
 
 ``` bash
-$ wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | bash
+$ wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
 ```
 
 一旦安裝完成，重啟終端機並執行下列指令以安裝 Node.js。
 
 ``` bash
-$ nvm install stable
+$ nvm install node
 ```
+
+{% note info Windows 用户 %}
+對於 Windows 用戶我們推薦使用 [Node Version Switcher](https://github.com/jasongin/nvs/)，其具有和 nvm 相似的命令行語法，並且可以通過 Windows Installer (MSI) 安裝包進行安裝。
+{% endnote %}
 
 或者您也可以下載 [安裝程式](http://nodejs.org/) 來安裝。
 
