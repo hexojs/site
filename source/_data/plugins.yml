@@ -2245,3 +2245,11 @@
   tags:
     - tag
     - qrcode
+- name: hexo-image-link
+  description: Convert the markdown image path to asset_img syntax, to make the image display both in typora and hexo. 
+  link: https://github.com/cocowool/hexo-image-link
+  tags:
+    - image
+    - asset_img
+    - path
+    - markdown
