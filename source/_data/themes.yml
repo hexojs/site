@@ -2849,9 +2849,9 @@
     - Mobile
     - Simple
 - name: Resume
-  description: a material design theme
+  description: a cool resume theme
   link: https://github.com/xaoxuu/hexo-theme-resume
-  preview: https://mxclub.github.io/resume/
+  preview: https://resume.js.org/
   tags:
     - resume
     - 简历
