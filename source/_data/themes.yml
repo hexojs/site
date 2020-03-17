@@ -2764,7 +2764,7 @@
     - simple
     - modern
     - clean
-    - Chinese
+    - i18n
     - css3
 - name: Chic
   description: An elegant,powerful,easy-to-read responsive Hexo theme.
