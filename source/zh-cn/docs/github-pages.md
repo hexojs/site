@@ -2,7 +2,7 @@
 title: 将 Hexo 部署到 GitHub Pages
 ---
 
-在本教程中，我们将会使用 [Travis CI](https://travis-ci.com/) 将 Hexo 博客部署到 GitHub Pages 上。Travis CI 对于开源 repository 是免费的，但是这意味着你的站点文件将会是公开的。如果你希望你的站点文件不被公开，请直接前往本文 [Private repository](#Private-repository) 部分。
+在本教程中，我们将会使用 [Travis CI](https://travis-ci.com/) 将 Hexo 博客部署到 GitHub Pages 上。Travis CI 对于开源 repository 是免费的，但是这意味着你的站点文件将会是公开的。如果你希望你的站点文件不被公开，请直接前往本文 [私有repository](#私有repository) 部分。
 
 1. 新建一个 repository。如果你希望你的站点能通过 `<你的 GitHub 用户名>.github.io` 域名访问，你的 repository 应该直接命名为 `<你的 GitHub 用户名>.github.io`。
 2. 将你的 Hexo 站点文件夹推送到 repository 中。默认情况下不应该 `public` 目录将不会被推送到 repository 中，你应该检查 `.gitignore` 文件中是否包含 `public` 一行，如果没有请加上。
@@ -43,12 +43,12 @@ deploy:
 如果你更希望你的站点部署在 `<你的 GitHub 用户名>.github.io` 的子目录中，你的 repository 需要直接命名为子目录的名字，这样你的站点可以通过 `https://<你的 GitHub 用户名>.github.io/<repository 的名字>` 访问。你需要检查你的 Hexo 配置文件，将 `url` 修改为 `https://<你的 GitHub 用户名>.github.io/<repository 的名字>`、将 `root` 的值修改为 `/<repository 的名字>/`
 
 
-## Private repository
+## 私有repository
 
-The following instruction is adapted from [one-command deployment](/docs/one-command-deployment) page.
+下面的说明改编自[一键部署](/docs/one-command-deployment)。
 
-1. Install [hexo-deployer-git](https://github.com/hexojs/hexo-deployer-git).
-2. Add the following configurations to **_config.yml**, (remove existing lines if any)
+1. 安装[hexo-deployer-git](https://github.com/hexojs/hexo-deployer-git).
+2. 在**_config.yml**（如果有已存在的请删除）添加如下配置：
 
   ``` yml
   deploy:
@@ -58,8 +58,8 @@ The following instruction is adapted from [one-command deployment](/docs/one-com
     branch: gh-pages
   ```
 
-3. Run `hexo clean && hexo deploy`.
-4. Check the webpage at *username*.github.io.
+3. 运行`hexo clean && hexo deploy`。
+4. 部署成功，网址是*username*.github.io。
 
 ## 有用的参考链接
 
