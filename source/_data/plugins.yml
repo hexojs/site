@@ -2511,3 +2511,9 @@
     - steam
     - game
     - embed
+- name: hexo-friendly-link
+  description: Automatically generate friendly permalink for Hexo.
+  link: https://github.com/houyonglu/hexo-friendly-link
+  tags:
+    - permalink
+    - link
