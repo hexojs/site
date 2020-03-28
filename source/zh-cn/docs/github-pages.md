@@ -43,7 +43,7 @@ deploy:
 如果你更希望你的站点部署在 `<你的 GitHub 用户名>.github.io` 的子目录中，你的 repository 需要直接命名为子目录的名字，这样你的站点可以通过 `https://<你的 GitHub 用户名>.github.io/<repository 的名字>` 访问。你需要检查你的 Hexo 配置文件，将 `url` 修改为 `https://<你的 GitHub 用户名>.github.io/<repository 的名字>`、将 `root` 的值修改为 `/<repository 的名字>/`
 
 
-## 私有repository
+## 私有 Repository
 
 下面的说明改编自[一键部署](/docs/one-command-deployment)。
 
