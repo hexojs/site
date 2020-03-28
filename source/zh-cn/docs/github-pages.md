@@ -59,7 +59,7 @@ deploy:
   ```
 
 3. 运行 `hexo clean && hexo deploy` 。
-4. 部署成功，网址是*username*.github.io。
+4. 查看 *username*.github.io 上的网页是否部署成功。
 
 ## 有用的参考链接
 
