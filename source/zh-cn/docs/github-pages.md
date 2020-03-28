@@ -45,7 +45,7 @@ deploy:
 
 ## 私有 Repository
 
-下面的说明改编自[一键部署](/docs/one-command-deployment)。
+下面的指示基于 [一键部署](/docs/one-command-deployment) 编写。
 
 1. 安装[hexo-deployer-git](https://github.com/hexojs/hexo-deployer-git).
 2. 在**_config.yml**（如果有已存在的请删除）添加如下配置：
