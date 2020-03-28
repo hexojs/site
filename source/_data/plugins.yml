@@ -1,3 +1,9 @@
+- name: hexo-valkyr-url
+  description: A simple url card display plugin for hexo
+  link: https://github.com/toastsgithub/hexo-valkyr-url
+  tags:
+    - url
+    - card
 - name: hexo-simple-image
   description: Simple to use markdown tag import image.
   link: https://github.com/Aragakiiii/hexo-simple-image
@@ -2472,9 +2478,51 @@
     - steam
     - game
 - name: hexo-deployer-cos-cdn
-  description: Tencent COS deployment and CDN refresh plugin of Hexo | 将博客发布到腾讯COS并刷新CDN缓存
+  description: Deploy Hexo to Aliyun OSS, Tencent COS, etc. and purge the CDN cache | 将博客发布到腾讯、阿里等云对象存储并刷新CDN缓存
   link: https://github.com/lxl80/hexo-deployer-cos-cdn
   tags:
     - deployer
+    - tencent
     - cos
     - cdn
+    - aliyun
+    - oss
+- name: hexo-web-push-notification
+  description: A hexo plugin help you automatically notify readers new post update. | 这个插件帮助你向读者自动推送你最新的文章。
+  link: https://github.com/glazec/hexo-web-push-notification
+  tags:
+    - utility
+    - web-push-notification
+    - notification
+- name: hexo-online-server
+  description: Edit and publish articles online | 在线编辑、发布文章
+  link: https://github.com/HCLonely/hexo-online-server
+  tags:
+    - online
+    - server
+    - editor
+    - preview
+- name: hexo-cldnry
+  description: Hexo tag to add an image from Cloudinary using Cloudinary SDK.
+  link: https://github.com/maliMirkec/hexo-cldnry
+  tags:
+    - tag
+    - image
+    - cloudinary
+- name: hexo-tag-steamgame
+  description: Embed steam game in Hexo posts/pages. | 在Hexo博客中嵌入steam游戏。
+  link: https://github.com/HCLonely/hexo-tag-steamgame
+  tags:
+    - tag
+    - steam
+    - game
+    - embed
+- name: hexo-github-include
+  description: Include static listings of files stored on GitHub and convert them to markdown.
+  link: https://github.com/zbicin/hexo-github-include
+  tags:
+    - tag
+    - markdown
+    - github
+    - code
+    - snippet

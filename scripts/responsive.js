@@ -16,7 +16,7 @@ async function responsive() {
       const assetPath = route.get(path);
       const assetData = [];
       assetPath.on('data', chunk => assetData.push(chunk));
-      assetPath.on('end', async() => {
+      assetPath.on('end', async () => {
         if (assetData.length) {
           try {
             const input = Buffer.concat(assetData);
@@ -54,7 +54,7 @@ async function responsive() {
       const assetPath = route.get(path);
       const assetData = [];
       assetPath.on('data', chunk => assetData.push(chunk));
-      assetPath.on('end', async() => {
+      assetPath.on('end', async () => {
         if (assetData.length) {
           try {
             const result = assetData.join('').replace(/<img (src|data-src)=['"](.*?)['"](.*?)>/gi, (imgTag, attr, value, alt) => {
