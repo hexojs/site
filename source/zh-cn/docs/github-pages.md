@@ -58,7 +58,7 @@ deploy:
     branch: gh-pages
   ```
 
-3. 运行`hexo clean && hexo deploy`。
+3. 运行 `hexo clean && hexo deploy` 。
 4. 部署成功，网址是*username*.github.io。
 
 ## 有用的参考链接
