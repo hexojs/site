@@ -2766,14 +2766,14 @@
 - name: A-Chief-Lx
   description: A light & simple & elegant theme
   link: https://github.com/blleng/hexo-theme-lx
-  preview: https://lx.blleng.cn
+  preview: https://lx.js.org
   tags:
     - sidebar
     - responsive
     - simple
     - modern
     - clean
-    - Chinese
+    - i18n
     - css3
 - name: Chic
   description: An elegant,powerful,easy-to-read responsive Hexo theme.
