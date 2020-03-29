@@ -3106,6 +3106,15 @@
     - elegant
     - clear
     - responsive
+- name: purer
+  description: Theme rewrite based on pure, purer.
+  link: https://github.com/fengkx/hexo-theme-purer
+  preview: https://purer.netlify.com
+  tags:
+    - responsive
+    - pure
+    - simple
+    - 中文
 - name: Amazing
   description: A Simple & Rich theme for Hexo.
   link: https://github.com/removeif/hexo-theme-amazing
