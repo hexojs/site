@@ -2517,6 +2517,12 @@
     - steam
     - game
     - embed
+- name: hexo-friendly-link
+  description: Automatically generate friendly permalink for Hexo.
+  link: https://github.com/houyonglu/hexo-friendly-link
+  tags:
+    - permalink
+    - link
 - name: hexo-github-include
   description: Include static listings of files stored on GitHub and convert them to markdown.
   link: https://github.com/zbicin/hexo-github-include
