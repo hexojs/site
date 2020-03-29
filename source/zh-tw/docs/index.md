@@ -7,7 +7,7 @@ title: 文件
 
 ## 什麼是 Hexo？
 
-Hexo 是一個快速、簡單且強大的網誌框架。Hexo 使用 [Markdown](http://daringfireball.net/projects/markdown/)（或其他渲染引擎）解析您的文章，並在幾秒鐘內，透過漂亮的主題產生靜態檔案。
+Hexo 是一個快速、簡單且強大的網誌框架。Hexo 使用 [Markdown](http://daringfireball.net/projects/markdown/)（或其他標記語言）解析您的文章，並在幾秒鐘內，透過漂亮的主題產生靜態檔案。
 
 ## 安裝
 

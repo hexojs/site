@@ -1,3 +1,9 @@
+- name: hexo-valkyr-url
+  description: A simple url card display plugin for hexo
+  link: https://github.com/toastsgithub/hexo-valkyr-url
+  tags:
+    - url
+    - card
 - name: hexo-simple-image
   description: Simple to use markdown tag import image.
   link: https://github.com/Aragakiiii/hexo-simple-image
@@ -2517,3 +2523,12 @@
   tags:
     - permalink
     - link
+- name: hexo-github-include
+  description: Include static listings of files stored on GitHub and convert them to markdown.
+  link: https://github.com/zbicin/hexo-github-include
+  tags:
+    - tag
+    - markdown
+    - github
+    - code
+    - snippet
