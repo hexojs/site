@@ -23,7 +23,7 @@
     "hexo-server": "^1.0.0",
     "hexo-uglify": "^1.0.0",
     "lunr": "2.3.8",
-    "sharp": "^0.23.1"
+    "sharp": "^0.25.2"
   },
   "devDependencies": {
     "eslint": "^6.0.1",
