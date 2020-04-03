@@ -169,6 +169,19 @@ deploy:
 `connections` | 連接數 | 1
 `verbose` | 顯示除錯訊息 | false
 
+## 21雲盒子
+
+1. 在 [21云盒子](https://www.21yunbox.com) 中， 創建一个新的 `靜態網頁`，然後使用以下配置：
+
+- **構建命令:** `yarn && hexo deploy`
+- **發佈目錄:** `public`
+
+2. 點擊 "部署" 按鈕！
+
+樣例已經部署在 [HTTPs://hexo.21yunbox.com/](HTTps://hexo.21yunbox.com/).
+
+請查看 [用 21雲盒子 部署一個 Hexo 樣例](HTTPs://www.21yunbox.com/docs/#/deploy-hexo).
+
 ## 其他方法
 
 Hexo 產生的所有檔案都放在 `public` 資料夾，您可以將它們拷貝到您喜歡的地方。
