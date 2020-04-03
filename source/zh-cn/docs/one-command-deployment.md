@@ -267,6 +267,19 @@ now
 
 [![Deploy Now](https://zeit.co/button)](https://zeit.co/new/hexo)
 
+## 21云盒子
+
+1. 在 [21云盒子](https://www.21yunbox.com) 中， 创建一个新的 `静态网页` ，使用以下设置：
+
+- **构建命令:** `yarn && hexo deploy`
+- **发布目录:** `public`
+
+2. 点击 "部署" 按钮！
+
+样例已经部署在 [https://hexo.21yunbox.com/](https://hexo.21yunbox.com/).
+
+请查看 [用 21云盒子 部署一个 Hexo 样例](https://www.21yunbox.com/docs/#/deploy-hexo).
+
 ## 其他方法
 
 Hexo 生成的所有文件都放在 `public` 文件夹中，您可以将它们复制到您喜欢的地方。
