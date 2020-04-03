@@ -3137,8 +3137,8 @@
     - latest-comment
 - name: A-Dearmsdan
   description: HEXO-Dearmsdan The theme is in a dark color, It gives people a sense of emptiness
-  link: https://www.dearmsdan.com/
-  preview: https://github.com/ZHD99/hexo-theme-dearmsdan
+  link: https://github.com/ZHD99/hexo-theme-dearmsdan
+  preview: https://www.dearmsdan.com/
   tags:
     - 中文
     - 简约
