@@ -1,3 +1,16 @@
+- name: A-ILS
+  description: A simple and atmospheric theme for Hexo.
+  link: https://github.com/XPoet/hexo-theme-ils
+  preview: https://xpoet.cn
+  tags:
+    - simple
+    - clean
+    - responsive
+    - light
+    - dark
+    - 中文
+    - english
+
 - name: Mustom
   description: A simple theme with simple design (card/flow) and simple functions (home/archive)
   link: https://github.com/jinyaoMa/hexo-theme-mustom
