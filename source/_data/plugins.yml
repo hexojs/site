@@ -2549,3 +2549,9 @@
     - alias
     - code
     - snippet
+- name: hexo-deployer-tcb
+  description: Tencent CloudBase (TCB) plugin of Hexo.
+  link: https://github.com/Azero-NG/hexo-deployer-tcb
+  tags:
+    - deployer
+    - tcb
