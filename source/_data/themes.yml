@@ -3147,6 +3147,7 @@
     - beautiful
     - clean
     - simple
+
 - name: Anatole-Core
   description: A simple and beautiful Hexo resume theme
   link: https://github.com/mrcore/hexo-theme-Anatole-Core
@@ -3159,3 +3160,12 @@
     - clean
     - simple
     - 中文
+- name: Arknights
+  description: A theme of Arknight Rhodes Island.
+  link: https://github.com/Yue-plus/hexo-theme-arknights
+  preview: http://ark.theme.yueplus.ink/
+  tags:
+    - dark
+    - Arknights
+    - RhodesIsland
+    - 明日方舟
