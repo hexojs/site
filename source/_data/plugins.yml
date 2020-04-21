@@ -1698,7 +1698,7 @@
     - helper
     - partial page
     - template
-- name : hexo-filter-plantuml
+- name: hexo-filter-plantuml
   description: Generate PlantUML Diagram with markdown code fence
   link: https://github.com/wafer-li/hexo-filter-plantuml
   tags:
@@ -1706,7 +1706,7 @@
     - plantuml
     - uml
     - markdown
-- name : hexo-slides-reveal
+- name: hexo-slides-reveal
   description: Generate slide page with reveal.js
   link: https://github.com/wicksome/hexo-slides-reveal
   tags:
@@ -2518,7 +2518,7 @@
     - game
     - embed
 - name: hexo-image-link
-  description: Convert the markdown image path to asset_img syntax, to make the image display both in typora and hexo. 
+  description: Convert the markdown image path to asset_img syntax, to make the image display both in typora and hexo.
   link: https://github.com/cocowool/hexo-image-link
   tags:
     - image
@@ -2540,3 +2540,31 @@
     - github
     - code
     - snippet
+- name: hexo-feed
+  description: RSS, Atom and JSON Feed generator for Hexo static site generator.
+  link: https://github.com/sergeyzwezdin/hexo-feed
+  tags:
+    - generator
+    - feed
+    - rss
+    - atom
+    - json
+    - feed
+- name: hexo-deployer-tcb
+  description: Tencent CloudBase (TCB) plugin of Hexo.
+  link: https://github.com/Azero-NG/hexo-deployer-tcb
+  tags:
+    - deployer
+    - tcb
+- name: hexo-admonition
+  description: Add block-styled admonition to hexo. | Hexo内容辅助插件，支持向文档中添加如提示、警告、错误等块式内容。
+  link: https://github.com/lxl80/hexo-admonition
+  tags:
+    - admonition
+    - note
+- name: hexo-deployer-clodui
+  description: Clodui (clodui.com) deployer plugin for Hexo
+  link: https://github.com/clodui/hexo-deployer-clodui
+  tags:
+    - deployer
+    - clodui
