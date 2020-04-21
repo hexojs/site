@@ -2549,6 +2549,15 @@
     - alias
     - code
     - snippet
+- name: hexo-related-posts
+  description: Generates related posts list with TF/IDF algorithm.
+  link: https://github.com/sergeyzwezdin/hexo-related-posts
+  tags:
+    - tf
+    - idf
+    - tf/idf
+    - related
+    - popular
 - name: hexo-feed
   description: RSS, Atom and JSON Feed generator for Hexo static site generator.
   link: https://github.com/sergeyzwezdin/hexo-feed
@@ -2565,3 +2574,15 @@
   tags:
     - deployer
     - tcb
+- name: hexo-admonition
+  description: Add block-styled admonition to hexo. | Hexo内容辅助插件，支持向文档中添加如提示、警告、错误等块式内容。
+  link: https://github.com/lxl80/hexo-admonition
+  tags:
+    - admonition
+    - note
+- name: hexo-deployer-clodui
+  description: Clodui (clodui.com) deployer plugin for Hexo
+  link: https://github.com/clodui/hexo-deployer-clodui
+  tags:
+    - deployer
+    - clodui

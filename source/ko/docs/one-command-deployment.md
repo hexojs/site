@@ -166,6 +166,21 @@ deploy:
 `connections` | 연결 번호 | 1
 `verbose` | Verbose 메시지를 표시합니다. | false
 
+## 21YunBox
+
+1. [21YunBox](https://www.21yunbox.com)에서 GitHub에서 다음 설정을 통해 새로운 '정적 사이트' 프로젝트를 설정합니다.
+
+- **Build command:** `yarn && hexo deploy`
+- **Publish directory:** `public`
+
+2. 부튼 을 눌러!
+
+그거에요! 앱은 빌드가 완료되는 즉시 21YunBox URL에 표시됩니다.
+
+'hexo'에 대한 샘플 앱은 [https://hexo.21yunbox.com/](https://hexo.21yunbox.com/)에서 배포됩니다.
+
+자세한 내용은 이 가이드를 참조하십시오.[https://www.21yunbox.com/docs/deploy-hexo](https://www.21yunbox.com/docs/#/deploy-hexo)에서 확인할 수 있습니다.
+
 ## 다른 메소드들
 
 생성되는 모든 파일들은 `public` 폴더에 저장됩니다. 이 파일들을 당신이 원하는 곳 아무데나 복사하여 사용할 수 있습니다.
