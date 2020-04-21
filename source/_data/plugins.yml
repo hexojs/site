@@ -2540,6 +2540,15 @@
     - github
     - code
     - snippet
+- name: hexo-generator-redirect
+  description: Generates additional redirect pages.
+  link: https://github.com/sergeyzwezdin/hexo-generator-redirect
+  tags:
+    - generator
+    - redirect
+    - alias
+    - code
+    - snippet
 - name: hexo-related-posts
   description: Generates related posts list with TF/IDF algorithm.
   link: https://github.com/sergeyzwezdin/hexo-related-posts
