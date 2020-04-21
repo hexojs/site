@@ -2562,4 +2562,9 @@
   tags:
     - admonition
     - note
-   
+- name: hexo-deployer-clodui
+  description: Clodui (clodui.com) deployer plugin for Hexo
+  link: https://github.com/clodui/hexo-deployer-clodui
+  tags:
+    - deployer
+    - clodui
