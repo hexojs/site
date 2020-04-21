@@ -243,6 +243,22 @@ Alternatively, you can click the deploy button below to create a new project:
 
 [![Deploy Now](https://zeit.co/button)](https://zeit.co/new/hexo)
 
+## 21YunBox
+
+1. On [21YunBox](https://www.21yunbox.com), setup up a new `Static Site` project from GitHub with the following settings:
+
+- **Build command:** `yarn && hexo deploy`
+- **Publish directory:** `public`
+
+2. Press Deploy Buton！
+
+That’s it! Your app will be live on your 21YunBox URL as soon as the build finishes.
+
+The sample app for `hexo` is deployed at [https://hexo.21yunbox.com/](https://hexo.21yunbox.com/).
+
+For more detail, follow this guide at [https://www.21yunbox.com/docs/#/deploy-hexo](https://www.21yunbox.com/docs/#/deploy-hexo).
+
+
 ## Other Methods
 
 All generated files are saved in the `public` folder. You can copy them to wherever you like.
