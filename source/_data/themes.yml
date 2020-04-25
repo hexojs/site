@@ -3135,6 +3135,17 @@
     - simple
     - fast
     - latest-comment
+- name: Dearmsdan
+  description: HEXO-Dearmsdan The theme is in a dark color, It gives people a sense of emptiness
+  link: https://github.com/ZHD99/hexo-theme-dearmsdan
+  preview: https://www.dearmsdan.com/
+  tags:
+    - 中文
+    - 简约
+    - 分类
+    - bootstrap
+    - shadows
+    - classification
 - name: Vita
   description: A simple and minimal Hexo resume theme
   link: https://github.com/Harendra1993/vita
