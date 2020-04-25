@@ -1,3 +1,17 @@
+- name: Aircv hexo theme
+  description: This is Hexo Theme with a beautiful style design form KeenThemes adapted to hexo by Molavec.
+  link: https://github.com/molavec/aircv-hexo-theme
+  preview: https://aircv-hexo-theme.molavec.com
+  tags:
+    - branding
+    - personal
+    - curriculum
+    - landing
+    - parallax
+    - responsive
+    - beautiful
+    - simple
+    - light
 - name: Mustom
   description: A simple theme with simple design (card/flow) and simple functions (home/archive)
   link: https://github.com/jinyaoMa/hexo-theme-mustom
