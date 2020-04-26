@@ -1,3 +1,15 @@
+- name: Aomori
+  description: A Hexo Theme.
+  link: https://github.com/lh1me/hexo-theme-aomori
+  preview: https://linhong.me/
+  tags:
+    - fast
+    - clean
+    - two_column
+    - widget
+    - responsive
+    - SEO
+    - 中文
 - name: Mustom
   description: A simple theme with simple design (card/flow) and simple functions (home/archive)
   link: https://github.com/jinyaoMa/hexo-theme-mustom
