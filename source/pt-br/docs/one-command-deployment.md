@@ -200,6 +200,21 @@ Opção | Descrição | Padrão
 `passphrase` | Frase secreta opcional para a chave privada |
 `agent` | Caminho para o socket do agente ssh | `$SSH_AUTH_SOCK`
 
+## 21YunBox
+
+1. Em [21YunBox](https://www.21yunbox.com), configure um novo projeto 'Site estático' do GitHub com as seguintes configurações:
+
+- **Build command:** `yarn && hexo deploy`
+- **Publish directory:** `public`
+
+2. Pressione Implantar Buton!
+
+É isso mesmo! Seu aplicativo estará ao vivo em sua URL 21YunBox assim que a compilação terminar.
+
+O aplicativo de exemplo para 'hexo' é implantado em [https://hexo.21yunbox.com/](https://hexo.21yunbox.com/).
+
+Para obter mais detalhes, siga este guia em [https://www.21yunbox.com/docs/#/deploy-hexo](https://www.21yunbox.com/docs/#/deploy-hexo).
+
 ## Outros Métodos
 
 Todos os arquivos gerados são salvos no diretório `public`. Você pode copiá-los para onde quiser.

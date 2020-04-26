@@ -223,6 +223,21 @@ Option | Description | Default
 `passphrase` | Optional passphrase for the private key |
 `agent` | Path to the ssh-agent socket | `$SSH_AUTH_SOCK`
 
+## 21YunBox
+
+1. ที่ [21YunBox](https://www.21yunbox.com) ให้ตั้งค่าโครงการ 'ไซต์แบบคงที่' ใหม่จาก GitHub ด้วยการตั้งค่าต่อไปนี้:
+
+- **Build command:** `yarn && hexo deploy`
+- **Publish directory:** `public`
+
+2.กดปรับใช้บิวตัน!
+
+แค่นั้นเอง แอปของคุณจะอยู่บน URL 21YunBox ทันทีที่สร้างเสร็จสิ้น
+
+แอปตัวอย่างสําหรับ 'hexo' ถูกปรับใช้ที่ [https://hexo.21yunbox.com/](https://hexo.21yunbox.com/)
+
+สําหรับรายละเอียดเพิ่มเติม โปรดทําตามคําแนะนํานี้ที่ [https://www.21yunbox.com/docs/#/deploy-hexo](https://www.21yunbox.com/docs/#/deploy-hexo)
+
 ## Other Methods
 
 ไฟล์ท่ีต้องการ generate จะบันทึกอยู่ใน folder `public` คุณสามารถ copy

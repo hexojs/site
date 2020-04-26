@@ -1,3 +1,15 @@
+- name: Aomori
+  description: A Hexo Theme.
+  link: https://github.com/lh1me/hexo-theme-aomori
+  preview: https://linhong.me/
+  tags:
+    - fast
+    - clean
+    - two_column
+    - widget
+    - responsive
+    - SEO
+    - 中文
 - name: Mustom
   description: A simple theme with simple design (card/flow) and simple functions (home/archive)
   link: https://github.com/jinyaoMa/hexo-theme-mustom
@@ -222,8 +234,8 @@
 
 - name: Gradient
   description: Gradient is clean and modern theme
-  link: https://github.com/RandomAdversary/Gradient
-  preview: https://hexo-gradient.netlify.com/
+  link: https://github.com/DeepSpaceHarbor/Gradient
+  preview: https://deepspaceharbor.github.io/Gradient/
   tags:
     - modern
     - clean
@@ -2363,7 +2375,7 @@
 - name: Autumn
   description: Recreate one classic and elegant wordpress theme — button
   link: https://github.com/FrontendSophie/hexo-theme-autumn
-  preview: http://ssnowy.coding.me/demo-autumn/
+  preview: http://8uf4mm.coding-pages.com/
   tags:
     - responsive
     - English
@@ -3135,6 +3147,17 @@
     - simple
     - fast
     - latest-comment
+- name: Dearmsdan
+  description: HEXO-Dearmsdan The theme is in a dark color, It gives people a sense of emptiness
+  link: https://github.com/ZHD99/hexo-theme-dearmsdan
+  preview: https://www.dearmsdan.com/
+  tags:
+    - 中文
+    - 简约
+    - 分类
+    - bootstrap
+    - shadows
+    - classification
 - name: Vita
   description: A simple and minimal Hexo resume theme
   link: https://github.com/Harendra1993/vita
@@ -3169,3 +3192,4 @@
     - Arknights
     - RhodesIsland
     - 明日方舟
+
