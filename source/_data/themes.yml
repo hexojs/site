@@ -1,3 +1,15 @@
+- name: Cards
+  description: A Simple & Swift Theme for Hexo, designed as its name.
+  link: https://github.com/ChrAlpha/hexo-theme-cards
+  preview: https://theme-cards.ichr.me/demo/
+  tags: 
+    - simple
+    - swift
+    - clean
+    - fast
+    - responsive
+    - card
+    - one_column
 - name: Aomori
   description: A Hexo Theme.
   link: https://github.com/lh1me/hexo-theme-aomori
