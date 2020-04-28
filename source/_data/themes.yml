@@ -3180,3 +3180,16 @@
     - RhodesIsland
     - 明日方舟
     - 中文
+
+- name: Clean
+  description: A modfy clean blog theme with more feature
+  link: https://github.com/luswdev/site.git
+  preview: http://blog.lusw.dev
+  tags:
+    - simple
+    - responsive
+    - one_column
+    - elegant
+    - standard
+    - powerful
+    - 中文
