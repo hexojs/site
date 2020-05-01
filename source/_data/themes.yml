@@ -3180,3 +3180,13 @@
     - RhodesIsland
     - 明日方舟
     - 中文
+- name: hiya
+  description: A customizable&simple theme base on landscape
+  link: https://github.com/FuShaoLei/hexo-theme-hiya
+  preview: https://fushaolei.github.io/
+  tags:
+    - hiya
+    - customizable
+    - colorful
+    - landscape
+    - simple
