@@ -3184,7 +3184,7 @@
 - name: Clean
   description: A modfy clean blog theme with more feature
   link: https://github.com/luswdev/site.git
-  preview: https://blog.lusw.dev
+  preview: https://lusw.dev
   tags:
     - simple
     - responsive
