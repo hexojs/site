@@ -788,15 +788,6 @@
     - extend
     - syntax
     - markdown
-- name: hexo-beautify
-  description: Beautify Hexo generated HTML, CSS and JS files, using js-beautify.
-  link: https://github.com/celsomiranda/hexo-beautify
-  tags:
-    - filter
-    - beautify
-    - html
-    - css
-    - js
 - name: hexo-qiniu-sync
   description: Sync static files to Qiniu CDN for you automatically
   link: https://github.com/gyk001/hexo-qiniu-sync
@@ -2597,3 +2588,24 @@
     - tools
     - request
     - cli
+- name: hexo-broken-links-checker
+  description: Broken links checker for Hexo static site generator.
+  link: https://github.com/sergeyzwezdin/hexo-broken-links-checker
+  tags:
+    - checker
+    - link
+    - links
+    - brokenLinks
+    - tools
+    - request
+    - cli
+- name: hexo-html-prettify
+  description: HTML beautifier for Hexo static site generator.
+  link: https://github.com/sergeyzwezdin/hexo-html-prettify
+  tags:
+    - html
+    - beautify
+    - prettify
+    - cleanup
+    - output
+    - filter
