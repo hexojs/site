@@ -652,17 +652,6 @@
     - simple
     - gallery
     - blog
-- name: lightime
-  description: Inspired by Hugo theme Cactus
-  link: https://github.com/caisiduo/hexo-theme-lightime
-  preview: https://caisiduo.github.io/hexo-theme-lightime
-  tags:
-    - Simple
-    - one_column
-    - Light
-    - clean
-    - Instantclick
-    - gitment
 - name: Edinburgh
   description: Clean, beautiful portfolio theme
   link: https://github.com/sharvaridesai/hexo-theme-edinburgh
@@ -870,16 +859,6 @@
     - two_columns
     - simple
     - light
-- name: LightOne
-  description: Remove the sidebar from theme light
-  link: https://github.com/caisiduo/hexo-theme-lightone
-  preview: https://caisiduo.xyz/
-  tags:
-    - gary
-    - simple
-    - light
-    - one_column
-    - white
 - name: yinwang
   description: Simplest View For Your Article Best
   link: https://github.com/mickeyouyou/yinwang
