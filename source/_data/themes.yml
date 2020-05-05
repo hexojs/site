@@ -3183,7 +3183,7 @@
 
 - name: Clean
   description: A modfy clean blog theme with more feature
-  link: https://github.com/luswdev/site.git
+  link: https://github.com/luswdev/hexo-theme-clean.git
   preview: https://lusw.dev
   tags:
     - simple
