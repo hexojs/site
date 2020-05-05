@@ -2588,17 +2588,15 @@
     - tools
     - request
     - cli
-- name: hexo-broken-links-checker
-  description: Broken links checker for Hexo static site generator.
-  link: https://github.com/sergeyzwezdin/hexo-broken-links-checker
+- name: hexo-tag-share-post
+  description: A small and dependency-free plugin that adds `share_post` tag and helper for adding text link to share blog post in social media. (Twitter, Facebook, and LinkedIn.)
+  link: https://github.com/wololock/hexo-tag-share-post
   tags:
-    - checker
-    - link
-    - links
-    - brokenLinks
-    - tools
-    - request
-    - cli
+    - tag
+    - share
+    - facebook
+    - twitter
+    - linkedin
 - name: hexo-html-prettify
   description: HTML beautifier for Hexo static site generator.
   link: https://github.com/sergeyzwezdin/hexo-html-prettify
