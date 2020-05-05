@@ -1,3 +1,15 @@
+- name: Aomori
+  description: A Hexo Theme.
+  link: https://github.com/lh1me/hexo-theme-aomori
+  preview: https://linhong.me/
+  tags:
+    - fast
+    - clean
+    - two_column
+    - widget
+    - responsive
+    - SEO
+    - 中文
 - name: Mustom
   description: A simple theme with simple design (card/flow) and simple functions (home/archive)
   link: https://github.com/jinyaoMa/hexo-theme-mustom
@@ -222,8 +234,8 @@
 
 - name: Gradient
   description: Gradient is clean and modern theme
-  link: https://github.com/RandomAdversary/Gradient
-  preview: https://hexo-gradient.netlify.com/
+  link: https://github.com/DeepSpaceHarbor/Gradient
+  preview: https://deepspaceharbor.github.io/Gradient/
   tags:
     - modern
     - clean
@@ -640,17 +652,6 @@
     - simple
     - gallery
     - blog
-- name: lightime
-  description: Inspired by Hugo theme Cactus
-  link: https://github.com/caisiduo/hexo-theme-lightime
-  preview: https://caisiduo.github.io/hexo-theme-lightime
-  tags:
-    - Simple
-    - one_column
-    - Light
-    - clean
-    - Instantclick
-    - gitment
 - name: Edinburgh
   description: Clean, beautiful portfolio theme
   link: https://github.com/sharvaridesai/hexo-theme-edinburgh
@@ -858,16 +859,6 @@
     - two_columns
     - simple
     - light
-- name: LightOne
-  description: Remove the sidebar from theme light
-  link: https://github.com/caisiduo/hexo-theme-lightone
-  preview: https://caisiduo.xyz/
-  tags:
-    - gary
-    - simple
-    - light
-    - one_column
-    - white
 - name: yinwang
   description: Simplest View For Your Article Best
   link: https://github.com/mickeyouyou/yinwang
@@ -1210,9 +1201,9 @@
     - fixed_nav
     - 中文
     - anisina
-- name: Typescript
+- name: Memory
   description: A minimal theme
-  link: https://github.com/artchen/hexo-theme-typescript
+  link: https://github.com/artchen/hexo-theme-memory
   preview: https://otakism.com
   tags:
     - responsive
@@ -2222,6 +2213,7 @@
     - one_column
     - search
     - minimalism
+    - dark_mode
 - name: gal
   description: https://mygalgame.com wordpress theme
   link: https://github.com/ZEROKISEKI/hexo-theme-gal
@@ -2363,7 +2355,7 @@
 - name: Autumn
   description: Recreate one classic and elegant wordpress theme — button
   link: https://github.com/FrontendSophie/hexo-theme-autumn
-  preview: http://ssnowy.coding.me/demo-autumn/
+  preview: http://8uf4mm.coding-pages.com/
   tags:
     - responsive
     - English
@@ -3135,6 +3127,17 @@
     - simple
     - fast
     - latest-comment
+- name: Dearmsdan
+  description: HEXO-Dearmsdan The theme is in a dark color, It gives people a sense of emptiness
+  link: https://github.com/ZHD99/hexo-theme-dearmsdan
+  preview: https://www.dearmsdan.com/
+  tags:
+    - 中文
+    - 简约
+    - 分类
+    - bootstrap
+    - shadows
+    - classification
 - name: Vita
   description: A simple and minimal Hexo resume theme
   link: https://github.com/Harendra1993/vita
@@ -3156,3 +3159,25 @@
     - fast
     - minimalism
     - freedom
+- name: Anatole-Core
+  description: A simple and beautiful Hexo resume theme
+  link: https://github.com/mrcore/hexo-theme-Anatole-Core
+  preview: https://www.jixian.io
+  tags:
+    - resume
+    - white
+    - minimal
+    - beautiful
+    - clean
+    - simple
+    - 中文
+- name: Arknights
+  description: A theme of Arknight Rhodes Island.
+  link: https://github.com/Yue-plus/hexo-theme-arknights
+  preview: http://ark.theme.yueplus.ink/
+  tags:
+    - dark
+    - Arknights
+    - RhodesIsland
+    - 明日方舟
+    - 中文
