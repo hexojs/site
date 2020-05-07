@@ -1,3 +1,15 @@
+- name: Cards
+  description: A Simple & Swift Theme for Hexo, designed as its name.
+  link: https://github.com/ChrAlpha/hexo-theme-cards
+  preview: https://theme-cards.ichr.me/demo/
+  tags: 
+    - simple
+    - swift
+    - clean
+    - fast
+    - responsive
+    - card
+    - one_column
 - name: Aomori
   description: A Hexo Theme.
   link: https://github.com/lh1me/hexo-theme-aomori
@@ -652,17 +664,6 @@
     - simple
     - gallery
     - blog
-- name: lightime
-  description: Inspired by Hugo theme Cactus
-  link: https://github.com/caisiduo/hexo-theme-lightime
-  preview: https://caisiduo.github.io/hexo-theme-lightime
-  tags:
-    - Simple
-    - one_column
-    - Light
-    - clean
-    - Instantclick
-    - gitment
 - name: Edinburgh
   description: Clean, beautiful portfolio theme
   link: https://github.com/sharvaridesai/hexo-theme-edinburgh
@@ -870,16 +871,6 @@
     - two_columns
     - simple
     - light
-- name: LightOne
-  description: Remove the sidebar from theme light
-  link: https://github.com/caisiduo/hexo-theme-lightone
-  preview: https://caisiduo.xyz/
-  tags:
-    - gary
-    - simple
-    - light
-    - one_column
-    - white
 - name: yinwang
   description: Simplest View For Your Article Best
   link: https://github.com/mickeyouyou/yinwang
@@ -1222,9 +1213,9 @@
     - fixed_nav
     - 中文
     - anisina
-- name: Typescript
+- name: Memory
   description: A minimal theme
-  link: https://github.com/artchen/hexo-theme-typescript
+  link: https://github.com/artchen/hexo-theme-memory
   preview: https://otakism.com
   tags:
     - responsive
@@ -2234,6 +2225,7 @@
     - one_column
     - search
     - minimalism
+    - dark_mode
 - name: gal
   description: https://mygalgame.com wordpress theme
   link: https://github.com/ZEROKISEKI/hexo-theme-gal
@@ -3170,6 +3162,27 @@
     - beautiful
     - clean
     - simple
+- name: Oranges
+  description: A simple hexo theme of minimalism
+  link: https://github.com/zchengsite/hexo-theme-oranges
+  preview: https://zchengsite.github.io/username.github.io/
+  tags:
+    - simple
+    - fast
+    - minimalism
+    - freedom
+- name: Anatole-Core
+  description: A simple and beautiful Hexo resume theme
+  link: https://github.com/mrcore/hexo-theme-Anatole-Core
+  preview: https://www.jixian.io
+  tags:
+    - resume
+    - white
+    - minimal
+    - beautiful
+    - clean
+    - simple
+    - 中文
 - name: Arknights
   description: A theme of Arknight Rhodes Island.
   link: https://github.com/Yue-plus/hexo-theme-arknights
@@ -3180,7 +3193,6 @@
     - RhodesIsland
     - 明日方舟
     - 中文
-
 - name: Clean
   description: A modfy clean blog theme with more feature
   link: https://github.com/luswdev/hexo-theme-clean
@@ -3193,3 +3205,13 @@
     - standard
     - powerful
     - 中文
+- name: hiya
+  description: A customizable simple theme base on landscape
+  link: https://github.com/FuShaoLei/hexo-theme-hiya
+  preview: https://fushaolei.github.io/
+  tags:
+    - hiya
+    - customizable
+    - colorful
+    - landscape
+    - simple
