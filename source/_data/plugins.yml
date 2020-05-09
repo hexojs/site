@@ -2613,3 +2613,14 @@
     - cleanup
     - output
     - filter
+- name: hexo-images
+  description: Toolset to opimize images for Hexo static site generator.
+  link: https://github.com/sergeyzwezdin/hexo-images
+  tags:
+    - filter
+    - generator
+    - image
+    - images
+    - responsive
+    - picture
+    - crop
