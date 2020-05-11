@@ -3203,3 +3203,13 @@
     - colorful
     - landscape
     - simple
+- name: blank
+  description: A concise hexo theme.
+  link: https://github.com/a2396837/hexo-theme-blank
+  preview: https://dmx.pub/
+  tags:
+    - blank
+    - concise
+    - fast
+    - simple
+    - 中文
