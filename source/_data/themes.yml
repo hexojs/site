@@ -1,8 +1,22 @@
+- name: Hexo theme aircv
+  description: This is Hexo Theme with a beautiful style design form KeenThemes adapted to hexo by Molavec.
+  link: https://github.com/molavec/hexo-theme-aircv
+  preview: https://hexo-theme-aircv.molavec.com
+  tags:
+    - branding
+    - personal
+    - curriculum
+    - landing
+    - parallax
+    - responsive
+    - beautiful
+    - simple
+    - light
 - name: Cards
   description: A Simple & Swift Theme for Hexo, designed as its name.
   link: https://github.com/ChrAlpha/hexo-theme-cards
   preview: https://theme-cards.ichr.me/demo/
-  tags: 
+  tags:
     - simple
     - swift
     - clean
