@@ -3208,7 +3208,7 @@
 - name: hiya
   description: A customizable simple theme base on landscape
   link: https://github.com/FuShaoLei/hexo-theme-hiya
-  preview: https://fushaolei.github.io/
+  preview: https://fushaolei.gitee.io/
   tags:
     - hiya
     - customizable
