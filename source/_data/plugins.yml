@@ -2613,3 +2613,13 @@
     - cleanup
     - output
     - filter
+- name: hexo-compat-report
+  description: Renders an MDN compatibility table on your hexo page.
+  link: https://github.com/TimDaub/hexo-compat-report
+  tags:
+    - mdn
+    - compat
+    - compatibility
+    - caniuse
+    - table
+    - overview
