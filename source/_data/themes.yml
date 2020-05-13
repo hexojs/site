@@ -2994,18 +2994,19 @@
     - color-config
     - 中文
     - English
-- name: A-Ayer
+- name: Ayer
   description: A Clean and Beautiful Theme for Hexo, also responsive.
   link: https://github.com/Shen-Yu/hexo-theme-ayer
   preview: https://shen-yu.gitee.io/
   tags:
     - 中文
     - clean
-    - Beautiful
-    - Responsive
+    - beautiful
+    - responsive
     - Gallery
     - Valine
     - English
+    - simple
 - name: Crisp-Minimal-Resume
   description: A minimalist resume template for Hexo
   link: https://github.com/crispgm/resume/tree/master/port-hexo
@@ -3208,10 +3209,20 @@
 - name: hiya
   description: A customizable simple theme base on landscape
   link: https://github.com/FuShaoLei/hexo-theme-hiya
-  preview: https://fushaolei.github.io/
+  preview: https://fushaolei.gitee.io/
   tags:
     - hiya
     - customizable
     - colorful
     - landscape
     - simple
+- name: blank
+  description: A concise hexo theme.
+  link: https://github.com/a2396837/hexo-theme-blank
+  preview: https://dmx.pub/
+  tags:
+    - blank
+    - concise
+    - fast
+    - simple
+    - 中文
