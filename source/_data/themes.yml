@@ -1,3 +1,13 @@
+- name: Fan
+  description: A dark theme, like a dreamy starry sky, the stars flicker.
+  link: https://github.com/fan-lv/Fan
+  preview: https://www.lvfan.xyz
+  tags:
+    - dark
+    - fantasy
+    - stars
+    - pug
+    - 中文
 - name: Cards
   description: A Simple & Swift Theme for Hexo, designed as its name.
   link: https://github.com/ChrAlpha/hexo-theme-cards
@@ -2657,15 +2667,6 @@
     - two_columns
     - light
     - 中文
-- name: Fan
-  description: A dark theme
-  link: https://github.com/fan-lv/Fan
-  preview: https://www.lvfan.xyz/
-  tags:
-    - 中文
-    - dark
-    - Pug
-    - Stylus
 - name: snark
   description: A dark theme with lofter style
   link: https://github.com/Litreily/hexo-theme-snark
