@@ -2613,6 +2613,28 @@
     - cleanup
     - output
     - filter
+- name: hexo-images
+  description: Toolset to opimize images for Hexo static site generator.
+  link: https://github.com/sergeyzwezdin/hexo-images
+  tags:
+    - filter
+    - generator
+    - image
+    - images
+    - responsive
+    - picture
+    - crop
+- name: hexo-covers
+  description: Microbrowser covers for Hexo static site generator so you'll have compelling webpage preview while sharing the link via iMessage, WhatsApp, Telegram, Facebook and others.
+  link: https://github.com/sergeyzwezdin/hexo-covers
+  tags:
+    - filter
+    - generator
+    - cover
+    - image
+    - images
+    - microbrowser
+    - review
 - name: hexo-compat-report
   description: Renders an MDN compatibility table on your hexo page.
   link: https://github.com/TimDaub/hexo-compat-report
