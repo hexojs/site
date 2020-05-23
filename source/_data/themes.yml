@@ -2604,7 +2604,7 @@
     - light
     - design
     - one_column
-- name: yinwang
+- name: hexo-theme-yinwang
   description: An imitation of yinwang's blog
   link: https://github.com/smallyunet/hexo-theme-yinwang
   preview: https://blog.smallyu.net
