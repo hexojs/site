@@ -135,7 +135,7 @@ hexo.extend.helper.register('lunr_index', data => {
     this.field('description');
     this.ref('id');
 
-    data.forEach((item, i) => {
+    data.forEach(item => {
       const object = Object.assign({}, { id: item.name }, item);
       this.add(object);
     });
