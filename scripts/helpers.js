@@ -133,11 +133,10 @@ hexo.extend.helper.register('lunr_index', data => {
     this.field('name', {boost: 10});
     this.field('tags', {boost: 50});
     this.field('description');
-    this.ref('id');
+    this.ref('name');
 
     data.forEach(item => {
-      const object = Object.assign({}, { id: item.name }, item);
-      this.add(object);
+      this.add(item);
     });
   });
 
