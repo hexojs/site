@@ -193,7 +193,7 @@
 
 - name: Mokusei
   description: A dark theme
-  link: https://github.com/shijuuu/hexo-theme-mokusei
+  link: https://github.com/kog1997/hexo-theme-mokusei
   preview: https://blog.shijukun.com/
   tags:
     - dark
@@ -282,7 +282,7 @@
 
 - name: Minami
   description: A Clear and Light Theme
-  link: https://github.com/nanqinlang/hexo-theme-Minami
+  link: https://github.com/NewBugger/hexo-theme-Minami
   preview: https://preview.sometimesnaive.org
   tags:
     - Clear
@@ -410,7 +410,7 @@
     - offline
 - name: cold
   description: A super cool theme
-  link: https://github.com/yudaren007007/hexo-theme-cold
+  link: https://github.com/mintsweet/hexo-theme-cold
   preview: http://www.yujunren.com/blog/
   tags:
     - cool
@@ -477,7 +477,7 @@
     - 中文
 - name: Goyangin
   description: A Simple theme with Bulma Framework CSS
-  link: https://github.com/devgexx/goyangin
+  link: https://github.com/g3xx/goyangin
   preview: http://goyangin.0x3g.com/
   tags:
     - responsive
@@ -485,16 +485,6 @@
     - clean
     - simple
     - thumb image
-- name: Slice
-  description: A Simple & Beautiful SinglePaged Theme
-  link: https://github.com/NHibiki/hexo-theme-slice
-  preview: https://slice.nekoyu.cc
-  tags:
-    - Flat
-    - SinglePaged
-    - Music Plug-ined
-    - Welcome Page
-    - Responsive
 - name: mdui
   description: A google plus like theme
   link: https://github.com/Halyul/hexo-theme-mdui
@@ -621,7 +611,7 @@
     - colorful
 - name: Inside
   description: ❤️ SPA, flat and clean theme.
-  link: https://github.com/elmorec/hexo-theme-inside
+  link: https://github.com/ikeq/hexo-theme-inside
   preview: https://blog.oniuo.com/
   tags:
     - responsive
@@ -848,7 +838,7 @@
     - elegant
 - name: Tranquilpeak
   description: A gorgeous responsive theme
-  link: https://github.com/LouisBarranqueiro/tranquilpeak-hexo-theme
+  link: https://github.com/LouisBarranqueiro/hexo-theme-tranquilpeak
   preview: http://louisbarranqueiro.github.io/hexo-theme-tranquilpeak
   tags:
     - responsive
@@ -990,7 +980,7 @@
     - metronic
 - name: Again
   description: Medium like, but more awesome
-  link: https://github.com/DrakeLeung/hexo-theme-again
+  link: https://github.com/lyyourc/hexo-theme-again
   preview: https://www.lyyourc.com/
   tags:
     - medium
@@ -1082,7 +1072,7 @@
     - 中文
 - name: Free2mind
   description: A new debonaire theme
-  link: https://github.com/rudy-yuan/free2mind
+  link: https://github.com/codeditor2/free2mind
   preview: http://www.rudy-yuan.net
   tags:
     - simple
@@ -1276,7 +1266,7 @@
     - scss
 - name: concise
   description: A beautiful and simple theme
-  link: https://github.com/HmyBmny/hexo-theme-concise
+  link: https://github.com/kingofctrl/hexo-theme-concise
   preview: https://hmybmny.github.io/hexo-theme-concise/
   tags:
     - material
@@ -1412,7 +1402,7 @@
     - light
 - name: Smackdown
   description: A simple and cool theme
-  link: https://github.com/winnerweb/hexo-theme-smackdown
+  link: https://github.com/smackgg/hexo-theme-smackdown
   preview: https://blog.smackgg.cn/
   tags:
     - responsive
@@ -1518,7 +1508,7 @@
     - blog
 - name: Material
   description: An elegant & Material Design Theme
-  link: https://github.com/viosey/hexo-theme-material
+  link: https://github.com/bolnh/hexo-theme-material
   preview: https://blog.viosey.com
   tags:
     - responsive
@@ -2185,7 +2175,7 @@
     - English
 - name: microb
   description: A very simple theme use pure css and less js
-  link: https://github.com/microacup/hexo-theme-micorb
+  link: https://github.com/microacup/hexo-theme-microb
   preview: http://blog.meiqiu.me/
   tags:
     - simple
@@ -2279,7 +2269,7 @@
     - developer
 - name: Lemon-Lime
   description: A refreshing theme
-  link: https://github.com/huan555/lemon-lime
+  link: https://github.com/huan-qiu/lemon-lime
   preview: http://rachelqiu.com
   tags:
     - responsive
@@ -2317,7 +2307,7 @@
     - simple
 - name: curry
   description: A beautiful theme with reference to Bear's reading experience
-  link: https://github.com/gary-Shen/hexo-theme-curry
+  link: https://github.com/gary-Shen/hexo-theme-bear
   preview: http://www.garyshen.com
   tags:
     - responsive
@@ -2393,7 +2383,7 @@
     - infinite scroll
 - name: Dxx
   description: A sample theme
-  link: https://github.com/fuzhouxxdong/hexo-theme-dxx
+  link: https://github.com/Sneakydogs/hexo-theme-dxx
   preview: https://fuzhouxxdong.github.io/hexo-theme-dxx/
   tags:
     - simple
@@ -2604,7 +2594,7 @@
     - light
     - design
     - one_column
-- name: yinwang
+- name: hexo-theme-yinwang
   description: An imitation of yinwang's blog
   link: https://github.com/smallyunet/hexo-theme-yinwang
   preview: https://blog.smallyu.net
@@ -2860,7 +2850,7 @@
     - Evernote
 - name: Nexmoe
   description: A special Hexo theme
-  link: https://github.com/nexmoe/hexo-theme-nexmoe
+  link: https://github.com/theme-nexmoe/hexo-theme-nexmoe
   preview: https://nexmoe.com/
   tags:
     - Sidebar
@@ -2998,7 +2988,7 @@
     - Valine
 - name: Paper
   description: A Simple Clean Paper-like Theme for Hexo with Darkmode!
-  link: https://github.com/OfficialYoungX/paper
+  link: https://github.com/random-yang/paper
   preview: https://www.randomyang.top
   tags:
     - dark-mode
