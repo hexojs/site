@@ -1,3 +1,14 @@
+- name: Coder
+  description: A Pure and Clean Theme in minimalist style for Coders
+  link: https://github.com/xunzhuo/hexo-theme-coder
+  preview: https://www.liuxunzhuo.top
+  tags:
+    - minimalist
+    - coders
+    - light
+    - dark/light
+    - pure
+    - clean
 - name: Aircv
   description: This is Hexo Theme with a beautiful style design form KeenThemes adapted to hexo by Molavec.
   link: https://github.com/molavec/hexo-theme-aircv
