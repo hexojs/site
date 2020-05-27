@@ -135,9 +135,7 @@ hexo.extend.helper.register('lunr_index', data => {
     this.field('description');
     this.ref('name');
 
-    data.forEach(item => {
-      this.add(item);
-    });
+    data.forEach(this.add, this);
   });
 
   return JSON.stringify(index);
