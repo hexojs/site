@@ -1,6 +1,6 @@
 - name: hexo-statistics-charts
   description: Render statistics of hexo poats, categories, and tags into charts
-  link: https://github.com/george16886/hexo-statistics-charts
+  link: https://www.npmjs.com/package/hexo-statistics-charts
   tags:
     - statistics
     - charts
