@@ -51,9 +51,9 @@ title: Variables
 
 변수 | 설명
 --- | ---
-`page.published` | Post가 draft상태가 아니라면 true를 반환합니다.
-`page.categories` | Post의 모든 카테고리
-`page.tags` | Post의 모든 태그
+`post.published` | Post가 draft상태가 아니라면 true를 반환합니다.
+`post.categories` | Post의 모든 카테고리
+`post.tags` | Post의 모든 태그
 
 **Home (index)**
 
@@ -74,7 +74,7 @@ title: Variables
 
 변수 | 설명
 --- | ---
-`page.archive` | `true`와 동일합니다.
+`page.published` | `true`와 동일합니다.
 `page.year` | 아카이브 연도 (4자리 숫자)
 `page.month` | 아카이브 월 (0을 제외한 2자리 숫자)
 

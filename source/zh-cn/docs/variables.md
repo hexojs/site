@@ -51,9 +51,9 @@ title: 变量
 
 变量 | 描述 | 类型
 --- | --- | ---
-`page.published` | 如果该文章已发布则为 true | `boolean`
-`page.categories` | 该文章的所有分类 |  `array` of ???
-`page.tags` | 该文章的所有标签 | `array` of ???
+`post.published` | 如果该文章已发布则为 true | `boolean`
+`post.categories` | 该文章的所有分类 |  `array` of ???
+`post.tags` | 该文章的所有标签 | `array` of ???
 
 **首页（`index`）**
 

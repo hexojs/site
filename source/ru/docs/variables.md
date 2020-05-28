@@ -51,9 +51,9 @@ title: Переменные
 
 Переменные | Описание
 --- | ---
-`page.published` | `true`, если пост не проект
-`page.categories` | Все категории поста
-`page.tags` | Все теги поста
+`post.published` | `true`, если пост не проект
+`post.categories` | Все категории поста
+`post.tags` | Все теги поста
 
 **Главная страница (index)**
 

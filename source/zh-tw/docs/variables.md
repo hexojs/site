@@ -49,6 +49,14 @@ title: 變數
 `page.photos` | 文章的照片（用於相簿）
 `page.link` | 文章的外連連結（用於連結文章）
 
+**Post (`post`):** Same as `page` layout but add the following variables.
+
+Variable | Description | Type
+--- | --- | ---
+`post.published` | True if the post is not a draft | `boolean`
+`post.categories` | All categories of the post | `array` of ???
+`post.tags` | All tags of the post | `array` of ???
+
 **首頁（index）**
 
 變數 | 描述
