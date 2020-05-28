@@ -321,6 +321,15 @@ Markdown에 맞게 문자열을 렌더링합니다.
 <%- render(str, engine, [options]) %>
 ```
 
+**Examples:**
+
+``` js
+<%- render('p(class="example") Test', 'pug'); %>
+// <p class="example">Test</p>
+```
+
+See [Rendering](https://hexo.io/ko/api/rendering) for more details.
+
 ### word_wrap
 
 주어진 `length`에 맞게 문자열을 포장합니다. `length`의 기본값은 80 입니다.

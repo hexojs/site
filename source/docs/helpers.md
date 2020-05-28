@@ -406,6 +406,15 @@ Renders a string.
 <%- render(str, engine, [options]) %>
 ```
 
+**Examples:**
+
+``` js
+<%- render('p(class="example") Test', 'pug'); %>
+// <p class="example">Test</p>
+```
+
+See [Rendering](https://hexo.io/api/rendering) for more details.
+
 ### word_wrap
 
 Wraps text into lines no longer than `length`. `length` is 80 by default.
