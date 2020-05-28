@@ -3260,3 +3260,15 @@
     - elegant
     - minimal
     - dark
+- name: mduilw
+  description: A light weight MD theme for Hexo.
+  link: https://github.com/186526/hexo-theme-mduilw
+  preview: https://mduilw.186526.xyz/
+  tags:
+    - light_weight
+    - simple
+    - responsive
+    - minimal
+    - dark
+    - 中文
+    
