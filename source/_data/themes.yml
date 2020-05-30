@@ -387,18 +387,6 @@
     - disqus
     - syntax-highlighting
     - Font Awesome
-- name: bulxo
-  description: A simple, modern, beautiful theme with Bulma
-  link: https://github.com/polebug/hexo-theme-bulxo
-  preview: http://polebug.github.io
-  tags:
-    - Bulma
-    - simple
-    - beautiful
-    - modern
-    - free
-    - creative
-    - fast
 - name: Space Cadet
   description: A modern, purple-accented Bootstrap 4 blog
   link: https://github.com/azigler/hexo-theme-space-cadet
