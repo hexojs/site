@@ -1,4 +1,4 @@
-<li class="plugin on">
+<li class="plugin on" id="{{ plugin.name }}">
   <div class="plugin-screenshot">
     <noscript>
       <img src="{{ url_for('themes/screenshots/' + plugin.name + '.png') }}" class="plugin-screenshot-img" alt="{{ plugin.name }}">

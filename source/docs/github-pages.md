@@ -36,6 +36,8 @@ deploy:
 10. In your GitHub repo's setting, navigate to "GitHub Pages" section and change Source to **gh-pages branch**.
 11. Check the webpage at *username*.github.io.
 
+Note - if you specify a custom domain name with a `CNAME`, you need to add the `CNAME` file to the `source/` folder.
+
 ## Project page
 
 If you prefer to have a project page on GitHub:

@@ -342,6 +342,15 @@ Renders a string.
 <%- render(str, engine, [options]) %>
 ```
 
+**Examples:**
+
+``` js
+<%- render('p(class="example") Test', 'pug'); %>
+// <p class="example">Test</p>
+```
+
+See [Rendering](https://hexo.io/th/api/rendering) for more details.
+
 ### word_wrap
 
 ทุกบรรทัดของ text จะไม่ยาวเกิน  `length` ค่า  `length` นั้นจะเป็น 80 ตัวอักษร

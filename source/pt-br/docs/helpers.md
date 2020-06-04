@@ -326,6 +326,15 @@ Renderiza uma string.
 <%- render(str, engine, [options]) %>
 ```
 
+**Examples:**
+
+``` js
+<%- render('p(class="example") Test', 'pug'); %>
+// <p class="example">Test</p>
+```
+
+See [Rendering](https://hexo.io/pt-br/api/rendering) for more details.
+
 ### word_wrap
 
 Coloca uma quebra de linha no texto a partir de um limite de caracteres, o limite é `length`. Por padrão, o valor de `length` é 80.

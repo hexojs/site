@@ -316,6 +316,15 @@ title: 輔助函數（Helpers）
 <%- render(str, engine, [options]) %>
 ```
 
+**Examples:**
+
+``` js
+<%- render('p(class="example") Test', 'pug'); %>
+// <p class="example">Test</p>
+```
+
+See [Rendering](https://hexo.io/zh-twapi/rendering) for more details.
+
 ### word_wrap
 
 使每行的字串長度不超過 `length`。`length` 預設為 80。

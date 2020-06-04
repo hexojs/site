@@ -166,6 +166,21 @@ deploy:
 `connections` | Количество подключений | 1
 `verbose` | Выводить подробные сообщения | false
 
+## 21YunBox
+
+1. На сайте [21YunBox](https://www.21yunbox.com) настройте новый проект «Статический сайт» от GitHub со следующими настройками:
+
+- **Build command:** `yarn && hexo deploy`
+- **Publish directory:** `public`
+
+2. Пресс Развертывание Бутон!
+
+Ну вот! Ваше приложение будет жить на вашем URL 21YunBox, как только сборка заканчивается.
+
+Образец приложения для 'hexo' развернут на сайте [https://hexo.21yunbox.com/](https://hexo.21yunbox.com/).
+
+Для получения более подробной информации, следуйте этому руководству по адресу [https://www.21yunbox.com/docs/'/deploy-hexo](https://www.21yunbox.com/docs/'/deploy-hexo).
+
 ## Другие способы
 
 Все созданные файлы сохраняются в папке `public`. Вы можете скопировать их куда угодно.
