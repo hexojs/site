@@ -2664,3 +2664,9 @@
     - web-player-support
     - rss
     - podcast
+- name: hexo-tag-friends
+  description: Friends tag
+  link: https://github.com/maplesugarr/hexo-tag-friends
+  tags:
+    - friends
+    - tag
