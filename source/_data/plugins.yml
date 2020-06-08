@@ -1,6 +1,6 @@
 - name: hexo-statistics-charts
   description: Render statistics of hexo poats, categories, and tags into charts
-  link: https://github.com/george16886/hexo-statistics-charts
+  link: https://www.npmjs.com/package/hexo-statistics-charts
   tags:
     - statistics
     - charts
@@ -2645,3 +2645,28 @@
     - caniuse
     - table
     - overview
+- name: hexo-lute
+  description: A markdown renderer for Hexo based on Lute.
+  link: https://github.com/SukkaW/hexo-lute
+  tags:
+    - renderer
+    - lute
+    - markdown
+    - gfm
+    - commonmark
+- name: hexo-generator-podcasts
+  description: A Podcast Feed Generator for Hexo with Multiple Podcast Support Feature
+  link: https://github.com/bestony/hexo-generator-podcasts
+  tags:
+    - generator
+    - podcasts
+    - multiple-podcasts
+    - web-player-support
+    - rss
+    - podcast
+- name: hexo-tag-friends
+  description: Friends tag
+  link: https://github.com/maplesugarr/hexo-tag-friends
+  tags:
+    - friends
+    - tag

@@ -39,7 +39,7 @@
     }
 
     for (i = 0; i < elementLen; i++) {
-      if (selected[i]) {
+      if (selected[elements[i].id]) {
         addClass(elements[i], 'on');
       } else {
         removeClass(elements[i], 'on');
