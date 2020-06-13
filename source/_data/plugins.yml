@@ -821,7 +821,7 @@
     - version control
 - name: hexo-math
   description: Add MathJax support
-  link: https://github.com/akfish/hexo-math
+  link: https://github.com/hexojs/hexo-math
   tags:
     - tag
     - math
@@ -2363,16 +2363,17 @@
     - canonical
     - seo
     - source
-- name: hexo-generator-indexed
-  description: Index generator plugin for Hexo, support more Front-matter parameters like sticky and hide.
-  link: https://github.com/stevenjoezhang/hexo-generator-indexed
+- name: hexo-pangu
+  description: Add spaces between CJK characters and western characters.
+  link: https://github.com/next-theme/hexo-pangu
   tags:
-    - generator
-    - index
-    - sticky
+    - filter
+    - pangu
+    - cjk
+    - spacing
 - name: hexo-filter-mathjax
   description: Server side MathJax renderer plugin for Hexo. No front-end scripts are required.
-  link: https://github.com/stevenjoezhang/hexo-filter-mathjax
+  link: https://github.com/next-theme/hexo-filter-mathjax
   tags:
     - filter
     - math
@@ -2664,3 +2665,9 @@
     - web-player-support
     - rss
     - podcast
+- name: hexo-tag-friends
+  description: Friends tag
+  link: https://github.com/maplesugarr/hexo-tag-friends
+  tags:
+    - friends
+    - tag
