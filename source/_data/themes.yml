@@ -3259,6 +3259,14 @@
     - minimal
     - dark
     - 中文
+- name: webstack
+  description: A hexo theme based on webstack.
+  link: https://github.com/HCLonely/hexo-theme-webstack
+  preview: https://webstack.hclonely.com/
+  tags:
+    - navigation
+    - webstack
+    - 中文
 - name: Lagom
   description: A minimalist theme for Hexo.
   link: https://github.com/jylzs369/hexo-theme-lagom
@@ -3270,4 +3278,3 @@
     - Minimalist
     - Elegant
     - 中文
-
