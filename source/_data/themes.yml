@@ -2749,17 +2749,16 @@
     - blog
     - responsive
 - name: Butterfly
-  description: A simple & beautiful & fast theme
+  description: A Simple and Card UI Design theme for Hexo
   link: https://github.com/jerryc127/hexo-theme-butterfly
-  preview: https://jerryc.me/
+  preview: https://demo.jerryc.me/
   tags:
-    - Sidebar
+    - Card UI
     - Responsive
     - Customizable
-    - Sticky
-    - Slideshow
     - 中文
-    - beautiful
+    - Simple
+    - Widget
 - name: Adagio
   description: A simple, elegant, calm, responsive theme with applause button, math support, and much more.
   link: https://github.com/Hanlin-Dong/hexo-theme-adagio
