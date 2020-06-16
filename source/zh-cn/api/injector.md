@@ -1,9 +1,9 @@
-title: Injector
+title: 注入器（Injector）
 ---
 
-An injector is used to add static code snippet to the `<head>` or/and `<body>` of generated HTML files. Hexo run injector **before** `after_render:html` filter is executed.
+注入器被用于将静态代码片段注入生成的 HTML 的 `<head>` 和/或 `<body>` 中。Hexo 将在 `after_render:html` 过滤器 **之前** 完成注入。
 
-## Synopsis
+## 概要
 
 ```js
 hexo.extend.injector.register(entry, value, to)
@@ -11,39 +11,37 @@ hexo.extend.injector.register(entry, value, to)
 
 ### entry `<string>`
 
-Where the code will be injected inside the HTML.
+代码片段注入的位置，接受以下值：
 
-Support those values:
-
-- `head_begin`: Inject code snippet right after `<head>` (Default).
-- `head_end`: Inject code snippet right before `</head>`.
-- `body_begin`: Inject code snippet right after `<body>`.
-- `body_end`: Inject code snippet right before `</body>`.
+- `head_begin`: 注入在 `<head>` 之后（默认）
+- `head_end`: 注入在 `</head>` 之前
+- `body_begin`: 注入在 `<body>` 之后
+- `body_end`: 注入在 `</body>` 之前
 
 ### value `<string> | <Function>`
 
-> A function that returns string is supported.
+> 除了字符串，也支持返回值为字符串的函数
 
-The code snippet to be injected.
+需要注入的代码片段。
 
 ### to `<string>`
 
-Which page will code snippets being injected.
+需要注入代码片段的页面类型，接受以下值：
 
-- `default`: Inject to every page (Default).
-- `home`: Only inject to home page (which has `is_home()` helper being `true`)
-- `post`: Only inject to post pages (which has `is_post()` helper being `true`)
-- `page`: Only inject to pages (which has `is_page()` helper being `true`)
-- `archive`: Only inject to archive pages (which has `is_archive()` helper being `true`)
-- `category`: Only inject to category pages (which has `is_category()` helper being `true`)
-- `tag`: Only inject to tag pages (which has `is_tag()` helper being `true`)
-- Custom layout name could be used as well, see [Writing - Layout](writing#Layout).
+- `default`: 注入到每个页面（默认值）
+- `home`: 只注入到主页（`is_home()` 为 `true` 的页面）
+- `post`: 只注入到文章页面（`is_post()` 为 `true` 的页面）
+- `page`: 只注入到独立页面（`is_page()` 为 `true` 的页面）
+- `archive`: 只注入到归档页面（`is_archive()` 为 `true` 的页面）
+- `category`: 只注入到分类页面（`is_category()` 为 `true` 的页面）
+- `tag`: 只注入到标签页面（`is_tag()` 为 `true` 的页面）
+- 或是其他自定义 layout 名称，自定义 layout 参见 [写作 - 布局（Layout）](writing#Layout)
 
 ----
 
-There are other internal functions, see [hexojs/hexo#4049](https://github.com/hexojs/hexo/pull/4049) for more details.
+注入器还有一些内部函数，如果你要使用它们，请参考 [hexojs/hexo#4049](https://github.com/hexojs/hexo/pull/4049)。
 
-## Example
+## 样例
 
 ```js
 const css = hexo.extend.helper.get('css');
@@ -60,4 +58,4 @@ hexo.extend.injector.register('body_end', () => {
 });
 ```
 
-Above setup will inject `APlayer.min.css` (`<link>` tag) to the `</head>` of any page which layout is `music`, and `APlayer.min.js` (`<script>` tag) to the `</body>` of those pages. Also, `jquery.js` (`<script>` tag) will be injected to `</body>` of every page generated.
+上述代码将会把 `APlayer.min.css`（`<link>` 标签）和 `APlayer.min.js` （`<script>` 标签）注入到所有 layout 为 `music` 的页面的 `</head>` 和 `</body>` 之前，以及将 `jquery.js`（`<script>` 标签）注入到每一个生成的页面的 `</body>` 之前。
