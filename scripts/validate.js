@@ -35,4 +35,4 @@ async function validateThemeThumbnail() {
   }
 }
 
-hexo.extend.filter.register('before_generate', validateThemeThumbnail);
+hexo.extend.filter.register('before_exit', validateThemeThumbnail);
