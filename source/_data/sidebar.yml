@@ -24,6 +24,7 @@ docs:
     variables: variables.html
     helpers: helpers.html
     internationalization: internationalization.html
+    syntax_highlight: syntax-highlight.html
     plugins: plugins.html
   miscellaneous:
     troubleshooting: troubleshooting.html

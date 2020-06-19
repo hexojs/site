@@ -48,6 +48,7 @@ sidebar:
     variables: 變數
     helpers: 輔助函數
     internationalization: 國際化 (i18n)
+    syntax_highlight: 語法突顯
     plugins: 外掛
     miscellaneous: 其他
     troubleshooting: 解決問題
