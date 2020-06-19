@@ -3,6 +3,8 @@ title: 標籤外掛（Tag Plugins）
 ---
 標籤外掛和 Front-matter 中的標籤不同，它們是用於在文章中快速插入特定內容的外掛。
 
+Although you can write your posts in any formats, but the tag plugins will always be available and syntax remains the same.
+
 ## Block Quote
 
 在文章中插入引言，可包含作者、來源和標題。

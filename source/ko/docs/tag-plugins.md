@@ -3,6 +3,8 @@ title: Tag Plugins
 ---
 태그 플러그인은 포스트의 태그와는 다릅니다. Octopress로부터 가져온 것으로 특별한 컨텐츠를 당신의 포스트에 빠르게 추가할 수 있도록 도와주는 유용한 방법입니다.
 
+Although you can write your posts in any formats, but the tag plugins will always be available and syntax remains the same.
+
 ## Block Quote
 
 인용구를 post, 소스, 제목에 추가하기 위한 완벽한 방법입니다. 옵션으로 인용구의 원작자를 추가할 수도 있습니다.

@@ -17,7 +17,7 @@ title: Themes
 
 ### _config.yml
 
-ไฟล์การตั้งค่าธีม  การแก้ไขไฟล์นี้แล้วไม่ต้องเปิดเซิร์ฟเวอร์ใหม่
+ไฟล์การตั้งค่าธีม  Unlike the site's primary configuration file  การแก้ไขไฟล์นี้แล้วไม่ต้องเปิดเซิร์ฟเวอร์ใหม่
 
 ### languages
 
