@@ -216,9 +216,9 @@ For instance, in the above example if `foo: bar` is in `custom.yml`, but `"foo":
 
 Hexo themes are independent projects, with separate `_config.yml` files.
 
-Instead of forking a theme, and maintaining a custom branch with your settings, you can configure it from somewhere else.
+Instead of forking a theme, and maintaining a custom version with your settings, you can configure it from somewhere else:
 
-**`theme_config` in site's primary configuration file**
+**from `theme_config` in site's primary configuration file**
 
 > Supported since Hexo 2.8.2
 
@@ -252,7 +252,7 @@ Resulting in theme configuration:
 }
 ```
 
-**dedicated `_config.[theme].yml` file**
+**from a dedicated `_config.[theme].yml` file**
 
 > Supported since Hexo 5.0.0
 
@@ -292,5 +292,6 @@ Resulting in theme configuration:
 ```
 
 {% note %}
-We strongly recommends you to store your theme configuration in one place. But in case you have to store your theme configuration separately, those information is quite important: The `theme_config` inside site's primary configuration file has the highest priority during merging, then the dedicated theme configuration file. the `_config.yml` file under the theme directory has the lowest priority.
+We strongly recommend you to store your theme configuration in one place. But in case you have to store your theme configuration separately, you need to know the priority of those configurations: The `theme_config` inside site's primary configuration file has the highest priority during merging, then the dedicated theme configuration file.
+The `_config.yml` file under the theme directory has the lowest priority.
 {% endnote %}
