@@ -119,6 +119,7 @@
   description: A hexo plugin to minify/optimize HTML, CSS, JS and images. Supports revisioning of assets.
   link: https://github.com/hexojs/hexo-asset-pipeline
   tags:
+    - official
     - filter
     - imagemin
     - html-minifier
@@ -644,6 +645,7 @@
   description: Very fast Markdown renderer with support for CommonMark, GFM and more.
   link: https://github.com/hexojs/hexo-renderer-markdown-it
   tags:
+    - official
     - renderer
     - markdown
     - markdown-it
@@ -823,6 +825,7 @@
   description: Add MathJax support
   link: https://github.com/hexojs/hexo-math
   tags:
+    - official
     - tag
     - math
     - MathJax
@@ -1545,6 +1548,7 @@
   description: A plugin to convert your image url use CDN host.
   link: https://github.com/hexojs/hexo-tag-imgurl
   tags:
+    - official
     - tag
     - images
     - photos
