@@ -25,14 +25,14 @@ pages:
   only:
     - master
 ```
-5. *username*.gitlab.io должен заработать, как только GitLab CI закончит деплоb,
-6. (Опфионально) Если вы хотите проверить содержимое папок с материалами (html, css, js и т.д.), они могут быть найдены в разделе [job artifact](https://docs.gitlab.com/ee/user/project/pipelines/job_artifacts.html).
+5. *username*.gitlab.io должен заработать, как только GitLab CI закончит деплой,
+6. (Опционально) Если вы хотите проверить содержимое папок с материалами (html, css, js и т.д.), они могут быть найдены в разделе [job artifact](https://docs.gitlab.com/ee/user/project/pipelines/job_artifacts.html).
 
 ### Страница проекта
 
 Если вы препочитаете страницу проекта на GitLab:
 
-1. Перейдите в насйтроки `Settings -> General -> Advanced -> Change path`. Измените значение на имя так, чтобы сайт был доступен по адресу <b>username.gitlab.io/*name*</b>. Это может быть любое слово, как *blog* или *hexo*.
+1. Перейдите в настройки `Settings -> General -> Advanced -> Change path`. Измените значение на имя так, чтобы сайт был доступен по адресу <b>username.gitlab.io/*name*</b>. Это может быть любое слово, как *blog* или *hexo*.
 2. Редактируйте **_config.yml**, изменив значение `root:` с `""` на `"name"`.
 3. Закоммитьте и запушьте.
 
