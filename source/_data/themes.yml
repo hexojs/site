@@ -302,17 +302,6 @@
     - Customizable
     - Freedom
 
-- name: Minami
-  description: A Clear and Light Theme
-  link: https://github.com/NewBugger/hexo-theme-Minami
-  preview: https://preview.sometimesnaive.org
-  tags:
-    - Clear
-    - Light
-    - Simple
-    - Customizable
-    - Freedom
-
 - name: Amber
   description: A boostrap blog theme
   link: https://github.com/Mitscherlich/hexo-theme-amber
