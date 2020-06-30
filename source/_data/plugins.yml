@@ -117,8 +117,9 @@
     - template
 - name: hexo-asset-pipeline
   description: A hexo plugin to minify/optimize HTML, CSS, JS and images. Supports revisioning of assets.
-  link: https://github.com/bhaskarmelkani/hexo-asset-pipeline
+  link: https://github.com/hexojs/hexo-asset-pipeline
   tags:
+    - official
     - filter
     - imagemin
     - html-minifier
@@ -227,7 +228,7 @@
     - favicons
 - name: hexo-helper-obfuscate
   description: Obfuscate strings using html entities. Handy against crawlers.
-  link: https://github.com/andrewpeterprifer/hexo-helper-obfuscate/
+  link: https://github.com/AndrewPrifer/hexo-helper-obfuscate
   tags:
     - helper
     - obfuscate
@@ -321,7 +322,7 @@
     - css
 - name: hexo-renderer-webpack
   description: Webpack renderer for Hexo.
-  link: https://github.com/briangonzalez/hexo-renderer-webpack
+  link: https://github.com/nejj/hexo-renderer-webpack
   tags:
     - renderer
     - js
@@ -382,7 +383,7 @@
     - index
 - name: hexo-generator-search
   description: Search data generator for Hexo.
-  link: https://github.com/PaicHyperionDev/hexo-generator-search
+  link: https://github.com/wzpan/hexo-generator-search
   tags:
     - generator
     - search
@@ -642,8 +643,9 @@
     - blogspot
 - name: hexo-renderer-markdown-it
   description: Very fast Markdown renderer with support for CommonMark, GFM and more.
-  link: https://github.com/celsomiranda/hexo-renderer-markdown-it
+  link: https://github.com/hexojs/hexo-renderer-markdown-it
   tags:
+    - official
     - renderer
     - markdown
     - markdown-it
@@ -665,7 +667,7 @@
     - toc
 - name: hexo-renderer-org
   description: Hexo renderer plugin for emacs org-mode.
-  link: https://github.com/CodeFalling/hexo-renderer-org
+  link: https://github.com/coldnew/hexo-renderer-org
   tags:
     - renderer
     - orgmode
@@ -764,7 +766,7 @@
     - widget
 - name: hexo-tag-plantuml
   description: hexo-tag-plantuml is a tag plugin for Hexo. It can work with plantuml to draw uml.
-  link: https://github.com/oohcoder/hexo-tag-plantuml
+  link: https://github.com/two/hexo-tag-plantuml
   tags:
     - tag_plugins
     - plantuml
@@ -823,6 +825,7 @@
   description: Add MathJax support
   link: https://github.com/hexojs/hexo-math
   tags:
+    - official
     - tag
     - math
     - MathJax
@@ -871,7 +874,7 @@
     - album
 - name: hexo-tag-vine
   description: Embed your Vine videos in posts/pages.
-  link: https://github.com/welksonramos/hexo-tag-vine
+  link: https://github.com/limbowr/hexo-tag-vine
   tags:
     - tag
     - vine
@@ -942,7 +945,7 @@
     - slides
 - name: hexo-tag-niconico
   description: Embed NicoNico seiga/douga in Hexo posts/pages.
-  link: https://github.com/kamiya555/hexo-tag-niconico
+  link: https://github.com/yuichi555/hexo-tag-niconico
   tags:
     - tag
     - niconico
@@ -1007,7 +1010,7 @@
     - pdf
 - name: hexo-all-minifier
   description: "Minifier & Optimization plugin for Hexo, include HTML, CSS, JS and Image."
-  link: https://github.com/unhealthy/hexo-all-minifier
+  link: https://github.com/chenzhutian/hexo-all-minifier
   tags:
     - filter
     - minify
@@ -1040,7 +1043,7 @@
     - location
 - name: hexo-tag-aplayer
   description: "Embed aplayer in Hexo posts/pages."
-  link: https://github.com/grzhan/hexo-tag-aplayer
+  link: https://github.com/MoePlayer/hexo-tag-aplayer
   tags:
     - tag
     - player
@@ -1048,7 +1051,7 @@
     - music
 - name: hexo-tag-dplayer
   description: "Embed dplayer in Hexo posts/pages."
-  link: https://github.com/NextMoe/hexo-tag-dplayer
+  link: https://github.com/MoePlayer/hexo-tag-dplayer
   tags:
     - tag
     - player
@@ -1273,7 +1276,7 @@
     - tracks
 - name: hexo-tag-asciinema
   description: Embed asciinema into your post
-  link: https://github.com/zenyai/hexo-tag-asciinema
+  link: https://github.com/narongdejsrn/hexo-tag-asciinema
   tags:
     - tag
     - asciinema
@@ -1284,7 +1287,7 @@
     - asciinema
 - name: hexo-tag-kbd
   description: Displays the keycaps in your post/page.
-  link: https://github.com/kamiya555/hexo-tag-kbd
+  link: https://github.com/yuichi555/hexo-tag-kbd
   tags:
     - tag
     - keycaps
@@ -1332,7 +1335,7 @@
     - i18n
 - name: hexo-tag-tencent
   description: A hexo plugin for inserting youku or tencent video in your site.
-  link: https://github.com/HmyBmny/hexo-tag-tencent
+  link: https://github.com/kingofctrl/hexo-tag-tencent
   tags:
     - tag
     - video
@@ -1448,7 +1451,7 @@
     - quiz
 - name: hexo-include
   description: Include the raw contents of any file (html, text, etc) directly into post contents.
-  link: https://github.com/pipirt/hexo-include
+  link: https://github.com/pirtleshell/hexo-include
   tags:
     - tag
     - include
@@ -1489,14 +1492,14 @@
     - languages
 - name: hexo-tag-echarts3
   description: A simple plugin for inserting ECharts 3 by using tags in Hexo.
-  link: https://github.com/quentin-chen/hexo-tag-echarts3
+  link: https://github.com/kchen0x/hexo-tag-echarts3
   tags:
     - tag
     - echarts
     - chart
 - name: hexo-reference
   description: A plugin to support markdown footnotes and Wiki-Style tooltip reference in your Hexo blog posts.
-  link: https://github.com/quentin-chen/hexo-reference
+  link: https://github.com/kchen0x/hexo-reference
   tags:
     - footnote
     - footnotes
@@ -1543,8 +1546,9 @@
     - interactive
 - name: hexo-tag-imgurl
   description: A plugin to convert your image url use CDN host.
-  link: https://github.com/geekrainy/hexo-tag-imgurl
+  link: https://github.com/hexojs/hexo-tag-imgurl
   tags:
+    - official
     - tag
     - images
     - photos
@@ -1697,7 +1701,7 @@
     - template
 - name: hexo-filter-plantuml
   description: Generate PlantUML Diagram with markdown code fence
-  link: https://github.com/wafer-li/hexo-filter-plantuml
+  link: https://github.com/miao1007/hexo-filter-plantuml
   tags:
     - filter
     - plantuml
@@ -1714,7 +1718,7 @@
     - reveal
 - name: hexo-generator-json-feed-org
   description: Generate a JSON feed as per the jsonfeed.org specification
-  link: https://github.com/rmlewisuk/hexo-generator-json-feed-org
+  link: https://github.com/rknightuk/hexo-generator-json-feed-org
   tags:
     - generator
     - content
@@ -1778,7 +1782,7 @@
     - issue
 - name: hexo-tag-ossimg
   description: Publish your post images to AliyunOSS..
-  link: https://github.com/chenxuefei-pp/hexo-tag-ossimg
+  link: https://github.com/stan-chen/hexo-tag-ossimg
   tags:
     - aliyun
     - oss
@@ -2440,7 +2444,7 @@
     - watermark
 - name: hexo-tag-mmedia
   description: Embed media in Hexo posts/pages.
-  link: https://github.com/MonoLogueChi/hexo-tag-mmedia
+  link: https://github.com/u2sb/hexo-tag-mmedia
   tags:
     - tag
     - aplayer

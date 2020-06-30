@@ -302,17 +302,6 @@
     - Customizable
     - Freedom
 
-- name: Minami
-  description: A Clear and Light Theme
-  link: https://github.com/NewBugger/hexo-theme-Minami
-  preview: https://preview.sometimesnaive.org
-  tags:
-    - Clear
-    - Light
-    - Simple
-    - Customizable
-    - Freedom
-
 - name: Amber
   description: A boostrap blog theme
   link: https://github.com/Mitscherlich/hexo-theme-amber
@@ -2171,18 +2160,6 @@
     - beautiful
     - google analytics
     - Japanese
-- name: grace
-  description: A simple and grace theme
-  link: https://github.com/buhuo00/hexo-theme-grace
-  preview: https://www.buhuoblog.com/
-  tags:
-    - simple
-    - grace
-    - disqus
-    - easy
-    - RSS
-    - 中文
-    - English
 - name: microb
   description: A very simple theme use pure css and less js
   link: https://github.com/microacup/hexo-theme-microb
@@ -2450,16 +2427,6 @@
     - responsive
     - portfolio
     - concise
-- name: Staunch
-  description: A clean and focus on words theme
-  link: https://github.com/staunchkai/hexo-theme-staunch
-  preview: http://staunchkai.com
-  tags:
-    - clean
-    - focus on words
-    - 中文
-    - beautiful
-    - simple
 - name: Siberia
   description: A beautiful and scalable theme
   link: https://github.com/hpcslag/hexo-theme-siberia
