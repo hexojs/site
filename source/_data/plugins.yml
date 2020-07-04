@@ -2675,3 +2675,18 @@
   tags:
     - friends
     - tag
+- name: hexo-renderer-multi-markdown-it
+  description: A renderer plugin for Hexo based on Markdown-it and auto Minify HTML, CSS, JS.
+  link: https://github.com/amehime/hexo-renderer-multi-markdown-it
+  tags:
+    - renderer
+    - markdown-it
+    - markdown-it-plugins
+    - prism
+    - katex
+    - mermaid
+    - pangu    
+    - minify
+    - html-minifier
+    - uglify
+    - clean-css
