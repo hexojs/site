@@ -3258,7 +3258,7 @@
 - name: Shoka
   description: A simple hexo theme for YumeShoka.
   link: https://github.com/amehime/hexo-theme-shoka
-  preview: http://amehime.github.io/shoka
+  preview: https://amehime.github.io/shoka
   tags:
     - responsive
     - two_column
@@ -3270,3 +3270,10 @@
     - sidebar
     - links
     - 中文
+- name: white
+  description: A white and very simple theme
+  link: https://github.com/FuShaoLei/hexo-theme-white
+  preview: https://fushaolei.github.io/
+  tags:
+    - white
+    - simple
