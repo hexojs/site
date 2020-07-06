@@ -3255,6 +3255,21 @@
     - Minimalist
     - Elegant
     - 中文
+- name: Shoka
+  description: A simple hexo theme for YumeShoka.
+  link: https://github.com/amehime/hexo-theme-shoka
+  preview: https://amehime.github.io/shoka
+  tags:
+    - responsive
+    - two_column
+    - concise
+    - elegant
+    - animation
+    - gradient
+    - cat
+    - sidebar
+    - links
+    - 中文
 - name: white
   description: A white and very simple theme
   link: https://github.com/FuShaoLei/hexo-theme-white
