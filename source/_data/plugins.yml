@@ -1,4 +1,4 @@
-- name: 
+- name: hexo-submit-urls-to-search-engine
   description: Hexo plugin to submit URLs of new posts to Google, Bing, Baidu search engine to improve the quality and speed of website collection.
   link: https://github.com/cjh0613/hexo-submit-urls-to-search-engine
   tags:
