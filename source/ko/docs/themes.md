@@ -14,7 +14,7 @@ Hexo theme를 만드는 것은 쉽습니다. - 새로운 폴더를 생성하기�
 
 ### _config.yml
 
-테마의 환경설정 파일입니다. server를 재시작하지 않고도 이 파일을 수정할 수 있습니다.
+테마의 환경설정 파일입니다. Unlike the site's primary configuration file, server를 재시작하지 않고도 이 파일을 수정할 수 있습니다.
 
 ### languages
 
@@ -22,7 +22,7 @@ Hexo theme를 만드는 것은 쉽습니다. - 새로운 폴더를 생성하기�
 
 ### layout
 
-레이아웃 폴더입니다. 이 폴더는 당신의 웹 사이트를 어떻게 보여줄지 정의한 테마 템플릿 파일을 포함합니다. Hexo는 기본적으로 [Swig] 템플릿 엔진을 준비해 두었습니다. 하지만 당신은 [EJS], [Haml], [Jade] 등 엔진을 대체할 다른 플러그인을 쉽게 설치할 수 있습니다. Hexo는 템플릿의 파일 확장자를 기반으로 템플릿 엔진을 선택합니다.
+레이아웃 폴더입니다. 이 폴더는 당신의 웹 사이트를 어떻게 보여줄지 정의한 테마 템플릿 파일을 포함합니다. Hexo는 기본적으로 [Swig] 템플릿 엔진을 준비해 두었습니다. 하지만 당신은 [EJS], [Haml], [Jade], [Pug] 등 엔진을 대체할 다른 플러그인을 쉽게 설치할 수 있습니다. Hexo는 템플릿의 파일 확장자를 기반으로 템플릿 엔진을 선택합니다.
 
 ``` plain
 layout.ejs   - uses EJS
@@ -77,4 +77,5 @@ Hexo는 모든 렌더링 가능한 파일들을 처리한 후 `public` 폴더에
 [Swig]: https://github.com/node-swig/swig-templates
 [Haml]: https://github.com/hexojs/hexo-renderer-haml
 [Jade]: https://github.com/hexojs/hexo-renderer-jade
+[Pug]: https://github.com/maxknee/hexo-render-pug
 [hexojs/site]: https://github.com/hexojs/site

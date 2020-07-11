@@ -3,6 +3,8 @@ title: Плагины тегов
 ---
 Плагины тегов отличаются от тегов в посте. Они портированы с Octopress и обеспечивают удобный способ, чтобы быстро добавить контент для ваших постов.
 
+Although you can write your posts in any formats, but the tag plugins will always be available and syntax remains the same.
+
 ## Блок цитаты
 
 Подходит для добавления цитаты в свой пост с указанием автора, источника и информационным заголовком.
