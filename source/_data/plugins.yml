@@ -2707,3 +2707,13 @@
     - card
     - crawl
     - spider
+- name: hexo-cdn-jsdelivr
+  description: A hexo plugin to help you automatically use jsDelivr CDN for Github to speed up the loading of static resources like images.
+  link: https://github.com/renzibei/hexo-cdn-jsdelivr
+  tags:
+    - cdn
+    - jsdelivr
+    - assets
+    - images
+    - generator
+    - deployer
