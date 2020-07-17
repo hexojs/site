@@ -666,6 +666,8 @@ See [Rendering](https://hexo.io/zh-cn/api/rendering) for more details.
 `color` | 使用颜色 | false
 `start_color` | 开始的颜色。您可使用十六进位值（`#b700ff`），rgba（`rgba(183, 0, 255, 1)`），hsla（`hsla(283, 100%, 50%, 1)`）或 [颜色关键字]。此变量仅在 `color` 参数开启时才有用。 |
 `end_color` | 结束的颜色。您可使用十六进位值（`#b700ff`），rgba（`rgba(183, 0, 255, 1)`），hsla（`hsla(283, 100%, 50%, 1)`）或 [颜色关键字]。此变量仅在 `color` 参数开启时才有用。 |
+`class` | 标签的 class name 前缀
+`level` | 不同 class name 的总数。此变量仅在 `class` 参数设定时才有用。 | 10
 
 ## 其他
 

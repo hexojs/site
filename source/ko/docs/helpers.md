@@ -570,6 +570,8 @@ XML 형식의 날짜를 삽입합니다. `date`는 unix time, ISO string, date o
 `color` | 태그 클라우드에 색상을 입힙니다. | false
 `start_color` | 시작 색상. 16진수 색상 (`#b700ff`), rgba (`rgba(183, 0, 255, 1)`), hsla (`hsla(283, 100%, 50%, 1)`), [color keywords]을 사용할 수 있습니다. 이 옵션은 `color`가 true일 때만 동작합니다. |
 `end_color` | 종료 색상. 16진수 색상 (`#b700ff`), rgba (`rgba(183, 0, 255, 1)`), hsla (`hsla(283, 100%, 50%, 1)`), [color keywords]. 이 옵션은 `color`가 true일 때만 동작합니다. |
+`class` | Class name prefix of tags
+`level` | The number of different class names. This option only works when `class` is set. | 10
 
 ## Miscellaneous
 

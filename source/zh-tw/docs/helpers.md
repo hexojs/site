@@ -557,6 +557,8 @@ See [Rendering](https://hexo.io/zh-twapi/rendering) for more details.
 `color` | 使用顏色 | false
 `start_color` | 開始的顏色。您可使用十六進位值（`#b700ff`），rgba（`rgba(183, 0, 255, 1)`），hsla（`hsla(283, 100%, 50%, 1)`）或 [顏色關鍵字]。此選項僅在 `color` 設定開啟時才有用。 |
 `end_color` | 結束的顏色。您可使用十六進位值（`#b700ff`），rgba（`rgba(183, 0, 255, 1)`），hsla（`hsla(283, 100%, 50%, 1)`）或 [顏色關鍵字]。此選項僅在 `color` 設定開啟時才有用。 |
+`class` | 標籤的 class name prefix of tags
+`level` | 不同 class name 的總數。此選項僅在 `class` 設定時才有用。 | 10
 
 ## 其他
 
