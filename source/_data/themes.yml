@@ -256,15 +256,6 @@
     - life
     - 中文
 
-- name: zero
-  description: Just for fun
-  link: https://github.com/loveminimal/hexo-theme-zero
-  preview: https://blog.comecow.com/
-  tags:
-    - fast
-    - pure
-    - 中文
-
 - name: BMW
   description: BMW is not only clean but also very powerful theme
   link: https://github.com/dongyuanxin/theme-bmw
@@ -711,16 +702,6 @@
     - widget
     - two_columns
     - one_column
-- name: Ada
-  description: Ada is an concise theme
-  link: https://github.com/shuiRong/hexo-theme-Ada
-  preview: https://fervent-bell-d9130f.netlify.com/
-  tags:
-    - concise
-    - one_column
-    - white
-    - clean
-    - simple
 - name: phase
   description: Feel the flow of time with Phase
   link: https://github.com/hexojs/hexo-theme-phase
@@ -736,17 +717,6 @@
     - official
     - responsive
     - two_columns
-- name: NexT
-  description: NexT is an elegant and powerful theme
-  link: https://github.com/theme-next/hexo-theme-next
-  preview: https://theme-next.org
-  tags:
-    - responsive
-    - one_column
-    - two_columns
-    - clean
-    - white
-    - elegant
 - name: Icarus
   description: A simple, delicate, and modern theme
   link: https://github.com/ppoffice/hexo-theme-icarus
@@ -969,15 +939,6 @@
     - simple
     - responsive
     - two_columns
-- name: Very-Simple
-  description: A black/white theme for which tend to be simple and elegant
-  link: https://github.com/lotabout/very-simple
-  preview: http://lotabout.github.io/very-simple/
-  tags:
-    - white & black
-    - flexbox
-    - simple
-    - responsive
 - name: Corporate
   description: A professional theme based on the Corporate Frontend framework
   link: https://github.com/ptsteadman/hexo-theme-corporate
@@ -1039,17 +1000,6 @@
     - chinese
     - material
     - less
-- name: Simple
-  description: Simple & Fresh, written with jade & less
-  link: https://github.com/chuguixin/Simple
-  preview: http://jser.it
-  tags:
-    - simple
-    - fresh
-    - responsive
-    - jade
-    - less
-    - one_column
 - name: Primer
   description: Github Style Theme
   link: https://github.com/justpsvm/hexo-theme-primer
@@ -1284,13 +1234,6 @@
     - elegant
     - two_columns
     - white
-- name: wiki-i18n
-  description: A theme for i18n wiki site
-  link: https://github.com/xcatliu/hexo-theme-wiki-i18n
-  preview: http://js-index.com/
-  tags:
-    - wiki
-    - i18n
 - name: beautiful-hexo
   description: A simple responsive beautiful theme
   link: https://github.com/twoyao/beautiful-hexo
@@ -1586,17 +1529,6 @@
     - one_column
     - clean
     - tagscloud
-- name: pteris
-  description: A materialize and clean theme in nunjucks
-  link: https://github.com/jonashao/hexo-theme-pteris
-  preview: https://junnanhao.com
-  tags:
-    - materialize
-    - simple
-    - nunjucks
-    - clean
-    - responsive
-    - one_column
 - name: X'new
   description: X'new theme. Referred from https://github.com/sjaakvandenberg/flexy
   link: https://github.com/XadillaX/hexo-xnew
@@ -1840,17 +1772,6 @@
     - clean
     - two_columns
     - one_column
-- name: black-blue
-  description: A wonderful black theme
-  link: https://github.com/maochunguang/black-blue
-  preview: http://geeksblog.cc
-  tags:
-    - black
-    - responsive
-    - two_columns
-    - personality
-    - localsearch
-    - seo
 - name: artemis
   description: A minimalist theme inspired by Apollo, built with Pug and Sass
   link: https://github.com/Dreyer/hexo-theme-artemis
@@ -1987,18 +1908,6 @@
     - blog
     - two_columns
     - three_columns
-- name: Archer
-  description: A smart and modern theme
-  link: https://github.com/fi3ework/hexo-theme-archer
-  preview: https://fi3ework.github.io/archer-demo
-  tags:
-    - fast
-    - single_page
-    - sidebar
-    - responsive
-    - two_columns
-    - Chinese
-    - English
 - name: Replica
   description: A github style replication theme
   link: https://github.com/sabrinaluo/hexo-theme-replica
@@ -2076,18 +1985,6 @@
     - light
     - fast
     - disqus
-- name: artemisX
-  description: A simple theme based on artemis, add new feature and new style
-  link: https://github.com/wwwuxt/hexo-theme-artemisX
-  preview: http://wwwuxt.cc/
-  tags:
-    - simple
-    - responsive
-    - light
-    - blog
-    - fast
-    - long-term developing
-    - maintaining
 - name: Concise-theme
   description: A simple theme based on theme landscape
   link: https://github.com/Sanonz/hexo-theme-concise
@@ -2246,13 +2143,6 @@
     - simple
     - not responsive
     - Bulma css
-    - clean
-- name: Terminal
-  description: A simple and clean theme
-  link: https://github.com/lazysheep666/terminal_theme
-  preview: http://yanghaolan.cn
-  tags:
-    - simple
     - clean
 - name: Dev Dark
   description: A simple dark theme, responsive and light
@@ -2474,18 +2364,6 @@
     - 日本語
     - beautiful
     - scalable
-- name: Suka
-  description: A Modern and Simple Theme, with a lot of powerful features
-  link: https://theme.suka.moe
-  preview: https://theme.suka.moe/demo/
-  tags:
-    - modern
-    - simple
-    - powerful
-    - responsive
-    - minimalism
-    - clean
-    - one_column
 - name: ele
   description: An elegant theme for pure reading, thinking and writing
   link: https://github.com/voyax/hexo-theme-ele
