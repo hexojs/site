@@ -1,3 +1,15 @@
+- name: ILS
+  description: A simple and light theme for Hexo.
+  link: https://github.com/XPoet/hexo-theme-ils
+  preview: https://xpoet.cn/
+  tags:
+    - simple
+    - clean
+    - responsive
+    - card
+    - dark
+    - light
+    - 中文
 - name: LiveMyLife
   description: A simple and pure personal Theme for Hexo...
   link: https://github.com/V-Vincen/hexo-theme-livemylife
