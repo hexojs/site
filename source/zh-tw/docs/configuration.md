@@ -12,7 +12,7 @@ title: 配置
 `title` | 網站標題
 `subtitle` | 網站副標題
 `description` | 網站描述
-`keywords` | 網站的關鍵詞。使用半角逗號 `,` 分隔多個關鍵詞。
+`keywords` | 網站的關鍵詞。支援多個關鍵詞。
 `author` | 您的名字
 `language` | 網站使用的語言，參考 [2-lettter ISO-639-1 code](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes)，預設為 `en`
 `timezone` | 網站時區，Hexo 預設使用您電腦的時區，您可以在 [時區列表](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) 尋找適當的時區，例如 `America/New_York` 、 `Japan` 與 `UTC`

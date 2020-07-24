@@ -10,6 +10,7 @@ title: Конфигурация
 `title` | Название сайта
 `subtitle` | Подзаголовок сайта
 `description` | Описание сайта
+`keywords` | The keywords of your website. Supports multiple values.
 `author` | Ваше имя
 `language` | Язык сайта. Используйте [2-значный код ISO-639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes). По умолчанию: `en`.
 `timezone` | Временной пояс. Hexo использует настройки компьютера по умолчанию. Список доступных часовых поясов можно найти [здесь](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones). Несколько примеров: `America/New_York`, `Japan` и `UTC`.

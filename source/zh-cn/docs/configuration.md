@@ -12,7 +12,7 @@ title: 配置
 `title` | 网站标题
 `subtitle` | 网站副标题
 `description` | 网站描述
-`keywords` | 网站的关键词。使用半角逗号 `,` 分隔多个关键词。
+`keywords` | 网站的关键词。支援多个关键词。
 `author` | 您的名字
 `language` | 网站使用的语言。对于简体中文用户来说，使用不同的主题可能需要设置成不同的值，请参考你的主题的文档自行设置，常见的有 `zh-Hans`和 `zh-CN`。
 `timezone` | 网站时区。Hexo 默认使用您电脑的时区。请参考 [时区列表](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) 进行设置，如 `America/New_York`, `Japan`, 和 `UTC` 。一般的，对于中国大陆地区可以使用 `Asia/Shanghai`。
