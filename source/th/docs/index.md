@@ -23,7 +23,7 @@ hexo เป็นกรอบบล็อกท่ีรวดเร็ว เ�
 
 การติดตั้ง hexo เป็นเรื่องง่ายๆ แต่คุณต้องการติดตั้งบางสิ่งก่อน:
 
-- [Node.js](http://nodejs.org/) (Should be at least Node.js 8.10, recommends 10.0 or higher)
+- [Node.js](http://nodejs.org/) (Should be at least Node.js 10.13, recommends 12.0 or higher)
 - [Git](http://git-scm.com/)
 
 ถ้าคุณติดตั้งสองสิ่งนี้อยู่แล้วในคอม ขอแสดงความยินดี คุณจะติดตั้ง hexo ด้วย npm ได้อย่างนี้:
@@ -84,3 +84,21 @@ We recommend to use [Node Version Switcher](https://github.com/jasongin/nvs/) as
 ``` bash
 $ npm install -g hexo-cli
 ```
+
+### Minimum required Node.js version
+
+If you are stuck with older Node.js, you can consider installing a past version of Hexo.
+
+Please note we do not provide bugfixes to past versions of Hexo.
+
+We highly recommend to always install the [latest version](https://www.npmjs.com/package/hexo?activeTab=versions) of Hexo and the [recommended version](#Requirements) of Node.js, whenever possible.
+
+Hexo version | Minimum Node.js version
+--- | ---
+5.0+ | 10.13.0
+4.1 - 4.2 | 8.10
+4.0 | 8.6
+3.3 - 3.9 | 6.9
+3.2 - 3.3 | 0.12
+3.0 - 3.1 | 0.10 or iojs
+0.0.1 - 2.8 | 0.10
