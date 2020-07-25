@@ -23,7 +23,7 @@ Here is a quick explanation of those command lines:
 * start a local server to display this site
 
 With Chrome DevTools, Network tab, let's analyze the result:
-![Chrome DevTools, Network tab](minimalist/site1-devtools-network.png)
+{% asset_img site1-devtools-network.png Chrome DevTools, Network tab %}
 
 That's 12 requests, for a page without images. That's a bit too much for our site.
 
@@ -48,7 +48,7 @@ widgets:
 ```
 
 Let's check again the DevTools:
-![Chrome DevTools, Network tab](minimalist/site1-devtools-network smaller.png)
+{% asset_img "site1-devtools-network smaller.png" "Chrome DevTools, Network tab" %}
 Only 9 requests now, but still two JavaScripts, and a big banner, and no way to disable them
 
 It's time to pick a new them from the wonderful list of theme on [https://hexo.io/themes/](hexo.io/theme).
@@ -69,7 +69,7 @@ theme: minidyne
 ```
 
 Let's check the result:
-![Chrome DevTools, Network tab](minimalist/site1-devtools-network minidyne.png)
+{% asset_img "site1-devtools-network minidyne.png" "Chrome DevTools, Network tab" %}
 
 Not bad: only 3 requests (one HTML, one CSS &nd one favicon)
 Total size has gone from 379kb to 129kb
@@ -88,7 +88,7 @@ npm i hexo-uncss -P
 ```
 
 The result is a 9bk website!
-![Chrome DevTools, Network tab](minimalist/site1-devtools-network minidyne optimized.png)
+{% asset_img "site1-devtools-network minidyne optimized.png" "Chrome DevTools, Network tab" %}
 
 I believe we achieved our goal. There are a few caveat to with this new site theme:
 * The plugin uncss takes a very long time to generate. It depends upon the number of pages, but generally more than 30 seconds
