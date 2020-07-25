@@ -11,6 +11,7 @@ Configuração | Descrição
 `title` | O título do seu site
 `subtitle` | O subtítulo do seu site
 `description` | A descrição do seu site
+`keywords` | The keywords of your website. Supports multiple values.
 `author` | Seu nome
 `language` | O idioma do seu site. Use a [2-lettter ISO-639-1 code](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes). O padrão é `en`.
 `timezone` | O fuso horário do seu site. O Hexo usa a configuração do seu computador por padrão. Você pode encontrar a lista de fusos horários disponíveis [aqui](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones). Alguns exemplos são `America/New_York`, `Japan` e `UTC`.

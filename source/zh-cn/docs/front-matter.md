@@ -25,7 +25,6 @@ date: 2013/7/13 20:46:25
 `tags` | 标签（不适用于分页） |
 `categories` | 分类（不适用于分页）|
 `permalink` | 覆盖文章网址 |
-`keywords` | 仅用于 meta 标签和 Open Graph 的关键词（不推荐使用） |
 
 ## 分类和标签
 

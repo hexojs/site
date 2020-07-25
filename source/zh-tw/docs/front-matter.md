@@ -25,7 +25,6 @@ date: 2013/7/13 20:46:25
 `tags` | 標籤（不適用於分頁） |
 `categories` | 分類（不適用於分頁）|
 `permalink` | 覆蓋文章網址 |
-`keywords` | 僅用在 meta 和 Open Graph 的關鍵詞（不建議使用） |
 
 ### 分類和標籤
 
