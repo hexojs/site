@@ -46,6 +46,7 @@ api:
     filter: filter.html
     generator: generator.html
     helper: helper.html
+    injector: injector.html
     migrator: migrator.html
     processor: processor.html
     renderer: renderer.html

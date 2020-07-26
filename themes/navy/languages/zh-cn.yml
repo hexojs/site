@@ -69,6 +69,7 @@ sidebar:
     filter: 过滤器 (Filter)
     generator: 生成器 (Generator)
     helper: 辅助函数 (Helper)
+    injector: 注入器 (Injector)
     migrator: 迁移器 (Migrator)
     processor: 处理器 (Processor)
     renderer: 渲染引擎 (Renderer)

@@ -69,6 +69,7 @@ sidebar:
     filter: Фильтр
     generator: Генератор
     helper: Помошник
+    injector: Injector
     migrator: Мигратор
     processor: Обработчик
     renderer: Рендер

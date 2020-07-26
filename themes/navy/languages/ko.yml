@@ -67,6 +67,7 @@ sidebar:
     console: Console
     deployer: Deployer
     filter: Filter
+    injector: Injector
     generator: Generator
     helper: Helper
     migrator: Migrator
