@@ -586,6 +586,8 @@ Examples:
 `color` | Цветное облако тегов | false
 `start_color` | Стартовый цвет. Можно использовать hex (`#b700ff`), rgba (`rgba(183, 0, 255, 1)`), hsla (`hsla(283, 100%, 50%, 1)`) или [имена цветов]. Эта опция работает только если `color` установлен в `true`. |
 `end_color` | Конечный цвет. Можно использовать hex (`#b700ff`), rgba (`rgba(183, 0, 255, 1)`), hsla (`hsla(283, 100%, 50%, 1)`) или [имена цветов]. Эта опция работает только если `color` установлен в `true`. |
+`class` | Class name prefix of tags
+`level` | The number of different class names. This option only works when `class` is set. | 10
 
 ## Разное
 

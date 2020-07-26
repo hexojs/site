@@ -593,6 +593,8 @@ Opção | Descrição | Padrão
 `color` | Colorizar a nuvem de tags? | false
 `start_color` | Cor inicial. Você pode usar o padrão hexadecimal (`#b700ff`), rgba (`rgba(183, 0, 255, 1)`), hsla (`hsla(283, 100%, 50%, 1)`) ou [color keywords]. Esta opção só funciona quando `color` é `true`. |
 `end_color` | Cor final. Você pode usar o padrão hexadecimal (`#b700ff`), rgba (`rgba(183, 0, 255, 1)`), hsla (`hsla(283, 100%, 50%, 1)`) ou [color keywords]. Esta opção só funciona quando `color` é `true`. |
+`class` | Class name prefix of tags
+`level` | The number of different class names. This option only works when `class` is set. | 10
 
 ## Miscelânea
 
