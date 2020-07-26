@@ -48,6 +48,7 @@ sidebar:
     variables: Variables
     helpers: Assistants
     internationalization: Internationalisation (i18n)
+    syntax_highlight: Syntax Highlight
     plugins: Plugins
     miscellaneous: Divers
     troubleshooting: Dépannage
