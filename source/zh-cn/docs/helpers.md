@@ -605,10 +605,28 @@ See [Rendering](https://hexo.io/zh-cn/api/rendering) for more details.
 `show_count` | 显示每个标签的文章总数 | true
 `style` | 标签列表的显示方式。使用 `list` 以无序列表（unordered list）方式显示。 | list
 `separator` | 标签间的分隔符号。只有在 `style` 不是 `list` 时有用。 | ,
-`class` | 标签列表的 class 名称。 | tag
+`class` | Class name of tag list (string) or customize each tag's class (object, see below). | tag
 `transform` | 改变标签名称显示方法的函数。请查看 [list_categories](#list-categories) 中给出的例子 |
 `amount` | 要显示的标签数量（0 = 无限制） | 0
 `suffix` | 为链接添加前缀 | None
+
+Class advanced customization:
+
+Option | Description | Default
+--- | --- | ---
+`class.ul` | `<ul>` class name (only for style `list`) | `tag-list` (list style)
+`class.li` | `<li>` class name (only for style `list`) | `tag-list-item` (list style)
+`class.a` | `<a>` class name | `tag-list-link` (list style) `tag-link` (normal style)
+`class.count` | `<span>` class name where the tag counter is stored (only when `show_count` is `true`) | `tag-list-count` (list style) `tag-count` (normal style)
+
+Examples:
+
+```ejs
+<%- list_tags(site.tags, {class: 'classtest', style: false, separator: ' | '}) %>
+<%- list_tags(site.tags, {class: 'classtest', style: 'list'}) %>
+<%- list_tags(site.tags, {class: {ul: 'ululul', li: 'lilili', a: 'aaa', count: 'ccc'}, style: false, separator: ' | '}) %>
+<%- list_tags(site.tags, {class: {ul: 'ululul', li: 'lilili', a: 'aaa', count: 'ccc'}, style: 'list'}) %>
+```
 
 ### list_archives
 
