@@ -9,10 +9,13 @@ title: 變數
 `page` | 針對該頁面的資訊以及 front-matter 所設定的變數。
 `config` | 網站配置
 `theme` | 主題配置。繼承自網站配置。
-`_` (單底線) | [Lodash](https://lodash.com/  'Lodash') 函式庫
 `path` | 目前頁面的路徑（不含根路徑）
 `url` | 目前頁面的完整網址
 `env` | 環境變數
+
+{% note warn %}
+Lodash has been removed from global variables since Hexo 5.0.0. [You-Dont-Need-Lodash-Underscore](https://github.com/you-dont-need/You-Dont-Need-Lodash-Underscore) might be helpful for your migration.
+{% endnote %}
 
 ### 網站變數
 
@@ -84,5 +87,4 @@ title: 變數
 --- | ---
 `tag` | 標籤名稱
 
-[Lodash]: http://lodash.com/
 [Moment.js]: http://momentjs.com/
