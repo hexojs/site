@@ -210,7 +210,30 @@ content
 在文章中插入 Youtube 影片。
 
 ```
-{% youtube video_id %}
+{% youtube video_id [type] [cookie] %}
+```
+
+### Examples
+
+**影片**
+
+```
+{% youtube lJIrF4YjHfQ %}
+```
+
+**播放列表**
+
+```
+{% youtube PL9hW1uS6HUfscJ9DHkOSoOX45MjXduUxo 'playlist' %}
+```
+
+**隱私模式**
+
+禁止 YouTube cookie
+
+```
+{% youtube lJIrF4YjHfQ false %}
+{% youtube PL9hW1uS6HUfscJ9DHkOSoOX45MjXduUxo 'playlist' false %}
 ```
 
 ## Vimeo
