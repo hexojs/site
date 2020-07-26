@@ -2723,3 +2723,10 @@
     - card
     - crawl
     - spider
+- name: hexo-image-cloudflare
+  description: Use Cloudflare to cache images in Hexo
+  link: https://github.com/njzjz/hexo-image-cloudflare
+  tags:
+    - image
+    - cloudflare
+    - cdn
