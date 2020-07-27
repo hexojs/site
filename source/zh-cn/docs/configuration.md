@@ -116,7 +116,19 @@ Hexo 使用 [Moment.js](http://momentjs.com/) 来解析和显示时间。
 --- | --- | ---
 `date_format` | 日期格式 | `YYYY-MM-DD`
 `time_format` | 时间格式 | `HH:mm:ss`
-`use_date_for_updated` | 启用以后，如果 Front Matter 中没有指定 `updated`， [`post.updated`](/zh-cn/docs/variables#页面变量) 将会使用 `date` 的值而不是文件的创建时间。在 Git 工作流中这个选项会很有用 | `true`  
+`updated_option` | 当 Front Matter 中没有指定 [`updated`](/zh-cn/docs/variables#页面变量) 时 `updated` 的取值 | `mtime`
+
+{% note info updated_option %}
+`updated_option` 控制了当 Front Matter 中没有指定 `updated` 时，`updated` 如何取值：
+
+- `mtime`: 使用文件的最后修改时间。这是从 Hexo 3.0.0 开始的默认行为。
+- `date`: 使用 `date` 作为 `updated` 的值。可被用于 Git 工作流之中，因为使用 Git 管理站点时，文件的最后修改日期常常会发生改变
+- `empty`: 直接删除 `updated`。使用这一选项可能会导致大部分主题和插件无法正常工作。
+
+`use_date_for_updated` 选项已经被废弃，将会在下个重大版本发布时去除。请改为使用 `updated_option: 'date'`。
+{% endnote %}
+
+`use_date_for_updated` | 启用以后，如果 Front Matter 中没有指定 `updated`， [`post.updated`]() 将会使用 `date` 的值而不是文件的创建时间。在 Git 工作流中这个选项会很有用 | `true`  
 
 ## 分页
 

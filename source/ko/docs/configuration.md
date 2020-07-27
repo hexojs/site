@@ -84,7 +84,17 @@ Hexo는 날짜 처리 시 [Moment.js](http://momentjs.com/)를 사용합니다.
 --- | --- | ---
 `date_format` | 날짜 형식 | `YYYY-MM-DD`
 `time_format` | 시간 형식 | `HH:mm:ss`
-`use_date_for_updated` | Use the date of the post in [`post.updated`](/ko/docs/variables#페이지 변수) if no updated date is provided in the front-matter. Typically used with Git workflow | `true`
+`updated_option` | The [`updated`](/ko/docs/variables#페이지 변수) value to used when not provided in the front-matter | `mtime`
+
+{% note info updated_option %}
+`updated_option` controls the `updated` value when not provided in the front-matter:
+
+- `mtime`: Use file modification date as `updated`. It is the default behavior of Hexo since 3.0.0
+- `date`: Use `date` as `updated`. Typically used with Git workflow when file modification date could be different.
+- `empty`: Simply drop `updated` when not provided. May not be compatible with most themes and plugins.
+
+`use_date_for_updated` is deprecated and will be removed in next major version. Please use `updated_option: 'date'` instead.
+{% endnote %}
 
 ### Pagination
 
