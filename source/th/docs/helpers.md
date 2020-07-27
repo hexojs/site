@@ -529,9 +529,27 @@ Option | Description | Default
 `style` | Style to display the category list. `list` displays categories in an unordered list.  | list
 `separator` | Separator between categories. (Only works if `style` is not `list`) | ,
 `depth` | Levels of categories to be displayed. `0` displays all categories and child categories; `-1` is similar to `0` but displayed in flat; `1` displays only top level categories. | 0
-`class` | Class name of category list. | category
+`class` | Class name of tag list (string) or customize each tag's class (object, see below). | tag
 `transform` | The function that changes the display of category name. |
 `suffix` | Add a suffix to link. | None
+
+Class advanced customization:
+
+Option | Description | Default
+--- | --- | ---
+`class.ul` | `<ul>` class name (only for style `list`) | `tag-list` (list style)
+`class.li` | `<li>` class name (only for style `list`) | `tag-list-item` (list style)
+`class.a` | `<a>` class name | `tag-list-link` (list style) `tag-link` (normal style)
+`class.count` | `<span>` class name where the tag counter is stored (only when `show_count` is `true`) | `tag-list-count` (list style) `tag-count` (normal style)
+
+Examples:
+
+```ejs
+<%- list_tags(site.tags, {class: 'classtest', style: false, separator: ' | '}) %>
+<%- list_tags(site.tags, {class: 'classtest', style: 'list'}) %>
+<%- list_tags(site.tags, {class: {ul: 'ululul', li: 'lilili', a: 'aaa', count: 'ccc'}, style: false, separator: ' | '}) %>
+<%- list_tags(site.tags, {class: {ul: 'ululul', li: 'lilili', a: 'aaa', count: 'ccc'}, style: 'list'}) %>
+```
 
 ### list_tags
 
@@ -553,6 +571,24 @@ Option | Description | Default
 `transform` | The function that changes the display of tag name. |
 `amount` | The number of tags to display (0 = unlimited) | 0
 `suffix` | Add a suffix to link. | None
+
+Class advanced customization:
+
+Option | Description | Default
+--- | --- | ---
+`class.ul` | `<ul>` class name (only for style `list`) | `tag-list` (list style)
+`class.li` | `<li>` class name (only for style `list`) | `tag-list-item` (list style)
+`class.a` | `<a>` class name | `tag-list-link` (list style) `tag-link` (normal style)
+`class.count` | `<span>` class name where the tag counter is stored (only when `show_count` is `true`) | `tag-list-count` (list style) `tag-count` (normal style)
+
+Examples:
+
+```ejs
+<%- list_tags(site.tags, {class: 'classtest', style: false, separator: ' | '}) %>
+<%- list_tags(site.tags, {class: 'classtest', style: 'list'}) %>
+<%- list_tags(site.tags, {class: {ul: 'ululul', li: 'lilili', a: 'aaa', count: 'ccc'}, style: false, separator: ' | '}) %>
+<%- list_tags(site.tags, {class: {ul: 'ululul', li: 'lilili', a: 'aaa', count: 'ccc'}, style: 'list'}) %>
+```
 
 ### list_archives
 
@@ -610,6 +646,8 @@ Option | Description | Default
 `color` | Colorizes the tag cloud | false
 `start_color` | Start color. You can use hex (`#b700ff`), rgba (`rgba(183, 0, 255, 1)`), hsla (`hsla(283, 100%, 50%, 1)`) or [color keywords]. This option only works when `color` is true. |
 `end_color` | End color. You can use hex (`#b700ff`), rgba (`rgba(183, 0, 255, 1)`), hsla (`hsla(283, 100%, 50%, 1)`) or [color keywords]. This option only works when `color` is true. |
+`class` | Class name prefix of tags
+`level` | The number of different class names. This option only works when `class` is set. | 10
 
 ## Miscellaneous
 

@@ -116,7 +116,19 @@ Hexo 使用 [Moment.js](http://momentjs.com/) 来解析和显示时间。
 --- | --- | ---
 `date_format` | 日期格式 | `YYYY-MM-DD`
 `time_format` | 时间格式 | `HH:mm:ss`
-`use_date_for_updated` | 启用以后，如果 Front Matter 中没有指定 `updated`， [`post.updated`](/zh-cn/docs/variables#页面变量) 将会使用 `date` 的值而不是文件的创建时间。在 Git 工作流中这个选项会很有用 | `true`  
+`updated_option` | 当 Front Matter 中没有指定 [`updated`](/zh-cn/docs/variables#页面变量) 时 `updated` 的取值 | `mtime`
+
+{% note info updated_option %}
+`updated_option` 控制了当 Front Matter 中没有指定 `updated` 时，`updated` 如何取值：
+
+- `mtime`: 使用文件的最后修改时间。这是从 Hexo 3.0.0 开始的默认行为。
+- `date`: 使用 `date` 作为 `updated` 的值。可被用于 Git 工作流之中，因为使用 Git 管理站点时，文件的最后修改日期常常会发生改变
+- `empty`: 直接删除 `updated`。使用这一选项可能会导致大部分主题和插件无法正常工作。
+
+`use_date_for_updated` 选项已经被废弃，将会在下个重大版本发布时去除。请改为使用 `updated_option: 'date'`。
+{% endnote %}
+
+`use_date_for_updated` | 启用以后，如果 Front Matter 中没有指定 `updated`， [`post.updated`]() 将会使用 `date` 的值而不是文件的创建时间。在 Git 工作流中这个选项会很有用 | `true`  
 
 ## 分页
 
@@ -208,30 +220,85 @@ $ hexo generate --config custom.yml,custom2.json
 
 如果 `custom.yml` 中指定了 `foo: bar`，在 custom2.json 中指定了 `"foo": "dinosaur"`，那么在 `_multiconfig.yml` 中你会得到 `foo: dinosaur`。
 
-### 覆盖主题配置
+### 使用代替主题配置文件
 
 通常情况下，Hexo 主题是一个独立的项目，并拥有一个独立的 `_config.yml` 配置文件。
-你可以在站点的 `_config.yml` 配置文件中配置你的主题，这样你就不需要 fork 一份主题并维护主题独立的配置文件。
 
-以下是一个覆盖主题配置的例子：
+除了自行维护独立的主题配置文件，你也可以在其它地方对主题进行配置。
 
- ```yml
+**配置文件中的 `theme_config`**
+
+> 该特性自 Hexo 2.8.2 起提供
+
+```yml
 # _config.yml
+theme: "my-theme"
 theme_config:
   bio: "My awesome bio"
+  foo:
+    bar: 'a'
 ```
 
- ```yml
+```yml
 # themes/my-theme/_config.yml
 bio: "Some generic bio"
 logo: "a-cool-image.png"
+  foo:
+    baz: 'b'
 ```
 
 最终主题配置的输出是：
 
- ```json
+```json
 {
   bio: "My awesome bio",
-  logo: "a-cool-image.png"
+  logo: "a-cool-image.png",
+  foo: {
+    bar: "a",
+    baz: "b"
+  }
 }
 ```
+
+**独立的 `_config.[theme].yml` 文件**
+
+> 该特性自 Hexo 5.0.0 起提供
+
+独立的主题配置文件应放置于站点根目录下，支持 `yml` 或 `json` 格式。需要配置站点 `_config.yml` 文件中的 `theme` 以供 Hexo 寻找 `_config.[theme].yml` 文件。
+
+```yml
+# _config.yml
+theme: "my-theme"
+```
+
+```yml
+# _config.my-theme.yml
+bio: "My awesome bio"
+foo:
+  bar: 'a'
+```
+
+```yml
+# themes/my-theme/_config.yml
+bio: "Some generic bio"
+logo: "a-cool-image.png"
+  foo:
+    baz: 'b'
+```
+
+最终主题配置的输出是：
+
+```json
+{
+  bio: "My awesome bio",
+  logo: "a-cool-image.png",
+  foo: {
+    bar: "a",
+    baz: "b"
+  }
+}
+```
+
+{% note %}
+我们强烈建议你将所有的主题配置集中在一处。如果你不得不在多处配置你的主题，那么这些信息对你将会非常有用：Hexo 在合并主题配置时，Hexo 配置文件中的 `theme_config` 的优先级最高，其次是 `_config.[theme].yml` 文件，最后是位于主题目录下的 `_config.yml` 文件。
+{% endnote %}

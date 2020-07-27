@@ -9,10 +9,13 @@ title: 变量
 `page` | 针对该页面的内容以及 front-matter 中自定义的变量。 | `object`; 见 [页面变量](#页面变量)
 `config` | 网站配置 | `object` (站点的配置文件)
 `theme` | 主题配置。继承自网站配置。 | `object` (主题配置文件)
-`_` (单下划线) | [Lodash](https://lodash.com/  'Lodash') 函数库 | [Lodash](https://lodash.com/  'Lodash') 文档
 `path` | 当前页面的路径（不含根路径）| `string`
 `url` | 当前页面的完整网址 | `string`
 `env` | 环境变量 | ???
+
+{% note warn %}
+从 Hexo 5.0.0 开始，Lodash 已从全局变量中移除。迁移时 [You-Dont-Need-Lodash-Underscore](https://github.com/you-dont-need/You-Dont-Need-Lodash-Underscore) 或许能为你提供帮助。
+{% endnote %}
 
 ### 网站变量
 
@@ -90,5 +93,4 @@ title: 变量
 --- | --- | ---
 `page.tag` | 标签名称 | `string`
 
-[Lodash]: http://lodash.com/
 [Moment.js]: http://momentjs.com/

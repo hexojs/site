@@ -87,7 +87,17 @@ Hexo 使用 [Moment.js](http://momentjs.com/) 來解析和顯示時間。
 --- | --- | ---
 `date_format` | 日期格式 | `YYYY-MM-DD`
 `time_format` | 時間格式 | `HH:mm:ss`
-`use_date_for_updated` | Use the date of the post in [`post.updated`](/zh-tw/docs/variables#頁面變數) if no updated date is provided in the front-matter. Typically used with Git workflow | `true`
+`updated_option` | The [`updated`](/zh-tw/docs/variables#頁面變數) value to used when not provided in the front-matter | `mtime`
+
+{% note info updated_option %}
+`updated_option` controls the `updated` value when not provided in the front-matter:
+
+- `mtime`: Use file modification date as `updated`. It is the default behavior of Hexo since 3.0.0
+- `date`: Use `date` as `updated`. Typically used with Git workflow when file modification date could be different.
+- `empty`: Simply drop `updated` when not provided. May not be compatible with most themes and plugins.
+
+`use_date_for_updated` is deprecated and will be removed in next major version. Please use `updated_option: 'date'` instead.
+{% endnote %}
 
 ### 分頁
 
@@ -172,3 +182,87 @@ $ hexo server --config custom.yml,custom2.json
 使用多個配置檔會合併產生一個 `_multiconfig.yml`。當合併遇到衝突時，列在愈後面的檔案，有愈高的優先權。可以使用任意數量帶有任意層級物件的 JSON 或 YAML 檔。注意**檔案列表字串中不得有空白**。
 
 以前述的多個配置檔範例來說明，若 `custom.yml` 中有 `foo: bar`，且 `custom2.json` 中有 `"foo": "dinosaur"`，最終在 `_multiconfig.yml` 裡的將會是 `foo: dinosaur`。
+
+### Alternate Theme Config
+
+Hexo themes are independent projects, with separate `_config.yml` files.
+
+Instead of forking a theme, and maintaining a custom branch with your settings, you can configure it from somewhere else.
+
+**`theme_config` in site's primary configuration file**
+
+> Supported since Hexo 2.8.2
+
+```yml
+# _config.yml
+theme: "my-theme"
+theme_config:
+  bio: "My awesome bio"
+  foo:
+    bar: 'a'
+```
+
+```yml
+# themes/my-theme/_config.yml
+bio: "Some generic bio"
+logo: "a-cool-image.png"
+  foo:
+    baz: 'b'
+```
+
+Resulting in theme configuration:
+
+```json
+{
+  bio: "My awesome bio",
+  logo: "a-cool-image.png",
+  foo: {
+    bar: "a",
+    baz: "b"
+  }
+}
+```
+
+**dedicated `_config.[theme].yml` file**
+
+> Supported since Hexo 5.0.0
+
+The file should be placed in your site folder, both `yml` and `json` are supported. `theme` inside `_config.yml` must be configured for Hexo to read `_config.[theme].yml`
+
+```yml
+# _config.yml
+theme: "my-theme"
+```
+
+```yml
+# _config.my-theme.yml
+bio: "My awesome bio"
+foo:
+  bar: 'a'
+```
+
+```yml
+# themes/my-theme/_config.yml
+bio: "Some generic bio"
+logo: "a-cool-image.png"
+  foo:
+    baz: 'b'
+```
+
+Resulting in theme configuration:
+
+```json
+{
+  bio: "My awesome bio",
+  logo: "a-cool-image.png",
+  foo: {
+    bar: "a",
+    baz: "b"
+  }
+}
+```
+
+{% note %}
+We strongly recommends you to store your theme configuration in one place. But in case you have to store your theme configuration separately, those information is quite important: The `theme_config` inside site's primary configuration file has the highest priority during merging, then the dedicated theme configuration file, while the `_config.yml` file under the theme directory has the lowest priority.
+{% endnote %}
+

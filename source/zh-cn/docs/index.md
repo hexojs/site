@@ -18,7 +18,7 @@ Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 [Markdown](h
 
 安装 Hexo 相当简单，只需要先安装下列应用程序即可：
 
-- [Node.js](http://nodejs.org/) (Node.js 版本需不低于 8.10，建议使用 Node.js 10.0 及以上版本)
+- [Node.js](http://nodejs.org/) (Node.js 版本需不低于 10.13，建议使用 Node.js 12.0 及以上版本)
 - [Git](http://git-scm.com/)
 
 如果您的电脑中已经安装上述必备程序，那么恭喜您！你可以直接前往 [安装 Hexo](#安装-Hexo) 步骤。
@@ -85,4 +85,18 @@ $ npm install hexo
   ``` bash
   echo 'PATH="$PATH:./node_modules/.bin"' >> ~/.profile
   ```
+
+### Node.js 版本限制
+
+我们强烈建议永远安装最新版本的 Hexo，以及 [推荐的 Node.js 版本](#安装前提)。
+
+Hexo 版本 | 最低兼容 Node.js 版本
+--- | ---
+5.0+ | 10.13.0
+4.1 - 4.2 | 8.10
+4.0 | 8.6
+3.3 - 3.9 | 6.9
+3.2 - 3.3 | 0.12
+3.0 - 3.1 | 0.10 or iojs
+0.0.1 - 2.8 | 0.10
 

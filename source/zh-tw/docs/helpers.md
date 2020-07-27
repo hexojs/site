@@ -497,9 +497,28 @@ See [Rendering](https://hexo.io/zh-twapi/rendering) for more details.
 `show_count` | 顯示每個標籤的文章總數 | true
 `style` | 標籤列表的顯示方式。使用 `list` 以無序列表（unordered list）方式顯示。 | list
 `separator` | 標籤間的分隔符號。只有在 `style` 不是 `list` 時有用。 | ,
-`class` | 標籤列表的 class 名稱。 | tag
+`class` | Class name of tag list (string) or customize each tag's class (object, see below). | tag
 `transform` | 改變標籤名稱顯示方法的函數 | 
 `amount` | 要顯示的標籤數量（0 = 無限制） | 0
+`suffix` | Add a suffix to link. | None
+
+Class advanced customization:
+
+Option | Description | Default
+--- | --- | ---
+`class.ul` | `<ul>` class name (only for style `list`) | `tag-list` (list style)
+`class.li` | `<li>` class name (only for style `list`) | `tag-list-item` (list style)
+`class.a` | `<a>` class name | `tag-list-link` (list style) `tag-link` (normal style)
+`class.count` | `<span>` class name where the tag counter is stored (only when `show_count` is `true`) | `tag-list-count` (list style) `tag-count` (normal style)
+
+Examples:
+
+```ejs
+<%- list_tags(site.tags, {class: 'classtest', style: false, separator: ' | '}) %>
+<%- list_tags(site.tags, {class: 'classtest', style: 'list'}) %>
+<%- list_tags(site.tags, {class: {ul: 'ululul', li: 'lilili', a: 'aaa', count: 'ccc'}, style: false, separator: ' | '}) %>
+<%- list_tags(site.tags, {class: {ul: 'ululul', li: 'lilili', a: 'aaa', count: 'ccc'}, style: 'list'}) %>
+```
 
 ### list_archives
 
@@ -557,6 +576,8 @@ See [Rendering](https://hexo.io/zh-twapi/rendering) for more details.
 `color` | 使用顏色 | false
 `start_color` | 開始的顏色。您可使用十六進位值（`#b700ff`），rgba（`rgba(183, 0, 255, 1)`），hsla（`hsla(283, 100%, 50%, 1)`）或 [顏色關鍵字]。此選項僅在 `color` 設定開啟時才有用。 |
 `end_color` | 結束的顏色。您可使用十六進位值（`#b700ff`），rgba（`rgba(183, 0, 255, 1)`），hsla（`hsla(283, 100%, 50%, 1)`）或 [顏色關鍵字]。此選項僅在 `color` 設定開啟時才有用。 |
+`class` | 標籤的 class name prefix of tags
+`level` | 不同 class name 的總數。此選項僅在 `class` 設定時才有用。 | 10
 
 ## 其他
 
