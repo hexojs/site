@@ -61,3 +61,70 @@ hexo.extend.injector.register('body_end', () => {
 ```
 
 Above setup will inject `APlayer.min.css` (`<link>` tag) to the `</head>` of any page which layout is `music`, and `APlayer.min.js` (`<script>` tag) to the `</body>` of those pages. Also, `jquery.js` (`<script>` tag) will be injected to `</body>` of every page generated.
+
+## Accessing user configuration
+
+Use any of the following options:
+
+1.
+
+``` js
+const css = hexo.extend.helper.get('css');
+
+hexo.extend.injector.register('head_end', () => {
+  const { cssPath } = hexo.config.fooPlugin;
+  return css(cssPath);
+});
+```
+
+2.
+
+
+``` js index.js
+/* global hexo */
+
+hexo.extend.injector.register('head_end', require('./lib/inject').bind(hexo))
+```
+
+``` js lib/inject.js
+module.exports = function () {
+  const css = this.extend.helper.get('css');
+  const { cssPath } = this.config.fooPlugin;
+  return css(cssPath);
+}
+```
+
+``` js lib/inject.js
+function injectFn() {
+  const css = this.extend.helper.get('css');
+  const { cssPath } = this.config.fooPlugin;
+  return css(cssPath);
+}
+
+module.exports = injectFn;
+```
+
+3.
+
+``` js index.js
+/* global hexo */
+
+hexo.extend.injector.register('head_end', require('./lib/inject')(hexo))
+```
+
+``` js lib/inject.js
+module.exports = (hexo) => () => {
+  const { cssPath } = hexo.config.fooPlugin;
+  return css(cssPath);
+};
+```
+
+``` js lib/inject.js
+const injectFn = (hexo) => {
+  const css = hexo.extend.helper.get('css');
+  const { cssPath } = hexo.config.fooPlugin;
+  return css(cssPath);
+};
+
+module.exports = (hexo) => injectFn(hexo);
+```

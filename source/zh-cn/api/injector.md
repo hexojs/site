@@ -59,3 +59,70 @@ hexo.extend.injector.register('body_end', () => {
 ```
 
 上述代码将会把 `APlayer.min.css`（`<link>` 标签）和 `APlayer.min.js` （`<script>` 标签）注入到所有 layout 为 `music` 的页面的 `</head>` 和 `</body>` 之前，以及将 `jquery.js`（`<script>` 标签）注入到每一个生成的页面的 `</body>` 之前。
+
+## Accessing user configuration
+
+Use any of the following options:
+
+1.
+
+``` js
+const css = hexo.extend.helper.get('css');
+
+hexo.extend.injector.register('head_end', () => {
+  const { cssPath } = hexo.config.fooPlugin;
+  return css(cssPath);
+});
+```
+
+2.
+
+
+``` js index.js
+/* global hexo */
+
+hexo.extend.injector.register('head_end', require('./lib/inject').bind(hexo))
+```
+
+``` js lib/inject.js
+module.exports = function () {
+  const css = this.extend.helper.get('css');
+  const { cssPath } = this.config.fooPlugin;
+  return css(cssPath);
+}
+```
+
+``` js lib/inject.js
+function injectFn() {
+  const css = this.extend.helper.get('css');
+  const { cssPath } = this.config.fooPlugin;
+  return css(cssPath);
+}
+
+module.exports = injectFn;
+```
+
+3.
+
+``` js index.js
+/* global hexo */
+
+hexo.extend.injector.register('head_end', require('./lib/inject')(hexo))
+```
+
+``` js lib/inject.js
+module.exports = (hexo) => () => {
+  const { cssPath } = hexo.config.fooPlugin;
+  return css(cssPath);
+};
+```
+
+``` js lib/inject.js
+const injectFn = (hexo) => {
+  const css = hexo.extend.helper.get('css');
+  const { cssPath } = hexo.config.fooPlugin;
+  return css(cssPath);
+};
+
+module.exports = (hexo) => injectFn(hexo);
+```
