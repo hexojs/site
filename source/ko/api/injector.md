@@ -46,8 +46,8 @@ There are other internal functions, see [hexojs/hexo#4049](https://github.com/he
 ## Example
 
 ```js
-const css = hexo.extend.helper.get('css');
-const js = hexo.extend.helper.get('js');
+const css = hexo.extend.helper.get('css').bind(hexo);
+const js = hexo.extend.helper.get('js').bind(hexo);
 
 hexo.extend.injector.register('head_end', () => {
   return css('https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css');
@@ -69,7 +69,7 @@ Use any of the following options:
 1.
 
 ``` js
-const css = hexo.extend.helper.get('css');
+const css = hexo.extend.helper.get('css').bind(hexo);
 
 hexo.extend.injector.register('head_end', () => {
   const { cssPath } = hexo.config.fooPlugin;
@@ -114,7 +114,7 @@ hexo.extend.injector.register('head_end', require('./lib/inject')(hexo))
 
 ``` js lib/inject.js
 module.exports = (hexo) => () => {
-  const css = hexo.extend.helper.get('css');
+  const css = hexo.extend.helper.get('css').bind(hexo);
   const { cssPath } = hexo.config.fooPlugin;
   return css(cssPath);
 };
@@ -122,7 +122,7 @@ module.exports = (hexo) => () => {
 
 ``` js lib/inject.js
 const injectFn = (hexo) => {
-  const css = hexo.extend.helper.get('css');
+  const css = hexo.extend.helper.get('css').bind(hexo);
   const { cssPath } = hexo.config.fooPlugin;
   return css(cssPath);
 };
