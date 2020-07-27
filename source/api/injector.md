@@ -62,7 +62,6 @@ hexo.extend.injector.register('body_end', () => {
 
 Above setup will inject `APlayer.min.css` (`<link>` tag) to the `</head>` of any page which layout is `music`, and `APlayer.min.js` (`<script>` tag) to the `</body>` of those pages. Also, `jquery.js` (`<script>` tag) will be injected to `</body>` of every page generated.
 
-
 ## Accessing user configuration
 
 Use any of the following options:
@@ -115,6 +114,7 @@ hexo.extend.injector.register('head_end', require('./lib/inject')(hexo))
 
 ``` js lib/inject.js
 module.exports = (hexo) => () => {
+  const css = hexo.extend.helper.get('css');
   const { cssPath } = hexo.config.fooPlugin;
   return css(cssPath);
 };

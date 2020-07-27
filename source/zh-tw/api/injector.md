@@ -114,6 +114,7 @@ hexo.extend.injector.register('head_end', require('./lib/inject')(hexo))
 
 ``` js lib/inject.js
 module.exports = (hexo) => () => {
+  const css = hexo.extend.helper.get('css');
   const { cssPath } = hexo.config.fooPlugin;
   return css(cssPath);
 };
