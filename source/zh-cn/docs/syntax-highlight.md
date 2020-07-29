@@ -177,15 +177,15 @@ Prismjs 默认禁用。启用 Primejs 前应设置 `highlight.enable` 为 `false
 
 ### preprocess
 
-Hexo 内建的 primejs 支持浏览器端高亮（`preprocess` 设置为 `false`）和服务器端高亮（`preprocess` 设置为 `true`）两种方式。
+Hexo 内建的 Prismjs 支持浏览器端高亮（`preprocess` 设置为 `false`）和服务器端高亮（`preprocess` 设置为 `true`）两种方式。
 
-使用服务器端高亮时（`preprocess` 设置为 `true`），只需要在站点引入 primejs 的主题（CSS 样式表）即可；而使用浏览器端高亮时（`preprocess` 设置为 `false`），需要将 JavaScript 文件也引入。
+使用服务器端高亮时（`preprocess` 设置为 `true`），只需要在站点引入 Prismjs 的主题（CSS 样式表）即可；而使用浏览器端高亮时（`preprocess` 设置为 `false`），需要将 JavaScript 文件也引入。
 
 设计上 Prismjs 是在浏览器端使用的。因此，在服务器端高亮模式下只有部分插件可用：
 
 - [行号显示](https://prismjs.com/plugins/line-numbers/)：需要引入`prism-line-numbers.css`，无需引入`prism-line-numbers.js`。Hexo 将生成其所需的 HTML 代码格式。
 - [语言显示](https://prismjs.com/plugins/show-language/)：当代码块有标注语言时，Hexo 总会添加 `data-language` 标签。
-- Hexo 也支持其它不需要特殊 HTML 代码格式的 prism 插件，不过你需要引入它们的 JavaScript 文件。
+- Hexo 也支持其它不需要特殊 HTML 代码格式的 Prismjs 插件，不过你需要引入它们的 JavaScript 文件。
 
 `preprocess` 设置为 `false` 时所有 primejs 插件均可用。注意这么几件事：
 
@@ -201,7 +201,7 @@ Hexo 内建的 primejs 支持浏览器端高亮（`preprocess` 设置为 `false`
 
 用这里的值替换代码内的 tab (`\t`)，默认值是两个空格。
 
-## 其它的有用信息
+## 其它有用信息
 
 - [Highlight.js](https://highlightjs.readthedocs.io/en/latest/)
 - [PrismJS](https://prismjs.com/)
