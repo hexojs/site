@@ -130,11 +130,11 @@ Hexo 通过用 `<figure>` 和 `<table>` 包裹其代码块为其添加了行号�
 
 ### tab_replace
 
-用这里的值替换代码内的 tab (`\t`)，默认值是两个空格。
+用代码内的 tab (`\t`) 替换为给定值，默认值是两个空格。
 
 ### wrap
 
-为了支持行号显示，Hexo 将输出 _包裹_在了 `<figure>` 和 `<table>` 内部。如果要保持 `highlight.js` 原来的行为，你需要将 `line_number` 和 `wrap` **全部**关闭。
+为了支持行号显示，Hexo 将输出包裹在了 `<figure>` 和 `<table>` 内部。如果要保持 `highlight.js` 原来的行为，你需要将 `line_number` 和 `wrap` **全部**关闭。
 
 ```html
 <pre><code class="yaml">
@@ -199,7 +199,7 @@ PrismJS 主要是面向浏览器的。因此，在服务器端高亮模式下只
 
 ### tab_replace
 
-用这里的值替换代码内的 tab (`\t`)，默认值是两个空格。
+用代码内的 tab (`\t`) 替换为给定值，默认值是两个空格。
 
 ## 其它参考资料
 
