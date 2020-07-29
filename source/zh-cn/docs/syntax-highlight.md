@@ -56,7 +56,7 @@ prismjs:
   enable: false
 ```
 
-当 `highlight.enable` 和 `prismjs.enable` 均为 `false` 时，代码块输出的 HTML 由相应的渲染器控制。举个例子：[`marked.js`](https://github.com/markedjs/marked)（Hexo 的默认 Markdown 渲染器 [`hexo-renderer-marked`](https://github.com/hexojs/hexo-renderer-marked) 有用到它）会把语言加入 `<code>` 标签的 `class` 中：
+当 `highlight.enable` 和 `prismjs.enable` 均为 `false` 时，代码块输出的 HTML 由相应的渲染器控制。举个例子：[`marked.js`](https://github.com/markedjs/marked)（Hexo 的默认 Markdown 渲染器 [`hexo-renderer-marked`](https://github.com/hexojs/hexo-renderer-marked) 由此驱动）会把语言加入 `<code>` 标签的 `class` 中：
 
 ````markdown
 ​```yaml
