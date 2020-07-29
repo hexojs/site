@@ -16,6 +16,7 @@ title: Постоянные ссылки
 `:i_day` | День публикации поста (Без ведущего нуля)
 `:hour` | Published hour of posts (2-digit)
 `:minute` | Published minute of posts (2-digit)
+`:second` | Published second of posts (2-digit)
 `:title` | Имя файла
 `:id` | ID поста (_not persistent across [cache reset](/ru/docs/commands#clean)_)
 `:category` | Категории. Если категория поста не указана, возьмётся значение по умолчанию из `default_category`.

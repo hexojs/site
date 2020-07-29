@@ -17,6 +17,7 @@ Variable | Description
 `:i_day` | Published day of posts (Without leading zeros)
 `:hour` | Published hour of posts (2-digit)
 `:minute` | Published minute of posts (2-digit)
+`:second` | Published second of posts (2-digit)
 `:title` | Filename
 `:post_title` | Post title
 `:id` | Post ID (_not persistent across [cache reset](/th/docs/commands#clean)_)
