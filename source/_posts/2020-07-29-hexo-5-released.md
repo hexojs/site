@@ -20,11 +20,19 @@ To upgrade to Hexo v5, change the following line in your package.json,
 - refactor(external_link): migrate config during load_config [@SukkaW] [#4414] [#4371]
   * See [Writing](https://hexo.io/docs/configuration#Writing) section for new options (introduced back in v4)
   ``` yml _config.yml
-  external_link: true|false # deprecated
+  # Deprecated
+  external_link: true|false
 
   # New option
   external_link:
     enable: true|false
+
+  # Deprecated
+  use_date_for_updated: true
+
+  # New option
+  # https://hexo.io/docs/configuration#Date-Time-format
+  updated_option: date
   ```
 
   * If you check `external_link` for [truthy](https://developer.mozilla.org/en-US/docs/Glossary/Truthy) value, since it's now automatically converted to object, it will always be truthy:
