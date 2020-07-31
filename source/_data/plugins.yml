@@ -2738,3 +2738,9 @@
     - tag
     - calendar
     - echarts
+- name: hexo-patch-load-highlight-style
+  description: Auto load hexo highlight style, support highlight and prismjs
+  link: https://github.com/jiangtj-lab/hexo-patch-load-highlight-style
+  tags:
+    - highlight
+    - prismjs

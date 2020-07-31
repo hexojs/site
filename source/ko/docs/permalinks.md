@@ -16,6 +16,7 @@ title: Permalinks
 `:i_day` | 포스트를 배포한 날 (앞에 붙는 0은 생략)
 `:hour` | Published hour of posts (2-digit)
 `:minute` | Published minute of posts (2-digit)
+`:second` | Published second of posts (2-digit)
 `:title` | 파일명
 `:id` | 포스트 ID (_not persistent across [cache reset](/ko/docs/commands#clean)_)
 `:category` | 포스트가 속한 카테고리. 지정하지 않으면 `default_category` 값을 사용합니다.

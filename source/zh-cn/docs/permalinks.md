@@ -16,6 +16,7 @@ title: 永久链接（Permalinks）
 `:i_day` | 文章的发表日期（去掉开头的零）
 `:hour` | 文章发表时的小时 (2 位数)
 `:minute` | 文章发表时的分钟 (2 位数)
+`:second` | 文章发表时的秒钟 (2 位数)
 `:title` | 文件名称
 `:post_title` | 文章标题
 `:id` | 文章 ID (_not persistent across [cache reset](/zh-cn/docs/commands#clean)_)
