@@ -2709,13 +2709,13 @@
     - prism
     - katex
     - mermaid
-    - pangu    
+    - pangu
     - minify
     - html-minifier
     - uglify
     - clean-css
 - name: hexo-douban-card
-  description: generate a douban book(movie/music) card in hexo post 
+  description: generate a douban book(movie/music) card in hexo post
   link: https://github.com/TankNee/hexo-douban-card
   tags:
     - douban
@@ -2730,6 +2730,14 @@
     - image
     - cloudflare
     - cdn
+- name: hexo-calendar
+  description: Insert a calendar like Github contributions into your blog. | 在博客中插入类似 Github contributions 的活动日历。
+  link: https://github.com/HCLonely/hexo-calendar
+  tags:
+    - helper
+    - tag
+    - calendar
+    - echarts
 - name: hexo-patch-load-highlight-style
   description: Auto load hexo highlight style, support highlight and prismjs
   link: https://github.com/jiangtj-lab/hexo-patch-load-highlight-style
