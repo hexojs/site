@@ -12,49 +12,30 @@ In this tutorial, we use [Travis CI](https://travis-ci.com/) to deploy Github Pa
 6. On a new tab, generate a [new token](https://github.com/settings/tokens) with **repo** scopes. Note down the token value.
 7. On the Travis page, go to your repo's setting. Under **Environment Variables**, put **GH_TOKEN** as name and paste the token onto value. Click Add to save it.
 8. Add `.travis.yml` file to your repo (alongside _config.yml & package.json) with the following content:
-```yml
-sudo: false
+
+``` yml .travis.yml
 language: node_js
 node_js:
-  - 10 # use nodejs v10 LTS
-cache: npm
+  - 12 # use nodejs v12 LTS
+cache:
+  npm: true
 branches:
   only:
     - master # build master branch only
+    # - hexo-source # build 'hexo-source' branch
 script:
   - hexo generate # generate static files
 deploy:
   provider: pages
-  skip-cleanup: true
-  github-token: $GH_TOKEN
-  keep-history: true
+  skip_cleanup: true
+  github_token: $GH_TOKEN
+  keep_history: true
   on:
-    branch: master
-  local-dir: public
+    branch: master # build master branch
+    # branch: hexo-source # build 'hexo-source' branch
+  # target_branch: pages # defaults to gh-pages
+  local_dir: public
 ```
-Note that if you want to customise the source branch and the target branch. You could do as followings:
-```yml
-sudo: false
-language: node_js
-node_js:
-  - 10 # use nodejs v10 LTS
-cache: npm
-branches:
-  only:
-    - hexo-source # <- the branch where your source codes are
-script:
-  - hexo generate
-deploy:
-  provider: pages
-  skip-cleanup: true
-  github-token: $GH_TOKEN
-  keep-history: true
-  target_branch：master # <- the branch where your generated static files go
-  on:
-    branch: hexo-source # <- the branch where your source codes are
-  local-dir: public
-```
-
 
 9. Once Travis CI finish the deployment, the generated pages can be found in the `gh-pages` branch of your repository
 10. In your GitHub repo's setting, navigate to "GitHub Pages" section and change Source to **gh-pages branch**.
