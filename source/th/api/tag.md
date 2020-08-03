@@ -13,6 +13,27 @@ hexo.extend.tag.register(name, function(args, content){
 
 argument ทั้งหมดสองตัวจะส่งเข้า function แท็ก: `args` และ `content`     `args` เป็น argument ท่ีส่งเข้าปลั๊กอินแท็กและ `content` เป็นเนื้อหาท่ีอยู่ในปลั๊กอินแท็ก จากคำแนะนำของ asynchronous rendering ใน hexo 3 รู้ได้ว่า hexo ใช้  [Nunjucks] เพื่อ rendering ซึ่งแตกต่างจาก rendering ใน [Swig]
 
+## Unregister Tags
+
+Use `unregister()` to replace existing [tag plugins](/docs/tag-plugins) with custom functions.
+
+``` js
+hexo.extend.tag.unregister(name);
+```
+
+**Example**
+
+``` js
+const tagFn = (args, content) => {
+  content = 'something';
+  return content;
+};
+
+// https://hexo.io/docs/tag-plugins#YouTube
+hexo.extend.tag.unregister('youtube');
+
+hexo.extend.tag.register('youtube', tagFn);
+```
 
 ## Options
 

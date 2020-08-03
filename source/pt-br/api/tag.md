@@ -16,6 +16,28 @@ Dois argumentos serão passados para dentro da função: `args` e `content`. `ar
 
 Desde a introdução da renderização assíncrona, na versão 3 do Hexo, estamos usando o [Nunjucks] para renderização. O comportamento pode ser um pouco diferente do [Swig].
 
+## Unregister Tags
+
+Use `unregister()` to replace existing [tag plugins](/docs/tag-plugins) with custom functions.
+
+``` js
+hexo.extend.tag.unregister(name);
+```
+
+**Example**
+
+``` js
+const tagFn = (args, content) => {
+  content = 'something';
+  return content;
+};
+
+// https://hexo.io/docs/tag-plugins#YouTube
+hexo.extend.tag.unregister('youtube');
+
+hexo.extend.tag.register('youtube', tagFn);
+```
+
 ## Opções
 
 ### ends

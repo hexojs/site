@@ -15,6 +15,28 @@ hexo.extend.tag.register(name, function(args, content){
 
 Hexo 3에서 비동기 렌더링을 도입한 이후, 우리는 렌더링을 위해 [Nunjucks]를 사용합니다. 이 동작은 [Swig]과는 조금 다를 수 있습니다.
 
+## Unregister Tags
+
+Use `unregister()` to replace existing [tag plugins](/docs/tag-plugins) with custom functions.
+
+``` js
+hexo.extend.tag.unregister(name);
+```
+
+**Example**
+
+``` js
+const tagFn = (args, content) => {
+  content = 'something';
+  return content;
+};
+
+// https://hexo.io/docs/tag-plugins#YouTube
+hexo.extend.tag.unregister('youtube');
+
+hexo.extend.tag.register('youtube', tagFn);
+```
+
 ## 옵션
 
 ### ends
