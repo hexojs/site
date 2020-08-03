@@ -1,12 +1,12 @@
 ---
-title: Syntax Highlighting
+title: 代码高亮
 ---
 
-Hexo has two built-in syntax highlight libraries, [highlight.js](https://github.com/highlightjs/highlight.js) and [prismjs](https://github.com/PrismJS/prism). This tutorial shows you how to integrate Hexo's built-in syntax highlight into your template.
+Hexo 对 [highlight.js](https://github.com/highlightjs/highlight.js) 与 [prismjs](https://github.com/PrismJS/prism) 两种代码高亮库提供内建支持。本篇教程将展示如何将 Hexo 的内建语法高亮组件整合至你的模板中。
 
-## How to use code block in posts
+## 如何在文章中插入代码块
 
-Hexo supports two ways to write code block: [Tag Plugin - Code Block](tag-plugins#Code-Block) and [Tag Plugin - Backtick Code Block](https://hexo.io/docs/tag-plugins#Backtick-Code-Block):
+Hexo 支持两种代码块写法——[代码块标签插件](tag-plugins#代码块)和[反引号代码块标签插件](tag-plugins#反引号代码块)：
 
 ````markdown
 {% codeblock [title] [lang:language] [url] [link text] [additional options] %}
@@ -17,18 +17,18 @@ code snippet
 code snippet
 {% endcode %}
 
-``` [language] [title] [url] [link text] [additional options]
+​``` [language] [title] [url] [link text] [additional options]
 code snippet
 ```
 ````
 
-The third syntax is a Markdown's fenced code block syntax and Hexo extends it to support more features. Check out [Tag Plugin Docs](tag-plugins#Code-Block) to find out options available.
+上面的第三种是 Markdown 的 fenced code block 语法。Hexo 对其进行了扩展，使其支持更多特性。在[标签插件文档](tag-plugins#代码块)中你可以找到可用的选项。
 
-> Tip: Hexo support posts written in any format, so long the corresponding renderer plugin is installed. It can be in markdown, ejs, swig, nunjucks, pug, asciidoc, etc. Regardless of the format used, those three code block syntax will always be available.
+> 提示：Hexo 支持用任何格式书写文章，只需安装相应渲染插件即可。不论文章以何种格式书写（Markdown、EJS、Swig、Nunjuck、Pug、ASCIIDoc），上述三种代码块语法总是可用。
 
-## Configuration
+## 配置
 
-```yaml
+​```yaml
 # _config.yml
 highlight:
   enable: true
@@ -44,9 +44,9 @@ prismjs:
   tab_replace: ''
 ```
 
-The YAML above is Hexo's default configuration.
+以上为 Hexo 的默认配置。
 
-## Disabled
+## 禁用
 
 ```yaml
 # _config.yml
@@ -56,21 +56,21 @@ prismjs:
   enable: false
 ```
 
-When both `highlight.enable` and `prismjs.enable` are `false`, the output HTML of the code block is controlled by the corresponding renderer. For example, [`marked.js`](https://github.com/markedjs/marked) (used by [`hexo-renderer-marked`](https://github.com/hexojs/hexo-renderer-marked), the default markdown renderer of Hexo) will add the language code to the `class` of `<code>`:
+当 `highlight.enable` 和 `prismjs.enable` 均为 `false` 时，代码块输出的 HTML 由相应的渲染器控制。举个例子：[`marked.js`](https://github.com/markedjs/marked)（Hexo 的默认 Markdown 渲染器 [`hexo-renderer-marked`](https://github.com/hexojs/hexo-renderer-marked) 由此驱动）会把语言加入 `<code>` 标签的 `class` 中：
 
 ````markdown
-```yaml
+​```yaml
 hello: hexo
 ```
 ````
 
-```html
+​```html
 <pre>
   <code class="yaml">hello: hexo</code>
 </pre>
 ```
 
-When no built-in syntax highlight is enabled, you can either install third-party syntax-highlight plugin, or use a browser-side syntax hilighter (e.g. `highlight.js` and `prism.js` both support running in browser).
+如果内建语法高亮器均未启用，你可以安装第三方语法高亮插件，也可以使用浏览器端的语法高亮库（例如 `highlight.js` 和 `prism.js` 也都支持在浏览器中运行）。
 
 ## Highlight.js
 
@@ -87,25 +87,25 @@ prismjs:
   enable: false
 ```
 
-`highlight.js` is enabled by default and used as server-side highlighting in Hexo; it needs to be disabled if you prefer to run `highlight.js` on browser-side.
+`highlight.js` 默认开启，用作 Hexo 的服务端高亮组件。如果你需要在浏览器端运行 `highlight.js`，请把它关闭。
 
-> Server-side means, the syntax highlight is generated during `hexo generate` or `hexo server`.
+> 「服务端高亮」指语法高亮在 `hexo generate` 或 `hexo server` 时完成。
 
 ### auto_detect
 
-`auto_detect` is a `highlight.js` feature that detect language of the code block automatically.
+`auto_detect` 是 `highlight.js` 的特性，能够自动检测代码块的语言。
 
-> Tip: When you want to use "sublanguage highlight", enable `auto_detect` and don't mark language when writing code block.
+> 提示：如果你想使用「子语言高亮」功能（例如在高亮 HTML 时同时高亮内部嵌入的 JavaScript 代码），请开启 `auto_detect`，并且在文章中插入代码块时不要标注语言。
 
-{% note warn "Warning!" %}
-`auto_detect` is very resource-intensive. Do not enable it unless you really need "sublanguage highlight" or prefer not to mark language when writing code block.
+{% note warn "警告！" %}
+`auto_detect` 十分耗费资源。 如果你不需要使用「子语言高亮」功能，或者不介意在书写代码块时标记语言，请不要启用此功能。
 {% endnote %}
 
 ### line_number
 
-`highlight.js` [does not](https://highlightjs.readthedocs.io/en/latest/line-numbers.html) support line number.
+`highlight.js` [不支持](https://highlightjs.readthedocs.io/en/latest/line-numbers.html)行号显示。
 
-Hexo adds line number by wrapping output inside `<figure>` and `<table>`:
+Hexo 通过用 `<figure>` 和 `<table>` 包裹其代码块为其添加了行号显示支持:
 
 ```html
 <figure class="highlight yaml">
@@ -124,17 +124,17 @@ Hexo adds line number by wrapping output inside `<figure>` and `<table>`:
 </figure>
 ```
 
-It is not the behavior of `highlight.js` and requires custom CSS for `<figure>` and `<table>` elements; some themes have built-in support.
+这不是 `highlight.js` 的行为，因此需要为 `<figure>` 和 `<table>` 添加自定义 CSS 代码。部分主题对此提供内建支持。
 
-You might also notice that all `class` has no `hljs-` prefixed, we will revisit it [later part](#hljs).
+你大概也注意到了，所有代码块的 `class` 都没有 `hljs-` 前缀。我们 [为此专门准备了一个章节](#hljs)。
 
 ### tab_replace
 
-Replace tabs inside code block with given string. By default it is 2 spaces.
+用代码内的 tab (`\t`) 替换为给定值，默认值是两个空格。
 
 ### wrap
 
-Hexo _wraps_ the output inside `<figure>` and `<table>` to support line number. You need to disable **both** `line_number` and `wrap` to revert to `highlight.js`'s behavior:
+为了支持行号显示，Hexo 将输出包裹在了 `<figure>` 和 `<table>` 内部。如果要保持 `highlight.js` 原来的行为，你需要将 `line_number` 和 `wrap` **全部**关闭。
 
 ```html
 <pre><code class="yaml">
@@ -143,13 +143,13 @@ Hexo _wraps_ the output inside `<figure>` and `<table>` to support line number. 
 </code></pre>
 ```
 
-{% note warn "Warning!" %}
-Because `line_number` feature relies on `wrap`, you can't disable `wrap` with `line_number` enabled: If you set `line_number` to `true`, `wrap` will be automatically enabled.
+{% note warn "警告！" %}
+因为 `line_number` 功能依赖 `wrap`，你无法在配置中关闭 `wrap` 而又开启 `line_number`。如果你将 `line_number` 设置为 `true` 的话，`wrap` 将被自动开启。
 {% endnote %}
 
 ### hljs
 
-When `hljs` is set to `true`, all the HTML output will have `class` prefixed with `hljs-` (regardless `wrap` is enabled or not):
+当 `hljs` 设置为 `true` 时，所有代码块的 HTML 输出均会给 `class` 添加 `hljs-` 前缀（无论 `wrap` 是否开启）：
 
 ```html
 <pre><code class="yaml hljs">
@@ -158,7 +158,7 @@ When `hljs` is set to `true`, all the HTML output will have `class` prefixed wit
 </code></pre>
 ```
 
-> Tip: When `line_number` is set to `false`, `wrap` is set to false and `hljs` is set to `true`, you can then use `highlight.js` [theme](https://github.com/highlightjs/highlight.js/tree/master/src/styles) directly in your site.
+> 提示：当 `line_number` 和 `wrap` 为 `false`，`hljs` 为 `true` 的时候，你可以在站点上直接应用 `highlight.js` 的[主题](https://github.com/highlightjs/highlight.js/tree/master/src/styles)。
 
 ## PrismJS
 
@@ -173,42 +173,42 @@ prismjs:
   tab_replace: ''
 ```
 
-Prismjs is disabled by default. You should set `highlight.enable` to `false` before enabling prismjs.
+PrismJS 默认禁用。启用 PrimeJS 前应设置 `highlight.enable` 为 `false`。
 
 ### preprocess
 
-Hexo's built-in prismjs supports both browser-side (`preprocess` set to `false`) and server-side (`preprocess` set to `true`).
+Hexo 内建的 PrismJS 支持浏览器端高亮（`preprocess` 设置为 `false`）和服务器端高亮（`preprocess` 设置为 `true`）两种方式。
 
-When use server-side mode (set `preprocess` to `true`), you only need to include prismjs theme (css stylesheet) in your website. When use browser-side (set `preprocess` to `false`), you have to include the javascript library as well.
+使用服务器端高亮时（`preprocess` 设置为 `true`），只需要在站点引入 Prismjs 的主题（CSS 样式表）即可；而使用浏览器端高亮时（`preprocess` 设置为 `false`），需要将 JavaScript 文件也引入。
 
-Prismjs is designed to be used in browser, thus under `preprocess` mode only limited prismjs plugin is supported:
+PrismJS 主要是面向浏览器的。因此，在服务器端高亮模式下只有部分插件可用：
 
-- [Line Numbers](https://prismjs.com/plugins/line-numbers/): Only `prism-line-numbers.css` is required, No need to include `prism-line-numbers.js` in your website. Hexo will generate required HTML mark up mark up for you.
-- [Show Languages](https://prismjs.com/plugins/show-language/): Hexo will always have `data-language` attribute added as long as language is given for the code block.
-- Any other prism plugins that don't need special HTML markup are supported as well, but you will have to include JavaScript required by those plugins.
+- [行号显示](https://prismjs.com/plugins/line-numbers/)：需要引入`prism-line-numbers.css`，无需引入`prism-line-numbers.js`。Hexo 将生成其所需的 HTML 代码片段。
+- [语言显示](https://prismjs.com/plugins/show-language/)：当代码块有标注语言时，Hexo 总会添加 `data-language` 属性。
+- Hexo 也支持其它不需要特殊 HTML 代码格式的 PrismJS 插件，不过你需要引入它们的 JavaScript 文件。
 
-All prism plugins are supported if `preprocess` is set to `false`. Here are a few things you should still pay attention to:
+`preprocess` 设置为 `false` 时所有 primejs 插件均可用，只需额外注意以下几点：
 
-- [Line Numbers](https://prismjs.com/plugins/line-numbers/): Hexo won't generate required HTML mark up when `preprocess` is set to `false`. Requires both `prism-line-numbers.css` and `prism-line-numbers.js`.
-- [Show Languages](https://prismjs.com/plugins/show-language/): Hexo will always have `data-language` attribute added as long as language is given for the code block.
-- [Line Highlight](https://prismjs.com/plugins/line-highlight/): Both Hexo [Tag Plugin - Code Block](tag-plugins#Code-Block) and [Tag Plugin - Backtick Code Block](https://hexo.io/docs/tag-plugins#Backtick-Code-Block) supports Line Highlight syntax (`mark` option). When `mark` option is given, Hexo will generate the corresponding HTML markup.
+- [行号显示](https://prismjs.com/plugins/line-numbers/)：当 `preprocess` 设置为 `false` 时，Hexo 不会生成插件所需的 HTML 代码格式。`prism-line-numbers.css` 和 `prism-line-numbers.js`均需被引入。
+- [语言显示](https://prismjs.com/plugins/show-language/)：当代码块有标注语言时，Hexo 总会添加 `data-language` 属性。
+- [高亮特定行](https://prismjs.com/plugins/line-highlight/): Hexo 的[代码块标签插件](tag-plugins#代码块)和[反引号代码块标签插件](tag-plugins#反引号代码块)都支持高亮特定行的语法（即 `mark` 选项）。当 `mark` 项被设置时，Hexo 将生成其所需的 HTML 代码格式。
 
 ### line_number
 
-With both `preprocess` and `line_number` set to `true`, you just need to include `prism-line-numbers.css` to make line-numbering work. If you set both `preprocess` and `line_number` to false, you will need both `prism-line-numbers.css` and `prism-line-numbers.js`.
+当 `preprocess` 与 `line_number` 均设置为 `true` 时，只需要引入 `prism-line-numbers.css` 即可启用行号显示。如果 `preprocess` 和 `line_number` 均被关闭，则需要将 `prism-line-numbers.css` 和 `prism-line-numbers.js` 都引入才能启用行号显示。
 
 ### tab_replace
 
-Replace `\t` inside code block with given string. By default it is 2 spaces.
+用代码内的 tab (`\t`) 替换为给定值，默认值是两个空格。
 
-## Other useful information
+## 其它参考资料
 
 - [Highlight.js](https://highlightjs.readthedocs.io/en/latest/)
 - [PrismJS](https://prismjs.com/)
 
-The source codes behind Hexo's syntax highlighting are available in:
+Hexo 语法高亮部分的源码可参见：
 
-- [Highlight.js Utility Functions](https://github.com/hexojs/hexo-util/blob/master/lib/highlight.js)
-- [PrismJS Utility Functions](https://github.com/hexojs/hexo-util/blob/master/lib/prism.js)
-- [Tag Plugin - Code Block](https://github.com/hexojs/hexo/blob/master/lib/plugins/tag/code.js)
-- [Tag Plugin - Backtick Code Block](https://github.com/hexojs/hexo/blob/master/lib/plugins/filter/before_post_render/backtick_code_block.js)
+- [Highlight.js 工具函数](https://github.com/hexojs/hexo-util/blob/master/lib/highlight.js)
+- [PrismJS 工具函数](https://github.com/hexojs/hexo-util/blob/master/lib/prism.js)
+- [代码块标签插件](https://github.com/hexojs/hexo/blob/master/lib/plugins/tag/code.js)
+- [反引号代码块标签插件](https://github.com/hexojs/hexo/blob/master/lib/plugins/filter/before_post_render/backtick_code_block.js)
