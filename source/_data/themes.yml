@@ -3318,3 +3318,15 @@
     - widgets
     - responsive
     - dark/light
+- name: Kaze
+  description: A simple, responsive and modern Hexo theme
+  link: https://github.com/theme-kaze/hexo-theme-Kaze
+  preview: https://demo.theme-kaze.top
+  tags:
+    - simple
+    - widgets
+    - dark-mode
+    - responsive
+    - modern
+    - elegant
+    - 中文
