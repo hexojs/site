@@ -5,12 +5,29 @@ title: GitHub Pages
 In this tutorial, we use [GitHub Actions](https://docs.github.com/en/actions) to deploy Github Pages. It works in both public and private repository. Skip to the [One-command deployment](#One-command-deployment) section if you prefer not to upload your source folder to GitHub.
 
 1. Create a repo named <b>*username*.github.io</b>, where username is your username on GitHub. If you have already uploaded to other repo, rename the repo instead.
-2. Push the files of your Hexo folder to the **`source` branch** of your repository. The `public/` folder is not (and should not be) uploaded by default, make sure the `.gitignore` file contains `public/` line. The folder structure should be roughly similar to [this repo](https://github.com/hexojs/hexo-starter), without the `.gitmodules` file.
-  - To push to `source` branch:
+2. Add the following *highlighted* lines to `package.json`: (skip this step if there are existing lines)
+
+{% codeblock lang:json mark:2-4 %}
+{
+  "scripts": {
+    "build": "hexo generate"
+  },
+  "hexo": {
+    "version": "5.0.0"
+  },
+  "dependencies": {
+    "hexo": "^5.0.0",
+    ...
+  }
+}
+{% endcodeblock %}
+
+3. Push the files of your Hexo folder to the **`source` branch** of your repository. The `public/` folder is not (and should not be) uploaded by default, make sure the `.gitignore` file contains `public/` line. The folder structure should be roughly similar to [this repo](https://github.com/hexojs/hexo-starter), without the `.gitmodules` file.
+  - To push `source` to GitHub:
   ```
   $ git push origin source
   ```
-3. Add `.github/workflows/pages.yml` file to your repo with the following content:
+4. Add `.github/workflows/pages.yml` file to your repo with the following content:
 
 ```yml .github/workflows/pages.yml
 name: Pages
@@ -48,9 +65,9 @@ jobs:
           publish_branch: master  # deploying branch
 ```
 
-4. Once the deployment is finished, the generated pages can be found in the `master` branch of your repository
-5. In your GitHub repo's setting, navigate to "GitHub Pages" section and change Source to **master branch**.
-6. Check the webpage at *username*.github.io.
+5. Once the deployment is finished, the generated pages can be found in the `master` branch of your repository
+6. In your GitHub repo's setting, navigate to "GitHub Pages" section and change Source to **master branch**.
+7. Check the webpage at *username*.github.io.
 
 Note - if you specify a custom domain name with a `CNAME`, you need to add the `CNAME` file to the `source/` folder.
 
@@ -85,7 +102,7 @@ jobs:
 ```
 
 4. Commit and push to **`master` branch**.
-  - To push to `master` branch:
+  - To push `master` branch to GitHub:
   ```
   $ git push origin master
   ```
