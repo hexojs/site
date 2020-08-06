@@ -2744,3 +2744,10 @@
   tags:
     - highlight
     - prismjs
+- name: hexo-tag-chart
+  description: Insert simple and flexible Chart in Hexo site by using tags.
+  link: https://github.com/Shen-Yu/hexo-tag-chart
+  tags:
+    - tag
+    - chart
+    - chartjs
