@@ -1,3 +1,17 @@
+- name: hexo-submit-urls-to-search-engine
+  description: Hexo plugin to submit URLs of new posts to Google, Bing, Baidu search engine to improve the quality and speed of website collection.
+  link: https://github.com/cjh0613/hexo-submit-urls-to-search-engine
+  tags:
+    - baidu
+    - google
+    - bing
+    - seo
+- name: hexo-statistics-charts
+  description: Render statistics of hexo poats, categories, and tags into charts
+  link: https://www.npmjs.com/package/hexo-statistics-charts
+  tags:
+    - statistics
+    - charts
 - name: hexo-valkyr-url
   description: A simple url card display plugin for hexo
   link: https://github.com/toastsgithub/hexo-valkyr-url
@@ -111,8 +125,9 @@
     - template
 - name: hexo-asset-pipeline
   description: A hexo plugin to minify/optimize HTML, CSS, JS and images. Supports revisioning of assets.
-  link: https://github.com/bhaskarmelkani/hexo-asset-pipeline
+  link: https://github.com/hexojs/hexo-asset-pipeline
   tags:
+    - official
     - filter
     - imagemin
     - html-minifier
@@ -221,7 +236,7 @@
     - favicons
 - name: hexo-helper-obfuscate
   description: Obfuscate strings using html entities. Handy against crawlers.
-  link: https://github.com/andrewpeterprifer/hexo-helper-obfuscate/
+  link: https://github.com/AndrewPrifer/hexo-helper-obfuscate
   tags:
     - helper
     - obfuscate
@@ -315,7 +330,7 @@
     - css
 - name: hexo-renderer-webpack
   description: Webpack renderer for Hexo.
-  link: https://github.com/briangonzalez/hexo-renderer-webpack
+  link: https://github.com/nejj/hexo-renderer-webpack
   tags:
     - renderer
     - js
@@ -376,7 +391,7 @@
     - index
 - name: hexo-generator-search
   description: Search data generator for Hexo.
-  link: https://github.com/PaicHyperionDev/hexo-generator-search
+  link: https://github.com/wzpan/hexo-generator-search
   tags:
     - generator
     - search
@@ -636,8 +651,9 @@
     - blogspot
 - name: hexo-renderer-markdown-it
   description: Very fast Markdown renderer with support for CommonMark, GFM and more.
-  link: https://github.com/celsomiranda/hexo-renderer-markdown-it
+  link: https://github.com/hexojs/hexo-renderer-markdown-it
   tags:
+    - official
     - renderer
     - markdown
     - markdown-it
@@ -659,7 +675,7 @@
     - toc
 - name: hexo-renderer-org
   description: Hexo renderer plugin for emacs org-mode.
-  link: https://github.com/CodeFalling/hexo-renderer-org
+  link: https://github.com/coldnew/hexo-renderer-org
   tags:
     - renderer
     - orgmode
@@ -758,7 +774,7 @@
     - widget
 - name: hexo-tag-plantuml
   description: hexo-tag-plantuml is a tag plugin for Hexo. It can work with plantuml to draw uml.
-  link: https://github.com/oohcoder/hexo-tag-plantuml
+  link: https://github.com/two/hexo-tag-plantuml
   tags:
     - tag_plugins
     - plantuml
@@ -815,8 +831,9 @@
     - version control
 - name: hexo-math
   description: Add MathJax support
-  link: https://github.com/akfish/hexo-math
+  link: https://github.com/hexojs/hexo-math
   tags:
+    - official
     - tag
     - math
     - MathJax
@@ -865,7 +882,7 @@
     - album
 - name: hexo-tag-vine
   description: Embed your Vine videos in posts/pages.
-  link: https://github.com/welksonramos/hexo-tag-vine
+  link: https://github.com/limbowr/hexo-tag-vine
   tags:
     - tag
     - vine
@@ -936,7 +953,7 @@
     - slides
 - name: hexo-tag-niconico
   description: Embed NicoNico seiga/douga in Hexo posts/pages.
-  link: https://github.com/kamiya555/hexo-tag-niconico
+  link: https://github.com/yuichi555/hexo-tag-niconico
   tags:
     - tag
     - niconico
@@ -1001,7 +1018,7 @@
     - pdf
 - name: hexo-all-minifier
   description: "Minifier & Optimization plugin for Hexo, include HTML, CSS, JS and Image."
-  link: https://github.com/unhealthy/hexo-all-minifier
+  link: https://github.com/chenzhutian/hexo-all-minifier
   tags:
     - filter
     - minify
@@ -1034,7 +1051,7 @@
     - location
 - name: hexo-tag-aplayer
   description: "Embed aplayer in Hexo posts/pages."
-  link: https://github.com/grzhan/hexo-tag-aplayer
+  link: https://github.com/MoePlayer/hexo-tag-aplayer
   tags:
     - tag
     - player
@@ -1042,7 +1059,7 @@
     - music
 - name: hexo-tag-dplayer
   description: "Embed dplayer in Hexo posts/pages."
-  link: https://github.com/NextMoe/hexo-tag-dplayer
+  link: https://github.com/MoePlayer/hexo-tag-dplayer
   tags:
     - tag
     - player
@@ -1216,9 +1233,25 @@
     - html
     - js
     - css
+- name: hexo-cute
+  description: "only minify html js css changed this time, fastest minifier"
+  link: https://github.com/rozbo/hexo-cute
+  tags:
+    - minify
+    - all in on
+    - html
+    - js
+    - css
 - name: hexo-abbrlink
   description: "auto create one and only link for every post for hexo"
   link: https://github.com/rozbo/hexo-abbrlink
+  tags:
+    - permalink
+    - link
+    - 固定链接
+- name: hexo-abbrlink2
+  description: "zero based auto-incrementing permalink"
+  link: https://github.com/rozbo/hexo-abbrlink2
   tags:
     - permalink
     - link
@@ -1267,7 +1300,7 @@
     - tracks
 - name: hexo-tag-asciinema
   description: Embed asciinema into your post
-  link: https://github.com/zenyai/hexo-tag-asciinema
+  link: https://github.com/narongdejsrn/hexo-tag-asciinema
   tags:
     - tag
     - asciinema
@@ -1278,7 +1311,7 @@
     - asciinema
 - name: hexo-tag-kbd
   description: Displays the keycaps in your post/page.
-  link: https://github.com/kamiya555/hexo-tag-kbd
+  link: https://github.com/yuichi555/hexo-tag-kbd
   tags:
     - tag
     - keycaps
@@ -1326,7 +1359,7 @@
     - i18n
 - name: hexo-tag-tencent
   description: A hexo plugin for inserting youku or tencent video in your site.
-  link: https://github.com/HmyBmny/hexo-tag-tencent
+  link: https://github.com/kingofctrl/hexo-tag-tencent
   tags:
     - tag
     - video
@@ -1442,7 +1475,7 @@
     - quiz
 - name: hexo-include
   description: Include the raw contents of any file (html, text, etc) directly into post contents.
-  link: https://github.com/pipirt/hexo-include
+  link: https://github.com/pirtleshell/hexo-include
   tags:
     - tag
     - include
@@ -1483,14 +1516,14 @@
     - languages
 - name: hexo-tag-echarts3
   description: A simple plugin for inserting ECharts 3 by using tags in Hexo.
-  link: https://github.com/quentin-chen/hexo-tag-echarts3
+  link: https://github.com/kchen0x/hexo-tag-echarts3
   tags:
     - tag
     - echarts
     - chart
 - name: hexo-reference
   description: A plugin to support markdown footnotes and Wiki-Style tooltip reference in your Hexo blog posts.
-  link: https://github.com/quentin-chen/hexo-reference
+  link: https://github.com/kchen0x/hexo-reference
   tags:
     - footnote
     - footnotes
@@ -1537,8 +1570,9 @@
     - interactive
 - name: hexo-tag-imgurl
   description: A plugin to convert your image url use CDN host.
-  link: https://github.com/geekrainy/hexo-tag-imgurl
+  link: https://github.com/hexojs/hexo-tag-imgurl
   tags:
+    - official
     - tag
     - images
     - photos
@@ -1691,7 +1725,7 @@
     - template
 - name: hexo-filter-plantuml
   description: Generate PlantUML Diagram with markdown code fence
-  link: https://github.com/wafer-li/hexo-filter-plantuml
+  link: https://github.com/miao1007/hexo-filter-plantuml
   tags:
     - filter
     - plantuml
@@ -1708,7 +1742,7 @@
     - reveal
 - name: hexo-generator-json-feed-org
   description: Generate a JSON feed as per the jsonfeed.org specification
-  link: https://github.com/rmlewisuk/hexo-generator-json-feed-org
+  link: https://github.com/rknightuk/hexo-generator-json-feed-org
   tags:
     - generator
     - content
@@ -1772,7 +1806,7 @@
     - issue
 - name: hexo-tag-ossimg
   description: Publish your post images to AliyunOSS..
-  link: https://github.com/chenxuefei-pp/hexo-tag-ossimg
+  link: https://github.com/stan-chen/hexo-tag-ossimg
   tags:
     - aliyun
     - oss
@@ -2357,16 +2391,17 @@
     - canonical
     - seo
     - source
-- name: hexo-generator-indexed
-  description: Index generator plugin for Hexo, support more Front-matter parameters like sticky and hide.
-  link: https://github.com/stevenjoezhang/hexo-generator-indexed
+- name: hexo-pangu
+  description: Add spaces between CJK characters and western characters.
+  link: https://github.com/next-theme/hexo-pangu
   tags:
-    - generator
-    - index
-    - sticky
+    - filter
+    - pangu
+    - cjk
+    - spacing
 - name: hexo-filter-mathjax
   description: Server side MathJax renderer plugin for Hexo. No front-end scripts are required.
-  link: https://github.com/stevenjoezhang/hexo-filter-mathjax
+  link: https://github.com/next-theme/hexo-filter-mathjax
   tags:
     - filter
     - math
@@ -2426,14 +2461,14 @@
     - extracts
 - name: hexo-images-watermark
   description: Article image watermark.
-  link: https://github.com/SpiritLing/hexo-images-watermark
+  link: https://github.com/SpiritLingPub/hexo-images-watermark
   tags:
     - hexo
     - images
     - watermark
 - name: hexo-tag-mmedia
   description: Embed media in Hexo posts/pages.
-  link: https://github.com/MonoLogueChi/hexo-tag-mmedia
+  link: https://github.com/u2sb/hexo-tag-mmedia
   tags:
     - tag
     - aplayer
@@ -2607,3 +2642,105 @@
     - cleanup
     - output
     - filter
+- name: hexo-images
+  description: Toolset to opimize images for Hexo static site generator.
+  link: https://github.com/sergeyzwezdin/hexo-images
+  tags:
+    - filter
+    - generator
+    - image
+    - images
+    - responsive
+    - picture
+    - crop
+- name: hexo-covers
+  description: Microbrowser covers for Hexo static site generator so you'll have compelling webpage preview while sharing the link via iMessage, WhatsApp, Telegram, Facebook and others.
+  link: https://github.com/sergeyzwezdin/hexo-covers
+  tags:
+    - filter
+    - generator
+    - cover
+    - image
+    - images
+    - microbrowser
+    - review
+- name: hexo-compat-report
+  description: Renders an MDN compatibility table on your hexo page.
+  link: https://github.com/TimDaub/hexo-compat-report
+  tags:
+    - mdn
+    - compat
+    - compatibility
+    - caniuse
+    - table
+    - overview
+- name: hexo-lute
+  description: A markdown renderer for Hexo based on Lute.
+  link: https://github.com/SukkaW/hexo-lute
+  tags:
+    - renderer
+    - lute
+    - markdown
+    - gfm
+    - commonmark
+- name: hexo-generator-podcasts
+  description: A Podcast Feed Generator for Hexo with Multiple Podcast Support Feature
+  link: https://github.com/bestony/hexo-generator-podcasts
+  tags:
+    - generator
+    - podcasts
+    - multiple-podcasts
+    - web-player-support
+    - rss
+    - podcast
+- name: hexo-tag-friends
+  description: Friends tag
+  link: https://github.com/maplesugarr/hexo-tag-friends
+  tags:
+    - friends
+    - tag
+- name: hexo-renderer-multi-markdown-it
+  description: A renderer plugin for Hexo based on Markdown-it and auto Minify HTML, CSS, JS.
+  link: https://github.com/amehime/hexo-renderer-multi-markdown-it
+  tags:
+    - renderer
+    - markdown-it
+    - markdown-it-plugins
+    - prism
+    - katex
+    - mermaid
+    - pangu
+    - minify
+    - html-minifier
+    - uglify
+    - clean-css
+- name: hexo-douban-card
+  description: generate a douban book(movie/music) card in hexo post
+  link: https://github.com/TankNee/hexo-douban-card
+  tags:
+    - douban
+    - post
+    - card
+    - crawl
+    - spider
+- name: hexo-image-cloudflare
+  description: Use Cloudflare to cache images in Hexo
+  link: https://github.com/njzjz/hexo-image-cloudflare
+  tags:
+    - image
+    - cloudflare
+    - cdn
+- name: hexo-calendar
+  description: Insert a calendar like Github contributions into your blog. | 在博客中插入类似 Github contributions 的活动日历。
+  link: https://github.com/HCLonely/hexo-calendar
+  tags:
+    - helper
+    - tag
+    - calendar
+    - echarts
+- name: hexo-patch-load-highlight-style
+  description: Auto load hexo highlight style, support highlight and prismjs
+  link: https://github.com/jiangtj-lab/hexo-patch-load-highlight-style
+  tags:
+    - highlight
+    - prismjs

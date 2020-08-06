@@ -3,6 +3,8 @@ title: Tag Plugins
 ---
 Tag plugins are different from post tags. They are ported from Octopress and provide a useful way for you to quickly add specific content to your posts.
 
+Although you can write your posts in any formats, but the tag plugins will always be available and syntax remains the same.
+
 {% youtube I07XMi7MHd4 %}
 
 ## Block Quote
@@ -246,7 +248,30 @@ Inserts code snippets in `source/downloads/code` folder. The folder location can
 Inserts a YouTube video.
 
 ```
-{% youtube video_id %}
+{% youtube video_id [type] [cookie] %}
+```
+
+### Examples
+
+**Embed a video**
+
+```
+{% youtube lJIrF4YjHfQ %}
+```
+
+**Embed a playlist**
+
+```
+{% youtube PL9hW1uS6HUfscJ9DHkOSoOX45MjXduUxo 'playlist' %}
+```
+
+**Enable privacy-enhanced mode**
+
+YouTube's cookie is not used in this mode.
+
+```
+{% youtube lJIrF4YjHfQ false %}
+{% youtube PL9hW1uS6HUfscJ9DHkOSoOX45MjXduUxo 'playlist' false %}
 ```
 
 ## Vimeo

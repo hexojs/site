@@ -17,7 +17,7 @@ title: Temas
 
 ### _config.yml
 
-Arquivo de configuração do tema. Modificações neste arquivo não requerem uma reinicialização do servidor.
+Arquivo de configuração do tema. Unlike the site's primary configuration file, modificações neste arquivo não requerem uma reinicialização do servidor.
 
 ### languages
 

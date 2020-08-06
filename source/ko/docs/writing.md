@@ -61,3 +61,12 @@ Placeholder | 설명
 `layout` | 레이아웃
 `title` | 제목
 `date` | 파일 생성일
+
+### Supported Formats
+
+Hexo support posts written in any format, as long as the corresponding renderer plugin is installed.
+
+For example, Hexo has `hexo-renderer-marked` and `hexo-renderer-ejs` installed by default, so you can write your posts in `markdown` or in `ejs`. If you have `hexo-renderer-pug` installed, then you can even write your post in pug template language.
+
+You can rename your posts and change to file extension from `.md` to `.ejs`, then Hexo will use `hexo-renderer-ejs` to render that file, so do the other formats.
+

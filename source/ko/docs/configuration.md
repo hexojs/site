@@ -10,6 +10,7 @@ title: Configuration
 `title` | 웹 사이트의 제목
 `subtitle` | 웹 사이트의 부제
 `description` | 웹 사이트에 대한 설명
+`keywords` | The keywords of your website. Supports multiple values.
 `author` | 작성자 이름
 `language` | 웹 사이트의 주 사용언어. [2-lettter ISO-639-1 code](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) 참조. 기본값은 `en`.
 `timezone` | 웹 사이트에서 사용하는 timezone. Hexo는 기본적으로 PC의 시간값을 사용합니다. 사용 가능한 timezone의 종류는 [여기](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones)에서 확인할 수 있습니다. 다음과 같은 형식으로 사용하세요. `America/New_York`, `Japan`, `UTC`.
@@ -83,7 +84,17 @@ Hexo는 날짜 처리 시 [Moment.js](http://momentjs.com/)를 사용합니다.
 --- | --- | ---
 `date_format` | 날짜 형식 | `YYYY-MM-DD`
 `time_format` | 시간 형식 | `HH:mm:ss`
-`use_date_for_updated` | Use the date of the post in [`post.updated`](/ko/docs/variables#페이지 변수) if no updated date is provided in the front-matter. Typically used with Git workflow | `true`
+`updated_option` | The [`updated`](/ko/docs/variables#페이지 변수) value to used when not provided in the front-matter | `mtime`
+
+{% note info updated_option %}
+`updated_option` controls the `updated` value when not provided in the front-matter:
+
+- `mtime`: Use file modification date as `updated`. It is the default behavior of Hexo since 3.0.0
+- `date`: Use `date` as `updated`. Typically used with Git workflow when file modification date could be different.
+- `empty`: Simply drop `updated` when not provided. May not be compatible with most themes and plugins.
+
+`use_date_for_updated` is deprecated and will be removed in next major version. Please use `updated_option: 'date'` instead.
+{% endnote %}
 
 ### Pagination
 
@@ -171,24 +182,31 @@ Using multiple files combines all the config files and saves the merged settings
 
 For instance, in the above example if `foo: bar` is in `custom.yml`, but `"foo": "dinosaur"` is in `custom2.json`, `_multiconfig.yml` will contain `foo: dinosaur`.
 
-### Overriding Theme Config
+### Alternate Theme Config
 
 Hexo themes are independent projects, with separate `_config.yml` files.
 
-Instead of forking a theme, and maintaining a custom branch with your settings, you can configure it from your site's primary configuration file.
+Instead of forking a theme, and maintaining a custom branch with your settings, you can configure it from somewhere else.
 
-Example configuration:
+**`theme_config` in site's primary configuration file**
+
+> Supported since Hexo 2.8.2
 
 ```yml
 # _config.yml
+theme: "my-theme"
 theme_config:
   bio: "My awesome bio"
+  foo:
+    bar: 'a'
 ```
 
 ```yml
 # themes/my-theme/_config.yml
 bio: "Some generic bio"
 logo: "a-cool-image.png"
+  foo:
+    baz: 'b'
 ```
 
 Resulting in theme configuration:
@@ -196,6 +214,53 @@ Resulting in theme configuration:
 ```json
 {
   bio: "My awesome bio",
-  logo: "a-cool-image.png"
+  logo: "a-cool-image.png",
+  foo: {
+    bar: "a",
+    baz: "b"
+  }
 }
 ```
+
+**dedicated `_config.[theme].yml` file**
+
+> Supported since Hexo 5.0.0
+
+The file should be placed in your site folder, both `yml` and `json` are supported. `theme` inside `_config.yml` must be configured for Hexo to read `_config.[theme].yml`
+
+```yml
+# _config.yml
+theme: "my-theme"
+```
+
+```yml
+# _config.my-theme.yml
+bio: "My awesome bio"
+foo:
+  bar: 'a'
+```
+
+```yml
+# themes/my-theme/_config.yml
+bio: "Some generic bio"
+logo: "a-cool-image.png"
+  foo:
+    baz: 'b'
+```
+
+Resulting in theme configuration:
+
+```json
+{
+  bio: "My awesome bio",
+  logo: "a-cool-image.png",
+  foo: {
+    bar: "a",
+    baz: "b"
+  }
+}
+```
+
+{% note %}
+We strongly recommends you to store your theme configuration in one place. But in case you have to store your theme configuration separately, those information is quite important: The `theme_config` inside site's primary configuration file has the highest priority during merging, then the dedicated theme configuration file. the `_config.yml` file under the theme directory has the lowest priority.
+{% endnote %}

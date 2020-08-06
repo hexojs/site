@@ -1,8 +1,67 @@
+- name: ILS
+  description: A simple and light theme for Hexo.
+  link: https://github.com/XPoet/hexo-theme-ils
+  preview: https://xpoet.cn/
+  tags:
+    - simple
+    - clean
+    - responsive
+    - card
+    - dark
+    - light
+    - 中文
+- name: LiveMyLife
+  description: A simple and pure personal Theme for Hexo...
+  link: https://github.com/V-Vincen/hexo-theme-livemylife
+  preview: https://v-vincen.life/
+  tags:
+    - simple
+    - pure
+    - clean
+    - dark/light
+    - personal
+    - practical
+- name: Insulin
+  description: A Simple and Pure Responsive Theme for Hexo
+  link: https://github.com/kb1000fx/hexo-theme-insulin
+  preview: https://garybear.cn/hexo-theme-insulin/
+  tags:
+    - simple
+    - dark/light
+    - pure
+    - vue
+    - 中文
+    - 简约
+- name: Coder
+  description: A Pure and Clean Theme in minimalist style for Coders
+  link: https://github.com/xunzhuo/hexo-theme-coder
+  preview: https://www.liuxunzhuo.top
+  tags:
+    - minimalist
+    - coders
+    - light
+    - dark/light
+    - pure
+    - clean
+- name: Aircv
+  description: This is Hexo Theme with a beautiful style design form KeenThemes adapted to hexo by Molavec.
+  link: https://github.com/molavec/hexo-theme-aircv
+  preview: https://hexo-theme-aircv.molavec.com
+  tags:
+    - branding
+    - personal
+    - curriculum
+    - landing
+    - parallax
+    - responsive
+    - beautiful
+    - simple
+    - light
 - name: Cards
   description: A Simple & Swift Theme for Hexo, designed as its name.
   link: https://github.com/ChrAlpha/hexo-theme-cards
   preview: https://theme-cards.ichr.me/demo/
-  tags: 
+  tags:
     - simple
     - swift
     - clean
@@ -46,7 +105,7 @@
 - name: Meadow
   description: Meadow is a Material Designed Hexo theme based on MDUI.
   link: https://github.com/kb1000fx/hexo-theme-meadow
-  preview: https://garybear.cn/
+  preview: https://garybear.cn/hexo-theme-meadow/
   tags:
     - Material Design
     - MDUI
@@ -179,7 +238,7 @@
 
 - name: Mokusei
   description: A dark theme
-  link: https://github.com/shijuuu/hexo-theme-mokusei
+  link: https://github.com/kog1997/hexo-theme-mokusei
   preview: https://blog.shijukun.com/
   tags:
     - dark
@@ -259,17 +318,6 @@
   description: A Clear and Light Theme
   link: https://github.com/huweihuang/hexo-theme-huweihuang
   preview: https://www.huweihuang.com/
-  tags:
-    - Clear
-    - Light
-    - Simple
-    - Customizable
-    - Freedom
-
-- name: Minami
-  description: A Clear and Light Theme
-  link: https://github.com/nanqinlang/hexo-theme-Minami
-  preview: https://preview.sometimesnaive.org
   tags:
     - Clear
     - Light
@@ -362,18 +410,6 @@
     - disqus
     - syntax-highlighting
     - Font Awesome
-- name: bulxo
-  description: A simple, modern, beautiful theme with Bulma
-  link: https://github.com/polebug/hexo-theme-bulxo
-  preview: http://polebug.github.io
-  tags:
-    - Bulma
-    - simple
-    - beautiful
-    - modern
-    - free
-    - creative
-    - fast
 - name: Space Cadet
   description: A modern, purple-accented Bootstrap 4 blog
   link: https://github.com/azigler/hexo-theme-space-cadet
@@ -396,7 +432,7 @@
     - offline
 - name: cold
   description: A super cool theme
-  link: https://github.com/yudaren007007/hexo-theme-cold
+  link: https://github.com/mintsweet/hexo-theme-cold
   preview: http://www.yujunren.com/blog/
   tags:
     - cool
@@ -463,7 +499,7 @@
     - 中文
 - name: Goyangin
   description: A Simple theme with Bulma Framework CSS
-  link: https://github.com/devgexx/goyangin
+  link: https://github.com/g3xx/goyangin
   preview: http://goyangin.0x3g.com/
   tags:
     - responsive
@@ -471,16 +507,6 @@
     - clean
     - simple
     - thumb image
-- name: Slice
-  description: A Simple & Beautiful SinglePaged Theme
-  link: https://github.com/NHibiki/hexo-theme-slice
-  preview: https://slice.nekoyu.cc
-  tags:
-    - Flat
-    - SinglePaged
-    - Music Plug-ined
-    - Welcome Page
-    - Responsive
 - name: mdui
   description: A google plus like theme
   link: https://github.com/Halyul/hexo-theme-mdui
@@ -607,7 +633,7 @@
     - colorful
 - name: Inside
   description: ❤️ SPA, flat and clean theme.
-  link: https://github.com/elmorec/hexo-theme-inside
+  link: https://github.com/ikeq/hexo-theme-inside
   preview: https://blog.oniuo.com/
   tags:
     - responsive
@@ -834,7 +860,7 @@
     - elegant
 - name: Tranquilpeak
   description: A gorgeous responsive theme
-  link: https://github.com/LouisBarranqueiro/tranquilpeak-hexo-theme
+  link: https://github.com/LouisBarranqueiro/hexo-theme-tranquilpeak
   preview: http://louisbarranqueiro.github.io/hexo-theme-tranquilpeak
   tags:
     - responsive
@@ -976,7 +1002,7 @@
     - metronic
 - name: Again
   description: Medium like, but more awesome
-  link: https://github.com/DrakeLeung/hexo-theme-again
+  link: https://github.com/lyyourc/hexo-theme-again
   preview: https://www.lyyourc.com/
   tags:
     - medium
@@ -1068,7 +1094,7 @@
     - 中文
 - name: Free2mind
   description: A new debonaire theme
-  link: https://github.com/rudy-yuan/free2mind
+  link: https://github.com/codeditor2/free2mind
   preview: http://www.rudy-yuan.net
   tags:
     - simple
@@ -1262,7 +1288,7 @@
     - scss
 - name: concise
   description: A beautiful and simple theme
-  link: https://github.com/HmyBmny/hexo-theme-concise
+  link: https://github.com/kingofctrl/hexo-theme-concise
   preview: https://hmybmny.github.io/hexo-theme-concise/
   tags:
     - material
@@ -1398,7 +1424,7 @@
     - light
 - name: Smackdown
   description: A simple and cool theme
-  link: https://github.com/winnerweb/hexo-theme-smackdown
+  link: https://github.com/smackgg/hexo-theme-smackdown
   preview: https://blog.smackgg.cn/
   tags:
     - responsive
@@ -1504,7 +1530,7 @@
     - blog
 - name: Material
   description: An elegant & Material Design Theme
-  link: https://github.com/viosey/hexo-theme-material
+  link: https://github.com/bolnh/hexo-theme-material
   preview: https://blog.viosey.com
   tags:
     - responsive
@@ -2157,21 +2183,9 @@
     - beautiful
     - google analytics
     - Japanese
-- name: grace
-  description: A simple and grace theme
-  link: https://github.com/buhuo00/hexo-theme-grace
-  preview: https://www.buhuoblog.com/
-  tags:
-    - simple
-    - grace
-    - disqus
-    - easy
-    - RSS
-    - 中文
-    - English
 - name: microb
   description: A very simple theme use pure css and less js
-  link: https://github.com/microacup/hexo-theme-micorb
+  link: https://github.com/microacup/hexo-theme-microb
   preview: http://blog.meiqiu.me/
   tags:
     - simple
@@ -2265,7 +2279,7 @@
     - developer
 - name: Lemon-Lime
   description: A refreshing theme
-  link: https://github.com/huan555/lemon-lime
+  link: https://github.com/huan-qiu/lemon-lime
   preview: http://rachelqiu.com
   tags:
     - responsive
@@ -2303,7 +2317,7 @@
     - simple
 - name: curry
   description: A beautiful theme with reference to Bear's reading experience
-  link: https://github.com/gary-Shen/hexo-theme-curry
+  link: https://github.com/gary-Shen/hexo-theme-bear
   preview: http://www.garyshen.com
   tags:
     - responsive
@@ -2379,7 +2393,7 @@
     - infinite scroll
 - name: Dxx
   description: A sample theme
-  link: https://github.com/fuzhouxxdong/hexo-theme-dxx
+  link: https://github.com/Sneakydogs/hexo-theme-dxx
   preview: https://fuzhouxxdong.github.io/hexo-theme-dxx/
   tags:
     - simple
@@ -2436,16 +2450,6 @@
     - responsive
     - portfolio
     - concise
-- name: Staunch
-  description: A clean and focus on words theme
-  link: https://github.com/staunchkai/hexo-theme-staunch
-  preview: http://staunchkai.com
-  tags:
-    - clean
-    - focus on words
-    - 中文
-    - beautiful
-    - simple
 - name: Siberia
   description: A beautiful and scalable theme
   link: https://github.com/hpcslag/hexo-theme-siberia
@@ -2590,7 +2594,7 @@
     - light
     - design
     - one_column
-- name: yinwang
+- name: hexo-theme-yinwang
   description: An imitation of yinwang's blog
   link: https://github.com/smallyunet/hexo-theme-yinwang
   preview: https://blog.smallyu.net
@@ -2735,17 +2739,16 @@
     - blog
     - responsive
 - name: Butterfly
-  description: A simple & beautiful & fast theme
+  description: A Simple and Card UI Design theme for Hexo
   link: https://github.com/jerryc127/hexo-theme-butterfly
-  preview: https://jerryc.me/
+  preview: https://demo.jerryc.me/
   tags:
-    - Sidebar
+    - Card UI
     - Responsive
     - Customizable
-    - Sticky
-    - Slideshow
     - 中文
-    - beautiful
+    - Simple
+    - Widget
 - name: Adagio
   description: A simple, elegant, calm, responsive theme with applause button, math support, and much more.
   link: https://github.com/Hanlin-Dong/hexo-theme-adagio
@@ -2846,7 +2849,7 @@
     - Evernote
 - name: Nexmoe
   description: A special Hexo theme
-  link: https://github.com/nexmoe/hexo-theme-nexmoe
+  link: https://github.com/theme-nexmoe/hexo-theme-nexmoe
   preview: https://nexmoe.com/
   tags:
     - Sidebar
@@ -2984,7 +2987,7 @@
     - Valine
 - name: Paper
   description: A Simple Clean Paper-like Theme for Hexo with Darkmode!
-  link: https://github.com/OfficialYoungX/paper
+  link: https://github.com/random-yang/paper
   preview: https://www.randomyang.top
   tags:
     - dark-mode
@@ -3194,13 +3197,136 @@
     - RhodesIsland
     - 明日方舟
     - 中文
+- name: Clean
+  description: A modfy clean blog theme with more feature
+  link: https://github.com/luswdev/hexo-theme-clean
+  preview: https://lusw.dev
+  tags:
+    - simple
+    - responsive
+    - one_column
+    - elegant
+    - standard
+    - powerful
+    - 中文
 - name: hiya
   description: A customizable simple theme base on landscape
   link: https://github.com/FuShaoLei/hexo-theme-hiya
-  preview: https://fushaolei.github.io/
+  preview: https://fushaolei.gitee.io/
   tags:
     - hiya
     - customizable
     - colorful
     - landscape
     - simple
+- name: blank
+  description: A concise hexo theme.
+  link: https://github.com/a2396837/hexo-theme-blank
+  preview: https://dmx.pub/
+  tags:
+    - blank
+    - concise
+    - fast
+    - simple
+    - 中文
+- name: Love
+  description: A simple HEXO theme for couples.
+  link: https://github.com/jiehua1995/hexo-theme-love.git
+  preview: https://blog.jiehua1995.xyz/hexo-theme-love/
+  tags:
+    - love
+    - simple
+    - couples
+- name: Ascent
+  description: An opinionated Hexo theme for blogs with long blocks of text.
+  link: https://github.com/cjquines/hexo-theme-ascent
+  preview: https://cjquines.github.io/hexo-theme-ascent/
+  tags:
+    - simple
+    - responsive
+    - one_column
+    - elegant
+    - minimal
+    - dark
+- name: mduilw
+  description: A light weight MD theme for Hexo.
+  link: https://github.com/186526/hexo-theme-mduilw
+  preview: https://mduilw.186526.xyz/
+  tags:
+    - light_weight
+    - simple
+    - responsive
+    - minimal
+    - dark
+    - 中文
+- name: webstack
+  description: A hexo theme based on webstack.
+  link: https://github.com/HCLonely/hexo-theme-webstack
+  preview: https://webstack.hclonely.com/
+  tags:
+    - navigation
+    - webstack
+    - 中文
+- name: Lagom
+  description: A minimalist theme for Hexo.
+  link: https://github.com/jylzs369/hexo-theme-lagom
+  preview: https://jylzs369.github.io/lagom/
+  tags:
+    - Simple
+    - Responsive
+    - Minimal
+    - Minimalist
+    - Elegant
+    - 中文
+- name: Shoka
+  description: A simple hexo theme for YumeShoka.
+  link: https://github.com/amehime/hexo-theme-shoka
+  preview: https://amehime.github.io/shoka
+  tags:
+    - responsive
+    - two_column
+    - concise
+    - elegant
+    - animation
+    - gradient
+    - cat
+    - sidebar
+    - links
+    - 中文
+- name: white
+  description: A white and very simple theme
+  link: https://github.com/FuShaoLei/hexo-theme-white
+  preview: https://fushaolei.github.io/
+  tags:
+    - white
+    - simple
+- name: ProWiki
+  description: Designed to display articles like wiki.
+  link: https://github.com/hdxw/hexo-theme-prowiki
+  preview: http://prowiki.demopage.icu
+  tags:
+    - wiki
+    - black
+    - no fancy
+- name: Kratos-Rebirth
+  description: A transplanted theme for Hexo, with many new features built with love.
+  link: https://github.com/Candinya/Kratos-Rebirth
+  preview: https://kr-demo.candinya.com
+  tags:
+    - kratos
+    - sidebar
+    - widgets
+    - responsive
+    - dark/light
+- name: Kaze
+  description: A simple, responsive and modern Hexo theme
+  link: https://github.com/theme-kaze/hexo-theme-Kaze
+  preview: https://demo.theme-kaze.top
+  tags:
+    - simple
+    - widgets
+    - dark-mode
+    - responsive
+    - modern
+    - elegant
+    - 中文

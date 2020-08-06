@@ -15,7 +15,7 @@ Hexo는 눈 깜박할 새에 설치할 수 있습니다. 설치 시 문제가 �
 
 Hexo의 설치는 꽤 쉽습니다. 하지만, 설치 전에 몇 가지 요구사항이 있습니다.
 
-- [Node.js](http://nodejs.org/) (Should be at least Node.js 8.10, recommends 10.0 or higher)
+- [Node.js](http://nodejs.org/) (Should be at least Node.js 10.13, recommends 12.0 or higher)
 - [Git](http://git-scm.com/)
 
 컴퓨터에 이미 이런 것들이 설치되어 있다면, 축하드립니다! 이제 npm을 이용하여 Hexo를 설치하기만 하면 됩니다.
@@ -72,3 +72,21 @@ We recommend to use [Node Version Switcher](https://github.com/jasongin/nvs/) as
 ``` bash
 $ npm install -g hexo-cli
 ```
+
+### Minimum required Node.js version
+
+If you are stuck with older Node.js, you can consider installing a past version of Hexo.
+
+Please note we do not provide bugfixes to past versions of Hexo.
+
+We highly recommend to always install the [latest version](https://www.npmjs.com/package/hexo?activeTab=versions) of Hexo and the [recommended version](#Requirements) of Node.js, whenever possible.
+
+Hexo version | Minimum Node.js version
+--- | ---
+5.0+ | 10.13.0
+4.1 - 4.2 | 8.10
+4.0 | 8.6
+3.3 - 3.9 | 6.9
+3.2 - 3.3 | 0.12
+3.0 - 3.1 | 0.10 or iojs
+0.0.1 - 2.8 | 0.10

@@ -133,19 +133,9 @@ hexo.extend.helper.register('lunr_index', data => {
     this.field('name', {boost: 10});
     this.field('tags', {boost: 50});
     this.field('description');
-    this.ref('id');
+    this.ref('name');
 
-    data.concat().sort((a, b) => {
-      if (a.name > b.name) {
-        return 1;
-      } else if (b.name > a.name) {
-        return -1;
-      }
-      return 0;
-    }).forEach((item, i) => {
-      const object = Object.assign({}, { id: i }, item);
-      this.add(object);
-    });
+    data.forEach(this.add, this);
   });
 
   return JSON.stringify(index);

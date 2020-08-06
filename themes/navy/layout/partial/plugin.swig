@@ -1,4 +1,4 @@
-<li class="plugin on">
+<li class="plugin on" id="{{ plugin.name }}">
   <a href="{{ plugin.link }}" class="plugin-name" target="_blank">{{ plugin.name }}</a>
   <p class="plugin-desc">{{ plugin.description }}</p>
   <div class="plugin-tag-list">

@@ -4,6 +4,8 @@ title: Tag Plugins
 
 As Tag Plugins são diferentes das tags de postagem. Elas são portadas pela Octopress e fornecem uma maneira útil para você adicionar rapidamente conteúdo específico às suas postagens.
 
+Although you can write your posts in any formats, but the tag plugins will always be available and syntax remains the same.
+
 {% youtube I07XMi7MHd4 %}
 
 ## Bloco de Citação
@@ -215,7 +217,30 @@ Insere trechos de código no diretório `source/downloads/code`.
 Insere um vídeo do YouTube.
 
 ```
-{% youtube video_id %}
+{% youtube video_id [type] [cookie] %}
+```
+
+### Examples
+
+**Embed a video**
+
+```
+{% youtube lJIrF4YjHfQ %}
+```
+
+**Embed a playlist**
+
+```
+{% youtube PL9hW1uS6HUfscJ9DHkOSoOX45MjXduUxo 'playlist' %}
+```
+
+**Enable privacy-enhanced mode**
+
+YouTube's cookie is not used in this mode.
+
+```
+{% youtube lJIrF4YjHfQ false %}
+{% youtube PL9hW1uS6HUfscJ9DHkOSoOX45MjXduUxo 'playlist' false %}
 ```
 
 ## Vimeo

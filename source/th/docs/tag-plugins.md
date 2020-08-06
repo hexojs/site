@@ -3,6 +3,9 @@ title: Tag Plugins
 ---
 ปลั๊กอินแท็กจะแตกต่างกับแท็กโพสต์ ปลั๊กอินแท็กนั้นยืมมาจาก Octopress 
 และสนับสนุนวิธีท่ีเพิ่มเนื้อหาเฉพาะไปถึงโพสต์ของตนได้อย่างรวดเร็ว
+
+Although you can write your posts in any formats, but the tag plugins will always be available and syntax remains the same.
+
 {% youtube I07XMi7MHd4 %}
 
 ## Block Quote
@@ -215,7 +218,30 @@ content
 เสียบวิดีโอ YouTube เข้า:
 
 ```
-{% youtube video_id %}
+{% youtube video_id [type] [cookie] %}
+```
+
+### Examples
+
+**Embed a video**
+
+```
+{% youtube lJIrF4YjHfQ %}
+```
+
+**Embed a playlist**
+
+```
+{% youtube PL9hW1uS6HUfscJ9DHkOSoOX45MjXduUxo 'playlist' %}
+```
+
+**Enable privacy-enhanced mode**
+
+YouTube's cookie is not used in this mode.
+
+```
+{% youtube lJIrF4YjHfQ false %}
+{% youtube PL9hW1uS6HUfscJ9DHkOSoOX45MjXduUxo 'playlist' false %}
 ```
 
 ## Vimeo

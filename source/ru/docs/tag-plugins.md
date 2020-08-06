@@ -3,6 +3,8 @@ title: Плагины тегов
 ---
 Плагины тегов отличаются от тегов в посте. Они портированы с Octopress и обеспечивают удобный способ, чтобы быстро добавить контент для ваших постов.
 
+Although you can write your posts in any formats, but the tag plugins will always be available and syntax remains the same.
+
 ## Блок цитаты
 
 Подходит для добавления цитаты в свой пост с указанием автора, источника и информационным заголовком.
@@ -212,7 +214,30 @@ content
 Вставка видео с YouTube.
 
 ```
-{% youtube video_id %}
+{% youtube video_id [type] [cookie] %}
+```
+
+### Examples
+
+**Embed a video**
+
+```
+{% youtube lJIrF4YjHfQ %}
+```
+
+**Embed a playlist**
+
+```
+{% youtube PL9hW1uS6HUfscJ9DHkOSoOX45MjXduUxo 'playlist' %}
+```
+
+**Enable privacy-enhanced mode**
+
+YouTube's cookie is not used in this mode.
+
+```
+{% youtube lJIrF4YjHfQ false %}
+{% youtube PL9hW1uS6HUfscJ9DHkOSoOX45MjXduUxo 'playlist' false %}
 ```
 
 ## Vimeo

@@ -5,8 +5,15 @@ A filter is used to modify some specified data. Hexo passes data to filters in s
 ## Synopsis
 
 ``` js
-hexo.extend.filter.register(type, function(){
-  // ...
+hexo.extend.filter.register(type, function() {
+  // User configuration
+  const { config } = this;
+  if (config.external_link.enable) // do something...
+
+  // Theme configuration
+  const { config: themeCfg } = this.theme;
+  if (themeCfg.fancybox) // do something...
+
 }, priority);
 ```
 

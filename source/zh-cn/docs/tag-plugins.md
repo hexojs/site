@@ -3,6 +3,8 @@ title: 标签插件（Tag Plugins）
 ---
 标签插件和 Front-matter 中的标签不同，它们是用于在文章中快速插入特定内容的插件。
 
+虽然你可以使用任何格式书写你的文章，但是标签插件永远可用，且语法也都是一致的。
+
 ## 引用块
 
 在文章中插入引言，可包含作者、来源和标题。
@@ -244,7 +246,30 @@ content
 在文章中插入 Youtube 视频。
 
 ```
-{% youtube video_id %}
+{% youtube video_id [type] [cookie] %}
+```
+
+### Examples
+
+**视频**
+
+```
+{% youtube lJIrF4YjHfQ %}
+```
+
+**播放列表**
+
+```
+{% youtube PL9hW1uS6HUfscJ9DHkOSoOX45MjXduUxo 'playlist' %}
+```
+
+**隐私模式**
+
+禁止 YouTube cookie
+
+```
+{% youtube lJIrF4YjHfQ false %}
+{% youtube PL9hW1uS6HUfscJ9DHkOSoOX45MjXduUxo 'playlist' false %}
 ```
 
 ## Vimeo
