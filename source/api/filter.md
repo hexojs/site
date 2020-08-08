@@ -97,8 +97,26 @@ Executed before a post is rendered. Refer to [post rendering](posts.html#Render)
 For example, to transform the title to lower case:
 
 ``` js
-hexo.extend.filter.register('before_post_render', function(data){
+hexo.extend.filter.register('before_post_render', function(data) {
   data.title = data.title.toLowerCase();
+  return data;
+});
+```
+
+This filter processes everything in the `source/` folder; depending on your use case, you may need to skip certain location or file type. Files listed in [`config.skip_render`](/docs/configuration#Directory) and `themes/<your-theme>/source/` folder are not processed by this filter.
+
+``` js
+hexo.extend.filter.register('before_post_render', function(data) {
+  // Target markdown files
+  if (data.source.endsWith('.md')) {
+    data.title = data.title.toUpperCase();
+  }
+
+  // Target "_posts/" folder only
+  if (data.source.startsWith('_posts/')) {
+    data.title = data.title.toLowerCase();
+  }
+  
   return data;
 });
 ```
@@ -110,11 +128,13 @@ Executed after a post is rendered. Refer to [post rendering](posts.html#Render) 
 For example, to replace `@username` with a link to a Twitter profile:
 
 ``` js
-hexo.extend.filter.register('after_post_render', function(data){
+hexo.extend.filter.register('after_post_render', function(data) {
   data.content = data.content.replace(/@(\d+)/, '<a href="http://twitter.com/$1">#$1</a>');
   return data;
 });
 ```
+
+This filter matches every files in the `source/` folder, see [`before_post_render`](#before-post-render) section for more details.
 
 ### before_exit
 

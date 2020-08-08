@@ -98,8 +98,26 @@ Post가 생성되기 전에 실행됩니다. 실행 단계에 대해 더 알아�
 아래 예시는 title을 소문자로 변경하는 것을 보여줍니다.
 
 ``` js
-hexo.extend.filter.register('before_post_render', function(data){
+hexo.extend.filter.register('before_post_render', function(data) {
   data.title = data.title.toLowerCase();
+  return data;
+});
+```
+
+This filter processes everything in the `source/` folder; depending on your use case, you may need to skip certain location or file type. Files listed in [`config.skip_render`](/docs/configuration#Directory) and `themes/<your-theme>/source/` folder are not processed by this filter.
+
+``` js
+hexo.extend.filter.register('before_post_render', function(data) {
+  // Target markdown files
+  if (data.source.endsWith('.md')) {
+    data.title = data.title.toUpperCase();
+  }
+
+  // Target "_posts/" folder only
+  if (data.source.startsWith('_posts/')) {
+    data.title = data.title.toLowerCase();
+  }
+  
   return data;
 });
 ```
@@ -112,11 +130,13 @@ Executed after a post is rendered. 실행 단계에 대해 더 알아보시길 �
 아래 예시는 `@username`을 Twitter link로 대체하는 것을 보여줍니다.
 
 ``` js
-hexo.extend.filter.register('after_post_render', function(data){
+hexo.extend.filter.register('after_post_render', function(data) {
   data.content = data.content.replace(/@(\d+)/, '<a href="http://twitter.com/$1">#$1</a>');
   return data;
 });
 ```
+
+This filter matches every files in the `source/` folder, see [`before_post_render`](#before-post-render) section for more details.
 
 ### before_exit
 

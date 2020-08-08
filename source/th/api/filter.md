@@ -100,8 +100,26 @@ execute ก่อนการ render ของโพสต์  สำหรั�
 ยกตัวอย่างเช่น การเปลี่ยนตัวอักษรเป็นตัวเล็ก:
 
 ``` js
-hexo.extend.filter.register('before_post_render', function(data){
+hexo.extend.filter.register('before_post_render', function(data) {
   data.title = data.title.toLowerCase();
+  return data;
+});
+```
+
+This filter processes everything in the `source/` folder; depending on your use case, you may need to skip certain location or file type. Files listed in [`config.skip_render`](/docs/configuration#Directory) and `themes/<your-theme>/source/` folder are not processed by this filter.
+
+``` js
+hexo.extend.filter.register('before_post_render', function(data) {
+  // Target markdown files
+  if (data.source.endsWith('.md')) {
+    data.title = data.title.toUpperCase();
+  }
+
+  // Target "_posts/" folder only
+  if (data.source.startsWith('_posts/')) {
+    data.title = data.title.toLowerCase();
+  }
+  
   return data;
 });
 ```
@@ -113,11 +131,13 @@ execute หลังการ render ของโพสต์ สำหรับ
 ยกตัวอย่างเช่น แทน `@username` ด้วยลิงค์ท่ีชึ้ไปถึงโปรไฟล์ของ Twitter
 
 ``` js
-hexo.extend.filter.register('after_post_render', function(data){
+hexo.extend.filter.register('after_post_render', function(data) {
   data.content = data.content.replace(/@(\d+)/, '<a href="http://twitter.com/$1">#$1</a>');
   return data;
 });
 ```
+
+This filter matches every files in the `source/` folder, see [`before_post_render`](#before-post-render) section for more details.
 
 ### before_exit
 
