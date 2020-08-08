@@ -22,6 +22,7 @@ title: 永久链接（Permalinks）
 `:post_title` | 文章标题
 `:id` | 文章 ID (_not persistent across [cache reset](/zh-cn/docs/commands#clean)_)
 `:category` | 分类。如果文章没有分类，则是 `default_category` 配置信息。
+`:hash` | SHA1 hash of filename (same as `:title`) and date (12-hexadecimal)
 
 您可在 `permalink_defaults` 参数下调整永久链接中各变量的默认值：
 
@@ -45,6 +46,7 @@ categories:
 `:year/:month/:day/:title/` | 2013/07/14/hello-world/
 `:year-:month-:day-:title.html` | 2013-07-14-hello-world.html
 `:category/:title/` | foo/bar/hello-world/
+`:title-:hash/` | hello-world-a2c8ac003b43/
 
 ``` yaml source/_posts/lorem/hello-world.md
 title: Hello World

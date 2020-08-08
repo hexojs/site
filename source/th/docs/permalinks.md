@@ -23,6 +23,7 @@ Variable | Description
 `:post_title` | Post title
 `:id` | Post ID (_not persistent across [cache reset](/th/docs/commands#clean)_)
 `:category` | Categories. If the post is uncategorized, it will use the `default_category` value.
+`:hash` | SHA1 hash of filename (same as `:title`) and date (12-hexadecimal)
 
 ตุณสามารถตั้งค่า default value ของทุก variable ใน permalink โดยตั้งค่า 
 `permalink_defaults`:
@@ -47,6 +48,7 @@ Setting | Result
 `:year/:month/:day/:title/` | 2013/07/14/hello-world/
 `:year-:month-:day-:title.html` | 2013-07-14-hello-world.html
 `:category/:title/` | foo/bar/hello-world/
+`:title-:hash/` | hello-world-a2c8ac003b43/
 
 ``` yaml source/_posts/lorem/hello-world.md
 title: Hello World

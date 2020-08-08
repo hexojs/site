@@ -22,6 +22,7 @@ title: Постоянные ссылки
 `:post_title` | Post title
 `:id` | ID поста (_not persistent across [cache reset](/ru/docs/commands#clean)_)
 `:category` | Категории. Если категория поста не указана, возьмётся значение по умолчанию из `default_category`.
+`:hash` | SHA1 hash of filename (same as `:title`) and date (12-hexadecimal)
 
 Можно определить значение по умолчанию для переменной постоянной ссылки, задав значение `permalink_defaults` в конфигурации:
 
@@ -45,6 +46,7 @@ categories:
 `:year/:month/:day/:title/` | 2013/07/14/hello-world/
 `:year-:month-:day-:title.html` | 2013-07-14-hello-world.html
 `:category/:title/` | foo/bar/hello-world/
+`:title-:hash/` | hello-world-a2c8ac003b43/
 
 ``` yaml source/_posts/lorem/hello-world.md
 title: Hello World

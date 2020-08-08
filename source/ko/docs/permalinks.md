@@ -22,6 +22,7 @@ title: Permalinks
 `:post_title` | Post title
 `:id` | 포스트 ID (_not persistent across [cache reset](/ko/docs/commands#clean)_)
 `:category` | 포스트가 속한 카테고리. 지정하지 않으면 `default_category` 값을 사용합니다.
+`:hash` | SHA1 hash of filename (same as `:title`) and date (12-hexadecimal)
 
 Permalink 내의 각 변수의 기본 값을 `permalink_defaults` 설정을 통해 정의할 수 있습니다.
 
@@ -45,6 +46,7 @@ categories:
 `:year/:month/:day/:title/` | 2013/07/14/hello-world/
 `:year-:month-:day-:title.html` | 2013-07-14-hello-world.html
 `:category/:title/` | foo/bar/hello-world/
+`:title-:hash/` | hello-world-a2c8ac003b43/
 
 ``` yaml source/_posts/lorem/hello-world.md
 title: Hello World
