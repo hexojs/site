@@ -17,7 +17,9 @@ title: Постоянные ссылки
 `:hour` | Published hour of posts (2-digit)
 `:minute` | Published minute of posts (2-digit)
 `:second` | Published second of posts (2-digit)
-`:title` | Имя файла
+`:title` | Имя файла (relative to "source/_posts/" folder)
+`:name` | Имя файла
+`:post_title` | Post title
 `:id` | ID поста (_not persistent across [cache reset](/ru/docs/commands#clean)_)
 `:category` | Категории. Если категория поста не указана, возьмётся значение по умолчанию из `default_category`.
 
@@ -30,9 +32,7 @@ permalink_defaults:
 
 ### Примеры
 
-Пост под названием `hello-world.md` в `source/_posts` следующего содержания:
-
-``` yaml
+``` yaml source/_posts/hello-world.md
 title: Hello World
 date: 2013-07-14 17:01:34
 categories:
@@ -45,6 +45,19 @@ categories:
 `:year/:month/:day/:title/` | 2013/07/14/hello-world/
 `:year-:month-:day-:title.html` | 2013-07-14-hello-world.html
 `:category/:title/` | foo/bar/hello-world/
+
+``` yaml source/_posts/lorem/hello-world.md
+title: Hello World
+date: 2013-07-14 17:01:34
+categories:
+- foo
+- bar
+```
+
+Настройка | Результат
+--- | ---
+`:year/:month/:day/:title/` | 2013/07/14/lorem/hello-world/
+`:year/:month/:day/:name/` | 2013/07/14/hello-world/
 
 ### Многоязычность
 

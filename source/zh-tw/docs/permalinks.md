@@ -17,7 +17,9 @@ title: 永久連結（Permalinks）
 `:hour` | 文章發表時的小時 (2 位數)
 `:minute` | 文章發表時的分鐘 (2 位數)
 `:second` | 文章發表時的秒鐘 (2 位數)
-`:title` | 檔案名稱
+`:title` | 檔案名稱 (relative to "source/_posts/" folder)
+`:name` | 檔案名稱
+`:post_title` | 文章標題
 `:id` | 文章 ID (_not persistent across [cache reset](/zh-tw/docs/commands#clean)_)
 `:category` | 分類。如果文章沒有分類，則是 `default_category` 設定。
 
@@ -30,9 +32,7 @@ permalink_defaults:
 
 ### 範例
 
-假設 `source/_posts` 資料夾中有個 `hello-world.md`，包含以下內容：
-
-``` yaml
+``` yaml source/_posts/hello-world.md
 title: Hello World
 date: 2013-07-14 17:01:34
 categories:
@@ -45,6 +45,19 @@ categories:
 `:year/:month/:day/:title/` | 2013/07/14/hello-world/
 `:year-:month-:day-:title.html` | 2013-07-14-hello-world.html
 `:category/:title/` | foo/bar/hello-world/
+
+``` yaml source/_posts/lorem/hello-world.md
+title: Hello World
+date: 2013-07-14 17:01:34
+categories:
+- foo
+- bar
+```
+
+設定 | 結果
+--- | ---
+`:year/:month/:day/:title/` | 2013/07/14/lorem/hello-world/
+`:year/:month/:day/:name/` | 2013/07/14/hello-world/
 
 ### 多語系支援
 

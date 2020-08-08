@@ -17,7 +17,8 @@ title: 永久链接（Permalinks）
 `:hour` | 文章发表时的小时 (2 位数)
 `:minute` | 文章发表时的分钟 (2 位数)
 `:second` | 文章发表时的秒钟 (2 位数)
-`:title` | 文件名称
+`:title` | 文件名称 (relative to "source/_posts/" folder)
+`:name` | 文件名称
 `:post_title` | 文章标题
 `:id` | 文章 ID (_not persistent across [cache reset](/zh-cn/docs/commands#clean)_)
 `:category` | 分类。如果文章没有分类，则是 `default_category` 配置信息。
@@ -31,9 +32,7 @@ permalink_defaults:
 
 ### 示例
 
-假设 `source/_posts` 文件夹中有个 `hello-world.md`，包含以下内容：
-
-``` yaml
+``` yaml source/_posts/hello-world.md
 title: Hello World
 date: 2013-07-14 17:01:34
 categories:
@@ -46,6 +45,19 @@ categories:
 `:year/:month/:day/:title/` | 2013/07/14/hello-world/
 `:year-:month-:day-:title.html` | 2013-07-14-hello-world.html
 `:category/:title/` | foo/bar/hello-world/
+
+``` yaml source/_posts/lorem/hello-world.md
+title: Hello World
+date: 2013-07-14 17:01:34
+categories:
+- foo
+- bar
+```
+
+参数 | 结果
+--- | ---
+`:year/:month/:day/:title/` | 2013/07/14/lorem/hello-world/
+`:year/:month/:day/:name/` | 2013/07/14/hello-world/
 
 ### 多语种支持
 
