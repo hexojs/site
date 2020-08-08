@@ -256,8 +256,22 @@ url: https://example.com/blog # example
 
 参数 | 描述 | 默认值
 --- | --- | ---
-`title` | Feed 标题 |
+`title` | Feed 标题 | `config.title`
 `type` | Feed 类型 | atom
+
+**示例：**
+
+``` js
+<%- feed_tag('atom.xml') %>
+// <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+
+<%- feed_tag('rss.xml', { title: 'RSS Feed', type: 'rss' }) %>
+// <link rel="alternate" href="/atom.xml" title="RSS Feed" type="application/rss+xml">
+
+/* Defaults to hexo-generator-feed's config if no argument */
+<%- feed_tag() %>
+// <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+```
 
 ## 条件函数
 
