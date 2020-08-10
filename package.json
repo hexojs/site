@@ -22,7 +22,7 @@
     "hexo-renderer-pug": "^1.0.0",
     "hexo-renderer-stylus": "^1.0.0",
     "hexo-renderer-swig": "^1.1.0",
-    "hexo-server": "^1.0.0",
+    "hexo-server": "^2.0.0",
     "hexo-uglify": "^1.0.0",
     "image-size": "^0.8.3",
     "lunr": "2.3.8",
