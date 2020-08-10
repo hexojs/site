@@ -11,7 +11,7 @@ post_asset_folder: true
 
 ## 標籤外掛
 
-Hexo 3 新增了幾個外掛，讓您更方便的在文章內引用資產。
+Hexo 3 新增了幾個[外掛](/docs/tag-plugins#Include-Assets)，讓您更方便的在文章內引用資產。
 
 ```
 {% asset_path slug %}
