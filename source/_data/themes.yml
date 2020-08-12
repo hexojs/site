@@ -3330,3 +3330,15 @@
     - modern
     - elegant
     - 中文
+
+- name: Dark
+  description: A different hexo theme 
+  link: https://confuseder.github.io/ 
+  preview: https://github.com/confuseder/hexo-dark-theme
+  tags: 
+    - simple
+    - beautiful
+    - fast
+    - dark
+    - Chinese
+    - 中文
