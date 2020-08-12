@@ -1,3 +1,14 @@
+- name: hexo-social9-socialshare
+  description: Social9 social sharing plugin provides you beautiful buttons, sharing capabilities, and analytics. (20+ buttons- Whatsapp, Facebook, Twitter, LinkedIn, Reddit, and many more...).
+  link: https://github.com/social9/hexo-plugin-social9-share
+  tags:
+    - helper
+    - plugin
+    - tag
+    - social
+    - hexo
+    - social9
+    - socialshare
 - name: hexo-submit-urls-to-search-engine
   description: Hexo plugin to submit URLs of new posts to Google, Bing, Baidu search engine to improve the quality and speed of website collection.
   link: https://github.com/cjh0613/hexo-submit-urls-to-search-engine
