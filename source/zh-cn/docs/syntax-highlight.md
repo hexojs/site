@@ -167,7 +167,7 @@ Hexo 通过用 `<figure>` 和 `<table>` 包裹其代码块为其添加了行号�
 highlight:
   enable: false
 prismjs:
-  enable: false
+  enable: true
   preprocess: true
   line_number: true
   tab_replace: ''
