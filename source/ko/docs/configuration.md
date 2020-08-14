@@ -60,13 +60,8 @@ title: Configuration
 `post_asset_folder` | [Asset 폴더](asset-folders.html)를 활성화 할 것인지 선택 | `false`
 `relative_link` | 루트 폴더에 대한 상대 경로로 링크를 만들 것인지 선택 | `false`
 `future` | 미래의 포스트를 표시할 것인지 선택 | `true`
-`highlight` | Code block의 설정 |
-`highlight.enable` | Enable syntax highlight | `true`
-`highlight.auto_detect` | Enable auto-detection if no language is specified | `false`
-`highlight.line_number` | Display line number<br>_Enabling this option will also enable `wrap` option_ | `true`
-`highlight.tab_replace` | Replace tabs by n space(s); if the value is empty, tabs won't be replaced | `''`
-`highlight.wrap` | Wrap the code block in [`<table>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table) | `true`
-`highlight.hljs` | Use the `hljs-*` prefix for CSS classes | `false`
+`highlight` | Code block의 설정, see [Highlight.js](/docs/syntax-highlight#Highlight-js) section for usage guide |
+`prismjs` | Code block의 설정, see [PrismJS](/docs/syntax-highlight#PrismJS) section for usage guide |
 
 ### Category & Tag
 

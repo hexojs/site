@@ -167,7 +167,7 @@ When `hljs` is set to `true`, all the HTML output will have `class` prefixed wit
 highlight:
   enable: false
 prismjs:
-  enable: false
+  enable: true
   preprocess: true
   line_number: true
   tab_replace: ''
