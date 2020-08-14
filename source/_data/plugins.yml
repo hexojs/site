@@ -2744,6 +2744,13 @@
   tags:
     - highlight
     - prismjs
+- name: hexo-tag-chart
+  description: Insert simple and flexible Chart in Hexo site by using tags.
+  link: https://github.com/Shen-Yu/hexo-tag-chart
+  tags:
+    - tag
+    - chart
+    - chartjs
 - name: hexo-extend-theme
   description: Replace any theme layout file to the custom file.
   link: https://github.com/jiangtj/hexo-extend-theme
