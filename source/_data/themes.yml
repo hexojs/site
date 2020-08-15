@@ -3339,3 +3339,16 @@
     - warm
     - simple
     - 中文
+
+- name: Dark
+  description: A different hexo theme.
+  link: https://github.com/confuseder/hexo-theme-dark
+  preview: https://confuseder.github.io/
+  tags:
+    - simple
+    - widgets
+    - dark-mode
+    - responsive
+    - modern
+    - elegant
+    - 中文
