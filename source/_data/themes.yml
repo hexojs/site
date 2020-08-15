@@ -3334,7 +3334,7 @@
 - name: Dark
   description: A different hexo theme 
   link: https://confuseder.github.io/ 
-  preview: https://github.com/confuseder/hexo-dark-theme
+  preview: https://github.com/confuseder/hexo-theme-dark
   tags: 
     - simple
     - beautiful
