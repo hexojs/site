@@ -1,3 +1,15 @@
+- name: ILS
+  description: A simple and light theme for Hexo.
+  link: https://github.com/XPoet/hexo-theme-ils
+  preview: https://xpoet.cn/
+  tags:
+    - simple
+    - clean
+    - responsive
+    - card
+    - dark
+    - light
+    - 中文
 - name: LiveMyLife
   description: A simple and pure personal Theme for Hexo...
   link: https://github.com/V-Vincen/hexo-theme-livemylife
@@ -3288,3 +3300,55 @@
   tags:
     - white
     - simple
+- name: ProWiki
+  description: Designed to display articles like wiki.
+  link: https://github.com/hdxw/hexo-theme-prowiki
+  preview: http://prowiki.demopage.icu
+  tags:
+    - wiki
+    - black
+    - no fancy
+- name: Kratos-Rebirth
+  description: A transplanted theme for Hexo, with many new features built with love.
+  link: https://github.com/Candinya/Kratos-Rebirth
+  preview: https://kr-demo.candinya.com
+  tags:
+    - kratos
+    - sidebar
+    - widgets
+    - responsive
+    - dark/light
+- name: Kaze
+  description: A simple, responsive and modern Hexo theme
+  link: https://github.com/theme-kaze/hexo-theme-Kaze
+  preview: https://demo.theme-kaze.top
+  tags:
+    - simple
+    - widgets
+    - dark-mode
+    - responsive
+    - modern
+    - elegant
+    - 中文
+- name: blur
+  description: A simple and warm Hexo blog theme 
+  link: https://github.com/kiten46087/hexo-theme-blur
+  preview: https://kiten46087.github.io/
+  tags:
+    - minimalist
+    - warm
+    - simple
+    - 中文
+
+- name: Dark
+  description: A different hexo theme.
+  link: https://github.com/confuseder/hexo-theme-dark
+  preview: https://confuseder.github.io/
+  tags:
+    - simple
+    - widgets
+    - dark-mode
+    - responsive
+    - modern
+    - elegant
+    - 中文

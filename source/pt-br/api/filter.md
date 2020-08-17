@@ -7,8 +7,15 @@ Um `filter` (filtro) pode ser utilizado para modificar alguns dados. O Hexo pass
 ## Resumo
 
 ``` js
-hexo.extend.filter.register(type, function(){
-  // ...
+hexo.extend.filter.register(type, function() {
+  // User configuration
+  const { config } = this;
+  if (config.external_link.enable) // do something...
+
+  // Theme configuration
+  const { config: themeCfg } = this.theme;
+  if (themeCfg.fancybox) // do something...
+
 }, priority);
 ```
 

@@ -14,6 +14,28 @@ hexo.extend.tag.register(name, function(args, content){
 
 从 Hexo 3 开始，因为新增了非同步渲染功能，而改用 [Nunjucks] 作为渲染引擎，其行为可能会与过去使用的 [Swig] 有些许差异。
 
+## 移除标签插件
+
+Use `unregister()` to replace existing [tag plugins](/docs/tag-plugins) with custom functions.
+
+``` js
+hexo.extend.tag.unregister(name);
+```
+
+**示例**
+
+``` js
+const tagFn = (args, content) => {
+  content = 'something';
+  return content;
+};
+
+// https://hexo.io/docs/tag-plugins#YouTube
+hexo.extend.tag.unregister('youtube');
+
+hexo.extend.tag.register('youtube', tagFn);
+```
+
 ## 选项
 
 ### ends
@@ -64,6 +86,59 @@ hexo.extend.tag.register('include_code', function(args){
     return '<pre><code>' + content + '</code></pre>';
   });
 }, {async: true});
+```
+
+## Front-matter and user configuration
+
+Any of the following options is valid:
+
+1.
+
+``` js
+hexo.extend.tag.register('foo', function (args) {
+  const [firstArg] = args;
+
+  // User config
+  const { config } = hexo;
+  const editor = config.author + firstArg;
+
+  // Theme config
+  const { config: themeCfg } = hexo.theme;
+  if (themeCfg.fancybox) // do something...
+
+  // Front-matter
+  const { title } = this; // article's (post/page) title
+
+  // Article's content
+  const { _content } = this; // original content
+  const { content } = this; // HTML-rendered content
+
+  return 'foo';
+});
+```
+
+2.
+
+``` js index.js
+hexo.extend.tag.register('foo', require('./lib/foo')(hexo));
+```
+
+``` js lib/foo.js
+module.exports = hexo => {
+  return function fooFn(args) {
+    const [firstArg] = args;
+
+    const { config } = hexo;
+    const editor = config.author + firstArg;
+
+    const { config: themeCfg } = hexo.theme;
+    if (themeCfg.fancybox) // do something...
+
+    const { title, _content, content } = this;
+
+    return 'foo';
+  };
+};
 ```
 
 [Nunjucks]: http://mozilla.github.io/nunjucks/
