@@ -28,7 +28,7 @@ code snippet
 
 ## 配置
 
-​```yaml
+```yaml
 # _config.yml
 highlight:
   enable: true
