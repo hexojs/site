@@ -60,9 +60,9 @@ hexo.extend.injector.register('body_end', () => {
 
 上述代码将会把 `APlayer.min.css`（`<link>` 标签）和 `APlayer.min.js` （`<script>` 标签）注入到所有 layout 为 `music` 的页面的 `</head>` 和 `</body>` 之前，以及将 `jquery.js`（`<script>` 标签）注入到每一个生成的页面的 `</body>` 之前。
 
-## Accessing user configuration
+## 用户访问配置
 
-Use any of the following options:
+使用以下任何选项：
 
 1.
 
