@@ -61,6 +61,10 @@ Node.js 为大多数平台提供了官方的 [安装程序](https://nodejs.org/e
 如果在尝试安装 Hexo 的过程中出现 `EACCES` 权限错误，请遵循 [由 npmjs 发布的指导](https://docs.npmjs.com/resolving-eacces-permissions-errors-when-installing-packages-globally) 修复该问题。强烈建议 **不要** 使用 root、sudo 等方法覆盖权限
 {% endnote %}
 
+{% note info Linux %}
+If you installed Node.js using Snap, you may need to manually run `npm install` in the target folder when [initializing](/docs/commands#init) a blog.
+{% endnote %}
+
 ### 安装 Hexo
 
 所有必备的应用程序安装完成后，即可使用 npm 安装 Hexo。
