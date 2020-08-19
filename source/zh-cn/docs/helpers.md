@@ -256,8 +256,22 @@ url: https://example.com/blog # example
 
 参数 | 描述 | 默认值
 --- | --- | ---
-`title` | Feed 标题 |
+`title` | Feed 标题 | `config.title`
 `type` | Feed 类型 | atom
+
+**示例：**
+
+``` js
+<%- feed_tag('atom.xml') %>
+// <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+
+<%- feed_tag('rss.xml', { title: 'RSS Feed', type: 'rss' }) %>
+// <link rel="alternate" href="/atom.xml" title="RSS Feed" type="application/rss+xml">
+
+/* Defaults to hexo-generator-feed's config if no argument */
+<%- feed_tag() %>
+// <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+```
 
 ## 条件函数
 
@@ -399,6 +413,15 @@ url: https://example.com/blog # example
 ``` js
 <%- render(str, engine, [options]) %>
 ```
+
+**Examples:**
+
+``` js
+<%- render('p(class="example") Test', 'pug'); %>
+// <p class="example">Test</p>
+```
+
+See [Rendering](https://hexo.io/zh-cn/api/rendering) for more details.
 
 ### word_wrap
 
@@ -596,10 +619,28 @@ url: https://example.com/blog # example
 `show_count` | 显示每个标签的文章总数 | true
 `style` | 标签列表的显示方式。使用 `list` 以无序列表（unordered list）方式显示。 | list
 `separator` | 标签间的分隔符号。只有在 `style` 不是 `list` 时有用。 | ,
-`class` | 标签列表的 class 名称。 | tag
+`class` | Class name of tag list (string) or customize each tag's class (object, see below). | tag
 `transform` | 改变标签名称显示方法的函数。请查看 [list_categories](#list-categories) 中给出的例子 |
 `amount` | 要显示的标签数量（0 = 无限制） | 0
 `suffix` | 为链接添加前缀 | None
+
+Class advanced customization:
+
+Option | Description | Default
+--- | --- | ---
+`class.ul` | `<ul>` class name (only for style `list`) | `tag-list` (list style)
+`class.li` | `<li>` class name (only for style `list`) | `tag-list-item` (list style)
+`class.a` | `<a>` class name | `tag-list-link` (list style) `tag-link` (normal style)
+`class.count` | `<span>` class name where the tag counter is stored (only when `show_count` is `true`) | `tag-list-count` (list style) `tag-count` (normal style)
+
+Examples:
+
+```ejs
+<%- list_tags(site.tags, {class: 'classtest', style: false, separator: ' | '}) %>
+<%- list_tags(site.tags, {class: 'classtest', style: 'list'}) %>
+<%- list_tags(site.tags, {class: {ul: 'ululul', li: 'lilili', a: 'aaa', count: 'ccc'}, style: false, separator: ' | '}) %>
+<%- list_tags(site.tags, {class: {ul: 'ululul', li: 'lilili', a: 'aaa', count: 'ccc'}, style: 'list'}) %>
+```
 
 ### list_archives
 
@@ -657,6 +698,8 @@ url: https://example.com/blog # example
 `color` | 使用颜色 | false
 `start_color` | 开始的颜色。您可使用十六进位值（`#b700ff`），rgba（`rgba(183, 0, 255, 1)`），hsla（`hsla(283, 100%, 50%, 1)`）或 [颜色关键字]。此变量仅在 `color` 参数开启时才有用。 |
 `end_color` | 结束的颜色。您可使用十六进位值（`#b700ff`），rgba（`rgba(183, 0, 255, 1)`），hsla（`hsla(283, 100%, 50%, 1)`）或 [颜色关键字]。此变量仅在 `color` 参数开启时才有用。 |
+`class` | 标签的 class name 前缀
+`level` | 不同 class name 的总数。此变量仅在 `class` 参数设定时才有用。 | 10
 
 ## 其他
 

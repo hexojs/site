@@ -185,8 +185,22 @@ Feed 링크를 삽입합니다.
 
 옵션 | 설명 | 기본 값
 --- | --- | ---
-`title` | Feed 제목 |
+`title` | Feed 제목 | `config.title`
 `type` | Feed 형식 | atom
+
+**Examples:**
+
+``` js
+<%- feed_tag('atom.xml') %>
+// <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+
+<%- feed_tag('rss.xml', { title: 'RSS Feed', type: 'rss' }) %>
+// <link rel="alternate" href="/atom.xml" title="RSS Feed" type="application/rss+xml">
+
+/* Defaults to hexo-generator-feed's config if no argument */
+<%- feed_tag() %>
+// <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+```
 
 ### 조건 태그
 
@@ -320,6 +334,15 @@ Markdown에 맞게 문자열을 렌더링합니다.
 ``` js
 <%- render(str, engine, [options]) %>
 ```
+
+**Examples:**
+
+``` js
+<%- render('p(class="example") Test', 'pug'); %>
+// <p class="example">Test</p>
+```
+
+See [Rendering](https://hexo.io/ko/api/rendering) for more details.
 
 ### word_wrap
 
@@ -500,10 +523,28 @@ XML 형식의 날짜를 삽입합니다. `date`는 unix time, ISO string, date o
 `show_count` | 각 태그 별 포스트의 번호를 표시합니다. | true
 `style` | 태그 목록 표시의 스타일. `list`는 태그 목록을 순서없이 표시합니다.  | list
 `separator` | 태그 별 구분자. (`style`이 `list`가 아닐 때만 동작합니다.) | ,
-`class` | 태그 목록의 Class명. | tag
+`class` | Class name of tag list (string) or customize each tag's class (object, see below). | tag
 `transform` | 태그 이름의 표시 방식을 변경하는 기능. |
 `amount` | 표시되는 태그의 개수. (0 = 무한대) | 0
 `suffix` | 링크에 접미사를 붙입니다. | None
+
+Class advanced customization:
+
+Option | Description | Default
+--- | --- | ---
+`class.ul` | `<ul>` class name (only for style `list`) | `tag-list` (list style)
+`class.li` | `<li>` class name (only for style `list`) | `tag-list-item` (list style)
+`class.a` | `<a>` class name | `tag-list-link` (list style) `tag-link` (normal style)
+`class.count` | `<span>` class name where the tag counter is stored (only when `show_count` is `true`) | `tag-list-count` (list style) `tag-count` (normal style)
+
+Examples:
+
+```ejs
+<%- list_tags(site.tags, {class: 'classtest', style: false, separator: ' | '}) %>
+<%- list_tags(site.tags, {class: 'classtest', style: 'list'}) %>
+<%- list_tags(site.tags, {class: {ul: 'ululul', li: 'lilili', a: 'aaa', count: 'ccc'}, style: false, separator: ' | '}) %>
+<%- list_tags(site.tags, {class: {ul: 'ululul', li: 'lilili', a: 'aaa', count: 'ccc'}, style: 'list'}) %>
+```
 
 ### list_archives
 
@@ -561,6 +602,8 @@ XML 형식의 날짜를 삽입합니다. `date`는 unix time, ISO string, date o
 `color` | 태그 클라우드에 색상을 입힙니다. | false
 `start_color` | 시작 색상. 16진수 색상 (`#b700ff`), rgba (`rgba(183, 0, 255, 1)`), hsla (`hsla(283, 100%, 50%, 1)`), [color keywords]을 사용할 수 있습니다. 이 옵션은 `color`가 true일 때만 동작합니다. |
 `end_color` | 종료 색상. 16진수 색상 (`#b700ff`), rgba (`rgba(183, 0, 255, 1)`), hsla (`hsla(283, 100%, 50%, 1)`), [color keywords]. 이 옵션은 `color`가 true일 때만 동작합니다. |
+`class` | Class name prefix of tags
+`level` | The number of different class names. This option only works when `class` is set. | 10
 
 ## Miscellaneous
 

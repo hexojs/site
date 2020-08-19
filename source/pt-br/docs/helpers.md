@@ -190,8 +190,22 @@ Insere um link de feed.
 
 Opção | Descrição | Padrão
 --- | --- | ---
-`title` | Título do feed |
+`title` | Título do feed | `config.title`
 `type` | Tipo do feed | atom
+
+**Examples:**
+
+``` js
+<%- feed_tag('atom.xml') %>
+// <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+
+<%- feed_tag('rss.xml', { title: 'RSS Feed', type: 'rss' }) %>
+// <link rel="alternate" href="/atom.xml" title="RSS Feed" type="application/rss+xml">
+
+/* Defaults to hexo-generator-feed's config if no argument */
+<%- feed_tag() %>
+// <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+```
 
 ## Tags condicionais
 
@@ -325,6 +339,15 @@ Renderiza uma string.
 ``` js
 <%- render(str, engine, [options]) %>
 ```
+
+**Examples:**
+
+``` js
+<%- render('p(class="example") Test', 'pug'); %>
+// <p class="example">Test</p>
+```
+
+See [Rendering](https://hexo.io/pt-br/api/rendering) for more details.
 
 ### word_wrap
 
@@ -505,10 +528,28 @@ Opção | Descrição | Padrão
 `show_count` | Exibir o número de postagens para cada tag | true
 `style` | Estilo para exibir a lista de tags. `list` exibe as tags em uma lista não ordenada. | list
 `separator`| Separador entre tags. (Só funciona se `style` não for `list`). | ,
-`class` | Nome da classe da lista de tags. | tag
+`class` | Class name of tag list (string) or customize each tag's class (object, see below). | tag
 `transform` | A função que altera a exibição do nome da tag. |
 `amount` | O número de tags a exibir (0 = ilimitado) | 0
 `suffix` | Adiciona um sufixo para o link. | Nenhum
+
+Class advanced customization:
+
+Option | Description | Default
+--- | --- | ---
+`class.ul` | `<ul>` class name (only for style `list`) | `tag-list` (list style)
+`class.li` | `<li>` class name (only for style `list`) | `tag-list-item` (list style)
+`class.a` | `<a>` class name | `tag-list-link` (list style) `tag-link` (normal style)
+`class.count` | `<span>` class name where the tag counter is stored (only when `show_count` is `true`) | `tag-list-count` (list style) `tag-count` (normal style)
+
+Examples:
+
+```ejs
+<%- list_tags(site.tags, {class: 'classtest', style: false, separator: ' | '}) %>
+<%- list_tags(site.tags, {class: 'classtest', style: 'list'}) %>
+<%- list_tags(site.tags, {class: {ul: 'ululul', li: 'lilili', a: 'aaa', count: 'ccc'}, style: false, separator: ' | '}) %>
+<%- list_tags(site.tags, {class: {ul: 'ululul', li: 'lilili', a: 'aaa', count: 'ccc'}, style: 'list'}) %>
+```
 
 ### list_archives
 
@@ -566,6 +607,8 @@ Opção | Descrição | Padrão
 `color` | Colorizar a nuvem de tags? | false
 `start_color` | Cor inicial. Você pode usar o padrão hexadecimal (`#b700ff`), rgba (`rgba(183, 0, 255, 1)`), hsla (`hsla(283, 100%, 50%, 1)`) ou [color keywords]. Esta opção só funciona quando `color` é `true`. |
 `end_color` | Cor final. Você pode usar o padrão hexadecimal (`#b700ff`), rgba (`rgba(183, 0, 255, 1)`), hsla (`hsla(283, 100%, 50%, 1)`) ou [color keywords]. Esta opção só funciona quando `color` é `true`. |
+`class` | Class name prefix of tags
+`level` | The number of different class names. This option only works when `class` is set. | 10
 
 ## Miscelânea
 

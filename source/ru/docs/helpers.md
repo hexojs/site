@@ -185,8 +185,22 @@ title: Помощники
 
 Опции | Описание | Значение по умолчанию
 --- | --- | ---
-`title` | Имя канала |
+`title` | Имя канала | `config.title`
 `type` | Тип канала | atom
+
+**Examples:**
+
+``` js
+<%- feed_tag('atom.xml') %>
+// <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+
+<%- feed_tag('rss.xml', { title: 'RSS Feed', type: 'rss' }) %>
+// <link rel="alternate" href="/atom.xml" title="RSS Feed" type="application/rss+xml">
+
+/* Defaults to hexo-generator-feed's config if no argument */
+<%- feed_tag() %>
+// <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+```
 
 ### Условные теги
 
@@ -319,6 +333,15 @@ title: Помощники
 ``` js
 <%- render(str, engine, [options]) %>
 ```
+
+**Examples:**
+
+``` js
+<%- render('p(class="example") Test', 'pug'); %>
+// <p class="example">Test</p>
+```
+
+See [Rendering](https://hexo.io/ru/api/rendering) for more details.
 
 ### word_wrap
 
@@ -498,9 +521,28 @@ title: Помощники
 `show_count` | Отображать количество постов для каждого тега. | true
 `style` | Стиль показа списка тегов. `list` отображает категории в неупорядоченном списке. | list
 `separator` | Разделитель тегов. (Работает если только стиль `style` не задан как `list`) | ,
-`class` | Имя класса списка тегов. | tag
+`class` | Class name of tag list (string) or customize each tag's class (object, see below). | tag
 `transform` | Функция, позволяющая изменить отображаемое имя категории. |
 `amount` | Ограничение количества отображаемых тегов (0 = неограниченно) | 0
+`suffix` | Add a suffix to link. | None
+
+Class advanced customization:
+
+Option | Description | Default
+--- | --- | ---
+`class.ul` | `<ul>` class name (only for style `list`) | `tag-list` (list style)
+`class.li` | `<li>` class name (only for style `list`) | `tag-list-item` (list style)
+`class.a` | `<a>` class name | `tag-list-link` (list style) `tag-link` (normal style)
+`class.count` | `<span>` class name where the tag counter is stored (only when `show_count` is `true`) | `tag-list-count` (list style) `tag-count` (normal style)
+
+Examples:
+
+```ejs
+<%- list_tags(site.tags, {class: 'classtest', style: false, separator: ' | '}) %>
+<%- list_tags(site.tags, {class: 'classtest', style: 'list'}) %>
+<%- list_tags(site.tags, {class: {ul: 'ululul', li: 'lilili', a: 'aaa', count: 'ccc'}, style: false, separator: ' | '}) %>
+<%- list_tags(site.tags, {class: {ul: 'ululul', li: 'lilili', a: 'aaa', count: 'ccc'}, style: 'list'}) %>
+```
 
 ### list_archives
 
@@ -558,6 +600,8 @@ title: Помощники
 `color` | Цветное облако тегов | false
 `start_color` | Стартовый цвет. Можно использовать hex (`#b700ff`), rgba (`rgba(183, 0, 255, 1)`), hsla (`hsla(283, 100%, 50%, 1)`) или [имена цветов]. Эта опция работает только если `color` установлен в `true`. |
 `end_color` | Конечный цвет. Можно использовать hex (`#b700ff`), rgba (`rgba(183, 0, 255, 1)`), hsla (`hsla(283, 100%, 50%, 1)`) или [имена цветов]. Эта опция работает только если `color` установлен в `true`. |
+`class` | Class name prefix of tags
+`level` | The number of different class names. This option only works when `class` is set. | 10
 
 ## Разное
 

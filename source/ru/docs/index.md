@@ -39,31 +39,28 @@ $ npm install -g hexo-cli
 
 ### Установка Node.js
 
-Лучший способ установить Node.js это [nvm](https://github.com/nvm-sh/nvm).
+Node.js provides [official installer](https://nodejs.org/en/download/) for most platforms.
 
-cURL:
+Alternative installation methods:
 
-``` bash
-$ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | sh
-```
+- Windows: Install it with [nvs](https://github.com/jasongin/nvs/) (recommended) or [nvm](https://github.com/nvm-sh/nvm).
+- Mac: Install it with [Homebrew](https://brew.sh/) or [MacPorts](http://www.macports.org/).
+- Linux (DEB/RPM-based): Install it with [NodeSource](https://github.com/nodesource/distributions).
+- Others: Install it through respective package manager. Refer to [the guide](https://nodejs.org/en/download/package-manager/) provided by Node.js.
 
-Wget:
+nvs is also recommended for Mac and Linux to avoid possible permission issue.
 
-``` bash
-$ wget -qO-https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | sh
-```
-
-После установки nvm запустите терминал и выполните следующую команду для установки Node.js.
-
-``` bash
-$ nvm install node
-```
-
-{% note info For Windows users %}
-We recommend to use [Node Version Switcher](https://github.com/jasongin/nvs/) as an alternative to nvm on Windows, which has similar command-line syntax with nvm and can be installed through provided Windows Installer (MSI) package.
+{% note info Windows %}
+If you use the official installer, make sure **Add to PATH** is checked (it's checked by default).
 {% endnote %}
 
-Или скачать и установить [установщик](http://nodejs.org/).
+{% note warn Mac / Linux %}
+If you encounter `EACCES` permission error when trying to install Hexo, please follow [the workaround](https://docs.npmjs.com/resolving-eacces-permissions-errors-when-installing-packages-globally) provided by npmjs; overriding with root/sudo is highly discouraged.
+{% endnote %}
+
+{% note info Linux %}
+If you installed Node.js using Snap, you may need to manually run `npm install` in the target folder when [initializing](/docs/commands#init) a blog.
+{% endnote %}
 
 ### Установка Hexo
 
@@ -72,3 +69,21 @@ We recommend to use [Node Version Switcher](https://github.com/jasongin/nvs/) as
 ``` bash
 $ npm install -g hexo-cli
 ```
+
+### Minimum required Node.js version
+
+If you are stuck with older Node.js, you can consider installing a past version of Hexo.
+
+Please note we do not provide bugfixes to past versions of Hexo.
+
+We highly recommend to always install the [latest version](https://www.npmjs.com/package/hexo?activeTab=versions) of Hexo and the [recommended version](#Requirements) of Node.js, whenever possible.
+
+Hexo version | Minimum Node.js version
+--- | ---
+5.0+ | 10.13.0
+4.1 - 4.2 | 8.10
+4.0 | 8.6
+3.3 - 3.9 | 6.9
+3.2 - 3.3 | 0.12
+3.0 - 3.1 | 0.10 or iojs
+0.0.1 - 2.8 | 0.10
