@@ -39,31 +39,28 @@ $ npm install -g hexo-cli
 
 ### Node.js를 설치하세요
 
-Node.js는 [nvm](https://github.com/nvm-sh/nvm)을 통해 설치하는 것이 가장 좋습니다.
+Node.js provides [official installer](https://nodejs.org/en/download/) for most platforms.
 
-cURL:
+Alternative installation methods:
 
-``` bash
-$ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | sh
-```
+- Windows: Install it with [nvs](https://github.com/jasongin/nvs/) (recommended) or [nvm](https://github.com/nvm-sh/nvm).
+- Mac: Install it with [Homebrew](https://brew.sh/) or [MacPorts](http://www.macports.org/).
+- Linux (DEB/RPM-based): Install it with [NodeSource](https://github.com/nodesource/distributions).
+- Others: Install it through respective package manager. Refer to [the guide](https://nodejs.org/en/download/package-manager/) provided by Node.js.
 
-Wget:
+nvs is also recommended for Mac and Linux to avoid possible permission issue.
 
-``` bash
-$ wget -qO-https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | sh
-```
-
-nvm이 설치되어 있다면, 터미널을 재시작하고 아래 명령어를 수행하세요.
-
-``` bash
-$ nvm install node
-```
-
-{% note info For Windows users %}
-We recommend to use [Node Version Switcher](https://github.com/jasongin/nvs/) as an alternative to nvm on Windows, which has similar command-line syntax with nvm and can be installed through provided Windows Installer (MSI) package.
+{% note info Windows %}
+If you use the official installer, make sure **Add to PATH** is checked (it's checked by default).
 {% endnote %}
 
-이런 방법 대신, [installer](http://nodejs.org/)를 다운로드 받아서 설치하는 방법도 있습니다.
+{% note warn Mac / Linux %}
+If you encounter `EACCES` permission error when trying to install Hexo, please follow [the workaround](https://docs.npmjs.com/resolving-eacces-permissions-errors-when-installing-packages-globally) provided by npmjs; overriding with root/sudo is highly discouraged.
+{% endnote %}
+
+{% note info Linux %}
+If you installed Node.js using Snap, you may need to manually run `npm install` in the target folder when [initializing](/docs/commands#init) a blog.
+{% endnote %}
 
 ### Hexo 설치하기
 
