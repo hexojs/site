@@ -16,7 +16,7 @@ hexo.extend.tag.register(name, function(args, content){
 
 ## 移除标签插件
 
-U使用 `unregister()` 将现有的 [标签插件](/docs/tag-plugins) 替换成自定义函数。
+使用 `unregister()` 将现有的 [标签插件](/docs/tag-plugins) 替换成自定义函数。
 ``` js
 hexo.extend.tag.unregister(name);
 ```
@@ -89,7 +89,7 @@ hexo.extend.tag.register('include_code', function(args){
 
 ## Front-matter 和用户配置
 
-以下任何选项都有效：
+以下任何配置都有效：
 
 1.
 
