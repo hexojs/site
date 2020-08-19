@@ -62,7 +62,7 @@ hexo.extend.injector.register('body_end', () => {
 
 ## 用户访问配置
 
-使用以下任何选项：
+使用以下任何配置：
 
 1.
 
