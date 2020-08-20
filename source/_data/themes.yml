@@ -3169,7 +3169,7 @@
 - name: Oranges
   description: A simple hexo theme of minimalism
   link: https://github.com/zchengsite/hexo-theme-oranges
-  preview: https://zchengsite.github.io/username.github.io/
+  preview: https://hexo.theme.oranges.zcheng.site/
   tags:
     - simple
     - fast
