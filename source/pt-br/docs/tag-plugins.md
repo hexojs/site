@@ -310,6 +310,8 @@ Incluir assets de postagem.
 
 ### Embed image
 
+_hexo-renderer-marked 3.1.0+ can (optionally) resolves the post's path of an image automatically, refer to [this section](/docs/asset-folders#Embedding-an-image-using-markdown) on how to enable it._
+
 "foo.jpg" is located at `http://yoursite.com/2020/01/02/hello/foo.jpg`.
 
 **Default (no option)**

@@ -35,3 +35,18 @@ Asset 폴더 관리 기능을 활성화 시켰다면, Hexo는 당신이 `hexo ne
 ```
 
 이 방법을 통해, 이미지 파일은 포스트 내부나 인덱스 페이지나 아카이브 페이지에서 모두 정상적으로 표시될 것 입니다.
+
+## Embedding an image using markdown
+
+[hexo-renderer-marked](https://github.com/hexojs/hexo-renderer-marked) 3.1.0 introduced a new option that allows you to embed an image in markdown without using `asset_img` tag plugin.
+
+To enable:
+
+``` yml _config.yml
+post_asset_folder: true
+marked:
+  prependRoot: true
+  postAsset: true
+```
+
+Once enabled, an asset image will be automatically resolved to its corresponding post's path. For example, "image.jpg" is located at "/2020/01/02/foo/image.jpg", meaning it is an asset image of "/2020/01/02/foo/" post, `![](image.jpg)` will be rendered as `<img src="/2020/01/02/foo/image.jpg">`.

@@ -54,3 +54,17 @@ asset folder นี้จะมีชื่อเดียวกันกับ�
 
 ดังนั้น รูปภาพจะอยู่ทั้งในโพสต์และในเพจ index กับ archive
 
+## Embedding an image using markdown
+
+[hexo-renderer-marked](https://github.com/hexojs/hexo-renderer-marked) 3.1.0 introduced a new option that allows you to embed an image in markdown without using `asset_img` tag plugin.
+
+To enable:
+
+``` yml _config.yml
+post_asset_folder: true
+marked:
+  prependRoot: true
+  postAsset: true
+```
+
+Once enabled, an asset image will be automatically resolved to its corresponding post's path. For example, "image.jpg" is located at "/2020/01/02/foo/image.jpg", meaning it is an asset image of "/2020/01/02/foo/" post, `![](image.jpg)` will be rendered as `<img src="/2020/01/02/foo/image.jpg">`.
