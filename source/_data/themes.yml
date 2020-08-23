@@ -3352,3 +3352,13 @@
     - modern
     - elegant
     - 中文
+- name: Cupertino
+  description: The Hexo Blog Theme Cupertino.
+  link: https://github.com/MrWillCom/hexo-theme-cupertino
+  preview: https://mrwillcom.github.io
+  tags:
+    - responsive
+    - dark/light
+    - simple
+    - modern
+    - cupertino-design
