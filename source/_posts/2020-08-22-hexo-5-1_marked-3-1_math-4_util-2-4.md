@@ -59,6 +59,34 @@ title: Hexo 5.1.0, hexo-renderer-marked 3.1.0, hexo-math 4.0.0 & hexo-util 2.4.0
 
 ---
 
+## Hexo 5.0.2
+
+### Changes
+
+- Revert "perf: avoid running plugins in 'clean' command" [#4386] [@curbengh] [#4470]
+  * This fixes error in `hexo clean`.
+
+[#4386]: https://github.com/hexojs/hexo/pull/4386
+[#4470]: https://github.com/hexojs/hexo/pull/4470
+
+---
+
+## Hexo 5.0.1
+
+### Changes
+
+- fix(helpers): call url_for from hexo-util [@curbengh] [#4447]
+  * [helpers](/docs/helpers) are now accessible from APIs such as [`Injector`](/api/injector#Example)
+- perf(external_link): update regexp [@SukkaW] [#4467]
+  * regex of [`external_link`](https://github.com/hexojs/hexo/blob/master/lib/plugins/filter/after_render/external_link.js) filter now pre-match external links, instead of solely rely on [`isExternalLink`](https://github.com/hexojs/hexo-util#isexternallinkurl-sitehost-exclude)
+- perf(injector): shorthand optimization [@SukkaW] [#4462]
+
+[#4447]: https://github.com/hexojs/hexo/pull/4447
+[#4467]: https://github.com/hexojs/hexo/pull/4467
+[#4462]: https://github.com/hexojs/hexo/pull/4462
+
+---
+
 ## hexo-renderer-marked 3.1.0
 
 ### Features
