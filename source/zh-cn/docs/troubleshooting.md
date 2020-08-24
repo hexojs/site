@@ -116,13 +116,19 @@ $ hexo clean
 
 ## 泄露（Escape）内容
 
-Hexo 使用 [Nunjucks] 来解析文章（旧版本使用 [Swig]，两者语法类似），内容若包含 `{% raw %}{{ }}{% endraw %}` 或 `{% raw %}{% %}{% endraw %}` 可能导致解析错误，您可以用 `raw` 标签包裹来避免潜在问题发生。
+Hexo 使用 [Nunjucks] 来解析文章（旧版本使用 [Swig]，两者语法类似），内容若包含 `{{ }}` 或 `{% %}` 可能导致解析错误，您可以用 [`raw`](/docs/tag-plugins#Raw) 标签包裹，single backtick ```` `{{ }}` ```` 或 triple backtick 来避免潜在问题发生。
 
 ```
 {% raw %}
-Hello {{ sensitive }}
+Hello {{ world }}
 {% endraw %}
 ```
+
+````
+```
+Hello {{ world }}
+```
+````
 
 ## ENOSPC 错误 （Linux）
 

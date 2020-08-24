@@ -155,16 +155,21 @@ $ hexo clean
 ## Escape Contents
 
 hexo ใช้ [Nunjucks] เพื่อ render โพสต์ (ในเวอร์ชั่นเก่าใช้ [Swig] ซึ่งมี 
-syntax เหมือนกัน) เนื้อหาที่ห่อด้วย `{% raw %}{{ }}{% endraw %}` หรือ `{% raw 
-%}{% %}{% endraw %}` อาจจะถูก parse ไม่ถูกต้องและเกิดปัญหาบ้าง 
-เพื่อป้องกันเรื่องนี้เกิดขึ้น คุณสามารถติดตั้งปลั๊กอินแท็ก `raw` 
-และห่อเนื้อหาท่ีอาจจะถูก parse ไม่ถูกต้องนั้นด้วยแท็กนี้
+syntax เหมือนกัน) เนื้อหาที่ห่อด้วย `{{ }}` หรือ `{% %}` อาจจะถูก parse ไม่ถูกต้องและเกิดปัญหาบ้าง 
+เพื่อป้องกันเรื่องนี้เกิดขึ้น คุณสามารถติดตั้งปลั๊กอินแท็ก
+You can skip the parsing by wrapping it with the [`raw`](/docs/tag-plugins#Raw) tag plugin, single backtick ```` `{{ }}` ```` or triple backtick.
 
 ```
 {% raw %}
-Hello {{ sensitive }}
+Hello {{ world }}
 {% endraw %}
 ```
+
+````
+```
+Hello {{ world }}
+```
+````
 
 ## ENOSPC Error (Linux)
 
