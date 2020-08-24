@@ -17,7 +17,7 @@ date: 2013/7/13 20:46:25
 
 設定 | 描述 | 預設值
 --- | --- | ---
-`layout` | 佈局 | 
+`layout` | 佈局 | [`config.default_layout`](/zh-tw/docs/configuration#寫作)
 `title` | 標題 | 文章的檔案名
 `date` | 建立日期 | 檔案建立日期
 `updated` | 更新日期 | 檔案更新日期
@@ -26,6 +26,10 @@ date: 2013/7/13 20:46:25
 `categories` | 分類（不適用於分頁）|
 `permalink` | 覆蓋文章網址 |
 `disableNunjucks` | Disable rendering of Nunjucks tag `{{ }}`/`{% %}` and [tag plugins](/docs/tag-plugins) when enabled
+
+### 佈局
+
+The default layout is `post`, in accordance to the value of [`default_layout`]((/docs/configuration#Writing)) setting in `_config.yml`. When the layout is disabled (`layout: false`) in an article, it will not be processed with a theme. However, it will still be rendered by any available renderer: if an article is written in Markdown and a Markdown renderer (like the default [hexo-renderer-marked](https://github.com/hexojs/hexo-renderer-marked)) is installed, it will be rendered to HTML. [Tag plugins](/docs/tag-plugins) are always processed regardless of layout.
 
 ### 分類和標籤
 

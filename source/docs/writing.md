@@ -22,8 +22,8 @@ Layout | Path
 `page` | `source`
 `draft` | `source/_drafts`
 
-{% note tip Don't process my posts! %}
-If you don't want your posts processed, you can set `layout: false` in front-matter.
+{% note tip Disabling layout %}
+If you don't want an article (post/page) to be processed with a theme, set `layout: false` in its front-matter. Refer to [this section](/docs/front-matter#Layout) for more details.
 {% endnote %}
 
 ### Filename
