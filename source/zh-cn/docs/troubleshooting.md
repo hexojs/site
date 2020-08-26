@@ -55,7 +55,7 @@ To override the limit:
   # '*' applies to all users and '-' set both soft and hard limits
   ```
 
-  * The above setting may not apply in some cases, check "/etc/pam.d/login" and "/etc/pam.d/lightdm" have the following line. (Ignore this step if those files do not exist)
+  * The above setting may not apply in some cases, ensure "/etc/pam.d/login" and "/etc/pam.d/lightdm" have the following line. (Ignore this step if those files do not exist)
 
   ```
   session required pam_limits.so
