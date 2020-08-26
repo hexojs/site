@@ -8,6 +8,8 @@ Although you can write your posts in any formats, but the tag plugins will alway
 
 {% youtube I07XMi7MHd4 %}
 
+_Tag plugins should not be wrapped inside Markdown syntax, e.g. `[]({% post_path lorem-ipsum %})` is not supported._
+
 ## Bloco de Citação
 
 Perfeito para adicionar citações à sua postagem, com informações opcionais de autor, fontes e título.
@@ -266,7 +268,7 @@ For instance: `{% raw %}{% post_link how-to-bake-a-cake %}{% endraw %}`.
 
 This will work as long as the filename of the post is `how-to-bake-a-cake.md`, even if the post is located at `source/posts/2015-02-my-family-holiday` and has permalink `2018/en/how-to-bake-a-cake`.
 
-You can customize the text to display, instead of displaying the post's title. Using `post_path` inside Markdown syntax `[]()` is not supported.
+You can customize the text to display, instead of displaying the post's title.
 
 Post's title and custom text are escaped by default. You can use the `escape` option to disable escaping.
 

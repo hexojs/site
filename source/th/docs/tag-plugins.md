@@ -8,6 +8,8 @@ Although you can write your posts in any formats, but the tag plugins will alway
 
 {% youtube I07XMi7MHd4 %}
 
+_Tag plugins should not be wrapped inside Markdown syntax, e.g. `[]({% post_path lorem-ipsum %})` is not supported._
+
 ## Block Quote
 
 Perfect for adding quotes to your post, with optional author, source and title information.
