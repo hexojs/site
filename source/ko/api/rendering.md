@@ -64,9 +64,9 @@ hexo.render.getOutput('layout.swig') // html
 hexo.render.getOutput('image.png') // '''
 ```
 
-## Disabling Nunjucks tag
+## Disable Nunjucks tags
 
-If you are not using a [tag plugin](/docs/tag-plugins) and want to use `{{ }}` or `{% %}` in your post without using content [escaping](/docs/troubleshooting#Escape-Contents), you can disable processing of Nunjucks tag by:
+If you are not using a [tag plugin](/docs/tag-plugins) and want to use `{{ }}` or `{% %}` in your post without using content [escaping](/docs/troubleshooting#Escape-Contents), you can disable processing of Nunjucks tag in existing renderer by:
 
 ``` js
 // following example only applies to '.md' file extension
