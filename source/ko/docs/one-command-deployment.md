@@ -166,6 +166,32 @@ deploy:
 `connections` | 연결 번호 | 1
 `verbose` | Verbose 메시지를 표시합니다. | false
 
+## Vercel
+
+[Vercel](https://vercel.com) is a cloud platform that enables developers to host Jamstack websites and web services that deploy instantly, scale automatically, and requires no supervision, all with zero configuration. They provide a global edge network, SSL encryption, asset compression, cache invalidation, and more.
+
+Step 1: Add a build script to your `package.json` file:
+
+```json
+{
+  "scripts": {
+    "build": "hexo generate"
+  }
+}
+```
+
+Step 2: Deploy your Hexo Website to Vercel
+
+To deploy your Hexo app with a [Vercel for Git Integration](https://vercel.com/docs/git-integrations), make sure it has been pushed to a Git repository.
+
+Import the project into Vercel using the [Import Flow](https://vercel.com/import/git). During the import, you will find all relevant options preconfigured for you; however, you can choose to change any of these options, a list of which can be found [here](https://vercel.com/docs/build-step#build-&-development-settings).
+
+After your project has been imported, all subsequent pushes to branches will generate [Preview Deployments](https://vercel.com/docs/platform/deployments#preview), and all changes made to the [Production Branch](https://vercel.com/docs/git-integrations#production-branch) (commonly "main") will result in a [Production Deployment](https://vercel.com/docs/platform/deployments#production).
+
+Alternatively, you can click the deploy button below to create a new project:
+
+[![Deploy Vercel](https://vercel.com/button)](https://vercel.com/new/hexo)
+
 ## 21YunBox
 
 1. [21YunBox](https://www.21yunbox.com)에서 GitHub에서 다음 설정을 통해 새로운 '정적 사이트' 프로젝트를 설정합니다.
