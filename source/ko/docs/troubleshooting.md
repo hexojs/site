@@ -146,13 +146,20 @@ $ hexo clean
 
 ## Escape Contents
 
-Hexo는 포스트를 렌더링하는데 [Nunjucks]를 사용합니다([Swig]은 이전 버전에서 사용했었습니다. 문법은 비슷합니다.). `{% raw %}{{ }}{% endraw %}` 또는 `{% raw %}{% %}{% endraw %}`로 감싼 컨텐츠는 파싱된 후에 문제를 발생시킵니다. 민감한 컨텐츠는 `raw` 태그 플러그인으로 감싸는 것이 좋습니다.
+Hexo는 포스트를 렌더링하는데 [Nunjucks]를 사용합니다([Swig]은 이전 버전에서 사용했었습니다. 문법은 비슷합니다.). `{{ }}` 또는 `{% %}`로 감싼 컨텐츠는 파싱된 후에 문제를 발생시킵니다. You can skip the parsing by wrapping it with the [`raw`](/docs/tag-plugins#Raw) tag plugin, single backtick ```` `{{ }}` ```` or triple backtick. Alternatively, Nunjucks tags can be disabled by the [renderer](/api/renderer#Disable-Nunjucks-tags) or [manually disabled](/api/rendering#Disable-Nunjucks-tags) by the user.
 
 ```
 {% raw %}
-Hello {{ sensitive }}
+Hello {{ world }}
 {% endraw %}
 ```
+
+````
+```
+Hello {{ world }}
+```
+````
+
 ## ENOSPC Error (Linux)
 `$ hexo server`명령어가 가끔 error를 반환할 때가 있습니다.
 ```

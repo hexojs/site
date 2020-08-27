@@ -157,13 +157,19 @@ Quando você não consegue executar nenhum comando do Hexo, com exceção de `he
 
 ## Conteúdo Escapando
 
-O Hexo usa [Nunjucks] para renderizar posts ([Swig] foi usado na versão mais antiga, que compartilha uma sintaxe semelhante). O conteúdo delimitado com `{% raw %}{{ }}{% endraw %}` ou `{% raw %}{% %}{% endraw %}` será "parseado" e pode causar problemas. Você pode empacotar um conteúdo sensível com a [tag plugin `raw`](tag-plugins.html#Raw).
+O Hexo usa [Nunjucks] para renderizar posts ([Swig] foi usado na versão mais antiga, que compartilha uma sintaxe semelhante). O conteúdo delimitado com `{{ }}` ou `{% %}` será "parseado" e pode causar problemas. Você pode empacotar um conteúdo sensível com a tag plugin [`raw`](/docs/tag-plugins#Raw), single backtick ```` `{{ }}` ```` or triple backtick. Alternatively, Nunjucks tags can be disabled by the [renderer](/api/renderer#Disable-Nunjucks-tags) or [manually disabled](/api/rendering#Disable-Nunjucks-tags) by the user.
 
 ```
 {% raw %}
-Hello {{ sensitive }}
+Hello {{ world }}
 {% endraw %}
 ```
+
+````
+```
+Hello {{ world }}
+```
+````
 
 ## ENOSPC Error (Linux)
 

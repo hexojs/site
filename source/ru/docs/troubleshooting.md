@@ -146,13 +146,19 @@ $ hexo clean
 
 ## Содержимое не найдено
 
-Hexo использует [Nunjucks] для отображения сообщения ([Swig] использовался в предыдущей версии, он использует похожий синтаксис). Содержимое, обёрнутое, в `{% raw %}{{ }}{% endraw %}` или `{% raw %}{% %}{% endraw %}`, поможет вам разобраться, какая часть вызвала проблемы. Можно переносить конфиденциальные данные с `raw` плагином.
+Hexo использует [Nunjucks] для отображения сообщения ([Swig] использовался в предыдущей версии, он использует похожий синтаксис). Содержимое, обёрнутое, в `{{ }}` или `{% %}`, поможет вам разобраться, какая часть вызвала проблемы. You can skip the parsing by wrapping it with the [`raw`](/docs/tag-plugins#Raw) tag plugin, single backtick ```` `{{ }}` ```` or triple backtick. Alternatively, Nunjucks tags can be disabled by the [renderer](/api/renderer#Disable-Nunjucks-tags) or [manually disabled](/api/rendering#Disable-Nunjucks-tags) by the user.
 
-``` plain
+```
 {% raw %}
-Hello {{ sensitive }}
+Hello {{ world }}
 {% endraw %}
 ```
+
+````
+```
+Hello {{ world }}
+```
+````
 
 ## ENOSPC Error (Linux)
 
