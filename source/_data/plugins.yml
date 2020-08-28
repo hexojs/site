@@ -2767,3 +2767,11 @@
   link: https://github.com/jiangtj/hexo-extend-theme
   tags:
     - theme
+- name: hexo-renderer-inferno
+  description: Inferno.js JSX renderer for Hexo.
+  link: https://github.com/ppoffice/hexo-renderer-inferno
+  tags:
+    - renderer
+    - jsx
+    - inferno
+    - react
