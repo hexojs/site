@@ -276,6 +276,28 @@ Alternatively, you can click the deploy button below to create a new project:
 
 请查看 [用 21云盒子 部署一个 Hexo 样例](https://www.21yunbox.com/docs/#/deploy-hexo).
 
+## Bip
+
+[Bip](https://bip.sh) provides zero downtime deployment, a global CDN, SSL, unlimited bandwidth and more for static websites.
+
+Getting started is quick and easy, as Bip provides out the box support for Hexo. This guide assumes you already have [a Bip domain and Bip CLI installed](https://bip.sh/getstarted).
+
+1: Initialise your project directory
+
+```bash
+$ bip init
+```
+
+Follow the prompts, where you'll be asked which domain you'd like to deploy to. Bip will detect that you're using Hexo, and set project settings like the source file directory automatically.
+
+2: Deploy your website
+
+```bash
+$ hexo generate —deploy && bip deploy
+```
+
+After a few moments, your website will be deployed.
+
 ## 其他方法
 
 Hexo 生成的所有文件都放在 `public` 文件夹中，您可以将它们复制到您喜欢的地方。
