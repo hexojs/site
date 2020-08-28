@@ -207,6 +207,28 @@ Alternatively, you can click the deploy button below to create a new project:
 
 자세한 내용은 이 가이드를 참조하십시오.[https://www.21yunbox.com/docs/deploy-hexo](https://www.21yunbox.com/docs/#/deploy-hexo)에서 확인할 수 있습니다.
 
+## Bip
+
+[Bip](https://bip.sh) provides zero downtime deployment, a global CDN, SSL, unlimited bandwidth and more for static websites.
+
+Getting started is quick and easy, as Bip provides out the box support for Hexo. This guide assumes you already have [a Bip domain and Bip CLI installed](https://bip.sh/getstarted).
+
+1: Initialise your project directory
+
+```bash
+$ bip init
+```
+
+Follow the prompts, where you'll be asked which domain you'd like to deploy to. Bip will detect that you're using Hexo, and set project settings like the source file directory automatically.
+
+2: Deploy your website
+
+```bash
+$ hexo generate —deploy && bip deploy
+```
+
+After a few moments, your website will be deployed.
+
 ## 다른 메소드들
 
 생성되는 모든 파일들은 `public` 폴더에 저장됩니다. 이 파일들을 당신이 원하는 곳 아무데나 복사하여 사용할 수 있습니다.
