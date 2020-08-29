@@ -243,7 +243,7 @@ Para obter mais detalhes, siga este guia em [https://www.21yunbox.com/docs/#/dep
 
 ## Bip
 
-[Bip](https://bip.sh) provides zero downtime deployment, a global CDN, SSL, unlimited bandwidth and more for static websites.
+[Bip](https://bip.sh) is a commercial hosting service which provides zero downtime deployment, a global CDN, SSL, unlimited bandwidth and more for static websites. Plans are available on a pay as you go, per domain basis.
 
 Getting started is quick and easy, as Bip provides out the box support for Hexo. This guide assumes you already have [a Bip domain and Bip CLI installed](https://bip.sh/getstarted).
 
