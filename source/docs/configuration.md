@@ -131,10 +131,10 @@ Setting | Description | Default
 Examples:
 ``` yaml
 pagination_dir: 'page'
-# http://yoursite.com/page/2
+# http://example.com/page/2
 
 pagination_dir: 'awesome-page'
-# http://yoursite.com/awesome-page/2
+# http://example.com/awesome-page/2
 ```
 
 ### Extensions
