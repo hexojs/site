@@ -2664,12 +2664,14 @@
 - name: Fan
   description: A dark theme
   link: https://github.com/fan-lv/Fan
-  preview: https://www.lvfan.xyz/
+  preview: https://lv-fan.gitee.io/
   tags:
     - 中文
     - dark
     - Pug
     - Stylus
+    - Beautiful
+    - 梦幻/dream
 - name: snark
   description: A dark theme with lofter style
   link: https://github.com/Litreily/hexo-theme-snark
