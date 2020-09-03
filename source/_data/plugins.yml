@@ -2769,8 +2769,9 @@
     - theme
 - name: hexo-renderer-inferno
   description: Inferno.js JSX renderer for Hexo.
-  link: https://github.com/ppoffice/hexo-renderer-inferno
+  link: https://github.com/hexojs/hexo-renderer-inferno
   tags:
+    - official
     - renderer
     - jsx
     - inferno
