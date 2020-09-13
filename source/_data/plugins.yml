@@ -1,3 +1,14 @@
+- name: hexo-social9-socialshare
+  description: Social9 social sharing plugin provides you beautiful buttons, sharing capabilities, and analytics. (20+ buttons- Whatsapp, Facebook, Twitter, LinkedIn, Reddit, and many more...).
+  link: https://github.com/social9/hexo-plugin-social9-share
+  tags:
+    - helper
+    - plugin
+    - tag
+    - social
+    - hexo
+    - social9
+    - socialshare
 - name: hexo-submit-urls-to-search-engine
   description: Hexo plugin to submit URLs of new posts to Google, Bing, Baidu search engine to improve the quality and speed of website collection.
   link: https://github.com/cjh0613/hexo-submit-urls-to-search-engine
@@ -2709,13 +2720,13 @@
     - prism
     - katex
     - mermaid
-    - pangu    
+    - pangu
     - minify
     - html-minifier
     - uglify
     - clean-css
 - name: hexo-douban-card
-  description: generate a douban book(movie/music) card in hexo post 
+  description: generate a douban book(movie/music) card in hexo post
   link: https://github.com/TankNee/hexo-douban-card
   tags:
     - douban
@@ -2737,4 +2748,38 @@
     - image
     - cloudflare
     - cdn
-    
+- name: hexo-calendar
+  description: Insert a calendar like Github contributions into your blog. | 在博客中插入类似 Github contributions 的活动日历。
+  link: https://github.com/HCLonely/hexo-calendar
+  tags:
+    - helper
+    - tag
+    - calendar
+    - echarts
+- name: hexo-patch-load-highlight-style
+  description: Auto load hexo highlight style, support highlight and prismjs
+  link: https://github.com/jiangtj-lab/hexo-patch-load-highlight-style
+  tags:
+    - highlight
+    - prismjs
+- name: hexo-tag-chart
+  description: Insert simple and flexible Chart in Hexo site by using tags.
+  link: https://github.com/Shen-Yu/hexo-tag-chart
+  tags:
+    - tag
+    - chart
+    - chartjs
+- name: hexo-extend-theme
+  description: Replace any theme layout file to the custom file.
+  link: https://github.com/jiangtj/hexo-extend-theme
+  tags:
+    - theme
+- name: hexo-renderer-inferno
+  description: Inferno.js JSX renderer for Hexo.
+  link: https://github.com/hexojs/hexo-renderer-inferno
+  tags:
+    - official
+    - renderer
+    - jsx
+    - inferno
+    - react

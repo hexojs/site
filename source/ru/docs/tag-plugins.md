@@ -5,6 +5,8 @@ title: Плагины тегов
 
 Although you can write your posts in any formats, but the tag plugins will always be available and syntax remains the same.
 
+_Tag plugins should not be wrapped inside Markdown syntax, e.g. `[]({% post_path lorem-ipsum %})` is not supported._
+
 ## Блок цитаты
 
 Подходит для добавления цитаты в свой пост с указанием автора, источника и информационным заголовком.
@@ -263,7 +265,7 @@ For instance: `{% raw %}{% post_link how-to-bake-a-cake %}{% endraw %}`.
 
 This will work as long as the filename of the post is `how-to-bake-a-cake.md`, even if the post is located at `source/posts/2015-02-my-family-holiday` and has permalink `2018/en/how-to-bake-a-cake`.
 
-You can customize the text to display, instead of displaying the post's title. Using `post_path` inside Markdown syntax `[]()` is not supported.
+You can customize the text to display, instead of displaying the post's title.
 
 Post's title and custom text are escaped by default. You can use the `escape` option to disable escaping.
 
@@ -301,8 +303,46 @@ For instance:
 
 ```
 {% asset_path filename %}
-{% asset_img filename [title] %}
+{% asset_img [class names] slug [width] [height] [title text [alt text]] %}
 {% asset_link filename [title] [escape] %}
+```
+
+### Embed image
+
+_hexo-renderer-marked 3.1.0+ can (optionally) resolves the post's path of an image automatically, refer to [this section](/docs/asset-folders#Embedding-an-image-using-markdown) on how to enable it._
+
+"foo.jpg" is located at `http://example.com/2020/01/02/hello/foo.jpg`.
+
+**Default (no option)**
+
+`{% asset_img foo.jpg %}`
+
+``` html
+<img src="/2020/01/02/hello/foo.jpg">
+```
+
+**Custom class**
+
+`{% asset_img post-image foo.jpg %}`
+
+``` html
+<img src="/2020/01/02/hello/foo.jpg" class="post-image">
+```
+
+**Display size**
+
+`{% asset_img foo.jpg 500 400 %}`
+
+``` html
+<img src="/2020/01/02/hello/foo.jpg" width="500" height="400">
+```
+
+**Title & Alt**
+
+`{% asset_img logo.svg "lorem ipsum'dolor'" %}`
+
+``` html
+<img src="/2020/01/02/hello/foo.jpg" title="lorem ipsum" alt="dolor">
 ```
 
 ## Сырцы

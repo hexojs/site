@@ -32,7 +32,7 @@ title: 配置
 `pretty_urls.trailing_html` | 是否在永久链接中保留尾部的 `.html`, 设置为 `false` 时去除 (_对尾部的 `index.html`无效_)  | `true`
 
 {% note info 网站存放在子目录 %}
-如果您的网站存放在子目录中，例如 `http://yoursite.com/blog`，则请将您的 `url` 设为 `http://yoursite.com/blog` 并把 `root` 设为 `/blog/`。
+如果您的网站存放在子目录中，例如 `http://example.com/blog`，则请将您的 `url` 设为 `http://example.com/blog` 并把 `root` 设为 `/blog/`。
 {% endnote %}
 
 例如：
@@ -88,13 +88,8 @@ skip_render: "_posts/test-post.md"
 `post_asset_folder` | 启动 [Asset 文件夹](asset-folders.html) | false
 `relative_link` | 把链接改为与根目录的相对位址 | false
 `future` | 显示未来的文章 | true
-`highlight` | 代码块的设置 |
-`highlight.enable` | 开启代码块高亮 | `true`
-`highlight.auto_detect` | 如果未指定语言，则启用自动检测 | `false`
-`highlight.line_number` | 显示行数<br>_Enabling this option will also enable `wrap` option_ | `true`
-`highlight.tab_replace` | 用 n 个空格替换 tabs；如果值为空，则不会替换 tabs | `''`
-`highlight.wrap` | Wrap the code block in [`<table>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table) | `true`
-`highlight.hljs` | Use the `hljs-*` prefix for CSS classes | `false`
+`highlight` | 代码块的设置, see [Highlight.js](/docs/syntax-highlight#Highlight-js) section for usage guide |
+`prismjs` | 代码块的设置, see [PrismJS](/docs/syntax-highlight#PrismJS) section for usage guide |
 
 {% note info 相对地址 %}
 默认情况下，Hexo 生成的超链接都是绝对地址。例如，如果您的网站域名为 `example.com`,您有一篇文章名为 `hello`，那么绝对链接可能像这样：`http://example.com/hello.html`，它是**绝对**于域名的。相对链接像这样：`/hello.html`，也就是说，无论用什么域名访问该站点，都没有关系，这在进行反向代理时可能用到。通常情况下，建议使用绝对地址。

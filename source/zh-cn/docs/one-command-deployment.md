@@ -237,17 +237,11 @@ deploy:
 `passphrase` | （可省略）ssh私钥的密码短语 |
 `agent` | ssh套接字的目录地址 | `$SSH_AUTH_SOCK`
 
-## ZEIT Now
+## Vercel
 
-[ZEIT Now](https://zeit.co) 是一个托管静态网站和 Serverless APIs 的云平台。你可以一键将你的 Hexo 网站部署到 ZEIT Now、并使用自己的域名或者由 ZEIT Now 提供的免费子域名 `now.sh`。
+[Vercel](https://vercel.com) is a cloud platform that enables developers to host Jamstack websites and web services that deploy instantly, scale automatically, and requires no supervision, all with zero configuration. They provide a global edge network, SSL encryption, asset compression, cache invalidation, and more.
 
-1. 安装 [Now CLI](https://zeit.co/download):
-
-```bash
-$ npm i -g now
-```
-
-2. 在 `package.json` 中添加 npm script:
+Step 1: Add a build script to your `package.json` file:
 
 ```json
 {
@@ -257,15 +251,17 @@ $ npm i -g now
 }
 ```
 
-3. 在 Hexo 所在目录执行下述指令：
+Step 2: Deploy your Hexo Website to Vercel
 
-```bash
-now
-```
+To deploy your Hexo app with a [Vercel for Git Integration](https://vercel.com/docs/git-integrations), make sure it has been pushed to a Git repository.
 
-你也可以使用下面的按钮在 ZEIT Now 创建一个 Hexo 项目。
+Import the project into Vercel using the [Import Flow](https://vercel.com/import/git). During the import, you will find all relevant options preconfigured for you; however, you can choose to change any of these options, a list of which can be found [here](https://vercel.com/docs/build-step#build-&-development-settings).
 
-[![Deploy Now](https://zeit.co/button)](https://zeit.co/new/hexo)
+After your project has been imported, all subsequent pushes to branches will generate [Preview Deployments](https://vercel.com/docs/platform/deployments#preview), and all changes made to the [Production Branch](https://vercel.com/docs/git-integrations#production-branch) (commonly "main") will result in a [Production Deployment](https://vercel.com/docs/platform/deployments#production).
+
+Alternatively, you can click the deploy button below to create a new project:
+
+[![Deploy Vercel](https://vercel.com/button)](https://vercel.com/new/hexo)
 
 ## 21云盒子
 
@@ -279,6 +275,28 @@ now
 样例已经部署在 [https://hexo.21yunbox.com/](https://hexo.21yunbox.com/).
 
 请查看 [用 21云盒子 部署一个 Hexo 样例](https://www.21yunbox.com/docs/#/deploy-hexo).
+
+## Bip
+
+[Bip](https://bip.sh) is a commercial hosting service which provides zero downtime deployment, a global CDN, SSL, unlimited bandwidth and more for static websites. Plans are available on a pay as you go, per domain basis.
+
+Getting started is quick and easy, as Bip provides out the box support for Hexo. This guide assumes you already have [a Bip domain and Bip CLI installed](https://bip.sh/getstarted).
+
+1: Initialise your project directory
+
+```bash
+$ bip init
+```
+
+Follow the prompts, where you'll be asked which domain you'd like to deploy to. Bip will detect that you're using Hexo, and set project settings like the source file directory automatically.
+
+2: Deploy your website
+
+```bash
+$ hexo generate —deploy && bip deploy
+```
+
+After a few moments, your website will be deployed.
 
 ## 其他方法
 

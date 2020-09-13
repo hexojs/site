@@ -34,6 +34,41 @@ $ ulimit -n 10000
 ```
 （这一命令只对Linux系统有效）
 
+**Error: cannot modify limit**
+
+If you encounter the following error:
+
+``` bash
+$ ulimit -n 10000
+ulimit: open files: cannot modify limit: Operation not permitted
+```
+
+It means some system-wide configurations are preventing `ulimit` to being increased to a certain limit.
+
+To override the limit:
+
+1. Add the following line to "/etc/security/limits.conf":
+
+  ```
+  * - nofile 10000
+
+  # '*' applies to all users and '-' set both soft and hard limits
+  ```
+
+  * The above setting may not apply in some cases, ensure "/etc/pam.d/login" and "/etc/pam.d/lightdm" have the following line. (Ignore this step if those files do not exist)
+
+  ```
+  session required pam_limits.so
+  ```
+
+2. If you are on a [systemd-based](https://en.wikipedia.org/wiki/Systemd#Adoption) distribution, systemd may override "limits.conf". To set the limit in systemd, add the following line in "/etc/systemd/system.conf" and "/etc/systemd/user.conf":
+
+  ```
+  DefaultLimitNOFILE=10000
+  ```
+
+3. Reboot
+
 ## Git 部署问题
 
 ### RPC failed
@@ -116,13 +151,19 @@ $ hexo clean
 
 ## 泄露（Escape）内容
 
-Hexo 使用 [Nunjucks] 来解析文章（旧版本使用 [Swig]，两者语法类似），内容若包含 `{% raw %}{{ }}{% endraw %}` 或 `{% raw %}{% %}{% endraw %}` 可能导致解析错误，您可以用 `raw` 标签包裹来避免潜在问题发生。
+Hexo 使用 [Nunjucks] 来解析文章（旧版本使用 [Swig]，两者语法类似），内容若包含 `{{ }}` 或 `{% %}` 可能导致解析错误，您可以用 [`raw`](/docs/tag-plugins#Raw) 标签包裹，single backtick ```` `{{ }}` ```` 或 triple backtick 来避免潜在问题发生。Alternatively, Nunjucks tags can be disabled by the [renderer](/api/renderer#Disable-Nunjucks-tags) or [manually disabled](/api/rendering#Disable-Nunjucks-tags) by the user.
 
 ```
 {% raw %}
-Hello {{ sensitive }}
+Hello {{ world }}
 {% endraw %}
 ```
+
+````
+```
+Hello {{ world }}
+```
+````
 
 ## ENOSPC 错误 （Linux）
 

@@ -185,8 +185,22 @@ Feed 링크를 삽입합니다.
 
 옵션 | 설명 | 기본 값
 --- | --- | ---
-`title` | Feed 제목 |
+`title` | Feed 제목 | `config.title`
 `type` | Feed 형식 | atom
+
+**Examples:**
+
+``` js
+<%- feed_tag('atom.xml') %>
+// <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+
+<%- feed_tag('rss.xml', { title: 'RSS Feed', type: 'rss' }) %>
+// <link rel="alternate" href="/atom.xml" title="RSS Feed" type="application/rss+xml">
+
+/* Defaults to hexo-generator-feed's config if no argument */
+<%- feed_tag() %>
+// <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+```
 
 ### 조건 태그
 

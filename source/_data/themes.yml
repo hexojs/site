@@ -2664,12 +2664,14 @@
 - name: Fan
   description: A dark theme
   link: https://github.com/fan-lv/Fan
-  preview: https://www.lvfan.xyz/
+  preview: https://lv-fan.gitee.io/
   tags:
     - 中文
     - dark
     - Pug
     - Stylus
+    - Beautiful
+    - 梦幻/dream
 - name: snark
   description: A dark theme with lofter style
   link: https://github.com/Litreily/hexo-theme-snark
@@ -3169,7 +3171,7 @@
 - name: Oranges
   description: A simple hexo theme of minimalism
   link: https://github.com/zchengsite/hexo-theme-oranges
-  preview: https://zchengsite.github.io/username.github.io/
+  preview: https://hexo.theme.oranges.zcheng.site/
   tags:
     - simple
     - fast
@@ -3318,3 +3320,65 @@
     - widgets
     - responsive
     - dark/light
+- name: Kaze
+  description: A simple, responsive and modern Hexo theme
+  link: https://github.com/theme-kaze/hexo-theme-Kaze
+  preview: https://demo.theme-kaze.top
+  tags:
+    - simple
+    - widgets
+    - dark-mode
+    - responsive
+    - modern
+    - elegant
+    - 中文
+- name: blur
+  description: A simple and warm Hexo blog theme 
+  link: https://github.com/kiten46087/hexo-theme-blur
+  preview: https://kiten46087.github.io/
+  tags:
+    - minimalist
+    - warm
+    - simple
+    - 中文
+
+- name: Dark
+  description: A different hexo theme.
+  link: https://github.com/confuseder/hexo-theme-dark
+  preview: https://confuseder.github.io/
+  tags:
+    - simple
+    - widgets
+    - dark-mode
+    - responsive
+    - modern
+    - elegant
+    - 中文
+- name: Cupertino
+  description: The Hexo Blog Theme Cupertino.
+  link: https://github.com/MrWillCom/hexo-theme-cupertino
+  preview: https://mrwillcom.github.io
+  tags:
+    - responsive
+    - dark/light
+    - simple
+    - modern
+    - cupertino-design
+- name: LiveForCode
+  description: A beautiful theme for Hexo.
+  link: https://github.com/first19326/hexo-liveforcode
+  preview: https://notes.worstone.cn
+  tags:
+    - Beautiful
+    - Blog
+    - Chinese
+    - Hexo
+    - Personal
+- name: milk
+  description: A tiling window theme.
+  link: https://github.com/MRsoymilk/hexo-theme-milk
+  preview: https://blog.soymilk.fun
+  tags:
+    - 非主流
+    - Blog
+    - dark_mode

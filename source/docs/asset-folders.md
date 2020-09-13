@@ -19,7 +19,7 @@ With asset folder management enabled, Hexo will create a folder every time you m
 
 ## Tag Plugins For Relative Path Referencing
 
-Referencing images or other assets using normal markdown syntax and relative paths may lead to incorrect display on archive or index pages. Plugins have been created by the community to address this issue in Hexo 2. However, with the release of Hexo 3, several new tag plugins were added to core. These enable you to reference your assets more easily in posts:
+Referencing images or other assets using normal markdown syntax and relative paths may lead to incorrect display on archive or index pages. Plugins have been created by the community to address this issue in Hexo 2. However, with the release of Hexo 3, several new [tag plugins](/docs/tag-plugins#Include-Assets) were added to core. These enable you to reference your assets more easily in posts:
 
 ```
 {% asset_path slug %}
@@ -27,7 +27,7 @@ Referencing images or other assets using normal markdown syntax and relative pat
 {% asset_link slug [title] %}
 ```
 
-For example, with post asset folders enabled, if you place an image `example.jpg` into your asset folder, it will *not* appear on the index page if you reference it using a relative path with regular `![](/example.jpg)` markdown syntax (however, it will work as expected in the post itself).
+For example, with post asset folders enabled, if you place an image `example.jpg` into your asset folder, it will *not* appear on the index page if you reference it using a relative path with regular `![](example.jpg)` markdown syntax (however, it will work as expected in the post itself).
 
 The correct way to reference the image will thus be using tag plugin syntax rather than markdown:
 
@@ -37,3 +37,18 @@ The correct way to reference the image will thus be using tag plugin syntax rath
 ```
 
 This way, the image will appear both inside the post and on index and archive pages.
+
+## Embedding an image using markdown
+
+[hexo-renderer-marked](https://github.com/hexojs/hexo-renderer-marked) 3.1.0 introduced a new option that allows you to embed an image in markdown without using `asset_img` tag plugin.
+
+To enable:
+
+``` yml _config.yml
+post_asset_folder: true
+marked:
+  prependRoot: true
+  postAsset: true
+```
+
+Once enabled, an asset image will be automatically resolved to its corresponding post's path. For example, "image.jpg" is located at "/2020/01/02/foo/image.jpg", meaning it is an asset image of "/2020/01/02/foo/" post, `![](image.jpg)` will be rendered as `<img src="/2020/01/02/foo/image.jpg">`.

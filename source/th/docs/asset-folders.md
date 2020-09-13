@@ -41,7 +41,7 @@ asset folder นี้จะมีชื่อเดียวกันกับ�
 ```
 
 ยกตัวอย่างเช่น ถ้าสร้าง asset folder แล้ว วางรูปภาพ  `example.jpg` เข้าอยู่ใน
- asset folder ของคุณ และใช้  syntax ของ markdown ท่ีเป็น `![](/example.jpg)` 
+ asset folder ของคุณ และใช้  syntax ของ markdown ท่ีเป็น `![](example.jpg)` 
  เพื่ออ้างอิงรูปภาพ  แต่ syntax นี้จะไม่สามารถทำให้รูปภาพนั้นอยู่ในเพจ index 
  อย่างถูกต้อง
 
@@ -54,3 +54,17 @@ asset folder นี้จะมีชื่อเดียวกันกับ�
 
 ดังนั้น รูปภาพจะอยู่ทั้งในโพสต์และในเพจ index กับ archive
 
+## Embedding an image using markdown
+
+[hexo-renderer-marked](https://github.com/hexojs/hexo-renderer-marked) 3.1.0 introduced a new option that allows you to embed an image in markdown without using `asset_img` tag plugin.
+
+To enable:
+
+``` yml _config.yml
+post_asset_folder: true
+marked:
+  prependRoot: true
+  postAsset: true
+```
+
+Once enabled, an asset image will be automatically resolved to its corresponding post's path. For example, "image.jpg" is located at "/2020/01/02/foo/image.jpg", meaning it is an asset image of "/2020/01/02/foo/" post, `![](image.jpg)` will be rendered as `<img src="/2020/01/02/foo/image.jpg">`.

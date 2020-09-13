@@ -213,17 +213,11 @@ deploy:
 | `passphrase` | Optional passphrase for the private key |
 | `agent`      | Path to the ssh-agent socket            | `$SSH_AUTH_SOCK` |
 
-## ZEIT Now
+## Vercel
 
-[ZEIT Now](https://zeit.co) is a cloud platform for websites and serverless APIs, that you can use to deploy your Hexo site to your personal domain (or a free `.now.sh` suffixed URL) with just a single command.
+[Vercel](https://vercel.com) is a cloud platform that enables developers to host Jamstack websites and web services that deploy instantly, scale automatically, and requires no supervision, all with zero configuration. They provide a global edge network, SSL encryption, asset compression, cache invalidation, and more.
 
-1. Install [Now CLI](https://zeit.co/download):
-
-```bash
-$ npm i -g now
-```
-
-2. Add a build script to your `package.json` file:
+Step 1: Add a build script to your `package.json` file:
 
 ```json
 {
@@ -233,15 +227,17 @@ $ npm i -g now
 }
 ```
 
-3. Deploy with a single command at the root of the project directory:
+Step 2: Deploy your Hexo Website to Vercel
 
-```bash
-now
-```
+To deploy your Hexo app with a [Vercel for Git Integration](https://vercel.com/docs/git-integrations), make sure it has been pushed to a Git repository.
+
+Import the project into Vercel using the [Import Flow](https://vercel.com/import/git). During the import, you will find all relevant options preconfigured for you; however, you can choose to change any of these options, a list of which can be found [here](https://vercel.com/docs/build-step#build-&-development-settings).
+
+After your project has been imported, all subsequent pushes to branches will generate [Preview Deployments](https://vercel.com/docs/platform/deployments#preview), and all changes made to the [Production Branch](https://vercel.com/docs/git-integrations#production-branch) (commonly "main") will result in a [Production Deployment](https://vercel.com/docs/platform/deployments#production).
 
 Alternatively, you can click the deploy button below to create a new project:
 
-[![Deploy Now](https://zeit.co/button)](https://zeit.co/new/hexo)
+[![Deploy Vercel](https://vercel.com/button)](https://vercel.com/new/hexo)
 
 ## 21YunBox
 
@@ -257,6 +253,28 @@ That’s it! Your app will be live on your 21YunBox URL as soon as the build fin
 The sample app for `hexo` is deployed at [https://hexo.21yunbox.com/](https://hexo.21yunbox.com/).
 
 For more detail, follow this guide at [https://www.21yunbox.com/docs/#/deploy-hexo](https://www.21yunbox.com/docs/#/deploy-hexo).
+
+## Bip
+
+[Bip](https://bip.sh) is a commercial hosting service which provides zero downtime deployment, a global CDN, SSL, unlimited bandwidth and more for static websites. Plans are available on a pay as you go, per domain basis.
+
+Getting started is quick and easy, as Bip provides out the box support for Hexo. This guide assumes you already have [a Bip domain and Bip CLI installed](https://bip.sh/getstarted).
+
+1: Initialise your project directory
+
+```bash
+$ bip init
+```
+
+Follow the prompts, where you'll be asked which domain you'd like to deploy to. Bip will detect that you're using Hexo, and set project settings like the source file directory automatically.
+
+2: Deploy your website
+
+```bash
+$ hexo generate —deploy && bip deploy
+```
+
+After a few moments, your website will be deployed.
 
 
 ## Other Methods

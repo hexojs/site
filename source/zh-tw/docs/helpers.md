@@ -184,8 +184,22 @@ title: 輔助函數（Helpers）
 
 選項 | 描述 | 預設值
 --- | --- | ---
-`title` | Feed 標題 |
+`title` | Feed 標題 | `config.title`
 `type` | Feed 類型 | atom
+
+**範例：**
+
+``` js
+<%- feed_tag('atom.xml') %>
+// <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+
+<%- feed_tag('rss.xml', { title: 'RSS Feed', type: 'rss' }) %>
+// <link rel="alternate" href="/atom.xml" title="RSS Feed" type="application/rss+xml">
+
+/* Defaults to hexo-generator-feed's config if no argument */
+<%- feed_tag() %>
+// <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+```
 
 ## 判斷函數
 

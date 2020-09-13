@@ -56,6 +56,10 @@ If you use the official installer, make sure **Add to PATH** is checked (it's ch
 If you encounter `EACCES` permission error when trying to install Hexo, please follow [the workaround](https://docs.npmjs.com/resolving-eacces-permissions-errors-when-installing-packages-globally) provided by npmjs; overriding with root/sudo is highly discouraged.
 {% endnote %}
 
+{% note info Linux %}
+If you installed Node.js using Snap, you may need to manually run `npm install` in the target folder when [initializing](/docs/commands#init) a blog.
+{% endnote %}
+
 ### Install Hexo
 
 Once all the requirements are installed, you can install Hexo with npm:
