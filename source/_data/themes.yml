@@ -3374,3 +3374,11 @@
     - Chinese
     - Hexo
     - Personal
+- name: milk
+  description: A tiling window theme.
+  link: https://github.com/MRsoymilk/hexo-theme-milk
+  preview: https://blog.soymilk.fun
+  tags:
+    - 非主流
+    - Blog
+    - dark_mode
