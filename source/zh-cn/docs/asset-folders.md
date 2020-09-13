@@ -14,7 +14,7 @@ post_asset_folder: true
 
 ## 相对路径引用的标签插件
 
-通过常规的 markdown 语法和相对路径来引用图片和其它资源可能会导致它们在存档页或者主页上显示不正确。在Hexo 2时代，社区创建了很多插件来解决这个问题。但是，随着Hexo 3 的发布，许多新的标签插件被加入到了核心代码中。这使得你可以更简单地在文章中引用你的资源。
+通过常规的 markdown 语法和相对路径来引用图片和其它资源可能会导致它们在存档页或者主页上显示不正确。在Hexo 2时代，社区创建了很多插件来解决这个问题。但是，随着Hexo 3 的发布，许多新的[标签插件](/docs/tag-plugins#Include-Assets)被加入到了核心代码中。这使得你可以更简单地在文章中引用你的资源。
 
 ```
 {% asset_path slug %}
@@ -22,7 +22,7 @@ post_asset_folder: true
 {% asset_link slug [title] %}
 ```
 
-比如说：当你打开文章资源文件夹功能后，你把一个 `example.jpg` 图片放在了你的资源文件夹中，如果通过使用相对路径的常规 markdown 语法 `![](/example.jpg)` ，它将 *不会* 出现在首页上。（但是它会在文章中按你期待的方式工作）
+比如说：当你打开文章资源文件夹功能后，你把一个 `example.jpg` 图片放在了你的资源文件夹中，如果通过使用相对路径的常规 markdown 语法 `![](example.jpg)` ，它将 *不会* 出现在首页上。（但是它会在文章中按你期待的方式工作）
 
 正确的引用图片方式是使用下列的标签插件而不是 markdown ：
 
@@ -31,3 +31,18 @@ post_asset_folder: true
 ```
 
 通过这种方式，图片将会同时出现在文章和主页以及归档页中。
+
+## Embedding an image using markdown
+
+[hexo-renderer-marked](https://github.com/hexojs/hexo-renderer-marked) 3.1.0 introduced a new option that allows you to embed an image in markdown without using `asset_img` tag plugin.
+
+To enable:
+
+``` yml _config.yml
+post_asset_folder: true
+marked:
+  prependRoot: true
+  postAsset: true
+```
+
+Once enabled, an asset image will be automatically resolved to its corresponding post's path. For example, "image.jpg" is located at "/2020/01/02/foo/image.jpg", meaning it is an asset image of "/2020/01/02/foo/" post, `![](image.jpg)` will be rendered as `<img src="/2020/01/02/foo/image.jpg">`.

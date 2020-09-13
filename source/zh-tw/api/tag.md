@@ -15,6 +15,28 @@ hexo.extend.tag.register(name, function(args, content){
 
 自 Hexo 3 開始，因為新增了非同步渲染功能，而改用 [Nunjucks] 作為渲染引擎，其行為可能會與過去使用的 [Swig] 有些許差異。
 
+## 移除標籤外掛
+
+Use `unregister()` to replace existing [tag plugins](/docs/tag-plugins) with custom functions.
+
+``` js
+hexo.extend.tag.unregister(name);
+```
+
+**Example**
+
+``` js
+const tagFn = (args, content) => {
+  content = 'something';
+  return content;
+};
+
+// https://hexo.io/docs/tag-plugins#YouTube
+hexo.extend.tag.unregister('youtube');
+
+hexo.extend.tag.register('youtube', tagFn);
+```
+
 ## 選項
 
 ### ends

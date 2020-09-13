@@ -60,13 +60,8 @@ title: Конфигурация
 `post_asset_folder` | Включать [папку с материалами](asset-folders.html)? | `false`
 `relative_link` | Создание ссылок относительно корневой папки? | `false`
 `future` | Отображать будущие посты? | `true`
-`highlight` | Настройки блоков кода |
-`highlight.enable` | Enable syntax highlight | `true`
-`highlight.auto_detect` | Enable auto-detection if no language is specified | `false`
-`highlight.line_number` | Display line number<br>_Enabling this option will also enable `wrap` option_ | `true`
-`highlight.tab_replace` | Replace tabs by n space(s); if the value is empty, tabs won't be replaced | `''`
-`highlight.wrap` | Wrap the code block in [`<table>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table) | `true`
-`highlight.hljs` | Use the `hljs-*` prefix for CSS classes | `false`
+`highlight` | Настройки блоков кода, see [Highlight.js](/docs/syntax-highlight#Highlight-js) section for usage guide |
+`prismjs` | Настройки блоков кода, see [PrismJS](/docs/syntax-highlight#PrismJS) section for usage guide |
 
 ### Категории и теги
 

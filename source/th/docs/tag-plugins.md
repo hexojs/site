@@ -8,6 +8,8 @@ Although you can write your posts in any formats, but the tag plugins will alway
 
 {% youtube I07XMi7MHd4 %}
 
+_Tag plugins should not be wrapped inside Markdown syntax, e.g. `[]({% post_path lorem-ipsum %})` is not supported._
+
 ## Block Quote
 
 Perfect for adding quotes to your post, with optional author, source and title information.
@@ -309,8 +311,46 @@ Post's title and custom text are escaped by default. You can use the `escape` op
 
 ```
 {% asset_path filename %}
-{% asset_img filename [title] %}
+{% asset_img [class names] slug [width] [height] [title text [alt text]] %}
 {% asset_link filename [title] [escape] %}
+```
+
+### Embed image
+
+_hexo-renderer-marked 3.1.0+ can (optionally) resolves the post's path of an image automatically, refer to [this section](/docs/asset-folders#Embedding-an-image-using-markdown) on how to enable it._
+
+"foo.jpg" is located at `http://example.com/2020/01/02/hello/foo.jpg`.
+
+**Default (no option)**
+
+`{% asset_img foo.jpg %}`
+
+``` html
+<img src="/2020/01/02/hello/foo.jpg">
+```
+
+**Custom class**
+
+`{% asset_img post-image foo.jpg %}`
+
+``` html
+<img src="/2020/01/02/hello/foo.jpg" class="post-image">
+```
+
+**Display size**
+
+`{% asset_img foo.jpg 500 400 %}`
+
+``` html
+<img src="/2020/01/02/hello/foo.jpg" width="500" height="400">
+```
+
+**Title & Alt**
+
+`{% asset_img logo.svg "lorem ipsum'dolor'" %}`
+
+``` html
+<img src="/2020/01/02/hello/foo.jpg" title="lorem ipsum" alt="dolor">
 ```
 
 ## Raw

@@ -15,10 +15,31 @@ hexo.extend.tag.register(name, function(args, content){
 
 С момента введения в асинхронное отображение Hexo 3 использует [Nunjucks] для обработки. Его поведение несколько отличается от применяемого в [Swig].
 
+## Unregister Tags
+
+Use `unregister()` to replace existing [tag plugins](/docs/tag-plugins) with custom functions.
+
+``` js
+hexo.extend.tag.unregister(name);
+```
+
+**Example**
+
+``` js
+const tagFn = (args, content) => {
+  content = 'something';
+  return content;
+};
+
+// https://hexo.io/docs/tag-plugins#YouTube
+hexo.extend.tag.unregister('youtube');
+
+hexo.extend.tag.register('youtube', tagFn);
+```
+
 ## Опции
 
 ### ends
-
 
 Использовать закрывающие теги. По умолчанию установлено в `false`.
 
