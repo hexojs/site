@@ -32,6 +32,7 @@ date: 2013/7/13 20:46:25
 `tags` | Теги (Недоступно для страниц) |
 `categories` | Категории (Не доступно для страниц) |
 `permalink` | Переопределяет ссылку по умолчанию |
+`disableNunjucks` | Disable rendering of Nunjucks tag `{{ }}`/`{% %}` and [tag plugins](/docs/tag-plugins) when enabled
 
 #### Категории и теги
 
