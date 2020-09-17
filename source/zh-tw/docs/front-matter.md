@@ -25,6 +25,7 @@ date: 2013/7/13 20:46:25
 `tags` | 標籤（不適用於分頁） |
 `categories` | 分類（不適用於分頁）|
 `permalink` | 覆蓋文章網址 |
+`disableNunjucks` | Disable rendering of Nunjucks tag `{{ }}`/`{% %}` and [tag plugins](/docs/tag-plugins) when enabled
 
 ### 分類和標籤
 

@@ -30,6 +30,7 @@ date: 2013/7/13 20:46:25
 `tags` | 태그 (page에서는 사용 불가능) |
 `categories` | 카테고리 (page에서는 사용 불가능) |
 `permalink` | 포스트의 기본 permalink를 override합니다. |
+`disableNunjucks` | Disable rendering of Nunjucks tag `{{ }}`/`{% %}` and [tag plugins](/docs/tag-plugins) when enabled
 
 #### 카테고리와 태그
 

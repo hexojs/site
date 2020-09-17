@@ -34,6 +34,7 @@ Setting | Description | Default
 `tags` | Tags (Not available for pages) |
 `categories` | Categories (Not available for pages) |
 `permalink` | Overrides the default permalink of the post |
+`disableNunjucks` | Disable rendering of Nunjucks tag `{{ }}`/`{% %}` and [tag plugins](/docs/tag-plugins) when enabled
 
 #### Categories & Tags
 

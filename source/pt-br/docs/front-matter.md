@@ -33,6 +33,7 @@ Configuração | Descrição | Padrão
 `tags` | Tags (Não disponível para páginas) |
 `categories` | Categorias (Não disponível para páginas) |
 `permalink` | Substitui o permalink padrão da postagem |
+`disableNunjucks` | Disable rendering of Nunjucks tag `{{ }}`/`{% %}` and [tag plugins](/docs/tag-plugins) when enabled
 
 #### Categorias & Tags
 
