@@ -3396,3 +3396,14 @@
     - 非主流
     - Blog
     - dark_mode
+- name: Bamboo
+  description: A beautiful hexo theme
+  link: https://github.com/yuang01/hexo-theme-bamboo
+  preview: https://yuang01.github.io/
+  tags:
+    - Vue
+    - simple
+    - cool
+    - Responsive
+    - Beautiful
+    - 中文
