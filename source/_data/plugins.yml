@@ -2462,6 +2462,14 @@
     - delopyer
     - qiniu
     - 七牛云
+- name: hexo-renderer-scss
+  description: A hexo plugin for node-scss
+  link: https://github.com/mamboer/hexo-renderer-scss
+  tags:
+    - renderer
+    - scss
+    - css
+    - style
 - name: hexo-tag-wikipedia
   description: Embed content from Wikipedia.
   link: https://github.com/tuanna-hsp/hexo-tag-wikipedia
