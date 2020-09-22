@@ -33,6 +33,7 @@ Configuração | Descrição | Padrão
 `tags` | Tags (Não disponível para páginas) |
 `categories` | Categorias (Não disponível para páginas) |
 `permalink` | Substitui o permalink padrão da postagem |
+`excerpt` | Page excerpt in plain text. Use [this plugin](/docs/tag-plugins#Post-Excerpt) to format the text |
 `disableNunjucks` | Disable rendering of Nunjucks tag `{{ }}`/`{% %}` and [tag plugins](/docs/tag-plugins) when enabled
 
 #### Layout

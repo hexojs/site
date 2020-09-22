@@ -25,6 +25,7 @@ date: 2013/7/13 20:46:25
 `tags` | 標籤（不適用於分頁） |
 `categories` | 分類（不適用於分頁）|
 `permalink` | 覆蓋文章網址 |
+`excerpt` | Page excerpt in plain text. Use [this plugin](/docs/tag-plugins#Post-Excerpt) to format the text |
 `disableNunjucks` | Disable rendering of Nunjucks tag `{{ }}`/`{% %}` and [tag plugins](/docs/tag-plugins) when enabled
 
 ### 佈局
