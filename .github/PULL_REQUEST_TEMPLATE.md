@@ -28,6 +28,7 @@
 
 <!-- 
     Thank you for publishing your work on Hexo site!
+    It was really helpful
     
     If you also would like to become a Hexojs org memeber, here is the opportunity. Simply transfer your repo into Hexojs org, and you will become hexojs member. You could still be the repo admin, but also gain access to hexojs other repoes. 
     
