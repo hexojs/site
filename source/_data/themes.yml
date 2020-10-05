@@ -2923,7 +2923,7 @@
 - name: A-Obsidian
   description: A dark Hexo theme, it's responsive, simple but elegant.
   link: https://github.com/TriDiamond/hexo-theme-obsidian
-  preview: https://tridiamond.me
+  preview: https://tridiamond.tech
   tags:
     - 中文
     - responsive
