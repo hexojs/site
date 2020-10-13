@@ -3347,7 +3347,7 @@
     - elegant
     - 中文
 - name: blur
-  description: A simple and warm Hexo blog theme 
+  description: A simple and warm Hexo blog theme
   link: https://github.com/kiten46087/hexo-theme-blur
   preview: https://kiten46087.github.io/
   tags:
@@ -3407,3 +3407,14 @@
     - Responsive
     - Beautiful
     - 中文
+- name: Minima
+  description: An undoubtedly simple and lightweight dark/light mode theme
+  link: https://github.com/adisaktijrs/hexo-theme-minima
+  preview: https://adisaktijrs.github.io/minima/
+  tags:
+    - Minimalist
+    - Dark
+    - Light
+    - Responsive
+    - Simple
+    - Clean
