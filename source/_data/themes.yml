@@ -3418,3 +3418,11 @@
     - Responsive
     - Simple
     - Clean
+- name: PreciousJoy
+  description: A simple hexo theme
+  link: https://github.com/fireworks99/hexo-theme-PreciousJoy
+  preview: https://fireworks99.github.io/
+  tags:
+    - Simple
+    - Beautiful
+    - Clean
