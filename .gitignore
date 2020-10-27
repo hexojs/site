@@ -1,9 +1,0 @@
-.DS_Store
-.idea/
-node_modules/
-*.log
-db.json
-public/
-.deploy*/
-package-lock.json
-/.vscode
