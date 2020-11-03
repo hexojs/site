@@ -1,3 +1,13 @@
+- name: Quiet
+  description: A simple, easy to read flat hexo theme.
+  link: https://github.com/QiaoBug/hexo-theme-quiet
+  preview: https://www.79bk.cn/
+  tags:
+    - Simple
+    - Beautiful
+    - Clean
+    - Delayering
+    - Readable
 - name: ILS
   description: A simple and light theme for Hexo.
   link: https://github.com/XPoet/hexo-theme-ils
