@@ -22,8 +22,8 @@ Layout | Caminho
 `page` | `source`
 `draft` | `source/_drafts`
 
-{% note tip Não processe minhas postagens! %}
-Se você não quer que suas postagens sejam processadas, você pode definir `layout: false` no front-matter.
+{% note tip Disabling layout %}
+If you don't want an article (post/page) to be processed with a theme, set `layout: false` in its front-matter. Refer to [this section](/docs/front-matter#Layout) for more details.
 {% endnote %}
 
 ### Nome de Arquivo

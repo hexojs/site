@@ -22,7 +22,7 @@ date: 2013/7/13 20:46:25
 
 설정 | 설명 | 기본 값
 --- | --- | ---
-`layout` | 레이아웃 |
+`layout` | 레이아웃 | [`config.default_layout`](/ko/docs/configuration#Writing)
 `title` | 타이틀 | Filename (posts only)
 `date` | 발행일 | 파일이 생성된 날짜
 `updated` | 갱신일 | 파일이 업로드된 날짜
@@ -30,7 +30,14 @@ date: 2013/7/13 20:46:25
 `tags` | 태그 (page에서는 사용 불가능) |
 `categories` | 카테고리 (page에서는 사용 불가능) |
 `permalink` | 포스트의 기본 permalink를 override합니다. |
+`excerpt` | Page excerpt in plain text. Use [this plugin](/docs/tag-plugins#Post-Excerpt) to format the text |
 `disableNunjucks` | Disable rendering of Nunjucks tag `{{ }}`/`{% %}` and [tag plugins](/docs/tag-plugins) when enabled
+
+#### 레이아웃
+
+The default layout is `post`, in accordance to the value of [`default_layout`]((/docs/configuration#Writing)) setting in `_config.yml`. When the layout is disabled (`layout: false`) in an article, it will not be processed with a theme. However, it will still be rendered by any available renderer: if an article is written in Markdown and a Markdown renderer (like the default [hexo-renderer-marked](https://github.com/hexojs/hexo-renderer-marked)) is installed, it will be rendered to HTML.
+
+[Tag plugins](/docs/tag-plugins) are always processed regardless of layout, unless disabled by the `disableNunjucks` setting or [renderer](/api/renderer#Disable-Nunjucks-tags).
 
 #### 카테고리와 태그
 

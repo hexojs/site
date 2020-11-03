@@ -19,8 +19,8 @@ $ hexo new [layout] <title>
 `page` | `source`
 `draft` | `source/_drafts`
 
-{% note tip Не обрабатывайте мои посты! %}
-Если не хотите чтобы ваши посты обрабатывались, можно настроить макет: установив `layout: false` в заголовке страницы.
+{% note tip Disabling layout %}
+If you don't want an article (post/page) to be processed with a theme, set `layout: false` in its front-matter. Refer to [this section](/ru/docs/front-matter#Макет) for more details.
 {% endnote %}
 
 ### Имя файла
