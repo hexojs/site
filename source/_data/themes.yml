@@ -1,3 +1,13 @@
+- name: Quiet
+  description: A simple, easy to read flat hexo theme.
+  link: https://github.com/QiaoBug/hexo-theme-quiet
+  preview: https://www.79bk.cn/
+  tags:
+    - Simple
+    - Beautiful
+    - Clean
+    - Delayering
+    - Readable
 - name: ILS
   description: A simple and light theme for Hexo.
   link: https://github.com/XPoet/hexo-theme-ils
@@ -2923,7 +2933,7 @@
 - name: A-Obsidian
   description: A dark Hexo theme, it's responsive, simple but elegant.
   link: https://github.com/TriDiamond/hexo-theme-obsidian
-  preview: https://tridiamond.me
+  preview: https://tridiamond.tech
   tags:
     - 中文
     - responsive
@@ -3347,7 +3357,7 @@
     - elegant
     - 中文
 - name: blur
-  description: A simple and warm Hexo blog theme 
+  description: A simple and warm Hexo blog theme
   link: https://github.com/kiten46087/hexo-theme-blur
   preview: https://kiten46087.github.io/
   tags:
@@ -3396,3 +3406,33 @@
     - 非主流
     - Blog
     - dark_mode
+- name: Bamboo
+  description: A beautiful hexo theme
+  link: https://github.com/yuang01/hexo-theme-bamboo
+  preview: https://yuang01.github.io/
+  tags:
+    - Vue
+    - simple
+    - cool
+    - Responsive
+    - Beautiful
+    - 中文
+- name: Minima
+  description: An undoubtedly simple and lightweight dark/light mode theme
+  link: https://github.com/adisaktijrs/hexo-theme-minima
+  preview: https://adisaktijrs.github.io/minima/
+  tags:
+    - Minimalist
+    - Dark
+    - Light
+    - Responsive
+    - Simple
+    - Clean
+- name: PreciousJoy
+  description: A simple hexo theme
+  link: https://github.com/fireworks99/hexo-theme-PreciousJoy
+  preview: https://fireworks99.github.io/
+  tags:
+    - Simple
+    - Beautiful
+    - Clean

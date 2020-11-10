@@ -115,7 +115,8 @@ $ hexo clean
 
 ## 脫逸（Escape）內容
 
-Hexo 使用 [Nunjucks] 來解析文章（舊版本使用 [Swig]，兩者語法類似），內容若包含 `{{ }}` 或 `{% %}` 可能導致解析錯誤，您可以用 [`raw`](/docs/tag-plugins#Raw) 標籤包裹，single backtick ```` `{{ }}` ```` 或 triple backtick 來避免潛在問題發生。Alternatively, Nunjucks tags can be disabled by the [renderer](/api/renderer#Disable-Nunjucks-tags) or [manually disabled](/api/rendering#Disable-Nunjucks-tags) by the user.
+Hexo 使用 [Nunjucks] 來解析文章（舊版本使用 [Swig]，兩者語法類似），內容若包含 `{{ }}` 或 `{% %}` 可能導致解析錯誤，您可以用 [`raw`](/docs/tag-plugins#Raw) 標籤包裹，single backtick ```` `{{ }}` ```` 或 triple backtick 來避免潛在問題發生。
+Alternatively, Nunjucks tags can be disabled through the renderer's option (if supported), [API](/api/renderer#Disable-Nunjucks-tags) or [front-matter](/docs/front-matter).
 
 ```
 {% raw %}

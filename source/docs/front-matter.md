@@ -25,7 +25,7 @@ date: 2013/7/13 20:46:25
 
 Setting | Description | Default
 --- | --- | ---
-`layout` | Layout |
+`layout` | Layout | [`config.default_layout`](/docs/configuration#Writing)
 `title` | Title | Filename (posts only)
 `date` | Published date | File created date
 `updated` | Updated date | File updated date
@@ -33,7 +33,14 @@ Setting | Description | Default
 `tags` | Tags (Not available for pages) |
 `categories` | Categories (Not available for pages) |
 `permalink` | Overrides the default permalink of the post |
-`excerpt` | Page excerpt in plain text. Use [this plugin](https://hexo.io/docs/tag-plugins#Post-Excerpt) to format the text |
+`excerpt` | Page excerpt in plain text. Use [this plugin](/docs/tag-plugins#Post-Excerpt) to format the text |
+`disableNunjucks` | Disable rendering of Nunjucks tag `{{ }}`/`{% %}` and [tag plugins](/docs/tag-plugins) when enabled
+
+#### Layout
+
+The default layout is `post`, in accordance to the value of [`default_layout`]((/docs/configuration#Writing)) setting in `_config.yml`. When the layout is disabled (`layout: false`) in an article, it will not be processed with a theme. However, it will still be rendered by any available renderer: if an article is written in Markdown and a Markdown renderer (like the default [hexo-renderer-marked](https://github.com/hexojs/hexo-renderer-marked)) is installed, it will be rendered to HTML.
+
+[Tag plugins](/docs/tag-plugins) are always processed regardless of layout, unless disabled by the `disableNunjucks` setting or [renderer](/api/renderer#Disable-Nunjucks-tags).
 
 #### Categories & Tags
 

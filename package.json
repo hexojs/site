@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "hexo": {
-    "version": "4.2.0"
+    "version": "5.1.1"
   },
   "scripts": {
     "build": "hexo generate",
@@ -24,9 +24,9 @@
     "hexo-renderer-swig": "^1.1.0",
     "hexo-server": "^2.0.0",
     "hexo-uglify": "^2.0.0",
-    "image-size": "^0.8.3",
+    "image-size": "^0.9.1",
     "lunr": "2.3.9",
-    "sharp": "^0.25.2"
+    "sharp": "^0.26.1"
   },
   "devDependencies": {
     "eslint": "^7.0.0",

@@ -24,7 +24,7 @@ date: 2013/7/13 20:46:25
 
 Параметр | Описание | Значение по умолчанию
 --- | --- | ---
-`layout` | Макет |
+`layout` | Макет | [`config.default_layout`](/ru/docs/configuration#Написание)
 `title` | Заголовок | Filename (posts only)
 `date` | Дата публикации | Дата создания файла
 `updated` | Дата обновления | Дата обновления файла
@@ -32,6 +32,14 @@ date: 2013/7/13 20:46:25
 `tags` | Теги (Недоступно для страниц) |
 `categories` | Категории (Не доступно для страниц) |
 `permalink` | Переопределяет ссылку по умолчанию |
+`excerpt` | Page excerpt in plain text. Use [this plugin](/docs/tag-plugins#Post-Excerpt) to format the text |
+`disableNunjucks` | Disable rendering of Nunjucks tag `{{ }}`/`{% %}` and [tag plugins](/docs/tag-plugins) when enabled
+
+#### Макет
+
+The default layout is `post`, in accordance to the value of [`default_layout`]((/docs/configuration#Writing)) setting in `_config.yml`. When the layout is disabled (`layout: false`) in an article, it will not be processed with a theme. However, it will still be rendered by any available renderer: if an article is written in Markdown and a Markdown renderer (like the default [hexo-renderer-marked](https://github.com/hexojs/hexo-renderer-marked)) is installed, it will be rendered to HTML.
+
+[Tag plugins](/docs/tag-plugins) are always processed regardless of layout, unless disabled by the `disableNunjucks` setting or [renderer](/api/renderer#Disable-Nunjucks-tags).
 
 #### Категории и теги
 

@@ -22,6 +22,10 @@ Hexo 有三種預設佈局：`post`、`page` 和 `draft`，它們分別對應不
 `page` | `source`
 `draft` | `source/_drafts`
 
+{% note tip Disabling layout %}
+If you don't want an article (post/page) to be processed with a theme, set `layout: false` in its front-matter. Refer to [this section](/zh-tw/docs/front-matter#佈局) for more details.
+{% endnote %}
+
 ### 檔案名稱
 
 Hexo 預設以標題做為檔案名稱，但您可編輯 `new_post_name` 設定來變更預設的檔案名稱，舉例來說，設為 `:year-:month-:day-:title.md` 可讓您更方便的透過日期來管理文章。
