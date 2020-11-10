@@ -2800,6 +2800,13 @@
     - collaps
     - console
     - video
+- name: hexo-custom-sort
+  description: Plugin helps to sort posts by required fields
+  link: https://github.com/dimonpanik/hexo-custom-sort
+  tags:
+    - fields
+    - locals
+    - sort
 - name: hexo-widget-tree
   description: A widget that displays a tree-like menu.
   link: https://github.com/YunYouJun/hexo-widget-tree
@@ -2809,3 +2816,4 @@
     - menu
     - categories
     - archive
+
