@@ -3436,3 +3436,15 @@
     - Simple
     - Beautiful
     - Clean
+- name: Particle
+  description: A concise theme with 3 color styles.
+  link: https://github.com/korilin/hexo-theme-particle
+  preview: https://korilin.com/
+  tags:
+    - Vue
+    - home-figure
+    - Chinese
+    - 中文
+    - 3-color-styles
+    - dark_mode
+    - maiden_mode
