@@ -204,21 +204,7 @@ Este é [um problema no BashOnWindows conhecido](https://github.com/Microsoft/Ba
 FATAL Something's wrong. Maybe you can find the solution here: http://hexo.io/docs/troubleshooting.html
 Template render error: (unknown path)
 ```
-Isso significa que existem algumas palavras irreconhecíveis no seu arquivo. Existem duas possibilidades, uma é seu novo page/post, a outra é o `_config.yml`.
-Em `_config.yml`, não esqueça de adicionar espaços em branco antes de uma lista no hash. Existe uma página wiki sobre [YAML](https://en.wikipedia.org/wiki/YAML).
-
-Forma errada:
-```
-plugins:
-- hexo-generator-feed
-- hexo-generator-sitemap
-```
-Forma correta:
-```
-plugins:
-  - hexo-generator-feed
-  - hexo-generator-sitemap
-```
+One possible reason is that there are some unrecognizable words in your file, e.g. invisible zero width characters.
 
 [Warehouse]: https://github.com/hexojs/warehouse
 [Swig]: http://paularmstrong.github.io/swig/

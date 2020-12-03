@@ -218,20 +218,7 @@ Sometimes when running the command `$ hexo generate` it returns an error:
 FATAL Something's wrong. Maybe you can find the solution here: http://hexo.io/docs/troubleshooting.html
 Template render error: (unknown path)
 ```
-It means that there are some unrecognizable words in your file, e.g. invisible zero width characters. There are two possibilities One is your new page/post, and the other one is `_config.yml`.
-In `_config.yml`, don't forget add whitespace before a list in hash. There is the wiki page about [YAML](https://en.wikipedia.org/wiki/YAML).
-The error one:
-```
-plugins:
-- hexo-generator-feed
-- hexo-generator-sitemap
-```
-The correct one:
-```
-plugins:
-  - hexo-generator-feed
-  - hexo-generator-sitemap
-```
+One possible reason is that there are some unrecognizable words in your file, e.g. invisible zero width characters.
 
 [Warehouse]: https://github.com/hexojs/warehouse
 [Swig]: http://paularmstrong.github.io/swig/
