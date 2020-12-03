@@ -210,25 +210,7 @@ FATAL Something's wrong. Maybe you can find the solution here: http://hexo.io/do
 Template render error: (unknown path)
 ```
 
-这表明你的文件中存在一些不可被识别的字符，比如不可见的零宽度字符。有可能你的新文章存在这个问题，或者你在修改配置文件时导致了这个错误。
-
-检查你的 `_config.yml` 文件中是否漏掉了列表前的空格。你可以查阅 Wikipedia 中 [YAML](https://zh.wikipedia.org/wiki/YAML) 相关页面来学习 YAML 语法。
-
-这个是错误的：
-
-```yaml
-plugins:
-- hexo-generator-feed
-- hexo-generator-sitemap
-```
-
-正确的应该是这样：
-
-```yaml
-plugins:
-  - hexo-generator-feed
-  - hexo-generator-sitemap
-```
+一种可能的原因是你的文件中存在一些不可被识别的字符，比如不可见的零宽度字符。
 
 [Warehouse]: https://github.com/hexojs/warehouse
 [Swig]: http://paularmstrong.github.io/swig/

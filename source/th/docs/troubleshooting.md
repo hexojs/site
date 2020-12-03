@@ -247,22 +247,7 @@ $ hexo server -s
 FATAL Something's wrong. Maybe you can find the solution here: http://hexo.io/docs/troubleshooting.html
 Template render error: (unknown path)
 ```
-ถ้าเป็นอย่างนี้ หมายความว่ามีคำบางคำท่ีอ่านไม่ออกในไฟล์ เหตุผลท่ีก่อให้เกิดเรื่องนี้คือสองอย่าง อย่างแรกคือ page/post ใหม่ของคุณ อย่างท่ีสองคือ `_config.yml`  ในไฟล์ `_config.yml` อย่่าลืมเพิ่ม whitespace ก่อนไฟล์ท่ีเป็น hash ท่ีนี่มีเพจวิกิเกี่ยวกับ [YAML](https://en.wikipedia.org/wiki/YAML)
-
-
-
-ตัวท่ีผิดพลาด:
-```
-plugins:
-- hexo-generator-feed
-- hexo-generator-sitemap
-```
-ตัวท่ีถูกต้อง:
-```
-plugins:
-  - hexo-generator-feed
-  - hexo-generator-sitemap
-```
+One possible reason is that there are some unrecognizable words in your file, e.g. invisible zero width characters.
 
 [Warehouse]: https://github.com/hexojs/warehouse
 [Swig]: http://paularmstrong.github.io/swig/
