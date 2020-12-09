@@ -39,7 +39,8 @@ index:
 
 ### Index files for languages
 
-For each laguage create a index file that will be rendered using using the index template in the specific language: 
+For each language that you want to serve content in, you might want to create an index file. This way your index page will be also rendered in each language that you are serving. To do this, you need to create regular markdown pages located in folders whose names are the languages code and refer to the index template (Where you are supposed to use the ```__() or _p()``` translation helpers). For instance: 
+
 ```
 └── workspace/
     └── source/
@@ -58,9 +59,9 @@ For each laguage create a index file that will be rendered using using the index
             └── index.md
 
 ```
-For this index files you only need to define layout in the frontmatter so your index page is rendered using that layout.
+For these index files you only need to define the layout property in the frontmatter so your index page is rendered using that layout.
 
-You can add the alias to your default language index so / redirects to your default locale e.g. /de/
+You can also add the alias property so / redirects to your default locale e.g. /de/
 
 ```
 ---
