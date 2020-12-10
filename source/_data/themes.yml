@@ -768,8 +768,8 @@
     - two_columns
 - name: NexT
   description: NexT is an elegant and powerful theme
-  link: https://github.com/theme-next/hexo-theme-next
-  preview: https://theme-next.org
+  link: https://github.com/next-theme/hexo-theme-next
+  preview: https://theme-next.js.org
   tags:
     - responsive
     - one_column
