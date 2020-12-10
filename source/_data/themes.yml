@@ -8,17 +8,15 @@
     - Clean
     - Delayering
     - Readable
-- name: ILS
-  description: A simple and light theme for Hexo.
-  link: https://github.com/XPoet/hexo-theme-ils
+- name: Keep
+  description: A simple and elegant theme for Hexo.
+  link: https://github.com/XPoet/hexo-theme-keep
   preview: https://xpoet.cn/
   tags:
-    - simple
     - clean
+    - powerful
     - responsive
-    - card
-    - dark
-    - light
+    - dark/light
     - 中文
 - name: LiveMyLife
   description: A simple and pure personal Theme for Hexo...
