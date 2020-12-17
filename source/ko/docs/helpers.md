@@ -380,6 +380,21 @@ See [Rendering](https://hexo.io/ko/api/rendering) for more details.
 // And they f... (continued)
 ```
 
+### escape_html
+
+Escapes HTML entities in a string.
+
+``` js
+<%- escape_html(str) %>
+```
+
+**Examples:**
+
+``` js
+<%- escape_html('<p>Hello "world".</p>') %>
+// &lt;p&gt;Hello &quot;world&quot;.&lt;&#x2F;p&gt;
+```
+
 ## 템플릿
 
 ### partial

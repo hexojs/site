@@ -385,6 +385,21 @@ Omite o texto após um certo valor de `length`. O valor padrão de `length` é 3
 // And they f... (continued)
 ```
 
+### escape_html
+
+Escapes HTML entities in a string.
+
+``` js
+<%- escape_html(str) %>
+```
+
+**Examples:**
+
+``` js
+<%- escape_html('<p>Hello "world".</p>') %>
+// &lt;p&gt;Hello &quot;world&quot;.&lt;&#x2F;p&gt;
+```
+
 ## Templates
 
 ### partial
