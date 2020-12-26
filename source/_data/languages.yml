@@ -17,3 +17,6 @@ pt-br:
 th:
   name: ภาษาไทย
   disqus_lang: th
+id:
+  name: Bahasa Indonesia
+  disqus_lang: id

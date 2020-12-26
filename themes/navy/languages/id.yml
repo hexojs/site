@@ -1,0 +1,77 @@
+menu:
+  docs: Dokumen
+  api: API
+  news: Berita
+  plugins: Plugin
+  themes: Tema
+  about: Tentang
+  search: Cari
+
+index:
+  get_started: Mulai
+  theme_intro: Pilih dari perpustakaan besar tema spektakuler, penuh fitur, dan dapat disesuaikan. Buat milik Anda sendiri menggunakan mesin template yang kompatibel.
+  theme_link: Jelajahi tema
+
+page:
+  contents: Kandungan
+  back_to_top: Kembali ke Atas
+  improve: Perbaiki dokumen ini
+  prev: Sebelumnya
+  next: Selanjutnya
+  last_updated: "Terakhir diperbarui: %s"
+
+sidebar:
+  docs:
+    getting_started: Mulai
+    overview: Gambaran
+    setup: Mendirikan
+    configuration: Konfigurasi
+    commands: Perintah
+    migration: Migrasi
+    basic_usage: Penggunaan Dasar
+    writing: Penulisan
+    front_matter: Materi-Depan
+    tag_plugins: Menandai Plugin
+    asset_folders: Folder Asset
+    data_files: File Data
+    server: Server
+    generating: Menghasilkan
+    deployment: Penyebaran
+    github_pages: Halaman GitHub
+    gitlab_pages: Halaman GitLab
+    one_command_deployment: Satu-Perintah Penerapan
+    customization: Kustomisasi
+    permalinks: Tautan Permanen
+    themes: Tema
+    structure: Struktur
+    templates: Template
+    variables: Variabel
+    helpers: Pembantu
+    internationalization: Penginternasionalan (i18n)
+    syntax_highlight: Sorotan Sintaks
+    plugins: Plugin
+    miscellaneous: Lain-lain
+    troubleshooting: Penyelesaian Masalah
+    contributing: Berkontribusi
+  api:
+    core: Inti
+    overview: Gambaran
+    events: Acara
+    locals: Lokal
+    router: Rute
+    box: Kotak
+    rendering: Rendering
+    posts: Posting
+    scaffolds: Perancah
+    themes: Tema
+    extensions: Ekstensi
+    console: Konsol
+    deployer: Penyebaran
+    filter: Saring
+    generator: Pembangkit
+    helper: Pembantu
+    injector: Penyuntik
+    migrator: Bermigrasi
+    processor: Prosesor
+    renderer: Penyaji
+    tag: Menandai
