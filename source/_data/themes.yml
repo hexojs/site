@@ -1,3 +1,13 @@
+- name: simple99
+  description: A concise wind blog theme based on hexo system.
+  link: https://github.com/shuxhan/hexo-theme-simple99
+  preview: https://shuxhan.com
+  tags:
+    - simplicity
+    - function
+    - widget
+    - mobile
+    - 中文
 - name: Quiet
   description: A simple, easy to read flat hexo theme.
   link: https://github.com/QiaoBug/hexo-theme-quiet
