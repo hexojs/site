@@ -1,74 +1,74 @@
 ---
-title: Writing
+title: Penulisan
 ---
 
 {% youtube AIqBubK6ZLc %}
 
-To create a new post or a new page, you can run the following command:
+Untuk membuat postingan baru atau halaman baru, Anda dapat menjalankan perintah berikut:
 
 ``` bash
 $ hexo new [layout] <title>
 ```
 
-`post` is the default `layout`, but you can supply your own. You can change the default layout by editing the `default_layout` setting in `_config.yml`.
+`post` adalah defaultnya `layout`, tetapi Anda dapat menyediakan sendiri. Anda dapat mengubah tata letak default dengan mengedit `default_layout` di pengaturan `_config.yml`.
 
-### Layout
+### Tata Letak
 
-There are three default layouts in Hexo: `post`, `page` and `draft`. Files created by each of them is saved to a different path. Newly created posts are saved to the `source/_posts` folder.
+Ada tiga tata letak default di Hexo: `post`, `page` dan `draft`. File yang dibuat oleh masing-masing file disimpan ke jalur yang berbeda. Postingan yang baru dibuat disimpan ke berkas `source/_posts`.
 
-Layout | Path
+Tata Letak | Jalan
 --- | ---
 `post` | `source/_posts`
 `page` | `source`
 `draft` | `source/_drafts`
 
 {% note tip Disabling layout %}
-If you don't want an article (post/page) to be processed with a theme, set `layout: false` in its front-matter. Refer to [this section](/docs/front-matter#Layout) for more details.
+Jika Anda tidak ingin artikel (posting / halaman) diproses dengan tema, set `layout: false` di bagian depan. Mengacu pada [bagian ini](/docs/front-matter#Layout) untuk lebih jelasnya.
 {% endnote %}
 
-### Filename
+### Nama file
 
-By default, Hexo uses the post title as its filename. You can edit the `new_post_name` setting in `_config.yml` to change the default filename. For example, `:year-:month-:day-:title.md` will prefix filenames with the post creation date. You can use the following placeholders:
+Secara default, Hexo menggunakan judul posting sebagai nama filenya. Anda dapat mengedit file `new_post_name` di pengaturan `_config.yml` untuk mengubah nama file default. Sebagai contoh, `:year-:month-:day-:title.md` akan memberi awalan nama file dengan tanggal pembuatan posting. Anda dapat menggunakan placeholder berikut:
 
-Placeholder | Description
+Placeholder | Deskripsi
 --- | ---
-`:title` | Post title (lower case, with spaces replaced by hyphens)
-`:year` | Created year, e.g. `2015`
-`:month` | Created month (leading zeros), e.g. `04`
-`:i_month` | Created month (no leading zeros), e.g. `4`
-`:day` | Created day (leading zeros), e.g. `07`
-`:i_day` | Created day (no leading zeros), e.g. `7`
+`:title` | Judul postingan (huruf kecil, dengan spasi diganti tanda hubung)
+`:year` | Tahun pembuatan, misal. `2015`
+`:month` | Bulan dibuat (nol di depan), misal. `04`
+`:i_month` | Bulan dibuat (tanpa nol di depan), misal. `4`
+`:day` | Dibuat hari (nol di depan), misal. `07`
+`:i_day` | Hari pembuatan (tanpa awalan nol), misal. `7`
 
-### Drafts
+### Draf
 
-Previously, we mentioned a special layout in Hexo: `draft`. Posts initialized with this layout are saved to the `source/_drafts` folder. You can use the `publish` command to move drafts to the `source/_posts` folder. `publish` works in a similar way to the `new` command.
+Sebelumnya, kami menyebutkan tata letak khusus di Hexo: `draft`. Tulisan yang diinisialisasi dengan tata letak ini disimpan ke berkas `source/_drafts`. Anda bisa menggunakan perintah `publish` untuk memindahkan draf ke berkas `source/_posts`. `publish` bekerja dengan cara yang mirip dengan perintah `new`.
 
 ``` bash
 $ hexo publish [layout] <title>
 ```
 
-Drafts are not displayed by default. You can add the `--draft` option when running Hexo or enable the `render_drafts` setting in `_config.yml` to render drafts.
+Draf tidak ditampilkan secara default. Anda dapat menambahakan pilihan `--draft` ketika menjalankan Hexo atau aktifkan `render_drafts` di pengaturan `_config.yml` untuk memberikan draf.
 
-### Scaffolds
+### Perancah
 
-When creating posts, Hexo will build files based on the corresponding file in `scaffolds` folder. For example:
+Saat membuat posting, Hexo akan membangun file berdasarkan file yang sesuai di folder `scaffolds`. Sebagai contoh:
 
 ``` bash
 $ hexo new photo "My Gallery"
 ```
 
-When you run this command, Hexo will try to find `photo.md` in the `scaffolds` folder and build the post based on it. The following placeholders are available in scaffolds:
+Ketika Anda menjalankan perintah ini, Hexo akan mencoba mencari `photo.md` di folder` scaffolds` dan membangun posting berdasarkan itu. Placeholder berikut tersedia dalam perancah:
 
-Placeholder | Description
+Placeholder | Deskripsi
 --- | ---
 `layout` | Layout
 `title` | Title
 `date` | File created date
 
-### Supported Formats
+### Format yang Didukung
 
-Hexo support posts written in any format, as long as the corresponding renderer plugin is installed.
+Posting dukungan Hexo ditulis dalam format apa pun, selama plugin perender yang sesuai diinstal.
 
-For example, Hexo has `hexo-renderer-marked` and `hexo-renderer-ejs` installed by default, so you can write your posts in `markdown` or in `ejs`. If you have `hexo-renderer-pug` installed, then you can even write your post in pug template language.
+Misalnya, Hexo memiliki `hexo-renderer-mark` dan` hexo-renderer-ejs` diinstal secara default, sehingga Anda dapat menulis posting Anda di `markdown` atau di` ejs`. Jika Anda telah menginstal `hexo-renderer-pug`, maka Anda bahkan dapat menulis posting Anda dalam bahasa template pug.
 
-You can rename your posts and change to file extension from `.md` to `.ejs`, then Hexo will use `hexo-renderer-ejs` to render that file, so do the other formats.
+Anda dapat mengganti nama posting Anda dan mengubah ekstensi file dari `.md` menjadi` .ejs`, kemudian Hexo akan menggunakan `hexo-renderer-ejs` untuk merender file itu, begitu juga format lainnya.
