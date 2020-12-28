@@ -1,3 +1,8 @@
+- name: hexo-mathjax3-linebreak
+  description: Solve MathJax3 linebreak issue
+  link: https://github.com/silencial/hexo-mathjax3-linebreak
+  tags:
+    - mathjax
 - name: hexo-social9-socialshare
   description: Social9 social sharing plugin provides you beautiful buttons, sharing capabilities, and analytics. (20+ buttons- Whatsapp, Facebook, Twitter, LinkedIn, Reddit, and many more...).
   link: https://github.com/social9/hexo-plugin-social9-share
