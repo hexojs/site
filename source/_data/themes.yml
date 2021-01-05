@@ -1940,20 +1940,16 @@
     - Pinghsu
     - customization
 - name: Claudia
-  description: Grace, simple theme
+  description: 📌 Concisely designed & easy to config, match device dark mode, 90+ Lighthouse scoring
   link: https://github.com/Haojen/hexo-theme-Claudia
   preview: https://haojen.github.io/Claudia-theme-blog/
   tags:
-    - emoji
-    - math
-    - anisina
-    - flowchart
-    - blur
-    - black
+    - dark mode
+    - mobile
     - responsive
-    - grace
-    - 数学公式
-    - 中文使用文档
+    - smooth animation
+    - SEO friendly
+    - 中文
 - name: Clexy
   description: Clexy, A clean and elegant theme
   link: https://github.com/mkkhedawat/clexy
