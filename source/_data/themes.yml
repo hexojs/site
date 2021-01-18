@@ -1,3 +1,14 @@
+- name: Miracle
+  description: A simple single-column theme for Hexo.
+  link: https://github.com/hifun-team/hexo-theme-miracle
+  preview: https://miracle-demo.now.sh
+  tags:
+    - simple
+    - dark/light
+    - 中文
+    - responsive
+    - mobile
+    - one_column
 - name: simple99
   description: A concise wind blog theme based on hexo system.
   link: https://github.com/shuxhan/hexo-theme-simple99
