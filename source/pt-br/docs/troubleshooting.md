@@ -33,6 +33,41 @@ Embora o Node.js tenha I/O não bloqueante, o número máximo de I/O síncronas 
 $ ulimit -n 10000
 ```
 
+**Error: cannot modify limit**
+
+If you encounter the following error:
+
+``` bash
+$ ulimit -n 10000
+ulimit: open files: cannot modify limit: Operation not permitted
+```
+
+It means some system-wide configurations are preventing `ulimit` to being increased to a certain limit.
+
+To override the limit:
+
+1. Add the following line to "/etc/security/limits.conf":
+
+  ```
+  * - nofile 10000
+
+  # '*' applies to all users and '-' set both soft and hard limits
+  ```
+
+  * The above setting may not apply in some cases, ensure "/etc/pam.d/login" and "/etc/pam.d/lightdm" have the following line. (Ignore this step if those files do not exist)
+
+  ```
+  session required pam_limits.so
+  ```
+
+2. If you are on a [systemd-based](https://en.wikipedia.org/wiki/Systemd#Adoption) distribution, systemd may override "limits.conf". To set the limit in systemd, add the following line in "/etc/systemd/system.conf" and "/etc/systemd/user.conf":
+
+  ```
+  DefaultLimitNOFILE=10000
+  ```
+
+3. Reboot
+
 ## Processos com Pouca Memória
 
 Quando você encontrar esse erro durante a geração:
@@ -122,13 +157,20 @@ Quando você não consegue executar nenhum comando do Hexo, com exceção de `he
 
 ## Conteúdo Escapando
 
-O Hexo usa [Nunjucks] para renderizar posts ([Swig] foi usado na versão mais antiga, que compartilha uma sintaxe semelhante). O conteúdo delimitado com `{% raw %}{{ }}{% endraw %}` ou `{% raw %}{% %}{% endraw %}` será "parseado" e pode causar problemas. Você pode empacotar um conteúdo sensível com a [tag plugin `raw`](tag-plugins.html#Raw).
+O Hexo usa [Nunjucks] para renderizar posts ([Swig] foi usado na versão mais antiga, que compartilha uma sintaxe semelhante). O conteúdo delimitado com `{{ }}` ou `{% %}` será "parseado" e pode causar problemas. Você pode empacotar um conteúdo sensível com a tag plugin [`raw`](/docs/tag-plugins#Raw), single backtick ```` `{{ }}` ```` or triple backtick.
+Alternatively, Nunjucks tags can be disabled through the renderer's option (if supported), [API](/api/renderer#Disable-Nunjucks-tags) or [front-matter](/docs/front-matter).
 
 ```
 {% raw %}
-Hello {{ sensitive }}
+Hello {{ world }}
 {% endraw %}
 ```
+
+````
+```
+Hello {{ world }}
+```
+````
 
 ## ENOSPC Error (Linux)
 
@@ -162,21 +204,7 @@ Este é [um problema no BashOnWindows conhecido](https://github.com/Microsoft/Ba
 FATAL Something's wrong. Maybe you can find the solution here: http://hexo.io/docs/troubleshooting.html
 Template render error: (unknown path)
 ```
-Isso significa que existem algumas palavras irreconhecíveis no seu arquivo. Existem duas possibilidades, uma é seu novo page/post, a outra é o `_config.yml`.
-Em `_config.yml`, não esqueça de adicionar espaços em branco antes de uma lista no hash. Existe uma página wiki sobre [YAML](https://en.wikipedia.org/wiki/YAML).
-
-Forma errada:
-```
-plugins:
-- hexo-generator-feed
-- hexo-generator-sitemap
-```
-Forma correta:
-```
-plugins:
-  - hexo-generator-feed
-  - hexo-generator-sitemap
-```
+One possible reason is that there are some unrecognizable words in your file, e.g. invisible zero width characters.
 
 [Warehouse]: https://github.com/hexojs/warehouse
 [Swig]: http://paularmstrong.github.io/swig/

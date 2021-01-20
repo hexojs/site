@@ -8,7 +8,7 @@ To migrate, update your "package.json",
 
 ``` diff
 -  "hexo-renderer-jade": "^0.4.1",
-+  "hexo-rederer-pug": "^1.0.0",
++  "hexo-renderer-pug": "^1.0.0",
 ```
 
 and rename all `*.jade` files to `*.pug`.

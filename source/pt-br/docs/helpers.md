@@ -385,6 +385,21 @@ Omite o texto após um certo valor de `length`. O valor padrão de `length` é 3
 // And they f... (continued)
 ```
 
+### escape_html
+
+Escapes HTML entities in a string.
+
+``` js
+<%- escape_html(str) %>
+```
+
+**Examples:**
+
+``` js
+<%- escape_html('<p>Hello "world".</p>') %>
+// &lt;p&gt;Hello &quot;world&quot;.&lt;&#x2F;p&gt;
+```
+
 ## Templates
 
 ### partial
@@ -540,6 +555,7 @@ Option | Description | Default
 `class.ul` | `<ul>` class name (only for style `list`) | `tag-list` (list style)
 `class.li` | `<li>` class name (only for style `list`) | `tag-list-item` (list style)
 `class.a` | `<a>` class name | `tag-list-link` (list style) `tag-link` (normal style)
+`class.label` | `<span>` class name where the tag label is stored (only for normal style, when `class.label` is set the label is put in a `<span>`) | `tag-label` (normal style)
 `class.count` | `<span>` class name where the tag counter is stored (only when `show_count` is `true`) | `tag-list-count` (list style) `tag-count` (normal style)
 
 Examples:

@@ -18,7 +18,7 @@ We have released a bugfix release for [hexo], and new version of official hexo p
   pretty_urls:
     trailing_html: false
   ```
-  * Example: `https://yoursite.com/page/about.html` -> `https://yoursite.com/page/about`
+  * Example: `https://example.com/page/about.html` -> `https://example.com/page/about`
 
 ### Fixes
 - Set default locales (in "language_TERRITORY" format) for [`og:locale`](https://ogp.me/#optional) Open Graph tag [#3921]

@@ -19,8 +19,8 @@ $ hexo new [layout] <title>
 `page` | `source`
 `draft` | `source/_drafts`
 
-{% note tip Не обрабатывайте мои посты! %}
-Если не хотите чтобы ваши посты обрабатывались, можно настроить макет: установив `layout: false` в заголовке страницы.
+{% note tip Отключение макета %}
+Если вы не хотите, чтобы статья (пост/страница) обрабатывалась с помощью темы, установите `layout: false` в её шапке. Обратитесь к [этому разделу] (/ru/docs/front-matter#Макет) для более подробной информации.
 {% endnote %}
 
 ### Имя файла
@@ -54,7 +54,7 @@ $ hexo publish [layout] <title>
 $ hexo new photo "My Gallery"
 ```
 
-Когда выпонится эта команда, Hexo постарается найти `photo.md` в папке `scaffolds` и создать пост на его основе. Эти подстановочные части доступны в заготовках:
+Когда выполнится эта команда, Hexo постарается найти `photo.md` в папке `scaffolds` и создать пост на его основе. Эти подстановочные части доступны в заготовках:
 
 Подстановка | Описание
 --- | ---
@@ -62,10 +62,9 @@ $ hexo new photo "My Gallery"
 `title` | Заголовок
 `date` | Дата создания файла
 
-### Supported Formats
+### Поддерживаемые форматы
+Hexo поддерживает посты в любом формате, если установлен соответствующий плагин для рендеринга.
 
-Hexo support posts written in any format, as long as the corresponding renderer plugin is installed.
+Например, плагины `hexo-renderer-marked` и `hexo-renderer-ejs` установлены в Hexo по умолчанию, таким образом вы можете писать свои посты в `markdown` или `ejs`. Если вы установили `hexo-renderer-pug`, то вы так же можете писать свои посты в формате `pug`.
 
-For example, Hexo has `hexo-renderer-marked` and `hexo-renderer-ejs` installed by default, so you can write your posts in `markdown` or in `ejs`. If you have `hexo-renderer-pug` installed, then you can even write your post in pug template language.
-
-You can rename your posts and change to file extension from `.md` to `.ejs`, then Hexo will use `hexo-renderer-ejs` to render that file, so do the other formats.
+Вы можете переименовать свои посты и изменить файловое расширение с `.md` на `.ejs`, тогда Hexo будет использовать `hexo-renderer-ejs` что бы отрендерить эти файлы, аналогично происходит и для других форматов.

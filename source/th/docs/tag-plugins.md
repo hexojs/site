@@ -8,6 +8,8 @@ Although you can write your posts in any formats, but the tag plugins will alway
 
 {% youtube I07XMi7MHd4 %}
 
+_Tag plugins should not be wrapped inside Markdown syntax, e.g. `[]({% post_path lorem-ipsum %})` is not supported._
+
 ## Block Quote
 
 Perfect for adding quotes to your post, with optional author, source and title information.
@@ -315,7 +317,9 @@ Post's title and custom text are escaped by default. You can use the `escape` op
 
 ### Embed image
 
-"foo.jpg" is located at `http://yoursite.com/2020/01/02/hello/foo.jpg`.
+_hexo-renderer-marked 3.1.0+ can (optionally) resolves the post's path of an image automatically, refer to [this section](/docs/asset-folders#Embedding-an-image-using-markdown) on how to enable it._
+
+"foo.jpg" is located at `http://example.com/2020/01/02/hello/foo.jpg`.
 
 **Default (no option)**
 

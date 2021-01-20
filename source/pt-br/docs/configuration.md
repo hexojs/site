@@ -20,7 +20,7 @@ Configuração | Descrição
 
 Configuração | Descrição | Padrão
 --- | --- | ---
-`url` | A URL do seu site |
+`url` | A URL do seu site, must starts with `http://` or `https://` |
 `root` | O diretório raiz do seu site | `url's pathname`
 `permalink` | O formato de [permalink](permalinks.html) dos artigos | `:year/:month/:day/:title/`
 `permalink_defaults` | Valores padrão de cada segmento no permalink |

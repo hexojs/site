@@ -1,14 +1,32 @@
-- name: ILS
-  description: A simple and light theme for Hexo.
-  link: https://github.com/XPoet/hexo-theme-ils
+- name: simple99
+  description: A concise wind blog theme based on hexo system.
+  link: https://github.com/shuxhan/hexo-theme-simple99
+  preview: https://simple99.cn
+  tags:
+    - simplicity
+    - function
+    - widget
+    - mobile
+    - 中文
+- name: Quiet
+  description: A simple, easy to read flat hexo theme.
+  link: https://github.com/QiaoBug/hexo-theme-quiet
+  preview: https://www.79bk.cn/
+  tags:
+    - Simple
+    - Beautiful
+    - Clean
+    - Delayering
+    - Readable
+- name: Keep
+  description: A simple and elegant theme for Hexo.
+  link: https://github.com/XPoet/hexo-theme-keep
   preview: https://xpoet.cn/
   tags:
-    - simple
     - clean
+    - powerful
     - responsive
-    - card
-    - dark
-    - light
+    - dark/light
     - 中文
 - name: LiveMyLife
   description: A simple and pure personal Theme for Hexo...
@@ -750,8 +768,8 @@
     - two_columns
 - name: NexT
   description: NexT is an elegant and powerful theme
-  link: https://github.com/theme-next/hexo-theme-next
-  preview: https://theme-next.org
+  link: https://github.com/next-theme/hexo-theme-next
+  preview: https://theme-next.js.org
   tags:
     - responsive
     - one_column
@@ -1922,20 +1940,16 @@
     - Pinghsu
     - customization
 - name: Claudia
-  description: Grace, simple theme
+  description: 📌 Concisely designed & easy to config, match device dark mode, 90+ Lighthouse scoring
   link: https://github.com/Haojen/hexo-theme-Claudia
   preview: https://haojen.github.io/Claudia-theme-blog/
   tags:
-    - emoji
-    - math
-    - anisina
-    - flowchart
-    - blur
-    - black
+    - dark mode
+    - mobile
     - responsive
-    - grace
-    - 数学公式
-    - 中文使用文档
+    - smooth animation
+    - SEO friendly
+    - 中文
 - name: Clexy
   description: Clexy, A clean and elegant theme
   link: https://github.com/mkkhedawat/clexy
@@ -2664,12 +2678,14 @@
 - name: Fan
   description: A dark theme
   link: https://github.com/fan-lv/Fan
-  preview: https://www.lvfan.xyz/
+  preview: https://lv-fan.gitee.io/
   tags:
     - 中文
     - dark
     - Pug
     - Stylus
+    - Beautiful
+    - 梦幻/dream
 - name: snark
   description: A dark theme with lofter style
   link: https://github.com/Litreily/hexo-theme-snark
@@ -2921,7 +2937,7 @@
 - name: A-Obsidian
   description: A dark Hexo theme, it's responsive, simple but elegant.
   link: https://github.com/TriDiamond/hexo-theme-obsidian
-  preview: https://tridiamond.me
+  preview: https://tridiamond.tech
   tags:
     - 中文
     - responsive
@@ -3169,7 +3185,7 @@
 - name: Oranges
   description: A simple hexo theme of minimalism
   link: https://github.com/zchengsite/hexo-theme-oranges
-  preview: https://zchengsite.github.io/username.github.io/
+  preview: https://hexo.theme.oranges.zcheng.site/
   tags:
     - simple
     - fast
@@ -3232,11 +3248,12 @@
 - name: Love
   description: A simple HEXO theme for couples.
   link: https://github.com/jiehua1995/hexo-theme-love.git
-  preview: https://blog.jiehua1995.xyz/hexo-theme-love/
+  preview: https://one.jiehua1995.xyz/hexo-theme-love/
   tags:
     - love
     - simple
     - couples
+    - forever
 - name: Ascent
   description: An opinionated Hexo theme for blogs with long blocks of text.
   link: https://github.com/cjquines/hexo-theme-ascent
@@ -3318,6 +3335,20 @@
     - widgets
     - responsive
     - dark/light
+- name: Web-Nary
+  description: A Fully Customised Hexo Flat Modular Theme for Bloging and More ...
+  link: https://github.com/BRAVO68WEB/hexo-webnary-theme/
+  preview: https://webnary.netlify.app/
+  tags:
+    - dark
+    - responsive
+    - widget
+    - colourful
+    - customised
+    - netlify
+    - flat
+    - modular
+    - beautiful
 - name: Kaze
   description: A simple, responsive and modern Hexo theme
   link: https://github.com/theme-kaze/hexo-theme-Kaze
@@ -3331,7 +3362,7 @@
     - elegant
     - 中文
 - name: blur
-  description: A simple and warm Hexo blog theme 
+  description: A simple and warm Hexo blog theme
   link: https://github.com/kiten46087/hexo-theme-blur
   preview: https://kiten46087.github.io/
   tags:
@@ -3352,3 +3383,73 @@
     - modern
     - elegant
     - 中文
+- name: Cupertino
+  description: The Hexo Blog Theme Cupertino.
+  link: https://github.com/MrWillCom/hexo-theme-cupertino
+  preview: https://mrwillcom.github.io
+  tags:
+    - responsive
+    - dark/light
+    - simple
+    - modern
+    - cupertino-design
+- name: LiveForCode
+  description: A beautiful theme for Hexo.
+  link: https://github.com/first19326/hexo-liveforcode
+  preview: https://notes.worstone.cn
+  tags:
+    - Beautiful
+    - Blog
+    - Chinese
+    - Hexo
+    - Personal
+- name: milk
+  description: A tiling window theme.
+  link: https://github.com/MRsoymilk/hexo-theme-milk
+  preview: https://blog.soymilk.fun
+  tags:
+    - 非主流
+    - Blog
+    - dark_mode
+- name: Bamboo
+  description: A beautiful hexo theme
+  link: https://github.com/yuang01/hexo-theme-bamboo
+  preview: https://yuang01.github.io/
+  tags:
+    - Vue
+    - simple
+    - cool
+    - Responsive
+    - Beautiful
+    - 中文
+- name: Minima
+  description: An undoubtedly simple and lightweight dark/light mode theme
+  link: https://github.com/adisaktijrs/hexo-theme-minima
+  preview: https://adisaktijrs.github.io/minima/
+  tags:
+    - Minimalist
+    - Dark
+    - Light
+    - Responsive
+    - Simple
+    - Clean
+- name: PreciousJoy
+  description: A simple hexo theme
+  link: https://github.com/fireworks99/hexo-theme-PreciousJoy
+  preview: https://fireworks99.github.io/
+  tags:
+    - Simple
+    - Beautiful
+    - Clean
+- name: Particle
+  description: A concise theme with 3 color styles.
+  link: https://github.com/korilin/hexo-theme-particle
+  preview: https://korilin.com/
+  tags:
+    - Vue
+    - home-figure
+    - Chinese
+    - 中文
+    - 3-color-styles
+    - dark_mode
+    - maiden_mode

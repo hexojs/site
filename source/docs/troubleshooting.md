@@ -33,6 +33,41 @@ Though Node.js has non-blocking I/O, the maximum number of synchronous I/O is st
 $ ulimit -n 10000
 ```
 
+**Error: cannot modify limit**
+
+If you encounter the following error:
+
+``` bash
+$ ulimit -n 10000
+ulimit: open files: cannot modify limit: Operation not permitted
+```
+
+It means some system-wide configurations are preventing `ulimit` to being increased to a certain limit.
+
+To override the limit:
+
+1. Add the following line to "/etc/security/limits.conf":
+
+  ```
+  * - nofile 10000
+
+  # '*' applies to all users and '-' set both soft and hard limits
+  ```
+
+  * The above setting may not apply in some cases, ensure "/etc/pam.d/login" and "/etc/pam.d/lightdm" have the following line. (Ignore this step if those files do not exist)
+
+  ```
+  session required pam_limits.so
+  ```
+
+2. If you are on a [systemd-based](https://en.wikipedia.org/wiki/Systemd#Adoption) distribution, systemd may override "limits.conf". To set the limit in systemd, add the following line in "/etc/systemd/system.conf" and "/etc/systemd/user.conf":
+
+  ```
+  DefaultLimitNOFILE=10000
+  ```
+
+3. Reboot
+
 ## Process Out of Memory
 
 When you encounter this error during generation:
@@ -136,13 +171,20 @@ When you can't get any command except `help`, `init` and `version` to work and y
 
 ## Escape Contents
 
-Hexo uses [Nunjucks] to render posts ([Swig] was used in older version, which share a similar syntax). Content wrapped with `{% raw %}{{ }}{% endraw %}` or `{% raw %}{% %}{% endraw %}` will get parsed and may cause problems. You can wrap sensitive content with the `raw` tag plugin.
+Hexo uses [Nunjucks] to render posts ([Swig] was used in older version, which share a similar syntax). Content wrapped with `{{ }}` or `{% %}` will get parsed and may cause problems. You can skip the parsing by wrapping it with the [`raw`](/docs/tag-plugins#Raw) tag plugin, single backtick ```` `{{ }}` ```` or triple backtick.
+Alternatively, Nunjucks tags can be disabled through the renderer's option (if supported), [API](/api/renderer#Disable-Nunjucks-tags) or [front-matter](/docs/front-matter).
 
 ```
 {% raw %}
-Hello {{ sensitive }}
+Hello {{ world }}
 {% endraw %}
 ```
+
+````
+```
+Hello {{ world }}
+```
+````
 
 ## ENOSPC Error (Linux)
 
@@ -176,20 +218,7 @@ Sometimes when running the command `$ hexo generate` it returns an error:
 FATAL Something's wrong. Maybe you can find the solution here: http://hexo.io/docs/troubleshooting.html
 Template render error: (unknown path)
 ```
-It means that there are some unrecognizable words in your file, e.g. invisible zero width characters. There are two possibilities One is your new page/post, and the other one is `_config.yml`.
-In `_config.yml`, don't forget add whitespace before a list in hash. There is the wiki page about [YAML](https://en.wikipedia.org/wiki/YAML).
-The error one:
-```
-plugins:
-- hexo-generator-feed
-- hexo-generator-sitemap
-```
-The correct one:
-```
-plugins:
-  - hexo-generator-feed
-  - hexo-generator-sitemap
-```
+One possible reason is that there are some unrecognizable words in your file, e.g. invisible zero width characters.
 
 [Warehouse]: https://github.com/hexojs/warehouse
 [Swig]: http://paularmstrong.github.io/swig/

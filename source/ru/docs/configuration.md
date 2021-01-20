@@ -19,7 +19,7 @@ title: Конфигурация
 
 Параметр | Описание | Умолчание
 --- | --- | ---
-`url` | URL-адрес сайта |
+`url` | URL-адрес сайта, must starts with `http://` or `https://` |
 `root` | Корневая папка сайта | `url's pathname`
 `permalink` | [Постоянная ссылка](permalinks.html) используются ссылки на статьи | `:year/:month/:day/:title/`
 `permalink_defaults` | Значение по умолчанию для каждого сегмента постоянной ссылки |

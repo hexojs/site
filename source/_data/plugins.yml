@@ -1965,12 +1965,6 @@
     - lazyload
     - inline
     - bundle
-- name: hexo-generator-searchdb
-  description: Yet another search data generator for Hexo with more features.
-  link: https://github.com/theme-next/hexo-generator-searchdb
-  tags:
-    - generator
-    - search
 - name: hexo-renderer-markdown
   description: Markdown-it renderer plugin for Hexo.
   link: https://github.com/niemingzhao/hexo-renderer-markdown
@@ -2410,6 +2404,12 @@
     - pangu
     - cjk
     - spacing
+- name: hexo-generator-searchdb
+  description: Yet another search data generator for Hexo with more features.
+  link: https://github.com/next-theme/hexo-generator-searchdb
+  tags:
+    - generator
+    - search
 - name: hexo-filter-mathjax
   description: Server side MathJax renderer plugin for Hexo. No front-end scripts are required.
   link: https://github.com/next-theme/hexo-filter-mathjax
@@ -2462,6 +2462,14 @@
     - delopyer
     - qiniu
     - 七牛云
+- name: hexo-renderer-scss
+  description: A hexo plugin for node-scss
+  link: https://github.com/mamboer/hexo-renderer-scss
+  tags:
+    - renderer
+    - scss
+    - css
+    - style
 - name: hexo-tag-wikipedia
   description: Embed content from Wikipedia.
   link: https://github.com/tuanna-hsp/hexo-tag-wikipedia
@@ -2734,6 +2742,13 @@
     - card
     - crawl
     - spider
+- name: hexo-highcharts
+  description: "A hexo tag for inserting highcharts chart in your blog."
+  link: https://github.com/lilunze/hexo-highcharts
+  tags:
+    - tag
+    - highcharts
+    - chart
 - name: hexo-image-cloudflare
   description: Use Cloudflare to cache images in Hexo
   link: https://github.com/njzjz/hexo-image-cloudflare
@@ -2767,3 +2782,38 @@
   link: https://github.com/jiangtj/hexo-extend-theme
   tags:
     - theme
+- name: hexo-renderer-inferno
+  description: Inferno.js JSX renderer for Hexo.
+  link: https://github.com/hexojs/hexo-renderer-inferno
+  tags:
+    - official
+    - renderer
+    - jsx
+    - inferno
+    - react
+- name: hexo-collaps
+  description: Parse movies Collaps CDN
+  link: https://github.com/dimonpanik/hexo-collaps
+  tags:
+    - movies
+    - serials
+    - collaps
+    - console
+    - video
+- name: hexo-custom-sort
+  description: Plugin helps to sort posts by required fields
+  link: https://github.com/dimonpanik/hexo-custom-sort
+  tags:
+    - fields
+    - locals
+    - sort
+- name: hexo-widget-tree
+  description: A widget that displays a tree-like menu.
+  link: https://github.com/YunYouJun/hexo-widget-tree
+  tags:
+    - tree
+    - widget
+    - menu
+    - categories
+    - archive
+

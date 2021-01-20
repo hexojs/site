@@ -19,7 +19,7 @@ title: Hexo 4.1.0 Released
   _config.yml
   permalink: :year/:month/:day/:hour/:minute/:title/
   ```
-  * Results in `https://yoursite.com/2019/12/09/23/59/a-post/`
+  * Results in `https://example.com/2019/12/09/23/59/a-post/`
 - Insert `article:published_time` [#3674] `article:author` [#3805] Open Graph tags
 - Enable `lazyload` in iframe-related tag plugins [#3798]
   * Affects [`iframe`](/docs/tag-plugins#iframe), [`jsfiddle`](/docs/tag-plugins#jsFiddle), [`vimeo`](/docs/tag-plugins#Vimeo), [`youtube`](/docs/tag-plugins#YouTube) tag plugins

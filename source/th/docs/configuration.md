@@ -19,7 +19,7 @@ Setting | Description
 
 Setting | Description | Default
 --- | --- | ---
-`url` | The URL of your website |
+`url` | The URL of your website, must starts with `http://` or `https://` |
 `root` | The root directory of your website | `url's pathname`
 `permalink` | The [permalink](permalinks.html) format of articles | `:year/:month/:day/:title/`
 `permalink_defaults` | Default values of each segment in permalink |
