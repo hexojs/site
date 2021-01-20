@@ -20,7 +20,7 @@ title: Конфигурация
 Параметр | Описание | Умолчание
 --- | --- | ---
 `url` | URL-адрес сайта |
-`root` | Корневая папка сайта |
+`root` | Корневая папка сайта | `url's pathname`
 `permalink` | [Постоянная ссылка](permalinks.html) используются ссылки на статьи | `:year/:month/:day/:title/`
 `permalink_defaults` | Значение по умолчанию для каждого сегмента постоянной ссылки |
 `pretty_urls` | Rewrite the [`permalink`](variables.html) variables to pretty URLs |

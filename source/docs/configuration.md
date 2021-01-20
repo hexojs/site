@@ -20,7 +20,7 @@ Setting | Description
 Setting | Description | Default
 --- | --- | ---
 `url` | The URL of your website |
-`root` | The root directory of your website |
+`root` | The root directory of your website | `url's pathname`
 `permalink` | The [permalink](permalinks.html) format of articles | `:year/:month/:day/:title/`
 `permalink_defaults` | Default values of each segment in permalink |
 `pretty_urls` | Rewrite the [`permalink`](variables.html) variables to pretty URLs |

@@ -22,7 +22,7 @@ title: 配置
 設定 | 描述 | 預設值
 --- | --- | ---
 `url` | 網站的網址 |
-`root` | 網站的根目錄 |
+`root` | 網站的根目錄 | `url's pathname`
 `permalink` | 文章 [永久連結](permalinks.html) 的格式 | `:year/:month/:day/:title/`
 `permalink_defaults` | `permalink` 中各區段的預設值 |
 `pretty_urls` | 改寫 [`permalink`](variables.html) 的值來美化 URL |
