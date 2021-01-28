@@ -10,7 +10,7 @@ title: 贡献
 
 ### 开始之前
 
-请首先阅读[《贡献者行为准则》]((https://github.com/hexojs/hexo/blob/master/CODE_OF_CONDUCT.md))，并确保您不会违反它。
+请首先阅读[《贡献者行为准则》](https://github.com/hexojs/hexo/blob/master/CODE_OF_CONDUCT.md)，并确保您不会违反它。
 
 请使用以下代码风格：
 
