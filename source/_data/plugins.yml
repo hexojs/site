@@ -2840,4 +2840,9 @@
     - Service Worker
     - Web App Manifest
     - Workbox
-
+- name: hexo-generator-latest2json
+  description: build a latest post list in a json file. that you can use it for other platforms
+  link: https://github.com/buxuku/hexo-generator-latest2json
+  tags:
+    - latest
+    - json
