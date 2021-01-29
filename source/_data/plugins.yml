@@ -2817,6 +2817,7 @@
     - categories
     - archive
 - name: hexo-generator-readme
+  description: auto generator readme file for hexo blog
   link: https://github.com/buxuku/hexo-generator-readme
   tags: 
     - readme
