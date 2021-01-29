@@ -2816,4 +2816,9 @@
     - menu
     - categories
     - archive
-
+- name: hexo-auto-issue
+  description: hexo plug auto publish articles to github issue.
+  link: https://github.com/buxuku/hexo-auto-issue
+  tags: 
+    - issue
+    - github
