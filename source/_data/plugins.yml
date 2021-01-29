@@ -2816,4 +2816,9 @@
     - menu
     - categories
     - archive
-
+- name: hexo-issue2readme
+  description: auto generator readme file for hexo blog from github issues.
+  link: https://github.com/buxuku/hexo-issue2readme
+  tags:
+    - issue
+    - readme
