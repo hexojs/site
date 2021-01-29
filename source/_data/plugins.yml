@@ -2816,4 +2816,8 @@
     - menu
     - categories
     - archive
-
+- name: hexo-generator-readme
+  link: https://github.com/buxuku/hexo-generator-readme
+  tags: 
+    - readme
+    - generator
