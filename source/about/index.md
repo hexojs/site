@@ -28,7 +28,7 @@ Second, in all good conscience, most of the visible costs (like the domain fees)
 
 #### Benefits
 
-We are grateful for every penny donated, here is a list of benefits you and us can achieve:
+We are grateful for every penny donated, here is a list of benefits you and we can achieve:
 
 1. Cover our cost.
 2. Motivate and acknowledge our work.
