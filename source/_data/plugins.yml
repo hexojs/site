@@ -2816,4 +2816,9 @@
     - menu
     - categories
     - archive
-
+- name: hexo-tag-scode
+  description: Add scode block in your post.
+  link: https://github.com/renbaoshuo/hexo-tag-scode
+  tags:
+    - tag
+    - scode
