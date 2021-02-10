@@ -1,3 +1,11 @@
+- name: hexo-abbrlink3
+  description: create one and only link for every different layouts for hexo
+  link: https://github.com/Keen-King/hexo-abbrlink3
+  tags:
+    - permalink
+    - link
+    - 固定链接
+    - abbrlink3
 - name: hexo-social9-socialshare
   description: Social9 social sharing plugin provides you beautiful buttons, sharing capabilities, and analytics. (20+ buttons- Whatsapp, Facebook, Twitter, LinkedIn, Reddit, and many more...).
   link: https://github.com/social9/hexo-plugin-social9-share
