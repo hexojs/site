@@ -17,7 +17,7 @@ Hexo 是一個快速、簡單且強大的網誌框架。Hexo 使用 [Markdown](h
 
 安裝 Hexo 相當簡單；然而，在安裝前您必須先檢查下列您的電腦是否已經安裝下列軟體：
 
-- [Node.js](http://nodejs.org/) (Node.js 版本需不低於8.10，建議使用 Node.js 10.0 及以上版本)
+- [Node.js](http://nodejs.org/) (Node.js 版本需不低於 10.13，建議使用 12.0 至 13 版，尚不支援 14.0 以後之版本)
 - [Git](http://git-scm.com/)
 
 若您的電腦已經安裝上述的必備軟體，那麼恭喜您！只需要透過 npm 即可完成 Hexo 的安裝。

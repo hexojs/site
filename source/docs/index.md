@@ -17,7 +17,7 @@ It only takes a few minutes to set up Hexo. If you encounter a problem and can't
 
 Installing Hexo is quite easy and only requires the following beforehand:
 
-- [Node.js](http://nodejs.org/) (Should be at least Node.js 10.13, recommends 12.0 or higher)
+- [Node.js](http://nodejs.org/) (Should be at least Node.js 10.13, recommends 12.0 to 13, 14.0+ version has not been supported yet)
 - [Git](http://git-scm.com/)
 
 If your computer already has these, congratulations! You can skip to the [Hexo installation](#Install-Hexo) step.
