@@ -3464,3 +3464,9 @@
     - 3-color-styles
     - dark_mode
     - maiden_mode
+- name: Leedom
+  description: A concise theme with 3 color styles.
+  link: https://github.com/leedom92/hexo-theme-leedom
+  preview: https://blog.leedom.me/
+  tags:
+    - Simple
