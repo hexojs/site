@@ -1,3 +1,24 @@
+- name: Miracle
+  description: A simple single-column theme for Hexo.
+  link: https://github.com/hifun-team/hexo-theme-miracle
+  preview: https://miracle-demo.now.sh
+  tags:
+    - simple
+    - dark/light
+    - 中文
+    - responsive
+    - mobile
+    - one_column
+- name: simple99
+  description: A concise wind blog theme based on hexo system.
+  link: https://github.com/shuxhan/hexo-theme-simple99
+  preview: https://simple99.cn
+  tags:
+    - simplicity
+    - function
+    - widget
+    - mobile
+    - 中文
 - name: Quiet
   description: A simple, easy to read flat hexo theme.
   link: https://github.com/QiaoBug/hexo-theme-quiet
@@ -758,8 +779,8 @@
     - two_columns
 - name: NexT
   description: NexT is an elegant and powerful theme
-  link: https://github.com/theme-next/hexo-theme-next
-  preview: https://theme-next.org
+  link: https://github.com/next-theme/hexo-theme-next
+  preview: https://theme-next.js.org
   tags:
     - responsive
     - one_column
@@ -1507,7 +1528,7 @@
 - name: Adoubi
   description: A simple theme without tags, categories, comments and other chaos
   link: https://github.com/shinux/hexo-theme-adoubi
-  preview: http://sinux.me
+  preview: https://sinux.icu
   tags:
     - responsive
     - adoubi
@@ -1930,20 +1951,16 @@
     - Pinghsu
     - customization
 - name: Claudia
-  description: Grace, simple theme
+  description: 📌 Concisely designed & easy to config, match device dark mode, 90+ Lighthouse scoring
   link: https://github.com/Haojen/hexo-theme-Claudia
   preview: https://haojen.github.io/Claudia-theme-blog/
   tags:
-    - emoji
-    - math
-    - anisina
-    - flowchart
-    - blur
-    - black
+    - dark mode
+    - mobile
     - responsive
-    - grace
-    - 数学公式
-    - 中文使用文档
+    - smooth animation
+    - SEO friendly
+    - 中文
 - name: Clexy
   description: Clexy, A clean and elegant theme
   link: https://github.com/mkkhedawat/clexy

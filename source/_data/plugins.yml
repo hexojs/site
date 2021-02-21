@@ -1965,12 +1965,6 @@
     - lazyload
     - inline
     - bundle
-- name: hexo-generator-searchdb
-  description: Yet another search data generator for Hexo with more features.
-  link: https://github.com/theme-next/hexo-generator-searchdb
-  tags:
-    - generator
-    - search
 - name: hexo-renderer-markdown
   description: Markdown-it renderer plugin for Hexo.
   link: https://github.com/niemingzhao/hexo-renderer-markdown
@@ -2410,6 +2404,12 @@
     - pangu
     - cjk
     - spacing
+- name: hexo-generator-searchdb
+  description: Yet another search data generator for Hexo with more features.
+  link: https://github.com/next-theme/hexo-generator-searchdb
+  tags:
+    - generator
+    - search
 - name: hexo-filter-mathjax
   description: Server side MathJax renderer plugin for Hexo. No front-end scripts are required.
   link: https://github.com/next-theme/hexo-filter-mathjax
@@ -2823,3 +2823,11 @@
     - admin
     - editor
     - admin-panel
+- name: hexo-next-pwa
+  description: Yet, another pwa plugin
+  link: https://github.com/jiangtj-lab/hexo-next-pwa
+  tags:
+    - PWA
+    - Service Worker
+    - Web App Manifest
+    - Workbox
