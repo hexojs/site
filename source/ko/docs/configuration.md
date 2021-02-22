@@ -20,7 +20,7 @@ title: Configuration
 설정 | 설명 | 기본값
 --- | --- | ---
 `url` | 웹 사이트의 URL, must starts with `http://` or `https://` |
-`root` | 웹 사이트의 루트 디렉토리 |
+`root` | 웹 사이트의 루트 디렉토리 | `url's pathname`
 `permalink` | 게시글의 [permalink](permalinks.html) 형식 | `:year/:month/:day/:title/`
 `permalink_defaults` | Permalink 각 부분(segment)의 기본값 |
 `pretty_urls` | Rewrite the [`permalink`](variables.html) variables to pretty URLs |
