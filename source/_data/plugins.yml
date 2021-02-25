@@ -2824,4 +2824,16 @@
     - Service Worker
     - Web App Manifest
     - Workbox
-
+- name: hexo-markmap
+  description: Innsert a mindmap by markdown in your hexo blog. 在你的hexo博客中插入思维导图。
+  link: https://github.com/MaxChang3/hexo-markmap
+  tags:
+    - markmap
+    - mindmap
+    - markdown
+- name: hexo-bilibili-card
+  description: Insert a bilibili card into your page or article.
+  link: https://github.com/MaxChang3/hexo-bilibili-card
+  tags:
+    - bilibili
+    - card
