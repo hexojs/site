@@ -2489,7 +2489,7 @@
     - scalable
 - name: Volantis
   description: A Wonderful Theme for Hexo
-  link: https://github.com/xaoxuu/hexo-theme-volantis
+  link: https://github.com/volantis-x/hexo-theme-volantis
   preview: https://volantis.js.org/
   tags:
     - responsive
@@ -3464,3 +3464,14 @@
     - 3-color-styles
     - dark_mode
     - maiden_mode
+- name: Stellar
+  description: A Wonderful Theme for Hexo
+  link: https://github.com/xaoxuu/hexo-theme-stellar
+  preview: https://xaoxuu.com/wiki/stellar
+  tags:
+    - responsive
+    - wiki
+    - beautiful
+    - clean
+    - 文档
+    - 简约
