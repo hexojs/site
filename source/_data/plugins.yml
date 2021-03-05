@@ -2816,14 +2816,6 @@
     - menu
     - categories
     - archive
-<<<<<<< HEAD
-- name: hexo-generator-latest2json
-  description: build a latest post list in a json file. that you can use it for other platforms
-  link: https://github.com/buxuku/hexo-generator-latest2json
-  tags:
-    - latest
-    - json
-=======
 - name: hexo-bridge
   description: "Admin panel for your website. Features: edit posts and pages, file manager, website settings editor, theme and plugin discovery."
   link: https://github.com/DeepSpaceHarbor/hexo-bridge
@@ -2831,7 +2823,6 @@
     - admin
     - editor
     - admin-panel
->>>>>>> Add plugin: Bridge admin panel (#1577)
 - name: hexo-next-pwa
   description: Yet, another pwa plugin
   link: https://github.com/jiangtj-lab/hexo-next-pwa
