@@ -12,10 +12,10 @@ $ hexo init [folder]
 
 新建一个网站。如果没有设置 `folder` ，Hexo 默认在目前的文件夹建立网站。
 
-This command is a shortcut that runs the following steps:
+本命令相当于执行了以下几步：
 
-1. Git clone [hexo-starter](https://github.com/hexojs/hexo-starter) including [hexo-theme-landscape](https://github.com/hexojs/hexo-theme-landscape) into the current directory or a target folder if specified.
-2. Install dependencies using a package manager: [Yarn 1](https://classic.yarnpkg.com/lang/en/), [pnpm](https://pnpm.js.org) or [npm](https://docs.npmjs.com/cli/install), whichever is installed; if there are more than one installed, the priority is as listed. npm is bundled with [Node.js](/docs/#Install-Node-js) by default.
+1. Git clone [hexo-starter](https://github.com/hexojs/hexo-starter) 和 [hexo-theme-landscape](https://github.com/hexojs/hexo-theme-landscape) 主题到当前目录或指定目录。
+2. 使用 [Yarn 1](https://classic.yarnpkg.com/lang/en/)、[pnpm](https://pnpm.js.org) 或 [npm](https://docs.npmjs.com/cli/install) 包管理器下载依赖。（如有已安装多个，则列在前面的优先）npm 默认随 [Node.js](/docs/#Install-Node-js) 安装。
 
 ## new
 
