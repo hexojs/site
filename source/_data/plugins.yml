@@ -2816,6 +2816,19 @@
     - menu
     - categories
     - archive
+- name: hexo-tag-scode
+  description: Add scode block in your post.
+  link: https://github.com/renbaoshuo/hexo-tag-scode
+  tags:
+    - tag
+    - scode
+- name: hexo-bridge
+  description: "Admin panel for your website. Features: edit posts and pages, file manager, website settings editor, theme and plugin discovery."
+  link: https://github.com/DeepSpaceHarbor/hexo-bridge
+  tags:
+    - admin
+    - editor
+    - admin-panel
 - name: hexo-next-pwa
   description: Yet, another pwa plugin
   link: https://github.com/jiangtj-lab/hexo-next-pwa
@@ -2832,4 +2845,23 @@
     - bilibili
     - bangumi
     - anime
-
+- name: hexo-filter-links
+  description: All external links to Internal links automatically.
+  link: https://github.com/naicfeng/hexo-filter-links
+  tags:
+    - links
+    - external links
+    - Internal links
+- name: hexo-kotlin-playground
+  description: Make codeblock support kotlin playground|使代码块支持Kotlin Playground
+  link: https://github.com/kairlec/hexo-kotlin-playground
+  tags:
+    - Kotlin
+    - Playground
+    - Run Code
+- name: hexo-generator-latest2json
+  description: build a latest post list in a json file. that you can use it for other platforms
+  link: https://github.com/buxuku/hexo-generator-latest2json
+  tags:
+    - latest
+    - json
