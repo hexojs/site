@@ -2831,6 +2831,13 @@
     - Service Worker
     - Web App Manifest
     - Workbox
+- name: hexo-kotlin-playground
+  description: Make codeblock support kotlin playground|使代码块支持Kotlin Playground
+  link: https://github.com/kairlec/hexo-kotlin-playground
+  tags:
+    - Kotlin
+    - Playground
+    - Run Code
 - name: hexo-generator-latest2json
   description: build a latest post list in a json file. that you can use it for other platforms
   link: https://github.com/buxuku/hexo-generator-latest2json
