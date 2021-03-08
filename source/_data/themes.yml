@@ -3397,7 +3397,7 @@
 - name: Cupertino
   description: The Hexo Blog Theme Cupertino.
   link: https://github.com/MrWillCom/hexo-theme-cupertino
-  preview: https://mrwillcom.github.io
+  preview: https://mrwillcom.now.sh
   tags:
     - responsive
     - dark/light
