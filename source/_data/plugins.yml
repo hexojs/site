@@ -2878,3 +2878,21 @@
   tags:
     - latest
     - json
+- name: hexo-seo-autopush
+  description: Daily automatic submission of urls to Baidu and Google Bing|每天自动提交site url到百度、谷歌、必应
+  link: https://github.com/lete114/hexo-seo-autopush
+  tags:
+    - baidu
+    - bing
+    - google
+    - seo
+- name: hexo-minify
+  description: Hexo resources compress HTML,CSS,JS | Hexo资源压缩，支持HTML、JS、CSS
+  link: https://github.com/lete114/hexo-minify
+  tags:
+    - compress
+    - minify
+    - html
+    - javascript
+    - js
+    - css
