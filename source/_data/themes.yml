@@ -3493,3 +3493,16 @@
     - stylish
     - clean
     - simple
+- name: MengD
+  description: A simple, elegant, and beautiful Hexo theme
+  link: https://github.com/lete114/hexo-theme-MengD
+  preview: https://blog.lete114.top/
+  tags:
+    - Responsive
+    - Customizable
+    - Slideshow
+    - 中文
+    - 简约
+    - simple
+    - beautiful
+    
