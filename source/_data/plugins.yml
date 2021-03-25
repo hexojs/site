@@ -2878,3 +2878,11 @@
   tags:
     - latest
     - json
+- name: hexo-encrypted-package-html
+  description: encrypt the article body plugin
+  link: https://github.com/yaoxuanzhi/hexo-encrypted-package-html
+  tags:
+    - encrypt
+    - package
+    - base64_with_xor
+
