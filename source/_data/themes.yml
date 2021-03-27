@@ -2948,7 +2948,7 @@
 - name: A-Obsidian
   description: A dark Hexo theme, it's responsive, simple but elegant.
   link: https://github.com/TriDiamond/hexo-theme-obsidian
-  preview: https://tridiamond.tech
+  preview: https://obsidian.tridiamond.tech
   tags:
     - 中文
     - responsive
@@ -3493,3 +3493,17 @@
     - stylish
     - clean
     - simple
+- name: ObsidiaNext
+  description: A futuristic theme that is clean and elegant.
+  link: https://github.com/obsidianext/hexo-theme-obsidianext
+  preview: https://tridiamond.tech
+  tags:
+    - 中文
+    - English
+    - Responsive
+    - Elegant
+    - Dark
+    - Light
+    - Clean
+    - Futuristic
+    - Vue3
