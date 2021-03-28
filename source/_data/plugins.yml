@@ -2878,3 +2878,9 @@
   tags:
     - latest
     - json
+- name: hexo-sponsor-button
+  description: Hexo plugin to display a fund button in page content
+  link: https://github.com/GhostyJade/hexo-sponsor-button
+  tags:
+    - funding
+    - sponsor
