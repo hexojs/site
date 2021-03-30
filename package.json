@@ -26,7 +26,7 @@
     "hexo-uglify": "^2.0.0",
     "image-size": "^0.9.1",
     "lunr": "2.3.9",
-    "sharp": "^0.26.1"
+    "sharp": "^0.28.0"
   },
   "devDependencies": {
     "eslint": "^7.0.0",
