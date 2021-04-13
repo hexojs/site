@@ -1,3 +1,13 @@
+- name:  Landscape-x
+  description: A simple single-column theme for Hexo.
+  link: https://github.com/HipHopCoderS/Landscape-x
+  preview: https://blog.hiphopcoder.com/
+  tags:
+    - simple 
+    - responsive
+    - 中文 
+    - clean
+    - seo 
 - name: Miracle
   description: A simple single-column theme for Hexo.
   link: https://github.com/hifun-team/hexo-theme-miracle
