@@ -1,3 +1,10 @@
+- name: hexo-simpleIcons
+  description: Use simple-icon in your hexo passages.
+  link: https://github.com/nidbCN/hexo-simpleIcons
+  tags:
+    - simple-icon
+    - icon
+    - passages
 - name: hexo-social9-socialshare
   description: Social9 social sharing plugin provides you beautiful buttons, sharing capabilities, and analytics. (20+ buttons- Whatsapp, Facebook, Twitter, LinkedIn, Reddit, and many more...).
   link: https://github.com/social9/hexo-plugin-social9-share
