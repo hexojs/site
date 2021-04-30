@@ -1,3 +1,14 @@
+- name: Miracle
+  description: A simple single-column theme for Hexo.
+  link: https://github.com/hifun-team/hexo-theme-miracle
+  preview: https://miracle-demo.now.sh
+  tags:
+    - simple
+    - dark/light
+    - 中文
+    - responsive
+    - mobile
+    - one_column
 - name: simple99
   description: A concise wind blog theme based on hexo system.
   link: https://github.com/shuxhan/hexo-theme-simple99
@@ -1517,7 +1528,7 @@
 - name: Adoubi
   description: A simple theme without tags, categories, comments and other chaos
   link: https://github.com/shinux/hexo-theme-adoubi
-  preview: http://sinux.me
+  preview: https://sinux.icu
   tags:
     - responsive
     - adoubi
@@ -2478,7 +2489,7 @@
     - scalable
 - name: Volantis
   description: A Wonderful Theme for Hexo
-  link: https://github.com/xaoxuu/hexo-theme-volantis
+  link: https://github.com/volantis-x/hexo-theme-volantis
   preview: https://volantis.js.org/
   tags:
     - responsive
@@ -2757,7 +2768,7 @@
 - name: Butterfly
   description: A Simple and Card UI Design theme for Hexo
   link: https://github.com/jerryc127/hexo-theme-butterfly
-  preview: https://demo.jerryc.me/
+  preview: https://butterfly.js.org/
   tags:
     - Card UI
     - Responsive
@@ -3386,7 +3397,7 @@
 - name: Cupertino
   description: The Hexo Blog Theme Cupertino.
   link: https://github.com/MrWillCom/hexo-theme-cupertino
-  preview: https://mrwillcom.github.io
+  preview: https://mrwillcom.now.sh
   tags:
     - responsive
     - dark/light
@@ -3453,3 +3464,32 @@
     - 3-color-styles
     - dark_mode
     - maiden_mode
+- name: Pure
+  description: A modern and simple theme for Hexo.
+  link: https://github.com/renbaoshuo/hexo-theme-pure
+  preview: https://blog.baoshuo.ren/
+  tags:
+    - simple
+    - clean
+    - modern
+    - 中文
+- name: Stellar
+  description: A Wonderful Theme for Hexo
+  link: https://github.com/xaoxuu/hexo-theme-stellar
+  preview: https://xaoxuu.com/wiki/stellar
+  tags:
+    - responsive
+    - wiki
+    - beautiful
+    - clean
+    - 文档
+    - 简约
+- name: Auto
+  description: A modern stylish theme for Hexo
+  link: https://github.com/autoload/hexo-theme-auto
+  preview: https://autoload.github.io/
+  tags:
+    - modern
+    - stylish
+    - clean
+    - simple

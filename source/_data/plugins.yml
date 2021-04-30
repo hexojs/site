@@ -1,3 +1,10 @@
+- name: hexo-simpleIcons
+  description: Use simple-icon in your hexo passages.
+  link: https://github.com/nidbCN/hexo-simpleIcons
+  tags:
+    - simple-icon
+    - icon
+    - passages
 - name: hexo-social9-socialshare
   description: Social9 social sharing plugin provides you beautiful buttons, sharing capabilities, and analytics. (20+ buttons- Whatsapp, Facebook, Twitter, LinkedIn, Reddit, and many more...).
   link: https://github.com/social9/hexo-plugin-social9-share
@@ -2822,3 +2829,79 @@
   tags: 
     - issue
     - github
+- name: hexo-deployer-upyun-purge
+  description: hexo deployer to upyun and purge cache
+  link: https://github.com/jingtaiboke/hexo-deployer-upyun-purge
+  tags:
+    - upyun
+    - cache
+    - purge
+- name: hexo-tag-scode
+  description: Add scode block in your post.
+  link: https://github.com/renbaoshuo/hexo-tag-scode
+  tags:
+    - tag
+    - scode
+- name: hexo-bridge
+  description: "Admin panel for your website. Features: edit posts and pages, file manager, website settings editor, theme and plugin discovery."
+  link: https://github.com/DeepSpaceHarbor/hexo-bridge
+  tags:
+    - admin
+    - editor
+    - admin-panel
+- name: hexo-next-pwa
+  description: Yet, another pwa plugin
+  link: https://github.com/jiangtj-lab/hexo-next-pwa
+  tags:
+    - PWA
+    - Service Worker
+    - Web App Manifest
+    - Workbox
+- name: hexo-markmap
+  description: Innsert a mindmap by markdown in your hexo blog. 在你的hexo博客中插入思维导图。
+  link: https://github.com/MaxChang3/hexo-markmap
+  tags:
+    - markmap
+    - mindmap
+    - markdown
+- name: hexo-bilibili-card
+  description: Insert a bilibili card into your page or article.
+  link: https://github.com/MaxChang3/hexo-bilibili-card
+  tags:
+    - bilibili
+    - card
+- name: hexo-tag-bilibili-bangumi
+  description: Embed real-time Bilibili bangumi progress in Hexo posts/pages.
+  link: https://github.com/hans362/hexo-tag-bilibili-bangumi
+  tags:
+    - tag
+    - bilibili
+    - bangumi
+    - anime
+- name: hexo-filter-links
+  description: All external links to Internal links automatically.
+  link: https://github.com/naicfeng/hexo-filter-links
+  tags:
+    - links
+    - external links
+    - Internal links
+- name: hexo-kotlin-playground
+  description: Make codeblock support kotlin playground|使代码块支持Kotlin Playground
+  link: https://github.com/kairlec/hexo-kotlin-playground
+  tags:
+    - Kotlin
+    - Playground
+    - Run Code
+- name: hexo-generator-latest2json
+  description: build a latest post list in a json file. that you can use it for other platforms
+  link: https://github.com/buxuku/hexo-generator-latest2json
+  tags:
+    - latest
+    - json
+- name: hexo-draft-tags
+  description: Adds draft tags to isolate markdown text within a post that should be considered as draft
+  link: https://github.com/CallumHewitt/hexo-draft-tags
+  tags:
+    - drafts
+    - tag
+    - tag_plugins
