@@ -1,3 +1,10 @@
+- name: hexo-simpleIcons
+  description: Use simple-icon in your hexo passages.
+  link: https://github.com/nidbCN/hexo-simpleIcons
+  tags:
+    - simple-icon
+    - icon
+    - passages
 - name: hexo-social9-socialshare
   description: Social9 social sharing plugin provides you beautiful buttons, sharing capabilities, and analytics. (20+ buttons- Whatsapp, Facebook, Twitter, LinkedIn, Reddit, and many more...).
   link: https://github.com/social9/hexo-plugin-social9-share
@@ -2816,6 +2823,19 @@
     - menu
     - categories
     - archive
+- name: hexo-auto-issue
+  description: hexo plug auto publish articles to github issue.
+  link: https://github.com/buxuku/hexo-auto-issue
+  tags: 
+    - issue
+    - github
+- name: hexo-deployer-upyun-purge
+  description: hexo deployer to upyun and purge cache
+  link: https://github.com/jingtaiboke/hexo-deployer-upyun-purge
+  tags:
+    - upyun
+    - cache
+    - purge
 - name: hexo-tag-scode
   description: Add scode block in your post.
   link: https://github.com/renbaoshuo/hexo-tag-scode
@@ -2884,3 +2904,10 @@
   tags:
     - plausible
     - analytics
+- name: hexo-draft-tags
+  description: Adds draft tags to isolate markdown text within a post that should be considered as draft
+  link: https://github.com/CallumHewitt/hexo-draft-tags
+  tags:
+    - drafts
+    - tag
+    - tag_plugins

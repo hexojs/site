@@ -2768,7 +2768,7 @@
 - name: Butterfly
   description: A Simple and Card UI Design theme for Hexo
   link: https://github.com/jerryc127/hexo-theme-butterfly
-  preview: https://demo.jerryc.me/
+  preview: https://butterfly.js.org/
   tags:
     - Card UI
     - Responsive
