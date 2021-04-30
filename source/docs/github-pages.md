@@ -2,7 +2,7 @@
 title: GitHub Pages
 ---
 
-In this tutorial, we use [GitHub Actions](https://docs.github.com/en/actions) to deploy Github Pages. It works in both public and private repository. Skip to the [One-command deployment](#One-command-deployment) section if you prefer not to upload your source folder to GitHub.
+In this tutorial, we use [GitHub Actions](https://docs.github.com/en/actions) to deploy GitHub Pages. It works in both public and private repository. Skip to the [One-command deployment](#One-command-deployment) section if you prefer not to upload your source folder to GitHub.
 
 1. Create a repo named <b>*username*.github.io</b>, where username is your username on GitHub. If you have already uploaded to other repo, rename the repo instead.
 2. Add the following *highlighted* lines to `package.json`: (skip this step if there are existing lines)
