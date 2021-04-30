@@ -46,6 +46,6 @@
     "*.js": "eslint --fix"
   },
   "engines": {
-    "node": ">=8.10.0"
+    "node": ">=12.9.0"
   }
 }
