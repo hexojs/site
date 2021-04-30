@@ -1,0 +1,17 @@
+name: Tester
+
+on: [push, pull_request]
+
+jobs:
+  tester:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js
+        uses: actions/setup-node@v2
+      - name: Install Dependencies
+        run: npm install
+      - name: Lint
+        run: npm run eslint
+      - name: Test
+        run: npm run build
