@@ -1,0 +1,21 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: daily
+  open-pull-requests-limit: 20
+  ignore:
+  - dependency-name: sharp
+    versions:
+    - 0.27.1
+    - 0.27.2
+    - 0.28.0
+  - dependency-name: husky
+    versions:
+    - 5.0.9
+    - 5.1.0
+    - 5.1.1
+    - 5.1.2
+    - 5.1.3
+    - 5.2.0
