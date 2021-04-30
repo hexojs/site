@@ -42,7 +42,8 @@
     "*.{png,jpeg,jpg,gif,svg}": [
       "imagemin-lint-staged",
       "git add"
-    ]
+    ],
+    "*.js": "eslint --fix"
   },
   "engines": {
     "node": ">=8.10.0"

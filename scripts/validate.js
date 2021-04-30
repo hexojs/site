@@ -35,7 +35,7 @@ async function validateThemeThumbnail() {
   const screenshotsPath = join(hexo.source_dir, 'themes/screenshots');
   const screenshots = await listDir(screenshotsPath);
 
-  for (let filename of screenshots) {
+  for (const filename of screenshots) {
     if (!filename.endsWith('.png')) {
       log.fatal(`The theme thumbnail "${filename}" is not a png image.`);
       isValidationPassed = false;
