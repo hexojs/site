@@ -2898,6 +2898,12 @@
   tags:
     - latest
     - json
+- name: hexo-sponsor-button
+  description: Hexo plugin to display a fund button in page content
+  link: https://github.com/GhostyJade/hexo-sponsor-button
+  tags:
+    - funding
+    - sponsor
 - name: hexo-plausible-analytics
   description: Integrate your Hexo blog with Plausible Analytics
   link: https://github.com/maaaaarco/hexo-plausible-analytics
