@@ -24,7 +24,7 @@ title: 配置
 参数 | 描述 | 默认值
 --- | --- | ---
 `url` | 网址, must starts with `http://` or `https://` |
-`root` | 网站根目录 |
+`root` | 网站根目录 | `url's pathname`
 `permalink` | 文章的 [永久链接](permalinks.html) 格式 | `:year/:month/:day/:title/`
 `permalink_defaults` | 永久链接中各部分的默认值 |
 `pretty_urls` | 改写 [`permalink`](variables.html) 的值来美化 URL |

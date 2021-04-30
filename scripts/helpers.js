@@ -119,7 +119,20 @@ hexo.extend.helper.register('plugin_list', function() {
   const partial = hexo.extend.helper.get('partial').bind(this);
   let html = '';
 
-  const arr = this.site.data[this.page.data].sort(() => { return Math.random() > 0.5 ? -1 : 1; });
+  const type = this.page.data;
+  const arr = this.site.data[type];
+
+  if (type === 'themes') {
+    arr.sort(() => { return Math.random() > 0.5 ? -1 : 1; });
+  }
+
+  if (type === 'plugins') {
+    arr.sort((a, b) => {
+      const nameA = a.name.toUpperCase();
+      const nameB = b.name.toUpperCase();
+      return nameA < nameB ? -1 : 1;
+    });
+  }
 
   for (const plugin of arr) {
     html += partial('partial/' + this.page.partial, { plugin });

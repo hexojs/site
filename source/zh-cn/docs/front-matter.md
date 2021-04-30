@@ -27,6 +27,7 @@ date: 2013/7/13 20:46:25
 `permalink` | 覆盖文章网址 |
 `excerpt` | Page excerpt in plain text. Use [this plugin](/docs/tag-plugins#Post-Excerpt) to format the text |
 `disableNunjucks` | Disable rendering of Nunjucks tag `{{ }}`/`{% %}` and [tag plugins](/docs/tag-plugins) when enabled
+`lang` | Set the language to override [auto-detection](/docs/internationalization#Path) | Inherited from `_config.yml`
 
 ## 布局
 

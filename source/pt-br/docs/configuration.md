@@ -21,7 +21,7 @@ Configuração | Descrição
 Configuração | Descrição | Padrão
 --- | --- | ---
 `url` | A URL do seu site, must starts with `http://` or `https://` |
-`root` | O diretório raiz do seu site |
+`root` | O diretório raiz do seu site | `url's pathname`
 `permalink` | O formato de [permalink](permalinks.html) dos artigos | `:year/:month/:day/:title/`
 `permalink_defaults` | Valores padrão de cada segmento no permalink |
 `pretty_urls` | Rewrite the [`permalink`](variables.html) variables to pretty URLs |
