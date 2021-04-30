@@ -2823,6 +2823,13 @@
     - menu
     - categories
     - archive
+- name: hexo-deployer-upyun-purge
+  description: hexo deployer to upyun and purge cache
+  link: https://github.com/jingtaiboke/hexo-deployer-upyun-purge
+  tags:
+    - upyun
+    - cache
+    - purge
 - name: hexo-tag-scode
   description: Add scode block in your post.
   link: https://github.com/renbaoshuo/hexo-tag-scode
