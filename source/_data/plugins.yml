@@ -2898,6 +2898,12 @@
   tags:
     - latest
     - json
+- name: hexo-plausible-analytics
+  description: Integrate your Hexo blog with Plausible Analytics
+  link: https://github.com/maaaaarco/hexo-plausible-analytics
+  tags:
+    - plausible
+    - analytics
 - name: hexo-draft-tags
   description: Adds draft tags to isolate markdown text within a post that should be considered as draft
   link: https://github.com/CallumHewitt/hexo-draft-tags
