@@ -3493,8 +3493,8 @@
     - stylish
     - clean
     - simple
-- name: ObsidiaNext
-  description: A futuristic theme that is clean and elegant.
+- name: Aurora
+  description: Futuristic auroral Hexo theme.
   link: https://github.com/obsidianext/hexo-theme-obsidianext
   preview: https://tridiamond.tech
   tags:
