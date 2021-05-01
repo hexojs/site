@@ -24,7 +24,7 @@ To upgrade to Hexo v4, change the following line in your package.json,
     - Use `decodeURI(post.permalink)`
     - [`decodeURL()`](https://github.com/hexojs/hexo-util#decodeurlstr) of hexo-util can decode [punycoded](https://en.wikipedia.org/wiki/Punycode) domain.
   * This change does not apply to `this.url` variable.
-- fix(paginator): add `escape` option for compatibility with hexo-util@1.3.0 [#3728]
+- fix(paginator): add `escape` option for compatibility with hexo-util 1.3.0 [#3728]
   * Theme devs, if you customize `prev_text`/`next_text` with html (e.g. to insert icons), you need to set [`escape: false`](https://github.com/theme-next/hexo-theme-next/blob/7d6272274afcc88edcefe3504e452a502c05329f/layout/_partials/pagination.swig#L8) in the parameter.
 
 ## Feature
@@ -83,7 +83,7 @@ To upgrade to Hexo v4, change the following line in your package.json,
 - chore(deps-dev): update husky requirement from ^1.1.3 to ^3.0.0 [#3608]
 - chore(deps-dev): update eslint requirement from ^5.9.0 to ^6.0.1 [#3606]
 - chore(deps-dev): update lint-staged requirement from ^8.1.0 to ^9.1.0 [#3615]
-- chore: update to hexo-util@1.0.1 and hexo-renderer-marked@2.0.0 [#3646]
+- chore: update to hexo-util 1.0.1 and hexo-renderer-marked 2.0.0 [#3646]
 - chore(deps): update hexo-i18n requirement from ^0.2.1 to ^1.0.0 [#3698]
 - chore(deps): update hexo-fs requirement from ^1.0.0 to ^2.0.0 [#3699]
 - chore(deps): update hexo-front-matter requirement from ^0.2.3 to ^1.0.0 [#3700]
