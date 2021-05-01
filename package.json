@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "hexo": {
-    "version": "5.3.0"
+    "version": "5.4.0"
   },
   "scripts": {
     "build": "hexo generate",
@@ -33,6 +33,7 @@
     "eslint-config-hexo": "^4.0.0",
     "husky": "^4.0.7",
     "imagemin-lint-staged": "^0.4.0",
+    "js-yaml": "^4.1.0",
     "lint-staged": "^10.2.2"
   },
   "husky": {

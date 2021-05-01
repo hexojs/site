@@ -2011,7 +2011,7 @@
     - One page
     - responsive
     - vue.js
-- name: pure
+- name: Pure
   description: Theme pure. It's a pure theme
   link: https://github.com/cofess/hexo-theme-pure
   preview: http://blog.cofess.com/
@@ -3464,7 +3464,7 @@
     - 3-color-styles
     - dark_mode
     - maiden_mode
-- name: Pure
+- name: A-Pure
   description: A modern and simple theme for Hexo.
   link: https://github.com/renbaoshuo/hexo-theme-pure
   preview: https://blog.baoshuo.ren/
