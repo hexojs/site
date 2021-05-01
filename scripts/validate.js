@@ -8,13 +8,9 @@ const { listDir } = require('hexo-fs')
 const { log } = hexo
 const sizeOf = require('image-size')
 
-const yaml = require('js-yaml')
-const fs = require('fs')
-
 async function validateThemeNames() {
   let isValidationPassed = true
-  const themeDataFile = fs.readFileSync(hexo.source_dir + '_data/themes.yml')
-  const themeData = yaml.load(themeDataFile)
+  const themeData = hexo.locals.get('data').themes
   const themeNames = []
   let name = ''
   for (let theme of themeData) {
