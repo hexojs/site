@@ -2011,7 +2011,7 @@
     - One page
     - responsive
     - vue.js
-- name: pure
+- name: Pure
   description: Theme pure. It's a pure theme
   link: https://github.com/cofess/hexo-theme-pure
   preview: http://blog.cofess.com/
@@ -2948,7 +2948,7 @@
 - name: A-Obsidian
   description: A dark Hexo theme, it's responsive, simple but elegant.
   link: https://github.com/TriDiamond/hexo-theme-obsidian
-  preview: https://tridiamond.tech
+  preview: https://obsidian.tridiamond.tech
   tags:
     - 中文
     - responsive
@@ -3464,7 +3464,7 @@
     - 3-color-styles
     - dark_mode
     - maiden_mode
-- name: Pure
+- name: A-Pure
   description: A modern and simple theme for Hexo.
   link: https://github.com/renbaoshuo/hexo-theme-pure
   preview: https://blog.baoshuo.ren/
@@ -3493,3 +3493,17 @@
     - stylish
     - clean
     - simple
+- name: Aurora
+  description: Futuristic auroral Hexo theme.
+  link: https://github.com/auroral-ui/hexo-theme-aurora
+  preview: https://tridiamond.tech
+  tags:
+    - 中文
+    - English
+    - Responsive
+    - Elegant
+    - Dark
+    - Light
+    - Clean
+    - Futuristic
+    - Vue3

@@ -8,6 +8,28 @@ const { listDir } = require('hexo-fs');
 const { log } = hexo;
 const sizeOf = require('image-size');
 
+async function validateThemeNames() {
+  let isValidationPassed = true;
+  const themeData = hexo.locals.get('data').themes;
+  const themeNames = [];
+  let name = '';
+  for (const theme of themeData) {
+    name = String(theme.name).toLocaleLowerCase();
+    if (themeNames.indexOf(name) !== -1) {
+      isValidationPassed = false;
+      break;
+    } else {
+      themeNames.push(name);
+    }
+  }
+
+  if (!isValidationPassed) {
+    throw new Error(`Theme name: [${name}] is duplicated.`);
+  } else {
+    log.info('Theme name validation passed');
+  }
+}
+
 async function validateThemeThumbnail() {
   let isValidationPassed = true;
   const screenshotsPath = join(hexo.source_dir, 'themes/screenshots');
@@ -23,7 +45,9 @@ async function validateThemeThumbnail() {
 
     const { width, height } = sizeOf(screenshot);
     if (width !== 800 || height !== 500) {
-      log.fatal(`The theme thumbnail "${filename}" is not sized in 800x500 (got ${width}x${height}).`);
+      log.fatal(
+        `The theme thumbnail "${filename}" is not sized in 800x500 (got ${width}x${height}).`
+      );
       isValidationPassed = false;
     }
   });
@@ -35,4 +59,5 @@ async function validateThemeThumbnail() {
   }
 }
 
+hexo.extend.filter.register('before_exit', validateThemeNames);
 hexo.extend.filter.register('before_exit', validateThemeThumbnail);
