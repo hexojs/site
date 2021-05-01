@@ -2823,6 +2823,19 @@
     - menu
     - categories
     - archive
+- name: hexo-auto-issue
+  description: hexo plug auto publish articles to github issue.
+  link: https://github.com/buxuku/hexo-auto-issue
+  tags: 
+    - issue
+    - github
+- name: hexo-deployer-upyun-purge
+  description: hexo deployer to upyun and purge cache
+  link: https://github.com/jingtaiboke/hexo-deployer-upyun-purge
+  tags:
+    - upyun
+    - cache
+    - purge
 - name: hexo-tag-scode
   description: Add scode block in your post.
   link: https://github.com/renbaoshuo/hexo-tag-scode
@@ -2885,6 +2898,18 @@
   tags:
     - latest
     - json
+- name: hexo-sponsor-button
+  description: Hexo plugin to display a fund button in page content
+  link: https://github.com/GhostyJade/hexo-sponsor-button
+  tags:
+    - funding
+    - sponsor
+- name: hexo-plausible-analytics
+  description: Integrate your Hexo blog with Plausible Analytics
+  link: https://github.com/maaaaarco/hexo-plausible-analytics
+  tags:
+    - plausible
+    - analytics
 - name: hexo-draft-tags
   description: Adds draft tags to isolate markdown text within a post that should be considered as draft
   link: https://github.com/CallumHewitt/hexo-draft-tags

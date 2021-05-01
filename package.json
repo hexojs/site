@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "hexo": {
-    "version": "5.3.0"
+    "version": "5.4.0"
   },
   "scripts": {
     "build": "hexo generate",
@@ -18,15 +18,15 @@
     "hexo-generator-archive": "^1.0.0",
     "hexo-generator-feed": "^3.0.0",
     "hexo-generator-sitemap": "^2.0.0",
-    "hexo-renderer-marked": "^3.0.0",
+    "hexo-renderer-marked": "^4.0.0",
     "hexo-renderer-pug": "^1.0.0",
     "hexo-renderer-stylus": "^2.0.0",
     "hexo-renderer-swig": "^1.1.0",
     "hexo-server": "^2.0.0",
     "hexo-uglify": "^2.0.0",
-    "image-size": "^0.9.1",
+    "image-size": "^1.0.0",
     "lunr": "2.3.9",
-    "sharp": "^0.26.1"
+    "sharp": "^0.28.1"
   },
   "devDependencies": {
     "eslint": "^7.0.0",
