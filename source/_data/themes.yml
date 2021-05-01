@@ -3495,7 +3495,7 @@
     - simple
 - name: Aurora
   description: Futuristic auroral Hexo theme.
-  link: https://github.com/obsidianext/hexo-theme-obsidianext
+  link: https://github.com/auroral-ui/hexo-theme-aurora
   preview: https://tridiamond.tech
   tags:
     - 中文
