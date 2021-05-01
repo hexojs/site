@@ -1,8 +1,7 @@
-{% set page.title = 'News' %}
 <div id="content-wrap">
   <div class="wrapper">
     <div class="inner">
-      {% for post in page.posts %}
+      {% for post in page.posts.toArray() %}
         {% if loop.index == 1 %}
           {{ partial('partial/post', {post: post}) }}
         {% else %}
