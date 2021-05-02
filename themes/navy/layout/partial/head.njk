@@ -7,8 +7,8 @@
   <link rel="canonical" href="{{ url }}">
   <!-- Alternative links -->
   {% if page.layout == 'page' or page.layout == 'index' %}
-    {% for lang in site.data.languages %}
-      <link rel="alternative" hreflang="{{ loop.key }}" href="{{ canonical_url(loop.key) }}">
+    {% for lang, value in site.data.languages %}
+      <link rel="alternative" hreflang="{{ lang }}" href="{{ canonical_url(lang) }}">
     {% endfor %}
   {% endif %}
   <!-- Icon -->
