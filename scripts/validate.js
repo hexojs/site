@@ -5,7 +5,6 @@
 const { join } = require('path');
 
 const { listDir } = require('hexo-fs');
-const { log } = hexo;
 const sharp = require('sharp');
 
 function difference(setA, setB) {
@@ -17,6 +16,7 @@ function difference(setA, setB) {
 }
 
 async function validateTheme() {
+  const message = [];
   let isValidationPassed = true;
 
   const themeData = hexo.locals.get('data').themes;
@@ -32,10 +32,10 @@ async function validateTheme() {
   }
 
   if (duplicate.size > 0) {
-    log.fatal(`Theme name: ${Array.from(duplicate)} is duplicated.`);
+    message.push(`Theme name: ${Array.from(duplicate)} is duplicated.`);
     isValidationPassed = false;
   } else {
-    log.info('Theme name validation passed');
+    message.push('Theme name validation passed.');
   }
 
   const screenshotsPath = join(hexo.source_dir, 'themes/screenshots');
@@ -43,7 +43,7 @@ async function validateTheme() {
 
   for (const filename of screenshots) {
     if (!filename.endsWith('.png')) {
-      log.fatal(`The theme thumbnail "${filename}" is not a png image.`);
+      message.push(`The theme thumbnail "${filename}" is not a png image.`);
       isValidationPassed = false;
     }
 
@@ -51,7 +51,7 @@ async function validateTheme() {
 
     const { width, height } = await sharp(screenshot).metadata();
     if (width !== 800 || height !== 500) {
-      log.fatal(
+      message.push(
         `The theme thumbnail "${filename}" is not sized in 800x500 (got ${width}x${height}).`
       );
       isValidationPassed = false;
@@ -64,19 +64,24 @@ async function validateTheme() {
   const diffScreenshotsThemes = difference(screenshots, themes);
 
   if (diffThemesScreenshots.size > 0) {
-    log.fatal(`Theme screenshots not found: ${Array.from(diffThemesScreenshots)}.`);
+    message.push(`Theme screenshots not found: ${Array.from(diffThemesScreenshots)}.`);
     isValidationPassed = false;
   }
   if (diffScreenshotsThemes.size > 0) {
-    log.fatal(`Theme screenshots not removed: ${Array.from(diffScreenshotsThemes)}.`);
+    message.push(`Theme screenshots not removed: ${Array.from(diffScreenshotsThemes)}.`);
     isValidationPassed = false;
   }
 
   if (!isValidationPassed) {
-    throw new Error('Theme thumbnails validation failed');
+    message.push('Theme thumbnails validation failed.');
   } else {
-    log.info('Theme thumbnails validation completed');
+    message.push('Theme thumbnails validation completed.');
   }
+
+  return {
+    path: 'validate_theme.txt',
+    data: message.join('\n')
+  };
 }
 
-hexo.extend.filter.register('before_exit', validateTheme);
+if (process.env.CI) hexo.extend.generator.register('validate_theme', validateTheme);
