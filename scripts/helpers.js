@@ -174,10 +174,6 @@ hexo.extend.helper.register('disqus_lang', function() {
   return data.disqus_lang || lang;
 });
 
-hexo.extend.helper.register('hexo_version', function() {
-  return this.env.version;
-});
-
 hexo.extend.filter.register('template_locals', locals => {
   const { page } = locals;
   if (page.archive) page.title = 'News';
