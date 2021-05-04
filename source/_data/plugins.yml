@@ -2917,3 +2917,10 @@
     - drafts
     - tag
     - tag_plugins
+- name: hexo-next-darkmode
+  description: Add Darkmode for NexT theme
+  link: https://github.com/rqh656418510/hexo-next-darkmode
+  tags:
+    - next
+    - darkmode
+    - nightmode
