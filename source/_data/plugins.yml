@@ -2917,3 +2917,9 @@
     - drafts
     - tag
     - tag_plugins
+- name: hexo-multiauthor
+  description: Multi author support for Hexo
+  link: https://github.com/bob983/hexo-multiauthor
+  tags:
+    - multi-author
+    - author
