@@ -3507,3 +3507,12 @@
     - Clean
     - Futuristic
     - Vue3
+- name: Yuzu
+  description: A simple black/white theme for novel reading.
+  link: https://github.com/cerallin/hexo-theme-yuzu
+  preview: http://cerallin.github.io
+  tags:
+    - 中文
+    - simple
+    - responsive
+    - clean
