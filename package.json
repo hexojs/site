@@ -12,7 +12,7 @@
   "dependencies": {
     "cheerio": "^0.22.0",
     "hexo": "hexojs/hexo",
-    "hexo-clean-css": "^1.0.0",
+    "hexo-clean-css": "^2.0.0",
     "hexo-filter-nofollow": "^2.0.2",
     "hexo-fs": "^3.1.0",
     "hexo-generator-archive": "^1.0.0",
