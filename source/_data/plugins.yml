@@ -329,6 +329,13 @@
     - official
     - browsersync
     - server
+- name: hexo-renderer-dartsass
+  description: Sass renderer plugin for Hexo (use dartsass instead of libsass)
+  link: https://www.npmjs.com/package/hexo-renderer-dartsass
+  tags:
+    - renderer
+    - sass
+    - dartsass
 - name: hexo-renderer-less
   description: Less renderer for Hexo.
   link: https://github.com/hexojs/hexo-renderer-less
