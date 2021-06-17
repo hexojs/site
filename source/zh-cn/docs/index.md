@@ -62,7 +62,7 @@ Node.js 为大多数平台提供了官方的 [安装程序](https://nodejs.org/e
 {% endnote %}
 
 {% note info Linux %}
-If you installed Node.js using Snap, you may need to manually run `npm install` in the target folder when [initializing](/docs/commands#init) a blog.
+如果您使用 Snap 来安装 Node.js，在[初始化](/docs/commands#init)博客时您可能需要手动在目标文件夹中执行 `npm install`。
 {% endnote %}
 
 ### 安装 Hexo
