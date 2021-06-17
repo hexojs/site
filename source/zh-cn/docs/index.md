@@ -12,7 +12,7 @@ Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 [Markdown](h
 
 ## 安装
 
-安装 Hexo 只需几分钟时间，若您在安装过程中遇到问题或无法找到解决方式，请[提交问题](https://github.com/hexojs/hexo/issues)，我们会尽力解决您的问题。
+安装 Hexo 只需几分钟时间，若您在安装过程中遇到问题或无法找到解决方式，请 [提交问题](https://github.com/hexojs/hexo/issues)，我们会尽力解决您的问题。
 
 ### 安装前提
 
@@ -46,10 +46,10 @@ Node.js 为大多数平台提供了官方的 [安装程序](https://nodejs.org/e
 
 其它的安装方法：
 
-- Windows：通过 [nvs](https://github.com/jasongin/nvs/)（推荐）或者[nvm](https://github.com/nvm-sh/nvm) 安装。
+- Windows：通过 [nvs](https://github.com/jasongin/nvs/)（推荐）或者 [nvm](https://github.com/nvm-sh/nvm) 安装。
 - Mac：使用 [Homebrew](https://brew.sh/) 或 [MacPorts](http://www.macports.org/) 安装。
 - Linux（DEB/RPM-based）：从 [NodeSource](https://github.com/nodesource/distributions) 安装。
-- 其它：使用相应的软件包管理器进行安装，可以参考由 Node.js 提供的 [指导](https://nodejs.org/en/download/package-manager/)
+- 其它：使用相应的软件包管理器进行安装，可以参考由 Node.js 提供的 [指导](https://nodejs.org/en/download/package-manager/)。
 
 对于 Mac 和 Linux 同样建议使用 nvs 或者 nvm，以避免可能会出现的权限问题。
 
@@ -62,7 +62,7 @@ Node.js 为大多数平台提供了官方的 [安装程序](https://nodejs.org/e
 {% endnote %}
 
 {% note info Linux %}
-If you installed Node.js using Snap, you may need to manually run `npm install` in the target folder when [initializing](/docs/commands#init) a blog.
+如果您使用 Snap 来安装 Node.js，在 [初始化](/zh-cn/docs/commands#init) 博客时您可能需要手动在目标文件夹中执行 `npm install`。
 {% endnote %}
 
 ### 安装 Hexo
