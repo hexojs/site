@@ -1,3 +1,4 @@
+---
 title: Injector
 ---
 
@@ -78,7 +79,6 @@ hexo.extend.injector.register('head_end', () => {
 ```
 
 2.
-
 
 ``` js index.js
 /* global hexo */

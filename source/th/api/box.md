@@ -1,13 +1,13 @@
 ---
 title: Box
 ---
-box เป็น container ที่ใช้มาจัดการไฟล์ภายใน folder เฉพาะ Hexo ใช้ box ที่แตกต่างกันสองตัว ซึ้งก็คือ `hexo.source` และ `hexo.theme` ตัวแรกใช้มาจัดการ folder `source` และตัวท่ีสองใช้มาจัดการ folder `theme` 
-
+box เป็น container ที่ใช้มาจัดการไฟล์ภายใน folder เฉพาะ Hexo ใช้ box ที่แตกต่างกันสองตัว ซึ้งก็คือ `hexo.source` และ `hexo.theme` ตัวแรกใช้มาจัดการ folder `source` และตัวท่ีสองใช้มาจัดการ folder `theme`
 
 ## Files Loading
 
-box สนับสนุนวิธีการโหลดไฟล์สองวิธี ซึ้งก็คือ `process` และ `watch`  วิธีตัว `process` จะโหลดไฟล์ทั้งหมดใน folder ส่วนวิธีตัว  `watch` 
+box สนับสนุนวิธีการโหลดไฟล์สองวิธี ซึ้งก็คือ `process` และ `watch`  วิธีตัว `process` จะโหลดไฟล์ทั้งหมดใน folder ส่วนวิธีตัว  `watch`
 นอกจากจะมีการกระทำที่เหมือนวิธีตัว `process` แล้วแถมยังเฝ้าดูการเปลี่ยนแปลงของไฟล์ที่อยู่ใน folder นั้นด้วย
+
 ``` js
 box.process().then(function(){
   // ...
@@ -17,15 +17,17 @@ box.watch().then(function(){
   // You can call box.unwatch() later to stop watching.
 });
 ```
- 
+
 ## Path Matching
+
 box สนับสนุนวิธีหลายอย่างสำหรับ path matching คุณสามารถใช้ regExp function หรือ Express-style pattern string เวลาทำเรื่อง path mathching
 
 ``` plain
 posts/:id => posts/89
 posts/*path => posts/2015/title
 ```
-สำหรับข้อมูลเพิ่มเติม สามารถดูได้ที่ [util.Pattern] 
+
+สำหรับข้อมูลเพิ่มเติม สามารถดูได้ที่ [util.Pattern]
 
 ## Processors
 
@@ -36,6 +38,7 @@ box.addProcessor('posts/:id', function(file){
   //
 });
 ```
+
 box ส่งเนื้อหาของไฟล์ที่ถูกคัดเลือกไปให้ processor ข้อมูลที่เกี่ยวกับปฎิบัติการนี้จะอ่านได้จาก `file` ที่เป็น argument ของ callback ได้
 
 Attribute | Description

@@ -7,8 +7,10 @@ We have released a new version of the official plugin [hexo-renderer-markdown-it
 [hexo-renderer-markdown-it]: https://github.com/hexojs/hexo-renderer-markdown-it
 
 ### Breaking changes
+
 - We have updated the default config to be consistent with [hexo-renderer-marked] [#90], [#92]
-  * New defaults:
+  - New defaults:
+
   ``` yml
   markdown:
     render:
@@ -28,7 +30,9 @@ We have released a new version of the official plugin [hexo-renderer-markdown-it
       case: 0
       separator: '-'
   ```
-  * Previous defaults (other configs remain the same):
+
+  - Previous defaults (other configs remain the same):
+
   ``` yml
   markdown:
     anchors:
@@ -37,12 +41,15 @@ We have released a new version of the official plugin [hexo-renderer-markdown-it
       collisionSuffix: 'v'
       case: 1
   ```
+
 - Requires Node 8.6+ [#79]
 
 ### Features
+
 - Include official markdown-it plugins [#52], [#86], [#87]
-  * They are disabled by default
-  * Included plugins:
+  - They are disabled by default
+  - Included plugins:
+
   ``` yml
   markdown:
     plugins:
@@ -57,14 +64,18 @@ We have released a new version of the official plugin [hexo-renderer-markdown-it
       - markdown-it-sub
       - markdown-it-sup
   ```
+
 - Include [markdown-it-cjk-breaks] plugin [#56]
-  * To enable:
+  - To enable:
+
   ``` yml
   markdown:
     plugins:
       - markdown-it-cjk-breaks
   ```
+
 - Add new options to `anchors:` [#95]
+
   ``` yml
   markdown:
     anchors:
@@ -73,6 +84,7 @@ We have released a new version of the official plugin [hexo-renderer-markdown-it
   ```
 
 ### Housekeeping
+
 - Update markdown-it from v8 to v10 [#80], [#88]
 - Update mocha from v3 to v5 [#60]
 

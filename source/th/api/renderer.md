@@ -26,7 +26,7 @@ Argument | Description
 
 ## ตัวอย่าง
 
-### โหมด async 
+### โหมด async
 
 ``` js
 var stylus = require('stylus');
@@ -44,7 +44,7 @@ hexo.extend.renderer.register('styl', 'css', function(data, options){
 });
 ```
 
-### โหมด sync 
+### โหมด sync
 
 ``` js
 var ejs = require('ejs');

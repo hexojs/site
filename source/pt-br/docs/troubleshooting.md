@@ -71,11 +71,13 @@ To override the limit:
 ## Processos com Pouca Memória
 
 Quando você encontrar esse erro durante a geração:
+
 ```
 FATAL ERROR: CALL_AND_RETRY_LAST Allocation failed - process out of memory
 ```
 
 Aumente o tamanho da memória heap do Node.js alterando a primeira linha de `hexo-cli` (o comando `which hexo` encontra o arquivo).
+
 ```
 #!/usr/bin/env node --max_old_space_size=8192
 ```
@@ -121,9 +123,11 @@ Este erro pode ocorrer ao tentar instalar um plugin escrito em C, C++ ou outra l
 ```
 
 A instalação do DTrace pode ter problemas, use isso:
+
 ```sh
 $ npm install hexo --no-optional
 ```
+
 Veja a issue [#1326](https://github.com/hexojs/hexo/issues/1326#issuecomment-113871796) no Github.
 
 ## Iterando o Modelo de Dados em Jade ou Swig
@@ -175,35 +179,45 @@ Hello {{ world }}
 ## ENOSPC Error (Linux)
 
 Às vezes, ao executar o comando `$ hexo server` é retornado o seguinte erro:
+
 ```
 Error: watch ENOSPC ...
 ```
+
 Isto pode ser consertado através do comando `$ npm dedupe` ou, se isso não funcionar, tente o seguinte comando no terminal do Linux:
+
 ``` bash
 $ echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
 ```
+
 Isso aumentará o limite do número de arquivos que você pode assistir.
 
 ## EMPERM Error (Windows Subsystem for Linux)
 
 Ao executar `$ hexo server` em um ambiente BashOnWindows, ele retorna o seguinte erro:
+
 ```
 Error: watch /path/to/hexo/theme/ EMPERM
 ```
+
 Infelizmente, o WSL (Windows Subsystem for Linux) atualmente não suporta os observadores (watchers) do sistema de arquivos. Portanto, o recurso de atualização em tempo real do servidor do Hexo não está disponível no momento. Contudo, ainda é possível executar o servidor a partir de um ambiente WSL, primeiro gere os arquivos e depois execute servidor em modo estático:
+
 ``` sh
 $ hexo generate
 $ hexo server -s
 ```
+
 Este é [um problema no BashOnWindows conhecido](https://github.com/Microsoft/BashOnWindows/issues/216), e em 15 de agosto de 2016, a equipe do Windows disse que eles trabalhariam nisso. Você pode obter atualizações de progresso e encorajá-los a priorizá-lo na [página UserVoice do problema](https://wpdev.uservoice.com/forums/266908-command-prompt-console-bash-on-ubuntu-on-windo/suggestions/13469097-support-for-filesystem-watchers-like-inotify).
 
 ## Erro de Renderização de Template
 
 Às vezes, ao executar o comando `$ hexo generate`, ele retorna um erro:
+
 ```
 FATAL Something's wrong. Maybe you can find the solution here: http://hexo.io/docs/troubleshooting.html
 Template render error: (unknown path)
 ```
+
 One possible reason is that there are some unrecognizable words in your file, e.g. invisible zero width characters.
 
 [Warehouse]: https://github.com/hexojs/warehouse

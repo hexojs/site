@@ -121,6 +121,7 @@ Configuração | Descrição
 `ignore` | Ignore files/folders
 
 Exemplo:
+
 ```yaml
 # Incluir/Excluir Arquivos/Diretórios
 include:
@@ -161,7 +162,6 @@ Each value in the list must be enclosed with single/double quotes.
 `include:` and `exclude:` do not apply to the `themes/` folder. Either use `ignore:` or alternatively, prepend an underscore to the file/folder name to exclude.
 
 \* Notable exception is the `source/_posts` folder, but any file or folder with a name that starts with an underscore under that folder would still be ignored. Using `include:` rule in that folder is not recommended.
-
 
 ### Alternate Theme Config
 
@@ -245,4 +245,3 @@ Resulting in theme configuration:
 {% note %}
 We strongly recommends you to store your theme configuration in one place. But in case you have to store your theme configuration separately, those information is quite important: The `theme_config` inside site's primary configuration file has the highest priority during merging, then the dedicated theme configuration file. the `_config.yml` file under the theme directory has the lowest priority.
 {% endnote %}
-

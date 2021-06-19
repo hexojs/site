@@ -62,15 +62,12 @@ $ npm install
 folder [Scaffold](writing.html#Scaffolds) เมื่อคุณสร้างโพสต์ใหม่ขึ้นมา hexo 
 จะเรียงข้อมูลไฟล์ตาม folder นี้
 
-
 ### source
-
 
 source folder. ท่ีนี้เป็นท่ีวางเนื้อหาเว็บไซต์ของคุณ hexo 
 ละเลยไฟล์ท่ีถูกซ่อนหรือ folder ท่ีมี `_` เป็นคำนำหน้าในชื่อไฟล์ (นอกจาก 
 folder `_posts`)  ไฟล์ท่ี renderable (เช่น Markdown และ HTML) 
 จะถูกจถูกจัดการและใส่เข้า folder `public` ในเมื่อไฟล์อื่นๆจะถูก copy เท่านั้น
-
 
 ### themes
 

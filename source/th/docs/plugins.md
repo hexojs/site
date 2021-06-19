@@ -1,21 +1,22 @@
 ---
 title: Plugins
 ---
-hexo มีระบบปลั๊กอินท่ีมีประสิทธิภาพ ซึ่งทำให้มันง่ายท่ีจะขยาย function ต่างๆโดยไม่ต้องแก้ไข source code ของ module สำคัญ ใน hexo 
+hexo มีระบบปลั๊กอินท่ีมีประสิทธิภาพ ซึ่งทำให้มันง่ายท่ีจะขยาย function ต่างๆโดยไม่ต้องแก้ไข source code ของ module สำคัญ ใน hexo
 มีปลั๊กอินสองอย่างทั้งหมด：
 
 ### Script
 
-ถ้าปลั๊กอินของคุณไม่ซับซ้อนเท่าไร การท่ีคุณต้องทำคือวางไฟล์ JavaScript 
-ของคุณอยู่ใน folder `script` เท่านั้น  hexo จะโหลดไฟล์นั้นในช่วง initialization 
+ถ้าปลั๊กอินของคุณไม่ซับซ้อนเท่าไร การท่ีคุณต้องทำคือวางไฟล์ JavaScript
+ของคุณอยู่ใน folder `script` เท่านั้น  hexo จะโหลดไฟล์นั้นในช่วง initialization
 
 ### Plugin
-ถ้า code ของคุณค่อนข้างซับซ้อน หรือคุณอยากไปประกาศท่ี NPM registry คุณใช้ 
-code เหล่านี้ในแบบปลั๊กอินจะสะดวกกว่า ชื่อของ folder นี้ต้องมี `hexo-` 
-เป็นคำนำหน้า ไม่งั้นจะถูก hexo ละเลย 
 
-folder ใหม่ของคุณต้องการมีไฟล์อย่างน้อยสองอย่าง: อย่างหนึ่งเป็นไฟล์ท่ีรวม 
-JavaScript code ของตน และอีกอย่างหนึ่งเป็นไฟล์ `package.json` 
+ถ้า code ของคุณค่อนข้างซับซ้อน หรือคุณอยากไปประกาศท่ี NPM registry คุณใช้
+code เหล่านี้ในแบบปลั๊กอินจะสะดวกกว่า ชื่อของ folder นี้ต้องมี `hexo-`
+เป็นคำนำหน้า ไม่งั้นจะถูก hexo ละเลย
+
+folder ใหม่ของคุณต้องการมีไฟล์อย่างน้อยสองอย่าง: อย่างหนึ่งเป็นไฟล์ท่ีรวม
+JavaScript code ของตน และอีกอย่างหนึ่งเป็นไฟล์ `package.json`
 ท่ีเขียนเจตนาการสร้างปลั๊กอินนี้และ dependency ของมัน
 
 ``` plain
@@ -24,7 +25,7 @@ JavaScript code ของตน และอีกอย่างหนึ่ง
 └── package.json
 ```
 
-ในช่วงแรกๆ คุณต้องตั้งค่า entry ของ `name` `version` และ `main` ในไฟล์ 
+ในช่วงแรกๆ คุณต้องตั้งค่า entry ของ `name` `version` และ `main` ในไฟล์
 `package.json` ยกตัวอย่างเชน:
 
 ``` json package.json
@@ -39,7 +40,7 @@ JavaScript code ของตน และอีกอย่างหนึ่ง
 
 ### Tools
 
-คุณสามารถใช้ประโยชน์จากเครื่องมือทางการท่ีสนับสนุนโดย hexo 
+คุณสามารถใช้ประโยชน์จากเครื่องมือทางการท่ีสนับสนุนโดย hexo
 เพื่อเพิ่มความเร็วของ development：
 
 - [hexo-fs]：File IO
@@ -51,6 +52,7 @@ JavaScript code ของตน และอีกอย่างหนึ่ง
 
 เมื่อปลั๊กอินของคุณพร้อมแล้ว คุณอาจจะคิดท่ีจะประกาศมันไปถึง [plugin list]
 (/plugins) เพื่อชวนคนอื่นมาใช้ การประกาศปลั๊กอินของตนจะคล้ายกับ [updating documentation](contributing.html#Updating_Documentation)
+
 1. Fork [hexojs/site]
 2. Clone the repository to your computer and install dependencies.
 
@@ -65,7 +67,7 @@ JavaScript code ของตน และอีกอย่างหนึ่ง
     {% code %}
     - name: hexo-server
       description: Server module for Hexo.
-      link: https://github.com/hexojs/hexo-server
+      link: <https://github.com/hexojs/hexo-server>
       tags:
         - official
         - server

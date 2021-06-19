@@ -129,6 +129,7 @@ Setting | Description | Default
 `pagination_dir` | URL format | `page`
 
 Examples:
+
 ``` yaml
 pagination_dir: 'page'
 # http://example.com/page/2
@@ -146,7 +147,6 @@ Setting | Description
 `deploy` | Deployment settings
 `meta_generator` | [Meta generator](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta#Attributes) tag. `false` disables injection of the tag.
 
-
 ### Include/Exclude Files or Folders
 
 Use the following options to explicitly process or ignore certain files/folders. Support [glob expressions](https://github.com/micromatch/micromatch#extended-globbing) for path matching.
@@ -160,6 +160,7 @@ Setting | Description
 `ignore` | Ignore files/folders
 
 Examples:
+
 ```yaml
 # Include/Exclude Files/Folders
 include:

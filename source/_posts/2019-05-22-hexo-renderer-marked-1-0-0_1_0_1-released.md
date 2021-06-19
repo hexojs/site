@@ -10,10 +10,10 @@ We released a new version of the official plugins [hexo-renderer-marked](https:/
 * [#92](https://github.com/hexojs/hexo-renderer-marked/pull/92) Require Node.js +6.9
 * [#39](https://github.com/hexojs/hexo-renderer-marked/pull/39), [#46](https://github.com/hexojs/hexo-renderer-marked/pull/46), [#62](https://github.com/hexojs/hexo-renderer-marked/pull/62) Markdown todo list render into disable checkbox
 * [#87](https://github.com/hexojs/hexo-renderer-marked/pull/87) Update marked 0.3.9 to 0.6.1
-    * It has **some breaking changes**. Please see marked's breaking changes.
-        * [v0.4.0](https://github.com/markedjs/marked/releases/tag/0.4.0)
-        * [v0.5.0](https://github.com/markedjs/marked/releases/tag/v0.5.0)
-        * [v0.6.0](https://github.com/markedjs/marked/releases/tag/v0.6.0)
+  * It has **some breaking changes**. Please see marked's breaking changes.
+    * [v0.4.0](https://github.com/markedjs/marked/releases/tag/0.4.0)
+    * [v0.5.0](https://github.com/markedjs/marked/releases/tag/v0.5.0)
+    * [v0.6.0](https://github.com/markedjs/marked/releases/tag/v0.6.0)
 
 ### New feature
 

@@ -1,15 +1,15 @@
 ---
 title: Documentation
 ---
-ยินดีต้อนรับเข้าสู่ documentation ของ hexo ถ้าคุณพบเจอปัญหาใดๆเวลาใช้ hexo 
-ไปดูข้อมูลได้ท่ี  [troubleshooting guide](troubleshooting.html) ไปเสนอ issue 
+ยินดีต้อนรับเข้าสู่ documentation ของ hexo ถ้าคุณพบเจอปัญหาใดๆเวลาใช้ hexo
+ไปดูข้อมูลได้ท่ี  [troubleshooting guide](troubleshooting.html) ไปเสนอ issue
 ได้ที่ [GitHub](https://github.com/hexojs/hexo/issues) หรือไปเปิด topic ได้ท่ี [Google Group](https://groups.google.com/group/hexo)
 
 ## What is Hexo?
 
-hexo เป็นกรอบบล็อกท่ีรวดเร็ว เรียบง่ายและมีประสิทธิภาพ 
+hexo เป็นกรอบบล็อกท่ีรวดเร็ว เรียบง่ายและมีประสิทธิภาพ
 คุณเขียนโพสต์ได้ด้วยภาษา [Markdown](http://daringfireball
-.net/projects/markdown/)(หรือภาษาอื่นๆ) และ hexo จะ generate 
+.net/projects/markdown/)(หรือภาษาอื่นๆ) และ hexo จะ generate
 ไฟล์คงที่ท่ีประกอบด้วยธีมสวยงามภายในเวลาไม่กี่วินาที
 
 ## Installation

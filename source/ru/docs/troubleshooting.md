@@ -71,11 +71,13 @@ To override the limit:
 ## `process out of memory`
 
 Когда вы сталкиваетесь с этой ошибкой во время создания
+
 ```
 FATAL ERROR: CALL_AND_RETRY_LAST Allocation failed - process out of memory
 ```
 
 Повысить размер динамической памяти Node.js можно, изменив в первой строке `hexo-cli` команду (для нахождения местоположения файла используйте `which hexo`).
+
 ```
 #!/usr/bin/env node --max_old_space_size=8192
 ```
@@ -122,9 +124,11 @@ npm ERR! node-waf configure build
 ```
 
 Проблема в DTrace попробуйте эту команду:
+
 ```sh
 $ npm install hexo --no-optional
 ```
+
 См. также [#1326](https://github.com/hexojs/hexo/issues/1326#issuecomment-113871796)
 
 ## Iterate Data Model on Jade or Swig

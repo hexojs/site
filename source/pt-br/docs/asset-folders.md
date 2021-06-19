@@ -35,6 +35,7 @@ A maneira correta de fazer referência à imagem será usando a sintaxe de tag p
 {% asset_img example.jpg This is an example image %}
 {% asset_img "spaced asset.jpg" "spaced title" %}
 ```
+
 Desta forma, a imagem aparecerá dentro da publicação e nas páginas de índice e arquivo.
 
 ## Embedding an image using markdown

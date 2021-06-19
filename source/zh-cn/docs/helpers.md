@@ -886,5 +886,3 @@ Inserts [generator tag](https://developer.mozilla.org/en-US/docs/Web/HTML/Elemen
 [颜色关键字]: http://www.w3.org/TR/css3-color/#svg-color
 [Moment.js]: http://momentjs.com/
 [Open Graph]: http://ogp.me/
-
-

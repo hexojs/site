@@ -7,28 +7,35 @@ We released a new version of the official plugins [hexo-i18n], [hexo-clean-css] 
 ## hexo-i18n 1.0.0
 
 ### Breaking change
+
 - chore: require at least node 8 [#15]
 
 ### Refactor
+
 - es6-fy [#5], [#6], [#17]
 
 ### Housekeeping
+
 - chore(package): use eslint intead of jscs [#4]
 
 ## hexo-clean-css 1.0.0
 
 ### Breaking change
+
 - chore: require at least node 8 [#13]
 
 ### Feature
+
 - replace minimatch with micromatch [#16]
 
 ### Refactor
+
 - test: drop gulp and jshint [#14]
 
 ## hexo-util 1.1.0
 
 ### Feature
+
 - feat: add encodeURL() [#77]
 
 [hexo-i18n]: https://github.com/hexojs/hexo-i18n

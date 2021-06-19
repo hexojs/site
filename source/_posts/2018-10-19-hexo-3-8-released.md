@@ -9,6 +9,7 @@ title: Hexo 3.8.0 Released
 * Added meta generator injection filter [#3129]
 
 ## Housekeeping
+
 [#3124], [#3117], [#3102], [#3276], [#3284], [#3285], [#3290], [#3293]
 
 More info: [changelog]
