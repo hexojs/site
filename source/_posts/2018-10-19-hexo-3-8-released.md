@@ -4,9 +4,9 @@ title: Hexo 3.8.0 Released
 
 ## New feature
 
-* Supported absolute config path [#3118]
-* Added command line option `--output` to write `db.json` and `_multiconfig` to different paths [#3122]
-* Added meta generator injection filter [#3129]
+- Supported absolute config path [#3118]
+- Added command line option `--output` to write `db.json` and `_multiconfig` to different paths [#3122]
+- Added meta generator injection filter [#3129]
 
 ## Housekeeping
 
