@@ -55,8 +55,10 @@ Option | Description | Default
 `token` | Optional token value to authenticate with the repo. Prefix with `$` to read token from environment variable
 
 3. Deploy your site `hexo clean && hexo deploy`.
+
   - You will be prompted with username and password of the target repository, unless you authenticate with a token or ssh key.
   - hexo-deployer-git does not store your username and password. Use [git-credential-cache](https://git-scm.com/docs/git-credential-cache) to store them temporarily.
+
 4. Navigate to your repository settings and change the "Pages" branch to `gh-pages` (or the branch specified in your config). The deployed site should be live on the link shown on the "Pages" setting.
 
 ## Heroku

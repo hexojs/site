@@ -119,6 +119,7 @@ Configuração | Descrição
 `ignore` | Ignore files/folders
 
 Exemplo:
+
 ```yaml
 # Incluir/Excluir Arquivos/Diretórios
 include:

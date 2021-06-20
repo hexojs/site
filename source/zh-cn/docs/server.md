@@ -36,6 +36,7 @@ $ hexo server -s
 ``` bash
 $ hexo server -i 192.168.1.1
 ```
+
 指定这个参数后，您就只能通过该IP才能访问站点。例如，对于一台使用无线网络的笔记本电脑，除了指向本机的`127.0.0.1`外，通常还有一个`192.168.*.*`的局域网IP，如果像上面那样使用`-i`参数，就不能用`127.0.0.1`来访问站点了。对于有公网IP的主机，如果您指定一个局域网IP作为`-i`参数的值，那么就无法通过公网来访问站点。
 
 ## Pow
@@ -64,4 +65,3 @@ $ ln -s /path/to/myapp
 [morgan]: https://github.com/expressjs/morgan
 [Forever]: https://github.com/nodejitsu/forever
 [PM2]: https://github.com/Unitech/pm2
-

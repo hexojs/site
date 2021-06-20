@@ -106,7 +106,6 @@ Hexo는 날짜 처리 시 [Moment.js](http://momentjs.com/)를 사용합니다.
 `deploy` | Deployment 설정
 `meta_generator` | [Meta generator](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta#Attributes) tag. `false` disables injection of the tag.
 
-
 ### Include/Exclude Files or Folders
 
 Use the following options to explicitly process or ignore certain files/folders. Support [glob expressions](https://github.com/micromatch/micromatch#extended-globbing) for path matching.
@@ -120,6 +119,7 @@ Setting | Description
 `ignore` | Ignore files/folders
 
 Examples:
+
 ```yaml
 # Include/Exclude Files/Folders
 include:

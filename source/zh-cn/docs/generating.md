@@ -23,11 +23,9 @@ $ hexo generate --watch
 $ hexo generate --deploy
 $ hexo deploy --generate
 ```
+
 {% note info 简写 %}
 上面两个命令可以简写为
 $ hexo g -d
 $ hexo d -g
 {% endnote %}
-
-
-

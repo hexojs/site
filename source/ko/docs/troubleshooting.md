@@ -122,9 +122,11 @@ npm ERR! node-waf configure build
 ```
 
 DTrace의 설치가 문제를 일으킬 수 있습니다. 아래 명령을 사용해 보세요.
+
 ```sh
 $ npm install hexo --no-optional
 ```
+
 [#1326](https://github.com/hexojs/hexo/issues/1326#issuecomment-113871796) 이슈를 확인해 보세요.
 
 ## Iterate Data Model on Jade or Swig
@@ -146,7 +148,7 @@ $ hexo clean
 
 ## Escape Contents
 
-Hexo는 포스트를 렌더링하는데 [Nunjucks]를 사용합니다([Swig]은 이전 버전에서 사용했었습니다. 문법은 비슷합니다.). `{{ }}` 또는 `{% %}`로 감싼 컨텐츠는 파싱된 후에 문제를 발생시킵니다. You can skip the parsing by wrapping it with the [`raw`](/docs/tag-plugins#Raw) tag plugin, single backtick ```` `{{ }}` ```` or triple backtick. 
+Hexo는 포스트를 렌더링하는데 [Nunjucks]를 사용합니다([Swig]은 이전 버전에서 사용했었습니다. 문법은 비슷합니다.). `{{ }}` 또는 `{% %}`로 감싼 컨텐츠는 파싱된 후에 문제를 발생시킵니다. You can skip the parsing by wrapping it with the [`raw`](/docs/tag-plugins#Raw) tag plugin, single backtick ```` `{{ }}` ```` or triple backtick.
 Alternatively, Nunjucks tags can be disabled through the renderer's option (if supported), [API](/api/renderer#Disable-Nunjucks-tags) or [front-matter](/docs/front-matter).
 
 ```
@@ -162,14 +164,19 @@ Hello {{ world }}
 ````
 
 ## ENOSPC Error (Linux)
+
 `$ hexo server`명령어가 가끔 error를 반환할 때가 있습니다.
+
 ```
 Error: watch ENOSPC ...
 ```
+
 `$ npm dedupe`를 실행하여도 해결되지 않는다면 Linux console에서 아래 명령을 수행해 보세요.
+
 ```
 $ echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
 ```
+
 이 명령어는 감시(watch)할 수 있는 파일의 개수 제한을 증가시킵니다.
 
 [Warehouse]: https://github.com/hexojs/warehouse

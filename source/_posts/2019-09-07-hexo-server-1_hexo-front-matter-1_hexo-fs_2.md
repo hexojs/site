@@ -7,32 +7,40 @@ We released a new version of the official plugins [hexo-server], [hexo-front-mat
 ## hexo-server 1.0.0
 
 ### Breaking change
+
 - Drop node 6 [#87]
 
 ### Refactor
+
 - Refactor: es2016nify [#68]
 - refactor: Test refactor es2016 [#67]
 
 ### Housekeeping
+
 - Move jscs to eslint [#65]
 
 ## hexo-front-matter 1.0.0
 
 ### Breaking change
+
 - chore: drop node 6 [#18]
 
 ### Refactor
+
 - Migrate to ES6 [#9]
 
 ### Housekeeping
+
 - Use eslint instead of jscs [#10]
 
 ## hexo-fs 2.0.0
 
 ### Breaking change
+
 - Drop node 6 [#34]
 
 ### Refactor
+
 - `Object.hasOwnProperty` syntax for compatibility with eslint v6 [#37]
 - Refactor(test): useful chai-as-promised [#43]
 - Destructure path module [#44]

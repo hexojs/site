@@ -55,8 +55,10 @@ deploy:
 `token` | Optional token value to authenticate with the repo. Prefix with `$` to read token from environment variable
 
 3. 上傳你的網站。執行 `hexo clean && hexo deploy`。
+
   - You will be prompted with username and password of the target repository, unless you authenticate with a token or ssh key.
   - hexo-deployer-git does not store your username and password. Use [git-credential-cache](https://git-scm.com/docs/git-credential-cache) to store them temporarily.
+
 4. 在Github/BitBucket/Gitlab前往妳的repo設定，並將你的主要分支從`master`設為`gh-pages`(或著任何你在_config.yml裡設定的名子)。現在你的網站就是你的帳號首頁。
 
 ## Heroku

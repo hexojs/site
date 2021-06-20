@@ -2,7 +2,7 @@
 title: Events
 ---
 
-hexo  สืบทอดจาก [EventEmitter]  มันใช้วิธี `on` มาคอยฟัง event ที่ hexo 
+hexo  สืบทอดจาก [EventEmitter]  มันใช้วิธี `on` มาคอยฟัง event ที่ hexo
 ส่งออกไป
 
 ### deployBefore
@@ -16,7 +16,6 @@ hexo  สืบทอดจาก [EventEmitter]  มันใช้วิธี
 ### exit
 
 ส่งออกไปก่อนการจบการใช้ hexo
-
 
 ### generateBefore
 
@@ -43,7 +42,7 @@ Data | Description
 
 ### processBefore
 
-ส่งออกไปก่อนการเกิดขึ้นของ processing event นี้ส่งกลับ path ท่ีบ่งบอก  root 
+ส่งออกไปก่อนการเกิดขึ้นของ processing event นี้ส่งกลับ path ท่ีบ่งบอก  root
 directory ของ box
 
 ### processAfter

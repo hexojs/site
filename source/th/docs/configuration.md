@@ -108,7 +108,6 @@ Setting | Description
 `deploy` | Deployment settings
 `meta_generator` | [Meta generator](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta#Attributes) tag. `false` disables injection of the tag.
 
-
 ### Include/Exclude Files or Folders
 
 ในไฟล์การตั้างค่า ตั้งค่า include/exclude ได้เพื่อทำให้ hexo
@@ -123,6 +122,7 @@ Setting | Description
 `ignore` | Ignore files/folders
 
 ตัวอย่าง:
+
 ```yaml
 # Include/Exclude Files/Folders
 include:
@@ -183,7 +183,6 @@ $ hexo server --config custom.yml,custom2.json
 สำหรับการตั้งค่า parameter เดียวกันนั้น value ท่ีอยู่ตัวหลังจะเกิดผล
 ไม่ว่ามีไฟล์ JSON และ YAML เป็นจำนวนเท่าไร ก็ปฏิบัติตามกฏอย่างนี้
 มีสิ่งท่ีต้องระวังคือ **no spaces are allowed in the list**
-
 
 ยกตัวอย่างเช่น ในตัวอย่างท่ีกล่าวข้างต้น ถ้่า `foo: bar` อยู่ในไฟล์ `custom
 .yml` แต่ `"foo": "dinosaur"` อยู่ในไฟล์ `custom2.json`    ไฟล์

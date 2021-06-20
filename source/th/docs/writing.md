@@ -6,13 +6,11 @@ title: Writing
 
 คุณสามรถรันคำสั่งต่อไปเพื่อสร้างโพสต์ใหม่หรือเพจใหม่:
 
-
 ``` bash
 $ hexo new [layout] <title>
 ```
 
 `post` เป็น `layout` default แต่คุณตั้งค่า layout ของตนได้โดยเปลี่ยนการตั้งค่าของ `default_layout` ใน  `_config.yml` ได้
-
 
 ### Layout
 
@@ -49,7 +47,6 @@ Placeholder | Description
 
 `draft` เป็น layout อย่างหนึ่งของ hexo โพสต์ท่ีตั้งค่า layout เป็น draft 
 นั้นจะถูกบันทึกอยู่ใน folder `source/_drafts`  คุณสามารถใช้คำสั่ง `publish` ไปย้ายไฟล์ไปถึง folder `source/_posts`  ในท่ีนี้คำสั่ง `publish` คล้ายกับคำสั่ง `new`
-
 
 ``` bash
 $ hexo publish [layout] <title>

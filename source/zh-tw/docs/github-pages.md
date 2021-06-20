@@ -3,7 +3,7 @@ title: 在 GitHub Pages 上部署 Hexo
 ---
 
 本文將使用 [Travis CI](https://travis-ci.com/) 部署 Github Pages 。若要免費使用 Travis CI 請將儲存庫 (repo) 的主分支 (Master) 設定至公開狀態 (public) 。否則請閱覽本文的 [Private repository](#Private-repository) 部分或採用其他儲存庫服務。
- 
+
 1. 新增名為 `<GitHub 用戶名>.github.io` 的儲存庫。如果你之前上載了 Hexo 到其他儲存庫，請重新命名該資料庫。
 2. 把 Hexo 檔案推播 (push) 到你的資料庫。檢查 `.gitignore` 裡已加上 `public` 一行。在預設狀態中， `public/` 不應會被上載到資料庫，你的 GitHub Pages 資料庫除了 [範例](https://github.com/hexojs/hexo-starter) 中的 `.gitmodules` 外，應該大致上與範例相同。
 3. 新增 [Travis CI](https://github.com/marketplace/travis-ci) 到 GitHub 帳戶中。
@@ -42,13 +42,13 @@ deploy:
 
 如果妳更希望妳的站點部署在 `<妳的 GitHub 用戶名>.github.io` 的子目錄中，妳的 repository 需要直接命名為子目錄的名字，這樣妳的站點可以通過 `https://<妳的 GitHub 用戶名>.github.io/<repository 的名字>` 訪問。妳需要檢查妳的 Hexo 配置文件，將 `url` 修改為 `https://<妳的 GitHub 用戶名>.github.io/<repository 的名字>`、將 `root` 的值修改為 `/<repository 的名字>/`
 
-
 ## 私人儲存庫
 
 以下教學改編自 [一鍵部署](/docs/one-command-deployment) .
 
 1. 安裝 [hexo-deployer-git](https://github.com/hexojs/hexo-deployer-git).
 2. 清空 `_config.yml` 的現有資料，並新增以下組態:
+
   ``` yml
   deploy:
     type: git
