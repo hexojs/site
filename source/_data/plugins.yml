@@ -2924,3 +2924,10 @@
     - drafts
     - tag
     - tag_plugins
+- name: hexo-filter-probe-image-size
+  description: Probe and set image sizes in Hexo web pages.
+  link: https://github.com/PaperStrike/hexo-filter-probe-image-size
+  tags:
+    - images
+    - size
+    - filter
