@@ -2833,7 +2833,7 @@
 - name: hexo-auto-issue
   description: hexo plug auto publish articles to github issue.
   link: https://github.com/buxuku/hexo-auto-issue
-  tags: 
+  tags:
     - issue
     - github
 - name: hexo-deployer-upyun-purge
@@ -2924,3 +2924,9 @@
     - drafts
     - tag
     - tag_plugins
+- name: hexo-generator-readme-file
+  description: Generate a README.md file contains all of blogs posts link.
+  link: https://github.com/tcatche/hexo-generator-readme-file
+  tags:
+    - generator
+    - readme
