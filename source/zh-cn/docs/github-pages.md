@@ -5,13 +5,14 @@ title: 将 Hexo 部署到 GitHub Pages
 在本教程中，我们将会使用 [Travis CI](https://travis-ci.com/) 将 Hexo 博客部署到 GitHub Pages 上。Travis CI 对于开源 repository 是免费的，但是这意味着你的站点文件将会是公开的。如果你希望你的站点文件不被公开，请直接前往本文 [私有 Repository](#私有 Repository) 部分。
 
 1. 新建一个 repository。如果你希望你的站点能通过 `<你的 GitHub 用户名>.github.io` 域名访问，你的 repository 应该直接命名为 `<你的 GitHub 用户名>.github.io`。
-2. 将你的 Hexo 站点文件夹推送到 repository 中。默认情况下不应该 `public` 目录将不会被推送到 repository 中，你应该检查 `.gitignore` 文件中是否包含 `public` 一行，如果没有请加上。
-3. 将 [Travis CI](https://github.com/marketplace/travis-ci) 添加到你的 GitHub 账户中。
-4. 前往 GitHub 的 [Applications settings](https://github.com/settings/installations)，配置 Travis CI 权限，使其能够访问你的 repository。
-5. 你应该会被重定向到 Travis CI 的页面。如果没有，请 [手动前往](https://travis-ci.com/)。
-6. 在浏览器新建一个标签页，前往 GitHub [新建 Personal Access Token](https://github.com/settings/tokens)，只勾选 `repo` 的权限并生成一个新的 Token。Token 生成后请复制并保存好。
-7. 回到 Travis CI，前往你的 repository 的设置页面，在 **Environment Variables** 下新建一个环境变量，**Name** 为 `GH_TOKEN`，**Value** 为刚才你在 GitHub 生成的 Token。确保 **DISPLAY VALUE IN BUILD LOG** 保持 **不被勾选** 避免你的 Token 泄漏。点击 **Add** 保存。
-8. 在你的 Hexo 站点文件夹中新建一个 `.travis.yml` 文件：
+2. 将你的 Hexo 站点文件夹推送到 repository 中。并且，你不应该将站点推送到远程的master分支。因为Github要求User Page必须建立在master分支上，原因参考[GitHub Pages 站点的发布来源](https://help.github.com/cn/github/working-with-github-pages/about-github-pages)。所以，你应该在你的远程仓库再新建一条分支（除了master），并将站点文件推送到这条分支上。
+3. 默认情况下不应该 `public` 目录将不会被推送到 repository 中，你应该检查 `.gitignore` 文件中是否包含 `public` 一行，如果没有请加上。
+4. 将 [Travis CI](https://github.com/marketplace/travis-ci) 添加到你的 GitHub 账户中。
+5. 前往 GitHub 的 [Applications settings](https://github.com/settings/installations)，配置 Travis CI 权限，使其能够访问你的 repository。
+6. 你应该会被重定向到 Travis CI 的页面。如果没有，请 [手动前往](https://travis-ci.com/)。
+7. 在浏览器新建一个标签页，前往 GitHub [新建 Personal Access Token](https://github.com/settings/tokens)，只勾选 `repo` 的权限并生成一个新的 Token。Token 生成后请复制并保存好。
+8. 回到 Travis CI，前往你的 repository 的设置页面，在 **Environment Variables** 下新建一个环境变量，**Name** 为 `GH_TOKEN`，**Value** 为刚才你在 GitHub 生成的 Token。确保 **DISPLAY VALUE IN BUILD LOG** 保持 **不被勾选** 避免你的 Token 泄漏。点击 **Add** 保存。
+9. 在你的 Hexo 站点文件夹中新建一个 `.travis.yml` 文件：
 
 ```yml
 sudo: false
@@ -21,7 +22,7 @@ node_js:
 cache: npm
 branches:
   only:
-    - master # build master branch only
+    - hexo # build master branch only # 假设新建的远程分支为hexo
 script:
   - hexo generate # generate static files
 deploy:
@@ -30,12 +31,12 @@ deploy:
   github-token: $GH_TOKEN
   keep-history: true
   on:
-    branch: master
+    branch: hexo # 基于新建的分支
   local-dir: public
+  target_branch: master # 设置部署分支为master
 ```
 
-9. 将 `.travis.yml` 推送到 repository 中。Travis CI 应该会自动开始运行，并将生成的文件推送到同一 repository 下的 `gh-pages` 分支下
-10. 在 GitHub 中前往你的 repository 的设置页面，修改 `GitHub Pages` 的部署分支为 `gh-pages`。
+10. 将 `.travis.yml` 推送到 repository 中。Travis CI 应该会自动开始运行，生成的文件会自动推送到同一 repository 下的 `master` 分支下
 11. 前往 `https://<你的 GitHub 用户名>.github.io` 查看你的站点是否可以访问。这可能需要一些时间。
 
 ## Project page
@@ -64,5 +65,6 @@ deploy:
 
 - [GitHub Pages 使用文档](https://help.github.com/categories/github-pages-basics/)
 - [Travis CI 使用文档](https://docs.travis-ci.com/user/tutorial/)
+- [Github Pages Deployment](https://docs.travis-ci.com/user/deployment/pages/)
 - [Awesome Hexo](https://github.com/hexojs/awesome-hexo)
 - [在百度上搜索 "Hexo GitHub"](https://www.baidu.com/s?wd=Hexo%20GitHub)
