@@ -238,7 +238,7 @@ YouTube video를 포함시킬 수 있습니다.
 YouTube's cookie is not used in this mode.
 
 ```
-{% youtube lJIrF4YjHfQ false %}
+{% youtube lJIrF4YjHfQ 'video' false %}
 {% youtube PL9hW1uS6HUfscJ9DHkOSoOX45MjXduUxo 'playlist' false %}
 ```
 
