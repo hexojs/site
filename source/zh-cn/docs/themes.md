@@ -42,6 +42,7 @@ layout.swig  - 使用 Swig
 如果文件可以被渲染的话，会经过解析然后储存到 `public` 文件夹，否则会直接拷贝到 `public` 文件夹。
 
 ### 发布
+
 当您完成主题后，可以考虑将它发布到 [主题列表](/themes)，让更多人能够使用您的主题。在发布前建议先进行 [主题单元测试](https://github.com/hexojs/hexo-theme-unit-test)，确保每一项功能都能正常使用。发布主题的步骤和 [更新文档](contributing.html#更新文档) 非常类似。
 
 1. Fork [hexojs/site]

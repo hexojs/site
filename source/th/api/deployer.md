@@ -12,4 +12,3 @@ hexo.extend.deployer.register(name, function(args){
 ```
 
 `args` เป็น argument ท่ีจะส่งเข้า function   ในไฟล์ `_config.yml` มีค่า `deploy` และคำสั่งท่ีผู้ใช้ต้องการพิมพ์ลงเข้า terminal
-   

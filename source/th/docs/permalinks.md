@@ -1,7 +1,7 @@
 ---
 title: Permalinks
 ---
-คุณสามารถตั้งค่า permalink ของเว็บไซตืตนในไฟล์ `_config.yml` หรือใน 
+คุณสามารถตั้งค่า permalink ของเว็บไซตืตนในไฟล์ `_config.yml` หรือใน
 front-matter ของทุกโพสต์
 
 ### Variables
@@ -25,7 +25,7 @@ Variable | Description
 `:category` | Categories. If the post is uncategorized, it will use the `default_category` value.
 `:hash` | SHA1 hash of filename (same as `:title`) and date (12-hexadecimal)
 
-ตุณสามารถตั้งค่า default value ของทุก variable ใน permalink โดยตั้งค่า 
+ตุณสามารถตั้งค่า default value ของทุก variable ใน permalink โดยตั้งค่า
 `permalink_defaults`:
 
 ``` yaml

@@ -22,7 +22,6 @@ $ hexo generate --watch
 
 คำสั่งสองบรรทัดต่อไปจะมีการปฏิบัติเหมือนกันสำหรับการ deploy หลังการ generate ไฟล์
 
-
 ``` bash
 $ hexo generate --deploy
 $ hexo deploy --generate

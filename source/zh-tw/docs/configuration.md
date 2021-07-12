@@ -108,7 +108,6 @@ Hexo 使用 [Moment.js](http://momentjs.com/) 來解析和顯示時間。
 `theme` | 使用主題名稱, 設為 `false` 表示關閉主題功能
 `deploy` | 佈署設定
 
-
 ### 包含/排除 檔案或資料夾
 
 Hexo 會根據配置檔中 `include` / `exlude` 欄位設定，了解要 處理/忽略 哪些特定的檔案或資料夾。
@@ -122,6 +121,7 @@ Hexo 會根據配置檔中 `include` / `exlude` 欄位設定，了解要 處理/
 `ignore` | Ignore files/folders
 
 範例:
+
 ```yaml
 # 包含/排除 檔案或資料夾
 include:
@@ -260,4 +260,3 @@ Resulting in theme configuration:
 {% note %}
 We strongly recommends you to store your theme configuration in one place. But in case you have to store your theme configuration separately, those information is quite important: The `theme_config` inside site's primary configuration file has the highest priority during merging, then the dedicated theme configuration file, while the `_config.yml` file under the theme directory has the lowest priority.
 {% endnote %}
-

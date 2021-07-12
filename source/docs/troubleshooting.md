@@ -71,11 +71,13 @@ To override the limit:
 ## Process Out of Memory
 
 When you encounter this error during generation:
+
 ```
 FATAL ERROR: CALL_AND_RETRY_LAST Allocation failed - process out of memory
 ```
 
 Increase Node.js heap memory size by changing the first line of `hexo-cli` (`which hexo` to look for the file).
+
 ```
 #!/usr/bin/env node --max_old_space_size=8192
 ```
@@ -85,6 +87,7 @@ Increase Node.js heap memory size by changing the first line of `hexo-cli` (`whi
 ## Git Deployment Problems
 
 ### RPC failed
+
 ``` plain
 error: RPC failed; result=22, HTTP code = 403
 
@@ -94,9 +97,11 @@ fatal: 'username.github.io' does not appear to be a git repository
 Make sure you have [set up git](https://help.github.com/articles/set-up-git) on your computer properly or try to use HTTPS repository URL instead.
 
 ### Error: ENOENT: no such file or directory
+
 If you get an error like `Error: ENOENT: no such file or directory` it's probably due to to mixing uppercase and lowercase letters in your tags, categories, or filenames. Git cannot automatically merge this change so it breaks the automatic branching.
 
 To fix this, try
+
 1. Check every tag's and category's case and make sure they are the same.
 1. Commit
 1. Clean and build: `./node_modules/.bin/hexo clean && ./node_modules/.bin/hexo generate`
@@ -135,9 +140,11 @@ This error may occur when trying to install a plugin written in C, C++ or other 
 ```
 
 DTrace install may have issue, use this:
+
 ```sh
 $ npm install hexo --no-optional
 ```
+
 See [#1326](https://github.com/hexojs/hexo/issues/1326#issuecomment-113871796)
 
 ## Iterate Data Model on Jade or Swig
@@ -189,35 +196,45 @@ Hello {{ world }}
 ## ENOSPC Error (Linux)
 
 Sometimes when running the command `$ hexo server` it returns an error:
+
 ```
 Error: watch ENOSPC ...
 ```
+
 It can be fixed by running `$ npm dedupe` or, if that doesn't help, try the following in the Linux console:
+
 ```
 $ echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
 ```
+
 This will increase the limit for the number of files you can watch.
 
 ## EMPERM Error (Windows Subsystem for Linux)
 
 When running `$ hexo server` in a BashOnWindows environment, it returns the following error:
+
 ```
 Error: watch /path/to/hexo/theme/ EMPERM
 ```
+
 Unfortunately, WSL does not currently support filesystem watchers. Therefore, the live updating feature of hexo's server is currently unavailable. You can still run the server from a WSL environment by first generating the files and then running it as a static server:
+
 ``` sh
 $ hexo generate
 $ hexo server -s
 ```
+
 This is [a known BashOnWindows issue](https://github.com/Microsoft/BashOnWindows/issues/216), and on 15 Aug 2016, the Windows team said they would work on it. You can get progress updates and encourage them to prioritize it on [the issue's UserVoice suggestion page](https://wpdev.uservoice.com/forums/266908-command-prompt-console-bash-on-ubuntu-on-windo/suggestions/13469097-support-for-filesystem-watchers-like-inotify).
 
 ## Template render error
 
 Sometimes when running the command `$ hexo generate` it returns an error:
+
 ```
 FATAL Something's wrong. Maybe you can find the solution here: http://hexo.io/docs/troubleshooting.html
 Template render error: (unknown path)
 ```
+
 One possible reason is that there are some unrecognizable words in your file, e.g. invisible zero width characters.
 
 [Warehouse]: https://github.com/hexojs/warehouse

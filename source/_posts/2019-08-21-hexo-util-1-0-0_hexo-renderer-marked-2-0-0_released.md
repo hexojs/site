@@ -27,21 +27,22 @@ We released a new version of the official plugins [hexo-util] & [hexo-renderer-m
 - camel_case_keys.js [#48]
 - ES6 [#44] [#46] [#70]
 
-
 ## hexo-renderer-marked 2.0.0
 
 ### Breaking changes
+
 - Drop Node 6 compatibility [#98]
 - `sanitize` option has been deprecated, replaced by `sanitizeUrl` with limited functions [#102]
 - `tables` option has been deprecated. Enabling `gfm` option also enables `tables` [#102]
 - Refer to upstream's [changelog] for details on possible breaking changes.
 
 ### Features
+
 - Add option to disable headerIds [#106]
 
 ### Refactor
-- ES6 [#97] [#104]
 
+- ES6 [#97] [#104]
 
 [hexo-util]: https://github.com/hexojs/hexo-util
 [hexo-renderer-marked]: https://github.com/hexojs/hexo-renderer-marked

@@ -26,4 +26,3 @@ Archives: /archives/
 <a href="/gallery/"> Gallery </a>
 <a href="/archives/"> Archives </a>
 ```
-

@@ -32,6 +32,7 @@ Error: EMFILE, too many open files
 ``` bash
 $ ulimit -n 10000
 ```
+
 （这一命令只对Linux系统有效）
 
 **Error: cannot modify limit**
@@ -114,11 +115,12 @@ npm ERR! node-waf configure build
 ```
 
 DTrace 安装可能有错误 , 使用下列命令:
+
 ```sh
 $ npm install hexo --no-optional
 ```
-参考 [#1326](https://github.com/hexojs/hexo/issues/1326#issuecomment-113871796)
 
+参考 [#1326](https://github.com/hexojs/hexo/issues/1326#issuecomment-113871796)
 
 ## 在 Jade 或 Swig 遍历资料
 
@@ -169,13 +171,17 @@ Hello {{ world }}
 ## ENOSPC 错误 （Linux）
 
 运行 `$ hexo server` 命令有时会返回这样的错误：
+
 ```
 Error: watch ENOSPC ...
 ```
+
 它可以用过运行 `$ npm dedupe` 来解决，如果不起作用的话，可以尝试在 Linux 终端中运行下列命令：
+
 ```
 $ echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
 ```
+
 这将会提高你能监视的文件数量。
 
 [Warehouse]: https://github.com/hexojs/warehouse
@@ -187,7 +193,7 @@ $ echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo
 在执行 `hexo server` 后返回如下错误：
 
 ```
-Error: watch /path/to/hexo/theme/ EMPERM	
+Error: watch /path/to/hexo/theme/ EMPERM
 ```
 
 这是由于你使用的 WSL 版本不支持监听文件系统改动。 最新版的 WSL 已经解决了这一问题。

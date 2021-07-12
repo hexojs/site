@@ -4,21 +4,21 @@ title: Hexo 3.9.0 Released
 
 ## New Features
 
-* Updated hexo-renderer-marked to 1.0.1 [#3571]
-* Updated hexo-fs to 1.0.0 [#3301]
-* TOC: Seek anchor id from parent nodes when target is not available [#3404]
-* tag/include_code now can include ranged code lines [#3393]
+- Updated hexo-renderer-marked to 1.0.1 [#3571]
+- Updated hexo-fs to 1.0.0 [#3301]
+- TOC: Seek anchor id from parent nodes when target is not available [#3404]
+- tag/include_code now can include ranged code lines [#3393]
 
 ## Bug Fixes
 
-* DisableNunjucks: true should render markdown code block [#3573]
-* Changing source config should generate assets [#3399]
+- DisableNunjucks: true should render markdown code block [#3573]
+- Changing source config should generate assets [#3399]
 
 ## Refactor
 
-* Spread function: Hexo built-in plugin blockquote [#3291]
-* ES6 block scoping refactor [#3294]
-* Use spread syntax [#3333]
+- Spread function: Hexo built-in plugin blockquote [#3291]
+- ES6 block scoping refactor [#3294]
+- Use spread syntax [#3333]
 
 ## Housekeeping
 

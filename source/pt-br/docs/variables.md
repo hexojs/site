@@ -69,7 +69,7 @@ Variável | Descrição | Tipo
 `page.total` | Número total de páginas | `number`
 `page.current` | Número da página atual | `number`
 `page.current_url` | A URL da página atual | `string`
-`page.posts` | Posts in this page ([Data Model](https://hexojs.github.io/warehouse/)) | 
+`page.posts` | Posts in this page ([Data Model](https://hexojs.github.io/warehouse/)) |
 `page.prev` | Número da página anterior. `0` se a página atual for a primeira. | `number`
 `page.prev_link` | A URL da página anterior. `''` se a página atual for a primeira. | `string`
 `page.next` | Número da próxima página. `0` se a página atual for a última. | `number`

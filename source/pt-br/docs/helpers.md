@@ -648,7 +648,7 @@ Opção | Descrição | Padrão
 `prev_next` | Exibir os links anteriores e seguintes | true
 `end_size` | O número de páginas exibidas no início e no final | 1
 `mid_size` | O número de páginas exibidas entre a página atual, mas não incluindo a página atual | 2
-`show_all` | Exibir todas as páginas. Se isso for definido como `true`, `end_size` e` mid_size` não irão funcionar. | false
+`show_all` | Exibir todas as páginas. Se isso for definido como `true`, `end_size` e `mid_size` não irão funcionar. | false
 `escape` | Escape HTML tags | true
 
 **Examples:**

@@ -322,6 +322,7 @@ For instance:
 ```
 {% post_link hexo-4-released 'How to use <b> tag in title' %}
 ```
+
 {% post_link hexo-4-released 'How to use <b> tag in title' %}
 
 **Do not escape title.**
@@ -329,6 +330,7 @@ For instance:
 ```
 {% post_link hexo-4-released '<b>bold</b> custom title' false %}
 ```
+
 {% post_link hexo-4-released '<b>bold</b> custom title' false %}
 
 ## Include Assets
@@ -388,7 +390,6 @@ If certain content is causing processing issues in your posts, wrap it with the 
 content
 {% endraw %}
 ```
-
 
 ## Post Excerpt
 

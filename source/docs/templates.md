@@ -44,7 +44,6 @@ By default, the `layout` template is used by all other templates. You can specif
 
 Partials are useful for sharing components between your templates. Typical examples include headers, footers or sidebars. You may want to put your partials in separate files to make maintaining your website significantly more convenient. For example:
 
-
 ``` html partial/header.ejs
 <h1 id="logo"><%= config.title %></h1>
 ```

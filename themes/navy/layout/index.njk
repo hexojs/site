@@ -11,8 +11,8 @@
   <div class="wrapper">
     <div class="inner">
       <div id="intro-news-flex">
-        {% set posts = site.posts.sort('-date'). %}
-        {% for post in posts.slice('0', '4') %}
+        {% set posts = site.posts.sort('-date') %}
+        {% for post in posts.slice('0', '4').toArray() %}
         <a href="{{ url_for(post.path) }}" class="intro-news-wrap">
           <div class="intro-news-time">{{ time_tag(post.date) }}</div>
           <div class="intro-news-title">{{ truncate(post.title, {length: 120, separator: ' '}) }}</div>

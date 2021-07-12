@@ -4,7 +4,6 @@ title: 写作
 
 {% youtube HLJ9jJy7CMg %}
 
-
 你可以执行下列命令来创建一篇新文章或者新的页面。
 
 ``` bash

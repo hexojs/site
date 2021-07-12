@@ -55,8 +55,10 @@ Option | Description | Default
 `token` | Optional token value to authenticate with the repo. Prefix with `$` to read token from environment variable
 
 3. Deploy your site `hexo clean && hexo deploy`.
+
   - You will be prompted with username and password of the target repository, unless you authenticate with a token or ssh key.
   - hexo-deployer-git does not store your username and password. Use [git-credential-cache](https://git-scm.com/docs/git-credential-cache) to store them temporarily.
+
 4. Navigate to your repository settings and change the "Pages" branch to `gh-pages` (or the branch specified in your config). The deployed site should be live on the link shown on the "Pages" setting.
 
 ## Heroku
@@ -90,7 +92,6 @@ Option | Description
 เป็นแพลตฟอร์มซึ่งรวมทุกอย่างเป็นหนึ่งเดียว
 ทำให้การสร้างไซต์หรือแอปของแว็บท่ีมีแระสิทธิภาพและรักษาได้ง่ายนั้นเป็นขบวนการอัตโนมัติ
 
-
  มีทั้งหมดสองวิธีในเรื่อง deploy เว็บไซต์ของตน  วิธีทั่วไปท่ีสุดคือการใช้ web
   UI คุณสามารถไปท่ี [create a new site page](https://app.netlify.com/start) และเลือก repo ของ project คุณจาก Github Gitlab หรือ Bitbucket และทำตามวิธีการใช้
 
@@ -99,7 +100,6 @@ Option | Description
 
 คุณสามารถเพิ่ม [Deploy to Netlify Button](https://www.netlify.com/docs/deploy-button/) ไปถึงไฟล์ README ของคุณ ดังนั้นจะอนุญาตให้คนอื่น
 copy respository ของคุณและ deploy ไปถึง Netlify ด้วยคลิกเดียว
-
 
 ## Rsync
 

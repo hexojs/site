@@ -68,6 +68,7 @@ $ hexo generate
 `-c`, `--concurrency` | 最大同时生成文件的数量，默认无限制
 
 该命令可以简写为
+
 ```bash
 $ hexo g
 ```
@@ -107,6 +108,7 @@ $ hexo deploy
 `-g`, `--generate` | 部署之前预先生成静态文件
 
 该命令可以简写为：
+
 ```bash
 $ hexo d
 ```
@@ -221,4 +223,3 @@ $ hexo --cwd /path/to/cwd
 ```
 
 自定义当前工作目录（Current working directory）的路径。
-

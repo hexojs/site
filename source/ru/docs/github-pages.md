@@ -12,6 +12,7 @@ title: GitHub Pages
 6. В новой вкладке сгенерируйте [новый токен](https://github.com/settings/tokens) с областью видимости **repo**. Запишите значение токена.
 7. На странице Travis зайдите в настройки репозитория. В поле **Environment Variables**, вставьте **GH_TOKEN** в качестве имени и токен в качестве значения. Нажмите `Add` для сохранения.
 8. Добавьте файл `.travis.yml` в свой репозиторий (рядом с _config.yml & package.json) со следующим контентом:
+
 ```yml
 sudo: false
 language: node_js
@@ -32,6 +33,7 @@ deploy:
     branch: master
   local-dir: public
 ```
+
 9. Как только Travis CI завершит деплой, сгенерированные страницы появятся в ветке `gh-pages` вашего репо.
 10. В настройках своего репозитория GitHub перейдите в раздел "GitHub Pages" и измените `Source` на **ветку gh-pages**.
 11. Проверьте страницу на *username*.github.io.

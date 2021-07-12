@@ -509,7 +509,7 @@ Escapes HTML entities in a string.
 `separator` | 分類間的分隔符號。只有在 `style` 不是 `list` 時有用。 | ,
 `depth` | 要顯示的分類層級。`0` 顯示所有層級的分類；`-1` 和 `0` 很類似，但是顯示不分層級；`1` 只顯示第一層的分類。 | 0
 `class` | 分類列表的 class 名稱。 | category
-`transform` | 改變分類名稱顯示方法的函數 | 
+`transform` | 改變分類名稱顯示方法的函數 |
 
 ### list_tags
 
@@ -527,7 +527,7 @@ Escapes HTML entities in a string.
 `style` | 標籤列表的顯示方式。使用 `list` 以無序列表（unordered list）方式顯示。 | list
 `separator` | 標籤間的分隔符號。只有在 `style` 不是 `list` 時有用。 | ,
 `class` | Class name of tag list (string) or customize each tag's class (object, see below). | tag
-`transform` | 改變標籤名稱顯示方法的函數 | 
+`transform` | 改變標籤名稱顯示方法的函數 |
 `amount` | 要顯示的標籤數量（0 = 無限制） | 0
 `suffix` | Add a suffix to link. | None
 
@@ -567,7 +567,7 @@ Examples:
 `style` | 彙整列表的顯示方式。使用 `list` 以無序列表（unordered list）方式顯示。 | list
 `separator` | 彙整間的分隔符號。只有在 `style` 不是 `list` 時有用。 | ,
 `class` | 彙整列表的 class 名稱。 | archive
-`transform` | 改變彙整名稱顯示方法的函數 | 
+`transform` | 改變彙整名稱顯示方法的函數 |
 
 ### list_posts
 
@@ -585,7 +585,7 @@ Examples:
 `separator` | 文章間的分隔符號。只有在 `style` 不是 `list` 時有用。 | ,
 `class` | 文章列表的 class 名稱。 | post
 `amount` | 要顯示的文章數量（0 = 無限制） | 6
-`transform` | 改變文章名稱顯示方法的函數 | 
+`transform` | 改變文章名稱顯示方法的函數 |
 
 ### tagcloud
 

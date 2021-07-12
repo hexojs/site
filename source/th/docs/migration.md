@@ -21,7 +21,6 @@ $ hexo migrate rss <source>
 ย้ายไฟล์ทั้งหมดใน folder Jekyll  `_posts` ไป folder  `source/_posts`
 แก้ไขการตั้งค่า `new_post_name` ใน `_config.yml`:
 
-
 ``` yaml
 new_post_name: :year-:month-:day-:title.md
 ```
@@ -43,7 +42,7 @@ new_post_name: :year-:month-:day-:title.md
 $ npm install hexo-migrator-wordpress --save
 ```
 
-นำไซตื WordPress ของคุณออกไปได้ด้วยการตั้งค่า "Tools" → "Export" → 
+นำไซตื WordPress ของคุณออกไปได้ด้วยการตั้งค่า "Tools" → "Export" →
 "WordPress"  ใน dashboard ของ WordPress (สำหรับข้อมูลเพิ่มเติมไปดูที่ [WordPress support page](http://en.support.wordpress.com/export/))
 
 แล้วรัน:
@@ -71,4 +70,3 @@ $ hexo migrate joomla <source>
 ```
 
 `source`  เป็น  path ของไฟล์หรือ URL ของไฟล์ท่ี  Joomla ท่ีส่งออกมา
-

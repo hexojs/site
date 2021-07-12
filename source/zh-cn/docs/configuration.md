@@ -12,7 +12,7 @@ title: 配置
 `title` | 网站标题
 `subtitle` | 网站副标题
 `description` | 网站描述
-`keywords` | 网站的关键词。支援多个关键词。
+`keywords` | 网站的关键词。支持多个关键词。
 `author` | 您的名字
 `language` | 网站使用的语言。对于简体中文用户来说，使用不同的主题可能需要设置成不同的值，请参考你的主题的文档自行设置，常见的有 `zh-Hans`和 `zh-CN`。
 `timezone` | 网站时区。Hexo 默认使用您电脑的时区。请参考 [时区列表](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) 进行设置，如 `America/New_York`, `Japan`, 和 `UTC` 。一般的，对于中国大陆地区可以使用 `Asia/Shanghai`。
@@ -23,7 +23,7 @@ title: 配置
 
 参数 | 描述 | 默认值
 --- | --- | ---
-`url` | 网址, must starts with `http://` or `https://` |
+`url` | 网址, 必须以 `http://` 或 `https://` 开头 |
 `root` | 网站根目录 | `url's pathname`
 `permalink` | 文章的 [永久链接](permalinks.html) 格式 | `:year/:month/:day/:title/`
 `permalink_defaults` | 永久链接中各部分的默认值 |
@@ -88,8 +88,8 @@ skip_render: "_posts/test-post.md"
 `post_asset_folder` | 启动 [Asset 文件夹](asset-folders.html) | false
 `relative_link` | 把链接改为与根目录的相对位址 | false
 `future` | 显示未来的文章 | true
-`highlight` | 代码块的设置, see [Highlight.js](/docs/syntax-highlight#Highlight-js) section for usage guide |
-`prismjs` | 代码块的设置, see [PrismJS](/docs/syntax-highlight#PrismJS) section for usage guide |
+`highlight` | 代码块的设置, 请参考 [Highlight.js](/docs/syntax-highlight#Highlight-js) 进行设置 |
+`prismjs` | 代码块的设置, 请参考 [PrismJS](/docs/syntax-highlight#PrismJS) 进行设置 |
 
 {% note info 相对地址 %}
 默认情况下，Hexo 生成的超链接都是绝对地址。例如，如果您的网站域名为 `example.com`,您有一篇文章名为 `hello`，那么绝对链接可能像这样：`http://example.com/hello.html`，它是**绝对**于域名的。相对链接像这样：`/hello.html`，也就是说，无论用什么域名访问该站点，都没有关系，这在进行反向代理时可能用到。通常情况下，建议使用绝对地址。
