@@ -3493,6 +3493,17 @@
     - stylish
     - clean
     - simple
+- name: omega
+  description: A simple and high readability theme for Hexo
+  link: https://github.com/kavience/hexo-theme-omega
+  preview: https://www.kavience.com/
+  tags:
+    - readability
+    - simple
+    - modern
+    - responsive
+    - 简约
+    - 阅读性高
 - name: Aurora
   description: Futuristic auroral Hexo theme.
   link: https://github.com/auroral-ui/hexo-theme-aurora
