@@ -322,7 +322,7 @@ After a few moments, your website will be deployed.
 |        参数        |          描述         |
 | ----------------- | ---------------------- |
 | `endpoint`        | 一个 RSS3 Hub 的链接    |
-| `privateKey`      | 您的私钥， 64 字节。    |
+| `privateKey`      | 您的私钥， 64 字节      |
 | `ipfs/deploy`     | 是否部署到 IPFS 上      |
 | `ipfs/gateway`    | IPFS API 网关          |
 | `ipfs/api/key`    | IPFS 网关相关的验证内容 |
