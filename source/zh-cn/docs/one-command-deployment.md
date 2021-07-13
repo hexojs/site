@@ -300,6 +300,40 @@ $ hexo generate —deploy && bip deploy
 
 After a few moments, your website will be deployed.
 
+## RSS3
+
+1. 安装 [hexo-deployer-rss3]
+
+2. 修改配置。
+
+  ``` yaml
+  deploy: # 所有部署器的根配置块
+  - type: rss3
+    endpoint: https://hub.rss3.io
+    privateKey: 47e18d6c386898b424025cd9db446f779ef24ad33a26c499c87bb3d9372540ba
+    ipfs:
+      deploy: true
+      gateway: pinata
+      api:
+        key: d693df715d3631e489d6
+        secret: ee8b74626f12b61c1a4bde3b8c331ad390567c86ba779c9b18561ee92c1cbff0
+  ```
+
+|        参数        |          描述         |
+| ----------------- | ---------------------- |
+| `endpoint`        | 一个 RSS3 Hub 的链接    |
+| `privateKey`      | 您的私钥， 64 字节。    |
+| `ipfs/deploy`     | 是否部署到 IPFS 上      |
+| `ipfs/gateway`    | IPFS API 网关          |
+| `ipfs/api/key`    | IPFS 网关相关的验证内容 |
+| `ipfs/api/secret` | IPFS 网关相关的验证内容 |
+
+3. 生成静态文件
+
+4. 部署
+
+关于部署相关的注意事项，您可以参阅 []() <!-- todo: 这里放官方教程地址（我们的 blog ，也许也可以用 hexo 筹备一下） -->
+
 ## 其他方法
 
 Hexo 生成的所有文件都放在 `public` 文件夹中，您可以将它们复制到您喜欢的地方。
@@ -310,3 +344,4 @@ Hexo 生成的所有文件都放在 `public` 文件夹中，您可以将它们�
 [hexo-deployer-openshift]: https://github.com/hexojs/hexo-deployer-openshift
 [hexo-deployer-ftpsync]: https://github.com/hexojs/hexo-deployer-ftpsync
 [hexo-deployer-sftp]: https://github.com/lucascaro/hexo-deployer-sftp
+[hexo-deployer-rss3]: https://github.com/NaturalSelectionLabs/hexo-deployer-rss3
