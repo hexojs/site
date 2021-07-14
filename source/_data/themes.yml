@@ -2738,13 +2738,14 @@
     - ejs
 - name: flex-block
   description: A simple block blog style based on a flex layout
-  link: https://github.com/miiiku/flex-block
-  preview: https://miiiku.xyz
+  link: https://github.com/miiiku/hexo-theme-flexblock
+  preview: https://kyori.xyz
   tags:
     - simple
     - block
     - image
     - responsive
+    - neumorphism
 - name: A-ACE
   description: A Comprehensive Elegant Theme
   link: https://github.com/kinggozhang/hexo-theme-ace
@@ -3397,7 +3398,7 @@
 - name: Cupertino
   description: The Hexo Blog Theme Cupertino.
   link: https://github.com/MrWillCom/hexo-theme-cupertino
-  preview: https://mrwillcom.now.sh
+  preview: https://mrwillcom.vercel.app/
   tags:
     - responsive
     - dark/light
@@ -3493,6 +3494,17 @@
     - stylish
     - clean
     - simple
+- name: omega
+  description: A simple and high readability theme for Hexo
+  link: https://github.com/kavience/hexo-theme-omega
+  preview: https://www.kavience.com/
+  tags:
+    - readability
+    - simple
+    - modern
+    - responsive
+    - 简约
+    - 阅读性高
 - name: Aurora
   description: Futuristic auroral Hexo theme.
   link: https://github.com/auroral-ui/hexo-theme-aurora
@@ -3516,3 +3528,17 @@
     - simple
     - responsive
     - clean
+- name: MengD
+  description: A simple, elegant, and beautiful Hexo theme
+  link: https://github.com/lete114/hexo-theme-MengD
+  preview: https://blog.lete114.top/
+  tags:
+    - Responsive
+    - Pjax
+    - Simple
+    - Dark
+    - Light 
+    - Clean
+    - English
+    - 中文
+    - 简约
