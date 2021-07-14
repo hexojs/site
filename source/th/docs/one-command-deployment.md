@@ -288,6 +288,8 @@ After a few moments, your website will be deployed.
 
 ## RSS3
 
+[RSS3](https://rss3.io) เป็นโปรโตคอลแบบเปิดที่ออกแบบมาสำหรับเนื้อหาและเครือข่ายโซเชียลในยุค Web 3.0
+
 1. ติดตั้ง [hexo-deployer-rss3]
 
 2. แก้ไขการกำหนดค่า

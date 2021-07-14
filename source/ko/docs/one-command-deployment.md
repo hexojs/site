@@ -233,6 +233,8 @@ After a few moments, your website will be deployed.
 
 ## RSS3
 
+[RSS3](https://rss3.io)는 Web 3.0 시대의 콘텐츠 및 소셜 네트워크를 위해 설계된 개방형 프로토콜입니다.
+
 1. [hexo-deployer-rss3] 설치
 
 2. 구성을 수정합니다.

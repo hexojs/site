@@ -233,6 +233,8 @@ After a few moments, your website will be deployed.
 
 ## RSS3
 
+[RSS3] (https://rss3.io) - это открытый протокол, разработанный для контента и социальных сетей в эпоху Web 3.0.
+
 1. Установите [hexo-deployer-rss3].
 
 2. Измените конфигурацию.

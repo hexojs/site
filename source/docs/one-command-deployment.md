@@ -280,6 +280,8 @@ After a few moments, your website will be deployed.
 
 ## RSS3
 
+[RSS3](https://rss3.io) is an open protocol designed for content and social networks in the Web 3.0 era.
+
 1. Install [hexo-deployer-rss3].
 
 2. Modify the configuration.

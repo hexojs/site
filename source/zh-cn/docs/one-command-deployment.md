@@ -302,6 +302,8 @@ After a few moments, your website will be deployed.
 
 ## RSS3
 
+[RSS3](https://rss3.io) 是一个为 Web 3.0 时代的内容和社交网络设计的开放协议。
+
 1. 安装 [hexo-deployer-rss3]
 
 2. 修改配置。
