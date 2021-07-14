@@ -286,6 +286,40 @@ $ hexo generate —deploy && bip deploy
 
 After a few moments, your website will be deployed.
 
+## RSS3
+
+1. ติดตั้ง [hexo-deployer-rss3]
+
+2. แก้ไขการกำหนดค่า
+
+  ``` yaml
+  deploy:
+  - type: rss3
+    endpoint: https://hub.rss3.io
+    privateKey: 47e18d6c386898b424025cd9db446f779ef24ad33a26c499c87bb3d9372540ba
+    ipfs:
+      deploy: true
+      gateway: pinata
+      api:
+        key: d693df715d3631e489d6
+        secret: ee8b74626f12b61c1a4bde3b8c331ad390567c86ba779c9b18561ee92c1cbff0
+  ```
+
+| พารามิเตอร์ | คำอธิบาย |
+| ----------------- | ---------------------- |
+| `deploy` | ลิงก์ไปยัง RSS3 Hub |
+| `privateKey` | คีย์ส่วนตัวของคุณ 64 ไบต์ |
+| `ipfs/deploy` | ว่าจะปรับใช้กับ IPFS หรือไม่ |
+| `ipfs/gateway` | IPFS API เกตเวย์ |
+| `ipfs/api/key` | เนื้อหาการตรวจสอบที่เกี่ยวข้องกับเกตเวย์ IPFS |
+| `ipfs/api/secret` | การตรวจสอบเนื้อหาที่เกี่ยวข้องกับเกตเวย์ IPFS |
+
+3. สร้างไฟล์แบบคงที่
+
+4. การปรับใช้
+
+สำหรับข้อควรระวังที่เกี่ยวข้องกับการทำให้ใช้งานได้โดยเฉพาะ โปรดดู[เอกสารประกอบของเรา](https://github.com/NaturalSelectionLabs/hexo-deployer-rss3/tree/develop/docs/zh_CN/start.md)
+
 ## Other Methods
 
 ไฟล์ท่ีต้องการ generate จะบันทึกอยู่ใน folder `public` คุณสามารถ copy
@@ -296,3 +330,4 @@ After a few moments, your website will be deployed.
 [hexo-deployer-rsync]: https://github.com/hexojs/hexo-deployer-rsync
 [hexo-deployer-openshift]: https://github.com/hexojs/hexo-deployer-openshift
 [hexo-deployer-ftpsync]: https://github.com/hexojs/hexo-deployer-ftpsync
+[hexo-deployer-rss3]: https://github.com/NaturalSelectionLabs/hexo-deployer-rss3

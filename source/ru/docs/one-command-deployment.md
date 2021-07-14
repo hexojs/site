@@ -231,6 +231,40 @@ $ hexo generate —deploy && bip deploy
 
 After a few moments, your website will be deployed.
 
+## RSS3
+
+1. Установите [hexo-deployer-rss3].
+
+2. Измените конфигурацию.
+
+  ``` yaml
+  deploy:
+  - type: rss3
+    endpoint: https://hub.rss3.io
+    privateKey: 47e18d6c386898b424025cd9db446f779ef24ad33a26c499c87bb3d9372540ba
+    ipfs:
+      deploy: true
+      gateway: pinata
+      api:
+        key: d693df715d3631e489d6
+        secret: ee8b74626f12b61c1a4bde3b8c331ad390567c86ba779c9b18561ee92c1cbff0
+  ```
+
+| Параметры | Описание |
+| ----------------- | ---------------------- |
+| `endpoint` | Ссылка на RSS3 Hub |
+| `privateKey` | Ваш закрытый ключ, 64 байта |
+| `ipfs/deploy` | Следует ли развертывать в IPFS |
+| `ipfs/gateway` | IPFS API Gateway |
+| `ipfs/api/key` | Проверочный контент, связанный со шлюзом IPFS |
+| `ipfs/api/secret` | Проверочный контент, связанный со шлюзом IPFS |
+
+3. Создавайте статические файлы.
+
+4. Развертывание
+
+Меры предосторожности, связанные с конкретным развертыванием, можно найти в [нашей документации] (https://github.com/NaturalSelectionLabs/hexo-deployer-rss3/tree/develop/docs/zh_CN/start.md).
+
 ## Другие способы
 
 Все созданные файлы сохраняются в папке `public`. Вы можете скопировать их куда угодно.
@@ -240,3 +274,4 @@ After a few moments, your website will be deployed.
 [hexo-deployer-rsync]: https://github.com/hexojs/hexo-deployer-rsync
 [hexo-deployer-openshift]: https://github.com/hexojs/hexo-deployer-openshift
 [hexo-deployer-ftpsync]: https://github.com/hexojs/hexo-deployer-ftpsync
+[hexo-deployer-rss3]: https://github.com/NaturalSelectionLabs/hexo-deployer-rss3

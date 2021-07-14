@@ -231,6 +231,40 @@ $ hexo generate —deploy && bip deploy
 
 After a few moments, your website will be deployed.
 
+## RSS3
+
+1. [hexo-deployer-rss3] 설치
+
+2. 구성을 수정합니다.
+
+  ``` 얌
+  deploy:
+  - type: rss3
+    endpoint: https://hub.rss3.io
+    privateKey: 47e18d6c386898b424025cd9db446f779ef24ad33a26c499c87bb3d9372540ba
+    ipfs:
+      deploy: true
+      gateway: pinata
+      api:
+        key: d693df715d3631e489d6
+        secret: ee8b74626f12b61c1a4bde3b8c331ad390567c86ba779c9b18561ee92c1cbff0
+  ```
+
+|매개변수 |설명 |
+| ------------------ | ---------------------- |
+| `endpoint` | RSS3 Hub에 대한 링크 |
+| `privateKey` | 개인 키, 64바이트 |
+| `ipfs/deploy` | IPFS에 배포할지 여부 |
+| `ipfs/gateway` | IPFS API 게이트웨이 |
+| `ipfs/api/key` | IPFS 게이트웨이 관련 검증 내용 |
+| `ipfs/api/secret` | IPFS 게이트웨이 관련 검증 내용 |
+
+3. 정적 파일 생성
+
+4. 배포
+
+특정 배포와 관련된 주의 사항은 [당사 문서](https://github.com/NaturalSelectionLabs/hexo-deployer-rss3/blob/develop/README.md)를 참조하세요.
+
 ## 다른 메소드들
 
 생성되는 모든 파일들은 `public` 폴더에 저장됩니다. 이 파일들을 당신이 원하는 곳 아무데나 복사하여 사용할 수 있습니다.
@@ -240,3 +274,4 @@ After a few moments, your website will be deployed.
 [hexo-deployer-rsync]: https://github.com/hexojs/hexo-deployer-rsync
 [hexo-deployer-openshift]: https://github.com/hexojs/hexo-deployer-openshift
 [hexo-deployer-ftpsync]: https://github.com/hexojs/hexo-deployer-ftpsync
+[hexo-deployer-rss3]: https://github.com/NaturalSelectionLabs/hexo-deployer-rss3
