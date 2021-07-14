@@ -232,6 +232,40 @@ $ hexo generate —deploy && bip deploy
 
 After a few moments, your website will be deployed.
 
+## RSS3
+
+1. 安裝 [hexo-deployer-rss3]
+
+2. 修改配置。
+
+  ``` yaml
+  deploy: # 所有部署器的根配置塊
+  - type: rss3
+    endpoint: https://hub.rss3.io
+    privateKey: 47e18d6c386898b424025cd9db446f779ef24ad33a26c499c87bb3d9372540ba
+    ipfs:
+      deploy: true
+      gateway: pinata
+      api:
+        key: d693df715d3631e489d6
+        secret: ee8b74626f12b61c1a4bde3b8c331ad390567c86ba779c9b18561ee92c1cbff0
+  ```
+
+|        參數        |          描述         |
+| ----------------- | ---------------------- |
+| `endpoint`        | 一個 RSS3 Hub 的鏈接    |
+| `privateKey`      | 您的私鑰， 64 字節      |
+| `ipfs/deploy`     | 是否部署到 IPFS 上      |
+| `ipfs/gateway`    | IPFS API 網關          |
+| `ipfs/api/key`    | IPFS 網關相關的驗證內容 |
+| `ipfs/api/secret` | IPFS 網關相關的驗證內容 |
+
+3. 生成靜態文件
+
+4. 部署
+
+關於具體部署相關的註意事項，您可以參閱 [我們的文檔](https://github.com/NaturalSelectionLabs/hexo-deployer-rss3/tree/develop/docs/zh_TW/start.md) 。
+
 ## 其他方法
 
 Hexo 產生的所有檔案都放在 `public` 資料夾，您可以將它們拷貝到您喜歡的地方。

@@ -332,7 +332,7 @@ After a few moments, your website will be deployed.
 
 4. 部署
 
-关于部署相关的注意事项，您可以参阅 []() <!-- todo: 这里放官方教程地址（我们的 blog ，也许也可以用 hexo 筹备一下） -->
+关于具体部署相关的注意事项，您可以参阅 [我们的文档](https://github.com/NaturalSelectionLabs/hexo-deployer-rss3/tree/develop/docs/zh_CN/start.md) 。
 
 ## 其他方法
 
