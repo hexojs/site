@@ -237,7 +237,7 @@ After a few moments, your website will be deployed.
 
 2. 구성을 수정합니다.
 
-  ``` 얌
+  ``` yaml
   deploy:
   - type: rss3
     endpoint: https://hub.rss3.io
