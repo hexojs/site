@@ -2955,3 +2955,9 @@
     - tag
     - trello
     - cards
+- name: hexo-deployer-rss3
+  description: RSS3 deployer plugin for Hexo
+  link: https://github.com/NaturalSelectionLabs/hexo-deployer-rss3
+  tags:
+    - deployer
+    - rss3
