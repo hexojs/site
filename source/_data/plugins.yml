@@ -2948,6 +2948,13 @@
     - drafts
     - tag
     - tag_plugins
+- name: hexo-filter-probe-image-size
+  description: Probe and set image sizes in Hexo web pages.
+  link: https://github.com/PaperStrike/hexo-filter-probe-image-size
+  tags:
+    - images
+    - size
+    - filter
 - name: hexo-generator-readme-file
   description: Generate a README.md file contains all of blogs posts link.
   link: https://github.com/tcatche/hexo-generator-readme-file
