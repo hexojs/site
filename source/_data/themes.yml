@@ -3542,6 +3542,18 @@
     - English
     - 中文
     - 简约
+- name: Ringo
+  description: A simple, concise, and fast theme for Hexo
+  link: https://github.com/HeliumOI/hexo-theme-ringo
+  preview: https://ringo.sophonci117.me/
+  tags:
+    - responsive
+    - simple
+    - clean
+    - fast
+    - English
+    - 中文
+    - 简约
 - name: Jelly
   description: A wonderful, elegant and eye-protected light theme for Hexo.
   link: https://github.com/preccrep/hexo-theme-jelly
