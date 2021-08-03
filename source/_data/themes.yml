@@ -3542,3 +3542,15 @@
     - English
     - 中文
     - 简约
+- name: Jelly
+  description: A wonderful, elegant and eye-protected light theme for Hexo.
+  link: https://github.com/preccrep/hexo-theme-jelly
+  preview: https://preccrepad.github.io
+  tags:
+    - 中文
+    - English
+    - Simple
+    - Elegant
+    - Light
+    - Material
+    - Light-green
