@@ -2981,3 +2981,22 @@
     - tag
     - timeline
     - mdline
+- name: hexo-tag-map
+  description: Insert an interactive map into your Hexo article! Support GoogleMap, Gaode map, Baidu map, Geoq map! A powerful map plugin.
+  link: https://github.com/kuole-o/hexo-tag-map
+  tags:
+    - tag
+    - map
+    - Google Map
+    - 高德地图
+    - 百度地图
+    - butterfly
+- name: hexo-butterfly-charts
+  description: Add statistical charts, radar charts, and histograms to beautify any page of your Hexo website.
+  link: https://github.com/kuole-o/hexo-butterfly-charts
+  tags:
+    - tag
+    - charts
+    - butterfly
+    - 统计图表
+    - 美化
