@@ -300,6 +300,20 @@ $ hexo generate —deploy && bip deploy
 
 After a few moments, your website will be deployed.
 
+## 腾讯云 Webify
+
+[腾讯云 Webify](https://webify.cloudbase.net/) 支持从 Git 仓库直接部署您的 Hexo 应用。
+
+进入 [Webify 新建应用页面](https://console.cloud.tencent.com/webify/new)，根据选择您代码仓库所在的 Git 平台（Github、Gitlab 或者 Gitee 码云），完成授权流程后，便可导入仓库。
+
+填入应用配置如下：
+
+- 构建命令填入 `npm run build`
+- 输出目录填入 `dist`，
+- 安装命令填入 `npm install`
+
+应用创建之后，等待构建、部署完毕，便可以通过应用的默认域名（`.app.tcloudbase.com`）来访问应用。如 https://my-hexo-site-0g2fpeyz0f499162-1255679239.ap-shanghai.app.tcloudbase.com/
+
 ## RSS3
 
 [RSS3](https://rss3.io) 是一个为 Web 3.0 时代的内容和社交网络设计的开放协议。
