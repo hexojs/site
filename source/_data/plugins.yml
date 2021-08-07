@@ -2981,6 +2981,13 @@
     - tag
     - timeline
     - mdline
+- name: hexo-filter-link-post
+  description: Transfer relative post link in markdown file to post link.
+  link: https://github.com/tcatche/hexo-filter-link-post
+  tags:
+    - filter
+    - link
+    - refer other markdown
 - name: hexo-tag-map
   description: Insert an interactive map into your Hexo article! Support GoogleMap, Gaode map, Baidu map, Geoq map! A powerful map plugin.
   link: https://github.com/kuole-o/hexo-tag-map
