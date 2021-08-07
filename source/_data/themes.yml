@@ -3566,3 +3566,16 @@
     - Light
     - Material
     - Light-green
+- name: Yet-The-Books
+  description: It starts with the appearance, but stays true to the words. A blog theme dedicated to those who love to think.
+  link: https://github.com/Yet-The-Books/hexo-theme-yet-the-books
+  preview: https://books.nexmoe.com/
+  tags:
+    - 中文
+    - Internationalization
+    - Book
+    - Simple
+    - Words
+    - Elegant
+    - Responsive
+    - Clean
