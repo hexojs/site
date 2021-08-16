@@ -6,7 +6,8 @@ title: Writing
 
 To create a new post or a new page, you can run the following command:
 
-``` bash
+``` bash![世界地图](https://user-images.githubusercontent.com/88994351/129508183-7c489377-475e-4be6-918c-c620727cca27.jpg)
+
 $ hexo new [layout] <title>
 ```
 
