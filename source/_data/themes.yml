@@ -2809,8 +2809,8 @@
     - 中文
     - Beautiful
     - Qrcode
-- name: A-Chief-Lx
-  description: A light & simple & elegant theme
+- name: Lx
+  description: A simple & clear & elegant theme
   link: https://github.com/blleng/hexo-theme-lx
   preview: https://lx.js.org
   tags:
