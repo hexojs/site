@@ -3016,3 +3016,10 @@
     - insert
     - tag
     - template
+- name: hexo-filter-inline-svg
+  description: A Hexo plugin that inline your svg in the img tag into HTML file.
+  link: https://github.com/widergao/hexo-filter-inline-svg
+  tags:
+    - filter
+    - inline
+    - svg
