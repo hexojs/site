@@ -3579,3 +3579,13 @@
     - Elegant
     - Responsive
     - Clean
+- name: Flavor
+  description: A Simple and Fast Theme for Hexo
+  link: https://github.com/xtexChooser/hexo-theme-flavor
+  preview: https://xtexx.ml/blog/2021-8-23-custom-theme/
+  tags:
+    - 中文
+    - 简约
+    - simple
+    - English
+    - Internationalization
