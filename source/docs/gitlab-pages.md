@@ -24,7 +24,7 @@ pages:
     paths:
       - public
   only:
-    - master
+    - main
 ```
 
 5. *username*.gitlab.io should be up and running, once GitLab CI finishes the deployment job,
