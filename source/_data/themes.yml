@@ -3579,3 +3579,13 @@
     - Elegant
     - Responsive
     - Clean
+- name: Klise
+  description: A simple, concise, and fast theme for Hexo.
+  link: https://github.com/dewjohn/hexo-theme-klise
+  preview: https://dewjohn.github.io/
+  tags:
+    - 中文
+    - English
+    - Simple
+    - Elegant
+    - Light
