@@ -1,3 +1,12 @@
+- name: Frame
+  description: A minimal, elegant hexo theme.
+  link: https://github.com/zoeingwingkei/frame
+  preview: https://frame.zhangyongqi.com/
+  tags:
+    - simple
+    - minimal
+    - elegant
+    - responsive
 - name: Miracle
   description: A simple single-column theme for Hexo.
   link: https://github.com/hifun-team/hexo-theme-miracle
