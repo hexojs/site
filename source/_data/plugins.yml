@@ -3034,3 +3034,12 @@
     - javascript
     - js
     - css
+- name: hexo-vtuber-banner
+  description: Add a Vtuber or banner to your blog | 添加vtuber/vup横幅card到你的博客
+  link: https://github.com/MIMONATCH/hexo-vtuber-banner
+  tags:
+    - vtuber
+    - vup
+    - html
+    - markdown
+    - 美化
