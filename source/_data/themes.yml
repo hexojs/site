@@ -268,7 +268,7 @@
 - name: mintin
   description: A simple theme
   link: https://github.com/kevinjobs/hexo-theme-mintin
-  preview: https://kevinjobs.github.io/
+  preview: https://blog.kevinjobs.com/mintin
   tags:
     - simple
     - light
