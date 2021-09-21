@@ -3465,7 +3465,7 @@
 - name: Particle
   description: A concise theme with 3 color styles.
   link: https://github.com/korilin/hexo-theme-particle
-  preview: https://korilin.com/
+  preview: https://korilin.github.io/
   tags:
     - Vue
     - home-figure
