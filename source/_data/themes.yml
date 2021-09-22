@@ -3201,6 +3201,16 @@
     - bootstrap
     - shadows
     - classification
+- name: Text
+  description: A simple theme
+  link: https://github.com/MaLuns/hexo-theme-text
+  preview: https://www.imalun.com
+  tags:
+    - dark
+    - light
+    - widget
+    - one_columns
+
 - name: Vita
   description: A simple and minimal Hexo resume theme
   link: https://github.com/Harendra1993/vita
