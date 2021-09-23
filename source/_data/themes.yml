@@ -1075,8 +1075,8 @@
     - concise
 - name: Weightless
   description: A lightweight theme with minimal fuss
-  link: https://git.fm/zllovesuki/hexo-theme-weightless
-  preview: https://zllovesuki.personal.git.fm/essays/
+  link: https://github.com/Luke-Wilson/hexo-theme-weightless
+  preview: https://github.com/Luke-Wilson/hexo-theme-weightless
   tags:
     - responsive
     - light
