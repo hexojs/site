@@ -2532,8 +2532,8 @@
     - scalable
 - name: Suka
   description: A Modern and Simple Theme, with a lot of powerful features
-  link: https://theme.suka.moe
-  preview: https://theme.suka.moe/demo/
+  link: https://github.com/SukkaW/hexo-theme-suka
+  preview: https://theme-suka.skk.moe/
   tags:
     - modern
     - simple
