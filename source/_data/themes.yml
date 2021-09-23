@@ -3404,8 +3404,8 @@
 
 - name: Dark
   description: A different hexo theme.
-  link: https://github.com/confuseder/hexo-theme-dark
-  preview: https://confuseder.github.io/
+  link: https://github.com/gokhanboss/hexo-theme-dark
+  preview: https://github.com/gokhanboss/hexo-theme-dark
   tags:
     - simple
     - widgets
