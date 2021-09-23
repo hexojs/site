@@ -975,8 +975,8 @@
     - scss
 - name: Jekyll
   description: A theme inspired by jekyllrb.com
-  link: https://github.com/pinggod/hexo-theme-jekyll
-  preview: https://github.com/pinggod/hexo-theme-jekyll
+  link: https://github.com/twang2218/hexo-theme-jekyll
+  preview: https://github.com/twang2218/hexo-theme-jekyll
   tags:
     - 中文
     - jekyll
