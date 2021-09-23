@@ -213,7 +213,7 @@
     - light
 - name: Lights
   description: A simple theme
-  link: https://github.com/F0r3at/Lights/
+  link: https://github.com/F0r3at/Lights
   preview: https://f0r3at.github.io
   tags:
     - responsive
@@ -649,7 +649,7 @@
     - signature
 - name: BeanTech
   description: Clean, elegant and beautiful Theme with optimized SEO
-  link: https://github.com/YenYuHsuan/hexo-theme-beantech/
+  link: https://github.com/YenYuHsuan/hexo-theme-beantech
   preview: http://beantech.org/
   tags:
     - clean
@@ -703,7 +703,7 @@
     - jade
 - name: Solar
   description: 3D solar animation, clean, dark theme, simple and responsive
-  link: https://github.com/tzvetkov75/solar-theme-hexo/
+  link: https://github.com/tzvetkov75/solar-theme-hexo
   preview: https://tzvetkov75.github.io/demo_blog/public/
   tags:
     - 3D animation
@@ -2810,7 +2810,7 @@
     - Simple
 - name: Technology
   description: A technology theme
-  link: https://github.com/guxuelong/hexo-theme-technology/
+  link: https://github.com/guxuelong/hexo-theme-technology
   preview: https://www.madelove.top/
   tags:
     - technology
@@ -3368,7 +3368,7 @@
     - dark/light
 - name: Web-Nary
   description: A Fully Customised Hexo Flat Modular Theme for Bloging and More ...
-  link: https://github.com/BRAVO68WEB/hexo-webnary-theme/
+  link: https://github.com/BRAVO68WEB/hexo-webnary-theme
   preview: https://webnary.netlify.app/
   tags:
     - dark
