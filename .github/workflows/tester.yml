@@ -1,12 +1,14 @@
 name: Tester
 
-on: [push, pull_request_target]
+on: pull_request_target
 
 jobs:
   tester:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+        with:
+          ref: refs/pull/${{ github.event.pull_request.number }}/merge
       - name: Use Node.js
         uses: actions/setup-node@v2
       - name: Install Dependencies
