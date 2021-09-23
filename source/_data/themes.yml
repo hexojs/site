@@ -527,7 +527,7 @@
     - minimal
 - name: hannah
   description: A simple & beautiful & fast theme
-  link: https://github.com/objectyan/hexo-theme-hannah.git
+  link: https://github.com/objectyan/hexo-theme-hannah
   preview: http://objectyan.me
   tags:
     - simple
@@ -3278,7 +3278,7 @@
     - 中文
 - name: Love
   description: A simple HEXO theme for couples.
-  link: https://github.com/jiehua1995/hexo-theme-love.git
+  link: https://github.com/jiehua1995/hexo-theme-love
   preview: https://one.jiehua1995.xyz/hexo-theme-love/
   tags:
     - love
