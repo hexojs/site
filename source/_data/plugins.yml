@@ -3045,4 +3045,9 @@
     - seo
     - url
     - search engine
-
+- name: hexo-tag-codepen-x
+  description: A plugin that enables Hexo to use CodeOpen.
+  link: https://github.com/xu-ux/hexo-tag-codepen-x
+  tags:
+    - tag
+    - codepen
