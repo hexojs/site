@@ -7,7 +7,8 @@
   },
   "scripts": {
     "build": "hexo generate",
-    "eslint": "eslint ."
+    "eslint": "eslint .",
+    "prepare": "husky install"
   },
   "dependencies": {
     "cheerio": "^0.22.0",
@@ -32,11 +33,6 @@
     "husky": "^7.0.2",
     "imagemin-lint-staged": "^0.4.0",
     "lint-staged": "^11.0.0"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
   },
   "lint-staged": {
     "*.{png,jpeg,jpg,gif,svg}": [
