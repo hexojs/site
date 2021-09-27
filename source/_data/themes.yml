@@ -40,7 +40,7 @@
     - 中文
 - name: Quiet
   description: A simple, easy to read flat hexo theme.
-  link: https://github.com/QiaoBug/hexo-theme-quiet
+  link: https://github.com/79E/hexo-theme-quiet
   preview: https://www.79bk.cn/
   tags:
     - Simple
