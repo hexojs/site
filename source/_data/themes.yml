@@ -8,6 +8,16 @@
     - searchbox
     - tagcloud
     - Chinese
+- name: Tangyuxian
+  description: Particularly cute and integrated with rich themes for Hexo.
+  link: https://github.com/tangyuxian/hexo-theme-tangyuxian
+  preview: https://www.tangyuxian.com
+  tags:
+      - 中文
+      - integrate
+      - comic
+      - 可爱/萌
+      - 小埋
 - name: Frame
   description: A minimal, elegant hexo theme.
   link: https://github.com/zoeingwingkei/frame
@@ -40,7 +50,7 @@
     - 中文
 - name: Quiet
   description: A simple, easy to read flat hexo theme.
-  link: https://github.com/QiaoBug/hexo-theme-quiet
+  link: https://github.com/79E/hexo-theme-quiet
   preview: https://www.79bk.cn/
   tags:
     - Simple
@@ -3475,7 +3485,7 @@
 - name: Particle
   description: A concise theme with 3 color styles.
   link: https://github.com/korilin/hexo-theme-particle
-  preview: https://korilin.com/
+  preview: https://korilin.github.io/
   tags:
     - Vue
     - home-figure
