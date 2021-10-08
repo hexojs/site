@@ -39,7 +39,7 @@ new_post_name: :year-:month-:day-:title.md
 $ npm install hexo-migrator-wordpress --save
 ```
 
-在 WordPress 仪表盘中导出数据("Tools" → "Export" → "WordPress")（详情参考[WP支持页面](http://en.support.wordpress.com/export/)）。
+在 WordPress 仪表盘中导出数据("Tools" → "Export" → "WordPress")（详情参考[WP支持页面](https://wordpress.com/zh-cn/support/export/)）。
 
 插件安装完成后，执行下列命令来迁移所有文章。`source` 可以是 WordPress 导出的文件路径或网址。
 
