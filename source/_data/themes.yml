@@ -1,3 +1,14 @@
+- name: mashiro
+  description: A CTeX-like theme for Hexo.
+  link: https://github.com/bill-xia/hexo-theme-mashiro
+  preview: https://wilsonxia.cn
+  tags:
+    - 中文
+    - responsive
+    - CTeX
+    - scholar
+    - simple
+    - one-column
 - name: Anatolo
   description: A simple hexo theme based on Anatole.
   link: https://github.com/Lhcfl/hexo-theme-anatolo
