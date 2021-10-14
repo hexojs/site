@@ -28,7 +28,7 @@
     "sharp": "^0.29.1"
   },
   "devDependencies": {
-    "eslint": "^7.0.0",
+    "eslint": "^8.0.1",
     "eslint-config-hexo": "^4.0.0",
     "husky": "^7.0.2",
     "imagemin-lint-staged": "^0.4.0",
