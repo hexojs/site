@@ -62,7 +62,7 @@
 - name: Quiet
   description: A simple, easy to read flat hexo theme.
   link: https://github.com/79E/hexo-theme-quiet
-  preview: https://www.79bk.cn/
+  preview: https://blog.taire.de/
   tags:
     - Simple
     - Beautiful
