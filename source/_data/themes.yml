@@ -24,11 +24,11 @@
   link: https://github.com/tangyuxian/hexo-theme-tangyuxian
   preview: https://www.tangyuxian.com
   tags:
-      - 中文
-      - integrate
-      - comic
-      - 可爱/萌
-      - 小埋
+    - 中文
+    - integrate
+    - comic
+    - 可爱/萌
+    - 小埋
 - name: Frame
   description: A minimal, elegant hexo theme.
   link: https://github.com/zoeingwingkei/frame
@@ -1415,7 +1415,7 @@
     - Chinese
     - Portuguese
 - name: Overdose
-  description: "⚠ Caution: you could be overdosed with this theme."
+  description: '⚠ Caution: you could be overdosed with this theme.'
   link: https://github.com/HyunSeob/hexo-theme-overdose
   preview: http://hyunseob.github.io/
   tags:
@@ -3527,7 +3527,7 @@
     - Pjax
     - Simple
     - Dark
-    - Light 
+    - Light
     - Clean
     - English
     - 中文
@@ -3589,3 +3589,13 @@
     - landscape
     - modern
     - gentle
+- name: MiHoYo
+  description: A theme of MiHoYo.
+  link: https://github.com/redhat123456/hexo-theme-MiHoYo
+  preview: http://mihoyo.tanger.cloud/
+  tags:
+    - 中文
+    - MiHoYo
+    - Light
+    - simple
+    - modern
