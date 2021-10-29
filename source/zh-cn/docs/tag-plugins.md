@@ -5,7 +5,7 @@ title: 标签插件（Tag Plugins）
 
 虽然你可以使用任何格式书写你的文章，但是标签插件永远可用，且语法也都是一致的。
 
-_不要在Markdown语法中插入标签插件，如 `[]({% post_path lorem-ipsum %})` 是不被支持的。_
+_不要在 Markdown 语法中插入标签插件。形如 `[]({% post_path lorem-ipsum %})` 是不被支持的。_
 
 ## 引用块
 
