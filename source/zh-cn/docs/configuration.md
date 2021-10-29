@@ -183,7 +183,7 @@ exclude:
 ignore:
   # 忽略任何名称为'foo'的文件夹。
   - "**/foo"
-  # 只忽略 'themes/' 子文件夹下的 'foo' 文件夹。
+  # 只忽略 "themes/" 子文件夹下的 "foo" 文件夹。
   - "**/themes/*/foo"
   # 同上，但是对任何'themes/'下的子文件夹均生效'themes/'。
   - "**/themes/**/foo"
