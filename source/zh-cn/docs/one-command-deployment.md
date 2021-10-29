@@ -27,7 +27,7 @@ deploy:
   repo:
 ```
 
-请参考[插件列表](https://hexo.io/plugins/) 以获得更多部署用插件。
+可前往 [插件列表](https://hexo.io/plugins/) 以获得更多部署插件。
 
 {% note warn 缩进 %}
 YAML依靠缩进来确定元素间的从属关系。因此，请确保每个deployer的缩进长度相同，并且使用空格缩进。
