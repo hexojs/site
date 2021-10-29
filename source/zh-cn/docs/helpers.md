@@ -461,7 +461,7 @@ url: https://example.com/blog # example
 
 ### escape_html
 
-转义HTML实体为字符串。
+转义 HTML。
 
 ``` js
 <%- escape_html(str) %>
