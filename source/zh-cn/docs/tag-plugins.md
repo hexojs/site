@@ -89,7 +89,7 @@ code snippet
 `highlight` | 是否启用代码高亮 | `true`
 `first_line` | 指定首行标号 | `1`
 `mark` | 高亮特定行，每一个值以英文逗号分隔，使用 `-` 符号指定一个范围<br>如 `mark:1,4-7,10` 将高亮显示第一行，第 4-7 行，第 10 行 |
-`wrap` | 将代码块包含在[`<table>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table) 标签中 | `true`
+`wrap` | 将代码块包含在 [`<table>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table) 标签中 | `true`
 
 ### 样例
 
