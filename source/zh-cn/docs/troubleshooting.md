@@ -62,7 +62,7 @@ ulimit: open files: cannot modify limit: Operation not permitted
   session required pam_limits.so
   ```
 
-2. 如果你是在一个 [systemd-based](https://en.wikipedia.org/wiki/Systemd#Adoption) 分发版上，systemd 可能会覆盖 "limits.conf"。如果要在 systemd 上设置限制，在 "/etc/systemd/system.conf" 和 "/etc/systemd/user.conf" 上加入以下内容：
+2. 如果你使用的 Linux 发行版基于 [systemd](https://en.wikipedia.org/wiki/Systemd#Adoption)，systemd 可能会覆盖 "limits.conf"。你可以在 "/etc/systemd/system.conf" 和 "/etc/systemd/user.conf" 上加入以下内容以在 systemd 上设置限制：
 
   ```
   DefaultLimitNOFILE=10000
