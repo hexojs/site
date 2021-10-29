@@ -88,7 +88,7 @@ code snippet
 `line_number` | 是否显示行号 | `true`
 `highlight` | 是否启用代码高亮 | `true`
 `first_line` | 指定首行标号 | `1`
-`mark` | 标记特定行，每一个值以英文逗号分隔，使用`-`号指定一个范围<br>如`mark:1,4-7,10` 将标记第一行，第4-7行，第10行。 |
+`mark` | 高亮特定行，每一个值以英文逗号分隔，使用 `-` 符号指定一个范围<br>如 `mark:1,4-7,10` 将高亮显示第一行，第 4-7 行，第 10 行 |
 `wrap` | 将代码块包含在[`<table>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table) 标签中 | `true`
 
 ### 样例
