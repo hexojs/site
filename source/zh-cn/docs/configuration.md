@@ -181,7 +181,7 @@ exclude:
   # 在这里配置一个 - "_posts/hello-world.md" 是没有用的。
 
 ignore:
-  # 忽略任何名称为'foo'的文件夹。
+  # 忽略任何名称为 "foo" 的文件夹。
   - "**/foo"
   # 只忽略 "themes/" 子文件夹下的 "foo" 文件夹。
   - "**/themes/*/foo"
