@@ -46,7 +46,7 @@ ulimit: open files: cannot modify limit: Operation not permitted
 
 意味着系统方面的配置在阻止 `ulimit` 的提升。
 
-如何客服这个限制：
+使用以下步骤覆盖这个限制：
 
 1. 将以下内容加入到 "/etc/security/limits.conf" 文件：
 
