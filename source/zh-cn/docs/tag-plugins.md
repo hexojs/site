@@ -349,7 +349,7 @@ _hexo-renderer-marked 3.1.0+ 可以自动解析文章图片的路径，具体内
 <img src="/2020/01/02/hello/foo.jpg">
 ```
 
-**自定义类名**
+**自定义 Class 属性**
 
 `{% asset_img post-image foo.jpg %}`
 
