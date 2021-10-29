@@ -44,4 +44,4 @@ marked:
   postAsset: true
 ```
 
-一旦启用，素材图片将会自动解析至对应文章的路径。例如，"image.jpg"位于"/2020/01/02/foo/image.jpg"，意味着它是 "/2020/01/02/foo/" 这篇文章的素材图片，`![](image.jpg)` 会被渲染为 `<img src="/2020/01/02/foo/image.jpg">`。
+一旦启用上述选项，图片将会自动解析至对应文章的路径。例如，`image.jpg` 位于 `/2020/01/02/foo/image.jpg` 意味着它是文章 `/2020/01/02/foo/` 的素材图片，`![](image.jpg)` 会被渲染为 `<img src="/2020/01/02/foo/image.jpg">`。
