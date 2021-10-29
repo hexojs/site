@@ -33,7 +33,7 @@ post_asset_folder: true
 
 ## 使用 Markdown 嵌入图片
 
-[hexo-renderer-marked](https://github.com/hexojs/hexo-renderer-marked) 3.1.0版本引入了一个新的选项，它使你无需使用`asset_img`标签插件来使用Markdown语言嵌入图片。
+[hexo-renderer-marked](https://github.com/hexojs/hexo-renderer-marked) 3.1.0 版本引入了一个新的选项，无需使用 `asset_img` 标签插件也可以通过 Markdown 嵌入图片。
 
 使用以下配置来启用它：
 
