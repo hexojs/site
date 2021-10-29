@@ -56,7 +56,7 @@ ulimit: open files: cannot modify limit: Operation not permitted
   # '*' applies to all users and '-' set both soft and hard limits
   ```
 
-  * 上述设置在某些情况下可能不太奏效，请保证 "/etc/pam.d/login" 和 "/etc/pam.d/lightdm" 有以下内容。如果这些文件不存在，忽略此步骤。
+  * 上述设置在某些情况下可能不会起作用，请保证 "/etc/pam.d/login" 和 "/etc/pam.d/lightdm" 有以下内容。如果这些文件不存在，忽略此步骤。
 
   ```
   session required pam_limits.so
