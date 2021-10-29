@@ -339,7 +339,7 @@ content
 
 _hexo-renderer-marked 3.1.0+ 可以自动解析文章图片的路径，具体内容请参考[此篇文档](/zh-cn/docs/asset-folders#使用Markdown嵌入图片)。_
 
-"foo.jpg" 位于 `http://example.com/2020/01/02/hello/foo.jpg`中。
+"foo.jpg" 位于 `http://example.com/2020/01/02/hello/foo.jpg` 中。
 
 **默认（无额外选项）**
 
