@@ -365,7 +365,7 @@ _hexo-renderer-marked 3.1.0+ 可以自动解析文章图片的路径，具体内
 <img src="/2020/01/02/hello/foo.jpg" width="500" height="400">
 ```
 
-**标题 & Alt属性**
+**Title & Alt 属性**
 
 `{% asset_img logo.svg "lorem ipsum'dolor'" %}`
 
