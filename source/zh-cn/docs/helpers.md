@@ -826,7 +826,7 @@ url: https://example.com/blog # example
 
 ### meta_generator
 
-插入 [Generator标签](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta).
+插入 [Generator 标签](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta).
 
 ``` js
 <%- meta_generator() %>
