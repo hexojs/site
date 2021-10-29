@@ -22,7 +22,7 @@ title: 永久链接（Permalinks）
 `:post_title` | 文章标题
 `:id` | 文章 ID (_在 [缓存清除](/zh-cn/docs/commands#clean)后将发生变化_)
 `:category` | 分类。如果文章没有分类，则是 `default_category` 配置信息。
-`:hash` | 文件名(与 `:title` 相同)和日期(12-hexadecimal)的SHA1哈希摘要值
+`:hash` | 文件名（与 `:title` 相同）和日期（12-hexadecimal）的 SHA1 哈希值
 
 您可在 `permalink_defaults` 参数下调整永久链接中各变量的默认值：
 
