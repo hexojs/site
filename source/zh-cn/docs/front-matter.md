@@ -31,7 +31,7 @@ date: 2013/7/13 20:46:25
 
 ## 布局
 
-默认布局是`post`，与`_config.yml`中的[`default_layout`](/zh-cn/docs/configuration.html#文章)设置保持一致。当布局选项被禁用(`layout: false`)时，它不会被主题处理，但会被任何可能安装的渲染器渲染。例如：如果一篇文章是用Markdown书写的，且有任何Markdown渲染器(如默认的 [hexo-renderer-marked](https://github.com/hexojs/hexo-renderer-marked))安装的话，它就会被渲染成HTML。
+默认布局是 `post`，与 `_config.yml` 中的 [`default_layout`](/zh-cn/docs/configuration.html#文章) 设置保持一致。当布局选项被禁用（`layout: false`）时，它不会被主题处理，但可能会被任何安装的渲染插件渲染。例如：如果一篇文章是用 Markdown 书写的，且安装有任何 Markdown 渲染器（如默认的 [hexo-renderer-marked](https://github.com/hexojs/hexo-renderer-marked)），它就会被渲染成 HTML。
 
 [内置标签插件](/zh-cn/docs/tag-plugins) 总会被处理，除非明确由 `disableNunjucks` 选项禁用，或手动指定一个[渲染器](/zh-cn/api/renderer#Disable-Nunjucks-tags)。
 
