@@ -44,7 +44,7 @@ $ ulimit -n 10000
 ulimit: open files: cannot modify limit: Operation not permitted
 ```
 
-意味着系统方面的配置在阻止 `ulimit` 的提升。
+上述日志表示系统级别的配置在阻止 `ulimit` 的提升。
 
 使用以下步骤覆盖这个限制：
 
