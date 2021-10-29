@@ -31,11 +31,11 @@ post_asset_folder: true
 
 通过这种方式，图片将会同时出现在文章和主页以及归档页中。
 
-## Embedding an image using markdown
+## 使用Markdown嵌入图片
 
-[hexo-renderer-marked](https://github.com/hexojs/hexo-renderer-marked) 3.1.0 introduced a new option that allows you to embed an image in markdown without using `asset_img` tag plugin.
+[hexo-renderer-marked](https://github.com/hexojs/hexo-renderer-marked) 3.1.0版本引入了一个新的选项，它使你无需使用`asset_img`标签插件来使用Markdown语言嵌入图片。
 
-To enable:
+使用以下配置来启用它：
 
 ``` yml _config.yml
 post_asset_folder: true
@@ -44,4 +44,4 @@ marked:
   postAsset: true
 ```
 
-Once enabled, an asset image will be automatically resolved to its corresponding post's path. For example, "image.jpg" is located at "/2020/01/02/foo/image.jpg", meaning it is an asset image of "/2020/01/02/foo/" post, `![](image.jpg)` will be rendered as `<img src="/2020/01/02/foo/image.jpg">`.
+一旦启用，素材图片将会自动解析至对应文章的路径。例如，"image.jpg"位于"/2020/01/02/foo/image.jpg"，意味着它是 "/2020/01/02/foo/" 这篇文章的素材图片，`![](image.jpg)` 会被渲染为 `<img src="/2020/01/02/foo/image.jpg">`。

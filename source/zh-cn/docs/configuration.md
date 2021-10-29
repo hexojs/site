@@ -85,11 +85,11 @@ skip_render: "_posts/test-post.md"
 `external_link.exclude` | 需要排除的域名。主域名和子域名如 `www` 需分别配置 | `[]`
 `filename_case` | 把文件名称转换为 (1) 小写或 (2) 大写 | 0
 `render_drafts` | 显示草稿 | false
-`post_asset_folder` | 启动 [Asset 文件夹](asset-folders.html) | false
+`post_asset_folder` | 启动 [Asset 文件夹](/zh-cn/docs/asset-folders) | false
 `relative_link` | 把链接改为与根目录的相对位址 | false
 `future` | 显示未来的文章 | true
-`highlight` | 代码块的设置, 请参考 [Highlight.js](/docs/syntax-highlight#Highlight-js) 进行设置 |
-`prismjs` | 代码块的设置, 请参考 [PrismJS](/docs/syntax-highlight#PrismJS) 进行设置 |
+`highlight` | 代码块的设置, 请参考 [Highlight.js](/zh-cn/docs/syntax-highlight#Highlight-js) 进行设置 |
+`prismjs` | 代码块的设置, 请参考 [PrismJS](/zh-cn/docs/syntax-highlight#PrismJS) 进行设置 |
 
 {% note info 相对地址 %}
 默认情况下，Hexo 生成的超链接都是绝对地址。例如，如果您的网站域名为 `example.com`,您有一篇文章名为 `hello`，那么绝对链接可能像这样：`http://example.com/hello.html`，它是**绝对**于域名的。相对链接像这样：`/hello.html`，也就是说，无论用什么域名访问该站点，都没有关系，这在进行反向代理时可能用到。通常情况下，建议使用绝对地址。
@@ -145,13 +145,13 @@ Hexo 使用 [Moment.js](http://momentjs.com/) 来解析和显示时间。
 
 在 Hexo 配置文件中，通过设置 include/exclude 可以让 Hexo 进行处理或忽略某些目录和文件夹。你可以使用 [glob 表达式](https://github.com/isaacs/minimatch) 对目录和文件进行匹配。
 
-`include` and `exclude` options only apply to the `source/` folder, whereas `ignore` option applies to all folders.
+`include` 和 `exclude` 选项只对 `source/` 文件夹生效，`ignore` 选项对所有文件夹均生效。
 
 参数 | 描述
 --- | ---
 `include` | Hexo 默认会忽略隐藏文件和文件夹（包括名称以下划线和 `.` 开头的文件和文件夹，Hexo 的 `_posts` 和 `_data` 等目录除外）。通过设置此字段将使 Hexo 处理他们并将它们复制到 `source` 目录下。
-`exclude` | Hexo 会忽略这些文件和目录
-`ignore` | Ignore files/folders
+`exclude` | Hexo 会排除这些文件和目录
+`ignore` | Hexo 会忽略这些文件和目录
 
 举例：
 
@@ -181,11 +181,11 @@ exclude:
   # 在这里配置一个 - "_posts/hello-world.md" 是没有用的。
 
 ignore:
-  # Ignore any folder named 'foo'.
+  # 忽略任何名称为'foo'的文件夹。
   - "**/foo"
-  # Ignore 'foo' folder in 'themes/' only.
+  # 只忽略 'themes/' 子文件夹下的 'foo' 文件夹。
   - "**/themes/*/foo"
-  # Same as above, but applies to every subfolders of 'themes/'.
+  # 同上，但是对任何'themes/'下的子文件夹均生效'themes/'。
   - "**/themes/**/foo"
 ```
 

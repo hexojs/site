@@ -17,12 +17,12 @@ title: 永久链接（Permalinks）
 `:hour` | 文章发表时的小时 (2 位数)
 `:minute` | 文章发表时的分钟 (2 位数)
 `:second` | 文章发表时的秒钟 (2 位数)
-`:title` | 文件名称 (relative to "source/_posts/" folder)
+`:title` | 文件名称 (相对于 "source/_posts/" 文件夹)
 `:name` | 文件名称
 `:post_title` | 文章标题
-`:id` | 文章 ID (_not persistent across [cache reset](/zh-cn/docs/commands#clean)_)
+`:id` | 文章 ID (_在 [缓存清除](/zh-cn/docs/commands#clean)后将发生变化_)
 `:category` | 分类。如果文章没有分类，则是 `default_category` 配置信息。
-`:hash` | SHA1 hash of filename (same as `:title`) and date (12-hexadecimal)
+`:hash` | 文件名(与 `:title` 相同)和日期(12-hexadecimal)的SHA1哈希摘要值
 
 您可在 `permalink_defaults` 参数下调整永久链接中各变量的默认值：
 

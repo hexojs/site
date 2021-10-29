@@ -27,7 +27,7 @@ deploy:
   repo:
 ```
 
-Refer to the [Plugins](https://hexo.io/plugins/) list for more deployment plugins.
+请参考[插件列表](https://hexo.io/plugins/) 以获得更多部署用插件。
 
 {% note warn 缩进 %}
 YAML依靠缩进来确定元素间的从属关系。因此，请确保每个deployer的缩进长度相同，并且使用空格缩进。
@@ -54,14 +54,14 @@ deploy:
 参数 | 描述 | 默认
 --- | --- | ---
 `repo` | 库（Repository）地址 |
-`branch` | 分支名称 | `gh-pages` (GitHub)<br>`coding-pages` (Coding.net)<br>`master` (others)
+`branch` | 分支名称 | `gh-pages` (GitHub)<br>`coding-pages` (Coding.net)<br>`master` (其他站点)
 `message` | 自定义提交信息 | `Site updated: {% raw %}{{ now('YYYY-MM-DD HH:mm:ss') }}{% endraw %}`)
-`token` | Optional token value to authenticate with the repo. Prefix with `$` to read token from environment variable
+`token` | 可选token值，用于仓库认证。如果要从环境变量读取，请使用`$`作为前缀。
 
 3. 生成站点文件并推送至远程库。执行 `hexo clean && hexo deploy`。
 
-  - You will be prompted with username and password of the target repository, unless you authenticate with a token or ssh key.
-  - hexo-deployer-git does not store your username and password. Use [git-credential-cache](https://git-scm.com/docs/git-credential-cache) to store them temporarily.
+  - 一个对话框会弹出，提示你输入目标仓库的用户名和密码，直到你使用令牌或SSH认证成功。
+  - hexo-deployer-git 不会存储您的用户名和密码，使用 [git-credential-cache](https://git-scm.com/docs/git-credential-cache) 来这样做。
 
 4. 登入 Github/BitBucket/Gitlab，请在库设置（Repository Settings）中将默认分支设置为`_config.yml`配置中的分支名称。稍等片刻，您的站点就会显示在您的Github Pages中。
 

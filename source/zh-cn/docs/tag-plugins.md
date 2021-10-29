@@ -5,7 +5,7 @@ title: 标签插件（Tag Plugins）
 
 虽然你可以使用任何格式书写你的文章，但是标签插件永远可用，且语法也都是一致的。
 
-_Tag plugins should not be wrapped inside Markdown syntax, e.g. `[]({% post_path lorem-ipsum %})` is not supported._
+_不要在Markdown语法中插入标签插件，如 `[]({% post_path lorem-ipsum %})` 是不被支持的。_
 
 ## 引用块
 
@@ -81,15 +81,15 @@ code snippet
 {% endcodeblock %}
 ```
 
-Specify additional options in `option:value` format, e.g. `line_number:false first_line:5`.
+使用 `option:value` 格式来指定额外选项，如 `line_number:false first_line:5`。
 
-Extra Options | Description | Default
+选项 | 描述 | 默认值
 --- | --- | ---
-`line_number` | Show line number | `true`
-`highlight` | Enable code highlighting | `true`
-`first_line` | Specify the first line number | `1`
-`mark` | Line highlight specific line(s), each value separated by a comma. Specify number range using a dash<br>Example: `mark:1,4-7,10` will mark line 1, 4 to 7 and 10. |
-`wrap` | Wrap the code block in [`<table>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table) | `true`
+`line_number` | 是否显示行号 | `true`
+`highlight` | 是否启用代码高亮 | `true`
+`first_line` | 指定首行标号 | `1`
+`mark` | 标记特定行，每一个值以英文逗号分隔，使用`-`号指定一个范围<br>如`mark:1,4-7,10` 将标记第一行，第4-7行，第10行。 |
+`wrap` | 将代码块包含在[`<table>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table) 标签中 | `true`
 
 ### 样例
 
@@ -251,7 +251,7 @@ content
 {% youtube video_id [type] [cookie] %}
 ```
 
-### Examples
+### 示例
 
 **视频**
 
@@ -335,13 +335,13 @@ content
 {% asset_link filename [title] [escape] %}
 ```
 
-### Embed image
+### 嵌入图片
 
-_hexo-renderer-marked 3.1.0+ can (optionally) resolves the post's path of an image automatically, refer to [this section](/docs/asset-folders#Embedding-an-image-using-markdown) on how to enable it._
+_hexo-renderer-marked 3.1.0+ 可以自动解析文章图片的路径，具体内容请参考[此篇文档](/zh-cn/docs/asset-folders#使用Markdown嵌入图片)。_
 
-"foo.jpg" is located at `http://example.com/2020/01/02/hello/foo.jpg`.
+"foo.jpg" 位于 `http://example.com/2020/01/02/hello/foo.jpg`中。
 
-**Default (no option)**
+**默认（无额外选项）**
 
 `{% asset_img foo.jpg %}`
 
@@ -349,7 +349,7 @@ _hexo-renderer-marked 3.1.0+ can (optionally) resolves the post's path of an ima
 <img src="/2020/01/02/hello/foo.jpg">
 ```
 
-**Custom class**
+**自定义类名**
 
 `{% asset_img post-image foo.jpg %}`
 
@@ -357,7 +357,7 @@ _hexo-renderer-marked 3.1.0+ can (optionally) resolves the post's path of an ima
 <img src="/2020/01/02/hello/foo.jpg" class="post-image">
 ```
 
-**Display size**
+**自定义大小**
 
 `{% asset_img foo.jpg 500 400 %}`
 
@@ -365,7 +365,7 @@ _hexo-renderer-marked 3.1.0+ can (optionally) resolves the post's path of an ima
 <img src="/2020/01/02/hello/foo.jpg" width="500" height="400">
 ```
 
-**Title & Alt**
+**标题 & Alt属性**
 
 `{% asset_img logo.svg "lorem ipsum'dolor'" %}`
 

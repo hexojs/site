@@ -10,12 +10,12 @@ title: 指令
 $ hexo init [folder]
 ```
 
-新建一个网站。如果没有设置 `folder` ，Hexo 默认在目前的文件夹建立网站。
+新建一个网站。如果没有指定 `folder` ，Hexo 默认在目前的文件夹建立网站。
 
 本命令相当于执行了以下几步：
 
 1. Git clone [hexo-starter](https://github.com/hexojs/hexo-starter) 和 [hexo-theme-landscape](https://github.com/hexojs/hexo-theme-landscape) 主题到当前目录或指定目录。
-2. 使用 [Yarn 1](https://classic.yarnpkg.com/lang/en/)、[pnpm](https://pnpm.js.org) 或 [npm](https://docs.npmjs.com/cli/install) 包管理器下载依赖（如有已安装多个，则列在前面的优先）。npm 默认随 [Node.js](/docs/#Install-Node-js) 安装。
+2. 使用 [Yarn 1](https://classic.yarnpkg.com/lang/en/)、[pnpm](https://pnpm.js.org) 或 [npm](https://docs.npmjs.com/cli/install) 包管理器下载依赖（如有已安装多个，则列在前面的优先）。npm 默认随 [Node.js](/zh-cn/docs/#安装-Node-js) 安装。
 
 ## new
 

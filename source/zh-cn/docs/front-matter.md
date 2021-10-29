@@ -25,15 +25,15 @@ date: 2013/7/13 20:46:25
 `tags` | 标签（不适用于分页） |
 `categories` | 分类（不适用于分页）|
 `permalink` | 覆盖文章网址 |
-`excerpt` | Page excerpt in plain text. Use [this plugin](/docs/tag-plugins#Post-Excerpt) to format the text |
-`disableNunjucks` | Disable rendering of Nunjucks tag `{{ }}`/`{% %}` and [tag plugins](/docs/tag-plugins) when enabled
-`lang` | Set the language to override [auto-detection](/docs/internationalization#Path) | Inherited from `_config.yml`
+`excerpt` | 页面摘要。使用[这个插件](/zh-cn/docs/tag-plugins#文章摘要和截断)来格式化文字 |
+`disableNunjucks` | 禁止 Nunjucks 标签 `{{ }}`/`{% %}` 和 [内置标签](/zh-cn/docs/tag-plugins) 的渲染
+`lang` | 手动设置语言，以覆盖[自动检测](/zh-cn/docs/internationalization.html#路径)的结果 | 从 `_config.yml`中继承
 
 ## 布局
 
-The default layout is `post`, in accordance to the value of [`default_layout`]((/docs/configuration#Writing)) setting in `_config.yml`. When the layout is disabled (`layout: false`) in an article, it will not be processed with a theme. However, it will still be rendered by any available renderer: if an article is written in Markdown and a Markdown renderer (like the default [hexo-renderer-marked](https://github.com/hexojs/hexo-renderer-marked)) is installed, it will be rendered to HTML.
+默认布局是`post`，与`_config.yml`中的[`default_layout`](/zh-cn/docs/configuration.html#文章)设置保持一致。当布局选项被禁用(`layout: false`)时，它不会被主题处理，但会被任何可能安装的渲染器渲染。例如：如果一篇文章是用Markdown书写的，且有任何Markdown渲染器(如默认的 [hexo-renderer-marked](https://github.com/hexojs/hexo-renderer-marked))安装的话，它就会被渲染成HTML。
 
-[Tag plugins](/docs/tag-plugins) are always processed regardless of layout, unless disabled by the `disableNunjucks` setting or [renderer](/api/renderer#Disable-Nunjucks-tags).
+[内置标签插件](/zh-cn/docs/tag-plugins) 总会被处理，除非明确由 `disableNunjucks` 选项禁用，或手动指定一个[渲染器](/zh-cn/api/renderer#Disable-Nunjucks-tags)。
 
 ## 分类和标签
 

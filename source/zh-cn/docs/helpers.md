@@ -414,14 +414,14 @@ url: https://example.com/blog # example
 <%- render(str, engine, [options]) %>
 ```
 
-**Examples:**
+**示例：**
 
 ``` js
 <%- render('p(class="example") Test', 'pug'); %>
 // <p class="example">Test</p>
 ```
 
-See [Rendering](https://hexo.io/zh-cn/api/rendering) for more details.
+查看 [渲染接口文档](https://hexo.io/zh-cn/api/rendering) 以了解详情。
 
 ### word_wrap
 
@@ -461,13 +461,13 @@ See [Rendering](https://hexo.io/zh-cn/api/rendering) for more details.
 
 ### escape_html
 
-Escapes HTML entities in a string.
+转义HTML实体为字符串。
 
 ``` js
 <%- escape_html(str) %>
 ```
 
-**Examples:**
+**示例：**
 
 ``` js
 <%- escape_html('<p>Hello "world".</p>') %>
@@ -639,9 +639,9 @@ Escapes HTML entities in a string.
 `amount` | 要显示的标签数量（0 = 无限制） | 0
 `suffix` | 为链接添加前缀 | None
 
-Class advanced customization:
+自定义扩展类名：
 
-Option | Description | Default
+选项 | 描述 | 默认值
 --- | --- | ---
 `class.ul` | `<ul>` class name (only for style `list`) | `tag-list` (list style)
 `class.li` | `<li>` class name (only for style `list`) | `tag-list-item` (list style)
@@ -649,7 +649,7 @@ Option | Description | Default
 `class.label` | `<span>` class name where the tag label is stored (only for normal style, when `class.label` is set the label is put in a `<span>`) | `tag-label` (normal style)
 `class.count` | `<span>` class name where the tag counter is stored (only when `show_count` is `true`) | `tag-list-count` (list style) `tag-count` (normal style)
 
-Examples:
+示例：
 
 ```ejs
 <%- list_tags(site.tags, {class: 'classtest', style: false, separator: ' | '}) %>
@@ -668,11 +668,11 @@ Examples:
 
 参数 | 描述 | 默认值
 --- | --- | ---
-`type` | 类型。此设定可为 `yearly` 或 `monthly`。 | monthly
-`order` | 排列顺序。`1`, `asc` 升序；`-1`, `desc` 降序。 | 1
-`show_count` | 显示每个归档的文章总数 | true
-`format` | 日期格式 | MMMM YYYY
-`style` | 归档列表的显示方式。使用 `list` 以无序列表（unordered list）方式显示。 | list
+`type` | 类型。此设定可为 `yearly` 或 `monthly`。 | `monthly`
+`order` | 排列顺序。`1`, `asc` 升序；`-1`, `desc` 降序。 | `1`
+`show_count` | 显示每个归档的文章总数 | `true`
+`format` | 日期格式 | `MMMM YYYY`
+`style` | 归档列表的显示方式。使用 `list` 以无序列表（unordered list）方式显示。 | `list`
 `separator` | 归档间的分隔符号。只有在 `style` 不是 `list` 时有用。 | ,
 `class` | 归档列表的 class 名称。 | archive
 `transform` | 改变归档名称显示方法的函数。请查看 [list_categories](#list-categories) 中给出的例子 |
@@ -740,9 +740,9 @@ Examples:
 `end_size` | 显示于两侧的页数 | 1
 `mid_size` | 显示于中间的页数 | 2
 `show_all` | 显示所有页数。如果开启此参数的话，`end_size` 和 `mid_size` 就没用了。 | false
-`escape` | Escape HTML tags | true
+`escape` | 转义HTML标签 | true
 
-**Examples:**
+**示例：**
 
 ``` js
 <%- paginator({
@@ -826,13 +826,13 @@ Examples:
 
 ### meta_generator
 
-Inserts [generator tag](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta).
+插入 [Generator标签](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta).
 
 ``` js
 <%- meta_generator() %>
 ```
 
-**Examples:**
+**示例：**
 
 ``` js
 <%- meta_generator() %>
