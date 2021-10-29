@@ -740,7 +740,7 @@ url: https://example.com/blog # example
 `end_size` | 显示于两侧的页数 | 1
 `mid_size` | 显示于中间的页数 | 2
 `show_all` | 显示所有页数。如果开启此参数的话，`end_size` 和 `mid_size` 就没用了。 | false
-`escape` | 转义HTML标签 | true
+`escape` | 转义 HTML 标签 | true
 
 **示例：**
 
