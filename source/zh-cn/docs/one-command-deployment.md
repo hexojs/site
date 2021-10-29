@@ -61,7 +61,7 @@ deploy:
 3. 生成站点文件并推送至远程库。执行 `hexo clean && hexo deploy`。
 
   - 除非你已经使用 Token 或 SSH 认证成功，否则一个对话框会弹出，提示你输入目标仓库的用户名和密码。
-  - hexo-deployer-git 不会存储您的用户名和密码，使用 [git-credential-cache](https://git-scm.com/docs/git-credential-cache) 来这样做。
+  - hexo-deployer-git 不会存储您的用户名和密码。请使用 [git-credential-cache](https://git-scm.com/docs/git-credential-cache) 来避免每次部署时手动输入用户名和密码。
 
 4. 登入 Github/BitBucket/Gitlab，请在库设置（Repository Settings）中将默认分支设置为`_config.yml`配置中的分支名称。稍等片刻，您的站点就会显示在您的Github Pages中。
 
