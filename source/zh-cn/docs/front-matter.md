@@ -26,7 +26,7 @@ date: 2013/7/13 20:46:25
 `categories` | 分类（不适用于分页）|
 `permalink` | 覆盖文章网址 |
 `excerpt` | 页面摘要。使用[这个插件](/zh-cn/docs/tag-plugins#文章摘要和截断)来格式化文字 |
-`disableNunjucks` | 禁止 Nunjucks 标签 `{{ }}`/`{% %}` 和 [内置标签](/zh-cn/docs/tag-plugins) 的渲染
+`disableNunjucks` | 禁止 Nunjucks 标签 `{{ }}`/`{% %}` 和 [标签插件](/zh-cn/docs/tag-plugins) 的渲染
 `lang` | 手动设置语言，以覆盖[自动检测](/zh-cn/docs/internationalization.html#路径)的结果 | 从 `_config.yml`中继承
 
 ## 布局
