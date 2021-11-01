@@ -1,3 +1,11 @@
+- name: hexo-blogger-xml
+  description: Import exported articles from blogger (migrate blogger to hexo)
+  link: https://github.com/dimaslanjaka/hexo-blogger-xml
+  tags:
+    - blogger
+    - migrate
+    - import
+    - blogger2hexo
 - name: hexo-simpleIcons
   description: Use simple-icon in your hexo passages.
   link: https://github.com/nidbCN/hexo-simpleIcons
