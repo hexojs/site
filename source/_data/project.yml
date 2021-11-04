@@ -1,1 +1,8 @@
+name: Hexo
+
 install_command: npm install hexo-cli -g
+
+github: hexojs/hexo
+npm: hexo
+twitter_name: Hexojs
+twitter: hexojs
