@@ -1,4 +1,14 @@
-en: English
+en:
+  name: English
+  menu:
+    docs: Docs
+    api: API
+    news: News
+    plugins: Plugins
+    themes: Themes
+    about: About
+    search: search
+
 zh-tw:
   name: 正體中文
   disqus_lang: zh_TW

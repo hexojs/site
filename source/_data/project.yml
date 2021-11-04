@@ -1,0 +1,1 @@
+install_command: npm install hexo-cli -g
