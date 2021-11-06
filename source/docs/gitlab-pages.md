@@ -8,7 +8,7 @@ title: GitLab Pages
 4. Add `.gitlab-ci.yml` file to your repo (alongside _config.yml & package.json) with the following content:
 
 ``` yml
-image: node:10-alpine # use nodejs v10 LTS
+image: node:14-alpine # use nodejs v14 LTS
 cache:
   paths:
     - node_modules/

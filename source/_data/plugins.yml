@@ -1,3 +1,11 @@
+- name: hexo-blogger-xml
+  description: Import exported articles from blogger (migrate blogger to hexo)
+  link: https://github.com/dimaslanjaka/hexo-blogger-xml
+  tags:
+    - blogger
+    - migrate
+    - import
+    - blogger2hexo
 - name: hexo-simpleIcons
   description: Use simple-icon in your hexo passages.
   link: https://github.com/nidbCN/hexo-simpleIcons
@@ -3034,3 +3042,28 @@
     - javascript
     - js
     - css
+- name: hexo-filter-inline-svg
+  description: A Hexo plugin that inline your svg in the img tag into HTML file.
+  link: https://github.com/widergao/hexo-filter-inline-svg
+  tags:
+    - filter
+    - inline
+    - svg
+- name: hexo-url-submission
+  description: Auto submit site URLs to major search engines, including Google, Bing, ShenMa and Baidu, to improve the speed and quality of sites included in search engines. | 自动提交站点URL到百度、谷歌、必应、神马，来提高搜索引擎收录站点的速度和质量。
+  link: https://github.com/abnerwei/hexo-url-submission
+  tags:
+    - baidu
+    - google
+    - bing
+    - shenma
+    - seo
+    - url
+    - search engine
+- name: hexo-reference-plus
+  description: A hexo plugin to support simply reference marked and footnotes by markdown. Auto serial number, tooltip, and more
+  link: https://github.com/MaxChang3/hexo-reference-plus
+  tags:
+    - footnotes
+    - reference
+    - tooltip
