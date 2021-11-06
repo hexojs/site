@@ -3580,6 +3580,16 @@
     - Elegant
     - Responsive
     - Clean
+- name: Flavor
+  description: A Simple and Fast Theme for Hexo
+  link: https://github.com/xtexChooser/hexo-theme-flavor
+  preview: https://xtexx.ml/blog/2021/8/22/custom-theme/
+  tags:
+    - 中文
+    - 简约
+    - simple
+    - English
+    - Internationalization
 - name: Klise
   description: A simple, concise, and fast theme for Hexo.
   link: https://github.com/dewjohn/hexo-theme-klise
