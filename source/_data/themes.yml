@@ -1,3 +1,14 @@
+- name: Nothinglin
+  description: A beauty-simple theme for Hexo.
+  link: https://github.com/Nothing-lin/hexo-theme-nothinglin
+  preview: https://www.nothinglin.ml/
+  tags:
+    - 中文
+    - simple
+    - minimal
+    - elegant
+    - responsive
+    - mobile
 - name: Hingle
   description: A concise theme based on Single for Hexo.
   link: https://github.com/Dreamer-Paul/Hingle
