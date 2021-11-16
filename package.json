@@ -7,7 +7,8 @@
   },
   "scripts": {
     "build": "hexo generate",
-    "eslint": "eslint ."
+    "eslint": "eslint .",
+    "prepare": "husky install"
   },
   "dependencies": {
     "cheerio": "^0.22.0",
@@ -24,19 +25,14 @@
     "hexo-server": "^2.0.0",
     "hexo-uglify": "^2.0.0",
     "lunr": "2.3.9",
-    "sharp": "^0.28.1"
+    "sharp": "^0.29.1"
   },
   "devDependencies": {
-    "eslint": "^7.0.0",
+    "eslint": "^8.0.1",
     "eslint-config-hexo": "^4.0.0",
-    "husky": "^4.0.7",
+    "husky": "^7.0.2",
     "imagemin-lint-staged": "^0.4.0",
     "lint-staged": "^11.0.0"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
   },
   "lint-staged": {
     "*.{png,jpeg,jpg,gif,svg}": [
