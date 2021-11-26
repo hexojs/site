@@ -30,6 +30,8 @@ title: Official plugins hexo-renderer-ejs 2.0.0, hexo-generator-sitemap 2.2.0 re
 
 ## hexo-renderer-ejs 2.2.0
 
+> [Release 2.2.0](https://github.com/hexojs/hexo-generator-sitemap/releases/tag/2.2.0)
+
 ### Fixes
 
 * Provide a more reasonable default value for sitemap [#117](https://github.com/hexojs/hexo-generator-sitemap/pull/117) [@wdhongtw]
