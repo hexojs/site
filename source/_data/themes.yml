@@ -3631,3 +3631,13 @@
     - Light
     - simple
     - pure
+- name: delicate
+  description: A delicate Hexo theme, and have many component.
+  link: https://github.com/can-dy-jack/hexo-theme-delicate
+  preview: https://kartjim.top/delicate
+  tags:
+    - 中文
+    - delicate
+    - Light
+    - simple
+    - component 
