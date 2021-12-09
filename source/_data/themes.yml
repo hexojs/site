@@ -35,11 +35,11 @@
   link: https://github.com/tangyuxian/hexo-theme-tangyuxian
   preview: https://www.tangyuxian.com
   tags:
-      - 中文
-      - integrate
-      - comic
-      - 可爱/萌
-      - 小埋
+    - 中文
+    - integrate
+    - comic
+    - 可爱/萌
+    - 小埋
 - name: Frame
   description: A minimal, elegant hexo theme.
   link: https://github.com/zoeingwingkei/frame
@@ -3640,4 +3640,15 @@
     - delicate
     - Light
     - simple
-    - component 
+    - component
+- name: Linear
+  description: A dream hexo theme for developers.
+  link: https://github.com/syy11cn/hexo-theme-linear
+  preview: https://blog.syy11.cn/
+  tags:
+    - Chinese
+    - English
+    - simple
+    - responsive
+    - one column
+    - Evan You
