@@ -3067,3 +3067,9 @@
     - footnotes
     - reference
     - tooltip
+- name: hexo-filter-text-autospace
+  description: A hexo plugin to insert spaces between CJK and Latin characters.
+  link: https://github.com/Cerallin/hexo-filter-text-autospace
+  tags:
+    - filter
+    - html
