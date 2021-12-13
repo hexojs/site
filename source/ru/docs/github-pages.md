@@ -2,10 +2,10 @@
 title: GitHub Pages
 ---
 
-В этом туториале мы используем [Travis CI](https://travis-ci.com/) для деплоя в Github Pages. Travis CI бесплатен для репозиториев с открытым исходным кодом, то есть ветка `master` вашего репозитория должна быть публичной. Пожалуйста, перейдите в описание [Приватного репозитория](#Private-repository), если вы предпочитаете не открывать свой исходный код, либо откажитесь от загрузки своих файлов на GitHub.
+В этом туториале мы используем [Travis CI](https://travis-ci.com/) для деплоя в Github Pages. [Travis CI](https://travis-ci.com/) бесплатен для репозиториев с открытым исходным кодом, то есть ветка `master` вашего репозитория должна быть публичной. Пожалуйста, перейдите в описание [приватного репозитория](#Private-repository), если вы предпочитаете не открывать свой исходный код, либо откажитесь от загрузки своих файлов на GitHub.
 
 1. Создайте репозиторий с названием <b>*username*.github.io</b>, где `username` — ваше имя пользователя GitHub. Если вы уже загрузили файлы в репозиторий с другим названием, просто переименуйте его.
-2. Запушьте файлы вашей папки Hexo в этот репозиторий. Папка `public/` не должна загружаться по умолчанию, проверьте, что файл `.gitignore` содержит строку `public/`. Структура папки должна быть такой же, как в [этом репозитории](https://github.com/hexojs/hexo-starter), без файла `.gitmodules`.
+2. Загрузите `push` файлы вашей папки Hexo в этот репозиторий. Папка `public/` не должна загружаться по умолчанию, проверьте, что файл `.gitignore` содержит строку `public/`. Структура папки должна быть такой же, как в [этом репозитории](https://github.com/hexojs/hexo-starter), без файла `.gitmodules`.
 3. Добавьте [Travis CI](https://github.com/marketplace/travis-ci) в свой аккаунт.
 4. Зайдите на страницу [Настроек приложения](https://github.com/settings/installations), сконфигурируйте Travis CI, чтобы оно имело доступ к репозиторию.
 5. Вас перенаправят на страницу Travis.
@@ -48,10 +48,10 @@ deploy:
 
 ## Приватный репозиторий
 
-The following instruction is adapted from [one-command deployment](/docs/one-command-deployment) page.
+Следующая инструкция адаптирована со страницы [развёртывание одной командой](/docs/one-command-deployment) page.
 
-1. Install [hexo-deployer-git](https://github.com/hexojs/hexo-deployer-git).
-2. Add the following configurations to **_config.yml**, (remove existing lines if any)
+1. Установите [hexo-deployer-git](https://github.com/hexojs/hexo-deployer-git).
+2. Добавьте следующую конфигурацию в **_config.yml**, (удалите существующие строки, если таковые имеются)
 
   ``` yml
   deploy:
@@ -61,8 +61,8 @@ The following instruction is adapted from [one-command deployment](/docs/one-com
     branch: gh-pages
   ```
 
-3. Run `hexo clean && hexo deploy`.
-4. Check the webpage at *username*.github.io.
+3. Запустите `hexo clean && hexo deploy`.
+4. Проверьте веб-страницу по адресу *username*.github.io.
 
 ## Полезные ссылки
 
