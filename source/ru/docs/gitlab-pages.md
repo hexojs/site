@@ -27,7 +27,7 @@ pages:
     - master
 ```
 
-5. *username*.gitlab.io должен заработать, как только GitLab CI закончит деплой,
+5. *username*.gitlab.io должен заработать, как только GitLab CI закончит деплой.
 6. (Опционально) Если вы хотите проверить содержимое папок с материалами (html, css, js и т.д.), они могут быть найдены в разделе [job artifact](https://docs.gitlab.com/ee/user/project/pipelines/job_artifacts.html).
 
 ### Страница проекта
