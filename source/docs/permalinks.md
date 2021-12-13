@@ -1,37 +1,37 @@
 ---
-title: Permalinks
+title: Постоянные ссылки
 ---
-You can specify the permalinks for your site in `_config.yml` or in the front-matter for each post.
+Вы можете указать постоянные ссылки для своего сайта в "_config.yml" или в заголовке для каждого сообщения.
 
-### Variables
+### Переменные
 
-Besides the following variables, you can use any attributes in the permalink.
+Помимо следующих переменных, вы можете использовать любые атрибуты в постоянной ссылке.
 
-Variable | Description
+Переменная | Описание
 --- | ---
-`:year` | Published year of posts (4-digit)
-`:month` | Published month of posts (2-digit)
-`:i_month` | Published month of posts (Without leading zeros)
-`:day` | Published day of posts (2-digit)
-`:i_day` | Published day of posts (Without leading zeros)
-`:hour` | Published hour of posts (2-digit)
-`:minute` | Published minute of posts (2-digit)
-`:second` | Published second of posts (2-digit)
-`:title` | Filename (relative to "source/_posts/" folder)
-`:name` | Filename
-`:post_title` | Post title
-`:id` | Post ID (_not persistent across [cache reset](/docs/commands#clean)_)
-`:category` | Categories. If the post is uncategorized, it will use the `default_category` value.
-`:hash` | SHA1 hash of filename (same as `:title`) and date (12-hexadecimal)
+`:year` | Год публикации статьи (4-значный)
+`:month` | Месяц публикации статьи (2-значный)
+`:i_month` | Месяц публикации статьи (без ведущих нулей)
+`:day` | Число публикации статьи (2-значный)
+`:i_day` | Число публикации статьи (без ведущих нулей)
+`:hour` | Час публикации статьи (2-значный)
+`:minute` | Минута публикации статьи (2-значный)
+`:second` | Секунда публикации статьи (2-значный)
+`:title` | Имя файла (относительно папки "source/_posts/")
+`:name` | Имя файла
+`:post_title` | Заголовок статьи
+`:id` | ID статьи (Идентификатор записи (_ не сохраняется при [сбросе кэша] (/docs/commands#clean)_)
+`:category` | Категории. Если сообщение не классифицировано, оно будет использовать значение "default_category".
+`:hash` | Хэш SHA1 имени файла (такой же, как `:title`) и даты (12-шестнадцатеричный)
 
-You can define the default value of each variable in the permalink through the `permalink_defaults` setting:
+Вы можете определить значение по умолчанию для каждой переменной в постоянной ссылке с помощью параметра `permalink_defaults`:
 
 ``` yaml
 permalink_defaults:
   lang: en
 ```
 
-### Examples
+### Примеры
 
 ``` yaml source/_posts/hello-world.md
 title: Hello World
@@ -41,7 +41,7 @@ categories:
 - bar
 ```
 
-Setting | Result
+Настройка | Результат
 --- | ---
 `:year/:month/:day/:title/` | 2013/07/14/hello-world/
 `:year-:month-:day-:title.html` | 2013-07-14-hello-world.html
@@ -56,28 +56,28 @@ categories:
 - bar
 ```
 
-Setting | Result
+Настройка | Результат
 --- | ---
 `:year/:month/:day/:title/` | 2013/07/14/lorem/hello-world/
 `:year/:month/:day/:name/` | 2013/07/14/hello-world/
 
-### Multi-language Support
+### Поддержка нескольких языков
 
-To create a multi-language site, you can modify the `new_post_name` and `permalink` settings like this:
+Чтобы создать многоязычный сайт, вы можете изменить настройки `new_post_name` и `permalink` следующим образом:
 
 ``` yaml
 new_post_name: :lang/:title.md
 permalink: :lang/:title/
 ```
 
-When you create a new post, the post will be saved to:
+Когда вы создадите новую публикацию, она будет сохранена в:
 
 ``` bash
 $ hexo new "Hello World" --lang tw
 # => source/_posts/tw/Hello-World.md
 ```
 
-and the URL will be:
+и URL-адрес будет:
 
 ``` plain
 http://localhost:4000/tw/hello-world/
