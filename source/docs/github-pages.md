@@ -30,7 +30,8 @@ In this tutorial, we use [GitHub Actions](https://docs.github.com/en/actions) to
   $ git push origin source
   ```
 
-4. Add `.github/workflows/pages.yml` file to your repo with the following content:
+4. Check what version of Node.js you are using on your local machine with `node --version`. Make a note of the major version (e.g., `v16.x`)
+5. Create `.github/workflows/pages.yml` in your repo with the following contents (substituting `v16.x` for whatever major version of Node.js you noted in the previous step):
 
 ```yml .github/workflows/pages.yml
 name: Pages
@@ -45,10 +46,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Use Node.js 12.x
+      - name: Use Node.js 16.x
         uses: actions/setup-node@v1
         with:
-          node-version: '12.x'
+          node-version: '16.x'
       - name: Cache NPM dependencies
         uses: actions/cache@v2
         with:
