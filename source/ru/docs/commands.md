@@ -10,10 +10,10 @@ $ hexo init [folder]
 
 Инициализирует сайт. Если переменная `folder` не указана, Hexo создаёт сайт в текущей папке.
 
-This command is a shortcut that runs the following steps:
+Эта команда представляет собой ярлык, который выполняет следующие действия:
 
-1. Git clone [hexo-starter](https://github.com/hexojs/hexo-starter) including [hexo-theme-landscape](https://github.com/hexojs/hexo-theme-landscape) into the current directory or a target folder if specified.
-2. Install dependencies using a package manager: [Yarn 1](https://classic.yarnpkg.com/lang/en/), [pnpm](https://pnpm.js.org) or [npm](https://docs.npmjs.com/cli/install), whichever is installed; if there are more than one installed, the priority is as listed. npm is bundled with [Node.js](/docs/#Install-Node-js) by default.
+1. Создаёт слон Git репозитория [hexo-starter](https://github.com/hexojs/hexo-starter) включая [hexo-theme-landscape](https://github.com/hexojs/hexo-theme-landscape) в текущий каталог или,если указана, в целевую папку.
+2. Установите зависимости с помощью менеджера пакетов: [Yarn 1](https://classic.yarnpkg.com/lang/en/), [pnpm](https://pnpm.js.org) или [npm](https://docs.npmjs.com/cli/install), в зависимости от того, что установлено; если установлено более одного, приоритет указан в списке. npm поставляется в комплекте с [Node.js](/docs/#Install-Node-js) by default.
 
 ## new
 
@@ -21,7 +21,7 @@ This command is a shortcut that runs the following steps:
 $ hexo new [layout] <title>
 ```
 
-Будет создана новая статья. Если макет не был указан, Hexo будет использовать значение `default_layout`, указанное в  [_config.yml](configuration.html). Если название содержит пробелы, заключите его в кавычки.
+Будет создана новая статья. Если макет не был указан, Hexo будет использовать значение `default_layout`, указанное в [_config.yml](configuration.html). Если название содержит пробелы, заключите его в кавычки.
 
 ## generate
 
