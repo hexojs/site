@@ -3735,7 +3735,7 @@
     - Simple
     - Clean
     - Blog
-- name: Terminal
+- name: M-Terminal
   description: A terminal like hexo theme.
   link: https://github.com/maiyatang2021/hexo-theme-terminal
   preview: https://blog.maiyatang.co/
