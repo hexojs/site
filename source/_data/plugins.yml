@@ -1,3 +1,12 @@
+- name: hexo-typora-asset
+  description: hexo兼容typora插入相对路径的图片
+  link: https://github.com/slcnx/hexo-typora-asset
+  tags:
+    - typora
+    - hexo
+    - filter
+    - markdown
+    - image
 - name: hexo-blogger-xml
   description: Import exported articles from blogger (migrate blogger to hexo)
   link: https://github.com/dimaslanjaka/hexo-blogger-xml
@@ -3073,3 +3082,4 @@
   tags:
     - filter
     - html
+    
