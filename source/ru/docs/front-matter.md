@@ -32,7 +32,7 @@ date: 2013/7/13 20:46:25
 `tags` | Теги (Недоступно для страниц) |
 `categories` | Категории (Не доступно для страниц) |
 `permalink` | Переопределяет ссылку по умолчанию |
-`excerpt` | Page excerpt in plain text. Use [this plugin](/docs/tag-plugins#Post-Excerpt) to format the text |
+`excerpt` | Отрывок страницы в виде простого текста. Используйте [этот плагин](/ru/docs/tag-plugins#Отрывок-поста) для оформления текста |
 `disableNunjucks` | Disable rendering of Nunjucks tag `{{ }}`/`{% %}` and [tag plugins](/docs/tag-plugins) when enabled
 `lang` | Set the language to override [auto-detection](/docs/internationalization#Path) | Inherited from `_config.yml`
 
