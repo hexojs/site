@@ -31,7 +31,7 @@ date: 2013/7/13 20:46:25
 `comments` | Включение поддержки комментариев в посте | true
 `tags` | Теги (Недоступно для страниц) |
 `categories` | Категории (Не доступно для страниц) |
-`permalink` | Переопределяет ссылку по умолчанию |
+`permalink` | Переопределяет ссылку по умолчанию. Должна заканчиваться `/` или `.html` | `null`
 `excerpt` | Отрывок страницы в виде простого текста. Используйте [этот плагин](/ru/docs/tag-plugins#Отрывок-поста) для оформления текста |
 `disableNunjucks` | Disable rendering of Nunjucks tag `{{ }}`/`{% %}` and [tag plugins](/docs/tag-plugins) when enabled
 `lang` | Set the language to override [auto-detection](/docs/internationalization#Path) | Inherited from `_config.yml`
