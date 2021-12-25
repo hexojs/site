@@ -314,6 +314,11 @@ After a few moments, your website will be deployed.
 
 For deployment-related considerations, you can refer to [Our documentation](https://github.com/NaturalSelectionLabs/hexo-deployer-rss3/blob/develop/README.md).
 
+## Layer0
+
+[Layer0](https://www.layer0.co) is an all-in-one platform to develop, deploy, preview, experiment on, monitor, and run your headless frontend. It is focused on large, dynamic websites and best-in-class performance through EdgeJS (a JavaScript-based Content Delivery Network), predictive prefetching, and performance monitoring. Layer0 offers a free tier.
+
+Get started in just a few minutes by following [Layer0's guide to deploying Hexo](https://docs.layer0.co/guides/hexo).
 
 ## Other Methods
 
