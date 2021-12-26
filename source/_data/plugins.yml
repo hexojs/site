@@ -3042,6 +3042,15 @@
     - javascript
     - js
     - css
+- name: hexo-vtuber-banner
+  description: Add a Vtuber or banner to your blog | 添加vtuber/vup横幅card到你的博客
+  link: https://github.com/MIMONATCH/hexo-vtuber-banner
+  tags:
+    - vtuber
+    - vup
+    - html
+    - markdown
+    - 美化
 - name: hexo-filter-inline-svg
   description: A Hexo plugin that inline your svg in the img tag into HTML file.
   link: https://github.com/widergao/hexo-filter-inline-svg
