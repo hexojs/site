@@ -80,6 +80,7 @@ We highly recommend to always install the [latest version](https://www.npmjs.com
 
 Hexo version | Minimum Node.js version
 --- | ---
+6.0+ | 12.13.0
 5.0+ | 10.13.0
 4.1 - 4.2 | 8.10
 4.0 | 8.6
