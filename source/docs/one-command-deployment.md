@@ -350,8 +350,6 @@ export default new Router().static('public', ({ cache }) => {
 0 deploy
 ```
 
-Get started in just a few minutes by following [Layer0's guide to deploying Hexo](https://docs.layer0.co/guides/hexo).
-
 Alternatively, you can click the deploy button below to create a new project:
 
 [![Deploy Layer0](https://docs.layer0.co/button.svg)](https://app.layer0.co/deploy?repo=https%3A%2F%2Fgithub.com%2Flayer0-docs%2Flayer0-hexo-example)
