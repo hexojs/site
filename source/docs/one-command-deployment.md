@@ -347,6 +347,7 @@ export default new Router().static('public', ({ cache }) => {
 
 3. Deploy
 ```bash
+npm run build
 0 deploy
 ```
 
