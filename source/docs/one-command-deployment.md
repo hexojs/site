@@ -347,7 +347,7 @@ export default new Router().static('public', ({ cache }) => {
 
 3. Deploy
 ```bash
-npm run build
+hexo generate
 0 deploy
 ```
 
