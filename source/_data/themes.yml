@@ -23,7 +23,7 @@
 - name: mashiro
   description: A CTeX-like theme for Hexo.
   link: https://github.com/bill-xia/hexo-theme-mashiro
-  preview: https://wilsonxia.cn
+  preview: http://mashiro.wilsonxia.cn
   tags:
     - 中文
     - responsive
