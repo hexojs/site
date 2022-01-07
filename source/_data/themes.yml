@@ -3663,3 +3663,13 @@
     - responsive
     - one column
     - Evan You
+- name: Peomas
+  description: A concise hexo theme.
+  link: https://github.com/thomasyu929/hexo-theme-peomas
+  preview: https://thomasyu929.github.io/
+  tags:
+    - Responsive design
+    - Category
+    - Tag
+    - Search
+    - Concise
