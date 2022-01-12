@@ -3089,3 +3089,10 @@
     - comments
     - simple config
     - self-hosted
+- name: hexo-deployer-pinata
+  description: Pinata and IPFS deployer for Hexo.
+  link: https://github.com/qishen/hexo-deployer-pinata
+  tags:
+    - deployer
+    - pinata
+    - ipfs
