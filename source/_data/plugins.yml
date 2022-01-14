@@ -3089,3 +3089,11 @@
     - comments
     - simple config
     - self-hosted
+- name: hexo-link-obsidian
+  description: Convert Obsidian WikiLinks to Markdown format by use obsidian plugin server.
+  link: https://github.com/moelody/hexo-link-obsidian
+  tags:
+    - obsidian
+    - link
+    - wiki
+    - image
