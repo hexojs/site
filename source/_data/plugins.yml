@@ -2548,7 +2548,7 @@
     - tag
     - images
 - name: hexo-bilibili-bangumi
-  description: Generate pages of bilibili bangumis for Hexo | 为 Hexo 添加哔哩哔哩番剧页面
+  description: Generate pages of bangumis for Hexo, support Bilibili and Bangumi sources. | 为 Hexo 添加番剧页面，支持哔哩哔哩和 Bangumi 源。
   link: https://github.com/HCLonely/hexo-bilibili-bangumi
   tags:
     - generator
@@ -2585,14 +2585,6 @@
     - utility
     - web-push-notification
     - notification
-- name: hexo-online-server
-  description: Edit and publish articles online | 在线编辑、发布文章
-  link: https://github.com/HCLonely/hexo-online-server
-  tags:
-    - online
-    - server
-    - editor
-    - preview
 - name: hexo-cldnry
   description: Hexo tag to add an image from Cloudinary using Cloudinary SDK.
   link: https://github.com/maliMirkec/hexo-cldnry
