@@ -1341,8 +1341,8 @@
     - white
 - name: ztopic
   description: A simple responsive theme
-  link: https://github.com/wa-ri/hexo-theme-ztopic
-  preview: https://wa-ri.github.io/
+  link: https://github.com/zo-ly/hexo-theme-ztopic
+  preview: https://zo-ly.github.io/
   tags:
     - responsive
     - simple
