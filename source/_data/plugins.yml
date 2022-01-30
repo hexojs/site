@@ -3089,3 +3089,10 @@
     - link
     - wiki
     - image
+- name: hexo-tag-fb-comments
+  description: Embed Facebook comments plugin without any modification of theme!
+  link: https://github.com/hms5232/hexo-tag-fb-comments
+  tags:
+    - tag
+    - facebook
+    - comments
