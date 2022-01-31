@@ -19,7 +19,7 @@
     "hexo-generator-archive": "^1.0.0",
     "hexo-generator-feed": "^3.0.0",
     "hexo-generator-sitemap": "^2.0.0",
-    "hexo-renderer-marked": "^4.0.0",
+    "hexo-renderer-marked": "^5.0.0",
     "hexo-renderer-pug": "^2.0.0",
     "hexo-renderer-stylus": "^2.0.0",
     "hexo-server": "^3.0.0",
