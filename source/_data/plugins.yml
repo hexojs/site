@@ -1,3 +1,10 @@
+- name: hexo-deployer-firebase
+  description: Google Firebase Deployer for Hexo.
+  link: https://github.com/pai233/hexo-deployer-firebase
+  tags:
+    - deployer
+    - google
+    - firebase
 - name: hexo-blogger-xml
   description: Import exported articles from blogger (migrate blogger to hexo)
   link: https://github.com/dimaslanjaka/hexo-blogger-xml
