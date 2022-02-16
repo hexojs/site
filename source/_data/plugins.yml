@@ -3103,3 +3103,9 @@
     - tag
     - facebook
     - comments
+- name: hexo-sitemap
+  description: generate sitemap.txt for hexo.
+  link: https://github.com/uiolee/hexo-sitemap
+  tags:
+    - sitemap
+    - seo
