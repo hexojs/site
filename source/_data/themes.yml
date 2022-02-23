@@ -1,3 +1,18 @@
+- name: Acorn
+  description: Acorn is a Hexo theme for small to medium sized businesses or studios.
+  link: https://github.com/zhwangart/hexo-theme-acorn
+  preview: https://acorn.imaging.xin
+  tags:
+    - 中文
+    - 企业官网
+    - 工作室
+    - 画廊
+    - Portal
+    - Studios
+    - Gallery
+    - Simple
+    - Elegant
+    - Mobile
 - name: Nothinglin
   description: A beauty-simple theme for Hexo.
   link: https://github.com/Nothing-lin/hexo-theme-nothinglin
