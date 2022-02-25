@@ -10,7 +10,7 @@ jobs:
         with:
           ref: refs/pull/${{ github.event.pull_request.number }}/merge
       - name: Use Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
       - name: Install Dependencies
         run: npm install
       - name: Lint

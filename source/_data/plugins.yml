@@ -3109,3 +3109,10 @@
   tags:
     - sitemap
     - seo
+- name: hexo-github-repo-tag
+  description: A simple and beautiful tag for the GitHub repository.
+  link: https://github.com/JoJoJotarou/hexo-github-repo-tag
+  tags:
+    - tag
+    - github
+    - repository
