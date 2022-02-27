@@ -1,0 +1,8 @@
+<div class="header">
+    <h1 class="logo"><%= config.title %></h1>
+    <ul class="nav">
+        <% for (name in theme.menu) { %>
+        <li><a href="<%- url_for(theme.menu[name]) %>"><%= name %></a></li>
+        <% } %>
+    </ul>
+</div>

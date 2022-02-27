@@ -1,14 +1,14 @@
-title: Hexo
-subtitle: "A fast, simple & powerful blog framework powered by Node.js."
-description: "Hexo is a fast, simple & powerful blog framework powered by Node.js."
-author: Hexo
-language: en
-timezone: UTC
+title: One-paper
+subtitle: "A light and pure hexo theme for bloggers, simulated the feeling of reading on paper."
+description: "A light and pure hexo theme for bloggers, simulated the feeling of reading on paper."
+author: Zheli
+language: zh-cn
+timezone: UTC-8
 
-url: https://hexo.io
+url: https://zheli.design/one-paper/
 root: /
 permalink: news/:year/:month/:day/:title/
-archive_dir: news
+archive_dir: /
 code_dir: downloads/code
 new_post_name: :year-:month-:day-:title.md # File name of new posts
 post_asset_folder: true
@@ -17,10 +17,10 @@ pretty_urls:
   trailing_index: false
   trailing_html: false
 
-theme: navy
+theme: one-paper
 
 highlight:
-  enable: true
+  enable: false
   line_number: false
 
 disqus_shortname: hexojs
