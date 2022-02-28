@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <%- partial('_partial/head') %>
+    <body>
+        <div class="paper">
+            <div class="paper-main">
+                <% if (is_post() || is_page()) { %>
+                    <%- partial('_partial/post-header') %>
+                <% } else { %>
+                    <%- partial('_partial/header') %>
+                <% } %>
+                <%- body %>
+                <%- partial('_partial/footer') %>
+            </div>
+        </div>
+    </body>
+</html>
