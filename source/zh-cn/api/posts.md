@@ -58,4 +58,4 @@ hexo.post.render(source, data);
 - 使用 [Nunjucks] 渲染
 - 执行 `after_post_render` 过滤器
 
-[Nunjucks]: http://mozilla.github.io/nunjucks/
+[Nunjucks]: https://mozilla.github.io/nunjucks/
