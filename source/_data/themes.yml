@@ -1,3 +1,23 @@
+- name: One-paper
+  description: A light and pure hexo theme for bloggers, simulated the feeling of reading on paper.
+  link: https://github.com/zheli-design/hexo-theme-one-paper
+  preview: https://zheli.design/one-paper/
+  tags:
+    - paper
+    - responsive
+    - blog
+    - pure
+    - simple
+    - minimal
+    - elegant
+    - white
+    - writing
+    - Chinese
+    - one-column
+    - light
+    - 中文
+    - 极简
+    - 博客
 - name: Acorn
   description: Acorn is a Hexo theme for small to medium sized businesses or studios.
   link: https://github.com/zhwangart/hexo-theme-acorn
