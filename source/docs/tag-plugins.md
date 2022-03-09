@@ -375,7 +375,7 @@ _hexo-renderer-marked 3.1.0+ can (optionally) resolves the post's path of an ima
 
 **Title & Alt**
 
-`{% asset_img logo.svg "lorem ipsum'dolor'" %}`
+`{% asset_img foo.jpg "lorem ipsum'dolor'" %}`
 
 ``` html
 <img src="/2020/01/02/hello/foo.jpg" title="lorem ipsum" alt="dolor">

@@ -51,7 +51,7 @@ jobs:
           publish_dir: ./public
 ```
 
-5. Once the deployment is finished, the generated pages can be found in the `gh-pages` branch of your repository
+5. Once the deployment is finished, the generated pages can be found in the `gh-pages` branch of your repository.
 6. In your GitHub repo's setting, navigate to **Settings** > **Pages** > **Source**. Change the branch to `gh-pages` and save.
 7. Check the webpage at *username*.github.io.
 
@@ -64,16 +64,16 @@ If you prefer to have a project page on GitHub:
 1. Navigate to your repo on GitHub. Go to the **Settings** tab. Change the **Repository name** so your blog is available at <b>username.github.io/*repository*</b>,  **repository** can be any name, like *blog* or *hexo*.
 2. Edit your **_config.yml**, change the `url:` value to <b>https://*username*.github.io/*repository*</b>.
 3. Commit and push to the default branch.
-4. Once the deployment is finished, the generated pages can be found in the `gh-pages` branch of your repository
+4. Once the deployment is finished, the generated pages can be found in the `gh-pages` branch of your repository.
 6. In your GitHub repo's setting, navigate to **Settings** > **Pages** > **Source**. Change the branch to `gh-pages` and save.
-7. Check the webpage at *username*.github.io/*repository*
+7. Check the webpage at *username*.github.io/*repository*.
 
 ## One-command deployment
 
 The following instruction is adapted from [one-command deployment](/docs/one-command-deployment) page.
 
 1. Install [hexo-deployer-git](https://github.com/hexojs/hexo-deployer-git).
-2. Add the following configurations to **_config.yml**, (remove existing lines if any)
+2. Add the following configurations to **_config.yml**, (remove existing lines if any).
 
   ``` yml
   deploy:
