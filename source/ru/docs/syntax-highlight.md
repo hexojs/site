@@ -35,6 +35,8 @@ highlight:
   auto_detect: false
   line_number: true
   tab_replace: ''
+  exclude_languages:
+    - example
   wrap: true
   hljs: false
 prismjs:
@@ -81,6 +83,8 @@ highlight:
   auto_detect: false
   line_number: true
   tab_replace: '  '
+  exclude_languages:
+    - example
   wrap: true
   hljs: false
 prismjs:
@@ -131,6 +135,11 @@ You might also notice that all `class` has no `hljs-` prefixed, we will revisit 
 ### tab_replace
 
 Replace tabs inside code block with given string. By default it is 2 spaces.
+
+
+### exclude_languages (+6.1.0)
+
+Only wrap with `<pre><code class="lang"></code></pre>` and will not render all tags(`span`, and `br`) in content if are languages matches this option.
 
 ### wrap
 
