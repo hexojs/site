@@ -36,6 +36,8 @@ highlight:
   line_number: true
   line_threshold: 0
   tab_replace: ''
+  exclude_languages:
+    - example
   wrap: true
   hljs: false
 prismjs:
@@ -84,6 +86,8 @@ highlight:
   line_number: true
   line_threshold: 0
   tab_replace: '  '
+  exclude_languages:
+    - example
   wrap: true
   hljs: false
 prismjs:
@@ -138,6 +142,11 @@ Accepts an optional threshold to only show line numbers as long as the numbers o
 ### tab_replace
 
 用代码内的 tab (`\t`) 替换为给定值，默认值是两个空格。
+
+
+### exclude_languages (+6.1.0)
+
+Only wrap with `<pre><code class="lang"></code></pre>` and will not render all tags(`span`, and `br`) in content if are languages matches this option.
 
 ### wrap
 
