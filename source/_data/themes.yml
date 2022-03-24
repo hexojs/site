@@ -3705,6 +3705,16 @@
     - Tag
     - Search
     - Concise
+- name: Paperwhite
+  description: A minimalist theme for Hexo
+  link: https://github.com/aeilot/hexo-theme-paperwhite
+  preview: http://en.blog.aeilot.top
+  tags:
+    - responsive
+    - minimalist
+    - simple
+    - light
+    - one_column
 - name: Instapaper
   description: A light fast hexo theme.
   link: https://github.com/techmovie/hexo-theme-instapaper
@@ -3715,4 +3725,5 @@
     - Tag
     - simple
     - Concise
-    - darkMode
+    - DarkMode
+    - Responsive design
