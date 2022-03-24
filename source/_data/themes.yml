@@ -3715,3 +3715,12 @@
     - simple
     - light
     - one_column
+- name: Lous
+  description: A minimalist theme for Hexo
+  link: https://github.com/liuxiaotian/hexo-theme-lous
+  preview: http://liuxiaotian.github.io
+  tags:
+    - Minimalist
+    - Simple
+    - Clean
+    - Blog
