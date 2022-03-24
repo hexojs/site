@@ -3715,3 +3715,14 @@
     - simple
     - light
     - one_column
+- name: leedom
+  description: A pure hexo theme.
+  link: https://github.com/leedom92/hexo-theme-leedom
+  preview: https://blog.leedom.me/
+  tags:
+    - 中文
+    - English
+    - Pure
+    - Simple
+    - Concise
+    - Search
