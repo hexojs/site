@@ -78,7 +78,7 @@ $ npm install hexo
 
 Once installed, you can run Hexo in two ways:
 
-1. `npx hexo <command>`
+1. `npm hexo <command>`
 2. Linux users can set relative path of `node_modules/` folder:
 
   ``` bash
