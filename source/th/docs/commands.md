@@ -7,7 +7,7 @@ title: Commands
 $ hexo init [folder]
 ```
 
-initialize เว็บไซต์. ถ้าไม่ป่งชี้หรือสร้าง `folder` โดยเฉพาะ hexo 
+initialize เว็บไซต์. ถ้าไม่ป่งชี้หรือสร้าง `folder` โดยเฉพาะ hexo
 จะสร้างไฟล์ต่างๆอยู่ใน directory ปัจจุบัน
 
 This command is a shortcut that runs the following steps:
@@ -21,9 +21,9 @@ This command is a shortcut that runs the following steps:
 $ hexo new [layout] <title>
 ```
 
-สร้างบทความใหม่. 
+สร้างบทความใหม่.
 ถ้าไม่ได้ตั้งค่าชั้ดเจน hexo จะใช้ `default_layout` ของไฟล์ [_config.yml](configuration.html)
-ถ้า `title` ของบทความนั้นมี  space  จะต้องห่อ `title` นั้นด้วยเครื่องหมายอ้างอิง 
+ถ้า `title` ของบทความนั้นมี  space  จะต้องห่อ `title` นั้นด้วยเครื่องหมายอ้างอิง
 
 ## generate
 
@@ -54,7 +54,7 @@ $ hexo publish [layout] <filename>
 $ hexo server
 ```
 
-เปิดเซร์ฟเวอร์ local   เซร์ฟเวอร์ local นั้นจะเป็น `http://localhost:4000/` 
+เปิดเซร์ฟเวอร์ local   เซร์ฟเวอร์ local นั้นจะเป็น `http://localhost:4000/`
 by default
 
 Option | Description
@@ -154,8 +154,8 @@ $ hexo --config custom.yml
 
 ใช้ไฟล์การตั้งค่าของตน(แทน `_config.yml`) ถ้่าเป็นไฟล์หลายตัว  
 ไฟล์นั้นเป็นไฟล์ JSON หรือ YAML ได้
-คุณต่องเขียนรายชื่อไฟล์พวกนี้อยู่ใน `_multiconfig.yml` 
-และตัดแต่ละชื่อไฟล์ด้วยเครื่องหมายจุลภาค 
+คุณต่องเขียนรายชื่อไฟล์พวกนี้อยู่ใน `_multiconfig.yml`
+และตัดแต่ละชื่อไฟล์ด้วยเครื่องหมายจุลภาค
 
 ``` bash
 $ hexo --config custom.yml,custom2.json

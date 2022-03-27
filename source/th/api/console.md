@@ -1,7 +1,7 @@
 ---
 title: Console
 ---
-console เป็นสะพานระหว่าง Hexo และผู้ใช้ของมัน และ console บันทึกและอธิบายคำสั่ง console ที่มีอยู่ 
+console เป็นสะพานระหว่าง Hexo และผู้ใช้ของมัน และ console บันทึกและอธิบายคำสั่ง console ที่มีอยู่
 
 ## Synopsis
 
@@ -18,7 +18,6 @@ Argument | Description
 `options`| Options
 
  `args` เป็น argument ที่ส่งเข้า function  และเป็น argument ท่ีผู้ใช้พิมพ์ลงเข้า Terminal  มันจะถูกวิเคราะห์โดย [Minimist]
-
 
 ## Options
 

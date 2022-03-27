@@ -58,4 +58,4 @@ hexo.post.render(source, data);
 - Обработка [Nunjucks]
 - Постобработка фильтрами `after_post_render`
 
-[Nunjucks]: http://mozilla.github.io/nunjucks/
+[Nunjucks]: https://mozilla.github.io/nunjucks/

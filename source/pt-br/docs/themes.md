@@ -25,11 +25,11 @@ Diretório de idiomas. Veja [internacionalização (i18n)](internationalization.
 
 ### layout
 
-Diretório de layouts. Este diretório contém os arquivos de template do tema, que definem a aparência do seu site. O Hexo fornece o mecanismo de template [Swig] por padrão, mas você pode instalar plugins adicionais para suportar mecanismos alternativos, como [EJS], [Haml], [Jade] ou [Pug]. O Hexo escolhe o mecanismo de template com base na extensão do arquivo deste. Por exemplo:
+Diretório de layouts. Este diretório contém os arquivos de template do tema, que definem a aparência do seu site. O Hexo fornece o mecanismo de template [Nunjucks] por padrão, mas você pode instalar plugins adicionais para suportar mecanismos alternativos, como [EJS], [Haml], [Jade] ou [Pug]. O Hexo escolhe o mecanismo de template com base na extensão do arquivo deste. Por exemplo:
 
 ``` plain
 layout.ejs   - uses EJS
-layout.swig  - uses Swig
+layout.njk   - uses Nunjucks
 ```
 
 Veja [templates](templates.html) para obter mais informações.
@@ -77,8 +77,8 @@ Quando você terminar de criar seu tema, você pode publicá-lo na [lista de tem
 6. Crie um pull request e descreva as mudanças.
 
 [EJS]: https://github.com/hexojs/hexo-renderer-ejs
-[Swig]: https://github.com/node-swig/swig-templates
 [Haml]: https://github.com/hexojs/hexo-renderer-haml
 [Jade]: https://github.com/hexojs/hexo-renderer-jade
 [Pug]: https://github.com/maxknee/hexo-render-pug
 [hexojs/site]: https://github.com/hexojs/site
+[Nunjucks]: https://mozilla.github.io/nunjucks/

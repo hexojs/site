@@ -7,6 +7,7 @@ title: Front-matter
 Front-matter é um bloco de YAML ou JSON no início do arquivo que é usado para definir configurações para o conteúdo que será escrito (como páginas ou postagens). O Front-matter é terminado por três traços quando escrito em YAML ou três ponto e vírgula quando escrito em JSON.
 
 **YAML**
+
 ``` yaml
 ---
 title: Hello World
@@ -15,6 +16,7 @@ date: 2013/7/13 20:46:25
 ```
 
 **JSON**
+
 ``` json
 "title": "Hello World",
 "date": "2013/7/13 20:46:25"

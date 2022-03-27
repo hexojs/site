@@ -52,8 +52,10 @@ Option | Description | Default
 `token` | Optional token value to authenticate with the repo. Prefix with `$` to read token from environment variable
 
 3. Deploy your site `hexo clean && hexo deploy`.
+
   - You will be prompted with username and password of the target repository, unless you authenticate with a token or ssh key.
   - hexo-deployer-git does not store your username and password. Use [git-credential-cache](https://git-scm.com/docs/git-credential-cache) to store them temporarily.
+
 4. Navigate to your repository settings and change the "Pages" branch to `gh-pages` (or the branch specified in your config). The deployed site should be live on the link shown on the "Pages" setting.
 
 ## Heroku
@@ -263,6 +265,42 @@ $ hexo generate —deploy && bip deploy
 
 After a few moments, your website will be deployed.
 
+## RSS3
+
+[RSS3] (https://rss3.io) é um protocolo aberto projetado para conteúdo e redes sociais na era da Web 3.0.
+
+1. Instale [hexo-deployer-rss3]
+
+2. Modifique a configuração.
+
+  ``` yaml
+  deploy:
+  - type: rss3
+    endpoint: https://hub.rss3.io
+    privateKey: 47e18d6c386898b424025cd9db446f779ef24ad33a26c499c87bb3d9372540ba
+    ipfs:
+      deploy: true
+      gateway: pinata
+      api:
+        key: d693df715d3631e489d6
+        secret: ee8b74626f12b61c1a4bde3b8c331ad390567c86ba779c9b18561ee92c1cbff0
+  ```
+
+| Parâmetros | Descrição |
+| ----------------- | ---------------------- |
+| `endpoint` | Um link para o hub RSS3 |
+| `privateKey` | Sua chave privada, 64 bytes |
+| `ipfs/deploy` | Se deve implantar no IPFS |
+| `ipfs/gateway` | Gateway de API IPFS |
+| `ipfs/api/key` | Conteúdo de verificação relacionado ao gateway IPFS |
+| `ipfs/api/secret` | Conteúdo de verificação relacionado ao gateway IPFS |
+
+3. Gere arquivos estáticos
+
+4. Implantação
+
+Para precauções relacionadas à implantação específica, você pode consultar [nossa documentação] (https://github.com/NaturalSelectionLabs/hexo-deployer-rss3/tree/develop/docs/zh_CN/start.md).
+
 ## Outros Métodos
 
 Todos os arquivos gerados são salvos no diretório `public`. Você pode copiá-los para onde quiser.
@@ -273,3 +311,4 @@ Todos os arquivos gerados são salvos no diretório `public`. Você pode copiá-
 [hexo-deployer-openshift]: https://github.com/hexojs/hexo-deployer-openshift
 [hexo-deployer-ftpsync]: https://github.com/hexojs/hexo-deployer-ftpsync
 [hexo-deployer-sftp]: https://github.com/lucascaro/hexo-deployer-sftp
+[hexo-deployer-rss3]: https://github.com/NaturalSelectionLabs/hexo-deployer-rss3

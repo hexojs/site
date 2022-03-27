@@ -1,3 +1,18 @@
+- name: hexo-deployer-firebase
+  description: Google Firebase Deployer for Hexo.
+  link: https://github.com/pai233/hexo-deployer-firebase
+  tags:
+    - deployer
+    - google
+    - firebase
+- name: hexo-blogger-xml
+  description: Import exported articles from blogger (migrate blogger to hexo)
+  link: https://github.com/dimaslanjaka/hexo-blogger-xml
+  tags:
+    - blogger
+    - migrate
+    - import
+    - blogger2hexo
 - name: hexo-simpleIcons
   description: Use simple-icon in your hexo passages.
   link: https://github.com/nidbCN/hexo-simpleIcons
@@ -329,6 +344,13 @@
     - official
     - browsersync
     - server
+- name: hexo-renderer-dartsass
+  description: Sass renderer plugin for Hexo (use dartsass instead of libsass)
+  link: https://www.npmjs.com/package/hexo-renderer-dartsass
+  tags:
+    - renderer
+    - sass
+    - dartsass
 - name: hexo-renderer-less
   description: Less renderer for Hexo.
   link: https://github.com/hexojs/hexo-renderer-less
@@ -1749,6 +1771,30 @@
     - plantuml
     - uml
     - markdown
+- name: hexo-filter-kroki
+  description: Using Kroki.io to render 20+ diagrams at compile time.
+  link: https://github.com/miao1007/hexo-filter-kroki
+  tags:
+    - blockdiag
+    - bpmn
+    - bytefield
+    - seqdiag
+    - actdiag
+    - nwdiag
+    - packetdiag
+    - rackdiag
+    - c4plantuml
+    - ditaa
+    - erd
+    - excalidraw
+    - graphviz
+    - mermaid
+    - nomnoml
+    - pikchr
+    - plantuml
+    - svgbob
+    - vega
+    - wavedrom
 - name: hexo-slides-reveal
   description: Generate slide page with reveal.js
   link: https://github.com/wicksome/hexo-slides-reveal
@@ -2509,7 +2555,7 @@
     - tag
     - images
 - name: hexo-bilibili-bangumi
-  description: Generate pages of bilibili bangumis for Hexo | 为 Hexo 添加哔哩哔哩番剧页面
+  description: Generate pages of bangumis for Hexo, support Bilibili and Bangumi sources. | 为 Hexo 添加番剧页面，支持哔哩哔哩和 Bangumi 源。
   link: https://github.com/HCLonely/hexo-bilibili-bangumi
   tags:
     - generator
@@ -2546,14 +2592,6 @@
     - utility
     - web-push-notification
     - notification
-- name: hexo-online-server
-  description: Edit and publish articles online | 在线编辑、发布文章
-  link: https://github.com/HCLonely/hexo-online-server
-  tags:
-    - online
-    - server
-    - editor
-    - preview
 - name: hexo-cldnry
   description: Hexo tag to add an image from Cloudinary using Cloudinary SDK.
   link: https://github.com/maliMirkec/hexo-cldnry
@@ -2826,7 +2864,7 @@
 - name: hexo-auto-issue
   description: hexo plug auto publish articles to github issue.
   link: https://github.com/buxuku/hexo-auto-issue
-  tags: 
+  tags:
     - issue
     - github
 - name: hexo-deployer-upyun-purge
@@ -2923,3 +2961,158 @@
   tags:
     - multi-author
     - author
+- name: hexo-filter-probe-image-size
+  description: Probe and set image sizes in Hexo web pages.
+  link: https://github.com/PaperStrike/hexo-filter-probe-image-size
+  tags:
+    - images
+    - size
+    - filter
+- name: hexo-generator-readme-file
+  description: Generate a README.md file contains all of blogs posts link.
+  link: https://github.com/tcatche/hexo-generator-readme-file
+  tags:
+    - generator
+    - readme
+- name: hexo-tag-trello
+  description: Display Trello cards in your Hexo posts/blog
+  link: https://github.com/welksonramos/hexo-tag-trello
+  tags:
+    - tag
+    - trello
+    - cards
+- name: hexo-deployer-rss3
+  description: RSS3 deployer plugin for Hexo
+  link: https://github.com/NaturalSelectionLabs/hexo-deployer-rss3
+  tags:
+    - deployer
+    - rss3
+- name: hexo-tag-mdline
+  description: Transfer markdown content to timeline style in your Hexo posts/pages.
+  link: https://github.com/wangwei1237/hexo-tag-mdline
+  tags:
+    - tag
+    - timeline
+    - mdline
+- name: hexo-filter-link-post
+  description: Transfer relative post link in markdown file to post link.
+  link: https://github.com/tcatche/hexo-filter-link-post
+  tags:
+    - filter
+    - link
+    - refer other markdown
+- name: hexo-tag-map
+  description: Insert an interactive map into your Hexo article! Support GoogleMap, Gaode map, Baidu map, Geoq map! A powerful map plugin.
+  link: https://github.com/kuole-o/hexo-tag-map
+  tags:
+    - tag
+    - map
+    - Google Map
+    - 高德地图
+    - 百度地图
+    - butterfly
+- name: hexo-butterfly-charts
+  description: Add statistical charts, radar charts, and histograms to beautify any page of your Hexo website.
+  link: https://github.com/kuole-o/hexo-butterfly-charts
+  tags:
+    - tag
+    - charts
+    - butterfly
+    - 统计图表
+    - 美化
+- name: hexo-insert-markdown
+  description: Insert Markdown files in your posts or pages. This plugin also allows to include multiple Markdown files from a custom folder.
+  link: https://github.com/bennycode/hexo-insert-markdown
+  tags:
+    - markdown
+    - include
+    - insert
+    - tag
+    - template
+- name: hexo-seo-autopush
+  description: Daily automatic submission of urls to Baidu and Google Bing|每天自动提交site url到百度、谷歌、必应
+  link: https://github.com/lete114/hexo-seo-autopush
+  tags:
+    - baidu
+    - bing
+    - google
+    - seo
+- name: hexo-minify
+  description: Hexo resources compress HTML,CSS,JS | Hexo资源压缩，支持HTML、JS、CSS
+  link: https://github.com/lete114/hexo-minify
+  tags:
+    - compress
+    - minify
+    - html
+    - javascript
+    - js
+    - css
+- name: hexo-vtuber-banner
+  description: Add a Vtuber or banner to your blog | 添加vtuber/vup横幅card到你的博客
+  link: https://github.com/MIMONATCH/hexo-vtuber-banner
+  tags:
+    - vtuber
+    - vup
+    - html
+    - markdown
+    - 美化
+- name: hexo-filter-inline-svg
+  description: A Hexo plugin that inline your svg in the img tag into HTML file.
+  link: https://github.com/widergao/hexo-filter-inline-svg
+  tags:
+    - filter
+    - inline
+    - svg
+- name: hexo-url-submission
+  description: Auto submit site URLs to major search engines, including Google, Bing, ShenMa and Baidu, to improve the speed and quality of sites included in search engines. | 自动提交站点URL到百度、谷歌、必应、神马，来提高搜索引擎收录站点的速度和质量。
+  link: https://github.com/abnerwei/hexo-url-submission
+  tags:
+    - baidu
+    - google
+    - bing
+    - shenma
+    - seo
+    - url
+    - search engine
+- name: hexo-reference-plus
+  description: A hexo plugin to support simply reference marked and footnotes by markdown. Auto serial number, tooltip, and more
+  link: https://github.com/MaxChang3/hexo-reference-plus
+  tags:
+    - footnotes
+    - reference
+    - tooltip
+- name: hexo-filter-text-autospace
+  description: A hexo plugin to insert spaces between CJK and Latin characters.
+  link: https://github.com/Cerallin/hexo-filter-text-autospace
+  tags:
+    - filter
+    - html
+- name: hexo-plugin-schnack
+  description: Plugin for adding the Schnack comment system to your Hexo Blog.
+  link: https://github.com/bedwardly-down/hexo-plugin-schnack
+  tags:
+    - comments
+    - simple config
+    - self-hosted
+- name: hexo-link-obsidian
+  description: Convert Obsidian WikiLinks to Markdown format by use obsidian plugin server.
+  link: https://github.com/moelody/hexo-link-obsidian
+  tags:
+    - obsidian
+    - link
+    - wiki
+    - image
+- name: hexo-tag-fb-comments
+  description: Embed Facebook comments plugin without any modification of theme!
+  link: https://github.com/hms5232/hexo-tag-fb-comments
+  tags:
+    - tag
+    - facebook
+    - comments
+- name: hexo-github-repo-tag
+  description: A simple and beautiful tag for the GitHub repository.
+  link: https://github.com/JoJoJotarou/hexo-github-repo-tag
+  tags:
+    - tag
+    - github
+    - repository

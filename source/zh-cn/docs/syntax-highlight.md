@@ -34,13 +34,17 @@ highlight:
   enable: true
   auto_detect: false
   line_number: true
+  line_threshold: 0
   tab_replace: ''
+  exclude_languages:
+    - example
   wrap: true
   hljs: false
 prismjs:
   enable: false
   preprocess: true
   line_number: true
+  line_threshold: 0
   tab_replace: ''
 ```
 
@@ -80,7 +84,10 @@ highlight:
   enable: true
   auto_detect: false
   line_number: true
+  line_threshold: 0
   tab_replace: '  '
+  exclude_languages:
+    - example
   wrap: true
   hljs: false
 prismjs:
@@ -128,9 +135,18 @@ Hexo 通过用 `<figure>` 和 `<table>` 包裹其代码块为其添加了行号�
 
 你大概也注意到了，所有代码块的 `class` 都没有 `hljs-` 前缀。我们 [为此专门准备了一个章节](#hljs)。
 
+### line_threshold (+6.1.0)
+
+Accepts an optional threshold to only show line numbers as long as the numbers of lines of the code block exceed such threshold. Default is `0`.
+
 ### tab_replace
 
 用代码内的 tab (`\t`) 替换为给定值，默认值是两个空格。
+
+
+### exclude_languages (+6.1.0)
+
+Only wrap with `<pre><code class="lang"></code></pre>` and will not render all tags(`span`, and `br`) in content if are languages matches this option.
 
 ### wrap
 
@@ -170,6 +186,7 @@ prismjs:
   enable: true
   preprocess: true
   line_number: true
+  line_threshold: 0
   tab_replace: ''
 ```
 
@@ -196,6 +213,10 @@ PrismJS 主要是面向浏览器的。因此，在服务器端高亮模式下只
 ### line_number
 
 当 `preprocess` 与 `line_number` 均设置为 `true` 时，只需要引入 `prism-line-numbers.css` 即可启用行号显示。如果 `preprocess` 和 `line_number` 均被关闭，则需要将 `prism-line-numbers.css` 和 `prism-line-numbers.js` 都引入才能启用行号显示。
+
+### line_threshold (+6.1.0)
+
+Accepts an optional threshold to only show line numbers as long as the numbers of lines of the code block exceed such threshold. Default is `0`.
 
 ### tab_replace
 

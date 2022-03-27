@@ -12,7 +12,7 @@ title: 配置
 `title` | 网站标题
 `subtitle` | 网站副标题
 `description` | 网站描述
-`keywords` | 网站的关键词。支持多个关键词。 
+`keywords` | 网站的关键词。支持多个关键词。
 `author` | 您的名字
 `language` | 网站使用的语言。对于简体中文用户来说，使用不同的主题可能需要设置成不同的值，请参考你的主题的文档自行设置，常见的有 `zh-Hans`和 `zh-CN`。
 `timezone` | 网站时区。Hexo 默认使用您电脑的时区。请参考 [时区列表](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) 进行设置，如 `America/New_York`, `Japan`, 和 `UTC` 。一般的，对于中国大陆地区可以使用 `Asia/Shanghai`。
@@ -145,47 +145,47 @@ Hexo 使用 [Moment.js](http://momentjs.com/) 来解析和显示时间。
 
 在 Hexo 配置文件中，通过设置 include/exclude 可以让 Hexo 进行处理或忽略某些目录和文件夹。你可以使用 [glob 表达式](https://github.com/isaacs/minimatch) 对目录和文件进行匹配。
 
-`include` and `exclude` options only apply to the `source/` folder, whereas `ignore` option applies to all folders.
+`include` 和 `exclude` 选项只会应用到 `source/` ，而 `ignore` 选项会应用到所有文件夹.
 
 参数 | 描述
 --- | ---
-`include` | Hexo 默认会忽略隐藏文件和文件夹（包括名称以下划线和 `.` 开头的文件和文件夹，Hexo 的 `_posts` 和 `_data` 等目录除外）。通过设置此字段将使 Hexo 处理他们并将它们复制到 `source` 目录下。
-`exclude` | Hexo 会忽略这些文件和目录
-`ignore` | Ignore files/folders
+`include` | Hexo 默认会不包括 `source/` 下的文件和文件夹（包括名称以下划线和 `.` 开头的文件和文件夹，Hexo 的 `_posts` 和 `_data` 等目录除外）。通过设置此字段将使 Hexo 处理他们并将它们复制到 `source` 目录下。
+`exclude` | Hexo 不包括 `source/` 下的这些文件和目录
+`ignore` | Hexo 会忽略整个 Hexo 项目下的这些文件夹或文件
 
 举例：
 
 ```yaml
-# Include/Exclude Files/Folders
+# 处理或不处理目录或文件
 include:
   - ".nojekyll"
-  # 包括 'source/css/_typing.css'
+  # 处理 'source/css/_typing.css'
   - "css/_typing.css"
-  # 包括 'source/_css/' 中的任何文件，但不包括子目录及其其中的文件。
+  # 处理 'source/_css/' 中的任何文件，但不包括子目录及其其中的文件。
   - "_css/*"
-  # 包含 'source/_css/' 中的任何文件和子目录下的任何文件
+  # 处理 'source/_css/' 中的任何文件和子目录下的任何文件
   - "_css/**/*"
 
 exclude:
-  # 不包括 'source/js/test.js'
+  # 不处理 'source/js/test.js'
   - "js/test.js"
-  # 不包括 'source/js/' 中的文件、但包括子目录下的所有目录和文件
+  # 不处理 'source/js/' 中的文件、但包括子目录下的所有目录和文件
   - "js/*"
-  # 不包括 'source/js/' 中的文件和子目录下的任何文件
+  # 不处理 'source/js/' 中的文件和子目录下的任何文件
   - "js/**/*"
-  # 不包括 'source/js/' 目录下的所有文件名以 'test' 开头的文件，但包括其它文件和子目录下的单文件
+  # 不处理 'source/js/' 目录下的所有文件名以 'test' 开头的文件，但包括其它文件和子目录下的单文件
   - "js/test*"
-  # 不包括 'source/js/' 及其子目录中任何以 'test' 开头的文件
+  # 不处理 'source/js/' 及其子目录中任何以 'test' 开头的文件
   - "js/**/test*"
   # 不要用 exclude 来忽略 'source/_posts/' 中的文件。你应该使用 'skip_render'，或者在要忽略的文件的文件名之前加一个下划线 '_'
   # 在这里配置一个 - "_posts/hello-world.md" 是没有用的。
 
 ignore:
-  # Ignore any folder named 'foo'.
+  # 忽略任何一个名叫 'foo' 的文件夹
   - "**/foo"
-  # Ignore 'foo' folder in 'themes/' only.
+  # 只忽略 'themes/' 下的 'foo' 文件夹
   - "**/themes/*/foo"
-  # Same as above, but applies to every subfolders of 'themes/'.
+  # 对 'themes/' 目录下的每个文件夹中忽略名叫 'foo' 的子文件夹
   - "**/themes/**/foo"
 ```
 
@@ -198,10 +198,10 @@ ignore:
 可以在 hexo-cli 中使用 `--config` 参数来指定自定义配置文件的路径。你可以使用一个 YAML 或 JSON 文件的路径，也可以使用逗号分隔（无空格）的多个 YAML 或 JSON 文件的路径。例如：
 
 ```bash
-# use 'custom.yml' in place of '_config.yml'
+# 用 'custom.yml' 代替 '_config.yml'
 $ hexo server --config custom.yml
 
-# use 'custom.yml' & 'custom2.json', prioritizing 'custom3.yml', then 'custom2.json'
+# 使用 'custom.yml' 和 'custom2.json'，优先使用 'custom3.yml'，然后是 'custom2.json'
 $ hexo generate --config custom.yml,custom2.json,custom3.yml
 ```
 

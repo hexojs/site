@@ -5,18 +5,21 @@ title: Official plugins hexo-generator-alias 1.0.0, hexo-cli 4.2.0, hexo-front-m
 ## hexo-generator-alias 1.0.0
 
 ### Breaking change
+
 - Requires Node 10.13+ [#54]
 
 ### Feature
+
 - feat: 'redirect' option [#48]
-  * See [this section](https://github.com/hexojs/hexo-generator-alias#redirect) for usage.
+  - See [this section](https://github.com/hexojs/hexo-generator-alias#redirect) for usage.
 - feat: redirect to post using slug [#55]
-  * See [this section](https://github.com/hexojs/hexo-generator-alias#redirect-to-a-post) for usage.
-  * Works similarly to [`post_path`](https://hexo.io/docs/tag-plugins#Include-Posts) tag plugin.
+  - See [this section](https://github.com/hexojs/hexo-generator-alias#redirect-to-a-post) for usage.
+  - Works similarly to [`post_path`](https://hexo.io/docs/tag-plugins#Include-Posts) tag plugin.
 
 ### Fix
+
 - fix(alias): url must be absolute [#52]
-  * https://support.google.com/webmasters/answer/139066#rel-canonical-link-method
+  - <https://support.google.com/webmasters/answer/139066#rel-canonical-link-method>
 
 [#54]: https://github.com/hexojs/hexo-generator-alias/pull/54
 [#48]: https://github.com/hexojs/hexo-generator-alias/pull/48
@@ -46,6 +49,7 @@ title: Official plugins hexo-generator-alias 1.0.0, hexo-cli 4.2.0, hexo-front-m
 
 - chore: drop node 8 [#32]
 - Specific function must now be declared, instead of declaring an object
+
   ```diff
   - const yfm = require('hexo-front-matter');
   + const { parse: yfm } = require('hexo-front-matter');
@@ -73,13 +77,14 @@ title: Official plugins hexo-generator-alias 1.0.0, hexo-cli 4.2.0, hexo-front-m
 ## hexo-generator-feed 3.0.0
 
 ### Breaking change
+
 - Drop Node 8 [#153]
 
 ### Fix
 
 - Compatibility with Hexo 5 [#117]
 - Utilize [`full_url_for()`](https://github.com/hexojs/hexo-util/#full_url_forpath) [#143] [#149]
-  * This is to avoid manually concat `root` prefix which may leads to undesired double slash in an url.
+  - This is to avoid manually concat `root` prefix which may leads to undesired double slash in an url.
 - fix(template): remove extra spacing [#128]
 
 ### Dependencies

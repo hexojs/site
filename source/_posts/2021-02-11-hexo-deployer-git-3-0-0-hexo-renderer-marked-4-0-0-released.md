@@ -30,15 +30,15 @@ title: hexo-deployer-git 3.0.0, hexo-renderer-marked 4.0.0 released
 ### Breaking Changes
 
 - bump marked from 1.2.9 to 2.0.0 [#183](https://github.com/hexojs/hexo-renderer-marked/pull/183)
-    - `em` and `strong` tokenizers have been merged into one` emStrong` tokenizer
-    - Please see [marked v2.0.0 release note](https://github.com/markedjs/marked/releases/tag/v2.0.0)
+  - `em` and `strong` tokenizers have been merged into one`emStrong` tokenizer
+  - Please see [marked v2.0.0 release note](https://github.com/markedjs/marked/releases/tag/v2.0.0)
 
 ### New Feature
 
 - feat: add descriptionLists options [@SukkaW] [#179](https://github.com/hexojs/hexo-renderer-marked/pull/179)
-    - Enable support for [description lists syntax](https://kramdown.gettalong.org/syntax.html#definition-lists).
-        - Currently description lists syntax is not in neither [CommonMark](http://commonmark.org/) or [GFM](https://github.github.com/gfm/#task-list-items-extension-), `hexo-renderer-marked` only provides the option for backward compatibility.
-        - By disabling the `descriptionLists`, markdown rendering performance will be improved by **a lot**.
+  - Enable support for [description lists syntax](https://kramdown.gettalong.org/syntax.html#definition-lists).
+    - Currently description lists syntax is not in neither [CommonMark](http://commonmark.org/) or [GFM](https://github.github.com/gfm/#task-list-items-extension-), `hexo-renderer-marked` only provides the option for backward compatibility.
+    - By disabling the `descriptionLists`, markdown rendering performance will be improved by **a lot**.
 
 ### Docs
 
@@ -47,7 +47,6 @@ title: hexo-deployer-git 3.0.0, hexo-renderer-marked 4.0.0 released
 ### Misc
 
 - fix small typo [@0xflotus] [#180](https://github.com/hexojs/hexo-renderer-marked/pull/180)
-
 
 [@SukkaW]: https://github.com/SukkaW
 [@stevenjoezhang]: https://github.com/stevenjoezhang

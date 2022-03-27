@@ -59,8 +59,10 @@ deploy:
 `token` | Optional token value to authenticate with the repo. Prefix with `$` to read token from environment variable
 
 3. 生成站点文件并推送至远程库。执行 `hexo clean && hexo deploy`。
+
   - You will be prompted with username and password of the target repository, unless you authenticate with a token or ssh key.
   - hexo-deployer-git does not store your username and password. Use [git-credential-cache](https://git-scm.com/docs/git-credential-cache) to store them temporarily.
+
 4. 登入 Github/BitBucket/Gitlab，请在库设置（Repository Settings）中将默认分支设置为`_config.yml`配置中的分支名称。稍等片刻，您的站点就会显示在您的Github Pages中。
 
 ### 这一切是如何发生的？
@@ -298,6 +300,42 @@ $ hexo generate —deploy && bip deploy
 
 After a few moments, your website will be deployed.
 
+## RSS3
+
+[RSS3](https://rss3.io) 是一个为 Web 3.0 时代的内容和社交网络设计的开放协议。
+
+1. 安装 [hexo-deployer-rss3]
+
+2. 修改配置。
+
+  ``` yaml
+  deploy: # 所有部署器的根配置块
+  - type: rss3
+    endpoint: https://hub.rss3.io
+    privateKey: 47e18d6c386898b424025cd9db446f779ef24ad33a26c499c87bb3d9372540ba
+    ipfs:
+      deploy: true
+      gateway: pinata
+      api:
+        key: d693df715d3631e489d6
+        secret: ee8b74626f12b61c1a4bde3b8c331ad390567c86ba779c9b18561ee92c1cbff0
+  ```
+
+|        参数        |          描述         |
+| ----------------- | ---------------------- |
+| `endpoint`        | 一个 RSS3 Hub 的链接    |
+| `privateKey`      | 您的私钥， 64 字节      |
+| `ipfs/deploy`     | 是否部署到 IPFS 上      |
+| `ipfs/gateway`    | IPFS API 网关          |
+| `ipfs/api/key`    | IPFS 网关相关的验证内容 |
+| `ipfs/api/secret` | IPFS 网关相关的验证内容 |
+
+3. 生成静态文件
+
+4. 部署
+
+关于具体部署相关的注意事项，您可以参阅 [我们的文档](https://github.com/NaturalSelectionLabs/hexo-deployer-rss3/tree/develop/docs/zh_CN/start.md) 。
+
 ## 其他方法
 
 Hexo 生成的所有文件都放在 `public` 文件夹中，您可以将它们复制到您喜欢的地方。
@@ -308,3 +346,4 @@ Hexo 生成的所有文件都放在 `public` 文件夹中，您可以将它们�
 [hexo-deployer-openshift]: https://github.com/hexojs/hexo-deployer-openshift
 [hexo-deployer-ftpsync]: https://github.com/hexojs/hexo-deployer-ftpsync
 [hexo-deployer-sftp]: https://github.com/lucascaro/hexo-deployer-sftp
+[hexo-deployer-rss3]: https://github.com/NaturalSelectionLabs/hexo-deployer-rss3

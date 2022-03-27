@@ -1,7 +1,7 @@
 ---
 title: Hexo 3.0 Released
 ---
-Hexo 3.0 has finally come out! After four beta and four RC versions, Hexo 3 become more stable and more powerful. Thanks for the contributors and testers! 
+Hexo 3.0 has finally come out! After four beta and four RC versions, Hexo 3 become more stable and more powerful. Thanks for the contributors and testers!
 
 ## What's Changed?
 
@@ -27,19 +27,19 @@ More info: [Breaking Changes in Hexo 3.0], [changelog]
       }
     }
     {% endcode %}
-    
+
 2. Install [hexo-cli]. If any error occurred, try to remove hexo first.
 
     {% code %}
     $ npm install hexo-cli -g
     {% endcode %}
-    
+
 3. Install Hexo.
 
     {% code %}
     $ npm install hexo --save
     {% endcode %}
-    
+
 4. Install plugins. You don't have to install all the following plugins. It depends on your need.
 
     {% code %}
@@ -53,7 +53,7 @@ More info: [Breaking Changes in Hexo 3.0], [changelog]
     $ npm install hexo-deployer-rsync --save
     $ npm install hexo-deployer-openshift --save
     {% endcode %}
-    
+
 5. Update plugins. Especially generators and filters. Since the API has breaking changes in Hexo 3.
 
 More info: [Migration from 2.x to 3.0]
