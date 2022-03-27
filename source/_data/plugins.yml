@@ -1,3 +1,10 @@
+- name: hexo-seo
+  description: Automated Search Engine Optimizations. Sitemap, Schema JSON/LD, Fix Broken Images, Etc. Demo https://www.webmanajemen.com
+  link: https://github.com/dimaslanjaka/hexo-seo
+  tags:
+    - automated
+    - seo
+    - search engine optimization
 - name: hexo-deployer-firebase
   description: Google Firebase Deployer for Hexo.
   link: https://github.com/pai233/hexo-deployer-firebase
