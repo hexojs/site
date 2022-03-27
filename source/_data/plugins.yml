@@ -3116,6 +3116,14 @@
     - link
     - wiki
     - image
+- name: hexo-tag-jianshou
+  description: A hexo tag for inserting jianshou selling links for digital assets.
+  link: https://github.com/p1slave/hexo-tag-jianshou
+  tags:
+    - wechat
+    - alipay
+    - tag
+    - image
 - name: hexo-tag-fb-comments
   description: Embed Facebook comments plugin without any modification of theme!
   link: https://github.com/hms5232/hexo-tag-fb-comments
