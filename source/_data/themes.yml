@@ -1,3 +1,35 @@
+- name: One-paper
+  description: A light, paper-like theme for writing and reading.
+  link: https://github.com/zheli-design/hexo-theme-one-paper
+  preview: https://zheli.design/one-paper/
+  tags:
+    - Responsive
+    - Simple
+    - Light
+    - Clean
+    - Minimal
+    - White
+    - Writing
+    - Paper-like
+    - Blog
+    - Mobile
+    - 中文
+    - 博客
+- name: Acorn
+  description: Acorn is a Hexo theme for small to medium sized businesses or studios.
+  link: https://github.com/zhwangart/hexo-theme-acorn
+  preview: https://acorn.imaging.xin
+  tags:
+    - 中文
+    - 企业官网
+    - 工作室
+    - 画廊
+    - Portal
+    - Studios
+    - Gallery
+    - Simple
+    - Elegant
+    - Mobile
 - name: Nothinglin
   description: A beauty-simple theme for Hexo.
   link: https://github.com/Nothing-lin/hexo-theme-nothinglin
@@ -1341,8 +1373,8 @@
     - white
 - name: ztopic
   description: A simple responsive theme
-  link: https://github.com/wa-ri/hexo-theme-ztopic
-  preview: https://wa-ri.github.io/
+  link: https://github.com/zo-ly/hexo-theme-ztopic
+  preview: https://zo-ly.github.io/
   tags:
     - responsive
     - simple
@@ -3674,3 +3706,32 @@
     - simple
     - fast
     - latest-comment
+- name: Peomas
+  description: A concise hexo theme.
+  link: https://github.com/thomasyu929/hexo-theme-peomas
+  preview: https://thomasyu929.github.io/
+  tags:
+    - Responsive design
+    - Category
+    - Tag
+    - Search
+    - Concise
+- name: Paperwhite
+  description: A minimalist theme for Hexo
+  link: https://github.com/aeilot/hexo-theme-paperwhite
+  preview: http://en.blog.aeilot.top
+  tags:
+    - responsive
+    - minimalist
+    - simple
+    - light
+    - one_column
+- name: Lous
+  description: A minimalist theme for Hexo
+  link: https://github.com/liuxiaotian/hexo-theme-lous
+  preview: http://liuxiaotian.github.io
+  tags:
+    - Minimalist
+    - Simple
+    - Clean
+    - Blog

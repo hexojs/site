@@ -1,3 +1,17 @@
+- name: hexo-seo
+  description: Automated Search Engine Optimizations. Sitemap, Schema JSON/LD, Fix Broken Images, Etc. Demo https://www.webmanajemen.com
+  link: https://github.com/dimaslanjaka/hexo-seo
+  tags:
+    - automated
+    - seo
+    - search engine optimization
+- name: hexo-deployer-firebase
+  description: Google Firebase Deployer for Hexo.
+  link: https://github.com/pai233/hexo-deployer-firebase
+  tags:
+    - deployer
+    - google
+    - firebase
 - name: hexo-blogger-xml
   description: Import exported articles from blogger (migrate blogger to hexo)
   link: https://github.com/dimaslanjaka/hexo-blogger-xml
@@ -2948,6 +2962,12 @@
     - drafts
     - tag
     - tag_plugins
+- name: hexo-multiauthor
+  description: Multi author support for Hexo
+  link: https://github.com/bob983/hexo-multiauthor
+  tags:
+    - multi-author
+    - author
 - name: hexo-filter-probe-image-size
   description: Probe and set image sizes in Hexo web pages.
   link: https://github.com/PaperStrike/hexo-filter-probe-image-size
@@ -3081,6 +3101,13 @@
     - comments
     - simple config
     - self-hosted
+- name: hexo-deployer-pinata
+  description: Pinata and IPFS deployer for Hexo.
+  link: https://github.com/qishen/hexo-deployer-pinata
+  tags:
+    - deployer
+    - pinata
+    - ipfs
 - name: hexo-link-obsidian
   description: Convert Obsidian WikiLinks to Markdown format by use obsidian plugin server.
   link: https://github.com/moelody/hexo-link-obsidian
@@ -3089,3 +3116,17 @@
     - link
     - wiki
     - image
+- name: hexo-tag-fb-comments
+  description: Embed Facebook comments plugin without any modification of theme!
+  link: https://github.com/hms5232/hexo-tag-fb-comments
+  tags:
+    - tag
+    - facebook
+    - comments
+- name: hexo-github-repo-tag
+  description: A simple and beautiful tag for the GitHub repository.
+  link: https://github.com/JoJoJotarou/hexo-github-repo-tag
+  tags:
+    - tag
+    - github
+    - repository
