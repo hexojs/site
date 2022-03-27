@@ -3695,6 +3695,17 @@
     - responsive
     - one column
     - Evan You
+- name: amazingremake
+  description: A new remake version of a simple, delicate, and modern theme for Hexo.
+  link: https://github.com/LittleYe233/hexo-theme-amazingremake
+  preview: https://amazingremake-preview.imakiseki.cf/
+  tags:
+    - responsive
+    - practical
+    - dark
+    - simple
+    - fast
+    - latest-comment
 - name: Peomas
   description: A concise hexo theme.
   link: https://github.com/thomasyu929/hexo-theme-peomas
