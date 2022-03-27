@@ -3131,6 +3131,13 @@
     - tag
     - facebook
     - comments
+- name: hexo-post-link
+  description: Automatically convert markdown links with post slugs to proper internal URLs.
+  link: https://github.com/bmwant/hexo-post-link
+  tags:
+    - link
+    - markdown
+    - plugin
 - name: hexo-github-repo-tag
   description: A simple and beautiful tag for the GitHub repository.
   link: https://github.com/JoJoJotarou/hexo-github-repo-tag
