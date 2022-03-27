@@ -11,7 +11,7 @@ Gallery: /gallery/
 Archives: /archives/
 ```
 
-И можно использовать их в шаблонах:
+Можно использовать их и в шаблонах:
 
 ```
 <% for (var link in site.data.menu) { %>

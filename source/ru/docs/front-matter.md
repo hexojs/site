@@ -31,16 +31,17 @@ date: 2013/7/13 20:46:25
 `comments` | Включение поддержки комментариев в посте | true
 `tags` | Теги (Недоступно для страниц) |
 `categories` | Категории (Не доступно для страниц) |
-`permalink` | Переопределяет ссылку по умолчанию |
-`excerpt` | Page excerpt in plain text. Use [this plugin](/docs/tag-plugins#Post-Excerpt) to format the text |
-`disableNunjucks` | Disable rendering of Nunjucks tag `{{ }}`/`{% %}` and [tag plugins](/docs/tag-plugins) when enabled
-`lang` | Set the language to override [auto-detection](/docs/internationalization#Path) | Inherited from `_config.yml`
+`permalink` | Переопределяет ссылку по умолчанию. Должна заканчиваться `/` или `.html` | `null`
+`excerpt` | Отрывок страницы в виде простого текста. Используйте [этот плагин](/ru/docs/tag-plugins#Отрывок-поста) для оформления текста |
+`disableNunjucks` | Отключить отображение тегов Nunjucks `{{ }}`/`{% %}` и [плагины тегов](/ru/docs/tag-plugins) при включении
+`lang` | Установите язык для переопределения [автоопределения](/ru/docs/internationalization#Путь) | Берётся из `_config.yml`
+
 
 #### Макет
 
-The default layout is `post`, in accordance to the value of [`default_layout`]((/docs/configuration#Writing)) setting in `_config.yml`. When the layout is disabled (`layout: false`) in an article, it will not be processed with a theme. However, it will still be rendered by any available renderer: if an article is written in Markdown and a Markdown renderer (like the default [hexo-renderer-marked](https://github.com/hexojs/hexo-renderer-marked)) is installed, it will be rendered to HTML.
+Умолчания для макета `поста`, берутся в соответствии со значениеми [`параметров`]((https://hexo.io/ru/docs/configuration#Написание)) в файле `_config.yml`. Когда в статье макет отключён (`layout: false`), он не будет обрабатываться с темой. Тем не менее, он все равно будет отображаться любым доступным средством визуализации: если статья написана в Markdown и средстве визуализации Markdown (например, установлен по умолчанию [hexo-renderer-marked](https://github.com/hexojs/hexo-renderer-marked )) , он будет отображён в HTML.
 
-[Tag plugins](/docs/tag-plugins) are always processed regardless of layout, unless disabled by the `disableNunjucks` setting or [renderer](/api/renderer#Disable-Nunjucks-tags).
+[Плагины тегов](/ru/docs/tag-plugins) всегда обрабатываются независимо от макета, если только они не отключены настройкой `disableNunjucks` или [средство визуализации] (/api/renderer#Disable-Nunjucks-tags).
 
 #### Категории и теги
 

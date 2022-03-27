@@ -5,6 +5,13 @@
     - automated
     - seo
     - search engine optimization
+- name: hexo-deployer-firebase
+  description: Google Firebase Deployer for Hexo.
+  link: https://github.com/pai233/hexo-deployer-firebase
+  tags:
+    - deployer
+    - google
+    - firebase
 - name: hexo-blogger-xml
   description: Import exported articles from blogger (migrate blogger to hexo)
   link: https://github.com/dimaslanjaka/hexo-blogger-xml
@@ -2555,7 +2562,7 @@
     - tag
     - images
 - name: hexo-bilibili-bangumi
-  description: Generate pages of bilibili bangumis for Hexo | 为 Hexo 添加哔哩哔哩番剧页面
+  description: Generate pages of bangumis for Hexo, support Bilibili and Bangumi sources. | 为 Hexo 添加番剧页面，支持哔哩哔哩和 Bangumi 源。
   link: https://github.com/HCLonely/hexo-bilibili-bangumi
   tags:
     - generator
@@ -2592,14 +2599,6 @@
     - utility
     - web-push-notification
     - notification
-- name: hexo-online-server
-  description: Edit and publish articles online | 在线编辑、发布文章
-  link: https://github.com/HCLonely/hexo-online-server
-  tags:
-    - online
-    - server
-    - editor
-    - preview
 - name: hexo-cldnry
   description: Hexo tag to add an image from Cloudinary using Cloudinary SDK.
   link: https://github.com/maliMirkec/hexo-cldnry
@@ -2963,6 +2962,12 @@
     - drafts
     - tag
     - tag_plugins
+- name: hexo-multiauthor
+  description: Multi author support for Hexo
+  link: https://github.com/bob983/hexo-multiauthor
+  tags:
+    - multi-author
+    - author
 - name: hexo-filter-probe-image-size
   description: Probe and set image sizes in Hexo web pages.
   link: https://github.com/PaperStrike/hexo-filter-probe-image-size
@@ -3049,6 +3054,15 @@
     - javascript
     - js
     - css
+- name: hexo-vtuber-banner
+  description: Add a Vtuber or banner to your blog | 添加vtuber/vup横幅card到你的博客
+  link: https://github.com/MIMONATCH/hexo-vtuber-banner
+  tags:
+    - vtuber
+    - vup
+    - html
+    - markdown
+    - 美化
 - name: hexo-filter-inline-svg
   description: A Hexo plugin that inline your svg in the img tag into HTML file.
   link: https://github.com/widergao/hexo-filter-inline-svg
@@ -3074,3 +3088,38 @@
     - footnotes
     - reference
     - tooltip
+- name: hexo-filter-text-autospace
+  description: A hexo plugin to insert spaces between CJK and Latin characters.
+  link: https://github.com/Cerallin/hexo-filter-text-autospace
+  tags:
+    - filter
+    - html
+- name: hexo-plugin-schnack
+  description: Plugin for adding the Schnack comment system to your Hexo Blog.
+  link: https://github.com/bedwardly-down/hexo-plugin-schnack
+  tags:
+    - comments
+    - simple config
+    - self-hosted
+- name: hexo-link-obsidian
+  description: Convert Obsidian WikiLinks to Markdown format by use obsidian plugin server.
+  link: https://github.com/moelody/hexo-link-obsidian
+  tags:
+    - obsidian
+    - link
+    - wiki
+    - image
+- name: hexo-tag-fb-comments
+  description: Embed Facebook comments plugin without any modification of theme!
+  link: https://github.com/hms5232/hexo-tag-fb-comments
+  tags:
+    - tag
+    - facebook
+    - comments
+- name: hexo-github-repo-tag
+  description: A simple and beautiful tag for the GitHub repository.
+  link: https://github.com/JoJoJotarou/hexo-github-repo-tag
+  tags:
+    - tag
+    - github
+    - repository

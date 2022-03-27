@@ -762,6 +762,10 @@ Opção | Descrição | Padrão
 `type` | Tipo de página (`og:type`) | blog
 `url` | URL da página (`og:url`) | `url`
 `image` | Capa da página (`og:image`) | All images in the content
+`author` | Article author (`og:article:author`) | `config.author`
+`date` | Article published time (`og:article:published_time`) | Page published time
+`updated` | Article modified time (`og:article:modified_time`) | Page modified time
+`language` | Article language (`og:locale`) | `page.lang || page.language || config.language`
 `site_name` | Nome do site (`og:site_name`) | `config.title`
 `description`| Descrição da página (`og:description`) | Trecho da página ou os 200 primeiros caracteres do conteúdo
 `twitter_card` | Tipo de Twitter card (`twitter:card`) | summary
@@ -791,6 +795,20 @@ Opção | Descrição | Padrão
 ``` js
 <%- toc(page.content) %>
 ```
+
+#### data-toc-unnumbered (+6.1.0)
+
+Headings with attribute `data-toc-unnumbered="true"` will be marked as unnumbered (list number will not be display).
+
+{% note warn "Warning!" %}
+For using `data-toc-unnumbered="true"`, the renderer must have the option to add CSS classes.
+
+Please see below PRs.
+
+- https://github.com/hexojs/hexo/pull/4871
+- https://github.com/hexojs/hexo-util/pull/269
+- https://github.com/hexojs/hexo-renderer-markdown-it/pull/174
+{% endnote %}
 
 [color keywords]: http://www.w3.org/TR/css3-color/#svg-color
 [Moment.js]: http://momentjs.com/

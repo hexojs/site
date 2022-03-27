@@ -745,6 +745,10 @@ Inserts [generator tag](https://developer.mozilla.org/en-US/docs/Web/HTML/Elemen
 `type` | 頁面類型 (`og:type`) | blog
 `url` | 頁面網址 (`og:url`) | `url`
 `image` | 頁面圖片 (`og:image`) | 內容中的圖片
+`author` | Article author (`og:article:author`) | `config.author`
+`date` | Article published time (`og:article:published_time`) | Page published time
+`updated` | Article modified time (`og:article:modified_time`) | Page modified time
+`language` | Article language (`og:locale`) | `page.lang || page.language || config.language`
 `site_name` | 網站名稱 (`og:site_name`) | `config.title`
 `description` | 頁面描述 (`og:description`) | 內容摘要或前 200 字
 `twitter_card` | Twitter 卡片類型 (`twitter:card`) | summary
@@ -774,6 +778,20 @@ Inserts [generator tag](https://developer.mozilla.org/en-US/docs/Web/HTML/Elemen
 ``` js
 <%- toc(page.content) %>
 ```
+
+#### data-toc-unnumbered (+6.1.0)
+
+Headings with attribute `data-toc-unnumbered="true"` will be marked as unnumbered (list number will not be display).
+
+{% note warn "Warning!" %}
+For using `data-toc-unnumbered="true"`, the renderer must have the option to add CSS classes.
+
+Please see below PRs.
+
+- https://github.com/hexojs/hexo/pull/4871
+- https://github.com/hexojs/hexo-util/pull/269
+- https://github.com/hexojs/hexo-renderer-markdown-it/pull/174
+{% endnote %}
 
 [顏色關鍵字]: http://www.w3.org/TR/css3-color/#svg-color
 [Moment.js]: http://momentjs.com/
