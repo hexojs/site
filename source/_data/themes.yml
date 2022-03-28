@@ -2372,7 +2372,7 @@
 - name: simple-black
   description: A simple and black theme
   link: https://github.com/yunfeihe/simple-black
-  preview: http://yunfeihe.me
+  preview: https://github.com/yunfeihe/simple-black
   tags:
     - simple
     - black
