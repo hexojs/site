@@ -2384,7 +2384,7 @@
 - name: simple-black
   description: A simple and black theme
   link: https://github.com/yunfeihe/simple-black
-  preview: http://yunfeihe.me
+  preview: https://github.com/yunfeihe/simple-black
   tags:
     - simple
     - black
@@ -3707,6 +3707,17 @@
     - responsive
     - one column
     - Evan You
+- name: amazingremake
+  description: A new remake version of a simple, delicate, and modern theme for Hexo.
+  link: https://github.com/LittleYe233/hexo-theme-amazingremake
+  preview: https://amazingremake-preview.imakiseki.cf/
+  tags:
+    - responsive
+    - practical
+    - dark
+    - simple
+    - fast
+    - latest-comment
 - name: Peomas
   description: A concise hexo theme.
   link: https://github.com/thomasyu929/hexo-theme-peomas
@@ -3736,3 +3747,13 @@
     - Simple
     - Clean
     - Blog
+- name: M-Terminal
+  description: A terminal like hexo theme.
+  link: https://github.com/maiyatang2021/hexo-theme-terminal
+  preview: https://blog.maiyatang.co/
+  tags:
+    - 中文
+    - English
+    - simple
+    - dark
+    - responsive
