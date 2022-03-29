@@ -34,13 +34,18 @@ highlight:
   enable: true
   auto_detect: false
   line_number: true
+  line_threshold: 0
   tab_replace: ''
+  exclude_languages:
+    - example
   wrap: true
   hljs: false
 prismjs:
   enable: false
   preprocess: true
   line_number: true
+  line_threshold: 0
+  line_threshold: 0
   tab_replace: ''
 ```
 
@@ -80,7 +85,10 @@ highlight:
   enable: true
   auto_detect: false
   line_number: true
+  line_threshold: 0
   tab_replace: '  '
+  exclude_languages:
+    - example
   wrap: true
   hljs: false
 prismjs:
@@ -128,9 +136,18 @@ It is not the behavior of `highlight.js` and requires custom CSS for `<figure>` 
 
 You might also notice that all `class` has no `hljs-` prefixed, we will revisit it [later part](#hljs).
 
+### line_threshold (+6.1.0)
+
+Accepts an optional threshold to only show line numbers as long as the numbers of lines of the code block exceed such threshold. Default is `0`.
+
 ### tab_replace
 
 Replace tabs inside code block with given string. By default it is 2 spaces.
+
+
+### exclude_languages (+6.1.0)
+
+Only wrap with `<pre><code class="lang"></code></pre>` and will not render all tags(`span`, and `br`) in content if are languages matches this option.
 
 ### wrap
 
@@ -170,6 +187,7 @@ prismjs:
   enable: true
   preprocess: true
   line_number: true
+  line_threshold: 0
   tab_replace: ''
 ```
 
@@ -196,6 +214,10 @@ All prism plugins are supported if `preprocess` is set to `false`. Here are a fe
 ### line_number
 
 With both `preprocess` and `line_number` set to `true`, you just need to include `prism-line-numbers.css` to make line-numbering work. If you set both `preprocess` and `line_number` to false, you will need both `prism-line-numbers.css` and `prism-line-numbers.js`.
+
+### line_threshold (+6.1.0)
+
+Accepts an optional threshold to only show line numbers as long as the numbers of lines of the code block exceed such threshold. Default is `0`.
 
 ### tab_replace
 

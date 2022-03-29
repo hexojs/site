@@ -1,3 +1,20 @@
+- name: One-paper
+  description: A light, paper-like theme for writing and reading.
+  link: https://github.com/zheli-design/hexo-theme-one-paper
+  preview: https://zheli.design/one-paper/
+  tags:
+    - Responsive
+    - Simple
+    - Light
+    - Clean
+    - Minimal
+    - White
+    - Writing
+    - Paper-like
+    - Blog
+    - Mobile
+    - 中文
+    - 博客
 - name: Acorn
   description: Acorn is a Hexo theme for small to medium sized businesses or studios.
   link: https://github.com/zhwangart/hexo-theme-acorn
@@ -2355,7 +2372,7 @@
 - name: simple-black
   description: A simple and black theme
   link: https://github.com/yunfeihe/simple-black
-  preview: http://yunfeihe.me
+  preview: https://github.com/yunfeihe/simple-black
   tags:
     - simple
     - black
@@ -3678,6 +3695,17 @@
     - responsive
     - one column
     - Evan You
+- name: amazingremake
+  description: A new remake version of a simple, delicate, and modern theme for Hexo.
+  link: https://github.com/LittleYe233/hexo-theme-amazingremake
+  preview: https://amazingremake-preview.imakiseki.cf/
+  tags:
+    - responsive
+    - practical
+    - dark
+    - simple
+    - fast
+    - latest-comment
 - name: Peomas
   description: A concise hexo theme.
   link: https://github.com/thomasyu929/hexo-theme-peomas
@@ -3688,3 +3716,32 @@
     - Tag
     - Search
     - Concise
+- name: Paperwhite
+  description: A minimalist theme for Hexo
+  link: https://github.com/aeilot/hexo-theme-paperwhite
+  preview: http://en.blog.aeilot.top
+  tags:
+    - responsive
+    - minimalist
+    - simple
+    - light
+    - one_column
+- name: Lous
+  description: A minimalist theme for Hexo
+  link: https://github.com/liuxiaotian/hexo-theme-lous
+  preview: http://liuxiaotian.github.io
+  tags:
+    - Minimalist
+    - Simple
+    - Clean
+    - Blog
+- name: M-Terminal
+  description: A terminal like hexo theme.
+  link: https://github.com/maiyatang2021/hexo-theme-terminal
+  preview: https://blog.maiyatang.co/
+  tags:
+    - 中文
+    - English
+    - simple
+    - dark
+    - responsive
