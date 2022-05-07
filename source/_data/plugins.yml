@@ -1,3 +1,17 @@
+- name: hexo-hash
+  description: 为静态资源创建哈希版本 | Create hash versions for static resources
+  link: https://github.com/Lete114/Hexo-hash
+  tags:
+    - hash
+    - rev
+    - revving
+    - cache
+    - file
+    - files
+    - caching
+    - version
+    - expire
+    - assets
 - name: hexo-seo
   description: Automated Search Engine Optimizations. Sitemap, Schema JSON/LD, Fix Broken Images, Etc. Demo https://www.webmanajemen.com
   link: https://github.com/dimaslanjaka/hexo-seo
