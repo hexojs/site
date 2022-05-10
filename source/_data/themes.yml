@@ -3790,3 +3790,15 @@
     - highlight
     - mathjax
     - local-search
+- name: ParticleX
+  description: A concise Hexo theme, transformed by Particle.
+  link: https://github.com/argvchs/hexo-theme-particlex
+  preview: https://argvchs.github.io/
+  tags:
+    - Chinese
+    - Vue3
+    - Concise
+    - Simple
+    - Responsive
+    - transform
+    - Light
