@@ -3688,3 +3688,11 @@
     - Tag
     - Search
     - Concise
+- name: hexo-theme-cola
+  description: A simple blog theme.
+  link: https://github.com/Aizener
+  preview: http://yangxiang.cc/
+  tags:
+    - Chinese
+    - Light
+    - Simple
