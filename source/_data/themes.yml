@@ -1,4 +1,10 @@
-- name: Scroll
+- name: Text
+  description: Text is because they are all text, but the DIY space is very large
+  link: https://github.com/sdqOS/hexo-theme-Text
+  preview: https://sdqos.github.io
+  tags: 
+  - 中文
+ - name: Scroll
   description: A minimalist blog theme
   link: https://github.com/2670637999/hexo-theme-scroll
   preview: https://scroll.glumi.cn/
