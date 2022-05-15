@@ -1,10 +1,3 @@
-- name: Scroll
-  description: A minimalist blog theme
-  link: https://github.com/2670637999/hexo-theme-scroll
-  preview: https://scroll.glumi.cn/
-  tags:
-    - 中文
-    - minimalist
 - name: Miracle
   description: A simple single-column theme for Hexo.
   link: https://github.com/hifun-team/hexo-theme-miracle
@@ -3471,3 +3464,10 @@
     - 3-color-styles
     - dark_mode
     - maiden_mode
+- name: Scroll
+  description: A minimalist blog theme
+  link: https://github.com/2670637999/hexo-theme-scroll
+  preview: https://scroll.glumi.cn/
+  tags:
+    - 中文
+    - minimalist
