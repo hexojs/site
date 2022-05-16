@@ -1,3 +1,45 @@
+- name: Text
+  description: Text is because they are all text, but the DIY space is very large
+  link: https://github.com/sdqOS/hexo-theme-Text
+  preview: https://sdqos.github.io
+  tags: 
+  - 中文
+- name: Scroll
+  description: A minimalist blog theme
+  link: https://github.com/2670637999/hexo-theme-scroll
+  preview: https://scroll.glumi.cn/
+  tags:
+  - 中文
+  - minimalist
+- name: leedom 
+  description: A pure hexo theme. 
+  link: https://github.com/leedom92/hexo-theme-leedom 
+  preview: https://blog.leedom.me/ 
+  tags: 
+  - 中文
+  - Chinese
+  - English
+  - Pure
+  - Simple
+  - Concise
+  - Search
+- name: One-paper
+  description: A light, paper-like theme for writing and reading.
+  link: https://github.com/zheli-design/hexo-theme-one-paper
+  preview: https://zheli.design/one-paper/
+  tags:
+    - Responsive
+    - Simple
+    - Light
+    - Clean
+    - Minimal
+    - White
+    - Writing
+    - Paper-like
+    - Blog
+    - Mobile
+    - 中文
+    - 博客
 - name: Acorn
   description: Acorn is a Hexo theme for small to medium sized businesses or studios.
   link: https://github.com/zhwangart/hexo-theme-acorn
@@ -99,7 +141,7 @@
 - name: Quiet
   description: A simple, easy to read flat hexo theme.
   link: https://github.com/79E/hexo-theme-quiet
-  preview: https://blog.taire.de/
+  preview: https://github.com/79E/hexo-theme-quiet
   tags:
     - Simple
     - Beautiful
@@ -2355,7 +2397,7 @@
 - name: simple-black
   description: A simple and black theme
   link: https://github.com/yunfeihe/simple-black
-  preview: http://yunfeihe.me
+  preview: https://github.com/yunfeihe/simple-black
   tags:
     - simple
     - black
@@ -3639,7 +3681,7 @@
 - name: MiHoYo
   description: A theme of MiHoYo.
   link: https://github.com/redhat123456/hexo-theme-MiHoYo
-  preview: http://mihoyo.tanger.cloud/
+  preview: http://mihoyo.tanger.ltd/
   tags:
     - 中文
     - MiHoYo
@@ -3678,6 +3720,17 @@
     - responsive
     - one column
     - Evan You
+- name: amazingremake
+  description: A new remake version of a simple, delicate, and modern theme for Hexo.
+  link: https://github.com/LittleYe233/hexo-theme-amazingremake
+  preview: https://amazingremake-preview.imakiseki.cf/
+  tags:
+    - responsive
+    - practical
+    - dark
+    - simple
+    - fast
+    - latest-comment
 - name: Peomas
   description: A concise hexo theme.
   link: https://github.com/thomasyu929/hexo-theme-peomas
@@ -3696,3 +3749,77 @@
     - Chinese
     - Light
     - Simple
+- name: Instapaper
+  description: A light fast hexo theme.
+  link: https://github.com/techmovie/hexo-theme-instapaper
+  preview: https://techmovie.xyz/
+  tags:
+    - 中文
+    - 简约
+    - Tag
+    - simple
+    - Concise
+    - darkMode
+- name: Paperwhite
+  description: A minimalist theme for Hexo
+  link: https://github.com/aeilot/hexo-theme-paperwhite
+  preview: http://en.blog.aeilot.top
+  tags:
+    - responsive
+    - minimalist
+    - simple
+    - light
+    - one_column
+- name: Lous
+  description: A minimalist theme for Hexo
+  link: https://github.com/liuxiaotian/hexo-theme-lous
+  preview: http://liuxiaotian.github.io
+  tags:
+    - Minimalist
+    - Simple
+    - Clean
+    - Blog
+- name: M-Terminal
+  description: A terminal like hexo theme.
+  link: https://github.com/maiyatang2021/hexo-theme-terminal
+  preview: https://blog.maiyatang.co/
+  tags:
+    - 中文
+    - English
+    - simple
+    - dark
+    - responsive
+- name: Async
+  description: A simple, lightweight Hexo theme.
+  link: https://github.com/MaLuns/hexo-theme-async
+  preview: https://www.imalun.com/
+  tags:
+    - 中文
+    - English
+    - simple
+    - dark
+    - two_columns
+- name: heyan
+  description: A simple but elegant Hexo theme.
+  link: https://github.com/smile-yan/hexo-theme-heyan
+  preview: https://smileyan.cn/heyan/
+  tags:
+    - 中文
+    - English
+    - simple
+    - elegant
+    - highlight
+    - mathjax
+    - local-search
+- name: ParticleX
+  description: A concise Hexo theme, transformed by Particle.
+  link: https://github.com/argvchs/hexo-theme-particlex
+  preview: https://argvchs.github.io/
+  tags:
+    - Chinese
+    - Vue3
+    - Concise
+    - Simple
+    - Responsive
+    - transform
+    - Light
