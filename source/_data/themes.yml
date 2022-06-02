@@ -3495,7 +3495,7 @@
 - name: Bamboo
   description: A beautiful hexo theme
   link: https://github.com/yuang01/hexo-theme-bamboo
-  preview: https://yuang01.gitee.io/
+  preview: https://yuang01.github.io/
   tags:
     - Vue
     - simple
