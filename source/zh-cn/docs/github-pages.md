@@ -2,7 +2,7 @@
 title: 在 GitHub Pages 上部署 Hexo
 ---
 
-本文将使用 [GitHub Actions](https://docs.github.com/en/actions) 部属至 GitHub Pages，此方法适用于公开或私人储存库。若你不希望将整个资料夹推上 GitHub，请参阅 [一键部属](#一键部属)。
+本文将使用 [GitHub Actions](https://docs.github.com/en/actions) 部署至 GitHub Pages，此方法适用于公开或私人储存库。若你不希望将整个资料夹推上 GitHub，请参阅 [一键部署](#一键部署)。
 
 1. 建立名为 <b>_username_.github.io</b> 的储存库，username 是你在 GitHub 上的使用者名称，若之前已将 Hexo 上传至其他储存库，将该储存库重命名即可。
 2. 将 Hexo 档案 push 到储存库的预设分支，预设分支通常名为 **main**，旧一点的储存库可能名为 **master**。
