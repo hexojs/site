@@ -52,7 +52,7 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
 ```
-5. 当部属作业完成后，产生的页面会放在储存库中的 `gh-pages` 分支。
+5. 当部署作业完成后，产生的页面会放在储存库中的 `gh-pages` 分支。
 6. 在储存库中前往 **Settings** > **Pages** > **Source**，并将 branch 改为 `gh-pages`。
 7. 前往 _username_.github.io 查看网站。
 
