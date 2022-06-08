@@ -71,7 +71,7 @@ jobs:
 5. 在 GitHub 储存库中，前往 **Settings** > **Pages** > **Source**，并将 branch 改为 `gh-pages` 后储存。
 6. 前往 _username_.github.io/_repository_ 查看。
 
-## 一键部属
+## 一键部署
 
 以下教学改编自 [一键部署](/docs/one-command-deployment) .
 
