@@ -31,7 +31,7 @@
     "eslint": "^8.0.1",
     "eslint-config-hexo": "^5.0.0",
     "husky": "^7.0.2",
-    "imagemin-lint-staged": "^0.4.0",
+    "imagemin-lint-staged": "^0.5.1",
     "lint-staged": "^12.3.7"
   },
   "lint-staged": {
