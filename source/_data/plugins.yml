@@ -3183,3 +3183,11 @@
     - html
     - url
     - seo
+- name: hexo-renderer-jsx
+  description: React JSX Renderer for Hexo
+  link: https://github.com/renbaoshuo/hexo-renderer-jsx
+  tags:
+    - renderer
+    - react
+    - react-jsx
+    - jsx
