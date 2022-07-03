@@ -3827,3 +3827,13 @@
     - Simple
     - Widget
     - Light
+- name: Energy
+  description: A special yellow Hexo theme, hope you'd like the color and the cute animation.
+  link: https://github.com/tong-h/hexo-theme-energy
+  preview: https://tong-h.github.io/
+  tags:
+    - Elegant
+    - Yellow/Colorful
+    - Responsive
+    - Customizable
+    - Animate
