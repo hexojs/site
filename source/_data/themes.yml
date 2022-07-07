@@ -3614,7 +3614,7 @@
 - name: Ringo
   description: A simple, concise, and fast theme for Hexo
   link: https://github.com/HeliumOI/hexo-theme-ringo
-  preview: https://ringo.sophonci117.me/
+  preview: https://heliumoi.github.io/ringoExample/
   tags:
     - responsive
     - simple
