@@ -2,27 +2,27 @@
   description: Text is because they are all text, but the DIY space is very large
   link: https://github.com/sdqOS/hexo-theme-Text
   preview: https://sdqos.github.io
-  tags: 
-  - 中文
+  tags:
+    - 中文
 - name: Scroll
   description: A minimalist blog theme
   link: https://github.com/2670637999/hexo-theme-scroll
   preview: https://scroll.glumi.cn/
   tags:
-  - 中文
-  - minimalist
-- name: leedom 
-  description: A pure hexo theme. 
-  link: https://github.com/leedom92/hexo-theme-leedom 
-  preview: https://blog.leedom.me/ 
-  tags: 
-  - 中文
-  - Chinese
-  - English
-  - Pure
-  - Simple
-  - Concise
-  - Search
+    - 中文
+    - minimalist
+- name: leedom
+  description: A pure hexo theme.
+  link: https://github.com/leedom92/hexo-theme-leedom
+  preview: https://blog.leedom.me/
+  tags:
+    - 中文
+    - Chinese
+    - English
+    - Pure
+    - Simple
+    - Concise
+    - Search
 - name: One-paper
   description: A light, paper-like theme for writing and reading.
   link: https://github.com/zheli-design/hexo-theme-one-paper
@@ -3837,3 +3837,12 @@
     - Responsive
     - Customizable
     - Animate
+- name: baozi
+  description: A minimalist theme, very simple style.
+  link: https://github.com/zzyxka/baozi
+  preview: http://baozi.life/
+  tags:
+    - 中文
+    - minimalist
+    - Responsive
+    - Customizable
