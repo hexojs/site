@@ -3743,7 +3743,7 @@
     - Concise
 - name: hexo-theme-cola
   description: A simple blog theme.
-  link: https://github.com/Aizener
+  link: https://github.com/Aizener/hexo-theme-cola
   preview: http://yangxiang.cc/
   tags:
     - Chinese
