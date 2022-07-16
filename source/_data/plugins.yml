@@ -3191,3 +3191,10 @@
     - react
     - react-jsx
     - jsx
+- name: hexo-rename
+  description: Hexo plugin that renames post files based on title
+  link: https://github.com/luzhang/hexo-rename
+  tags:
+    - rename
+    - markdown
+    - title
