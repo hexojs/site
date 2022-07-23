@@ -3166,6 +3166,19 @@
     - readmore
     - wechat
     - vip
+- name: hexo-include-md
+  description: A Hexo helper function to include markdown files that is located in `_source`.
+  link: https://github.com/patrick330602/hexo-include-md
+  tags:
+    - markdown
+    - helper
+- name: hexo-generator-opengraph-image
+  description: Generate OpenGraph Images for your every post in Hexo.
+  link: https://github.com/patrick330602/hexo-generator-opengraph-image
+  tags:
+    - generator
+    - opengraph
+    - image
 - name: hexo-insert-toc
   description: Small plugin to insert a table of contents (TOC) in Hexo posts and pages.
   link: https://github.com/bennycode/hexo-insert-toc
