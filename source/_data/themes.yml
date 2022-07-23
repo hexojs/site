@@ -1,3 +1,16 @@
+- name: Text
+  description: Text is because they are all text, but the DIY space is very large
+  link: https://github.com/sdqOS/hexo-theme-Text
+  preview: https://sdqos.github.io
+  tags: 
+  - 中文
+- name: Scroll
+  description: A minimalist blog theme
+  link: https://github.com/2670637999/hexo-theme-scroll
+  preview: https://scroll.glumi.cn/
+  tags:
+  - 中文
+  - minimalist
 - name: leedom 
   description: A pure hexo theme. 
   link: https://github.com/leedom92/hexo-theme-leedom 
@@ -128,7 +141,7 @@
 - name: Quiet
   description: A simple, easy to read flat hexo theme.
   link: https://github.com/79E/hexo-theme-quiet
-  preview: https://blog.taire.de/
+  preview: https://github.com/79E/hexo-theme-quiet
   tags:
     - Simple
     - Beautiful
@@ -3275,7 +3288,7 @@
 - name: Anatole-Core
   description: A simple and beautiful Hexo resume theme
   link: https://github.com/mrcore/hexo-theme-Anatole-Core
-  preview: https://www.jixian.io
+  preview: https://www.mrcore.cn
   tags:
     - resume
     - white
@@ -3394,7 +3407,7 @@
 - name: white
   description: A white and very simple theme
   link: https://github.com/FuShaoLei/hexo-theme-white
-  preview: https://fushaolei.github.io/
+  preview: https://fushaolei.github.io/hexo-theme-white/
   tags:
     - white
     - simple
@@ -3482,7 +3495,7 @@
 - name: Bamboo
   description: A beautiful hexo theme
   link: https://github.com/yuang01/hexo-theme-bamboo
-  preview: https://yuang01.gitee.io/
+  preview: https://yuang01.github.io/
   tags:
     - Vue
     - simple
@@ -3601,7 +3614,7 @@
 - name: Ringo
   description: A simple, concise, and fast theme for Hexo
   link: https://github.com/HeliumOI/hexo-theme-ringo
-  preview: https://ringo.sophonci117.me/
+  preview: https://heliumoi.github.io/ringoExample/
   tags:
     - responsive
     - simple
@@ -3728,6 +3741,14 @@
     - Tag
     - Search
     - Concise
+- name: hexo-theme-cola
+  description: A simple blog theme.
+  link: https://github.com/Aizener/hexo-theme-cola
+  preview: http://yangxiang.cc/
+  tags:
+    - Chinese
+    - Light
+    - Simple
 - name: Instapaper
   description: A light fast hexo theme.
   link: https://github.com/techmovie/hexo-theme-instapaper
@@ -3790,3 +3811,53 @@
     - highlight
     - mathjax
     - local-search
+- name: ParticleX
+  description: A concise Hexo theme, transformed by Particle.
+  link: https://github.com/argvchs/hexo-theme-particlex
+  preview: https://argvchs.github.io/
+  tags:
+    - Chinese
+    - Vue3
+    - Concise
+    - Simple
+    - Responsive
+    - transform
+    - Light
+- name: Bcxm
+  description: A fun, concise, and generous Hexo theme.
+  link: https://github.com/chenxz21/hexo-theme-bcxm
+  preview: https://www.chenxuezhi.top/
+  tags:
+    - 中文
+    - Card UI
+    - Responsive
+    - Customizable
+    - Simple
+    - Widget
+    - Light
+- name: Energy
+  description: A special yellow Hexo theme, hope you'd like the color and the cute animation.
+  link: https://github.com/tong-h/hexo-theme-energy
+  preview: https://tong-h.github.io/
+  tags:
+    - Elegant
+    - Yellow/Colorful
+    - Responsive
+    - Customizable
+    - Animate
+- name: maple
+  description: An elegant,powerful,easy-to-read responsive Hexo theme.
+  link: https://github.com/xbmlz/hexo-theme-maple
+  preview: https://xbmlz.github.io/
+  tags:
+    - 中文
+    - 极简
+    - Responsive
+    - Customizable
+    - Light/Dark
+    - Elegant
+    - Concise
+    - Out of the box
+    - MathJax support
+    - Mermaid support
+    - Baidu/Google Analytics
