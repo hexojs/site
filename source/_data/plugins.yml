@@ -3191,6 +3191,14 @@
     - react
     - react-jsx
     - jsx
+- name: hexo-filter-img-url-changer
+  description: Change local img url to picture bed url.
+  link: https://github.com/pengber/hexo-filter-img-url-changer.git
+  tags:
+    - img
+    - url
+    - convert
+    - changer
 - name: hexo-midijs
   description: A hexo plugin to play MIDI files by MIDIjs.
   link: https://github.com/D-Sketon/hexo-midijs
