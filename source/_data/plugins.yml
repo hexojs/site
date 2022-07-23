@@ -3198,3 +3198,24 @@
     - rename
     - markdown
     - title
+- name: hexo-filter-markdown-auto-indent
+  description: This is an auto indent based on hexo-renderer-marked. It will work on text tags that are not list tags. When I want to upload, I find that there is already a similar plugin called hexo-filter-text-autospace, so you can also try it.
+  link: https://github.com/fireMan-34/hexo-filter-markdown-auto-indent
+  tags:
+    - filter
+    - marked
+- name: hexo-filter-img-url-changer
+  description: Change local img url to picture bed url.
+  link: https://github.com/pengber/hexo-filter-img-url-changer.git
+  tags:
+    - img
+    - url
+    - convert
+    - changer
+- name: hexo-midijs
+  description: A hexo plugin to play MIDI files by MIDIjs.
+  link: https://github.com/D-Sketon/hexo-midijs
+  tags:
+    - midi
+    - midijs
+    - music
