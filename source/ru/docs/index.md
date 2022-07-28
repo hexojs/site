@@ -78,14 +78,14 @@ $ npm install -g hexo-cli
 
 Мы настоятельно рекомендуем всегда устанавливать [последнюю версию](https://www.npmjs.com/package/hexo?activeTab=версии) Hexo и [рекомендуемую версию](#Requirements) Node.js , когда это возможно.
 
-Hexo version | Minimum Node.js version | Maximum Node.js version
+Hexo version | Minimum (Node.js version) | Less than (Node.js version)
 --- | --- | ---
 6.2+ | 12.13.0 | latest
-6.0+ | 12.13.0 | 18.4.0
-5.0+ | 10.13.0 | unknown
-4.1 - 4.2 | 8.10 | unknown
-4.0 | 8.6 | unknown
-3.3 - 3.9 | 6.9 | unknown
+6.0+ | 12.13.0 | 18.5.0
+5.0+ | 10.13.0 | 12.0.0
+4.1 - 4.2 | 8.10 | 10.0.0
+4.0 | 8.6 | 8.10.0
+3.3 - 3.9 | 6.9 | 8.0.0
 3.2 - 3.3 | 0.12 | unknown
 3.0 - 3.1 | 0.10 or iojs | unknown
 0.0.1 - 2.8 | 0.10 | unknown
