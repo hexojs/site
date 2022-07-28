@@ -94,13 +94,14 @@ $ npm install hexo
 
 我们强烈建议永远安装最新版本的 Hexo，以及 [推荐的 Node.js 版本](#安装前提)。
 
-Hexo 版本 | 最低兼容 Node.js 版本
---- | ---
-6.0+ | 12.13.0
-5.0+ | 10.13.0
-4.1 - 4.2 | 8.10
-4.0 | 8.6
-3.3 - 3.9 | 6.9
-3.2 - 3.3 | 0.12
-3.0 - 3.1 | 0.10 or iojs
-0.0.1 - 2.8 | 0.10
+Hexo version | Minimum Node.js version | Maximum Node.js version
+--- | --- | ---
+6.2+ | 12.13.0 | latest
+6.0+ | 12.13.0 | 18.4.0
+5.0+ | 10.13.0 | unknown
+4.1 - 4.2 | 8.10 | unknown
+4.0 | 8.6 | unknown
+3.3 - 3.9 | 6.9 | unknown
+3.2 - 3.3 | 0.12 | unknown
+3.0 - 3.1 | 0.10 or iojs | unknown
+0.0.1 - 2.8 | 0.10 | unknown
