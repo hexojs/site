@@ -3812,17 +3812,17 @@
     - mathjax
     - local-search
 - name: ParticleX
-  description: A concise Hexo theme, transformed by Particle.
+  description: A concise Hexo theme, based on Particle.
   link: https://github.com/argvchs/hexo-theme-particlex
   preview: https://argvchs.github.io/
   tags:
     - Chinese
     - Vue3
-    - Concise
     - Simple
-    - Responsive
-    - transform
+    - Concise
     - Light
+    - Animate
+    - Responsive
 - name: Bcxm
   description: A fun, concise, and generous Hexo theme.
   link: https://github.com/chenxz21/hexo-theme-bcxm
