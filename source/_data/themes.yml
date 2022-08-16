@@ -3861,3 +3861,12 @@
     - MathJax support
     - Mermaid support
     - Baidu/Google Analytics
+- name: Burgerking
+  description: A simple cartoon movie related theme.
+  link: https://github.com/JackZong/hexo-theme-burgerking
+  preview: https://jackzong.github.io/
+  tags:
+    - movie
+    - cartoon
+    - custom
+    - clean
