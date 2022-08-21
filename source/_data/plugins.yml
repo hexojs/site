@@ -1,3 +1,16 @@
+- name: hexo-info-api
+  description: Simple api serve for Hexo. Can custom allowOrigin. (Build with generator)
+  link: https://github.com/0ojixueseno0/hexo-info-api
+  tags:
+    - api
+    - json
+    - information
+- name: hexo-generator-index-custom
+  description: Custom index generator plugin for hexo. Can hide posts and pin-top posts.
+  link: https://github.com/im0o/hexo-generator-index-custom
+  tags:
+    - generator
+    - index
 - name: hexo-hash
   description: 为静态资源创建哈希版本 | Create hash versions for static resources
   link: https://github.com/Lete114/Hexo-hash
