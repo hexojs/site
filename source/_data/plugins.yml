@@ -3245,3 +3245,11 @@
     - midi
     - midijs
     - music
+- name: hexo-bangumis
+  description: Generate pages of bangumis for Hexo, support bgm.tv | Hexo 番剧页面插件，数据源 bgm.tv
+  link: https://github.com/mmdjiji/hexo-bangumis
+  tags:
+    - generator
+    - bilibili
+    - bangumi
+    - anime
