@@ -3260,3 +3260,9 @@
     - filter
     - performance
     - partytown
+- name: hexo-friends
+  description: Hexo friends plugin | 生成友人帐页面
+  link: https://github.com/mmdjiji/hexo-friends
+  tags:
+    - friends
+    - generator
