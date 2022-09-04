@@ -716,6 +716,8 @@ Examples:
 `end_color` | 结束的颜色。您可使用十六进位值（`#b700ff`），rgba（`rgba(183, 0, 255, 1)`），hsla（`hsla(283, 100%, 50%, 1)`）或 [颜色关键字]。此变量仅在 `color` 参数开启时才有用。 |
 `class` | 标签的 class name 前缀
 `level` | 不同 class name 的总数。此变量仅在 `class` 参数设定时才有用。 | 10
+`show_count` | 显示每个标签的文章总数 | false
+`count_class` | 标签文章总数的 class | `count`
 
 ## 其他
 

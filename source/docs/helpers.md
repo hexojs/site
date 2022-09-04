@@ -723,6 +723,8 @@ Option | Description | Default
 `end_color` | End color. You can use hex (`#b700ff`), rgba (`rgba(183, 0, 255, 1)`), hsla (`hsla(283, 100%, 50%, 1)`) or [color keywords]. This option only works when `color` is true. |
 `class` | Class name prefix of tags
 `level` | The number of different class names. This option only works when `class` is set. | 10
+`show_count` | Display the number of posts for each tag | false
+`count_class` | Class name of tag count | count
 
 **Examples:**
 
