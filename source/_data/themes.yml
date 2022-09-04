@@ -3870,7 +3870,7 @@
     - cartoon
     - custom
     - clean
-- name: Kira-Hexo
+- name: Kira
   description: Kira-Hexo is a kirameki ✨ hexo theme for your blog.
   link: https://github.com/ch1ny/kira-hexo
   preview: https://ch1ny.github.io/
