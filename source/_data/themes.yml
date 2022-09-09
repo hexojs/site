@@ -3883,3 +3883,14 @@
     - Cover
     - music Aplayer
     - Mobile
+- name: Minimalism
+  description: Minimalism, simplicity and refined details
+  link: https://github.com/f-dong/hexo-theme-minimalism
+  preview: https://www.codeover.cn/
+  tags:
+    - 中文
+    - 极简
+    - Shadow
+    - Mobile
+    - minimalism
+    - Light/Dark
