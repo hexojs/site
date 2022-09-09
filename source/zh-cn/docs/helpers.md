@@ -743,6 +743,12 @@ Examples:
 `mid_size` | 显示于中间的页数 | 2
 `show_all` | 显示所有页数。如果开启此参数的话，`end_size` 和 `mid_size` 就没用了。 | false
 `escape` | Escape HTML tags | true
+`page_class` | 分页链接的 class 名称 | `page-number`
+`current_class` | 当前页链接的 class 名称 | `current`
+`space_class` | 空白文字的 class 名称 | `space`
+`prev_class` | 上一页链接的 class 名称 | `extend prev`
+`next_class` | 下一页链接的 class 名称 | `extend next`
+`force_prev_next` | 强制显示上一页和下一页的链接 | false
 
 **Examples:**
 

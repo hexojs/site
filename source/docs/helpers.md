@@ -760,6 +760,13 @@ Option | Description | Default
 `mid_size` | The number of pages displayed between current page, but not including current page | 2
 `show_all` | Display all pages. If this is set to true, `end_size` and `mid_size` will not work | false
 `escape` | Escape HTML tags | true
+`page_class` | Page class name | `page-number`
+`current_class` | Current page class name | `current`
+`space_class` | Space class name | `space`
+`prev_class` | Previous page class name | `extend prev`
+`next_class` | Next page class name | `extend next`
+`force_prev_next` | Force display previous and next links | false
+
 
 **Examples:**
 
