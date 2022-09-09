@@ -892,7 +892,13 @@ Inserts [generator tag](https://developer.mozilla.org/en-US/docs/Web/HTML/Elemen
 
 参数 | 描述 | 默认值
 --- | --- | ---
-`class` | Class 名称 | toc
+`class` | Class 名称 | `toc`
+`class_item` | 目录元素的 Class 名称 | `${class}-item`
+`class_link` | 目录内链接的 Class 名称 | `${class}-link`
+`class_text` | 目录链接内文本的 Class 名称 | `${class}-text`
+`class_child` | 目录内子列表的 Class 名称 | `${class}-child`
+`class_number` | 目录序号的 Class 名称 | `${class}-number`
+`class_level` | 目录层级的 Class 名称前缀 | `${class}-level`
 `list_number` | 显示编号 | true
 `max_depth` | 生成 TOC 的最大深度 | 6
 `min_depth` | 生成 TOC 的最小深度 | 1

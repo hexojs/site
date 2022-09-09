@@ -910,7 +910,13 @@ Parses all heading tags (h1~h6) in the content and inserts a table of contents.
 
 Option | Description | Default
 --- | --- | ---
-`class` | Class name | toc
+`class` | Class name | `toc`
+`class_item` | Class name of item | `${class}-item`
+`class_link` | Class name of link | `${class}-link`
+`class_text` | Class name of text | `${class}-text`
+`class_child` | Class name of child | `${class}-child`
+`class_number` | Class name of number | `${class}-number`
+`class_level` | Class name prefix of level | `${class}-level`
 `list_number` | Displays list number | true
 `max_depth` | Maximum heading depth of generated toc | 6
 `min_depth` | Minimum heading depth of generated toc | 1
