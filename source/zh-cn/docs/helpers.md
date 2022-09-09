@@ -291,6 +291,14 @@ url: https://example.com/blog # example
 <%- is_home() %>
 ```
 
+### is_home_first_page
+
+检查当前页面是否为首页的第一页。
+
+``` js
+<%- is_home_first_page() %>
+```
+
 ### is_post
 
 检查当前页面是否为文章。

@@ -297,6 +297,14 @@ Check whether the current page is home page.
 <%- is_home() %>
 ```
 
+### is_home_first_page
+
+Check whether the current page is the first of home page.
+
+``` js
+<%- is_home_first_page() %>
+```
+
 ### is_post
 
 Check whether the current page is a post.
