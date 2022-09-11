@@ -1,7 +1,7 @@
 - name: Monie
   description: a card face, simple and beautiful theme
   link: https://github.com/lyboy6/hexo-theme-monie
-  preview: https://lyboy6.github.io/blog/
+  preview: https://lyboy6.github.io/blog
   tags:
     - 中文
     - card
