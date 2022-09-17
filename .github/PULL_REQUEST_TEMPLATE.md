@@ -19,12 +19,13 @@
 - [ ] Others (Update, fix, translation, etc...)
   - Languages:
   - [ ] `en` English
-  - [ ] `ko` Korean
-  - [ ] `pt-br` Brazilian Portuguese
   - [ ] `ru` Russian
-  - [ ] `th` Thai
   - [ ] `zh-cn` simplified Chinese
   - [ ] `zh-tw` traditional Chinese
+
+<!--
+    `ko`, `pt-br`, `th` language documents are inactive. Plase, submit issue if you want to continuous contribution to them.
+-->
 
 <!-- 
     Thank you for publishing your work on Hexo site!
