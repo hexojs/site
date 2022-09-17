@@ -23,9 +23,14 @@
   - [ ] `zh-cn` simplified Chinese
   - [ ] `zh-tw` traditional Chinese
 
-<!--
-    `ko`, `pt-br`, `th` language documents are inactive. Plase, submit issue if you want to continuous contribution to them.
--->
+
+> **Note**
+>
+> No need to translate `ko`, `pt-br`, `th` languages if you submit a PR for documentation.
+
+> **Warning**
+>
+> `ko`, `pt-br`, `th` languages document are inactive. Plase, submit issue if you want to continuous contribution to them.
 
 <!-- 
     Thank you for publishing your work on Hexo site!
