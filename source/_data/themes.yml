@@ -11,6 +11,13 @@
   tags:
   - 中文
   - minimalist
+- name: Monie
+  description: Monie is simple card theme
+  link: https://github.com/lyboy6/hexo-theme-monie
+  preview: https://lyboy6.github.io/blog
+  tags: 
+  - 中文
+  - Card
 - name: leedom 
   description: A pure hexo theme. 
   link: https://github.com/leedom92/hexo-theme-leedom 
