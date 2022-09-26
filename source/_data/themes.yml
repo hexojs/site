@@ -3894,3 +3894,13 @@
     - Mobile
     - minimalism
     - Light/Dark
+- name: Wave
+  description: Simple & clean theme for Hexo, focus on personal tech blog.
+  link: https://github.com/cocowool/wave
+  preview: http://www.edulinks.cn
+  tags:
+    - responsive
+    - simple
+    - clean
+    - chinese
+    - 中文
