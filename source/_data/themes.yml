@@ -3904,3 +3904,12 @@
     - clean
     - chinese
     - 中文
+- name: Monie
+  description: Monie a simple and beautiful card theme
+  link: https://github.com/lyboy6/hexo-theme-monie
+  preview: https://lyboy6.github.io/blog/
+  tags:
+    - 中文
+    - 简约
+    - Card
+    - Simplicity
