@@ -1,14 +1,14 @@
 - name: Commerce
-  description: Commercial theme for hexo
+  description: Commercial theme for hexo, material design.
   link: https://github.com/ginoblog/hexo-theme-commerce
-  preview: https://ginoblog.github.io/commerce/
+  preview: https://ginozhangblog.inet2.org/
   tags: 
     - 中文
     - Material Design
     - Commercial
     - English
     - Search
-  - 中文
+    - Shop
 - name: Text
   description: Text is because they are all text, but the DIY space is very large
   link: https://github.com/sdqOS/hexo-theme-Text
