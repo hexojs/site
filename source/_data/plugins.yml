@@ -3282,3 +3282,9 @@
   tags:
     - obsidian
     - blog
+- name: hexo-indexnow
+  description: A lightweight SEO (indexnow) plugin. | 一个轻量级的indexnow链接提交插件
+  link: https://github.com/zkz098/hexo-indexnow
+  tags:
+    - seo
+    - indexnow
