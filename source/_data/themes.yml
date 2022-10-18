@@ -4,6 +4,20 @@
   preview: https://sdqos.github.io
   tags: 
   - 中文
+- name: Redefine
+  description: "Redefine" hexo theme is a simple & fast & pure theme, but with no compromise.
+  link: https://github.com/EvanNotFound/hexo-theme-redefine
+  preview: https://redefine.evanluo.top
+  tags: 
+  - redefine
+  - simple
+  - fast
+  - pure
+  - 中文
+  - English
+  - Chinses
+  - DIY
+  - responsive
 - name: Scroll
   description: A minimalist blog theme
   link: https://github.com/2670637999/hexo-theme-scroll
