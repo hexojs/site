@@ -237,7 +237,7 @@ Template render error: (unknown path)
 
 One possible reason is that there are some unrecognizable words in your file, e.g. invisible zero width characters.
 
-### YAMLException (Issue [#4917](https://github.com/hexojs/hexo/issues/4917))
+## YAMLException (Issue [#4917](https://github.com/hexojs/hexo/issues/4917))
 
 Upgrading to `hexo^6.1.0` from an older version may cause the following error when running `$ hexo generate`:
 
