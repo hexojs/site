@@ -1,3 +1,11 @@
+- name: MegaBolD
+  description: MegaBolD is a powerful magazine theme for hexo.
+  link: https://github.com/sclass53/hexo-theme-megabold
+  preview: https://sclass53.github.io/megabold/
+  tags: 
+  - 中文
+  - multilanguage
+  - magazine
 - name: Text
   description: Text is because they are all text, but the DIY space is very large
   link: https://github.com/sdqOS/hexo-theme-Text
