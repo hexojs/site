@@ -3282,3 +3282,14 @@
   tags:
     - seo
     - indexnow
+- name: hexo-related-posts-bysk
+  description: A plugin for Hexo to list related posts, when many similar plugins are invalid now. | 一个 Hexo 相关文章插件，如今许多类似插件失效。
+  link: https://github.com/Sukwants/hexo-related-posts-bysk
+  tags:
+    - related
+- name: hexo-content-blocks
+  description: A content block plugin for Hexo. Customization supported. | 一个 Hexo 内容块插件，支持自定义。
+  link: https://github.com/Sukwants/hexo-content-blocks
+  tags:
+    - blocks
+    - admonitions
