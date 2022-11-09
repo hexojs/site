@@ -31,7 +31,7 @@ post_asset_folder: true
 
 通过这种方式，图片将会同时出现在文章和主页以及归档页中。
 
-## 使用markdown嵌入图片
+## 使用 Markdown 嵌入图片
 
 [hexo-renderer-marked](https://github.com/hexojs/hexo-renderer-marked) 3.1.0 引入了一个新的选项，其允许你无需使用 `asset_img` 标签插件就可以在 markdown 中嵌入图片
 
