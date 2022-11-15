@@ -338,7 +338,7 @@ content
 
 ### Embed image
 
-_hexo-renderer-marked 3.1.0+ 可以（可选）自动解析图片的文章路径，参考 [本节](/zh-cn/docs/asset-folders#Embedding-an-image-using-markdown) 如何启用它。_
+_hexo-renderer-marked 3.1.0+ 可以（可选）自动解析图片的文章路径，参考 [本节](/zh-cn/docs/asset-folders#使用-Markdown-嵌入图片) 如何启用它。_
 
 "foo.jpg" 位于 `http://example.com/2020/01/02/hello/foo.jpg`。
 

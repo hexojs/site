@@ -25,13 +25,13 @@ date: 2013/7/13 20:46:25
 `tags` | 标签（不适用于分页） |
 `categories` | 分类（不适用于分页）|
 `permalink` | 覆盖文章网址 |
-`excerpt` | 纯文本的页面摘要。使用 [该插件](/zh-cn/docs/tag-plugins#Post-Excerpt) 来格式化文本 |
+`excerpt` | 纯文本的页面摘要。使用 [该插件](/zh-cn/docs/tag-plugins#文章摘要和截断) 来格式化文本 |
 `disableNunjucks` | 启用时禁用 Nunjucks 标签 `{{ }}`/`{% %}` 和 [标签插件](/zh-cn/docs/tag-plugins) 的渲染功能
-`lang` | 设置语言以覆盖 [自动检测](/zh-cn/docs/internationalization#Path) |继承自 `_config.yml`
+`lang` | 设置语言以覆盖 [自动检测](/zh-cn/docs/internationalization#路径) |继承自 `_config.yml`
 
 ## 布局
 
-根据 `_config.yml` 中 [`default_layout`](/zh-cn/docs/configuration#Writing) 的设置，默认布局是 `post` 。当文章中的布局被禁用(`layout: false`)，它将不会使用主题处理。然而，它仍然会被任何可用的渲染引擎渲染：如果一篇文章是用 Markdown 写的，并且安装了 Markdown 渲染引擎（比如默认的 [hexo-renderer-marked](https://github.com/hexojs/hexo-renderer-marked))，它将被渲染成HTML。
+根据 `_config.yml` 中 [`default_layout`](/zh-cn/docs/configuration#文章) 的设置，默认布局是 `post` 。当文章中的布局被禁用(`layout: false`)，它将不会使用主题处理。然而，它仍然会被任何可用的渲染引擎渲染：如果一篇文章是用 Markdown 写的，并且安装了 Markdown 渲染引擎（比如默认的 [hexo-renderer-marked](https://github.com/hexojs/hexo-renderer-marked))，它将被渲染成HTML。
 
 [标签插件](/zh-cn/docs/tag-plugins) 总是被处理，而会不考虑布局，除非被 `disableNunjucks` 设置或 [渲染引擎](/zh-cn/api/renderer#Disable-Nunjucks-tags) 禁用。
 
