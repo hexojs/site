@@ -911,12 +911,12 @@ Inserts [generator tag](https://developer.mozilla.org/en-US/docs/Web/HTML/Elemen
 
 #### data-toc-unnumbered (+6.1.0)
 
-Headings with attribute `data-toc-unnumbered="true"` will be marked as unnumbered (list number will not be display).
+带有 `data-toc-unnumbered="true"` 属性的标题将被标记为未编号（不显示列表编号）。
 
-{% note warn "Warning!" %}
-For using `data-toc-unnumbered="true"`, the renderer must have the option to add CSS classes.
+{% note warn "警告！" %}
+对于使用 `data-toc-unnumbered="true"` ，渲染引擎必须要有添加 CSS 类的选项。
 
-Please see below PRs.
+请看下面的 PR。
 
 - https://github.com/hexojs/hexo/pull/4871
 - https://github.com/hexojs/hexo-util/pull/269
