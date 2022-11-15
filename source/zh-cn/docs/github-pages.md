@@ -73,7 +73,7 @@ jobs:
 
 ## 一键部署
 
-以下教学改编自 [一键部署](/docs/one-command-deployment) .
+以下教学改编自 [一键部署](/zh-cn/docs/one-command-deployment) .
 
 1. 安装 [hexo-deployer-git](https://github.com/hexojs/hexo-deployer-git).
 2. 清空 `_config.yml` 的现有资料，并新增以下组态:

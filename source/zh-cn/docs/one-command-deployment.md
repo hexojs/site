@@ -56,9 +56,9 @@ deploy:
 `repo` | 库（Repository）地址 |
 `branch` | 分支名称 | `gh-pages` (GitHub)<br>`coding-pages` (Coding.net)<br>`master` (others)
 `message` | 自定义提交信息 | `Site updated: {% raw %}{{ now('YYYY-MM-DD HH:mm:ss') }}{% endraw %}`)
-`token` | Optional token value to authenticate with the repo. Prefix with `$` to read token from environment variable
+`token` |可选的令牌值，用于认证 repo。用 `$` 作为前缀从而从环境变量中读取令牌
 
-3. 生成站点文件并推送至远程库。执行 `hexo clean && hexo deploy`。
+1. 生成站点文件并推送至远程库。执行 `hexo clean && hexo deploy`。
 
   - 除非你使用令牌或 SSH 密钥认证，否则你会被提示提供目标仓库的用户名和密码。
   - hexo-deployer-git 并不会存储你的用户名和密码. 请使用 [git-credential-cache](https://git-scm.com/docs/git-credential-cache) 来临时存储它们。

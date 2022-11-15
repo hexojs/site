@@ -5,7 +5,7 @@ title: 标签插件（Tag Plugins）
 
 虽然你可以使用任何格式书写你的文章，但是标签插件永远可用，且语法也都是一致的。
 
-_Tag plugins should not be wrapped inside Markdown syntax, e.g. `[]({% post_path lorem-ipsum %})` is not supported._
+_标签插件不应该被包裹在 Markdown 语法中，例如： `[]({% post_path lorem-ipsum %})` 是不被支持的。_
 
 ## 引用块
 
@@ -81,16 +81,16 @@ code snippet
 {% endcodeblock %}
 ```
 
-Specify additional options in `option:value` format, e.g. `line_number:false first_line:5`.
+以 `option:value` 的格式指定额外选项，例如：`line_number:false first_line:5`。
 
-Extra Options | Description | Default
+额外选项 | 描述 | 默认值
 --- | --- | ---
-`line_number` | Show line number | `true`
-`line_threshold` | Only show line numbers as long as the numbers of lines of the code block exceed such threshold. | `0` |
-`highlight` | Enable code highlighting | `true`
-`first_line` | Specify the first line number | `1`
-`mark` | Line highlight specific line(s), each value separated by a comma. Specify number range using a dash<br>Example: `mark:1,4-7,10` will mark line 1, 4 to 7 and 10. |
-`wrap` | Wrap the code block in [`<table>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table) | `true`
+`line_number` | 显示行号 | `true`
+`line_threshold` | 只有代码块的行数超过该阈值，才显示行数 | `0` |
+`highlight` | 启用代码高亮 | `true`
+`first_line` | 指定第一个行号 | `1`
+`mark` | 突出显示特定的行，每个值用逗号分隔。 使用破折号指定数字范围<br>例如： `mark:1,4-7,10` 将标记第1、4至7和10行 |
+`wrap` | 用 [`<table>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table) 包裹代码块 | `true`
 
 ### 样例
 
@@ -338,9 +338,9 @@ content
 
 ### Embed image
 
-_hexo-renderer-marked 3.1.0+ can (optionally) resolves the post's path of an image automatically, refer to [this section](/docs/asset-folders#Embedding-an-image-using-markdown) on how to enable it._
+_hexo-renderer-marked 3.1.0+ 可以（可选）自动解析图片的文章路径，参考 [本节](/zh-cn/docs/asset-folders#Embedding-an-image-using-markdown) 如何启用它。_
 
-"foo.jpg" is located at `http://example.com/2020/01/02/hello/foo.jpg`.
+"foo.jpg" 位于 `http://example.com/2020/01/02/hello/foo.jpg`。
 
 **Default (no option)**
 

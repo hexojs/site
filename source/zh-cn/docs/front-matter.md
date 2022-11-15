@@ -25,9 +25,9 @@ date: 2013/7/13 20:46:25
 `tags` | 标签（不适用于分页） |
 `categories` | 分类（不适用于分页）|
 `permalink` | 覆盖文章网址 |
-`excerpt` | Page excerpt in plain text. Use [this plugin](/docs/tag-plugins#Post-Excerpt) to format the text |
-`disableNunjucks` | Disable rendering of Nunjucks tag `{{ }}`/`{% %}` and [tag plugins](/docs/tag-plugins) when enabled
-`lang` | Set the language to override [auto-detection](/docs/internationalization#Path) | Inherited from `_config.yml`
+`excerpt` | 纯文本的页面摘要。使用 [该插件](/zh-cn/docs/tag-plugins#Post-Excerpt) 来格式化文本 |
+`disableNunjucks` | 启用时禁用 Nunjucks 标签 `{{ }}`/`{% %}` 和 [标签插件](/zh-cn/docs/tag-plugins) 的渲染功能
+`lang` | 设置语言以覆盖 [自动检测](/zh-cn/docs/internationalization#Path) |继承自 `_config.yml`
 
 ## 布局
 
