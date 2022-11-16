@@ -1,9 +1,32 @@
+- name: MegaBolD
+  description: MegaBolD is a powerful magazine theme for hexo.
+  link: https://github.com/sclass53/hexo-theme-megabold
+  preview: https://megabold.sclass53.jnrcs.org
+  tags: 
+  - 中文
+  - English
+  - Magazine
+  - Search
 - name: Text
   description: Text is because they are all text, but the DIY space is very large
   link: https://github.com/sdqOS/hexo-theme-Text
   preview: https://sdqos.github.io
   tags: 
   - 中文
+- name: Redefine
+  description: Redefine theme is a simple & fast & pure theme, but with no compromise.
+  link: https://github.com/EvanNotFound/hexo-theme-redefine
+  preview: https://redefine.evanluo.top
+  tags: 
+  - redefine
+  - simple
+  - fast
+  - pure
+  - 中文
+  - English
+  - Chinses
+  - DIY
+  - responsive
 - name: Scroll
   description: A minimalist blog theme
   link: https://github.com/2670637999/hexo-theme-scroll
@@ -3651,7 +3674,7 @@
 - name: Flavor
   description: A Simple and Fast Theme for Hexo
   link: https://github.com/xtexChooser/hexo-theme-flavor
-  preview: https://xtexx.ml/blog/2021/8/22/custom-theme/
+  preview: https://blog.xtexx.ml/2021/8/22/custom-theme/
   tags:
     - 中文
     - 简约
@@ -3862,14 +3885,16 @@
     - Mermaid support
     - Baidu/Google Analytics
 - name: Burgerking
-  description: A simple cartoon movie related theme.
+  description: A clean and responsive theme, I call it Burgerking.
   link: https://github.com/JackZong/hexo-theme-burgerking
   preview: https://jackzong.github.io/
   tags:
-    - movie
-    - cartoon
-    - custom
-    - clean
+    - Cartoon
+    - Custom
+    - Clean
+    - Code highlight
+    - Responsive
+    - Chinese
 - name: Kira
   description: Kira-Hexo is a kirameki ✨ hexo theme for your blog.
   link: https://github.com/ch1ny/kira-hexo

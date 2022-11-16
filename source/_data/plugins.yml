@@ -3202,6 +3202,12 @@
     - page
     - post
     - toc
+- name: hexo-tag-icodeweb
+  description: Including code from any website in your Hexo posts.
+  link: https://github.com/Tiphereth-A/hexo-tag-icodeweb
+  tags:
+    - tag
+    - code
 - name: hexo-absolute
   description: Convert relative path to absolute URL for hexo
   link: https://github.com/uiolee/hexo-absolute
@@ -3276,12 +3282,26 @@
     - variable
     - dynamic
     - config
+- name: hexo-obsidian-link
+  description: Hexo plugin to transfer obsidian link to post link
+  link: https://github.com/wangeDear/hexo-obsidian-link
+  tags:
+    - obsidian
+    - blog
 - name: hexo-indexnow
   description: A lightweight SEO (indexnow) plugin. | 一个轻量级的indexnow链接提交插件
   link: https://github.com/zkz098/hexo-indexnow
   tags:
     - seo
     - indexnow
+- name: hexo-lightningcss
+  description: LightningCSS Plugin for Hexo.
+  link: https://github.com/kwaa/hexo-lightningcss
+  tags:
+    - filter
+    - css
+    - lightningcss
+    - autoprefixer
 - name: hexo-related-posts-bysk
   description: A plugin for Hexo to list related posts, generated from tags and categories. | 一个 Hexo 相关文章插件，由标签和分类生成。
   link: https://github.com/Sukwants/hexo-related-posts-bysk
