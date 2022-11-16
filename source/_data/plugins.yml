@@ -3283,7 +3283,7 @@
     - seo
     - indexnow
 - name: hexo-related-posts-bysk
-  description: A plugin for Hexo to list related posts, when many similar plugins are invalid now. | 一个 Hexo 相关文章插件，如今许多类似插件失效。
+  description: A plugin for Hexo to list related posts, generated from tags and categories. | 一个 Hexo 相关文章插件，由标签和分类生成。
   link: https://github.com/Sukwants/hexo-related-posts-bysk
   tags:
     - related
