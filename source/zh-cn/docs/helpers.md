@@ -118,7 +118,7 @@ url: https://example.com/blog # example
 
 ### css
 
-载入 CSS 文件。`path` 可以是数组或字符串，如果 `path` 开头不是 `/` 或任何协议，则会自动加上根路径；如果后面没有加上 `.css` 扩展名的话，也会自动加上。Use object type for custom attributes.
+载入 CSS 文件。`path` 可以是数组或字符串，如果 `path` 开头不是 `/` 或任何协议，则会自动加上根路径；如果后面没有加上 `.css` 扩展名的话，也会自动加上。对于自定义属性请使用对象类型。
 
 ``` js
 <%- css(path, ...) %>
@@ -144,7 +144,7 @@ url: https://example.com/blog # example
 
 ### js
 
-载入 JavaScript 文件。`path` 可以是数组或字符串，如果 `path` 开头不是 `/` 或任何协议，则会自动加上根路径；如果后面没有加上 `.js` 扩展名的话，也会自动加上。Use object type for custom attributes.
+载入 JavaScript 文件。`path` 可以是数组或字符串，如果 `path` 开头不是 `/` 或任何协议，则会自动加上根路径；如果后面没有加上 `.js` 扩展名的话，也会自动加上。对于自定义属性请使用对象类型。
 
 ``` js
 <%- js(path, ...) %>
@@ -422,14 +422,14 @@ url: https://example.com/blog # example
 <%- render(str, engine, [options]) %>
 ```
 
-**Examples:**
+**示例：**
 
 ``` js
 <%- render('p(class="example") Test', 'pug'); %>
 // <p class="example">Test</p>
 ```
 
-See [Rendering](https://hexo.io/zh-cn/api/rendering) for more details.
+详见 [渲染](https://hexo.io/zh-cn/api/rendering)。
 
 ### word_wrap
 
@@ -469,13 +469,13 @@ See [Rendering](https://hexo.io/zh-cn/api/rendering) for more details.
 
 ### escape_html
 
-Escapes HTML entities in a string.
+在字符串中转义 HTML 实体。
 
 ``` js
 <%- escape_html(str) %>
 ```
 
-**Examples:**
+**示例：**
 
 ``` js
 <%- escape_html('<p>Hello "world".</p>') %>
@@ -610,7 +610,7 @@ Escapes HTML entities in a string.
 `transform` | 改变分类名称显示方法的函数 |
 `suffix` | 为链接添加前缀 | None
 
-**用例:**
+**示例：**
 
 ``` js
 <%- list_categories(post.categories, {
@@ -642,22 +642,22 @@ Escapes HTML entities in a string.
 `show_count` | 显示每个标签的文章总数 | true
 `style` | 标签列表的显示方式。使用 `list` 以无序列表（unordered list）方式显示。 | list
 `separator` | 标签间的分隔符号。只有在 `style` 不是 `list` 时有用。 | ,
-`class` | Class name of tag list (string) or customize each tag's class (object, see below). | tag
+`class` | 标签列表的类名（字符串）或自定义每个标签的类（对象，见下文）。 | tag
 `transform` | 改变标签名称显示方法的函数。请查看 [list_categories](#list-categories) 中给出的例子 |
 `amount` | 要显示的标签数量（0 = 无限制） | 0
 `suffix` | 为链接添加前缀 | None
 
-Class advanced customization:
+类的高级定制：
 
-Option | Description | Default
+选项 | 描述 | 预设值
 --- | --- | ---
-`class.ul` | `<ul>` class name (only for style `list`) | `tag-list` (list style)
-`class.li` | `<li>` class name (only for style `list`) | `tag-list-item` (list style)
-`class.a` | `<a>` class name | `tag-list-link` (list style) `tag-link` (normal style)
-`class.label` | `<span>` class name where the tag label is stored (only for normal style, when `class.label` is set the label is put in a `<span>`) | `tag-label` (normal style)
-`class.count` | `<span>` class name where the tag counter is stored (only when `show_count` is `true`) | `tag-list-count` (list style) `tag-count` (normal style)
+`class.ul` | `<ul>` 类名 （只适用于样式 `list`） | `tag-list` （列表样式）
+`class.li` | `<li>` 类名 （只适用于样式 `list`） | `tag-list-item` （列表样式）
+`class.a` | `<a>` 类名 | `tag-list-link` （列表样式） `tag-link` （普通样式）
+`class.label` | `<span>` 类名，标签 label 存储在这里（仅适用于普通样式，当 `class.label` 被设置时，标签被放置在 `<span>` 中） | `tag-label` （普通样式）
+`class.count` | `<span>` 类名，标签 counter 存储在这里 （仅当 `show_count` 为 `true`） | `tag-list-count` （列表样式） `tag-count` （普通样式）
 
-Examples:
+示例：
 
 ```ejs
 <%- list_tags(site.tags, {class: 'classtest', style: false, separator: ' | '}) %>
@@ -758,7 +758,7 @@ Examples:
 `next_class` (+6.3.0) | 下一页链接的 class 名称 | `extend next`
 `force_prev_next` (+6.3.0) | 强制显示上一页和下一页的链接 | false
 
-**Examples:**
+**示例：**
 
 ``` js
 <%- paginator({
@@ -842,13 +842,13 @@ Examples:
 
 ### meta_generator
 
-Inserts [generator tag](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta).
+插入 [generator tag](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta)。
 
 ``` js
 <%- meta_generator() %>
 ```
 
-**Examples:**
+**示例：**
 
 ``` js
 <%- meta_generator() %>
@@ -914,7 +914,7 @@ Inserts [generator tag](https://developer.mozilla.org/en-US/docs/Web/HTML/Elemen
 带有 `data-toc-unnumbered="true"` 属性的标题将被标记为未编号（不显示列表编号）。
 
 {% note warn "警告！" %}
-对于使用 `data-toc-unnumbered="true"` ，渲染引擎必须要有添加 CSS 类的选项。
+对于使用 `data-toc-unnumbered="true"`，渲染引擎必须要有添加 CSS 类的选项。
 
 请看下面的 PR。
 

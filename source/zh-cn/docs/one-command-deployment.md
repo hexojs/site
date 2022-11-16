@@ -56,7 +56,7 @@ deploy:
 `repo` | 库（Repository）地址 |
 `branch` | 分支名称 | `gh-pages` (GitHub)<br>`coding-pages` (Coding.net)<br>`master` (others)
 `message` | 自定义提交信息 | `Site updated: {% raw %}{{ now('YYYY-MM-DD HH:mm:ss') }}{% endraw %}`)
-`token` |可选的令牌值，用于认证 repo。用 `$` 作为前缀从而从环境变量中读取令牌
+`token` | 可选的令牌值，用于认证 repo。用 `$` 作为前缀从而从环境变量中读取令牌
 
 3. 生成站点文件并推送至远程库。执行 `hexo clean && hexo deploy`。
 

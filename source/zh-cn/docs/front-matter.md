@@ -27,7 +27,7 @@ date: 2013/7/13 20:46:25
 `permalink` | 覆盖文章网址 |
 `excerpt` | 纯文本的页面摘要。使用 [该插件](/zh-cn/docs/tag-plugins#文章摘要和截断) 来格式化文本 |
 `disableNunjucks` | 启用时禁用 Nunjucks 标签 `{{ }}`/`{% %}` 和 [标签插件](/zh-cn/docs/tag-plugins) 的渲染功能
-`lang` | 设置语言以覆盖 [自动检测](/zh-cn/docs/internationalization#路径) |继承自 `_config.yml`
+`lang` | 设置语言以覆盖 [自动检测](/zh-cn/docs/internationalization#路径) | 继承自 `_config.yml`
 
 ## 布局
 
@@ -56,7 +56,7 @@ categories:
   - Life
 ```
 
-会使分类`Life`成为`Diary`的子分类，而不是并列分类。因此，有必要为您的文章选择尽可能准确的分类。
+会使分类 `Life` 成为 `Diary` 的子分类，而不是并列分类。因此，有必要为您的文章选择尽可能准确的分类。
 
 如果你需要为文章添加多个分类，可以尝试以下 list 中的方法。
 
