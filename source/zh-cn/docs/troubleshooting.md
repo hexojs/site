@@ -218,6 +218,23 @@ Template render error: (unknown path)
 
 一种可能的原因是你的文件中存在一些不可被识别的字符，比如不可见的零宽度字符。
 
+## YAMLException (Issue [#4917](https://github.com/hexojs/hexo/issues/4917))
+
+从低版本的 Hexo 升级到 Hexo 6.1.0 及以上版本之后，可能会在生成站点时出现以下错误：
+
+```
+YAMLException: Specified list of YAML types (or a single Type object) contains a non-Type object.
+    at ...
+```
+
+这可能是由于存在包管理器无法自动修复的不正确的依赖项（即 `js-yaml`）引起的，您需要手动更新它：
+
+```sh
+$ npm install js-yaml@latest
+# 如果您使用 yarn 作为包管理器，请运行下面这个命令：
+$ yarn add js-yaml@latest
+```
+
 [Warehouse]: https://github.com/hexojs/warehouse
 [Swig]: http://paularmstrong.github.io/swig/
 [Nunjucks]: https://mozilla.github.io/nunjucks/

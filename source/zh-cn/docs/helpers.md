@@ -291,6 +291,14 @@ url: https://example.com/blog # example
 <%- is_home() %>
 ```
 
+### is_home_first_page (+6.3.0)
+
+检查当前页面是否为首页的第一页。
+
+``` js
+<%- is_home_first_page() %>
+```
+
 ### is_post
 
 检查当前页面是否为文章。
@@ -716,6 +724,8 @@ Examples:
 `end_color` | 结束的颜色。您可使用十六进位值（`#b700ff`），rgba（`rgba(183, 0, 255, 1)`），hsla（`hsla(283, 100%, 50%, 1)`）或 [颜色关键字]。此变量仅在 `color` 参数开启时才有用。 |
 `class` | 标签的 class name 前缀
 `level` | 不同 class name 的总数。此变量仅在 `class` 参数设定时才有用。 | 10
+`show_count` (+6.3.0) | 显示每个标签的文章总数 | false
+`count_class` (+6.3.0) | 标签文章总数的 class | `count`
 
 ## 其他
 
@@ -741,6 +751,12 @@ Examples:
 `mid_size` | 显示于中间的页数 | 2
 `show_all` | 显示所有页数。如果开启此参数的话，`end_size` 和 `mid_size` 就没用了。 | false
 `escape` | Escape HTML tags | true
+`page_class` | 分页链接的 class 名称 | `page-number`
+`current_class` (+6.3.0) | 当前页链接的 class 名称 | `current`
+`space_class` (+6.3.0) | 空白文字的 class 名称 | `space`
+`prev_class` (+6.3.0) | 上一页链接的 class 名称 | `extend prev`
+`next_class` (+6.3.0) | 下一页链接的 class 名称 | `extend next`
+`force_prev_next` (+6.3.0) | 强制显示上一页和下一页的链接 | false
 
 **Examples:**
 
@@ -876,7 +892,13 @@ Inserts [generator tag](https://developer.mozilla.org/en-US/docs/Web/HTML/Elemen
 
 参数 | 描述 | 默认值
 --- | --- | ---
-`class` | Class 名称 | toc
+`class` | Class 名称 | `toc`
+`class_item` (+6.3.0) | 目录元素的 Class 名称 | `${class}-item`
+`class_link` (+6.3.0) | 目录内链接的 Class 名称 | `${class}-link`
+`class_text` (+6.3.0) | 目录链接内文本的 Class 名称 | `${class}-text`
+`class_child` (+6.3.0) | 目录内子列表的 Class 名称 | `${class}-child`
+`class_number` (+6.3.0) | 目录序号的 Class 名称 | `${class}-number`
+`class_level` | 目录层级的 Class 名称前缀 | `${class}-level`
 `list_number` | 显示编号 | true
 `max_depth` | 生成 TOC 的最大深度 | 6
 `min_depth` | 生成 TOC 的最小深度 | 1
