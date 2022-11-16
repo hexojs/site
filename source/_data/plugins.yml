@@ -3294,3 +3294,11 @@
   tags:
     - seo
     - indexnow
+- name: hexo-lightningcss
+  description: LightningCSS Plugin for Hexo.
+  link: https://github.com/kwaa/hexo-lightningcss
+  tags:
+    - filter
+    - css
+    - lightningcss
+    - autoprefixer
