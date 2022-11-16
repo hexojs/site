@@ -3876,14 +3876,16 @@
     - Mermaid support
     - Baidu/Google Analytics
 - name: Burgerking
-  description: A simple cartoon movie related theme.
+  description: A clean and responsive theme, I call it Burgerking.
   link: https://github.com/JackZong/hexo-theme-burgerking
   preview: https://jackzong.github.io/
   tags:
-    - movie
-    - cartoon
-    - custom
-    - clean
+    - Cartoon
+    - Custom
+    - Clean
+    - Code highlight
+    - Responsive
+    - Chinese
 - name: Kira
   description: Kira-Hexo is a kirameki ✨ hexo theme for your blog.
   link: https://github.com/ch1ny/kira-hexo
