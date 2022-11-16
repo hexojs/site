@@ -3202,6 +3202,12 @@
     - page
     - post
     - toc
+- name: hexo-tag-icodeweb
+  description: Including code from any website in your Hexo posts.
+  link: https://github.com/Tiphereth-A/hexo-tag-icodeweb
+  tags:
+    - tag
+    - code
 - name: hexo-absolute
   description: Convert relative path to absolute URL for hexo
   link: https://github.com/uiolee/hexo-absolute
