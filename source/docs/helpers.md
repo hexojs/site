@@ -563,7 +563,7 @@ Option | Description | Default
 `orderby` | Order of categories | name
 `order` | Sort of order. `1`, `asc` for ascending; `-1`, `desc` for descending | 1
 `show_count` | Display the number of posts for each category | true
-`style` | Style to display the category list. `list` displays categories in an unordered list. Use `false` or any other value  to disable it. | list
+`style` | Style to display the category list. `list` displays categories in an unordered list. Use `false` or any other value to disable it. | list
 `separator` | Separator between categories. (Only works if `style` is not `list`) | ,
 `depth` | Levels of categories to be displayed. `0` displays all categories and child categories; `-1` is similar to `0` but displayed in flat; `1` displays only top level categories. | 0
 `class` | Class name of category list. | category
