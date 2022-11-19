@@ -621,7 +621,7 @@ Option | Description | Default
 `order` | Sort of order. `1`, `asc` for ascending; `-1`, `desc` for descending | 1
 `show_count` | Display the number of posts for each archive | true
 `format` | Date format | MMMM YYYY
-`style` | Style to display the category list. `list` displays categories in an unordered list. Use `false` or any other value  to disable it. | list
+`style` | Style to display the category list. `list` displays categories in an unordered list. Use `false` or any other value to disable it. | list
 `separator` | Separator between archives. (Only works if `style` is not `list`) | ,
 `class` | Class name of archive list. | archive
 `transform` | The function that changes the display of archive name. See examples in [list_categories](#list-categories). |
