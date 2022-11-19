@@ -3204,15 +3204,6 @@
     - hexo-theme
     - simple
     - clean
-- name: leo
-  description: A simple, elegant, clear and responsive theme for Hexo.
-  link: https://github.com/lixuetaoleo/hexo-theme-leo
-  preview: https://lixuetaoleo.github.io/
-  tags:
-    - simple
-    - elegant
-    - clear
-    - responsive
 - name: macleaya
   description: A simple, responsive theme for Hexo.
   link: https://github.com/lsylovelmy/hexo-theme-macleaya
