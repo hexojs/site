@@ -31,8 +31,7 @@ hexo.extend.helper.register('js', function(path){
 
 ### 如何在我的定制 helper 中使用另外一个已经注册的 helper？
 
-All helpers are executed in the same context. For example, to use [`url_for()`](/docs/helpers#url-for) inside a custom helper:
-
+所有的辅助函数都在同一个上下文中执行。例如，在一个自定义的辅助函数中使用 [`url_for()`](/zh-cn/docs/helpers#url-for) ：
 ``` js
 hexo.extend.helper.register('lorem', function(path) {
   return '<script src="' + this.url_for(path) + '"></script>';
