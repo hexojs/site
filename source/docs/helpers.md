@@ -638,7 +638,7 @@ Option | Description | Default
 --- | --- | ---
 `orderby` | Order of posts | date
 `order` | Sort of order. `1`, `asc` for ascending; `-1`, `desc` for descending | 1
-`style` | Style to display the category list. `list` displays categories in an unordered list. Use `false` or any other value  to disable it. | list
+`style` | Style to display the category list. `list` displays categories in an unordered list. Use `false` or any other value to disable it. | list
 `separator` | Separator between posts. (Only works if `style` is not `list`) | ,
 `class` | Class name of post list. | post
 `amount` | The number of posts to display (0 = unlimited) | 6
