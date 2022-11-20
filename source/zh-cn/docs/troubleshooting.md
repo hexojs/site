@@ -37,18 +37,18 @@ $ ulimit -n 10000
 
 **Error: cannot modify limit**
 
-If you encounter the following error:
+如果遇到以下错误：
 
 ``` bash
 $ ulimit -n 10000
 ulimit: open files: cannot modify limit: Operation not permitted
 ```
 
-It means some system-wide configurations are preventing `ulimit` to being increased to a certain limit.
+这意味着一些系统范围内的配置阻止了 `ulimit` 的增加。
 
-To override the limit:
+想要去除该限制:
 
-1. Add the following line to "/etc/security/limits.conf":
+1. 在 "/etc/security/limits.conf" 中增加以下一行：
 
   ```
   * - nofile 10000
@@ -56,19 +56,19 @@ To override the limit:
   # '*' applies to all users and '-' set both soft and hard limits
   ```
 
-  * The above setting may not apply in some cases, ensure "/etc/pam.d/login" and "/etc/pam.d/lightdm" have the following line. (Ignore this step if those files do not exist)
+  * 上述设置在某些情况下可能不适用，请确保 "/etc/pam.d/login" 和 "/etc/pam.d/lightdm" 有以下一行(如果这些文件不存在，请忽略此步骤)：
 
   ```
   session required pam_limits.so
   ```
 
-2. If you are on a [systemd-based](https://en.wikipedia.org/wiki/Systemd#Adoption) distribution, systemd may override "limits.conf". To set the limit in systemd, add the following line in "/etc/systemd/system.conf" and "/etc/systemd/user.conf":
+2. 如果你使用的是 [基于systemd](https://en.wikipedia.org/wiki/Systemd#Adoption) 的发行版，systemd 可能会覆盖 "limits.conf"。如果想要在 systemd 中设置限制，请在 "/etc/systemd/system.conf" 和 "/etc/systemd/user.conf" 中添加以下一行：
 
   ```
   DefaultLimitNOFILE=10000
   ```
 
-3. Reboot
+3. 重启
 
 ## Git 部署问题
 

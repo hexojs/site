@@ -27,7 +27,7 @@ deploy:
   repo:
 ```
 
-Refer to the [Plugins](https://hexo.io/plugins/) list for more deployment plugins.
+关于更多的部署插件，请参考 [插件](https://hexo.io/plugins/) 列表。
 
 {% note warn 缩进 %}
 YAML依靠缩进来确定元素间的从属关系。因此，请确保每个deployer的缩进长度相同，并且使用空格缩进。
@@ -56,12 +56,12 @@ deploy:
 `repo` | 库（Repository）地址 |
 `branch` | 分支名称 | `gh-pages` (GitHub)<br>`coding-pages` (Coding.net)<br>`master` (others)
 `message` | 自定义提交信息 | `Site updated: {% raw %}{{ now('YYYY-MM-DD HH:mm:ss') }}{% endraw %}`)
-`token` | Optional token value to authenticate with the repo. Prefix with `$` to read token from environment variable
+`token` | 可选的令牌值，用于认证 repo。用 `$` 作为前缀从而从环境变量中读取令牌
 
 3. 生成站点文件并推送至远程库。执行 `hexo clean && hexo deploy`。
 
-  - You will be prompted with username and password of the target repository, unless you authenticate with a token or ssh key.
-  - hexo-deployer-git does not store your username and password. Use [git-credential-cache](https://git-scm.com/docs/git-credential-cache) to store them temporarily.
+  - 除非你使用令牌或 SSH 密钥认证，否则你会被提示提供目标仓库的用户名和密码。
+  - hexo-deployer-git 并不会存储你的用户名和密码. 请使用 [git-credential-cache](https://git-scm.com/docs/git-credential-cache) 来临时存储它们。
 
 4. 登入 Github/BitBucket/Gitlab，请在库设置（Repository Settings）中将默认分支设置为`_config.yml`配置中的分支名称。稍等片刻，您的站点就会显示在您的Github Pages中。
 
@@ -241,9 +241,9 @@ deploy:
 
 ## Vercel
 
-[Vercel](https://vercel.com) is a cloud platform that enables developers to host Jamstack websites and web services that deploy instantly, scale automatically, and requires no supervision, all with zero configuration. They provide a global edge network, SSL encryption, asset compression, cache invalidation, and more.
+[Vercel](https://vercel.com) 是一个云平台，使开发人员能够托管 Jamstack 网站和网络服务，这些网站和服务可即时部署，自动扩展，无需监督，零配置。他们提供全球边缘网络、SSL 加密、资源压缩、缓存失效等服务。
 
-Step 1: Add a build script to your `package.json` file:
+步骤 1: 在你的 `package.json` 文件中添加一个构建脚本：
 
 ```json
 {
@@ -253,39 +253,39 @@ Step 1: Add a build script to your `package.json` file:
 }
 ```
 
-Step 2: Deploy your Hexo Website to Vercel
+步骤 2: 将你的 Hexo 网站部署到 Vercel 上
 
-To deploy your Hexo app with a [Vercel for Git Integration](https://vercel.com/docs/git-integrations), make sure it has been pushed to a Git repository.
+要通过 [Git整合Vercel](https://vercel.com/docs/git-integrations) 部署 Hexo 应用程序，请确保它已被推送到 Git 仓库。
 
-Import the project into Vercel using the [Import Flow](https://vercel.com/import/git). During the import, you will find all relevant options preconfigured for you; however, you can choose to change any of these options, a list of which can be found [here](https://vercel.com/docs/build-step#build-&-development-settings).
+使用 [导入流](https://vercel.com/import/git) 将该项目导入 Vercel。在导入过程中，你会发现所有相关的选项都是预先配置好的；但是，你可以选择改变其中的任何选项，这些选项的清单可以在 [这里](https://vercel.com/docs/build-step#build-&-development-settings) 找到。
 
-After your project has been imported, all subsequent pushes to branches will generate [Preview Deployments](https://vercel.com/docs/platform/deployments#preview), and all changes made to the [Production Branch](https://vercel.com/docs/git-integrations#production-branch) (commonly "main") will result in a [Production Deployment](https://vercel.com/docs/platform/deployments#production).
+在你的项目被导入后，所有后续推送到分支的内容都会产生 [预览部署](https://vercel.com/docs/platform/deployments#preview) ，而对 [生产分支](https://vercel.com/docs/git-integrations#production-branch)（通常是“主分支”）所做的所有更改都会导致 [生产部署](https://vercel.com/docs/platform/deployments#production)。
 
-Alternatively, you can click the deploy button below to create a new project:
+此外，你也可以点击下面的部署按钮来创建一个新的项目：
 
-[![Deploy Vercel](https://vercel.com/button)](https://vercel.com/new/hexo)
+[![部署Vercel](https://vercel.com/button)](https://vercel.com/new/hexo)
 
 ## Bip
 
-[Bip](https://bip.sh) is a commercial hosting service which provides zero downtime deployment, a global CDN, SSL, unlimited bandwidth and more for static websites. Plans are available on a pay as you go, per domain basis.
+[Bip](https://bip.sh) 是一项商业托管服务，为静态网站提供零停机部署、全球 CDN、SSL、无限带宽等。计划以以每个域为基础，随用随付的方式提供。
 
-Getting started is quick and easy, as Bip provides out the box support for Hexo. This guide assumes you already have [a Bip domain and Bip CLI installed](https://bip.sh/getstarted).
+由于 Bip 为 Hexo 提供了开箱即用的支持，因此开始使用是很容易的。本指南假定你已经有 [一个Bip域和已经安装Bip CLI](https://bip.sh/getstarted)。
 
-1: Initialise your project directory
+1: 初始化你的项目目录
 
 ```bash
 $ bip init
 ```
 
-Follow the prompts, where you'll be asked which domain you'd like to deploy to. Bip will detect that you're using Hexo, and set project settings like the source file directory automatically.
+按照提示，你会被提问到你想部署到哪个域。Bip 会检测到你正在使用 Hexo ，并自动设置项目设置，如源文件目录。
 
-2: Deploy your website
+2: 部署你的网站
 
 ```bash
 $ hexo generate —deploy && bip deploy
 ```
 
-After a few moments, your website will be deployed.
+几分钟后，你的网站将被部署。
 
 ## RSS3
 
