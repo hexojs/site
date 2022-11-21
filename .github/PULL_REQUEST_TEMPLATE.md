@@ -30,7 +30,7 @@
 
 > **Warning**
 >
-> `ko`, `pt-br`, `th` languages document are inactive. Plase, submit issue if you want to continuous contribution to them.
+> `ko`, `pt-br`, `th` languages document are inactive. Please, submit issue if you want to continuous contribution to them.
 
 <!-- 
     Thank you for publishing your work on Hexo site!
