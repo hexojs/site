@@ -164,7 +164,11 @@ content
 {% endpullquote %}
 ```
 
-## jsFiddle
+## jsFiddle (deleted in `v7.0.0`)
+
+{% note warn %}
+Please use [hexo-tag-embed](https://github.com/hexojs/hexo-tag-embed) instead if you use `v7.0.0+`.
+{% endnote %}
 
 在文章中嵌入 jsFiddle。
 
@@ -172,7 +176,11 @@ content
 {% jsfiddle shorttag [tabs] [skin] [width] [height] %}
 ```
 
-## Gist
+## Gist (deleted in `v7.0.0`)
+
+{% note warn %}
+Please use [hexo-tag-embed](https://github.com/hexojs/hexo-tag-embed) instead if you use `v7.0.0+`.
+{% endnote %}
 
 在文章中嵌入 Gist。
 
@@ -244,7 +252,11 @@ content
 {% include_code lang:javascript to:8 test.js %}
 ```
 
-## Youtube
+## Youtube (deleted in `v7.0.0`)
+
+{% note warn %}
+Please use [hexo-tag-embed](https://github.com/hexojs/hexo-tag-embed) instead if you use `v7.0.0+`.
+{% endnote %}
 
 在文章中插入 Youtube 视频。
 
@@ -275,7 +287,11 @@ content
 {% youtube PL9hW1uS6HUfscJ9DHkOSoOX45MjXduUxo 'playlist' false %}
 ```
 
-## Vimeo
+## Vimeo (deleted in `v7.0.0`)
+
+{% note warn %}
+Please use [hexo-tag-embed](https://github.com/hexojs/hexo-tag-embed) instead if you use `v7.0.0+`.
+{% endnote %}
 
 在文章中插入 Vimeo 视频。
 

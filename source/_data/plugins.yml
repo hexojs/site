@@ -456,6 +456,13 @@
     - official
     - generator
     - tag
+- name: hexo-tag-embed
+  description: Embed tags (Gists, Viemo, jsFiddle, Youtube) for Hexo.
+  link: https://github.com/hexojs/hexo-tag-embed
+  tags:
+    - official
+    - generator
+    - tag
 - name: hexo-generator-index
   description: Index generator plugin for Hexo.
   link: https://github.com/hexojs/hexo-generator-index
