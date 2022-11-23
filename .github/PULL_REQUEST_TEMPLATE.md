@@ -19,12 +19,18 @@
 - [ ] Others (Update, fix, translation, etc...)
   - Languages:
   - [ ] `en` English
-  - [ ] `ko` Korean
-  - [ ] `pt-br` Brazilian Portuguese
   - [ ] `ru` Russian
-  - [ ] `th` Thai
   - [ ] `zh-cn` simplified Chinese
   - [ ] `zh-tw` traditional Chinese
+
+
+> **Note**
+>
+> No need to translate `ko`, `pt-br`, `th` languages if you submit a PR for documentation.
+
+> **Warning**
+>
+> `ko`, `pt-br`, `th` languages document are inactive. Please, submit issue if you want to continuous contribution to them.
 
 <!-- 
     Thank you for publishing your work on Hexo site!

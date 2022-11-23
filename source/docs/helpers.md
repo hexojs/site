@@ -297,6 +297,14 @@ Check whether the current page is home page.
 <%- is_home() %>
 ```
 
+### is_home_first_page (+6.3.0)
+
+Check whether the current page is the first of home page.
+
+``` js
+<%- is_home_first_page() %>
+```
+
 ### is_post
 
 Check whether the current page is a post.
@@ -723,6 +731,8 @@ Option | Description | Default
 `end_color` | End color. You can use hex (`#b700ff`), rgba (`rgba(183, 0, 255, 1)`), hsla (`hsla(283, 100%, 50%, 1)`) or [color keywords]. This option only works when `color` is true. |
 `class` | Class name prefix of tags
 `level` | The number of different class names. This option only works when `class` is set. | 10
+`show_count` (+6.3.0) | Display the number of posts for each tag | false
+`count_class` (+6.3.0) | Class name of tag count | count
 
 **Examples:**
 
@@ -758,6 +768,13 @@ Option | Description | Default
 `mid_size` | The number of pages displayed between current page, but not including current page | 2
 `show_all` | Display all pages. If this is set to true, `end_size` and `mid_size` will not work | false
 `escape` | Escape HTML tags | true
+`page_class` (+6.3.0) | Page class name | `page-number`
+`current_class` (+6.3.0) | Current page class name | `current`
+`space_class` (+6.3.0) | Space class name | `space`
+`prev_class` (+6.3.0) | Previous page class name | `extend prev`
+`next_class` (+6.3.0) | Next page class name | `extend next`
+`force_prev_next` (+6.3.0) | Force display previous and next links | false
+
 
 **Examples:**
 
@@ -893,7 +910,13 @@ Parses all heading tags (h1~h6) in the content and inserts a table of contents.
 
 Option | Description | Default
 --- | --- | ---
-`class` | Class name | toc
+`class` | Class name | `toc`
+`class_item` (+6.3.0) | Class name of item | `${class}-item`
+`class_link` (+6.3.0) | Class name of link | `${class}-link`
+`class_text` (+6.3.0) | Class name of text | `${class}-text`
+`class_child` (+6.3.0) | Class name of child | `${class}-child`
+`class_number` (+6.3.0) | Class name of number | `${class}-number`
+`class_level` (+6.3.0) | Class name prefix of level | `${class}-level`
 `list_number` | Displays list number | true
 `max_depth` | Maximum heading depth of generated toc | 6
 `min_depth` | Minimum heading depth of generated toc | 1

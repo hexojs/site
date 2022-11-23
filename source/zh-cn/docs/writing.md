@@ -22,8 +22,8 @@ Hexo 有三种默认布局：`post`、`page` 和 `draft`。在创建这三种不
 `page` | `source`
 `draft` | `source/_drafts`
 
-{% note tip Disabling layout %}
-If you don't want an article (post/page) to be processed with a theme, set `layout: false` in its front-matter. Refer to [this section](/zh-cn/docs/front-matter#布局) for more details.
+{% note tip 禁用布局 %}
+如果你不希望一篇文章（post/page）使用主题处理，请在它的 front-matter 中设置 `layout: false`。详情请参考[本节](/zh-cn/docs/front-matter#布局)。
 {% endnote %}
 
 ### 文件名称

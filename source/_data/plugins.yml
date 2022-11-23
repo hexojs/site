@@ -1,3 +1,16 @@
+- name: hexo-info-api
+  description: Simple api serve for Hexo. Can custom allowOrigin. (Build with generator)
+  link: https://github.com/0ojixueseno0/hexo-info-api
+  tags:
+    - api
+    - json
+    - information
+- name: hexo-generator-index-custom
+  description: Custom index generator plugin for hexo. Can hide posts and pin-top posts.
+  link: https://github.com/im0o/hexo-generator-index-custom
+  tags:
+    - generator
+    - index
 - name: hexo-hash
   description: 为静态资源创建哈希版本 | Create hash versions for static resources
   link: https://github.com/Lete114/Hexo-hash
@@ -74,7 +87,7 @@
     - card
 - name: hexo-simple-image
   description: Simple to use markdown tag import image.
-  link: https://github.com/Aragakiiii/hexo-simple-image
+  link: https://github.com/ZaiZheTingDun/hexo-simple-image
   tags:
     - image
 - name: hexo-asset
@@ -110,7 +123,7 @@
     - workbox
 - name: hexo-fbcomments
   description: Add Facebook comments to your posts
-  link: https://github.com/RichardJECooke/hexo-fbcomments
+  link: https://www.npmjs.com/package/hexo-fbcomments
   tags:
     - comments
     - facebook
@@ -214,7 +227,7 @@
     - markdown
 - name: hexo-filter-inline-assets
   description: Inlines images, JS, and CSS in HTML for Hexo.
-  link: https://github.com/stephencroberts/hexo-filter-inline-assets
+  link: https://www.npmjs.com/package/hexo-filter-inline-assets
   tags:
     - filter
     - images
@@ -473,7 +486,7 @@
     - kramed
 - name: hexo-renderer-unified
   description: Markdown renderer plugin for Hexo - based on Unified.
-  link: https://github.com/TitiAlone/hexo-renderer-unified
+  link: https://github.com/StaloneLab/hexo-renderer-unified
   tags:
     - renderer
     - markdown
@@ -941,14 +954,6 @@
     - image
     - gallery
     - album
-- name: hexo-tag-vine
-  description: Embed your Vine videos in posts/pages.
-  link: https://github.com/limbowr/hexo-tag-vine
-  tags:
-    - tag
-    - vine
-    - video
-    - social
 - name: hexo-tag-xvideos
   description: Embed xvideos player in your posts/pages.
   link: https://github.com/welksonramos/hexo-tag-xvideos
@@ -1183,13 +1188,13 @@
     - post
 - name: hexo-tag-cloud
   description: "Yet, another tag cloud plugin for hexo."
-  link: https://github.com/MikeCoder/hexo-tag-cloud
+  link: https://github.com/D0n9X1n/hexo-tag-cloud
   tags:
     - tag
     - cloud
 - name: hexo-tag-mtime
   description: "Embed a movie card on your Hexo article, used mtime API."
-  link: https://github.com/mayuko2012/hexo-tag-mtime
+  link: https://github.com/liopoos/hexo-tag-mtime
   tags:
     - tag
     - plugin
@@ -1491,7 +1496,7 @@
     - awesome
 - name: hexo-blog-encrypt
   description: "Yet, another blog encrypt plugin for hexo."
-  link: https://github.com/MikeCoder/hexo-blog-encrypt
+  link: https://github.com/D0n9X1n/hexo-blog-encrypt
   tags:
     - encrypt
     - aes
@@ -1550,7 +1555,7 @@
     - template
 - name: hexo-algolia
   description: Index posts and contents in [Algolia](https://www.algolia.com/) and offer a blazing fast search experience to your users.
-  link: https://github.com/oncletom/hexo-algolia
+  link: https://github.com/thom4parisot/hexo-algolia
   tags:
     - search
     - algolia
@@ -2160,7 +2165,7 @@
     - structure
 - name: hexo-deployer-ipfs
   description: this is plugin for hexo to deploy static sites to ipfs network.
-  link: https://github.com/IamGabrielWu/hexo-deployer-ipfs
+  link: https://github.com/ishallbethat/hexo-deployer-ipfs
   tags:
     - deployer
 - name: hexo-generator-search-zip
@@ -2387,7 +2392,7 @@
     - summary
 - name: hexo-migrator-web
   description: Hexo Migrator plugin for common Web pages
-  link: https://github.com/TechQuery/hexo-migrator-web
+  link: https://github.com/TechQuery/Web-fetch
   tags:
     - migrator
     - web
@@ -2458,7 +2463,7 @@
     - tag
 - name: hexo-hide-posts
   description: A plugin to hide specific posts from your Hexo blog and make them only accessible by links.
-  link: https://github.com/printempw/hexo-hide-posts
+  link: https://github.com/prinsss/hexo-hide-posts
   tags:
     - hide
     - unlisted
@@ -2778,12 +2783,6 @@
     - web-player-support
     - rss
     - podcast
-- name: hexo-tag-friends
-  description: Friends tag
-  link: https://github.com/maplesugarr/hexo-tag-friends
-  tags:
-    - friends
-    - tag
 - name: hexo-renderer-multi-markdown-it
   description: A renderer plugin for Hexo based on Markdown-it and auto Minify HTML, CSS, JS.
   link: https://github.com/amehime/hexo-renderer-multi-markdown-it
@@ -3079,7 +3078,7 @@
     - 美化
 - name: hexo-filter-inline-svg
   description: A Hexo plugin that inline your svg in the img tag into HTML file.
-  link: https://github.com/widergao/hexo-filter-inline-svg
+  link: https://github.com/izmttk/hexo-filter-inline-svg
   tags:
     - filter
     - inline
@@ -3189,6 +3188,12 @@
     - page
     - post
     - toc
+- name: hexo-tag-icodeweb
+  description: Including code from any website in your Hexo posts.
+  link: https://github.com/Tiphereth-A/hexo-tag-icodeweb
+  tags:
+    - tag
+    - code
 - name: hexo-absolute
   description: Convert relative path to absolute URL for hexo
   link: https://github.com/uiolee/hexo-absolute
@@ -3198,7 +3203,7 @@
     - seo
 - name: hexo-renderer-jsx
   description: React JSX Renderer for Hexo
-  link: https://github.com/renbaoshuo/hexo-renderer-jsx
+  link: https://github.com/hexojs/hexo-renderer-jsx
   tags:
     - renderer
     - react
@@ -3232,3 +3237,54 @@
     - midi
     - midijs
     - music
+- name: hexo-bangumis
+  description: Generate pages of bangumis for Hexo, support bgm.tv | Hexo 番剧页面插件，数据源 bgm.tv
+  link: https://github.com/mmdjiji/hexo-bangumis
+  tags:
+    - generator
+    - bilibili
+    - bangumi
+    - anime
+- name: hexo-partytown
+  description: Partytown Integration for Hexo
+  link: https://github.com/kwaa/hexo-partytown
+  tags:
+    - filter
+    - performance
+    - partytown
+- name: hexo-minecraft-skin-viewer
+  description: A hexo plugin to display minecraft skin by skinview3d | 使用skinview3d展示minecraft皮肤3D模型
+  link: https://github.com/D-Sketon/hexo-minecraft-skin-viewer
+  tags:
+    - minecraft
+    - skin
+    - 3d
+- name: hexo-dynamic-config
+  description: A hexo plugin for using variable in configuration. You can use environment variable in your `_config.yml`
+  link: https://github.com/wenonly/hexo-dynamic-config
+  tags:
+    - environment
+    - env
+    - variable
+    - dynamic
+    - config
+- name: hexo-obsidian-link
+  description: Hexo plugin to transfer obsidian link to post link
+  link: https://github.com/wangeDear/hexo-obsidian-link
+  tags:
+    - obsidian
+    - blog
+- name: hexo-indexnow
+  description: A lightweight SEO (indexnow) plugin. | 一个轻量级的indexnow链接提交插件
+  link: https://github.com/zkz098/hexo-indexnow
+  tags:
+    - seo
+    - indexnow
+- name: hexo-lightningcss
+  description: LightningCSS Plugin for Hexo.
+  link: https://github.com/kwaa/hexo-lightningcss
+  tags:
+    - filter
+    - css
+    - lightningcss
+    - autoprefixer

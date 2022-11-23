@@ -228,21 +228,6 @@ Alternatively, you can click the deploy button below to create a new project:
 
 [![Deploy Vercel](https://vercel.com/button)](https://vercel.com/new/hexo)
 
-## 21YunBox
-
-1. Em [21YunBox](https://www.21yunbox.com), configure um novo projeto 'Site estático' do GitHub com as seguintes configurações:
-
-- **Build command:** `yarn && hexo deploy`
-- **Publish directory:** `public`
-
-2. Pressione Implantar Buton!
-
-É isso mesmo! Seu aplicativo estará ao vivo em sua URL 21YunBox assim que a compilação terminar.
-
-O aplicativo de exemplo para 'hexo' é implantado em [https://hexo.21yunbox.com/](https://hexo.21yunbox.com/).
-
-Para obter mais detalhes, siga este guia em [https://www.21yunbox.com/docs/#/deploy-hexo](https://www.21yunbox.com/docs/#/deploy-hexo).
-
 ## Bip
 
 [Bip](https://bip.sh) is a commercial hosting service which provides zero downtime deployment, a global CDN, SSL, unlimited bandwidth and more for static websites. Plans are available on a pay as you go, per domain basis.
