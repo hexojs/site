@@ -16,7 +16,7 @@ hexo.extend.tag.register(name, function(args, content){
 
 ## 移除标签插件
 
-使用 `unregister()` 来用自定义函数替换现有的 [标签插件](/zh-cn/docs/tag-plugins) 。
+使用 `unregister()` 来用自定义函数替换现有的 [标签插件](/zh-cn/docs/tag-plugins)。
 
 ``` js
 hexo.extend.tag.unregister(name);
