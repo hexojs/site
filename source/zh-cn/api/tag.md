@@ -142,4 +142,4 @@ module.exports = hexo => {
 ```
 
 [Nunjucks]: https://mozilla.github.io/nunjucks/
-[Swig]: http://paularmstrong.github.io/swig/
+[Swig]: https://node-swig.github.io/swig-templates/
