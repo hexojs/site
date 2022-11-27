@@ -12,7 +12,7 @@ hexo.post.create(data, replace);
 `data` | 数据
 `replace` | 替换现有文件
 
-您可以在资料中指定文章的属性，除了以下属性之外，其他属性也会被加到 front-matter 中。
+您可以在 `data` 中指定文章的属性，除了以下属性之外，其他属性也会被加到 front-matter 中。
 
 属性 | 描述
 --- | ---
@@ -30,10 +30,10 @@ hexo.post.publish(data, replace);
 
 参数 | 描述
 --- | ---
-`data` | 资料
+`data` | 数据
 `replace` | 替换现有文件
 
-您可以在资料中指定文章的属性，除了以下的属性之外，其他属性也会被加到 front-matter 中。
+您可以在 `data` 中指定文章的属性，除了以下的属性之外，其他属性也会被加到 front-matter 中。
 
 属性 | 描述
 --- | ---

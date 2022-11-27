@@ -182,5 +182,5 @@ $ echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo
 Это позволит увеличить лимит количества файлов, которые можно просматривать одновременно.
 
 [Warehouse]: https://github.com/hexojs/warehouse
-[Swig]: http://paularmstrong.github.io/swig/
+[Swig]: https://node-swig.github.io/swig-templates/
 [Nunjucks]: https://mozilla.github.io/nunjucks/

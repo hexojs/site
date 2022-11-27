@@ -16,7 +16,7 @@ hexo.extend.tag.register(name, function(args, content){
 
 ## 移除标签插件
 
-Use `unregister()` to replace existing [tag plugins](/docs/tag-plugins) with custom functions.
+使用 `unregister()` 来用自定义函数替换现有的 [标签插件](/zh-cn/docs/tag-plugins)。
 
 ``` js
 hexo.extend.tag.unregister(name);
@@ -88,9 +88,9 @@ hexo.extend.tag.register('include_code', function(args){
 }, {async: true});
 ```
 
-## Front-matter and user configuration
+## Front-matter 和用户配置
 
-Any of the following options is valid:
+以下任何选项都是有效的：
 
 1.
 
@@ -142,4 +142,4 @@ module.exports = hexo => {
 ```
 
 [Nunjucks]: https://mozilla.github.io/nunjucks/
-[Swig]: http://paularmstrong.github.io/swig/
+[Swig]: https://node-swig.github.io/swig-templates/
