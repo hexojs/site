@@ -77,6 +77,7 @@ hexo.extend.generator.register('archive', function(locals){
 ### Generate All Posts
 
 โพสต์ทั้งหมดจะมีอยู่ใน `locals.posts` ด้วยแล้วจะสร้าง route ให้โพสต์ทั้งหมด
+
 ``` js
 hexo.extend.generator.register('post', function(locals){
   return locals.posts.map(function(post){
@@ -92,7 +93,6 @@ hexo.extend.generator.register('post', function(locals){
 ### Copy Files
 
 คราวนี้  `data` จะเป็น function และ route `fs.ReadStream` ของ `data` จะสร้างขึ้นมาในเวลาที่ต้องการ
-
 
 ``` js
 var fs = require('hexo-fs');

@@ -12,6 +12,7 @@ In this tutorial, we use [Travis CI](https://travis-ci.com/) to deploy Github Pa
 6. On a new tab, generate a [new token](https://github.com/settings/tokens) with **repo** scopes. Note down the token value.
 7. On the Travis page, go to your repo's setting. Under **Environment Variables**, put **GH_TOKEN** as name and paste the token onto value. Click Add to save it.
 8. Add `.travis.yml` file to your repo (alongside _config.yml & package.json) with the following content:
+
 ```yml
 sudo: false
 language: node_js
@@ -32,6 +33,7 @@ deploy:
     branch: master
   local-dir: public
 ```
+
 9. Once Travis CI finish the deployment, the generated pages can be found in the `gh-pages` branch of your repository
 10. In your GitHub repo's setting, navigate to "GitHub Pages" section and change Source to **gh-pages branch**.
 11. Check the webpage at *username*.github.io.

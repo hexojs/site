@@ -27,7 +27,7 @@ deploy:
   repo:
 ```
 
-Refer to the [Plugins](https://hexo.io/plugins/) list for more deployment plugins.
+关于更多的部署插件，请参考 [插件](https://hexo.io/plugins/) 列表。
 
 {% note warn 缩进 %}
 YAML依靠缩进来确定元素间的从属关系。因此，请确保每个deployer的缩进长度相同，并且使用空格缩进。
@@ -56,11 +56,13 @@ deploy:
 `repo` | 库（Repository）地址 |
 `branch` | 分支名称 | `gh-pages` (GitHub)<br>`coding-pages` (Coding.net)<br>`master` (others)
 `message` | 自定义提交信息 | `Site updated: {% raw %}{{ now('YYYY-MM-DD HH:mm:ss') }}{% endraw %}`)
-`token` | Optional token value to authenticate with the repo. Prefix with `$` to read token from environment variable
+`token` | 可选的令牌值，用于认证 repo。用 `$` 作为前缀从而从环境变量中读取令牌
 
 3. 生成站点文件并推送至远程库。执行 `hexo clean && hexo deploy`。
-  - You will be prompted with username and password of the target repository, unless you authenticate with a token or ssh key.
-  - hexo-deployer-git does not store your username and password. Use [git-credential-cache](https://git-scm.com/docs/git-credential-cache) to store them temporarily.
+
+  - 除非你使用令牌或 SSH 密钥认证，否则你会被提示提供目标仓库的用户名和密码。
+  - hexo-deployer-git 并不会存储你的用户名和密码. 请使用 [git-credential-cache](https://git-scm.com/docs/git-credential-cache) 来临时存储它们。
+
 4. 登入 Github/BitBucket/Gitlab，请在库设置（Repository Settings）中将默认分支设置为`_config.yml`配置中的分支名称。稍等片刻，您的站点就会显示在您的Github Pages中。
 
 ### 这一切是如何发生的？
@@ -237,17 +239,11 @@ deploy:
 `passphrase` | （可省略）ssh私钥的密码短语 |
 `agent` | ssh套接字的目录地址 | `$SSH_AUTH_SOCK`
 
-## ZEIT Now
+## Vercel
 
-[ZEIT Now](https://zeit.co) 是一个托管静态网站和 Serverless APIs 的云平台。你可以一键将你的 Hexo 网站部署到 ZEIT Now、并使用自己的域名或者由 ZEIT Now 提供的免费子域名 `now.sh`。
+[Vercel](https://vercel.com) 是一个云平台，使开发人员能够托管 Jamstack 网站和网络服务，这些网站和服务可即时部署，自动扩展，无需监督，零配置。他们提供全球边缘网络、SSL 加密、资源压缩、缓存失效等服务。
 
-1. 安装 [Now CLI](https://zeit.co/download):
-
-```bash
-$ npm i -g now
-```
-
-2. 在 `package.json` 中添加 npm script:
+步骤 1: 在你的 `package.json` 文件中添加一个构建脚本：
 
 ```json
 {
@@ -257,15 +253,75 @@ $ npm i -g now
 }
 ```
 
-3. 在 Hexo 所在目录执行下述指令：
+步骤 2: 将你的 Hexo 网站部署到 Vercel 上
+
+要通过 [Git整合Vercel](https://vercel.com/docs/git-integrations) 部署 Hexo 应用程序，请确保它已被推送到 Git 仓库。
+
+使用 [导入流](https://vercel.com/import/git) 将该项目导入 Vercel。在导入过程中，你会发现所有相关的选项都是预先配置好的；但是，你可以选择改变其中的任何选项，这些选项的清单可以在 [这里](https://vercel.com/docs/build-step#build-&-development-settings) 找到。
+
+在你的项目被导入后，所有后续推送到分支的内容都会产生 [预览部署](https://vercel.com/docs/platform/deployments#preview) ，而对 [生产分支](https://vercel.com/docs/git-integrations#production-branch)（通常是“主分支”）所做的所有更改都会导致 [生产部署](https://vercel.com/docs/platform/deployments#production)。
+
+此外，你也可以点击下面的部署按钮来创建一个新的项目：
+
+[![部署Vercel](https://vercel.com/button)](https://vercel.com/new/hexo)
+
+## Bip
+
+[Bip](https://bip.sh) 是一项商业托管服务，为静态网站提供零停机部署、全球 CDN、SSL、无限带宽等。计划以以每个域为基础，随用随付的方式提供。
+
+由于 Bip 为 Hexo 提供了开箱即用的支持，因此开始使用是很容易的。本指南假定你已经有 [一个Bip域和已经安装Bip CLI](https://bip.sh/getstarted)。
+
+1: 初始化你的项目目录
 
 ```bash
-now
+$ bip init
 ```
 
-你也可以使用下面的按钮在 ZEIT Now 创建一个 Hexo 项目。
+按照提示，你会被提问到你想部署到哪个域。Bip 会检测到你正在使用 Hexo ，并自动设置项目设置，如源文件目录。
 
-[![Deploy Now](https://zeit.co/button)](https://zeit.co/new/hexo)
+2: 部署你的网站
+
+```bash
+$ hexo generate —deploy && bip deploy
+```
+
+几分钟后，你的网站将被部署。
+
+## RSS3
+
+[RSS3](https://rss3.io) 是一个为 Web 3.0 时代的内容和社交网络设计的开放协议。
+
+1. 安装 [hexo-deployer-rss3]
+
+2. 修改配置。
+
+  ``` yaml
+  deploy: # 所有部署器的根配置块
+  - type: rss3
+    endpoint: https://hub.rss3.io
+    privateKey: 47e18d6c386898b424025cd9db446f779ef24ad33a26c499c87bb3d9372540ba
+    ipfs:
+      deploy: true
+      gateway: pinata
+      api:
+        key: d693df715d3631e489d6
+        secret: ee8b74626f12b61c1a4bde3b8c331ad390567c86ba779c9b18561ee92c1cbff0
+  ```
+
+|        参数        |          描述         |
+| ----------------- | ---------------------- |
+| `endpoint`        | 一个 RSS3 Hub 的链接    |
+| `privateKey`      | 您的私钥， 64 字节      |
+| `ipfs/deploy`     | 是否部署到 IPFS 上      |
+| `ipfs/gateway`    | IPFS API 网关          |
+| `ipfs/api/key`    | IPFS 网关相关的验证内容 |
+| `ipfs/api/secret` | IPFS 网关相关的验证内容 |
+
+3. 生成静态文件
+
+4. 部署
+
+关于具体部署相关的注意事项，您可以参阅 [我们的文档](https://github.com/NaturalSelectionLabs/hexo-deployer-rss3/tree/develop/docs/zh_CN/start.md) 。
 
 ## 其他方法
 
@@ -277,3 +333,4 @@ Hexo 生成的所有文件都放在 `public` 文件夹中，您可以将它们�
 [hexo-deployer-openshift]: https://github.com/hexojs/hexo-deployer-openshift
 [hexo-deployer-ftpsync]: https://github.com/hexojs/hexo-deployer-ftpsync
 [hexo-deployer-sftp]: https://github.com/lucascaro/hexo-deployer-sftp
+[hexo-deployer-rss3]: https://github.com/NaturalSelectionLabs/hexo-deployer-rss3

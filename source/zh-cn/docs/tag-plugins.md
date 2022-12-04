@@ -3,6 +3,10 @@ title: 标签插件（Tag Plugins）
 ---
 标签插件和 Front-matter 中的标签不同，它们是用于在文章中快速插入特定内容的插件。
 
+虽然你可以使用任何格式书写你的文章，但是标签插件永远可用，且语法也都是一致的。
+
+_标签插件不应该被包裹在 Markdown 语法中，例如： `[]({% post_path lorem-ipsum %})` 是不被支持的。_
+
 ## 引用块
 
 在文章中插入引言，可包含作者、来源和标题。
@@ -77,15 +81,16 @@ code snippet
 {% endcodeblock %}
 ```
 
-Specify additional options in `option:value` format, e.g. `line_number:false first_line:5`.
+以 `option:value` 的格式指定额外选项，例如：`line_number:false first_line:5`。
 
-Extra Options | Description | Default
+额外选项 | 描述 | 默认值
 --- | --- | ---
-`line_number` | Show line number | `true`
-`highlight` | Enable code highlighting | `true`
-`first_line` | Specify the first line number | `1`
-`mark` | Line highlight specific line(s), each value separated by a comma. Specify number range using a dash<br>Example: `mark:1,4-7,10` will mark line 1, 4 to 7 and 10. |
-`wrap` | Wrap the code block in [`<table>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table) | `true`
+`line_number` | 显示行号 | `true`
+`line_threshold` | 只有代码块的行数超过该阈值，才显示行数 | `0` |
+`highlight` | 启用代码高亮 | `true`
+`first_line` | 指定第一个行号 | `1`
+`mark` | 突出显示特定的行，每个值用逗号分隔。 使用破折号指定数字范围<br>例如： `mark:1,4-7,10` 将标记第1、4至7和10行 |
+`wrap` | 用 [`<table>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table) 包裹代码块 | `true`
 
 ### 样例
 
@@ -244,7 +249,30 @@ content
 在文章中插入 Youtube 视频。
 
 ```
-{% youtube video_id %}
+{% youtube video_id [type] [cookie] %}
+```
+
+### Examples
+
+**视频**
+
+```
+{% youtube lJIrF4YjHfQ %}
+```
+
+**播放列表**
+
+```
+{% youtube PL9hW1uS6HUfscJ9DHkOSoOX45MjXduUxo 'playlist' %}
+```
+
+**隐私模式**
+
+禁止 YouTube cookie
+
+```
+{% youtube lJIrF4YjHfQ false %}
+{% youtube PL9hW1uS6HUfscJ9DHkOSoOX45MjXduUxo 'playlist' false %}
 ```
 
 ## Vimeo
@@ -268,7 +296,7 @@ content
 
 例如，在文章中使用 `{% raw %}{% post_link how-to-bake-a-cake %}{% endraw %}` 时，只需有一个名为 `how-to-bake-a-cake.md` 的文章文件即可。即使这个文件位于站点文件夹的 `source/posts/2015-02-my-family-holiday` 目录下、或者文章的永久链接是 `2018/en/how-to-bake-a-cake`，都没有影响。
 
-默认链接文字是文章的标题，你也可以自定义要显示的文本。此时不应该使用 Markdown 语法 `[]()`。
+默认链接文字是文章的标题，你也可以自定义要显示的文本。
 
 默认对文章的标题和自定义标题里的特殊字符进行转义。可以使用`escape`选项，禁止对特殊字符进行转义。
 
@@ -304,8 +332,46 @@ content
 
 ```
 {% asset_path filename %}
-{% asset_img filename [title] %}
+{% asset_img [class names] slug [width] [height] [title text [alt text]] %}
 {% asset_link filename [title] [escape] %}
+```
+
+### Embed image
+
+_hexo-renderer-marked 3.1.0+ 可以（可选）自动解析图片的文章路径，参考 [本节](/zh-cn/docs/asset-folders#使用-Markdown-嵌入图片) 如何启用它。_
+
+"foo.jpg" 位于 `http://example.com/2020/01/02/hello/foo.jpg`。
+
+**Default (no option)**
+
+`{% asset_img foo.jpg %}`
+
+``` html
+<img src="/2020/01/02/hello/foo.jpg">
+```
+
+**Custom class**
+
+`{% asset_img post-image foo.jpg %}`
+
+``` html
+<img src="/2020/01/02/hello/foo.jpg" class="post-image">
+```
+
+**Display size**
+
+`{% asset_img foo.jpg 500 400 %}`
+
+``` html
+<img src="/2020/01/02/hello/foo.jpg" width="500" height="400">
+```
+
+**Title & Alt**
+
+`{% asset_img logo.svg "lorem ipsum'dolor'" %}`
+
+``` html
+<img src="/2020/01/02/hello/foo.jpg" title="lorem ipsum" alt="dolor">
 ```
 
 ## Raw

@@ -3,20 +3,34 @@
 **Please read and check followings before submitting a PR.**
 
 - [ ] I want to publish my theme on Hexo official website.
-    - [ ] I have read the [theme publishing doc](https://hexo.io/docs/themes#Publishing).
-    - [ ] `name` is unique.
-    - [ ] `link` URL is correct.
-    - [ ] `preview` URL is correct.
-    - [ ] `preview` URL web site is rendered correctly.
-    - [ ] Add a screenshot to `source/themes/screenshots`.
-    - [ ] Screenshot filename is same as value of `name`.
-    - [ ] Screenshot size is `800 * 500`.
-    - [ ] Screenshot file format is `png`.
+  - [ ] I have read the [theme publishing doc](https://hexo.io/docs/themes#Publishing).
+  - [ ] `name` is unique.
+  - [ ] `link` URL is correct.
+  - [ ] `preview` URL is correct.
+  - [ ] `preview` URL web site is rendered correctly.
+  - [ ] Add a screenshot to `source/themes/screenshots`.
+  - [ ] Screenshot filename is same as value of `name`.
+  - [ ] Screenshot size is `800 * 500`.
+  - [ ] Screenshot file format is `png`.
 - [ ] I want to publish my plugin on Hexo official website.
-    - [ ] I have read the [plugin publishing doc](https://hexo.io/docs/plugins#Publishing).
-    - [ ] `name` is unique.
-    - [ ] `link` URL is correct.
+  - [ ] I have read the [plugin publishing doc](https://hexo.io/docs/plugins#Publishing).
+  - [ ] `name` is unique.
+  - [ ] `link` URL is correct.
 - [ ] Others (Update, fix, translation, etc...)
+  - Languages:
+  - [ ] `en` English
+  - [ ] `ru` Russian
+  - [ ] `zh-cn` simplified Chinese
+  - [ ] `zh-tw` traditional Chinese
+
+
+> **Note**
+>
+> No need to translate `ko`, `pt-br`, `th` languages if you submit a PR for documentation.
+
+> **Warning**
+>
+> `ko`, `pt-br`, `th` languages document are inactive. Please, submit issue if you want to continuous contribution to them.
 
 <!-- 
     Thank you for publishing your work on Hexo site!

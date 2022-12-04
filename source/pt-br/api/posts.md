@@ -59,4 +59,4 @@ O argumento `data` deve conter o atributo `content`. Caso não inclua, o Hexo te
 - Renderiza utilizando [Nunjucks]
 - Executa os filtros de `after_post_render`
 
-[Nunjucks]: http://mozilla.github.io/nunjucks/
+[Nunjucks]: https://mozilla.github.io/nunjucks/

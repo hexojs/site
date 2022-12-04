@@ -1,14 +1,19 @@
 ---
 title: Tag Plugins
 ---
-ปลั๊กอินแท็กจะแตกต่างกับแท็กโพสต์ ปลั๊กอินแท็กนั้นยืมมาจาก Octopress 
+ปลั๊กอินแท็กจะแตกต่างกับแท็กโพสต์ ปลั๊กอินแท็กนั้นยืมมาจาก Octopress
 และสนับสนุนวิธีท่ีเพิ่มเนื้อหาเฉพาะไปถึงโพสต์ของตนได้อย่างรวดเร็ว
+
+Although you can write your posts in any formats, but the tag plugins will always be available and syntax remains the same.
+
 {% youtube I07XMi7MHd4 %}
+
+_Tag plugins should not be wrapped inside Markdown syntax, e.g. `[]({% post_path lorem-ipsum %})` is not supported._
 
 ## Block Quote
 
 Perfect for adding quotes to your post, with optional author, source and title information.
-เหมาะสำหรับการเพิ่มการอ้างอิงไปถึงโพสต์ต่างๆ เช่นชื่อผู้เขียน 
+เหมาะสำหรับการเพิ่มการอ้างอิงไปถึงโพสต์ต่างๆ เช่นชื่อผู้เขียน
 ที่มาและข้อมูลหัวข้อ
 
 **นามแฝง:** การอ้างอิง
@@ -53,8 +58,8 @@ NEW: DevDocs now comes with syntax highlighting. http://devdocs.io
 {% endblockquote %}
 ```
 
-{% blockquote @DevDocs https://twitter.com/devdocs/status/356095192085962752 %}
-NEW: DevDocs now comes with syntax highlighting. http://devdocs.io
+{% blockquote @DevDocs <https://twitter.com/devdocs/status/356095192085962752> %}
+NEW: DevDocs now comes with syntax highlighting. <http://devdocs.io>
 {% endblockquote %}
 
 **การอ้างอิงจากบทความในแว็บ**
@@ -65,7 +70,7 @@ Every interaction is both precious and an opportunity to delight.
 {% endblockquote %}
 ```
 
-{% blockquote Seth Godin http://sethgodin.typepad.com/seths_blog/2009/07/welcome-to-island-marketing.html Welcome to Island Marketing %}
+{% blockquote Seth Godin <http://sethgodin.typepad.com/seths_blog/2009/07/welcome-to-island-marketing.html> Welcome to Island Marketing %}
 Every interaction is both precious and an opportunity to delight.
 {% endblockquote %}
 
@@ -86,6 +91,7 @@ Specify additional options in `option:value` format, e.g. `line_number:false fir
 Extra Options | Description | Default
 --- | --- | ---
 `line_number` | Show line number | `true`
+`line_threshold` | Only show line numbers as long as the numbers of lines of the code block exceed such threshold. | `0` |
 `highlight` | Enable code highlighting | `true`
 `first_line` | Specify the first line number | `1`
 `mark` | Line highlight specific line(s), each value separated by a comma. Specify number range using a dash<br>Example: `mark:1,4-7,10` will mark line 1, 4 to 7 and 10. |
@@ -138,7 +144,7 @@ _.compact([0, 1, false, 2, '', 3]);
 {% endcodeblock %}
 ```
 
-{% codeblock _.compact http://underscorejs.org/#compact Underscore.js %}
+{% codeblock _.compact <http://underscorejs.org/#compact> Underscore.js %}
 _.compact([0, 1, false, 2, '', 3]);
 => [1, 2, 3]
 {% endcodeblock %}
@@ -147,7 +153,7 @@ _.compact([0, 1, false, 2, '', 3]);
 
 มันเหมือนกันกับการใช้ code block แต่จำกัดจำนวน block โดยใช้ backtick สามอัน
 {% raw %}
-&#96`` [language] [title] [url] [link text]
+&#96``[language] [title] [url] [link text]
 code snippet
 &#96;``
 {% endraw %}
@@ -215,7 +221,30 @@ content
 เสียบวิดีโอ YouTube เข้า:
 
 ```
-{% youtube video_id %}
+{% youtube video_id [type] [cookie] %}
+```
+
+### Examples
+
+**Embed a video**
+
+```
+{% youtube lJIrF4YjHfQ %}
+```
+
+**Embed a playlist**
+
+```
+{% youtube PL9hW1uS6HUfscJ9DHkOSoOX45MjXduUxo 'playlist' %}
+```
+
+**Enable privacy-enhanced mode**
+
+YouTube's cookie is not used in this mode.
+
+```
+{% youtube lJIrF4YjHfQ false %}
+{% youtube PL9hW1uS6HUfscJ9DHkOSoOX45MjXduUxo 'playlist' false %}
 ```
 
 ## Vimeo
@@ -239,12 +268,12 @@ content
 
 ยกตัวอย่างเช่น: `{% raw %}{% post_link how-to-bake-a-cake %}{% endraw %}`
 
-โพสต์ท่ีมีชื่อว่า `how-to-bake-a-cake.md` จะ render 
-ได้แม้ว่าโพสต์นั้นจะอยู่ใน folder `source/posts/2015-02-my-family-holiday` 
+โพสต์ท่ีมีชื่อว่า `how-to-bake-a-cake.md` จะ render
+ได้แม้ว่าโพสต์นั้นจะอยู่ใน folder `source/posts/2015-02-my-family-holiday`
 และมี permalink เป็น `2018/en/how-to-bake-a-cake`
 
-แทนท่ีจะแสดงให้เห็นหัวข้อโพสต์  คุณสามารถตั้งค่าว่าอะไรของ text 
-จะโชว์ให้เห็นได้ดัวยการตั้งค่า `post_path` ส่วน syntax ท่ีเป็น `[]()` 
+แทนท่ีจะแสดงให้เห็นหัวข้อโพสต์  คุณสามารถตั้งค่าว่าอะไรของ text
+จะโชว์ให้เห็นได้ดัวยการตั้งค่า `post_path` ส่วน syntax ท่ีเป็น `[]()`
 จะไม่สนับสนุนโดย hexo ในท่ีนี่
 
 Post's title and custom text are escaped by default. You can use the `escape` option to disable escaping.
@@ -268,6 +297,7 @@ Post's title and custom text are escaped by default. You can use the `escape` op
 ```
 {% post_link hexo-4-released 'How to use <b> tag in title' %}
 ```
+
 {% post_link hexo-4-released 'How to use <b> tag in title' %}
 
 **Do not escape title.**
@@ -275,6 +305,7 @@ Post's title and custom text are escaped by default. You can use the `escape` op
 ```
 {% post_link hexo-4-released '<b>bold</b> custom title' false %}
 ```
+
 {% post_link hexo-4-released '<b>bold</b> custom title' false %}
 
 ## Include Assets
@@ -283,14 +314,52 @@ Post's title and custom text are escaped by default. You can use the `escape` op
 
 ```
 {% asset_path filename %}
-{% asset_img filename [title] %}
+{% asset_img [class names] slug [width] [height] [title text [alt text]] %}
 {% asset_link filename [title] [escape] %}
+```
+
+### Embed image
+
+_hexo-renderer-marked 3.1.0+ can (optionally) resolves the post's path of an image automatically, refer to [this section](/docs/asset-folders#Embedding-an-image-using-markdown) on how to enable it._
+
+"foo.jpg" is located at `http://example.com/2020/01/02/hello/foo.jpg`.
+
+**Default (no option)**
+
+`{% asset_img foo.jpg %}`
+
+``` html
+<img src="/2020/01/02/hello/foo.jpg">
+```
+
+**Custom class**
+
+`{% asset_img post-image foo.jpg %}`
+
+``` html
+<img src="/2020/01/02/hello/foo.jpg" class="post-image">
+```
+
+**Display size**
+
+`{% asset_img foo.jpg 500 400 %}`
+
+``` html
+<img src="/2020/01/02/hello/foo.jpg" width="500" height="400">
+```
+
+**Title & Alt**
+
+`{% asset_img logo.svg "lorem ipsum'dolor'" %}`
+
+``` html
+<img src="/2020/01/02/hello/foo.jpg" title="lorem ipsum" alt="dolor">
 ```
 
 ## Raw
 
-ถ้าเนื้อหาใน block ก้อนให้เกิด issue สำหรับการ render โพสต์ของคุณ 
-กรุณาห่อด้วยแท็ก `raw` 
+ถ้าเนื้อหาใน block ก้อนให้เกิด issue สำหรับการ render โพสต์ของคุณ
+กรุณาห่อด้วยแท็ก `raw`
 
 ```
 {% raw %}
@@ -298,14 +367,13 @@ content
 {% endraw %}
 ```
 
-
 ## Post Excerpt
 
 text ท่ีวางก่อนแท็ก `<!-- more -->` จะถือเป็นส่วนที่ตัดตอนมาจากโพสต์
 
 **ยกตัวอย่างเช่น:**
 
-``` 
+```
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 <!-- more -->
 Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.

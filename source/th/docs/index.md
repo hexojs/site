@@ -1,15 +1,15 @@
 ---
 title: Documentation
 ---
-ยินดีต้อนรับเข้าสู่ documentation ของ hexo ถ้าคุณพบเจอปัญหาใดๆเวลาใช้ hexo 
-ไปดูข้อมูลได้ท่ี  [troubleshooting guide](troubleshooting.html) ไปเสนอ issue 
+ยินดีต้อนรับเข้าสู่ documentation ของ hexo ถ้าคุณพบเจอปัญหาใดๆเวลาใช้ hexo
+ไปดูข้อมูลได้ท่ี  [troubleshooting guide](troubleshooting.html) ไปเสนอ issue
 ได้ที่ [GitHub](https://github.com/hexojs/hexo/issues) หรือไปเปิด topic ได้ท่ี [Google Group](https://groups.google.com/group/hexo)
 
 ## What is Hexo?
 
-hexo เป็นกรอบบล็อกท่ีรวดเร็ว เรียบง่ายและมีประสิทธิภาพ 
+hexo เป็นกรอบบล็อกท่ีรวดเร็ว เรียบง่ายและมีประสิทธิภาพ
 คุณเขียนโพสต์ได้ด้วยภาษา [Markdown](http://daringfireball
-.net/projects/markdown/)(หรือภาษาอื่นๆ) และ hexo จะ generate 
+.net/projects/markdown/)(หรือภาษาอื่นๆ) และ hexo จะ generate
 ไฟล์คงที่ท่ีประกอบด้วยธีมสวยงามภายในเวลาไม่กี่วินาที
 
 ## Installation
@@ -23,7 +23,7 @@ hexo เป็นกรอบบล็อกท่ีรวดเร็ว เ�
 
 การติดตั้ง hexo เป็นเรื่องง่ายๆ แต่คุณต้องการติดตั้งบางสิ่งก่อน:
 
-- [Node.js](http://nodejs.org/) (Should be at least Node.js 8.10, recommends 10.0 or higher)
+- [Node.js](http://nodejs.org/) (Should be at least Node.js 10.13, recommends 12.0 or higher)
 - [Git](http://git-scm.com/)
 
 ถ้าคุณติดตั้งสองสิ่งนี้อยู่แล้วในคอม ขอแสดงความยินดี คุณจะติดตั้ง hexo ด้วย npm ได้อย่างนี้:
@@ -50,32 +50,28 @@ $ npm install -g hexo-cli
 
 ### Install Node.js
 
-วิธีดีท่ีสุดสำหรับการติดตั้ง Node.js คือ [Node Version Manager](https://github.com/nvm-sh/nvm)
-ขอบคุณ ผู้ประดิษฐ์ nvm ท่ีได้แนะนำวิธีเรียบง่ายท่ีติดตั้ง nvm ได้โดยอัตโนมัติ
+Node.js provides [official installer](https://nodejs.org/en/download/) for most platforms.
 
-cURL:
+Alternative installation methods:
 
-``` bash
-$ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
-```
+- Windows: Install it with [nvs](https://github.com/jasongin/nvs/) (recommended) or [nvm](https://github.com/nvm-sh/nvm).
+- Mac: Install it with [Homebrew](https://brew.sh/) or [MacPorts](http://www.macports.org/).
+- Linux (DEB/RPM-based): Install it with [NodeSource](https://github.com/nodesource/distributions).
+- Others: Install it through respective package manager. Refer to [the guide](https://nodejs.org/en/download/package-manager/) provided by Node.js.
 
-Wget:
+nvs is also recommended for Mac and Linux to avoid possible permission issue.
 
-``` bash
-$ wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
-```
-
-เมื่อเสร็จการติดตั้ง nvm เปิด terminal ใหม่และรันคำสั่งต่อไปเพื่อติดตั้ง Node.js
-
-``` bash
-$ nvm install node
-```
-
-{% note info For Windows users %}
-We recommend to use [Node Version Switcher](https://github.com/jasongin/nvs/) as an alternative to nvm on Windows, which has similar command-line syntax with nvm and can be installed through provided Windows Installer (MSI) package.
+{% note info Windows %}
+If you use the official installer, make sure **Add to PATH** is checked (it's checked by default).
 {% endnote %}
 
-นอกจากนี้ยังดาวน์โหลดและรัน [the installer](http://nodejs.org/) ได้
+{% note warn Mac / Linux %}
+If you encounter `EACCES` permission error when trying to install Hexo, please follow [the workaround](https://docs.npmjs.com/resolving-eacces-permissions-errors-when-installing-packages-globally) provided by npmjs; overriding with root/sudo is highly discouraged.
+{% endnote %}
+
+{% note info Linux %}
+If you installed Node.js using Snap, you may need to manually run `npm install` in the target folder when [initializing](/docs/commands#init) a blog.
+{% endnote %}
 
 ### Install Hexo
 
@@ -84,3 +80,23 @@ We recommend to use [Node Version Switcher](https://github.com/jasongin/nvs/) as
 ``` bash
 $ npm install -g hexo-cli
 ```
+
+### Required Node.js version
+
+If you are stuck with older Node.js, you can consider installing a past version of Hexo.
+
+Please note we do not provide bugfixes to past versions of Hexo.
+
+We highly recommend to always install the [latest version](https://www.npmjs.com/package/hexo?activeTab=versions) of Hexo and the [recommended version](#Requirements) of Node.js, whenever possible.
+
+Hexo version | Minimum (Node.js version) | Less than (Node.js version)
+--- | --- | ---
+6.2+ | 12.13.0 | latest
+6.0+ | 12.13.0 | 18.5.0
+5.0+ | 10.13.0 | 12.0.0
+4.1 - 4.2 | 8.10 | 10.0.0
+4.0 | 8.6 | 8.10.0
+3.3 - 3.9 | 6.9 | 8.0.0
+3.2 - 3.3 | 0.12 | unknown
+3.0 - 3.1 | 0.10 or iojs | unknown
+0.0.1 - 2.8 | 0.10 | unknown

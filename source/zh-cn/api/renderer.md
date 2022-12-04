@@ -53,3 +53,17 @@ hexo.extend.renderer.register('ejs', 'html', function(data, options){
   return ejs.render(data.text, options);
 }, true);
 ```
+
+### 禁用 Nunjucks 标签
+
+Nunjucks 标签 `{{ }}` 或 `{% %}` (被 [标签插件](/zh-cn/docs/tag-plugins) 所使用) 默认会被处理，想要禁用：
+
+``` js
+function lessFn(data, options) {
+  // do something
+}
+
+lessFn.disableNunjucks = true
+
+hexo.extend.renderer.register('less', 'css', lessFn);
+```

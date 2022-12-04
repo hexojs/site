@@ -1,54 +1,85 @@
 ---
-title: 將 Hexo 部署到 GitHub Pages
+title: 在 GitHub Pages 上部署 Hexo
 ---
 
-在本教程中，我們將會使用 [Travis CI](https://travis-ci.com/) 將 Hexo 博客部署到 GitHub Pages 上。Travis CI 對於開源 repository 是免費的，但是這意味著妳的站點文件將會是公開的。如果妳希望妳的站點文件不被公開，請直接前往本文 [Private repository](#Private-repository) 部分。
+本文將使用 [GitHub Actions](https://docs.github.com/en/actions) 部屬至 GitHub Pages，此方法適用於公開或私人儲存庫。若你不希望將整個資料夾推上 GitHub，請參閱 [一鍵部屬](#一鍵部屬)。
 
-1. 新建壹個 repository。如果妳希望妳的站點能通過 `<妳的 GitHub 用戶名>.github.io` 域名訪問，妳的 repository 應該直接命名為 `<妳的 GitHub 用戶名>.github.io`。
-2. 將妳的 Hexo 站點文件夾推送到 repository 中。默認情況下不應該 `public` 目錄將不會被推送到 repository 中，妳應該檢查 `.gitignore` 文件中是否包含 `public` 壹行，如果沒有請加上。
-3. 將 [Travis CI](https://github.com/marketplace/travis-ci) 添加到妳的 GitHub 賬戶中。
-4. 前往 GitHub 的 [Applications settings](https://github.com/settings/installations)，配置 Travis CI 權限，使其能夠訪問妳的 repository。
-5. 妳應該會被重定向到 Travis CI 的頁面。如果沒有，請 [手動前往](https://travis-ci.com/)。
-6. 在瀏覽器新建壹個標簽頁，前往 GitHub [新建 Personal Access Token](https://github.com/settings/tokens)，只勾選 `repo` 的權限並生成壹個新的 Token。Token 生成後請復制並保存好。
-7. 回到 Travis CI，前往妳的 repository 的設置頁面，在 **Environment Variables** 下新建壹個環境變量，**Name** 為 `GH_TOKEN`，**Value** 為剛才妳在 GitHub 生成的 Token。確保 **DISPLAY VALUE IN BUILD LOG** 保持 **不被勾選** 避免妳的 Token 泄漏。點擊 **Add** 保存。
-8. 在妳的 Hexo 站點文件夾中新建壹個 `.travis.yml` 文件：
+1. 建立名為 <b>*username*.github.io</b> 的儲存庫，username 是你在 GitHub 上的使用者名稱，若之前已將 Hexo 上傳至其他儲存庫，將該儲存庫重命名即可。
+2. 將 Hexo 檔案 push 到儲存庫的預設分支，預設分支通常名為 **main**，舊一點的儲存庫可能名為 **master**。
+  - 將 `main` 分支 push 到 GitHub：
 
-```yml
-sudo: false
-language: node_js
-node_js:
-  - 10 # use nodejs v10 LTS
-cache: npm
-branches:
-  only:
-    - master # build master branch only
-script:
-  - hexo generate # generate static files
-deploy:
-  provider: pages
-  skip-cleanup: true
-  github-token: $GH_TOKEN
-  keep-history: true
-  on:
-    branch: master
-  local-dir: public
+    ```
+    $ git push -u origin main
+    ```
+  - 預設情況下 `public/` 不會被上傳(也不該被上傳)，確認 `.gitignore` 檔案中包含一行 `public/`。整體資料夾結構應會與[範例儲存庫](https://github.com/hexojs/hexo-starter)極為相似。
+
+3. 使用 `node --version` 指令檢查你電腦上的 Node.js 版本，並記下該版本 (例如：`v16.y.z`)
+4. 在儲存庫中建立 `.github/workflows/pages.yml`，並填入以下內容 (將 `16` 替換為上個步驟中記下的版本)：
+
+```yml .github/workflows/pages.yml
+name: Pages
+
+on:
+  push:
+    branches:
+      - main  # default branch
+
+jobs:
+  pages:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          # If your repository depends on submodule, please see: https://github.com/actions/checkout
+          submodules: recursive
+      - name: Use Node.js 16.x
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16'
+      - name: Cache NPM dependencies
+        uses: actions/cache@v2
+        with:
+          path: node_modules
+          key: ${{ runner.OS }}-npm-cache
+          restore-keys: |
+            ${{ runner.OS }}-npm-cache
+      - name: Install Dependencies
+        run: npm install
+      - name: Build
+        run: npm run build
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
 ```
 
-9. 將 `.travis.yml` 推送到 repository 中。Travis CI 應該會自動開始運行，並將生成的文件推送到同壹 repository 下的 `gh-pages` 分支下
-10. 在 GitHub 中前往妳的 repository 的設置頁面，修改 `GitHub Pages` 的部署分支為 `gh-pages`。
-11. 前往 `https://<妳的 GitHub 用戶名>.github.io` 查看妳的站點是否可以訪問。這可能需要壹些時間。
+5. 當部屬作業完成後，產生的頁面會放在儲存庫中的 `gh-pages` 分支。
+6. 在儲存庫中前往 **Settings** > **Pages** > **Source**，並將 branch 改為 `gh-pages`。
+7. 前往 *username*.github.io 查看網站。
 
-## Project page
+{% note info CNAME %}
+若你使用 `CNAME` 自訂域名，你需要在 `source/` 資料夾中新增 `CNAME` 檔案。[更多資訊](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site)
+{% endnote %}
 
-如果妳更希望妳的站點部署在 `<妳的 GitHub 用戶名>.github.io` 的子目錄中，妳的 repository 需要直接命名為子目錄的名字，這樣妳的站點可以通過 `https://<妳的 GitHub 用戶名>.github.io/<repository 的名字>` 訪問。妳需要檢查妳的 Hexo 配置文件，將 `url` 修改為 `https://<妳的 GitHub 用戶名>.github.io/<repository 的名字>`、將 `root` 的值修改為 `/<repository 的名字>/`
+## 專案頁面
 
+如果你希望網站部署在 `<你的 GitHub 用戶名>.github.io` 的子目錄中：
 
-## Private repository
+1. 開啟你在 GitHub 的儲存庫，並前往 **Settings** 頁面。更改你的 **Repository name** 使你的部落格網址變成 <b>username.github.io/*repository*</b>，*repository* 可以是任何名稱，例如 *blog* 或 *hexo*。
+2. 編輯你的 **_config.yml**，將 `url:` 更改為 <b>https://*username*.github.io/*repository*</b>。
+3. Commit 並 push 到預設分支上。
+4. 當部屬完成後，在 `gh-pages` 分支可以找到產生的網頁。
+5. 在 GitHub 儲存庫中，前往 **Settings** > **Pages** > **Source**，並將 branch 改為 `gh-pages` 後儲存。
+6. 前往 *username*.github.io/*repository* 查看。
 
-The following instruction is adapted from [one-command deployment](/docs/one-command-deployment) page.
+## 一鍵部屬
 
-1. Install [hexo-deployer-git](https://github.com/hexojs/hexo-deployer-git).
-2. Add the following configurations to **_config.yml**, (remove existing lines if any)
+以下教學改編自 [一鍵部署](/docs/one-command-deployment) .
+
+1. 安裝 [hexo-deployer-git](https://github.com/hexojs/hexo-deployer-git).
+2. 清空 `_config.yml` 的現有資料，並新增以下組態:
 
   ``` yml
   deploy:
@@ -58,17 +89,15 @@ The following instruction is adapted from [one-command deployment](/docs/one-com
     branch: gh-pages
   ```
 
-3. Run `hexo clean && hexo deploy`.
-4. Check the webpage at *username*.github.io.
+3. 執行 `hexo clean && hexo deploy` 。
+4. 瀏覽 `<GitHub 用戶名>.github.io` 檢查你的網站能否運作。
 
 {% note info Windows 用戶 %}
-在 [Awesome Hexo](https://github.com/hexojs/awesome-hexo) 中收錄有壹些在 GitHub 部署 Hexo 更仔細的教程。通過搜索引擎可以找到更多教程。
-也歡迎更多有誌之士前來改善 Hexo 文檔，不勝感激。
+[Awesome Hexo](https://github.com/hexojs/awesome-hexo) 中收錄了更多有關在 GitHub Pages 上部署 Hexo ，你也可透過搜尋引擎了解更多。
+歡迎更多有誌之士前來改善 Hexo 文檔，不勝感激。
 {% endnote %}
 
-## 有用的參考鏈接
+## 參考連結
 
 - [GitHub Pages 使用文檔](https://help.github.com/categories/github-pages-basics/)
-- [Travis CI 使用文檔](https://docs.travis-ci.com/user/tutorial/)
-- [Awesome Hexo](https://github.com/hexojs/awesome-hexo)
-- [在Google上搜索 "Hexo GitHub"](https://www.google.com/search?q=hexo+github)
+- [peaceiris/actions-gh-pages](https://github.com/marketplace/actions/github-pages-action)

@@ -1,3 +1,4 @@
+---
 title: Local Variables
 ---
 Local variables are used for template rendering, which is the `site` variable in templates.

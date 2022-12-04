@@ -33,14 +33,51 @@ Embora o Node.js tenha I/O não bloqueante, o número máximo de I/O síncronas 
 $ ulimit -n 10000
 ```
 
+**Error: cannot modify limit**
+
+If you encounter the following error:
+
+``` bash
+$ ulimit -n 10000
+ulimit: open files: cannot modify limit: Operation not permitted
+```
+
+It means some system-wide configurations are preventing `ulimit` to being increased to a certain limit.
+
+To override the limit:
+
+1. Add the following line to "/etc/security/limits.conf":
+
+  ```
+  * - nofile 10000
+
+  # '*' applies to all users and '-' set both soft and hard limits
+  ```
+
+  * The above setting may not apply in some cases, ensure "/etc/pam.d/login" and "/etc/pam.d/lightdm" have the following line. (Ignore this step if those files do not exist)
+
+  ```
+  session required pam_limits.so
+  ```
+
+2. If you are on a [systemd-based](https://en.wikipedia.org/wiki/Systemd#Adoption) distribution, systemd may override "limits.conf". To set the limit in systemd, add the following line in "/etc/systemd/system.conf" and "/etc/systemd/user.conf":
+
+  ```
+  DefaultLimitNOFILE=10000
+  ```
+
+3. Reboot
+
 ## Processos com Pouca Memória
 
 Quando você encontrar esse erro durante a geração:
+
 ```
 FATAL ERROR: CALL_AND_RETRY_LAST Allocation failed - process out of memory
 ```
 
 Aumente o tamanho da memória heap do Node.js alterando a primeira linha de `hexo-cli` (o comando `which hexo` encontra o arquivo).
+
 ```
 #!/usr/bin/env node --max_old_space_size=8192
 ```
@@ -86,9 +123,11 @@ Este erro pode ocorrer ao tentar instalar um plugin escrito em C, C++ ou outra l
 ```
 
 A instalação do DTrace pode ter problemas, use isso:
+
 ```sh
 $ npm install hexo --no-optional
 ```
+
 Veja a issue [#1326](https://github.com/hexojs/hexo/issues/1326#issuecomment-113871796) no Github.
 
 ## Iterando o Modelo de Dados em Jade ou Swig
@@ -122,62 +161,65 @@ Quando você não consegue executar nenhum comando do Hexo, com exceção de `he
 
 ## Conteúdo Escapando
 
-O Hexo usa [Nunjucks] para renderizar posts ([Swig] foi usado na versão mais antiga, que compartilha uma sintaxe semelhante). O conteúdo delimitado com `{% raw %}{{ }}{% endraw %}` ou `{% raw %}{% %}{% endraw %}` será "parseado" e pode causar problemas. Você pode empacotar um conteúdo sensível com a [tag plugin `raw`](tag-plugins.html#Raw).
+O Hexo usa [Nunjucks] para renderizar posts ([Swig] foi usado na versão mais antiga, que compartilha uma sintaxe semelhante). O conteúdo delimitado com `{{ }}` ou `{% %}` será "parseado" e pode causar problemas. Você pode empacotar um conteúdo sensível com a tag plugin [`raw`](/docs/tag-plugins#Raw), single backtick ```` `{{ }}` ```` or triple backtick.
+Alternatively, Nunjucks tags can be disabled through the renderer's option (if supported), [API](/api/renderer#Disable-Nunjucks-tags) or [front-matter](/docs/front-matter).
 
 ```
 {% raw %}
-Hello {{ sensitive }}
+Hello {{ world }}
 {% endraw %}
 ```
+
+````
+```
+Hello {{ world }}
+```
+````
 
 ## ENOSPC Error (Linux)
 
 Às vezes, ao executar o comando `$ hexo server` é retornado o seguinte erro:
+
 ```
 Error: watch ENOSPC ...
 ```
+
 Isto pode ser consertado através do comando `$ npm dedupe` ou, se isso não funcionar, tente o seguinte comando no terminal do Linux:
+
 ``` bash
 $ echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
 ```
+
 Isso aumentará o limite do número de arquivos que você pode assistir.
 
 ## EMPERM Error (Windows Subsystem for Linux)
 
 Ao executar `$ hexo server` em um ambiente BashOnWindows, ele retorna o seguinte erro:
+
 ```
 Error: watch /path/to/hexo/theme/ EMPERM
 ```
+
 Infelizmente, o WSL (Windows Subsystem for Linux) atualmente não suporta os observadores (watchers) do sistema de arquivos. Portanto, o recurso de atualização em tempo real do servidor do Hexo não está disponível no momento. Contudo, ainda é possível executar o servidor a partir de um ambiente WSL, primeiro gere os arquivos e depois execute servidor em modo estático:
+
 ``` sh
 $ hexo generate
 $ hexo server -s
 ```
+
 Este é [um problema no BashOnWindows conhecido](https://github.com/Microsoft/BashOnWindows/issues/216), e em 15 de agosto de 2016, a equipe do Windows disse que eles trabalhariam nisso. Você pode obter atualizações de progresso e encorajá-los a priorizá-lo na [página UserVoice do problema](https://wpdev.uservoice.com/forums/266908-command-prompt-console-bash-on-ubuntu-on-windo/suggestions/13469097-support-for-filesystem-watchers-like-inotify).
 
 ## Erro de Renderização de Template
 
 Às vezes, ao executar o comando `$ hexo generate`, ele retorna um erro:
+
 ```
 FATAL Something's wrong. Maybe you can find the solution here: http://hexo.io/docs/troubleshooting.html
 Template render error: (unknown path)
 ```
-Isso significa que existem algumas palavras irreconhecíveis no seu arquivo. Existem duas possibilidades, uma é seu novo page/post, a outra é o `_config.yml`.
-Em `_config.yml`, não esqueça de adicionar espaços em branco antes de uma lista no hash. Existe uma página wiki sobre [YAML](https://en.wikipedia.org/wiki/YAML).
 
-Forma errada:
-```
-plugins:
-- hexo-generator-feed
-- hexo-generator-sitemap
-```
-Forma correta:
-```
-plugins:
-  - hexo-generator-feed
-  - hexo-generator-sitemap
-```
+One possible reason is that there are some unrecognizable words in your file, e.g. invisible zero width characters.
 
 [Warehouse]: https://github.com/hexojs/warehouse
 [Swig]: http://paularmstrong.github.io/swig/
-[Nunjucks]: http://mozilla.github.io/nunjucks/
+[Nunjucks]: https://mozilla.github.io/nunjucks/

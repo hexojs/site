@@ -12,7 +12,7 @@ title: 配置
 `title` | 網站標題
 `subtitle` | 網站副標題
 `description` | 網站描述
-`keywords` | 網站的關鍵詞。使用半角逗號 `,` 分隔多個關鍵詞。
+`keywords` | 網站的關鍵詞。支援多個關鍵詞。
 `author` | 您的名字
 `language` | 網站使用的語言，參考 [2-lettter ISO-639-1 code](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes)，預設為 `en`
 `timezone` | 網站時區，Hexo 預設使用您電腦的時區，您可以在 [時區列表](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) 尋找適當的時區，例如 `America/New_York` 、 `Japan` 與 `UTC`
@@ -21,8 +21,8 @@ title: 配置
 
 設定 | 描述 | 預設值
 --- | --- | ---
-`url` | 網站的網址 |
-`root` | 網站的根目錄 |
+`url` | 網站的網址，must starts with `http://` or `https://` |
+`root` | 網站的根目錄 | `url's pathname`
 `permalink` | 文章 [永久連結](permalinks.html) 的格式 | `:year/:month/:day/:title/`
 `permalink_defaults` | `permalink` 中各區段的預設值 |
 `pretty_urls` | 改寫 [`permalink`](variables.html) 的值來美化 URL |
@@ -63,13 +63,8 @@ title: 配置
 `post_asset_folder` | 啟動 [Asset 資料夾](asset-folders.html) | `false`
 `relative_link` | 把連結改為與根目錄的相對位址 | `false`
 `future` | 顯示未來的文章 | `true`
-`highlight` | 程式碼區塊的設定 |
-`highlight.enable` | 開啟代碼塊高亮 | `true`
-`highlight.auto_detect` | 如果未指定語言，則啟用自動檢測 | `false`
-`highlight.line_number` | 顯示行數<br>_Enabling this option will also enable `wrap` option_ | `true`
-`highlight.tab_replace` | 用 n 個空格替換 tabs；如果值為空，則不會替換 tabs | `''`
-`highlight.wrap` | Wrap the code block in [`<table>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table) | `true`
-`highlight.hljs` | Use the `hljs-*` prefix for CSS classes | `false`
+`highlight` | 程式碼區塊的設定, see [Highlight.js](/docs/syntax-highlight#Highlight-js) section for usage guide |
+`prismjs` | 程式碼區塊的設定, see [PrismJS](/docs/syntax-highlight#PrismJS) section for usage guide |
 
 ### 分類 & 標籤
 
@@ -87,7 +82,17 @@ Hexo 使用 [Moment.js](http://momentjs.com/) 來解析和顯示時間。
 --- | --- | ---
 `date_format` | 日期格式 | `YYYY-MM-DD`
 `time_format` | 時間格式 | `HH:mm:ss`
-`use_date_for_updated` | Use the date of the post in [`post.updated`](/zh-tw/docs/variables#頁面變數) if no updated date is provided in the front-matter. Typically used with Git workflow | `true`
+`updated_option` | The [`updated`](/zh-tw/docs/variables#頁面變數) value to used when not provided in the front-matter | `mtime`
+
+{% note info updated_option %}
+`updated_option` controls the `updated` value when not provided in the front-matter:
+
+- `mtime`: Use file modification date as `updated`. It is the default behavior of Hexo since 3.0.0
+- `date`: Use `date` as `updated`. Typically used with Git workflow when file modification date could be different.
+- `empty`: Simply drop `updated` when not provided. May not be compatible with most themes and plugins.
+
+`use_date_for_updated` is deprecated and will be removed in next major version. Please use `updated_option: 'date'` instead.
+{% endnote %}
 
 ### 分頁
 
@@ -103,7 +108,6 @@ Hexo 使用 [Moment.js](http://momentjs.com/) 來解析和顯示時間。
 `theme` | 使用主題名稱, 設為 `false` 表示關閉主題功能
 `deploy` | 佈署設定
 
-
 ### 包含/排除 檔案或資料夾
 
 Hexo 會根據配置檔中 `include` / `exlude` 欄位設定，了解要 處理/忽略 哪些特定的檔案或資料夾。
@@ -117,6 +121,7 @@ Hexo 會根據配置檔中 `include` / `exlude` 欄位設定，了解要 處理/
 `ignore` | Ignore files/folders
 
 範例:
+
 ```yaml
 # 包含/排除 檔案或資料夾
 include:
@@ -172,3 +177,86 @@ $ hexo server --config custom.yml,custom2.json
 使用多個配置檔會合併產生一個 `_multiconfig.yml`。當合併遇到衝突時，列在愈後面的檔案，有愈高的優先權。可以使用任意數量帶有任意層級物件的 JSON 或 YAML 檔。注意**檔案列表字串中不得有空白**。
 
 以前述的多個配置檔範例來說明，若 `custom.yml` 中有 `foo: bar`，且 `custom2.json` 中有 `"foo": "dinosaur"`，最終在 `_multiconfig.yml` 裡的將會是 `foo: dinosaur`。
+
+### Alternate Theme Config
+
+Hexo themes are independent projects, with separate `_config.yml` files.
+
+Instead of forking a theme, and maintaining a custom branch with your settings, you can configure it from somewhere else.
+
+**`theme_config` in site's primary configuration file**
+
+> Supported since Hexo 2.8.2
+
+```yml
+# _config.yml
+theme: "my-theme"
+theme_config:
+  bio: "My awesome bio"
+  foo:
+    bar: 'a'
+```
+
+```yml
+# themes/my-theme/_config.yml
+bio: "Some generic bio"
+logo: "a-cool-image.png"
+  foo:
+    baz: 'b'
+```
+
+Resulting in theme configuration:
+
+```json
+{
+  bio: "My awesome bio",
+  logo: "a-cool-image.png",
+  foo: {
+    bar: "a",
+    baz: "b"
+  }
+}
+```
+
+**dedicated `_config.[theme].yml` file**
+
+> Supported since Hexo 5.0.0
+
+The file should be placed in your site folder, both `yml` and `json` are supported. `theme` inside `_config.yml` must be configured for Hexo to read `_config.[theme].yml`
+
+```yml
+# _config.yml
+theme: "my-theme"
+```
+
+```yml
+# _config.my-theme.yml
+bio: "My awesome bio"
+foo:
+  bar: 'a'
+```
+
+```yml
+# themes/my-theme/_config.yml
+bio: "Some generic bio"
+logo: "a-cool-image.png"
+  foo:
+    baz: 'b'
+```
+
+Resulting in theme configuration:
+
+```json
+{
+  bio: "My awesome bio",
+  logo: "a-cool-image.png",
+  foo: {
+    bar: "a",
+    baz: "b"
+  }
+}
+```
+
+{% note %}
+We strongly recommends you to store your theme configuration in one place. But in case you have to store your theme configuration separately, those information is quite important: The `theme_config` inside site's primary configuration file has the highest priority during merging, then the dedicated theme configuration file, while the `_config.yml` file under the theme directory has the lowest priority.
+{% endnote %}

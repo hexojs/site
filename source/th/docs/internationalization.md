@@ -22,7 +22,7 @@ language:
 
 คุณใช้ helper ของ `__` หรือ `_p` ใน template ได้เพื่อได้  string ท่ีแปลมาแล้ว
  ตัวแรกใช้ในกรณีทางการ ส่วนตัวหลังใช้ในกรณีท่ีมีหลาย string ยกตัวอย่างเช่น：
-、
+
 ``` yaml en.yml
 index:
   title: Home
@@ -53,7 +53,6 @@ i18n_dir: :lang
 default value ของการตั้งค่า  `i18n_dir` คือ `:lang` ซึ่งหมายความว่า hexo 
 จะสืบค้นภาษาท่ีอยู่ใน segment ตัวแรกของ URL ยกตัวอย่างเช่น：
 
-
 ``` plain
 /index.html => en
 /archives/index.html => en
@@ -62,5 +61,3 @@ default value ของการตั้งค่า  `i18n_dir` คือ `:la
 
 string นั้นจะมีผลได้ในแต่กรณีท่ีไลฟ์ภาษานั้นมีอยู่จริงๆ ดังนั้น `archives` ใน
  `/archives/index.html` (ตัวอย่างท่ีสอง) จะไม่เกิดผลในการตั้งค่าภาษาของเว็บไซต์
-
-

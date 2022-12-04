@@ -54,3 +54,17 @@ hexo.extend.renderer.register('ejs', 'html', function(data, options){
   return ejs.render(data.text, options);
 }, true);
 ```
+
+### Disable Nunjucks tags
+
+Nunjucks tags `{{ }}` or `{% %}` (utilized by [tag plugin](/docs/tag-plugins)) are processed by default, to disable:
+
+``` js
+function lessFn(data, options) {
+  // do something
+}
+
+lessFn.disableNunjucks = true
+
+hexo.extend.renderer.register('less', 'css', lessFn);
+```

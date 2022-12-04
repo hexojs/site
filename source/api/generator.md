@@ -1,3 +1,4 @@
+---
 title: Generator
 ---
 A generator builds routes based on processed files.

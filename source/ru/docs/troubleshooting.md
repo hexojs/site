@@ -33,14 +33,51 @@ Error: EMFILE, too many open files
 $ ulimit -n 10000
 ```
 
+**Error: cannot modify limit**
+
+If you encounter the following error:
+
+``` bash
+$ ulimit -n 10000
+ulimit: open files: cannot modify limit: Operation not permitted
+```
+
+It means some system-wide configurations are preventing `ulimit` to being increased to a certain limit.
+
+To override the limit:
+
+1. Add the following line to "/etc/security/limits.conf":
+
+  ```
+  * - nofile 10000
+
+  # '*' applies to all users and '-' set both soft and hard limits
+  ```
+
+  * The above setting may not apply in some cases, ensure "/etc/pam.d/login" and "/etc/pam.d/lightdm" have the following line. (Ignore this step if those files do not exist)
+
+  ```
+  session required pam_limits.so
+  ```
+
+2. If you are on a [systemd-based](https://en.wikipedia.org/wiki/Systemd#Adoption) distribution, systemd may override "limits.conf". To set the limit in systemd, add the following line in "/etc/systemd/system.conf" and "/etc/systemd/user.conf":
+
+  ```
+  DefaultLimitNOFILE=10000
+  ```
+
+3. Reboot
+
 ## `process out of memory`
 
 Когда вы сталкиваетесь с этой ошибкой во время создания
+
 ```
 FATAL ERROR: CALL_AND_RETRY_LAST Allocation failed - process out of memory
 ```
 
 Повысить размер динамической памяти Node.js можно, изменив в первой строке `hexo-cli` команду (для нахождения местоположения файла используйте `which hexo`).
+
 ```
 #!/usr/bin/env node --max_old_space_size=8192
 ```
@@ -87,9 +124,11 @@ npm ERR! node-waf configure build
 ```
 
 Проблема в DTrace попробуйте эту команду:
+
 ```sh
 $ npm install hexo --no-optional
 ```
+
 См. также [#1326](https://github.com/hexojs/hexo/issues/1326#issuecomment-113871796)
 
 ## Iterate Data Model on Jade or Swig
@@ -111,13 +150,20 @@ $ hexo clean
 
 ## Содержимое не найдено
 
-Hexo использует [Nunjucks] для отображения сообщения ([Swig] использовался в предыдущей версии, он использует похожий синтаксис). Содержимое, обёрнутое, в `{% raw %}{{ }}{% endraw %}` или `{% raw %}{% %}{% endraw %}`, поможет вам разобраться, какая часть вызвала проблемы. Можно переносить конфиденциальные данные с `raw` плагином.
+Hexo использует [Nunjucks] для отображения сообщения ([Swig] использовался в предыдущей версии, он использует похожий синтаксис). Содержимое, обёрнутое, в `{{ }}` или `{% %}`, поможет вам разобраться, какая часть вызвала проблемы. You can skip the parsing by wrapping it with the [`raw`](/docs/tag-plugins#Raw) tag plugin, single backtick ```` `{{ }}` ```` or triple backtick.
+Alternatively, Nunjucks tags can be disabled through the renderer's option (if supported), [API](/api/renderer#Disable-Nunjucks-tags) or [front-matter](/docs/front-matter).
 
-``` plain
+```
 {% raw %}
-Hello {{ sensitive }}
+Hello {{ world }}
 {% endraw %}
 ```
+
+````
+```
+Hello {{ world }}
+```
+````
 
 ## ENOSPC Error (Linux)
 
@@ -136,5 +182,5 @@ $ echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo
 Это позволит увеличить лимит количества файлов, которые можно просматривать одновременно.
 
 [Warehouse]: https://github.com/hexojs/warehouse
-[Swig]: http://paularmstrong.github.io/swig/
-[Nunjucks]: http://mozilla.github.io/nunjucks/
+[Swig]: https://node-swig.github.io/swig-templates/
+[Nunjucks]: https://mozilla.github.io/nunjucks/

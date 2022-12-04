@@ -48,6 +48,7 @@ sidebar:
     variables: 變數
     helpers: 輔助函數
     internationalization: 國際化 (i18n)
+    syntax_highlight: 語法突顯
     plugins: 外掛
     miscellaneous: 其他
     troubleshooting: 解決問題
@@ -69,6 +70,7 @@ sidebar:
     filter: 過濾器 (Filter)
     generator: 產生器 (Generator)
     helper: 輔助函數 (Helper)
+    injector: 注射器 (Injector)
     migrator: 轉移器 (Migrator)
     processor: 處理器 (Processor)
     renderer: 渲染引擎 (Renderer)

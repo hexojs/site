@@ -10,47 +10,51 @@ We welcome you to join the development of Hexo. This document will help you thro
 
 ### Before You Start
 
+Please read [Contributor Covenant Code of Conduct](https://github.com/hexojs/hexo/blob/master/CODE_OF_CONDUCT.md) first.
+
 Please follow the coding style:
 
 - Follow [Google JavaScript Style Guide](https://google.github.io/styleguide/jsguide.html).
 - Use soft-tabs with a two space indent.
 - Don't put commas first.
 
+Also, Hexo has its own [ESLint config](https://github.com/hexojs/eslint-config-hexo), so please make sure your contribution will make ESLint happy.
+
 ### Workflow
 
 1. Fork [hexojs/hexo].
 2. Clone the repository to your computer and install dependencies.
 
-    {% code %}
-    $ git clone https://github.com/<username>/hexo.git
-    $ cd hexo
-    $ npm install
-    $ git submodule update --init
-    {% endcode %}
+``` bash
+$ git clone https://github.com/<username>/hexo.git
+$ cd hexo
+$ npm install
+$ git submodule update --init
+```
 
 3. Create a feature branch.
 
-    {% code %}
-    $ git checkout -b new_feature
-    {% endcode %}
+``` bash
+$ git checkout -b new_feature
+```
 
 4. Start hacking.
 5. Push the branch:
 
-    {% code %}
-    $ git push origin new_feature
-    {% endcode %}
+```
+$ git push origin new_feature
+```
 
 6. Create a pull request and describe the change.
 
 ### Notice
 
-- Don't modify version number in `package.json`.
+- Please don't modify version number in `package.json`.
 - Your pull request will only get merged when tests passed. Don't forget to run tests before submission.
 
-    {% code %}
-    $ npm test
-    {% endcode %}
+``` bash
+$ npm test
+```
 
 ## Updating official-plugins
 
@@ -65,17 +69,18 @@ The Hexo documentation is open source and you can find the source code on [hexoj
 1. Fork [hexojs/site]
 2. Clone the repository to your computer and install dependencies.
 
-    {% code %}
-    $ git clone https://github.com/<username>/site.git
-    $ cd site
-    $ npm install
-    {% endcode %}
+``` bash
+$ npm install hexo-cli -g # If you don't have hexo-cli installed
+$ git clone https://github.com/<username>/site.git
+$ cd site
+$ npm install
+```
 
 3. Start editing the documentation. You can start the server for live previewing.
 
-    {% code %}
-    $ hexo server
-    {% endcode %}
+``` bash
+$ hexo server
+```
 
 4. Push the branch.
 5. Create a pull request and describe the change.
@@ -92,8 +97,7 @@ The Hexo documentation is open source and you can find the source code on [hexoj
 When you encounter some problems when using Hexo, you can find the solutions in [Troubleshooting](troubleshooting.html) or ask me on [GitHub](https://github.com/hexojs/hexo/issues) or [Google Group](https://groups.google.com/group/hexo). If you can't find the answer, please report it on GitHub.
 
 1. Represent the problem in [debug mode](commands.html#Debug_mode).
-2. Run `hexo version` and check the version info.    
-3. Post both debug message and version info on GitHub.
+2. Follow the steps from issue template to provide debug message and version when submitting a new issue at GitHub.
 
 [hexojs/hexo]: https://github.com/hexojs/hexo
 [hexojs/site]: https://github.com/hexojs/site

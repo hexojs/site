@@ -15,7 +15,7 @@ hexo.extend.console.register(name, desc, options, function(args){
 --- | ---
 `name` | Имя
 `desc` | Описание
-`options`| Опции
+`options` | Опции
 
 Значение из аргумента `args` передаётся в функцию. Свойство описывает вводимые через терминал данные. Анализируется с помощью [Minimist].
 
@@ -67,4 +67,4 @@ hexo.extend.console.register('config', 'Display configuration', function(args){
 });
 ```
 
-[Minimist]: https://github.com/substack/minimist
+[Minimist]: https://github.com/minimistjs/minimist

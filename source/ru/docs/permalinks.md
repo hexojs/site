@@ -16,9 +16,13 @@ title: Постоянные ссылки
 `:i_day` | День публикации поста (Без ведущего нуля)
 `:hour` | Published hour of posts (2-digit)
 `:minute` | Published minute of posts (2-digit)
-`:title` | Имя файла
+`:second` | Published second of posts (2-digit)
+`:title` | Имя файла (relative to "source/_posts/" folder)
+`:name` | Имя файла
+`:post_title` | Post title
 `:id` | ID поста (_not persistent across [cache reset](/ru/docs/commands#clean)_)
 `:category` | Категории. Если категория поста не указана, возьмётся значение по умолчанию из `default_category`.
+`:hash` | SHA1 hash of filename (same as `:title`) and date (12-hexadecimal)
 
 Можно определить значение по умолчанию для переменной постоянной ссылки, задав значение `permalink_defaults` в конфигурации:
 
@@ -29,9 +33,7 @@ permalink_defaults:
 
 ### Примеры
 
-Пост под названием `hello-world.md` в `source/_posts` следующего содержания:
-
-``` yaml
+``` yaml source/_posts/hello-world.md
 title: Hello World
 date: 2013-07-14 17:01:34
 categories:
@@ -43,7 +45,21 @@ categories:
 --- | ---
 `:year/:month/:day/:title/` | 2013/07/14/hello-world/
 `:year-:month-:day-:title.html` | 2013-07-14-hello-world.html
-`:category/:title` | foo/bar/hello-world
+`:category/:title/` | foo/bar/hello-world/
+`:title-:hash/` | hello-world-a2c8ac003b43/
+
+``` yaml source/_posts/lorem/hello-world.md
+title: Hello World
+date: 2013-07-14 17:01:34
+categories:
+- foo
+- bar
+```
+
+Настройка | Результат
+--- | ---
+`:year/:month/:day/:title/` | 2013/07/14/lorem/hello-world/
+`:year/:month/:day/:name/` | 2013/07/14/hello-world/
 
 ### Многоязычность
 

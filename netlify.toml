@@ -1,37 +1,42 @@
 [build]
   command = "npm run build"
   publish = "/public"
-  environment = { NODE_VERSION = "10", NODE_ENV = "production" }
+  environment = { NODE_VERSION = "14", NODE_ENV = "production" }
 
 [[redirects]]
   from = "/"
   to = "/zh-tw/"
   status = 302
   conditions = {Language = ["zh-tw", "zh-hk"]}
+  force = true
 
 [[redirects]]
   from = "/"
   to = "/zh-cn/"
   status = 302
   conditions = {Language = ["zh", "zh-cn"]}
+  force = true
 
 [[redirects]]
   from = "/"
   to = "/ru/"
   status = 302
   conditions = {Language = ["ru"]}
+  force = true
 
 [[redirects]]
   from = "/"
   to = "/ko/"
   status = 302
   conditions = {Language = ["ko"]}
+  force = true
 
 [[redirects]]
   from = "/"
   to = "/pt-br/"
   status = 302
   conditions = {Language = ["pt-br"]}
+  force = true
 
 [[headers]]
   for = "/*"

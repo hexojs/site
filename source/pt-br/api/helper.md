@@ -31,4 +31,22 @@ hexo.extend.helper.register('js', function(path){
 
 ### Onde pôr um helper personalizado?
 
-Coloque-o dentro de `themes/<yourtheme>/scripts`
+Place it under `scripts/` or `themes/<yourtheme>/scripts/` folder.
+
+### How do I use another registered helper in my custom helper?
+
+All helpers are executed in the same context. For example, to use [`url_for()`](/docs/helpers#url-for) inside a custom helper:
+
+``` js
+hexo.extend.helper.register('lorem', function(path) {
+  return '<script src="' + this.url_for(path) + '"></script>';
+});
+```
+
+### How do I use a registered helper in another extension (e.g. Filter, Injector, etc)?
+
+`hexo.extend.helper.get` will return the helper function, but it needs to have hexo as its context, so:
+
+``` js
+const url_for = hexo.extend.helper.get('url_for').bind(hexo);
+```

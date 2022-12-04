@@ -6,13 +6,11 @@ title: Writing
 
 คุณสามรถรันคำสั่งต่อไปเพื่อสร้างโพสต์ใหม่หรือเพจใหม่:
 
-
 ``` bash
 $ hexo new [layout] <title>
 ```
 
 `post` เป็น `layout` default แต่คุณตั้งค่า layout ของตนได้โดยเปลี่ยนการตั้งค่าของ `default_layout` ใน  `_config.yml` ได้
-
 
 ### Layout
 
@@ -25,8 +23,8 @@ Layout | Path
 `page` | `source`
 `draft` | `source/_drafts`
 
-{% note tip Don't process my posts! %}
-ถ้าคุณไม่อยากทำให้โพสต์ของตนถูกจัดการ คุณสามารถตั้งค่าให้เป็น `layout: false`ใน front-matter
+{% note tip Disabling layout %}
+If you don't want an article (post/page) to be processed with a theme, set `layout: false` in its front-matter. Refer to [this section](/docs/front-matter#Layout) for more details.
 {% endnote %}
 
 ### Filename
@@ -49,7 +47,6 @@ Placeholder | Description
 
 `draft` เป็น layout อย่างหนึ่งของ hexo โพสต์ท่ีตั้งค่า layout เป็น draft 
 นั้นจะถูกบันทึกอยู่ใน folder `source/_drafts`  คุณสามารถใช้คำสั่ง `publish` ไปย้ายไฟล์ไปถึง folder `source/_posts`  ในท่ีนี้คำสั่ง `publish` คล้ายกับคำสั่ง `new`
-
 
 ``` bash
 $ hexo publish [layout] <title>
@@ -74,3 +71,11 @@ Placeholder | Description
 `layout` | Layout
 `title` | Title
 `date` | File created date
+
+### Supported Formats
+
+Hexo support posts written in any format, as long as the corresponding renderer plugin is installed.
+
+For example, Hexo has `hexo-renderer-marked` and `hexo-renderer-ejs` installed by default, so you can write your posts in `markdown` or in `ejs`. If you have `hexo-renderer-pug` installed, then you can even write your post in pug template language.
+
+You can rename your posts and change to file extension from `.md` to `.ejs`, then Hexo will use `hexo-renderer-ejs` to render that file, so do the other formats.

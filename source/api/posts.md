@@ -58,4 +58,5 @@ The data must contain the `content` attribute. If not, Hexo will try to read the
 - Render with [Nunjucks]
 - Execute `after_post_render` filters
 
-[Nunjucks]: http://mozilla.github.io/nunjucks/
+[Nunjucks]: https://mozilla.github.io/nunjucks/
+

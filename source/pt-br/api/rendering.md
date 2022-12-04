@@ -64,3 +64,17 @@ Use o método `getOutput` para obter a extensão da saída renderizada. Se um ar
 hexo.render.getOutput('layout.swig') // html
 hexo.render.getOutput('image.png') // '''
 ```
+
+## Disable Nunjucks tags
+
+If you are not using a [tag plugin](/docs/tag-plugins) and want to use `{{ }}` or `{% %}` in your post without using content [escaping](/docs/troubleshooting#Escape-Contents), you can disable processing of Nunjucks tag in existing renderer by:
+
+``` js
+// following example only applies to '.md' file extension
+// you may need to cover other extensions, e.g. '.markdown', '.mkd', etc
+const renderer = hexo.render.renderer.get('md')
+if (renderer) {
+  renderer.disableNunjucks = true
+  hexo.extend.renderer.register('md', 'html', renderer)
+}
+```

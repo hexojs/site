@@ -33,6 +33,41 @@ Node.js가 non-blocking I/O를 가지고 있음에도 불구하고, 동기적 I/
 $ ulimit -n 10000
 ```
 
+**Error: cannot modify limit**
+
+If you encounter the following error:
+
+``` bash
+$ ulimit -n 10000
+ulimit: open files: cannot modify limit: Operation not permitted
+```
+
+It means some system-wide configurations are preventing `ulimit` to being increased to a certain limit.
+
+To override the limit:
+
+1. Add the following line to "/etc/security/limits.conf":
+
+  ```
+  * - nofile 10000
+
+  # '*' applies to all users and '-' set both soft and hard limits
+  ```
+
+  * The above setting may not apply in some cases, ensure "/etc/pam.d/login" and "/etc/pam.d/lightdm" have the following line. (Ignore this step if those files do not exist)
+
+  ```
+  session required pam_limits.so
+  ```
+
+2. If you are on a [systemd-based](https://en.wikipedia.org/wiki/Systemd#Adoption) distribution, systemd may override "limits.conf". To set the limit in systemd, add the following line in "/etc/systemd/system.conf" and "/etc/systemd/user.conf":
+
+  ```
+  DefaultLimitNOFILE=10000
+  ```
+
+3. Reboot
+
 ## `process out of memory`
 
 생성(generation)중에 이 error가 발생할 수 있습니다.:
@@ -87,9 +122,11 @@ npm ERR! node-waf configure build
 ```
 
 DTrace의 설치가 문제를 일으킬 수 있습니다. 아래 명령을 사용해 보세요.
+
 ```sh
 $ npm install hexo --no-optional
 ```
+
 [#1326](https://github.com/hexojs/hexo/issues/1326#issuecomment-113871796) 이슈를 확인해 보세요.
 
 ## Iterate Data Model on Jade or Swig
@@ -111,24 +148,37 @@ $ hexo clean
 
 ## Escape Contents
 
-Hexo는 포스트를 렌더링하는데 [Nunjucks]를 사용합니다([Swig]은 이전 버전에서 사용했었습니다. 문법은 비슷합니다.). `{% raw %}{{ }}{% endraw %}` 또는 `{% raw %}{% %}{% endraw %}`로 감싼 컨텐츠는 파싱된 후에 문제를 발생시킵니다. 민감한 컨텐츠는 `raw` 태그 플러그인으로 감싸는 것이 좋습니다.
+Hexo는 포스트를 렌더링하는데 [Nunjucks]를 사용합니다([Swig]은 이전 버전에서 사용했었습니다. 문법은 비슷합니다.). `{{ }}` 또는 `{% %}`로 감싼 컨텐츠는 파싱된 후에 문제를 발생시킵니다. You can skip the parsing by wrapping it with the [`raw`](/docs/tag-plugins#Raw) tag plugin, single backtick ```` `{{ }}` ```` or triple backtick.
+Alternatively, Nunjucks tags can be disabled through the renderer's option (if supported), [API](/api/renderer#Disable-Nunjucks-tags) or [front-matter](/docs/front-matter).
 
 ```
 {% raw %}
-Hello {{ sensitive }}
+Hello {{ world }}
 {% endraw %}
 ```
+
+````
+```
+Hello {{ world }}
+```
+````
+
 ## ENOSPC Error (Linux)
+
 `$ hexo server`명령어가 가끔 error를 반환할 때가 있습니다.
+
 ```
 Error: watch ENOSPC ...
 ```
+
 `$ npm dedupe`를 실행하여도 해결되지 않는다면 Linux console에서 아래 명령을 수행해 보세요.
+
 ```
 $ echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
 ```
+
 이 명령어는 감시(watch)할 수 있는 파일의 개수 제한을 증가시킵니다.
 
 [Warehouse]: https://github.com/hexojs/warehouse
 [Swig]: http://paularmstrong.github.io/swig/
-[Nunjucks]: http://mozilla.github.io/nunjucks/
+[Nunjucks]: https://mozilla.github.io/nunjucks/

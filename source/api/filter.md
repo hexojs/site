@@ -1,3 +1,4 @@
+---
 title: Filter
 ---
 A filter is used to modify some specified data. Hexo passes data to filters in sequence and the filters then modify the data one after the other. This concept was borrowed from [WordPress](http://codex.wordpress.org/Plugin_API#Filters).
@@ -5,8 +6,15 @@ A filter is used to modify some specified data. Hexo passes data to filters in s
 ## Synopsis
 
 ``` js
-hexo.extend.filter.register(type, function(){
-  // ...
+hexo.extend.filter.register(type, function() {
+  // User configuration
+  const { config } = this;
+  if (config.external_link.enable) // do something...
+
+  // Theme configuration
+  const { config: themeCfg } = this.theme;
+  if (themeCfg.fancybox) // do something...
+
 }, priority);
 ```
 

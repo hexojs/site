@@ -115,24 +115,40 @@ hexo.extend.helper.register('page_anchor', str => {
   return $.html();
 });
 
+hexo.extend.helper.register('plugin_list', function() {
+  const partial = hexo.extend.helper.get('partial').bind(this);
+  let html = '';
+
+  const type = this.page.data;
+  const arr = this.site.data[type];
+
+  if (type === 'themes') {
+    arr.sort(() => { return Math.random() > 0.5 ? -1 : 1; });
+  }
+
+  if (type === 'plugins') {
+    arr.sort((a, b) => {
+      const nameA = a.name.toUpperCase();
+      const nameB = b.name.toUpperCase();
+      return nameA < nameB ? -1 : 1;
+    });
+  }
+
+  for (const plugin of arr) {
+    html += partial('partial/' + this.page.partial, { plugin });
+  }
+
+  return html;
+});
+
 hexo.extend.helper.register('lunr_index', data => {
   const index = lunr(function() {
     this.field('name', {boost: 10});
     this.field('tags', {boost: 50});
     this.field('description');
-    this.ref('id');
+    this.ref('name');
 
-    data.concat().sort((a, b) => {
-      if (a.name > b.name) {
-        return 1;
-      } else if (b.name > a.name) {
-        return -1;
-      }
-      return 0;
-    }).forEach((item, i) => {
-      const object = Object.assign({}, { id: i }, item);
-      this.add(object);
-    });
+    data.forEach(this.add, this);
   });
 
   return JSON.stringify(index);
@@ -158,7 +174,7 @@ hexo.extend.helper.register('disqus_lang', function() {
   return data.disqus_lang || lang;
 });
 
-hexo.extend.helper.register('hexo_version', function() {
-  return this.env.version;
+hexo.extend.filter.register('template_locals', locals => {
+  const { page } = locals;
+  if (page.archive) page.title = 'News';
 });
-

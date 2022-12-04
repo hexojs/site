@@ -48,6 +48,7 @@ sidebar:
     variables: Variables
     helpers: Helpers
     internationalization: Internationalization (i18n)
+    syntax_highlight: Syntax Highlight
     plugins: Plugins
     miscellaneous: Miscellaneous
     troubleshooting: Troubleshooting
@@ -67,6 +68,7 @@ sidebar:
     console: Console
     deployer: Deployer
     filter: Filter
+    injector: Injector
     generator: Generator
     helper: Helper
     migrator: Migrator

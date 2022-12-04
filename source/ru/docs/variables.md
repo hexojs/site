@@ -9,10 +9,13 @@ title: Переменные
 `page` | Информация о конкретной странице и переменные в шапке страницы.
 `config` | Конфигурация сайта.
 `theme` | Конфигурация темы. Наследуется от конфигурации сайта.
-`_` (одинарное подчёркивание) | Библиотека [Lodash](https://lodash.com/  'Lodash')
 `path` | Путь текущей страницы.
 `url` | Полная URL ссылка на текущую страницу.
 `env` | Переменные среды.
+
+{% note warn %}
+Lodash has been removed from global variables since Hexo 5.0.0. [You-Dont-Need-Lodash-Underscore](https://github.com/you-dont-need/You-Dont-Need-Lodash-Underscore) might be helpful for your migration.
+{% endnote %}
 
 ### Переменные сайта
 

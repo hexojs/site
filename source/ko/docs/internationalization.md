@@ -13,7 +13,7 @@ language:
 
 ### 언어 파일
 
-언어 파일로 YAML 또는 JSON 파일을 사용할 수 있습니다. 테마의 `languages` 폴더에 이 파일을 넣어두면 됩니다. 언어 파일의 [printf format](https://github.com/alexei/sprintf.js)을 지원합니다. 
+언어 파일로 YAML 또는 JSON 파일을 사용할 수 있습니다. 테마의 `languages` 폴더에 이 파일을 넣어두면 됩니다. 언어 파일의 [printf format](https://github.com/alexei/sprintf.js)을 지원합니다.
 
 ### 템플릿
 

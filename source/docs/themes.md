@@ -17,7 +17,7 @@ It's easy to build a Hexo theme - you just have to create a new folder. To start
 
 ### _config.yml
 
-Theme configuration file. Modifying this doesn't require a server restart.
+Theme configuration file. Unlike the site's primary configuration file, modifying this doesn't require a server restart.
 
 ### languages
 
@@ -25,11 +25,11 @@ Language folder. See [internationalization (i18n)](internationalization.html) fo
 
 ### layout
 
-Layout folder. This folder contains the theme's template files, which define the appearance of your website. Hexo provides the [Swig] template engine by default, but you can easily install additional plugins to support alternative engines such as [EJS], [Haml], [Jade], or [Pug]. Hexo chooses the template engine based on the file extension of the template. For example:
+Layout folder. This folder contains the theme's template files, which define the appearance of your website. Hexo provides the [Nunjucks] template engine by default, but you can easily install additional plugins to support alternative engines such as [EJS], [Haml], [Jade], or [Pug]. Hexo chooses the template engine based on the file extension of the template (just like the posts). For example:
 
 ``` plain
 layout.ejs   - uses EJS
-layout.swig  - uses Swig
+layout.njk   - uses Nunjucks
 ```
 
 See [templates](templates.html) for more info.
@@ -77,8 +77,8 @@ When you have finished building your theme, you can publish it to the [theme lis
 6. Create a pull request and describe the change.
 
 [EJS]: https://github.com/hexojs/hexo-renderer-ejs
-[Swig]: https://github.com/node-swig/swig-templates
 [Haml]: https://github.com/hexojs/hexo-renderer-haml
 [Jade]: https://github.com/hexojs/hexo-renderer-jade
 [Pug]: https://github.com/maxknee/hexo-render-pug
 [hexojs/site]: https://github.com/hexojs/site
+[Nunjucks]: https://mozilla.github.io/nunjucks/

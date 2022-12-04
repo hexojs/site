@@ -12,13 +12,13 @@ Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 [Markdown](h
 
 ## 安装
 
-安装 Hexo 只需几分钟时间，若您在安装过程中遇到问题或无法找到解决方式，请[提交问题](https://github.com/hexojs/hexo/issues)，我们会尽力解决您的问题。
+安装 Hexo 只需几分钟时间，若您在安装过程中遇到问题或无法找到解决方式，请 [提交问题](https://github.com/hexojs/hexo/issues)，我们会尽力解决您的问题。
 
 ### 安装前提
 
 安装 Hexo 相当简单，只需要先安装下列应用程序即可：
 
-- [Node.js](http://nodejs.org/) (Node.js 版本需不低于 8.10，建议使用 Node.js 10.0 及以上版本)
+- [Node.js](http://nodejs.org/) (Node.js 版本需不低于 10.13，建议使用 Node.js 12.0 及以上版本)
 - [Git](http://git-scm.com/)
 
 如果您的电脑中已经安装上述必备程序，那么恭喜您！你可以直接前往 [安装 Hexo](#安装-Hexo) 步骤。
@@ -46,10 +46,10 @@ Node.js 为大多数平台提供了官方的 [安装程序](https://nodejs.org/e
 
 其它的安装方法：
 
-- Windows：通过 [nvs](https://github.com/jasongin/nvs/)（推荐）或者[nvm](https://github.com/nvm-sh/nvm) 安装。
+- Windows：通过 [nvs](https://github.com/jasongin/nvs/)（推荐）或者 [nvm](https://github.com/nvm-sh/nvm) 安装。
 - Mac：使用 [Homebrew](https://brew.sh/) 或 [MacPorts](http://www.macports.org/) 安装。
 - Linux（DEB/RPM-based）：从 [NodeSource](https://github.com/nodesource/distributions) 安装。
-- 其它：使用相应的软件包管理器进行安装，可以参考由 Node.js 提供的 [指导](https://nodejs.org/en/download/package-manager/)
+- 其它：使用相应的软件包管理器进行安装，可以参考由 Node.js 提供的 [指导](https://nodejs.org/en/download/package-manager/)。
 
 对于 Mac 和 Linux 同样建议使用 nvs 或者 nvm，以避免可能会出现的权限问题。
 
@@ -59,6 +59,10 @@ Node.js 为大多数平台提供了官方的 [安装程序](https://nodejs.org/e
 
 {% note warn For Mac / Linux 用户 %}
 如果在尝试安装 Hexo 的过程中出现 `EACCES` 权限错误，请遵循 [由 npmjs 发布的指导](https://docs.npmjs.com/resolving-eacces-permissions-errors-when-installing-packages-globally) 修复该问题。强烈建议 **不要** 使用 root、sudo 等方法覆盖权限
+{% endnote %}
+
+{% note info Linux %}
+如果您使用 Snap 来安装 Node.js，在 [初始化](/zh-cn/docs/commands#init) 博客时您可能需要手动在目标文件夹中执行 `npm install`。
 {% endnote %}
 
 ### 安装 Hexo
@@ -86,3 +90,18 @@ $ npm install hexo
   echo 'PATH="$PATH:./node_modules/.bin"' >> ~/.profile
   ```
 
+### Node.js 版本限制
+
+我们强烈建议永远安装最新版本的 Hexo，以及 [推荐的 Node.js 版本](#安装前提)。
+
+Hexo version | Minimum (Node.js version) | Less than (Node.js version)
+--- | --- | ---
+6.2+ | 12.13.0 | latest
+6.0+ | 12.13.0 | 18.5.0
+5.0+ | 10.13.0 | 12.0.0
+4.1 - 4.2 | 8.10 | 10.0.0
+4.0 | 8.6 | 8.10.0
+3.3 - 3.9 | 6.9 | 8.0.0
+3.2 - 3.3 | 0.12 | unknown
+3.0 - 3.1 | 0.10 or iojs | unknown
+0.0.1 - 2.8 | 0.10 | unknown

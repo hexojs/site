@@ -118,7 +118,7 @@ url: https://example.com/blog # example
 
 ### css
 
-载入 CSS 文件。`path` 可以是数组或字符串，如果 `path` 开头不是 `/` 或任何协议，则会自动加上根路径；如果后面没有加上 `.css` 扩展名的话，也会自动加上。Use object type for custom attributes.
+载入 CSS 文件。`path` 可以是数组或字符串，如果 `path` 开头不是 `/` 或任何协议，则会自动加上根路径；如果后面没有加上 `.css` 扩展名的话，也会自动加上。对于自定义属性请使用对象类型。
 
 ``` js
 <%- css(path, ...) %>
@@ -144,7 +144,7 @@ url: https://example.com/blog # example
 
 ### js
 
-载入 JavaScript 文件。`path` 可以是数组或字符串，如果 `path` 开头不是 `/` 或任何协议，则会自动加上根路径；如果后面没有加上 `.js` 扩展名的话，也会自动加上。Use object type for custom attributes.
+载入 JavaScript 文件。`path` 可以是数组或字符串，如果 `path` 开头不是 `/` 或任何协议，则会自动加上根路径；如果后面没有加上 `.js` 扩展名的话，也会自动加上。对于自定义属性请使用对象类型。
 
 ``` js
 <%- js(path, ...) %>
@@ -256,8 +256,22 @@ url: https://example.com/blog # example
 
 参数 | 描述 | 默认值
 --- | --- | ---
-`title` | Feed 标题 |
+`title` | Feed 标题 | `config.title`
 `type` | Feed 类型 | atom
+
+**示例：**
+
+``` js
+<%- feed_tag('atom.xml') %>
+// <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+
+<%- feed_tag('rss.xml', { title: 'RSS Feed', type: 'rss' }) %>
+// <link rel="alternate" href="/atom.xml" title="RSS Feed" type="application/rss+xml">
+
+/* Defaults to hexo-generator-feed's config if no argument */
+<%- feed_tag() %>
+// <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+```
 
 ## 条件函数
 
@@ -275,6 +289,14 @@ url: https://example.com/blog # example
 
 ``` js
 <%- is_home() %>
+```
+
+### is_home_first_page (+6.3.0)
+
+检查当前页面是否为首页的第一页。
+
+``` js
+<%- is_home_first_page() %>
 ```
 
 ### is_post
@@ -400,6 +422,15 @@ url: https://example.com/blog # example
 <%- render(str, engine, [options]) %>
 ```
 
+**示例：**
+
+``` js
+<%- render('p(class="example") Test', 'pug'); %>
+// <p class="example">Test</p>
+```
+
+详见 [渲染](https://hexo.io/zh-cn/api/rendering)。
+
 ### word_wrap
 
 使每行的字符串长度不超过 `length`。`length` 预设为 80。
@@ -434,6 +465,21 @@ url: https://example.com/blog # example
 
 <%- truncate('And they found that many people were sleeping better.', {length: 25, omission: '... (continued)'}) %>
 // And they f... (continued)
+```
+
+### escape_html
+
+在字符串中转义 HTML 实体。
+
+``` js
+<%- escape_html(str) %>
+```
+
+**示例：**
+
+``` js
+<%- escape_html('<p>Hello "world".</p>') %>
+// &lt;p&gt;Hello &quot;world&quot;.&lt;&#x2F;p&gt;
 ```
 
 ## 模板
@@ -564,7 +610,7 @@ url: https://example.com/blog # example
 `transform` | 改变分类名称显示方法的函数 |
 `suffix` | 为链接添加前缀 | None
 
-**用例:**
+**示例：**
 
 ``` js
 <%- list_categories(post.categories, {
@@ -596,10 +642,29 @@ url: https://example.com/blog # example
 `show_count` | 显示每个标签的文章总数 | true
 `style` | 标签列表的显示方式。使用 `list` 以无序列表（unordered list）方式显示。 | list
 `separator` | 标签间的分隔符号。只有在 `style` 不是 `list` 时有用。 | ,
-`class` | 标签列表的 class 名称。 | tag
+`class` | 标签列表的类名（字符串）或自定义每个标签的类（对象，见下文）。 | tag
 `transform` | 改变标签名称显示方法的函数。请查看 [list_categories](#list-categories) 中给出的例子 |
 `amount` | 要显示的标签数量（0 = 无限制） | 0
 `suffix` | 为链接添加前缀 | None
+
+类的高级定制：
+
+选项 | 描述 | 预设值
+--- | --- | ---
+`class.ul` | `<ul>` 类名 （只适用于样式 `list`） | `tag-list` （列表样式）
+`class.li` | `<li>` 类名 （只适用于样式 `list`） | `tag-list-item` （列表样式）
+`class.a` | `<a>` 类名 | `tag-list-link` （列表样式） `tag-link` （普通样式）
+`class.label` | `<span>` 类名，标签 label 存储在这里（仅适用于普通样式，当 `class.label` 被设置时，标签被放置在 `<span>` 中） | `tag-label` （普通样式）
+`class.count` | `<span>` 类名，标签 counter 存储在这里 （仅当 `show_count` 为 `true`） | `tag-list-count` （列表样式） `tag-count` （普通样式）
+
+示例：
+
+```ejs
+<%- list_tags(site.tags, {class: 'classtest', style: false, separator: ' | '}) %>
+<%- list_tags(site.tags, {class: 'classtest', style: 'list'}) %>
+<%- list_tags(site.tags, {class: {ul: 'ululul', li: 'lilili', a: 'aaa', count: 'ccc'}, style: false, separator: ' | '}) %>
+<%- list_tags(site.tags, {class: {ul: 'ululul', li: 'lilili', a: 'aaa', count: 'ccc'}, style: 'list'}) %>
+```
 
 ### list_archives
 
@@ -657,6 +722,10 @@ url: https://example.com/blog # example
 `color` | 使用颜色 | false
 `start_color` | 开始的颜色。您可使用十六进位值（`#b700ff`），rgba（`rgba(183, 0, 255, 1)`），hsla（`hsla(283, 100%, 50%, 1)`）或 [颜色关键字]。此变量仅在 `color` 参数开启时才有用。 |
 `end_color` | 结束的颜色。您可使用十六进位值（`#b700ff`），rgba（`rgba(183, 0, 255, 1)`），hsla（`hsla(283, 100%, 50%, 1)`）或 [颜色关键字]。此变量仅在 `color` 参数开启时才有用。 |
+`class` | 标签的 class name 前缀
+`level` | 不同 class name 的总数。此变量仅在 `class` 参数设定时才有用。 | 10
+`show_count` (+6.3.0) | 显示每个标签的文章总数 | false
+`count_class` (+6.3.0) | 标签文章总数的 class | `count`
 
 ## 其他
 
@@ -682,8 +751,14 @@ url: https://example.com/blog # example
 `mid_size` | 显示于中间的页数 | 2
 `show_all` | 显示所有页数。如果开启此参数的话，`end_size` 和 `mid_size` 就没用了。 | false
 `escape` | Escape HTML tags | true
+`page_class` | 分页链接的 class 名称 | `page-number`
+`current_class` (+6.3.0) | 当前页链接的 class 名称 | `current`
+`space_class` (+6.3.0) | 空白文字的 class 名称 | `space`
+`prev_class` (+6.3.0) | 上一页链接的 class 名称 | `extend prev`
+`next_class` (+6.3.0) | 下一页链接的 class 名称 | `extend next`
+`force_prev_next` (+6.3.0) | 强制显示上一页和下一页的链接 | false
 
-**Examples:**
+**示例：**
 
 ``` js
 <%- paginator({
@@ -767,13 +842,13 @@ url: https://example.com/blog # example
 
 ### meta_generator
 
-Inserts [generator tag](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta).
+插入 [generator tag](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta)。
 
 ``` js
 <%- meta_generator() %>
 ```
 
-**Examples:**
+**示例：**
 
 ``` js
 <%- meta_generator() %>
@@ -794,6 +869,10 @@ Inserts [generator tag](https://developer.mozilla.org/en-US/docs/Web/HTML/Elemen
 `type` | 页面类型 (`og:type`) | blog
 `url` | 页面网址 (`og:url`) | `url`
 `image` | 页面图片 (`og:image`) | 内容中的图片
+`author` | Article author (`og:article:author`) | `config.author`
+`date` | Article published time (`og:article:published_time`) | Page published time
+`updated` | Article modified time (`og:article:modified_time`) | Page modified time
+`language` | Article language (`og:locale`) | `page.lang || page.language || config.language`
 `site_name` | 网站名称 (`og:site_name`) | `config.title`
 `description` | 页面描述 (`og:description`) | 内容摘要或前 200 字
 `twitter_card` | Twitter 卡片类型 (`twitter:card`) | summary
@@ -813,7 +892,13 @@ Inserts [generator tag](https://developer.mozilla.org/en-US/docs/Web/HTML/Elemen
 
 参数 | 描述 | 默认值
 --- | --- | ---
-`class` | Class 名称 | toc
+`class` | Class 名称 | `toc`
+`class_item` (+6.3.0) | 目录元素的 Class 名称 | `${class}-item`
+`class_link` (+6.3.0) | 目录内链接的 Class 名称 | `${class}-link`
+`class_text` (+6.3.0) | 目录链接内文本的 Class 名称 | `${class}-text`
+`class_child` (+6.3.0) | 目录内子列表的 Class 名称 | `${class}-child`
+`class_number` (+6.3.0) | 目录序号的 Class 名称 | `${class}-number`
+`class_level` | 目录层级的 Class 名称前缀 | `${class}-level`
 `list_number` | 显示编号 | true
 `max_depth` | 生成 TOC 的最大深度 | 6
 `min_depth` | 生成 TOC 的最小深度 | 1
@@ -824,8 +909,20 @@ Inserts [generator tag](https://developer.mozilla.org/en-US/docs/Web/HTML/Elemen
 <%- toc(page.content) %>
 ```
 
+#### data-toc-unnumbered (+6.1.0)
+
+带有 `data-toc-unnumbered="true"` 属性的标题将被标记为未编号（不显示列表编号）。
+
+{% note warn "警告！" %}
+对于使用 `data-toc-unnumbered="true"`，渲染引擎必须要有添加 CSS 类的选项。
+
+请看下面的 PR。
+
+- https://github.com/hexojs/hexo/pull/4871
+- https://github.com/hexojs/hexo-util/pull/269
+- https://github.com/hexojs/hexo-renderer-markdown-it/pull/174
+{% endnote %}
+
 [颜色关键字]: http://www.w3.org/TR/css3-color/#svg-color
 [Moment.js]: http://momentjs.com/
 [Open Graph]: http://ogp.me/
-
-

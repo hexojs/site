@@ -11,6 +11,7 @@ Configuração | Descrição
 `title` | O título do seu site
 `subtitle` | O subtítulo do seu site
 `description` | A descrição do seu site
+`keywords` | The keywords of your website. Supports multiple values.
 `author` | Seu nome
 `language` | O idioma do seu site. Use a [2-lettter ISO-639-1 code](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes). O padrão é `en`.
 `timezone` | O fuso horário do seu site. O Hexo usa a configuração do seu computador por padrão. Você pode encontrar a lista de fusos horários disponíveis [aqui](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones). Alguns exemplos são `America/New_York`, `Japan` e `UTC`.
@@ -19,8 +20,8 @@ Configuração | Descrição
 
 Configuração | Descrição | Padrão
 --- | --- | ---
-`url` | A URL do seu site |
-`root` | O diretório raiz do seu site |
+`url` | A URL do seu site, must starts with `http://` or `https://` |
+`root` | O diretório raiz do seu site | `url's pathname`
 `permalink` | O formato de [permalink](permalinks.html) dos artigos | `:year/:month/:day/:title/`
 `permalink_defaults` | Valores padrão de cada segmento no permalink |
 `pretty_urls` | Rewrite the [`permalink`](variables.html) variables to pretty URLs |
@@ -60,13 +61,8 @@ Configuração | Descrição | Padrão
 `post_asset_folder` | Ativar o [diretório de Asset](asset-folders.html)? | `false`
 `relative_link` | Links para o diretório raiz? | `false`
 `future` | Exibir postagens futuras? | `true`
-`highlight` | Configurações de bloco de código |
-`highlight.enable` | Enable syntax highlight | `true`
-`highlight.auto_detect` | Enable auto-detection if no language is specified | `false`
-`highlight.line_number` | Display line number<br>_Enabling this option will also enable `wrap` option_ | `true`
-`highlight.tab_replace` | Replace tabs by n space(s); if the value is empty, tabs won't be replaced | `''`
-`highlight.wrap` | Wrap the code block in [`<table>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table) | `true`
-`highlight.hljs` | Use the `hljs-*` prefix for CSS classes | `false`
+`highlight` | Configurações de bloco de código, see [Highlight.js](/docs/syntax-highlight#Highlight-js) section for usage guide |
+`prismjs` | Configurações de bloco de código, see [PrismJS](/docs/syntax-highlight#PrismJS) section for usage guide |
 
 ### Categoria & Tag
 
@@ -84,7 +80,17 @@ Configuração | Descrição | Padrão
 --- | --- | ---
 `date_format` | Formato de data | `YYYY-MM-DD`
 `time_format` | Formado de hora | `HH:mm:ss`
-`use_date_for_updated` | Use the date of the post in [`post.updated`](/pt-br/docs/variables#Variaveis-da-Pagina) if no updated date is provided in the front-matter. Typically used with Git workflow | `true`
+`updated_option` | The [`updated`](/pt-br/docs/variables#Variaveis-da-Pagina) value to used when not provided in the front-matter | `mtime`
+
+{% note info updated_option %}
+`updated_option` controls the `updated` value when not provided in the front-matter:
+
+- `mtime`: Use file modification date as `updated`. It is the default behavior of Hexo since 3.0.0
+- `date`: Use `date` as `updated`. Typically used with Git workflow when file modification date could be different.
+- `empty`: Simply drop `updated` when not provided. May not be compatible with most themes and plugins.
+
+`use_date_for_updated` is deprecated and will be removed in next major version. Please use `updated_option: 'date'` instead.
+{% endnote %}
 
 ### Paginação
 
@@ -115,6 +121,7 @@ Configuração | Descrição
 `ignore` | Ignore files/folders
 
 Exemplo:
+
 ```yaml
 # Incluir/Excluir Arquivos/Diretórios
 include:
@@ -156,48 +163,85 @@ Each value in the list must be enclosed with single/double quotes.
 
 \* Notable exception is the `source/_posts` folder, but any file or folder with a name that starts with an underscore under that folder would still be ignored. Using `include:` rule in that folder is not recommended.
 
+### Alternate Theme Config
 
-### Usando uma Configuração Alternativa
+Hexo themes are independent projects, with separate `_config.yml` files.
 
-Um arquivo de configuração personalizado pode ser especificado adicionando o sinalizador `--config` aos comandos do `hexo` com o caminho para o arquivo alternativo de configuração YAML ou JSON, ou até mesmo uma lista separada por vírgulas (sem espaços) de múltiplos arquivos YAML ou JSON.
+Instead of forking a theme, and maintaining a custom branch with your settings, you can configure it from somewhere else.
 
-``` bash
-# usando 'custom.yml' no lugar de '_config.yml'
-$ hexo server --config custom.yml
+**`theme_config` in site's primary configuration file**
 
-# usando 'custom.yml' e 'custom2.json', priorizando 'custom2.json'
-$ hexo server --config custom.yml,custom2.json
-```
-
-O uso de vários arquivos combina todos os arquivos de configuração e salva as configurações mescladas para `_multiconfig.yml`. Os valores posteriores prevalecem. Este recurso funciona com qualquer quantidade de arquivos JSON e YAML com objetos arbitrariamente profundos. Observe que **nenhum espaço é permitido na lista**.
-
-Por exemplo, no exemplo acima se `foo: bar` estiver em `custom.yml`, mas `"foo": "dinosaur"` estiver em `custom2.json`, `_multiconfig.yml` irá conter `foo: dinosaur`.
-
-### Sobrescrevendo as Configurações do Tema
-
-Os temas do Hexo são projetos independentes, com arquivos `_config.yml` separados.
-
-Em vez de dar fork em um tema e manter uma branch personalizada com suas configurações, você pode configurá-lo a partir do arquivo de configuração principal do seu site.
-
-Exemplo de configuração:
+> Supported since Hexo 2.8.2
 
 ```yml
 # _config.yml
+theme: "my-theme"
 theme_config:
   bio: "My awesome bio"
+  foo:
+    bar: 'a'
 ```
 
 ```yml
 # themes/my-theme/_config.yml
 bio: "Some generic bio"
 logo: "a-cool-image.png"
+  foo:
+    baz: 'b'
 ```
 
-Resultado da configuração do tema:
+Resulting in theme configuration:
 
 ```json
 {
   bio: "My awesome bio",
-  logo: "a-cool-image.png"
+  logo: "a-cool-image.png",
+  foo: {
+    bar: "a",
+    baz: "b"
+  }
 }
 ```
+
+**dedicated `_config.[theme].yml` file**
+
+> Supported since Hexo 5.0.0
+
+The file should be placed in your site folder, both `yml` and `json` are supported. `theme` inside `_config.yml` must be configured for Hexo to read `_config.[theme].yml`
+
+```yml
+# _config.yml
+theme: "my-theme"
+```
+
+```yml
+# _config.my-theme.yml
+bio: "My awesome bio"
+foo:
+  bar: 'a'
+```
+
+```yml
+# themes/my-theme/_config.yml
+bio: "Some generic bio"
+logo: "a-cool-image.png"
+  foo:
+    baz: 'b'
+```
+
+Resulting in theme configuration:
+
+```json
+{
+  bio: "My awesome bio",
+  logo: "a-cool-image.png",
+  foo: {
+    bar: "a",
+    baz: "b"
+  }
+}
+```
+
+{% note %}
+We strongly recommends you to store your theme configuration in one place. But in case you have to store your theme configuration separately, those information is quite important: The `theme_config` inside site's primary configuration file has the highest priority during merging, then the dedicated theme configuration file. the `_config.yml` file under the theme directory has the lowest priority.
+{% endnote %}

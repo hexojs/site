@@ -35,8 +35,6 @@ Argument | Description
 
 attribute ของโพสต์จะตั้งค่าอยู่ใน data ตารางต่อไปไม่ละเอียดถี่ถ้วนและ attribute อื่นๆสามารถเพิ่มใส่เข้าไปใน front-matter ได้
 
-
-
 Data | Description
 --- | ---
 `slug` | File name (Required)
@@ -55,9 +53,9 @@ Argument | Description
 
  data ต้องการมี attribute `content`  ถ้าไม่มี hexo จะลองอ่านไฟล์ที่เป็นต้นฉบับ ขั้นตอน execution ของ function นี้จะดังต่อไปนี้
 
-- Execute `before_post_render` filters execute 
+- Execute `before_post_render` filters execute
 - Render with Markdown or other renderers (depending on the extension name)
 - Render with [Nunjucks]
 - Execute `after_post_render` filters
 
-[Nunjucks]: http://mozilla.github.io/nunjucks/
+[Nunjucks]: https://mozilla.github.io/nunjucks/

@@ -17,7 +17,7 @@ It only takes a few minutes to set up Hexo. If you encounter a problem and can't
 
 Installing Hexo is quite easy and only requires the following beforehand:
 
-- [Node.js](http://nodejs.org/) (Should be at least Node.js 8.10, recommends 10.0 or higher)
+- [Node.js](http://nodejs.org/) (Should be at least Node.js 10.13, recommends 12.0 or higher)
 - [Git](http://git-scm.com/)
 
 If your computer already has these, congratulations! You can skip to the [Hexo installation](#Install-Hexo) step.
@@ -56,6 +56,10 @@ If you use the official installer, make sure **Add to PATH** is checked (it's ch
 If you encounter `EACCES` permission error when trying to install Hexo, please follow [the workaround](https://docs.npmjs.com/resolving-eacces-permissions-errors-when-installing-packages-globally) provided by npmjs; overriding with root/sudo is highly discouraged.
 {% endnote %}
 
+{% note info Linux %}
+If you installed Node.js using Snap, you may need to manually run `npm install` in the target folder when [initializing](/docs/commands#init) a blog.
+{% endnote %}
+
 ### Install Hexo
 
 Once all the requirements are installed, you can install Hexo with npm:
@@ -83,7 +87,7 @@ Once installed, you can run Hexo in two ways:
 
   then run Hexo using `hexo <command>`
 
-### Compatibility
+### Required Node.js version
 
 If you are stuck with older Node.js, you can consider installing a past version of Hexo.
 
@@ -91,11 +95,14 @@ Please note we do not provide bugfixes to past versions of Hexo.
 
 We highly recommend to always install the [latest version](https://www.npmjs.com/package/hexo?activeTab=versions) of Hexo and the [recommended version](#Requirements) of Node.js, whenever possible.
 
-Hexo version | Minimum Node.js version
---- | ---
-4.1+ | 8.10
-4.0 | 8.6
-3.3 - 3.9 | 6.9
-3.2 - 3.3 | 0.12
-3.0 - 3.1 | 0.10 or iojs
-0.0.1 - 2.8 | 0.10
+Hexo version | Minimum (Node.js version) | Less than (Node.js version)
+--- | --- | ---
+6.2+ | 12.13.0 | latest
+6.0+ | 12.13.0 | 18.5.0
+5.0+ | 10.13.0 | 12.0.0
+4.1 - 4.2 | 8.10 | 10.0.0
+4.0 | 8.6 | 8.10.0
+3.3 - 3.9 | 6.9 | 8.0.0
+3.2 - 3.3 | 0.12 | unknown
+3.0 - 3.1 | 0.10 or iojs | unknown
+0.0.1 - 2.8 | 0.10 | unknown

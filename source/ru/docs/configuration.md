@@ -10,6 +10,7 @@ title: Конфигурация
 `title` | Название сайта
 `subtitle` | Подзаголовок сайта
 `description` | Описание сайта
+`keywords` | Ключевые слова вашего сайта. Поддерживает несколько значений.
 `author` | Ваше имя
 `language` | Язык сайта. Используйте [2-значный код ISO-639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes). По умолчанию: `en`.
 `timezone` | Временной пояс. Hexo использует настройки компьютера по умолчанию. Список доступных часовых поясов можно найти [здесь](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones). Несколько примеров: `America/New_York`, `Japan` и `UTC`.
@@ -18,13 +19,13 @@ title: Конфигурация
 
 Параметр | Описание | Умолчание
 --- | --- | ---
-`url` | URL-адрес сайта |
-`root` | Корневая папка сайта |
+`url` | URL-адрес сайта, должен начинаться с `http://` или `https://` |
+`root` | Корневая папка сайта | `url's pathname`
 `permalink` | [Постоянная ссылка](permalinks.html) используются ссылки на статьи | `:year/:month/:day/:title/`
 `permalink_defaults` | Значение по умолчанию для каждого сегмента постоянной ссылки |
-`pretty_urls` | Rewrite the [`permalink`](variables.html) variables to pretty URLs |
-`pretty_urls.trailing_index` | Trailing `index.html`, set to `false` to remove it  | `true`
-`pretty_urls.trailing_html` | Trailing `.html`, set to `false` to remove it (_does not apply to trailing `index.html`_)  | `true`
+`pretty_urls` | Переопределите [`permalink`](variables.html) переменную для создания "красивых" URLs ссылок. |
+`pretty_urls.trailing_index` | Включает показывание `index.html`, установите значение `false` для удаления.  | `true`
+`pretty_urls.trailing_html` | Включает показывание `.html`, установите значение `false` для удаления (_не применяется к показу `index.html`_)  | `true`
 
 {% note info Сайт в подпапке %}
 Если ваш сайт располагается в поддиректории (к примеру `http://example.org/blog`) поменяйте значение `url` на `http://example.org/blog` и установите переменной `root` значение `/blog/`.
@@ -52,20 +53,15 @@ title: Конфигурация
 `titlecase` | Преобразовать заголовки в заглавные буквы? | `false`
 `external_link` | Открывать внешние ссылки в новой вкладке? | `true`
 `external_link.enable` | Открывать внешние ссылки в новой вкладке? | `true`
-`external_link.field` | Applies to the whole `site` or `post` only | `site`
-`external_link.exclude` | Exclude hostname. Specify subdomain when applicable, including `www` | `[]`
+`external_link.field` | Применяется только ко всему `site` или `post` | `site`
+`external_link.exclude` | Исключить имя хоста. Укажите поддомен, когда это применимо, включая `www` | `[]`
 `filename_case` | Преобразовать имена файлов в `1` нижний регистр; `2` верхний регистр | `0`
 `render_drafts` | Отображать черновики? | `false`
 `post_asset_folder` | Включать [папку с материалами](asset-folders.html)? | `false`
 `relative_link` | Создание ссылок относительно корневой папки? | `false`
 `future` | Отображать будущие посты? | `true`
-`highlight` | Настройки блоков кода |
-`highlight.enable` | Enable syntax highlight | `true`
-`highlight.auto_detect` | Enable auto-detection if no language is specified | `false`
-`highlight.line_number` | Display line number<br>_Enabling this option will also enable `wrap` option_ | `true`
-`highlight.tab_replace` | Replace tabs by n space(s); if the value is empty, tabs won't be replaced | `''`
-`highlight.wrap` | Wrap the code block in [`<table>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table) | `true`
-`highlight.hljs` | Use the `hljs-*` prefix for CSS classes | `false`
+`highlight` | Настройки блоков кода, см. [Highlight.js](/docs/syntax-highlight#Highlight-js) раздел для руководства по использованию |
+`prismjs` | Настройки блоков кода, см. [PrismJS](/docs/syntax-highlight#PrismJS) раздел для руководства по использованию |
 
 ### Категории и теги
 
@@ -83,7 +79,17 @@ Hexo использует [Moment.js](http://momentjs.com/) для работы 
 --- | --- | ---
 `date_format` | Формат даты | `YYYY-MM-DD`
 `time_format` | Формат времени | `HH:mm:ss`
-`use_date_for_updated` | Use the date of the post in [`post.updated`](/ru/docs/variables#Переменные-страницы) if no updated date is provided in the front-matter. Typically used with Git workflow | `true`
+`updated_option` | Значение [`обновлено`](/ru/docs/variables#Переменные-страницы) используется, если оно не указано в front-matter | `mtime`
+
+{% note info updated_option %}
+`updated_option` управляет значением `updated` если оно не указано в front-matter:
+
+- `mtime`: Использует дату изменения файла для показа `обновлено`. Это введено в Hexo по умолчанию с версии 3.0.0
+- `date`: Использует дату изменения для показа `обновлено`. Обычно используется с рабочим процессом Git, когда дата изменения файла может отличаться.
+- `empty`: Просто не использует `updated`, если оно не указано. Может быть несовместимо с большинством тем и плагинов.
+
+`use_date_for_updated` устарел и будет удален в следующей основной версии. Пожалуйста, используйте вместо этого `updated_option: 'date'`.
+{% endnote %}
 
 ### Разбивка на страницы
 
@@ -98,21 +104,22 @@ Hexo использует [Moment.js](http://momentjs.com/) для работы 
 --- | ---
 `theme` | Имя темы. `false` отключает применение тем
 `deploy` | Параметры публикации
-`meta_generator` | [Meta generator](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta#Attributes) tag. `false` disables injection of the tag.
+`meta_generator` | [Meta generator](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta#Attributes) тегов. `false` отключает ввод тегов.
 
-### Incluir/Excluir Arquivos ou Diretórios
+### Включить/Исключить файлы или каталоги
 
-No arquivo de configuração, defina a chave de include/exclude para que o hexo processe ou ignore, explicitamente, determinados arquivos/diretórios.
+В файле конфигурации, установите ключ include/exclude, чтобы hexo обрабатывал или игнорировал, указанные файлы/каталоги.
 
-`include` and `exclude` options only apply to the `source/` folder, whereas `ignore` option applies to all folders.
+`include` и `exclude` опции применяются только к папке `source/`, тогда как опция `ignore` применяется ко всем папкам.
 
-Configuração | Descrição
+Параметр | Описание
 --- | ---
-`include` | Por padrão, o Hexo ignora os arquivos e diretórios ocultos, mas configurar este campo fará com que o Hexo os processe também
-`exclude` | O Hexo irá ignorar os arquivos e diretórios listados abaixo deste campo
-`ignore` | Ignore files/folders
+`include` | По умолчанию Hexo игнорирует скрытые архивы и директории, укажите это значение, чтобы Hexo их обрабатывал
+`exclude` | В Hexo будет игнорировать файлы и каталоги, перечисленные в этой переменной
+`ignore` | Игнорирует файлы/папки
 
-Exemplo:
+Примеры:
+
 ```yaml
 # Incluir/Excluir Arquivos/Diretórios
 include:
@@ -148,15 +155,15 @@ ignore:
   - "**/themes/**/foo"
 ```
 
-Each value in the list must be enclosed with single/double quotes.
+Каждое значение в списке должно быть заключено в одинарные/двойные кавычки.
 
-`include:` and `exclude:` do not apply to the `themes/` folder. Either use `ignore:` or alternatively, prepend an underscore to the file/folder name to exclude.
+`include:` и `exclude:` не применяются к папке `themes/`. Либо используйте `ignore:`, либо, как вариант, добавьте подчеркивание к имени файла/папки, чтобы исключить.
 
-\* Notable exception is the `source/_posts` folder, but any file or folder with a name that starts with an underscore under that folder would still be ignored. Using `include:` rule in that folder is not recommended.
+\* Заметным исключением является папка `source/_posts`, но любой файл или папка с именем, начинающимся с подчеркивания в этой папке, все равно будут игнорироваться. Использование правила `include:` в этой папке не рекомендуется.
 
-### Usando uma Configuração Alternativa
+### Указание альтернативного файла конфигурации
 
-Um arquivo de configuração personalizado pode ser especificado adicionando o sinalizador `--config` aos comandos do `hexo` com o caminho para o arquivo alternativo de configuração YAML ou JSON, ou até mesmo uma lista separada por vírgulas (sem espaços) de múltiplos arquivos YAML ou JSON.
+Пользовательский файл конфигурации может быть указан при добавлении флага `--config` в команду `hexo` с указанием пути к альтрнативному файу конфигурации YAML или JSON, или даже списку с разделителями-запятыми (без пробелов) нескольких файлов YAML или JSON.
 
 ``` bash
 # usando 'custom.yml' no lugar de '_config.yml'
@@ -166,35 +173,89 @@ $ hexo server --config custom.yml
 $ hexo server --config custom.yml,custom2.json
 ```
 
-O uso de vários arquivos combina todos os arquivos de configuração e salva as configurações mescladas para `_multiconfig.yml`. Os valores posteriores prevalecem. Este recurso funciona com qualquer quantidade de arquivos JSON e YAML com objetos arbitrariamente profundos. Observe que **nenhum espaço é permitido na lista**.
+Использование нескольких файлов включает в себя все файлы, настройки и указанные параметры объединены в `_multiconfig.yml`. Значения последующих преобладают. Эта функция работает с любым количеством файлов JSON и YAML с объектами, сколь угодно глубоких. Обратите внимание, что **нет места разрешается в списке**.
 
-Por exemplo, no exemplo acima se `foo: bar` estiver em `custom.yml`, mas `"foo": "dinosaur"` estiver em `custom2.json`, `_multiconfig.yml` irá conter `foo: dinosaur`.
+Например, в приведенном выше примере, если `foo: bar` находящийся в файле `custom.yml`, но `"foo": "dinosaur"` в ` "custom2".json`, `_multiconfig.yml` будет сохранено значение `"foo": "dinosaur"`.
 
-### Sobrescrevendo as Configurações do Tema
+### Альтернативная конфигурация темы
 
-Os temas do Hexo são projetos independentes, com arquivos `_config.yml` separados.
+Темы Hexo - это независимые проекты с отдельными файлами `_config.yml`.
 
-Em vez de dar fork em um tema e manter uma branch personalizada com suas configurações, você pode configurá-lo a partir do arquivo de configuração principal do seu site.
+Вместо того чтобы делать ответвление(форк) темы и поддерживать пользовательскую ветвь с вашими настройками, вы можете настроить ее где-нибудь в другом месте.
 
-Exemplo de configuração:
+** `theme_config` в основном файле конфигурации сайта**
+
+> Поддерживается начиная с Hexo 2.8.2
 
 ```yml
 # _config.yml
+theme: "my-theme"
 theme_config:
   bio: "My awesome bio"
+  foo:
+    bar: 'a'
 ```
 
 ```yml
 # themes/my-theme/_config.yml
 bio: "Some generic bio"
 logo: "a-cool-image.png"
+  foo:
+    baz: 'b'
 ```
 
-Resultado da configuração do tema:
+В результате чего создается конфигурация темы:
 
 ```json
 {
   bio: "My awesome bio",
-  logo: "a-cool-image.png"
+  logo: "a-cool-image.png",
+  foo: {
+    bar: "a",
+    baz: "b"
+  }
 }
 ```
+
+**альтернативный `_config.[theme].yml` файл**
+
+> Поддерживается начиная с Hexo 5.0.0
+
+Файл должен быть помещен в папку вашего сайта, поддерживаются как `yml`, так и `json`. `theme` внутри `_config.yml` должна быть настроена так, чтобы Hexo считывал `_config.[theme].yml`
+
+```yml
+# _config.yml
+theme: "my-theme"
+```
+
+```yml
+# _config.my-theme.yml
+bio: "My awesome bio"
+foo:
+  bar: 'a'
+```
+
+```yml
+# themes/my-theme/_config.yml
+bio: "Some generic bio"
+logo: "a-cool-image.png"
+  foo:
+    baz: 'b'
+```
+
+В результате чего создастся конфигурация темы:
+
+```json
+{
+  bio: "My awesome bio",
+  logo: "a-cool-image.png",
+  foo: {
+    bar: "a",
+    baz: "b"
+  }
+}
+```
+
+{% note %}
+Мы настоятельно рекомендуем вам хранить конфигурацию вашей темы в одном месте. Но, в случае, если вам нужно хранить конфигурацию темы отдельно, эта информация очень важна: `theme_config` внутри основного файла конфигурации сайта имеет наивысший приоритет при объединении, затем выделенный файл конфигурации темы. Файл `_config.yml` в каталоге темы имеет самый низкий приоритет.
+{% endnote %}

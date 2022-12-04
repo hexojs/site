@@ -2,11 +2,11 @@
 title: Box
 ---
 
-Box é um container usado para processar arquivos em um diretório específico. O Hexo usa dois Boxes diferentes: `hexo.source` e` hexo.theme`. O primeiro é usado para processar o diretório `source` e o segundo para processar o diretório `theme`.
+Box é um container usado para processar arquivos em um diretório específico. O Hexo usa dois Boxes diferentes: `hexo.source` e `hexo.theme`. O primeiro é usado para processar o diretório `source` e o segundo para processar o diretório `theme`.
 
 ## Carregar Arquivos
 
-O Box fornece dois métodos para carregar arquivos: `process` e` watch`. `process` carrega todos os arquivos no diretório. `watch` faz o mesmo, mas também começa a assistir as mudanças nos arquivos.
+O Box fornece dois métodos para carregar arquivos: `process` e `watch`. `process` carrega todos os arquivos no diretório. `watch` faz o mesmo, mas também começa a assistir as mudanças nos arquivos.
 
 ``` js
 box.process().then(function(){

@@ -27,7 +27,7 @@ new_post_name: :year-:month-:day-:title.md
 
 ## Octopress
 
-Move all files in the Octopress `source/_posts` folder to `source/_posts` 
+Move all files in the Octopress `source/_posts` folder to `source/_posts`
 
 Modify the `new_post_name` setting in `_config.yml`:
 

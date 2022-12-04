@@ -3,7 +3,11 @@ title: Tag Plugins
 ---
 Tag plugins are different from post tags. They are ported from Octopress and provide a useful way for you to quickly add specific content to your posts.
 
+Although you can write your posts in any formats, but the tag plugins will always be available and syntax remains the same.
+
 {% youtube I07XMi7MHd4 %}
+
+_Tag plugins should not be wrapped inside Markdown syntax, e.g. `[]({% post_path lorem-ipsum %})` is not supported._
 
 ## Block Quote
 
@@ -84,6 +88,7 @@ Specify additional options in `option:value` format, e.g. `line_number:false fir
 Extra Options | Description | Default
 --- | --- | ---
 `line_number` | Show line number | `true`
+`line_threshold` | Only show line numbers as long as the numbers of lines of the code block exceed such threshold. | `0` |
 `highlight` | Enable code highlighting | `true`
 `first_line` | Specify the first line number | `1`
 `mark` | Line highlight specific line(s), each value separated by a comma. Specify number range using a dash<br>Example: `mark:1,4-7,10` will mark line 1, 4 to 7 and 10. |
@@ -246,7 +251,30 @@ Inserts code snippets in `source/downloads/code` folder. The folder location can
 Inserts a YouTube video.
 
 ```
-{% youtube video_id %}
+{% youtube video_id [type] [cookie] %}
+```
+
+### Examples
+
+**Embed a video**
+
+```
+{% youtube lJIrF4YjHfQ %}
+```
+
+**Embed a playlist**
+
+```
+{% youtube PL9hW1uS6HUfscJ9DHkOSoOX45MjXduUxo 'playlist' %}
+```
+
+**Enable privacy-enhanced mode**
+
+YouTube's cookie is not used in this mode.
+
+```
+{% youtube lJIrF4YjHfQ false %}
+{% youtube PL9hW1uS6HUfscJ9DHkOSoOX45MjXduUxo 'playlist' false %}
 ```
 
 ## Vimeo
@@ -272,7 +300,7 @@ For instance: `{% raw %}{% post_link how-to-bake-a-cake %}{% endraw %}`.
 
 This will work as long as the filename of the post is `how-to-bake-a-cake.md`, even if the post is located at `source/posts/2015-02-my-family-holiday` and has permalink `2018/en/how-to-bake-a-cake`.
 
-You can customize the text to display, instead of displaying the post's title. Using `post_path` inside Markdown syntax `[]()` is not supported.
+You can customize the text to display, instead of displaying the post's title.
 
 Post's title and custom text are escaped by default. You can use the `escape` option to disable escaping.
 
@@ -295,6 +323,7 @@ For instance:
 ```
 {% post_link hexo-4-released 'How to use <b> tag in title' %}
 ```
+
 {% post_link hexo-4-released 'How to use <b> tag in title' %}
 
 **Do not escape title.**
@@ -302,16 +331,55 @@ For instance:
 ```
 {% post_link hexo-4-released '<b>bold</b> custom title' false %}
 ```
+
 {% post_link hexo-4-released '<b>bold</b> custom title' false %}
 
 ## Include Assets
 
-Include post assets.
+Include post assets, to be used in conjunction with [`post_asset_folder`](/docs/asset-folders).
 
 ```
 {% asset_path filename %}
-{% asset_img filename [title] %}
+{% asset_img [class names] slug [width] [height] [title text [alt text]] %}
 {% asset_link filename [title] [escape] %}
+```
+
+### Embed image
+
+_hexo-renderer-marked 3.1.0+ can (optionally) resolves the post's path of an image automatically, refer to [this section](/docs/asset-folders#Embedding-an-image-using-markdown) on how to enable it._
+
+"foo.jpg" is located at `http://example.com/2020/01/02/hello/foo.jpg`.
+
+**Default (no option)**
+
+`{% asset_img foo.jpg %}`
+
+``` html
+<img src="/2020/01/02/hello/foo.jpg">
+```
+
+**Custom class**
+
+`{% asset_img post-image foo.jpg %}`
+
+``` html
+<img src="/2020/01/02/hello/foo.jpg" class="post-image">
+```
+
+**Display size**
+
+`{% asset_img foo.jpg 500 400 %}`
+
+``` html
+<img src="/2020/01/02/hello/foo.jpg" width="500" height="400">
+```
+
+**Title & Alt**
+
+`{% asset_img foo.jpg "lorem ipsum'dolor'" %}`
+
+``` html
+<img src="/2020/01/02/hello/foo.jpg" title="lorem ipsum" alt="dolor">
 ```
 
 ## Raw
@@ -323,7 +391,6 @@ If certain content is causing processing issues in your posts, wrap it with the 
 content
 {% endraw %}
 ```
-
 
 ## Post Excerpt
 

@@ -17,7 +17,6 @@ hexo.extend.renderer.register(name, output, function(data, options){
 `output` | 출력 파일의 확장자 (소문자, '.' 사용 불가)
 `sync` | 동기(Sync) 모드
 
-
 두 개의 인자가 render 함수로 전달됩니다:
 
 인자 | 설명
@@ -54,4 +53,18 @@ hexo.extend.renderer.register('ejs', 'html', function(data, options){
   options.filename = data.path;
   return ejs.render(data.text, options);
 }, true);
+```
+
+### Disable Nunjucks tags
+
+Nunjucks tags `{{ }}` or `{% %}` (utilized by [tag plugin](/docs/tag-plugins)) are processed by default, to disable:
+
+``` js
+function lessFn(data, options) {
+  // do something
+}
+
+lessFn.disableNunjucks = true
+
+hexo.extend.renderer.register('less', 'css', lessFn);
 ```

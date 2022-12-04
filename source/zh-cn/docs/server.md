@@ -36,32 +36,11 @@ $ hexo server -s
 ``` bash
 $ hexo server -i 192.168.1.1
 ```
+
 指定这个参数后，您就只能通过该IP才能访问站点。例如，对于一台使用无线网络的笔记本电脑，除了指向本机的`127.0.0.1`外，通常还有一个`192.168.*.*`的局域网IP，如果像上面那样使用`-i`参数，就不能用`127.0.0.1`来访问站点了。对于有公网IP的主机，如果您指定一个局域网IP作为`-i`参数的值，那么就无法通过公网来访问站点。
-
-## Pow
-
-[Pow](http://pow.cx/) 是一个 Mac 系统上的零配置 Rack 服务器，它也可以作为一个简单易用的静态文件服务器来使用。
-
-### 安装
-
-``` bash
-$ curl get.pow.cx | sh
-```
-
-### 设置
-
-在 `~/.pow` 文件夹建立链接（symlink）。
-
-``` bash
-$ cd ~/.pow
-$ ln -s /path/to/myapp
-```
-
-您的网站将会在 `http://myapp.dev` 下运行，网址根据链接名称而定。
 
 [hexo-server]: https://github.com/hexojs/hexo-server
 [Connect]: https://github.com/senchalabs/connect
 [morgan]: https://github.com/expressjs/morgan
 [Forever]: https://github.com/nodejitsu/forever
 [PM2]: https://github.com/Unitech/pm2
-

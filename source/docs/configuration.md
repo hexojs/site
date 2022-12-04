@@ -10,7 +10,7 @@ Setting | Description
 `title` | The title of your website
 `subtitle` | The subtitle of your website
 `description` | The description of your website
-`keywords` | The keywords of your website. Separate multiple keywords with commas `,`.
+`keywords` | The keywords of your website. Supports multiple values.
 `author` | Your name
 `language` | The language of your website. Use a [2-letter ISO-639-1 code](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) or optionally [its variant](/docs/internationalization). Default is `en`.
 `timezone` | The timezone of your website. Hexo uses the setting on your computer by default. You can find the list of available timezones [here](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones). Some examples are `America/New_York`, `Japan`, and `UTC`.
@@ -19,8 +19,8 @@ Setting | Description
 
 Setting | Description | Default
 --- | --- | ---
-`url` | The URL of your website |
-`root` | The root directory of your website |
+`url` | The URL of your website, must starts with `http://` or `https://` |
+`root` | The root directory of your website | `url's pathname`
 `permalink` | The [permalink](permalinks.html) format of articles | `:year/:month/:day/:title/`
 `permalink_defaults` | Default values of each segment in permalink |
 `pretty_urls` | Rewrite the [`permalink`](variables.html) variables to pretty URLs |
@@ -80,13 +80,8 @@ Setting | Description | Default
 `post_asset_folder` | Enable the [Asset Folder](asset-folders.html)? | `false`
 `relative_link` | Make links relative to the root folder? | `false`
 `future` | Display future posts? | `true`
-`highlight` | Code block syntax highlight settings, powered by [highlight.js](https://highlightjs.org/) |
-`highlight.enable` | Enable syntax highlight | `true`
-`highlight.auto_detect` | Enable auto-detection if no language is specified | `false`
-`highlight.line_number` | Display line number<br>_Enabling this option will also enable `wrap` option_ | `true`
-`highlight.tab_replace` | Replace tabs by n space(s); if the value is empty, tabs won't be replaced | `''`
-`highlight.wrap` | Wrap the code block in [`<table>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table) | `true`
-`highlight.hljs` | Use the `hljs-*` prefix for CSS classes | `false`
+`highlight` | Code block syntax highlight settings, see [Highlight.js](/docs/syntax-highlight#Highlight-js) section for usage guide |
+`prismjs` | Code block syntax highlight settings, see [PrismJS](/docs/syntax-highlight#PrismJS) section for usage guide |
 
 ### Home page setting
 
@@ -114,7 +109,17 @@ Setting | Description | Default
 --- | --- | ---
 `date_format` | Date format | `YYYY-MM-DD`
 `time_format` | Time format | `HH:mm:ss`
-`use_date_for_updated` | Use the date of the post in [`post.updated`](/docs/variables#Page-Variables) if no updated date is provided in the front-matter. Typically used with Git workflow | `true`
+`updated_option` | The [`updated`](/docs/variables#Page-Variables) value to used when not provided in the front-matter | `mtime`
+
+{% note info updated_option %}
+`updated_option` controls the `updated` value when not provided in the front-matter:
+
+- `mtime`: Use file modification date as `updated`. It is the default behavior of Hexo since 3.0.0
+- `date`: Use `date` as `updated`. Typically used with Git workflow when file modification date could be different.
+- `empty`: Simply drop `updated` when not provided. May not be compatible with most themes and plugins.
+
+`use_date_for_updated` is deprecated and will be removed in next major version. Please use `updated_option: 'date'` instead.
+{% endnote %}
 
 ### Pagination
 
@@ -124,12 +129,13 @@ Setting | Description | Default
 `pagination_dir` | URL format | `page`
 
 Examples:
+
 ``` yaml
 pagination_dir: 'page'
-# http://yoursite.com/page/2
+# http://example.com/page/2
 
 pagination_dir: 'awesome-page'
-# http://yoursite.com/awesome-page/2
+# http://example.com/awesome-page/2
 ```
 
 ### Extensions
@@ -140,7 +146,6 @@ Setting | Description
 `theme_config` | Theme configuration. Include any custom theme settings under this key to override theme defaults.
 `deploy` | Deployment settings
 `meta_generator` | [Meta generator](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta#Attributes) tag. `false` disables injection of the tag.
-
 
 ### Include/Exclude Files or Folders
 
@@ -155,6 +160,7 @@ Setting | Description
 `ignore` | Ignore files/folders
 
 Examples:
+
 ```yaml
 # Include/Exclude Files/Folders
 include:
@@ -212,24 +218,31 @@ Using multiple files combines all the config files and saves the merged settings
 
 For instance, in the above example if `foo: bar` is in `custom.yml`, but `"foo": "dinosaur"` is in `custom2.json`, `_multiconfig.yml` will contain `foo: dinosaur`.
 
-### Overriding Theme Config
+### Alternate Theme Config
 
 Hexo themes are independent projects, with separate `_config.yml` files.
 
-Instead of forking a theme, and maintaining a custom branch with your settings, you can configure it from your site's primary configuration file.
+Instead of forking a theme, and maintaining a custom version with your settings, you can configure it from somewhere else:
 
-Example configuration:
+**from `theme_config` in site's primary configuration file**
+
+> Supported since Hexo 2.8.2
 
 ```yml
 # _config.yml
+theme: "my-theme"
 theme_config:
   bio: "My awesome bio"
+  foo:
+    bar: 'a'
 ```
 
 ```yml
 # themes/my-theme/_config.yml
 bio: "Some generic bio"
 logo: "a-cool-image.png"
+  foo:
+    baz: 'b'
 ```
 
 Resulting in theme configuration:
@@ -237,6 +250,54 @@ Resulting in theme configuration:
 ```json
 {
   bio: "My awesome bio",
-  logo: "a-cool-image.png"
+  logo: "a-cool-image.png",
+  foo: {
+    bar: "a",
+    baz: "b"
+  }
 }
 ```
+
+**from a dedicated `_config.[theme].yml` file**
+
+> Supported since Hexo 5.0.0
+
+The file should be placed in your site folder, both `yml` and `json` are supported. `theme` inside `_config.yml` must be configured for Hexo to read `_config.[theme].yml`
+
+```yml
+# _config.yml
+theme: "my-theme"
+```
+
+```yml
+# _config.my-theme.yml
+bio: "My awesome bio"
+foo:
+  bar: 'a'
+```
+
+```yml
+# themes/my-theme/_config.yml
+bio: "Some generic bio"
+logo: "a-cool-image.png"
+  foo:
+    baz: 'b'
+```
+
+Resulting in theme configuration:
+
+```json
+{
+  bio: "My awesome bio",
+  logo: "a-cool-image.png",
+  foo: {
+    bar: "a",
+    baz: "b"
+  }
+}
+```
+
+{% note %}
+We strongly recommend you to store your theme configuration in one place. But in case you have to store your theme configuration separately, you need to know the priority of those configurations: The `theme_config` inside site's primary configuration file has the highest priority during merging, then the dedicated theme configuration file.
+The `_config.yml` file under the theme directory has the lowest priority.
+{% endnote %}

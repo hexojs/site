@@ -6,12 +6,19 @@ title: Фильтры
 ## Краткий обзор
 
 ``` js
-hexo.extend.filter.register(type, function(){
-  // ...
+hexo.extend.filter.register(type, function() {
+  // User configuration
+  const { config } = this;
+  if (config.external_link.enable) // do something...
+
+  // Theme configuration
+  const { config: themeCfg } = this.theme;
+  if (themeCfg.fancybox) // do something...
+
 }, priority);
 ```
 
-Вы можете определить приоритет. Низкий приоритет означает, что он будет выполняться в первую очередь. Приоритет по умолчанию равен 10
+Вы можете определить приоритет. Низкий приоритет означает, что он будет выполняться в первую очередь. Приоритет по умолчанию равен 10. Рекомендуется использовать настраиваемое пользователем значение приоритета, которое возможно указать в конфигурации, например `hexo.config.your_plugin.priority`.
 
 ## Использование фильтров
 

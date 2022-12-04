@@ -1,7 +1,7 @@
 ---
 title: Permalinks
 ---
-คุณสามารถตั้งค่า permalink ของเว็บไซตืตนในไฟล์ `_config.yml` หรือใน 
+คุณสามารถตั้งค่า permalink ของเว็บไซตืตนในไฟล์ `_config.yml` หรือใน
 front-matter ของทุกโพสต์
 
 ### Variables
@@ -17,12 +17,15 @@ Variable | Description
 `:i_day` | Published day of posts (Without leading zeros)
 `:hour` | Published hour of posts (2-digit)
 `:minute` | Published minute of posts (2-digit)
-`:title` | Filename
+`:second` | Published second of posts (2-digit)
+`:title` | Filename (relative to "source/_posts/" folder)
+`:name` | Filename
 `:post_title` | Post title
 `:id` | Post ID (_not persistent across [cache reset](/th/docs/commands#clean)_)
 `:category` | Categories. If the post is uncategorized, it will use the `default_category` value.
+`:hash` | SHA1 hash of filename (same as `:title`) and date (12-hexadecimal)
 
-ตุณสามารถตั้งค่า default value ของทุก variable ใน permalink โดยตั้งค่า 
+ตุณสามารถตั้งค่า default value ของทุก variable ใน permalink โดยตั้งค่า
 `permalink_defaults`:
 
 ``` yaml
@@ -32,9 +35,7 @@ permalink_defaults:
 
 ### Examples
 
- โพสต์ท่ีมีชื่อว่า `hello-world.md` ใน  folder `source/_posts` จะมีเนื่อหาต่อไป 
-
-``` yaml
+``` yaml source/_posts/hello-world.md
 title: Hello World
 date: 2013-07-14 17:01:34
 categories:
@@ -46,7 +47,21 @@ Setting | Result
 --- | ---
 `:year/:month/:day/:title/` | 2013/07/14/hello-world/
 `:year-:month-:day-:title.html` | 2013-07-14-hello-world.html
-`:category/:title` | foo/bar/hello-world
+`:category/:title/` | foo/bar/hello-world/
+`:title-:hash/` | hello-world-a2c8ac003b43/
+
+``` yaml source/_posts/lorem/hello-world.md
+title: Hello World
+date: 2013-07-14 17:01:34
+categories:
+- foo
+- bar
+```
+
+Setting | Result
+--- | ---
+`:year/:month/:day/:title/` | 2013/07/14/lorem/hello-world/
+`:year/:month/:day/:name/` | 2013/07/14/hello-world/
 
 ### Multi-language Support
 

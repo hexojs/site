@@ -2,7 +2,7 @@
 title: Helpers
 ---
 
-helper จะถูกใช้ใน template เพื่อช่วยเสียบ snippet ได้รวดเร็ว แต่ helper 
+helper จะถูกใช้ใน template เพื่อช่วยเสียบ snippet ได้รวดเร็ว แต่ helper
 นั้นไม่สามารถใช้ในไฟล์ source ได้ คุณสามารถ[write your own custom helper](https://hexo.io/api/helper.html)
 ได้ง่ายๆ หรือใช้ helper ท่ีเตรียมไว้ให้ได้
 
@@ -31,8 +31,8 @@ helper จะถูกใช้ใน template เพื่อช่วยเส
 
 เสียบรูปภาพ Gravatar เข้า:
 
-ถ้าคุณไม่ได้ป่งชี้ parameter ของ [options] ให้ชัดเจน จะมีการตั้งค่าให้  by 
-default  แล้วคุณก็สามารถตั้งค่า option ด้วยตนเอง ถ้าคุณตั้งค่านี้เป็น object 
+ถ้าคุณไม่ได้ป่งชี้ parameter ของ [options] ให้ชัดเจน จะมีการตั้งค่าให้  by
+default  แล้วคุณก็สามารถตั้งค่า option ด้วยตนเอง ถ้าคุณตั้งค่านี้เป็น object
 object นั้นจะถูกเปลี่ยนไปเป็น query string
 
 ``` js
@@ -57,8 +57,8 @@ object นั้นจะถูกเปลี่ยนไปเป็น query 
 ### css
 
 โหลดไฟล์ CSS  `path` นั้นเป็น array หรือ string ได้  ถ้า `path` นั้นไม่มี `/`
-หรือ protocol ใดๆ เป็นคำนำหน้า มันจะมี root URL เป็นคำนำหน้า 
-ถ้าคุณไม่ได้เพิ่ม extension ท่ีเป็น `.css`  หลัง `path`  extension 
+หรือ protocol ใดๆ เป็นคำนำหน้า มันจะมี root URL เป็นคำนำหน้า
+ถ้าคุณไม่ได้เพิ่ม extension ท่ีเป็น `.css`  หลัง `path`  extension
 นั้นจะถูกเพิ่มให้ไฟล์โดยอัตโนมัติ
 Use object type for custom attributes.
 
@@ -86,9 +86,9 @@ Use object type for custom attributes.
 
 ### js
 
-โหลดไฟล์ JavaScript  `path` นั้นเป็น array หรือ string ได้  ถ้า `path` 
-นั้นไม่มี `/` หรือ protocol ใดๆ เป็นคำนำหน้า มันจะมี root URL เป็นคำนำหน้า 
-ถ้าคุณไม่ได้เพิ่ม extension ท่ีเป็น `.js`  หลัง `path`  extension 
+โหลดไฟล์ JavaScript  `path` นั้นเป็น array หรือ string ได้  ถ้า `path`
+นั้นไม่มี `/` หรือ protocol ใดๆ เป็นคำนำหน้า มันจะมี root URL เป็นคำนำหน้า
+ถ้าคุณไม่ได้เพิ่ม extension ท่ีเป็น `.js`  หลัง `path`  extension
 นั้นจะถูกเพิ่มให้ไฟล์โดยอัตโนมัติ
 Use object type for custom attributes.
 
@@ -188,7 +188,6 @@ Option | Description
 
 เสียบ favicon เข้า:
 
-
 ``` js
 <%- favicon_tag(path) %>
 ```
@@ -203,14 +202,28 @@ Option | Description
 
 Option | Description | Default
 --- | --- | ---
-`title` | Feed title |
+`title` | Feed title | `config.title`
 `type` | Feed type | atom
+
+**Examples:**
+
+``` js
+<%- feed_tag('atom.xml') %>
+// <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+
+<%- feed_tag('rss.xml', { title: 'RSS Feed', type: 'rss' }) %>
+// <link rel="alternate" href="/atom.xml" title="RSS Feed" type="application/rss+xml">
+
+/* Defaults to hexo-generator-feed's config if no argument */
+<%- feed_tag() %>
+// <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+```
 
 ## Conditional Tags
 
 ### is_current
 
-ตรวจได้ว่า `path` นั้นเหมาะกับ URL ของเพจปัจจุบันหรือไม่  คุณใช้ตัวเลือก 
+ตรวจได้ว่า `path` นั้นเหมาะกับ URL ของเพจปัจจุบันหรือไม่  คุณใช้ตัวเลือก
 `strict` ไปเปิด strict matching ได้
 
 ``` js
@@ -219,7 +232,7 @@ Option | Description | Default
 
 ### is_home
 
-ตรวจได้ว่าเพจปัจจุบันเป็นหน้าหลักหรือไม่ 
+ตรวจได้ว่าเพจปัจจุบันเป็นหน้าหลักหรือไม่
 
 ``` js
 <%- is_home() %>
@@ -227,7 +240,7 @@ Option | Description | Default
 
 ### is_post
 
-ตรวจได้ว่าเพจปัจจุบันเป็นโพสต์หรือไม่ 
+ตรวจได้ว่าเพจปัจจุบันเป็นโพสต์หรือไม่
 
 ``` js
 <%- is_post() %>
@@ -235,7 +248,7 @@ Option | Description | Default
 
 ### is_archive
 
-ตรวจได้ว่าเพจปัจจุบันเป็นเพจ archive หรือไม่ 
+ตรวจได้ว่าเพจปัจจุบันเป็นเพจ archive หรือไม่
 
 ``` js
 <%- is_archive() %>
@@ -243,7 +256,7 @@ Option | Description | Default
 
 ### is_year
 
-ตรวจได้ว่าเพจปัจจุบันเป็นเพจ archive ต่อปีหรือไม่ 
+ตรวจได้ว่าเพจปัจจุบันเป็นเพจ archive ต่อปีหรือไม่
 
 ``` js
 <%- is_year() %>
@@ -251,7 +264,7 @@ Option | Description | Default
 
 ### is_month
 
-ตรวจได้ว่าเพจปัจจุบันเป็นเพจ archive ต่อเดือนหรือไม่ 
+ตรวจได้ว่าเพจปัจจุบันเป็นเพจ archive ต่อเดือนหรือไม่
 
 ``` js
 <%- is_month() %>
@@ -259,8 +272,8 @@ Option | Description | Default
 
 ### is_category
 
-ตรวจได้ว่าเพจปัจจุบันเป็นเพจ category หรือไม่ 
-ถ้า parameter นั้นเป็น string  จะตรวจได้ว่าเพจปัจจุบันอยู่ใน category 
+ตรวจได้ว่าเพจปัจจุบันเป็นเพจ category หรือไม่
+ถ้า parameter นั้นเป็น string  จะตรวจได้ว่าเพจปัจจุบันอยู่ใน category
 นั้นหรือไม่
 
 ``` js
@@ -270,9 +283,8 @@ Option | Description | Default
 
 ### is_tag
 
-ตรวจได้ว่าเพจปัจจุบันเป็นเพจแท็กหรือไม่ 
+ตรวจได้ว่าเพจปัจจุบันเป็นเพจแท็กหรือไม่
 ถ้า parameter นั้นเป็น string จะตรวจได้ว่าเพจปัจจุบันเหมาะกับแท็กนั้นหรือไม่
-
 
 ``` js
 <%- is_tag() %>
@@ -342,6 +354,15 @@ Renders a string.
 <%- render(str, engine, [options]) %>
 ```
 
+**Examples:**
+
+``` js
+<%- render('p(class="example") Test', 'pug'); %>
+// <p class="example">Test</p>
+```
+
+See [Rendering](https://hexo.io/th/api/rendering) for more details.
+
 ### word_wrap
 
 ทุกบรรทัดของ text จะไม่ยาวเกิน  `length` ค่า  `length` นั้นจะเป็น 80 ตัวอักษร
@@ -360,7 +381,7 @@ Renders a string.
 
 ### truncate
 
-ตัด text ให้สั้นตามการตั้งค่าของ `length` การตั้งค่า `length` default 
+ตัด text ให้สั้นตามการตั้งค่าของ `length` การตั้งค่า `length` default
 เป็นตัวอักษร 30 ตัว
 
 ``` js
@@ -380,6 +401,21 @@ Renders a string.
 // And they f... (continued)
 ```
 
+### escape_html
+
+Escapes HTML entities in a string.
+
+``` js
+<%- escape_html(str) %>
+```
+
+**Examples:**
+
+``` js
+<%- escape_html('<p>Hello "world".</p>') %>
+// &lt;p&gt;Hello &quot;world&quot;.&lt;&#x2F;p&gt;
+```
+
 ## Templates
 
 ### partial
@@ -397,7 +433,7 @@ Option | Description | Default
 
 ### fragment_cache
 
-cache เนื้อหาอยู่ใน fragment มันจะบันทึกเนื้อหาอยู่ใน fragment และ cache 
+cache เนื้อหาอยู่ใน fragment มันจะบันทึกเนื้อหาอยู่ใน fragment และ cache
 นั้นจะทำให้ request ท่ีเกี่ยวข้องนั้นมีการตอบรับเร็วขึ้น
 
 ``` js
@@ -416,12 +452,10 @@ cache เนื้อหาอยู่ใน fragment มันจะบัน�
 
 ### date
 
-เสียบวันเดือนปีท่ีได้จัดรูปแบบแล้วเข้า: 
+เสียบวันเดือนปีท่ีได้จัดรูปแบบแล้วเข้า:
 
 `date` นั้นจะเป็น unix time, ISO string, date object, หรือ [Moment.js] object
  ได้ `format` นั้นถูกตั้งค่าเป็น `date_format` อยู่แล้ว by default
-
-
 
 ``` js
 <%- date(date, [format]) %>
@@ -442,7 +476,7 @@ cache เนื้อหาอยู่ใน fragment มันจะบัน�
 เสียบวันเดือนปีเข้าในรูปแบบ XML :
 
 `date` นั้นจะเป็น unix time, ISO string, date object, หรือ [Moment.js] object
- ได้ 
+ ได้
 
 ``` js
 <%- date_xml(date) %>
@@ -457,7 +491,7 @@ cache เนื้อหาอยู่ใน fragment มันจะบัน�
 
 ### time
 
-เสียบกาลเวลาท่ีได้จัดรูปแบบแล้วเข้า: 
+เสียบกาลเวลาท่ีได้จัดรูปแบบแล้วเข้า:
 
 `date` นั้นเป็น unix time, ISO string, date object, หรือ [Moment.js] object ได้
 `format` นั้นถูกตั้งค่าเป็น `time_format` อยู่แล้ว by default
@@ -482,7 +516,6 @@ cache เนื้อหาอยู่ใน fragment มันจะบัน�
 
 `date` นั้นเป็น unix time, ISO string, date object, หรือ [Moment.js] object ได้
 `format` นั้นถูกตั้งค่าเป็น `date_format + time_format` อยู่แล้ว by default
-
 
 ``` js
 <%- full_date(date, [format]) %>
@@ -520,14 +553,32 @@ Option | Description | Default
 `style` | Style to display the category list. `list` displays categories in an unordered list.  | list
 `separator` | Separator between categories. (Only works if `style` is not `list`) | ,
 `depth` | Levels of categories to be displayed. `0` displays all categories and child categories; `-1` is similar to `0` but displayed in flat; `1` displays only top level categories. | 0
-`class` | Class name of category list. | category
+`class` | Class name of tag list (string) or customize each tag's class (object, see below). | tag
 `transform` | The function that changes the display of category name. |
 `suffix` | Add a suffix to link. | None
+
+Class advanced customization:
+
+Option | Description | Default
+--- | --- | ---
+`class.ul` | `<ul>` class name (only for style `list`) | `tag-list` (list style)
+`class.li` | `<li>` class name (only for style `list`) | `tag-list-item` (list style)
+`class.a` | `<a>` class name | `tag-list-link` (list style) `tag-link` (normal style)
+`class.label` | `<span>` class name where the tag label is stored (only for normal style, when `class.label` is set the label is put in a `<span>`) | `tag-label` (normal style)
+`class.count` | `<span>` class name where the tag counter is stored (only when `show_count` is `true`) | `tag-list-count` (list style) `tag-count` (normal style)
+
+Examples:
+
+```ejs
+<%- list_tags(site.tags, {class: 'classtest', style: false, separator: ' | '}) %>
+<%- list_tags(site.tags, {class: 'classtest', style: 'list'}) %>
+<%- list_tags(site.tags, {class: {ul: 'ululul', li: 'lilili', a: 'aaa', count: 'ccc'}, style: false, separator: ' | '}) %>
+<%- list_tags(site.tags, {class: {ul: 'ululul', li: 'lilili', a: 'aaa', count: 'ccc'}, style: 'list'}) %>
+```
 
 ### list_tags
 
 เสียบรายชื่อของแท็กทั้งหมดเข้า:
-
 
 ``` js
 <%- list_tags([options]) %>
@@ -544,6 +595,24 @@ Option | Description | Default
 `transform` | The function that changes the display of tag name. |
 `amount` | The number of tags to display (0 = unlimited) | 0
 `suffix` | Add a suffix to link. | None
+
+Class advanced customization:
+
+Option | Description | Default
+--- | --- | ---
+`class.ul` | `<ul>` class name (only for style `list`) | `tag-list` (list style)
+`class.li` | `<li>` class name (only for style `list`) | `tag-list-item` (list style)
+`class.a` | `<a>` class name | `tag-list-link` (list style) `tag-link` (normal style)
+`class.count` | `<span>` class name where the tag counter is stored (only when `show_count` is `true`) | `tag-list-count` (list style) `tag-count` (normal style)
+
+Examples:
+
+```ejs
+<%- list_tags(site.tags, {class: 'classtest', style: false, separator: ' | '}) %>
+<%- list_tags(site.tags, {class: 'classtest', style: 'list'}) %>
+<%- list_tags(site.tags, {class: {ul: 'ululul', li: 'lilili', a: 'aaa', count: 'ccc'}, style: false, separator: ' | '}) %>
+<%- list_tags(site.tags, {class: {ul: 'ululul', li: 'lilili', a: 'aaa', count: 'ccc'}, style: 'list'}) %>
+```
 
 ### list_archives
 
@@ -601,6 +670,8 @@ Option | Description | Default
 `color` | Colorizes the tag cloud | false
 `start_color` | Start color. You can use hex (`#b700ff`), rgba (`rgba(183, 0, 255, 1)`), hsla (`hsla(283, 100%, 50%, 1)`) or [color keywords]. This option only works when `color` is true. |
 `end_color` | End color. You can use hex (`#b700ff`), rgba (`rgba(183, 0, 255, 1)`), hsla (`hsla(283, 100%, 50%, 1)`) or [color keywords]. This option only works when `color` is true. |
+`class` | Class name prefix of tags
+`level` | The number of different class names. This option only works when `class` is set. | 10
 
 ## Miscellaneous
 
@@ -737,7 +808,11 @@ Option | Description | Default
 `title` | Page title (`og:title`) | `page.title`
 `type` | Page type (`og:type`) | blog
 `url` | Page URL (`og:url`) | `url`
-`image` | Page cover (`og:image`) | First image in the content
+`image` | Page images (`og:image`) | All images in the content
+`author` | Article author (`og:article:author`) | `config.author`
+`date` | Article published time (`og:article:published_time`) | Page published time
+`updated` | Article modified time (`og:article:modified_time`) | Page modified time
+`language` | Article language (`og:locale`) | `page.lang || page.language || config.language`
 `site_name` | Site name (`og:site_name`) | `config.title`
 `description` | Page description (`og:description`) | Page excerpt or first 200 characters of the content
 `twitter_card` | Twitter card type (`twitter:card`) | summary
@@ -767,6 +842,20 @@ Option | Description | Default
 ``` js
 <%- toc(page.content) %>
 ```
+
+#### data-toc-unnumbered (+6.1.0)
+
+Headings with attribute `data-toc-unnumbered="true"` will be marked as unnumbered (list number will not be display).
+
+{% note warn "Warning!" %}
+For using `data-toc-unnumbered="true"`, the renderer must have the option to add CSS classes.
+
+Please see below PRs.
+
+- https://github.com/hexojs/hexo/pull/4871
+- https://github.com/hexojs/hexo-util/pull/269
+- https://github.com/hexojs/hexo-renderer-markdown-it/pull/174
+{% endnote %}
 
 [color keywords]: http://www.w3.org/TR/css3-color/#svg-color
 [Moment.js]: http://momentjs.com/

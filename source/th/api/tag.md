@@ -13,6 +13,27 @@ hexo.extend.tag.register(name, function(args, content){
 
 argument ทั้งหมดสองตัวจะส่งเข้า function แท็ก: `args` และ `content`     `args` เป็น argument ท่ีส่งเข้าปลั๊กอินแท็กและ `content` เป็นเนื้อหาท่ีอยู่ในปลั๊กอินแท็ก จากคำแนะนำของ asynchronous rendering ใน hexo 3 รู้ได้ว่า hexo ใช้  [Nunjucks] เพื่อ rendering ซึ่งแตกต่างจาก rendering ใน [Swig]
 
+## Unregister Tags
+
+Use `unregister()` to replace existing [tag plugins](/docs/tag-plugins) with custom functions.
+
+``` js
+hexo.extend.tag.unregister(name);
+```
+
+**Example**
+
+``` js
+const tagFn = (args, content) => {
+  content = 'something';
+  return content;
+};
+
+// https://hexo.io/docs/tag-plugins#YouTube
+hexo.extend.tag.unregister('youtube');
+
+hexo.extend.tag.register('youtube', tagFn);
+```
 
 ## Options
 
@@ -66,5 +87,58 @@ hexo.extend.tag.register('include_code', function(args){
 }, {async: true});
 ```
 
-[Nunjucks]: http://mozilla.github.io/nunjucks/
+## Front-matter and user configuration
+
+Any of the following options is valid:
+
+1.
+
+``` js
+hexo.extend.tag.register('foo', function (args) {
+  const [firstArg] = args;
+
+  // User config
+  const { config } = hexo;
+  const editor = config.author + firstArg;
+
+  // Theme config
+  const { config: themeCfg } = hexo.theme;
+  if (themeCfg.fancybox) // do something...
+
+  // Front-matter
+  const { title } = this; // article's (post/page) title
+
+  // Article's content
+  const { _content } = this; // original content
+  const { content } = this; // HTML-rendered content
+
+  return 'foo';
+});
+```
+
+2.
+
+``` js index.js
+hexo.extend.tag.register('foo', require('./lib/foo')(hexo));
+```
+
+``` js lib/foo.js
+module.exports = hexo => {
+  return function fooFn(args) {
+    const [firstArg] = args;
+
+    const { config } = hexo;
+    const editor = config.author + firstArg;
+
+    const { config: themeCfg } = hexo.theme;
+    if (themeCfg.fancybox) // do something...
+
+    const { title, _content, content } = this;
+
+    return 'foo';
+  };
+};
+```
+
+[Nunjucks]: https://mozilla.github.io/nunjucks/
 [Swig]: http://paularmstrong.github.io/swig/

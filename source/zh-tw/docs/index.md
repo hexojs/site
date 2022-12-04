@@ -7,7 +7,7 @@ title: 文件
 
 ## 什麼是 Hexo？
 
-Hexo 是一個快速、簡單且強大的網誌框架。Hexo 使用 [Markdown](http://daringfireball.net/projects/markdown/)（或其他渲染引擎）解析您的文章，並在幾秒鐘內，透過漂亮的主題產生靜態檔案。
+Hexo 是一個快速、簡單且強大的網誌框架。Hexo 使用 [Markdown](http://daringfireball.net/projects/markdown/)（或其他標記語言）解析您的文章，並在幾秒鐘內，透過漂亮的主題產生靜態檔案。
 
 ## 安裝
 
@@ -41,31 +41,28 @@ $ npm install -g hexo-cli
 
 ### 安裝 Node.js
 
-安裝 Node.js 的最佳方式是透過 [Node Version Manager](https://github.com/nvm-sh/nvm)。感謝 nvm 的開發者提供簡易自動安裝的腳本指令：
+Node.js 為大多數平台提供了官方的 [安裝程序](https://nodejs.org/en/download/)。對於中國大陸地區用戶，可以前往 [淘寶 Node.js 鏡像](https://npm.taobao.org/mirrors/node) 下載。
 
-cURL:
+其它的安裝方法：
 
-``` bash
-$ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
-```
+- Windows：通過 [nvs](https://github.com/jasongin/nvs/)（推薦）或者[nvm](https://github.com/nvm-sh/nvm) 安裝。
+- Mac：使用 [Homebrew](https://brew.sh/) 或 [MacPorts](http://www.macports.org/) 安裝。
+- Linux（DEB/RPM-based）：從 [NodeSource](https://github.com/nodesource/distributions) 安裝。
+- 其它：使用相應的軟件包管理器進行安裝，可以參考由 Node.js 提供的 [指導](https://nodejs.org/en/download/package-manager/)
 
-Wget:
+對於 Mac 和 Linux 同樣建議使用 nvs 或者 nvm，以避免可能會出現的權限問題。
 
-``` bash
-$ wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
-```
-
-一旦安裝完成，重啟終端機並執行下列指令以安裝 Node.js。
-
-``` bash
-$ nvm install node
-```
-
-{% note info Windows 用户 %}
-對於 Windows 用戶我們推薦使用 [Node Version Switcher](https://github.com/jasongin/nvs/)，其具有和 nvm 相似的命令行語法，並且可以通過 Windows Installer (MSI) 安裝包進行安裝。
+{% note info Windows 用戶 %}
+使用 Node.js 官方安裝程序時，請確保勾選 **Add to PATH** 選項（默認已勾選）
 {% endnote %}
 
-或者您也可以下載 [安裝程式](http://nodejs.org/) 來安裝。
+{% note warn For Mac / Linux 用戶 %}
+如果在嘗試安裝Hexo 的過程中出現`EACCES` 權限錯誤，請遵循[由npmjs 發布的指導](https://docs.npmjs.com/resolving-eacces-permissions-errors-when-installing-packages-globally ) 修復該問題。強烈建議 **不要** 使用 root、sudo 等方法覆蓋權限
+{% endnote %}
+
+{% note info Linux %}
+If you installed Node.js using Snap, you may need to manually run `npm install` in the target folder when [initializing](/docs/commands#init) a blog.
+{% endnote %}
 
 ### 安裝 Hexo
 
@@ -74,3 +71,23 @@ $ nvm install node
 ``` bash
 $ npm install -g hexo-cli
 ```
+
+### Required Node.js version
+
+If you are stuck with older Node.js, you can consider installing a past version of Hexo.
+
+Please note we do not provide bugfixes to past versions of Hexo.
+
+We highly recommend to always install the [latest version](https://www.npmjs.com/package/hexo?activeTab=versions) of Hexo and the [recommended version](#安裝需求) of Node.js, whenever possible.
+
+Hexo version | Minimum (Node.js version) | Less than (Node.js version)
+--- | --- | ---
+6.2+ | 12.13.0 | latest
+6.0+ | 12.13.0 | 18.5.0
+5.0+ | 10.13.0 | 12.0.0
+4.1 - 4.2 | 8.10 | 10.0.0
+4.0 | 8.6 | 8.10.0
+3.3 - 3.9 | 6.9 | 8.0.0
+3.2 - 3.3 | 0.12 | unknown
+3.0 - 3.1 | 0.10 or iojs | unknown
+0.0.1 - 2.8 | 0.10 | unknown

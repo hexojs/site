@@ -12,10 +12,13 @@ Variável | Descrição | Tipo
 `page` | Informações específicas da página e  variáveis personalizadas definidas no front-matter. | `object`; veja [Variáveis da Página]
 `config` | Configuração do site. | `object` (arquivo `_config` do seu site)
 `theme` | Configuração do tema. Herda a configuração do site. | `object` (arquivo `_config` do seu tema)
-`_` (sublinhado) | Biblioteca Lodash | veja a documentação do [Lodash](https://lodash.com/  'Lodash')
 `path` | Caminho da página atual | `string`
 `url` | URL completa da página atual | `string`
 `env` | Variáveis de ambiente | ???
+
+{% note warn %}
+Lodash has been removed from global variables since Hexo 5.0.0. [You-Dont-Need-Lodash-Underscore](https://github.com/you-dont-need/You-Dont-Need-Lodash-Underscore) might be helpful for your migration.
+{% endnote %}
 
 ### Variáveis do Site
 
@@ -66,7 +69,7 @@ Variável | Descrição | Tipo
 `page.total` | Número total de páginas | `number`
 `page.current` | Número da página atual | `number`
 `page.current_url` | A URL da página atual | `string`
-`page.posts` | Posts in this page ([Data Model](https://hexojs.github.io/warehouse/)) | 
+`page.posts` | Posts in this page ([Data Model](https://hexojs.github.io/warehouse/)) |
 `page.prev` | Número da página anterior. `0` se a página atual for a primeira. | `number`
 `page.prev_link` | A URL da página anterior. `''` se a página atual for a primeira. | `string`
 `page.next` | Número da próxima página. `0` se a página atual for a última. | `number`

@@ -40,7 +40,6 @@ hexo.route.set('index.html', function(callback){
 
 ผู้ใช้ส่ง boolean เข้าไปได้ว่า path นั้นจะถูกแก้ไขหรือเปล่า ดังนั้นการตั้งค่าท่ีเป็น  boolean นี้จะช่วยเพิ่มความเร็วใน file generation เพราะว่าจะเลือกการไม่รันไฟล์ที่ unmodified ได้
 
-
 ``` js
 hexo.route.set('index.html', {
     data: 'index',

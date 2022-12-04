@@ -43,7 +43,7 @@ new_post_name: :year-:month-:day-:title.md
 $ npm install hexo-migrator-wordpress --save
 ```
 
-Экспортируйте WordPress сайт, зайдя в “Инструменты” → “Экспорт” → “Wordplress” в панели WordPress (см. страницу [поддержки WordPress](http://en.support.wordpress.com/export/) для более подробной информации.
+Экспортируйте WordPress сайт, зайдя в “Инструменты” → “Экспорт” → “Wordpress” в панели WordPress (см. страницу [поддержки WordPress](https://wordpress.com/ru/support/export/) для более подробной информации.
 
 Выполните:
 

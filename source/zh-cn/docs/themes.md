@@ -14,7 +14,7 @@ title: 主题
 
 ### _config.yml
 
-主题的配置文件。修改时会自动更新，无需重启服务器。
+主题的配置文件。和 Hexo 配置文件不同，主题配置文件修改时会自动更新，无需重启 Hexo Server。
 
 ### languages
 
@@ -22,7 +22,7 @@ title: 主题
 
 ### layout
 
-布局文件夹。用于存放主题的模板文件，决定了网站内容的呈现方式，Hexo 内建 [Swig] 模板引擎，您可以另外安装插件来获得 [EJS]、[Haml] 或 [Jade] 支持，Hexo 根据模板文件的扩展名来决定所使用的模板引擎，例如：
+布局文件夹。用于存放主题的模板文件，决定了网站内容的呈现方式，Hexo 内建 [Nunjucks] 模板引擎，您可以另外安装插件来获得 [EJS]、[Haml]、[Jade] 或 [Pug] 支持，Hexo 根据模板文件的扩展名来决定所使用的模板引擎，例如：
 
 ``` plain
 layout.ejs   - 使用 EJS
@@ -42,6 +42,7 @@ layout.swig  - 使用 Swig
 如果文件可以被渲染的话，会经过解析然后储存到 `public` 文件夹，否则会直接拷贝到 `public` 文件夹。
 
 ### 发布
+
 当您完成主题后，可以考虑将它发布到 [主题列表](/themes)，让更多人能够使用您的主题。在发布前建议先进行 [主题单元测试](https://github.com/hexojs/hexo-theme-unit-test)，确保每一项功能都能正常使用。发布主题的步骤和 [更新文档](contributing.html#更新文档) 非常类似。
 
 1. Fork [hexojs/site]
@@ -73,7 +74,8 @@ layout.swig  - 使用 Swig
 6. 建立一个新的合并申请（pull request）并描述改动。
 
 [EJS]: https://github.com/hexojs/hexo-renderer-ejs
-[Swig]: https://github.com/node-swig/swig-templates
 [Haml]: https://github.com/hexojs/hexo-renderer-haml
 [Jade]: https://github.com/hexojs/hexo-renderer-jade
+[Pug]: https://github.com/maxknee/hexo-render-pug
 [hexojs/site]: https://github.com/hexojs/site
+[Nunjucks]: https://mozilla.github.io/nunjucks/

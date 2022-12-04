@@ -4,7 +4,6 @@ title: 写作
 
 {% youtube HLJ9jJy7CMg %}
 
-
 你可以执行下列命令来创建一篇新文章或者新的页面。
 
 ``` bash
@@ -15,7 +14,7 @@ $ hexo new [layout] <title>
 
 ### 布局（Layout）
 
-Hexo 有三种默认布局：`post`、`page` 和 `draft`。在创建者三种不同类型的文件时，它们将会被保存到不同的路径；而您自定义的其他布局和 `post` 相同，都将储存到 `source/_posts` 文件夹。
+Hexo 有三种默认布局：`post`、`page` 和 `draft`。在创建这三种不同类型的文件时，它们将会被保存到不同的路径；而您自定义的其他布局和 `post` 相同，都将储存到 `source/_posts` 文件夹。
 
 布局 | 路径
 --- | ---
@@ -23,8 +22,8 @@ Hexo 有三种默认布局：`post`、`page` 和 `draft`。在创建者三种不
 `page` | `source`
 `draft` | `source/_drafts`
 
-{% note tip 不要处理我的文章 %}
-如果你不想你的文章被处理，你可以将 Front-Matter 中的`layout:` 设为 `false` 。
+{% note tip 禁用布局 %}
+如果你不希望一篇文章（post/page）使用主题处理，请在它的 front-matter 中设置 `layout: false`。详情请参考[本节](/zh-cn/docs/front-matter#布局)。
 {% endnote %}
 
 ### 文件名称
@@ -65,3 +64,11 @@ $ hexo new photo "My Gallery"
 `layout` | 布局
 `title` | 标题
 `date` | 文件建立日期
+
+### 支持的格式
+
+Hexo 支持以任何格式书写文章，只要安装了相应的渲染插件。
+
+例如，Hexo 默认安装了 `hexo-renderer-marked` 和 `hexo-renderer-ejs`，因此你不仅可以用 Markdown 写作，你还可以用 EJS 写作。如果你安装了 `hexo-renderer-pug`，你甚至可以用 Pug 模板语言书写文章。
+
+只需要将文章的扩展名从 `md` 改成 `ejs`，Hexo 就会使用 `hexo-renderer-ejs` 渲染这个文件，其他格式同理。

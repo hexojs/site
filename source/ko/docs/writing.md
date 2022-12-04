@@ -19,8 +19,8 @@ Hexo에는 세 개의 기본 레이아웃이 존재합니다. `post`, `page`, `d
 `page` | `source`
 `draft` | `source/_drafts`
 
-{% note tip Don't process my posts! %}
-당신의 post가 처리되는 것을 원치 않는다면 front-matter에 `layout: false`를 선언하면 됩니다.
+{% note tip Disabling layout %}
+If you don't want an article (post/page) to be processed with a theme, set `layout: false` in its front-matter. Refer to [this section](/ko/docs/front-matter#레이아웃) for more details.
 {% endnote %}
 
 ### 파일명
@@ -61,3 +61,11 @@ Placeholder | 설명
 `layout` | 레이아웃
 `title` | 제목
 `date` | 파일 생성일
+
+### Supported Formats
+
+Hexo support posts written in any format, as long as the corresponding renderer plugin is installed.
+
+For example, Hexo has `hexo-renderer-marked` and `hexo-renderer-ejs` installed by default, so you can write your posts in `markdown` or in `ejs`. If you have `hexo-renderer-pug` installed, then you can even write your post in pug template language.
+
+You can rename your posts and change to file extension from `.md` to `.ejs`, then Hexo will use `hexo-renderer-ejs` to render that file, so do the other formats.

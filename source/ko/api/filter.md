@@ -6,8 +6,15 @@ Filter는 특정한 데이터를 수정할 때 사용합니다. Hexo는 데이�
 ## 개요
 
 ``` js
-hexo.extend.filter.register(type, function(){
-  // ...
+hexo.extend.filter.register(type, function() {
+  // User configuration
+  const { config } = this;
+  if (config.external_link.enable) // do something...
+
+  // Theme configuration
+  const { config: themeCfg } = this.theme;
+  if (themeCfg.fancybox) // do something...
+
 }, priority);
 ```
 
@@ -26,7 +33,7 @@ hexo.extend.filter.execSync(type, data, options);
 `args` | 인자. 이 값은 배열(array)입니다.
 
 Filter의 첫 번째 인자는 `data` 입니다. 다음 filter로 전달 된 `data`는 새 값으로 변경되어 반환될 수 있습니다. 아무런 값도 반환되지 않았다면 data의 값이 변경되지 않았다는 의미입니다. Filter의 다른 인자를 지정하기 위해 `args`를 사용할 수도 있습니다. 아래 예시를 봐주세요.
- 
+
 ``` js
 hexo.extend.filter.register('test', function(data, arg1, arg2){
   // data === 'some data'

@@ -17,10 +17,13 @@ Variável | Descrição
 `:i_day` | Dia da publicação da postagem (sem zero à esquerda)
 `:hour` | Published hour of posts (2-digit)
 `:minute` | Published minute of posts (2-digit)
-`:title` | Nome do arquivo (sem sua extensão)
+`:second` | Published second of posts (2-digit)
+`:title` | Filename (relative to "source/_posts/" folder)
+`:name` | Filename
 `:post_title` | Título da postagem
 `:id` | ID da postagem (_not persistent across [cache reset](/pt-br/docs/commands#clean)_)
 `:category` | Categorias. Se a postagem não possuir uma categoria, será usado o valor de `default_category`.
+`:hash` | SHA1 hash of filename (same as `:title`) and date (12-hexadecimal)
 
 Você pode definir o valor padrão de cada variável do permalink através da definição `permalink_defaults`:
 
@@ -31,9 +34,7 @@ permalink_defaults:
 
 ### Exemplos
 
-Dado uma postagem nomeada `hello-world.md` no diretório `source/_posts` com o seguinte conteúdo:
-
-``` yaml
+``` yaml source/_posts/hello-world.md
 title: Hello World
 date: 2013-07-14 17:01:34
 categories:
@@ -45,7 +46,21 @@ Definição | Resultado
 --- | ---
 `:year/:month/:day/:title/` | 2013/07/14/hello-world/
 `:year-:month-:day-:title.html` | 2013-07-14-hello-world.html
-`:category/:title` | foo/bar/hello-world
+`:category/:title/` | foo/bar/hello-world/
+`:title-:hash/` | hello-world-a2c8ac003b43/
+
+``` yaml source/_posts/lorem/hello-world.md
+title: Hello World
+date: 2013-07-14 17:01:34
+categories:
+- foo
+- bar
+```
+
+Definição | Resultado
+--- | ---
+`:year/:month/:day/:title/` | 2013/07/14/lorem/hello-world/
+`:year/:month/:day/:name/` | 2013/07/14/hello-world/
 
 ### Suporte Multi-idioma
 

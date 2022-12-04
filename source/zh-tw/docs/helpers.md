@@ -184,8 +184,22 @@ title: 輔助函數（Helpers）
 
 選項 | 描述 | 預設值
 --- | --- | ---
-`title` | Feed 標題 |
+`title` | Feed 標題 | `config.title`
 `type` | Feed 類型 | atom
+
+**範例：**
+
+``` js
+<%- feed_tag('atom.xml') %>
+// <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+
+<%- feed_tag('rss.xml', { title: 'RSS Feed', type: 'rss' }) %>
+// <link rel="alternate" href="/atom.xml" title="RSS Feed" type="application/rss+xml">
+
+/* Defaults to hexo-generator-feed's config if no argument */
+<%- feed_tag() %>
+// <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+```
 
 ## 判斷函數
 
@@ -316,6 +330,15 @@ title: 輔助函數（Helpers）
 <%- render(str, engine, [options]) %>
 ```
 
+**Examples:**
+
+``` js
+<%- render('p(class="example") Test', 'pug'); %>
+// <p class="example">Test</p>
+```
+
+See [Rendering](https://hexo.io/zh-twapi/rendering) for more details.
+
 ### word_wrap
 
 使每行的字串長度不超過 `length`。`length` 預設為 80。
@@ -344,6 +367,21 @@ title: 輔助函數（Helpers）
 ``` js
 <%- truncate('Once upon a time in a world far far away', 16) %>
 // Once upon a time
+```
+
+### escape_html
+
+Escapes HTML entities in a string.
+
+``` js
+<%- escape_html(str) %>
+```
+
+**Examples:**
+
+``` js
+<%- escape_html('<p>Hello "world".</p>') %>
+// &lt;p&gt;Hello &quot;world&quot;.&lt;&#x2F;p&gt;
 ```
 
 ## 模板
@@ -471,7 +509,7 @@ title: 輔助函數（Helpers）
 `separator` | 分類間的分隔符號。只有在 `style` 不是 `list` 時有用。 | ,
 `depth` | 要顯示的分類層級。`0` 顯示所有層級的分類；`-1` 和 `0` 很類似，但是顯示不分層級；`1` 只顯示第一層的分類。 | 0
 `class` | 分類列表的 class 名稱。 | category
-`transform` | 改變分類名稱顯示方法的函數 | 
+`transform` | 改變分類名稱顯示方法的函數 |
 
 ### list_tags
 
@@ -488,9 +526,29 @@ title: 輔助函數（Helpers）
 `show_count` | 顯示每個標籤的文章總數 | true
 `style` | 標籤列表的顯示方式。使用 `list` 以無序列表（unordered list）方式顯示。 | list
 `separator` | 標籤間的分隔符號。只有在 `style` 不是 `list` 時有用。 | ,
-`class` | 標籤列表的 class 名稱。 | tag
-`transform` | 改變標籤名稱顯示方法的函數 | 
+`class` | Class name of tag list (string) or customize each tag's class (object, see below). | tag
+`transform` | 改變標籤名稱顯示方法的函數 |
 `amount` | 要顯示的標籤數量（0 = 無限制） | 0
+`suffix` | Add a suffix to link. | None
+
+Class advanced customization:
+
+Option | Description | Default
+--- | --- | ---
+`class.ul` | `<ul>` class name (only for style `list`) | `tag-list` (list style)
+`class.li` | `<li>` class name (only for style `list`) | `tag-list-item` (list style)
+`class.a` | `<a>` class name | `tag-list-link` (list style) `tag-link` (normal style)
+`class.label` | `<span>` class name where the tag label is stored (only for normal style, when `class.label` is set the label is put in a `<span>`) | `tag-label` (normal style)
+`class.count` | `<span>` class name where the tag counter is stored (only when `show_count` is `true`) | `tag-list-count` (list style) `tag-count` (normal style)
+
+Examples:
+
+```ejs
+<%- list_tags(site.tags, {class: 'classtest', style: false, separator: ' | '}) %>
+<%- list_tags(site.tags, {class: 'classtest', style: 'list'}) %>
+<%- list_tags(site.tags, {class: {ul: 'ululul', li: 'lilili', a: 'aaa', count: 'ccc'}, style: false, separator: ' | '}) %>
+<%- list_tags(site.tags, {class: {ul: 'ululul', li: 'lilili', a: 'aaa', count: 'ccc'}, style: 'list'}) %>
+```
 
 ### list_archives
 
@@ -509,7 +567,7 @@ title: 輔助函數（Helpers）
 `style` | 彙整列表的顯示方式。使用 `list` 以無序列表（unordered list）方式顯示。 | list
 `separator` | 彙整間的分隔符號。只有在 `style` 不是 `list` 時有用。 | ,
 `class` | 彙整列表的 class 名稱。 | archive
-`transform` | 改變彙整名稱顯示方法的函數 | 
+`transform` | 改變彙整名稱顯示方法的函數 |
 
 ### list_posts
 
@@ -527,7 +585,7 @@ title: 輔助函數（Helpers）
 `separator` | 文章間的分隔符號。只有在 `style` 不是 `list` 時有用。 | ,
 `class` | 文章列表的 class 名稱。 | post
 `amount` | 要顯示的文章數量（0 = 無限制） | 6
-`transform` | 改變文章名稱顯示方法的函數 | 
+`transform` | 改變文章名稱顯示方法的函數 |
 
 ### tagcloud
 
@@ -548,6 +606,8 @@ title: 輔助函數（Helpers）
 `color` | 使用顏色 | false
 `start_color` | 開始的顏色。您可使用十六進位值（`#b700ff`），rgba（`rgba(183, 0, 255, 1)`），hsla（`hsla(283, 100%, 50%, 1)`）或 [顏色關鍵字]。此選項僅在 `color` 設定開啟時才有用。 |
 `end_color` | 結束的顏色。您可使用十六進位值（`#b700ff`），rgba（`rgba(183, 0, 255, 1)`），hsla（`hsla(283, 100%, 50%, 1)`）或 [顏色關鍵字]。此選項僅在 `color` 設定開啟時才有用。 |
+`class` | 標籤的 class name prefix of tags
+`level` | 不同 class name 的總數。此選項僅在 `class` 設定時才有用。 | 10
 
 ## 其他
 
@@ -685,6 +745,10 @@ Inserts [generator tag](https://developer.mozilla.org/en-US/docs/Web/HTML/Elemen
 `type` | 頁面類型 (`og:type`) | blog
 `url` | 頁面網址 (`og:url`) | `url`
 `image` | 頁面圖片 (`og:image`) | 內容中的圖片
+`author` | Article author (`og:article:author`) | `config.author`
+`date` | Article published time (`og:article:published_time`) | Page published time
+`updated` | Article modified time (`og:article:modified_time`) | Page modified time
+`language` | Article language (`og:locale`) | `page.lang || page.language || config.language`
 `site_name` | 網站名稱 (`og:site_name`) | `config.title`
 `description` | 頁面描述 (`og:description`) | 內容摘要或前 200 字
 `twitter_card` | Twitter 卡片類型 (`twitter:card`) | summary
@@ -714,6 +778,20 @@ Inserts [generator tag](https://developer.mozilla.org/en-US/docs/Web/HTML/Elemen
 ``` js
 <%- toc(page.content) %>
 ```
+
+#### data-toc-unnumbered (+6.1.0)
+
+Headings with attribute `data-toc-unnumbered="true"` will be marked as unnumbered (list number will not be display).
+
+{% note warn "Warning!" %}
+For using `data-toc-unnumbered="true"`, the renderer must have the option to add CSS classes.
+
+Please see below PRs.
+
+- https://github.com/hexojs/hexo/pull/4871
+- https://github.com/hexojs/hexo-util/pull/269
+- https://github.com/hexojs/hexo-renderer-markdown-it/pull/174
+{% endnote %}
 
 [顏色關鍵字]: http://www.w3.org/TR/css3-color/#svg-color
 [Moment.js]: http://momentjs.com/

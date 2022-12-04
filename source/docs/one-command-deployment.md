@@ -55,8 +55,10 @@ Option | Description | Default
 `token` | Optional token value to authenticate with the repo. Prefix with `$` to read token from environment variable
 
 3. Deploy your site `hexo clean && hexo deploy`.
+
   - You will be prompted with username and password of the target repository, unless you authenticate with a token or ssh key.
   - hexo-deployer-git does not store your username and password. Use [git-credential-cache](https://git-scm.com/docs/git-credential-cache) to store them temporarily.
+
 4. Navigate to your repository settings and change the "Pages" branch to `gh-pages` (or the branch specified in your config). The deployed site should be live on the link shown on the "Pages" setting.
 
 ## Heroku
@@ -213,17 +215,11 @@ deploy:
 | `passphrase` | Optional passphrase for the private key |
 | `agent`      | Path to the ssh-agent socket            | `$SSH_AUTH_SOCK` |
 
-## ZEIT Now
+## Vercel
 
-[ZEIT Now](https://zeit.co) is a cloud platform for websites and serverless APIs, that you can use to deploy your Hexo site to your personal domain (or a free `.now.sh` suffixed URL) with just a single command.
+[Vercel](https://vercel.com) is a cloud platform that enables developers to host Jamstack websites and web services that deploy instantly, scale automatically, and requires no supervision, all with zero configuration. They provide a global edge network, SSL encryption, asset compression, cache invalidation, and more.
 
-1. Install [Now CLI](https://zeit.co/download):
-
-```bash
-$ npm i -g now
-```
-
-2. Add a build script to your `package.json` file:
+Step 1: Add a build script to your `package.json` file:
 
 ```json
 {
@@ -233,15 +229,116 @@ $ npm i -g now
 }
 ```
 
-3. Deploy with a single command at the root of the project directory:
+Step 2: Deploy your Hexo Website to Vercel
+
+To deploy your Hexo app with a [Vercel for Git Integration](https://vercel.com/docs/git-integrations), make sure it has been pushed to a Git repository.
+
+Import the project into Vercel using the [Import Flow](https://vercel.com/import/git). During the import, you will find all relevant options preconfigured for you; however, you can choose to change any of these options, a list of which can be found [here](https://vercel.com/docs/build-step#build-&-development-settings).
+
+After your project has been imported, all subsequent pushes to branches will generate [Preview Deployments](https://vercel.com/docs/platform/deployments#preview), and all changes made to the [Production Branch](https://vercel.com/docs/git-integrations#production-branch) (commonly "main") will result in a [Production Deployment](https://vercel.com/docs/platform/deployments#production).
+
+Alternatively, you can click the deploy button below to create a new project:
+
+[![Deploy Vercel](https://vercel.com/button)](https://vercel.com/new/hexo)
+
+## Bip
+
+[Bip](https://bip.sh) is a commercial hosting service which provides zero downtime deployment, a global CDN, SSL, unlimited bandwidth and more for static websites. Plans are available on a pay as you go, per domain basis.
+
+Getting started is quick and easy, as Bip provides out the box support for Hexo. This guide assumes you already have [a Bip domain and Bip CLI installed](https://bip.sh/getstarted).
+
+1: Initialise your project directory
 
 ```bash
-now
+$ bip init
+```
+
+Follow the prompts, where you'll be asked which domain you'd like to deploy to. Bip will detect that you're using Hexo, and set project settings like the source file directory automatically.
+
+2: Deploy your website
+
+```bash
+$ hexo generate —deploy && bip deploy
+```
+
+After a few moments, your website will be deployed.
+
+## RSS3
+
+[RSS3](https://rss3.io) is an open protocol designed for content and social networks in the Web 3.0 era.
+
+1. Install [hexo-deployer-rss3].
+
+2. Modify the configuration.
+
+  ``` yaml
+  deploy: # The root configuration block for all deployers
+  - type: rss3
+    endpoint: https://hub.rss3.io
+    privateKey: 47e18d6c386898b424025cd9db446f779ef24ad33a26c499c87bb3d9372540ba
+    ipfs:
+      deploy: true
+      gateway: pinata
+      api:
+        key: d693df715d3631e489d6
+        secret: ee8b74626f12b61c1a4bde3b8c331ad390567c86ba779c9b18561ee92c1cbff0
+  ```
+
+| Parameters | Description |
+| ----------------- | ---------------------- |
+| `endpoint` | a link to the RSS3 Hub |
+| `privateKey` | your private key, 64 bytes |
+| `ipfs/deploy` | whether to deploy to IPFS |
+| `ipfs/gateway` | IPFS API gateway |
+| `ipfs/api/key` | IPFS gateway-related authentication content |
+| `ipfs/api/secret` | IPFS gateway-related authentication content |
+
+3. generate static files
+
+4. deploy
+
+For deployment-related considerations, you can refer to [Our documentation](https://github.com/NaturalSelectionLabs/hexo-deployer-rss3/blob/develop/README.md).
+
+## Layer0
+
+[Layer0](https://www.layer0.co) is an all-in-one platform to develop, deploy, preview, experiment on, monitor, and run your headless frontend, focused on EdgeJS, predictive prefetching, and performance monitoring.
+
+1. In your hexo project directory, run:
+```bash
+npm i -g @layer0/cli
+0 init
+```
+
+2. Update routes.js (created by 0 init):
+```js
+// This file was added by layer0 init.
+// You should commit this file to source control.
+
+import { Router } from '@layer0/core/router'
+
+export default new Router().static('public', ({ cache }) => {
+  cache({
+    edge: {
+      maxAgeSeconds: 60 * 60 * 60 * 365,
+      forcePrivateCaching: true,
+    },
+    browser: {
+      maxAgeSeconds: 0,
+      serviceWorkerSeconds: 60 * 60 * 24,
+    },
+  })
+})
+```
+
+3. Deploy
+```bash
+hexo generate
+0 deploy
 ```
 
 Alternatively, you can click the deploy button below to create a new project:
 
-[![Deploy Now](https://zeit.co/button)](https://zeit.co/new/hexo)
+[![Deploy Layer0](https://docs.layer0.co/button.svg)](https://app.layer0.co/deploy?repo=https%3A%2F%2Fgithub.com%2Flayer0-docs%2Flayer0-hexo-example)
 
 ## Other Methods
 
@@ -253,3 +350,4 @@ All generated files are saved in the `public` folder. You can copy them to where
 [hexo-deployer-openshift]: https://github.com/hexojs/hexo-deployer-openshift
 [hexo-deployer-ftpsync]: https://github.com/hexojs/hexo-deployer-ftpsync
 [hexo-deployer-sftp]: https://github.com/lucascaro/hexo-deployer-sftp
+[hexo-deployer-rss3]: https://github.com/NaturalSelectionLabs/hexo-deployer-rss3

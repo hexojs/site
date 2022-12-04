@@ -8,7 +8,7 @@ To migrate, update your "package.json",
 
 ``` diff
 -  "hexo-renderer-jade": "^0.4.1",
-+  "hexo-rederer-pug": "^1.0.0",
++  "hexo-renderer-pug": "^1.0.0",
 ```
 
 and rename all `*.jade` files to `*.pug`.
@@ -16,10 +16,12 @@ and rename all `*.jade` files to `*.pug`.
 ## hexo-renderer-jade 0.5.0
 
 ### Breaking change
+
 - Final release, this plugin has been deprecated and replaced by [hexo-renderer-pug] [#35]
 - chore: drop node 6 [#29]
 
 ### Dependencies
+
 - Update eslint requirement from ^5.9.0 to ^6.1.0 [#28]
 - Update mocha requirement from ^5.2.0 to ^6.0.1 [#25]
 - chore(package): delete jscs & update eslint-config-hexo to 3.0.0 [#22]
@@ -32,10 +34,12 @@ The plugin was initially imported from [hexo-renderer-jade] repository up until 
 Following are the changes from the commit onwards
 
 ### Breaking changes
+
 - drop Jade [#2]
 - rename to hexo-renderer-pug [#1]
 
 ### Unit testing
+
 - ci(travis): add windows [#4]
 
 [jade]: https://www.npmjs.com/package/jade

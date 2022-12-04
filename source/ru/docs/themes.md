@@ -15,7 +15,7 @@ title: Темы
 
 ### _config.yml
 
-Файл конфигурации темы. Изменения не требуют перезагрузки сервера.
+Файл конфигурации темы. Unlike the site's primary configuration file, Изменения не требуют перезагрузки сервера.
 
 ### languages
 
@@ -23,11 +23,11 @@ title: Темы
 
 ### layout
 
-Папка шаблонов. Эта папка содержит файлы шаблонов темы, которые определяют внешний вид сайта. Hexo использует шаблонизатор [Swig] по умолчанию, но вы легко сможете установить дополнительные плагины, чтобы поддерживать альтернативные системы, такие как [EJS], [Haml] или [Jade]. Hexo выбирает шаблонизатор на основе расширения файла. Например:
+Папка шаблонов. Эта папка содержит файлы шаблонов темы, которые определяют внешний вид сайта. Hexo использует шаблонизатор [Nunjucks] по умолчанию, но вы легко сможете установить дополнительные плагины, чтобы поддерживать альтернативные системы, такие как [EJS], [Haml] или [Jade]. Hexo выбирает шаблонизатор на основе расширения файла. Например:
 
 ``` plain
 layout.ejs   - uses EJS
-layout.swig  - uses Swig
+layout.njk   - uses Nunjucks
 ```
 
 Дополнительные сведения см. в разделе [шаблоны](templates.html).
@@ -75,7 +75,7 @@ Hexo будет сохранять все обработанные файлы в
 6. Создайте запрос на слияние с описанием изменений.
 
 [EJS]: https://github.com/hexojs/hexo-renderer-ejs
-[Swig]: https://github.com/node-swig/swig-templates
 [Haml]: https://github.com/hexojs/hexo-renderer-haml
 [Jade]: https://github.com/hexojs/hexo-renderer-jade
 [hexojs/site]: https://github.com/hexojs/site
+[Nunjucks]: https://mozilla.github.io/nunjucks/

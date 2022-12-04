@@ -47,7 +47,7 @@ title: Помощники
 
 ### css
 
-Загружает CSS-файлы. `path` может быть массивом или строкой. Если путь не начинается с префикса `/` или с любого протокола, то будет начинаться с корневого URL-адреса. Если не добавить `.css` в конце пути, он будет подставлен автоматически. Use object type for custom attributes.
+Загружает CSS-файлы. `path` может быть массивом или строкой. Если путь не начинается с префикса `/` или с любого протокола, то будет начинаться с корневого URL-адреса. Если не добавить `.css` в конце пути, он будет подставлен автоматически. Используйте тип объекта для пользовательских атрибутов.
 
 ``` js
 <%- css(path, ...) %>
@@ -73,7 +73,7 @@ title: Помощники
 
 ### js
 
-Загружает JavaScript файлы. `path` может быть массивом или строкой. Если путь не начинается с префикса `/` или с любого протокола, то будет начинаться с корневого URL-адреса. Если не добавить `.js` в конце пути, он будет подставлен автоматически. Use object type for custom attributes.
+Загружает JavaScript файлы. `path` может быть массивом или строкой. Если путь не начинается с префикса `/` или с любого протокола, то будет начинаться с корневого URL-адреса. Если не добавить `.js` в конце пути, он будет подставлен автоматически. Используйте тип объекта для пользовательских атрибутов.
 
 ``` js
 <%- js(path, ...) %>
@@ -185,8 +185,22 @@ title: Помощники
 
 Опции | Описание | Значение по умолчанию
 --- | --- | ---
-`title` | Имя канала |
+`title` | Имя канала | `config.title`
 `type` | Тип канала | atom
+
+**Examples:**
+
+``` js
+<%- feed_tag('atom.xml') %>
+// <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+
+<%- feed_tag('rss.xml', { title: 'RSS Feed', type: 'rss' }) %>
+// <link rel="alternate" href="/atom.xml" title="RSS Feed" type="application/rss+xml">
+
+/* Defaults to hexo-generator-feed's config if no argument */
+<%- feed_tag() %>
+// <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+```
 
 ### Условные теги
 
@@ -320,6 +334,15 @@ title: Помощники
 <%- render(str, engine, [options]) %>
 ```
 
+**Examples:**
+
+``` js
+<%- render('p(class="example") Test', 'pug'); %>
+// <p class="example">Test</p>
+```
+
+См. [отрисовка](https://hexo.io/ru/api/rendering) для получения более подробной информации.
+
 ### word_wrap
 
 Переносит строки длиннее указанного в `length` количества символов. `length` равняется 80 по умолчанию.
@@ -354,6 +377,21 @@ title: Помощники
 
 <%- truncate('And they found that many people were sleeping better.', {length: 25, omission: '... (continued)'}) %>
 // And they f... (continued)
+```
+
+### escape_html
+
+Escapes HTML entities in a string.
+
+``` js
+<%- escape_html(str) %>
+```
+
+**Examples:**
+
+``` js
+<%- escape_html('<p>Hello "world".</p>') %>
+// &lt;p&gt;Hello &quot;world&quot;.&lt;&#x2F;p&gt;
 ```
 
 ## Шаблоны
@@ -391,7 +429,7 @@ title: Помощники
 
 ### date
 
-Вставляет отформатированную дату. `date` может быть в формате времени Unix, строки ISO, объекта date, или [Moment.js] объекта. Параметр `format` по умолчанию равен `date_format`.
+Вставляет отформатированную дату. `date` может быть в формате времени Unix, строки ISO, объекта date, или [Moment.js](https://momentjs.com/) объекта. Параметр `format` по умолчанию равен `date_format`.
 
 ``` js
 <%- date(date, [format]) %>
@@ -409,7 +447,7 @@ title: Помощники
 
 ### date_xml
 
-Вставляет дату в формате XML. `date` может быть в формате времени Unix, строки ISO, объекта date или [Moment.js] объекта.
+Вставляет дату в формате XML. `date` может быть в формате времени Unix, строки ISO, объекта date или [Moment.js](https://momentjs.com/) объекта.
 
 ``` js
 <%- date_xml(date) %>
@@ -424,7 +462,7 @@ title: Помощники
 
 ### time
 
-Вставляет отформатированное время. `date` может быть в формате времени Unix, строки ISO, объекта date или [Moment.js] объекта. Параметр `format` по умолчанию равен  `time_format`.
+Вставляет отформатированное время. `date` может быть в формате времени Unix, строки ISO, объекта date или [Moment.js](https://momentjs.com/) объекта. Параметр `format` по умолчанию равен  `time_format`.
 
 ``` js
 <%- time(date, [format]) %>
@@ -442,7 +480,7 @@ title: Помощники
 
 ### full_date
 
-Вставляет отформатированные дату и время. `date` может быть в формате времени Unix, строки ISO, объекта date или [Moment.js] объекта. Параметр `format` по умолчанию равен `date_format + time_format`.
+Вставляет отформатированные дату и время. `date` может быть в формате времени Unix, строки ISO, объекта date или [Moment.js](https://momentjs.com/) объекта. Параметр `format` по умолчанию равен `date_format + time_format`.
 
 ``` js
 <%- full_date(date, [format]) %>
@@ -460,7 +498,7 @@ title: Помощники
 
 ### moment
 
-Библиотека [Moment.js].
+Библиотека [Moment.js](https://momentjs.com/).
 
 ## Списки
 
@@ -498,9 +536,29 @@ title: Помощники
 `show_count` | Отображать количество постов для каждого тега. | true
 `style` | Стиль показа списка тегов. `list` отображает категории в неупорядоченном списке. | list
 `separator` | Разделитель тегов. (Работает если только стиль `style` не задан как `list`) | ,
-`class` | Имя класса списка тегов. | tag
+`class` | Имя класса списка тегов (string) или настройте класс каждого тега (object, см. Ниже). | tag
 `transform` | Функция, позволяющая изменить отображаемое имя категории. |
 `amount` | Ограничение количества отображаемых тегов (0 = неограниченно) | 0
+`suffix` | Добавьте суффикс к ссылке. | None
+
+Расширенная настройка класса:
+
+Опция | Описание | Значение по умолчанию
+--- | --- | ---
+`class.ul` | `<ul>` имя класса (только для стиля `list`) | `tag-list` (стиль списка)
+`class.li` | `<li>` имя класса (только для стиля `list`) | `tag-list-item` (стиль списка)
+`class.a` | `<a>` имя класса | `tag-list-link` (list style) `tag-link` (обычный стиль)
+`class.label` | имя класса `<span>`, в котором хранится метка тега (только для обычного стиля, когда задан `class.label`, метка помещается в `<span>`) | `tag-label` (обычный стиль)
+`class.count` | имя класса `<span>`, в котором хранится счетчик тегов (только если `show_count` имеет значение `true`) | `tag-list-count` (стиль списка) `tag-count` (обычный стиль)
+
+Примеры:
+
+```ejs
+<%- list_tags(site.tags, {class: 'classtest', style: false, separator: ' | '}) %>
+<%- list_tags(site.tags, {class: 'classtest', style: 'list'}) %>
+<%- list_tags(site.tags, {class: {ul: 'ululul', li: 'lilili', a: 'aaa', count: 'ccc'}, style: false, separator: ' | '}) %>
+<%- list_tags(site.tags, {class: {ul: 'ululul', li: 'lilili', a: 'aaa', count: 'ccc'}, style: 'list'}) %>
+```
 
 ### list_archives
 
@@ -558,6 +616,8 @@ title: Помощники
 `color` | Цветное облако тегов | false
 `start_color` | Стартовый цвет. Можно использовать hex (`#b700ff`), rgba (`rgba(183, 0, 255, 1)`), hsla (`hsla(283, 100%, 50%, 1)`) или [имена цветов]. Эта опция работает только если `color` установлен в `true`. |
 `end_color` | Конечный цвет. Можно использовать hex (`#b700ff`), rgba (`rgba(183, 0, 255, 1)`), hsla (`hsla(283, 100%, 50%, 1)`) или [имена цветов]. Эта опция работает только если `color` установлен в `true`. |
+`class` | Префикс имени класса тегов
+`level` | Количество различных имен классов. Эта опция работает только тогда, когда переменная `class` установлена. | 10
 
 ## Разное
 
@@ -582,9 +642,9 @@ title: Помощники
 `end_size` | Количество страниц, отображаемых с начала и конца. | 1
 `mid_size` | Количество страниц, отображаемых от текущей страницы. Текущая страница не включена. | 2
 `show_all` | Отобразить все страницы. Если установлено в `true`, `end_size` и `mid_size` не работают. | false
-`escape` | Escape HTML tags | true
+`escape` | Экранирование HTML-тегов | true
 
-**Examples:**
+**Примеры:**
 
 ``` js
 <%- paginator({
@@ -668,13 +728,13 @@ title: Помощники
 
 ### meta_generator
 
-Inserts [generator tag](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta).
+Добавляет [генерирование тегов](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta).
 
 ``` js
 <%- meta_generator() %>
 ```
 
-**Examples:**
+**Примеры:**
 
 ``` js
 <%- meta_generator() %>
@@ -694,7 +754,11 @@ Inserts [generator tag](https://developer.mozilla.org/en-US/docs/Web/HTML/Elemen
 `title` | Заголовок страницы (`og:title`) | `page.title`
 `type` | Тип страницы (`og:type`) | blog
 `url` | URL-адрес страницы (`og:url`) | `url`
-`image` | Обложка страницы (`og:image`) | Первое изображение в контенте
+`image` | Обложка страницы (`og:image`) | Все изображения в материалах
+`author` | Автор статьи (`og:article:author`) | `config.author`
+`date` | Время публикации статьи (`og:article:published_time`) | Время публикации страницы
+`updated` | Время изменения статьи (`og:article:modified_time`) | Время изменения страницы
+`language` | Язык статьи (`og:locale`) | `page.lang || page.language || config.language`
 `site_name` | Имя сайта (`og:site_name`) | `config.title`
 `description` | Описание страницы (`og:description`) | Отрывок страницы или первые 200 символов содержимого
 `twitter_card` | Карточка Twitter (`twitter:card`) | Краткое изложение
@@ -716,14 +780,28 @@ Inserts [generator tag](https://developer.mozilla.org/en-US/docs/Web/HTML/Elemen
 --- | --- | ---
 `class` | Имя класса | toc
 `list_number` | Отображать нумерацию | true
-`max_depth` | Maximum heading depth of generated toc | 6
-`min_depth` | Minimum heading depth of generated toc | 1
+`max_depth` | Максимальная глубина генерации заголовков toc | 6
+`min_depth` | Минимальная глубина генерации заголовков toc | 1
 
 **Примеры:**
 
 ``` js
 <%- toc(page.content) %>
 ```
+
+#### data-toc-unnumbered (+6.1.0)
+
+Headings with attribute `data-toc-unnumbered="true"` will be marked as unnumbered (list number will not be display).
+
+{% note warn "Warning!" %}
+For using `data-toc-unnumbered="true"`, the renderer must have the option to add CSS classes.
+
+Please see below PRs.
+
+- https://github.com/hexojs/hexo/pull/4871
+- https://github.com/hexojs/hexo-util/pull/269
+- https://github.com/hexojs/hexo-renderer-markdown-it/pull/174
+{% endnote %}
 
 [Имена цветов]: http://www.w3.org/TR/css3-color/#svg-color
 [Moment.js]: http://momentjs.com/

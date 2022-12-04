@@ -26,7 +26,7 @@ Argument | Description
 
 ## ตัวอย่าง
 
-### โหมด async 
+### โหมด async
 
 ``` js
 var stylus = require('stylus');
@@ -44,7 +44,7 @@ hexo.extend.renderer.register('styl', 'css', function(data, options){
 });
 ```
 
-### โหมด sync 
+### โหมด sync
 
 ``` js
 var ejs = require('ejs');
@@ -53,4 +53,18 @@ hexo.extend.renderer.register('ejs', 'html', function(data, options){
   options.filename = data.path;
   return ejs.render(data.text, options);
 }, true);
+```
+
+### Disable Nunjucks tags
+
+Nunjucks tags `{{ }}` or `{% %}` (utilized by [tag plugin](/docs/tag-plugins)) are processed by default, to disable:
+
+``` js
+function lessFn(data, options) {
+  // do something
+}
+
+lessFn.disableNunjucks = true
+
+hexo.extend.renderer.register('less', 'css', lessFn);
 ```

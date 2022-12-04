@@ -35,7 +35,8 @@ We are grateful for every penny donated, here is a list of benefits you and us c
 3. List your name on Hexo.io website (2.5k users and 10k pageviews per day!).
 
 There are two tiers of donation:
-  * Less than $100, your name and website link will be on the donor list.
-  * More than $100, your name, icon, and website link will be on the home page for at least one month (depending on the amount).
+
+- Less than $100, your name and website link will be on the donor list.
+- More than $100, your name, icon, and website link will be on the home page for at least one month (depending on the amount).
 
 Again, thanks for your support!

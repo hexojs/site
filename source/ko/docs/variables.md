@@ -9,10 +9,13 @@ title: Variables
 `page` | 페이지 정보와 front-matter의 사용자 정의 변수 집합.
 `config` | 사이트 환경설정
 `theme` | 테마 환경설정. 사이트 환경설정을 상속합니다.
-`_` (하나의 underscore) | [Lodash](https://lodash.com/  'Lodash') 라이브러리
 `path` | 현재 페이지의 경로
 `url` | 현재 페이지의 전체 경로
 `env` | 환경설정 변수
+
+{% note warn %}
+Lodash has been removed from global variables since Hexo 5.0.0. [You-Dont-Need-Lodash-Underscore](https://github.com/you-dont-need/You-Dont-Need-Lodash-Underscore) might be helpful for your migration.
+{% endnote %}
 
 ### 사이트 변수
 

@@ -1,6 +1,7 @@
 ---
 title: Команды
 ---
+
 ## init
 
 ``` bash
@@ -9,13 +10,18 @@ $ hexo init [folder]
 
 Инициализирует сайт. Если переменная `folder` не указана, Hexo создаёт сайт в текущей папке.
 
+Эта команда представляет собой ярлык, который выполняет следующие действия:
+
+1. Создаёт слон Git репозитория [hexo-starter](https://github.com/hexojs/hexo-starter) включая [hexo-theme-landscape](https://github.com/hexojs/hexo-theme-landscape) в текущий каталог или,если указана, в целевую папку.
+2. Установите зависимости с помощью менеджера пакетов: [Yarn 1](https://classic.yarnpkg.com/lang/en/), [pnpm](https://pnpm.js.org) или [npm](https://docs.npmjs.com/cli/install), в зависимости от того, что установлено; если установлено более одного, приоритет указан в списке. npm поставляется в комплекте с [Node.js](/docs/#Install-Node-js) by default.
+
 ## new
 
 ``` bash
 $ hexo new [layout] <title>
 ```
 
-Будет создана новая статья. Если макет не был указан, Hexo будет использовать значение `default_layout`, указанное в  [_config.yml](configuration.html). Если название содержит пробелы, заключите его в кавычки.
+Будет создана новая статья. Если макет не был указан, Hexo будет использовать значение `default_layout`, указанное в [_config.yml](configuration.html). Если название содержит пробелы, заключите его в кавычки.
 
 ## generate
 

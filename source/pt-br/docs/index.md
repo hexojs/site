@@ -18,7 +18,7 @@ Demora apenas alguns minutos para configurar o Hexo. Se você encontrar um probl
 
 Instalar o Hexo é bastante fácil. No entanto, você precisa ter algumas outras coisas instaladas primeiro:
 
-- [Node.js](http://nodejs.org/) (Should be at least Node.js 8.10, recommends 10.0 or higher)
+- [Node.js](http://nodejs.org/) (Should be at least Node.js 10.13, recommends 12.0 or higher)
 - [Git](http://git-scm.com/)
 
 Se o seu computador já possui estes, parabéns! Basta instalar o Hexo com o npm:
@@ -42,32 +42,28 @@ Você pode encontrar alguns problemas ao compilar. Instale o Xcode da App Store 
 
 ### Instalando o Node.js
 
-A melhor maneira de instalar o Node.js é com o [Node Version Manager](https://github.com/nvm-sh/nvm).
-Felizmente, os criadores do nvm fornecem um script simples que instala automaticamente o nvm:
+Node.js provides [official installer](https://nodejs.org/en/download/) for most platforms.
 
-cURL:
+Alternative installation methods:
 
-``` bash
-$ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
-```
+- Windows: Install it with [nvs](https://github.com/jasongin/nvs/) (recommended) or [nvm](https://github.com/nvm-sh/nvm).
+- Mac: Install it with [Homebrew](https://brew.sh/) or [MacPorts](http://www.macports.org/).
+- Linux (DEB/RPM-based): Install it with [NodeSource](https://github.com/nodesource/distributions).
+- Others: Install it through respective package manager. Refer to [the guide](https://nodejs.org/en/download/package-manager/) provided by Node.js.
 
-Wget:
+nvs is also recommended for Mac and Linux to avoid possible permission issue.
 
-``` bash
-$ wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
-```
-
-Uma vez que o nvm esteja instalado, reinicie o terminal e execute o seguinte comando para instalar o Node.js:
-
-``` bash
-$ nvm install node
-```
-
-{% note info For Windows users %}
-We recommend to use [Node Version Switcher](https://github.com/jasongin/nvs/) as an alternative to nvm on Windows, which has similar command-line syntax with nvm and can be installed through provided Windows Installer (MSI) package.
+{% note info Windows %}
+If you use the official installer, make sure **Add to PATH** is checked (it's checked by default).
 {% endnote %}
 
-Alternativamente, é possível baixar e executar [o instalador do Node.js](http://nodejs.org/).
+{% note warn Mac / Linux %}
+If you encounter `EACCES` permission error when trying to install Hexo, please follow [the workaround](https://docs.npmjs.com/resolving-eacces-permissions-errors-when-installing-packages-globally) provided by npmjs; overriding with root/sudo is highly discouraged.
+{% endnote %}
+
+{% note info Linux %}
+If you installed Node.js using Snap, you may need to manually run `npm install` in the target folder when [initializing](/docs/commands#init) a blog.
+{% endnote %}
 
 ### Instalando Hexo
 
@@ -76,3 +72,23 @@ Uma vez que todos os requisitos estão instalados, você pode instalar o Hexo co
 ``` bash
 $ npm install -g hexo-cli
 ```
+
+### Required Node.js version
+
+If you are stuck with older Node.js, you can consider installing a past version of Hexo.
+
+Please note we do not provide bugfixes to past versions of Hexo.
+
+We highly recommend to always install the [latest version](https://www.npmjs.com/package/hexo?activeTab=versions) of Hexo and the [recommended version](#Requirements) of Node.js, whenever possible.
+
+Hexo version | Minimum (Node.js version) | Less than (Node.js version)
+--- | --- | ---
+6.2+ | 12.13.0 | latest
+6.0+ | 12.13.0 | 18.5.0
+5.0+ | 10.13.0 | 12.0.0
+4.1 - 4.2 | 8.10 | 10.0.0
+4.0 | 8.6 | 8.10.0
+3.3 - 3.9 | 6.9 | 8.0.0
+3.2 - 3.3 | 0.12 | unknown
+3.0 - 3.1 | 0.10 or iojs | unknown
+0.0.1 - 2.8 | 0.10 | unknown

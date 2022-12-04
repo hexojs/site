@@ -16,9 +16,13 @@ title: Permalinks
 `:i_day` | 포스트를 배포한 날 (앞에 붙는 0은 생략)
 `:hour` | Published hour of posts (2-digit)
 `:minute` | Published minute of posts (2-digit)
-`:title` | 파일명
+`:second` | Published second of posts (2-digit)
+`:title` | 파일명 (relative to "source/_posts/" folder)
+`:name` | 파일명
+`:post_title` | Post title
 `:id` | 포스트 ID (_not persistent across [cache reset](/ko/docs/commands#clean)_)
 `:category` | 포스트가 속한 카테고리. 지정하지 않으면 `default_category` 값을 사용합니다.
+`:hash` | SHA1 hash of filename (same as `:title`) and date (12-hexadecimal)
 
 Permalink 내의 각 변수의 기본 값을 `permalink_defaults` 설정을 통해 정의할 수 있습니다.
 
@@ -29,9 +33,7 @@ permalink_defaults:
 
 ### 예시
 
-`source/_posts` 내에 `hello-world.md`라는 포스트가 아래와 같이 있다고 하겠습니다.
-
-``` yaml
+``` yaml source/_posts/hello-world.md
 title: Hello World
 date: 2013-07-14 17:01:34
 categories:
@@ -43,7 +45,21 @@ categories:
 --- | ---
 `:year/:month/:day/:title/` | 2013/07/14/hello-world/
 `:year-:month-:day-:title.html` | 2013-07-14-hello-world.html
-`:category/:title` | foo/bar/hello-world
+`:category/:title/` | foo/bar/hello-world/
+`:title-:hash/` | hello-world-a2c8ac003b43/
+
+``` yaml source/_posts/lorem/hello-world.md
+title: Hello World
+date: 2013-07-14 17:01:34
+categories:
+- foo
+- bar
+```
+
+설정 | 결과
+--- | ---
+`:year/:month/:day/:title/` | 2013/07/14/lorem/hello-world/
+`:year/:month/:day/:name/` | 2013/07/14/hello-world/
 
 ### 다국어 지원
 

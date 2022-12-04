@@ -12,6 +12,7 @@ In this tutorial, we use [Travis CI](https://travis-ci.com/) to deploy Github Pa
 6. On a new tab, generate a [new token](https://github.com/settings/tokens) with **repo** scopes. Note down the token value.
 7. On the Travis page, go to your repo's setting. Under **Environment Variables**, put **GH_TOKEN** as name and paste the token onto value. Click Add to save it.
 8. Add `.travis.yml` file to your repo (alongside _config.yml & package.json) with the following content:
+
 ```yml
 sudo: false
 language: node_js
@@ -32,6 +33,7 @@ deploy:
     branch: master
   local-dir: public
 ```
+
 9. Once Travis CI finish the deployment, the generated pages can be found in the `gh-pages` branch of your repository
 10. In your GitHub repo's setting, navigate to "GitHub Pages" section and change Source to **gh-pages branch**.
 11. Check the webpage at *username*.github.io.
@@ -52,20 +54,25 @@ This section only applies to private repo.
 2. Push the files of your Hexo folder to the repository. The `public/` folder is not (and should not be) uploaded by default, make sure the `.gitignore` file contains `public/` line. The folder structure should be roughly similar to [this repo](https://github.com/hexojs/hexo-starter), without the `.gitmodules` file.
 3. Run `hexo generate` and copy the `public/` folder to somewhere else (in your workstation).
 4. Create a new `gh-pages` git branch from your Hexo folder, we recommend creating an orphan branch (to create a new branch without commit history):
+
 ``` bash
 $ git checkout --orphan gh-pages
 ```
+
 5. Remove everything including any hidden files **except** the `.git/` folder. Fret not, those files are still residing at the master branch.
 6. Move the _content_ of the `public/` folder back.
 7. Commit and push the gh-pages branch.
+
 ``` bash
 $ git add .
 $ git commit -a -m "Initial commit"
 $ git push origin gh-pages
 ```
+
 8. In your repo's setting, navigate to "GitHub Pages" section and change Source is **gh-pages branch**.
 9. Check the webpage at your-username.github.io.
 10. To navigate back to your source folder,
+
 ``` bash
 $ git checkout master
 ```

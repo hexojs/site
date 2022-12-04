@@ -1,11 +1,12 @@
 ---
-title: GitLab Pages
+title: 在 GitLab Pages 上部署 Hexo
 ---
 
-1. Create a new repository named <b>*username*.gitlab.io</b>, where username is your username on GitLab. If you have already uploaded to other repo, rename the repo instead.
-2. Enable Shared Runners via `Settings -> CI / CD -> Shared Runners`.
-3. Push the files of your Hexo folder to the repository. The `public/` folder is not (and should not be) uploaded by default, make sure the `.gitignore` file contains `public/` line. The folder structure should be roughly similar to [this repo](https://gitlab.com/pages/hexo).
-4. Add `.gitlab-ci.yml` file to your repo (alongside _config.yml & package.json) with the following content:
+1. 新增名為 `<GitLab 用戶名>.gitlab.io` 的儲存庫。 如果你之前上載了 Hexo 到其他資料庫，那麼只需將該資料庫重新命名為 `<GitLab 用戶名>.gitlab.io` 。
+2. 在 GitLab 中的 `Settings -> CI / CD` 啟用 `Shared Runners` 。
+3. 將 Hexo 檔案資料夾推播到資料庫中。預設情況下 `public/` 是不會被上載到資料庫，請確保 `.gitignore` 已經包含 `public/` 一行。你的 Hexo 資料庫大致上應該與[這裡](https://gitlab.com/pages/hexo)相同。
+4. 於儲存庫目錄中新增 `.gitlab-ci.yml`:
+
 ``` yml
 image: node:10-alpine # use nodejs v10 LTS
 cache:
@@ -25,19 +26,19 @@ pages:
   only:
     - master
 ```
-5. *username*.gitlab.io should be up and running, once GitLab CI finishes the deployment job,
-6. (Optional) If you wish to inspect the generated site assets (html, css, js, etc), they can be found in the [job artifact](https://docs.gitlab.com/ee/user/project/pipelines/job_artifacts.html).
 
-## Project page
+5. GitLab CI 完成部署後，你應該能瀏覽 `<GitLab 用戶名>.gitlab.io` 頁面。
+6. (可選部分) 若要檢驗你的 site assets (html、 css、 js 等)，你可[點選這裡](https://docs.gitlab.com/ee/user/project/pipelines/job_artifacts.html) 了解。
 
-If you prefer to have a project page on GitLab:
+## 專案頁面
 
-1. Go to `Settings -> General -> Advanced -> Change path`. Change the value to a name, so the website is available at <b>username.gitlab.io/*name*</b>. It can be any name, like *blog* or *hexo*.
-2. Edit **_config.yml**, change the `root:` value from `""` to `"name"`.
-3. Commit and push.
+下文將講解如何在 GitLab 上設立專案頁面:
 
+1. 前往 Hexo資料庫的 `Settings -> General -> Advanced -> Change path`。 更改成 `<GitLab 用戶名>.gitlab.io/<任何名稱>` （請將`<任何名稱>`替換成你會用到的名字）
+2. 修改 **_config.yml**, 把 `root:` 的 `""` 改成 `"name"`.
+3. 確定並推播。
 
-## Useful links
+## 參考鏈接
 
 - [GitLab Pages](https://docs.gitlab.com/ee/user/project/pages/index.html)
 - [GitLab CI Docs](https://docs.gitlab.com/ee/ci/README.html)

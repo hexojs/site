@@ -48,6 +48,7 @@ sidebar:
     variables: Переменные
     helpers: Помощники
     internationalization: Интернационализация (i18n)
+    syntax_highlight: Syntax Highlight
     plugins: Плагины
     miscellaneous: Разное
     troubleshooting: Решение проблем
@@ -69,6 +70,7 @@ sidebar:
     filter: Фильтр
     generator: Генератор
     helper: Помошник
+    injector: Injector
     migrator: Мигратор
     processor: Обработчик
     renderer: Рендер
