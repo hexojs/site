@@ -601,7 +601,8 @@ Option | Description | Default
 `orderby` | Order of categories | name
 `order` | Sort of order. `1`, `asc` for ascending; `-1`, `desc` for descending | 1
 `show_count` | Display the number of posts for each tag | true
-`style` | Style to display the category list. `list` displays categories in an unordered list. Use `false` or any other value to disable it. | list`separator` | Separator between categories. (Only works if `style` is not `list`) | ,
+`style` | Style to display the category list. `list` displays categories in an unordered list. Use `false` or any other value to disable it. | list
+`separator` | Separator between categories. (Only works if `style` is not `list`) | ,
 `class` | Class name of tag list. | tag
 `transform` | The function that changes the display of tag name. See examples in [list_categories](#list-categories). |
 `amount` | The number of tags to display (0 = unlimited) | 0
@@ -621,7 +622,7 @@ Option | Description | Default
 `order` | Sort of order. `1`, `asc` for ascending; `-1`, `desc` for descending | 1
 `show_count` | Display the number of posts for each archive | true
 `format` | Date format | MMMM YYYY
-`style` | Style to display the category list. `list` displays categories in an unordered list. Use `false` or any other value to disable it. | list
+`style` | Style to display the archive list. `list` displays archives in an unordered list. Use `false` or any other value to disable it. | list
 `separator` | Separator between archives. (Only works if `style` is not `list`) | ,
 `class` | Class name of archive list. | archive
 `transform` | The function that changes the display of archive name. See examples in [list_categories](#list-categories). |
@@ -638,7 +639,7 @@ Option | Description | Default
 --- | --- | ---
 `orderby` | Order of posts | date
 `order` | Sort of order. `1`, `asc` for ascending; `-1`, `desc` for descending | 1
-`style` | Style to display the category list. `list` displays categories in an unordered list. Use `false` or any other value to disable it. | list
+`style` | Style to display the post list. `list` displays posts in an unordered list. Use `false` or any other value to disable it. | list
 `separator` | Separator between posts. (Only works if `style` is not `list`) | ,
 `class` | Class name of post list. | post
 `amount` | The number of posts to display (0 = unlimited) | 6
