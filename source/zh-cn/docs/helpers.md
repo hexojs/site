@@ -750,7 +750,7 @@ url: https://example.com/blog # example
 `end_size` | 显示于两侧的页数 | 1
 `mid_size` | 显示于中间的页数 | 2
 `show_all` | 显示所有页数。如果开启此参数的话，`end_size` 和 `mid_size` 就没用了。 | false
-`escape` | Escape HTML tags | true
+`escape` | 转义 HTML 标签 | true
 `page_class` | 分页链接的 class 名称 | `page-number`
 `current_class` (+6.3.0) | 当前页链接的 class 名称 | `current`
 `space_class` (+6.3.0) | 空白文字的 class 名称 | `space`
@@ -869,10 +869,10 @@ url: https://example.com/blog # example
 `type` | 页面类型 (`og:type`) | blog
 `url` | 页面网址 (`og:url`) | `url`
 `image` | 页面图片 (`og:image`) | 内容中的图片
-`author` | Article author (`og:article:author`) | `config.author`
-`date` | Article published time (`og:article:published_time`) | Page published time
-`updated` | Article modified time (`og:article:modified_time`) | Page modified time
-`language` | Article language (`og:locale`) | `page.lang || page.language || config.language`
+`author` | 文章作者 (`og:article:author`) | `config.author`
+`date` | 文章发表时间 (`og:article:published_time`) | 页面发表时间
+`updated` | 文章修改时间 (`og:article:modified_time`) | 页面修改时间
+`language` | 文章语言 (`og:locale`) | `page.lang || page.language || config.language`
 `site_name` | 网站名称 (`og:site_name`) | `config.title`
 `description` | 页面描述 (`og:description`) | 内容摘要或前 200 字
 `twitter_card` | Twitter 卡片类型 (`twitter:card`) | summary
