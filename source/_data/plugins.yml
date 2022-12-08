@@ -3288,3 +3288,14 @@
     - css
     - lightningcss
     - autoprefixer
+- name: hexo-related-posts-bysk
+  description: A plugin for Hexo to list related posts, generated from tags and categories. | 一个 Hexo 相关文章插件，由标签和分类生成。
+  link: https://github.com/Sukwants/hexo-related-posts-bysk
+  tags:
+    - related
+- name: hexo-content-blocks
+  description: A content block plugin for Hexo. Customization supported. | 一个 Hexo 内容块插件，支持自定义。
+  link: https://github.com/Sukwants/hexo-content-blocks
+  tags:
+    - blocks
+    - admonitions
