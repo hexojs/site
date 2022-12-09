@@ -37,26 +37,4 @@ Hexo runs the server at `0.0.0.0` by default. You can override the default IP se
 $ hexo server -i 192.168.1.1
 ```
 
-## Pow
-
-[Pow] is a zero-config Rack server for Mac.
-
-### Install
-
-``` bash
-$ curl get.pow.cx | sh
-```
-
-### Setup
-
-Symlink the folder into `~/.pow`
-
-``` bash
-$ cd ~/.pow
-$ ln -s /path/to/myapp
-```
-
-Your website will be up and running at `http://myapp.test`. The URL is based on the name of the symlink.
-
 [hexo-server]: https://github.com/hexojs/hexo-server
-[Pow]: http://pow.cx/

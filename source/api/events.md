@@ -50,4 +50,4 @@ Emitted after processing finishes. This event returns a path representing the ro
 
 Emitted after initialization finishes.
 
-[EventEmitter]: http://nodejs.org/api/events.html
+[EventEmitter]: https://nodejs.org/dist/latest/docs/api/events.html
