@@ -27,6 +27,14 @@
   - Chinses
   - DIY
   - responsive
+- name: Personal
+  description: A great theme that fit your needs.
+  link: https://github.com/dulgani/personaltheme
+  preview: https://personaltheme.netlify.app
+  tags:
+  - website
+  - blog
+  - simple
 - name: leedom 
   description: A pure hexo theme. 
   link: https://github.com/leedom92/hexo-theme-leedom 
