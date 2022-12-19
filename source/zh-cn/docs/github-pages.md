@@ -94,7 +94,7 @@ deploy:
 欢迎更多有志之士前来改善 Hexo 文档，不胜感激。
 {% endnote %}
 
-## 参考连结
+## 参考链接
 
 - [GitHub Pages 使用文档](https://help.github.com/categories/github-pages-basics/)
 - [peaceiris/actions-gh-pages](https://github.com/marketplace/actions/github-pages-action)
