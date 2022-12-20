@@ -3302,3 +3302,10 @@
     - encryption
     - decryption
     - crypto-js
+- name: hexo-tag-dailymotion
+  description: A tag plugin to embed Dailymotion video player in your Hexo blog
+  link: https://github.com/dharFr/hexo-tag-dailymotion
+  tags:
+    - tag
+    - video
+    - dailymotion
