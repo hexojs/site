@@ -64,9 +64,9 @@ hexo.render.getOutput('layout.swig') // html
 hexo.render.getOutput('image.png') // '''
 ```
 
-## Disable Nunjucks tags
+## 禁用 Nunjucks 标签
 
-If you are not using a [tag plugin](/docs/tag-plugins) and want to use `{{ }}` or `{% %}` in your post without using content [escaping](/docs/troubleshooting#Escape-Contents), you can disable processing of Nunjucks tag in existing renderer by:
+如果你没有使用 [标签插件](/zh-cn/docs/tag-plugins) 并且想要在你的文章中使用 `{{ }}` 或 `{% %}` 而不使用 [转义](/zh-cn/docs/troubleshooting#转义（Escape）内容), 你可以通过以下方式在现有的渲染器中禁用对 Nunjucks 标签的处理：
 
 ``` js
 // following example only applies to '.md' file extension

@@ -3288,3 +3288,17 @@
     - css
     - lightningcss
     - autoprefixer
+- name: hexo-generator-search-lite
+  description: Search data generator for Hexo.
+  link: https://github.com/argvchs/hexo-generator-search-lite
+  tags:
+    - generator
+    - search
+- name: hexo-helper-crypto
+  description: A helper for encryption and decryption using Crypto-js.
+  link: https://github.com/argvchs/hexo-helper-crypto
+  tags:
+    - helper
+    - encryption
+    - decryption
+    - crypto-js

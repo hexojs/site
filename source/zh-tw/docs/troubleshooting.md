@@ -175,5 +175,5 @@ Template render error: (unknown path)
 One possible reason is that there are some unrecognizable words in your file, e.g. invisible zero width characters.
 
 [Warehouse]: https://github.com/hexojs/warehouse
-[Swig]: http://paularmstrong.github.io/swig/
+[Swig]: https://node-swig.github.io/swig-templates/
 [Nunjucks]: https://mozilla.github.io/nunjucks/

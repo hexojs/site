@@ -258,5 +258,5 @@ $ yarn add js-yaml@latest
 if you use `yarn`.
 
 [Warehouse]: https://github.com/hexojs/warehouse
-[Swig]: http://paularmstrong.github.io/swig/
+[Swig]: https://node-swig.github.io/swig-templates/
 [Nunjucks]: https://mozilla.github.io/nunjucks/

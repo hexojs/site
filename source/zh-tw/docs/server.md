@@ -37,26 +37,4 @@ $ hexo server -s
 $ hexo server -i 192.168.1.1
 ```
 
-## Pow
-
-[Pow] 是一個 Mac 系統上的零配置 Rack 伺服器，它也可作為一個簡單易用的靜態檔案伺服器來使用。
-
-### 安裝
-
-``` bash
-$ curl get.pow.cx | sh
-```
-
-### 設定
-
-在 `~/.pow` 資料夾建立連結（symlink）。
-
-``` bash
-$ cd ~/.pow
-$ ln -s /path/to/myapp
-```
-
-您的網站將會執行於 `http://myapp.dev`，網址是根據連結名稱而定。
-
 [hexo-server]: https://github.com/hexojs/hexo-server
-[Pow]: http://pow.cx/
