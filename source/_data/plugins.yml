@@ -3302,6 +3302,14 @@
     - encryption
     - decryption
     - crypto-js
+- name: hexo-tag-videojs2
+  description: Use video.js player in Hexo.
+  link: https://github.com/lzctuhao/hexo-tag-videojs2
+  tags:
+    - video
+    - tag
+    - video.js
+    - player
 - name: hexo-filter-include
   description: hexo plugin for including other files before any other filter.
   link: https://github.com/pluswave/hexo-filter-include
