@@ -3302,6 +3302,13 @@
     - encryption
     - decryption
     - crypto-js
+- name: hexo-renderer-babeljs
+  description: A plugin to compile JS for Hexo, using Babel.
+  link: https://github.com/argvchs/hexo-renderer-babeljs
+  tags:
+    - babel
+    - renderer
+    - babeljs
 - name: hexo-content-blocks
   description: It helps to use foldable and non-foldable content blocks with styles.
   link: https://github.com/Sukwants/hexo-content-blocks
@@ -3331,3 +3338,4 @@
     - tag
     - video
     - dailymotion
+ 
