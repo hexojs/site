@@ -3310,3 +3310,40 @@
     - image
     - path
     - typora
+- name: hexo-renderer-babeljs
+  description: A plugin to compile JS for Hexo, using Babel.
+  link: https://github.com/argvchs/hexo-renderer-babeljs
+  tags:
+    - babel
+    - renderer
+    - babeljs
+- name: hexo-content-blocks
+  description: It helps to use foldable and non-foldable content blocks with styles.
+  link: https://github.com/Sukwants/hexo-content-blocks
+  tags:
+    - tag
+    - blocks
+    - admonitions
+- name: hexo-tag-videojs2
+  description: Use video.js player in Hexo.
+  link: https://github.com/lzctuhao/hexo-tag-videojs2
+  tags:
+    - video
+    - tag
+    - video.js
+    - player
+- name: hexo-filter-include
+  description: hexo plugin for including other files before any other filter.
+  link: https://github.com/pluswave/hexo-filter-include
+  tags:
+    - filter
+    - include
+    - file
+- name: hexo-tag-dailymotion
+  description: A tag plugin to embed Dailymotion video player in your Hexo blog
+  link: https://github.com/dharFr/hexo-tag-dailymotion
+  tags:
+    - tag
+    - video
+    - dailymotion
+ 
