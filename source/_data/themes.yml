@@ -3909,6 +3909,13 @@
     - Material Design
     - Light/Dark
     - 中文
+- name: baozi
+  description: baozi is a simple
+  link: https://github.com/zzyxka/baozi
+  preview: https://zzyxka.github.io
+  tags:
+    - 中文
+    - 简约
 - name: Tranquility
   description: A personal page style theme for Hexo.
   link: https://github.com/hooozen/hexo-theme-tranquility
