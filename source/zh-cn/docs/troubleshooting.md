@@ -151,10 +151,10 @@ $ hexo clean
 }
 ```
 
-## 泄露（Escape）内容
+## 转义（Escape）内容
 
-Hexo 使用 [Nunjucks] 来解析文章（旧版本使用 [Swig]，两者语法类似），内容若包含 `{{ }}` 或 `{% %}` 可能导致解析错误，您可以用 [`raw`](/docs/tag-plugins#Raw) 标签包裹，single backtick ```` `{{ }}` ```` 或 triple backtick 来避免潜在问题发生。
-Alternatively, Nunjucks tags can be disabled through the renderer's option (if supported), [API](/api/renderer#Disable-Nunjucks-tags) or [front-matter](/docs/front-matter).
+Hexo 使用 [Nunjucks] 来解析文章（旧版本使用 [Swig]，两者语法类似），内容若包含 `{{ }}` 或 `{% %}` 可能导致解析错误，您可以用 [`raw`](/zh-cn/docs/tag-plugins#Raw) 标签包裹，单反引号 ```` `{{ }}` ```` 或 三反引号 来避免潜在问题发生。
+此外，Nunjucks 标签也可以通过渲染器的选项（如果支持的话）、[API](/zh-cn/api/renderer#禁用-Nunjucks-标签) 或 [front-matter](/zh-cn/docs/front-matter) 来禁用。
 
 ```
 {% raw %}
