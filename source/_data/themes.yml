@@ -3833,13 +3833,14 @@
     - Responsive
     - Customizable
     - Animate
-- name: maple
-  description: An elegant,powerful,easy-to-read responsive Hexo theme.
+- name: Maple
+  description: It is concise but not simple. 简约而不简单
   link: https://github.com/xbmlz/hexo-theme-maple
   preview: https://xbmlz.github.io/
   tags:
     - 中文
     - 极简
+    - 简约
     - Responsive
     - Customizable
     - Light/Dark
@@ -3849,6 +3850,7 @@
     - MathJax support
     - Mermaid support
     - Baidu/Google Analytics
+    - giscus
 - name: Burgerking
   description: A clean and responsive theme, I call it Burgerking.
   link: https://github.com/JackZong/hexo-theme-burgerking
@@ -3914,4 +3916,24 @@
     - Material
     - Material Design
     - Light/Dark
+    - 中文
+- name: baozi
+  description: baozi is a simple
+  link: https://github.com/zzyxka/baozi
+  preview: https://zzyxka.github.io
+  tags:
+    - 中文
+    - 简约
+- name: Tranquility
+  description: A personal page style theme for Hexo.
+  link: https://github.com/hooozen/hexo-theme-tranquility
+  preview: https://www.hozen.site
+  tags:
+    - Customizable
+    - Hozen
+    - Writing
+    - Chinese
+    - 素雅
+    - 个人主页
+    - 写作
     - 中文
