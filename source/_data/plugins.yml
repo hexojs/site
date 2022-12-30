@@ -3347,3 +3347,12 @@
     - video
     - dailymotion
  
+- name: hexo-graphviz-tag
+  description: graphviz Tag for Hexo, you can easily use `dot` to generate graphviz graph in your posts.
+  link: https://github.com/Qiu-Weidong/hexo-tag-graphviz.git
+  tags:
+    - graphviz
+    - tag
+    - dot
+    - tag_plugins
+    - plugins
