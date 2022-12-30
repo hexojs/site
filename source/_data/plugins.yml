@@ -3346,4 +3346,10 @@
     - tag
     - video
     - dailymotion
- 
+- name: hexo-tag-echarts-new
+description: A hexo plugin for inserting echarts in your blog, customised versions and types
+link: https://github.com/D-Sketon/hexo-tag-echarts-new
+tags:
+  - tag
+  - echarts
+  - chart
