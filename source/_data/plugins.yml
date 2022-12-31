@@ -3346,6 +3346,13 @@
     - tag
     - video
     - dailymotion
+- name: hexo-tag-echarts-new
+  description: A hexo plugin for inserting echarts in your blog, customised versions and types
+  link: https://github.com/D-Sketon/hexo-tag-echarts-new
+  tags:
+    - tag
+    - echarts
+    - chart
 - name: hexo-graphviz-tag
   description: Graphviz Tag for Hexo, you can easily use `dot` to generate graphviz graph in your posts.
   link: https://github.com/Qiu-Weidong/hexo-tag-graphviz.git
