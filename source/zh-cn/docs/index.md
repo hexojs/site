@@ -70,7 +70,7 @@ Node.js 为大多数平台提供了官方的 [安装程序](https://nodejs.org/e
 所有必备的应用程序安装完成后，即可使用 npm 安装 Hexo。
 
 ``` bash
-$ npm install -g hexo-cli
+# npm install -g hexo-cli
 ```
 
 ### 进阶安装和使用
