@@ -23,7 +23,7 @@ Hexo 是一個快速、簡單且強大的網誌框架。Hexo 使用 [Markdown](h
 若您的電腦已經安裝上述的必備軟體，那麼恭喜您！只需要透過 npm 即可完成 Hexo 的安裝。
 
 ``` bash
-$ npm install -g hexo-cli
+# npm install -g hexo-cli
 ```
 
 如果您的電腦尚未安裝必備軟體的話，請根據下列的安裝指示來完成安裝。
