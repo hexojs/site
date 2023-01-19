@@ -19,7 +19,7 @@ content
 {% endblockquote %}
 ```
 
-### 样例
+### 示例
 
 **没有提供参数，则只输出普通的 blockquote**
 
@@ -92,7 +92,7 @@ code snippet
 `mark` | 突出显示特定的行，每个值用逗号分隔。 使用破折号指定数字范围<br>例如： `mark:1,4-7,10` 将标记第1、4至7和10行 |
 `wrap` | 用 [`<table>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table) 包裹代码块 | `true`
 
-### 样例
+### 示例
 
 **普通的代码块**
 
@@ -212,7 +212,7 @@ content
 {% include_code [title] [lang:language] [from:line] [to:line] path/to/file %}
 ```
 
-### 样例
+### 示例
 
 **嵌入 test.js 文件全文**
 
@@ -252,7 +252,7 @@ content
 {% youtube video_id [type] [cookie] %}
 ```
 
-### 样例
+### 示例
 
 **视频**
 
