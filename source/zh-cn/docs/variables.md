@@ -11,7 +11,7 @@ title: 变量
 `theme` | 主题配置。继承自网站配置。 | `object` (主题配置文件)
 `path` | 当前页面的路径（不含根路径）| `string`
 `url` | 当前页面的完整网址 | `string`
-`env` | 环境变量 | ???
+`env` | 环境变量 | `object`
 
 {% note warn %}
 从 Hexo 5.0.0 开始，Lodash 已从全局变量中移除。迁移时 [You-Dont-Need-Lodash-Underscore](https://github.com/you-dont-need/You-Dont-Need-Lodash-Underscore) 或许能为你提供帮助。
@@ -21,10 +21,10 @@ title: 变量
 
 变量 | 描述 | 类型
 --- | --- | ---
-`site.posts` | 所有文章 | `array` of `post` objects
-`site.pages` | 所有分页 | `array` of `page` objects
-`site.categories` | 所有分类 | `object`，包含了站点全部的分类
-`site.tags` | 所有标签 | `array`，包含了站点全部的标签
+`site.posts` | 所有文章 | `array`，包含了站点全部的文章 `object`
+`site.pages` | 所有分页 | `array`，包含了站点全部的分页 `object`
+`site.categories` | 所有分类 | `array`，包含了站点全部的分类 `object`
+`site.tags` | 所有标签 | `array`，包含了站点全部的标签 `object`
 
 ### 页面变量
 
@@ -44,9 +44,9 @@ title: 变量
 `page.full_source` | 页面的完整原始路径 | `string`
 `page.path` | 页面网址（不含根路径）。我们通常在主题中使用 `url_for(page.path)`。| `string`
 `page.permalink` | 页面的完整网址 | `string`
-`page.prev` | 上一个页面。如果此为第一个页面则为 `null`。| `string` or `null`
-`page.next` | 下一个页面。如果此为最后一个页面则为 `null`。| `string` or `null`
-`page.raw` | 文章的原始内容 | ???
+`page.prev` | 上一个页面。如果此为第一个页面则为 `null`。| `object` 或 `null`
+`page.next` | 下一个页面。如果此为最后一个页面则为 `null`。| `object` 或 `null`
+`page.raw` | 文章的原始内容 | `string`
 `page.photos` | 文章的照片（用于相簿）| `array`
 `page.link` | 文章的外部链接（用于链接文章）| `string`
 
@@ -55,8 +55,8 @@ title: 变量
 变量 | 描述 | 类型
 --- | --- | ---
 `page.published` | 如果该文章已发布则为 true | `boolean`
-`page.categories` | 该文章的所有分类 |  `array` of ???
-`page.tags` | 该文章的所有标签 | `array` of ???
+`page.categories` | 该文章的所有分类 |  `array`
+`page.tags` | 该文章的所有标签 | `array`
 
 **首页（`index`）**
 
@@ -73,7 +73,7 @@ title: 变量
 `page.next_link` | 下一页的网址。如果此页是最后一页的话则为 `''`。 | `string`
 `page.path` | 当前页面的路径（不含根目录）。我们通常在主题中使用 `url_for(page.path)`。| `string`
 
-**归档 (`archive`)**：与 `index` 布局相同，但新增以下变量。
+**归档 (`archive`)** ：与 `index` 布局相同，但新增以下变量。
 
 变量 | 描述 | 类型
 --- | --- | ---
@@ -81,13 +81,13 @@ title: 变量
 `page.year` | 年份归档 (4位) | `number`
 `page.month` | 月份归档 (没有前导零的2位数) | `number`
 
-**分类 (`category`)**：与 `index` 布局相同，但新增以下变量。
+**分类 (`category`)** ：与 `index` 布局相同，但新增以下变量。
 
 变量 | 描述 | 类型
 --- | --- | ---
 `page.category` | 分类名称 | `string`
 
-**标签 (`tag`)**：与 `index` 布局相同，但新增以下变量。
+**标签 (`tag`)** ：与 `index` 布局相同，但新增以下变量。
 
 变量 | 描述 | 类型
 --- | --- | ---

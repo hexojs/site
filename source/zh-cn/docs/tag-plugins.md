@@ -252,7 +252,7 @@ content
 {% youtube video_id [type] [cookie] %}
 ```
 
-### Examples
+### 样例
 
 **视频**
 
@@ -268,7 +268,7 @@ content
 
 **隐私模式**
 
-禁止 YouTube cookie
+在这种模式下，禁用 YouTube cookie
 
 ```
 {% youtube lJIrF4YjHfQ false %}
@@ -328,7 +328,7 @@ content
 
 ## 引用资源
 
-引用文章的资源。
+引用文章的资源，与 [资源文件夹](/zh-cn/docs/asset-folders) 一起使用。
 
 ```
 {% asset_path filename %}
@@ -336,13 +336,13 @@ content
 {% asset_link filename [title] [escape] %}
 ```
 
-### Embed image
+### 嵌入图片
 
 _hexo-renderer-marked 3.1.0+ 可以（可选）自动解析图片的文章路径，参考 [本节](/zh-cn/docs/asset-folders#使用-Markdown-嵌入图片) 如何启用它。_
 
 "foo.jpg" 位于 `http://example.com/2020/01/02/hello/foo.jpg`。
 
-**Default (no option)**
+**默认（无选项）**
 
 `{% asset_img foo.jpg %}`
 
@@ -350,7 +350,7 @@ _hexo-renderer-marked 3.1.0+ 可以（可选）自动解析图片的文章路径
 <img src="/2020/01/02/hello/foo.jpg">
 ```
 
-**Custom class**
+**自定义 class 属性**
 
 `{% asset_img post-image foo.jpg %}`
 
@@ -358,7 +358,7 @@ _hexo-renderer-marked 3.1.0+ 可以（可选）自动解析图片的文章路径
 <img src="/2020/01/02/hello/foo.jpg" class="post-image">
 ```
 
-**Display size**
+**展示尺寸**
 
 `{% asset_img foo.jpg 500 400 %}`
 
@@ -366,7 +366,7 @@ _hexo-renderer-marked 3.1.0+ 可以（可选）自动解析图片的文章路径
 <img src="/2020/01/02/hello/foo.jpg" width="500" height="400">
 ```
 
-**Title & Alt**
+**title 和 alt 属性**
 
 `{% asset_img logo.svg "lorem ipsum'dolor'" %}`
 
