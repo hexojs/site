@@ -123,8 +123,6 @@ Hexo 使用 [Moment.js](http://momentjs.com/) 来解析和显示时间。
 `use_date_for_updated` 选项已经被废弃，将会在下个重大版本发布时去除。请改为使用 `updated_option: 'date'`。
 {% endnote %}
 
-`use_date_for_updated` | 启用以后，如果 Front Matter 中没有指定 `updated`， [`post.updated`]() 将会使用 `date` 的值而不是文件的创建时间。在 Git 工作流中这个选项会很有用 | `true`  
-
 ## 分页
 
 参数 | 描述 | 默认值
