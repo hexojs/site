@@ -3936,3 +3936,13 @@
     - 个人主页
     - 写作
     - 中文
+- name: Nexterfly
+  description: A Hexo theme integrated by Next and Butterfly.
+  link: https://github.com/SuSWhW/hexo-theme-nexterfly
+  preview: https://nexterfly-demo.pages.dev
+  tags:
+    - Chinese
+    - 个人主页
+    - 写作
+    - 中文
+    - 简约
