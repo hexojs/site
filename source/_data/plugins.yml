@@ -3304,13 +3304,12 @@
     - image
     - path
     - typora
-- name: hexo-renderer-babeljs
+- name: hexo-babel
   description: A plugin to compile JS for Hexo, using Babel.
-  link: https://github.com/argvchs/hexo-renderer-babeljs
+  link: https://github.com/argvchs/hexo-babel
   tags:
     - babel
     - renderer
-    - babeljs
 - name: hexo-content-blocks
   description: It helps to use foldable and non-foldable content blocks with styles.
   link: https://github.com/Sukwants/hexo-content-blocks
