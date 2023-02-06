@@ -3356,3 +3356,10 @@
     - tag_plugins
     - plugins
     - hexo
+- name: hexo-obsdian-link-plus
+  description: Hexo plugin to transfer obsidian link to post link | 原 hexo-obsdian-link 加強版
+  link: https://github.com/Antfire70007/hexo-obsdian-link-plus
+  tags:
+    - tag
+    - obsidian
+    - blog
