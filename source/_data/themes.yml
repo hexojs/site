@@ -3936,3 +3936,16 @@
     - 个人主页
     - 写作
     - 中文
+- name: Alog
+  description: Alog is a simple and elegant hexo theme.
+  link: https://github.com/vkm0303/hexo-theme-alog
+  preview: https://akino.icu
+  tags:
+    - Elegant
+    - Simple
+    - Writing
+    - Chinese
+    - English
+    - 中文
+    - 简洁
+    - 优雅
