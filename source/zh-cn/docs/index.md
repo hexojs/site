@@ -42,14 +42,14 @@ Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 [Markdown](h
 
 ### 安装 Node.js
 
-Node.js 为大多数平台提供了官方的 [安装程序](https://nodejs.org/en/download/)。对于中国大陆地区用户，可以前往 [淘宝 Node.js 镜像](https://npm.taobao.org/mirrors/node) 下载。
+Node.js 为大多数平台提供了官方的 [安装程序](https://nodejs.org/zh-cn/download/)。对于中国大陆地区用户，可以前往 [淘宝 Node.js 镜像](https://npm.taobao.org/mirrors/node) 下载。
 
 其它的安装方法：
 
 - Windows：通过 [nvs](https://github.com/jasongin/nvs/)（推荐）或者 [nvm](https://github.com/nvm-sh/nvm) 安装。
 - Mac：使用 [Homebrew](https://brew.sh/) 或 [MacPorts](http://www.macports.org/) 安装。
 - Linux（DEB/RPM-based）：从 [NodeSource](https://github.com/nodesource/distributions) 安装。
-- 其它：使用相应的软件包管理器进行安装，可以参考由 Node.js 提供的 [指导](https://nodejs.org/en/download/package-manager/)。
+- 其它：使用相应的软件包管理器进行安装，可以参考由 Node.js 提供的 [指导](https://nodejs.org/zh-cn/download/package-manager/)。
 
 对于 Mac 和 Linux 同样建议使用 nvs 或者 nvm，以避免可能会出现的权限问题。
 
@@ -94,7 +94,7 @@ $ npm install hexo
 
 我们强烈建议永远安装最新版本的 Hexo，以及 [推荐的 Node.js 版本](#安装前提)。
 
-Hexo version | Minimum (Node.js version) | Less than (Node.js version)
+Hexo 版本 | 最低版本 (Node.js 版本) | 最高版本 (Node.js 版本)
 --- | --- | ---
 6.2+ | 12.13.0 | latest
 6.0+ | 12.13.0 | 18.5.0
@@ -102,6 +102,6 @@ Hexo version | Minimum (Node.js version) | Less than (Node.js version)
 4.1 - 4.2 | 8.10 | 10.0.0
 4.0 | 8.6 | 8.10.0
 3.3 - 3.9 | 6.9 | 8.0.0
-3.2 - 3.3 | 0.12 | unknown
-3.0 - 3.1 | 0.10 or iojs | unknown
-0.0.1 - 2.8 | 0.10 | unknown
+3.2 - 3.3 | 0.12 | 未知
+3.0 - 3.1 | 0.10 或 iojs | 未知
+0.0.1 - 2.8 | 0.10 | 未知
