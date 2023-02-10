@@ -3945,3 +3945,15 @@
     - 中文
     - Responsive
     - Pure
+- name: ShokaX
+  description: A simple hexo theme, based on shoka
+  link: https://github.com/zkz098/hexo-theme-shokaX
+  preview: https://www.kaitaku.xyz
+  tags:
+    - 中文
+    - Vue3
+    - Simple
+    - Responsive
+    - animation
+    - concise
+    - Customizable
