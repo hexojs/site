@@ -29,6 +29,8 @@ on:
 jobs:
   pages:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v2
       - name: Use Node.js 16.x
