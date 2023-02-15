@@ -299,46 +299,31 @@ After a few moments, your website will be deployed.
 
 For deployment-related considerations, you can refer to [Our documentation](https://github.com/NaturalSelectionLabs/hexo-deployer-rss3/blob/develop/README.md).
 
-## Layer0
+## Edgio (formerly Layer0)
 
-[Layer0](https://www.layer0.co) is an all-in-one platform to develop, deploy, preview, experiment on, monitor, and run your headless frontend, focused on EdgeJS, predictive prefetching, and performance monitoring.
+[Edgio (formerly Layer0)](https://docs.edg.io) is an Internet-scale platform that makes it easy for teams to build, release, protect, and accelerate their web apps and APIs.
 
-1. In your hexo project directory, run:
+1. In your hexo project directory, install the Edgio CLI:
+
 ```bash
-npm i -g @layer0/cli
-0 init
+npm i -g @edgio/cli
 ```
 
-2. Update routes.js (created by 0 init):
-```js
-// This file was added by layer0 init.
-// You should commit this file to source control.
+2. Install Hexo connector by Edgio:
 
-import { Router } from '@layer0/core/router'
-
-export default new Router().static('public', ({ cache }) => {
-  cache({
-    edge: {
-      maxAgeSeconds: 60 * 60 * 60 * 365,
-      forcePrivateCaching: true,
-    },
-    browser: {
-      maxAgeSeconds: 0,
-      serviceWorkerSeconds: 60 * 60 * 24,
-    },
-  })
-})
+```bash
+edgio init --connector=@edgio/hexo
 ```
 
 3. Deploy
+
 ```bash
-hexo generate
-0 deploy
+edgio deploy
 ```
 
 Alternatively, you can click the deploy button below to create a new project:
 
-[![Deploy Layer0](https://docs.layer0.co/button.svg)](https://app.layer0.co/deploy?repo=https%3A%2F%2Fgithub.com%2Flayer0-docs%2Flayer0-hexo-example)
+[![Deploy To Edgio](https://docs.edg.io/button.svg)](https://app.layer0.co/deploy?repo=https%3A%2F%2Fgithub.com%2Fedgio-docs%2Fedgio-hexo-example)
 
 ## Other Methods
 
