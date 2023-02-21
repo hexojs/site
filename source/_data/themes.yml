@@ -3949,3 +3949,15 @@
     - animation
     - concise
     - Customizable
+- name: Harbor
+  description: Harbor is dark & futuristic hexo theme.
+  link: https://github.com/DeepSpaceHarbor/Harbor
+  preview: https://deepspaceharbor.github.io/Harbor/
+  tags:
+    - Dark
+    - Futuristic
+    - Simple
+    - Responsive
+    - Blog
+    - yellow
+
