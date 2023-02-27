@@ -3356,6 +3356,13 @@
     - tag_plugins
     - plugins
     - hexo
+- name: hexo-obsdian-link-plus
+  description: Hexo plugin to transfer obsidian link to post link | 原 hexo-obsdian-link 加強版
+  link: https://github.com/Antfire70007/hexo-obsdian-link-plus
+  tags:
+    - tag
+    - obsidian
+    - blog
 - name: hexo-tag-collapse-spoiler
   description: A Hexo tag plugin for collapse spoiler, hiding/expanding content | 给页面某些内容添加折叠/展开功能的Tag
   link: https://github.com/ggehuliang/hexo-tag-collapse-spoiler
