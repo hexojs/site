@@ -3960,4 +3960,15 @@
     - Responsive
     - Blog
     - yellow
-
+- name: mnh
+  description: A simple, clean Hexo theme.
+  link: https://github.com/meannoharm/hexo-theme-mnh
+  preview: https://pua.al
+  tags:
+    - clean
+    - scss
+    - simple
+    - beautiful
+    - blog
+    - custom pages
+    - 中文
