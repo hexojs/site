@@ -48,7 +48,7 @@ ulimit: open files: cannot modify limit: Operation not permitted
 
 想要去除该限制:
 
-1. 在 "/etc/security/limits.conf" 中增加以下一行：
+1. 在 `/etc/security/limits.conf` 中增加以下一行：
 
   ```
   * - nofile 10000
@@ -56,13 +56,13 @@ ulimit: open files: cannot modify limit: Operation not permitted
   # '*' applies to all users and '-' set both soft and hard limits
   ```
 
-  * 上述设置在某些情况下可能不适用，请确保 "/etc/pam.d/login" 和 "/etc/pam.d/lightdm" 有以下一行(如果这些文件不存在，请忽略此步骤)：
+  * 上述设置在某些情况下可能不适用，请确保 `/etc/pam.d/login` 和 `/etc/pam.d/lightdm` 有以下一行(如果这些文件不存在，请忽略此步骤)：
 
   ```
   session required pam_limits.so
   ```
 
-2. 如果你使用的是 [基于systemd](https://en.wikipedia.org/wiki/Systemd#Adoption) 的发行版，systemd 可能会覆盖 "limits.conf"。如果想要在 systemd 中设置限制，请在 "/etc/systemd/system.conf" 和 "/etc/systemd/user.conf" 中添加以下一行：
+2. 如果你使用的是 [基于systemd](https://en.wikipedia.org/wiki/Systemd#Adoption) 的发行版，systemd 可能会覆盖 `limits.conf`。如果想要在 systemd 中设置限制，请在 `/etc/systemd/system.conf` 和 `/etc/systemd/user.conf` 中添加以下一行：
 
   ```
   DefaultLimitNOFILE=10000
@@ -80,7 +80,7 @@ error: RPC failed; result=22, HTTP code = 403
 fatal: 'username.github.io' does not appear to be a git repository
 ```
 
-请确认您已经在电脑上 [配置 git](https://help.github.com/articles/set-up-git)，或改用 HTTPS 库（repository）地址。
+请确认您已经在电脑上 [配置 git](https://docs.github.com/zh/get-started/quickstart/set-up-git)，或改用 HTTPS 库（repository）地址。
 
 ### Error: ENOENT: no such file or directory
 
