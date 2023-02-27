@@ -3961,7 +3961,7 @@
     - Blog
     - yellow
 
--name: Bloomy
+- name: Bloomy
 description: A simple hexo theme
 link: https://github.com/7UP-hue/Bloomy
 perview: https://7up-hue.github.io/
