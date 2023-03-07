@@ -3483,11 +3483,12 @@
 - name: Bamboo
   description: A beautiful hexo theme
   link: https://github.com/yuang01/hexo-theme-bamboo
-  preview: https://yuang01.github.io/
+  preview: https://hexo-theme-bamboo.netlify.app
   tags:
     - Vue
-    - simple
     - cool
+    - pjax
+    - Powerful
     - Responsive
     - Beautiful
     - 中文
