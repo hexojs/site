@@ -2,6 +2,8 @@
 title: Hexo 7.0.0 (RC1)
 ---
 
+> [GitHub Release Note: v7.0.0 (RC1)](https://github.com/hexojs/hexo/releases/tag/v7.0.0-rc1)
+
 ## Migration Guid
 
 Some of tag feature has been droped. Please use [hexo-tag-embed](https://github.com/hexojs/hexo-tag-embed) instead of them.
