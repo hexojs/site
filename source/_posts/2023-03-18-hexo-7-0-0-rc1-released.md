@@ -10,6 +10,10 @@ Some of tag feature has been droped. Please use [hexo-tag-embed](https://github.
 $ npm i hexo-tag-embed
 ```
 
+> **Note**
+>
+> No need to install if you are not using (or will not use) `gist`, `youtube`, `jsfiddle`, `vimeo` tags in your post or page.
+
 ## Breaking Changes
 
 * chore: require node14+ by [@yoshinorin] in [#5061](https://github.com/hexojs/hexo/pull/5061)
