@@ -8,3 +8,4 @@ public/
 package-lock.json
 yarn.lock
 /.vscode
+/.husky
