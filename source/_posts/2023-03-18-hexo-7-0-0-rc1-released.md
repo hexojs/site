@@ -6,7 +6,7 @@ title: Hexo 7.0.0 (RC1) Released
 
 ## Migration Guide
 
-Some of tag feature has been droped. Please use [hexo-tag-embed](https://github.com/hexojs/hexo-tag-embed) instead of them.
+Some of the built-in tags have been dropped (E.g. `gist`, `youtube`, `jsfiddle`, and `vimeo`). If you use those tags in your existing blog posts, you can install [hexo-tag-embed](https://github.com/hexojs/hexo-tag-embed) to continue using them with Hexo 7.0.0.
 
 ```sh
 $ npm i hexo-tag-embed
