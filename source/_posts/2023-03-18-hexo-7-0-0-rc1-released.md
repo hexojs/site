@@ -19,7 +19,7 @@ $ npm i hexo-tag-embed
 ## Breaking Changes
 
 * chore: require node14+ by [@yoshinorin] in [#5061](https://github.com/hexojs/hexo/pull/5061)
-* Dropped tag features. Please see `Migration Guid` section.
+* Dropped tag features. Please see `Migration Guide` section.
     * refactor: drop `gist` tag by [@yoshinorin] in [#5067](https://github.com/hexojs/hexo/pull/5067)
     * refactor: drop `youtube` tag by [@yoshinorin] in [#5064](https://github.com/hexojs/hexo/pull/5064)
     * refactor: drop `jsfiddle` tag by [@yoshinorin] in [#5066](https://github.com/hexojs/hexo/pull/5066)
