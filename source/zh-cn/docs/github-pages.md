@@ -2,10 +2,10 @@
 title: 在 GitHub Pages 上部署 Hexo
 ---
 
-本文将使用 [GitHub Actions](https://docs.github.com/en/actions) 部署至 GitHub Pages，此方法适用于公开或私人储存库。若你不希望将源文件夹上传到 GitHub，请参阅 [一键部署](#一键部署)。
+本文将使用 [GitHub Actions](https://docs.github.com/zh/actions) 部署至 GitHub Pages，此方法适用于公开或私人储存库。若你不希望将源文件夹上传到 GitHub，请参阅 [一键部署](#一键部署)。
 
-1. 建立名为 <b>_username_.github.io</b> 的储存库，username 是你在 GitHub 上的用户名，若之前已将 Hexo 上传至其他储存库，将该储存库重命名即可。
-2. 将 Hexo 文件夹中的文件 push 到储存库的默认分支，默认分支通常名为 **main**，旧一点的储存库可能名为 **master**。
+1. 建立名为 `<你的 GitHub 用户名>.github.io` 的储存库，若之前已将 Hexo 上传至其他储存库，将该储存库重命名即可。
+2. 将 Hexo 文件夹中的文件 push 到储存库的默认分支，默认分支通常名为 `main`，旧一点的储存库可能名为 `master`。
 
 - 将 `main` 分支 push 到 GitHub：
 
@@ -55,30 +55,30 @@ jobs:
           publish_dir: ./public
 ```
 5. 当部署作业完成后，产生的页面会放在储存库中的 `gh-pages` 分支。
-6. 在储存库中前往 **Settings** > **Pages** > **Source**，并将 branch 改为 `gh-pages`。
-7. 前往 _username_.github.io 查看网站。
+6. 在储存库中前往 `Settings > Pages > Source`，并将 branch 改为 `gh-pages`。
+7. 前往 `https://<你的 GitHub 用户名>.github.io` 查看网站。
 
 {% note info CNAME %}
-若你使用了一个带有 `CNAME` 的自定义域名，你需要在 `source/` 文件夹中新增 `CNAME` 文件。 [更多信息](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site)
+若你使用了一个带有 `CNAME` 的自定义域名，你需要在 `source/` 文件夹中新增 `CNAME` 文件。 [更多信息](https://docs.github.com/zh/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site)
 {% endnote %}
 
 ## 项目页面
 
 如果你希望网站部署在 `<你的 GitHub 用户名>.github.io` 的子目录中：
 
-1. 开启你在 GitHub 的储存库，并前往 **Settings** 页面。更改你的 **Repository name** 使你的博客网址变成 <b>username.github.io/_repository_</b>，_repository_ 可以是任何名称，例如 _blog_ 或 _hexo_。
-2. 编辑你的 **\_config.yml**，将 `url:` 更改为 <b>https://_username_.github.io/_repository_</b>。
+1. 建立名为 `<repository 的名字>` 的储存库，这样你的博客网址为 `<你的 GitHub 用户名>.github.io/<repository 的名字>`，repository 的名字可以任意，例如 blog 或 hexo。
+2. 编辑你的 `_config.yml`，将 `url:` 更改为 `<你的 GitHub 用户名>.github.io/<repository 的名字>`。
 3. Commit 并 push 到默认分支上。
 4. 当部署完成后，在 `gh-pages` 分支可以找到生成的网页。
-5. 在 GitHub 储存库中，前往 **Settings** > **Pages** > **Source**，并将 branch 改为 `gh-pages` 后储存。
-6. 前往 _username_.github.io/_repository_ 查看。
+5. 在 GitHub 储存库中，前往 `Settings > Pages > Source`，并将 branch 改为 `gh-pages`。
+6. 前往 `https://<你的 GitHub 用户名>.github.io/<repository 的名字>` 查看网站。
 
 ## 一键部署
 
 以下教学改编自 [一键部署](/zh-cn/docs/one-command-deployment)。
 
 1. 安装 [hexo-deployer-git](https://github.com/hexojs/hexo-deployer-git)。
-2. 在 `_config.yml` 中添加以下配置（如果有的话，删除现有行）:
+2. 在 `_config.yml` 中添加以下配置（如果配置已经存在，请将其替换为如下）:
 
 ```yml
 deploy:
@@ -98,5 +98,5 @@ deploy:
 
 ## 参考链接
 
-- [GitHub Pages 使用文档](https://help.github.com/categories/github-pages-basics/)
+- [GitHub Pages 使用文档](https://docs.github.com/zh/pages)
 - [peaceiris/actions-gh-pages](https://github.com/marketplace/actions/github-pages-action)
