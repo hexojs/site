@@ -3383,6 +3383,13 @@
     - collapse
     - hide
     - expand
+- name: hexo-highlight-shiki
+  description: A Hexo plugin for highlighting code blocks using shiki.
+  link: https://github.com/Pcrab/hexo-highlight-shiki
+  tags:
+    - code
+    - highlight
+    - shiki
 - name: hexo-generator-readtime
   description: Hexo package that provides analytics on the read time to review a post. Generates word, character, image, and video counts in the front-matter of the markdown file. Plus provides read-time estimates for given language profile. Supports 42 languages!
   link: https://github.com/AsemAlhaidary/hexo-generator-readtime/
