@@ -1,3 +1,22 @@
+- name: hexo-shortcodes
+  description: Hexo shortcodes helper. Various shortcodes for hexo, adapted from jekyll.
+  link: https://www.npmjs.com/package/hexo-shortcodes
+  tags:
+    - shortcode
+    - rss reader
+    - codepen
+    - jsfiddle
+    - dailymotion
+- name: hexo-renderers
+  description: All in one hexo renderers. Using latest compatible API and dependencies.
+  link: https://www.npmjs.com/package/hexo-renderers
+  tags:
+    - renderer
+    - nunjucks
+    - pug
+    - ejs
+    - sass
+    - stylus
 - name: hexo-info-api
   description: Simple api serve for Hexo. Can custom allowOrigin. (Build with generator)
   link: https://github.com/0ojixueseno0/hexo-info-api
