@@ -1,3 +1,22 @@
+- name: hexo-shortcodes
+  description: Hexo shortcodes helper. Various shortcodes for hexo, adapted from jekyll.
+  link: https://www.npmjs.com/package/hexo-shortcodes
+  tags:
+    - shortcode
+    - rss reader
+    - codepen
+    - jsfiddle
+    - dailymotion
+- name: hexo-renderers
+  description: All in one hexo renderers. Using latest compatible API and dependencies.
+  link: https://www.npmjs.com/package/hexo-renderers
+  tags:
+    - renderer
+    - nunjucks
+    - pug
+    - ejs
+    - sass
+    - stylus
 - name: hexo-info-api
   description: Simple api serve for Hexo. Can custom allowOrigin. (Build with generator)
   link: https://github.com/0ojixueseno0/hexo-info-api
@@ -3371,3 +3390,52 @@
     - code
     - highlight
     - shiki
+- name: hexo-generator-readtime
+  description: Hexo package that provides analytics on the read time to review a post. Generates word, character, image, and video counts in the front-matter of the markdown file. Plus provides read-time estimates for given language profile. Supports 42 languages!
+  link: https://github.com/AsemAlhaidary/hexo-generator-readtime/
+  tags:
+    - "read analytics"
+    - "hexo readtime"
+    - readtime
+    - "read-time"
+    - "read time"
+    - "reading-time"
+    - "reading time"
+    - "word count"
+    - wordcount
+    - "post time"
+    - calculate
+    - estimate
+    - "estimated time"
+    - reading
+    - words
+    - time
+    - count
+    - wpm
+    - "words per minute"
+    - "calculate-reading-time"
+    - "words-calculate"
+    - "reading-time-estimator"
+    - "estimated reading time"
+    - "character-counter"
+    - "word-counter"
+    - "character-count"
+    - "word-count"
+- name: hexo-webp-polyfill
+  description: WebP image format browser polyfill for Hexo.
+  link: https://github.com/MBRjun/hexo-webp-polyfill
+  tags:
+    - polyfill
+    - webp
+    - webp-polyfill
+    - browser-polyfill
+    - decoder
+- name: hexo-mahgen
+  description: Mahgen plugin for Hexo. | 在 Hexo 中插入由 Mahgen 生成的麻将牌面图案.
+  link: https://github.com/eric200203/hexo-mahgen
+  tags:
+    - mahgen
+    - mahjong
+    - plugin
+    - hexo
+    - image
