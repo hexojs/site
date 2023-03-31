@@ -98,8 +98,16 @@ Setting | Description | Default
 Setting | Description | Default
 --- | --- | ---
 `default_category` | Default category | `uncategorized`
-`category_map` | Category slugs |
-`tag_map` | Tag slugs |
+`category_map` | Override category slugs |
+`tag_map` | Override tag slugs |
+
+Examples:
+
+``` yaml
+category_map:
+  "yesterday's thoughts": yesterdays-thoughts
+  "C++": c-plus-plus
+```
 
 ### Date / Time format
 
