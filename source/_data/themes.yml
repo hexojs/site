@@ -1,3 +1,18 @@
+- name: anzhiyu
+  description: Simple & clean theme for Hexo, A designer-style theme.
+  link: https://github.com/anzhiyu-c/hexo-theme-anzhiyu
+  preview: https://anzhiy.cn/
+  tags:
+    - card
+    - responsive
+    - simple
+    - clean
+    - chinese
+    - DIY
+    - fast
+    - pure
+    - 中文
+    - 设计师风格
 - name: MegaBolD
   description: MegaBolD is a powerful magazine theme for hexo.
   link: https://github.com/sclass53/hexo-theme-megabold
