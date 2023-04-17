@@ -42,7 +42,7 @@ hexo.extend.injector.register(entry, value, to)
 
 注入器还有一些内部函数，如果你要使用它们，请参考 [hexojs/hexo#4049](https://github.com/hexojs/hexo/pull/4049)。
 
-## 样例
+## 示例
 
 ```js
 const css = hexo.extend.helper.get('css').bind(hexo);

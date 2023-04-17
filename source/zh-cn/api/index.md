@@ -7,7 +7,7 @@ title: API
 
 ## 初始化
 
-首先，我们必须建立一个 Hexo 实例（instance），第一个参数是网站的根目录，也就是 `base_dir`，而第二个参数则是初始化的选项。接著执行 `init` 方法后，Hexo 会加载插件及配置文件。
+首先，我们必须建立一个 Hexo 实例（instance），第一个参数是网站的根目录，也就是 `base_dir`，而第二个参数则是初始化的选项。接着执行 `init` 方法后，Hexo 会加载插件及配置文件。
 
 ``` js
 var Hexo = require('hexo');
