@@ -3937,6 +3937,15 @@
     - 个人主页
     - 写作
     - 中文
+- name: Insnow
+  description: insnow, a simple hexo theme.
+  link: https://github.com/mizoreyo/hexo-theme-insnow
+  preview: https://mizore.site/
+  tags:
+    - 简约
+    - 中文
+    - Responsive
+    - Pure
 - name: Alog
   description: Alog is a simple and elegant hexo theme.
   link: https://github.com/vkm0303/hexo-theme-alog
