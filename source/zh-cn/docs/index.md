@@ -37,12 +37,12 @@ Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 [Markdown](h
 {% endnote %}
 
 {% note info Windows 用户 %}
-对于中国大陆地区用户，可以前往 [淘宝 Git for Windows 镜像](https://npm.taobao.org/mirrors/git-for-windows/) 下载 git 安装包。
+对于中国大陆地区用户，可以前往 [淘宝 Git for Windows 镜像](https://npmmirror.com/mirrors/git-for-windows/) 下载 git 安装包。
 {% endnote %}
 
 ### 安装 Node.js
 
-Node.js 为大多数平台提供了官方的 [安装程序](https://nodejs.org/zh-cn/download/)。对于中国大陆地区用户，可以前往 [淘宝 Node.js 镜像](https://npm.taobao.org/mirrors/node) 下载。
+Node.js 为大多数平台提供了官方的 [安装程序](https://nodejs.org/zh-cn/download/)。对于中国大陆地区用户，可以前往 [淘宝 Node.js 镜像](https://npmmirror.com/mirrors/node/) 下载。
 
 其它的安装方法：
 
