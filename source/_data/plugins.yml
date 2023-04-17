@@ -3439,6 +3439,16 @@
     - plugin
     - hexo
     - image
+- name: hexo-auto-tag
+  description: Automatically assigns relevant predefined tags to your posts based on their content with the power of GPT-3.
+  link: https://github.com/declan-haojin/hexo-auto-tag
+  tags:
+    - tag
+    - auto
+    - GPT-3
+    - OpenAI
+    - API
+    - Embeddings
 - name: hexo-renderer-djot
   description: Djot renderer plugin for hexo.
   link: https://github.com/Pcrab/hexo-renderer-djot
