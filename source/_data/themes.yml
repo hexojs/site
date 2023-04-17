@@ -3937,6 +3937,18 @@
     - 个人主页
     - 写作
     - 中文
+- name: Alog
+  description: Alog is a simple and elegant hexo theme.
+  link: https://github.com/vkm0303/hexo-theme-alog
+  preview: https://akino.icu
+  tags:
+    - Elegant
+    - Simple
+    - Writing
+    - Chinese
+    - English
+    - 简洁
+    - 优雅
 - name: Reimu
   description: 一款博丽灵梦风格的Hexo主题 | A Hakurei Reimu style Hexo theme.
   link: https://github.com/D-Sketon/hexo-theme-reimu
