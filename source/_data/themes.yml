@@ -3483,11 +3483,12 @@
 - name: Bamboo
   description: A beautiful hexo theme
   link: https://github.com/yuang01/hexo-theme-bamboo
-  preview: https://yuang01.github.io/
+  preview: https://hexo-theme-bamboo.netlify.app
   tags:
     - Vue
-    - simple
     - cool
+    - pjax
+    - Powerful
     - Responsive
     - Beautiful
     - 中文
@@ -3948,3 +3949,53 @@
     - English
     - 简洁
     - 优雅
+- name: Reimu
+  description: 一款博丽灵梦风格的Hexo主题 | A Hakurei Reimu style Hexo theme.
+  link: https://github.com/D-Sketon/hexo-theme-reimu
+  preview: https://d-sketon.github.io
+  tags:
+    - Touhou
+    - Customizable
+    - Writing
+    - Sidebar
+    - Chinese
+    - 东方
+    - 博丽灵梦
+    - 中文
+- name: ShokaX
+  description: A simple hexo theme, based on shoka
+  link: https://github.com/zkz098/hexo-theme-shokaX
+  preview: https://www.kaitaku.xyz
+  tags:
+    - 中文
+    - Vue3
+    - Simple
+    - Responsive
+    - animation
+    - concise
+    - Customizable
+- name: Harbor
+  description: Harbor is dark & futuristic hexo theme.
+  link: https://github.com/DeepSpaceHarbor/Harbor
+  preview: https://deepspaceharbor.github.io/Harbor/
+  tags:
+    - Dark
+    - Futuristic
+    - Simple
+    - Responsive
+    - Blog
+    - yellow
+- name: dimension
+  description: 一个二次元风格设计的hexo主题
+  link: https://github.com/ezgx/hexo-theme-dimension
+  preview: http://ezgx.site/
+  tags:
+    - 中文
+    - light
+    - Card
+    - beautiful
+    - comic
+    - anime
+    - responsive
+    - widget
+    - one_column
