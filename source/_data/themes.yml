@@ -3937,7 +3937,40 @@
     - 个人主页
     - 写作
     - 中文
-
+- name: Insnow
+  description: insnow, a simple hexo theme.
+  link: https://github.com/mizoreyo/hexo-theme-insnow
+  preview: https://mizore.site/
+  tags:
+    - 简约
+    - 中文
+    - Responsive
+    - Pure
+- name: Alog
+  description: Alog is a simple and elegant hexo theme.
+  link: https://github.com/vkm0303/hexo-theme-alog
+  preview: https://akino.icu
+  tags:
+    - Elegant
+    - Simple
+    - Writing
+    - Chinese
+    - English
+    - 简洁
+    - 优雅
+- name: Reimu
+  description: 一款博丽灵梦风格的Hexo主题 | A Hakurei Reimu style Hexo theme.
+  link: https://github.com/D-Sketon/hexo-theme-reimu
+  preview: https://d-sketon.github.io
+  tags:
+    - Touhou
+    - Customizable
+    - Writing
+    - Sidebar
+    - Chinese
+    - 东方
+    - 博丽灵梦
+    - 中文
 - name: ShokaX
   description: A simple hexo theme, based on shoka
   link: https://github.com/zkz098/hexo-theme-shokaX
