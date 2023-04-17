@@ -3439,3 +3439,10 @@
     - plugin
     - hexo
     - image
+- name: hexo-renderer-djot
+  description: Djot renderer plugin for hexo.
+  link: https://github.com/Pcrab/hexo-renderer-djot
+  tags:
+    - renderer
+    - djot
+    - "djot.js"
