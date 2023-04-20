@@ -1,3 +1,12 @@
+- name: A4
+  description: A hexo theme that looks like an A4 paper.
+  link: https://github.com/HiNinoJay/hexo-theme-A4.git
+  preview: https://ninojay.top
+  tags: 
+  - 中文
+  - English
+  - A4
+  - 极简
 - name: anzhiyu
   description: Simple & clean theme for Hexo, A designer-style theme.
   link: https://github.com/anzhiyu-c/hexo-theme-anzhiyu
