@@ -3994,6 +3994,18 @@
     - Responsive
     - Blog
     - yellow
+- name: mnh
+  description: A simple, clean Hexo theme.
+  link: https://github.com/meannoharm/hexo-theme-mnh
+  preview: https://gao.tn
+  tags:
+    - clean
+    - scss
+    - simple
+    - beautiful
+    - blog
+    - custom pages
+    - 中文
 - name: dimension
   description: 一个二次元风格设计的hexo主题
   link: https://github.com/ezgx/hexo-theme-dimension
