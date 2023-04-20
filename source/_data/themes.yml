@@ -7,6 +7,21 @@
   - English
   - A4
   - 极简
+- name: anzhiyu
+  description: Simple & clean theme for Hexo, A designer-style theme.
+  link: https://github.com/anzhiyu-c/hexo-theme-anzhiyu
+  preview: https://anzhiy.cn/
+  tags:
+    - card
+    - responsive
+    - simple
+    - clean
+    - chinese
+    - DIY
+    - fast
+    - pure
+    - 中文
+    - 设计师风格
 - name: MegaBolD
   description: MegaBolD is a powerful magazine theme for hexo.
   link: https://github.com/sclass53/hexo-theme-megabold
@@ -3946,7 +3961,40 @@
     - 个人主页
     - 写作
     - 中文
-
+- name: Insnow
+  description: insnow, a simple hexo theme.
+  link: https://github.com/mizoreyo/hexo-theme-insnow
+  preview: https://mizore.site/
+  tags:
+    - 简约
+    - 中文
+    - Responsive
+    - Pure
+- name: Alog
+  description: Alog is a simple and elegant hexo theme.
+  link: https://github.com/vkm0303/hexo-theme-alog
+  preview: https://akino.icu
+  tags:
+    - Elegant
+    - Simple
+    - Writing
+    - Chinese
+    - English
+    - 简洁
+    - 优雅
+- name: Reimu
+  description: 一款博丽灵梦风格的Hexo主题 | A Hakurei Reimu style Hexo theme.
+  link: https://github.com/D-Sketon/hexo-theme-reimu
+  preview: https://d-sketon.github.io
+  tags:
+    - Touhou
+    - Customizable
+    - Writing
+    - Sidebar
+    - Chinese
+    - 东方
+    - 博丽灵梦
+    - 中文
 - name: ShokaX
   description: A simple hexo theme, based on shoka
   link: https://github.com/zkz098/hexo-theme-shokaX
@@ -3970,6 +4018,18 @@
     - Responsive
     - Blog
     - yellow
+- name: mnh
+  description: A simple, clean Hexo theme.
+  link: https://github.com/meannoharm/hexo-theme-mnh
+  preview: https://gao.tn
+  tags:
+    - clean
+    - scss
+    - simple
+    - beautiful
+    - blog
+    - custom pages
+    - 中文
 - name: dimension
   description: 一个二次元风格设计的hexo主题
   link: https://github.com/ezgx/hexo-theme-dimension
