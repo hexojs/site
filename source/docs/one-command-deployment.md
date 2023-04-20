@@ -204,16 +204,18 @@ deploy:
   agent: [path/to/agent/socket]
 ```
 
-| Option       | Description                             | Default          |
-| ------------ | --------------------------------------- | ---------------- |
-| `host`       | Address of remote host                  |
-| `user`       | Username                                |
-| `pass`       | Password                                |
-| `remotePath` | Root directory of remote host           | `/`              |
-| `port`       | Port                                    | 22               |
-| `privateKey` | Path to a ssh private key               |
-| `passphrase` | Optional passphrase for the private key |
-| `agent`      | Path to the ssh-agent socket            | `$SSH_AUTH_SOCK` |
+| Option        | Description                                     | Default          |
+| ------------- | ----------------------------------------------- | ---------------- |
+| `host`        | Address of remote host                          |
+| `port`        | Port                                            | 22               |
+| `user`        | Username                                        |
+| `pass`        | Password                                        |
+| `privateKey`  | Path to a ssh private key                       |
+| `passphrase`  | Optional passphrase for the private key         |
+| `agent`       | Path to the ssh-agent socket                    | `$SSH_AUTH_SOCK` |
+| `remotePath`  | Root directory of remote host                   | `/`              |
+| `forceUpload` | Override existing files                         | false            |
+| `concurrency` | Max number of SFTP tasks processed concurrently | 100            |
 
 ## Vercel
 
