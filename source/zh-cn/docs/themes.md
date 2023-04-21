@@ -48,15 +48,15 @@ layout.swig  - 使用 Swig
 1. Fork [hexojs/site]
 2. 把库（repository）复制到电脑上，并安装所依赖的插件。
 
-    {% code %}
+    ```shell
     $ git clone https://github.com/<username>/site.git
     $ cd site
     $ npm install
-    {% endcode %}
+    ```
 
 3. 编辑 `source/_data/themes.yml`，在文件中新增您的主题，例如：
 
-    {% code %}
+    ```yaml
     - name: landscape
       description: A brand new default theme for Hexo.
       link: https://github.com/hexojs/hexo-theme-landscape
@@ -67,7 +67,7 @@ layout.swig  - 使用 Swig
         - widget
         - two_column
         - one_column
-    {% endcode %}
+    ```
 
 4. 在 `source/themes/screenshots` 新增同名的截图档案，图片必须为 800x500 的 PNG 文件。
 5. 推送（push）分支。

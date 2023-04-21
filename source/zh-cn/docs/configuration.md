@@ -1,7 +1,7 @@
 ---
 title: 配置
 ---
-您可以在 `_config.yml` 中修改大部分的配置。
+您可以在 `_config.yml` 或 [代替配置文件](#使用代替配置文件) 中修改大部分的配置。
 
 {% youtube A0Enyn70jKU %}
 
@@ -17,7 +17,7 @@ title: 配置
 `language` | 网站使用的语言。对于简体中文用户来说，使用不同的主题可能需要设置成不同的值，请参考你的主题的文档自行设置，常见的有 `zh-Hans`和 `zh-CN`。
 `timezone` | 网站时区。Hexo 默认使用您电脑的时区。请参考 [时区列表](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) 进行设置，如 `America/New_York`, `Japan`, 和 `UTC` 。一般的，对于中国大陆地区可以使用 `Asia/Shanghai`。
 
-其中，`description`主要用于SEO，告诉搜索引擎一个关于您站点的简单描述，通常建议在其中包含您网站的关键词。`author`参数用于主题显示文章的作者。
+其中，`description` 主要用于SEO，告诉搜索引擎一个关于您站点的简单描述，通常建议在其中包含您网站的关键词。`author` 参数用于主题显示文章的作者。
 
 ## 网址
 
@@ -75,19 +75,19 @@ skip_render: "_posts/test-post.md"
 
 参数 | 描述 | 默认值
 --- | --- | ---
-`new_post_name` | 新文章的文件名称 | :title.md
-`default_layout` | 预设布局 | post
-`auto_spacing` | 在中文和英文之间加入空格 | false
-`titlecase` | 把标题转换为 title case | false
-`external_link` | 在新标签中打开链接 | true
+`new_post_name` | 新文章的文件名称 | `:title.md`
+`default_layout` | 预设布局 | `post`
+`auto_spacing` | 在中文和英文之间加入空格 | `false`
+`titlecase` | 把标题转换为 title case | `false`
+`external_link` | 在新标签中打开链接 | `true`
 `external_link.enable` | 在新标签中打开链接 | `true`
 `external_link.field` | 对整个网站（`site`）生效或仅对文章（`post`）生效 | `site`
 `external_link.exclude` | 需要排除的域名。主域名和子域名如 `www` 需分别配置 | `[]`
-`filename_case` | 把文件名称转换为 (1) 小写或 (2) 大写 | 0
-`render_drafts` | 显示草稿 | false
-`post_asset_folder` | 启动 [Asset 文件夹](asset-folders.html) | false
-`relative_link` | 把链接改为与根目录的相对位址 | false
-`future` | 显示未来的文章 | true
+`filename_case` | 把文件名称转换为 (1) 小写或 (2) 大写 | `0`
+`render_drafts` | 显示草稿 | `false`
+`post_asset_folder` | 启动 [Asset 文件夹](asset-folders.html) | `false`
+`relative_link` | 把链接改为与根目录的相对位址 | `false`
+`future` | 显示未来的文章 | `true`
 `highlight` | 代码块的设置, 请参考 [Highlight.js](/zh-cn/docs/syntax-highlight#Highlight-js) 进行设置 |
 `prismjs` | 代码块的设置, 请参考 [PrismJS](/zh-cn/docs/syntax-highlight#PrismJS) 进行设置 |
 
@@ -130,6 +130,15 @@ Hexo 使用 [Moment.js](http://momentjs.com/) 来解析和显示时间。
 `per_page` | 每页显示的文章量 (0 = 关闭分页功能) | `10`
 `pagination_dir` | 分页目录 | `page`
 
+例如：
+``` yaml
+pagination_dir: 'page'
+# http://example.com/page/2
+
+pagination_dir: 'awesome-page'
+# http://example.com/awesome-page/2
+```
+
 ## 扩展
 
 参数 | 描述
@@ -151,7 +160,7 @@ Hexo 使用 [Moment.js](http://momentjs.com/) 来解析和显示时间。
 `exclude` | Hexo 不包括 `source/` 下的这些文件和目录
 `ignore` | Hexo 会忽略整个 Hexo 项目下的这些文件夹或文件
 
-举例：
+例如：
 
 ```yaml
 # 处理或不处理目录或文件
@@ -190,6 +199,8 @@ ignore:
 列表中的每一项都必须用单引号或双引号包裹起来。
 
 `include` 和 `exclude` 并不适用于 `themes/` 目录下的文件。如果需要忽略 `themes/` 目录下的部分文件或文件夹，可以使用 `ignore` 或在文件名之前添加下划线 `_`。
+
+\* `source/_posts` 文件夹是一个例外，但该文件夹下任何名称以 `_` 开头的文件或文件夹仍会被忽略。不建议在该文件夹中使用 `include` 规则。
 
 ### 使用代替配置文件
 

@@ -6,7 +6,7 @@ title: 文档
 
 ## 什么是 Hexo？
 
-Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 [Markdown](http://daringfireball.net/projects/markdown/)（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。
+Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 [Markdown](http://daringfireball.net/projects/markdown/)（或其他标记语言）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。
 
 {% youtube PsXWbI2Mqu0 %}
 
@@ -27,7 +27,7 @@ Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 [Markdown](h
 
 ### 安装 Git
 
-- Windows：下载并安装 [git](https://git-scm.com/download/win).
+- Windows：下载并安装 [git](https://git-scm.com/download/win)。
 - Mac：使用 [Homebrew](http://mxcl.github.com/homebrew/), [MacPorts](http://www.macports.org/) 或者下载 [安装程序](http://sourceforge.net/projects/git-osx-installer/)。
 - Linux (Ubuntu, Debian)：`sudo apt-get install git-core`
 - Linux (Fedora, Red Hat, CentOS)：`sudo yum install git-core`
@@ -84,15 +84,18 @@ $ npm install hexo
 安装以后，可以使用以下两种方式执行 Hexo：
 
 1. `npx hexo <command>`
-2. 将 Hexo 所在的目录下的 `node_modules` 添加到环境变量之中即可直接使用 `hexo <command>`：
+2. Linux 用户可以将 Hexo 所在的目录下的 `node_modules` 添加到环境变量之中即可直接使用 `hexo <command>`：
 
   ``` bash
   echo 'PATH="$PATH:./node_modules/.bin"' >> ~/.profile
   ```
 
 ### Node.js 版本限制
+如果你坚持使用旧的 Node.js，你可以考虑安装 Hexo 的过去版本。
 
-我们强烈建议永远安装最新版本的 Hexo，以及 [推荐的 Node.js 版本](#安装前提)。
+请注意，我们不提供对过去版本 Hexo 的错误修复。
+
+我们强烈建议永远安装 [最新版本](https://www.npmjs.com/package/hexo?activeTab=versions) 的 Hexo，以及 [推荐的 Node.js 版本](#安装前提)。
 
 Hexo 版本 | 最低版本 (Node.js 版本) | 最高版本 (Node.js 版本)
 --- | --- | ---

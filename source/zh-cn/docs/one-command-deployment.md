@@ -323,6 +323,32 @@ $ hexo generate —deploy && bip deploy
 
 关于具体部署相关的注意事项，您可以参阅 [我们的文档](https://github.com/NaturalSelectionLabs/hexo-deployer-rss3/tree/develop/docs/zh_CN/start.md) 。
 
+## Edgio (原Layer0)
+
+[Edgio (原Layer0)](https://docs.edg.io) 是一个互联网规模的平台，使团队可以轻松构建、发布、保护和加速其 Web 应用程序和 API。
+
+1. 在您的 Hexo 项目目录中，安装 Edgio CLI：
+
+```bash
+npm i -g @edgio/cli
+```
+
+2. 通过 Edgio 安装 Hexo 连接器：
+
+```bash
+edgio init --connector=@edgio/hexo
+```
+
+3. 部署
+
+```bash
+edgio deploy
+```
+
+或者，您可以单击下面的部署按钮创建新项目：
+
+[![Deploy To Edgio](https://docs.edg.io/button.svg)](https://app.layer0.co/deploy?repo=https%3A%2F%2Fgithub.com%2Fedgio-docs%2Fedgio-hexo-example)
+
 ## 其他方法
 
 Hexo 生成的所有文件都放在 `public` 文件夹中，您可以将它们复制到您喜欢的地方。
