@@ -131,6 +131,7 @@ Hexo 使用 [Moment.js](http://momentjs.com/) 来解析和显示时间。
 `pagination_dir` | 分页目录 | `page`
 
 例如：
+
 ``` yaml
 pagination_dir: 'page'
 # http://example.com/page/2
@@ -200,7 +201,7 @@ ignore:
 
 `include` 和 `exclude` 并不适用于 `themes/` 目录下的文件。如果需要忽略 `themes/` 目录下的部分文件或文件夹，可以使用 `ignore` 或在文件名之前添加下划线 `_`。
 
-\* `source/_posts` 文件夹是一个例外，但该文件夹下任何名称以 `_` 开头的文件或文件夹仍会被忽略。不建议在该文件夹中使用 `include` 规则。
+* `source/_posts` 文件夹是一个例外，但该文件夹下任何名称以 `_` 开头的文件或文件夹仍会被忽略。不建议在该文件夹中使用 `include` 规则。
 
 ### 使用代替配置文件
 

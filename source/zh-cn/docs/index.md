@@ -91,6 +91,7 @@ $ npm install hexo
   ```
 
 ### Node.js 版本限制
+
 如果你坚持使用旧的 Node.js，你可以考虑安装 Hexo 的过去版本。
 
 请注意，我们不提供对过去版本 Hexo 的错误修复。
