@@ -4044,3 +4044,18 @@
     - responsive
     - widget
     - one_column
+- name: Vivia
+  description: A simple and elegant theme for Hexo.
+  link: https://github.com/saicaca/hexo-theme-vivia
+  preview: https://saicaca.github.io/vivia-preview
+  tags:
+    - card
+    - clean
+    - customizable
+    - responsive
+    - simple
+    - two_column
+    - widget
+    - English
+    - Chinese
+    - 中文
