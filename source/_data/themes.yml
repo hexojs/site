@@ -2,7 +2,7 @@
   description: A hexo theme that looks like an A4 paper.
   link: https://github.com/HiNinoJay/hexo-theme-A4.git
   preview: https://ninojay.top
-  tags: 
+  tags:
   - 中文
   - English
   - A4
@@ -26,7 +26,7 @@
   description: MegaBolD is a powerful magazine theme for hexo.
   link: https://github.com/sclass53/hexo-theme-megabold
   preview: https://megabold.sclass53.jnrcs.org
-  tags: 
+  tags:
   - 中文
   - English
   - Magazine
@@ -35,13 +35,13 @@
   description: Text is because they are all text, but the DIY space is very large
   link: https://github.com/sdqOS/hexo-theme-Text
   preview: https://sdqos.github.io
-  tags: 
+  tags:
   - 中文
 - name: Redefine
   description: Redefine theme is a simple & fast & pure theme, but with no compromise.
   link: https://github.com/EvanNotFound/hexo-theme-redefine
   preview: https://redefine.ohevan.com
-  tags: 
+  tags:
   - redefine
   - simple
   - fast
@@ -59,11 +59,11 @@
   - website
   - blog
   - simple
-- name: leedom 
-  description: A pure hexo theme. 
-  link: https://github.com/leedom92/hexo-theme-leedom 
-  preview: https://blog.leedom.me/ 
-  tags: 
+- name: leedom
+  description: A pure hexo theme.
+  link: https://github.com/leedom92/hexo-theme-leedom
+  preview: https://blog.leedom.me/
+  tags:
   - 中文
   - Chinese
   - English
@@ -2802,7 +2802,7 @@
 - name: Fan
   description: A dark theme
   link: https://github.com/fan-lv/Fan
-  preview: https://lv-fan.gitee.io/
+  preview: https://fan-lv.github.io/
   tags:
     - 中文
     - dark
