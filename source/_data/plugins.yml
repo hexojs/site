@@ -3309,7 +3309,7 @@
     - autoprefixer
 - name: hexo-helper-crypto
   description: A helper for encryption and decryption using Crypto-js.
-  link: https://github.com/argvchs/hexo-helper-crypto
+  link: https://github.com/theme-particlex/hexo-helper-crypto
   tags:
     - helper
     - encryption
@@ -3325,7 +3325,7 @@
     - typora
 - name: hexo-babel
   description: A plugin to compile JS for Hexo, using Babel.
-  link: https://github.com/argvchs/hexo-babel
+  link: https://github.com/theme-particlex/hexo-babel
   tags:
     - babel
     - renderer
