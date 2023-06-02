@@ -1,3 +1,14 @@
+- name: Acrylic-next
+  description: A minimalist but not simple theme, designed by Heo.
+  link: https://github.com/hexo-theme-Acrylic/Hexo-Theme-Acrylic-Next
+  preview: https://blog.adil.com.cn/
+  tags:
+    - acrylic
+    - chinese
+    - heo
+    - 中文
+    - 设计师风格
+
 - name: A4
   description: A hexo theme that looks like an A4 paper.
   link: https://github.com/HiNinoJay/hexo-theme-A4.git
