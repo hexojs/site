@@ -4070,3 +4070,17 @@
     - mono
     - programmer
     - responsive
+- name: Freemind Plus
+  description: A more powerful bootstrap theme for hexo.
+  link: https://github.com/myyerrol/hexo-theme-freemind-plus
+  preview: https://myyerrol.xyz
+  tags:
+    - 中文
+    - English
+    - Waline
+    - Gitalk
+    - Disqus
+    - Simple
+    - Clean
+    - Responsive
+    - Customizable
