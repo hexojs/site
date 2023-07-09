@@ -1,8 +1,11 @@
 description: A theme of Arknight Rhodes Island.
 link: https://github.com/Yue-plus/hexo-theme-arknights
-preview: http://ark.theme.yueplus.ink/
+preview: https://arknights.theme.hexo.yue.zone/
 tags:
-  - dark
+  - Dark/Light
+  - comment
+  - Mermaid
+  - MathJax
   - Arknights
   - RhodesIsland
   - 明日方舟
