@@ -1,3 +1,17 @@
+- name: Dynasty
+  description: 新一代简洁华美hexo主题
+  link: https://github.com/Ezgx/hexo-theme-Dynasty.git
+  preview: https://ezgx.site
+  tags:
+    - 中文
+    - English
+    - dynasty
+    - dimension
+    - ezgx
+    - 简洁
+    - 美观
+    - 简洁华美
+    - 新一代
 - name: A4
   description: A hexo theme that looks like an A4 paper.
   link: https://github.com/HiNinoJay/hexo-theme-A4.git
@@ -4033,7 +4047,7 @@
 - name: dimension
   description: 一个二次元风格设计的hexo主题
   link: https://github.com/ezgx/hexo-theme-dimension
-  preview: http://ezgx.site/
+  preview: http://demo.dimension.ezgx.site/
   tags:
     - 中文
     - light
