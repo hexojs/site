@@ -1,13 +1,14 @@
 - name: Dynasty
   description: 新一代简洁华美hexo主题
   link: https://github.com/Ezgx/hexo-theme-Dynasty.git
-  preview: https://ezgx.site
+  preview: https://uu.sssu.us
   tags:
     - 中文
     - English
     - dynasty
     - dimension
     - ezgx
+    - Aegcbx
     - 简洁
     - 美观
     - 简洁华美
@@ -4047,7 +4048,7 @@
 - name: dimension
   description: 一个二次元风格设计的hexo主题
   link: https://github.com/ezgx/hexo-theme-dimension
-  preview: http://demo.dimension.ezgx.site/
+  preview: http://demo.dim.sssu.us
   tags:
     - 中文
     - light
