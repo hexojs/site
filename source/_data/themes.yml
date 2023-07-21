@@ -1,3 +1,12 @@
+- name: Ning
+  description: 一款简洁的Hexo主题
+  link: https://github.com/ning0818/hexo-theme-ning.git
+  preview: https://theme.yuanning0818.tk
+  tags:
+    - 中文
+    - 简洁
+    - 美观
+    - 博客
 - name: Dynasty
   description: 新一代简洁华美hexo主题
   link: https://github.com/Ezgx/hexo-theme-Dynasty.git
