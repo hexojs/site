@@ -57,7 +57,7 @@ hexo.extend.console.register(name, desc, options, function(args){
 
 ### 描述
 
-控制台更详细的说明。
+关于控制台命令的更详细的信息。
 
 ## 范例
 
@@ -67,4 +67,4 @@ hexo.extend.console.register('config', 'Display configuration', function(args){
 });
 ```
 
-[Minimist]: https://github.com/substack/minimist
+[Minimist]: https://github.com/minimistjs/minimist

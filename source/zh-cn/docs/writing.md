@@ -22,13 +22,13 @@ Hexo 有三种默认布局：`post`、`page` 和 `draft`。在创建这三种不
 `page` | `source`
 `draft` | `source/_drafts`
 
-{% note tip Disabling layout %}
-If you don't want an article (post/page) to be processed with a theme, set `layout: false` in its front-matter. Refer to [this section](/zh-cn/docs/front-matter#布局) for more details.
+{% note tip 禁用布局 %}
+如果你不希望一篇文章（post/page）使用主题处理，请在它的 front-matter 中设置 `layout: false`。详情请参考[本节](/zh-cn/docs/front-matter#布局)。
 {% endnote %}
 
 ### 文件名称
 
-Hexo 默认以标题做为文件名称，但您可编辑 `new_post_name` 参数来改变默认的文件名称，举例来说，设为 `:year-:month-:day-:title.md` 可让您更方便的通过日期来管理文章。
+Hexo 默认以标题做为文件名称，但您可编辑 `new_post_name` 参数来改变默认的文件名称，举例来说，设为 `:year-:month-:day-:title.md` 可让您更方便的通过日期来管理文章。你可以使用以下占位符：
 
 变量 | 描述
 --- | ---
@@ -47,7 +47,7 @@ Hexo 默认以标题做为文件名称，但您可编辑 `new_post_name` 参数�
 $ hexo publish [layout] <title>
 ```
 
-草稿默认不会显示在页面中，您可在执行时加上 `--draft` 参数，或是把 `render_drafts` 参数设为 `true` 来预览草稿。
+草稿默认不会显示在页面中，您可在执行时加上 `--draft` 参数，或是在 `_config.yml` 中把 `render_drafts` 参数设为 `true` 来预览草稿。
 
 ## 模版（Scaffold）
 

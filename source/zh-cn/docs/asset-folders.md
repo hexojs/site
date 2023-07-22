@@ -1,7 +1,11 @@
 ---
 title: 资源文件夹
 ---
+## 全局资源文件夹
+
 资源（Asset）代表 `source` 文件夹中除了文章以外的所有文件，例如图片、CSS、JS 文件等。比方说，如果你的Hexo项目中只有少量图片，那最简单的方法就是将它们放在 `source/images` 文件夹中。然后通过类似于 `![](/images/image.jpg)` 的方法访问它们。
+
+## 文章资源文件夹
 
 对于那些想要更有规律地提供图片和其他资源以及想要将他们的资源分布在各个文章上的人来说，Hexo也提供了更组织化的方式来管理资源。这个稍微有些复杂但是管理资源非常方便的功能可以通过将 `config.yml` 文件中的 `post_asset_folder` 选项设为 `true` 来打开。
 
@@ -13,7 +17,7 @@ post_asset_folder: true
 
 ## 相对路径引用的标签插件
 
-通过常规的 markdown 语法和相对路径来引用图片和其它资源可能会导致它们在存档页或者主页上显示不正确。在Hexo 2时代，社区创建了很多插件来解决这个问题。但是，随着Hexo 3 的发布，许多新的[标签插件](/docs/tag-plugins#Include-Assets)被加入到了核心代码中。这使得你可以更简单地在文章中引用你的资源。
+通过常规的 markdown 语法和相对路径来引用图片和其它资源可能会导致它们在存档页或者主页上显示不正确。在Hexo 2时代，社区创建了很多插件来解决这个问题。但是，随着Hexo 3 的发布，许多新的[标签插件](/zh-cn/docs/tag-plugins#引用资源)被加入到了核心代码中。这使得你可以更简单地在文章中引用你的资源。
 
 ```
 {% asset_path slug %}
@@ -31,11 +35,11 @@ post_asset_folder: true
 
 通过这种方式，图片将会同时出现在文章和主页以及归档页中。
 
-## Embedding an image using markdown
+## 使用 Markdown 嵌入图片
 
-[hexo-renderer-marked](https://github.com/hexojs/hexo-renderer-marked) 3.1.0 introduced a new option that allows you to embed an image in markdown without using `asset_img` tag plugin.
+[hexo-renderer-marked](https://github.com/hexojs/hexo-renderer-marked) 3.1.0 引入了一个新的选项，其允许你无需使用 `asset_img` 标签插件就可以在 markdown 中嵌入图片
 
-To enable:
+如需启用：
 
 ``` yml _config.yml
 post_asset_folder: true
@@ -44,4 +48,5 @@ marked:
   postAsset: true
 ```
 
-Once enabled, an asset image will be automatically resolved to its corresponding post's path. For example, "image.jpg" is located at "/2020/01/02/foo/image.jpg", meaning it is an asset image of "/2020/01/02/foo/" post, `![](image.jpg)` will be rendered as `<img src="/2020/01/02/foo/image.jpg">`.
+启用后，资源图片将会被自动解析为其对应文章的路径。
+例如： `image.jpg` 位置为 `/2020/01/02/foo/image.jpg` ，这表示它是 `/2020/01/02/foo/` 文章的一张资源图片， `![](image.jpg)` 将会被解析为 `<img src="/2020/01/02/foo/image.jpg">` 。

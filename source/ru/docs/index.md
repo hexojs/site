@@ -39,27 +39,27 @@ $ npm install -g hexo-cli
 
 ### Установка Node.js
 
-Node.js provides [official installer](https://nodejs.org/en/download/) for most platforms.
+Node.js предоставляет [официальный установщик](http://nodejs.org/en/download /) для большинства платформ.
 
-Alternative installation methods:
+Альтернативные методы установки:
 
-- Windows: Install it with [nvs](https://github.com/jasongin/nvs/) (recommended) or [nvm](https://github.com/nvm-sh/nvm).
-- Mac: Install it with [Homebrew](https://brew.sh/) or [MacPorts](http://www.macports.org/).
-- Linux (DEB/RPM-based): Install it with [NodeSource](https://github.com/nodesource/distributions).
-- Others: Install it through respective package manager. Refer to [the guide](https://nodejs.org/en/download/package-manager/) provided by Node.js.
+- Windows: Установите его с помощью [nvs](https://github.com/jasongin/nvs/) (рекомендуется) или [nvm](https://github.com/nvm-sh/nvm).
+- Mac: Установите его с помощью [Homebrew](https://brew.sh/) или [MacPorts](http://www.macports.org/).
+- Linux (DEB/RPM-based): Установите его с помощью [NodeSource](https://github.com/nodesource/distributions).
+- Others: Установите его через соответствующий менеджер пакетов. Обратитесь к [руководству](https://nodejs.org/en/download/package-manager/) предоставленное Node.js.
 
-nvs is also recommended for Mac and Linux to avoid possible permission issue.
+nvs также рекомендуется для Mac и Linux, чтобы избежать возможных проблем с разрешениями.
 
 {% note info Windows %}
-If you use the official installer, make sure **Add to PATH** is checked (it's checked by default).
+Если вы используете официальный установщик, убедитесь, что установлен флажок **Добавить в ПУТЬ**(**Add to PATH**) (он установлен по умолчанию).
 {% endnote %}
 
 {% note warn Mac / Linux %}
-If you encounter `EACCES` permission error when trying to install Hexo, please follow [the workaround](https://docs.npmjs.com/resolving-eacces-permissions-errors-when-installing-packages-globally) provided by npmjs; overriding with root/sudo is highly discouraged.
+Если вы столкнулись с ошибкой разрешения `EACCES`обходному при попытке установить Hexo, пожалуйста, следуйте [обходному пути](https://docs.npmjs.com/resolving-eacces-permissions-errors-when-installing-packages-globally ) предоставляенным npmjs; переопределение с помощью root/sudo крайне не рекомендуется.
 {% endnote %}
 
 {% note info Linux %}
-If you installed Node.js using Snap, you may need to manually run `npm install` in the target folder when [initializing](/docs/commands#init) a blog.
+Если вы установили Node.js используя Snap, вам может потребоваться вручную запустить `npm install` в целевой папке при [инициализации](/docs/commands#init) блога.
 {% endnote %}
 
 ### Установка Hexo
@@ -70,20 +70,22 @@ If you installed Node.js using Snap, you may need to manually run `npm install` 
 $ npm install -g hexo-cli
 ```
 
-### Minimum required Node.js version
+### необходимая версия Node.js
 
-If you are stuck with older Node.js, you can consider installing a past version of Hexo.
+Если вы застряли с устаревшими версиями Node.js , вы можете рассмотреть возможность установки предыдущей версии Hexo.
 
-Please note we do not provide bugfixes to past versions of Hexo.
+Пожалуйста, обратите внимание, что мы не предоставляем исправления ошибок в предыдущих версиях Hexo.
 
-We highly recommend to always install the [latest version](https://www.npmjs.com/package/hexo?activeTab=versions) of Hexo and the [recommended version](#Requirements) of Node.js, whenever possible.
+Мы настоятельно рекомендуем всегда устанавливать [последнюю версию](https://www.npmjs.com/package/hexo?activeTab=версии) Hexo и [рекомендуемую версию](#Requirements) Node.js , когда это возможно.
 
-Hexo version | Minimum Node.js version
---- | ---
-5.0+ | 10.13.0
-4.1 - 4.2 | 8.10
-4.0 | 8.6
-3.3 - 3.9 | 6.9
-3.2 - 3.3 | 0.12
-3.0 - 3.1 | 0.10 or iojs
-0.0.1 - 2.8 | 0.10
+Hexo version | Minimum (Node.js version) | Less than (Node.js version)
+--- | --- | ---
+6.2+ | 12.13.0 | latest
+6.0+ | 12.13.0 | 18.5.0
+5.0+ | 10.13.0 | 12.0.0
+4.1 - 4.2 | 8.10 | 10.0.0
+4.0 | 8.6 | 8.10.0
+3.3 - 3.9 | 6.9 | 8.0.0
+3.2 - 3.3 | 0.12 | unknown
+3.0 - 3.1 | 0.10 or iojs | unknown
+0.0.1 - 2.8 | 0.10 | unknown

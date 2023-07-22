@@ -10,15 +10,15 @@ title: Содействие
 
 ### Прежде, чем начать
 
-Please read [Contributor Covenant Code of Conduct](https://github.com/hexojs/hexo/blob/master/CODE_OF_CONDUCT.md) first.
+Пожалуйста сначала прочтите [Contributor Covenant Code of Conduct](https://github.com/hexojs/hexo/blob/master/CODE_OF_CONDUCT.md).
 
-Пожалуйста, следите за стилем написания кода:
+Убедительно просим, следите за стилем написания кода:
 
 - Следуйте [Google JavaScript Style Guide](https://google.github.io/styleguide/jsguide.html).
 - Используйте мягкие табы с двойным пробелом.
 - Не ставьте запятую в начале.
 
-Also, Hexo has its own [ESLint config](https://github.com/hexojs/eslint-config-hexo), so please make sure your contribution will make ESLint happy.
+Кроме того, у Hexo есть своя собственная конфигурация [ESLint config](https://github.com/hexojs/eslint-config-hexo), поэтому, пожалуйста, убедитесь, что ваш вклад пройдёт ESLint проверку.
 
 ### Рабочее пространство
 
@@ -62,7 +62,7 @@ $ npm test
 
 ## Обновление документации
 
-Документация Hexo имеет открытый исходный код, его можно найти по адресу [hexojs/site].
+Документация Hexo имеет открытый исходный код, его можно найти по адресу [hexojs/site](https://github.com/hexojs/site).
 
 ### Рабочее пространство
 
@@ -97,7 +97,7 @@ $ hexo server
 Если Вы столкнулись с проблемой при использовании Hexo, то можно поискать решения в [устранении неполадок](troubleshooting.html) или задать вопросы на [GitHub](https://github.com/hexojs/hexo/issues) или [Google Group](https://groups.google.com/group/hexo). Если решения не нашлось, пожалуйста, сообщите об этом на GitHub.
 
 1. Воспроизведите проблему в режиме отладки [debug mode](commands.html#Режим-отладки).
-2. Follow the steps from issue template to provide debug message and version when submitting a new issue at GitHub.
+2. Следуйте инструкциям из шаблона issue, чтобы предоставить сообщение об отладке и версию при создании нового issue на GitHub.
 
 [hexojs/hexo]: https://github.com/hexojs/hexo
 [hexojs/site]: https://github.com/hexojs/site

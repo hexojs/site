@@ -140,5 +140,5 @@ module.exports = hexo => {
 };
 ```
 
-[Nunjucks]: http://mozilla.github.io/nunjucks/
+[Nunjucks]: https://mozilla.github.io/nunjucks/
 [Swig]: http://paularmstrong.github.io/swig/

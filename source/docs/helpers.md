@@ -297,6 +297,14 @@ Check whether the current page is home page.
 <%- is_home() %>
 ```
 
+### is_home_first_page (+6.3.0)
+
+Check whether the current page is the first of home page.
+
+``` js
+<%- is_home_first_page() %>
+```
+
 ### is_post
 
 Check whether the current page is a post.
@@ -601,7 +609,7 @@ Option | Description | Default
 `orderby` | Order of categories | name
 `order` | Sort of order. `1`, `asc` for ascending; `-1`, `desc` for descending | 1
 `show_count` | Display the number of posts for each category | true
-`style` | Style to display the category list. `list` displays categories in an unordered list.  | list
+`style` | Style to display the category list. `list` displays categories in an unordered list. Use `false` or any other value to disable it. | list
 `separator` | Separator between categories. (Only works if `style` is not `list`) | ,
 `depth` | Levels of categories to be displayed. `0` displays all categories and child categories; `-1` is similar to `0` but displayed in flat; `1` displays only top level categories. | 0
 `class` | Class name of category list. | category
@@ -639,7 +647,7 @@ Option | Description | Default
 `orderby` | Order of categories | name
 `order` | Sort of order. `1`, `asc` for ascending; `-1`, `desc` for descending | 1
 `show_count` | Display the number of posts for each tag | true
-`style` | Style to display the tag list. `list` displays tags in an unordered list. | list
+`style` | Style to display the tag list. `list` displays tags in an unordered list. Use `false` or any other value to disable it. | list
 `separator` | Separator between categories. (Only works if `style` is not `list`) | ,
 `class` | Class name of tag list (string) or customize each tag's class (object, see below). | tag
 `transform` | The function that changes the display of tag name. See examples in [list_categories](#list-categories). |
@@ -679,7 +687,7 @@ Option | Description | Default
 `order` | Sort of order. `1`, `asc` for ascending; `-1`, `desc` for descending | 1
 `show_count` | Display the number of posts for each archive | true
 `format` | Date format | MMMM YYYY
-`style` | Style to display the archive list. `list` displays archives in an unordered list.  | list
+`style` | Style to display the archive list. `list` displays archives in an unordered list. Use `false` or any other value to disable it. | list
 `separator` | Separator between archives. (Only works if `style` is not `list`) | ,
 `class` | Class name of archive list. | archive
 `transform` | The function that changes the display of archive name. See examples in [list_categories](#list-categories). |
@@ -696,7 +704,7 @@ Option | Description | Default
 --- | --- | ---
 `orderby` | Order of posts | date
 `order` | Sort of order. `1`, `asc` for ascending; `-1`, `desc` for descending | 1
-`style` | Style to display the post list. `list` displays posts in an unordered list.  | list
+`style` | Style to display the post list. `list` displays posts in an unordered list. Use `false` or any other value to disable it. | list
 `separator` | Separator between posts. (Only works if `style` is not `list`) | ,
 `class` | Class name of post list. | post
 `amount` | The number of posts to display (0 = unlimited) | 6
@@ -723,6 +731,8 @@ Option | Description | Default
 `end_color` | End color. You can use hex (`#b700ff`), rgba (`rgba(183, 0, 255, 1)`), hsla (`hsla(283, 100%, 50%, 1)`) or [color keywords]. This option only works when `color` is true. |
 `class` | Class name prefix of tags
 `level` | The number of different class names. This option only works when `class` is set. | 10
+`show_count` (+6.3.0) | Display the number of posts for each tag | false
+`count_class` (+6.3.0) | Class name of tag count | count
 
 **Examples:**
 
@@ -758,6 +768,13 @@ Option | Description | Default
 `mid_size` | The number of pages displayed between current page, but not including current page | 2
 `show_all` | Display all pages. If this is set to true, `end_size` and `mid_size` will not work | false
 `escape` | Escape HTML tags | true
+`page_class` (+6.3.0) | Page class name | `page-number`
+`current_class` (+6.3.0) | Current page class name | `current`
+`space_class` (+6.3.0) | Space class name | `space`
+`prev_class` (+6.3.0) | Previous page class name | `extend prev`
+`next_class` (+6.3.0) | Next page class name | `extend next`
+`force_prev_next` (+6.3.0) | Force display previous and next links | false
+
 
 **Examples:**
 
@@ -893,7 +910,13 @@ Parses all heading tags (h1~h6) in the content and inserts a table of contents.
 
 Option | Description | Default
 --- | --- | ---
-`class` | Class name | toc
+`class` | Class name | `toc`
+`class_item` (+6.3.0) | Class name of item | `${class}-item`
+`class_link` (+6.3.0) | Class name of link | `${class}-link`
+`class_text` (+6.3.0) | Class name of text | `${class}-text`
+`class_child` (+6.3.0) | Class name of child | `${class}-child`
+`class_number` (+6.3.0) | Class name of number | `${class}-number`
+`class_level` (+6.3.0) | Class name prefix of level | `${class}-level`
 `list_number` | Displays list number | true
 `max_depth` | Maximum heading depth of generated toc | 6
 `min_depth` | Minimum heading depth of generated toc | 1
@@ -903,6 +926,20 @@ Option | Description | Default
 ``` js
 <%- toc(page.content) %>
 ```
+
+#### data-toc-unnumbered (+6.1.0)
+
+Headings with attribute `data-toc-unnumbered="true"` will be marked as unnumbered (list number will not be display).
+
+{% note warn "Warning!" %}
+For using `data-toc-unnumbered="true"`, the renderer must have the option to add CSS classes.
+
+Please see below PRs.
+
+- https://github.com/hexojs/hexo/pull/4871
+- https://github.com/hexojs/hexo-util/pull/269
+- https://github.com/hexojs/hexo-renderer-markdown-it/pull/174
+{% endnote %}
 
 [color keywords]: http://www.w3.org/TR/css3-color/#svg-color
 [Moment.js]: http://momentjs.com/

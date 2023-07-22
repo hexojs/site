@@ -24,17 +24,17 @@ deploy:
   repo:
 ```
 
-Refer to the [Plugins](https://hexo.io/plugins/) list for more deployment plugins.
+Расположение списка дополнительных плагинов для развертывания: [Plugins](https://hexo.io/plugins/).
 
 ## Git
 
-1. Install [hexo-deployer-git].
+1. Установка [hexo-deployer-git].
 
 ```bash
 $ npm install hexo-deployer-git --save
 ```
 
-2. Edit **\_config.yml** (with example values shown below as comments):
+2. Отредактируйте **\_config.yml** (примеры значений, показаны ниже в качестве комментариев):
 
 ```yaml
 deploy:
@@ -44,19 +44,19 @@ deploy:
   message: [message]
 ```
 
-Option | Description | Default
+Опция | Описание | По умолчанию
 --- | --- | ---
-`repo` | URL of the target repository |
-`branch` | Branch name. | `gh-pages` (GitHub)<br>`coding-pages` (Coding.net)<br>`master` (others)
-`message` | Customize commit message. | `Site updated: {% raw %}{{ now('YYYY-MM-DD HH:mm:ss') }}{% endraw %}`
-`token` | Optional token value to authenticate with the repo. Prefix with `$` to read token from environment variable
+`repo` | URL-адрес целевого репозитория |
+`branch` | Название ветки. | `gh-pages` (GitHub)<br>`coding-pages` (Coding.net)<br>`master` (другое)
+`message` | Конфигурирация сообщения о коммите. | `Site updated: {% raw %}{{ now('YYYY-MM-DD HH:mm:ss') }}{% endraw %}`
+`token` | Необязательное значение токена для аутентификации в репозитории. Префикс с `$` для чтения, взятый из переменной среды
 
-3. Deploy your site `hexo clean && hexo deploy`.
+3. Разместите свой сайт  `hexo clean && hexo deploy`.
 
-  - You will be prompted with username and password of the target repository, unless you authenticate with a token or ssh key.
-  - hexo-deployer-git does not store your username and password. Use [git-credential-cache](https://git-scm.com/docs/git-credential-cache) to store them temporarily.
+  - Вам будет предложено ввести имя пользователя и пароль целевого репозитория, если вы не аутентифицируетесь с помощью токена или ssh-ключа.
+  - hexo-deployer-git не хранит ваше имя пользователя и пароль. Используйте [git-credential-cache](https://git-scm.com/docs/git-credential-cache), чтобы временно их хранить.
 
-4. Navigate to your repository settings and change the "Pages" branch to `gh-pages` (or the branch specified in your config). The deployed site should be live on the link shown on the "Pages" setting.
+4. Перейдите в настройки своего репозитория и измените ветвь "Pages" на `gh-pages` (или ветвь, указанную в вашей конфигурации). Развернутый сайт должен быть доступен по ссылке, указанной в параметре "Pages".
 
 ## Heroku
 
@@ -170,9 +170,10 @@ deploy:
 
 ## Vercel
 
-[Vercel](https://vercel.com) is a cloud platform that enables developers to host Jamstack websites and web services that deploy instantly, scale automatically, and requires no supervision, all with zero configuration. They provide a global edge network, SSL encryption, asset compression, cache invalidation, and more.
 
-Step 1: Add a build script to your `package.json` file:
+[Vercel](https://vercel.com) это облачная платформа, которая позволяет разработчикам размещать веб-сайты и веб-службы Jamstackкоторые мгновенно развертываются, автоматически масштабируются и не требуют контроля, все с нулевой конфигурацией. Они обеспечивают глобальную пограничную сеть, шифрование SSL, сжатие ресурсов, аннулирование кэша и многое другое.
+
+Шаг 1: Добавьте сценарий сборки в файл `package.json`:
 
 ```json
 {
@@ -182,54 +183,40 @@ Step 1: Add a build script to your `package.json` file:
 }
 ```
 
-Step 2: Deploy your Hexo Website to Vercel
+Шаг 2: Разместите свой веб-сайт Hexo в Vercel
 
-To deploy your Hexo app with a [Vercel for Git Integration](https://vercel.com/docs/git-integrations), make sure it has been pushed to a Git repository.
+Для разворачивания вашего приложения Hexo с помощью [Vercel для интеграции с Git](https://vercel.com/docs/git-integrations), убедитесь, что он был отправлен в репозиторий Git.
 
-Import the project into Vercel using the [Import Flow](https://vercel.com/import/git). During the import, you will find all relevant options preconfigured for you; however, you can choose to change any of these options, a list of which can be found [here](https://vercel.com/docs/build-step#build-&-development-settings).
+Импортируйте проект в Vercel с помощью [Import Flow](https://vercel.com/import/git). Во время импорта вы найдете все соответствующие параметры, предварительно настроенные для вас; однако вы можете изменить любой из этих параметров, список которых можно найти [здесь](https://vercel.com/docs/build-step#build-&-development-settings).
 
-After your project has been imported, all subsequent pushes to branches will generate [Preview Deployments](https://vercel.com/docs/platform/deployments#preview), and all changes made to the [Production Branch](https://vercel.com/docs/git-integrations#production-branch) (commonly "main") will result in a [Production Deployment](https://vercel.com/docs/platform/deployments#production).
+После импорта вашего проекта все последующие изменения в ветви будут создавать [Preview Deployments](https://vercel.com/docs/platform/deployments#preview), и все изменения, внесенные в [Production Branch](https://vercel.com/docs/git-integrations#production-branch ) (обычно "main") приведет к [Production Deployment] (https://vercel.com/docs/platform/deployments#production).
 
-Alternatively, you can click the deploy button below to create a new project:
+Кроме того, вы можете нажать кнопку разместить ниже, чтобы создать новый проект:
 
-[![Deploy Vercel](https://vercel.com/button)](https://vercel.com/new/hexo)
-
-## 21YunBox
-
-1. На сайте [21YunBox](https://www.21yunbox.com) настройте новый проект «Статический сайт» от GitHub со следующими настройками:
-
-- **Build command:** `yarn && hexo deploy`
-- **Publish directory:** `public`
-
-2. Пресс Развертывание Бутон!
-
-Ну вот! Ваше приложение будет жить на вашем URL 21YunBox, как только сборка заканчивается.
-
-Образец приложения для 'hexo' развернут на сайте [https://hexo.21yunbox.com/](https://hexo.21yunbox.com/).
-
-Для получения более подробной информации, следуйте этому руководству по адресу [https://www.21yunbox.com/docs/'/deploy-hexo](https://www.21yunbox.com/docs/'/deploy-hexo).
+[![Разместить в Vercel](https://vercel.com/button)](https://vercel.com/new/hexo)
 
 ## Bip
 
-[Bip](https://bip.sh) is a commercial hosting service which provides zero downtime deployment, a global CDN, SSL, unlimited bandwidth and more for static websites. Plans are available on a pay as you go, per domain basis.
+[Bip](https://bip.sh ) - это коммерческая услуга хостинга, которая обеспечивает развертывание с нулевым временем простоя, глобальную CDN, SSL, неограниченную пропускную способность и многое другое для статических веб-сайтов. Планы доступны с оплатой по факту (pay as you go), в зависимости от домена.
 
-Getting started is quick and easy, as Bip provides out the box support for Hexo. This guide assumes you already have [a Bip domain and Bip CLI installed](https://bip.sh/getstarted).
+Начало работы происходит быстро и легко, так как Bip обеспечивает стандартную поддержку Hexo. В этом руководстве предполагается, что у вас уже есть [домен Bip и установленный интерфейс командной строки](https://bip.sh/getstarted).
 
-1: Initialise your project directory
+
+1: Инициализируйте каталог вашего проекта
 
 ```bash
 $ bip init
 ```
 
-Follow the prompts, where you'll be asked which domain you'd like to deploy to. Bip will detect that you're using Hexo, and set project settings like the source file directory automatically.
+Следуйте инструкциям, где вас спросят, в каком домене вы хотите выполнить развертывание. Bip обнаружит, что вы используете Hexo, и автоматически установит параметры проекта, такие как каталог исходных файлов.
 
-2: Deploy your website
+2: Разместите свой веб-сайт
 
 ```bash
 $ hexo generate —deploy && bip deploy
 ```
 
-After a few moments, your website will be deployed.
+Через несколько мгновений ваш веб-сайт будет размещён.
 
 ## RSS3
 
@@ -265,7 +252,7 @@ After a few moments, your website will be deployed.
 
 4. Развертывание
 
-Меры предосторожности, связанные с конкретным развертыванием, можно найти в [нашей документации] (https://github.com/NaturalSelectionLabs/hexo-deployer-rss3/tree/develop/docs/zh_CN/start.md).
+Меры предосторожности, связанные с конкретным развертыванием, можно найти в [нашей документации](https://github.com/NaturalSelectionLabs/hexo-deployer-rss3/tree/develop/docs/en/start.md).
 
 ## Другие способы
 

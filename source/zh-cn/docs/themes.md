@@ -22,7 +22,7 @@ title: 主题
 
 ### layout
 
-布局文件夹。用于存放主题的模板文件，决定了网站内容的呈现方式，Hexo 内建 [Swig] 模板引擎，您可以另外安装插件来获得 [EJS]、[Haml]、[Jade] 或 [Pug] 支持，Hexo 根据模板文件的扩展名来决定所使用的模板引擎，例如：
+布局文件夹。用于存放主题的模板文件，决定了网站内容的呈现方式，Hexo 内建 [Nunjucks] 模板引擎，您可以另外安装插件来获得 [EJS]、[Haml]、[Jade] 或 [Pug] 支持，Hexo 根据模板文件的扩展名来决定所使用的模板引擎，例如：
 
 ``` plain
 layout.ejs   - 使用 EJS
@@ -37,7 +37,7 @@ layout.swig  - 使用 Swig
 
 ### source
 
-资源文件夹，除了模板以外的 Asset，例如 CSS、JavaScript 文件等，都应该放在这个文件夹中。文件或文件夹开头名称为 `_`（下划线线）或隐藏的文件会被忽略。
+资源文件夹，除了模板以外的 Asset，例如 CSS、JavaScript 文件等，都应该放在这个文件夹中。文件或文件夹开头名称为 `_`（下划线）或隐藏的文件会被忽略。
 
 如果文件可以被渲染的话，会经过解析然后储存到 `public` 文件夹，否则会直接拷贝到 `public` 文件夹。
 
@@ -48,15 +48,15 @@ layout.swig  - 使用 Swig
 1. Fork [hexojs/site]
 2. 把库（repository）复制到电脑上，并安装所依赖的插件。
 
-    {% code %}
+    ```shell
     $ git clone https://github.com/<username>/site.git
     $ cd site
     $ npm install
-    {% endcode %}
+    ```
 
 3. 编辑 `source/_data/themes.yml`，在文件中新增您的主题，例如：
 
-    {% code %}
+    ```yaml
     - name: landscape
       description: A brand new default theme for Hexo.
       link: https://github.com/hexojs/hexo-theme-landscape
@@ -67,15 +67,15 @@ layout.swig  - 使用 Swig
         - widget
         - two_column
         - one_column
-    {% endcode %}
+    ```
 
 4. 在 `source/themes/screenshots` 新增同名的截图档案，图片必须为 800x500 的 PNG 文件。
 5. 推送（push）分支。
 6. 建立一个新的合并申请（pull request）并描述改动。
 
 [EJS]: https://github.com/hexojs/hexo-renderer-ejs
-[Swig]: https://github.com/node-swig/swig-templates
 [Haml]: https://github.com/hexojs/hexo-renderer-haml
 [Jade]: https://github.com/hexojs/hexo-renderer-jade
 [Pug]: https://github.com/maxknee/hexo-render-pug
 [hexojs/site]: https://github.com/hexojs/site
+[Nunjucks]: https://mozilla.github.io/nunjucks/

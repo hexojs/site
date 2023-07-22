@@ -22,7 +22,7 @@ title: 主題
 
 ### layout
 
-佈局資料夾。用於放置主題的模板檔案，決定了網站內容的呈現方式，Hexo 內建 [Swig] 模板引擎，您可另外安裝外掛來獲得 [EJS]、[Haml]、[Jade] 或 [Pug] 支援，Hexo 根據模板檔案的副檔名來決定所使用的模板引擎，例如：
+佈局資料夾。用於放置主題的模板檔案，決定了網站內容的呈現方式，Hexo 內建 [Nunjucks] 模板引擎，您可另外安裝外掛來獲得 [EJS]、[Haml]、[Jade] 或 [Pug] 支援，Hexo 根據模板檔案的副檔名來決定所使用的模板引擎，例如：
 
 ``` plain
 EJS: layout.ejs
@@ -74,8 +74,8 @@ Swig: layout.swig
 6. 建立一個新的合併申請（pull request）。
 
 [EJS]: https://github.com/hexojs/hexo-renderer-ejs
-[Swig]: https://github.com/node-swig/swig-templates
 [Haml]: https://github.com/hexojs/hexo-renderer-haml
 [Jade]: https://github.com/hexojs/hexo-renderer-jade
 [Pug]: https://github.com/maxknee/hexo-render-pug
 [hexojs/site]: https://github.com/hexojs/site
+[Nunjucks]: https://mozilla.github.io/nunjucks/

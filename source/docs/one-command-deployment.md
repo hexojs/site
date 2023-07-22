@@ -204,16 +204,18 @@ deploy:
   agent: [path/to/agent/socket]
 ```
 
-| Option       | Description                             | Default          |
-| ------------ | --------------------------------------- | ---------------- |
-| `host`       | Address of remote host                  |
-| `user`       | Username                                |
-| `pass`       | Password                                |
-| `remotePath` | Root directory of remote host           | `/`              |
-| `port`       | Port                                    | 22               |
-| `privateKey` | Path to a ssh private key               |
-| `passphrase` | Optional passphrase for the private key |
-| `agent`      | Path to the ssh-agent socket            | `$SSH_AUTH_SOCK` |
+| Option        | Description                                     | Default          |
+| ------------- | ----------------------------------------------- | ---------------- |
+| `host`        | Address of remote host                          |
+| `port`        | Port                                            | 22               |
+| `user`        | Username                                        |
+| `pass`        | Password                                        |
+| `privateKey`  | Path to a ssh private key                       |
+| `passphrase`  | Optional passphrase for the private key         |
+| `agent`       | Path to the ssh-agent socket                    | `$SSH_AUTH_SOCK` |
+| `remotePath`  | Root directory of remote host                   | `/`              |
+| `forceUpload` | Override existing files                         | false            |
+| `concurrency` | Max number of SFTP tasks processed concurrently | 100            |
 
 ## Vercel
 
@@ -240,21 +242,6 @@ After your project has been imported, all subsequent pushes to branches will gen
 Alternatively, you can click the deploy button below to create a new project:
 
 [![Deploy Vercel](https://vercel.com/button)](https://vercel.com/new/hexo)
-
-## 21YunBox
-
-1. On [21YunBox](https://www.21yunbox.com), setup up a new `Static Site` project from GitHub with the following settings:
-
-- **Build command:** `yarn && hexo deploy`
-- **Publish directory:** `public`
-
-2. Press Deploy Buton！
-
-That’s it! Your app will be live on your 21YunBox URL as soon as the build finishes.
-
-The sample app for `hexo` is deployed at [https://hexo.21yunbox.com/](https://hexo.21yunbox.com/).
-
-For more detail, follow this guide at [https://www.21yunbox.com/docs/#/deploy-hexo](https://www.21yunbox.com/docs/#/deploy-hexo).
 
 ## Bip
 
@@ -314,6 +301,31 @@ After a few moments, your website will be deployed.
 
 For deployment-related considerations, you can refer to [Our documentation](https://github.com/NaturalSelectionLabs/hexo-deployer-rss3/blob/develop/README.md).
 
+## Edgio (formerly Layer0)
+
+[Edgio (formerly Layer0)](https://docs.edg.io) is an Internet-scale platform that makes it easy for teams to build, release, protect, and accelerate their web apps and APIs.
+
+1. In your hexo project directory, install the Edgio CLI:
+
+```bash
+npm i -g @edgio/cli
+```
+
+2. Install Hexo connector by Edgio:
+
+```bash
+edgio init --connector=@edgio/hexo
+```
+
+3. Deploy
+
+```bash
+edgio deploy
+```
+
+Alternatively, you can click the deploy button below to create a new project:
+
+[![Deploy To Edgio](https://docs.edg.io/button.svg)](https://app.layer0.co/deploy?repo=https%3A%2F%2Fgithub.com%2Fedgio-docs%2Fedgio-hexo-example)
 
 ## Other Methods
 

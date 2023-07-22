@@ -25,11 +25,11 @@ folder ภาษา สำหรับข้อมูลเพิ่มเติ
 
 ### layout
 
-layout folder. ใน folder นี้มีไฟล์ template ของธีม ซึ่งตั้งค่ารูปลักษณ์ของเว็บไซต์   hexo ใช้ [Swig] เป็น template engine by default แต่คุณเปลี่ยนเป็น engine อื่นๆได้ เช่น [EJS], [Haml], [Jade] หรือ [Pug] hexo เลือก engine ของ template ตาม extension ของไฟล์ ยกตัวอย่างเช่น:
+layout folder. ใน folder นี้มีไฟล์ template ของธีม ซึ่งตั้งค่ารูปลักษณ์ของเว็บไซต์   hexo ใช้ [Nunjucks] เป็น template engine by default แต่คุณเปลี่ยนเป็น engine อื่นๆได้ เช่น [EJS], [Haml], [Jade] หรือ [Pug] hexo เลือก engine ของ template ตาม extension ของไฟล์ ยกตัวอย่างเช่น:
 
 ``` plain
 layout.ejs   - uses EJS
-layout.swig  - uses Swig
+layout.njk   - uses Nunjucks
 ```
 
 สำหรับข้อมูลเพิ่มเติม ไปดูที่ [templates](templates.html)
@@ -84,8 +84,8 @@ hexo จะจัดการและบันทึกไฟล์ทั้ง
 6. Create a pull request and describe the change.
 
 [EJS]: https://github.com/hexojs/hexo-renderer-ejs
-[Swig]: https://github.com/node-swig/swig-templates
 [Haml]: https://github.com/hexojs/hexo-renderer-haml
 [Jade]: https://github.com/hexojs/hexo-renderer-jade
 [Pug]: https://github.com/maxknee/hexo-render-pug
 [hexojs/site]: https://github.com/hexojs/site
+[Nunjucks]: https://mozilla.github.io/nunjucks/

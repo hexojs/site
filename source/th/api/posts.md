@@ -58,4 +58,4 @@ Argument | Description
 - Render with [Nunjucks]
 - Execute `after_post_render` filters
 
-[Nunjucks]: http://mozilla.github.io/nunjucks/
+[Nunjucks]: https://mozilla.github.io/nunjucks/

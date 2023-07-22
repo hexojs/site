@@ -237,6 +237,26 @@ Template render error: (unknown path)
 
 One possible reason is that there are some unrecognizable words in your file, e.g. invisible zero width characters.
 
+## YAMLException (Issue [#4917](https://github.com/hexojs/hexo/issues/4917))
+
+Upgrading to `hexo^6.1.0` from an older version may cause the following error when running `$ hexo generate`:
+
+```
+YAMLException: Specified list of YAML types (or a single Type object) contains a non-Type object.
+    at ...
+```
+ 
+This may be caused by an incorrect dependency(i.e. `js-yaml`) setting that can't be solved automatically by the package manager, and you may have to update it manually running: 
+
+```sh
+$ npm install js-yaml@latest
+```
+or
+```sh
+$ yarn add js-yaml@latest
+```
+if you use `yarn`.
+
 [Warehouse]: https://github.com/hexojs/warehouse
-[Swig]: http://paularmstrong.github.io/swig/
-[Nunjucks]: http://mozilla.github.io/nunjucks/
+[Swig]: https://node-swig.github.io/swig-templates/
+[Nunjucks]: https://mozilla.github.io/nunjucks/

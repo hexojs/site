@@ -26,13 +26,13 @@ hexo.extend.helper.register('js', function(path){
 
 ## FAQ
 
-### Where to place custom helper?
+### Где разместить собственного помощника?
 
-Place it under `scripts/` or `themes/<yourtheme>/scripts/` folder.
+Поместите его в папку `scripts/` или `themes/<ваша_тема>/scripts/`.
 
-### How do I use another registered helper in my custom helper?
+### Как мне использовать другого зарегистрированного помощника в моем собственном помощнике?
 
-All helpers are executed in the same context. For example, to use [`url_for()`](/docs/helpers#url-for) inside a custom helper:
+Все помощники выполняются в одном и том же окружении. Например, чтобы использовать [`url_for()`](/ru/docs/helpers#url-for) внутри собственного помощника:
 
 ``` js
 hexo.extend.helper.register('lorem', function(path) {
@@ -40,9 +40,9 @@ hexo.extend.helper.register('lorem', function(path) {
 });
 ```
 
-### How do I use a registered helper in another extension (e.g. Filter, Injector, etc)?
+### Как мне использовать зарегистрированного помощника в другом расширении (например Фильтра, инжектора и т.д.)?
 
-`hexo.extend.helper.get` will return the helper function, but it needs to have hexo as its context, so:
+`hexo.extend.helper.get` вернёт вспомогательную функцию, но в качестве контекста она должна иметь hexo, поэтому:
 
 ``` js
 const url_for = hexo.extend.helper.get('url_for').bind(hexo);

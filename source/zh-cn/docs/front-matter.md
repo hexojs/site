@@ -24,16 +24,16 @@ date: 2013/7/13 20:46:25
 `comments` | 开启文章的评论功能 | true
 `tags` | 标签（不适用于分页） |
 `categories` | 分类（不适用于分页）|
-`permalink` | 覆盖文章网址 |
-`excerpt` | Page excerpt in plain text. Use [this plugin](/docs/tag-plugins#Post-Excerpt) to format the text |
-`disableNunjucks` | Disable rendering of Nunjucks tag `{{ }}`/`{% %}` and [tag plugins](/docs/tag-plugins) when enabled
-`lang` | Set the language to override [auto-detection](/docs/internationalization#Path) | Inherited from `_config.yml`
+`permalink` | 覆盖文章的永久链接，永久链接应该以 `/` 或 `.html` 结尾 | `null`
+`excerpt` | 纯文本的页面摘要。使用 [该插件](/zh-cn/docs/tag-plugins#文章摘要和截断) 来格式化文本 |
+`disableNunjucks` | 启用时禁用 Nunjucks 标签 `{{ }}`/`{% %}` 和 [标签插件](/zh-cn/docs/tag-plugins) 的渲染功能 | false
+`lang` | 设置语言以覆盖 [自动检测](/zh-cn/docs/internationalization#路径) | 继承自 `_config.yml`
 
 ## 布局
 
-The default layout is `post`, in accordance to the value of [`default_layout`]((/docs/configuration#Writing)) setting in `_config.yml`. When the layout is disabled (`layout: false`) in an article, it will not be processed with a theme. However, it will still be rendered by any available renderer: if an article is written in Markdown and a Markdown renderer (like the default [hexo-renderer-marked](https://github.com/hexojs/hexo-renderer-marked)) is installed, it will be rendered to HTML.
+根据 `_config.yml` 中 [`default_layout`](/zh-cn/docs/configuration#文章) 的设置，默认布局是 `post` 。当文章中的布局被禁用(`layout: false`)，它将不会使用主题处理。然而，它仍然会被任何可用的渲染引擎渲染：如果一篇文章是用 Markdown 写的，并且安装了 Markdown 渲染引擎（比如默认的 [hexo-renderer-marked](https://github.com/hexojs/hexo-renderer-marked))，它将被渲染成HTML。
 
-[Tag plugins](/docs/tag-plugins) are always processed regardless of layout, unless disabled by the `disableNunjucks` setting or [renderer](/api/renderer#Disable-Nunjucks-tags).
+除非通过 `disableNunjucks` 设置或 [渲染引擎](/zh-cn/api/renderer#禁用-Nunjucks-标签) 禁用，否则无论布局如何，[标签插件](/zh-cn/docs/tag-plugins) 总是被处理。
 
 ## 分类和标签
 
@@ -56,7 +56,7 @@ categories:
   - Life
 ```
 
-会使分类`Life`成为`Diary`的子分类，而不是并列分类。因此，有必要为您的文章选择尽可能准确的分类。
+会使分类 `Life` 成为 `Diary` 的子分类，而不是并列分类。因此，有必要为您的文章选择尽可能准确的分类。
 
 如果你需要为文章添加多个分类，可以尝试以下 list 中的方法。
 

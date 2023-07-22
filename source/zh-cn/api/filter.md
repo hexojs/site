@@ -192,7 +192,7 @@ hexo.extend.filter.register('post_permalink', function(data){
 
 ### after_render
 
-在渲染后执行，您可以参考 [渲染](rendering.html#after_render_过滤器) 以了解更多信息。
+在渲染后执行，您可以参考 [渲染](rendering.html#after-render-过滤器) 以了解更多信息。
 
 ### server_middleware
 

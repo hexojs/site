@@ -37,18 +37,18 @@ $ ulimit -n 10000
 
 **Error: cannot modify limit**
 
-If you encounter the following error:
+如果遇到以下错误：
 
 ``` bash
 $ ulimit -n 10000
 ulimit: open files: cannot modify limit: Operation not permitted
 ```
 
-It means some system-wide configurations are preventing `ulimit` to being increased to a certain limit.
+这意味着一些系统范围内的配置阻止了 `ulimit` 的增加。
 
-To override the limit:
+想要去除该限制:
 
-1. Add the following line to "/etc/security/limits.conf":
+1. 在 `/etc/security/limits.conf` 中增加以下一行：
 
   ```
   * - nofile 10000
@@ -56,19 +56,19 @@ To override the limit:
   # '*' applies to all users and '-' set both soft and hard limits
   ```
 
-  * The above setting may not apply in some cases, ensure "/etc/pam.d/login" and "/etc/pam.d/lightdm" have the following line. (Ignore this step if those files do not exist)
+  * 上述设置在某些情况下可能不适用，请确保 `/etc/pam.d/login` 和 `/etc/pam.d/lightdm` 有以下一行(如果这些文件不存在，请忽略此步骤)：
 
   ```
   session required pam_limits.so
   ```
 
-2. If you are on a [systemd-based](https://en.wikipedia.org/wiki/Systemd#Adoption) distribution, systemd may override "limits.conf". To set the limit in systemd, add the following line in "/etc/systemd/system.conf" and "/etc/systemd/user.conf":
+2. 如果你使用的是 [基于systemd](https://en.wikipedia.org/wiki/Systemd#Adoption) 的发行版，systemd 可能会覆盖 `limits.conf`。如果想要在 systemd 中设置限制，请在 `/etc/systemd/system.conf` 和 `/etc/systemd/user.conf` 中添加以下一行：
 
   ```
   DefaultLimitNOFILE=10000
   ```
 
-3. Reboot
+3. 重启
 
 ## Git 部署问题
 
@@ -80,7 +80,7 @@ error: RPC failed; result=22, HTTP code = 403
 fatal: 'username.github.io' does not appear to be a git repository
 ```
 
-请确认您已经在电脑上 [配置 git](https://help.github.com/articles/set-up-git)，或改用 HTTPS 库（repository）地址。
+请确认您已经在电脑上 [配置 git](https://docs.github.com/zh/get-started/quickstart/set-up-git)，或改用 HTTPS 库（repository）地址。
 
 ### Error: ENOENT: no such file or directory
 
@@ -151,10 +151,10 @@ $ hexo clean
 }
 ```
 
-## 泄露（Escape）内容
+## 转义（Escape）内容
 
-Hexo 使用 [Nunjucks] 来解析文章（旧版本使用 [Swig]，两者语法类似），内容若包含 `{{ }}` 或 `{% %}` 可能导致解析错误，您可以用 [`raw`](/docs/tag-plugins#Raw) 标签包裹，single backtick ```` `{{ }}` ```` 或 triple backtick 来避免潜在问题发生。
-Alternatively, Nunjucks tags can be disabled through the renderer's option (if supported), [API](/api/renderer#Disable-Nunjucks-tags) or [front-matter](/docs/front-matter).
+Hexo 使用 [Nunjucks] 来解析文章（旧版本使用 [Swig]，两者语法类似），内容若包含 `{{ }}` 或 `{% %}` 可能导致解析错误，您可以用 [`raw`](/zh-cn/docs/tag-plugins#Raw) 标签包裹，单反引号 ```` `{{ }}` ```` 或 三反引号 来避免潜在问题发生。
+此外，Nunjucks 标签也可以通过渲染器的选项（如果支持的话）、[API](/zh-cn/api/renderer#禁用-Nunjucks-标签) 或 [front-matter](/zh-cn/docs/front-matter) 来禁用。
 
 ```
 {% raw %}
@@ -185,8 +185,8 @@ $ echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo
 这将会提高你能监视的文件数量。
 
 [Warehouse]: https://github.com/hexojs/warehouse
-[Swig]: http://paularmstrong.github.io/swig/
-[Nunjucks]: http://mozilla.github.io/nunjucks/
+[Swig]: https://node-swig.github.io/swig-templates/
+[Nunjucks]: https://mozilla.github.io/nunjucks/
 
 ## EMPERM Error (Windows Subsystem for Linux)
 
@@ -218,6 +218,23 @@ Template render error: (unknown path)
 
 一种可能的原因是你的文件中存在一些不可被识别的字符，比如不可见的零宽度字符。
 
+## YAMLException (Issue [#4917](https://github.com/hexojs/hexo/issues/4917))
+
+从低版本的 Hexo 升级到 Hexo 6.1.0 及以上版本之后，可能会在生成站点时出现以下错误：
+
+```
+YAMLException: Specified list of YAML types (or a single Type object) contains a non-Type object.
+    at ...
+```
+
+这可能是由于存在包管理器无法自动修复的不正确的依赖项（即 `js-yaml`）引起的，您需要手动更新它：
+
+```sh
+$ npm install js-yaml@latest
+# 如果您使用 yarn 作为包管理器，请运行下面这个命令：
+$ yarn add js-yaml@latest
+```
+
 [Warehouse]: https://github.com/hexojs/warehouse
-[Swig]: http://paularmstrong.github.io/swig/
-[Nunjucks]: http://mozilla.github.io/nunjucks/
+[Swig]: https://node-swig.github.io/swig-templates/
+[Nunjucks]: https://mozilla.github.io/nunjucks/

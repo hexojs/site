@@ -41,7 +41,7 @@ $ npm install -g hexo-cli
 
 ### 安裝 Node.js
 
-Node.js 為大多數平台提供了官方的 [安裝程序](https://nodejs.org/en/download/)。對於中國大陸地區用戶，可以前往 [淘寶 Node.js 鏡像](https://npm.taobao.org/mirrors/node) 下載。
+Node.js 為大多數平台提供了官方的 [安裝程序](https://nodejs.org/en/download/)。對於中國大陸地區用戶，可以前往 [淘寶 Node.js 鏡像](https://npmmirror.com/mirrors/node/) 下載。
 
 其它的安裝方法：
 
@@ -72,7 +72,7 @@ If you installed Node.js using Snap, you may need to manually run `npm install` 
 $ npm install -g hexo-cli
 ```
 
-### Minimum required Node.js version
+### Required Node.js version
 
 If you are stuck with older Node.js, you can consider installing a past version of Hexo.
 
@@ -80,12 +80,14 @@ Please note we do not provide bugfixes to past versions of Hexo.
 
 We highly recommend to always install the [latest version](https://www.npmjs.com/package/hexo?activeTab=versions) of Hexo and the [recommended version](#安裝需求) of Node.js, whenever possible.
 
-Hexo version | Minimum Node.js version
---- | ---
-5.0+ | 10.13.0
-4.1 - 4.2 | 8.10
-4.0 | 8.6
-3.3 - 3.9 | 6.9
-3.2 - 3.3 | 0.12
-3.0 - 3.1 | 0.10 or iojs
-0.0.1 - 2.8 | 0.10
+Hexo version | Minimum (Node.js version) | Less than (Node.js version)
+--- | --- | ---
+6.2+ | 12.13.0 | latest
+6.0+ | 12.13.0 | 18.5.0
+5.0+ | 10.13.0 | 12.0.0
+4.1 - 4.2 | 8.10 | 10.0.0
+4.0 | 8.6 | 8.10.0
+3.3 - 3.9 | 6.9 | 8.0.0
+3.2 - 3.3 | 0.12 | unknown
+3.0 - 3.1 | 0.10 or iojs | unknown
+0.0.1 - 2.8 | 0.10 | unknown

@@ -89,6 +89,7 @@ Specify additional options in `option:value` format, e.g. `line_number:false fir
 Extra Options | Description | Default
 --- | --- | ---
 `line_number` | Show line number | `true`
+`line_threshold` | Only show line numbers as long as the numbers of lines of the code block exceed such threshold. | `0` |
 `highlight` | Enable code highlighting | `true`
 `first_line` | Specify the first line number | `1`
 `mark` | Line highlight specific line(s), each value separated by a comma. Specify number range using a dash<br>Example: `mark:1,4-7,10` will mark line 1, 4 to 7 and 10. |

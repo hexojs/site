@@ -34,7 +34,7 @@ Setting | Description | Default
 `comments` | Enables comment feature for the post | true
 `tags` | Tags (Not available for pages) |
 `categories` | Categories (Not available for pages) |
-`permalink` | Overrides the default permalink of the post |
+`permalink` | Overrides the default permalink of the post. Permalink should end with `/` or `.html` | `null`
 `excerpt` | Page excerpt in plain text. Use [this plugin](/docs/tag-plugins#Post-Excerpt) to format the text |
 `disableNunjucks` | Disable rendering of Nunjucks tag `{{ }}`/`{% %}` and [tag plugins](/docs/tag-plugins) when enabled | false
 `lang` | Set the language to override [auto-detection](/docs/internationalization#Path) | Inherited from `_config.yml`
