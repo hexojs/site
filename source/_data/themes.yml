@@ -3727,15 +3727,15 @@
     - simple
     - pure
 - name: delicate
-  description: A delicate Hexo theme, and have many component.
+  description: A simple but delicate theme for Hexo.
   link: https://github.com/can-dy-jack/hexo-theme-delicate
   preview: https://kartjim.cn/delicate
   tags:
     - 中文
-    - delicate
-    - Light
+    - English
     - simple
-    - component
+    - delicate
+    - paper
 - name: Linear
   description: A dream hexo theme for developers.
   link: https://github.com/syy11cn/hexo-theme-linear
