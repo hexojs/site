@@ -1,0 +1,7 @@
+description: Sass renderer plugin for Hexo with Bourbon/Neat support.
+link: https://github.com/vandreleal/hexo-renderer-sass-bourbon-neat
+tags:
+  - renderer
+  - sass
+  - bourbon
+  - neat

@@ -1,0 +1,5 @@
+description: Add block-styled admonition to hexo. | Hexo内容辅助插件，支持向文档中添加如提示、警告、错误等块式内容。
+link: https://github.com/lxl80/hexo-admonition
+tags:
+  - admonition
+  - note

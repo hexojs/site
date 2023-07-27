@@ -1,0 +1,23 @@
+description: Using Kroki.io to render 20+ diagrams at compile time.
+link: https://github.com/miao1007/hexo-filter-kroki
+tags:
+  - blockdiag
+  - bpmn
+  - bytefield
+  - seqdiag
+  - actdiag
+  - nwdiag
+  - packetdiag
+  - rackdiag
+  - c4plantuml
+  - ditaa
+  - erd
+  - excalidraw
+  - graphviz
+  - mermaid
+  - nomnoml
+  - pikchr
+  - plantuml
+  - svgbob
+  - vega
+  - wavedrom

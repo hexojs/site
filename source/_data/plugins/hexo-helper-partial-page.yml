@@ -1,0 +1,6 @@
+description: Hexo helper plugin for including and rendering partial content.
+link: https://github.com/kulikala/hexo-helper-partial-page
+tags:
+  - helper
+  - partial page
+  - template

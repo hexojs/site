@@ -1,0 +1,7 @@
+description: Yet, another pwa plugin
+link: https://github.com/jiangtj-lab/hexo-next-pwa
+tags:
+  - PWA
+  - Service Worker
+  - Web App Manifest
+  - Workbox

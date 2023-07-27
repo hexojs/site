@@ -1,0 +1,6 @@
+description: Transfer relative post link in markdown file to post link.
+link: https://github.com/tcatche/hexo-filter-link-post
+tags:
+  - filter
+  - link
+  - refer other markdown

@@ -1,0 +1,9 @@
+description: >-
+  Unofficial CLI plugin for convenient editing, renaming, deleting, isolating
+  and integrating posts and pages from the command line.
+link: https://github.com/greg-js/hexo-cli-extras
+tags:
+  - console
+  - cli
+  - editor
+  - admin

@@ -1,0 +1,7 @@
+description: An up-to-date node-sass wrapper for Hexo that includes Bourbon mixins.
+link: https://github.com/celsomiranda/hexo-renderer-bourbon
+tags:
+  - renderer
+  - sass
+  - libsass
+  - bourbon

@@ -1,0 +1,8 @@
+description: Minify JavaScript files with UglifyJS.
+link: https://github.com/hexojs/hexo-uglify
+tags:
+  - official
+  - filter
+  - js
+  - uglify
+  - minify

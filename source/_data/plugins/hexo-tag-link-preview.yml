@@ -1,0 +1,9 @@
+description: Embed a link preview on your Hexo article.
+link: https://github.com/minamo173/hexo-tag-link-preview
+tags:
+  - helper
+  - tag
+  - link
+  - preview
+  - image
+  - ogp

@@ -1,0 +1,8 @@
+description: >-
+  Admin panel for your website. Features: edit posts and pages, file manager,
+  website settings editor, theme and plugin discovery.
+link: https://github.com/DeepSpaceHarbor/hexo-bridge
+tags:
+  - admin
+  - editor
+  - admin-panel

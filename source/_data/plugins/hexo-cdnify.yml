@@ -1,0 +1,4 @@
+description: Converts local URLs to CDN ones when hexo generator.
+link: https://github.com/zqjimlove/hexo-cdnify
+tags:
+  - cdn

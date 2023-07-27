@@ -1,0 +1,9 @@
+description: >-
+  A Hexo tag plugin for collapse spoiler, hiding/expanding content |
+  给页面某些内容添加折叠/展开功能的Tag
+link: https://github.com/ggehuliang/hexo-tag-collapse-spoiler
+tags:
+  - tag
+  - collapse
+  - hide
+  - expand

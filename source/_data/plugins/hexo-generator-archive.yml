@@ -1,0 +1,6 @@
+description: Archive generator plugin for Hexo.
+link: https://github.com/hexojs/hexo-generator-archive
+tags:
+  - official
+  - generator
+  - archive

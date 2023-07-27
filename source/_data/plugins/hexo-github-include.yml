@@ -1,0 +1,10 @@
+description: >-
+  Include static listings of files stored on GitHub and convert them to
+  markdown.
+link: https://github.com/zbicin/hexo-github-include
+tags:
+  - tag
+  - markdown
+  - github
+  - code
+  - snippet

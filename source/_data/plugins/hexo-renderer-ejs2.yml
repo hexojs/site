@@ -1,0 +1,5 @@
+description: EJS renderer for Hexo using EJS version 2.
+link: https://github.com/NoahDragon/hexo-renderer-ejs2
+tags:
+  - ejs
+  - renderer

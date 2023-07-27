@@ -1,0 +1,8 @@
+description: >-
+  A hexo plugin help you automatically notify readers new post update. |
+  这个插件帮助你向读者自动推送你最新的文章。
+link: https://github.com/glazec/hexo-web-push-notification
+tags:
+  - utility
+  - web-push-notification
+  - notification

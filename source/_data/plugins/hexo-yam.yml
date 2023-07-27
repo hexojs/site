@@ -1,0 +1,13 @@
+description: >-
+  Yet Another Minifier. Minify and compress html, js and css. Support gzip and
+  brotli compressions.
+link: https://github.com/curbengh/hexo-yam
+tags:
+  - filter
+  - minify
+  - html
+  - js
+  - css
+  - compress
+  - gzip
+  - brotli

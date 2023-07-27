@@ -1,0 +1,9 @@
+description: This plugin for Hexo can easily load markdown files in Markdown.
+link: https://github.com/tea3/hexo-include-markdown
+tags:
+  - markdown
+  - import
+  - include
+  - partial
+  - load
+  - template

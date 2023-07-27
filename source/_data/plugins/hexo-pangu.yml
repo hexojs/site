@@ -1,0 +1,7 @@
+description: Add spaces between CJK characters and western characters.
+link: https://github.com/next-theme/hexo-pangu
+tags:
+  - filter
+  - pangu
+  - cjk
+  - spacing

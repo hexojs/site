@@ -1,0 +1,7 @@
+description: Feed generator for Hexo.
+link: https://github.com/hexojs/hexo-generator-feed
+tags:
+  - official
+  - generator
+  - feed
+  - rss
