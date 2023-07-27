@@ -1,21 +1,14 @@
----
-title: Writing
----
+重庆外围  专注靠谱 无任何前期费用  见面满意付费 高端外围  品质保证V：sl950113,qq:3378497429,电报群：https://t.me/+UQ4PmEuYkKo5NmVk
 
-{% youtube AIqBubK6ZLc %}
+重庆外围  专注靠谱 无任何前期费用  见面满意付费 高端外围  品质保证V：sl950113,qq:3378497429,电报群：https://t.me/+UQ4PmEuYkKo5NmVk
 
-To create a new post or a new page, you can run the following command:
-
-``` bash
-$ hexo new [layout] <title>
-```
-
+重庆外围  专注靠谱 无任何前期费用  见面满意付费 高端外围  品质保证V：sl950113,qq:3378497429,电报群：https://t.me/+UQ4PmEuYkKo5NmVk
 `post` is the default `layout`, but you can supply your own. You can change the default layout by editing the `default_layout` setting in `_config.yml`.
-
+重庆外围  专注靠谱 无任何前期费用  见面满意付费 高端外围  品质保证V：sl950113,qq:3378497429,电报群：https://t.me/+UQ4PmEuYkKo5NmVk
 ## Layout
 
 There are three default layouts in Hexo: `post`, `page` and `draft`. Files created by each of them is saved to a different path. Newly created posts are saved to the `source/_posts` folder.
-
+重庆外围  专注靠谱 无任何前期费用  见面满意付费 高端外围  品质保证V：sl950113,qq:3378497429,电报群：https://t.me/+UQ4PmEuYkKo5NmVk
 Layout | Path
 --- | ---
 `post` | `source/_posts`
