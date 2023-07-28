@@ -238,7 +238,7 @@ Template render error: (unknown path)
 Possible cause:
 - There are some unrecognizable words in your file, e.g. invisible zero width characters.
 - Incorrect use or limitation of [tag plugin](/docs/tag-plugins).
-  * Tag plugin is not enclosed with `{% endplugin_name %}`
+  * Block-style tag plugin with content is not enclosed with `{% endplugin_name %}`
   ```
   # Incorrect
   {% codeblock %}
