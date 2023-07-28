@@ -29,7 +29,9 @@ deploy:
 
 Refer to the [Plugins](https://hexo.io/plugins/) list for more deployment plugins.
 
-## Git
+## Deployer Plugins
+
+### Git
 
 1. Install [hexo-deployer-git].
 
@@ -61,7 +63,7 @@ Option | Description | Default
 
 4. Navigate to your repository settings and change the "Pages" branch to `gh-pages` (or the branch specified in your config). The deployed site should be live on the link shown on the "Pages" setting.
 
-## Heroku
+### Heroku
 
 Install [hexo-deployer-heroku].
 
@@ -83,17 +85,7 @@ deploy:
 | `repo`, `repository` | Heroku repository URL                                                                                       |
 | `message`            | Customize commit message (Default to `Site updated: {% raw %}{{ now('YYYY-MM-DD HH:mm:ss') }}{% endraw %}`) |
 
-## Netlify
-
-[Netlify](https://www.netlify.com/) provides continuous deployment (Git-triggered builds), an intelligent global CDN, full DNS (including custom domains), automated HTTPS, asset acceleration, and a lot more. It is a unified platform that automates your code to create high-performance, easily maintainable sites and web apps.
-
-There are two different ways to deploy your sites on Netlify. The most common way is to use the web UI. Go to the [create a new site page](https://app.netlify.com/start), select your project repo from GitHub, GitLab, or Bitbucket, and follow the prompts.
-
-Alternatively, you can use Netlify's [Node based CLI](https://www.netlify.com/docs/cli/) tool to manage and deploy sites on Netlify without leaving your terminal.
-
-You can also add a [Deploy to Netlify Button](https://www.netlify.com/docs/deploy-button/) in your README.file to allow others to create a copy of your repository and be deployed to Netlify via one click.
-
-## Rsync
+### Rsync
 
 Install [hexo-deployer-rsync].
 
@@ -125,7 +117,7 @@ deploy:
 | `verbose`       | Display verbose messages        | true    |
 | `ignore_errors` | Ignore errors                   | false   |
 
-## OpenShift
+### OpenShift
 
 Install [hexo-deployer-openshift].
 
@@ -147,7 +139,7 @@ deploy:
 | `repo`    | OpenShift repository URL                                                                                    |
 | `message` | Customize commit message (Default to `Site updated: {% raw %}{{ now('YYYY-MM-DD HH:mm:ss') }}{% endraw %}`) |
 
-## FTPSync
+### FTPSync
 
 Install [hexo-deployer-ftpsync].
 
@@ -181,7 +173,7 @@ deploy:
 | `connections` | Connections number                        | 1       |
 | `verbose`     | Display verbose messages                  | false   |
 
-## SFTP
+### SFTP
 
 Install [hexo-deployer-sftp]. Deploys the site via SFTP, allowing for passwordless connections using ssh-agent.
 
@@ -217,55 +209,7 @@ deploy:
 | `forceUpload` | Override existing files                         | false            |
 | `concurrency` | Max number of SFTP tasks processed concurrently | 100            |
 
-## Vercel
-
-[Vercel](https://vercel.com) is a cloud platform that enables developers to host Jamstack websites and web services that deploy instantly, scale automatically, and requires no supervision, all with zero configuration. They provide a global edge network, SSL encryption, asset compression, cache invalidation, and more.
-
-Step 1: Add a build script to your `package.json` file:
-
-```json
-{
-  "scripts": {
-    "build": "hexo generate"
-  }
-}
-```
-
-Step 2: Deploy your Hexo Website to Vercel
-
-To deploy your Hexo app with a [Vercel for Git Integration](https://vercel.com/docs/git-integrations), make sure it has been pushed to a Git repository.
-
-Import the project into Vercel using the [Import Flow](https://vercel.com/import/git). During the import, you will find all relevant options preconfigured for you; however, you can choose to change any of these options, a list of which can be found [here](https://vercel.com/docs/build-step#build-&-development-settings).
-
-After your project has been imported, all subsequent pushes to branches will generate [Preview Deployments](https://vercel.com/docs/platform/deployments#preview), and all changes made to the [Production Branch](https://vercel.com/docs/git-integrations#production-branch) (commonly "main") will result in a [Production Deployment](https://vercel.com/docs/platform/deployments#production).
-
-Alternatively, you can click the deploy button below to create a new project:
-
-[![Deploy Vercel](https://vercel.com/button)](https://vercel.com/new/hexo)
-
-## Bip
-
-[Bip](https://bip.sh) is a commercial hosting service which provides zero downtime deployment, a global CDN, SSL, unlimited bandwidth and more for static websites. Plans are available on a pay as you go, per domain basis.
-
-Getting started is quick and easy, as Bip provides out the box support for Hexo. This guide assumes you already have [a Bip domain and Bip CLI installed](https://bip.sh/getstarted).
-
-1: Initialise your project directory
-
-```bash
-$ bip init
-```
-
-Follow the prompts, where you'll be asked which domain you'd like to deploy to. Bip will detect that you're using Hexo, and set project settings like the source file directory automatically.
-
-2: Deploy your website
-
-```bash
-$ hexo generate —deploy && bip deploy
-```
-
-After a few moments, your website will be deployed.
-
-## RSS3
+### RSS3
 
 [RSS3](https://rss3.io) is an open protocol designed for content and social networks in the Web 3.0 era.
 
@@ -301,7 +245,67 @@ After a few moments, your website will be deployed.
 
 For deployment-related considerations, you can refer to [Our documentation](https://github.com/NaturalSelectionLabs/hexo-deployer-rss3/blob/develop/README.md).
 
-## Edgio (formerly Layer0)
+## Platforms
+
+### Netlify
+
+[Netlify](https://www.netlify.com/) provides continuous deployment (Git-triggered builds), an intelligent global CDN, full DNS (including custom domains), automated HTTPS, asset acceleration, and a lot more. It is a unified platform that automates your code to create high-performance, easily maintainable sites and web apps.
+
+There are two different ways to deploy your sites on Netlify. The most common way is to use the web UI. Go to the [create a new site page](https://app.netlify.com/start), select your project repo from GitHub, GitLab, or Bitbucket, and follow the prompts.
+
+Alternatively, you can use Netlify's [Node based CLI](https://www.netlify.com/docs/cli/) tool to manage and deploy sites on Netlify without leaving your terminal.
+
+You can also add a [Deploy to Netlify Button](https://www.netlify.com/docs/deploy-button/) in your README.file to allow others to create a copy of your repository and be deployed to Netlify via one click.
+
+### Vercel
+
+[Vercel](https://vercel.com) is a cloud platform that enables developers to host Jamstack websites and web services that deploy instantly, scale automatically, and requires no supervision, all with zero configuration. They provide a global edge network, SSL encryption, asset compression, cache invalidation, and more.
+
+Step 1: Add a build script to your `package.json` file:
+
+```json
+{
+  "scripts": {
+    "build": "hexo generate"
+  }
+}
+```
+
+Step 2: Deploy your Hexo Website to Vercel
+
+To deploy your Hexo app with a [Vercel for Git Integration](https://vercel.com/docs/git-integrations), make sure it has been pushed to a Git repository.
+
+Import the project into Vercel using the [Import Flow](https://vercel.com/import/git). During the import, you will find all relevant options preconfigured for you; however, you can choose to change any of these options, a list of which can be found [here](https://vercel.com/docs/build-step#build-&-development-settings).
+
+After your project has been imported, all subsequent pushes to branches will generate [Preview Deployments](https://vercel.com/docs/platform/deployments#preview), and all changes made to the [Production Branch](https://vercel.com/docs/git-integrations#production-branch) (commonly "main") will result in a [Production Deployment](https://vercel.com/docs/platform/deployments#production).
+
+Alternatively, you can click the deploy button below to create a new project:
+
+[![Deploy Vercel](https://vercel.com/button)](https://vercel.com/new/hexo)
+
+### Bip
+
+[Bip](https://bip.sh) is a commercial hosting service which provides zero downtime deployment, a global CDN, SSL, unlimited bandwidth and more for static websites. Plans are available on a pay as you go, per domain basis.
+
+Getting started is quick and easy, as Bip provides out the box support for Hexo. This guide assumes you already have [a Bip domain and Bip CLI installed](https://bip.sh/getstarted).
+
+1: Initialise your project directory
+
+```bash
+$ bip init
+```
+
+Follow the prompts, where you'll be asked which domain you'd like to deploy to. Bip will detect that you're using Hexo, and set project settings like the source file directory automatically.
+
+2: Deploy your website
+
+```bash
+$ hexo generate —deploy && bip deploy
+```
+
+After a few moments, your website will be deployed.
+
+### Edgio (formerly Layer0)
 
 [Edgio (formerly Layer0)](https://docs.edg.io) is an Internet-scale platform that makes it easy for teams to build, release, protect, and accelerate their web apps and APIs.
 
