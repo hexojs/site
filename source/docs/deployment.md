@@ -50,6 +50,10 @@ Netlify provides free static site hosting service with CDN, CI/CD and Automated 
 
 Vercel is a severless cloud platform for websites and serverless APIs. [Read More](one-command-deployment#Vercel).
 
+### Bip
+
+Deploy your website in seconds to your own .bip.sh domain. [Read More](one-command-deployment#Bip).
+
 ### Edgio
 
 Edgio (formerly Layer0) is an Internet-scale platform that makes it easy for teams to build, release, protect, and accelerate their web apps and APIs. [Read More](one-command-deployment#Edgio-formerly-Layer0)
