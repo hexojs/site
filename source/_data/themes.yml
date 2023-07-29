@@ -1,3 +1,13 @@
+- name: Acrylic-next
+  description: A minimalist but not simple theme, designed by Heo.
+  link: https://github.com/hexo-theme-Acrylic/Hexo-Theme-Acrylic-Next
+  preview: https://blog.adil.com.cn/
+  tags:
+    - acrylic
+    - chinese
+    - heo
+    - 中文
+    - 设计师风格
 - name: Dynasty
   description: 新一代简洁华美hexo主题
   link: https://github.com/Ezgx/hexo-theme-Dynasty.git
