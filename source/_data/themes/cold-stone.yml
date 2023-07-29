@@ -1,0 +1,11 @@
+description: A simple, clean, text-based Hexo blog theme.
+link: https://github.com/xrr2016/hexo-theme-cold-stone
+preview: https://coldstone.fun
+tags:
+  - light weight
+  - night mode
+  - responsive
+  - PWA support
+  - utteranc comment
+  - english/chinese
+  - easy config

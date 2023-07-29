@@ -1,0 +1,6 @@
+description: Rsync deployer plugin for Hexo.
+link: https://github.com/hexojs/hexo-deployer-rsync
+tags:
+  - official
+  - deployer
+  - rsync

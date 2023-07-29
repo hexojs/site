@@ -1,0 +1,6 @@
+description: A Hexo tag for inserting arbitrary html tags (with attributes) into posts.
+link: https://github.com/seangravener/hexo-tag-htmlTag
+tags:
+  - tag
+  - html
+  - code

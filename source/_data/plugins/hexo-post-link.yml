@@ -1,0 +1,6 @@
+description: Automatically convert markdown links with post slugs to proper internal URLs.
+link: https://github.com/bmwant/hexo-post-link
+tags:
+  - link
+  - markdown
+  - plugin

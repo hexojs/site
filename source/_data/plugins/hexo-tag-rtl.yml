@@ -1,0 +1,9 @@
+description: Force RTL layout direction when used in a mixed RTL and LTR texts.
+link: https://github.com/bluemix/hexo-tag-rtl
+tags:
+  - tag
+  - rtl
+  - direction
+  - bidi
+  - multilingual
+  - right-to-left

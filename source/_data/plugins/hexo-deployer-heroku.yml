@@ -1,0 +1,6 @@
+description: Heroku deployer for Hexo.
+link: https://github.com/hexojs/hexo-deployer-heroku
+tags:
+  - official
+  - deployer
+  - heroku

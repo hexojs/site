@@ -1,0 +1,6 @@
+description: Yet, another blog encrypt plugin for hexo.
+link: https://github.com/D0n9X1n/hexo-blog-encrypt
+tags:
+  - encrypt
+  - aes
+  - security

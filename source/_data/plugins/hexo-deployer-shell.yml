@@ -1,0 +1,5 @@
+description: Use your own shell command to deploy hexo.
+link: https://github.com/HakurouKen/hexo-deployer-shell
+tags:
+  - deployer
+  - shell

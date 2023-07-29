@@ -1,0 +1,5 @@
+description: Mustache renderer for Hexo
+link: https://github.com/snovey/hexo-renderer-mustache
+tags:
+  - renderer
+  - mustache

@@ -1,0 +1,11 @@
+description: >-
+  A plugin for giving your app offline caching as a progressive enhancement
+  using service workers.
+link: https://github.com/josex2r/hexo-workbox
+tags:
+  - pwa
+  - offline
+  - service
+  - workers
+  - cache
+  - workbox

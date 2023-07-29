@@ -1,0 +1,11 @@
+description: >-
+  Deploy Hexo to Aliyun OSS, Tencent COS, etc. and purge the CDN cache |
+  将博客发布到腾讯、阿里等云对象存储并刷新CDN缓存
+link: https://github.com/lxl80/hexo-deployer-cos-cdn
+tags:
+  - deployer
+  - tencent
+  - cos
+  - cdn
+  - aliyun
+  - oss

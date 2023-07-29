@@ -1,0 +1,10 @@
+description: >-
+  Embed html5 video player and play videos stored in asset_path or elsewhere in
+  public folder for Hexo.
+link: https://github.com/stephenmkbrady/hexo-tag-html5
+tags:
+  - tag_plugins
+  - mp4
+  - html5video
+  - webm
+  - video

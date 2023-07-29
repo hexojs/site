@@ -1,0 +1,11 @@
+description: >-
+  a feature enhancement plugin for Hexo, includes auto-title, auto-date,
+  auto-categories, auto-tags, auto-abbrlink.
+link: https://github.com/sisyphsu/hexo-enhancer
+tags:
+  - auto-generate
+  - title
+  - date
+  - categories
+  - tags
+  - abbrlink

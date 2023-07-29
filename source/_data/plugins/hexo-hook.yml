@@ -1,0 +1,8 @@
+description: >-
+  A webhook plugin for hexo to generate static file when the remote post
+  repository is updated.
+link: https://github.com/alycat-Yan/hexo-hook
+tags:
+  - webhook
+  - generate
+  - git

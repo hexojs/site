@@ -1,0 +1,6 @@
+description: hexo plugin for including other files before any other filter.
+link: https://github.com/pluswave/hexo-filter-include
+tags:
+  - filter
+  - include
+  - file

@@ -1,0 +1,7 @@
+description: Generate UML sequence diagrams for Hexo.
+link: https://github.com/bubkoo/hexo-filter-sequence
+tags:
+  - filter
+  - sequence
+  - diagrams
+  - markdown

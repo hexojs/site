@@ -1,0 +1,17 @@
+description: >-
+  Very fast Markdown renderer with support for katex, sub, sup, ins, emoji,
+  toc&anchor, deflist, abbr, footnote, mark.
+link: https://github.com/CHENXCHEN/hexo-renderer-markdown-it-plus
+tags:
+  - renderer
+  - markdown
+  - markdown-it
+  - latex
+  - katex
+  - emoji
+  - deflist
+  - ins
+  - sup
+  - sub
+  - mark
+  - toc

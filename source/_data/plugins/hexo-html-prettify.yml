@@ -1,0 +1,9 @@
+description: HTML beautifier for Hexo static site generator.
+link: https://github.com/sergeyzwezdin/hexo-html-prettify
+tags:
+  - html
+  - beautify
+  - prettify
+  - cleanup
+  - output
+  - filter

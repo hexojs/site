@@ -1,0 +1,8 @@
+description: Add nofollow attribute to all external links automatically.
+link: https://github.com/hexojs/hexo-filter-nofollow/
+tags:
+  - official
+  - filter
+  - nofollow
+  - SEO
+  - external

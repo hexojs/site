@@ -1,0 +1,8 @@
+description: >-
+  Asset path format, fix original markdown image path when enabling
+  post_asset_folder
+link: https://github.com/cnzsb/hexo-asset
+tags:
+  - asset
+  - image
+  - path
