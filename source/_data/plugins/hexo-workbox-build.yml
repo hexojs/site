@@ -1,0 +1,6 @@
+description: A hexo plugin to run workbox build. Add PWA support for your site.
+link: https://github.com/uiolee/hexo-workbox-build
+tags:
+  - workbox
+  - pwa
+  - offline
