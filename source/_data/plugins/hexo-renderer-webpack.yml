@@ -1,0 +1,6 @@
+description: Webpack renderer for Hexo.
+link: https://github.com/nejj/hexo-renderer-webpack
+tags:
+  - renderer
+  - js
+  - webpack

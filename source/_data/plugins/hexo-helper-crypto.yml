@@ -1,0 +1,7 @@
+description: A helper for encryption and decryption using Crypto-js.
+link: https://github.com/theme-particlex/hexo-helper-crypto
+tags:
+  - helper
+  - encryption
+  - decryption
+  - crypto-js

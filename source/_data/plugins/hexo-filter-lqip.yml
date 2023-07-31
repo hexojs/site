@@ -1,0 +1,7 @@
+description: Generate Low-Quality Image Placeholders for lazy loaded images in themes
+link: https://github.com/hexojs/hexo-filter-lqip
+tags:
+  - official
+  - images
+  - placeholder
+  - optimize

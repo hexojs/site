@@ -1,0 +1,9 @@
+description: RSS, Atom and JSON Feed generator for Hexo static site generator.
+link: https://github.com/sergeyzwezdin/hexo-feed
+tags:
+  - generator
+  - feed
+  - rss
+  - atom
+  - json
+  - feed

@@ -1,0 +1,5 @@
+description: Hexo renderer plugin for emacs org-mode.
+link: https://github.com/coldnew/hexo-renderer-org
+tags:
+  - renderer
+  - orgmode

@@ -1,0 +1,5 @@
+description: Add native lazy load to hexo page as well as optional fallback.
+link: https://github.com/fengkx/hexo-native-lazy-load
+tags:
+  - lazyload
+  - optimize

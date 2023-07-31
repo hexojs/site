@@ -1,0 +1,9 @@
+description: >-
+  Insert a markdown TOC (Table Of Contents) before posts are rendered when and
+  where a placeholder is found.
+link: https://github.com/bubkoo/hexo-toc
+tags:
+  - toc
+  - filter
+  - markdown
+  - placeholder

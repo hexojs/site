@@ -1,0 +1,8 @@
+description: >-
+  A plugin to hide specific posts from your Hexo blog and make them only
+  accessible by links.
+link: https://github.com/prinsss/hexo-hide-posts
+tags:
+  - hide
+  - unlisted
+  - private

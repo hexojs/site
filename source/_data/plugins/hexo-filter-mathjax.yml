@@ -1,0 +1,8 @@
+description: >-
+  Server side MathJax renderer plugin for Hexo. No front-end scripts are
+  required.
+link: https://github.com/next-theme/hexo-filter-mathjax
+tags:
+  - filter
+  - math
+  - MathJax

@@ -1,0 +1,7 @@
+description: lazyload images support for Hexo with IntersectionObserver API.
+link: https://github.com/Robin-front/hexo-lazyload
+tags:
+  - lazyload
+  - images
+  - performance
+  - IntersectionObserver

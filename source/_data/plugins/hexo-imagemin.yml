@@ -1,0 +1,7 @@
+description: Minify images with imagemin.
+link: https://github.com/vseventer/hexo-imagemin
+tags:
+  - assets
+  - filter
+  - imagemin
+  - images

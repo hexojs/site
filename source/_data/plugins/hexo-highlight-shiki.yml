@@ -1,0 +1,6 @@
+description: A Hexo plugin for highlighting code blocks using shiki.
+link: https://github.com/Pcrab/hexo-highlight-shiki
+tags:
+  - code
+  - highlight
+  - shiki

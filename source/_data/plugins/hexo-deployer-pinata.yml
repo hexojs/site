@@ -1,0 +1,6 @@
+description: Pinata and IPFS deployer for Hexo.
+link: https://github.com/qishen/hexo-deployer-pinata
+tags:
+  - deployer
+  - pinata
+  - ipfs

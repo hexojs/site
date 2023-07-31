@@ -1,0 +1,6 @@
+description: A hexo plugin to extend hexo with helpers to process hierarchy categories
+link: https://github.com/EqualMa/hexo-plugin-hierarchy-category
+tags:
+  - hierarchy
+  - category
+  - helper

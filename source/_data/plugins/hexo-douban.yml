@@ -1,0 +1,7 @@
+description: Generate douban pages of books and movies for Hexo.
+link: https://github.com/mythsman/hexo-douban
+tags:
+  - generator
+  - books
+  - movies
+  - douban

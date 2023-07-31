@@ -1,0 +1,6 @@
+description: Sass renderer plugin for Hexo with Typesettings support.
+link: https://github.com/vandreleal/hexo-renderer-sass-typesettings
+tags:
+  - renderer
+  - sass
+  - typesettings

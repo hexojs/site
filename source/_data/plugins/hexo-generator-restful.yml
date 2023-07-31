@@ -1,0 +1,7 @@
+description: Generate RESTful json data for Hexo plugins.
+link: https://github.com/yscoder/hexo-generator-restful
+tags:
+  - json
+  - data
+  - RESTful
+  - generator

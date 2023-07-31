@@ -1,0 +1,10 @@
+description: A material design hexo theme
+link: https://github.com/aiokr/hexo-theme-type
+preview: https://blog.itypen.com/
+tags:
+  - material
+  - simple
+  - gallery
+  - single column
+  - ejs
+  - scss

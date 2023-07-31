@@ -1,0 +1,7 @@
+description: A hexo tag for rendering abc music notation on your blog posts.
+link: https://github.com/maiwenan/hexo-tag-abcjs
+tags:
+  - tag
+  - abcjs
+  - notation
+  - piano
