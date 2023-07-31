@@ -59,7 +59,7 @@ When you have finished building your theme, you can publish it to the [theme lis
 
 3. Create a new yaml file in `source/_data/themes/`, use your theme name as the file name
 
-4. Edit `source/_data/themes/<your-plugin-name>.yml` and add your theme. For example:
+4. Edit `source/_data/themes/<your-theme-name>.yml` and add your theme. For example:
 
    ```yaml
    description: A brand new default theme for Hexo.
