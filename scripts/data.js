@@ -14,9 +14,16 @@ hexo.extend.filter.register('before_generate', async () => {
         });
       }
     });
-    await Data.insert({
-      _id: type,
-      data: arr
-    });
+    if (Data.has(type)) {
+      await Data.replaceById(type, {
+        _id: type,
+        data: arr
+      });
+    } else {
+      await Data.insert({
+        _id: type,
+        data: arr
+      });
+    }
   }
 }, 0);
