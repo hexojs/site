@@ -7,7 +7,7 @@ hexo.extend.filter.register('before_generate', async () => {
   for (const type of ['themes', 'plugins']) {
     const arr = [];
     Data.forEach(({_id, data}) => {
-      if (_id.startsWith(type)) {
+      if (_id.startsWith(type + '/')) {
         arr.push({
           name: _id.replace(type + '/', ''),
           ...data
@@ -15,10 +15,7 @@ hexo.extend.filter.register('before_generate', async () => {
       }
     });
     if (Data.has(type)) {
-      await Data.replaceById(type, {
-        _id: type,
-        data: arr
-      });
+      await Data.replaceById(type, { data: arr });
     } else {
       await Data.insert({
         _id: type,
