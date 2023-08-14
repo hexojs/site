@@ -327,6 +327,30 @@ Alternatively, you can click the deploy button below to create a new project:
 
 [![Deploy To Edgio](https://docs.edg.io/button.svg)](https://app.layer0.co/deploy?repo=https%3A%2F%2Fgithub.com%2Fedgio-docs%2Fedgio-hexo-example)
 
+## Zeabur
+
+[Zeabur](https://zeabur.com) is a cloud platform helps developers to deploy their services with one click, with auto scalling and CI/CD integration and some other features.
+
+Step 1: Add a build script to your `package.json` file:
+
+```json
+{
+  "scripts": {
+    "build": "hexo generate"
+  }
+}
+```
+
+Step 2: Deploy your Hexo Site to Zeabur
+
+To deploy your Hexo site to Zeabur, you need a Git repository to save your hexo site codes and files, make sure is has been pushed to a Git repository.
+
+Open [Zeabur Dashboard](https://dash.zeabur.com), follow the [create a new service instructions](https://zeabur.com/docs/get-started) and select your Hexo repository, then click the `Deploy` button.
+
+Zeabur will automatically detect your site is a Hexo site. After deployment, you can just push updates to your Git repository, and Zeabur will automatically deploy the updates.
+
+[![Deploy on Zeabur](https://zeabur.com/button.svg)](https://zeabur.com/templates/D27F35)
+
 ## Other Methods
 
 All generated files are saved in the `public` folder. You can copy them to wherever you like.
