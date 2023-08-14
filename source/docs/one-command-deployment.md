@@ -331,7 +331,7 @@ Alternatively, you can click the deploy button below to create a new project:
 
 [Zeabur](https://zeabur.com) is a cloud platform helps developers to deploy their services with one click, with auto scalling and CI/CD integration and some other features.
 
-Step 1: Add a build script to your `package.json` file:
+Step 1: Add a `build` script to your `package.json` file if doesn't exist:
 
 ```json
 {
