@@ -343,7 +343,7 @@ Step 1: Add a `build` script to your `package.json` file if doesn't exist:
 
 Step 2: Deploy your Hexo Site to Zeabur
 
-To deploy your Hexo site to Zeabur, you need a Git repository to save your hexo site codes and files, make sure is has been pushed to a Git repository.
+To deploy your Hexo site to Zeabur, you need a Git repository to save your hexo site codes and files, make sure is has been pushed to a Git repository. (Zeabur only support GitHub now)
 
 Open [Zeabur Dashboard](https://dash.zeabur.com), follow the [create a new service instructions](https://zeabur.com/docs/get-started) and select your Hexo repository, then click the `Deploy` button.
 
