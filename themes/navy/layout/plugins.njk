@@ -6,6 +6,13 @@
         <input type="search" id="plugin-search-input" placeholder="Search">
         <div id="plugin-list-count">{{ site.data[page.data].length }} items</div>
       </header>
+      <blockquote class="note warn">
+        <strong class="note-title">About Community plugins and themes</strong>
+        <p>Many of plugins and themes listed below are provided by the community. We are deeply appreciative of their contributions.</p>
+        <p>However, its also means that they are out of scope maintaine by official Hexo organization's. 
+           In the other words, as time goes on, if they become inaccessible by domain expiration or other reasons caused by 404 (or etc) errors or no longer maintained them, the official Hexo organization can not solve these issues.
+        </p>
+      </blockquote>
       <ul id="plugin-list">
         {{ plugin_list() }}
       </ul>
