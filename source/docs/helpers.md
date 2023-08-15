@@ -263,7 +263,7 @@ Inserts a feed link.
 Option | Description | Default
 --- | --- | ---
 `title` | Feed title | `config.title`
-`type` | Feed type | atom
+`type` | Feed type | 
 
 **Examples:**
 

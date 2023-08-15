@@ -185,7 +185,7 @@ title: 輔助函數（Helpers）
 選項 | 描述 | 預設值
 --- | --- | ---
 `title` | Feed 標題 | `config.title`
-`type` | Feed 類型 | atom
+`type` | Feed 類型 | 
 
 **範例：**
 
