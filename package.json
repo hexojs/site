@@ -20,7 +20,6 @@
     "hexo-generator-feed": "^3.0.0",
     "hexo-generator-sitemap": "^3.0.1",
     "hexo-renderer-marked": "^6.0.0",
-    "hexo-renderer-pug": "^3.0.0",
     "hexo-renderer-stylus": "^3.0.0",
     "hexo-server": "^3.0.0",
     "hexo-tag-embed": "^1.0.0-rc.1",
