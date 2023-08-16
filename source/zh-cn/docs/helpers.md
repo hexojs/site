@@ -257,7 +257,7 @@ url: https://example.com/blog # example
 参数 | 描述 | 默认值
 --- | --- | ---
 `title` | Feed 标题 | `config.title`
-`type` | Feed 类型 | atom
+`type` | Feed 类型 | 
 
 **示例：**
 
