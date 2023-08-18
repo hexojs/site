@@ -103,6 +103,12 @@
   padding-top: (10 / 16 * 100)% // 16:10 ratio
   height: 0
   overflow: hidden
+  &:hover
+    .plugin-screenshot-mask
+      opacity: 1
+    .fa
+      opacity: 1
+      transform: scale(1)
 
 .plugin-screenshot-img
   position: absolute
@@ -117,7 +123,7 @@
   &.lazyloaded
     opacity: 1
 
-.plugin-preview-image
+.plugin-screenshot-mask
   position: absolute
   top: 0
   left: 0
@@ -128,11 +134,7 @@
   text-align: center
   opacity: 0
   transition: 0.15s
-  &:hover
-    opacity: 1
-    .fa
-      opacity: 1
-      transform: scale(1)
+  pointer-events: none
   .fa
     position: absolute
     top: 0
@@ -147,3 +149,4 @@
     transform: scale(6)
     transition: 0.2s
     transition-delay: 0.15s
+    pointer-events: none
