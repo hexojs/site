@@ -56,8 +56,27 @@
   font-size: 20px
   text-decoration: none
   line-height: 1
+  .fa-external-link
+    font-size: 12px
+    opacity: 0.7
   &:hover
     color: color-link-hover
+
+.plugin-preview-wrap
+  margin: 10px 0 10px 0
+
+.plugin-preview-link
+  font-family: font-title
+  color: color-link
+  font-size: 14px
+  text-decoration: none
+  line-height: 1
+  .fa-external-link
+    font-size: 12px
+    opacity: 0.7
+  &:hover
+    color: color-link-hover
+
 
 .plugin-desc
   line-height: line-height
@@ -84,6 +103,12 @@
   padding-top: (10 / 16 * 100)% // 16:10 ratio
   height: 0
   overflow: hidden
+  &:hover
+    .plugin-screenshot-mask
+      opacity: 1
+    .fa
+      opacity: 1
+      transform: scale(1)
 
 .plugin-screenshot-img
   position: absolute
@@ -98,7 +123,7 @@
   &.lazyloaded
     opacity: 1
 
-.plugin-preview-link
+.plugin-screenshot-mask
   position: absolute
   top: 0
   left: 0
@@ -109,11 +134,7 @@
   text-align: center
   opacity: 0
   transition: 0.15s
-  &:hover
-    opacity: 1
-    .fa
-      opacity: 1
-      transform: scale(1)
+  pointer-events: none
   .fa
     position: absolute
     top: 0
@@ -128,7 +149,7 @@
     transform: scale(6)
     transition: 0.2s
     transition-delay: 0.15s
-
+    pointer-events: none
 blockquote
     font-size: 0.8rem
     opacity: 0.7
@@ -146,3 +167,4 @@ blockquote
     display: block
     font-size: 1.2em
     font-weight: bold
+
