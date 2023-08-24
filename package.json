@@ -36,8 +36,7 @@
   },
   "lint-staged": {
     "*.{png,jpeg,jpg,gif,svg}": [
-      "imagemin-lint-staged",
-      "git add"
+      "imagemin-lint-staged"
     ],
     "*.js": "eslint --fix"
   },
