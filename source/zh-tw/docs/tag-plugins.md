@@ -393,7 +393,7 @@ You could also disable it to output a non-relative link, even when `relative_lin
 <a href="/index.html">blog</a>
 ```
 
-### full_url_for (+7.0.0)
+### full_url_for (7.0.0+)
 
 Returns a url with the `config.url` prefixed. Output is encoded automatically.
 
