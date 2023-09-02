@@ -425,7 +425,7 @@ relative_link: true
 <a href="/index.html">blog</a>
 ```
 
-### full_url_for (+7.0.0)
+### full_url_for (7.0.0+)
 
 返回一个以 `config.url` 为前缀的URL。输出将会自动编码。
 
