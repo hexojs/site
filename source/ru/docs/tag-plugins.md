@@ -350,7 +350,7 @@ _hexo-renderer-marked 3.1.0+ can (optionally) resolves the post's path of an ima
 
 ## URL
 
-### url_for (+7.0.0)
+### url_for (7.0.0+)
 
 Returns a url with the root path prefixed. Output is encoded automatically.
 
