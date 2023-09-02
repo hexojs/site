@@ -1,0 +1,25 @@
+plugin:
+  - "source/_data/plugins/**"
+theme:
+  - "source/_data/themes/**"
+docs:
+  - "source/docs/**"
+  - "source/*/docs/**"
+api:
+  - "source/api/**"
+  - "source/*/api/**"
+ko:
+  - "source/ko/**"
+pt-br:
+  - "source/pt-br/**"
+ru:
+  - "source/ru/**"
+th:
+  - "source/th/**"
+zh:
+  - "source/zh-cn/**"
+  - "source/zh-tw/**"
+site-theme:
+  - "/themes/**"
+site-script:
+  - "/scripts/**"
