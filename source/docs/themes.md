@@ -25,7 +25,7 @@ Language folder. See [internationalization (i18n)](internationalization.html) fo
 
 ### layout
 
-Layout folder. This folder contains the theme's template files, which define the appearance of your website. Hexo provides the [Nunjucks] template engine by default, but you can easily install additional plugins to support alternative engines such as [EJS], [Haml], [Jade], or [Pug]. Hexo chooses the template engine based on the file extension of the template (just like the posts). For example:
+Layout folder. This folder contains the theme's template files, which define the appearance of your website. Hexo provides the [Nunjucks] template engine by default, but you can easily install additional plugins to support alternative engines such as [EJS] or [Pug]. Hexo chooses the template engine based on the file extension of the template (just like the posts). For example:
 
 ```plain
 layout.ejs   - uses EJS
@@ -78,8 +78,6 @@ When you have finished building your theme, you can publish it to the [theme lis
 7. Create a pull request and describe the change.
 
 [EJS]: https://github.com/hexojs/hexo-renderer-ejs
-[Haml]: https://github.com/hexojs/hexo-renderer-haml
-[Jade]: https://github.com/hexojs/hexo-renderer-jade
-[Pug]: https://github.com/maxknee/hexo-render-pug
+[Pug]: https://github.com/hexojs/hexo-renderer-pug
 [hexojs/site]: https://github.com/hexojs/site
 [Nunjucks]: https://mozilla.github.io/nunjucks/
