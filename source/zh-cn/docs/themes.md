@@ -22,7 +22,7 @@ title: 主题
 
 ### layout
 
-布局文件夹。用于存放主题的模板文件，决定了网站内容的呈现方式，Hexo 内建 [Nunjucks] 模板引擎，您可以另外安装插件来获得 [EJS]、[Haml]、[Jade] 或 [Pug] 支持，Hexo 根据模板文件的扩展名来决定所使用的模板引擎，例如：
+布局文件夹。用于存放主题的模板文件，决定了网站内容的呈现方式，Hexo 内建 [Nunjucks] 模板引擎，您可以另外安装插件来获得 [EJS] 或 [Pug] 支持，Hexo 根据模板文件的扩展名来决定所使用的模板引擎，例如：
 
 ``` plain
 layout.ejs   - 使用 EJS
@@ -74,8 +74,6 @@ layout.swig  - 使用 Swig
 6. 建立一个新的合并申请（pull request）并描述改动。
 
 [EJS]: https://github.com/hexojs/hexo-renderer-ejs
-[Haml]: https://github.com/hexojs/hexo-renderer-haml
-[Jade]: https://github.com/hexojs/hexo-renderer-jade
-[Pug]: https://github.com/maxknee/hexo-render-pug
+[Pug]: https://github.com/hexojs/hexo-renderer-pug
 [hexojs/site]: https://github.com/hexojs/site
 [Nunjucks]: https://mozilla.github.io/nunjucks/

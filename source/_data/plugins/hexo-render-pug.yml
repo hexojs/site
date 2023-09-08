@@ -1,5 +1,5 @@
 description: Pug template renderer for hexo, use pug template language.
-link: https://github.com/maxknee/hexo-render-pug
+link: https://github.com/hexojs/hexo-renderer-pug
 tags:
   - jade
   - pug
