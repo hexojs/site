@@ -289,7 +289,7 @@ Alternatively, you can click the deploy button below to create a new project:
 
 Getting started is quick and easy, as Bip provides out the box support for Hexo. This guide assumes you already have [a Bip domain and Bip CLI installed](https://bip.sh/getstarted).
 
-1: Initialise your project directory
+1: Initialize your project directory
 
 ```bash
 $ bip init
