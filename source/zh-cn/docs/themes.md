@@ -53,6 +53,7 @@ layout.swig  - 使用 Swig
     $ cd site
     $ npm install
     ```
+
 3. 在 `source/_data/themes/` 中创建一个新的 yaml 文件，使用您的主题名称作为文件名。
 
 4. 编辑 `source/_data/themes/<your-theme-name>.yml` 并添加您的主题。例如：
