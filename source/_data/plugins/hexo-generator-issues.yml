@@ -1,0 +1,5 @@
+description: The Hexo plugin publish your posts to GitHub issues..
+link: https://github.com/tcatche/hexo-generator-issues
+tags:
+  - github
+  - issue

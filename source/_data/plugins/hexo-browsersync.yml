@@ -1,0 +1,6 @@
+description: BrowserSync plugin for Hexo.
+link: https://github.com/hexojs/hexo-browsersync
+tags:
+  - official
+  - browsersync
+  - server

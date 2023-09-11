@@ -1,0 +1,5 @@
+description: Generate a README.md file contains all of blogs posts link.
+link: https://github.com/tcatche/hexo-generator-readme-file
+tags:
+  - generator
+  - readme

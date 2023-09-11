@@ -1,0 +1,5 @@
+description: Image manipulation for hexo via imagemagick.
+link: https://github.com/vkuznecovas/hexo-img-optimization
+tags:
+  - imagemagick
+  - images

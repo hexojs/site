@@ -1,0 +1,7 @@
+description: Very fast Markdown renderer with support for CommonMark, GFM and more.
+link: https://github.com/hexojs/hexo-renderer-markdown-it
+tags:
+  - official
+  - renderer
+  - markdown
+  - markdown-it

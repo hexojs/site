@@ -1,0 +1,5 @@
+description: Amazon S3 deployer plugin for Hexo.
+link: https://github.com/nt3rp/hexo-deployer-s3
+tags:
+  - deployer
+  - s3

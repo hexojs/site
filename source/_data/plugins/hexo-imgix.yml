@@ -1,0 +1,9 @@
+description: Use the imgix API for image manipulation via a tag, filter and helper.
+link: https://github.com/mshick/hexo-imgix/
+tags:
+  - imgix
+  - filter
+  - tag
+  - helper
+  - manipulation
+  - image

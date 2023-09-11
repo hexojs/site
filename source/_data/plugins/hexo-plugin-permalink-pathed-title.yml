@@ -1,0 +1,7 @@
+description: >-
+  A plugin to show permalinks of posts according to their relative path, like
+  '/dir1/dir2/post3'.
+link: https://github.com/EqualMa/hexo-plugin-permalink-pathed-title
+tags:
+  - permalink
+  - path

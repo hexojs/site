@@ -1,0 +1,7 @@
+description: Generate superscript (sup) tag for Hexo.
+link: https://github.com/bubkoo/hexo-filter-sup
+tags:
+  - sup
+  - tag
+  - filter
+  - markdown

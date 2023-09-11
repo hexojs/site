@@ -1,0 +1,6 @@
+description: A Hexo plugin that inline your svg in the img tag into HTML file.
+link: https://github.com/izmttk/hexo-filter-inline-svg
+tags:
+  - filter
+  - inline
+  - svg

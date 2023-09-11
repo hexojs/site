@@ -1,0 +1,8 @@
+description: >-
+  Include the raw contents of any file (html, text, etc) directly into post
+  contents.
+link: https://github.com/pirtleshell/hexo-include
+tags:
+  - tag
+  - include
+  - insert

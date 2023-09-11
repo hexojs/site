@@ -1,0 +1,6 @@
+description: Binary Pagination plugin for hexo. Use 1,2,4,8,16 instead of 1,2,3,4,5.
+link: https://github.com/CroMarmot/hexo-bin-pagination
+tags:
+  - bin
+  - binary
+  - pagination

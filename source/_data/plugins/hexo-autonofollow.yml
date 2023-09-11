@@ -1,0 +1,8 @@
+description: >-
+  Adds nofollow attribute to all external links in your hexo blog posts
+  automatically.
+link: https://github.com/liuzc/hexo-autonofollow
+tags:
+  - SEO
+  - nofollow
+  - external

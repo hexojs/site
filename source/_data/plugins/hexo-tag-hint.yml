@@ -1,0 +1,7 @@
+description: A Hexo tag plugin displaying text hint.
+link: https://github.com/etigerstudio/hexo-tag-hint
+tags:
+  - tag
+  - hint
+  - tooltip
+  - text

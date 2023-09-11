@@ -6,6 +6,11 @@
         <input type="search" id="plugin-search-input" placeholder="Search">
         <div id="plugin-list-count">{{ site.data[page.data].length }} items</div>
       </header>
+      <blockquote class="note warn">
+        <strong class="note-title">Warning</strong>
+        <p>Many plugins and themes are contributed by the community. They are not maintained by Hexo organization. Hexo organization does not guarantee their availability and security.
+        </p>
+      </blockquote>
       <ul id="plugin-list">
         {{ plugin_list() }}
       </ul>
@@ -13,3 +18,5 @@
   </div>
 </div>
 <script>window.SEARCH_INDEX = {{ lunr_index(site.data[page.data]) }}</script>
+<script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.8/dist/medium-zoom.min.js"></script>
+<script defer>mediumZoom('[data-zoomable]',{background:'#171f26'});</script>

@@ -1,0 +1,10 @@
+description: Obfuscate strings using html entities. Handy against crawlers.
+link: https://github.com/AndrewPrifer/hexo-helper-obfuscate
+tags:
+  - helper
+  - obfuscate
+  - encode
+  - email
+  - crawler
+  - entity
+  - entities
