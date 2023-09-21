@@ -28,13 +28,14 @@ date: 2013/7/13 20:46:25
 `title` | Заголовок | Filename (posts only)
 `date` | Дата публикации | Дата создания файла
 `updated` | Дата обновления | Дата обновления файла
-`comments` | Включение поддержки комментариев в посте | true
+`comments` | Включение поддержки комментариев в посте | `true`
 `tags` | Теги (Недоступно для страниц) |
 `categories` | Категории (Не доступно для страниц) |
 `permalink` | Переопределяет ссылку по умолчанию. Должна заканчиваться `/` или `.html` | `null`
 `excerpt` | Отрывок страницы в виде простого текста. Используйте [этот плагин](/ru/docs/tag-plugins#Отрывок-поста) для оформления текста |
 `disableNunjucks` | Отключить отображение тегов Nunjucks `{{ }}`/`{% %}` и [плагины тегов](/ru/docs/tag-plugins) при включении
 `lang` | Установите язык для переопределения [автоопределения](/ru/docs/internationalization#Путь) | Берётся из `_config.yml`
+`published` | Whether the post should be published | For posts under `_posts`, it is `true`, and for posts under `_draft`, it is `false`
 
 
 #### Макет
