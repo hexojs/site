@@ -40,31 +40,32 @@ Hexo 有强大的插件系统，使您能轻松扩展功能而不用修改核心
 
 ### 发布
 
-当您完成插件后，可以考虑将它发布到 [插件列表](/plugins)，让更多人能够使用您的插件。发布插件的步骤和 [更新文件](contributing.html#更新文件) 非常类似。
+当您完成插件后，可以考虑将它发布到 [插件列表](/plugins)，让更多人能够使用您的插件。发布插件的步骤和 [更新文档](contributing.html#更新文档) 非常类似。
 
 1. Fork [hexojs/site]
 2. 把库（repository）复制到电脑上，并安装所依赖的插件。
 
-    {% code %}
-    $ git clone https://github.com/<username>/site.git
-    $ cd site
-    $ npm install
-    {% endcode %}
+   ```shell
+   $ git clone https://github.com/<username>/site.git
+   $ cd site
+   $ npm install
+   ```
 
-3. 编辑 `source/_data/plugins.yml`，在档案中新增您的插件，例如：
+3. 在 `source/_data/plugins/` 中创建一个新的 yaml 文件，使用您的插件名称作为文件名。
 
-    {% code %}
-    - name: hexo-server
-      description: Server module for Hexo.
-      link: https://github.com/hexojs/hexo-server
-      tags:
-        - official
-        - server
-        - console
-    {% endcode %}
+4. 编辑 `source/_data/plugins/<your-plugin-name>.yml` 并添加您的插件。例如：
 
-4. 推送（push）分支。
-5. 建立一个新的合并申请（pull request）并描述改动。
+   ```yaml
+   description: Server module for Hexo.
+   link: https://github.com/hexojs/hexo-server
+   tags:
+     - official
+     - server
+     - console
+   ```
+
+5. 推送（push）分支。
+6. 建立一个新的合并申请（pull request）并描述改动。
 
 [hexo-fs]: https://github.com/hexojs/hexo-fs
 [hexo-util]: https://github.com/hexojs/hexo-util

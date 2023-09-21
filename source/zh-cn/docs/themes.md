@@ -54,24 +54,25 @@ layout.swig  - 使用 Swig
     $ npm install
     ```
 
-3. 编辑 `source/_data/themes.yml`，在文件中新增您的主题，例如：
+3. 在 `source/_data/themes/` 中创建一个新的 yaml 文件，使用您的主题名称作为文件名。
 
-    ```yaml
-    - name: landscape
-      description: A brand new default theme for Hexo.
-      link: https://github.com/hexojs/hexo-theme-landscape
-      preview: http://hexo.io/hexo-theme-landscape
-      tags:
-        - official
-        - responsive
-        - widget
-        - two_column
-        - one_column
-    ```
+4. 编辑 `source/_data/themes/<your-theme-name>.yml` 并添加您的主题。例如：
 
-4. 在 `source/themes/screenshots` 新增同名的截图档案，图片必须为 800x500 的 PNG 文件。
-5. 推送（push）分支。
-6. 建立一个新的合并申请（pull request）并描述改动。
+   ```yaml
+   description: A brand new default theme for Hexo.
+   link: https://github.com/hexojs/hexo-theme-landscape
+   preview: http://hexo.io/hexo-theme-landscape
+   tags:
+     - official
+     - responsive
+     - widget
+     - two_column
+     - one_column
+   ```
+
+5. 在 `source/themes/screenshots` 中添加一张截图（名称与主题相同），图片必须为 800x500 的 PNG 文件。
+6. 推送（push）分支。
+7. 建立一个新的合并申请（pull request）并描述改动。
 
 [EJS]: https://github.com/hexojs/hexo-renderer-ejs
 [Pug]: https://github.com/hexojs/hexo-renderer-pug
