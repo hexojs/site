@@ -28,7 +28,7 @@ date: 2013/7/13 20:46:25
 `excerpt` | 纯文本的页面摘要。使用 [该插件](/zh-cn/docs/tag-plugins#文章摘要和截断) 来格式化文本 |
 `disableNunjucks` | 启用时禁用 Nunjucks 标签 `{{ }}`/`{% %}` 和 [标签插件](/zh-cn/docs/tag-plugins) 的渲染功能 | false
 `lang` | 设置语言以覆盖 [自动检测](/zh-cn/docs/internationalization#路径) | 继承自 `_config.yml`
-`published` | 文章是否发布 | 对于`_posts`下的文章为`true`，对于`_draft`下的文章为`false`
+`published` | 文章是否发布 | 对于 `_posts` 下的文章为 `true`，对于 `_draft` 下的文章为 `false`
 
 ## 布局
 
