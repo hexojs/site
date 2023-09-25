@@ -190,7 +190,7 @@ prismjs:
   tab_replace: ''
 ```
 
-PrismJS 默认禁用。启用 PrimeJS 前应设置 `highlight.enable` 为 `false`。
+PrismJS 默认禁用。启用 PrismJS 前应设置 `highlight.enable` 为 `false`。
 
 ### preprocess
 
@@ -204,7 +204,7 @@ PrismJS 主要是面向浏览器的。因此，在服务器端高亮模式下只
 - [语言显示](https://prismjs.com/plugins/show-language/)：当代码块有标注语言时，Hexo 总会添加 `data-language` 属性。
 - Hexo 也支持其它不需要特殊 HTML 代码格式的 PrismJS 插件，不过你需要引入它们的 JavaScript 文件。
 
-`preprocess` 设置为 `false` 时所有 primejs 插件均可用，只需额外注意以下几点：
+`preprocess` 设置为 `false` 时所有 PrismJS 插件均可用，只需额外注意以下几点：
 
 - [行号显示](https://prismjs.com/plugins/line-numbers/)：当 `preprocess` 设置为 `false` 时，Hexo 不会生成插件所需的 HTML 代码格式。`prism-line-numbers.css` 和 `prism-line-numbers.js`均需被引入。
 - [语言显示](https://prismjs.com/plugins/show-language/)：当代码块有标注语言时，Hexo 总会添加 `data-language` 属性。
