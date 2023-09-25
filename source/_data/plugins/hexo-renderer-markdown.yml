@@ -1,0 +1,6 @@
+description: Markdown-it renderer plugin for Hexo.
+link: https://github.com/niemingzhao/hexo-renderer-markdown
+tags:
+  - renderer
+  - markdown
+  - markdown-it

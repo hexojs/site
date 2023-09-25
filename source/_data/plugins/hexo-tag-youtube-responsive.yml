@@ -1,0 +1,15 @@
+description: >-
+  Hexo tag to embed a Youtube player that auto resizes with your responsive
+  layout with many customization options to control the player.
+link: https://github.com/quocvu/hexo-tag-youtube-responsive
+tags:
+  - tag_plugins
+  - youtube
+  - widget
+  - videos
+  - playlist
+  - responsive
+  - auto-resize
+  - options
+  - parameters
+  - customization

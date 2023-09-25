@@ -1,0 +1,10 @@
+description: >-
+  Extend syntax for the native fenced code block. Use tag-plugins as fenced code
+  block.
+link: https://github.com/bubkoo/hexo-filter-fenced-code
+tags:
+  - filter
+  - code block
+  - extend
+  - syntax
+  - markdown

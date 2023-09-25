@@ -1,0 +1,8 @@
+description: Generate mutliple version of images for responsive blogs.
+link: https://github.com/hexojs/hexo-filter-responsive-images
+tags:
+  - official
+  - images
+  - responsive
+  - resize
+  - thumbnails

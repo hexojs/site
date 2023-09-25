@@ -1,0 +1,9 @@
+description: >-
+  Generate paged html fragments for `Index`, `Category` and `Tag` pages, let
+  `Hexo` support elegant ajax pagination.
+link: https://github.com/mamboer/hexo-generator-fragments
+tags:
+  - generator
+  - pagination
+  - ajax-pagination
+  - fragments

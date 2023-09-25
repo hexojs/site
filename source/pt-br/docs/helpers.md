@@ -191,7 +191,7 @@ Insere um link de feed.
 Opção | Descrição | Padrão
 --- | --- | ---
 `title` | Título do feed | `config.title`
-`type` | Tipo do feed | atom
+`type` | Tipo do feed | 
 
 **Examples:**
 

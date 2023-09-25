@@ -1,0 +1,11 @@
+description: Generate a powerful ServiceWorker for your website.
+link: https://github.com/EmptyDreams/hexo-swpp
+tags:
+  - "service worker"
+  - "local cache"
+  - "cdn racing"
+  - "alternative URLs"
+  - "request tampering"
+  - "block request"
+  - "pjax"
+  - generator

@@ -1,0 +1,11 @@
+description: A theme using swig template aimed to build github project site conveniently
+link: https://github.com/Jamling/hexo-theme-nova
+preview: https://www.ieclipse.cn
+tags:
+  - bootstrap
+  - responsive
+  - widget
+  - two_columns
+  - three_columns
+  - project layout
+  - multi-languages

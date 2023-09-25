@@ -1,0 +1,5 @@
+description: Render statistics of hexo poats, categories, and tags into charts
+link: https://www.npmjs.com/package/hexo-statistics-charts
+tags:
+  - statistics
+  - charts

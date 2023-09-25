@@ -1,0 +1,8 @@
+description: Minify CSS files with clean-css.
+link: https://github.com/hexojs/hexo-clean-css
+tags:
+  - official
+  - filter
+  - css
+  - cleancss
+  - minify

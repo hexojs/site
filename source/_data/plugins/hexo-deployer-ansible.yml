@@ -1,0 +1,5 @@
+description: Ansible deployer plugin for Hexo.
+link: https://github.com/zyuyou/hexo-deployer-ansible
+tags:
+  - deployer
+  - ansible

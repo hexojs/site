@@ -1,0 +1,8 @@
+description: Markdown renderer plugin for Hexo - based on Unified.
+link: https://github.com/StaloneLab/hexo-renderer-unified
+tags:
+  - renderer
+  - markdown
+  - unified
+  - remark
+  - rehype

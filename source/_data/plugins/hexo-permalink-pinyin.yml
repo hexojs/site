@@ -1,0 +1,5 @@
+description: A Hexo plugin which convert Chinese title to transliterate permalink.
+link: https://github.com/viko16/hexo-permalink-pinyin
+tags:
+  - permalink
+  - transliteration

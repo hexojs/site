@@ -1,0 +1,5 @@
+description: A plugin for Hexo that adds Gitter to every page.
+link: https://github.com/wshunli/hexo-gitter
+tags:
+  - helper
+  - gitter

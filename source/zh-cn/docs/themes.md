@@ -22,7 +22,7 @@ title: 主题
 
 ### layout
 
-布局文件夹。用于存放主题的模板文件，决定了网站内容的呈现方式，Hexo 内建 [Nunjucks] 模板引擎，您可以另外安装插件来获得 [EJS]、[Haml]、[Jade] 或 [Pug] 支持，Hexo 根据模板文件的扩展名来决定所使用的模板引擎，例如：
+布局文件夹。用于存放主题的模板文件，决定了网站内容的呈现方式，Hexo 内建 [Nunjucks] 模板引擎，您可以另外安装插件来获得 [EJS] 或 [Pug] 支持，Hexo 根据模板文件的扩展名来决定所使用的模板引擎，例如：
 
 ``` plain
 layout.ejs   - 使用 EJS
@@ -54,28 +54,27 @@ layout.swig  - 使用 Swig
     $ npm install
     ```
 
-3. 编辑 `source/_data/themes.yml`，在文件中新增您的主题，例如：
+3. 在 `source/_data/themes/` 中创建一个新的 yaml 文件，使用您的主题名称作为文件名。
 
-    ```yaml
-    - name: landscape
-      description: A brand new default theme for Hexo.
-      link: https://github.com/hexojs/hexo-theme-landscape
-      preview: http://hexo.io/hexo-theme-landscape
-      tags:
-        - official
-        - responsive
-        - widget
-        - two_column
-        - one_column
-    ```
+4. 编辑 `source/_data/themes/<your-theme-name>.yml` 并添加您的主题。例如：
 
-4. 在 `source/themes/screenshots` 新增同名的截图档案，图片必须为 800x500 的 PNG 文件。
-5. 推送（push）分支。
-6. 建立一个新的合并申请（pull request）并描述改动。
+   ```yaml
+   description: A brand new default theme for Hexo.
+   link: https://github.com/hexojs/hexo-theme-landscape
+   preview: http://hexo.io/hexo-theme-landscape
+   tags:
+     - official
+     - responsive
+     - widget
+     - two_column
+     - one_column
+   ```
+
+5. 在 `source/themes/screenshots` 中添加一张截图（名称与主题相同），图片必须为 800x500 的 PNG 文件。
+6. 推送（push）分支。
+7. 建立一个新的合并申请（pull request）并描述改动。
 
 [EJS]: https://github.com/hexojs/hexo-renderer-ejs
-[Haml]: https://github.com/hexojs/hexo-renderer-haml
-[Jade]: https://github.com/hexojs/hexo-renderer-jade
-[Pug]: https://github.com/maxknee/hexo-render-pug
+[Pug]: https://github.com/hexojs/hexo-renderer-pug
 [hexojs/site]: https://github.com/hexojs/site
 [Nunjucks]: https://mozilla.github.io/nunjucks/

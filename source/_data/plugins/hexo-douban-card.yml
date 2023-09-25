@@ -1,0 +1,8 @@
+description: generate a douban book(movie/music) card in hexo post
+link: https://github.com/TankNee/hexo-douban-card
+tags:
+  - douban
+  - post
+  - card
+  - crawl
+  - spider

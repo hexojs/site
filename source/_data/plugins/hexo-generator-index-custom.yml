@@ -1,0 +1,5 @@
+description: Custom index generator plugin for hexo. Can hide posts and pin-top posts.
+link: https://github.com/im0o/hexo-generator-index-custom
+tags:
+  - generator
+  - index

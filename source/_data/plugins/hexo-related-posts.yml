@@ -1,0 +1,8 @@
+description: Generates related posts list with TF/IDF algorithm.
+link: https://github.com/sergeyzwezdin/hexo-related-posts
+tags:
+  - tf
+  - idf
+  - tf/idf
+  - related
+  - popular

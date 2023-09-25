@@ -1,0 +1,6 @@
+description: Using d3-cloud to generate tagcloud for Hexo.
+link: https://github.com/lucyhao/hexo-d3cloudtag
+tags:
+  - plugins
+  - d3-cloudud
+  - tagcloud

@@ -1,0 +1,6 @@
+description: A generator automatically make canonical link for hexo.
+link: https://github.com/HyunSeob/hexo-auto-canonical
+tags:
+  - helper
+  - canonical
+  - SEO
