@@ -1,7 +1,7 @@
 ---
 title: 渲染
 ---
-在 Hexo 中，有两个方法可用于渲染文件或字符串，分别是异步的 `hexo.render.render` 和同步的 `hexo.render.renderSync`，这两个方法的使用方式十分类似，因此以下仅以异步的 `hexo.render.render` 为例。
+在 Hexo 中，有两个方法可用于渲染文件或字符串，分别是异步的 `hexo.render.render` 和同步的 `hexo.render.renderSync`，这两个方法的使用方式十分类似，因此下文仅以异步的 `hexo.render.render` 为例。
 
 ## 渲染字符串
 
