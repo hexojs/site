@@ -3,9 +3,9 @@ title:  Box
 ---
 「Box」是 Hexo 用来处理特定文件夹中的文件的容器，在 Hexo 中有两个 Box，分别是 `hexo.source` 和 `hexo.theme`，前者用于处理 `source` 文件夹，而后者用于处理主题文件夹。
 
-## 载入文件
+## 加载文件
 
-Box 提供了两种方法来载入文件：`process`, `watch`，前者用于载入文件夹内的所有文件；而后者除了执行 `process` 以外，还会继续监视文件变动。
+Box 提供了两种方法来加载文件：`process`, `watch`，前者用于加载文件夹内的所有文件；而后者除了执行 `process` 以外，还会继续监视文件变动。
 
 ``` js
 box.process().then(function(){
@@ -19,7 +19,7 @@ box.watch().then(function(){
 
 ## 比对路径
 
-Box 提供了多种比对路径的模式，您可以以使用正则表达式（regular expression）、函数、或是一种类似于 Express 的路径字符串，例如：
+Box 提供了多种比对路径的模式，您可以以使用正则表达式（regular expression）、函数、或是 Express 风格的模式字符串，例如：
 
 ``` plain
 posts/:id => posts/89

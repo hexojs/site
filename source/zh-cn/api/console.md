@@ -1,7 +1,7 @@
 ---
 title: 控制台（Console）
 ---
-控制台是 Hexo 与开发者之间沟通的桥梁。
+控制台是 Hexo 与开发者之间沟通的桥梁。它注册并描述了可用的控制台命令。
 
 ## 概要
 
@@ -45,7 +45,7 @@ hexo.extend.console.register(name, desc, options, function(args){
 
 ### 选项
 
-控制台的选项，例如：
+控制台的各个选项的说明，例如：
 
 ``` js
 {
@@ -59,7 +59,7 @@ hexo.extend.console.register(name, desc, options, function(args){
 
 关于控制台命令的更详细的信息。
 
-## 范例
+## 示例
 
 ``` js
 hexo.extend.console.register('config', 'Display configuration', function(args){

@@ -10,7 +10,7 @@ hexo.extend.generator.register(name, function(locals){
 });
 ```
 
-在函数中会传入一个 `locals` 参数，等同于 [网站变量](../docs/variables.html#网站变量)，请尽量利用此参数取得网站数据，避免直接存取资料库。
+函数中将传递一个 `locals` 参数，其中包含 [网站变量](../docs/variables.html#网站变量)，请尽量利用此参数取得网站数据，避免直接访问数据库。
 
 ## 更新路由
 
@@ -36,13 +36,13 @@ hexo.extend.generator.register('test', function(locals){
 `data` | 数据
 `layout` | 布局。指定用于渲染的模板，可为字符串或数组，如果省略此属性的话则会直接输出 `data`。
 
-在原始文件更新时，Hexo 会执行所有生成器并重建路由，**请直接回传资料，不要直接操作路由**。
+在原始文件更新时，Hexo 会执行所有生成器并重建路由，**请直接回传数据，不要直接操作路由**。
 
-## 范例
+## 示例
 
 ### 归档页面
 
-在 `archives/index.html` 建立一归档页面，把所有文章当作资料传入模板内，这个资料也就等同于模板中的 `page` 变量。
+在 `archives/index.html` 建立一归档页面，把所有文章当作数据传入模板内，这个数据也就等同于模板中的 `page` 变量。
 
 然后，设置 `layout` 属性好让 Hexo 使用主题模板来渲染，在此例中同时设定了两个布局，当 `archive` 布局不存在时，会继续尝试 `index` 布局。
 
@@ -90,7 +90,7 @@ hexo.extend.generator.register('post', function(locals){
 
 ### 复制文件
 
-这次不直接在 `data` 中返回数据而是返回一个函数，如此一来这个路由唯有在使用时才会建立 `fs.ReadStream`。
+这次我们不明确返回数据，而是将 `data` 设置为一个函数，这样路由只会在需要时才会构建 `fs.ReadStream`。
 
 ``` js
 var fs = require('hexo-fs');

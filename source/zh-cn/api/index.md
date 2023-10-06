@@ -26,11 +26,11 @@ hexo.init().then(function(){
 `config` | 指定配置文件的路径。| `_config.yml`
 `draft` / `drafts`| 是否将草稿加入到文章列表中。<br>例如在 `hexo.locals.get('posts')` 中获取草稿内容 | _config.yml 中 `render_drafts` 的值
 
-## 载入文件
+## 加载文件
 
-Hexo 提供了两种方法来载入文件：`load`, `watch`，前者用于载入 `source` 文件夹内的所有文件及主题资源；而后者除了执行 `load` 以外，还会继续监视文件变动。
+Hexo 提供了两种方法来加载文件：`load`, `watch`，前者用于加载 `source` 文件夹内的所有文件及主题资源；而后者除了执行 `load` 以外，还会继续监视文件变动。
 
-这两个方法实际上所做的，就是载入文件列表，并把文件传给相对应的处理器（Processor），当文件全部处理完毕后，就执行生成器（Generator）来建立路由。
+这两个方法实际上所做的，就是加载文件列表，并把文件传给相对应的处理器（Processor），当文件全部处理完毕后，就会执行生成器（Generator）来建立路由。
 
 ``` js
 hexo.load().then(function(){
@@ -52,9 +52,9 @@ hexo.call('generate', {}).then(function(){
 });
 ```
 
-## 结束
+## 退出
 
-当指令完毕后，请执行 `exit` 方法让 Hexo 退出结束前的准备工作（如存储资料库）。
+无论控制台命令完成与否，都应调用 `exit` 方法。这样 Hexo 就能优雅地退出，并完成保存数据库等重要工作。
 
 ``` js
 hexo.call('generate').then(function(){
