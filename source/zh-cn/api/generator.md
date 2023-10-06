@@ -10,7 +10,7 @@ hexo.extend.generator.register(name, function(locals){
 });
 ```
 
-函数中将传递一个 `locals` 参数，其中包含 [网站变量](../docs/variables.html#网站变量)，请尽量利用此参数取得网站数据，避免直接访问数据库。
+`locals` 参数会被传递到此函数，其中包含 [网站变量](../docs/variables.html#网站变量)，请尽量利用此参数取得网站数据，避免直接访问数据库。
 
 ## 更新路由
 
