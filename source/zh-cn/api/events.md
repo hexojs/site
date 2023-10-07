@@ -40,7 +40,7 @@ hexo.on('new', function(post){
 
 ### processBefore
 
-在处理原始文件前发布。此事件会返回一个路径，代表 Box（Box）的根目录。
+在处理原始文件前发布。此事件会返回一个路径，代表 盒（Box）的根目录。
 
 ### processAfter
 
