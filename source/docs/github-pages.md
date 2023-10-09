@@ -14,7 +14,8 @@ In this tutorial, we use [GitHub Actions](https://docs.github.com/en/actions) to
   - The `public/` folder is not (and should not be) uploaded by default, make sure the `.gitignore` file contains `public/` line. The folder structure should be roughly similar to [this repo](https://github.com/hexojs/hexo-starter), without the `.gitmodules` file.
 
 3. Check what version of Node.js you are using on your local machine with `node --version`. Make a note of the major version (e.g., `v16.y.z`)
-4. Create `.github/workflows/pages.yml` in your repo with the following contents (substituting `16` to the major version of Node.js that you noted in previous step):
+4. In your GitHub repo's setting, navigate to **Settings** > **Pages** > **Source**. Change the source to **GitHub Actions** and save.
+5. Create `.github/workflows/pages.yml` in your repo with the following contents (substituting `16` to the major version of Node.js that you noted in previous step):
 
 ```yml .github/workflows/pages.yml
 name: Pages
@@ -27,8 +28,6 @@ on:
 jobs:
   pages:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
     steps:
       - uses: actions/checkout@v3
         with:
@@ -50,16 +49,26 @@ jobs:
         run: npm install
       - name: Build
         run: npm run build
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v2
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public
+          path: ./public
+  deploy:
+    needs: pages
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v2
 ```
 
-5. Once the deployment is finished, the generated pages can be found in the `gh-pages` branch of your repository.
-6. In your GitHub repo's setting, navigate to **Settings** > **Pages** > **Source**. Change the branch to `gh-pages` and save.
-7. Check the webpage at *username*.github.io.
+6. Once the deployment is finished, check the webpage at *username*.github.io.
 
 Note - if you specify a custom domain name with a `CNAME`, you need to add the `CNAME` file to the `source/` folder. [More info](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site).
 
@@ -69,10 +78,9 @@ If you prefer to have a project page on GitHub:
 
 1. Navigate to your repo on GitHub. Go to the **Settings** tab. Change the **Repository name** so your blog is available at <b>username.github.io/*repository*</b>,  **repository** can be any name, like *blog* or *hexo*.
 2. Edit your **_config.yml**, change the `url:` value to <b>https://*username*.github.io/*repository*</b>.
-3. Commit and push to the default branch.
-4. Once the deployment is finished, the generated pages can be found in the `gh-pages` branch of your repository.
-6. In your GitHub repo's setting, navigate to **Settings** > **Pages** > **Source**. Change the branch to `gh-pages` and save.
-7. Check the webpage at *username*.github.io/*repository*.
+3. In your GitHub repo's setting, navigate to **Settings** > **Pages** > **Source**. Change the source to **GitHub Actions** and save.
+4. Commit and push to the default branch.
+4. Once the deployment is finished, check the webpage at *username*.github.io/*repository*.
 
 ## One-command deployment
 
@@ -95,4 +103,5 @@ The following instruction is adapted from [one-command deployment](/docs/one-com
 ## Useful links
 
 - [GitHub Pages](https://docs.github.com/en/pages)
-- [peaceiris/actions-gh-pages](https://github.com/marketplace/actions/github-pages-action)
+- [Publishing with a custom GitHub Actions workflow](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site#publishing-with-a-custom-github-actions-workflow)
+- [actions/deploy-github-pages-site](https://github.com/marketplace/actions/deploy-github-pages-site)
