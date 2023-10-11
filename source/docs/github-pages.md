@@ -26,7 +26,7 @@ on:
       - main  # default branch
 
 jobs:
-  pages:
+  build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -54,7 +54,7 @@ jobs:
         with:
           path: ./public
   deploy:
-    needs: pages
+    needs: build
     permissions:
       pages: write
       id-token: write
