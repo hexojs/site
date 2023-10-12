@@ -19,7 +19,9 @@ th:
 zh:
   - "source/zh-cn/**"
   - "source/zh-tw/**"
-site-theme:
+infra:
+  - "/.github/**"
+  - "/.husky/**"
   - "/themes/**"
-site-script:
   - "/scripts/**"
+  - "./_config.yml"
