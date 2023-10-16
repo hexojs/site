@@ -32,7 +32,7 @@
     "eslint-config-hexo": "^5.0.0",
     "husky": "^8.0.1",
     "imagemin-lint-staged": "^0.5.1",
-    "lint-staged": "^14.0.1"
+    "lint-staged": "^15.0.1"
   },
   "lint-staged": {
     "*.{png,jpeg,jpg,gif,svg}": [
