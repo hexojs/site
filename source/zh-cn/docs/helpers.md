@@ -118,7 +118,7 @@ url: https://example.com/blog # example
 
 ### css
 
-载入 CSS 文件。`path` 可以是数组或字符串，如果 `path` 开头不是 `/` 或任何协议，则会自动加上根路径；如果后面没有加上 `.css` 扩展名的话，也会自动加上。对于自定义属性请使用对象类型。
+加载 CSS 文件。`path` 可以是数组或字符串，如果 `path` 开头不是 `/` 或任何协议，则会自动加上根路径；如果后面没有加上 `.css` 扩展名的话，也会自动加上。对于自定义属性请使用对象类型。
 
 ``` js
 <%- css(path, ...) %>
@@ -144,7 +144,7 @@ url: https://example.com/blog # example
 
 ### js
 
-载入 JavaScript 文件。`path` 可以是数组或字符串，如果 `path` 开头不是 `/` 或任何协议，则会自动加上根路径；如果后面没有加上 `.js` 扩展名的话，也会自动加上。对于自定义属性请使用对象类型。
+加载 JavaScript 文件。`path` 可以是数组或字符串，如果 `path` 开头不是 `/` 或任何协议，则会自动加上根路径；如果后面没有加上 `.js` 扩展名的话，也会自动加上。对于自定义属性请使用对象类型。
 
 ``` js
 <%- js(path, ...) %>
@@ -486,7 +486,7 @@ url: https://example.com/blog # example
 
 ### partial
 
-载入其他模板文件，您可在 `locals` 设定区域变量。
+加载其他模板文件，您可在 `locals` 设定区域变量。
 
 ``` js
 <%- partial(layout, [locals], [options]) %>

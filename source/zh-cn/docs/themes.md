@@ -33,7 +33,7 @@ layout.swig  - 使用 Swig
 
 ### scripts
 
-脚本文件夹。在启动时，Hexo 会载入此文件夹内的 JavaScript 文件，请参见 [插件](plugins.html) 以获得更多信息。
+脚本文件夹。在启动时，Hexo 会加载此文件夹内的 JavaScript 文件，请参见 [插件](plugins.html) 以获得更多信息。
 
 ### source
 

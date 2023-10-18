@@ -51,7 +51,7 @@ hexo.post.render(source, data);
 `source` | 文件的完整路径（可忽略）
 `data` | 数据
 
-资料中必须包含 `content` 属性，如果没有的话，会尝试读取原始文件。此函数的执行顺序为：
+数据中必须包含 `content` 属性，如果没有的话，Hexo 会尝试读取原始文件。此函数的执行顺序为：
 
 - 执行 `before_post_render` 过滤器
 - 使用 Markdown 或其他渲染器渲染（根据扩展名而定）
