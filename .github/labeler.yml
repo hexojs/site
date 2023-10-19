@@ -1,13 +1,20 @@
-plugin:
+Plugins:
   - "source/_data/plugins/**"
-theme:
+Themes:
   - "source/_data/themes/**"
-docs:
+  - "source/themes/screenshots/**"
+Docs:
   - "source/docs/**"
   - "source/*/docs/**"
-api:
+API:
   - "source/api/**"
   - "source/*/api/**"
+News:
+  - "source/_posts/**"
+en:
+  - "source/docs/**"
+  - "source/api/**"
+  - "source/index.md"
 ko:
   - "source/ko/**"
 pt-br:
@@ -20,8 +27,10 @@ zh:
   - "source/zh-cn/**"
   - "source/zh-tw/**"
 infra:
-  - "/.github/**"
-  - "/.husky/**"
-  - "/themes/**"
-  - "/scripts/**"
-  - "./_config.yml"
+  - ".github/**"
+  - ".husky/**"
+  - "scaffolds/**"
+  - "themes/**"
+  - "scripts/**"
+  - "*"
+  - ".*"
