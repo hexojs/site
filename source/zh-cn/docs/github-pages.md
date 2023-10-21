@@ -16,7 +16,8 @@ title: 在 GitHub Pages 上部署 Hexo
 - 默认情况下 `public/` 不会被上传(也不该被上传)，确保 `.gitignore` 文件中包含一行 `public/`。整体文件夹结构应该与 [示例储存库](https://github.com/hexojs/hexo-starter) 大致相似。
 
 3. 使用 `node --version` 指令检查你电脑上的 Node.js 版本，并记下该版本 (例如：`v16.y.z`)
-4. 在储存库中建立 `.github/workflows/pages.yml`，并填入以下内容 (将 `16` 替换为上个步骤中记下的版本)：
+4. 在储存库中前往 `Settings > Pages > Source`，并将 `Source` 改为 `GitHub Actions`。
+5. 在储存库中建立 `.github/workflows/pages.yml`，并填入以下内容 (将 `16` 替换为上个步骤中记下的版本)：
 
 ```yml .github/workflows/pages.yml
 name: Pages
@@ -27,10 +28,8 @@ on:
       - main # default branch
 
 jobs:
-  pages:
+  build:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
     steps:
       - uses: actions/checkout@v3
         with:
@@ -40,7 +39,7 @@ jobs:
       - name: Use Node.js 16.x
         uses: actions/setup-node@v2
         with:
-          node-version: "16"
+          node-version: '16'
       - name: Cache NPM dependencies
         uses: actions/cache@v2
         with:
@@ -52,15 +51,26 @@ jobs:
         run: npm install
       - name: Build
         run: npm run build
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v2
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public
+          path: ./public
+  deploy:
+    needs: build
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v2
 ```
-5. 当部署作业完成后，产生的页面会放在储存库中的 `gh-pages` 分支。
-6. 在储存库中前往 `Settings > Pages > Source`，并将 branch 改为 `gh-pages`。
-7. 前往 `https://<你的 GitHub 用户名>.github.io` 查看网站。
+
+6. 部署完成后，前往 `https://<你的 GitHub 用户名>.github.io` 查看网站。
 
 {% note info CNAME %}
 若你使用了一个带有 `CNAME` 的自定义域名，你需要在 `source/` 文件夹中新增 `CNAME` 文件。 [更多信息](https://docs.github.com/zh/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site)
@@ -72,10 +82,9 @@ jobs:
 
 1. 建立名为 `<repository 的名字>` 的储存库，这样你的博客网址为 `<你的 GitHub 用户名>.github.io/<repository 的名字>`，repository 的名字可以任意，例如 blog 或 hexo。
 2. 编辑你的 `_config.yml`，将 `url:` 更改为 `<你的 GitHub 用户名>.github.io/<repository 的名字>`。
-3. Commit 并 push 到默认分支上。
-4. 当部署完成后，在 `gh-pages` 分支可以找到生成的网页。
-5. 在 GitHub 储存库中，前往 `Settings > Pages > Source`，并将 branch 改为 `gh-pages`。
-6. 前往 `https://<你的 GitHub 用户名>.github.io/<repository 的名字>` 查看网站。
+3. 在储存库中前往 `Settings > Pages > Source`，并将 `Source` 改为 `GitHub Actions`。
+4. Commit 并 push 到默认分支上。
+5. 部署完成后，前往 `https://<你的 GitHub 用户名>.github.io/<repository 的名字>` 查看网站。
 
 ## 一键部署
 
@@ -103,4 +112,5 @@ deploy:
 ## 参考链接
 
 - [GitHub Pages 使用文档](https://docs.github.com/zh/pages)
-- [peaceiris/actions-gh-pages](https://github.com/marketplace/actions/github-pages-action)
+- [使用自定义 GitHub Actions 工作流进行发布](https://docs.github.com/zh/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site#使用自定义-github-actions-工作流进行发布)
+- [actions/deploy-github-pages-site](https://github.com/marketplace/actions/deploy-github-pages-site)
