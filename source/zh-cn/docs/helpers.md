@@ -878,6 +878,7 @@ url: https://example.com/blog # example
 `twitter_card` | Twitter 卡片类型 (`twitter:card`) | summary
 `twitter_id` | Twitter ID (`twitter:creator`) |
 `twitter_site` | Twitter 网站 (`twitter:site`) |
+`twitter_image` | Twitter 图片 (`twitter:image`) |
 `google_plus` | Google+ 个人资料链接 |
 `fb_admins` | Facebook 管理者 ID |
 `fb_app_id` | Facebook 应用程序 ID |

@@ -896,6 +896,7 @@ Option | Description | Default
 `twitter_card` | Twitter card type (`twitter:card`) | summary
 `twitter_id` | Twitter ID (`twitter:creator`) |
 `twitter_site` | Twitter Site (`twitter:site`) |
+`twitter_image` | Twitter Image (`twitter:image`) |
 `google_plus` | Google+ profile link |
 `fb_admins` | Facebook admin ID |
 `fb_app_id` | Facebook App ID |
