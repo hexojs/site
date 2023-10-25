@@ -217,7 +217,7 @@ $ hexo generate --config custom.yml,custom2.json,custom3.yml
 
 当你指定了多个配置文件以后，Hexo 会按顺序将这部分配置文件合并成一个 `_multiconfig.yml`。如果遇到重复的配置，排在后面的文件的配置会覆盖排在前面的文件的配置。这个原则适用于任意数量、任意深度的 YAML 和 JSON 文件。
 
-例如，使用 `--options` 指定了两个自定义配置文件：
+例如，使用 `--config` 指定了两个自定义配置文件：
 
 ```
 $ hexo generate --config custom.yml,custom2.json
