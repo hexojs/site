@@ -19,7 +19,7 @@ Setting | Description
 
 Setting | Description | Default
 --- | --- | ---
-`url` | The URL of your website, must starts with `http://` or `https://` |
+`url` | The URL of your website, must start with `http://` or `https://` |
 `root` | The root directory of your website | `url's pathname`
 `permalink` | The [permalink](permalinks.html) format of articles | `:year/:month/:day/:title/`
 `permalink_defaults` | Default values of each segment in permalink |
@@ -122,11 +122,11 @@ Setting | Description | Default
 {% note info updated_option %}
 `updated_option` controls the `updated` value when not provided in the front-matter:
 
-- `mtime`: Use file modification date as `updated`. It is the default behavior of Hexo since 3.0.0
+- `mtime`: Use file modification date as `updated`. It has been the default behaviour of Hexo since 3.0.0
 - `date`: Use `date` as `updated`. Typically used with Git workflow when file modification date could be different.
 - `empty`: Simply drop `updated` when not provided. May not be compatible with most themes and plugins.
 
-`use_date_for_updated` is deprecated and will be removed in next major version. Please use `updated_option: 'date'` instead.
+`use_date_for_updated` is deprecated and will be removed in the next major version. Please use `updated_option: 'date'` instead.
 {% endnote %}
 
 ### Pagination
@@ -163,7 +163,7 @@ Use the following options to explicitly process or ignore certain files/folders.
 
 Setting | Description
 --- | ---
-`include` | Include hidden files (including files/folders with a name that start with an underscore, with an exception*)
+`include` | Include hidden files (including files/folders with a name that starts with an underscore, with an exception*)
 `exclude` | Exclude files/folders
 `ignore` | Ignore files/folders
 
@@ -306,6 +306,6 @@ Resulting in theme configuration:
 ```
 
 {% note %}
-We strongly recommend you to store your theme configuration in one place. But in case you have to store your theme configuration separately, you need to know the priority of those configurations: The `theme_config` inside site's primary configuration file has the highest priority during merging, then the dedicated theme configuration file.
+We strongly recommend that you store your theme configuration in one place. But in case you have to store your theme configuration separately, you need to know the priority of those configurations: The `theme_config` inside site's primary configuration file has the highest priority during merging, then the dedicated theme configuration file.
 The `_config.yml` file under the theme directory has the lowest priority.
 {% endnote %}
