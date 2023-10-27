@@ -98,7 +98,7 @@ Make sure you have [set up git](https://help.github.com/articles/set-up-git) on 
 
 ### Error: ENOENT: no such file or directory
 
-If you get an error like `Error: ENOENT: no such file or directory` it's probably due to to mixing uppercase and lowercase letters in your tags, categories, or filenames. Git cannot automatically merge this change so it breaks the automatic branching.
+If you get an error like `Error: ENOENT: no such file or directory` it's probably due to mixing uppercase and lowercase letters in your tags, categories, or filenames. Git cannot automatically merge this change so it breaks the automatic branching.
 
 To fix this, try
 
@@ -178,7 +178,7 @@ When you can't get any command except `help`, `init` and `version` to work and y
 
 ## Escape Contents
 
-Hexo uses [Nunjucks] to render posts ([Swig] was used in older version, which share a similar syntax). Content wrapped with `{{ }}` or `{% %}` will get parsed and may cause problems. You can skip the parsing by wrapping it with the [`raw`](/docs/tag-plugins#Raw) tag plugin, single backtick ```` `{{ }}` ```` or triple backtick.
+Hexo uses [Nunjucks] to render posts ([Swig] was used in older version, which shares a similar syntax). Content wrapped with `{{ }}` or `{% %}` will get parsed and may cause problems. You can skip the parsing by wrapping it with the [`raw`](/docs/tag-plugins#Raw) tag plugin, single backtick ```` `{{ }}` ```` or triple backtick.
 Alternatively, Nunjucks tags can be disabled through the renderer's option (if supported), [API](/api/renderer#Disable-Nunjucks-tags) or [front-matter](/docs/front-matter).
 
 ```
