@@ -22,7 +22,7 @@ code snippet
 ```
 ````
 
-The third syntax is Markdown's fenced code block syntax and Hexo extends it to support more features. Check out [Tag Plugin Docs](tag-plugins#Code-Block) to find out the options available.
+The third syntax is Markdown's fenced code block syntax, and Hexo extends it to support more features. Check out [Tag Plugin Docs](tag-plugins#Code-Block) to find out the options available.
 
 > Tip: Hexo support posts written in any format, so long the corresponding renderer plugin is installed. It can be in markdown, ejs, swig, nunjucks, pug, asciidoc, etc. Regardless of the format used, those three code block syntax will always be available.
 
