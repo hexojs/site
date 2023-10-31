@@ -23,7 +23,7 @@ hexo.theme.removeView(path);
 
 ## 模板
 
-模板本身有两个方法可供使用：`render` 和 `renderSync`。两者功能一样，只是前者为非同步函数，而后者为同步函數，因此仅以 `render` 演示调用方法。
+模板本身有两个方法可供使用：`render` 和 `renderSync`。两者功能一样，只是前者为异步函数，而后者为同步函数，因此仅以 `render` 演示调用方法。
 
 ``` js
 var view = hexo.theme.getView('layout.swig');

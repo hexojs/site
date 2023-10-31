@@ -192,11 +192,11 @@ hexo.extend.filter.register('post_permalink', function(data){
 
 ### after_render
 
-在渲染后执行，您可以参考 [渲染](rendering.html#after_render_过滤器) 以了解更多信息。
+在渲染后执行，您可以参考 [渲染](rendering.html#after-render-过滤器) 以了解更多信息。
 
 ### server_middleware
 
-新增服务器的 Middleware。`app` 是一个 [Connect] 实例。
+向服务器添加中间件（Middleware）。`app` 是一个 [Connect] 实例。
 
 举例来说，在响应头中新增 `X-Powered-By: Hexo`。
 

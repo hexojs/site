@@ -42,7 +42,7 @@ hexo.extend.helper.register('lorem', function(path) {
 });
 ```
 
-### How do I use a registered helper in another extension (e.g. Filter, Injector, etc)?
+### How do I use a registered helper in another extension (e.g. Filter, Injector)?
 
 `hexo.extend.helper.get` will return the helper function, but it needs to have hexo as its context, so:
 

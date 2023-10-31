@@ -12,11 +12,11 @@ hexo.extend.tag.register(name, function(args, content){
 
 标签函数会传入两个参数：`args` 和 `content`，前者代表开发者在使用标签插件时传入的参数，而后者则是标签插件所覆盖的内容。
 
-从 Hexo 3 开始，因为新增了非同步渲染功能，而改用 [Nunjucks] 作为渲染引擎，其行为可能会与过去使用的 [Swig] 有些许差异。
+从 Hexo 3 开始，因为新增了异步渲染功能，而改用 [Nunjucks] 作为渲染引擎，其行为可能会与过去使用的 [Swig] 有些许差异。
 
 ## 移除标签插件
 
-Use `unregister()` to replace existing [tag plugins](/docs/tag-plugins) with custom functions.
+使用 `unregister()` 来用自定义函数替换现有的 [标签插件](/zh-cn/docs/tag-plugins)。
 
 ``` js
 hexo.extend.tag.unregister(name);
@@ -44,9 +44,9 @@ hexo.extend.tag.register('youtube', tagFn);
 
 ### async
 
-开启非同步模式，此选项默认为 `false`。
+开启异步模式，此选项默认为 `false`。
 
-## 范例
+## 示例
 
 ### 没有结束标签
 
@@ -70,7 +70,7 @@ hexo.extend.tag.register('pullquote', function(args, content){
 }, {ends: true});
 ```
 
-### 非同步渲染
+### 异步渲染
 
 插入文件。
 
@@ -88,9 +88,9 @@ hexo.extend.tag.register('include_code', function(args){
 }, {async: true});
 ```
 
-## Front-matter and user configuration
+## Front-matter 和用户配置
 
-Any of the following options is valid:
+以下任何选项都是有效的：
 
 1.
 
@@ -142,4 +142,4 @@ module.exports = hexo => {
 ```
 
 [Nunjucks]: https://mozilla.github.io/nunjucks/
-[Swig]: http://paularmstrong.github.io/swig/
+[Swig]: https://node-swig.github.io/swig-templates/

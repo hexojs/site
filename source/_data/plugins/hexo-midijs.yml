@@ -1,0 +1,6 @@
+description: A hexo plugin to play MIDI files by MIDIjs.
+link: https://github.com/D-Sketon/hexo-midijs
+tags:
+  - midi
+  - midijs
+  - music

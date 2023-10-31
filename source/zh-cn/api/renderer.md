@@ -7,6 +7,7 @@ title: 渲染引擎（Renderer）
 
 ``` js
 hexo.extend.renderer.register(name, output, function(data, options){
+  // ...
 }, sync);
 ```
 
@@ -16,16 +17,17 @@ hexo.extend.renderer.register(name, output, function(data, options){
 `output` | 输出的扩展名（小写，不含开头的 `.`）
 `sync` | 同步模式
 
-渲染函数中会传入两个参数：
+渲染函数中会传入三个参数：
 
 参数 | 描述
 --- | ---
 `data` | 包含两个属性：文件路径 `path` 和文件内容 `text`。`path` 不一定存在。
 `option` | 选项
+`callback` | 包含两个参数 `err`, `value` 的回调函数
 
-## 范例
+## 示例
 
-### 非同步模式
+### 异步模式
 
 ``` js
 var stylus = require('stylus');
@@ -54,9 +56,9 @@ hexo.extend.renderer.register('ejs', 'html', function(data, options){
 }, true);
 ```
 
-### Disable Nunjucks tags
+### 禁用 Nunjucks 标签
 
-Nunjucks tags `{{ }}` or `{% %}` (utilized by [tag plugin](/docs/tag-plugins)) are processed by default, to disable:
+Nunjucks 标签 `{{ }}` 或 `{% %}` (被 [标签插件](/zh-cn/docs/tag-plugins) 所使用) 默认会被处理，想要禁用：
 
 ``` js
 function lessFn(data, options) {

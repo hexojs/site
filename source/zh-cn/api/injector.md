@@ -36,13 +36,13 @@ hexo.extend.injector.register(entry, value, to)
 - `archive`: 只注入到归档页面（`is_archive()` 为 `true` 的页面）
 - `category`: 只注入到分类页面（`is_category()` 为 `true` 的页面）
 - `tag`: 只注入到标签页面（`is_tag()` 为 `true` 的页面）
-- 或是其他自定义 layout 名称，自定义 layout 参见 [写作 - 布局（Layout）](writing#Layout)
+- 或是其他自定义 layout 名称，自定义 layout 参见 [写作 - 布局（Layout）](/zh-cn/docs/writing#布局（Layout）)
 
 ----
 
 注入器还有一些内部函数，如果你要使用它们，请参考 [hexojs/hexo#4049](https://github.com/hexojs/hexo/pull/4049)。
 
-## 样例
+## 示例
 
 ```js
 const css = hexo.extend.helper.get('css').bind(hexo);
@@ -61,9 +61,9 @@ hexo.extend.injector.register('body_end', () => {
 
 上述代码将会把 `APlayer.min.css`（`<link>` 标签）和 `APlayer.min.js` （`<script>` 标签）注入到所有 layout 为 `music` 的页面的 `</head>` 和 `</body>` 之前，以及将 `jquery.js`（`<script>` 标签）注入到每一个生成的页面的 `</body>` 之前。
 
-## Accessing user configuration
+## 访问用户配置
 
-Use any of the following options:
+使用以下任何一个选项：
 
 1.
 

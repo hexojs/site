@@ -1,0 +1,10 @@
+description: Minifier & Optimization plugin for Hexo, include HTML, CSS, JS and Image.
+link: https://github.com/chenzhutian/hexo-all-minifier
+tags:
+  - filter
+  - minify
+  - optimize
+  - html
+  - css
+  - js
+  - image

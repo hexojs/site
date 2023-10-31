@@ -1,0 +1,6 @@
+description: Add spaces between CJK characters and western characters.
+link: https://github.com/hexojs/hexo-filter-auto-spacing
+tags:
+  - official
+  - filter
+  - spacing

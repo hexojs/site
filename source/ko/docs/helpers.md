@@ -186,7 +186,7 @@ Feed 링크를 삽입합니다.
 옵션 | 설명 | 기본 값
 --- | --- | ---
 `title` | Feed 제목 | `config.title`
-`type` | Feed 형식 | atom
+`type` | Feed 형식 | 
 
 **Examples:**
 

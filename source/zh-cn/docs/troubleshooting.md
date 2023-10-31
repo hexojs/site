@@ -48,7 +48,7 @@ ulimit: open files: cannot modify limit: Operation not permitted
 
 想要去除该限制:
 
-1. 在 "/etc/security/limits.conf" 中增加以下一行：
+1. 在 `/etc/security/limits.conf` 中增加以下一行：
 
   ```
   * - nofile 10000
@@ -56,13 +56,13 @@ ulimit: open files: cannot modify limit: Operation not permitted
   # '*' applies to all users and '-' set both soft and hard limits
   ```
 
-  * 上述设置在某些情况下可能不适用，请确保 "/etc/pam.d/login" 和 "/etc/pam.d/lightdm" 有以下一行(如果这些文件不存在，请忽略此步骤)：
+  * 上述设置在某些情况下可能不适用，请确保 `/etc/pam.d/login` 和 `/etc/pam.d/lightdm` 有以下一行(如果这些文件不存在，请忽略此步骤)：
 
   ```
   session required pam_limits.so
   ```
 
-2. 如果你使用的是 [基于systemd](https://en.wikipedia.org/wiki/Systemd#Adoption) 的发行版，systemd 可能会覆盖 "limits.conf"。如果想要在 systemd 中设置限制，请在 "/etc/systemd/system.conf" 和 "/etc/systemd/user.conf" 中添加以下一行：
+2. 如果你使用的是 [基于systemd](https://en.wikipedia.org/wiki/Systemd#Adoption) 的发行版，systemd 可能会覆盖 `limits.conf`。如果想要在 systemd 中设置限制，请在 `/etc/systemd/system.conf` 和 `/etc/systemd/user.conf` 中添加以下一行：
 
   ```
   DefaultLimitNOFILE=10000
@@ -80,7 +80,7 @@ error: RPC failed; result=22, HTTP code = 403
 fatal: 'username.github.io' does not appear to be a git repository
 ```
 
-请确认您已经在电脑上 [配置 git](https://help.github.com/articles/set-up-git)，或改用 HTTPS 库（repository）地址。
+请确认您已经在电脑上 [配置 git](https://docs.github.com/zh/get-started/quickstart/set-up-git)，或改用 HTTPS 库（repository）地址。
 
 ### Error: ENOENT: no such file or directory
 
@@ -122,18 +122,18 @@ $ npm install hexo --no-optional
 
 参考 [#1326](https://github.com/hexojs/hexo/issues/1326#issuecomment-113871796)
 
-## 在 Jade 或 Swig 遍历资料
+## 在 Jade 或 Swig 遍历数据
 
-Hexo 使用 [Warehouse] 存储资料，它不是一般数组所以必须先进行类型转型才能遍历。
+Hexo 使用 [Warehouse] 存储数据，它不是一般数组所以必须先进行类型转型才能遍历。
 
 ```
 {% for post in site.posts.toArray() %}
 {% endfor %}
 ```
 
-## 资料没有更新
+## 数据没有更新
 
-有时资料可能没有被更新，或是生成的文件与修改前的相同，您可以尝试清除缓存并再执行一次。
+有时数据可能没有被更新，或是生成的文件与修改前的相同，您可以尝试清除缓存并再执行一次。
 
 ``` bash
 $ hexo clean
@@ -151,10 +151,10 @@ $ hexo clean
 }
 ```
 
-## 泄露（Escape）内容
+## 转义（Escape）内容
 
-Hexo 使用 [Nunjucks] 来解析文章（旧版本使用 [Swig]，两者语法类似），内容若包含 `{{ }}` 或 `{% %}` 可能导致解析错误，您可以用 [`raw`](/docs/tag-plugins#Raw) 标签包裹，single backtick ```` `{{ }}` ```` 或 triple backtick 来避免潜在问题发生。
-Alternatively, Nunjucks tags can be disabled through the renderer's option (if supported), [API](/api/renderer#Disable-Nunjucks-tags) or [front-matter](/docs/front-matter).
+Hexo 使用 [Nunjucks] 来解析文章（旧版本使用 [Swig]，两者语法类似），内容若包含 `{{ }}` 或 `{% %}` 可能导致解析错误，您可以用 [`raw`](/zh-cn/docs/tag-plugins#Raw) 标签包裹，单反引号 ```` `{{ }}` ```` 或 三反引号 来避免潜在问题发生。
+此外，Nunjucks 标签也可以通过渲染器的选项（如果支持的话）、[API](/zh-cn/api/renderer#禁用-Nunjucks-标签) 或 [front-matter](/zh-cn/docs/front-matter) 来禁用。
 
 ```
 {% raw %}
@@ -185,7 +185,7 @@ $ echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo
 这将会提高你能监视的文件数量。
 
 [Warehouse]: https://github.com/hexojs/warehouse
-[Swig]: http://paularmstrong.github.io/swig/
+[Swig]: https://node-swig.github.io/swig-templates/
 [Nunjucks]: https://mozilla.github.io/nunjucks/
 
 ## EMPERM Error (Windows Subsystem for Linux)
@@ -236,5 +236,5 @@ $ yarn add js-yaml@latest
 ```
 
 [Warehouse]: https://github.com/hexojs/warehouse
-[Swig]: http://paularmstrong.github.io/swig/
+[Swig]: https://node-swig.github.io/swig-templates/
 [Nunjucks]: https://mozilla.github.io/nunjucks/

@@ -1,0 +1,8 @@
+description: >-
+  Read git log and overwrite the front-matter properties `date` and `updated`
+  for each posts.
+link: https://github.com/xcatliu/hexo-filter-date-from-git
+tags:
+  - date
+  - updated
+  - git

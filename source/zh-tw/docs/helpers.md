@@ -185,7 +185,7 @@ title: 輔助函數（Helpers）
 選項 | 描述 | 預設值
 --- | --- | ---
 `title` | Feed 標題 | `config.title`
-`type` | Feed 類型 | atom
+`type` | Feed 類型 | 
 
 **範例：**
 
@@ -754,6 +754,7 @@ Inserts [generator tag](https://developer.mozilla.org/en-US/docs/Web/HTML/Elemen
 `twitter_card` | Twitter 卡片類型 (`twitter:card`) | summary
 `twitter_id` | Twitter ID (`twitter:creator`) |
 `twitter_site` | Twitter 網站 (`twitter:site`) |
+`twitter_image` | Twitter 圖片 (`twitter:image`) |
 `google_plus` | Google+ 個人資料連結 |
 `fb_admins` | Facebook 管理者 ID |
 `fb_app_id` | Facebook 應用程式 ID |

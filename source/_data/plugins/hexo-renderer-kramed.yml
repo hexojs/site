@@ -1,0 +1,6 @@
+description: Markdown renderer for Hexo with kramed engine.
+link: https://github.com/sun11/hexo-renderer-kramed
+tags:
+  - renderer
+  - markdown
+  - kramed

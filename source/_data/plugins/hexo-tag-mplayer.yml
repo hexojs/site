@@ -1,0 +1,6 @@
+description: A simple plugin for inserting cPlayer by using tags in Hexo.
+link: https://github.com/wshunli/hexo-tag-mplayer
+tags:
+  - tag
+  - music
+  - cPlayer

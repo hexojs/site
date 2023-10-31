@@ -235,7 +235,31 @@ FATAL Something's wrong. Maybe you can find the solution here: http://hexo.io/do
 Template render error: (unknown path)
 ```
 
-One possible reason is that there are some unrecognizable words in your file, e.g. invisible zero width characters.
+Possible cause:
+- There are some unrecognizable words in your file, e.g. invisible zero width characters.
+- Incorrect use or limitation of [tag plugin](/docs/tag-plugins).
+  * Block-style tag plugin with content is not enclosed with `{% endplugin_name %}`
+  ```
+  # Incorrect
+  {% codeblock %}
+  fn()
+  {% codeblock %}
+
+  # Incorrect
+  {% codeblock %}
+  fn()
+
+  # Correct
+  {% codeblock %}
+  fn()
+  {% endcodeblock %}
+  ```
+  * Having Nunjucks-like syntax in a tag plugin, e.g. [`{#`](https://mozilla.github.io/nunjucks/templating.html#comments). A workaround for this example is to use [triple backtick](/docs/tag-plugins#Backtick-Code-Block) instead. [Escape Contents](/docs/troubleshooting#Escape-Contents) section has more details.
+  ```
+  {% codeblock lang:bash %}
+  Size of array is ${#ARRAY}
+  {% endcodeblock %}
+  ```
 
 ## YAMLException (Issue [#4917](https://github.com/hexojs/hexo/issues/4917))
 
@@ -258,5 +282,5 @@ $ yarn add js-yaml@latest
 if you use `yarn`.
 
 [Warehouse]: https://github.com/hexojs/warehouse
-[Swig]: http://paularmstrong.github.io/swig/
+[Swig]: https://node-swig.github.io/swig-templates/
 [Nunjucks]: https://mozilla.github.io/nunjucks/

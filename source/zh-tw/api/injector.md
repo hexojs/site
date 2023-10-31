@@ -38,7 +38,7 @@ Which page will code snippets being injected.
 - `archive`: Only inject to archive pages (which has `is_archive()` helper being `true`)
 - `category`: Only inject to category pages (which has `is_category()` helper being `true`)
 - `tag`: Only inject to tag pages (which has `is_tag()` helper being `true`)
-- Custom layout name could be used as well, see [Writing - Layout](writing#Layout).
+- Custom layout name could be used as well, see [Writing - Layout](/docs/writing#Layout).
 
 ----
 

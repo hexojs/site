@@ -21,13 +21,14 @@ date: 2013/7/13 20:46:25
 `title` | 標題 | 文章的檔案名
 `date` | 建立日期 | 檔案建立日期
 `updated` | 更新日期 | 檔案更新日期
-`comments` | 開啟文章的留言功能 | true
+`comments` | 開啟文章的留言功能 | `true`
 `tags` | 標籤（不適用於分頁） |
 `categories` | 分類（不適用於分頁）|
 `permalink` | 覆蓋文章網址 |
 `excerpt` | Page excerpt in plain text. Use [this plugin](/docs/tag-plugins#Post-Excerpt) to format the text |
 `disableNunjucks` | Disable rendering of Nunjucks tag `{{ }}`/`{% %}` and [tag plugins](/docs/tag-plugins) when enabled
 `lang` | Set the language to override [auto-detection](/docs/internationalization#Path) | Inherited from `_config.yml`
+`published` | Whether the post should be published | For posts under `_posts`, it is `true`, and for posts under `_draft`, it is `false`
 
 ### 佈局
 

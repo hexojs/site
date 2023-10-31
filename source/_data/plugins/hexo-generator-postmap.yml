@@ -1,0 +1,9 @@
+description: >-
+  Generates a page with an embedded Google map, showing the locations of all
+  geo-tagged posts and pages.
+link: https://github.com/jamiei/hexo-generator-postmap
+tags:
+  - maps
+  - generator
+  - google
+  - location

@@ -1,0 +1,6 @@
+description: OpenShift deployer for Hexo.
+link: https://github.com/hexojs/hexo-deployer-openshift
+tags:
+  - official
+  - deployer
+  - openshift

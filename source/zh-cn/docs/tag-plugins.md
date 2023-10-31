@@ -19,7 +19,7 @@ content
 {% endblockquote %}
 ```
 
-### 样例
+### 示例
 
 **没有提供参数，则只输出普通的 blockquote**
 
@@ -92,7 +92,7 @@ code snippet
 `mark` | 突出显示特定的行，每个值用逗号分隔。 使用破折号指定数字范围<br>例如： `mark:1,4-7,10` 将标记第1、4至7和10行 |
 `wrap` | 用 [`<table>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table) 包裹代码块 | `true`
 
-### 样例
+### 示例
 
 **普通的代码块**
 
@@ -220,7 +220,7 @@ Please use [hexo-tag-embed](https://github.com/hexojs/hexo-tag-embed) instead if
 {% include_code [title] [lang:language] [from:line] [to:line] path/to/file %}
 ```
 
-### 样例
+### 示例
 
 **嵌入 test.js 文件全文**
 
@@ -264,7 +264,7 @@ Please use [hexo-tag-embed](https://github.com/hexojs/hexo-tag-embed) instead if
 {% youtube video_id [type] [cookie] %}
 ```
 
-### Examples
+### 示例
 
 **视频**
 
@@ -280,7 +280,7 @@ Please use [hexo-tag-embed](https://github.com/hexojs/hexo-tag-embed) instead if
 
 **隐私模式**
 
-禁止 YouTube cookie
+在这种模式下，禁用 YouTube cookie
 
 ```
 {% youtube lJIrF4YjHfQ false %}
@@ -314,7 +314,9 @@ Please use [hexo-tag-embed](https://github.com/hexojs/hexo-tag-embed) instead if
 
 默认链接文字是文章的标题，你也可以自定义要显示的文本。
 
-默认对文章的标题和自定义标题里的特殊字符进行转义。可以使用`escape`选项，禁止对特殊字符进行转义。
+默认对文章的标题和自定义标题里的特殊字符进行转义。可以使用 `escape` 选项，禁止对特殊字符进行转义。
+
+例如：
 
 **链接使用文章的标题**
 
@@ -344,7 +346,7 @@ Please use [hexo-tag-embed](https://github.com/hexojs/hexo-tag-embed) instead if
 
 ## 引用资源
 
-引用文章的资源。
+引用文章的资源，与 [资源文件夹](/zh-cn/docs/asset-folders) 一起使用。
 
 ```
 {% asset_path filename %}
@@ -352,13 +354,13 @@ Please use [hexo-tag-embed](https://github.com/hexojs/hexo-tag-embed) instead if
 {% asset_link filename [title] [escape] %}
 ```
 
-### Embed image
+### 嵌入图片
 
 _hexo-renderer-marked 3.1.0+ 可以（可选）自动解析图片的文章路径，参考 [本节](/zh-cn/docs/asset-folders#使用-Markdown-嵌入图片) 如何启用它。_
 
 "foo.jpg" 位于 `http://example.com/2020/01/02/hello/foo.jpg`。
 
-**Default (no option)**
+**默认（无选项）**
 
 `{% asset_img foo.jpg %}`
 
@@ -366,7 +368,7 @@ _hexo-renderer-marked 3.1.0+ 可以（可选）自动解析图片的文章路径
 <img src="/2020/01/02/hello/foo.jpg">
 ```
 
-**Custom class**
+**自定义 class 属性**
 
 `{% asset_img post-image foo.jpg %}`
 
@@ -374,7 +376,7 @@ _hexo-renderer-marked 3.1.0+ 可以（可选）自动解析图片的文章路径
 <img src="/2020/01/02/hello/foo.jpg" class="post-image">
 ```
 
-**Display size**
+**展示尺寸**
 
 `{% asset_img foo.jpg 500 400 %}`
 
@@ -382,7 +384,7 @@ _hexo-renderer-marked 3.1.0+ 可以（可选）自动解析图片的文章路径
 <img src="/2020/01/02/hello/foo.jpg" width="500" height="400">
 ```
 
-**Title & Alt**
+**title 和 alt 属性**
 
 `{% asset_img logo.svg "lorem ipsum'dolor'" %}`
 

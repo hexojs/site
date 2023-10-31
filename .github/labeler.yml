@@ -1,0 +1,36 @@
+Plugins:
+  - "source/_data/plugins/**"
+Themes:
+  - "source/_data/themes/**"
+  - "source/themes/screenshots/**"
+Docs:
+  - "source/docs/**"
+  - "source/*/docs/**"
+API:
+  - "source/api/**"
+  - "source/*/api/**"
+News:
+  - "source/_posts/**"
+en:
+  - "source/docs/**"
+  - "source/api/**"
+  - "source/index.md"
+ko:
+  - "source/ko/**"
+pt-br:
+  - "source/pt-br/**"
+ru:
+  - "source/ru/**"
+th:
+  - "source/th/**"
+zh:
+  - "source/zh-cn/**"
+  - "source/zh-tw/**"
+infra:
+  - ".github/**"
+  - ".husky/**"
+  - "scaffolds/**"
+  - "themes/**"
+  - "scripts/**"
+  - "*"
+  - ".*"

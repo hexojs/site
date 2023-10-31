@@ -1,0 +1,9 @@
+description: Minimalistic Theme
+link: https://github.com/tomap/hexo-theme-minidyne
+preview: https://hexo-theme-minidyne-demo.netlify.com/
+tags:
+  - static
+  - no-dependency
+  - no-javascript
+  - minimal
+  - one_column

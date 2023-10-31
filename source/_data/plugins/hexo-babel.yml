@@ -1,0 +1,5 @@
+description: A plugin to compile JS for Hexo, using Babel.
+link: https://github.com/theme-particlex/hexo-babel
+tags:
+  - babel
+  - renderer

@@ -1,0 +1,5 @@
+description: Netlify (netlify.com) deployer plugin for Hexo
+link: https://github.com/piktaszuikis/hexo-deployer-netlify
+tags:
+  - deployer
+  - netlify

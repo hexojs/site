@@ -1,0 +1,9 @@
+description: >-
+  Index generator plus for Hexo, including new order attributes like top and
+  updateDate.
+link: https://github.com/YuyingWu/hexo-generator-index-plus
+tags:
+  - generator
+  - index
+  - top|置顶
+  - updateDate|更新日期

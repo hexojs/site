@@ -1,0 +1,7 @@
+description: Import exported articles from blogger (migrate blogger to hexo)
+link: https://github.com/dimaslanjaka/hexo-blogger-xml
+tags:
+  - blogger
+  - migrate
+  - import
+  - blogger2hexo

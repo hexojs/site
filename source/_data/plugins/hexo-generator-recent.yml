@@ -1,0 +1,5 @@
+description: Creates a list of recent articles in JSON
+link: https://github.com/leviwheatcroft/hexo-generator-recent
+tags:
+  - generator
+  - recent

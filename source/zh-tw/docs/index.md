@@ -41,7 +41,7 @@ $ npm install -g hexo-cli
 
 ### 安裝 Node.js
 
-Node.js 為大多數平台提供了官方的 [安裝程序](https://nodejs.org/en/download/)。對於中國大陸地區用戶，可以前往 [淘寶 Node.js 鏡像](https://npm.taobao.org/mirrors/node) 下載。
+Node.js 為大多數平台提供了官方的 [安裝程序](https://nodejs.org/en/download/)。對於中國大陸地區用戶，可以前往 [淘寶 Node.js 鏡像](https://npmmirror.com/mirrors/node/) 下載。
 
 其它的安裝方法：
 

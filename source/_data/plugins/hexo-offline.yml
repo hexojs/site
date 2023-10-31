@@ -1,0 +1,5 @@
+description: Out-of-the-box hexo offline experience.
+link: https://github.com/JLHwung/hexo-offline
+tags:
+  - offline
+  - sw-precache

@@ -1,7 +1,7 @@
 ---
 title: 渲染
 ---
-在 Hexo 中，有两个方法可用于渲染文件或字符串，分别是非同步的 `hexo.render.render` 和同步的 `hexo.render.renderSync`，这两个方法的使用方式十分类似，因此以下仅以非同步的 `hexo.render.render` 为例。
+在 Hexo 中，有两个方法可用于渲染文件或字符串，分别是异步的 `hexo.render.render` 和同步的 `hexo.render.renderSync`，这两个方法的使用方式十分类似，因此下文仅以异步的 `hexo.render.render` 为例。
 
 ## 渲染字符串
 
@@ -64,13 +64,13 @@ hexo.render.getOutput('layout.swig') // html
 hexo.render.getOutput('image.png') // '''
 ```
 
-## Disable Nunjucks tags
+## 禁用 Nunjucks 标签
 
-If you are not using a [tag plugin](/docs/tag-plugins) and want to use `{{ }}` or `{% %}` in your post without using content [escaping](/docs/troubleshooting#Escape-Contents), you can disable processing of Nunjucks tag in existing renderer by:
+如果你没有使用 [标签插件](/zh-cn/docs/tag-plugins) 并且想要在你的文章中使用 `{{ }}` 或 `{% %}` 而不使用 [转义](/zh-cn/docs/troubleshooting#转义（Escape）内容), 你可以通过以下方式在现有的渲染器中禁用对 Nunjucks 标签的处理：
 
 ``` js
-// following example only applies to '.md' file extension
-// you may need to cover other extensions, e.g. '.markdown', '.mkd', etc
+// 以下示例仅适用于".md "文件扩展名
+// 您可能需要覆盖其他扩展名，例如'.markdown'、'.mkd'等
 const renderer = hexo.render.renderer.get('md')
 if (renderer) {
   renderer.disableNunjucks = true

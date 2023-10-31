@@ -1,0 +1,7 @@
+description: CoffeeScript renderer for Hexo.
+link: https://github.com/hexojs/hexo-renderer-coffeescript
+tags:
+  - official
+  - renderer
+  - coffeescript
+  - coffee

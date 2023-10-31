@@ -1,0 +1,9 @@
+description: Small plugin to insert a table of contents (TOC) in Hexo posts and pages.
+link: https://github.com/bennycode/hexo-insert-toc
+tags:
+  - include
+  - insert
+  - markdown
+  - page
+  - post
+  - toc
