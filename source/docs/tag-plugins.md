@@ -169,7 +169,7 @@ content
 ## jsFiddle (deleted in `v7.0.0`)
 
 {% note warn %}
-Please use [hexo-tag-embed](https://github.com/hexojs/hexo-tag-embed) instead if you use `v7.0.0+`.
+The tag was removed in Hexo 7.0.0. We have provided a plugin [hexo-tag-embed](https://github.com/hexojs/hexo-tag-embed) for backward compatibility with your existing posts.
 {% endnote %}
 
 To embed a jsFiddle snippet:
