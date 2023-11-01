@@ -166,7 +166,11 @@ content
 {% endpullquote %}
 ```
 
-## jsFiddle
+## jsFiddle (deleted in `v7.0.0`)
+
+{% note warn %}
+The tag was removed in Hexo 7.0.0. We have provided a plugin [hexo-tag-embed](https://github.com/hexojs/hexo-tag-embed) for backward compatibility with your existing posts.
+{% endnote %}
 
 To embed a jsFiddle snippet:
 
@@ -174,7 +178,11 @@ To embed a jsFiddle snippet:
 {% jsfiddle shorttag [tabs] [skin] [width] [height] %}
 ```
 
-## Gist
+## Gist (deleted in `v7.0.0`)
+
+{% note warn %}
+Please use [hexo-tag-embed](https://github.com/hexojs/hexo-tag-embed) instead if you use `v7.0.0+`.
+{% endnote %}
 
 To embed a Gist snippet:
 
@@ -246,7 +254,11 @@ Inserts code snippets in `source/downloads/code` folder. The folder location can
 {% include_code lang:javascript to:8 test.js %}
 ```
 
-## YouTube
+## YouTube (deleted in `v7.0.0`)
+
+{% note warn %}
+Please use [hexo-tag-embed](https://github.com/hexojs/hexo-tag-embed) instead if you use `v7.0.0+`.
+{% endnote %}
 
 Inserts a YouTube video.
 
@@ -277,7 +289,11 @@ YouTube's cookie is not used in this mode.
 {% youtube PL9hW1uS6HUfscJ9DHkOSoOX45MjXduUxo 'playlist' false %}
 ```
 
-## Vimeo
+## Vimeo (deleted in `v7.0.0`)
+
+{% note warn %}
+Please use [hexo-tag-embed](https://github.com/hexojs/hexo-tag-embed) instead if you use `v7.0.0+`.
+{% endnote %}
 
 Inserts a responsive or specified size Vimeo video.
 
