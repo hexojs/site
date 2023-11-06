@@ -22,7 +22,7 @@ code snippet
 ```
 ````
 
-The third syntax is a Markdown's fenced code block syntax and Hexo extends it to support more features. Check out [Tag Plugin Docs](tag-plugins#Code-Block) to find out options available.
+The third syntax is Markdown's fenced code block syntax, and Hexo extends it to support more features. Check out [Tag Plugin Docs](tag-plugins#Code-Block) to find out the options available.
 
 > Tip: Hexo support posts written in any format, so long the corresponding renderer plugin is installed. It can be in markdown, ejs, swig, nunjucks, pug, asciidoc, etc. Regardless of the format used, those three code block syntax will always be available.
 
@@ -74,7 +74,7 @@ hello: hexo
 </pre>
 ```
 
-When no built-in syntax highlight is enabled, you can either install third-party syntax-highlight plugin, or use a browser-side syntax hilighter (e.g. `highlight.js` and `prism.js` both support running in browser).
+When no built-in syntax highlight is enabled, you can either install third-party syntax-highlight plugin, or use a browser-side syntax highlighter (e.g. `highlight.js` and `prism.js` both support running in browser).
 
 ## Highlight.js
 
@@ -100,7 +100,7 @@ prismjs:
 
 ### auto_detect
 
-`auto_detect` is a `highlight.js` feature that detect language of the code block automatically.
+`auto_detect` is a `highlight.js` feature that detects language of the code block automatically.
 
 > Tip: When you want to use "sublanguage highlight", enable `auto_detect` and don't mark language when writing code block.
 
@@ -145,7 +145,7 @@ Replace tabs inside code block with given string. By default it is 2 spaces.
 
 ### exclude_languages (+6.1.0)
 
-Only wrap with `<pre><code class="lang"></code></pre>` and will not render all tags(`span`, and `br`) in content if are languages matches this option.
+Only wrap with `<pre><code class="lang"></code></pre>` and will not render all tags(`span`, and `br`) in content if are languages match this option.
 
 ### wrap
 

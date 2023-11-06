@@ -3,7 +3,7 @@ title: Tag Plugins
 ---
 Tag plugins are different from post tags. They are ported from Octopress and provide a useful way for you to quickly add specific content to your posts.
 
-Although you can write your posts in any formats, but the tag plugins will always be available and syntax remains the same.
+Although you can write your posts in any format, the tag plugins will always be available and syntax remains the same.
 
 {% youtube I07XMi7MHd4 %}
 
@@ -73,7 +73,7 @@ Every interaction is both precious and an opportunity to delight.
 
 ## Code Block
 
-Useful feature for adding code snippets to your post.
+A useful feature for adding code snippets to your post.
 
 **Alias:** code
 
@@ -91,7 +91,7 @@ Extra Options | Description | Default
 `line_threshold` | Only show line numbers as long as the numbers of lines of the code block exceed such threshold. | `0` |
 `highlight` | Enable code highlighting | `true`
 `first_line` | Specify the first line number | `1`
-`mark` | Line highlight specific line(s), each value separated by a comma. Specify number range using a dash<br>Example: `mark:1,4-7,10` will mark line 1, 4 to 7 and 10. |
+`mark` | Line highlight specific line(s), each value separated by a comma. Specify the number range using a dash<br>Example: `mark:1,4-7,10` will mark lines 1, 4 to 7 and 10. |
 `wrap` | Wrap the code block in [`<table>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table) | `true`
 
 ### Examples
