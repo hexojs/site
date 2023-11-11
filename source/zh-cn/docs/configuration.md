@@ -120,7 +120,7 @@ Hexo 使用 [Moment.js](http://momentjs.com/) 来解析和显示时间。
 - `date`: 使用 `date` 作为 `updated` 的值。可被用于 Git 工作流之中，因为使用 Git 管理站点时，文件的最后修改日期常常会发生改变
 - `empty`: 直接删除 `updated`。使用这一选项可能会导致大部分主题和插件无法正常工作。
 
-`use_date_for_updated` 选项已经被废弃，将会在下个重大版本发布时去除。请改为使用 `updated_option: 'date'`。
+`use_date_for_updated` 选项已经在 v7.0.0+ 中被移除。请改为使用 `updated_option: 'date'`。
 {% endnote %}
 
 ## 分页
