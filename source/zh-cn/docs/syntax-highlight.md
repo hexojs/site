@@ -28,7 +28,7 @@ code snippet
 
 ## 配置
 
-7.0.0以下：
+v7.0.0以下：
 
 ```yaml
 # _config.yml
@@ -50,7 +50,7 @@ prismjs:
   tab_replace: ''
 ```
 
-7.0.0及以上：
+v7.0.0及以上：
 
 ```yaml
 # _config.yml
@@ -75,7 +75,7 @@ prismjs:
 
 ## 禁用
 
-7.0.0及以下：
+v7.0.0及以下：
 
 ```yaml
 # _config.yml
@@ -85,14 +85,14 @@ prismjs:
   enable: false
 ```
 
-7.0.0及以上：
+v7.0.0及以上：
 
 ```yaml
 # _config.yml
 syntax_highlighter:  # empty
 ```
 
-当 `highlight.enable` 和 `prismjs.enable` 均为 `false` （7.0.0以下）或 `syntax_highlighter` 为空（7.0.0及以上）时，代码块输出的 HTML 由相应的渲染器控制。举个例子：[`marked.js`](https://github.com/markedjs/marked)（Hexo 的默认 Markdown 渲染器 [`hexo-renderer-marked`](https://github.com/hexojs/hexo-renderer-marked) 由此驱动）会把语言加入 `<code>` 标签的 `class` 中：
+当 `highlight.enable` 和 `prismjs.enable` 均为 `false` （v7.0.0以下）或 `syntax_highlighter` 为空（v7.0.0及以上）时，代码块输出的 HTML 由相应的渲染器控制。举个例子：[`marked.js`](https://github.com/markedjs/marked)（Hexo 的默认 Markdown 渲染器 [`hexo-renderer-marked`](https://github.com/hexojs/hexo-renderer-marked) 由此驱动）会把语言加入 `<code>` 标签的 `class` 中：
 
 ````markdown
 ```yaml
@@ -110,7 +110,7 @@ hello: hexo
 
 ## Highlight.js
 
-7.0.0以下：
+v7.0.0以下：
 
 ```yaml
 # _config.yml
@@ -128,7 +128,7 @@ prismjs:
   enable: false
 ```
 
-7.0.0及以上：
+v7.0.0及以上：
 
 ```yaml
 # _config.yml
@@ -228,7 +228,8 @@ Hexo 通过用 `<figure>` 和 `<table>` 包裹其代码块为其添加了行号�
 
 ## PrismJS
 
-7.0.0以下：
+v7.0.0以下：
+
 ```yaml
 # _config.yml
 highlight:
@@ -241,7 +242,7 @@ prismjs:
   tab_replace: ''
 ```
 
-7.0.0及以上：
+v7.0.0及以上：
 
 ```yaml
 # _config.yml
@@ -253,7 +254,7 @@ prismjs:
   tab_replace: ''
 ```
 
-PrismJS 默认禁用。启用 PrismJS 前应设置 `highlight.enable` 为 `false`（7.0.0以下）或设置 `syntax_highlighter` 为 `prismjs`（7.0.0及以上）。
+PrismJS 默认禁用。启用 PrismJS 前应设置 `highlight.enable` 为 `false`（v7.0.0以下）或设置 `syntax_highlighter` 为 `prismjs`（v7.0.0及以上）。
 
 ### preprocess
 
