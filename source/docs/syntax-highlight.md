@@ -28,6 +28,8 @@ The third syntax is Markdown's fenced code block syntax, and Hexo extends it to 
 
 ## Configuration
 
+below v7.0.0:
+
 ```yaml
 # _config.yml
 highlight:
@@ -48,9 +50,32 @@ prismjs:
   tab_replace: ''
 ```
 
+v7.0.0+:
+
+```yaml
+# _config.yml
+syntax_highlighter: highlight.js
+highlight:
+  auto_detect: false
+  line_number: true
+  line_threshold: 0
+  tab_replace: ''
+  exclude_languages:
+    - example
+  wrap: true
+  hljs: false
+prismjs:
+  preprocess: true
+  line_number: true
+  line_threshold: 0
+  tab_replace: ''
+```
+
 The YAML above is Hexo's default configuration.
 
 ## Disabled
+
+below v7.0.0:
 
 ```yaml
 # _config.yml
@@ -60,7 +85,14 @@ prismjs:
   enable: false
 ```
 
-When both `highlight.enable` and `prismjs.enable` are `false`, the output HTML of the code block is controlled by the corresponding renderer. For example, [`marked.js`](https://github.com/markedjs/marked) (used by [`hexo-renderer-marked`](https://github.com/hexojs/hexo-renderer-marked), the default markdown renderer of Hexo) will add the language code to the `class` of `<code>`:
+v7.0.0+:
+
+```yaml
+# _config.yml
+syntax_highlighter:  # empty
+```
+
+When both `highlight.enable` and `prismjs.enable` are `false` (below v7.0.0) or `syntax_highlighter` is empty (v7.0.0+), the output HTML of the code block is controlled by the corresponding renderer. For example, [`marked.js`](https://github.com/markedjs/marked) (used by [`hexo-renderer-marked`](https://github.com/hexojs/hexo-renderer-marked), the default markdown renderer of Hexo) will add the language code to the `class` of `<code>`:
 
 ````markdown
 ```yaml
@@ -78,6 +110,8 @@ When no built-in syntax highlight is enabled, you can either install third-party
 
 ## Highlight.js
 
+below v7.0.0:
+
 ```yaml
 # _config.yml
 highlight:
@@ -92,6 +126,22 @@ highlight:
   hljs: false
 prismjs:
   enable: false
+```
+
+v7.0.0+:
+
+```yaml
+# _config.yml
+syntax_highlighter: highlight.js
+highlight:
+  auto_detect: false
+  line_number: true
+  line_threshold: 0
+  tab_replace: '  '
+  exclude_languages:
+    - example
+  wrap: true
+  hljs: false
 ```
 
 `highlight.js` is enabled by default and used as server-side highlighting in Hexo; it needs to be disabled if you prefer to run `highlight.js` on browser-side.
@@ -177,6 +227,8 @@ When `hljs` is set to `true`, all the HTML output will have `class` prefixed wit
 
 ## PrismJS
 
+below v7.0.0:
+
 ```yaml
 # _config.yml
 highlight:
@@ -189,7 +241,19 @@ prismjs:
   tab_replace: ''
 ```
 
-Prismjs is disabled by default. You should set `highlight.enable` to `false` before enabling prismjs.
+v7.0.0+:
+
+```yaml
+# _config.yml
+syntax_highlighter: prismjs
+prismjs:
+  preprocess: true
+  line_number: true
+  line_threshold: 0
+  tab_replace: ''
+```
+
+Prismjs is disabled by default. You should set `highlight.enable` to `false` (below v7.0.0) or set `syntax_highlighter` to `prismjs` (v7.0.0+) before enabling prismjs.
 
 ### preprocess
 
