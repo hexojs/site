@@ -28,6 +28,8 @@ The third syntax is Markdown's fenced code block syntax, and Hexo extends it to 
 
 ## Configuration
 
+Until v7.0
+
 ```yaml
 # _config.yml
 highlight:
@@ -42,6 +44,27 @@ highlight:
   hljs: false
 prismjs:
   enable: false
+  preprocess: true
+  line_number: true
+  line_threshold: 0
+  tab_replace: ''
+```
+
+After v7.0
+
+```yaml
+# _config.yml
+syntax_highlighter: highlight.js # highlight.js | prismjs | <empty>
+highlight:
+  auto_detect: false
+  line_number: true
+  line_threshold: 0
+  tab_replace: ''
+  exclude_languages:
+    - example
+  wrap: true
+  hljs: false
+prismjs:
   preprocess: true
   line_number: true
   line_threshold: 0
