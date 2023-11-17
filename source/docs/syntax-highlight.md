@@ -28,7 +28,7 @@ The third syntax is Markdown's fenced code block syntax, and Hexo extends it to 
 
 ## Configuration
 
-Until v7.0
+Before v7.0
 
 ```yaml
 # _config.yml
