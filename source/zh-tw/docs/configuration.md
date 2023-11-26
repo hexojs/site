@@ -91,7 +91,7 @@ Hexo 使用 [Moment.js](http://momentjs.com/) 來解析和顯示時間。
 - `date`: Use `date` as `updated`. Typically used with Git workflow when file modification date could be different.
 - `empty`: Simply drop `updated` when not provided. May not be compatible with most themes and plugins.
 
-`use_date_for_updated` is deprecated and will be removed in next major version. Please use `updated_option: 'date'` instead.
+`use_date_for_updated` is removed in v7.0.0+. Please use `updated_option: 'date'` instead.
 {% endnote %}
 
 ### 分頁

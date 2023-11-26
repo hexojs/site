@@ -164,10 +164,10 @@ content
 {% endpullquote %}
 ```
 
-## jsFiddle (deleted in `v7.0.0`)
+## jsFiddle (`v7.0.0` 中被移除)
 
 {% note warn %}
-Please use [hexo-tag-embed](https://github.com/hexojs/hexo-tag-embed) instead if you use `v7.0.0+`.
+如果你正在使用 `v7.0.0+`，请使用 [hexo-tag-embed](https://github.com/hexojs/hexo-tag-embed) 替代。
 {% endnote %}
 
 在文章中嵌入 jsFiddle。
@@ -176,10 +176,10 @@ Please use [hexo-tag-embed](https://github.com/hexojs/hexo-tag-embed) instead if
 {% jsfiddle shorttag [tabs] [skin] [width] [height] %}
 ```
 
-## Gist (deleted in `v7.0.0`)
+## Gist (`v7.0.0` 中被移除)
 
 {% note warn %}
-Please use [hexo-tag-embed](https://github.com/hexojs/hexo-tag-embed) instead if you use `v7.0.0+`.
+如果你正在使用 `v7.0.0+`，请使用 [hexo-tag-embed](https://github.com/hexojs/hexo-tag-embed) 替代。
 {% endnote %}
 
 在文章中嵌入 Gist。
@@ -252,10 +252,10 @@ Please use [hexo-tag-embed](https://github.com/hexojs/hexo-tag-embed) instead if
 {% include_code lang:javascript to:8 test.js %}
 ```
 
-## Youtube (deleted in `v7.0.0`)
+## Youtube (`v7.0.0` 中被移除)
 
 {% note warn %}
-Please use [hexo-tag-embed](https://github.com/hexojs/hexo-tag-embed) instead if you use `v7.0.0+`.
+如果你正在使用 `v7.0.0+`，请使用 [hexo-tag-embed](https://github.com/hexojs/hexo-tag-embed) 替代。
 {% endnote %}
 
 在文章中插入 Youtube 视频。
@@ -287,10 +287,10 @@ Please use [hexo-tag-embed](https://github.com/hexojs/hexo-tag-embed) instead if
 {% youtube PL9hW1uS6HUfscJ9DHkOSoOX45MjXduUxo 'playlist' false %}
 ```
 
-## Vimeo (deleted in `v7.0.0`)
+## Vimeo (`v7.0.0` 中被移除)
 
 {% note warn %}
-Please use [hexo-tag-embed](https://github.com/hexojs/hexo-tag-embed) instead if you use `v7.0.0+`.
+如果你正在使用 `v7.0.0+`，请使用 [hexo-tag-embed](https://github.com/hexojs/hexo-tag-embed) 替代。
 {% endnote %}
 
 在文章中插入 Vimeo 视频。

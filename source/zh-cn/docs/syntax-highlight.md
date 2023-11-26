@@ -28,6 +28,8 @@ code snippet
 
 ## 配置
 
+v7.0.0以下：
+
 ```yaml
 # _config.yml
 highlight:
@@ -48,9 +50,32 @@ prismjs:
   tab_replace: ''
 ```
 
+v7.0.0及以上：
+
+```yaml
+# _config.yml
+syntax_highlighter: highlight.js
+highlight:
+  auto_detect: false
+  line_number: true
+  line_threshold: 0
+  tab_replace: ''
+  exclude_languages:
+    - example
+  wrap: true
+  hljs: false
+prismjs:
+  preprocess: true
+  line_number: true
+  line_threshold: 0
+  tab_replace: ''
+```
+
 以上为 Hexo 的默认配置。
 
 ## 禁用
+
+v7.0.0及以下：
 
 ```yaml
 # _config.yml
@@ -60,7 +85,14 @@ prismjs:
   enable: false
 ```
 
-当 `highlight.enable` 和 `prismjs.enable` 均为 `false` 时，代码块输出的 HTML 由相应的渲染器控制。举个例子：[`marked.js`](https://github.com/markedjs/marked)（Hexo 的默认 Markdown 渲染器 [`hexo-renderer-marked`](https://github.com/hexojs/hexo-renderer-marked) 由此驱动）会把语言加入 `<code>` 标签的 `class` 中：
+v7.0.0及以上：
+
+```yaml
+# _config.yml
+syntax_highlighter:  # empty
+```
+
+当 `highlight.enable` 和 `prismjs.enable` 均为 `false` （v7.0.0以下）或 `syntax_highlighter` 为空（v7.0.0及以上）时，代码块输出的 HTML 由相应的渲染器控制。举个例子：[`marked.js`](https://github.com/markedjs/marked)（Hexo 的默认 Markdown 渲染器 [`hexo-renderer-marked`](https://github.com/hexojs/hexo-renderer-marked) 由此驱动）会把语言加入 `<code>` 标签的 `class` 中：
 
 ````markdown
 ```yaml
@@ -78,6 +110,8 @@ hello: hexo
 
 ## Highlight.js
 
+v7.0.0以下：
+
 ```yaml
 # _config.yml
 highlight:
@@ -92,6 +126,22 @@ highlight:
   hljs: false
 prismjs:
   enable: false
+```
+
+v7.0.0及以上：
+
+```yaml
+# _config.yml
+syntax_highlighter: highlight.js
+highlight:
+  auto_detect: false
+  line_number: true
+  line_threshold: 0
+  tab_replace: '  '
+  exclude_languages:
+    - example
+  wrap: true
+  hljs: false
 ```
 
 `highlight.js` 默认开启，用作 Hexo 的服务端高亮组件。如果你需要在浏览器端运行 `highlight.js`，请把它关闭。
@@ -178,6 +228,8 @@ Hexo 通过用 `<figure>` 和 `<table>` 包裹其代码块为其添加了行号�
 
 ## PrismJS
 
+v7.0.0以下：
+
 ```yaml
 # _config.yml
 highlight:
@@ -190,7 +242,19 @@ prismjs:
   tab_replace: ''
 ```
 
-PrismJS 默认禁用。启用 PrismJS 前应设置 `highlight.enable` 为 `false`。
+v7.0.0及以上：
+
+```yaml
+# _config.yml
+syntax_highlighter: prismjs
+prismjs:
+  preprocess: true
+  line_number: true
+  line_threshold: 0
+  tab_replace: ''
+```
+
+PrismJS 默认禁用。启用 PrismJS 前应设置 `highlight.enable` 为 `false`（v7.0.0以下）或设置 `syntax_highlighter` 为 `prismjs`（v7.0.0及以上）。
 
 ### preprocess
 

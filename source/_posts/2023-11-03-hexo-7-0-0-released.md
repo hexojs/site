@@ -18,6 +18,14 @@ No need to install it if you are not using (or will not use) `gist`, `youtube`, 
 $ npm i hexo-tag-embed
 ```
 
+{% note warn %}
+Syntax highlighting is refactored and controlled by the following settings. See [Syntax Highlighting](/docs/syntax-highlight#Configuration) for more details.
+{% endnote %}
+
+```yaml
+syntax_highlighter: highlight.js # highlight.js | prismjs | <empty>
+```
+
 ## Breaking Changes
 
 * chore: require node14+ by [@yoshinorin] in [#5061](https://github.com/hexojs/hexo/pull/5061)
@@ -31,6 +39,7 @@ $ npm i hexo-tag-embed
     * refactor: drop `use_date_for_updated` option for `updated_option` by [@yoshinorin] in [#5062](https://github.com/hexojs/hexo/pull/5062)
     * feat(post): remove front-matter property `link` (#5253) by [@stevenjoezhang] in [#5253](https://github.com/hexojs/hexo/pull/5253)
 * revert: Access data files from source folder (#1969) (#5325) by [@stevenjoezhang] in [#5325](https://github.com/hexojs/hexo/pull/5325)
+* refactor highlight: add extend api for highlight by [@stevenjoezhang] in [#5095](https://github.com/hexojs/hexo/pull/5095)
 
 ## Notable Changes
 
@@ -74,7 +83,6 @@ $ npm i hexo-tag-embed
 
 ## Refactor
 
-* refactor highlight: add extend api for highlight by [@stevenjoezhang] in [#5095](https://github.com/hexojs/hexo/pull/5095)
 * refactor: use the `WHATWG URL API` instead of `url.resolve` by [@yoshinorin] in [#5136](https://github.com/hexojs/hexo/pull/5136)
 
 ## CI/CD

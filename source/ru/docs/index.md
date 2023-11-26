@@ -80,6 +80,7 @@ $ npm install -g hexo-cli
 
 Hexo version | Minimum (Node.js version) | Less than (Node.js version)
 --- | --- | ---
+7.0+ | 14.0.0 | latest
 6.2+ | 12.13.0 | latest
 6.0+ | 12.13.0 | 18.5.0
 5.0+ | 10.13.0 | 12.0.0
