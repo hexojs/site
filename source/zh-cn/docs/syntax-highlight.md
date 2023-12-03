@@ -295,5 +295,5 @@ Hexo 语法高亮部分的源码可参见：
 
 - [Highlight.js 工具函数](https://github.com/hexojs/hexo-util/blob/master/lib/highlight.ts)
 - [PrismJS 工具函数](https://github.com/hexojs/hexo-util/blob/master/lib/prism.ts)
-- [代码块标签插件](https://github.com/hexojs/hexo/blob/master/lib/plugins/tag/code.js)
-- [反引号代码块标签插件](https://github.com/hexojs/hexo/blob/master/lib/plugins/filter/before_post_render/backtick_code_block.js)
+- [代码块标签插件](https://github.com/hexojs/hexo/blob/master/lib/plugins/tag/code.ts)
+- [反引号代码块标签插件](https://github.com/hexojs/hexo/blob/master/lib/plugins/filter/before_post_render/backtick_code_block.ts)
