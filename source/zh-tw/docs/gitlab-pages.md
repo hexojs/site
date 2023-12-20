@@ -41,4 +41,4 @@ pages:
 ## 參考鏈接
 
 - [GitLab Pages](https://docs.gitlab.com/ee/user/project/pages/index.html)
-- [GitLab CI Docs](https://docs.gitlab.com/ee/ci/README.html)
+- [GitLab CI Docs](https://docs.gitlab.com/ee/ci/yaml/)

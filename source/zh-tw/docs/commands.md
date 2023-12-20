@@ -15,7 +15,7 @@ $ hexo init [folder]
 This command is a shortcut that runs the following steps:
 
 1. Git clone [hexo-starter](https://github.com/hexojs/hexo-starter) including [hexo-theme-landscape](https://github.com/hexojs/hexo-theme-landscape) into the current directory or a target folder if specified.
-2. Install dependencies using a package manager: [Yarn 1](https://classic.yarnpkg.com/lang/en/), [pnpm](https://pnpm.js.org) or [npm](https://docs.npmjs.com/cli/install), whichever is installed; if there are more than one installed, the priority is as listed. npm is bundled with [Node.js](/docs/#Install-Node-js) by default.
+2. Install dependencies using a package manager: [Yarn 1](https://classic.yarnpkg.com/lang/en/), [pnpm](https://pnpm.io/zh-TW/) or [npm](https://docs.npmjs.com/cli/install), whichever is installed; if there are more than one installed, the priority is as listed. npm is bundled with [Node.js](/docs/#Install-Node-js) by default.
 
 ## new
 
@@ -132,7 +132,7 @@ $ hexo --safe
 $ hexo --debug
 ```
 
-在終端機中顯示除錯訊息並儲存記錄檔到 `debug.log`。當您碰到問題時，試著以除錯模式重新執行一次，並 [把除錯訊息貼到 GitHub](https://github.com/hexojs/hexo/issues/new)。
+在終端機中顯示除錯訊息並儲存記錄檔到 `debug.log`。當您碰到問題時，試著以除錯模式重新執行一次，並 [把除錯訊息貼到 GitHub](https://github.com/hexojs/hexo/issues/new?assignees=&labels=&projects=&template=bug_report.yml)。
 
 ### 安靜模式
 

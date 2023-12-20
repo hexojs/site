@@ -85,7 +85,7 @@ skip_render: "_posts/test-post.md"
 `external_link.exclude` | 需要排除的域名。主域名和子域名如 `www` 需分别配置 | `[]`
 `filename_case` | 把文件名称转换为 (1) 小写或 (2) 大写 | `0`
 `render_drafts` | 显示草稿 | `false`
-`post_asset_folder` | 启动 [Asset 文件夹](asset-folders.html) | `false`
+`post_asset_folder` | 启用 [资源文件夹](asset-folders.html) | `false`
 `relative_link` | 把链接改为与根目录的相对位址 | `false`
 `future` | 显示未来的文章 | `true`
 `highlight` | 代码块的设置, 请参考 [Highlight.js](/zh-cn/docs/syntax-highlight#Highlight-js) 进行设置 |
