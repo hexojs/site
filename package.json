@@ -11,6 +11,7 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "@node-rs/jieba": "^1.7.2",
     "cheerio": "^0.22.0",
     "hexo": "7.0.0-rc1",
     "hexo-clean-css": "^2.0.0",
@@ -25,6 +26,7 @@
     "hexo-tag-embed": "^1.0.0-rc.1",
     "hexo-uglify": "^2.0.0",
     "lunr": "2.3.9",
+    "lunr-languages": "^1.14.0",
     "sharp": "^0.32.0"
   },
   "devDependencies": {
