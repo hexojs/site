@@ -1,36 +1,60 @@
 Plugins:
-  - "source/_data/plugins/**"
+  - changed-files:
+      - any-glob-to-any-file:
+          - "source/_data/plugins/**"
 Themes:
-  - "source/_data/themes/**"
-  - "source/themes/screenshots/**"
+  - changed-files:
+      - any-glob-to-any-file:
+          - "source/_data/themes/**"
+          - "source/themes/screenshots/**"
 Docs:
-  - "source/docs/**"
-  - "source/*/docs/**"
+  - changed-files:
+      - any-glob-to-any-file:
+          - "source/docs/**"
+          - "source/*/docs/**"
 API:
-  - "source/api/**"
-  - "source/*/api/**"
+  - changed-files:
+      - any-glob-to-any-file:
+          - "source/api/**"
+          - "source/*/api/**"
 News:
-  - "source/_posts/**"
+  - changed-files:
+      - any-glob-to-any-file:
+          - "source/_posts/**"
 en:
-  - "source/docs/**"
-  - "source/api/**"
-  - "source/index.md"
+  - changed-files:
+      - any-glob-to-any-file:
+          - "source/docs/**"
+          - "source/api/**"
+          - "source/index.md"
 ko:
-  - "source/ko/**"
+  - changed-files:
+      - any-glob-to-any-file:
+          - "source/ko/**"
 pt-br:
-  - "source/pt-br/**"
+  - changed-files:
+      - any-glob-to-any-file:
+          - "source/pt-br/**"
 ru:
-  - "source/ru/**"
+  - changed-files:
+      - any-glob-to-any-file:
+          - "source/ru/**"
 th:
-  - "source/th/**"
+  - changed-files:
+      - any-glob-to-any-file:
+          - "source/th/**"
 zh:
-  - "source/zh-cn/**"
-  - "source/zh-tw/**"
+  - changed-files:
+      - any-glob-to-any-file:
+          - "source/zh-cn/**"
+          - "source/zh-tw/**"
 infra:
-  - ".github/**"
-  - ".husky/**"
-  - "scaffolds/**"
-  - "themes/**"
-  - "scripts/**"
-  - "*"
-  - ".*"
+  - changed-files:
+      - any-glob-to-any-file:
+          - ".github/**"
+          - ".husky/**"
+          - "scaffolds/**"
+          - "themes/**"
+          - "scripts/**"
+          - "*"
+          - ".*"
