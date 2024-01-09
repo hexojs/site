@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "hexo": {
-    "version": "7.0.0-rc1"
+    "version": "7.0.0"
   },
   "scripts": {
     "build": "hexo generate",
@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "cheerio": "^0.22.0",
-    "hexo": "7.0.0-rc1",
+    "hexo": "^7.0.0",
     "hexo-clean-css": "^2.0.0",
     "hexo-filter-nofollow": "^2.0.2",
     "hexo-fs": "^4.1.1",
