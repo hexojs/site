@@ -212,7 +212,7 @@ Option | Description | Default
 // <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
 
 <%- feed_tag('rss.xml', { title: 'RSS Feed', type: 'rss' }) %>
-// <link rel="alternate" href="/atom.xml" title="RSS Feed" type="application/rss+xml">
+// <link rel="alternate" href="/rss.xml" title="RSS Feed" type="application/rss+xml">
 
 /* Defaults to hexo-generator-feed's config if no argument */
 <%- feed_tag() %>
