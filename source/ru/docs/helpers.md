@@ -496,6 +496,42 @@ Escapes HTML entities in a string.
 // Tuesday, January 1st 2013, 12:00:00 am
 ```
 
+### relative_date
+
+Inserts relative time from now. `date` can be unix time, ISO string, date object, or [Moment.js] object.
+
+```js
+<%- relative_date(date) %>
+```
+
+**Examples:**
+
+``` js
+<%- relative_date(new Date()) %>
+// a few seconds ago
+
+<%- relative_date(new Date(1000000000000)) %>
+// 22 years ago
+```
+
+### time_tag
+
+Inserts time tag. `date` can be unix time, ISO string, date object, or [Moment.js] object. `format` is `date_format` setting by default.
+
+```js
+<%- time_tag(date, [format]) %>
+```
+
+**Examples:**
+
+``` js
+<%- time_tag(new Date()) %>
+// <time datetime="2024-01-22T06:35:31.108Z">2024-01-22</time>
+
+<%- time_tag(new Date(), 'MMM-D-YYYY') %>
+// <time datetime="2024-01-22T06:35:31.108Z">Jan-22-2024</time>
+```
+
 ### moment
 
 Библиотека [Moment.js](https://momentjs.com/).

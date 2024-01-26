@@ -584,6 +584,42 @@ url: https://example.com/blog # example
 // Tuesday, January 1st 2013, 12:00:00 am
 ```
 
+### relative_date
+
+插入相对当前的时间。`date` 可以是 UNIX 时间、ISO 字符串、Date 对象或 [Moment.js] 对象。
+
+```js
+<%- relative_date(date) %>
+```
+
+**示例：**
+
+``` js
+<%- relative_date(new Date()) %>
+// a few seconds ago
+
+<%- relative_date(new Date(1000000000000)) %>
+// 22 years ago
+```
+
+### time_tag
+
+插入时间标签。`date` 可以是 UNIX 时间、ISO 字符串、Date 对象或 [Moment.js] 对象。`format` 默认为 `date_format` 配置信息。
+
+```js
+<%- time_tag(date, [format]) %>
+```
+
+**示例：**
+
+``` js
+<%- time_tag(new Date()) %>
+// <time datetime="2024-01-22T06:35:31.108Z">2024-01-22</time>
+
+<%- time_tag(new Date(), 'MMM-D-YYYY') %>
+// <time datetime="2024-01-22T06:35:31.108Z">Jan-22-2024</time>
+```
+
 ### moment
 
 [Moment.js] 函数库。
