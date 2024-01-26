@@ -8,7 +8,7 @@
   "scripts": {
     "build": "hexo generate",
     "eslint": "eslint .",
-    "prepare": "husky install"
+    "prepare": "husky"
   },
   "dependencies": {
     "cheerio": "^0.22.0",
