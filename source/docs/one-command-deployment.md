@@ -127,6 +127,10 @@ deploy:
 
 ## OpenShift
 
+{% note warn %}
+`hexo-deployer-openshift` has been deprecated in 2022.
+{% endnote %}
+
 Install [hexo-deployer-openshift].
 
 ```bash
@@ -266,6 +270,10 @@ $ hexo generate —deploy && bip deploy
 After a few moments, your website will be deployed.
 
 ## RSS3
+
+{% note warn %}
+`hexo-deployer-rss3` has been deprecated in 2023.
+{% endnote %}
 
 [RSS3](https://rss3.io) is an open protocol designed for content and social networks in the Web 3.0 era.
 
