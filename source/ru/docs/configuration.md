@@ -60,6 +60,7 @@ title: Конфигурация
 `post_asset_folder` | Включать [папку с материалами](asset-folders.html)? | `false`
 `relative_link` | Создание ссылок относительно корневой папки? | `false`
 `future` | Отображать будущие посты? | `true`
+`syntax_highlighter` | Code block syntax highlight settings, see [Syntax Highlight](/docs/syntax-highlight) section for usage guide | `highlight.js`
 `highlight` | Настройки блоков кода, см. [Highlight.js](/docs/syntax-highlight#Highlight-js) раздел для руководства по использованию |
 `prismjs` | Настройки блоков кода, см. [PrismJS](/docs/syntax-highlight#PrismJS) раздел для руководства по использованию |
 

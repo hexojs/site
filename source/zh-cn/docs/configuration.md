@@ -88,6 +88,7 @@ skip_render: "_posts/test-post.md"
 `post_asset_folder` | 启用 [资源文件夹](asset-folders.html) | `false`
 `relative_link` | 把链接改为与根目录的相对位址 | `false`
 `future` | 显示未来的文章 | `true`
+`syntax_highlighter` | 代码块的设置, 请参考 [代码高亮](/zh-cn/docs/syntax-highlight) 进行设置 | `highlight.js`
 `highlight` | 代码块的设置, 请参考 [Highlight.js](/zh-cn/docs/syntax-highlight#Highlight-js) 进行设置 |
 `prismjs` | 代码块的设置, 请参考 [PrismJS](/zh-cn/docs/syntax-highlight#PrismJS) 进行设置 |
 
