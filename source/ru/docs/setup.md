@@ -36,7 +36,7 @@ $ npm install
   "version": "0.0.0",
   "private": true,
   "hexo": {
-    "version": "7.0.0"
+    "version": ""
   },
   "dependencies": {
     "hexo": "^7.0.0",
