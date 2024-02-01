@@ -80,6 +80,7 @@ Setting | Description | Default
 `post_asset_folder` | Enable the [Asset Folder](asset-folders.html)? | `false`
 `relative_link` | Make links relative to the root folder? | `false`
 `future` | Display future posts? | `true`
+`syntax_highlighter` | Code block syntax highlight settings, see [Syntax Highlight](/docs/syntax-highlight) section for usage guide | `highlight.js`
 `highlight` | Code block syntax highlight settings, see [Highlight.js](/docs/syntax-highlight#Highlight-js) section for usage guide |
 `prismjs` | Code block syntax highlight settings, see [PrismJS](/docs/syntax-highlight#PrismJS) section for usage guide |
 

@@ -63,6 +63,7 @@ title: 配置
 `post_asset_folder` | 啟動 [Asset 資料夾](asset-folders.html) | `false`
 `relative_link` | 把連結改為與根目錄的相對位址 | `false`
 `future` | 顯示未來的文章 | `true`
+`syntax_highlighter` | Code block syntax highlight settings, see [Syntax Highlight](/docs/syntax-highlight) section for usage guide | `highlight.js`
 `highlight` | 程式碼區塊的設定, see [Highlight.js](/docs/syntax-highlight#Highlight-js) section for usage guide |
 `prismjs` | 程式碼區塊的設定, see [PrismJS](/docs/syntax-highlight#PrismJS) section for usage guide |
 
