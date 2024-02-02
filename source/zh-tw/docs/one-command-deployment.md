@@ -117,6 +117,10 @@ deploy:
 
 ## OpenShift
 
+{% note warn %}
+`hexo-deployer-openshift` has been deprecated in 2022.
+{% endnote %}
+
 安裝 [hexo-deployer-openshift]。
 
 ``` bash
@@ -220,6 +224,10 @@ $ hexo generate —deploy && bip deploy
 After a few moments, your website will be deployed.
 
 ## RSS3
+
+{% note warn %}
+`hexo-deployer-rss3` has been deprecated in 2023.
+{% endnote %}
 
 [RSS3](https://rss3.io) 是一個為 Web 3.0 時代的內容和社交網路設計的開放協議。
 

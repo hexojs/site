@@ -147,6 +147,10 @@ deploy:
 
 ## OpenShift
 
+{% note warn %}
+`hexo-deployer-openshift` 已于2022年被弃用。
+{% endnote %}
+
 安装 [hexo-deployer-openshift]。
 
 ``` bash
@@ -288,6 +292,10 @@ $ hexo generate —deploy && bip deploy
 几分钟后，你的网站将被部署。
 
 ## RSS3
+
+{% note warn %}
+`hexo-deployer-rss3` 已于2023年被弃用。
+{% endnote %}
 
 [RSS3](https://rss3.io) 是一个为 Web 3.0 时代的内容和社交网络设计的开放协议。
 
