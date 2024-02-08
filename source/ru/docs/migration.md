@@ -1,17 +1,18 @@
 ---
 title: Миграция
 ---
+
 ## RSS
 
 Прежде нужно установить плагин `hexo-migrator-rss`.
 
-``` bash
+```bash
 $ npm install hexo-migrator-rss --save
 ```
 
 После установки плагина запустите следующую команду для миграции всех постов в RSS. `source` может быть путём к файлу или URL ссылкой.
 
-``` bash
+```bash
 $ hexo migrate rss <source>
 ```
 
@@ -21,7 +22,7 @@ $ hexo migrate rss <source>
 
 Измените переменную `new_post_name` в `_config.yml`:
 
-``` yaml
+```yaml
 new_post_name: :year-:month-:day-:title.md
 ```
 
@@ -31,7 +32,7 @@ new_post_name: :year-:month-:day-:title.md
 
 Измените переменную `new_post_name` в `_config.yml`:
 
-``` yaml
+```yaml
 new_post_name: :year-:month-:day-:title.md
 ```
 
@@ -39,7 +40,7 @@ new_post_name: :year-:month-:day-:title.md
 
 Сначала установите плагин `hexo-migrator-wordpress`.
 
-``` bash
+```bash
 $ npm install hexo-migrator-wordpress --save
 ```
 
@@ -47,7 +48,7 @@ $ npm install hexo-migrator-wordpress --save
 
 Выполните:
 
-``` bash
+```bash
 $ hexo migrate wordpress <source>
 ```
 
