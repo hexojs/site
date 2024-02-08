@@ -1,12 +1,13 @@
 ---
 title: 部署器（Deployer）
 ---
+
 部署器帮助开发者将网站快速部署到远程服务器上，而无需复杂的指令。
 
 ## 概要
 
-``` js
-hexo.extend.deployer.register(name, function(args){
+```js
+hexo.extend.deployer.register(name, function (args) {
   // ...
 });
 ```
