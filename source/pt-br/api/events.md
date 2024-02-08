@@ -28,16 +28,16 @@ Emitido depois da geração finalizada.
 
 Emitido depois de uma nova postagem ter sido criada. Este evento retorna os dados da postagem:
 
-``` js
-hexo.on('new', function(post){
+```js
+hexo.on("new", function (post) {
   //
 });
 ```
 
-Dados | Descrição
---- | ---
-`post.path` | Caminho completo do arquivo da postagem
-`post.content` | Conteúdo do arquivo da postagem
+| Dados          | Descrição                               |
+| -------------- | --------------------------------------- |
+| `post.path`    | Caminho completo do arquivo da postagem |
+| `post.content` | Conteúdo do arquivo da postagem         |
 
 ### processBefore
 

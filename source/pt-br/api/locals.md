@@ -6,22 +6,22 @@ As variáveis locais são usadas para renderização de template, que é a vari�
 
 ## Variáveis Padrão
 
-Variável | Descrição
---- | ---
-`posts` | Todas as postagens
-`pages` | Todas as páginas
-`categories` | Todas as categorias
-`tags` | Todas as tags
+| Variável     | Descrição           |
+| ------------ | ------------------- |
+| `posts`      | Todas as postagens  |
+| `pages`      | Todas as páginas    |
+| `categories` | Todas as categorias |
+| `tags`       | Todas as tags       |
 
 ## Obter uma Variável
 
-``` js
-hexo.locals.get('posts')
+```js
+hexo.locals.get("posts");
 ```
 
 ## Atribuir uma Variável
 
-``` js
+```js
 hexo.locals.set('posts', function(){
   return ...
 });
@@ -29,18 +29,18 @@ hexo.locals.set('posts', function(){
 
 ## Remover uma Variável
 
-``` js
-hexo.locals.remove('posts');
+```js
+hexo.locals.remove("posts");
 ```
 
 ## Obter Todos as Variáveis
 
-``` js
+```js
 hexo.locals.toObject();
 ```
 
 ## Invalidar o Cache
 
-``` js
+```js
 hexo.locals.invalidate();
 ```
