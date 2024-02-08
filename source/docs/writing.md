@@ -6,7 +6,7 @@ title: Writing
 
 To create a new post or a new page, you can run the following command:
 
-``` bash
+```bash
 $ hexo new [layout] <title>
 ```
 
@@ -16,11 +16,11 @@ $ hexo new [layout] <title>
 
 There are three default layouts in Hexo: `post`, `page` and `draft`. Files created by each of them is saved to a different path. Newly created posts are saved to the `source/_posts` folder.
 
-Layout | Path
---- | ---
-`post` | `source/_posts`
-`page` | `source`
-`draft` | `source/_drafts`
+| Layout  | Path             |
+| ------- | ---------------- |
+| `post`  | `source/_posts`  |
+| `page`  | `source`         |
+| `draft` | `source/_drafts` |
 
 {% note tip Disabling layout %}
 If you don't want an article (post/page) to be processed with a theme, set `layout: false` in its front-matter. Refer to [this section](/docs/front-matter#Layout) for more details.
@@ -30,20 +30,20 @@ If you don't want an article (post/page) to be processed with a theme, set `layo
 
 By default, Hexo uses the post title as its filename. You can edit the `new_post_name` setting in `_config.yml` to change the default filename. For example, `:year-:month-:day-:title.md` will prefix filenames with the post creation date. You can use the following placeholders:
 
-Placeholder | Description
---- | ---
-`:title` | Post title (lower case, with spaces replaced by hyphens)
-`:year` | Created year, e.g. `2015`
-`:month` | Created month (leading zeros), e.g. `04`
-`:i_month` | Created month (no leading zeros), e.g. `4`
-`:day` | Created day (leading zeros), e.g. `07`
-`:i_day` | Created day (no leading zeros), e.g. `7`
+| Placeholder | Description                                              |
+| ----------- | -------------------------------------------------------- |
+| `:title`    | Post title (lower case, with spaces replaced by hyphens) |
+| `:year`     | Created year, e.g. `2015`                                |
+| `:month`    | Created month (leading zeros), e.g. `04`                 |
+| `:i_month`  | Created month (no leading zeros), e.g. `4`               |
+| `:day`      | Created day (leading zeros), e.g. `07`                   |
+| `:i_day`    | Created day (no leading zeros), e.g. `7`                 |
 
 ## Drafts
 
 Previously, we mentioned a special layout in Hexo: `draft`. Posts initialized with this layout are saved to the `source/_drafts` folder. You can use the `publish` command to move drafts to the `source/_posts` folder. `publish` works in a similar way to the `new` command.
 
-``` bash
+```bash
 $ hexo publish [layout] <title>
 ```
 
@@ -53,17 +53,17 @@ Drafts are not displayed by default. You can add the `--draft` option when runni
 
 When creating posts, Hexo will build files based on the corresponding file in `scaffolds` folder. For example:
 
-``` bash
+```bash
 $ hexo new photo "My Gallery"
 ```
 
 When you run this command, Hexo will try to find `photo.md` in the `scaffolds` folder and build the post based on it. The following placeholders are available in scaffolds:
 
-Placeholder | Description
---- | ---
-`layout` | Layout
-`title` | Title
-`date` | File created date
+| Placeholder | Description       |
+| ----------- | ----------------- |
+| `layout`    | Layout            |
+| `title`     | Title             |
+| `date`      | File created date |
 
 ## Supported Formats
 

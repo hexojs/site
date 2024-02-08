@@ -1,6 +1,7 @@
 ---
 title: Tag Plugins
 ---
+
 Tag plugins are different from post tags. They are ported from Octopress and provide a useful way for you to quickly add specific content to your posts.
 
 Although you can write your posts in any format, the tag plugins will always be available and syntax remains the same.
@@ -85,14 +86,14 @@ code snippet
 
 Specify additional options in `option:value` format, e.g. `line_number:false first_line:5`.
 
-Extra Options | Description | Default
---- | --- | ---
-`line_number` | Show line number | `true`
-`line_threshold` | Only show line numbers as long as the numbers of lines of the code block exceed such threshold. | `0` |
-`highlight` | Enable code highlighting | `true`
-`first_line` | Specify the first line number | `1`
-`mark` | Line highlight specific line(s), each value separated by a comma. Specify the number range using a dash<br>Example: `mark:1,4-7,10` will mark lines 1, 4 to 7 and 10. |
-`wrap` | Wrap the code block in [`<table>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table) | `true`
+| Extra Options    | Description                                                                                                                                                           | Default |
+| ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
+| `line_number`    | Show line number                                                                                                                                                      | `true`  |
+| `line_threshold` | Only show line numbers as long as the numbers of lines of the code block exceed such threshold.                                                                       | `0`     |
+| `highlight`      | Enable code highlighting                                                                                                                                              | `true`  |
+| `first_line`     | Specify the first line number                                                                                                                                         | `1`     |
+| `mark`           | Line highlight specific line(s), each value separated by a comma. Specify the number range using a dash<br>Example: `mark:1,4-7,10` will mark lines 1, 4 to 7 and 10. |
+| `wrap`           | Wrap the code block in [`<table>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table)                                                                   | `true`  |
 
 ### Examples
 
@@ -142,7 +143,7 @@ _.compact([0, 1, false, 2, '', 3]);
 ```
 
 {% codeblock _.compact http://underscorejs.org/#compact Underscore.js %}
-_.compact([0, 1, false, 2, '', 3]);
+\_.compact([0, 1, false, 2, '', 3]);
 => [1, 2, 3]
 {% endcodeblock %}
 
@@ -151,9 +152,9 @@ _.compact([0, 1, false, 2, '', 3]);
 This is identical to using a code block, but instead uses three backticks to delimit the block.
 
 {% raw %}
-&#96`` [language] [title] [url] [link text]
+&#96` [language] [title] [url] [link text]
 code snippet
-&#96;``
+&#96;`
 {% endraw %}
 
 ## Pull Quote
@@ -370,32 +371,32 @@ _hexo-renderer-marked 3.1.0+ can (optionally) resolves the post's path of an ima
 
 `{% asset_img foo.jpg %}`
 
-``` html
-<img src="/2020/01/02/hello/foo.jpg">
+```html
+<img src="/2020/01/02/hello/foo.jpg" />
 ```
 
 **Custom class**
 
 `{% asset_img post-image foo.jpg %}`
 
-``` html
-<img src="/2020/01/02/hello/foo.jpg" class="post-image">
+```html
+<img src="/2020/01/02/hello/foo.jpg" class="post-image" />
 ```
 
 **Display size**
 
 `{% asset_img foo.jpg 500 400 %}`
 
-``` html
-<img src="/2020/01/02/hello/foo.jpg" width="500" height="400">
+```html
+<img src="/2020/01/02/hello/foo.jpg" width="500" height="400" />
 ```
 
 **Title & Alt**
 
 `{% asset_img foo.jpg "lorem ipsum'dolor'" %}`
 
-``` html
-<img src="/2020/01/02/hello/foo.jpg" title="lorem ipsum" alt="dolor">
+```html
+<img src="/2020/01/02/hello/foo.jpg" title="lorem ipsum" alt="dolor" />
 ```
 
 ## URL
@@ -410,23 +411,23 @@ Returns a url with the root path prefixed. Output is encoded automatically.
 
 **Examples:**
 
-``` yml
+```yml
 _config.yml
 root: /blog/ # example
 ```
 
-``` 
+```
 {% url_for blog index.html %}
 ```
 
-``` html
+```html
 <a href="/blog/index.html">blog</a>
 ```
 
 Relative link, follows `relative_link` option by default
 e.g. post/page path is '/foo/bar/index.html'
 
-``` yml
+```yml
 _config.yml
 relative_link: true
 ```
@@ -435,7 +436,7 @@ relative_link: true
 {% url_for blog index.html %}
 ```
 
-``` html
+```html
 <a href="../../index.html">blog</a>
 ```
 
@@ -445,7 +446,7 @@ You could also disable it to output a non-relative link, even when `relative_lin
 {% url_for blog index.html false %}
 ```
 
-``` html
+```html
 <a href="/index.html">blog</a>
 ```
 
@@ -459,7 +460,7 @@ Returns a url with the `config.url` prefixed. Output is encoded automatically.
 
 **Examples:**
 
-``` yml
+```yml
 _config.yml
 url: https://example.com/blog # example
 ```
@@ -468,7 +469,7 @@ url: https://example.com/blog # example
 {% full_url_for index /a/path %}
 ```
 
-``` html
+```html
 <a href="https://example.com/blog/a/path">index</a>
 ```
 
