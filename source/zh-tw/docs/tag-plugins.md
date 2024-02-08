@@ -1,6 +1,7 @@
 ---
 title: 標籤外掛（Tag Plugins）
 ---
+
 標籤外掛和 Front-matter 中的標籤不同，它們是用於在文章中快速插入特定內容的外掛。
 
 Although you can write your posts in any formats, but the tag plugins will always be available and syntax remains the same.
@@ -81,14 +82,14 @@ code snippet
 
 Specify additional options in `option:value` format, e.g. `line_number:false first_line:5`.
 
-Extra Options | Description | Default
---- | --- | ---
-`line_number` | Show line number | `true`
-`line_threshold` | Only show line numbers as long as the numbers of lines of the code block exceed such threshold. | `0` |
-`highlight` | Enable code highlighting | `true`
-`first_line` | Specify the first line number | `1`
-`mark` | Line highlight specific line(s), each value separated by a comma. Specify number range using a dash<br>Example: `mark:1,4-7,10` will mark line 1, 4 to 7 and 10. |
-`wrap` | Wrap the code block in [`<table>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table) | `true`
+| Extra Options    | Description                                                                                                                                                      | Default |
+| ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
+| `line_number`    | Show line number                                                                                                                                                 | `true`  |
+| `line_threshold` | Only show line numbers as long as the numbers of lines of the code block exceed such threshold.                                                                  | `0`     |
+| `highlight`      | Enable code highlighting                                                                                                                                         | `true`  |
+| `first_line`     | Specify the first line number                                                                                                                                    | `1`     |
+| `mark`           | Line highlight specific line(s), each value separated by a comma. Specify number range using a dash<br>Example: `mark:1,4-7,10` will mark line 1, 4 to 7 and 10. |
+| `wrap`           | Wrap the code block in [`<table>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table)                                                              | `true`  |
 
 **普通的程式碼區塊**
 
@@ -136,7 +137,7 @@ _.compact([0, 1, false, 2, '', 3]);
 ```
 
 {% codeblock _.compact http://underscorejs.org/#compact Underscore.js %}
-_.compact([0, 1, false, 2, '', 3]);
+\_.compact([0, 1, false, 2, '', 3]);
 => [1, 2, 3]
 {% endcodeblock %}
 
@@ -145,9 +146,9 @@ _.compact([0, 1, false, 2, '', 3]);
 另一種形式的程式碼區塊。
 
 {% raw %}
-&#96``[language] [title] [url] [link text]
+&#96`[language] [title] [url] [link text]
 code snippet
-&#96``
+&#96`
 {% endraw %}
 
 ## Pull Quote
@@ -301,6 +302,7 @@ For instance:
 ```
 {% post_link hexo-4-released 'How to use <b> tag in title' %}
 ```
+
 {% post_link hexo-4-released 'How to use <b> tag in title' %}
 
 **Do not escape title.**
@@ -308,6 +310,7 @@ For instance:
 ```
 {% post_link hexo-4-released '<b>bold</b> custom title' false %}
 ```
+
 {% post_link hexo-4-released '<b>bold</b> custom title' false %}
 
 ## 引用資產
@@ -330,32 +333,32 @@ _hexo-renderer-marked 3.1.0+ can (optionally) resolves the post's path of an ima
 
 `{% asset_img foo.jpg %}`
 
-``` html
-<img src="/2020/01/02/hello/foo.jpg">
+```html
+<img src="/2020/01/02/hello/foo.jpg" />
 ```
 
 **Custom class**
 
 `{% asset_img post-image foo.jpg %}`
 
-``` html
-<img src="/2020/01/02/hello/foo.jpg" class="post-image">
+```html
+<img src="/2020/01/02/hello/foo.jpg" class="post-image" />
 ```
 
 **Display size**
 
 `{% asset_img foo.jpg 500 400 %}`
 
-``` html
-<img src="/2020/01/02/hello/foo.jpg" width="500" height="400">
+```html
+<img src="/2020/01/02/hello/foo.jpg" width="500" height="400" />
 ```
 
 **Title & Alt**
 
 `{% asset_img logo.svg "lorem ipsum'dolor'" %}`
 
-``` html
-<img src="/2020/01/02/hello/foo.jpg" title="lorem ipsum" alt="dolor">
+```html
+<img src="/2020/01/02/hello/foo.jpg" title="lorem ipsum" alt="dolor" />
 ```
 
 ## URL
@@ -370,23 +373,23 @@ Returns a url with the root path prefixed. Output is encoded automatically.
 
 **Examples:**
 
-``` yml
+```yml
 _config.yml
 root: /blog/ # example
 ```
 
-``` 
+```
 {% url_for blog index.html %}
 ```
 
-``` html
+```html
 <a href="/blog/index.html">blog</a>
 ```
 
 Relative link, follows `relative_link` option by default
 e.g. post/page path is '/foo/bar/index.html'
 
-``` yml
+```yml
 _config.yml
 relative_link: true
 ```
@@ -395,7 +398,7 @@ relative_link: true
 {% url_for blog index.html %}
 ```
 
-``` html
+```html
 <a href="../../index.html">blog</a>
 ```
 
@@ -405,7 +408,7 @@ You could also disable it to output a non-relative link, even when `relative_lin
 {% url_for blog index.html false %}
 ```
 
-``` html
+```html
 <a href="/index.html">blog</a>
 ```
 
@@ -419,7 +422,7 @@ Returns a url with the `config.url` prefixed. Output is encoded automatically.
 
 **Examples:**
 
-``` yml
+```yml
 _config.yml
 url: https://example.com/blog # example
 ```
@@ -428,7 +431,7 @@ url: https://example.com/blog # example
 {% full_url_for index /a/path %}
 ```
 
-``` html
+```html
 <a href="https://example.com/blog/a/path">index</a>
 ```
 

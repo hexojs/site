@@ -1,18 +1,19 @@
 ---
 title: 解決問題
 ---
+
 在使用 Hexo 時，您可能會遇到一些問題，下列的常見問題解答可能會對您有所幫助。如果您在這裡找不道解答，可以在 [GitHub](https://github.com/hexojs/hexo/issues) 或 [Google Group](https://groups.google.com/group/hexo) 上詢問。
 
 ## YAML 解析錯誤
 
-``` plain
+```plain
 JS-YAML: incomplete explicit mapping pair; a key node is missed at line 18, column 29:
       last_updated: Last updated: %s
 ```
 
 如果 YAML 字串中包含冒號（`:`）的話，請加上引號。
 
-``` plain
+```plain
 JS-YAML: bad indentation of a mapping entry at line 18, column 31:
       last_updated:"Last updated: %s"
 ```
@@ -23,13 +24,13 @@ JS-YAML: bad indentation of a mapping entry at line 18, column 31:
 
 ## EMFILE 錯誤
 
-``` plain
+```plain
 Error: EMFILE, too many open files
 ```
 
 雖然 Node.js 有非阻塞 I/O，同步 I/O 的數量仍被系統所限制，在產生大量靜態檔案的時候，您可能會碰到 EMFILE 錯誤，您可試著提高同步 I/O 的限制來解決此問題。
 
-``` bash
+```bash
 $ ulimit -n 10000
 ```
 
@@ -37,7 +38,7 @@ $ ulimit -n 10000
 
 If you encounter the following error:
 
-``` bash
+```bash
 $ ulimit -n 10000
 ulimit: open files: cannot modify limit: Operation not permitted
 ```
@@ -48,29 +49,29 @@ To override the limit:
 
 1. Add the following line to "/etc/security/limits.conf":
 
-  ```
-  * - nofile 10000
+```
+* - nofile 10000
 
-  # '*' applies to all users and '-' set both soft and hard limits
-  ```
+# '*' applies to all users and '-' set both soft and hard limits
+```
 
-  * The above setting may not apply in some cases, ensure "/etc/pam.d/login" and "/etc/pam.d/lightdm" have the following line. (Ignore this step if those files do not exist)
+- The above setting may not apply in some cases, ensure "/etc/pam.d/login" and "/etc/pam.d/lightdm" have the following line. (Ignore this step if those files do not exist)
 
-  ```
-  session required pam_limits.so
-  ```
+```
+session required pam_limits.so
+```
 
 2. If you are on a [systemd-based](https://en.wikipedia.org/wiki/Systemd#Adoption) distribution, systemd may override "limits.conf". To set the limit in systemd, add the following line in "/etc/systemd/system.conf" and "/etc/systemd/user.conf":
 
-  ```
-  DefaultLimitNOFILE=10000
-  ```
+```
+DefaultLimitNOFILE=10000
+```
 
 3. Reboot
 
 ## Git 佈署問題
 
-``` plain
+```plain
 fatal: 'username.github.io' does not appear to be a git repository
 ```
 
@@ -78,19 +79,19 @@ fatal: 'username.github.io' does not appear to be a git repository
 
 ## 伺服器問題
 
-``` plain
+```plain
 Error: listen EADDRINUSE
 ```
 
 您可能同時開啟兩個 Hexo 伺服器，或者有其他應用程式正在佔用相同的連接埠，請試著修改 `port` 設定，或是在啟動 Hexo 伺服器時加上 `-p` 選項。
 
-``` bash
+```bash
 $ hexo server -p 5000
 ```
 
 ## 外掛安裝問題
 
-``` plain
+```plain
 npm ERR! node-waf configure build
 ```
 
@@ -109,13 +110,13 @@ Hexo 使用 [Warehouse] 儲存資料，它不是一般陣列所以必須先轉�
 
 有時資料可能沒有被更新，或是產生出的檔案與修改前的相同，您可試著清除快取並再試一次。
 
-``` bash
+```bash
 $ hexo clean
 ```
 
 ## 脫逸（Escape）內容
 
-Hexo 使用 [Nunjucks] 來解析文章（舊版本使用 [Swig]，兩者語法類似），內容若包含 `{{ }}` 或 `{% %}` 可能導致解析錯誤，您可以用 [`raw`](/docs/tag-plugins#Raw) 標籤包裹，single backtick ```` `{{ }}` ```` 或 triple backtick 來避免潛在問題發生。
+Hexo 使用 [Nunjucks] 來解析文章（舊版本使用 [Swig]，兩者語法類似），內容若包含 `{{ }}` 或 `{% %}` 可能導致解析錯誤，您可以用 [`raw`](/docs/tag-plugins#Raw) 標籤包裹，single backtick `` `{{ }}` `` 或 triple backtick 來避免潛在問題發生。
 Alternatively, Nunjucks tags can be disabled through the renderer's option (if supported), [API](/api/renderer#Disable-Nunjucks-tags) or [front-matter](/docs/front-matter).
 
 ```
@@ -156,7 +157,7 @@ Error: watch /path/to/hexo/theme/ EMPERM
 
 Unfortunately, WSL does not currently support filesystem watchers. Therefore, the live updating feature of hexo's server is currently unavailable. You can still run the server from a WSL environment by first generating the files and then running it as a static server:
 
-``` sh
+```sh
 $ hexo generate
 $ hexo server -s
 ```
