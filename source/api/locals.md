@@ -1,26 +1,27 @@
 ---
 title: Local Variables
 ---
+
 Local variables are used for template rendering, which is the `site` variable in templates.
 
 ## Default Variables
 
-Variable | Description
---- | ---
-`posts` | All posts
-`pages` | All pages
-`categories` | All categories
-`tags` | All tags
+| Variable     | Description    |
+| ------------ | -------------- |
+| `posts`      | All posts      |
+| `pages`      | All pages      |
+| `categories` | All categories |
+| `tags`       | All tags       |
 
 ## Get a Variable
 
-``` js
-hexo.locals.get('posts')
+```js
+hexo.locals.get("posts");
 ```
 
 ## Set a Variable
 
-``` js
+```js
 hexo.locals.set('posts', function(){
   return ...
 });
@@ -28,18 +29,18 @@ hexo.locals.set('posts', function(){
 
 ## Remove a Variable
 
-``` js
-hexo.locals.remove('posts');
+```js
+hexo.locals.remove("posts");
 ```
 
 ## Get All Variable
 
-``` js
+```js
 hexo.locals.toObject();
 ```
 
 ## Invalidate the cache
 
-``` js
+```js
 hexo.locals.invalidate();
 ```
