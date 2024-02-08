@@ -8,7 +8,7 @@ title: 将 Hexo 部署到 GitLab Pages
 2. 将你的 Hexo 站点文件夹推送到 repository 中。默认情况下 `public` 目录将不会（并且不应该）被推送到 repository 中，建议你检查 `.gitignore` 文件中是否包含 `public` 一行，如果没有请加上。
 3. 在你的站点文件夹中新建 `.gitlab-ci.yml` 文件：
 
-``` yml
+```yml
 image: node:10-alpine # use nodejs v10 LTS
 cache:
   paths:
