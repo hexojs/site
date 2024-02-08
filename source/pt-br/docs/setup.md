@@ -6,7 +6,7 @@ title: Setup
 
 Uma vez instalado o Hexo, execute os seguintes comandos para inicializar um site com Hexo em um diretório `<folder>`.
 
-``` bash
+```bash
 $ hexo init <folder>
 $ cd <folder>
 $ npm install
@@ -14,7 +14,7 @@ $ npm install
 
 Após inicializado, o diretório do seu projeto ficará com a seguinte estrutura:
 
-``` plain
+```plain
 .
 ├── _config.yml
 ├── package.json
@@ -25,7 +25,7 @@ Após inicializado, o diretório do seu projeto ficará com a seguinte estrutura
 └── themes
 ```
 
-### _config.yml
+### \_config.yml
 
 Arquivo de [configuração](configuration.html) do site. Você pode definir a maioria das configurações aqui.
 
@@ -33,7 +33,7 @@ Arquivo de [configuração](configuration.html) do site. Você pode definir a ma
 
 Arquivo de dados da aplicação. Os renderizadores [Markdown](http://daringfireball.net/projects/markdown/), [EJS](https://ejs.co/) e [Stylus](http://learnboost.github.io/stylus/) são instalados por padrão. Se desejar, você pode desinstalá-los posteriormente.
 
-``` json package.json
+```json package.json
 {
   "name": "hexo-site",
   "version": "0.0.0",
