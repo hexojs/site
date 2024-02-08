@@ -1,11 +1,12 @@
 ---
 title: 過濾器（Filter）
 ---
+
 過濾器用於修改特定資料，Hexo 將資料依序傳給過濾器，而過濾器可以針對資料進行修改，這個概念是從 [WordPress](http://codex.wordpress.org/Plugin_API#Filters) 借來的。
 
 ## 概要
 
-``` js
+```js
 hexo.extend.filter.register(type, function() {
   // User configuration
   const { config } = this;
@@ -22,69 +23,69 @@ hexo.extend.filter.register(type, function() {
 
 ## 執行過濾器
 
-``` js
+```js
 hexo.extend.filter.exec(type, data, options);
 hexo.extend.filter.execSync(type, data, options);
 ```
 
-選項 | 描述
---- | ---
-`context` | Context
-`args` | 參數。必須為陣列。
+| 選項      | 描述               |
+| --------- | ------------------ |
+| `context` | Context            |
+| `args`    | 參數。必須為陣列。 |
 
 `data` 會作為第一個參數傳入每個過濾器，而您可在過濾器中透過回傳值改變下一個過濾器中的 `data`，如果什麼都沒回傳的話則會保持原本的 `data`。您還可使用 `args` 指定過濾器的其他參數。舉例來說：
 
-``` js
-hexo.extend.filter.register('test', function(data, arg1, arg2){
+```js
+hexo.extend.filter.register("test", function (data, arg1, arg2) {
   // data === 'some data'
   // arg1 === 'foo'
   // arg2 === 'bar'
 
-  return 'something';
+  return "something";
 });
 
-hexo.extend.filter.register('test', function(data, arg1, arg2){
+hexo.extend.filter.register("test", function (data, arg1, arg2) {
   // data === 'something'
 });
 
-hexo.extend.filter.exec('test', 'some data', {
-  args: ['foo', 'bar']
+hexo.extend.filter.exec("test", "some data", {
+  args: ["foo", "bar"],
 });
 ```
 
 您也可使用以下方法來執行過濾器：
 
-``` js
+```js
 hexo.execFilter(type, data, options);
 hexo.execFilterSync(type, data, options);
 ```
 
 ## 移除過濾器
 
-``` js
+```js
 hexo.extend.filter.unregister(type, filter);
 ```
 
 **Example**
 
-``` js
+```js
 // Unregister a filter which is registered with named function
 
 const filterFn = (data) => {
-  data = 'something';
+  data = "something";
   return data;
 };
-hexo.extend.filter.register('example', filterFn);
+hexo.extend.filter.register("example", filterFn);
 
-hexo.extend.filter.unregister('example', filterFn);
+hexo.extend.filter.unregister("example", filterFn);
 ```
 
-``` js
+```js
 // Unregister a filter which is registered with commonjs module
 
-hexo.extend.filter.register('example', require('path/to/filter'));
+hexo.extend.filter.register("example", require("path/to/filter"));
 
-hexo.extend.filter.unregister('example', require('path/to/filter'));
+hexo.extend.filter.unregister("example", require("path/to/filter"));
 ```
 
 ## 過濾器列表
@@ -97,8 +98,8 @@ hexo.extend.filter.unregister('example', require('path/to/filter'));
 
 舉例來說，把標題轉為小寫：
 
-``` js
-hexo.extend.filter.register('before_post_render', function(data){
+```js
+hexo.extend.filter.register("before_post_render", function (data) {
   data.title = data.title.toLowerCase();
   return data;
 });
@@ -110,9 +111,12 @@ hexo.extend.filter.register('before_post_render', function(data){
 
 舉例來說，把 `@username` 取代為 Twitter 的使用者連結。
 
-``` js
-hexo.extend.filter.register('after_post_render', function(data){
-  data.content = data.content.replace(/@(\d+)/, '<a href="http://twitter.com/$1">#$1</a>');
+```js
+hexo.extend.filter.register("after_post_render", function (data) {
+  data.content = data.content.replace(
+    /@(\d+)/,
+    '<a href="http://twitter.com/$1">#$1</a>',
+  );
   return data;
 });
 ```
@@ -121,8 +125,8 @@ hexo.extend.filter.register('after_post_render', function(data){
 
 在 Hexo 即將結束時執行，也就是在 `hexo.exit` 被呼叫後執行。
 
-``` js
-hexo.extend.filter.register('before_exit', function(){
+```js
+hexo.extend.filter.register("before_exit", function () {
   // ...
 });
 ```
@@ -131,8 +135,8 @@ hexo.extend.filter.register('before_exit', function(){
 
 在產生器執行開始前執行。
 
-``` js
-hexo.extend.filter.register('before_generate', function(){
+```js
+hexo.extend.filter.register("before_generate", function () {
   // ...
 });
 ```
@@ -141,8 +145,8 @@ hexo.extend.filter.register('before_generate', function(){
 
 在產生器執行結束後執行。
 
-``` js
-hexo.extend.filter.register('after_generate', function(){
+```js
+hexo.extend.filter.register("after_generate", function () {
   // ...
 });
 ```
@@ -153,8 +157,8 @@ hexo.extend.filter.register('after_generate', function(){
 
 舉例來說，在模板的區域變數中新增目前的時間：
 
-``` js
-hexo.extend.filter.register('template_locals', function(locals){
+```js
+hexo.extend.filter.register("template_locals", function (locals) {
   locals.now = Date.now();
   return locals;
 });
@@ -164,8 +168,8 @@ hexo.extend.filter.register('template_locals', function(locals){
 
 在 Hexo 初始化完成後執行，也就是在 `hexo.init` 執行完成後執行。
 
-``` js
-hexo.extend.filter.register('after_init', function(){
+```js
+hexo.extend.filter.register("after_init", function () {
   // ...
 });
 ```
@@ -174,8 +178,8 @@ hexo.extend.filter.register('after_init', function(){
 
 用來決定新建文章的路徑，在建立文章時執行。
 
-``` js
-hexo.extend.filter.register('new_post_path', function(data, replace){
+```js
+hexo.extend.filter.register("new_post_path", function (data, replace) {
   // ...
 });
 ```
@@ -184,8 +188,8 @@ hexo.extend.filter.register('new_post_path', function(data, replace){
 
 用來決定文章的永久連結。
 
-``` js
-hexo.extend.filter.register('post_permalink', function(data){
+```js
+hexo.extend.filter.register("post_permalink", function (data) {
   // ...
 });
 ```
@@ -200,10 +204,10 @@ hexo.extend.filter.register('post_permalink', function(data){
 
 舉例來說，在回應標頭中新增 `X-Powered-By: Hexo`。
 
-``` js
-hexo.extend.filter.register('server_middleware', function(app){
-  app.use(function(req, res, next){
-    res.setHeader('X-Powered-By', 'Hexo');
+```js
+hexo.extend.filter.register("server_middleware", function (app) {
+  app.use(function (req, res, next) {
+    res.setHeader("X-Powered-By", "Hexo");
     next();
   });
 });

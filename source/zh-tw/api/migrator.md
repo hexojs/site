@@ -1,12 +1,13 @@
 ---
 title: 轉移器（Migrator）
 ---
+
 轉移器幫助使用者從其他系統轉移到 Hexo。
 
 ## 概要
 
-``` js
-hexo.extend.migrator.register(name, function(args){
+```js
+hexo.extend.migrator.register(name, function (args) {
   // ...
 });
 ```
