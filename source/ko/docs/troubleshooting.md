@@ -1,18 +1,19 @@
 ---
 title: Troubleshooting
 ---
+
 Hexo 사용 중에 문제가 발생할 경우, 이 문서에 있는 해결책을 확인해 보세요. 자주 발생하는 문제에 대해 정리해 두었습니다. 만약 이 문서에서 해결 방안을 찾지 못하였다면 [GitHub](https://github.com/hexojs/hexo/issues) 또는 [Google Group](https://groups.google.com/group/hexo)을 검색해 보세요.
 
 ## YAML Parsing Error
 
-``` plain
+```plain
 JS-YAML: incomplete explicit mapping pair; a key node is missed at line 18, column 29:
       last_updated: Last updated: %s
 ```
 
 문자열이 콜론(:)을 포함하고 있다면 따옴표(")로 감싸주세요.
 
-``` plain
+```plain
 JS-YAML: bad indentation of a mapping entry at line 18, column 31:
       last_updated:"Last updated: %s"
 ```
@@ -23,13 +24,13 @@ Soft tab의 사용을 명확히 하고 콜론(:) 뒤에는 공백을 추가해 �
 
 ## EMFILE Error
 
-``` plain
+```plain
 Error: EMFILE, too many open files
 ```
 
 Node.js가 non-blocking I/O를 가지고 있음에도 불구하고, 동기적 I/O의 최대 개수는 아직도 시스템에 의해 제한됩니다. 많은 수의 파일을 생성하려 할 때 EMFILE error가 발생할 수 있습니다. 이 경우 동기적 I/O의 개술를 증가시키기 위해 아래의 명령어를 수행해 보세요.
 
-``` bash
+```bash
 $ ulimit -n 10000
 ```
 
@@ -37,7 +38,7 @@ $ ulimit -n 10000
 
 If you encounter the following error:
 
-``` bash
+```bash
 $ ulimit -n 10000
 ulimit: open files: cannot modify limit: Operation not permitted
 ```
@@ -48,29 +49,30 @@ To override the limit:
 
 1. Add the following line to "/etc/security/limits.conf":
 
-  ```
-  * - nofile 10000
+```
+* - nofile 10000
 
-  # '*' applies to all users and '-' set both soft and hard limits
-  ```
+# '*' applies to all users and '-' set both soft and hard limits
+```
 
-  * The above setting may not apply in some cases, ensure "/etc/pam.d/login" and "/etc/pam.d/lightdm" have the following line. (Ignore this step if those files do not exist)
+- The above setting may not apply in some cases, ensure "/etc/pam.d/login" and "/etc/pam.d/lightdm" have the following line. (Ignore this step if those files do not exist)
 
-  ```
-  session required pam_limits.so
-  ```
+```
+session required pam_limits.so
+```
 
 2. If you are on a [systemd-based](https://en.wikipedia.org/wiki/Systemd#Adoption) distribution, systemd may override "limits.conf". To set the limit in systemd, add the following line in "/etc/systemd/system.conf" and "/etc/systemd/user.conf":
 
-  ```
-  DefaultLimitNOFILE=10000
-  ```
+```
+DefaultLimitNOFILE=10000
+```
 
 3. Reboot
 
 ## `process out of memory`
 
 생성(generation)중에 이 error가 발생할 수 있습니다.:
+
 ```
 FATAL ERROR: CALL_AND_RETRY_LAST Allocation failed - process out of memory
 ```
@@ -85,7 +87,7 @@ FATAL ERROR: CALL_AND_RETRY_LAST Allocation failed - process out of memory
 
 ## Git Deployment Problems
 
-``` plain
+```plain
 error: RPC failed; result=22, HTTP code = 403
 
 fatal: 'username.github.io' does not appear to be a git repository
@@ -95,19 +97,19 @@ fatal: 'username.github.io' does not appear to be a git repository
 
 ## Server Problems
 
-``` plain
+```plain
 Error: listen EADDRINUSE
 ```
 
 동시에 두 개의 Hexo server를 실행시키려 하거나 다른 어플리케이션이 같은 포트를 사용하려고 할 때 발생합니다. `port` 설정을 수정하거나 Hexo server를 `-p` 플래그와 함께 시작해 보세요.
 
-``` bash
+```bash
 $ hexo server -p 5000
 ```
 
 ## Plugin Installation Problems
 
-``` plain
+```plain
 npm ERR! node-waf configure build
 ```
 
@@ -142,13 +144,13 @@ Hexo는 데이터 모델로 [Warehouse]을 사용합니다. 이는 배열(array)
 
 몇몇 데이터가 갱신되지 않거나 새로 생성되는 파일들이 마지막 버전과 동일할 경우입니다. 캐시를 정리하고 다시 시도해 보세요.
 
-``` bash
+```bash
 $ hexo clean
 ```
 
 ## Escape Contents
 
-Hexo는 포스트를 렌더링하는데 [Nunjucks]를 사용합니다([Swig]은 이전 버전에서 사용했었습니다. 문법은 비슷합니다.). `{{ }}` 또는 `{% %}`로 감싼 컨텐츠는 파싱된 후에 문제를 발생시킵니다. You can skip the parsing by wrapping it with the [`raw`](/docs/tag-plugins#Raw) tag plugin, single backtick ```` `{{ }}` ```` or triple backtick.
+Hexo는 포스트를 렌더링하는데 [Nunjucks]를 사용합니다([Swig]은 이전 버전에서 사용했었습니다. 문법은 비슷합니다.). `{{ }}` 또는 `{% %}`로 감싼 컨텐츠는 파싱된 후에 문제를 발생시킵니다. You can skip the parsing by wrapping it with the [`raw`](/docs/tag-plugins#Raw) tag plugin, single backtick `` `{{ }}` `` or triple backtick.
 Alternatively, Nunjucks tags can be disabled through the renderer's option (if supported), [API](/api/renderer#Disable-Nunjucks-tags) or [front-matter](/docs/front-matter).
 
 ```

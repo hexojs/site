@@ -1,6 +1,7 @@
 ---
 title: Documentation
 ---
+
 Hexo 문서에 오신 것을 환영합니다. Hexo 사용 중 문제가 발생한다면 [troubleshooting guide](troubleshooting.html)를 살펴보세요. 이슈가 발생했다면 [GitHub](https://github.com/hexojs/hexo/issues) 또는 [Google Group](https://groups.google.com/group/hexo) 에 내용을 등록해 주세요.
 
 ## Hexo는 무엇인가요?
@@ -20,7 +21,7 @@ Hexo의 설치는 꽤 쉽습니다. 하지만, 설치 전에 몇 가지 요구�
 
 컴퓨터에 이미 이런 것들이 설치되어 있다면, 축하드립니다! 이제 npm을 이용하여 Hexo를 설치하기만 하면 됩니다.
 
-``` bash
+```bash
 $ npm install -g hexo-cli
 ```
 
@@ -66,7 +67,7 @@ If you installed Node.js using Snap, you may need to manually run `npm install` 
 
 위의 요구사항을 모두 설치하셨다면, npm을 통해 Hexo를 설치하세요.
 
-``` bash
+```bash
 $ npm install -g hexo-cli
 ```
 
@@ -78,15 +79,15 @@ Please note we do not provide bugfixes to past versions of Hexo.
 
 We highly recommend to always install the [latest version](https://www.npmjs.com/package/hexo?activeTab=versions) of Hexo and the [recommended version](#Requirements) of Node.js, whenever possible.
 
-Hexo version | Minimum (Node.js version) | Less than (Node.js version)
---- | --- | ---
-7.0+ | 14.0.0 | latest
-6.2+ | 12.13.0 | latest
-6.0+ | 12.13.0 | 18.5.0
-5.0+ | 10.13.0 | 12.0.0
-4.1 - 4.2 | 8.10 | 10.0.0
-4.0 | 8.6 | 8.10.0
-3.3 - 3.9 | 6.9 | 8.0.0
-3.2 - 3.3 | 0.12 | unknown
-3.0 - 3.1 | 0.10 or iojs | unknown
-0.0.1 - 2.8 | 0.10 | unknown
+| Hexo version | Minimum (Node.js version) | Less than (Node.js version) |
+| ------------ | ------------------------- | --------------------------- |
+| 7.0+         | 14.0.0                    | latest                      |
+| 6.2+         | 12.13.0                   | latest                      |
+| 6.0+         | 12.13.0                   | 18.5.0                      |
+| 5.0+         | 10.13.0                   | 12.0.0                      |
+| 4.1 - 4.2    | 8.10                      | 10.0.0                      |
+| 4.0          | 8.6                       | 8.10.0                      |
+| 3.3 - 3.9    | 6.9                       | 8.0.0                       |
+| 3.2 - 3.3    | 0.12                      | unknown                     |
+| 3.0 - 3.1    | 0.10 or iojs              | unknown                     |
+| 0.0.1 - 2.8  | 0.10                      | unknown                     |
