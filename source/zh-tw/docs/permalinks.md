@@ -5,7 +5,7 @@ title: 永久連結（Permalinks）
 
 ### 變數
 
-除了下列變數外，您還可使用 Front-matter 中的所有屬性。
+除了下列變數外，您還可使用除了 `:path` 和 `:permalink` 之外 Front-matter 中的所有屬性。
 
 變數 | 描述
 --- | ---
