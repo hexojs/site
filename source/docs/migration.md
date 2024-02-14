@@ -1,17 +1,18 @@
 ---
 title: Migration
 ---
+
 ## RSS
 
 First, install the `hexo-migrator-rss` plugin.
 
-``` bash
+```bash
 $ npm install hexo-migrator-rss --save
 ```
 
 Once the plugin is installed, run the following command to migrate all posts from RSS. `source` can be a file path or URL.
 
-``` bash
+```bash
 $ hexo migrate rss <source>
 ```
 
@@ -21,7 +22,7 @@ Move all files in the Jekyll `_posts` folder to the `source/_posts` folder.
 
 Modify the `new_post_name` setting in `_config.yml`:
 
-``` yaml
+```yaml
 new_post_name: :year-:month-:day-:title.md
 ```
 
@@ -31,7 +32,7 @@ Move all files in the Octopress `source/_posts` folder to `source/_posts`
 
 Modify the `new_post_name` setting in `_config.yml`:
 
-``` yaml
+```yaml
 new_post_name: :year-:month-:day-:title.md
 ```
 
@@ -39,7 +40,7 @@ new_post_name: :year-:month-:day-:title.md
 
 First, install the `hexo-migrator-wordpress` plugin.
 
-``` bash
+```bash
 $ npm install hexo-migrator-wordpress --save
 ```
 
@@ -47,7 +48,7 @@ Export your WordPress site by going to "Tools" → "Export" → "WordPress" in t
 
 Now run:
 
-``` bash
+```bash
 $ hexo migrate wordpress <source>
 ```
 

@@ -1,31 +1,32 @@
 ---
 title: Configuration
 ---
+
 คุณสามารถแก้ไขการตั้งค่าของเว็บไซต์ใน `_config.yml` หรือในไฟล์ [alternate config file](#Using-an-Alternate-Config)
 
 ### Site
 
-Setting | Description
---- | ---
-`title` | The title of your website
-`subtitle` | The subtitle of your website
-`description` | The description of your website
-`keywords` | The keywords of your website. Supports multiple values.
-`author` | Your name
-`language` | The language of your website. Use a [2-lettter ISO-639-1 code](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes). Default is `en`.
-`timezone` | The timezone of your website. Hexo uses the setting on your computer by default. You can find the list of available timezones [here](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones). Some examples are `America/New_York`, `Japan`, and `UTC`.
+| Setting       | Description                                                                                                                                                                                                                                                   |
+| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `title`       | The title of your website                                                                                                                                                                                                                                     |
+| `subtitle`    | The subtitle of your website                                                                                                                                                                                                                                  |
+| `description` | The description of your website                                                                                                                                                                                                                               |
+| `keywords`    | The keywords of your website. Supports multiple values.                                                                                                                                                                                                       |
+| `author`      | Your name                                                                                                                                                                                                                                                     |
+| `language`    | The language of your website. Use a [2-lettter ISO-639-1 code](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes). Default is `en`.                                                                                                                       |
+| `timezone`    | The timezone of your website. Hexo uses the setting on your computer by default. You can find the list of available timezones [here](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones). Some examples are `America/New_York`, `Japan`, and `UTC`. |
 
 ### URL
 
-Setting | Description | Default
---- | --- | ---
-`url` | The URL of your website, must starts with `http://` or `https://` |
-`root` | The root directory of your website | `url's pathname`
-`permalink` | The [permalink](permalinks.html) format of articles | `:year/:month/:day/:title/`
-`permalink_defaults` | Default values of each segment in permalink |
-`pretty_urls` | Rewrite the [`permalink`](variables.html) variables to pretty URLs |
-`pretty_urls.trailing_index` | Trailing `index.html`, set to `false` to remove it  | `true`
-`pretty_urls.trailing_html` | Trailing `.html`, set to `false` to remove it (_does not apply to trailing `index.html`_)  | `true`
+| Setting                      | Description                                                                               | Default                     |
+| ---------------------------- | ----------------------------------------------------------------------------------------- | --------------------------- |
+| `url`                        | The URL of your website, must starts with `http://` or `https://`                         |
+| `root`                       | The root directory of your website                                                        | `url's pathname`            |
+| `permalink`                  | The [permalink](permalinks.html) format of articles                                       | `:year/:month/:day/:title/` |
+| `permalink_defaults`         | Default values of each segment in permalink                                               |
+| `pretty_urls`                | Rewrite the [`permalink`](variables.html) variables to pretty URLs                        |
+| `pretty_urls.trailing_index` | Trailing `index.html`, set to `false` to remove it                                        | `true`                      |
+| `pretty_urls.trailing_html`  | Trailing `.html`, set to `false` to remove it (_does not apply to trailing `index.html`_) | `true`                      |
 
 {% note info Website in subdirectory %}
 ถ้าเว็บไซต์ของคุณอยู่ใน subdirectory (เช่น `http://example.org/blog` )
@@ -34,53 +35,53 @@ Setting | Description | Default
 
 ### Directory
 
-Setting | Description | Default
---- | --- | ---
-`source_dir` | Source folder. Where your content is stored | `source`
-`public_dir` | Public folder. Where the static site will be generated | `public`
-`tag_dir` | Tag directory | `tags`
-`archive_dir` | Archive directory | `archives`
-`category_dir` | Category directory | `categories`
-`code_dir` | Include code directory (subdirectory of `source_dir`) | `downloads/code`
-`i18n_dir` | i18n directory | `:lang`
-`skip_render` | Paths that will be copied to `public` raw, without being rendered. You can use [glob expressions](https://github.com/micromatch/micromatch#extended-globbing) for path matching.<br /><br />For example, `skip_render: mypage/**/*` will output `source/mypage/index.html` and `source/mypage/code.js` without altering them. |
+| Setting        | Description                                                                                                                                                                                                                                                                                                                   | Default          |
+| -------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------- |
+| `source_dir`   | Source folder. Where your content is stored                                                                                                                                                                                                                                                                                   | `source`         |
+| `public_dir`   | Public folder. Where the static site will be generated                                                                                                                                                                                                                                                                        | `public`         |
+| `tag_dir`      | Tag directory                                                                                                                                                                                                                                                                                                                 | `tags`           |
+| `archive_dir`  | Archive directory                                                                                                                                                                                                                                                                                                             | `archives`       |
+| `category_dir` | Category directory                                                                                                                                                                                                                                                                                                            | `categories`     |
+| `code_dir`     | Include code directory (subdirectory of `source_dir`)                                                                                                                                                                                                                                                                         | `downloads/code` |
+| `i18n_dir`     | i18n directory                                                                                                                                                                                                                                                                                                                | `:lang`          |
+| `skip_render`  | Paths that will be copied to `public` raw, without being rendered. You can use [glob expressions](https://github.com/micromatch/micromatch#extended-globbing) for path matching.<br /><br />For example, `skip_render: mypage/**/*` will output `source/mypage/index.html` and `source/mypage/code.js` without altering them. |
 
 ### Writing
 
-Setting | Description | Default
---- | --- | ---
-`new_post_name` | The filename format for new posts | `:title.md`
-`default_layout` | Default layout | `post`
-`titlecase` | Transform titles into title case? | `false`
-`external_link` | Open external links in a new tab?
-`external_link.enable` | Open external links in a new tab? | `true`
-`external_link.field` | Applies to the whole `site` or `post` only | `site`
-`external_link.exclude` | Exclude hostname. Specify subdomain when applicable, including `www` | `[]`
-`filename_case` | Transform filenames to `1` lower case; `2` upper case | `0`
-`render_drafts` | Display drafts? | `false`
-`post_asset_folder` | Enable the [Asset Folder](asset-folders.html)? | `false`
-`relative_link` | Make links relative to the root folder? | `false`
-`future` | Display future posts? | `true`
-`highlight` | Code block syntax highlight settings, see [Highlight.js](/docs/syntax-highlight#Highlight-js) section for usage guide |
-`prismjs` | Code block syntax highlight settings, see [PrismJS](/docs/syntax-highlight#PrismJS) section for usage guide |
+| Setting                 | Description                                                                                                           | Default     |
+| ----------------------- | --------------------------------------------------------------------------------------------------------------------- | ----------- |
+| `new_post_name`         | The filename format for new posts                                                                                     | `:title.md` |
+| `default_layout`        | Default layout                                                                                                        | `post`      |
+| `titlecase`             | Transform titles into title case?                                                                                     | `false`     |
+| `external_link`         | Open external links in a new tab?                                                                                     |
+| `external_link.enable`  | Open external links in a new tab?                                                                                     | `true`      |
+| `external_link.field`   | Applies to the whole `site` or `post` only                                                                            | `site`      |
+| `external_link.exclude` | Exclude hostname. Specify subdomain when applicable, including `www`                                                  | `[]`        |
+| `filename_case`         | Transform filenames to `1` lower case; `2` upper case                                                                 | `0`         |
+| `render_drafts`         | Display drafts?                                                                                                       | `false`     |
+| `post_asset_folder`     | Enable the [Asset Folder](asset-folders.html)?                                                                        | `false`     |
+| `relative_link`         | Make links relative to the root folder?                                                                               | `false`     |
+| `future`                | Display future posts?                                                                                                 | `true`      |
+| `highlight`             | Code block syntax highlight settings, see [Highlight.js](/docs/syntax-highlight#Highlight-js) section for usage guide |
+| `prismjs`               | Code block syntax highlight settings, see [PrismJS](/docs/syntax-highlight#PrismJS) section for usage guide           |
 
 ### Category & Tag
 
-Setting | Description | Default
---- | --- | ---
-`default_category` | Default category | `uncategorized`
-`category_map` | Category slugs |
-`tag_map` | Tag slugs |
+| Setting            | Description      | Default         |
+| ------------------ | ---------------- | --------------- |
+| `default_category` | Default category | `uncategorized` |
+| `category_map`     | Category slugs   |
+| `tag_map`          | Tag slugs        |
 
 ### Date / Time format
 
 hexo ใช้ [Moment.js](http://momentjs.com/) มาจัดการวันเดือนปี
 
-Setting | Description | Default
---- | --- | ---
-`date_format` | Date format | `YYYY-MM-DD`
-`time_format` | Time format | `HH:mm:ss`
-`updated_option` | The [`updated`](/th/docs/variables#Page-Variables) value to used when not provided in the front-matter | `mtime`
+| Setting          | Description                                                                                            | Default      |
+| ---------------- | ------------------------------------------------------------------------------------------------------ | ------------ |
+| `date_format`    | Date format                                                                                            | `YYYY-MM-DD` |
+| `time_format`    | Time format                                                                                            | `HH:mm:ss`   |
+| `updated_option` | The [`updated`](/th/docs/variables#Page-Variables) value to used when not provided in the front-matter | `mtime`      |
 
 {% note info updated_option %}
 `updated_option` controls the `updated` value when not provided in the front-matter:
@@ -94,32 +95,32 @@ Setting | Description | Default
 
 ### Pagination
 
-Setting | Description | Default
---- | --- | ---
-`per_page` | The amount of posts displayed on a single page. `0` disables pagination | `10`
-`pagination_dir` | Pagination directory | `page`
+| Setting          | Description                                                             | Default |
+| ---------------- | ----------------------------------------------------------------------- | ------- |
+| `per_page`       | The amount of posts displayed on a single page. `0` disables pagination | `10`    |
+| `pagination_dir` | Pagination directory                                                    | `page`  |
 
 ### Extensions
 
-Setting | Description
---- | ---
-`theme` | Theme name. `false` disables theming
-`theme_config` | Theme configuration. Include any custom theme settings under this key to override theme defaults.
-`deploy` | Deployment settings
-`meta_generator` | [Meta generator](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta#Attributes) tag. `false` disables injection of the tag.
+| Setting          | Description                                                                                                                             |
+| ---------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
+| `theme`          | Theme name. `false` disables theming                                                                                                    |
+| `theme_config`   | Theme configuration. Include any custom theme settings under this key to override theme defaults.                                       |
+| `deploy`         | Deployment settings                                                                                                                     |
+| `meta_generator` | [Meta generator](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta#Attributes) tag. `false` disables injection of the tag. |
 
 ### Include/Exclude Files or Folders
 
 ในไฟล์การตั้างค่า ตั้งค่า include/exclude ได้เพื่อทำให้ hexo
-จัดการหรือละเลยไฟล์หรือ  folder เฉพาะ
+จัดการหรือละเลยไฟล์หรือ folder เฉพาะ
 
 `include` and `exclude` options only apply to the `source/` folder, whereas `ignore` option applies to all folders.
 
-Setting | Description
---- | ---
-`include` | Hexo by default ignores hidden files and folders, but setting this field will make Hexo process them
-`exclude` | Hexo process will ignore files list under this field
-`ignore` | Ignore files/folders
+| Setting   | Description                                                                                          |
+| --------- | ---------------------------------------------------------------------------------------------------- |
+| `include` | Hexo by default ignores hidden files and folders, but setting this field will make Hexo process them |
+| `exclude` | Hexo process will ignore files list under this field                                                 |
+| `ignore`  | Ignore files/folders                                                                                 |
 
 ตัวอย่าง:
 
@@ -170,7 +171,7 @@ path ของไฟล์การตั้งค่าจะถูกตั้
 path นั้นสามารถชี้ถึงไฟล์การตั้งค่าท่ีมีรูปแบบเป็น YAML หรือ JSON
 หรือมีหมวกไฟล์ท่ีตัดรายชื่อด้วยเครื่องหมายจุลภาค
 
-``` bash
+```bash
 # use 'custom.yml' in place of '_config.yml'
 $ hexo server --config custom.yml
 
@@ -185,7 +186,7 @@ $ hexo server --config custom.yml,custom2.json
 มีสิ่งท่ีต้องระวังคือ **no spaces are allowed in the list**
 
 ยกตัวอย่างเช่น ในตัวอย่างท่ีกล่าวข้างต้น ถ้่า `foo: bar` อยู่ในไฟล์ `custom
-.yml` แต่ `"foo": "dinosaur"` อยู่ในไฟล์ `custom2.json`    ไฟล์
+.yml` แต่ `"foo": "dinosaur"` อยู่ในไฟล์ `custom2.json` ไฟล์
 `_multiconfig.yml` นั้นจะมีการตั้งค่าเป็น `foo: dinosaur`
 
 ### Alternate Theme Config
@@ -204,7 +205,7 @@ theme: "my-theme"
 theme_config:
   bio: "My awesome bio"
   foo:
-    bar: 'a'
+    bar: "a"
 ```
 
 ```yml
@@ -219,11 +220,11 @@ Resulting in theme configuration:
 
 ```json
 {
-  bio: "My awesome bio",
-  logo: "a-cool-image.png",
-  foo: {
-    bar: "a",
-    baz: "b"
+  "bio": "My awesome bio",
+  "logo": "a-cool-image.png",
+  "foo": {
+    "bar": "a",
+    "baz": "b"
   }
 }
 ```
@@ -243,7 +244,7 @@ theme: "my-theme"
 # _config.my-theme.yml
 bio: "My awesome bio"
 foo:
-  bar: 'a'
+  bar: "a"
 ```
 
 ```yml
@@ -258,11 +259,11 @@ Resulting in theme configuration:
 
 ```json
 {
-  bio: "My awesome bio",
-  logo: "a-cool-image.png",
-  foo: {
-    bar: "a",
-    baz: "b"
+  "bio": "My awesome bio",
+  "logo": "a-cool-image.png",
+  "foo": {
+    "bar": "a",
+    "baz": "b"
   }
 }
 ```

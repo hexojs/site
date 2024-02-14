@@ -6,7 +6,7 @@ title: Front-matter
 
 Front-matter 是文件最上方以 `---` 分隔的区域，用于指定个别文件的变量，举例来说：
 
-``` yaml
+```yaml
 ---
 title: Hello World
 date: 2013/7/13 20:46:25
@@ -15,20 +15,20 @@ date: 2013/7/13 20:46:25
 
 以下是预先定义的参数，您可在模板中使用这些参数值并加以利用。
 
-参数 | 描述 | 默认值
---- | --- | ---
-`layout` | 布局 | [`config.default_layout`](/zh-cn/docs/configuration#文章)
-`title` | 标题 | 文章的文件名
-`date` | 建立日期 | 文件建立日期
-`updated` | 更新日期 | 文件更新日期
-`comments` | 开启文章的评论功能 | `true`
-`tags` | 标签（不适用于分页） |
-`categories` | 分类（不适用于分页）|
-`permalink` | 覆盖文章的永久链接，永久链接应该以 `/` 或 `.html` 结尾 | `null`
-`excerpt` | 纯文本的页面摘要。使用 [该插件](/zh-cn/docs/tag-plugins#文章摘要和截断) 来格式化文本 |
-`disableNunjucks` | 启用时禁用 Nunjucks 标签 `{{ }}`/`{% %}` 和 [标签插件](/zh-cn/docs/tag-plugins) 的渲染功能 | false
-`lang` | 设置语言以覆盖 [自动检测](/zh-cn/docs/internationalization#路径) | 继承自 `_config.yml`
-`published` | 文章是否发布 | 对于 `_posts` 下的文章为 `true`，对于 `_draft` 下的文章为 `false`
+| 参数              | 描述                                                                                       | 默认值                                                            |
+| ----------------- | ------------------------------------------------------------------------------------------ | ----------------------------------------------------------------- |
+| `layout`          | 布局                                                                                       | [`config.default_layout`](/zh-cn/docs/configuration#文章)         |
+| `title`           | 标题                                                                                       | 文章的文件名                                                      |
+| `date`            | 建立日期                                                                                   | 文件建立日期                                                      |
+| `updated`         | 更新日期                                                                                   | 文件更新日期                                                      |
+| `comments`        | 开启文章的评论功能                                                                         | `true`                                                            |
+| `tags`            | 标签（不适用于分页）                                                                       |
+| `categories`      | 分类（不适用于分页）                                                                       |
+| `permalink`       | 覆盖文章的永久链接，永久链接应该以 `/` 或 `.html` 结尾                                     | `null`                                                            |
+| `excerpt`         | 纯文本的页面摘要。使用 [该插件](/zh-cn/docs/tag-plugins#文章摘要和截断) 来格式化文本       |
+| `disableNunjucks` | 启用时禁用 Nunjucks 标签 `{{ }}`/`{% %}` 和 [标签插件](/zh-cn/docs/tag-plugins) 的渲染功能 | false                                                             |
+| `lang`            | 设置语言以覆盖 [自动检测](/zh-cn/docs/internationalization#路径)                           | 继承自 `_config.yml`                                              |
+| `published`       | 文章是否发布                                                                               | 对于 `_posts` 下的文章为 `true`，对于 `_draft` 下的文章为 `false` |
 
 ## 布局
 
@@ -40,12 +40,12 @@ date: 2013/7/13 20:46:25
 
 只有文章支持分类和标签，您可以在 Front-matter 中设置。在其他系统中，分类和标签听起来很接近，但是在 Hexo 中两者有着明显的差别：分类具有顺序性和层次性，也就是说 `Foo, Bar` 不等于 `Bar, Foo`；而标签没有顺序和层次。
 
-``` yaml
+```yaml
 categories:
-- Diary
+  - Diary
 tags:
-- PS3
-- Games
+  - PS3
+  - Games
 ```
 
 {% note warn 分类方法的分歧 %}
@@ -63,9 +63,9 @@ categories:
 
 ```yaml
 categories:
-- [Diary, PlayStation]
-- [Diary, Games]
-- [Life]
+  - [Diary, PlayStation]
+  - [Diary, Games]
+  - [Life]
 ```
 
 此时这篇文章同时包括三个分类： `PlayStation` 和 `Games` 分别都是父分类 `Diary` 的子分类，同时 `Life` 是一个没有子分类的分类。
@@ -75,7 +75,7 @@ categories:
 
 除了 YAML 外，你也可以使用 JSON 来编写 Front-matter，只要将 `---` 代换成 `;;;` 即可。
 
-``` json
+```json
 "title": "Hello World",
 "date": "2013/7/13 20:46:25"
 ;;;

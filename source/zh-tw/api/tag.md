@@ -1,14 +1,19 @@
 ---
 title: 標籤外掛（Tag）
 ---
+
 標籤外掛幫助使用者在文章中快速插入內容。
 
 ## 概要
 
-``` js
-hexo.extend.tag.register(name, function(args, content){
-  // ...
-}, options);
+```js
+hexo.extend.tag.register(
+  name,
+  function (args, content) {
+    // ...
+  },
+  options,
+);
 ```
 
 標籤函數會傳入兩個參數：`args` 和 `content`，前者代表使用者在使用標籤外掛時傳入的參數，而後者則是標籤外掛所包覆的內容。
@@ -19,22 +24,22 @@ hexo.extend.tag.register(name, function(args, content){
 
 Use `unregister()` to replace existing [tag plugins](/docs/tag-plugins) with custom functions.
 
-``` js
+```js
 hexo.extend.tag.unregister(name);
 ```
 
 **Example**
 
-``` js
+```js
 const tagFn = (args, content) => {
-  content = 'something';
+  content = "something";
   return content;
 };
 
 // https://hexo.io/docs/tag-plugins#YouTube
-hexo.extend.tag.unregister('youtube');
+hexo.extend.tag.unregister("youtube");
 
-hexo.extend.tag.register('youtube', tagFn);
+hexo.extend.tag.register("youtube", tagFn);
 ```
 
 ## 選項
@@ -53,10 +58,14 @@ hexo.extend.tag.register('youtube', tagFn);
 
 插入 Youtube 影片。
 
-``` js
-hexo.extend.tag.register('youtube', function(args){
+```js
+hexo.extend.tag.register("youtube", function (args) {
   var id = args[0];
-  return '<div class="video-container"><iframe width="560" height="315" src="http://www.youtube.com/embed/' + id + '" frameborder="0" allowfullscreen></iframe></div>';
+  return (
+    '<div class="video-container"><iframe width="560" height="315" src="http://www.youtube.com/embed/' +
+    id +
+    '" frameborder="0" allowfullscreen></iframe></div>'
+  );
 });
 ```
 
@@ -64,29 +73,43 @@ hexo.extend.tag.register('youtube', function(args){
 
 插入 pull quote。
 
-``` js
-hexo.extend.tag.register('pullquote', function(args, content){
-  var className =  args.join(' ');
-  return '<blockquote class="pullquote' + className + '">' + content + '</blockquote>';
-}, {ends: true});
+```js
+hexo.extend.tag.register(
+  "pullquote",
+  function (args, content) {
+    var className = args.join(" ");
+    return (
+      '<blockquote class="pullquote' +
+      className +
+      '">' +
+      content +
+      "</blockquote>"
+    );
+  },
+  { ends: true },
+);
 ```
 
 ### 非同步渲染
 
 插入檔案。
 
-``` js
-var fs = require('hexo-fs');
-var pathFn = require('path');
+```js
+var fs = require("hexo-fs");
+var pathFn = require("path");
 
-hexo.extend.tag.register('include_code', function(args){
-  var filename = args[0];
-  var path = pathFn.join(hexo.source_dir, filename);
-  
-  return fs.readFile(path).then(function(content){
-    return '<pre><code>' + content + '</code></pre>';
-  });
-}, {async: true});
+hexo.extend.tag.register(
+  "include_code",
+  function (args) {
+    var filename = args[0];
+    var path = pathFn.join(hexo.source_dir, filename);
+
+    return fs.readFile(path).then(function (content) {
+      return "<pre><code>" + content + "</code></pre>";
+    });
+  },
+  { async: true },
+);
 ```
 
 ## Front-matter and user configuration
@@ -95,7 +118,7 @@ Any of the following options is valid:
 
 1.
 
-``` js
+```js
 hexo.extend.tag.register('foo', function (args) {
   const [firstArg] = args;
 
@@ -120,11 +143,11 @@ hexo.extend.tag.register('foo', function (args) {
 
 2.
 
-``` js index.js
-hexo.extend.tag.register('foo', require('./lib/foo')(hexo));
+```js index.js
+hexo.extend.tag.register("foo", require("./lib/foo")(hexo));
 ```
 
-``` js lib/foo.js
+```js lib/foo.js
 module.exports = hexo => {
   return function fooFn(args) {
     const [firstArg] = args;

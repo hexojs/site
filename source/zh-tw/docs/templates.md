@@ -1,38 +1,43 @@
 ---
 title: 模版
 ---
+
 模板決定了網站內容的呈現方式，每個主題至少都應包含一個 `index` 模板，以下是各頁面相對應的模板名稱：
 
-模板 | 用途 | Fallback
---- | --- | ---
-`index` | 首頁 |
-`post` | 文章 | `index`
-`page` | 分頁 | `index`
-`archive` | 彙整 | `index`
-`category` | 分類彙整 | `archive`
-`tag` | 標籤彙整 | `archive`
+| 模板       | 用途     | Fallback  |
+| ---------- | -------- | --------- |
+| `index`    | 首頁     |
+| `post`     | 文章     | `index`   |
+| `page`     | 分頁     | `index`   |
+| `archive`  | 彙整     | `index`   |
+| `category` | 分類彙整 | `archive` |
+| `tag`      | 標籤彙整 | `archive` |
 
 ## 佈局（Layout）
 
 如果頁面結構類似，例如兩個模板都有頁首（Header）和頁尾（Footer），您可考慮透過「佈局」讓兩個模板共享相同的結構。一個佈局檔案必須要能顯示 `body` 變數的內容，如此一來模板的內容才會被顯示，舉例來說：
 
-``` html index.ejs
+```html index.ejs
 index
 ```
 
-``` html layout.ejs
-<!DOCTYPE html>
+```html layout.ejs
+<!doctype html>
 <html>
-  <body><%- body %></body>
+  <body>
+    <%- body %>
+  </body>
 </html>
 ```
 
 產生：
 
-``` html
-<!DOCTYPE html>
+```html
+<!doctype html>
 <html>
-  <body>index</body>
+  <body>
+    index
+  </body>
 </html>
 ```
 
@@ -42,18 +47,18 @@ index
 
 局部模板讓您在不同模板之間共享相同的組件，例如頁首（Header）、頁尾（Footer）或側邊欄（Sidebar）等，可利用局部模板功能分割為個別檔案，讓維護更加便利。舉例來說：
 
-``` html partial/header.ejs
+```html partial/header.ejs
 <h1 id="logo"><%= config.title %></h1>
 ```
 
-``` html index.ejs
+```html index.ejs
 <%- partial('partial/header') %>
 <div id="content">Home page</div>
 ```
 
 產生：
 
-``` html
+```html
 <h1 id="logo">My Site</h1>
 <div id="content">Home page</div>
 ```
@@ -62,18 +67,18 @@ index
 
 您可以在模板中指定區域變數，就能在其他模板中使用。
 
-``` html partial/header.ejs
+```html partial/header.ejs
 <h1 id="logo"><%= title></h1>
 ```
 
-``` html index.ejs
+```html index.ejs
 <%- partial('partial/header', {title: 'Hello World'}) %>
 <div id="content">Home page</div>
 ```
 
 產生：
 
-``` html
+```html
 <h1 id="logo">Hello World</h1>
 <div id="content">Home page</div>
 ```
@@ -86,7 +91,7 @@ index
 
 它可用於頁首、頁尾、側邊欄等資料不常變動的位置，舉例來說：
 
-``` js
+```js
 <%- fragment_cache('header', function(){
   return '<header></header>';
 });
@@ -94,7 +99,7 @@ index
 
 如果您使用局部模板的話，可以更簡單：
 
-``` js
+```js
 <%- partial('header', {}, {cache: true});
 ```
 

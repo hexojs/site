@@ -6,7 +6,7 @@ title: Themes
 
 การสร้างธีมของ hexo เป็นเรื่องเรียบง่าย - คุณต้องการสร้าง folder ใหม่ เพื่อเริ่มใช้ธีมของคุณ ไปแก้ไขการตั้งค่าของ `theme` ในไฟล์ `_config.yml` ธีมของ hexo จะมีโครงสร้างต่อไป:
 
-``` plain
+```plain
 .
 ├── _config.yml
 ├── languages
@@ -15,9 +15,9 @@ title: Themes
 └── source
 ```
 
-### _config.yml
+### \_config.yml
 
-ไฟล์การตั้งค่าธีม  Unlike the site's primary configuration file  การแก้ไขไฟล์นี้แล้วไม่ต้องเปิดเซิร์ฟเวอร์ใหม่
+ไฟล์การตั้งค่าธีม Unlike the site's primary configuration file การแก้ไขไฟล์นี้แล้วไม่ต้องเปิดเซิร์ฟเวอร์ใหม่
 
 ### languages
 
@@ -25,9 +25,9 @@ folder ภาษา สำหรับข้อมูลเพิ่มเติ
 
 ### layout
 
-layout folder. ใน folder นี้มีไฟล์ template ของธีม ซึ่งตั้งค่ารูปลักษณ์ของเว็บไซต์   hexo ใช้ [Nunjucks] เป็น template engine by default แต่คุณเปลี่ยนเป็น engine อื่นๆได้ เช่น [EJS], [Haml], [Jade] หรือ [Pug] hexo เลือก engine ของ template ตาม extension ของไฟล์ ยกตัวอย่างเช่น:
+layout folder. ใน folder นี้มีไฟล์ template ของธีม ซึ่งตั้งค่ารูปลักษณ์ของเว็บไซต์ hexo ใช้ [Nunjucks] เป็น template engine by default แต่คุณเปลี่ยนเป็น engine อื่นๆได้ เช่น [EJS], [Haml], [Jade] หรือ [Pug] hexo เลือก engine ของ template ตาม extension ของไฟล์ ยกตัวอย่างเช่น:
 
-``` plain
+```plain
 layout.ejs   - uses EJS
 layout.njk   - uses Nunjucks
 ```
@@ -36,7 +36,7 @@ layout.njk   - uses Nunjucks
 
 ### scripts
 
-folder ของ script.  hexo  จะโหลดไฟล์ JavaScript ทั้งหมดใน folder นี้ในช่วง
+folder ของ script. hexo จะโหลดไฟล์ JavaScript ทั้งหมดใน folder นี้ในช่วง
 initialization สำหรับข้อมูลเพิ่มเติม ไปดูท่ี [plugins](plugins.html)
 
 ### source
@@ -58,28 +58,28 @@ hexo จะจัดการและบันทึกไฟล์ทั้ง
 1. Fork [hexojs/site]
 2. Clone the repository to your computer and install dependencies.
 
-    ```shell
-    $ git clone https://github.com/<username>/site.git
-    $ cd site
-    $ npm install
-    ```
+   ```shell
+   $ git clone https://github.com/<username>/site.git
+   $ cd site
+   $ npm install
+   ```
 
 3. Edit `source/_data/themes.yml` and add your theme. For example:
 
-    ```yaml
-    - name: landscape
-      description: A brand new default theme for Hexo.
-      link: https://github.com/hexojs/hexo-theme-landscape
-      preview: http://hexo.io/hexo-theme-landscape
-      tags:
-        - official
-        - responsive
-        - widget
-        - two_column
-        - one_column
-    ```
+   ```yaml
+   - name: landscape
+     description: A brand new default theme for Hexo.
+     link: https://github.com/hexojs/hexo-theme-landscape
+     preview: http://hexo.io/hexo-theme-landscape
+     tags:
+       - official
+       - responsive
+       - widget
+       - two_column
+       - one_column
+   ```
 
-4. Add a screenshot (with the same name as the theme) to `source/themes/screenshots`. It must be a 800*500px PNG.
+4. Add a screenshot (with the same name as the theme) to `source/themes/screenshots`. It must be a 800\*500px PNG.
 5. Push the branch.
 6. Create a pull request and describe the change.
 

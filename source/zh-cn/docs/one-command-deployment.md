@@ -6,25 +6,25 @@ title: 部署
 
 Hexo 提供了快速方便的一键部署功能，让您只需一条命令就能将网站部署到服务器上。
 
-``` bash
+```bash
 $ hexo deploy
 ```
 
 在开始之前，您必须先在 `_config.yml` 中修改参数，一个正确的部署配置中至少要有 `type` 参数，例如：
 
-``` yaml
+```yaml
 deploy:
   type: git
 ```
 
 您可同时使用多个 deployer，Hexo 会依照顺序执行每个 deployer。
 
-``` yaml
+```yaml
 deploy:
-- type: git
-  repo:
-- type: heroku
-  repo:
+  - type: git
+    repo:
+  - type: heroku
+    repo:
 ```
 
 关于更多的部署插件，请参考 [插件](https://hexo.io/plugins/) 列表。
@@ -37,13 +37,13 @@ YAML依靠缩进来确定元素间的从属关系。因此，请确保每个depl
 
 1. 安装 [hexo-deployer-git]。
 
-``` bash
+```bash
 $ npm install hexo-deployer-git --save
 ```
 
 2. 修改配置。
 
-``` yaml
+```yaml
 deploy:
   type: git
   repo: <repository url> #https://bitbucket.org/JohnSmith/johnsmith.bitbucket.io
@@ -51,17 +51,17 @@ deploy:
   message: [message]
 ```
 
-参数 | 描述 | 默认
---- | --- | ---
-`repo` | 库（Repository）地址 |
-`branch` | 分支名称 | `gh-pages` (GitHub)<br>`coding-pages` (Coding.net)<br>`master` (others)
-`message` | 自定义提交信息 | `Site updated: {% raw %}{{ now('YYYY-MM-DD HH:mm:ss') }}{% endraw %}`)
-`token` | 可选的令牌值，用于认证 repo。用 `$` 作为前缀从而从环境变量中读取令牌
+| 参数      | 描述                                                                 | 默认                                                                    |
+| --------- | -------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| `repo`    | 库（Repository）地址                                                 |
+| `branch`  | 分支名称                                                             | `gh-pages` (GitHub)<br>`coding-pages` (Coding.net)<br>`master` (others) |
+| `message` | 自定义提交信息                                                       | `Site updated: {% raw %}{{ now('YYYY-MM-DD HH:mm:ss') }}{% endraw %}`)  |
+| `token`   | 可选的令牌值，用于认证 repo。用 `$` 作为前缀从而从环境变量中读取令牌 |
 
 3. 生成站点文件并推送至远程库。执行 `hexo clean && hexo deploy`。
 
-  - 除非你使用令牌或 SSH 密钥认证，否则你会被提示提供目标仓库的用户名和密码。
-  - hexo-deployer-git 并不会存储你的用户名和密码. 请使用 [git-credential-cache](https://git-scm.com/docs/git-credential-cache) 来临时存储它们。
+- 除非你使用令牌或 SSH 密钥认证，否则你会被提示提供目标仓库的用户名和密码。
+- hexo-deployer-git 并不会存储你的用户名和密码. 请使用 [git-credential-cache](https://git-scm.com/docs/git-credential-cache) 来临时存储它们。
 
 4. 登入 Github/BitBucket/Gitlab，请在库设置（Repository Settings）中将默认分支设置为`_config.yml`配置中的分支名称。稍等片刻，您的站点就会显示在您的Github Pages中。
 
@@ -81,23 +81,23 @@ Hexo 在部署你的站点生成的文件时并不会更新你的站点目录。
 
 安装 [hexo-deployer-heroku]。
 
-``` bash
+```bash
 $ npm install hexo-deployer-heroku --save
 ```
 
 修改配置。
 
-``` yaml
+```yaml
 deploy:
   type: heroku
   repo: <repository url>
   message: [message]
 ```
 
-参数 | 描述
---- | ---
-`repo` | Heroku 库（Repository）地址
-`message` | 自定提交信息 (默认为 `Site updated: {% raw %}{{ now('YYYY-MM-DD HH:mm:ss') }}{% endraw %}`)
+| 参数      | 描述                                                                                        |
+| --------- | ------------------------------------------------------------------------------------------- |
+| `repo`    | Heroku 库（Repository）地址                                                                 |
+| `message` | 自定提交信息 (默认为 `Site updated: {% raw %}{{ now('YYYY-MM-DD HH:mm:ss') }}{% endraw %}`) |
 
 ## Netlify
 
@@ -113,13 +113,13 @@ deploy:
 
 安装 [hexo-deployer-rsync]。
 
-``` bash
+```bash
 $ npm install hexo-deployer-rsync --save
 ```
 
 修改配置。
 
-``` yaml
+```yaml
 deploy:
   type: rsync
   host: <host>
@@ -131,15 +131,15 @@ deploy:
   ignore_errors: [true|false]
 ```
 
-参数 | 描述 | 默认值
---- | --- | ---
-`host` | 远程主机的地址 |
-`user` | 使用者名称 |
-`root` | 远程主机的根目录 |
-`port` | 端口 | 22
-`delete` | 删除远程主机上的旧文件 | true
-`verbose` | 显示调试信息 | true
-`ignore_errors` | 忽略错误 | false
+| 参数            | 描述                   | 默认值 |
+| --------------- | ---------------------- | ------ |
+| `host`          | 远程主机的地址         |
+| `user`          | 使用者名称             |
+| `root`          | 远程主机的根目录       |
+| `port`          | 端口                   | 22     |
+| `delete`        | 删除远程主机上的旧文件 | true   |
+| `verbose`       | 显示调试信息           | true   |
+| `ignore_errors` | 忽略错误               | false  |
 
 {% note info rsync部署模块的工作方式 %}
 需要注意的是，要求您提供的实际上是一个能通过SSH登陆远程主机的Linux用户。Hexo会自动处理关于rsync使用的一切操作。因此，您需要在远程主机上为您的Hexo站点建立一个用户，并允许其通过SSH登陆。不过，这里的`port`，的确是指rsync监听的端口，请确保防火墙打开了该端口。
@@ -153,35 +153,35 @@ deploy:
 
 安装 [hexo-deployer-openshift]。
 
-``` bash
+```bash
 $ npm install hexo-deployer-openshift --save
 ```
 
 修改配置。
 
-``` yaml
+```yaml
 deploy:
   type: openshift
   repo: <repository url>
   message: [message]
 ```
 
-参数 | 描述
---- | ---
-`repo` | OpenShift 库（Repository）地址
-`message` | 自定提交信息 (默认为 `Site updated: {% raw %}{{ now('YYYY-MM-DD HH:mm:ss') }}{% endraw %}`)
+| 参数      | 描述                                                                                        |
+| --------- | ------------------------------------------------------------------------------------------- |
+| `repo`    | OpenShift 库（Repository）地址                                                              |
+| `message` | 自定提交信息 (默认为 `Site updated: {% raw %}{{ now('YYYY-MM-DD HH:mm:ss') }}{% endraw %}`) |
 
 ## FTPSync
 
 安装 [hexo-deployer-ftpsync]。
 
-``` bash
+```bash
 $ npm install hexo-deployer-ftpsync --save
 ```
 
 修改配置。
 
-``` yaml
+```yaml
 deploy:
   type: ftpsync
   host: <host>
@@ -194,16 +194,16 @@ deploy:
   verbose: [true|false]
 ```
 
-参数 | 描述 | 默认值
---- | --- | ---
-`host` | 远程主机的地址 |
-`user` | 使用者名称 |
-`pass` | 密码 |
-`remote` | 远程主机的根目录 | `/`
-`port` | 端口 | 21
-`ignore` | 忽略的文件或目录 |
-`connections` | 使用的连接数 | 1
-`verbose` | 显示调试信息 | false
+| 参数          | 描述             | 默认值 |
+| ------------- | ---------------- | ------ |
+| `host`        | 远程主机的地址   |
+| `user`        | 使用者名称       |
+| `pass`        | 密码             |
+| `remote`      | 远程主机的根目录 | `/`    |
+| `port`        | 端口             | 21     |
+| `ignore`      | 忽略的文件或目录 |
+| `connections` | 使用的连接数     | 1      |
+| `verbose`     | 显示调试信息     | false  |
 
 {% note warn FTP部署可能出现的问题 %}
 您可能需要预先通过其他方式将所有文件上传到远程主机中。否则初次使用ftpsync插件就可能出现报错。另外，由于FTP协议的特征，它每传送一个文件就需要一次握手，相对速度较慢。
@@ -213,13 +213,13 @@ deploy:
 
 安装 [hexo-deployer-sftp]。
 
-``` bash
+```bash
 $ npm install hexo-deployer-sftp --save
 ```
 
 修改配置。
 
-``` yaml
+```yaml
 deploy:
   type: sftp
   host: <host>
@@ -232,16 +232,16 @@ deploy:
   agent: [path/to/agent/socket]
 ```
 
-参数 | 描述 | 默认值
---- | --- | ---
-`host` | 远程主机的地址 |
-`user` | 使用者名称 |
-`pass` | 密码 |
-`remotePath` | 远程主机的根目录 | `/`
-`port` | 端口 | 22
-`privateKey` | ssh私钥的目录地址 |
-`passphrase` | （可省略）ssh私钥的密码短语 |
-`agent` | ssh套接字的目录地址 | `$SSH_AUTH_SOCK`
+| 参数         | 描述                        | 默认值           |
+| ------------ | --------------------------- | ---------------- |
+| `host`       | 远程主机的地址              |
+| `user`       | 使用者名称                  |
+| `pass`       | 密码                        |
+| `remotePath` | 远程主机的根目录            | `/`              |
+| `port`       | 端口                        | 22               |
+| `privateKey` | ssh私钥的目录地址           |
+| `passphrase` | （可省略）ssh私钥的密码短语 |
+| `agent`      | ssh套接字的目录地址         | `$SSH_AUTH_SOCK` |
 
 ## Vercel
 
@@ -303,8 +303,8 @@ $ hexo generate —deploy && bip deploy
 
 2. 修改配置。
 
-  ``` yaml
-  deploy: # 所有部署器的根配置块
+```yaml
+deploy: # 所有部署器的根配置块
   - type: rss3
     endpoint: https://hub.rss3.io
     privateKey: 47e18d6c386898b424025cd9db446f779ef24ad33a26c499c87bb3d9372540ba
@@ -314,14 +314,14 @@ $ hexo generate —deploy && bip deploy
       api:
         key: d693df715d3631e489d6
         secret: ee8b74626f12b61c1a4bde3b8c331ad390567c86ba779c9b18561ee92c1cbff0
-  ```
+```
 
-|        参数        |          描述         |
-| ----------------- | ---------------------- |
+| 参数              | 描述                    |
+| ----------------- | ----------------------- |
 | `endpoint`        | 一个 RSS3 Hub 的链接    |
 | `privateKey`      | 您的私钥， 64 字节      |
 | `ipfs/deploy`     | 是否部署到 IPFS 上      |
-| `ipfs/gateway`    | IPFS API 网关          |
+| `ipfs/gateway`    | IPFS API 网关           |
 | `ipfs/api/key`    | IPFS 网关相关的验证内容 |
 | `ipfs/api/secret` | IPFS 网关相关的验证内容 |
 

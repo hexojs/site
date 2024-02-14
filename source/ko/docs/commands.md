@@ -4,7 +4,7 @@ title: Commands
 
 ## init
 
-``` bash
+```bash
 $ hexo init [folder]
 ```
 
@@ -17,28 +17,28 @@ This command is a shortcut that runs the following steps:
 
 ## new
 
-``` bash
+```bash
 $ hexo new [layout] <title>
 ```
 
-새 글(article)을 생성합니다. `layout`이 준비되어 있지 않다면, Hexo는 [_config.yml](configuration.html)에 정의된 `default_layout`을 사용합니다. 만약 `title`에 공백이 포함된다면 따옴표로 감싸주세요.
+새 글(article)을 생성합니다. `layout`이 준비되어 있지 않다면, Hexo는 [\_config.yml](configuration.html)에 정의된 `default_layout`을 사용합니다. 만약 `title`에 공백이 포함된다면 따옴표로 감싸주세요.
 
 ## generate
 
-``` bash
+```bash
 $ hexo generate
 ```
 
 정적 파일들을 생성합니다.
 
-옵션 | 설명
---- | ---
-`-d`, `--deploy` | 생성이 종료된 후 deploy 합니다.
-`-w`, `--watch` | 파일의 변경사항을 감시(watch)합니다.
+| 옵션             | 설명                                 |
+| ---------------- | ------------------------------------ |
+| `-d`, `--deploy` | 생성이 종료된 후 deploy 합니다.      |
+| `-w`, `--watch`  | 파일의 변경사항을 감시(watch)합니다. |
 
 ## publish
 
-``` bash
+```bash
 $ hexo publish [layout] <filename>
 ```
 
@@ -46,45 +46,45 @@ $ hexo publish [layout] <filename>
 
 ## server
 
-``` bash
+```bash
 $ hexo server
 ```
 
 로컬 서버를 구동시킵니다. 기본적으로 `http://localhost:4000/` 를 사용합니다.
 
-옵션 | 설명
---- | ---
-`-p`, `--port` | 기본 포트를 덮어씁니다.
-`-s`, `--static` | 정적인 파일만 구동합니다.
-`-l`, `--log` | Logger를 활성화 시킵니다. Logger 형식을 덮어씁니다.
+| 옵션             | 설명                                                |
+| ---------------- | --------------------------------------------------- |
+| `-p`, `--port`   | 기본 포트를 덮어씁니다.                             |
+| `-s`, `--static` | 정적인 파일만 구동합니다.                           |
+| `-l`, `--log`    | Logger를 활성화 시킵니다. Logger 형식을 덮어씁니다. |
 
 ## deploy
 
-``` bash
+```bash
 $ hexo deploy
 ```
 
 웹 사이트를 deploy 합니다.
 
-옵션 | 설명
---- | ---
-`-g`, `--generate` | Deploy 하기 전에 generate를 수행합니다.
+| 옵션               | 설명                                    |
+| ------------------ | --------------------------------------- |
+| `-g`, `--generate` | Deploy 하기 전에 generate를 수행합니다. |
 
 ## render
 
-``` bash
+```bash
 $ hexo render <file1> [file2] ...
 ```
 
 파일을 렌더링합니다.
 
-옵션 | 설명
---- | ---
-`-o`, `--output` | Output destination
+| 옵션             | 설명               |
+| ---------------- | ------------------ |
+| `-o`, `--output` | Output destination |
 
 ## migrate
 
-``` bash
+```bash
 $ hexo migrate <type>
 ```
 
@@ -92,7 +92,7 @@ $ hexo migrate <type>
 
 ## clean
 
-``` bash
+```bash
 $ hexo clean
 ```
 
@@ -100,7 +100,7 @@ $ hexo clean
 
 ## list
 
-``` bash
+```bash
 $ hexo list <type>
 ```
 
@@ -108,7 +108,7 @@ $ hexo list <type>
 
 ## version
 
-``` bash
+```bash
 $ hexo version
 ```
 
@@ -118,7 +118,7 @@ $ hexo version
 
 ### 안전 모드
 
-``` bash
+```bash
 $ hexo --safe
 ```
 
@@ -126,7 +126,7 @@ $ hexo --safe
 
 ### 디버그 모드
 
-``` bash
+```bash
 $ hexo --debug
 ```
 
@@ -134,7 +134,7 @@ $ hexo --debug
 
 ### Silent 모드
 
-``` bash
+```bash
 $ hexo --silent
 ```
 
@@ -142,7 +142,7 @@ $ hexo --silent
 
 ### 설정 파일의 변경(customizing)
 
-``` bash
+```bash
 $ hexo --config custom.yml
 ```
 
@@ -150,7 +150,7 @@ $ hexo --config custom.yml
 
 ### Draft 포스트 표시
 
-``` bash
+```bash
 $ hexo --draft
 ```
 
@@ -158,7 +158,7 @@ Draft 포스트를 보여줍니다(`source/_drafts` 폴더에 저장되어 있�
 
 ### 현재 작업 디렉토리의 변경(customizing)
 
-``` bash
+```bash
 $ hexo --cwd /path/to/cwd
 ```
 

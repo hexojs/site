@@ -1,9 +1,10 @@
 ---
 title: Generating
 ---
+
 Generating static files with Hexo is quite easy and fast.
 
-``` bash
+```bash
 $ hexo generate
 ```
 
@@ -13,7 +14,7 @@ $ hexo generate
 
 Hexo can watch for file changes and regenerate files immediately. Hexo will compare the SHA1 checksum of your files and only write if file changes are detected.
 
-``` bash
+```bash
 $ hexo generate --watch
 ```
 
@@ -21,7 +22,7 @@ $ hexo generate --watch
 
 To deploy after generating, you can run one of the following commands. There is no difference between the two.
 
-``` bash
+```bash
 $ hexo generate --deploy
 $ hexo deploy --generate
 ```

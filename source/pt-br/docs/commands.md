@@ -4,7 +4,7 @@ title: Comandos
 
 ## init
 
-``` bash
+```bash
 $ hexo init [folder]
 ```
 
@@ -17,30 +17,30 @@ This command is a shortcut that runs the following steps:
 
 ## new
 
-``` bash
+```bash
 $ hexo new [layout] <title>
 ```
 
-Cria um novo artigo. Se nenhum `layout` for fornecido, o Hexo usará o `default_layout` de [_config.yml](configuration.html). Se o `title` contiver espaços, rode-o com aspas.
+Cria um novo artigo. Se nenhum `layout` for fornecido, o Hexo usará o `default_layout` de [\_config.yml](configuration.html). Se o `title` contiver espaços, rode-o com aspas.
 
 ## generate
 
-``` bash
+```bash
 $ hexo generate
 ```
 
 Gera os arquivos estáticos.
 
-Opção | Descrição
---- | ---
-`-d`, `--deploy` | Faz o deploy após os arquivos estáticos serem gerados
-`-w`, `--watch` | Assiste alterações no aquivo
-`-b`, `--bail` | Levanta um erro se qualquer exceção não tratada for lançada durante o processo de geração dos arquivos
-`-f`, `--force` | Regeneração forçada
+| Opção            | Descrição                                                                                              |
+| ---------------- | ------------------------------------------------------------------------------------------------------ |
+| `-d`, `--deploy` | Faz o deploy após os arquivos estáticos serem gerados                                                  |
+| `-w`, `--watch`  | Assiste alterações no aquivo                                                                           |
+| `-b`, `--bail`   | Levanta um erro se qualquer exceção não tratada for lançada durante o processo de geração dos arquivos |
+| `-f`, `--force`  | Regeneração forçada                                                                                    |
 
 ## publish
 
-``` bash
+```bash
 $ hexo publish [layout] <filename>
 ```
 
@@ -48,45 +48,45 @@ Publica um rascunho.
 
 ## server
 
-``` bash
+```bash
 $ hexo server
 ```
 
 Inicia um servidor local. Por padrão, o local é `http://localhost:4000/`.
 
-Opção | Descrição
---- | ---
-`-p`, `--port` | Substituir a porta padrão
-`-s`, `--static` | Somente serve arquivos estáticos
-`-l`, `--log` | Ativar o logger. Substitui o formato do logger.
+| Opção            | Descrição                                       |
+| ---------------- | ----------------------------------------------- |
+| `-p`, `--port`   | Substituir a porta padrão                       |
+| `-s`, `--static` | Somente serve arquivos estáticos                |
+| `-l`, `--log`    | Ativar o logger. Substitui o formato do logger. |
 
 ## deploy
 
-``` bash
+```bash
 $ hexo deploy
 ```
 
 Implanta o site.
 
-Opção | Descrição
---- | ---
-`-g`, `--generate` | Gerar os arquivos estáticos antes do deploy
+| Opção              | Descrição                                   |
+| ------------------ | ------------------------------------------- |
+| `-g`, `--generate` | Gerar os arquivos estáticos antes do deploy |
 
 ## render
 
-``` bash
+```bash
 $ hexo render <file1> [file2] ...
 ```
 
 Renderiza arquivos.
 
-Opção | Descrição
---- | ---
-`-o`, `--output` | Destino de saída
+| Opção            | Descrição        |
+| ---------------- | ---------------- |
+| `-o`, `--output` | Destino de saída |
 
 ## migrate
 
-``` bash
+```bash
 $ hexo migrate <type>
 ```
 
@@ -94,7 +94,7 @@ $ hexo migrate <type>
 
 ## clean
 
-``` bash
+```bash
 $ hexo clean
 ```
 
@@ -102,7 +102,7 @@ Limpa o arquivo de cache (`db.json`) e os arquivos gerados (`public`).
 
 ## list
 
-``` bash
+```bash
 $ hexo list <type>
 ```
 
@@ -110,7 +110,7 @@ Lista todas as rotas
 
 ## version
 
-``` bash
+```bash
 $ hexo version
 ```
 
@@ -120,7 +120,7 @@ Exibe informações de versão.
 
 ### Modo safe
 
-``` bash
+```bash
 $ hexo --safe
 ```
 
@@ -128,7 +128,7 @@ Desativa o carregamento de plugins e scripts. Tente isso se você encontrar prob
 
 ### Modo debug
 
-``` bash
+```bash
 $ hexo --debug
 ```
 
@@ -136,7 +136,7 @@ Registra mensagens detalhadas para o terminal e para o arquivo `debug.log`. Tent
 
 ### Modo silent
 
-``` bash
+```bash
 $ hexo --silent
 ```
 
@@ -144,19 +144,19 @@ Silencia a saída para no terminal.
 
 ### Caminho do arquivo de configuração personalizado
 
-``` bash
+```bash
 $ hexo --config custom.yml
 ```
 
 Usa um arquivo de configuração personalizado (em vez de `_config.yml`). Também aceita uma lista separada por vírgulas (sem espaços) de arquivos de configuração JSON ou YAML que combinará os arquivos em um único `_multiconfig.yml`.
 
-``` bash
+```bash
 $ hexo --config custom.yml,custom2.json
 ```
 
 ### Mostra rascunhos
 
-``` bash
+```bash
 $ hexo --draft
 ```
 
@@ -164,7 +164,7 @@ Exibe os rascunhos (armazenados no diretório `source/_drafts`).
 
 ### Customizando CWD
 
-``` bash
+```bash
 $ hexo --cwd /path/to/cwd
 ```
 

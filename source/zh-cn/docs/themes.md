@@ -1,9 +1,10 @@
 ---
 title: 主题
 ---
+
 创建 Hexo 主题非常容易，您只要在 `themes` 文件夹内，新增一个任意名称的文件夹，并修改 `_config.yml` 内的 `theme` 设定，即可切换主题。一个主题可能会有以下的结构：
 
-``` plain
+```plain
 .
 ├── _config.yml
 ├── languages
@@ -12,7 +13,7 @@ title: 主题
 └── source
 ```
 
-### _config.yml
+### \_config.yml
 
 主题的配置文件。和 Hexo 配置文件不同，主题配置文件修改时会自动更新，无需重启 Hexo Server。
 
@@ -24,7 +25,7 @@ title: 主题
 
 布局文件夹。用于存放主题的模板文件，决定了网站内容的呈现方式，Hexo 内建 [Nunjucks] 模板引擎，您可以另外安装插件来获得 [EJS] 或 [Pug] 支持，Hexo 根据模板文件的扩展名来决定所使用的模板引擎，例如：
 
-``` plain
+```plain
 layout.ejs   - 使用 EJS
 layout.swig  - 使用 Swig
 ```
@@ -48,11 +49,11 @@ layout.swig  - 使用 Swig
 1. Fork [hexojs/site]
 2. 把库（repository）复制到电脑上，并安装所依赖的插件。
 
-    ```shell
-    $ git clone https://github.com/<username>/site.git
-    $ cd site
-    $ npm install
-    ```
+   ```shell
+   $ git clone https://github.com/<username>/site.git
+   $ cd site
+   $ npm install
+   ```
 
 3. 在 `source/_data/themes/` 中创建一个新的 yaml 文件，使用您的主题名称作为文件名。
 

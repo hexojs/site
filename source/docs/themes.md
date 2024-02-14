@@ -73,7 +73,7 @@ When you have finished building your theme, you can publish it to the [theme lis
      - one_column
    ```
 
-5. Add a screenshot (with the same name as the theme) to `source/themes/screenshots`. It must be a 800*500px PNG.
+5. Add a screenshot (with the same name as the theme) to `source/themes/screenshots`. It must be a 800\*500px PNG.
 6. Push the branch.
 7. Create a pull request and describe the change.
 

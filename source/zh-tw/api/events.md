@@ -1,6 +1,7 @@
 ---
 title: 事件
 ---
+
 Hexo 繼承了 [EventEmitter]，您可用 `on` 方法監聽 Hexo 所發佈的事件，亦可用 `emit` 方法對 Hexo 發佈事件，更詳細的說明請參閱 Node.js 的 API。
 
 ### deployBefore
@@ -27,16 +28,16 @@ Hexo 繼承了 [EventEmitter]，您可用 `on` 方法監聽 Hexo 所發佈的事
 
 在文章檔案建立完成後發佈。此事件會回傳資料參數。
 
-``` js
-hexo.on('new', function(post){
-  // 
+```js
+hexo.on("new", function (post) {
+  //
 });
 ```
 
-資料 | 描述
---- | ---
-`post.path` | 文章檔案的完整路徑
-`post.content` | 文章檔案的內容
+| 資料           | 描述               |
+| -------------- | ------------------ |
+| `post.path`    | 文章檔案的完整路徑 |
+| `post.content` | 文章檔案的內容     |
 
 ### processBefore
 

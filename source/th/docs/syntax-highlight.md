@@ -17,7 +17,7 @@ code snippet
 code snippet
 {% endcode %}
 
-``` [language] [title] [url] [link text] [additional options]
+```[language] [title] [url] [link text] [additional options]
 code snippet
 ```
 ````
@@ -35,7 +35,7 @@ highlight:
   auto_detect: false
   line_number: true
   line_threshold: 0
-  tab_replace: ''
+  tab_replace: ""
   exclude_languages:
     - example
   wrap: true
@@ -45,7 +45,7 @@ prismjs:
   preprocess: true
   line_number: true
   line_threshold: 0
-  tab_replace: ''
+  tab_replace: ""
 ```
 
 The YAML above is Hexo's default configuration.
@@ -85,7 +85,7 @@ highlight:
   auto_detect: false
   line_number: true
   line_threshold: 0
-  tab_replace: '  '
+  tab_replace: "  "
   exclude_languages:
     - example
   wrap: true
@@ -116,18 +116,18 @@ Hexo adds line number by wrapping output inside `<figure>` and `<table>`:
 
 ```html
 <figure class="highlight yaml">
-<table>
-<tbody>
-<tr>
-  <td class="gutter">
-    <pre><span class="line">1</span><br></pre>
-  </td>
-  <td class="code">
-    <pre><span class="line"><span class="attr">hello:</span><span class="string">hexo</span></span><br></pre>
-  </td>
-</tr>
-</tbody>
-</table>
+  <table>
+    <tbody>
+      <tr>
+        <td class="gutter">
+          <pre><span class="line">1</span><br></pre>
+        </td>
+        <td class="code">
+          <pre><span class="line"><span class="attr">hello:</span><span class="string">hexo</span></span><br></pre>
+        </td>
+      </tr>
+    </tbody>
+  </table>
 </figure>
 ```
 
@@ -142,7 +142,6 @@ Accepts an optional threshold to only show line numbers as long as the numbers o
 ### tab_replace
 
 Replace tabs inside code block with given string. By default it is 2 spaces.
-
 
 ### exclude_languages (+6.1.0)
 
@@ -187,7 +186,7 @@ prismjs:
   preprocess: true
   line_number: true
   line_threshold: 0
-  tab_replace: ''
+  tab_replace: ""
 ```
 
 Prismjs is disabled by default. You should set `highlight.enable` to `false` before enabling prismjs.

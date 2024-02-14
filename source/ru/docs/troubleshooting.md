@@ -1,18 +1,19 @@
 ---
 title: Решение проблем
 ---
+
 Если вы столкнулись с проблемами при использовании Hexo, на этот случай существует эта страница со списком ответов на часто возникающие вопросы. Если она не помогла, попробуйте поискать решение на [GitHub](https://github.com/hexojs/hexo/issues) или в нашей группе [Google Group](https://groups.google.com/group/hexo).
 
 ## Ошибка обработки YAML
 
-``` plain
+```plain
 JS-YAML: incomplete explicit mapping pair; a key node is missed at line 18, column 29:
       last_updated: Last updated: %s
 ```
 
 Заключите строку в кавычки, если она содержит двоеточия.
 
-``` plain
+```plain
 JS-YAML: bad indentation of a mapping entry at line 18, column 31:
       last_updated:"Last updated: %s"
 ```
@@ -23,13 +24,13 @@ JS-YAML: bad indentation of a mapping entry at line 18, column 31:
 
 ## Ошибка EMFILE
 
-``` plain
+```plain
 Error: EMFILE, too many open files
 ```
 
 Хотя Node.js и использует неблокирующий ввод/вывод, максимальное количество одновременных операций I/O по-прежнему ограничено. Можно встретить ошибку EMFILE при попытке создания большого количества файлов. Попробуйте запустить следующую команду, чтобы увеличить количество синхронных операций ввода-вывода:
 
-``` bash
+```bash
 $ ulimit -n 10000
 ```
 
@@ -37,7 +38,7 @@ $ ulimit -n 10000
 
 If you encounter the following error:
 
-``` bash
+```bash
 $ ulimit -n 10000
 ulimit: open files: cannot modify limit: Operation not permitted
 ```
@@ -48,23 +49,23 @@ To override the limit:
 
 1. Add the following line to "/etc/security/limits.conf":
 
-  ```
-  * - nofile 10000
+```
+* - nofile 10000
 
-  # '*' applies to all users and '-' set both soft and hard limits
-  ```
+# '*' applies to all users and '-' set both soft and hard limits
+```
 
-  * The above setting may not apply in some cases, ensure "/etc/pam.d/login" and "/etc/pam.d/lightdm" have the following line. (Ignore this step if those files do not exist)
+- The above setting may not apply in some cases, ensure "/etc/pam.d/login" and "/etc/pam.d/lightdm" have the following line. (Ignore this step if those files do not exist)
 
-  ```
-  session required pam_limits.so
-  ```
+```
+session required pam_limits.so
+```
 
 2. If you are on a [systemd-based](https://en.wikipedia.org/wiki/Systemd#Adoption) distribution, systemd may override "limits.conf". To set the limit in systemd, add the following line in "/etc/systemd/system.conf" and "/etc/systemd/user.conf":
 
-  ```
-  DefaultLimitNOFILE=10000
-  ```
+```
+DefaultLimitNOFILE=10000
+```
 
 3. Reboot
 
@@ -86,7 +87,7 @@ FATAL ERROR: CALL_AND_RETRY_LAST Allocation failed - process out of memory
 
 ## Проблемы с публикацией в Git
 
-``` plain
+```plain
 error: RPC failed; result=22, HTTP code = 403
 
 fatal: 'username.github.io' does not appear to be a git repository
@@ -96,20 +97,19 @@ fatal: 'username.github.io' does not appear to be a git repository
 
 ## Проблемы с сервером
 
-
-``` plain
+```plain
 Error: listen EADDRINUSE
 ```
 
 Были запущены два сервера Hexo одновременно, или возможно другое приложение использует тот же порт. Попробуйте изменить настройки порта или запустить сервер Hexo с флагом `-p`.
 
-``` bash
+```bash
 $ hexo server -p 5000
 ```
 
 ## Проблема установки плагина
 
-``` plain
+```plain
 npm ERR! node-waf configure build
 ```
 
@@ -144,13 +144,13 @@ Hexo использует склад [Warehouse] для своей модели 
 
 Некоторые данные не могут быть обновлены или вновь созданные файлы идентичны последней версии. Очистите кэш и попробуйте снова.
 
-``` bash
+```bash
 $ hexo clean
 ```
 
 ## Содержимое не найдено
 
-Hexo использует [Nunjucks] для отображения сообщения ([Swig] использовался в предыдущей версии, он использует похожий синтаксис). Содержимое, обёрнутое, в `{{ }}` или `{% %}`, поможет вам разобраться, какая часть вызвала проблемы. You can skip the parsing by wrapping it with the [`raw`](/docs/tag-plugins#Raw) tag plugin, single backtick ```` `{{ }}` ```` or triple backtick.
+Hexo использует [Nunjucks] для отображения сообщения ([Swig] использовался в предыдущей версии, он использует похожий синтаксис). Содержимое, обёрнутое, в `{{ }}` или `{% %}`, поможет вам разобраться, какая часть вызвала проблемы. You can skip the parsing by wrapping it with the [`raw`](/docs/tag-plugins#Raw) tag plugin, single backtick `` `{{ }}` `` or triple backtick.
 Alternatively, Nunjucks tags can be disabled through the renderer's option (if supported), [API](/api/renderer#Disable-Nunjucks-tags) or [front-matter](/docs/front-matter).
 
 ```
@@ -169,13 +169,13 @@ Hello {{ world }}
 
 Иногда команда `$ hexo server` возвращает ошибку:
 
-``` plain
+```plain
 Error: watch ENOSPC ...
 ```
 
 Это может быть исправлено путем запуска `$ npm dedupe`, или, если это не поможет, попробуйте выполнить следующие действия в консоли Linux.
 
-``` plain
+```plain
 $ echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
 ```
 

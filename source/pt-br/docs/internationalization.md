@@ -1,9 +1,10 @@
 ---
 title: Internacionalização (i18n)
 ---
+
 Você pode usar a internacionalização para apresentar seu site em diferentes idiomas. O idioma padrão é definido modificando a configuração `language` em `_config.yml`. Você também pode definir vários idiomas e modificar a ordem dos idiomas padrão.
 
-``` yaml
+```yaml
 language: zh-tw
 
 language:
@@ -19,7 +20,7 @@ Os arquivos de idioma podem ser arquivos YAML ou JSON. Você deve inseri-los no 
 
 Use os helpers `__` ou `_p` nos templates para traduzir as strings. O primeiro é para uso normal e o segundo é para strings no plural. Por exemplo:
 
-``` yaml en.yml
+```yaml en.yml
 index:
   title: Home
   add: Add
@@ -29,7 +30,7 @@ index:
     other: %d videos
 ```
 
-``` js
+```js
 <%= __('index.title') %>
 // Home
 
@@ -41,13 +42,13 @@ index:
 
 Você pode definir o idioma das páginas no front-matter ou modificar a configuração `i18n_dir` no arquivo `_config.yml` para habilitar a detecção automática pelo Hexo.
 
-``` yaml
+```yaml
 i18n_dir: :lang
 ```
 
 O valor padrão da configuração `i18n_dir` é `:lang`, o que significa que o Hexo detectará o idioma dentro do primeiro segmento de URL. Por exemplo:
 
-``` plain
+```plain
 /index.html => en
 /archives/index.html => en
 /zh-tw/index.html => zh-tw

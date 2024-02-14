@@ -1,6 +1,7 @@
 ---
 title: 文件
 ---
+
 歡迎使用 Hexo，此文件將幫助您快速開始使用。如果您在使用途中遇到任何問題，您可以在 [解決問題](troubleshooting.html) 中找到解答，或者也可以在 [GitHub](https://github.com/hexojs/hexo/issues) 或 [Google Group](https://groups.google.com/group/hexo) 上詢問。
 
 {% youtube PsXWbI2Mqu0 %}
@@ -22,7 +23,7 @@ Hexo 是一個快速、簡單且強大的網誌框架。Hexo 使用 [Markdown](h
 
 若您的電腦已經安裝上述的必備軟體，那麼恭喜您！只需要透過 npm 即可完成 Hexo 的安裝。
 
-``` bash
+```bash
 $ npm install -g hexo-cli
 ```
 
@@ -57,7 +58,7 @@ Node.js 為大多數平台提供了官方的 [安裝程序](https://nodejs.org/e
 {% endnote %}
 
 {% note warn For Mac / Linux 用戶 %}
-如果在嘗試安裝Hexo 的過程中出現`EACCES` 權限錯誤，請遵循[由npmjs 發布的指導](https://docs.npmjs.com/resolving-eacces-permissions-errors-when-installing-packages-globally ) 修復該問題。強烈建議 **不要** 使用 root、sudo 等方法覆蓋權限
+如果在嘗試安裝Hexo 的過程中出現`EACCES` 權限錯誤，請遵循[由npmjs 發布的指導](https://docs.npmjs.com/resolving-eacces-permissions-errors-when-installing-packages-globally) 修復該問題。強烈建議 **不要** 使用 root、sudo 等方法覆蓋權限
 {% endnote %}
 
 {% note info Linux %}
@@ -68,7 +69,7 @@ If you installed Node.js using Snap, you may need to manually run `npm install` 
 
 一旦所有的必備軟體都安裝完畢後，即可透過 npm 安裝 Hexo：
 
-``` bash
+```bash
 $ npm install -g hexo-cli
 ```
 
@@ -80,15 +81,15 @@ Please note we do not provide bugfixes to past versions of Hexo.
 
 We highly recommend to always install the [latest version](https://www.npmjs.com/package/hexo?activeTab=versions) of Hexo and the [recommended version](#安裝需求) of Node.js, whenever possible.
 
-Hexo version | Minimum (Node.js version) | Less than (Node.js version)
---- | --- | ---
-7.0+ | 14.0.0 | latest
-6.2+ | 12.13.0 | latest
-6.0+ | 12.13.0 | 18.5.0
-5.0+ | 10.13.0 | 12.0.0
-4.1 - 4.2 | 8.10 | 10.0.0
-4.0 | 8.6 | 8.10.0
-3.3 - 3.9 | 6.9 | 8.0.0
-3.2 - 3.3 | 0.12 | unknown
-3.0 - 3.1 | 0.10 or iojs | unknown
-0.0.1 - 2.8 | 0.10 | unknown
+| Hexo version | Minimum (Node.js version) | Less than (Node.js version) |
+| ------------ | ------------------------- | --------------------------- |
+| 7.0+         | 14.0.0                    | latest                      |
+| 6.2+         | 12.13.0                   | latest                      |
+| 6.0+         | 12.13.0                   | 18.5.0                      |
+| 5.0+         | 10.13.0                   | 12.0.0                      |
+| 4.1 - 4.2    | 8.10                      | 10.0.0                      |
+| 4.0          | 8.6                       | 8.10.0                      |
+| 3.3 - 3.9    | 6.9                       | 8.0.0                       |
+| 3.2 - 3.3    | 0.12                      | unknown                     |
+| 3.0 - 3.1    | 0.10 or iojs              | unknown                     |
+| 0.0.1 - 2.8  | 0.10                      | unknown                     |

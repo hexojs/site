@@ -1,9 +1,10 @@
 ---
 title: Commands
 ---
+
 ## init
 
-``` bash
+```bash
 $ hexo init [folder]
 ```
 
@@ -17,32 +18,32 @@ This command is a shortcut that runs the following steps:
 
 ## new
 
-``` bash
+```bash
 $ hexo new [layout] <title>
 ```
 
 สร้างบทความใหม่.
-ถ้าไม่ได้ตั้งค่าชั้ดเจน hexo จะใช้ `default_layout` ของไฟล์ [_config.yml](configuration.html)
-ถ้า `title` ของบทความนั้นมี  space  จะต้องห่อ `title` นั้นด้วยเครื่องหมายอ้างอิง
+ถ้าไม่ได้ตั้งค่าชั้ดเจน hexo จะใช้ `default_layout` ของไฟล์ [\_config.yml](configuration.html)
+ถ้า `title` ของบทความนั้นมี space จะต้องห่อ `title` นั้นด้วยเครื่องหมายอ้างอิง
 
 ## generate
 
-``` bash
+```bash
 $ hexo generate
 ```
 
 generate ไฟล์คงที่
 
-Option | Description
---- | ---
-`-d`, `--deploy` | Deploy after generation finishes
-`-w`, `--watch` | Watch file changes
-`-b`, `--bail` | Raise an error if any unhandled exception is thrown during generation
-`-f`, `--force` | Force regenerate
+| Option           | Description                                                           |
+| ---------------- | --------------------------------------------------------------------- |
+| `-d`, `--deploy` | Deploy after generation finishes                                      |
+| `-w`, `--watch`  | Watch file changes                                                    |
+| `-b`, `--bail`   | Raise an error if any unhandled exception is thrown during generation |
+| `-f`, `--force`  | Force regenerate                                                      |
 
 ## publish
 
-``` bash
+```bash
 $ hexo publish [layout] <filename>
 ```
 
@@ -50,46 +51,46 @@ $ hexo publish [layout] <filename>
 
 ## server
 
-``` bash
+```bash
 $ hexo server
 ```
 
-เปิดเซร์ฟเวอร์ local   เซร์ฟเวอร์ local นั้นจะเป็น `http://localhost:4000/`
+เปิดเซร์ฟเวอร์ local เซร์ฟเวอร์ local นั้นจะเป็น `http://localhost:4000/`
 by default
 
-Option | Description
---- | ---
-`-p`, `--port` | Override default port
-`-s`, `--static` | Only serve static files
-`-l`, `--log` | Enable logger. Override logger format.
+| Option           | Description                            |
+| ---------------- | -------------------------------------- |
+| `-p`, `--port`   | Override default port                  |
+| `-s`, `--static` | Only serve static files                |
+| `-l`, `--log`    | Enable logger. Override logger format. |
 
 ## deploy
 
-``` bash
+```bash
 $ hexo deploy
 ```
 
 deploy เว็บไซต์ของคุณ
 
-Option | Description
---- | ---
-`-g`, `--generate` | Generate before deployment
+| Option             | Description                |
+| ------------------ | -------------------------- |
+| `-g`, `--generate` | Generate before deployment |
 
 ## render
 
-``` bash
+```bash
 $ hexo render <file1> [file2] ...
 ```
 
 render ไฟล์ต่างๆ
 
-Option | Description
---- | ---
-`-o`, `--output` | Output destination
+| Option           | Description        |
+| ---------------- | ------------------ |
+| `-o`, `--output` | Output destination |
 
 ## migrate
 
-``` bash
+```bash
 $ hexo migrate <type>
 ```
 
@@ -97,7 +98,7 @@ $ hexo migrate <type>
 
 ## clean
 
-``` bash
+```bash
 $ hexo clean
 ```
 
@@ -105,7 +106,7 @@ $ hexo clean
 
 ## list
 
-``` bash
+```bash
 $ hexo list <type>
 ```
 
@@ -113,7 +114,7 @@ $ hexo list <type>
 
 ## version
 
-``` bash
+```bash
 $ hexo version
 ```
 
@@ -123,7 +124,7 @@ $ hexo version
 
 ### Safe mode
 
-``` bash
+```bash
 $ hexo --safe
 ```
 
@@ -131,16 +132,16 @@ $ hexo --safe
 
 ### Debug mode
 
-``` bash
+```bash
 $ hexo --debug
 ```
 
-log ข้อมูลละเอียดไปถึง terminal และ `debug.log`  เมื่อเห็นข้อผิดพลาดใดๆอยู่ใน
- log ไป[raise a GitHub issue](https://github.com/hexojs/hexo/issues/new)ได้
+log ข้อมูลละเอียดไปถึง terminal และ `debug.log` เมื่อเห็นข้อผิดพลาดใดๆอยู่ใน
+log ไป[raise a GitHub issue](https://github.com/hexojs/hexo/issues/new)ได้
 
 ### Silent mode
 
-``` bash
+```bash
 $ hexo --silent
 ```
 
@@ -148,7 +149,7 @@ silence ผลไปถึง terminal
 
 ### Customize config file path
 
-``` bash
+```bash
 $ hexo --config custom.yml
 ```
 
@@ -157,13 +158,13 @@ $ hexo --config custom.yml
 คุณต่องเขียนรายชื่อไฟล์พวกนี้อยู่ใน `_multiconfig.yml`
 และตัดแต่ละชื่อไฟล์ด้วยเครื่องหมายจุลภาค
 
-``` bash
+```bash
 $ hexo --config custom.yml,custom2.json
 ```
 
 ### Display drafts
 
-``` bash
+```bash
 $ hexo --draft
 ```
 
@@ -171,7 +172,7 @@ $ hexo --draft
 
 ### Customize CWD
 
-``` bash
+```bash
 $ hexo --cwd /path/to/cwd
 ```
 

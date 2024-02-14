@@ -69,7 +69,7 @@ Node.js 为大多数平台提供了官方的 [安装程序](https://nodejs.org/z
 
 所有必备的应用程序安装完成后，即可使用 npm 安装 Hexo。
 
-``` bash
+```bash
 $ npm install -g hexo-cli
 ```
 
@@ -77,7 +77,7 @@ $ npm install -g hexo-cli
 
 对于熟悉 npm 的进阶用户，可以仅局部安装 `hexo` 包。
 
-``` bash
+```bash
 $ npm install hexo
 ```
 
@@ -86,9 +86,9 @@ $ npm install hexo
 1. `npx hexo <command>`
 2. Linux 用户可以将 Hexo 所在的目录下的 `node_modules` 添加到环境变量之中即可直接使用 `hexo <command>`：
 
-  ``` bash
-  echo 'PATH="$PATH:./node_modules/.bin"' >> ~/.profile
-  ```
+```bash
+echo 'PATH="$PATH:./node_modules/.bin"' >> ~/.profile
+```
 
 ### Node.js 版本限制
 
@@ -98,15 +98,15 @@ $ npm install hexo
 
 我们强烈建议永远安装 [最新版本](https://www.npmjs.com/package/hexo?activeTab=versions) 的 Hexo，以及 [推荐的 Node.js 版本](#安装前提)。
 
-Hexo 版本 | 最低版本 (Node.js 版本) | 最高版本 (Node.js 版本)
---- | --- | ---
-7.0+ | 14.0.0 | latest
-6.2+ | 12.13.0 | latest
-6.0+ | 12.13.0 | 18.5.0
-5.0+ | 10.13.0 | 12.0.0
-4.1 - 4.2 | 8.10 | 10.0.0
-4.0 | 8.6 | 8.10.0
-3.3 - 3.9 | 6.9 | 8.0.0
-3.2 - 3.3 | 0.12 | 未知
-3.0 - 3.1 | 0.10 或 iojs | 未知
-0.0.1 - 2.8 | 0.10 | 未知
+| Hexo 版本   | 最低版本 (Node.js 版本) | 最高版本 (Node.js 版本) |
+| ----------- | ----------------------- | ----------------------- |
+| 7.0+        | 14.0.0                  | latest                  |
+| 6.2+        | 12.13.0                 | latest                  |
+| 6.0+        | 12.13.0                 | 18.5.0                  |
+| 5.0+        | 10.13.0                 | 12.0.0                  |
+| 4.1 - 4.2   | 8.10                    | 10.0.0                  |
+| 4.0         | 8.6                     | 8.10.0                  |
+| 3.3 - 3.9   | 6.9                     | 8.0.0                   |
+| 3.2 - 3.3   | 0.12                    | 未知                    |
+| 3.0 - 3.1   | 0.10 或 iojs            | 未知                    |
+| 0.0.1 - 2.8 | 0.10                    | 未知                    |

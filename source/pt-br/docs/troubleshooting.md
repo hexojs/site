@@ -1,18 +1,19 @@
 ---
 title: Soluções de Problemas
 ---
+
 No caso de você ter problemas com o uso do Hexo, aqui está uma lista de soluções para alguns dos problemas mais frequentes. Se esta página não ajudar a resolver seu problema, tente fazer uma pesquisa no nosso [GitHub](https://github.com/hexojs/hexo/issues) ou no nosso [Google Group](https://groups.google.com/group/hexo).
 
 ## YAML Parsing Error
 
-``` plain
+```plain
 JS-YAML: incomplete explicit mapping pair; a key node is missed at line 18, column 29:
       last_updated: Last updated: %s
 ```
 
 Delimite a string com aspas duplas se ela contiver dois pontos (:).
 
-``` plain
+```plain
 JS-YAML: bad indentation of a mapping entry at line 18, column 31:
       last_updated:"Last updated: %s"
 ```
@@ -23,13 +24,13 @@ Para mais informações, veja [YAML Spec](http://www.yaml.org/spec/1.2/spec.html
 
 ## EMFILE Error
 
-``` plain
+```plain
 Error: EMFILE, too many open files
 ```
 
 Embora o Node.js tenha I/O não bloqueante, o número máximo de I/O síncronas ainda é limitado pelo sistema. Você pode encontrar um erro EMFILE ao tentar gerar uma grande quantidade de arquivos. Você pode tentar executar o seguinte comando para aumentar o número de operações de I/O síncronas permitidas.
 
-``` bash
+```bash
 $ ulimit -n 10000
 ```
 
@@ -37,7 +38,7 @@ $ ulimit -n 10000
 
 If you encounter the following error:
 
-``` bash
+```bash
 $ ulimit -n 10000
 ulimit: open files: cannot modify limit: Operation not permitted
 ```
@@ -48,23 +49,23 @@ To override the limit:
 
 1. Add the following line to "/etc/security/limits.conf":
 
-  ```
-  * - nofile 10000
+```
+* - nofile 10000
 
-  # '*' applies to all users and '-' set both soft and hard limits
-  ```
+# '*' applies to all users and '-' set both soft and hard limits
+```
 
-  * The above setting may not apply in some cases, ensure "/etc/pam.d/login" and "/etc/pam.d/lightdm" have the following line. (Ignore this step if those files do not exist)
+- The above setting may not apply in some cases, ensure "/etc/pam.d/login" and "/etc/pam.d/lightdm" have the following line. (Ignore this step if those files do not exist)
 
-  ```
-  session required pam_limits.so
-  ```
+```
+session required pam_limits.so
+```
 
 2. If you are on a [systemd-based](https://en.wikipedia.org/wiki/Systemd#Adoption) distribution, systemd may override "limits.conf". To set the limit in systemd, add the following line in "/etc/systemd/system.conf" and "/etc/systemd/user.conf":
 
-  ```
-  DefaultLimitNOFILE=10000
-  ```
+```
+DefaultLimitNOFILE=10000
+```
 
 3. Reboot
 
@@ -86,7 +87,7 @@ Aumente o tamanho da memória heap do Node.js alterando a primeira linha de `hex
 
 ## Problemas de Deploy com Git
 
-``` plain
+```plain
 error: RPC failed; result=22, HTTP code = 403
 
 fatal: 'username.github.io' does not appear to be a git repository
@@ -96,19 +97,19 @@ Certifique-se de ter [configurado o git](https://help.github.com/articles/set-up
 
 ## Problemas de Servidor
 
-``` plain
+```plain
 Error: listen EADDRINUSE
 ```
 
 Você pode ter iniciado dois servidores do Hexo ao mesmo tempo ou pode haver outro aplicativo usando a mesma porta. Tente modificar a configuração `port` ou iniciar o servidor do Hexo com o argumento `-p`.
 
-``` bash
+```bash
 $ hexo server -p 5000
 ```
 
 ## Problemas na Instalação de Plugins
 
-``` plain
+```plain
 npm ERR! node-waf configure build
 ```
 
@@ -143,7 +144,7 @@ A Hexo usa [Warehouse] para o seu modelo de dados. Ele não é um array, então 
 
 Alguns dados não podem ser atualizados ou os arquivos recém-gerados são idênticos aos da última versão. Limpe o cache e tente novamente.
 
-``` bash
+```bash
 $ hexo clean
 ```
 
@@ -161,7 +162,7 @@ Quando você não consegue executar nenhum comando do Hexo, com exceção de `he
 
 ## Conteúdo Escapando
 
-O Hexo usa [Nunjucks] para renderizar posts ([Swig] foi usado na versão mais antiga, que compartilha uma sintaxe semelhante). O conteúdo delimitado com `{{ }}` ou `{% %}` será "parseado" e pode causar problemas. Você pode empacotar um conteúdo sensível com a tag plugin [`raw`](/docs/tag-plugins#Raw), single backtick ```` `{{ }}` ```` or triple backtick.
+O Hexo usa [Nunjucks] para renderizar posts ([Swig] foi usado na versão mais antiga, que compartilha uma sintaxe semelhante). O conteúdo delimitado com `{{ }}` ou `{% %}` será "parseado" e pode causar problemas. Você pode empacotar um conteúdo sensível com a tag plugin [`raw`](/docs/tag-plugins#Raw), single backtick `` `{{ }}` `` or triple backtick.
 Alternatively, Nunjucks tags can be disabled through the renderer's option (if supported), [API](/api/renderer#Disable-Nunjucks-tags) or [front-matter](/docs/front-matter).
 
 ```
@@ -186,7 +187,7 @@ Error: watch ENOSPC ...
 
 Isto pode ser consertado através do comando `$ npm dedupe` ou, se isso não funcionar, tente o seguinte comando no terminal do Linux:
 
-``` bash
+```bash
 $ echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
 ```
 
@@ -202,7 +203,7 @@ Error: watch /path/to/hexo/theme/ EMPERM
 
 Infelizmente, o WSL (Windows Subsystem for Linux) atualmente não suporta os observadores (watchers) do sistema de arquivos. Portanto, o recurso de atualização em tempo real do servidor do Hexo não está disponível no momento. Contudo, ainda é possível executar o servidor a partir de um ambiente WSL, primeiro gere os arquivos e depois execute servidor em modo estático:
 
-``` sh
+```sh
 $ hexo generate
 $ hexo server -s
 ```

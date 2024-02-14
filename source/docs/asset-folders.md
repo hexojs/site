@@ -1,6 +1,7 @@
 ---
 title: Asset Folders
 ---
+
 ## Global Asset Folder
 
 Assets are non-post files in the `source` folder, such as images, CSS or JavaScript files. For instance, If you are only going to have a few images in the Hexo project, then the easiest way is to keep them in a `source/images` directory. Then, you can access them using something like `![](/images/image.jpg)`.
@@ -11,7 +12,7 @@ Assets are non-post files in the `source` folder, such as images, CSS or JavaScr
 
 For users who expect to regularly serve images and/or other assets, and for those who prefer to separate their assets on a post-per-post basis, Hexo also provides a more organized way to manage assets. This slightly more involved, but very convenient approach to asset management can be turned on by setting the `post_asset_folder` setting in `_config.yml` to true.
 
-``` yaml _config.yml
+```yaml _config.yml
 post_asset_folder: true
 ```
 
@@ -27,7 +28,7 @@ Referencing images or other assets using normal markdown syntax and relative pat
 {% asset_link slug [title] %}
 ```
 
-For example, with post asset folders enabled, if you place an image `example.jpg` into your asset folder, it will *not* appear on the index page if you reference it using a relative path with regular `![](example.jpg)` markdown syntax (however, it will work as expected in the post itself).
+For example, with post asset folders enabled, if you place an image `example.jpg` into your asset folder, it will _not_ appear on the index page if you reference it using a relative path with regular `![](example.jpg)` markdown syntax (however, it will work as expected in the post itself).
 
 The correct way to reference the image will thus be using tag plugin syntax rather than markdown:
 
@@ -44,7 +45,7 @@ This way, the image will appear both inside the post and on index and archive pa
 
 To enable:
 
-``` yml _config.yml
+```yml _config.yml
 post_asset_folder: true
 marked:
   prependRoot: true

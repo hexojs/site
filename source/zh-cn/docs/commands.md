@@ -6,7 +6,7 @@ title: 指令
 
 ## init
 
-``` bash
+```bash
 $ hexo init [folder]
 ```
 
@@ -19,21 +19,21 @@ $ hexo init [folder]
 
 ## new
 
-``` bash
+```bash
 $ hexo new [layout] <title>
 ```
 
-新建一篇文章。如果没有设置 `layout` 的话，默认使用 [_config.yml](configuration.html) 中的 `default_layout` 参数代替。如果标题包含空格的话，请使用引号括起来。
+新建一篇文章。如果没有设置 `layout` 的话，默认使用 [\_config.yml](configuration.html) 中的 `default_layout` 参数代替。如果标题包含空格的话，请使用引号括起来。
 
-``` bash
+```bash
 $ hexo new "post title with whitespace"
 ```
 
-参数 | 描述
---- | ---
-`-p`, `--path` | 自定义新文章的路径
-`-r`, `--replace` | 如果存在同名文章，将其替换
-`-s`, `--slug` | 文章的 Slug，作为新文章的文件名和发布后的 URL
+| 参数              | 描述                                          |
+| ----------------- | --------------------------------------------- |
+| `-p`, `--path`    | 自定义新文章的路径                            |
+| `-r`, `--replace` | 如果存在同名文章，将其替换                    |
+| `-s`, `--slug`    | 文章的 Slug，作为新文章的文件名和发布后的 URL |
 
 默认情况下，Hexo 会使用文章的标题来决定文章文件的路径。对于独立页面来说，Hexo 会创建一个以标题为名字的目录，并在目录中放置一个 `index.md` 文件。你可以使用 `--path` 参数来覆盖上述行为、自行决定文件的目录：
 
@@ -53,19 +53,19 @@ hexo new page --path about/me
 
 ## generate
 
-``` bash
+```bash
 $ hexo generate
 ```
 
 生成静态文件。
 
-选项 | 描述
---- | ---
-`-d`, `--deploy` | 文件生成后立即部署网站
-`-w`, `--watch` | 监视文件变动
-`-b`, `--bail` | 生成过程中如果发生任何未处理的异常则抛出异常
-`-f`, `--force` | 强制重新生成文件<br>Hexo 引入了差分机制，如果 `public` 目录存在，那么 `hexo g` 只会重新生成改动的文件。<br>使用该参数的效果接近 `hexo clean && hexo generate`
-`-c`, `--concurrency` | 最大同时生成文件的数量，默认无限制
+| 选项                  | 描述                                                                                                                                                          |
+| --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `-d`, `--deploy`      | 文件生成后立即部署网站                                                                                                                                        |
+| `-w`, `--watch`       | 监视文件变动                                                                                                                                                  |
+| `-b`, `--bail`        | 生成过程中如果发生任何未处理的异常则抛出异常                                                                                                                  |
+| `-f`, `--force`       | 强制重新生成文件<br>Hexo 引入了差分机制，如果 `public` 目录存在，那么 `hexo g` 只会重新生成改动的文件。<br>使用该参数的效果接近 `hexo clean && hexo generate` |
+| `-c`, `--concurrency` | 最大同时生成文件的数量，默认无限制                                                                                                                            |
 
 该命令可以简写为
 
@@ -75,7 +75,7 @@ $ hexo g
 
 ## publish
 
-``` bash
+```bash
 $ hexo publish [layout] <filename>
 ```
 
@@ -83,29 +83,29 @@ $ hexo publish [layout] <filename>
 
 ## server
 
-``` bash
+```bash
 $ hexo server
 ```
 
 启动服务器。默认情况下，访问网址为： `http://localhost:4000/`。
 
-选项 | 描述
---- | ---
-`-p`, `--port` | 重设端口
-`-s`, `--static` | 只使用静态文件
-`-l`, `--log` | 启动日记记录，使用覆盖记录格式
+| 选项             | 描述                           |
+| ---------------- | ------------------------------ |
+| `-p`, `--port`   | 重设端口                       |
+| `-s`, `--static` | 只使用静态文件                 |
+| `-l`, `--log`    | 启动日记记录，使用覆盖记录格式 |
 
 ## deploy
 
-``` bash
+```bash
 $ hexo deploy
 ```
 
 部署网站。
 
-参数 | 描述
---- | ---
-`-g`, `--generate` | 部署之前预先生成静态文件
+| 参数               | 描述                     |
+| ------------------ | ------------------------ |
+| `-g`, `--generate` | 部署之前预先生成静态文件 |
 
 该命令可以简写为：
 
@@ -115,19 +115,19 @@ $ hexo d
 
 ## render
 
-``` bash
+```bash
 $ hexo render <file1> [file2] ...
 ```
 
 渲染文件。
 
-参数 | 描述
---- | ---
-`-o`, `--output` | 设置输出路径
+| 参数             | 描述         |
+| ---------------- | ------------ |
+| `-o`, `--output` | 设置输出路径 |
 
 ## migrate
 
-``` bash
+```bash
 $ hexo migrate <type>
 ```
 
@@ -135,7 +135,7 @@ $ hexo migrate <type>
 
 ## clean
 
-``` bash
+```bash
 $ hexo clean
 ```
 
@@ -145,7 +145,7 @@ $ hexo clean
 
 ## list
 
-``` bash
+```bash
 $ hexo list <type>
 ```
 
@@ -153,7 +153,7 @@ $ hexo list <type>
 
 ## version
 
-``` bash
+```bash
 $ hexo version
 ```
 
@@ -171,7 +171,7 @@ $ hexo config [key] [value]
 
 ### 安全模式
 
-``` bash
+```bash
 $ hexo --safe
 ```
 
@@ -179,7 +179,7 @@ $ hexo --safe
 
 ### 调试模式
 
-``` bash
+```bash
 $ hexo --debug
 ```
 
@@ -187,7 +187,7 @@ $ hexo --debug
 
 ### 简洁模式
 
-``` bash
+```bash
 $ hexo --silent
 ```
 
@@ -218,7 +218,7 @@ $ hexo generate --config custom.yml,custom2.json,custom3.yml
 
 ### 显示草稿
 
-``` bash
+```bash
 $ hexo --draft
 ```
 
@@ -226,7 +226,7 @@ $ hexo --draft
 
 ### 自定义 CWD
 
-``` bash
+```bash
 $ hexo --cwd /path/to/cwd
 ```
 

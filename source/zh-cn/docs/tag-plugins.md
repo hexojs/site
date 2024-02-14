@@ -1,6 +1,7 @@
 ---
 title: 标签插件（Tag Plugins）
 ---
+
 标签插件和 Front-matter 中的标签不同，它们是用于在文章中快速插入特定内容的插件。
 
 虽然你可以使用任何格式书写你的文章，但是标签插件永远可用，且语法也都是一致的。
@@ -83,14 +84,14 @@ code snippet
 
 以 `option:value` 的格式指定额外选项，例如：`line_number:false first_line:5`。
 
-额外选项 | 描述 | 默认值
---- | --- | ---
-`line_number` | 显示行号 | `true`
-`line_threshold` | 只有代码块的行数超过该阈值，才显示行数 | `0` |
-`highlight` | 启用代码高亮 | `true`
-`first_line` | 指定第一个行号 | `1`
-`mark` | 突出显示特定的行，每个值用逗号分隔。 使用破折号指定数字范围<br>例如： `mark:1,4-7,10` 将标记第1、4至7和10行 |
-`wrap` | 用 [`<table>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table) 包裹代码块 | `true`
+| 额外选项         | 描述                                                                                                        | 默认值 |
+| ---------------- | ----------------------------------------------------------------------------------------------------------- | ------ |
+| `line_number`    | 显示行号                                                                                                    | `true` |
+| `line_threshold` | 只有代码块的行数超过该阈值，才显示行数                                                                      | `0`    |
+| `highlight`      | 启用代码高亮                                                                                                | `true` |
+| `first_line`     | 指定第一个行号                                                                                              | `1`    |
+| `mark`           | 突出显示特定的行，每个值用逗号分隔。 使用破折号指定数字范围<br>例如： `mark:1,4-7,10` 将标记第1、4至7和10行 |
+| `wrap`           | 用 [`<table>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table) 包裹代码块                  | `true` |
 
 ### 示例
 
@@ -140,7 +141,7 @@ _.compact([0, 1, false, 2, '', 3]);
 ```
 
 {% codeblock _.compact http://underscorejs.org/#compact Underscore.js %}
-_.compact([0, 1, false, 2, '', 3]);
+\_.compact([0, 1, false, 2, '', 3]);
 => [1, 2, 3]
 {% endcodeblock %}
 
@@ -149,9 +150,9 @@ _.compact([0, 1, false, 2, '', 3]);
 另一种形式的代码块，不同的是它使用三个反引号来包裹。
 
 {% raw %}
-&#96`` [language] [title] [url] [link text]
+&#96` [language] [title] [url] [link text]
 code snippet
-&#96;``
+&#96;`
 {% endraw %}
 
 ## Pull Quote
@@ -335,6 +336,7 @@ content
 ```
 {% post_link hexo-4-released 'How to use <b> tag in title' %}
 ```
+
 {% post_link hexo-4-released 'How to use <b> tag in title' %}
 
 **禁止对标题的特殊字符进行转义**
@@ -342,6 +344,7 @@ content
 ```
 {% post_link hexo-4-released '<b>bold</b> custom title' false %}
 ```
+
 {% post_link hexo-4-released '<b>bold</b> custom title' false %}
 
 ## 引用资源
@@ -364,32 +367,32 @@ _hexo-renderer-marked 3.1.0+ 可以（可选）自动解析图片的文章路径
 
 `{% asset_img foo.jpg %}`
 
-``` html
-<img src="/2020/01/02/hello/foo.jpg">
+```html
+<img src="/2020/01/02/hello/foo.jpg" />
 ```
 
 **自定义 class 属性**
 
 `{% asset_img post-image foo.jpg %}`
 
-``` html
-<img src="/2020/01/02/hello/foo.jpg" class="post-image">
+```html
+<img src="/2020/01/02/hello/foo.jpg" class="post-image" />
 ```
 
 **展示尺寸**
 
 `{% asset_img foo.jpg 500 400 %}`
 
-``` html
-<img src="/2020/01/02/hello/foo.jpg" width="500" height="400">
+```html
+<img src="/2020/01/02/hello/foo.jpg" width="500" height="400" />
 ```
 
 **title 和 alt 属性**
 
 `{% asset_img logo.svg "lorem ipsum'dolor'" %}`
 
-``` html
-<img src="/2020/01/02/hello/foo.jpg" title="lorem ipsum" alt="dolor">
+```html
+<img src="/2020/01/02/hello/foo.jpg" title="lorem ipsum" alt="dolor" />
 ```
 
 ## URL
@@ -404,23 +407,23 @@ _hexo-renderer-marked 3.1.0+ 可以（可选）自动解析图片的文章路径
 
 **示例：**
 
-``` yml
+```yml
 _config.yml
 root: /blog/ # example
 ```
 
-``` 
+```
 {% url_for blog index.html %}
 ```
 
-``` html
+```html
 <a href="/blog/index.html">blog</a>
 ```
 
 是否输出相对链接，默认遵循配置文件中 `relative_link` 的值
 例如， post/page 的路径值可能是 `/foo/bar/index.html`
 
-``` yml
+```yml
 _config.yml
 relative_link: true
 ```
@@ -429,7 +432,7 @@ relative_link: true
 {% url_for blog index.html %}
 ```
 
-``` html
+```html
 <a href="../../index.html">blog</a>
 ```
 
@@ -439,7 +442,7 @@ relative_link: true
 {% url_for blog index.html false %}
 ```
 
-``` html
+```html
 <a href="/index.html">blog</a>
 ```
 
@@ -453,7 +456,7 @@ relative_link: true
 
 **示例：**
 
-``` yml
+```yml
 _config.yml
 url: https://example.com/blog # example
 ```
@@ -462,7 +465,7 @@ url: https://example.com/blog # example
 {% full_url_for index /a/path %}
 ```
 
-``` html
+```html
 <a href="https://example.com/blog/a/path">index</a>
 ```
 

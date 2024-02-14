@@ -1,17 +1,18 @@
 ---
 title: Migration
 ---
+
 ## RSS
 
 먼저 `hexo-migrator-rss` 플러그인을 설치하세요.
 
-``` bash
+```bash
 $ npm install hexo-migrator-rss --save
 ```
 
 플러그인 설치 후에는 아래의 명령어를 수행하여 RSS의 모든 포스트를 마이그레이션 하세요. `source`에는 파일 경로나 URL를 사용할 수 있습니다.
 
-``` bash
+```bash
 $ hexo migrate rss <source>
 ```
 
@@ -21,7 +22,7 @@ Jekyll의 `_posts` 폴더의 모든 파일을 Hexo의 `source/_posts` 폴더로 
 
 `_config.yml`파일의 `new_post_name` 설정을 다음과 같이 수정하세요.
 
-``` yaml
+```yaml
 new_post_name: :year-:month-:day-:title.md
 ```
 
@@ -31,7 +32,7 @@ Octopress `source/_posts` 폴더의 모든 파일을 Hexo의 `source/_posts` 폴
 
 `_config.yml`파일의 `new_post_name` 설정을 다음과 같이 수정하세요.
 
-``` yaml
+```yaml
 new_post_name: :year-:month-:day-:title.md
 ```
 
@@ -39,7 +40,7 @@ new_post_name: :year-:month-:day-:title.md
 
 먼저, `hexo-migrator-wordpress` plugin을 설치하세요.
 
-``` bash
+```bash
 $ npm install hexo-migrator-wordpress --save
 ```
 
@@ -47,7 +48,7 @@ WordPress의 dashboard에서 "Tools" → "Export" → "WordPress" 를 통해 사
 
 그 후 아래 명령어를 수행하세요:
 
-``` bash
+```bash
 $ hexo migrate wordpress <source>
 ```
 

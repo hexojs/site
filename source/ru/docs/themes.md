@@ -4,7 +4,7 @@ title: Темы
 
 Создать тему Hexo легко, надо просто создать новую папку. Чтобы начать использовать темы, измените настройки `theme` в файле сайта `_config`. Тема должна иметь следующую структуру:
 
-``` plain
+```plain
 .
 ├── _config.yml
 ├── languages
@@ -13,7 +13,7 @@ title: Темы
 └── source
 ```
 
-### _config.yml
+### \_config.yml
 
 Файл конфигурации темы. Unlike the site's primary configuration file, Изменения не требуют перезагрузки сервера.
 
@@ -25,7 +25,7 @@ title: Темы
 
 Папка шаблонов. Эта папка содержит файлы шаблонов темы, которые определяют внешний вид сайта. Hexo использует шаблонизатор [Nunjucks] по умолчанию, но вы легко сможете установить дополнительные плагины, чтобы поддерживать альтернативные системы, такие как [EJS] или [Pug]. Hexo выбирает шаблонизатор на основе расширения файла. Например:
 
-``` plain
+```plain
 layout.ejs   - uses EJS
 layout.njk   - uses Nunjucks
 ```
@@ -49,28 +49,28 @@ Hexo будет сохранять все обработанные файлы в
 1. Создайте форк [hexojs/site]
 2. Клонируйте репозиторий на компьютер и установите все зависимости.
 
-    ``` shell
-    git clone ttps://github.com/<username>/site.git
-    cd site
-    npm install
-    ```
+   ```shell
+   git clone ttps://github.com/<username>/site.git
+   cd site
+   npm install
+   ```
 
 3. Отредактируйте `source/_data/themes.yml` и добавьте свою тему. Например:
 
-    ```yaml
-    - name: landscape
-      description: Новая тема по умолчанию для Hexo.
-      link: https://github.com/hexojs/hexo-theme-landscape
-      preview: http://hexo.io/hexo-theme-landscape
-      tags:
-        - official
-        - responsive
-        - widget
-        - two_column
-        - one_column
-    ```
+   ```yaml
+   - name: landscape
+     description: Новая тема по умолчанию для Hexo.
+     link: https://github.com/hexojs/hexo-theme-landscape
+     preview: http://hexo.io/hexo-theme-landscape
+     tags:
+       - official
+       - responsive
+       - widget
+       - two_column
+       - one_column
+   ```
 
-4. Добавьте скриншот темы (с таким же, как и тема, названием) в папку `source/themes/screenshots`. Он должен быть размером 800*500px в формате PNG.
+4. Добавьте скриншот темы (с таким же, как и тема, названием) в папку `source/themes/screenshots`. Он должен быть размером 800\*500px в формате PNG.
 5. Загрузите ветку.
 6. Создайте запрос на слияние с описанием изменений.
 

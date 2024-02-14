@@ -1,6 +1,7 @@
 ---
 title: Tag Plugins
 ---
+
 ปลั๊กอินแท็กจะแตกต่างกับแท็กโพสต์ ปลั๊กอินแท็กนั้นยืมมาจาก Octopress
 และสนับสนุนวิธีท่ีเพิ่มเนื้อหาเฉพาะไปถึงโพสต์ของตนได้อย่างรวดเร็ว
 
@@ -88,14 +89,14 @@ code snippet
 
 Specify additional options in `option:value` format, e.g. `line_number:false first_line:5`.
 
-Extra Options | Description | Default
---- | --- | ---
-`line_number` | Show line number | `true`
-`line_threshold` | Only show line numbers as long as the numbers of lines of the code block exceed such threshold. | `0` |
-`highlight` | Enable code highlighting | `true`
-`first_line` | Specify the first line number | `1`
-`mark` | Line highlight specific line(s), each value separated by a comma. Specify number range using a dash<br>Example: `mark:1,4-7,10` will mark line 1, 4 to 7 and 10. |
-`wrap` | Wrap the code block in [`<table>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table) | `true`
+| Extra Options    | Description                                                                                                                                                      | Default |
+| ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
+| `line_number`    | Show line number                                                                                                                                                 | `true`  |
+| `line_threshold` | Only show line numbers as long as the numbers of lines of the code block exceed such threshold.                                                                  | `0`     |
+| `highlight`      | Enable code highlighting                                                                                                                                         | `true`  |
+| `first_line`     | Specify the first line number                                                                                                                                    | `1`     |
+| `mark`           | Line highlight specific line(s), each value separated by a comma. Specify number range using a dash<br>Example: `mark:1,4-7,10` will mark line 1, 4 to 7 and 10. |
+| `wrap`           | Wrap the code block in [`<table>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table)                                                              | `true`  |
 
 ### Examples
 
@@ -145,7 +146,7 @@ _.compact([0, 1, false, 2, '', 3]);
 ```
 
 {% codeblock _.compact <http://underscorejs.org/#compact> Underscore.js %}
-_.compact([0, 1, false, 2, '', 3]);
+\_.compact([0, 1, false, 2, '', 3]);
 => [1, 2, 3]
 {% endcodeblock %}
 
@@ -153,9 +154,9 @@ _.compact([0, 1, false, 2, '', 3]);
 
 มันเหมือนกันกับการใช้ code block แต่จำกัดจำนวน block โดยใช้ backtick สามอัน
 {% raw %}
-&#96``[language] [title] [url] [link text]
+&#96`[language] [title] [url] [link text]
 code snippet
-&#96;``
+&#96;`
 {% endraw %}
 
 ## Pull Quote
@@ -257,7 +258,7 @@ YouTube's cookie is not used in this mode.
 
 ## Include Posts
 
-รวมลิงก์ของโพสต์อื่นๆเข้าไปใน  block:
+รวมลิงก์ของโพสต์อื่นๆเข้าไปใน block:
 
 ```
 {% post_path filename %}
@@ -272,7 +273,7 @@ YouTube's cookie is not used in this mode.
 ได้แม้ว่าโพสต์นั้นจะอยู่ใน folder `source/posts/2015-02-my-family-holiday`
 และมี permalink เป็น `2018/en/how-to-bake-a-cake`
 
-แทนท่ีจะแสดงให้เห็นหัวข้อโพสต์  คุณสามารถตั้งค่าว่าอะไรของ text
+แทนท่ีจะแสดงให้เห็นหัวข้อโพสต์ คุณสามารถตั้งค่าว่าอะไรของ text
 จะโชว์ให้เห็นได้ดัวยการตั้งค่า `post_path` ส่วน syntax ท่ีเป็น `[]()`
 จะไม่สนับสนุนโดย hexo ในท่ีนี่
 
@@ -328,32 +329,32 @@ _hexo-renderer-marked 3.1.0+ can (optionally) resolves the post's path of an ima
 
 `{% asset_img foo.jpg %}`
 
-``` html
-<img src="/2020/01/02/hello/foo.jpg">
+```html
+<img src="/2020/01/02/hello/foo.jpg" />
 ```
 
 **Custom class**
 
 `{% asset_img post-image foo.jpg %}`
 
-``` html
-<img src="/2020/01/02/hello/foo.jpg" class="post-image">
+```html
+<img src="/2020/01/02/hello/foo.jpg" class="post-image" />
 ```
 
 **Display size**
 
 `{% asset_img foo.jpg 500 400 %}`
 
-``` html
-<img src="/2020/01/02/hello/foo.jpg" width="500" height="400">
+```html
+<img src="/2020/01/02/hello/foo.jpg" width="500" height="400" />
 ```
 
 **Title & Alt**
 
 `{% asset_img logo.svg "lorem ipsum'dolor'" %}`
 
-``` html
-<img src="/2020/01/02/hello/foo.jpg" title="lorem ipsum" alt="dolor">
+```html
+<img src="/2020/01/02/hello/foo.jpg" title="lorem ipsum" alt="dolor" />
 ```
 
 ## Raw

@@ -1,33 +1,34 @@
 ---
 title: 配置
 ---
+
 您可以在 `_config.yml` 或 [替代配置檔](#Using-an-Alternate-Config) 中修改網站配置。
 
 {% youtube A0Enyn70jKU %}
 
 ### 網站
 
-設定 | 描述
---- | ---
-`title` | 網站標題
-`subtitle` | 網站副標題
-`description` | 網站描述
-`keywords` | 網站的關鍵詞。支援多個關鍵詞。
-`author` | 您的名字
-`language` | 網站使用的語言，參考 [2-lettter ISO-639-1 code](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes)，預設為 `en`
-`timezone` | 網站時區，Hexo 預設使用您電腦的時區，您可以在 [時區列表](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) 尋找適當的時區，例如 `America/New_York` 、 `Japan` 與 `UTC`
+| 設定          | 描述                                                                                                                                                                               |
+| ------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `title`       | 網站標題                                                                                                                                                                           |
+| `subtitle`    | 網站副標題                                                                                                                                                                         |
+| `description` | 網站描述                                                                                                                                                                           |
+| `keywords`    | 網站的關鍵詞。支援多個關鍵詞。                                                                                                                                                     |
+| `author`      | 您的名字                                                                                                                                                                           |
+| `language`    | 網站使用的語言，參考 [2-lettter ISO-639-1 code](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes)，預設為 `en`                                                                |
+| `timezone`    | 網站時區，Hexo 預設使用您電腦的時區，您可以在 [時區列表](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) 尋找適當的時區，例如 `America/New_York` 、 `Japan` 與 `UTC` |
 
 ### 網址
 
-設定 | 描述 | 預設值
---- | --- | ---
-`url` | 網站的網址，must starts with `http://` or `https://` |
-`root` | 網站的根目錄 | `url's pathname`
-`permalink` | 文章 [永久連結](permalinks.html) 的格式 | `:year/:month/:day/:title/`
-`permalink_defaults` | `permalink` 中各區段的預設值 |
-`pretty_urls` | 改寫 [`permalink`](variables.html) 的值來美化 URL |
-`pretty_urls.trailing_index` | 是否在永久鏈接中保留尾部的 `index.html`，設置為 `false` 時去除 | `true`
-`pretty_urls.trailing_html` | 是否在永久鏈接中保留尾部的 `.html`, 設置為 `false` 時去除 (_對尾部的 `index.html`無效_) | `true`
+| 設定                         | 描述                                                                                    | 預設值                      |
+| ---------------------------- | --------------------------------------------------------------------------------------- | --------------------------- |
+| `url`                        | 網站的網址，must starts with `http://` or `https://`                                    |
+| `root`                       | 網站的根目錄                                                                            | `url's pathname`            |
+| `permalink`                  | 文章 [永久連結](permalinks.html) 的格式                                                 | `:year/:month/:day/:title/` |
+| `permalink_defaults`         | `permalink` 中各區段的預設值                                                            |
+| `pretty_urls`                | 改寫 [`permalink`](variables.html) 的值來美化 URL                                       |
+| `pretty_urls.trailing_index` | 是否在永久鏈接中保留尾部的 `index.html`，設置為 `false` 時去除                          | `true`                      |
+| `pretty_urls.trailing_html`  | 是否在永久鏈接中保留尾部的 `.html`, 設置為 `false` 時去除 (_對尾部的 `index.html`無效_) | `true`                      |
 
 {% note info 網站存放在子目錄 %}
 如果您的網站存放在子目錄中，例如 `http://example.org/blog`，請將您的 `url` 設為 `http://example.org/blog` 並把 `root` 設為 `/blog/`。
@@ -35,55 +36,55 @@ title: 配置
 
 ### 目錄
 
-設定 | 描述 | 預設值
---- | --- | ---
-`source_dir` | 原始檔案資料夾，這個資料夾用於存放您的內容 | `source`
-`public_dir` | 靜態檔案資料夾，這個資料夾用於存放建立完畢的檔案 | public
-`tag_dir` | 標籤資料夾 | `tags`
-`archive_dir` | 彙整資料夾 | `archives`
-`category_dir` | 分類資料夾 | `categories`
-`code_dir` | Include code 資料夾 | `downloads/code`
-`i18n_dir` | 國際化（i18n）資料夾 | `:lang`
-`skip_render` | 跳過指定檔案的渲染，您可使用 [glob 表達式](https://github.com/micromatch/micromatch#extended-globbing) 來配對路徑 |
+| 設定           | 描述                                                                                                              | 預設值           |
+| -------------- | ----------------------------------------------------------------------------------------------------------------- | ---------------- |
+| `source_dir`   | 原始檔案資料夾，這個資料夾用於存放您的內容                                                                        | `source`         |
+| `public_dir`   | 靜態檔案資料夾，這個資料夾用於存放建立完畢的檔案                                                                  | public           |
+| `tag_dir`      | 標籤資料夾                                                                                                        | `tags`           |
+| `archive_dir`  | 彙整資料夾                                                                                                        | `archives`       |
+| `category_dir` | 分類資料夾                                                                                                        | `categories`     |
+| `code_dir`     | Include code 資料夾                                                                                               | `downloads/code` |
+| `i18n_dir`     | 國際化（i18n）資料夾                                                                                              | `:lang`          |
+| `skip_render`  | 跳過指定檔案的渲染，您可使用 [glob 表達式](https://github.com/micromatch/micromatch#extended-globbing) 來配對路徑 |
 
 ### 寫作
 
-設定 | 描述 | 預設值
---- | --- | ---
-`new_post_name` | 新文章的檔案名稱 | `:title.md`
-`default_layout` | 預設佈局 | `post`
-`auto_spacing` | 在西方文字與東方文字中加入空白 | `false`
-`titlecase` | 把標題轉換為 title case | `false`
-`external_link` | 在新頁籤中開啟連結 | `true`
-`external_link.enable` | 在新頁籤中開啟連結 | `true`
-`external_link.field` | Applies to the whole `site` or `post` only | `site`
-`external_link.exclude` | Exclude hostname. Specify subdomain when applicable, including `www` | `[]`
-`filename_case` | 把檔案名稱轉換為: `1` 小寫或 `2` 大寫 | `0`
-`render_drafts` | 顯示草稿 | `false`
-`post_asset_folder` | 啟動 [Asset 資料夾](asset-folders.html) | `false`
-`relative_link` | 把連結改為與根目錄的相對位址 | `false`
-`future` | 顯示未來的文章 | `true`
-`syntax_highlighter` | Code block syntax highlight settings, see [Syntax Highlight](/docs/syntax-highlight) section for usage guide | `highlight.js`
-`highlight` | 程式碼區塊的設定, see [Highlight.js](/docs/syntax-highlight#Highlight-js) section for usage guide |
-`prismjs` | 程式碼區塊的設定, see [PrismJS](/docs/syntax-highlight#PrismJS) section for usage guide |
+| 設定                    | 描述                                                                                                         | 預設值         |
+| ----------------------- | ------------------------------------------------------------------------------------------------------------ | -------------- |
+| `new_post_name`         | 新文章的檔案名稱                                                                                             | `:title.md`    |
+| `default_layout`        | 預設佈局                                                                                                     | `post`         |
+| `auto_spacing`          | 在西方文字與東方文字中加入空白                                                                               | `false`        |
+| `titlecase`             | 把標題轉換為 title case                                                                                      | `false`        |
+| `external_link`         | 在新頁籤中開啟連結                                                                                           | `true`         |
+| `external_link.enable`  | 在新頁籤中開啟連結                                                                                           | `true`         |
+| `external_link.field`   | Applies to the whole `site` or `post` only                                                                   | `site`         |
+| `external_link.exclude` | Exclude hostname. Specify subdomain when applicable, including `www`                                         | `[]`           |
+| `filename_case`         | 把檔案名稱轉換為: `1` 小寫或 `2` 大寫                                                                        | `0`            |
+| `render_drafts`         | 顯示草稿                                                                                                     | `false`        |
+| `post_asset_folder`     | 啟動 [Asset 資料夾](asset-folders.html)                                                                      | `false`        |
+| `relative_link`         | 把連結改為與根目錄的相對位址                                                                                 | `false`        |
+| `future`                | 顯示未來的文章                                                                                               | `true`         |
+| `syntax_highlighter`    | Code block syntax highlight settings, see [Syntax Highlight](/docs/syntax-highlight) section for usage guide | `highlight.js` |
+| `highlight`             | 程式碼區塊的設定, see [Highlight.js](/docs/syntax-highlight#Highlight-js) section for usage guide            |
+| `prismjs`               | 程式碼區塊的設定, see [PrismJS](/docs/syntax-highlight#PrismJS) section for usage guide                      |
 
 ### 分類 & 標籤
 
-設定 | 描述 | 預設值
---- | --- | ---
-`default_category` | 預設分類 | `uncategorized`
-`category_map` | 分類別名 |
-`tag_map` | 標籤別名 |
+| 設定               | 描述     | 預設值          |
+| ------------------ | -------- | --------------- |
+| `default_category` | 預設分類 | `uncategorized` |
+| `category_map`     | 分類別名 |
+| `tag_map`          | 標籤別名 |
 
 ### 日期 / 時間格式
 
 Hexo 使用 [Moment.js](http://momentjs.com/) 來解析和顯示時間。
 
-設定 | 描述 | 預設值
---- | --- | ---
-`date_format` | 日期格式 | `YYYY-MM-DD`
-`time_format` | 時間格式 | `HH:mm:ss`
-`updated_option` | The [`updated`](/zh-tw/docs/variables#頁面變數) value to used when not provided in the front-matter | `mtime`
+| 設定             | 描述                                                                                                | 預設值       |
+| ---------------- | --------------------------------------------------------------------------------------------------- | ------------ |
+| `date_format`    | 日期格式                                                                                            | `YYYY-MM-DD` |
+| `time_format`    | 時間格式                                                                                            | `HH:mm:ss`   |
+| `updated_option` | The [`updated`](/zh-tw/docs/variables#頁面變數) value to used when not provided in the front-matter | `mtime`      |
 
 {% note info updated_option %}
 `updated_option` controls the `updated` value when not provided in the front-matter:
@@ -97,17 +98,17 @@ Hexo 使用 [Moment.js](http://momentjs.com/) 來解析和顯示時間。
 
 ### 分頁
 
-設定 | 描述 | 預設值
---- | --- | ---
-`per_page` | 一頁顯示的文章量 (`0` = 關閉分頁功能) | `10`
-`pagination_dir` | 分頁目錄 | `page`
+| 設定             | 描述                                  | 預設值 |
+| ---------------- | ------------------------------------- | ------ |
+| `per_page`       | 一頁顯示的文章量 (`0` = 關閉分頁功能) | `10`   |
+| `pagination_dir` | 分頁目錄                              | `page` |
 
 ### 擴充套件
 
-設定 | 描述
---- | ---
-`theme` | 使用主題名稱, 設為 `false` 表示關閉主題功能
-`deploy` | 佈署設定
+| 設定     | 描述                                        |
+| -------- | ------------------------------------------- |
+| `theme`  | 使用主題名稱, 設為 `false` 表示關閉主題功能 |
+| `deploy` | 佈署設定                                    |
 
 ### 包含/排除 檔案或資料夾
 
@@ -115,11 +116,11 @@ Hexo 會根據配置檔中 `include` / `exlude` 欄位設定，了解要 處理/
 
 `include` and `exclude` options only apply to the `source/` folder, whereas `ignore` option applies to all folders.
 
-設定 | 描述
---- | ---
-`include` | Hexo 預設會忽略隱藏檔與隱藏資料夾，但列在這個欄位中的檔案，Hexo 仍然會去處理
-`exclude` | 列在這裡的檔案將會被 Hexo 忽略
-`ignore` | Ignore files/folders
+| 設定      | 描述                                                                         |
+| --------- | ---------------------------------------------------------------------------- |
+| `include` | Hexo 預設會忽略隱藏檔與隱藏資料夾，但列在這個欄位中的檔案，Hexo 仍然會去處理 |
+| `exclude` | 列在這裡的檔案將會被 Hexo 忽略                                               |
+| `ignore`  | Ignore files/folders                                                         |
 
 範例:
 
@@ -167,7 +168,7 @@ ignore:
 
 範例:
 
-``` bash
+```bash
 # 使用自訂的 'custom.yml' 取代預設的 '_config.yml'
 $ hexo server --config custom.yml
 
@@ -195,7 +196,7 @@ theme: "my-theme"
 theme_config:
   bio: "My awesome bio"
   foo:
-    bar: 'a'
+    bar: "a"
 ```
 
 ```yml
@@ -210,11 +211,11 @@ Resulting in theme configuration:
 
 ```json
 {
-  bio: "My awesome bio",
-  logo: "a-cool-image.png",
-  foo: {
-    bar: "a",
-    baz: "b"
+  "bio": "My awesome bio",
+  "logo": "a-cool-image.png",
+  "foo": {
+    "bar": "a",
+    "baz": "b"
   }
 }
 ```
@@ -234,7 +235,7 @@ theme: "my-theme"
 # _config.my-theme.yml
 bio: "My awesome bio"
 foo:
-  bar: 'a'
+  bar: "a"
 ```
 
 ```yml
@@ -249,11 +250,11 @@ Resulting in theme configuration:
 
 ```json
 {
-  bio: "My awesome bio",
-  logo: "a-cool-image.png",
-  foo: {
-    bar: "a",
-    baz: "b"
+  "bio": "My awesome bio",
+  "logo": "a-cool-image.png",
+  "foo": {
+    "bar": "a",
+    "baz": "b"
   }
 }
 ```

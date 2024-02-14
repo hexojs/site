@@ -1,3 +1,4 @@
+---
 layout: plugins
 title: Themes
 data: themes

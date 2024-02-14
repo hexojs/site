@@ -6,7 +6,7 @@ title: 建立
 
 一旦 Hexo 完成後，請執行下列指令，Hexo 會在指定資料夾中建立所有您需要的檔案。
 
-``` bash
+```bash
 $ hexo init <folder>
 $ cd <folder>
 $ npm install
@@ -14,7 +14,7 @@ $ npm install
 
 建立完成後，專案資料夾會有下列檔案：
 
-``` plain
+```plain
 .
 ├── _config.yml
 ├── package.json
@@ -25,7 +25,7 @@ $ npm install
 └── themes
 ```
 
-### _config.yml
+### \_config.yml
 
 網站 [配置](configuration.html) 檔案，您可以在此配置大部分的設定。
 
@@ -33,7 +33,7 @@ $ npm install
 
 應用程式資料。[EJS](https://ejs.co/), [Stylus](http://learnboost.github.io/stylus/) 和 [Markdown](http://daringfireball.net/projects/markdown/) renderer 已預設安裝，您可以稍後移除。
 
-``` json package.json
+```json package.json
 {
   "name": "hexo-site",
   "version": "0.0.0",

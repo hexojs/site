@@ -1,6 +1,7 @@
 ---
 title: 事件
 ---
+
 Hexo 继承了 [EventEmitter]，您可以用 `on` 方法监听 Hexo 所发布的事件，也可以使用 `emit` 方法对 Hexo 发布事件，更详细的说明请参阅 Node.js 的 API。
 
 ### deployBefore
@@ -27,16 +28,16 @@ Hexo 继承了 [EventEmitter]，您可以用 `on` 方法监听 Hexo 所发布的
 
 在文章文件建立后发布。该事件返回文章参数。
 
-``` js
-hexo.on('new', function(post){
-  // 
+```js
+hexo.on("new", function (post) {
+  //
 });
 ```
 
-数据 | 描述
---- | ---
-`post.path` | 文章文件的完整路径
-`post.content` | 文章文件的内容
+| 数据           | 描述               |
+| -------------- | ------------------ |
+| `post.path`    | 文章文件的完整路径 |
+| `post.content` | 文章文件的内容     |
 
 ### processBefore
 

@@ -1,6 +1,7 @@
 ---
 title: Events
 ---
+
 Hexo inherits from [EventEmitter]. Use the `on` method to listen for events emitted by Hexo, and use the `emit` method to emit events. For more information, refer to the Node.js API documentation.
 
 ### deployBefore
@@ -27,16 +28,16 @@ Emitted after generation finishes.
 
 Emitted after a new post has been created. This event returns the post data:
 
-``` js
-hexo.on('new', function(post){
+```js
+hexo.on("new", function (post) {
   //
 });
 ```
 
-Data | Description
---- | ---
-`post.path` | Full path of the post file
-`post.content` | Content of the post file
+| Data           | Description                |
+| -------------- | -------------------------- |
+| `post.path`    | Full path of the post file |
+| `post.content` | Content of the post file   |
 
 ### processBefore
 

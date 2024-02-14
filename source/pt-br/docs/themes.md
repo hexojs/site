@@ -6,7 +6,7 @@ title: Temas
 
 É fácil construir um tema para o Hexo - você só precisa criar um no diretório. Para começar a usar o seu tema, modifique a configuração `theme` do arquivo `_config.yml` do seu site. Um tema deve ter a seguinte estrutura:
 
-``` plain
+```plain
 .
 ├── _config.yml
 ├── languages
@@ -15,7 +15,7 @@ title: Temas
 └── source
 ```
 
-### _config.yml
+### \_config.yml
 
 Arquivo de configuração do tema. Unlike the site's primary configuration file, modificações neste arquivo não requerem uma reinicialização do servidor.
 
@@ -27,7 +27,7 @@ Diretório de idiomas. Veja [internacionalização (i18n)](internationalization.
 
 Diretório de layouts. Este diretório contém os arquivos de template do tema, que definem a aparência do seu site. O Hexo fornece o mecanismo de template [Nunjucks] por padrão, mas você pode instalar plugins adicionais para suportar mecanismos alternativos, como [EJS], [Haml], [Jade] ou [Pug]. O Hexo escolhe o mecanismo de template com base na extensão do arquivo deste. Por exemplo:
 
-``` plain
+```plain
 layout.ejs   - uses EJS
 layout.njk   - uses Nunjucks
 ```
@@ -51,26 +51,26 @@ Quando você terminar de criar seu tema, você pode publicá-lo na [lista de tem
 1. Faça um fork [hexojs/site]
 2. Clone o repositório no seu computador e instale dependências.
 
-    ```shell
-    $ git clone https://github.com/<username>/site.git
-    $ cd site
-    $ npm install
-    ```
+   ```shell
+   $ git clone https://github.com/<username>/site.git
+   $ cd site
+   $ npm install
+   ```
 
 3. Edite o arquivo `source/_data/themes.yml` e adicione seu tema. Por exemplo:
 
-    ```yaml
-    - name: landscape
-      description: A brand new default theme for Hexo.
-      link: https://github.com/hexojs/hexo-theme-landscape
-      preview: http://hexo.io/hexo-theme-landscape
-      tags:
-        - official
-        - responsive
-        - widget
-        - two_column
-        - one_column
-    ```
+   ```yaml
+   - name: landscape
+     description: A brand new default theme for Hexo.
+     link: https://github.com/hexojs/hexo-theme-landscape
+     preview: http://hexo.io/hexo-theme-landscape
+     tags:
+       - official
+       - responsive
+       - widget
+       - two_column
+       - one_column
+   ```
 
 4. Adicione um print de tela (com o mesmo nome do tema) no diretório `source/themes/screenshots`. Deve ser um arquivo PNG com resolução de 800x500 pixels.
 5. Faça um push para o seu repositório remoto.

@@ -6,19 +6,19 @@ O `hexo.theme` herda de [Box](box.html) e também guarda os templates.
 
 ## Obter uma View
 
-``` js
+```js
 hexo.theme.getView(path);
 ```
 
 ## Definir uma View
 
-``` js
+```js
 hexo.theme.setView(path, data);
 ```
 
 ## Remover uma View
 
-``` js
+```js
 hexo.theme.removeView(path);
 ```
 
@@ -26,10 +26,10 @@ hexo.theme.removeView(path);
 
 As Views têm dois métodos: `render` e `renderSync`. Esses dois métodos são idênticos, mas o primeiro é assíncrono e o segundo é síncrono. Por uma questão de simplicidade, só discutiremos `render` aqui.
 
-``` js
-var view = hexo.theme.getView('layout.swig');
+```js
+var view = hexo.theme.getView("layout.swig");
 
-view.render({foo: 1, bar: 2}).then(function(result){
+view.render({ foo: 1, bar: 2 }).then(function (result) {
   // ...
 });
 ```

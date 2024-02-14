@@ -2,7 +2,7 @@
 title: Documentação
 ---
 
-Bem-vindo à documentação do Hexo. Se você encontrar algum problema ao usar o Hexo, dê uma olhada no  [guia de solução de problemas](troubleshooting.html), abra uma issue no [GitHub](https://github.com/hexojs/hexo/issues) ou inicie um tópico no [Google Group](https://groups.google.com/group/hexo).
+Bem-vindo à documentação do Hexo. Se você encontrar algum problema ao usar o Hexo, dê uma olhada no [guia de solução de problemas](troubleshooting.html), abra uma issue no [GitHub](https://github.com/hexojs/hexo/issues) ou inicie um tópico no [Google Group](https://groups.google.com/group/hexo).
 
 ## O que é o Hexo?
 
@@ -23,7 +23,7 @@ Instalar o Hexo é bastante fácil. No entanto, você precisa ter algumas outras
 
 Se o seu computador já possui estes, parabéns! Basta instalar o Hexo com o npm:
 
-``` bash
+```bash
 $ npm install -g hexo-cli
 ```
 
@@ -69,7 +69,7 @@ If you installed Node.js using Snap, you may need to manually run `npm install` 
 
 Uma vez que todos os requisitos estão instalados, você pode instalar o Hexo com npm:
 
-``` bash
+```bash
 $ npm install -g hexo-cli
 ```
 
@@ -81,15 +81,15 @@ Please note we do not provide bugfixes to past versions of Hexo.
 
 We highly recommend to always install the [latest version](https://www.npmjs.com/package/hexo?activeTab=versions) of Hexo and the [recommended version](#Requirements) of Node.js, whenever possible.
 
-Hexo version | Minimum (Node.js version) | Less than (Node.js version)
---- | --- | ---
-7.0+ | 14.0.0 | latest
-6.2+ | 12.13.0 | latest
-6.0+ | 12.13.0 | 18.5.0
-5.0+ | 10.13.0 | 12.0.0
-4.1 - 4.2 | 8.10 | 10.0.0
-4.0 | 8.6 | 8.10.0
-3.3 - 3.9 | 6.9 | 8.0.0
-3.2 - 3.3 | 0.12 | unknown
-3.0 - 3.1 | 0.10 or iojs | unknown
-0.0.1 - 2.8 | 0.10 | unknown
+| Hexo version | Minimum (Node.js version) | Less than (Node.js version) |
+| ------------ | ------------------------- | --------------------------- |
+| 7.0+         | 14.0.0                    | latest                      |
+| 6.2+         | 12.13.0                   | latest                      |
+| 6.0+         | 12.13.0                   | 18.5.0                      |
+| 5.0+         | 10.13.0                   | 12.0.0                      |
+| 4.1 - 4.2    | 8.10                      | 10.0.0                      |
+| 4.0          | 8.6                       | 8.10.0                      |
+| 3.3 - 3.9    | 6.9                       | 8.0.0                       |
+| 3.2 - 3.3    | 0.12                      | unknown                     |
+| 3.0 - 3.1    | 0.10 or iojs              | unknown                     |
+| 0.0.1 - 2.8  | 0.10                      | unknown                     |

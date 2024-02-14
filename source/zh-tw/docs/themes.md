@@ -1,9 +1,10 @@
 ---
 title: 主題
 ---
+
 打造 Hexo 主題非常容易，您只要在 `themes` 資料夾內，新增一個資料夾，並修改 `_config.yml` 內的 `theme` 設定，即可切換主題。一個主題可能會有以下的結構：
 
-``` plain
+```plain
 .
 ├── _config.yml
 ├── languages
@@ -12,7 +13,7 @@ title: 主題
 └── source
 ```
 
-### _config.yml
+### \_config.yml
 
 主題的配置檔案。Unlike the site's primary configuration file, 主題的配置檔案修改時會自動更新，無需重啟 Hexo 伺服器。
 
@@ -24,7 +25,7 @@ title: 主題
 
 佈局資料夾。用於放置主題的模板檔案，決定了網站內容的呈現方式，Hexo 內建 [Nunjucks] 模板引擎，您可另外安裝外掛來獲得 [EJS]、或 [Pug] 支援，Hexo 根據模板檔案的副檔名來決定所使用的模板引擎，例如：
 
-``` plain
+```plain
 EJS: layout.ejs
 Swig: layout.swig
 ```
@@ -48,26 +49,22 @@ Swig: layout.swig
 1. Fork [hexojs/site]
 2. 把檔案庫（repository）複製到電腦上，並安裝相依套件。
 
-    {% code %}
-    $ git clone https://github.com/<username>/site.git
-    $ cd site
-    $ npm install
-    {% endcode %}
+   {% code %}
+   $ git clone https://github.com/<username>/site.git
+   $ cd site
+   $ npm install
+   {% endcode %}
 
 3. 編輯 `source/_data/themes.yml`，在檔案中新增您的主題，例如：
 
-    {% code %}
-    - name: landscape
-      description: A brand new default theme for Hexo.
-      link: https://github.com/hexojs/hexo-theme-landscape
-      preview: http://hexo.io/hexo-theme-landscape
-      tags:
-        - official
-        - responsive
-        - widget
-        - two_column
-        - one_column
-    {% endcode %}
+   {% code %}
+
+   - name: landscape
+     description: A brand new default theme for Hexo.
+     link: https://github.com/hexojs/hexo-theme-landscape
+     preview: http://hexo.io/hexo-theme-landscape
+     tags: - official - responsive - widget - two_column - one_column
+     {% endcode %}
 
 4. 在 `source/themes/screenshots` 新增同名的截圖檔案，圖片必須為 800x500 的 PNG 檔案。
 5. 推送（push）分支。

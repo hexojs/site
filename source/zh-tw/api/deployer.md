@@ -1,12 +1,13 @@
 ---
 title: 佈署器（Deployer）
 ---
+
 佈署器幫助使用者快速將網站佈署到遠端伺服器上，免去複雜的指令。
 
 ## 概要
 
-``` js
-hexo.extend.deployer.register(name, function(args){
+```js
+hexo.extend.deployer.register(name, function (args) {
   // ...
 });
 ```

@@ -1,23 +1,24 @@
 ---
 title: Server
 ---
+
 ## [hexo-server]
 
 With the release of Hexo 3, the server has been separated from the main module. To start using the server, you will first have to install [hexo-server].
 
-``` bash
+```bash
 $ npm install hexo-server --save
 ```
 
 Once the server has been installed, run the following command to start the server. Your website will run at `http://localhost:4000` by default. When the server is running, Hexo will watch for file changes and update automatically so it's not necessary to manually restart the server.
 
-``` bash
+```bash
 $ hexo server
 ```
 
 If you want to change the port or if you're encountering `EADDRINUSE` errors, use the `-p` option to set a different port.
 
-``` bash
+```bash
 $ hexo server -p 5000
 ```
 
@@ -25,7 +26,7 @@ $ hexo server -p 5000
 
 In static mode, only files in the `public` folder will be served and file watching is disabled. You have to run `hexo generate` before starting the server. Usually used in production.
 
-``` bash
+```bash
 $ hexo server -s
 ```
 
@@ -33,7 +34,7 @@ $ hexo server -s
 
 Hexo runs the server at `0.0.0.0` by default. You can override the default IP setting.
 
-``` bash
+```bash
 $ hexo server -i 192.168.1.1
 ```
 

@@ -39,7 +39,7 @@ jobs:
       - name: Use Node.js 16.x
         uses: actions/setup-node@v2
         with:
-          node-version: '16'
+          node-version: "16"
       - name: Cache NPM dependencies
         uses: actions/cache@v2
         with:
