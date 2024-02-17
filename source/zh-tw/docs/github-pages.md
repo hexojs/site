@@ -4,7 +4,7 @@ title: 在 GitHub Pages 上部署 Hexo
 
 本文將使用 [GitHub Actions](https://docs.github.com/en/actions) 部屬至 GitHub Pages，此方法適用於公開或私人儲存庫。若你不希望將整個資料夾推上 GitHub，請參閱 [一鍵部屬](#一鍵部屬)。
 
-1. 建立名為 <b>*username*.github.io</b> 的儲存庫，username 是你在 GitHub 上的使用者名稱，若之前已將 Hexo 上傳至其他儲存庫，將該儲存庫重命名即可。
+1. 建立名為 `<你的 GitHub 使用者名稱>.github.io` 的儲存庫，username 是你在 GitHub 上的使用者名稱，若之前已將 Hexo 上傳至其他儲存庫，將該儲存庫重命名即可。
 2. 將 Hexo 檔案 push 到儲存庫的預設分支，預設分支通常名為 **main**，舊一點的儲存庫可能名為 **master**。
   - 將 `main` 分支 push 到 GitHub：
 
@@ -14,7 +14,8 @@ title: 在 GitHub Pages 上部署 Hexo
   - 預設情況下 `public/` 不會被上傳(也不該被上傳)，確認 `.gitignore` 檔案中包含一行 `public/`。整體資料夾結構應會與[範例儲存庫](https://github.com/hexojs/hexo-starter)極為相似。
 
 3. 使用 `node --version` 指令檢查你電腦上的 Node.js 版本，並記下該版本 (例如：`v20.y.z`)
-4. 在儲存庫中建立 `.github/workflows/pages.yml`，並填入以下內容 (將 `20` 替換為上個步驟中記下的版本)：
+4. 在儲存庫中前往 `Settings > Pages > Source`，並將 `Source` 改為 `GitHub Actions`。
+5. 在儲存庫中建立 `.github/workflows/pages.yml`，並填入以下內容 (將 `20` 替換為上個步驟中記下的版本)：
 
 ```yml .github/workflows/pages.yml
 name: Pages
@@ -69,9 +70,7 @@ jobs:
         uses: actions/deploy-pages@v4
 ```
 
-5. 當部屬作業完成後，產生的頁面會放在儲存庫中的 `gh-pages` 分支。
-6. 在儲存庫中前往 **Settings** > **Pages** > **Source**，並將 branch 改為 `gh-pages`。
-7. 前往 *username*.github.io 查看網站。
+6. 當部屬作業完成後，前往 `https://<你的 GitHub 使用者名稱>.github.io` 查看網站。
 
 {% note info CNAME %}
 若你使用 `CNAME` 自訂域名，你需要在 `source/` 資料夾中新增 `CNAME` 檔案。[更多資訊](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site)
