@@ -6,7 +6,8 @@ title: 在 GitHub Pages 上部署 Hexo
 
 1. 建立名為 `<你的 GitHub 使用者名稱>.github.io` 的儲存庫，username 是你在 GitHub 上的使用者名稱，若之前已將 Hexo 上傳至其他儲存庫，將該儲存庫重命名即可。
 2. 將 Hexo 檔案 push 到儲存庫的預設分支，預設分支通常名為 **main**，舊一點的儲存庫可能名為 **master**。
-  - 將 `main` 分支 push 到 GitHub：
+
+- 將 `main` 分支 push 到 GitHub：
 
     ```
     $ git push -u origin main
@@ -70,7 +71,7 @@ jobs:
         uses: actions/deploy-pages@v4
 ```
 
-6. 當部屬作業完成後，前往 `https://<你的 GitHub 使用者名稱>.github.io` 查看網站。
+6. 當部屬作業完成後，前往 `https://<你的 GitHub 使用者名稱>.github.io` 檢視網站。
 
 {% note info CNAME %}
 若你使用 `CNAME` 自訂域名，你需要在 `source/` 資料夾中新增 `CNAME` 檔案。[更多資訊](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site)
@@ -78,14 +79,13 @@ jobs:
 
 ## 專案頁面
 
-如果你希望網站部署在 `<你的 GitHub 用戶名>.github.io` 的子目錄中：
+如果你希望網站部署在 `<你的 GitHub 使用者名稱>.github.io` 的子目錄中：
 
-1. 開啟你在 GitHub 的儲存庫，並前往 **Settings** 頁面。更改你的 **Repository name** 使你的部落格網址變成 <b>username.github.io/*repository*</b>，*repository* 可以是任何名稱，例如 *blog* 或 *hexo*。
-2. 編輯你的 **_config.yml**，將 `url:` 更改為 <b>https://*username*.github.io/*repository*</b>。
-3. Commit 並 push 到預設分支上。
-4. 當部屬完成後，在 `gh-pages` 分支可以找到產生的網頁。
-5. 在 GitHub 儲存庫中，前往 **Settings** > **Pages** > **Source**，並將 branch 改為 `gh-pages` 後儲存。
-6. 前往 *username*.github.io/*repository* 查看。
+1. 建立名為 `<repository 的名字>` 的儲存庫，這樣你的部落格網址為 `<你的 GitHub 使用者名稱>.github.io/<repository 的名字>`，repository 的名字可以任意，例如 blog 或 hexo。
+2. 編輯你的 `_config.yml`，將 `url:` 更改為 `<你的 GitHub 使用者名稱>.github.io/<repository 的名字>`。
+3. 在儲存庫中前往 `Settings > Pages > Source`，並將 `Source` 改為 `GitHub Actions`。
+4. Commit 並 push 到預設分支上。
+5. 部署完成後，前往 `https://<你的 GitHub 使用者名稱>.github.io/<repository 的名字>` 檢視網站。
 
 ## 一鍵部屬
 
@@ -113,4 +113,5 @@ jobs:
 ## 參考連結
 
 - [GitHub Pages 使用文檔](https://help.github.com/categories/github-pages-basics/)
-- [peaceiris/actions-gh-pages](https://github.com/marketplace/actions/github-pages-action)
+- [使用自定义 GitHub Actions 工作流进行发布](https://docs.github.com/zh/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site#使用自定义-github-actions-工作流进行发布)
+- [actions/deploy-github-pages-site](https://github.com/marketplace/actions/deploy-github-pages-site)
