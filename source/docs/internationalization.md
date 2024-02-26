@@ -37,6 +37,41 @@ index:
 // 3 videos
 ```
 
+### Index files for languages
+
+For each language that you want to serve content in, you might want to create an index file. This way your index page will be also rendered in each language that you are serving. To do this, you need to create regular markdown pages located in folders whose names are the languages code and refer to the index template (Where you are supposed to use the ```__() or _p()``` translation helpers). For instance: 
+
+```
+└── workspace/
+    └── source/
+        ├── _posts/
+        │   ├── en/
+        │   │   ├── welcome.md
+        │   │   ├── blogpost.md
+        │   │   └── ...
+        │   └── de/
+        │       ├── willkommen.md
+        │       ├── blogpost.md
+        │       └── ...
+        ├── en/
+        │   └── index.md
+        └── de/
+            └── index.md
+
+```
+For these index files you only need to define the layout property in the frontmatter so your index page is rendered using that layout.
+
+You can also add the alias property so / redirects to your default locale e.g. /de/
+
+```
+---
+layout: index
+alias: index.html
+---
+```
+
+It's no wonder you are getting 404 for /xx-yy/ if you have not created the index page for the specific language.
+
 ### Path
 
 You can set the language of pages in front-matter, or modify the `i18n_dir` setting in `_config.yml` to enable automatic detection by Hexo.
