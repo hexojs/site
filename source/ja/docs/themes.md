@@ -1,10 +1,8 @@
 ---
-title: Themes
+title: テーマ
 ---
 
-{% youtube 5ROIU_9dYe4 %}
-
-It's easy to build a Hexo theme - you just have to create a new folder. To start using your theme, modify the `theme` setting in your site's `_config.yml`. A theme should have the following structure:
+Hexoのテーマを作るのは簡単で、新しいフォルダを作成するだけです。テーマを使用するには、サイトの`_config.yml`の`theme`設定を変更してください。テーマには以下の構造が必要です:
 
 ```plain
 .
@@ -17,39 +15,39 @@ It's easy to build a Hexo theme - you just have to create a new folder. To start
 
 ### \_config.yml
 
-Theme configuration file. Unlike the site's primary configuration file, modifying this doesn't require a server restart.
+テーマ設定ファイル。サイトの全体の設定ファイルと異なり、これを変更してもサーバーの再起動は必要ありません。
 
 ### languages
 
-Language folder. See [internationalization (i18n)](internationalization.html) for more info.
+言語フォルダ。詳細については、[国際化 (i18n)](internationalization.html)を参照してください。
 
 ### layout
 
-Layout folder. This folder contains the theme's template files, which define the appearance of your website. Hexo provides the [Nunjucks] template engine by default, but you can easily install additional plugins to support alternative engines such as [EJS] or [Pug]. Hexo chooses the template engine based on the file extension of the template (just like the posts). For example:
+レイアウトフォルダ。このフォルダには、ウェブサイトの外観を定義するテーマのテンプレートファイルが含まれます。Hexoはデフォルトで[Nunjucks]テンプレートエンジンを提供しますが、[EJS]や[Pug]などの代替エンジンをサポートするプラグインを簡単にインストールすることができます。Hexoは（投稿と同様に）テンプレートのファイル拡張子に基づいてテンプレートエンジンを選択します。例:
 
 ```plain
-layout.ejs   - uses EJS
-layout.njk   - uses Nunjucks
+layout.ejs   - EJSを使用
+layout.njk   - Nunjucksを使用
 ```
 
-See [templates](templates.html) for more info.
+詳細は、[テンプレート](templates.html)を参照してください。
 
 ### scripts
 
-Script folder. Hexo will automatically load all JavaScript files in this folder during initialization. For more info, see [plugins](plugins.html).
+スクリプトフォルダ。Hexoは初期化中にこのフォルダ内のすべてのJavaScriptファイルを自動的に読み込みます。詳細は、[プラグイン](plugins.html)を参照してください。
 
 ### source
 
-Source folder. Place your assets (e.g. CSS and JavaScript files) here. Hexo ignores hidden files and files or folders prefixed with `_` (underscore).
+ソースフォルダ。アセット（例：CSSやJavaScriptファイル）をここに配置します。Hexoは隠しファイルや`_`（アンダースコア）で始まるファイルやフォルダを無視します。
 
-Hexo will process and save all renderable files to the `public` folder. Non-renderable files will be copied to the `public` folder directly.
+Hexoは、すべてのレンダリング可能なファイルを処理し`public`フォルダに保存します。レンダリング不可能なファイルは直接`public`フォルダにコピーされます。
 
-### Publishing
+### 公開
 
-When you have finished building your theme, you can publish it to the [theme list](/themes). Before doing so, you should run the [theme unit test](https://github.com/hexojs/hexo-theme-unit-test) to ensure that everything works. The steps for publishing a theme are very similar to those for [updating documentation](contributing.html#Updating_Documentation).
+テーマを構築したら[テーマリスト](/themes)に公開できます。その前に、[テーマユニットテスト](https://github.com/hexojs/hexo-theme-unit-test)を実行して、すべてが正常に機能することを確認する必要があります。テーマを公開する手順は、[ドキュメントの更新](contributing.html#Updating_Documentation)に関する手順と非常に似ています。
 
-1. Fork [hexojs/site]
-2. Clone the repository to your computer and install dependencies.
+1. [hexojs/site]をフォークします。
+2. リポジトリをコンピュータにクローンし、依存関係をインストールします。
 
    ```shell
    $ git clone https://github.com/<username>/site.git
@@ -57,9 +55,9 @@ When you have finished building your theme, you can publish it to the [theme lis
    $ npm install
    ```
 
-3. Create a new yaml file in `source/_data/themes/`, use your theme name as the file name
+3. テーマ名と同じファイル名で`source/_data/themes/`に新しいyamlファイルを作成します。
 
-4. Edit `source/_data/themes/<your-theme-name>.yml` and add your theme. For example:
+4. `source/_data/themes/<your-theme-name>.yml`を編集し、テーマを追加します。例:
 
    ```yaml
    description: A brand new default theme for Hexo.
@@ -73,9 +71,9 @@ When you have finished building your theme, you can publish it to the [theme lis
      - one_column
    ```
 
-5. Add a screenshot (with the same name as the theme) to `source/themes/screenshots`. It must be a 800*500px PNG.
-6. Push the branch.
-7. Create a pull request and describe the change.
+5. スクリーンショット（テーマと同じ名前）を`source/themes/screenshots`に追加します。800*500pxのPNGでなければなりません。
+6. ブランチをプッシュします。
+7. プルリクエストを作成し、変更を説明します。
 
 [EJS]: https://github.com/hexojs/hexo-renderer-ejs
 [Pug]: https://github.com/hexojs/hexo-renderer-pug

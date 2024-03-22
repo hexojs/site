@@ -1,18 +1,18 @@
 ---
-title: Plugins
+title: プラグイン
 ---
 
-Hexo has a powerful plugin system, which makes it easy to extend functions without modifying the source code of the core module. There are two kinds of plugins in Hexo:
+Hexoには強力なプラグインシステムがあり、コアモジュールのソースコードを変更することなく機能を拡張することが簡単です。Hexoには2種類のプラグインがあります:
 
-### Script
+### スクリプト
 
-If your plugin is relatively simple, it's recommended to use a script. All you need to do is put your JavaScript files in the `scripts` folder and Hexo will load them during initialization.
+プラグインが比較的シンプルな場合は、スクリプトの使用が推奨されます。`scripts`フォルダにJavaScriptファイルを置くだけで、Hexoが初期化時にそれらを読み込みます。
 
-### Plugin
+### プラグイン
 
-If your code is complicated or if you want to publish it to the NPM registry, we recommend using a plugin. First, create a folder in the `node_modules` folder. The name of this folder must begin with `hexo-` or Hexo will ignore it.
+コードが複雑である場合や、NPMレジストリに公開したい場合は、プラグインの使用を推奨します。最初に、`node_modules`フォルダ内にフォルダを作成します。このフォルダの名前は`hexo-`で始まる必要があり、そうでない場合Hexoはそれを無視します。
 
-Your new folder must contain at least two files: one containing the actual JavaScript code and one `package.json` file that describes the purpose of the plugin and sets its dependencies.
+新しいフォルダには、少なくとも2つのファイルが含まれている必要があります：実際のJavaScriptコードを含むファイルと、プラグインの目的を説明し依存関係を設定する`package.json`ファイルです。
 
 ```plain
 .
@@ -20,7 +20,7 @@ Your new folder must contain at least two files: one containing the actual JavaS
 └── package.json
 ```
 
-At the very least, you should set the `name`, `version` and `main` entries in `package.json`. For example:
+少なくとも、`package.json`で`name`、`version`、`main`エントリを設定する必要があります。例えば:
 
 ```json package.json
 {
@@ -30,45 +30,45 @@ At the very least, you should set the `name`, `version` and `main` entries in `p
 }
 ```
 
-You'll also need to list your plugin as a dependency in the root `package.json` of your hexo instance in order for Hexo to detect and load it.
+Hexoが検出して読み込むためには、あなたのhexoインスタンスのルート`package.json`でプラグインを依存関係としてリストする必要があります。
 
-### Tools
+### ツール
 
-You can make use of the official tools provided by Hexo to accelerate development:
+Hexoが提供する公式ツールを使用して開発を加速することができます:
 
-- [hexo-fs]：File IO
-- [hexo-util]：Utilities
-- [hexo-i18n]：Localization (i18n)
-- [hexo-pagination]：Generate pagination data
+- [hexo-fs]：ファイルIO
+- [hexo-util]：ユーティリティ
+- [hexo-i18n]：ローカリゼーション (i18n)
+- [hexo-pagination]：ページネーションデータの生成
 
-### Publishing
+### 公開
 
-When your plugin is ready, you may consider publishing it to the [plugin list](/plugins) to invite other people to start using it. Publishing your own plugins is very similar to [updating documentation](contributing.html#Updating_Documentation).
+プラグインが完成したら、他の人に使用を開始してもらうために、[プラグインリスト](/plugins)に公開することを検討してみてください。自分のプラグインを公開することは、[ドキュメントの更新](contributing.html#Updating_Documentation)に非常に似ています。
 
-1. Fork [hexojs/site]
-2. Clone the repository to your computer and install dependencies.
+1. [hexojs/site]をフォークします。
+2. リポジトリをコンピュータにクローンし、依存関係をインストールします。
 
-   ```shell
+   \\```shell
    $ git clone https://github.com/<username>/site.git
    $ cd site
    $ npm install
-   ```
+   \\```
 
-3. Create a new yaml file in `source/_data/plugins/`, use your plugin name as the file name
+3. `source/_data/plugins/`に新しいyamlファイルを作成し、ファイル名としてプラグイン名を使用します。
 
-4. Edit `source/_data/plugins/<your-plugin-name>.yml` and add your plugin. For example:
+4. `source/_data/plugins/<your-plugin-name>.yml`を編集し、プラグインを追加します。例えば:
 
-   ```yaml
-   description: Server module for Hexo.
+   \\```yaml
+   description: Hexoのサーバーモジュール。
    link: https://github.com/hexojs/hexo-server
    tags:
      - official
      - server
      - console
-   ```
+   \\```
 
-5. Push the branch.
-6. Create a pull request and describe the change.
+5. ブランチをプッシュします。
+6. プルリクエストを作成し、変更を説明します。
 
 [hexo-fs]: https://github.com/hexojs/hexo-fs
 [hexo-util]: https://github.com/hexojs/hexo-util

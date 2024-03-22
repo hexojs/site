@@ -1,74 +1,72 @@
 ---
-title: Writing
+title: 執筆
 ---
 
-{% youtube AIqBubK6ZLc %}
-
-To create a new post or a new page, you can run the following command:
+新しい投稿や新しいページを作成するには、次のコマンドを実行します:
 
 ``` bash
 $ hexo new [layout] <title>
 ```
 
-`post` is the default `layout`, but you can supply your own. You can change the default layout by editing the `default_layout` setting in `_config.yml`.
+`post`はデフォルトの`layout`ですが、独自のものを指定することができます。`_config.yml`の`default_layout`設定を編集することでデフォルトのレイアウトを変更できます。
 
-## Layout
+## レイアウト
 
-There are three default layouts in Hexo: `post`, `page` and `draft`. Files created by each of them is saved to a different path. Newly created posts are saved to the `source/_posts` folder.
+Hexoには `post`、`page`、`draft` の3つのデフォルトレイアウトがあります。それぞれのレイアウトより作成されたファイルは異なるパスに保存されます。新しく作成された投稿は`source/_posts`フォルダに保存されます。
 
-Layout | Path
+レイアウト | パス
 --- | ---
 `post` | `source/_posts`
 `page` | `source`
 `draft` | `source/_drafts`
 
-{% note tip Disabling layout %}
-If you don't want an article (post/page) to be processed with a theme, set `layout: false` in its front-matter. Refer to [this section](/docs/front-matter#Layout) for more details.
+{% note tip レイアウトの無効化 %}
+テーマで処理されない記事（投稿/ページ）を作成する場合、フロントマターに`layout: false`を設定してください。詳細は[このセクション](front-matter#レイアウト)を参照してください。
 {% endnote %}
 
-## Filename
+## ファイル名
 
-By default, Hexo uses the post title as its filename. You can edit the `new_post_name` setting in `_config.yml` to change the default filename. For example, `:year-:month-:day-:title.md` will prefix filenames with the post creation date. You can use the following placeholders:
+デフォルトでは、Hexoは投稿タイトルをファイル名として使用します。`_config.yml`の`new_post_name`設定を編集することで、デフォルトのファイル名を変更できます。例えば、`:year-:month-:day-:title.md`は投稿作成日をファイル名の冒頭に付与します。以下のプレースホルダを使用できます:
 
-Placeholder | Description
+プレースホルダ | 説明
 --- | ---
-`:title` | Post title (lower case, with spaces replaced by hyphens)
-`:year` | Created year, e.g. `2015`
-`:month` | Created month (leading zeros), e.g. `04`
-`:i_month` | Created month (no leading zeros), e.g. `4`
-`:day` | Created day (leading zeros), e.g. `07`
-`:i_day` | Created day (no leading zeros), e.g. `7`
+`:title` | 投稿タイトル（小文字、スペースはハイフンに置き換えられます）
+`:year` | 作成年（例：`2015`）
+`:month` | 作成月（先頭のゼロ付き）、例：`04`
+`:i_month` | 作成月（先頭のゼロなし）、例：`4`
+`:day` | 作成日（先頭のゼロ付き）、例：`07`
+`:i_day` | 作成日（先頭のゼロなし）、例：`7`
 
-## Drafts
+## 下書き
 
-Previously, we mentioned a special layout in Hexo: `draft`. Posts initialized with this layout are saved to the `source/_drafts` folder. You can use the `publish` command to move drafts to the `source/_posts` folder. `publish` works in a similar way to the `new` command.
+以前に、Hexoの特別なレイアウトとして`draft`について触れました。このレイアウトで初期化された投稿は`source/_drafts`フォルダに保存されます。`publish`コマンドを使用して、下書きを`source/_posts`フォルダに移動できます。`publish`は`new`コマンドと同様の方法で機能します。
 
 ``` bash
 $ hexo publish [layout] <title>
 ```
 
-Drafts are not displayed by default. You can add the `--draft` option when running Hexo or enable the `render_drafts` setting in `_config.yml` to render drafts.
+デフォルトでは下書きは表示されません。Hexoを実行する際に`--draft`オプションを追加するか、`_config.yml`の`render_drafts`設定を有効すると、下書きもレンダリングできます。
 
-## Scaffolds
+## スキャフォールド
 
-When creating posts, Hexo will build files based on the corresponding file in `scaffolds` folder. For example:
+投稿を作成するとき、Hexoは`scaffolds`フォルダ内の対応するファイルに基づいてファイルを構築します。例えば:
 
 ``` bash
 $ hexo new photo "My Gallery"
 ```
 
-When you run this command, Hexo will try to find `photo.md` in the `scaffolds` folder and build the post based on it. The following placeholders are available in scaffolds:
+このコマンドを実行すると、Hexoは`scaffolds`フォルダ内の`photo.md`を探して、それに基づいて投稿を構築します。スキャフォールド内で利用可能なプレースホルダは以下の通りです:
 
-Placeholder | Description
+プレースホルダ | 説明
 --- | ---
-`layout` | Layout
-`title` | Title
-`date` | File created date
+`layout` | レイアウト
+`title` | タイトル
+`date` | ファイル作成日
 
-## Supported Formats
+## サポートされるフォーマット
 
-Hexo supports posts written in any format, as long as the corresponding renderer plugin is installed.
+Hexoは、対応するレンダラープラグインがインストールされていれば、任意の形式で書かれた投稿をサポートします。
 
-For example, Hexo has `hexo-renderer-marked` and `hexo-renderer-ejs` installed by default, so you can write your posts in `markdown` or in `ejs`. If you have `hexo-renderer-pug` installed, then you can even write your post in pug template language.
+例えば、Hexoはデフォルトで`hexo-renderer-marked`と`hexo-renderer-ejs`をインストールしているので、`markdown`または`ejs`で投稿を書くことができます。`hexo-renderer-pug`をインストールしている場合は、pugテンプレート言語で投稿を書くこともできます。
 
-You can rename your posts and change the file extension from `.md` to `.ejs`, then Hexo will use `hexo-renderer-ejs` to render that file, and so do the other formats.
+投稿ファイルの拡張子を`.md`から`.ejs`に変更すると、Hexoは`hexo-renderer-ejs`を使用してそのファイルをレンダリングします。他のフォーマットも同様です。

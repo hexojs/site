@@ -1,9 +1,9 @@
 ---
-title: Console
+title: コンソール
 ---
-The console forms the bridge between Hexo and its users. It registers and describes the available console commands.
+コンソールはHexoとそのユーザー間の橋渡しをする役割を果たします。利用可能なコンソールコマンドを登録し説明します。
 
-## Synopsis
+## 概要
 
 ``` js
 hexo.extend.console.register(name, desc, options, function(args){
@@ -11,19 +11,19 @@ hexo.extend.console.register(name, desc, options, function(args){
 });
 ```
 
-Argument | Description
+引数 | 説明
 --- | ---
-`name` | Name
-`desc` | Description
-`options`| Options
+`name` | 名前
+`desc` | 説明
+`options`| オプション
 
-An argument `args` will be passed into the function. This is the argument that users type into the terminal. It's parsed by [Minimist].
+関数には引数`args`が渡されます。これはユーザーがターミナルに入力する引数です。[Minimist]によって解析されます。
 
-## Options
+## オプション
 
 ### usage
 
-The usage of a console command. For example:
+コンソールコマンドの使用方法。例えば:
 
 ``` js
 {usage: '[layout] <title>'}
@@ -32,37 +32,37 @@ The usage of a console command. For example:
 
 ### arguments
 
-The description of each argument of a console command. For example:
+コンソールコマンドの各引数の説明。例えば:
 
 ``` js
 {
   arguments: [
-    {name: 'layout', desc: 'Post layout'},
-    {name: 'title', desc: 'Post title'}
+    {name: 'layout', desc: '投稿のレイアウト'},
+    {name: 'title', desc: '投稿のタイトル'}
   ]
 }
 ```
 
 ### options
 
-The description of each option of a console command. For example:
+コンソールコマンドの各オプションの説明。例えば:
 
 ``` js
 {
   options: [
-    {name: '-r, --replace', desc: 'Replace existing files'}
+    {name: '-r, --replace', desc: '既存のファイルを置き換える'}
   ]
 }
 ```
 
 ### desc
 
-More detailed information about a console command.
+コンソールコマンドについてのより詳細な情報。
 
-## Example
+## 例
 
 ``` js
-hexo.extend.console.register('config', 'Display configuration', function(args){
+hexo.extend.console.register('config', '設定を表示する', function(args){
   console.log(hexo.config);
 });
 ```

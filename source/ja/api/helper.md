@@ -1,11 +1,11 @@
 ---
-title: Helper
+title: ヘルパー
 ---
-A helper makes it easy to quickly add snippets to your templates. We recommend using helpers instead of templates when you're dealing with more complicated code.
+ヘルパーを使用すると、テンプレートにスニペットを迅速に追加することが容易になります。より複雑なコードを扱う場合は、テンプレートの代わりにヘルパーを使用することをお勧めします。
 
-Helpers can not be accessed from `source` files.
+ヘルパーは`source`ファイルからアクセスできません。
 
-## Synopsis
+## 概要
 
 ``` js
 hexo.extend.helper.register(name, function(){
@@ -13,7 +13,7 @@ hexo.extend.helper.register(name, function(){
 });
 ```
 
-## Example
+## 例
 
 ``` js
 hexo.extend.helper.register('js', function(path){
@@ -28,13 +28,13 @@ hexo.extend.helper.register('js', function(path){
 
 ## FAQ
 
-### Where to place custom helper?
+### カスタムヘルパーをどこに配置するか？
 
-Place it under `scripts/` or `themes/<yourtheme>/scripts/` folder.
+`scripts/`または`themes/<yourtheme>/scripts/`フォルダーの下に配置してください。
 
-### How do I use another registered helper in my custom helper?
+### カスタムヘルパー内で別の登録済みヘルパーをどのように使用するか？
 
-All helpers are executed in the same context. For example, to use [`url_for()`](/docs/helpers#url-for) inside a custom helper:
+すべてのヘルパーは同じコンテキストで実行されます。例えば、カスタムヘルパー内で[`url_for()`](/docs/helpers#url-for)を使用するには:
 
 ``` js
 hexo.extend.helper.register('lorem', function(path) {
@@ -42,9 +42,9 @@ hexo.extend.helper.register('lorem', function(path) {
 });
 ```
 
-### How do I use a registered helper in another extension (e.g. Filter, Injector)?
+### 登録済みヘルパーを他の拡張機能（例：フィルター、インジェクター）でどのように使用するか？
 
-`hexo.extend.helper.get` will return the helper function, but it needs to have hexo as its context, so:
+`hexo.extend.helper.get`はヘルパー関数を返しますが、それにはhexoがコンテキストとして必要ですので:
 
 ``` js
 const url_for = hexo.extend.helper.get('url_for').bind(hexo);

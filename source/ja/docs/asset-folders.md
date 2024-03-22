@@ -1,25 +1,23 @@
 ---
-title: Asset Folders
+title: アセットフォルダ
 ---
-## Global Asset Folder
+## グローバルアセットフォルダ
 
-Assets are non-post files in the `source` folder, such as images, CSS or JavaScript files. For instance, If you are only going to have a few images in the Hexo project, then the easiest way is to keep them in a `source/images` directory. Then, you can access them using something like `![](/images/image.jpg)`.
+アセットとは、`source`フォルダ内の投稿以外のファイルです。例えば、画像、CSS、JavaScriptファイルなどがこれにあたります。Hexoプロジェクトで数枚の画像を使用するだけの場合、`source/images`ディレクトリに保管するのが最も簡単な方法です。それから、`![](/images/image.jpg)`のようにしてアクセスできます。
 
-## Post Asset Folder
+## 投稿アセットフォルダ
 
-{% youtube feIDVQ2tz0o %}
-
-For users who expect to regularly serve images and/or other assets, and for those who prefer to separate their assets on a post-per-post basis, Hexo also provides a more organized way to manage assets. This slightly more involved, but very convenient approach to asset management can be turned on by setting the `post_asset_folder` setting in `_config.yml` to true.
+定期的に画像やその他のアセットを提供する予定のユーザーや、投稿ごとにアセットを分けたいと考えるユーザーのために、Hexoはもっと整理された方法でアセットを管理する方法を提供します。これは少し複雑ですが、非常に便利なアセット管理方法で、`_config.yml`の`post_asset_folder`設定をtrueに設定することで有効にできます。
 
 ``` yaml _config.yml
 post_asset_folder: true
 ```
 
-With asset folder management enabled, Hexo will create a folder every time you make a new post with the `hexo new [layout] <title>` command. This asset folder will have the same name as the markdown file associated with the post. Place all assets related to your post into the associated folder, and you will be able to reference them using a relative path, making for an easier and more convenient workflow.
+アセットフォルダ管理を有効にすると、`hexo new [layout] <title>`コマンドで新しい投稿を作成するたびに、Hexoはその投稿に関連付けられたマークダウンファイルと同じ名前のフォルダを作成します。投稿に関連するすべてのアセットを関連フォルダに配置すると、相対パスを使用してそれらを参照できるようになり、より簡単で便利なワークフローを実現できます。
 
-## Tag Plugins For Relative Path Referencing
+## 相対パス参照用のタグプラグイン
 
-Referencing images or other assets using normal markdown syntax and relative paths may lead to incorrect display on archive or index pages. Plugins have been created by the community to address this issue in Hexo 2. However, with the release of Hexo 3, several new [tag plugins](/docs/tag-plugins#Include-Assets) were added to core. These enable you to reference your assets more easily in posts:
+通常のマークダウン構文と相対パスを使用して画像やその他のアセットを参照すると、アーカイブページやインデックスページで正しく表示されないことがあります。コミュニティによってHexo 2でこの問題に対処するプラグインが作成されました。しかし、Hexo 3のリリースにより、投稿内でアセットをより簡単に参照できるいくつかの新しい[タグプラグイン](tag-plugins#アセットを含める)がコアに追加されました。
 
 ```
 {% asset_path slug %}
@@ -27,22 +25,22 @@ Referencing images or other assets using normal markdown syntax and relative pat
 {% asset_link slug [title] %}
 ```
 
-For example, with post asset folders enabled, if you place an image `example.jpg` into your asset folder, it will *not* appear on the index page if you reference it using a relative path with regular `![](example.jpg)` markdown syntax (however, it will work as expected in the post itself).
+例えば、投稿アセットフォルダが有効な状態で、画像`example.jpg`をアセットフォルダに配置した場合、通常の`![](example.jpg)`マークダウン構文を使用して相対パスで参照しても、インデックスページには表示されません（しかし、投稿自体では期待通りに機能します）。
 
-The correct way to reference the image will thus be using tag plugin syntax rather than markdown:
+したがって、画像を参照する正しい方法は、マークダウンではなくタグプラグインの構文を使用することです:
 
 ```
 {% asset_img example.jpg This is an example image %}
 {% asset_img "spaced asset.jpg" "spaced title" %}
 ```
 
-This way, the image will appear both inside the post and on index and archive pages.
+この方法を使用すると、画像は投稿内だけでなくインデックスページやアーカイブページにも表示されます。
 
-## Embedding an image using markdown
+## マークダウンを使用した画像の埋め込み
 
-[hexo-renderer-marked](https://github.com/hexojs/hexo-renderer-marked) 3.1.0 introduced a new option that allows you to embed an image in markdown without using `asset_img` tag plugin.
+[hexo-renderer-marked](https://github.com/hexojs/hexo-renderer-marked) 3.1.0は、`asset_img`タグプラグインを使用せずにマークダウンで画像を埋め込むことを可能にする新しいオプションを導入しました。
 
-To enable:
+有効にするには:
 
 ``` yml _config.yml
 post_asset_folder: true
@@ -51,4 +49,4 @@ marked:
   postAsset: true
 ```
 
-Once enabled, an asset image will be automatically resolved to its corresponding post's path. For example, "image.jpg" is located at "/2020/01/02/foo/image.jpg", meaning it is an asset image of "/2020/01/02/foo/" post, `![](image.jpg)` will be rendered as `<img src="/2020/01/02/foo/image.jpg">`.
+有効にすると、アセット画像は自動的に対応する投稿のパスに解決されます。例えば、"image.jpg"が"/2020/01/02/foo/image.jpg"に位置している場合、これは"/2020/01/02/foo/"投稿のアセット画像であることを意味し、`![](image.jpg)`は`<img src="/2020/01/02/foo/image.jpg">`としてレンダリングされます。

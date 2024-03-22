@@ -1,9 +1,9 @@
 ---
-title: Generator
+title: ジェネレータ
 ---
-A generator builds routes based on processed files.
+ジェネレータは、処理されたファイルに基づいてルートを構築します。
 
-## Synopsis
+## 概要
 
 ``` js
 hexo.extend.generator.register(name, function(locals){
@@ -11,19 +11,19 @@ hexo.extend.generator.register(name, function(locals){
 });
 ```
 
-A `locals` argument will get passed into the function, containing the [site variables](../docs/variables.html#Site-Variables). You should use this argument to get the website data, thereby avoiding having to access the database directly.
+関数には`locals`引数が渡され、[サイト変数](../docs/variables.html#Site-Variables)が含まれます。この引数を使用してウェブサイトデータを取得し、直接データベースにアクセスする必要性を避けるべきです。
 
-## Update Routes
+## ルートの更新
 
 ``` js
 hexo.extend.generator.register('test', function(locals){
-  // Object
+  // オブジェクト
   return {
     path: 'foo',
     data: 'foo'
   };
 
-  // Array
+  // 配列
   return [
     {path: 'foo', data: 'foo'},
     {path: 'bar', data: 'bar'}
@@ -31,23 +31,23 @@ hexo.extend.generator.register('test', function(locals){
 });
 ```
 
-Attribute | Description
+属性 | 説明
 --- | ---
-`path` | Path not including the prefixing `/`.
-`data` | Data
-`layout` | Layout. Specify the layouts for rendering. The value can be a string or an array. If it's ignored then the route will return `data` directly.
+`path` | `/`を含まないパス。
+`data` | データ
+`layout` | レイアウト。レンダリングに使用するレイアウトを指定します。値は文字列または配列であることができます。無視されると、ルートは`data`を直接返します。
 
-When the source files are updated, Hexo will execute all generators and rebuild the routes. **Please return the data and do not access the router directly.**
+ソースファイルが更新されると、Hexoはすべてのジェネレータを実行し、ルートを再構築します。**データを返し、直接ルーターにアクセスしないでください。**
 
-## Example
+## 例
 
-### Archive Page
+### アーカイブページ
 
-Create an archive page at `archives/index.html`. We pass all posts as data to the templates. This data is equivalent to the `page` variable in templates.
+`archives/index.html`にアーカイブページを作成します。テンプレートにすべての投稿をデータとして渡します。このデータはテンプレート内の`page`変数と同等です。
 
-Next, set the `layout` attribute to render with the theme templates. We're setting two layouts in this example: if the `archive` layout doesn't exist, the `index` layout will be used instead.
+次に、`layout`属性を設定してテーマテンプレートでレンダリングします。この例では2つのレイアウトを設定しています：`archive`レイアウトが存在しない場合は、代わりに`index`レイアウトが使用されます。
 
-``` js
+```js
 hexo.extend.generator.register('archive', function(locals){
   return {
     path: 'archives/index.html',
@@ -57,15 +57,15 @@ hexo.extend.generator.register('archive', function(locals){
 });
 ```
 
-### Archive Page with Pagination
+### ページネーション付きアーカイブページ
 
-You can use the convenient official tool [hexo-pagination] to easily build archive pages with pagination.
+公式ツール[hexo-pagination]を使用して、ページネーション付きのアーカイブページを簡単に構築できます。
 
 ``` js
 var pagination = require('hexo-pagination');
 
 hexo.extend.generator.register('archive', function(locals){
-  // hexo-pagination makes an index.html for the /archives route
+  // hexo-paginationは/archivesルートにindex.htmlを作成します
   return pagination('archives', locals.posts, {
     perPage: 10,
     layout: ['archive', 'index'],
@@ -74,9 +74,9 @@ hexo.extend.generator.register('archive', function(locals){
 });
 ```
 
-### Generate All Posts
+### すべての投稿を生成
 
-Iterate over all posts in `locals.posts` and create routes for all the posts.
+`locals.posts`内のすべての投稿を反復処理し、すべての投稿に対してルートを作成します。
 
 ``` js
 hexo.extend.generator.register('post', function(locals){
@@ -90,9 +90,9 @@ hexo.extend.generator.register('post', function(locals){
 });
 ```
 
-### Copy Files
+### ファイルのコピー
 
-This time we don't return the data explicitly but instead set `data` to a function so the route will build `fs.ReadStream` only when needed.
+今回はデータを明示的に返さず、ルートが必要なときにのみ`fs.ReadStream`を構築するように`data`を関数に設定します。
 
 ``` js
 var fs = require('hexo-fs');

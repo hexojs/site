@@ -1,7 +1,7 @@
 ---
-title: Internationalization (i18n)
+title: 国際化 (i18n)
 ---
-You can use internationalization to present your site in different languages. The default language is set by modifying the `language` setting in `_config.yml`. You can also set multiple languages and modify the order of default languages.
+サイトを異なる言語で表示するために、国際化を使用できます。デフォルト言語は、`_config.yml` の `language` 設定を変更することで設定されます。複数の言語を設定し、デフォルト言語の順序を変更することもできます。
 
 ``` yaml
 language: zh-tw
@@ -11,13 +11,13 @@ language:
 - en
 ```
 
-### Language Files
+### 言語ファイル
 
-Language files can be YAML or JSON files. You should put them into the `languages` folder in the theme. There is support for the [printf format](https://github.com/alexei/sprintf.js) in language files.
+言語ファイルはYAMLまたはJSONファイルです。それらをテーマの `languages` フォルダに格納してください。言語ファイルでは [printf フォーマット](https://github.com/alexei/sprintf.js) がサポートされています。
 
-### Templates
+### テンプレート
 
-Use `__` or `_p` helpers in templates to get the translated strings. The former is for normal usage and the latter is for plural strings. For example:
+テンプレート内で翻訳された文字列を取得するために、`__` または `_p` ヘルパーを使用します。前者は通常の使用のためで、後者は複数形の文字列のためです。例えば:
 
 ``` yaml en.yml
 index:
@@ -37,15 +37,15 @@ index:
 // 3 videos
 ```
 
-### Path
+### パス
 
-You can set the language of pages in front-matter, or modify the `i18n_dir` setting in `_config.yml` to enable automatic detection by Hexo.
+フロントマターでページの言語を設定するか、`_config.yml` の `i18n_dir` 設定を変更して、Hexoによる自動検出を有効にできます。
 
 ``` yaml
 i18n_dir: :lang
 ```
 
-The default value of `i18n_dir` setting is `:lang`, which means that Hexo will detect the language within the first segment of URL. For example:
+`i18n_dir` 設定のデフォルト値は `:lang` です。これはHexoがURLの最初のセグメント内の言語を検出することを意味します。例えば:
 
 ``` plain
 /index.html => en
@@ -53,4 +53,4 @@ The default value of `i18n_dir` setting is `:lang`, which means that Hexo will d
 /zh-tw/index.html => zh-tw
 ```
 
-The string will only be served as a language when the language file exists. So `archives` in `/archives/index.html` (example 2) will not get served as a language.
+言語ファイルが存在する場合のみ、文字列は言語として提供されます。したがって、`/archives/index.html`（例2）の `archives` は言語として提供されません。

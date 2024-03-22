@@ -1,37 +1,37 @@
 ---
-title: Permalinks
+title: パーマリンク
 ---
-You can specify the permalinks for your site in `_config.yml` or in the front-matter for each post.
+サイトのパーマリンクは、`_config.yml`または各投稿のフロントマターで指定することができます。
 
-### Variables
+### 変数
 
-Besides the following variables, you can use any attributes in the permalink.
+以下の変数の他に、パーマリンク内で任意の属性を使用することができます。
 
-Variable | Description
+変数 | 説明
 --- | ---
-`:year` | Published year of posts (4-digit)
-`:month` | Published month of posts (2-digit)
-`:i_month` | Published month of posts (Without leading zeros)
-`:day` | Published day of posts (2-digit)
-`:i_day` | Published day of posts (Without leading zeros)
-`:hour` | Published hour of posts (2-digit)
-`:minute` | Published minute of posts (2-digit)
-`:second` | Published second of posts (2-digit)
-`:title` | Filename (relative to "source/_posts/" folder)
-`:name` | Filename
-`:post_title` | Post title
-`:id` | Post ID (_not persistent across [cache reset](/docs/commands#clean)_)
-`:category` | Categories. If the post is uncategorized, it will use the `default_category` value.
-`:hash` | SHA1 hash of filename (same as `:title`) and date (12-hexadecimal)
+`:year` | 投稿の公開年（4桁）
+`:month` | 投稿の公開月（2桁）
+`:i_month` | 投稿の公開月（先行ゼロなし）
+`:day` | 投稿の公開日（2桁）
+`:i_day` | 投稿の公開日（先行ゼロなし）
+`:hour` | 投稿の公開時（2桁）
+`:minute` | 投稿の公開分（2桁）
+`:second` | 投稿の公開秒（2桁）
+`:title` | ファイル名（"source/_posts/"フォルダーに関連）
+`:name` | ファイル名
+`:post_title` | 投稿のタイトル
+`:id` | 投稿ID（[キャッシュリセット](/docs/commands#clean)を跨いで永続しない）
+`:category` | カテゴリー。投稿が未分類の場合、`default_category`の値を使用します。
+`:hash` | ファイル名（`:title`と同じ）と日付のSHA1ハッシュ（12桁の16進数）
 
-You can define the default value of each variable in the permalink through the `permalink_defaults` setting:
+パーマリンク内の各変数のデフォルト値を`permalink_defaults`設定を通じて定義することができます:
 
 ``` yaml
 permalink_defaults:
   lang: en
 ```
 
-### Examples
+### 例
 
 ``` yaml source/_posts/hello-world.md
 title: Hello World
@@ -41,7 +41,7 @@ categories:
 - bar
 ```
 
-Setting | Result
+設定 | 結果
 --- | ---
 `:year/:month/:day/:title/` | 2013/07/14/hello-world/
 `:year-:month-:day-:title.html` | 2013-07-14-hello-world.html
@@ -56,28 +56,28 @@ categories:
 - bar
 ```
 
-Setting | Result
+設定 | 結果
 --- | ---
 `:year/:month/:day/:title/` | 2013/07/14/lorem/hello-world/
 `:year/:month/:day/:name/` | 2013/07/14/hello-world/
 
-### Multi-language Support
+### 多言語サポート
 
-To create a multi-language site, you can modify the `new_post_name` and `permalink` settings like this:
+多言語サイトを作成するには、`new_post_name`および`permalink`設定を次のように変更します:
 
 ``` yaml
 new_post_name: :lang/:title.md
 permalink: :lang/:title/
 ```
 
-When you create a new post, the post will be saved to:
+新しい投稿を作成すると、投稿は以下に保存されます:
 
 ``` bash
 $ hexo new "Hello World" --lang tw
 # => source/_posts/tw/Hello-World.md
 ```
 
-and the URL will be:
+そして、URLは以下になります:
 
 ``` plain
 http://localhost:4000/tw/hello-world/

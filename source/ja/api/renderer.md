@@ -1,9 +1,9 @@
 ---
-title: Renderer
+title: レンダラー
 ---
-A renderer is used to render content.
+レンダラーは、コンテンツをレンダリングするために使用されます。
 
-## Synopsis
+## 概要
 
 ``` js
 hexo.extend.renderer.register(name, output, function(data, options){
@@ -11,23 +11,23 @@ hexo.extend.renderer.register(name, output, function(data, options){
 }, sync);
 ```
 
-Argument | Description
+引数 | 説明
 --- | ---
-`name` | Input filename extension (lower case, without leading `.`)
-`output` | Output filename extension (lower case, without leading `.`)
-`sync` | Sync mode
+`name` | 入力ファイルの拡張子（小文字、先頭の`.`なし）
+`output` | 出力ファイルの拡張子（小文字、先頭の`.`なし）
+`sync` | 同期モード
 
-Three arguments will be passed into the render function:
+レンダリング関数には3つの引数が渡されます:
 
-Argument | Description
+引数 | 説明
 --- | ---
-`data` | Include two attributes: file path `path` and file content `text`. `path` won't necessarily exist.
-`option` | Options
-`callback` | Callback function of two parameters `err`, `value`.
+`data` | ファイルパス`path`とファイルコンテンツ`text`の2つの属性を含みます。`path`が必ずしも存在するわけではありません。
+`option` | オプション
+`callback` | `err`, `value`の2つのパラメータを持つコールバック関数。
 
-## Example
+## 例
 
-### Async Mode
+### 非同期モード
 
 ``` js
 var stylus = require('stylus');
@@ -45,7 +45,7 @@ hexo.extend.renderer.register('styl', 'css', function(data, options){
 });
 ```
 
-### Sync Mode
+### 同期モード
 
 ``` js
 var ejs = require('ejs');
@@ -56,9 +56,9 @@ hexo.extend.renderer.register('ejs', 'html', function(data, options){
 }, true);
 ```
 
-### Disable Nunjucks tags
+### Nunjucksタグを無効にする
 
-Nunjucks tags `{{ }}` or `{% %}` (utilized by [tag plugin](/docs/tag-plugins)) are processed by default, to disable:
+Nunjucksタグ`{{ }}`や`{% %}`（[タグプラグイン](/docs/tag-plugins)で使用される）はデフォルトで処理されますが、無効にするには:
 
 ``` js
 function lessFn(data, options) {

@@ -1,5 +1,5 @@
 ---
-title: Commands
+title: コマンド
 ---
 
 ## init
@@ -8,12 +8,12 @@ title: Commands
 $ hexo init [folder]
 ```
 
-Initializes a website. If no `folder` is provided, Hexo will set up a website in the current directory.
+ウェブサイトを初期化します。`folder`が指定されていない場合、Hexoは現在のディレクトリにウェブサイトをセットアップします。
 
-This command is a shortcut that runs the following steps:
+このコマンドは、以下のステップを実行するショートカットです:
 
-1. Git clone [hexo-starter](https://github.com/hexojs/hexo-starter) including [hexo-theme-landscape](https://github.com/hexojs/hexo-theme-landscape) into the current directory or a target folder if specified.
-2. Install dependencies using a package manager: [Yarn 1](https://classic.yarnpkg.com/lang/en/), [pnpm](https://pnpm.io) or [npm](https://docs.npmjs.com/cli/install), whichever is installed; if there are more than one installed, the priority is as listed. npm is bundled with [Node.js](/docs/#Install-Node-js) by default.
+1. [hexo-starter](https://github.com/hexojs/hexo-starter)を現在のディレクトリまたは指定されたフォルダにGitクローンします。これには[hexo-theme-landscape](https://github.com/hexojs/hexo-theme-landscape)が含まれます。
+2. パッケージマネージャーを使用して依存関係をインストールします：[Yarn 1](https://classic.yarnpkg.com/lang/en/)、[pnpm](https://pnpm.io)、または[npm](https://docs.npmjs.com/cli/install)。複数インストールされている場合、リストされている順に優先されます。npmはデフォルトで[Node.js](./#Node-jsのインストール)にバンドルされています。
 
 ## new
 
@@ -21,29 +21,29 @@ This command is a shortcut that runs the following steps:
 $ hexo new [layout] <title>
 ```
 
-Creates a new article. If no `layout` is provided, Hexo will use the `default_layout` from [_config.yml](configuration.html). Use the layout `draft` to create a draft. If the `title` contains spaces, surround it with quotation marks.
+新しい記事を作成します。`layout`が指定されていない場合、Hexoは[_config.yml](configuration.html)の`default_layout`を使用します。下書きを作成するには`draft`レイアウトを使用します。`title`にスペースが含まれる場合は、引用符で囲んでください。
 
-Option | Description
+オプション | 説明
 --- | ---
-`-p`, `--path` | Post path. Customize the path of the post.
-`-r`, `--replace` | Replace the current post if existed.
-`-s`, `--slug` | Post slug. Customize the URL of the post.
+`-p`, `--path` | 投稿パス。投稿のパスをカスタマイズします。
+`-r`, `--replace` | 既存の投稿を置き換えます。
+`-s`, `--slug` | 投稿スラッグ。投稿のURLをカスタマイズします。
 
-By default, Hexo will use the title to define the path of the file. For pages, it will create a directory of that name and an `index.md` file in it. Use the `--path` option to override that behaviour and define the file path:
+デフォルトでは、Hexoはタイトルを使用してファイルのパスを定義します。ページの場合、その名前のディレクトリとその中に`index.md`ファイルを作成します。`--path`オプションを使用してこの挙動をオーバーライドし、ファイルパスを定義できます:
 
 ```bash
 hexo new page --path about/me "About me"
 ```
 
-will create `source/about/me.md` file with the title "About me" set in the front matter.
+これは`source/about/me.md`ファイルを作成し、フロントマターに"About me"というタイトルを設定します。
 
-Please note that the title is mandatory. For example, this will not result in the behaviour you might expect:
+タイトルは必須です。例えば、以下は期待した通りの挙動にはなりません:
 
 ```bash
 hexo new page --path about/me
 ```
 
-will create the post `source/_posts/about/me.md` with the title "page" in the front matter. This is because there is only one argument (`page`) and the default layout is `post`.
+これは`source/_posts/about/me.md`に投稿を作成し、フロントマターに"page"というタイトルを設定します。これは引数が1つ(`page`)のみで、デフォルトレイアウトが`post`であるためです。
 
 ## generate
 
@@ -51,15 +51,15 @@ will create the post `source/_posts/about/me.md` with the title "page" in the fr
 $ hexo generate
 ```
 
-Generates static files.
+静的ファイルを生成します。
 
-Option | Description
+オプション | 説明
 --- | ---
-`-d`, `--deploy` | Deploy after generation finishes
-`-w`, `--watch` | Watch file changes
-`-b`, `--bail` | Raise an error if any unhandled exception is thrown during generation
-`-f`, `--force` | Force regenerate
-`-c`, `--concurrency` | Maximum number of files to be generated in parallel. Default is infinity
+`-d`, `--deploy` | 生成が完了した後にデプロイします
+`-w`, `--watch` | ファイルの変更を監視します
+`-b`, `--bail` | 生成中に取り扱いされない例外がスローされた場合にエラーを発生させます
+`-f`, `--force` | 強制的に再生成します
+`-c`, `--concurrency` | 並行して生成されるファイルの最大数。デフォルトは無限です
 
 ## publish
 
@@ -67,7 +67,7 @@ Option | Description
 $ hexo publish [layout] <filename>
 ```
 
-Publishes a draft.
+下書きを公開します。
 
 ## server
 
@@ -75,13 +75,13 @@ Publishes a draft.
 $ hexo server
 ```
 
-Starts a local server. By default, this is at `http://localhost:4000/`.
+ローカルサーバーを起動します。デフォルトでは`http://localhost:4000/`です。
 
-Option | Description
+オプション | 説明
 --- | ---
-`-p`, `--port` | Override default port
-`-s`, `--static` | Only serve static files
-`-l`, `--log` | Enable logger. Override logger format.
+`-p`, `--port` | デフォルトポートを上書きします
+`-s`, `--static` | 静的ファイルのみを提供します
+`-l`, `--log` | ロガーを有効にします。ログ形式を上書きします。
 
 ## deploy
 
@@ -89,11 +89,11 @@ Option | Description
 $ hexo deploy
 ```
 
-Deploys your website.
+ウェブサイトをデプロイします。
 
-Option | Description
+オプション | 説明
 --- | ---
-`-g`, `--generate` | Generate before deployment
+`-g`, `--generate` | デプロイ前に生成を行います
 
 ## render
 
@@ -101,11 +101,11 @@ Option | Description
 $ hexo render <file1> [file2] ...
 ```
 
-Renders files.
+ファイルをレンダリングします。
 
-Option | Description
+オプション | 説明
 --- | ---
-`-o`, `--output` | Output destination
+`-o`, `--output` | 出力先
 
 ## migrate
 
@@ -113,7 +113,7 @@ Option | Description
 $ hexo migrate <type>
 ```
 
-[Migrates](migration.html) content from other blog systems.
+他のブログシステムからのコンテンツを[移行](migration.html)します。
 
 ## clean
 
@@ -121,7 +121,7 @@ $ hexo migrate <type>
 $ hexo clean
 ```
 
-Cleans the cache file (`db.json`) and generated files (`public`).
+キャッシュファイル(`db.json`)と生成されたファイル(`public`)を削除します。
 
 ## list
 
@@ -129,7 +129,7 @@ Cleans the cache file (`db.json`) and generated files (`public`).
 $ hexo list <type>
 ```
 
-Lists all routes.
+すべてのルートをリストアップします。
 
 ## version
 
@@ -137,7 +137,7 @@ Lists all routes.
 $ hexo version
 ```
 
-Displays version information.
+バージョン情報を表示します。
 
 ## config
 
@@ -145,58 +145,58 @@ Displays version information.
 $ hexo config [key] [value]
 ```
 
-Lists the configuration (`_config.yml`). If `key` is specified, only the value of the corresponding `key` in the configuration is shown; if both `key` and `value` are specified, the value of the corresponding `key` in the configuration is changed to `value`.
+設定(`_config.yml`)をリストアップします。`key`が指定された場合、設定の対応する`key`の値のみが表示されます。`key`と`value`が両方指定された場合、設定の対応する`key`の値を`value`に変更します。
 
-## Options
+## オプション
 
-### Safe mode
+### セーフモード
 
 ``` bash
 $ hexo --safe
 ```
 
-Disables loading plugins and scripts. Try this if you encounter problems after installing a new plugin.
+プラグインとスクリプトの読み込みを無効にします。新しいプラグインをインストールした後に問題が発生した場合に試してください。
 
-### Debug mode
+### デバッグモード
 
 ``` bash
 $ hexo --debug
 ```
 
-Logs verbose messages to the terminal and to `debug.log`. Try this if you encounter any problems with Hexo. If you see errors, please [raise a GitHub issue](https://github.com/hexojs/hexo/issues/new?assignees=&labels=&projects=&template=bug_report.yml).
+端末と`debug.log`に詳細なメッセージをログします。Hexoで問題が発生した場合に試してください。エラーが見つかった場合は、[GitHub issueを提出](https://github.com/hexojs/hexo/issues/new?assignees=&labels=&projects=&template=bug_report.yml)してください。
 
-### Silent mode
+### サイレントモード
 
 ``` bash
 $ hexo --silent
 ```
 
-Silences output to the terminal.
+端末への出力を無音にします。
 
-### Customize config file path
+### 設定ファイルパスのカスタマイズ
 
 ``` bash
 $ hexo --config custom.yml
 ```
 
-Uses a custom config file (instead of `_config.yml`). Also accepts a comma-separated list (no spaces) of JSON or YAML config files that will combine the files into a single `_multiconfig.yml`.
+カスタム設定ファイル(`_config.yml`の代わり)を使用します。JSONまたはYAML設定ファイルのカンマ区切りリスト（スペースなし）も受け入れ、ファイルを単一の`_multiconfig.yml`に結合します。
 
 ``` bash
 $ hexo --config custom.yml,custom2.json
 ```
 
-### Display drafts
+### 下書きの表示
 
 ``` bash
 $ hexo --draft
 ```
 
-Displays draft posts (stored in the `source/_drafts` folder).
+下書き(`source/_drafts`フォルダに保存)を表示します。
 
-### Customize CWD
+### 現在の作業ディレクトリのカスタマイズ
 
 ``` bash
 $ hexo --cwd /path/to/cwd
 ```
 
-Customizes the path of current working directory.
+現在の作業ディレクトリのパスをカスタマイズします。

@@ -1,9 +1,9 @@
 ---
-title: Deployer
+title: デプロイヤー
 ---
-A deployer helps users quickly deploy their site to a remote server without complicated commands.
+デプロイヤーは、複雑なコマンドなしにユーザーが自分のサイトをリモートサーバーに迅速にデプロイするのを助けます。
 
-## Synopsis
+## 概要
 
 ``` js
 hexo.extend.deployer.register(name, function(args){
@@ -11,4 +11,4 @@ hexo.extend.deployer.register(name, function(args){
 });
 ```
 
-An argument `args` will be passed into the function. It contains the `deploy` value set in `_config.yml`, as well as the exact input users typed into their terminal.
+関数には引数`args`が渡されます。これには`_config.yml`で設定された`deploy`の値と、ユーザーがターミナルに入力した正確な入力が含まれます。

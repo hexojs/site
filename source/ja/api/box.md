@@ -1,36 +1,36 @@
 ---
-title: Box
+title: ボックス
 ---
-Box is a container used for processing files in a specified folder. Hexo uses two different boxes: `hexo.source` and `hexo.theme`. The former is used to process the `source` folder and the latter to process the `theme` folder.
+ボックスは指定されたフォルダ内のファイルを処理するために使用されるコンテナです。Hexoでは2種類のボックスが使用されます：`hexo.source`と`hexo.theme`です。前者は`source`フォルダを処理するために、後者は`theme`フォルダを処理するために使用されます。
 
-## Load Files
+## ファイルの読み込み
 
-Box provides two methods for loading files: `process` and `watch`. `process` loads all files in the folder. `watch` does the same, but also starts watching for file changes.
+ボックスはファイルを読み込むために`process`と`watch`の2つの方法を提供します。`process`はフォルダ内のすべてのファイルを読み込みます。`watch`も同様の操作を行いますが、ファイルの変更を監視も開始します。
 
-``` js
+```js
 box.process().then(function(){
   // ...
 });
 
 box.watch().then(function(){
-  // You can call box.unwatch() later to stop watching.
+  // 後で box.unwatch() を呼び出して監視を停止できます。
 });
 ```
 
-## Path Matching
+## パスマッチング
 
-Box provides many ways for path matching. You can use a regular expression, a function or an Express-style pattern string. For example:
+ボックスはパスマッチングのための多くの方法を提供します。正規表現、関数、またはExpressスタイルのパターン文字列を使用できます。例えば:
 
 ``` plain
 posts/:id => posts/89
 posts/*path => posts/2015/title
 ```
 
-See [util.Pattern] for more info.
+詳細については[util.Pattern]を参照してください。
 
-## Processors
+## プロセッサ
 
-A processor is an essential element of Box and is used to process files. You can use path matching as described above to restrict what exactly the processor should process. Register a new processor with the `addProcessor` method.
+プロセッサはボックスの重要な要素であり、ファイルを処理するために使用されます。上記のパスマッチングを使用して、プロセッサが処理すべき正確なものを制限できます。新しいプロセッサを`addProcessor`メソッドで登録します。
 
 ``` js
 box.addProcessor('posts/:id', function(file){
@@ -38,24 +38,24 @@ box.addProcessor('posts/:id', function(file){
 });
 ```
 
-Box passes the content of matched files to processors. This information can then be read straight from the `file` argument in the callback:
+ボックスはマッチしたファイルの内容をプロセッサに渡します。この情報はコールバックの`file`引数から直接読むことができます:
 
-Attribute | Description
+属性 | 説明
 --- | ---
-`source` | Full path of the file
-`path` | Relative path to the box of the file
-`type` | File type. The value can be `create`, `update`, `skip`, `delete`.
-`params` | The information from path matching.
+`source` | ファイルの完全なパス
+`path` | ファイルのボックスまでの相対パス
+`type` | ファイルのタイプ。値は`create`, `update`, `skip`, `delete`があります。
+`params` | パスマッチングからの情報。
 
-Box also provides some methods so you don't have to do file IO by yourself.
+ボックスはファイルIOを自分で行う必要がないようにいくつかのメソッドも提供しています。
 
-Method | Description
+方法 | 説明
 --- | ---
-`read` | Read a file
-`readSync` | Read a file synchronously
-`stat` | Read the status of a file
-`statSync` | Read the status of a file synchronously
-`render` | Render a file
-`renderSync` | Render a file synchronously
+`read` | ファイルを読み込む
+`readSync` | 同期的にファイルを読み込む
+`stat` | ファイルのステータスを読み込む
+`statSync` | 同期的にファイルのステータスを読み込む
+`render` | ファイルをレンダリングする
+`renderSync` | 同期的にファイルをレンダリングする
 
 [util.Pattern]: https://github.com/hexojs/hexo-util#patternrule

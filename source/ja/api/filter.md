@@ -1,38 +1,38 @@
 ---
-title: Filter
+title: フィルター
 ---
-A filter is used to modify some specified data. Hexo passes data to filters in sequence and the filters then modify the data one after the other. This concept was borrowed from [WordPress](http://codex.wordpress.org/Plugin_API#Filters).
+フィルターは特定のデータを変更するために使用されます。Hexoはデータをフィルターに順番に渡し、フィルターがデータを一つずつ変更します。この概念は[WordPress](http://codex.wordpress.org/Plugin_API#Filters)から借用されました。
 
-## Synopsis
+## 概要
 
 ``` js
 hexo.extend.filter.register(type, function() {
-  // User configuration
+  // ユーザー設定
   const { config } = this;
-  if (config.external_link.enable) // do something...
+  if (config.external_link.enable) // 何かする...
 
-  // Theme configuration
+  // テーマ設定
   const { config: themeCfg } = this.theme;
-  if (themeCfg.fancybox) // do something...
+  if (themeCfg.fancybox) // 何かする...
 
 }, priority);
 ```
 
-You can define the `priority`. Lower `priority` means that it will be executed first. The default `priority` is 10. We recommend using user-configurable priority value that user can specify in the config, e.g. `hexo.config.your_plugin.priority`.
+`priority`を定義できます。`priority`が低いほど、先に実行されます。デフォルトの`priority`は10です。ユーザーが設定ファイルで指定できるユーザー設定可能な優先度値を使用することをお勧めします。例: `hexo.config.your_plugin.priority`。
 
-## Execute Filters
+## フィルターの実行
 
 ``` js
 hexo.extend.filter.exec(type, data, options);
 hexo.extend.filter.execSync(type, data, options);
 ```
 
-Option | Description
+オプション | 説明
 --- | ---
-`context` | Context
-`args` | Arguments. This must be an array.
+`context` | コンテキスト
+`args` | 引数。これは配列である必要があります。
 
-The first argument passed into each filter is `data`. The `data` passed into the next filter can be modified by returning a new value. If nothing is returned, the data remains unmodified. You can even use `args` to specify other arguments in filters. For example:
+各フィルターに渡される最初の引数は`data`です。次のフィルターに渡される`data`は、新しい値を返すことで変更できます。何も返されない場合、データは変更されません。`args`を使用してフィルターに他の引数を指定することもできます。例えば:
 
 ``` js
 hexo.extend.filter.register('test', function(data, arg1, arg2){
@@ -52,23 +52,23 @@ hexo.extend.filter.exec('test', 'some data', {
 });
 ```
 
-You can also use the following methods to execute filters:
+フィルターを実行するために以下の方法も使用できます:
 
 ``` js
 hexo.execFilter(type, data, options);
 hexo.execFilterSync(type, data, options);
 ```
 
-## Unregister Filters
+## フィルターの登録解除
 
 ``` js
 hexo.extend.filter.unregister(type, filter);
 ```
 
-**Example**
+**例**
 
 ``` js
-// Unregister a filter which is registered with named function
+// 名前付き関数で登録されたフィルターを登録解除
 
 const filterFn = (data) => {
   data = 'something';
@@ -80,22 +80,22 @@ hexo.extend.filter.unregister('example', filterFn);
 ```
 
 ``` js
-// Unregister a filter which is registered with commonjs module
+// commonjsモジュールで登録されたフィルターを登録解除
 
 hexo.extend.filter.register('example', require('path/to/filter'));
 
 hexo.extend.filter.unregister('example', require('path/to/filter'));
 ```
 
-## Filter List
+## フィルターリスト
 
-Here is a list of filters used by Hexo.
+Hexoで使用されるフィルターのリストです。
 
 ### before_post_render
 
-Executed before a post is rendered. Refer to [post rendering](posts.html#Render) to learn the execution steps.
+投稿がレンダリングされる前に実行されます。実行手順については、[投稿のレンダリング](posts.html#Render)を参照してください。
 
-For example, to transform the title to lower case:
+例えば、タイトルを小文字に変換するには:
 
 ``` js
 hexo.extend.filter.register('before_post_render', function(data){
@@ -106,9 +106,10 @@ hexo.extend.filter.register('before_post_render', function(data){
 
 ### after_post_render
 
-Executed after a post is rendered. Refer to [post rendering](posts.html#Render) to learn the execution steps.
+投稿がレンダリングされた後に実行されます。実行手順については、[投稿のレンダ
+リング](posts.html#Render)を参照してください。
 
-For example, to replace `@username` with a link to a Twitter profile:
+例えば、`@username`をTwitterプロファイルへのリンクに置き換えるには:
 
 ``` js
 hexo.extend.filter.register('after_post_render', function(data){
@@ -119,7 +120,7 @@ hexo.extend.filter.register('after_post_render', function(data){
 
 ### before_exit
 
-Executed before Hexo is about to exit -- this will run right after `hexo.exit` is called.
+Hexoが終了しようとする直前に実行されます。これは`hexo.exit`が呼び出された直後に実行されます。
 
 ``` js
 hexo.extend.filter.register('before_exit', function(){
@@ -129,7 +130,7 @@ hexo.extend.filter.register('before_exit', function(){
 
 ### before_generate
 
-Executed before generation begins.
+生成が始まる前に実行されます。
 
 ``` js
 hexo.extend.filter.register('before_generate', function(){
@@ -139,7 +140,7 @@ hexo.extend.filter.register('before_generate', function(){
 
 ### after_generate
 
-Executed after generation finishes.
+生成が終了した後に実行されます。
 
 ``` js
 hexo.extend.filter.register('after_generate', function(){
@@ -149,9 +150,9 @@ hexo.extend.filter.register('after_generate', function(){
 
 ### template_locals
 
-Modify [local variables](../docs/variables.html) in templates.
+テンプレートの[ローカル変数](../docs/variables.html)を変更します。
 
-For example, to add the current time to the local variables of templates:
+例えば、テンプレートのローカル変数に現在の時間を追加するには:
 
 ``` js
 hexo.extend.filter.register('template_locals', function(locals){
@@ -162,7 +163,7 @@ hexo.extend.filter.register('template_locals', function(locals){
 
 ### after_init
 
-Executed after Hexo is initialized -- this will run right after `hexo.init` completes.
+Hexoが初期化された直後に実行されます。これは`hexo.init`が完了した直後に実行されます。
 
 ``` js
 hexo.extend.filter.register('after_init', function(){
@@ -172,7 +173,7 @@ hexo.extend.filter.register('after_init', function(){
 
 ### new_post_path
 
-Executed when creating a post to determine the path of new posts.
+新しい投稿を作成する際に新しい投稿のパスを決定するために実行されます。
 
 ``` js
 hexo.extend.filter.register('new_post_path', function(data, replace){
@@ -182,7 +183,7 @@ hexo.extend.filter.register('new_post_path', function(data, replace){
 
 ### post_permalink
 
-Used to determine the permalink of posts.
+投稿のパーマリンクを決定するために使用されます。
 
 ``` js
 hexo.extend.filter.register('post_permalink', function(data){
@@ -192,23 +193,23 @@ hexo.extend.filter.register('post_permalink', function(data){
 
 ### after_render
 
-Executed after rendering finishes. You can see [rendering](rendering.html#after_render_Filters) for more info.
+レンダリングが完了した後に実行されます。詳細については、[レンダリング](rendering.html#after_render_Filters)を参照してください。
 
 ### after_clean
 
-Executed after generated files and cache are removed with `hexo clean` command.
+`hexo clean`コマンドで生成されたファイルとキャッシュが削除された後に実行されます。
 
 ``` js
 hexo.extend.filter.register('after_clean', function(){
-  // remove some other temporary files
+  // 他の一時ファイルを削除する
 });
 ```
 
 ### server_middleware
 
-Add middleware to the server. `app` is a [Connect] instance.
+サーバーにミドルウェアを追加します。`app`は[Connect]インスタンスです。
 
-For example, to add `X-Powered-By: Hexo` to the response header:
+例えば、レスポンスヘッダーに`X-Powered-By: Hexo`を追加するには:
 
 ``` js
 hexo.extend.filter.register('server_middleware', function(app){

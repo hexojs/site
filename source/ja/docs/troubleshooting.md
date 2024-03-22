@@ -1,82 +1,82 @@
 ---
-title: Troubleshooting
+title: トラブルシューティング
 ---
-In case you're experiencing problems with using Hexo, here is a list of solutions to some frequently encountered issues. If this page doesn't help you solve your problem, try doing a search on [GitHub](https://github.com/hexojs/hexo/issues) or our [Google Group](https://groups.google.com/group/hexo).
+Hexoの使用中に頻繁に遭遇する問題に対する解決策のリストをここに示します。このページで問題が解決しない場合は、[GitHub](https://github.com/hexojs/hexo/issues)や[Google Group](https://groups.google.com/group/hexo)で検索してみてください。
 
-## YAML Parsing Error
+## YAML解析エラー
 
 ``` plain
 JS-YAML: incomplete explicit mapping pair; a key node is missed at line 18, column 29:
       last_updated: Last updated: %s
 ```
 
-Wrap the string with quotations if it contains colons.
+文字列にコロンが含まれている場合は、引用符で囲みます。
 
 ``` plain
 JS-YAML: bad indentation of a mapping entry at line 18, column 31:
       last_updated:"Last updated: %s"
 ```
 
-Make sure you are using soft tabs and add a space after colons.
+ソフトタブを使用していることを確認し、コロンの後にスペースを追加してください。
 
-You can see [YAML Spec](http://www.yaml.org/spec/1.2/spec.html) for more info.
+[YAML Spec](http://www.yaml.org/spec/1.2/spec.html)で詳細を確認できます。
 
-## EMFILE Error
+## EMFILEエラー
 
 ``` plain
 Error: EMFILE, too many open files
 ```
 
-Though Node.js has non-blocking I/O, the maximum number of synchronous I/O is still limited by the system. You may come across an EMFILE error when trying to generate a large number of files. You can try to run the following command to increase the number of allowed synchronous I/O operations.
+Node.jsはノンブロッキングI/Oを持っていますが、システムによって同時に実行できる同期I/Oの最大数には制限があります。大量のファイルを生成しようとするときにEMFILEエラーに遭遇することがあります。以下のコマンドを実行して、許可される同期I/O操作の数を増やしてみてください。
 
 ``` bash
 $ ulimit -n 10000
 ```
 
-**Error: cannot modify limit**
+**エラー：制限を変更できません**
 
-If you encounter the following error:
+次のエラーに遭遇した場合:
 
 ``` bash
 $ ulimit -n 10000
 ulimit: open files: cannot modify limit: Operation not permitted
 ```
 
-It means some system-wide configurations are preventing `ulimit` to being increased to a certain limit.
+システム全体の設定により、設定可能な`ulimit`の値に制限があることを意味します。
 
-To override the limit:
+制限を上書きするには:
 
-1. Add the following line to "/etc/security/limits.conf":
+1. "/etc/security/limits.conf"に以下の行を追加します:
 
   ```
   * - nofile 10000
 
-  # '*' applies to all users and '-' set both soft and hard limits
+  # '*'はすべてのユーザーに適用され、'-'はソフトとハードの両方の制限を設定します
   ```
 
-  * The above setting may not apply in some cases, ensure "/etc/pam.d/login" and "/etc/pam.d/lightdm" have the following line. (Ignore this step if those files do not exist)
+  * 上記の設定が適用されない場合があるため、"/etc/pam.d/login"と"/etc/pam.d/lightdm"に以下の行が含まれていることを確認してください。（これらのファイルが存在しない場合はこのステップを無視してください）
 
   ```
   session required pam_limits.so
   ```
 
-2. If you are on a [systemd-based](https://en.wikipedia.org/wiki/Systemd#Adoption) distribution, systemd may override "limits.conf". To set the limit in systemd, add the following line in "/etc/systemd/system.conf" and "/etc/systemd/user.conf":
+2. [systemdベースのディストリビューション](https://en.wikipedia.org/wiki/Systemd#Adoption)を使用している場合、systemdは"limits.conf"を上書きする可能性があります。systemdで制限を設定するには、"/etc/systemd/system.conf"と"/etc/systemd/user.conf"に以下の行を追加します:
 
   ```
   DefaultLimitNOFILE=10000
   ```
 
-3. Reboot
+3. 再起動
 
-## Process Out of Memory
+## メモリ不足のプロセス
 
-When you encounter this error during generation:
+生成中にこのエラーに遭遇した場合:
 
 ```
 FATAL ERROR: CALL_AND_RETRY_LAST Allocation failed - process out of memory
 ```
 
-Increase Node.js heap memory size by changing the first line of `hexo-cli` (`which hexo` to look for the file).
+`hexo-cli`の最初の行を変更してNode.jsヒープメモリサイズを増やします（ファイルを探すには`which hexo`を使用します）。
 
 ```
 #!/usr/bin/env node --max_old_space_size=8192
@@ -84,9 +84,9 @@ Increase Node.js heap memory size by changing the first line of `hexo-cli` (`whi
 
 [Out of memory while generating a huge blog · Issue #1735 · hexojs/hexo](https://github.com/hexojs/hexo/issues/1735)
 
-## Git Deployment Problems
+## Gitデプロイの問題
 
-### RPC failed
+### RPC失敗
 
 ``` plain
 error: RPC failed; result=22, HTTP code = 403
@@ -94,44 +94,44 @@ error: RPC failed; result=22, HTTP code = 403
 fatal: 'username.github.io' does not appear to be a git repository
 ```
 
-Make sure you have [set up git](https://help.github.com/articles/set-up-git) on your computer properly or try to use HTTPS repository URL instead.
+コンピュータ上で[gitを適切に設定](https://help.github.com/articles/set-up-git)していることを確認するか、HTTPSリポジトリURLを代わりに使用してみてください。
 
-### Error: ENOENT: no such file or directory
+### エラー：ENOENT：そのようなファイルやディレクトリはありません
 
-If you get an error like `Error: ENOENT: no such file or directory` it's probably due to mixing uppercase and lowercase letters in your tags, categories, or filenames. Git cannot automatically merge this change, so it breaks the automatic branching.
+`Error: ENOENT: no such file or directory`のようなエラーが発生した場合、タグ、カテゴリー、またはファイル名で大文字と小文字を混在させている可能性があります。Gitはこの変更を自動的にマージできないため、自動ブランチングが中断されます。
 
-To fix this, try
+これを修正するには:
 
-1. Check every tag's and category's case and make sure they are the same.
-1. Commit
-1. Clean and build: `./node_modules/.bin/hexo clean && ./node_modules/.bin/hexo generate`
-1. Manually copy the public folder to your desktop
-1. Switch branch from your master branch to your deployment branch locally
-1. Copy the contents of the public folder from your desktop into the deployment branch
-1. Commit. You should see any merge conflicts appear that you can manually resolve.
-1. Switch back to your master branch and deploy normally: `./node_modules/.bin/hexo deploy`
+1. すべてのタグとカテゴリーのケースを確認し、同じであることを確認します。
+1. コミット
+1. 初期化とビルド：`./node_modules/.bin/hexo clean && ./node_modules/.bin/hexo generate`
+1. パブリックフォルダをデスクトップに手動でコピー
+1. マスターブランチからデプロイ用ブランチにローカルでブランチを切り替え
+1. デスクトップからのパブリックフォルダの内容をデプロイ用ブランチにコピー
+1. コミット。マージコンフリクトが表示され、手動で解決できます。
+1. マスターブランチに戻り、通常どおりデプロイ：`./node_modules/.bin/hexo deploy`
 
-## Server Problems
+## サーバーの問題
 
 ``` plain
 Error: listen EADDRINUSE
 ```
 
-You may have started two Hexo servers at the same time or there might be another application using the same port. Try to modify the `port` setting or start the Hexo server with the `-p` flag.
+同時に2つのHexoサーバーを起動したか、別のアプリケーションが同じポートを使用している可能性があります。`port`設定を変更するか、`-p`フラグを使用してHexoサーバーを起動してみてください。
 
 ``` bash
 $ hexo server -p 5000
 ```
 
-## Plugin Installation Problems
+## プラグインのインストール問題
 
 ``` plain
 npm ERR! node-waf configure build
 ```
 
-This error may occur when trying to install a plugin written in C, C++ or other non-JavaScript languages. Make sure you have installed the right compiler on your computer.
+C、C++、またはJavaScript以外の言語で書かれたプラグインをインストールしようとすると、このエラーが発生することがあります。コンピュータに適切なコンパイラがインストールされていることを確認してください。
 
-## Error with DTrace (Mac OS X)
+## DTraceのエラー（Mac OS X）
 
 ```plain
 { [Error: Cannot find module './build/Release/DTraceProviderBindings'] code: 'MODULE_NOT_FOUND' }
@@ -139,34 +139,34 @@ This error may occur when trying to install a plugin written in C, C++ or other 
 { [Error: Cannot find module './build/Debug/DTraceProviderBindings'] code: 'MODULE_NOT_FOUND' }
 ```
 
-DTrace install may have issue, use this:
+DTraceのインストールに問題がある場合、これを使用してください:
 
 ```sh
 $ npm install hexo --no-optional
 ```
 
-See [#1326](https://github.com/hexojs/hexo/issues/1326#issuecomment-113871796)
+[#1326](https://github.com/hexojs/hexo/issues/1326#issuecomment-113871796)を参照
 
-## Iterate Data Model on Jade or Swig
+## JadeまたはSwigでのデータモデルのイテレート
 
-Hexo uses [Warehouse] for its data model. It's not an array so you may have to transform objects into iterables.
+Hexoはデータモデルに[Warehouse]を使用しています。これは配列ではないので、反復可能オブジェクトに変換する必要があるかもしれません。
 
 ```
 {% for post in site.posts.toArray() %}
 {% endfor %}
 ```
 
-## Data Not Updated
+## データが更新されない
 
-Some data cannot be updated, or the newly generated files are identical to those of the last version. Clean the cache and try again.
+一部のデータは更新されず、新しく生成されたファイルが前のバージョンと同一になることがあります。キャッシュをクリーンして再試行してください。
 
 ``` bash
 $ hexo clean
 ```
 
-## No command is executed
+## コマンドが実行されない
 
-When you can't get any command except `help`, `init` and `version` to work and you keep getting content of `hexo help`, it could be caused by a missing `hexo` in `package.json`:
+`help`、`init`、`version`以外のコマンドが機能せず、`hexo help`の内容が表示され続ける場合、`package.json`に`hexo`が欠けていることが原因の可能性があります:
 
 ```json
 {
@@ -176,10 +176,10 @@ When you can't get any command except `help`, `init` and `version` to work and y
 }
 ```
 
-## Escape Contents
+## コンテンツのエスケープ
 
-Hexo uses [Nunjucks] to render posts ([Swig] was used in the older version, which shares a similar syntax). Content wrapped with `{{ }}` or `{% %}` will get parsed and may cause problems. You can skip the parsing by wrapping it with the [`raw`](/docs/tag-plugins#Raw) tag plugin, a single backtick ```` `{{ }}` ```` or a triple backtick.
-Alternatively, Nunjucks tags can be disabled through the renderer's option (if supported), [API](/api/renderer#Disable-Nunjucks-tags) or [front-matter](/docs/front-matter).
+Hexoは投稿をレンダリングするために[Nunjucks]を使用しています（以前のバージョンでは、同様の構文を共有する[Swig]が使用されていました）。`{{ }}`または`{% %}`で囲まれたコンテンツはパースの際に問題を引き起こす可能性があります。[`raw`](tag-plugins#Raw)タグプラグイン、単一のバックティック```` `{{ }}` ````、またはトリプルバックティックでパースをスキップできます。
+または、レンダラーのオプション（サポートされている場合）、[API](../api/renderer#Nunjucksタグを無効にする)、または[フロントマター](front-matter)を通じてNunjucksタグを無効にすることもできます。
 
 ```
 {% raw %}
@@ -193,93 +193,93 @@ Hello {{ world }}
 ```
 ````
 
-## ENOSPC Error (Linux)
+## ENOSPCエラー（Linux）
 
-Sometimes when running the command `$ hexo server` it returns an error:
+`$ hexo server`コマンドを実行するときに、時々以下のエラーが返されます:
 
 ```
 Error: watch ENOSPC ...
 ```
 
-It can be fixed by running `$ npm dedupe` or, if that doesn't help, try the following in the Linux console:
+これは、`$ npm dedupe`を実行するか、効果がない場合Linuxコンソールで次のコマンドを試すことで修正できます:
 
 ```
 $ echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
 ```
 
-This will increase the limit for the number of files you can watch.
+これにより、監視できるファイルの数の制限が増加します。
 
-## EMPERM Error (Windows Subsystem for Linux)
+## EMPERMエラー（Windows Subsystem for Linux）
 
-When running `$ hexo server` in a BashOnWindows environment, it returns the following error:
+BashOnWindows環境で`$ hexo server`を実行すると、次のエラーが返されます:
 
 ```
 Error: watch /path/to/hexo/theme/ EMPERM
 ```
 
-Unfortunately, WSL does not currently support filesystem watchers. Therefore, the live updating feature of hexo's server is currently unavailable. You can still run the server from a WSL environment by first generating the files and then running it as a static server:
+残念ながら、WSLは現在ファイルシステムウォッチャをサポートしていません。そのため、hexoサーバーのライブ更新機能は現在利用できません。ファイルを最初に生成してから、静的サーバーとして実行することにより、WSL環境からサーバーを実行することは可能です:
 
 ``` sh
 $ hexo generate
 $ hexo server -s
 ```
 
-This is [a known BashOnWindows issue](https://github.com/Microsoft/BashOnWindows/issues/216), and on 15 Aug 2016, the Windows team said they would work on it. You can get progress updates and encourage them to prioritize it on [the issue's UserVoice suggestion page](https://wpdev.uservoice.com/forums/266908-command-prompt-console-bash-on-ubuntu-on-windo/suggestions/13469097-support-for-filesystem-watchers-like-inotify).
+これは[既知のBashOnWindowsの問題](https://github.com/Microsoft/BashOnWindows/issues/216)であり、2016年8月15日にWindowsチームはそれに取り組むと述べました。[問題のUserVoice提案ページ](https://wpdev.uservoice.com/forums/266908-command-prompt-console-bash-on-ubuntu-on-windo/suggestions/13469097-support-for-filesystem-watchers-like-inotify)で進捗状況を確認し、それを優先してもらうよう奨励することができます。
 
-## Template render error
+## テンプレートレンダリングエラー
 
-Sometimes when running the command `$ hexo generate` it returns an error:
+`$ hexo generate`コマンドを実行するときに、時々以下のエラーが返されます:
 
 ```
 FATAL Something's wrong. Maybe you can find the solution here: http://hexo.io/docs/troubleshooting.html
 Template render error: (unknown path)
 ```
 
-Possible cause:
-- There are some unrecognizable words in your file, e.g. invisible zero width characters.
-- Incorrect use or limitation of [tag plugin](/docs/tag-plugins).
-  * Block-style tag plugin with content is not enclosed with `{% endplugin_name %}`
+考えられる原因:
+- ファイルに認識できない単語が含まれていることがあります。例えば、見えないゼロ幅文字などです。
+- [タグプラグイン](tag-plugins)の誤用または制限。
+  * コンテンツが`{% endplugin_name %}`で閉じられていないブロックスタイルのタグプラグイン
   ```
-  # Incorrect
+  # 誤り
   {% codeblock %}
   fn()
   {% codeblock %}
 
-  # Incorrect
+  # 誤り
   {% codeblock %}
   fn()
 
-  # Correct
+  # 正しい
   {% codeblock %}
   fn()
   {% endcodeblock %}
   ```
-  * Having Nunjucks-like syntax in a tag plugin, e.g. [`{#`](https://mozilla.github.io/nunjucks/templating.html#comments). A workaround for this example is to use [triple backtick](/docs/tag-plugins#Backtick-Code-Block) instead. [Escape Contents](/docs/troubleshooting#Escape-Contents) section has more details.
+  * タグプラグインでNunjucksのような構文を含んでいる場合、例えば[`{% raw %}{#{% endraw %}`](https://mozilla.github.io/nunjucks/templating.html#comments)。この例の回避策は、[トリプルバックティック](tag-plugins#バックティックコードブロック)を代わりに使用することです。[コンテンツのエスケープ](troubleshooting#コンテンツのエスケープ)セクションに詳細があります。
   ```
   {% codeblock lang:bash %}
   Size of array is ${#ARRAY}
   {% endcodeblock %}
   ```
 
-## YAMLException (Issue [#4917](https://github.com/hexojs/hexo/issues/4917))
+## YAMLException（Issue [#4917](https://github.com/hexojs/hexo/issues/4917)）
 
-Upgrading to `hexo^6.1.0` from an older version may cause the following error when running `$ hexo generate`:
+古いバージョンから`hexo^6.1.0`にアップグレードすると、`$ hexo generate`を実行したときに以下のエラーが発生する可能性があります:
 
 ```
 YAMLException: Specified list of YAML types (or a single Type object) contains a non-Type object.
     at ...
 ```
- 
-This may be caused by an incorrect dependency(i.e. `js-yaml`) setting that can't be solved automatically by the package manager, and you may have to update it manually running: 
+
+これは、パッケージマネージャーによって自動的に解決できない不正な依存関係設定（例：`js-yaml`）が原因である可能性があり、手動で更新する必要がある場合があります:
 
 ```sh
 $ npm install js-yaml@latest
 ```
-or
+または、`yarn`を使用している場合は
 ```sh
 $ yarn add js-yaml@latest
 ```
-if you use `yarn`.
+を実行してください。
 
 [Warehouse]: https://github.com/hexojs/warehouse
 [Swig]: https://node-swig.github.io/swig-templates/

@@ -1,9 +1,9 @@
 ---
-title: Tag
+title: タグ
 ---
-A tag allows users to quickly and easily insert snippets into their posts.
+タグを使用すると、ユーザーは投稿に簡単にスニペットを挿入できます。
 
-## Synopsis
+## 概要
 
 ``` js
 hexo.extend.tag.register(name, function(args, content){
@@ -11,19 +11,19 @@ hexo.extend.tag.register(name, function(args, content){
 }, options);
 ```
 
-Two arguments will be passed into the tag function: `args` and `content`. `args` contains the arguments passed into the tag plugin and `content` is the wrapped content from the tag plugin.
+タグ関数には`args`と`content`の2つの引数が渡されます。`args`にはタグプラグインに渡された引数が含まれ、`content`はタグプラグインからのラップされたコンテンツです。
 
-Since the introduction of asynchronous rendering in Hexo 3, we are using [Nunjucks] for rendering. The behavior may be somewhat different from that in [Swig].
+Hexo 3で非同期レンダリングが導入されて以来、レンダリングには[Nunjucks]が使用されています。その挙動は[Swig]のそれと多少異なる場合があります。
 
-## Unregister Tags
+## タグの登録解除
 
-Use `unregister()` to replace existing [tag plugins](/docs/tag-plugins) with custom functions.
+`unregister()`を使用して、既存の[タグプラグイン](/docs/tag-plugins)をカスタム関数で置き換えます。
 
 ``` js
 hexo.extend.tag.unregister(name);
 ```
 
-**Example**
+**例**
 
 ``` js
 const tagFn = (args, content) => {
@@ -37,21 +37,21 @@ hexo.extend.tag.unregister('youtube');
 hexo.extend.tag.register('youtube', tagFn);
 ```
 
-## Options
+## オプション
 
 ### ends
 
-Use end tags. This option is `false` by default.
+終了タグを使用します。このオプションはデフォルトで`false`です。
 
 ### async
 
-Enable async mode. This option is `false` by default.
+非同期モードを有効にします。このオプションはデフォルトで`false`です。
 
-## Examples
+## 例
 
-### Without End Tags
+### 終了タグなし
 
-Insert a Youtube video.
+Youtubeビデオを挿入します。
 
 ``` js
 hexo.extend.tag.register('youtube', function(args){
@@ -60,9 +60,9 @@ hexo.extend.tag.register('youtube', function(args){
 });
 ```
 
-### With End Tags
+### 終了タグあり
 
-Insert a pull quote.
+プルクオートを挿入します。
 
 ``` js
 hexo.extend.tag.register('pullquote', function(args, content){
@@ -71,9 +71,9 @@ hexo.extend.tag.register('pullquote', function(args, content){
 }, {ends: true});
 ```
 
-### Async Rendering
+### 非同期レンダリング
 
-Insert a file.
+ファイルを挿入します。
 
 ``` js
 var fs = require('hexo-fs');
@@ -89,9 +89,9 @@ hexo.extend.tag.register('include_code', function(args){
 }, {async: true});
 ```
 
-## Front-matter and user configuration
+## フロントマターとユーザー設定
 
-Any of the following options is valid:
+以下のオプションが有効です:
 
 1.
 
@@ -99,20 +99,20 @@ Any of the following options is valid:
 hexo.extend.tag.register('foo', function (args) {
   const [firstArg] = args;
 
-  // User config
+  // ユーザー設定
   const { config } = hexo;
   const editor = config.author + firstArg;
 
-  // Theme config
+  // テーマ設定
   const { config: themeCfg } = hexo.theme;
-  if (themeCfg.fancybox) // do something...
+  if (themeCfg.fancybox) // 何かする...
 
-  // Front-matter
-  const { title } = this; // article's (post/page) title
+  // フロントマター
+  const { title } = this; // 記事の（投稿/ページ）タイトル
 
-  // Article's content
-  const { _content } = this; // original content
-  const { content } = this; // HTML-rendered content
+  // 記事のコンテンツ
+  const { _content } = this; // 元のコンテンツ
+  const { content } = this; // HTMLレンダリングされたコンテンツ
 
   return 'foo';
 });

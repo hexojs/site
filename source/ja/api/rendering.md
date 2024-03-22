@@ -1,11 +1,11 @@
 ---
-title: Rendering
+title: レンダリング
 ---
-There are two methods for rendering files or strings in Hexo: the asynchronous `hexo.render.render` method and the synchronous `hexo.render.renderSync` method. Unsurprisingly, the two methods are very similar so only the asynchronous `hexo.render.render` will be further discussed in the below paragraphs.
+Hexoでは、ファイルや文字列をレンダリングするための2つの方法があります：非同期の`hexo.render.render`メソッドと同期の`hexo.render.renderSync`メソッドです。これら2つの方法は非常に似ているため、以下では非同期の`hexo.render.render`についてのみ詳しく説明します。
 
-## Render a String
+## 文字列のレンダリング
 
-When rendering a string, you must specify an `engine` to let Hexo know which rendering engine it should use.
+文字列をレンダリングする際、Hexoがどのレンダリングエンジンを使用すべきか知るために`engine`を指定する必要があります。
 
 ``` js
 hexo.render.render({text: 'example', engine: 'swig'}).then(function(result){
@@ -13,9 +13,9 @@ hexo.render.render({text: 'example', engine: 'swig'}).then(function(result){
 });
 ```
 
-## Render a File
+## ファイルのレンダリング
 
-When rendering a file, it's not necessary to specify an `engine` because Hexo will detect the relevant rendering engine automatically based on the extension of the file. Of course, you are also allowed to explicitly define the `engine`.
+ファイルをレンダリングする際には、Hexoがファイルの拡張子に基づいて自動的に関連するレンダリングエンジンを検出するため、`engine`を指定する必要はありません。もちろん、`engine`を明示的に定義することもできます。
 
 ``` js
 hexo.render.render({path: 'path/to/file.swig'}).then(function(result){
@@ -23,9 +23,9 @@ hexo.render.render({path: 'path/to/file.swig'}).then(function(result){
 });
 ```
 
-## Render Options
+## レンダリングオプション
 
-You can pass in an options object as the second argument.
+第二引数としてオプションオブジェクトを渡すことができます。
 
 ``` js
 hexo.render.render({text: ''}, {foo: 'foo'}).then(function(result){
@@ -33,9 +33,9 @@ hexo.render.render({text: ''}, {foo: 'foo'}).then(function(result){
 });
 ```
 
-## after_render Filters
+## after_renderフィルター
 
-When rendering is complete, Hexo will execute the corresponding `after_render` filters. For example, we can use this feature to implement a JavaScript minifier.
+レンダリングが完了すると、Hexoは対応する`after_render`フィルターを実行します。例えば、この機能を使用してJavaScriptのミニファイヤを実装することができます。
 
 ``` js
 var UglifyJS = require('uglify-js');
@@ -46,31 +46,31 @@ hexo.extend.filter.register('after_render:js', function(str, data){
 });
 ```
 
-## Check Whether a File is Renderable
+## ファイルがレンダリング可能かどうかをチェック
 
-You can use the `isRenderable` or `isRenderableSync` method to check whether a file path is renderable. Only when a corresponding renderer has been registered will this method return true.
+`isRenderable`または`isRenderableSync`メソッドを使用して、ファイルパスがレンダリング可能かどうかをチェックできます。対応するレンダラーが登録されている場合のみ、このメソッドはtrueを返します。
 
 ``` js
 hexo.render.isRenderable('layout.swig') // true
 hexo.render.isRenderable('image.png') // false
 ```
 
-## Get the Output Extension
+## 出力拡張子を取得
 
-Use the `getOutput` method to get the extension of the rendered output. If a file is not renderable, the method will return an empty string.
+レンダリングされた出力の拡張子を取得するには、`getOutput`メソッドを使用します。ファイルがレンダリング可能でない場合、このメソッドは空の文字列を返します。
 
 ``` js
 hexo.render.getOutput('layout.swig') // html
-hexo.render.getOutput('image.png') // '''
+hexo.render.getOutput('image.png') // ''
 ```
 
-## Disable Nunjucks tags
+## Nunjucksタグを無効にする
 
-If you are not using a [tag plugin](/docs/tag-plugins) and want to use `{{ }}` or `{% %}` in your post without using content [escaping](/docs/troubleshooting#Escape-Contents), you can disable processing of Nunjucks tag in existing renderer by:
+[tag plugin](/docs/tag-plugins)を使用していない場合で、コンテンツの[エスケープ](/docs/troubleshooting#Escape-Contents)を使用せずに投稿内で`{{ }}`または`{% %}`を使用したい場合は、既存のレンダラーでNunjucksタグの処理を無効にすることができます:
 
 ``` js
-// following example only applies to '.md' file extension
-// you may need to cover other extensions, e.g. '.markdown', '.mkd'
+// 以下の例は'.md'ファイル拡張子にのみ適用されます
+// 他の拡張子もカバーする必要がある場合があります。例：'.markdown', '.mkd'
 const renderer = hexo.render.renderer.get('md')
 if (renderer) {
   renderer.disableNunjucks = true

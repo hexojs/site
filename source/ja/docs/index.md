@@ -1,101 +1,99 @@
 ---
-title: Documentation
+title: 概要
 ---
-Welcome to the Hexo documentation. If you encounter any problems when using Hexo, have a look at the  [troubleshooting guide](troubleshooting.html), raise an issue on [GitHub](https://github.com/hexojs/hexo/issues) or start a topic on the [Google Group](https://groups.google.com/group/hexo).
+Hexoのドキュメントへようこそ。利用中に問題に遭遇した場合は、[トラブルシューティング](troubleshooting.html)をご覧になるか、[GitHub](https://github.com/hexojs/hexo/issues)でIssueを報告したり、[Google Group](https://groups.google.com/group/hexo)でトピックを開始してください。
 
-## What is Hexo?
+## Hexoとは？
 
-Hexo is a fast, simple and powerful blog framework. You write posts in [Markdown](http://daringfireball.net/projects/markdown/) (or other markup languages) and Hexo generates static files with a beautiful theme in seconds.
+Hexoは、高速でシンプルかつ強力なブログフレームワークです。[Markdown](http://daringfireball.net/projects/markdown/)（または他のマークアップ言語）で投稿を書くと、Hexoはすぐに美しいテーマの静的ファイルを生成します。
 
-## Installation
+## インストール
 
-It only takes a few minutes to set up Hexo. If you encounter a problem and can't find the solution here, please [submit a GitHub issue](https://github.com/hexojs/hexo/issues) and we'll help.
+Hexoのセットアップには数分しかかかりません。問題が発生しドキュメントでは解決策を見つけられない場合、[GitHub issueを提出](https://github.com/hexojs/hexo/issues)してください。私たちがサポートします。
 
-{% youtube ARted4RniaU %}
+### 必要要件
 
-### Requirements
+Hexoのインストールは非常に簡単で、事前に必要なのは以下のものだけです:
 
-Installing Hexo is quite easy and only requires the following beforehand:
-
-- [Node.js](http://nodejs.org/) (Should be at least Node.js 10.13, recommends 12.0 or higher)
+- [Node.js](http://nodejs.org/)（最低でもNode.js 10.13が必要、12.0以上を推奨）
 - [Git](http://git-scm.com/)
 
-If your computer already has these, congratulations! You can skip to the [Hexo installation](#Install-Hexo) step.
+これらが既にインストールされている場合、おめでとうございます！[Hexoのインストール](#Hexoのインストール)ステップに進んでください。
 
-If not, please follow the following instructions to install all the requirements.
+インストールされていない場合、以下の指示に従って必要なものを全てインストールしてください。
 
-### Install Git
+### Gitのインストール
 
-- Windows: Download & install [git](https://git-scm.com/download/win).
-- Mac: Install it with [Homebrew](https://brew.sh/), [MacPorts](http://www.macports.org/) or [installer](http://sourceforge.net/projects/git-osx-installer/).
+- Windows: [git](https://git-scm.com/download/win)をダウンロード及びインストール。
+- Mac: [Homebrew](https://brew.sh/)、[MacPorts](http://www.macports.org/)、または[インストーラ](http://sourceforge.net/projects/git-osx-installer/)でインストール。
 - Linux (Ubuntu, Debian): `sudo apt-get install git-core`
 - Linux (Fedora, Red Hat, CentOS): `sudo yum install git-core`
 
-{% note warn For Mac users %}
-You may encounter some problems when compiling. Please install Xcode from App Store first. After Xcode is installed, open Xcode and go to **Preferences -> Download -> Command Line Tools -> Install** to install command line tools.
+{% note warn Macをお使いの場合 %}
+コンパイル時に問題が発生した場合、まずApp StoreからXcodeをインストールしてください。その後、Xcodeを開き**Preferences -> Download -> Command Line Tools -> Install**よりcommand line toolsをインストールしてください。
 {% endnote %}
 
-### Install Node.js
+### Node.jsのインストール
 
-Node.js provides [official installer](https://nodejs.org/en/download/) for most platforms.
+Node.jsはほとんどのプラットフォームに対して[公式インストーラ](https://nodejs.org/en/download/)を提供しています。
 
-Alternative installation methods:
+それ以外のインストール方法:
 
-- Windows: Install it with [nvs](https://github.com/jasongin/nvs/) (recommended) or [nvm](https://github.com/nvm-sh/nvm).
-- Mac: Install it with [Homebrew](https://brew.sh/) or [MacPorts](http://www.macports.org/).
-- Linux (DEB/RPM-based): Install it with [NodeSource](https://github.com/nodesource/distributions).
-- Others: Install it through respective package manager. Refer to [the guide](https://nodejs.org/en/download/package-manager/) provided by Node.js.
+- Windows: [nvs](https://github.com/jasongin/nvs/)（推奨）または[nvm](https://github.com/nvm-sh/nvm)でインストール。
+- Mac: [Homebrew](https://brew.sh/)または[MacPorts](http://www.macports.org/)でインストール。
+- Linux (DEB/RPMベース): [NodeSource](https://github.com/nodesource/distributions)でインストール。
+- その他: 各パッケージマネージャを通じてインストール。Node.jsによって提供される[ガイド](https://nodejs.org/en/download/package-manager/)を参照してください。
 
-nvs is also recommended for Mac and Linux to avoid possible permission issue.
+MacとやLinuxではパーミッション問題を避けるためnvsを推奨します。
 
 {% note info Windows %}
-If you use the official installer, make sure **Add to PATH** is checked (it's checked by default).
+公式インストーラを使用する場合は、**Add to PATH**がチェックされていることを確認してください（デフォルトでチェックされています）。
 {% endnote %}
 
 {% note warn Mac / Linux %}
-If you encounter `EACCES` permission error when trying to install Hexo, please follow [the workaround](https://docs.npmjs.com/resolving-eacces-permissions-errors-when-installing-packages-globally) provided by npmjs; overriding with root/sudo is highly discouraged.
+Hexoをインストールしようとした際に`EACCES`パーミッションエラーに遭遇した場合は、npmjsによって提供された[ワークアラウンド](https://docs.npmjs.com/resolving-eacces-permissions-errors-when-installing-packages-globally)に従ってください。root/sudoでの上書きは強く非推奨です。
 {% endnote %}
 
 {% note info Linux %}
-If you installed Node.js using Snap, you may need to manually run `npm install` in the target folder when [initializing](/docs/commands#init) a blog.
+Snapを使用してNode.jsをインストールした場合、ブログを[初期化](commands#init)する際にターゲットフォルダで`npm install`を手動で実行する必要があるかもしれません。
 {% endnote %}
 
-### Install Hexo
+### Hexoのインストール
 
-Once all the requirements are installed, you can install Hexo with npm:
+すべての要件がインストールされたら、npmでHexoをインストールできます:
 
 ``` bash
 $ npm install -g hexo-cli
 ```
 
-### Advanced installation and usage
+### 上級ユーザー者向けのインストール方法
 
-Advanced users may prefer to install and use `hexo` package instead.
+上級ユーザーは、代わりに`hexo`パッケージをインストールして使用することを好むかもしれません。
 
 ``` bash
 $ npm install hexo
 ```
 
-Once installed, you can run Hexo in two ways:
+インストール後、Hexoを2つの方法で実行できます:
 
 1. `npx hexo <command>`
-2. Linux users can set relative path of `node_modules/` folder:
+2. Linuxユーザーは`node_modules/`フォルダの相対パスを設定できます:
 
   ``` bash
   echo 'PATH="$PATH:./node_modules/.bin"' >> ~/.profile
   ```
 
-  then run Hexo using `hexo <command>`
+  その後、`hexo <command>`を使用してHexoを実行します。
 
-### Required Node.js version
+### 必要なNode.jsのバージョン
 
-If you are stuck with older Node.js, you can consider installing a past version of Hexo.
+古いNode.jsを使用している場合は、Hexoの過去のバージョンをインストールすることを検討してください。
 
-Please note we do not provide bugfixes to past versions of Hexo.
+Hexoの過去のバージョンへはバグ修正を提供していないことに注意してください。
 
-We highly recommend to always install the [latest version](https://www.npmjs.com/package/hexo?activeTab=versions) of Hexo and the [recommended version](#Requirements) of Node.js, whenever possible.
+可能な限り、常にHexoの[最新バージョン](https://www.npmjs.com/package/hexo?activeTab=versions)と[推奨されるバージョン](#必要要件)のNode.jsをインストールすることを強く推奨します。
 
-Hexo version | Minimum (Node.js version) | Less than (Node.js version)
+Hexoバージョン | 最小 (Node.jsバージョン) | 未満 (Node.jsバージョン)
 --- | --- | ---
 7.0+ | 14.0.0 | latest
 6.2+ | 12.13.0 | latest

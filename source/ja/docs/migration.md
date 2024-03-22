@@ -1,15 +1,15 @@
 ---
-title: Migration
+title: 移行
 ---
 ## RSS
 
-First, install the `hexo-migrator-rss` plugin.
+まず`hexo-migrator-rss`プラグインをインストールします。
 
 ``` bash
 $ npm install hexo-migrator-rss --save
 ```
 
-Once the plugin is installed, run the following command to migrate all posts from RSS. `source` can be a file path or URL.
+プラグインがインストールされたら、以下のコマンドを実行してRSSからすべての投稿を移行します。`source`はファイルパスまたはURLです。
 
 ``` bash
 $ hexo migrate rss <source>
@@ -17,9 +17,9 @@ $ hexo migrate rss <source>
 
 ## Jekyll
 
-Move all files in the Jekyll `_posts` folder to the `source/_posts` folder.
+Jekyllの`_posts`フォルダ内のすべてのファイルを`source/_posts`フォルダに移動します。
 
-Modify the `new_post_name` setting in `_config.yml`:
+`_config.yml`の`new_post_name`設定を変更します:
 
 ``` yaml
 new_post_name: :year-:month-:day-:title.md
@@ -27,9 +27,9 @@ new_post_name: :year-:month-:day-:title.md
 
 ## Octopress
 
-Move all files in the Octopress `source/_posts` folder to `source/_posts`
+Octopressの`source/_posts`フォルダ内のすべてのファイルを`source/_posts`に移動します。
 
-Modify the `new_post_name` setting in `_config.yml`:
+`_config.yml`の`new_post_name`設定を変更します:
 
 ``` yaml
 new_post_name: :year-:month-:day-:title.md
@@ -37,36 +37,36 @@ new_post_name: :year-:month-:day-:title.md
 
 ## WordPress
 
-First, install the `hexo-migrator-wordpress` plugin.
+まず、`hexo-migrator-wordpress`プラグインをインストールします。
 
 ``` bash
 $ npm install hexo-migrator-wordpress --save
 ```
 
-Export your WordPress site by going to "Tools" → "Export" → "WordPress" in the WordPress dashboard (see the [WordPress support page](http://en.support.wordpress.com/export/) for more details).
+WordPressダッシュボードで "Tools" → "Export" → "WordPress" に移動して、WordPressサイトをエクスポートします（詳細は[WordPressサポートページ](http://en.support.wordpress.com/export/)を参照）。
 
-Now run:
+次のコマンドを実行します:
 
 ``` bash
 $ hexo migrate wordpress <source>
 ```
 
-Where `source` is the file path or URL to the WordPress export file.
+ここで、`source`はWordPressエクスポートファイルへのファイルパスまたはURLです。
 
 ## Joomla
 
-First, install the `hexo-migrator-joomla` plugin.
+まず、`hexo-migrator-joomla`プラグインをインストールします。
 
 ```bash
 $ npm install hexo-migrator-joomla --save
 ```
 
-Export your Joomla articles using the [J2XML](http://extensions.joomla.org/extensions/migration-a-conversion/data-import-a-export/12816?qh=YToxOntpOjA7czo1OiJqMnhtbCI7fQ%3D%3D) component.
+[J2XML](http://extensions.joomla.org/extensions/migration-a-conversion/data-import-a-export/12816?qh=YToxOntpOjA7czo1OiJqMnhtbCI7fQ%3D%3D)コンポーネントを使用してJoomla記事をエクスポートします。
 
-Now run:
+次のコマンドを実行します:
 
 ```bash
 $ hexo migrate joomla <source>
 ```
 
-Where `source` is the file path or URL to the Joomla export file.
+ここで、`source`はJoomlaエクスポートファイルへのファイルパスまたはURLです。

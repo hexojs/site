@@ -1,19 +1,17 @@
 ---
-title: Tag Plugins
+title: タグプラグイン
 ---
-Tag plugins are different from post tags. They are ported from Octopress and provide a useful way for you to quickly add specific content to your posts.
+タグプラグインは投稿タグとは異なります。これらはOctopressから移植されました。特定のコンテンツを投稿に素早く追加するのに便利です。
 
-Although you can write your posts in any format, the tag plugins will always be available and syntax remains the same.
+投稿は任意のフォーマットで書くことができますが、何れの場合もタグプラグインは利用可能です。構文には変わりはありません。
 
-{% youtube I07XMi7MHd4 %}
+_タグプラグインをMarkdownの構文でラップしてはいけません。例えば `[]({% post_path lorem-ipsum %})` はサポートされていません。_
 
-_Tag plugins should not be wrapped inside Markdown syntax, e.g. `[]({% post_path lorem-ipsum %})` is not supported._
+## 引用
 
-## Block Quote
+投稿に引用を追加します。オプションで著者、出典、タイトル情報を含めることができます。
 
-Perfect for adding quotes to your post, with optional author, source and title information.
-
-**Alias:** quote
+**別名:** quote
 
 ```
 {% blockquote [author[, source]] [link] [source_link_title] %}
@@ -21,9 +19,9 @@ content
 {% endblockquote %}
 ```
 
-### Examples
+### 例
 
-**No arguments. Plain blockquote.**
+**引数なし。プレーンなブロック引用。**
 
 ```
 {% blockquote %}
@@ -31,11 +29,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque hendrerit 
 {% endblockquote %}
 ```
 
-{% blockquote %}
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque hendrerit lacus ut purus iaculis feugiat. Sed nec tempor elit, quis aliquam neque. Curabitur sed diam eget dolor fermentum semper at eu lorem.
-{% endblockquote %}
-
-**Quote from a book**
+**本からの引用**
 
 ```
 {% blockquote David Levithan, Wide Awake %}
@@ -43,11 +37,7 @@ Do not just seek happiness for yourself. Seek happiness for all. Through kindnes
 {% endblockquote %}
 ```
 
-{% blockquote David Levithan, Wide Awake %}
-Do not just seek happiness for yourself. Seek happiness for all. Through kindness. Through mercy.
-{% endblockquote %}
-
-**Quote from Twitter**
+**Twitterからの引用**
 
 ```
 {% blockquote @DevDocs https://twitter.com/devdocs/status/356095192085962752 %}
@@ -55,11 +45,7 @@ NEW: DevDocs now comes with syntax highlighting. http://devdocs.io
 {% endblockquote %}
 ```
 
-{% blockquote @DevDocs https://twitter.com/devdocs/status/356095192085962752 %}
-NEW: DevDocs now comes with syntax highlighting. http://devdocs.io
-{% endblockquote %}
-
-**Quote from an article on the web**
+**ウェブ上の記事からの引用**
 
 ```
 {% blockquote Seth Godin http://sethgodin.typepad.com/seths_blog/2009/07/welcome-to-island-marketing.html Welcome to Island Marketing %}
@@ -67,36 +53,32 @@ Every interaction is both precious and an opportunity to delight.
 {% endblockquote %}
 ```
 
-{% blockquote Seth Godin http://sethgodin.typepad.com/seths_blog/2009/07/welcome-to-island-marketing.html Welcome to Island Marketing %}
-Every interaction is both precious and an opportunity to delight.
-{% endblockquote %}
+## コードブロック
 
-## Code Block
+投稿にコードスニペットを追加するための便利な機能です。
 
-A useful feature for adding code snippets to your post.
-
-**Alias:** code
+**別名:** code
 
 ```
-{% codeblock [title] [lang:language] [url] [link text] [additional options] %}
+{% codeblock [title] [lang:language] [url] [link text] [追加オプション] %}
 code snippet
 {% endcodeblock %}
 ```
 
-Specify additional options in `option:value` format, e.g. `line_number:false first_line:5`.
+追加オプションは `option:value` 形式で指定します。例: `line_number:false first_line:5`。
 
-Extra Options | Description | Default
+追加オプション | 説明 | デフォルト
 --- | --- | ---
-`line_number` | Show line number | `true`
-`line_threshold` | Only show line numbers as long as the numbers of lines of the code block exceed such threshold. | `0` |
-`highlight` | Enable code highlighting | `true`
-`first_line` | Specify the first line number | `1`
-`mark` | Line highlight specific line(s), each value separated by a comma. Specify the number range using a dash<br>Example: `mark:1,4-7,10` will mark lines 1, 4 to 7 and 10. |
-`wrap` | Wrap the code block in [`<table>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table) | `true`
+`line_number` | 行番号を表示 | `true`
+`line_threshold` | コードブロックの行数がこの閾値を超える場合にのみ行番号を表示。 | `0` |
+`highlight` | コードのハイライトを有効にする | `true`
+`first_line` | 最初の行番号を指定 | `1`
+`mark` | コンマ区切りで指定された行をハイライト。範囲指定にはハイフンを使用<br>例: `mark:1,4-7,10` は行1、4から7、10をマークします。 |
+`wrap` | コードブロックを[`<table>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table)でラップ | `true`
 
-### Examples
+### 例
 
-**A plain code block**
+**プレーンなコードブロック**
 
 ```
 {% codeblock %}
@@ -104,11 +86,7 @@ alert('Hello World!');
 {% endcodeblock %}
 ```
 
-{% codeblock %}
-alert('Hello World!');
-{% endcodeblock %}
-
-**Specifying the language**
+**言語指定**
 
 ```
 {% codeblock lang:objc %}
@@ -116,11 +94,7 @@ alert('Hello World!');
 {% endcodeblock %}
 ```
 
-{% codeblock lang:objc %}
-[rectangle setX: 10 y: 10 width: 20 height: 20];
-{% endcodeblock %}
-
-**Adding a caption to the code block**
+**コードブロックにキャプションを追加**
 
 ```
 {% codeblock Array.map %}
@@ -128,11 +102,7 @@ array.map(callback[, thisArg])
 {% endcodeblock %}
 ```
 
-{% codeblock Array.map %}
-array.map(callback[, thisArg])
-{% endcodeblock %}
-
-**Adding a caption and a URL**
+**キャプションとURLを追加**
 
 ```
 {% codeblock _.compact http://underscorejs.org/#compact Underscore.js %}
@@ -141,14 +111,9 @@ _.compact([0, 1, false, 2, '', 3]);
 {% endcodeblock %}
 ```
 
-{% codeblock _.compact http://underscorejs.org/#compact Underscore.js %}
-_.compact([0, 1, false, 2, '', 3]);
-=> [1, 2, 3]
-{% endcodeblock %}
+## バックティックコードブロック
 
-## Backtick Code Block
-
-This is identical to using a code block, but instead uses three backticks to delimit the block.
+これはコードブロックの使用と同じですが、ブロックを区切るために3つのバックティックを使用します。
 
 {% raw %}
 &#96`` [language] [title] [url] [link text]
@@ -156,9 +121,9 @@ code snippet
 &#96;``
 {% endraw %}
 
-## Pull Quote
+## プルクオート
 
-To add pull quotes to your posts:
+投稿にプルクオートを追加するには:
 
 ```
 {% pullquote [class] %}
@@ -166,25 +131,25 @@ content
 {% endpullquote %}
 ```
 
-## jsFiddle (deleted in `v7.0.0`)
+## jsFiddle (v7.0.0で削除されました)
 
 {% note warn %}
-The tag was removed in Hexo 7.0.0. We have provided a plugin [hexo-tag-embed](https://github.com/hexojs/hexo-tag-embed) for backward compatibility with your existing posts.
+このタグはHexo 7.0.0で削除されました。既存の投稿との後方互換性を提供するために、プラグイン[hexo-tag-embed](https://github.com/hexojs/hexo-tag-embed)を提供しています。
 {% endnote %}
 
-To embed a jsFiddle snippet:
+jsFiddleスニペットを埋め込むには:
 
 ```
 {% jsfiddle shorttag [tabs] [skin] [width] [height] %}
 ```
 
-## Gist (deleted in `v7.0.0`)
+## Gist (v7.0.0で削除されました)
 
 {% note warn %}
-Please use [hexo-tag-embed](https://github.com/hexojs/hexo-tag-embed) instead if you use `v7.0.0+`.
+v7.0.0+を使用する場合は、代わりに[hexo-tag-embed](https://github.com/hexojs/hexo-tag-embed)を使用してください。
 {% endnote %}
 
-To embed a Gist snippet:
+Gistスニペットを埋め込むには:
 
 ```
 {% gist gist_id [filename] %}
@@ -192,149 +157,149 @@ To embed a Gist snippet:
 
 ## iframe
 
-To embed an iframe:
+iframeを埋め込むには:
 
 ```
 {% iframe url [width] [height] %}
 ```
 
-## Image
+## 画像
 
-Inserts an image with specified size.
+指定されたサイズで画像を挿入します。
 
 ```
 {% img [class names] /path/to/image [width] [height] '"title text" "alt text"' %}
 ```
 
-## Link
+## リンク
 
-Inserts a link with `target="_blank"` attribute.
+`target="_blank"`属性を持つリンクを挿入します。
 
 ```
 {% link text url [external] [title] %}
 ```
 
-## Include Code
+## コードを含める
 
-Inserts code snippets in `source/downloads/code` folder. The folder location can be specified through the `code_dir` option in the config.
+`source/downloads/code`フォルダにあるコードスニペットを挿入します。フォルダの場所は`code_dir`オプションを通じて設定できます。
 
 ```
 {% include_code [title] [lang:language] [from:line] [to:line] path/to/file %}
 ```
 
-### Examples
+### 例
 
-**Embed the whole content of test.js**
+**test.jsの全内容を埋め込む**
 
 ```
 {% include_code lang:javascript test.js %}
 ```
 
-**Embed line 3 only**
+**3行目のみを埋め込む**
 
 ```
 {% include_code lang:javascript from:3 to:3 test.js %}
 ```
 
-**Embed line 5 to 8**
+**5行目から8行目を埋め込む**
 
 ```
 {% include_code lang:javascript from:5 to:8 test.js %}
 ```
 
-**Embed line 5 to the end of file**
+**5行目からファイルの終わりまでを埋め込む**
 
 ```
 {% include_code lang:javascript from:5 test.js %}
 ```
 
-**Embed line 1 to 8**
+**1行目から8行目を埋め込む**
 
 ```
 {% include_code lang:javascript to:8 test.js %}
 ```
 
-## YouTube (deleted in `v7.0.0`)
+## YouTube (v7.0.0で削除されました)
 
 {% note warn %}
-Please use [hexo-tag-embed](https://github.com/hexojs/hexo-tag-embed) instead if you use `v7.0.0+`.
+v7.0.0+を使用する場合は、代わりに[hexo-tag-embed](https://github.com/hexojs/hexo-tag-embed)を使用してください。
 {% endnote %}
 
-Inserts a YouTube video.
+YouTube動画を挿入します。
 
 ```
 {% youtube video_id [type] [cookie] %}
 ```
 
-### Examples
+### 例
 
-**Embed a video**
+**動画を埋め込む**
 
 ```
 {% youtube lJIrF4YjHfQ %}
 ```
 
-**Embed a playlist**
+**プレイリストを埋め込む**
 
 ```
 {% youtube PL9hW1uS6HUfscJ9DHkOSoOX45MjXduUxo 'playlist' %}
 ```
 
-**Enable privacy-enhanced mode**
+**プライバシー強化モードを有効にする**
 
-YouTube's cookie is not used in this mode.
+このモードではYouTubeのクッキーは使用されません。
 
 ```
 {% youtube lJIrF4YjHfQ false %}
 {% youtube PL9hW1uS6HUfscJ9DHkOSoOX45MjXduUxo 'playlist' false %}
 ```
 
-## Vimeo (deleted in `v7.0.0`)
+## Vimeo (v7.0.0で削除されました)
 
 {% note warn %}
-Please use [hexo-tag-embed](https://github.com/hexojs/hexo-tag-embed) instead if you use `v7.0.0+`.
+v7.0.0+を使用する場合は、代わりに[hexo-tag-embed](https://github.com/hexojs/hexo-tag-embed)を使用してください。
 {% endnote %}
 
-Inserts a responsive or specified size Vimeo video.
+レスポンシブまたは指定されたサイズのVimeo動画を挿入します。
 
 ```
 {% vimeo video_id [width] [height] %}
 ```
 
-## Include Posts
+## 投稿を含める
 
-Include links to other posts.
+他の投稿へのリンクを含めます。
 
 ```
 {% post_path filename %}
 {% post_link filename [title] [escape] %}
 ```
 
-You can ignore permalink and folder information, like languages and dates, when using this tag.
+このタグを使用するときは、パーマリンクやフォルダ情報（言語や日付など）を無視できます。
 
-For instance: `{% raw %}{% post_link how-to-bake-a-cake %}{% endraw %}`.
+例えば、\`{% raw %}{% post_link how-to-bake-a-cake %}{% endraw %}\`というように使用できます。
 
-This will work as long as the filename of the post is `how-to-bake-a-cake.md`, even if the post is located at `source/posts/2015-02-my-family-holiday` and has permalink `2018/en/how-to-bake-a-cake`.
+これは投稿のファイル名が`how-to-bake-a-cake.md`である限り、投稿が`source/posts/2015-02-my-family-holiday`に位置し、パーマリンクが`2018/en/how-to-bake-a-cake`であっても機能します。
 
-You can customize the text to display, instead of displaying the post's title.
+投稿のタイトルではなくカスタムテキストを表示することもできます。
 
-Post's title and custom text are escaped by default. You can use the `escape` option to disable escaping.
+投稿のタイトルとカスタムテキストはデフォルトでエスケープされます。`escape`オプションを使用してエスケープを無効にできます。
 
-For instance:
+例:
 
-**Display title of the post.**
+**投稿のタイトルを表示。**
 
-`{% raw %}{% post_link hexo-3-8-released %}{% endraw %}`
+\`{% raw %}{% post_link hexo-3-8-released %}{% endraw %}\`
 
 {% post_link hexo-3-8-released %}
 
-**Display custom text.**
+**カスタムテキストを表示。**
 
-`{% raw %}{% post_link hexo-3-8-released 'Link to a post' %}{% endraw %}`
+\`{% raw %}{% post_link hexo-3-8-released 'Link to a post' %}{% endraw %}\`
 
 {% post_link hexo-3-8-released 'Link to a post' %}
 
-**Escape title.**
+**タイトルをエスケープする。**
 
 ```
 {% post_link hexo-4-released 'How to use <b> tag in title' %}
@@ -342,7 +307,7 @@ For instance:
 
 {% post_link hexo-4-released 'How to use <b> tag in title' %}
 
-**Do not escape title.**
+**タイトルのエスケープを無効にする。**
 
 ```
 {% post_link hexo-4-released '<b>bold</b> custom title' false %}
@@ -350,9 +315,9 @@ For instance:
 
 {% post_link hexo-4-released '<b>bold</b> custom title' false %}
 
-## Include Assets
+## アセットを含める
 
-Include post assets, to be used in conjunction with [`post_asset_folder`](/docs/asset-folders).
+[`post_asset_folder`](/docs/asset-folders)と一緒に使用する投稿アセットを含めます。
 
 ```
 {% asset_path filename %}
@@ -360,13 +325,13 @@ Include post assets, to be used in conjunction with [`post_asset_folder`](/docs/
 {% asset_link filename [title] [escape] %}
 ```
 
-### Embed image
+### 画像を埋め込む
 
-_hexo-renderer-marked 3.1.0+ can (optionally) resolves the post's path of an image automatically, refer to [this section](/docs/asset-folders#Embedding-an-image-using-markdown) on how to enable it._
+_hexo-renderer-marked 3.1.0+は、オプションで画像の投稿パスを自動的に解決できます。これを有効にする方法については、[このセクション](asset-folders#マークダウンを使用した画像の埋め込み)を参照してください。_
 
-"foo.jpg" is located at `http://example.com/2020/01/02/hello/foo.jpg`.
+"foo.jpg"は`http://example.com/2020/01/02/hello/foo.jpg`に位置しています。
 
-**Default (no option)**
+**デフォルト（オプションなし）**
 
 `{% asset_img foo.jpg %}`
 
@@ -374,7 +339,7 @@ _hexo-renderer-marked 3.1.0+ can (optionally) resolves the post's path of an ima
 <img src="/2020/01/02/hello/foo.jpg">
 ```
 
-**Custom class**
+**カスタムクラス**
 
 `{% asset_img post-image foo.jpg %}`
 
@@ -382,7 +347,7 @@ _hexo-renderer-marked 3.1.0+ can (optionally) resolves the post's path of an ima
 <img src="/2020/01/02/hello/foo.jpg" class="post-image">
 ```
 
-**Display size**
+**サイズを指定**
 
 `{% asset_img foo.jpg 500 400 %}`
 
@@ -390,7 +355,7 @@ _hexo-renderer-marked 3.1.0+ can (optionally) resolves the post's path of an ima
 <img src="/2020/01/02/hello/foo.jpg" width="500" height="400">
 ```
 
-**Title & Alt**
+**タイトル & Alt**
 
 `{% asset_img foo.jpg "lorem ipsum'dolor'" %}`
 
@@ -402,17 +367,17 @@ _hexo-renderer-marked 3.1.0+ can (optionally) resolves the post's path of an ima
 
 ### url_for (7.0.0+)
 
-Returns a url with the root path prefixed. Output is encoded automatically.
+ルートパスがプレフィックスとして付加されたURLを返します。出力は自動的にエンコードされます。
 
 ```
 {% url_for text path [relative] %}
 ```
 
-**Examples:**
+**例:**
 
 ``` yml
 _config.yml
-root: /blog/ # example
+root: /blog/ # 例
 ```
 
 ``` 
@@ -423,8 +388,8 @@ root: /blog/ # example
 <a href="/blog/index.html">blog</a>
 ```
 
-Relative link, follows `relative_link` option by default
-e.g. post/page path is '/foo/bar/index.html'
+相対リンク指定はデフォルトで`relative_link`オプションに従います。
+例えば、投稿/ページのパスが'/foo/bar/index.html'の場合
 
 ``` yml
 _config.yml
@@ -439,7 +404,7 @@ relative_link: true
 <a href="../../index.html">blog</a>
 ```
 
-You could also disable it to output a non-relative link, even when `relative_link` is enabled and vice versa.
+`relative_link`が有効になっていても非相対リンクを出力する、あるいはその逆を行うこともできます。
 
 ```
 {% url_for blog index.html false %}
@@ -451,13 +416,13 @@ You could also disable it to output a non-relative link, even when `relative_lin
 
 ### full_url_for (7.0.0+)
 
-Returns a url with the `config.url` prefixed. Output is encoded automatically.
+`config.url`がプレフィックスとして付加されたURLを返します。出力は自動的にエンコードされます。
 
 ```
 {% full_url_for text path %}
 ```
 
-**Examples:**
+**例:**
 
 ``` yml
 _config.yml
@@ -474,7 +439,7 @@ url: https://example.com/blog # example
 
 ## Raw
 
-If certain content is causing processing issues in your posts, wrap it with the `raw` tag to avoid rendering errors.
+投稿の一部のコンテンツが処理中に問題を起こす場合、`raw`タグでラップしてレンダリングエラーを回避します。
 
 ```
 {% raw %}
@@ -482,11 +447,11 @@ content
 {% endraw %}
 ```
 
-## Post Excerpt
+## 投稿の抜粋
 
-Use text placed before the `<!-- more -->` tag as an excerpt for the post. `excerpt:` value in the [front-matter](/docs/front-matter#Settings-amp-Their-Default-Values), if specified, will take precedent.
+`<!-- more -->`タグの前に置かれたテキストを投稿の抜粋として使用します。フロントマターに指定された`excerpt:`の値がある場合、それが優先されます。
 
-**Examples:**
+**例:**
 
 ```
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.

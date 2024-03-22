@@ -1,62 +1,62 @@
 ---
-title: Posts
+title: 投稿
 ---
-## Create a Post
+## 投稿の作成
 
 ``` js
 hexo.post.create(data, replace);
 ```
 
-Argument | Description
+引数 | 説明
 --- | ---
-`data` | Data
-`replace` | Replace existing files
+`data` | データ
+`replace` | 既存のファイルを置き換える
 
-The attributes of a post can be defined in `data`. The table below is not exhaustive. Additional attributes may be appended to the front-matter.
+投稿の属性は`data`で定義できます。以下の表は網羅的ではありません。追加の属性はフロントマターに追加されるかもしれません。
 
-Data | Description
+データ | 説明
 --- | ---
-`title` | Title
+`title` | タイトル
 `slug` | URL
-`layout` | Layout. Defaults to the `default_layout` setting.
-`path` | Path. Hexo builds the post path based on the `new_post_path` setting by default.
-`date` | Date. Defaults to the current date.
+`layout` | レイアウト。`default_layout`設定がデフォルトです。
+`path` | パス。デフォルトでは`new_post_path`設定に基づいて投稿のパスをHexoが構築します。
+`date` | 日付。デフォルトでは現在の日付です。
 
-## Publish a Draft
+## 下書きの公開
 
 ``` js
 hexo.post.publish(data, replace);
 ```
 
-Argument | Description
+引数 | 説明
 --- | ---
-`data` | Data
-`replace` | Replace existing files
+`data` | データ
+`replace` | 既存のファイルを置き換える
 
-The attributes of a post can be defined in `data`. The table below is not exhaustive. Additional attributes may be appended to the front-matter.
+投稿の属性は`data`で定義できます。以下の表は網羅的ではありません。追加の属性はフロントマターに追加されるかもしれません。
 
-Data | Description
+データ | 説明
 --- | ---
-`slug` | File name (Required)
-`layout` | Layout. Defaults to the `default_layout` setting.
+`slug` | ファイル名（必須）
+`layout` | レイアウト。`default_layout`設定がデフォルトです。
 
-## Render
+## レンダリング
 
 ``` js
 hexo.post.render(source, data);
 ```
 
-Argument | Description
+引数 | 説明
 --- | ---
-`source` | Full path of a file (Optional)
-`data` | Data
+`source` | ファイルの完全なパス（オプショナル）
+`data` | データ
 
-The data must contain the `content` attribute. If not, Hexo will try to read the original file. The execution steps of this function are as follows:
+データには`content`属性が含まれている必要があります。そうでない場合、Hexoは元のファイルを読み込もうとします。この関数の実行手順は以下の通りです:
 
-- Execute `before_post_render` filters
-- Render with Markdown or other renderers (depending on the extension name)
-- Render with [Nunjucks]
-- Execute `after_post_render` filters
+- `before_post_render`フィルターを実行
+- Markdownや他のレンダラー（拡張名に依存）でレンダリング
+- [Nunjucks]でレンダリング
+- `after_post_render`フィルターを実行
 
 [Nunjucks]: https://mozilla.github.io/nunjucks/
 

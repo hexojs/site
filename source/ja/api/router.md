@@ -1,11 +1,11 @@
 ---
-title: Router
+title: ルーター
 ---
-The router saves all paths used in the site.
+ルーターはサイトで使用されるすべてのパスを保存します。
 
-## Get a Path
+## パスの取得
 
-The `get` method returns a [Stream]. For example, to save the path data to a specified destination:
+`get`メソッドは[Stream]を返します。たとえば、指定された宛先にパスデータを保存するには:
 
 ``` js
 var data = hexo.route.get('index.html');
@@ -14,31 +14,31 @@ var dest = fs.createWriteStream('somewhere');
 data.pipe(dest);
 ```
 
-## Set a Path
+## パスの設定
 
-The `set` method takes a string, a [Buffer] or a function.
+`set`メソッドは文字列、[Buffer]、または関数を引数に取ります。
 
 ``` js
-// String
+// 文字列
 hexo.route.set('index.html', 'index')
 
 // Buffer
 hexo.route.set('index.html', new Buffer('index'));
 
-// Function (Promise)
+// 関数 (Promise)
 hexo.route.set('index.html', function(){
   return new Promise(function(resolve, reject){
     resolve('index');
   });
 });
 
-// Function (Callback)
+// 関数 (コールバック)
 hexo.route.set('index.html', function(callback){
   callback(null, 'index');
 });
 ```
 
-You can also set a boolean for whether a path has been modified or not. This can speed up file generation as it allows for ignoring the unmodified files.
+パスが変更されたかどうかのブール値も設定できます。これにより、変更されていないファイルを無視することでファイル生成を高速化できます。
 
 ``` js
 hexo.route.set('index.html', {
@@ -49,21 +49,21 @@ hexo.route.set('index.html', {
 // hexo.route.isModified('index.html') => false
 ```
 
-## Remove a Path
+## パスの削除
 
 ``` js
 hexo.route.remove('index.html');
 ```
 
-## Get the List of Routes
+## ルートのリストを取得
 
 ``` js
 hexo.route.list();
 ```
 
-## Format a Path
+## パスのフォーマット
 
-The `format` method transforms a string to a valid path.
+`format`メソッドは文字列を有効なパスに変換します。
 
 ``` js
 hexo.route.format('archives/');

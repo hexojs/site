@@ -1,22 +1,20 @@
 ---
-title: Templates
+title: テンプレート
 ---
-Templates define the presentation of your website by describing what each page should look like. The table below shows the corresponding template for every available page. At the very least, a theme should contain an `index` template.
+テンプレートは、ウェブサイトのプレゼンテーションを定義します。それは各ページがどのように見えるべきかを記述します。下記の表は、利用可能な各ページに対応するテンプレートを示しています。最低限、テーマには`index`テンプレートが含まれているべきです。
 
-{% youtube mb65bQ4iUc4 %}
-
-Template | Page | Fallback
+テンプレート | ページ | フォールバック
 --- | --- | ---
-`index` | Home page |
-`post` | Posts | `index`
-`page` | Pages | `index`
-`archive` | Archives | `index`
-`category` | Category archives | `archive`
-`tag` | Tag archives | `archive`
+`index` | ホームページ |
+`post` | 投稿 | `index`
+`page` | ページ | `index`
+`archive` | アーカイブ | `index`
+`category` | カテゴリーアーカイブ | `archive`
+`tag` | タグアーカイブ | `archive`
 
-## Layouts
+## レイアウト
 
-When pages share a similar structure - for instance, when two templates have both a header and a footer - you can consider using a `layout` to declare these structural similarities. Every layout file should contain a `body` variable to display the contents of the template in question. For example:
+ページが類似の構造を共有する場合（例えば、二つのテンプレートがヘッダーとフッターを持つ場合）、これらの構造上の類似性を宣言するために`layout`を使用することができます。すべてのレイアウトファイルには、該当するテンプレートの内容を表示するための`body`変数を含めるべきです。例えば:
 
 ``` html index.ejs
 index
@@ -29,7 +27,7 @@ index
 </html>
 ```
 
-yields:
+は次のようになります:
 
 ``` html
 <!DOCTYPE html>
@@ -38,11 +36,11 @@ yields:
 </html>
 ```
 
-By default, the `layout` template is used by all other templates. You can specify additional layouts in the front-matter or set it to `false` to disable it. It's even possible to build a complex nested structure by including more layout templates in your top layout.
+デフォルトでは、`layout`テンプレートは他のすべてのテンプレートによって使用されます。フロントマターや設定で`false`に設定することで無効にするか、追加のレイアウトを指定することができます。トップレイアウトにさらに多くのレイアウトテンプレートを含めることで、複雑なネスト構造を構築することも可能です。
 
-## Partials
+## パーシャル
 
-Partials are useful for sharing components between your templates. Typical examples include headers, footers or sidebars. You may want to put your partials in separate files to make maintaining your website significantly more convenient. For example:
+テンプレート間でコンポーネントを共有する場合に、パーシャルが役立ちます。典型的な例には、ヘッダー、フッター、サイドバーなどがあります。ウェブサイトのメンテナンスを大幅に便利にするために、パーシャルを別のファイルに置くことができます。例えば:
 
 ``` html partial/header.ejs
 <h1 id="logo"><%= config.title %></h1>
@@ -50,43 +48,43 @@ Partials are useful for sharing components between your templates. Typical examp
 
 ``` html index.ejs
 <%- partial('partial/header') %>
-<div id="content">Home page</div>
+<div id="content">ホームページ</div>
 ```
 
-yields:
+は次のようになります:
 
 ``` html
-<h1 id="logo">My Site</h1>
-<div id="content">Home page</div>
+<h1 id="logo">マイサイト</h1>
+<div id="content">ホームページ</div>
 ```
 
-## Local Variables
+## ローカル変数
 
-You can define local variables in templates and use them in other templates.
+テンプレート内でローカル変数を定義し、他のテンプレートで使用することができます。
 
 ``` html partial/header.ejs
 <h1 id="logo"><%= title %></h1>
 ```
 
 ``` html index.ejs
-<%- partial('partial/header', {title: 'Hello World'}) %>
-<div id="content">Home page</div>
+<%- partial('partial/header', {title: 'ハローワールド'}) %>
+<div id="content">ホームページ</div>
 ```
 
-yields:
+は次のようになります:
 
 ``` html
-<h1 id="logo">Hello World</h1>
-<div id="content">Home page</div>
+<h1 id="logo">ハローワールド</h1>
+<div id="content">ホームページ</div>
 ```
 
-## Optimization
+## 最適化
 
-If your theme is exceedingly complex or if the number of files to generate becomes too large, Hexo's file generation performance may begin to decrease considerably. Aside from simplifying your theme, you may also try Fragment Caching, which was introduced in Hexo 2.7.
+テーマが極端に複雑であるか、生成するファイルの数が多すぎる場合、Hexoのファイル生成性能が大幅に低下することがあります。テーマを単純化する以外に、Fragment Cachingを試すことができます。これはHexo 2.7で導入されました。
 
-This feature was borrowed from [Ruby on Rails](http://guides.rubyonrails.org/caching_with_rails.html#fragment-caching). It causes content to be saved as fragments and cached for when additional requests are made. This can reduce the number of database queries and can also speed up file generation.
+この機能は[Ruby on Rails](http://guides.rubyonrails.org/caching_with_rails.html#fragment-caching)から借用されました。それはコンテンツをフラグメントとして保存し、追加のリクエストが行われたときにキャッシュされるようにします。これにより、データベースクエリの数を減らし、ファイル生成をスピードアップすることができます。
 
-Fragment caching is best used for headers, footers, sidebars or other static content that is unlikely to change from template to template. For example:
+Fragment cachingは、テンプレートからテンプレートへ変更がないと予想されるヘッダー、フッター、サイドバー、または他の静的コンテンツに最適に使用されます。例えば:
 
 ``` js
 <%- fragment_cache('header', function(){
@@ -94,13 +92,13 @@ Fragment caching is best used for headers, footers, sidebars or other static con
 });
 ```
 
-Though it may be easier to use partials:
+パーシャルを使用する方が簡単かもしれません:
 
 ``` js
 <%- partial('header', {}, {cache: true});
 ```
 
 {% note warn %}
-`fragment_cache()` will cache the rendered result and output the cached result to other pages. This should only be used on partials that are expected **not** to change across different pages. Otherwise, it should **not** be enabled.
-For example, it should be disabled when `relative_link` is enabled in the config. This is because relative links may appear differently across pages.
+`fragment_cache()`はレンダリング結果をキャッシュし、他のページにキャッシュされた結果を出力します。これは、異なるページ間で変更されることが**ない**と予想されるパーシャルにのみ使用されるべきです。そうでなければ、有効にすべき**ではありません**。
+例えば、config内で`relative_link`が有効になっている場合は無効にすべきです。これは、相対リンクがページ間で異なるように見える可能性があるためです。
 {% endnote %}

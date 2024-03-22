@@ -1,37 +1,37 @@
 ---
-title: Server
+title: サーバー
 ---
 ## [hexo-server]
 
-With the release of Hexo 3, the server has been separated from the main module. To start using the server, you will first have to install [hexo-server].
+Hexo 3のリリースとともに、サーバーはメインモジュールから分離されました。サーバーを使用開始するには、まず[hexo-server]をインストールする必要があります。
 
 ``` bash
 $ npm install hexo-server --save
 ```
 
-Once the server has been installed, run the following command to start the server. Your website will run at `http://localhost:4000` by default. When the server is running, Hexo will watch for file changes and update automatically so it's not necessary to manually restart the server.
+サーバーをインストールした後、以下のコマンドを実行してサーバーを起動します。デフォルトでは、あなたのウェブサイトは`http://localhost:4000`で実行されます。サーバーが実行中の場合、Hexoはファイルの変更を監視し、自動的に更新するので、手動でサーバーを再起動する必要はありません。
 
 ``` bash
 $ hexo server
 ```
 
-If you want to change the port or if you're encountering `EADDRINUSE` errors, use the `-p` option to set a different port.
+ポートを変更したい場合や`EADDRINUSE`エラーが発生している場合は、`-p`オプションを使用して異なるポートを設定します。
 
 ``` bash
 $ hexo server -p 5000
 ```
 
-### Static Mode
+### スタティックモード
 
-In static mode, only files in the `public` folder will be served and file watching is disabled. You have to run `hexo generate` before starting the server. Usually used in production.
+スタティックモードでは、`public`フォルダ内のファイルのみが提供され、ファイルの監視は無効になります。サーバーを起動する前に`hexo generate`を実行する必要があります。通常、本番環境で使用されます。
 
 ``` bash
 $ hexo server -s
 ```
 
-### Custom IP
+### カスタムIP
 
-Hexo runs the server at `0.0.0.0` by default. You can override the default IP setting.
+Hexoはデフォルトで`0.0.0.0`でサーバーを実行します。デフォルトのIPアドレスを上書きすることもできます。
 
 ``` bash
 $ hexo server -i 192.168.1.1

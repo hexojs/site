@@ -1,29 +1,30 @@
 ---
-title: Contributing
+title: 貢献
 ---
 
-We welcome you to join the development of Hexo. 🤗
+私達は、Hexoの開発への参加を歓迎しています。🤗
 
-## Development
+## 開発
 
-We welcome you to join the development of Hexo. This document will help you through the process.
+私達は、Hexoの開発への参加を歓迎しています。この文書は、そのプロセスをサポートします。
 
-### Before You Start
+### 始める前に
 
-Please read [Contributor Covenant Code of Conduct](https://github.com/hexojs/hexo/blob/master/CODE_OF_CONDUCT.md) first.
+まず、[Contributor Covenant Code of Conduct](https://github.com/hexojs/hexo/blob/master/CODE_OF_CONDUCT.md)をお読みください。
 
-Please follow the coding style:
+コーディングスタイルに従ってください:
 
-- Follow [Google JavaScript Style Guide](https://google.github.io/styleguide/jsguide.html).
-- Use soft-tabs with a two space indent.
-- Don't put commas first.
+- [Google JavaScript スタイルガイド](https://google.github.io/styleguide/jsguide.html)に従ってください。
+- ソフトタブを使用し、2スペースのインデントを使ってください。
+- コンマを先頭に置かないでください。
 
-Also, Hexo has its own [ESLint config](https://github.com/hexojs/eslint-config-hexo), so please make sure your contribution will make ESLint happy.
 
-### Workflow
+また、Hexoには独自の[ESLint設定](https://github.com/hexojs/eslint-config-hexo)があるため、貢献の際はESLintのルールに従っていることを確認してください。
 
-1. Fork [hexojs/hexo].
-2. Clone the repository to your computer and install dependencies.
+### ワークフロー
+
+1. [hexojs/hexo]をフォークします。
+2. リポジトリをコンピューターにクローンし、依存関係をインストールします。
 
 ``` bash
 $ git clone https://github.com/<username>/hexo.git
@@ -32,72 +33,72 @@ $ npm install
 $ git submodule update --init
 ```
 
-3. Create a feature branch.
+3. 機能ブランチを作成します。
 
 ``` bash
 $ git checkout -b new_feature
 ```
 
-4. Start hacking.
-5. Push the branch:
+4. 開発を開始します。
+5. ブランチをプッシュします:
 
 ```
 $ git push origin new_feature
 ```
 
-6. Create a pull request and describe the change.
+6. プルリクエストを作成し、変更内容を説明します。
 
-### Notice
+### 注意
 
-- Please don't modify version number in `package.json`.
-- Your pull request will only get merged when tests passed. Don't forget to run tests before submission.
+- `package.json`のバージョン番号は変更しないでください。
+- プルリクエストは、テストが通った場合にのみマージされます。提出前にテストを実行してください。
 
 ``` bash
 $ npm test
 ```
 
-## Updating official-plugins
+## 公式プラグインの更新
 
-Also, we welcome PR or issue to [official-plugins](https://github.com/hexojs). 🤗
+公式プラグインに対するプルリクエストやIssueも歓迎します。🤗
 
-## Updating Documentation
+## ドキュメントの更新
 
-The Hexo documentation is open source and you can find the source code on [hexojs/site].
+Hexoのドキュメントはオープンソースで、ソースコードは[hexojs/site]で見つけることができます。
 
-### Workflow
+### ワークフロー
 
-1. Fork [hexojs/site]
-2. Clone the repository to your computer and install dependencies.
+1. [hexojs/site]をフォークします。
+2. リポジトリをコンピューターにクローンし、依存関係をインストールします。
 
 ``` bash
-$ npm install hexo-cli -g # If you don't have hexo-cli installed
+$ npm install hexo-cli -g # hexo-cliがインストールされていない場合
 $ git clone https://github.com/<username>/site.git
 $ cd site
 $ npm install
 ```
 
-3. Start editing the documentation. You can start the server for live previewing.
+3. ドキュメントの編集を始めます。ライブプレビューのためにサーバーを起動することができます。
 
 ``` bash
 $ hexo server
 ```
 
-4. Push the branch.
-5. Create a pull request and describe the change.
+4. ブランチをプッシュします。
+5. プルリクエストを作成し、変更を説明します。
 
-### Translating
+### 翻訳
 
-1. Add a new language folder in `source` folder. (All lower case)
-2. Copy Markdown and template files in `source` folder to the new language folder.
-3. Add the new language to `source/_data/language.yml`.
-4. Copy `en.yml` in `themes/navy/languages` and rename it to the language name (all lower case).
+1. `source`フォルダ内に新しい言語フォルダを追加します。（すべて小文字）
+2. `source`フォルダのマークダウンとテンプレートファイルを新しい言語フォルダにコピーします。
+3. `source/_data/language.yml`に新しい言語を追加します。
+4. `themes/navy/languages`内の`en.yml`をコピーし、言語名（すべて小文字）にリネームします。
 
-## Reporting Issues
+## 問題の報告
 
-When you encounter some problems when using Hexo, you can find the solutions in [Troubleshooting](troubleshooting.html) or ask me on [GitHub](https://github.com/hexojs/hexo/issues) or [Google Group](https://groups.google.com/group/hexo). If you can't find the answer, please report it on GitHub.
+Hexoの使用中に問題に遭遇した場合、[トラブルシューティング](troubleshooting.html)で解決策を見つけるか、[GitHub](https://github.com/hexojs/hexo/issues)や[Google Group](https://groups.google.com/group/hexo)で質問してください。解決策が見つからない場合は、GitHubで報告してください。
 
-1. Represent the problem in [debug mode](commands.html#Debug_mode).
-2. Follow the steps from the issue template to provide a debug message and version when submitting a new issue at GitHub.
+1. [デバッグモード](commands.html#デバッグモード)で問題を示してください。
+2. 新しい問題をGitHubで提出するときは、Issueテンプレートの手順に従い、デバッグメッセージとバージョンを提供してください。
 
 [hexojs/hexo]: https://github.com/hexojs/hexo
 [hexojs/site]: https://github.com/hexojs/site

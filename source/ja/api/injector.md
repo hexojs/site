@@ -1,10 +1,10 @@
 ---
-title: Injector
+title: インジェクター
 ---
 
-An injector is used to add static code snippet to the `<head>` or/and `<body>` of generated HTML files. Hexo run injector **before** `after_render:html` filter is executed.
+インジェクターは、生成されたHTMLファイルの`<head>`や`<body>`に静的なコードスニペットを追加するために使用されます。Hexoは`after_render:html`フィルターが実行される**前に**インジェクターを実行します。
 
-## Synopsis
+## 概要
 
 ```js
 hexo.extend.injector.register(entry, value, to)
@@ -12,39 +12,39 @@ hexo.extend.injector.register(entry, value, to)
 
 ### entry `<string>`
 
-Where the code will be injected inside the HTML.
+HTML内でコードが挿入される場所です。
 
-Support those values:
+以下の値がサポートされています:
 
-- `head_begin`: Inject code snippet right after `<head>` (Default).
-- `head_end`: Inject code snippet right before `</head>`.
-- `body_begin`: Inject code snippet right after `<body>`.
-- `body_end`: Inject code snippet right before `</body>`.
+- `head_begin`: `<head>`の直後にコードスニペットを挿入します（デフォルト）。
+- `head_end`: `</head>`の直前にコードスニペットを挿入します。
+- `body_begin`: `<body>`の直後にコードスニペットを挿入します。
+- `body_end`: `</body>`の直前にコードスニペットを挿入します。
 
 ### value `<string> | <Function>`
 
-> A function that returns string is supported.
+> 文字列を返す関数がサポートされています。
 
-The code snippet to be injected.
+挿入されるコードスニペットです。
 
 ### to `<string>`
 
-Which page will code snippets being injected.
+コードスニペットが挿入されるページです。
 
-- `default`: Inject to every page (Default).
-- `home`: Only inject to home page (which has `is_home()` helper being `true`)
-- `post`: Only inject to post pages (which has `is_post()` helper being `true`)
-- `page`: Only inject to pages (which has `is_page()` helper being `true`)
-- `archive`: Only inject to archive pages (which has `is_archive()` helper being `true`)
-- `category`: Only inject to category pages (which has `is_category()` helper being `true`)
-- `tag`: Only inject to tag pages (which has `is_tag()` helper being `true`)
-- Custom layout name could be used as well, see [Writing - Layout](/docs/writing#Layout).
+- `default`: すべてのページに挿入します（デフォルト）。
+- `home`: ホームページのみに挿入します（`is_home()`ヘルパーが`true`の場合）。
+- `post`: 投稿ページのみに挿入します（`is_post()`ヘルパーが`true`の場合）。
+- `page`: ページのみに挿入します（`is_page()`ヘルパーが`true`の場合）。
+- `archive`: アーカイブページのみに挿入します（`is_archive()`ヘルパーが`true`の場合）。
+- `category`: カテゴリページのみに挿入します（`is_category()`ヘルパーが`true`の場合）。
+- `tag`: タグページのみに挿入します（`is_tag()`ヘルパーが`true`の場合）。
+- カスタムレイアウト名も使用可能です。詳細は[ライティング - レイアウト](/docs/writing#Layout)を参照してください。
 
 ----
 
-There are other internal functions, see [hexojs/hexo#4049](https://github.com/hexojs/hexo/pull/4049) for more details.
+他にも内部関数があります。詳細については、[hexojs/hexo#4049](https://github.com/hexojs/hexo/pull/4049) を参照してください。
 
-## Example
+## 例
 
 ```js
 const css = hexo.extend.helper.get('css').bind(hexo);
@@ -61,11 +61,11 @@ hexo.extend.injector.register('body_end', () => {
 });
 ```
 
-Above setup will inject `APlayer.min.css` (`<link>` tag) to the `</head>` of any page which layout is `music`, and `APlayer.min.js` (`<script>` tag) to the `</body>` of those pages. Also, `jquery.js` (`<script>` tag) will be injected to `</body>` of every page generated.
+上記の設定では、`music`レイアウトのある任意のページの`</head>`に`APlayer.min.css`（`<link>`タグ）、それらのページの`</body>`に`APlayer.min.js`（`<script>`タグ）を挿入し、生成されたすべてのページの`</body>`に`jquery.js`（`<script>`タグ）を挿入します。
 
-## Accessing user configuration
+## ユーザー設定へのアクセス
 
-Use any of the following options:
+以下のオプションのいずれかを使用します:
 
 1.
 

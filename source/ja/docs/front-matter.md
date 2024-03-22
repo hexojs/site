@@ -1,10 +1,8 @@
 ---
-title: Front-matter
+title: フロントマター
 ---
 
-{% youtube pfD6FCZdW4Q %}
-
-Front-matter is a block of YAML or JSON at the beginning of the file that is used to configure settings for your writings. Front-matter is terminated by three dashes when written in YAML or three semicolons when written in JSON.
+フロントマター（Front-matter）は、ファイルの先頭に配置されるYAMLまたはJSONのブロックで、投稿の設定のために使用されます。YAMLの場合は三つのハイフン、JSONの場合は三つのセミコロンで終了します。
 
 **YAML**
 
@@ -23,53 +21,53 @@ date: 2013/7/13 20:46:25
 ;;;
 ```
 
-### Settings & Their Default Values
+### 設定とデフォルト値
 
-Setting | Description | Default
+設定 | 説明 | デフォルト
 --- | --- | ---
-`layout` | Layout | [`config.default_layout`](/docs/configuration#Writing)
-`title` | Title | Filename (posts only)
-`date` | Published date | File created date
-`updated` | Updated date | File updated date
-`comments` | Enables comment feature for the post | `true`
-`tags` | Tags (Not available for pages) |
-`categories` | Categories (Not available for pages) |
-`permalink` | Overrides the default permalink of the post. Permalink should end with `/` or `.html` | `null`
-`excerpt` | Page excerpt in plain text. Use [this plugin](/docs/tag-plugins#Post-Excerpt) to format the text |
-`disableNunjucks` | Disable rendering of Nunjucks tag `{{ }}`/`{% %}` and [tag plugins](/docs/tag-plugins) when enabled | false
-`lang` | Set the language to override [auto-detection](/docs/internationalization#Path) | Inherited from `_config.yml`
-`published` | Whether the post should be published | For posts under `_posts`, it is `true`, and for posts under `_draft`, it is `false`
+`layout` | レイアウト | [`config.default_layout`](/docs/configuration#Writing)
+`title` | タイトル | ファイル名（投稿のみ）
+`date` | 公開日 | ファイル作成日
+`updated` | 更新日 | ファイル更新日
+`comments` | 投稿へのコメント機能を有効にする | `true`
+`tags` | タグ（ページには利用不可） |
+`categories` | カテゴリ（ページには利用不可） |
+`permalink` | 投稿のデフォルトパーマリンクを上書き。パーマリンクは`/`または`.html`で終わるべき | `null`
+`excerpt` | プレーンテキストでのページの抜粋。テキストのフォーマットには[このプラグイン](tag-plugins#投稿の抜粋)を使用 |
+`disableNunjucks` | 有効にするとNunjucksタグ`{{ }}`/`{% %}`と[タグプラグイン](tag-plugins)のレンダリングを無効にする | false
+`lang` | [自動検出](internationalization#パス)を上書きする言語を設定 | `_config.yml`から継承
+`published` | 投稿を公開するか | `_posts`配下の投稿では`true`、`_draft`配下の投稿では`false`
 
-#### Layout
+#### レイアウト
 
-The default layout is `post`, in accordance with the value of [`default_layout`](/docs/configuration#Writing) setting in `_config.yml`. When the layout is disabled (`layout: false`) in an article, it will not be processed with a theme. However, it will still be rendered by any available renderer: if an article is written in Markdown and a Markdown renderer (like the default [hexo-renderer-marked](https://github.com/hexojs/hexo-renderer-marked)) is installed, it will be rendered to HTML.
+デフォルトのレイアウトは`post`で、`_config.yml`の[`default_layout`](configuration#執筆)設定に従います。記事でレイアウトが無効にされた場合（`layout: false`）、それはテーマでは処理されません。しかし、利用可能なレンダラーでレンダリングされます。例えば記事がMarkdownで書かれ、Markdownレンダラー（デフォルトの[hexo-renderer-marked](https://github.com/hexojs/hexo-renderer-marked)など）がインストールされている場合、それはHTMLにレンダリングされます。
 
-[Tag plugins](/docs/tag-plugins) are always processed regardless of layout, unless disabled by the `disableNunjucks` setting or [renderer](/api/renderer#Disable-Nunjucks-tags).
+[タグプラグイン](tag-plugins)は、`disableNunjucks`設定や[レンダラー](../api/renderer#Nunjucksタグを無効にする)によって無効にされない限り、レイアウトに関わらず常に処理されます。
 
-#### Categories & Tags
+#### カテゴリーとタグ
 
-Only posts support the use of categories and tags. Categories apply to posts in order, resulting in a hierarchy of classifications and sub-classifications. Tags are all defined on the same hierarchical level so the order in which they appear is not important.
+カテゴリーとタグは投稿でのみサポートされています。カテゴリーは指定された順に、投稿に対する階層やサブ階層として機能します。タグは同じ階層レベルで定義されるため、指定される順序は重要ではありません。
 
-**Example**
+**例**
 
 ``` yaml
 categories:
-- Sports
-- Baseball
+- スポーツ
+- 野球
 tags:
-- Injury
-- Fight
-- Shocking
+- 怪我
+- 乱闘
+- 衝撃
 ```
 
-If you want to apply multiple category hierarchies, use a list of names instead of a single name. If Hexo sees any categories defined this way on a post, it will treat each category for that post as its own independent hierarchy.
+複数のカテゴリ階層を適用したい場合は、カテゴリ名のリストを単一の名前の代わりに使用します。Hexoが投稿でこのように定義されたカテゴリを見つけると、その投稿の各カテゴリを独自の独立した階層として扱います。
 
-**Example**
+**例**
 
 ``` yaml
 categories:
-- [Sports, Baseball]
-- [MLB, American League, Boston Red Sox]
-- [MLB, American League, New York Yankees]
-- Rivalries
+- [スポーツ, 野球]
+- [MLB, アメリカンリーグ, ボストン・レッドソックス]
+- [MLB, アメリカンリーグ, ニューヨーク・ヤンキース]
+- ライバル関係
 ```

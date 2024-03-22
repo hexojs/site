@@ -1,29 +1,29 @@
 ---
-title: Themes
+title: テーマ
 ---
-`hexo.theme` inherits from [Box](box.html), and also saves templates.
+`hexo.theme`は[Box](box.html)から継承され、テンプレートも保存します。
 
-## Get a View
+## ビューの取得
 
 ``` js
 hexo.theme.getView(path);
 ```
 
-## Set a View
+## ビューの設定
 
 ``` js
 hexo.theme.setView(path, data);
 ```
 
-## Remove a View
+## ビューの削除
 
 ``` js
 hexo.theme.removeView(path);
 ```
 
-## View
+## ビュー
 
-Views have two methods: `render` and `renderSync`. These two methods are identical, but the former is asynchronous and the latter is synchronous. So for the sake of simplicity, we will only discuss `render` here.
+ビューには`render`と`renderSync`の2つのメソッドがあります。これら2つのメソッドは同一ですが、前者は非同期であり、後者は同期です。簡単にするために、ここでは`render`についてのみ説明します。
 
 ``` js
 var view = hexo.theme.getView('layout.swig');
@@ -33,4 +33,4 @@ view.render({foo: 1, bar: 2}).then(function(result){
 });
 ```
 
-You can pass options to the `render` method and it will try to process the template with the corresponding renderer and load the [helpers](helper.html). When rendering is complete, it will try to find whether a layout exists. If `layout` is `false` or if it doesn't exist, the result will be returned directly.
+`render`メソッドにオプションを渡すことができ、対応するレンダラーを使用してテンプレートを処理し、[ヘルパー](helper.html)を読み込むように試みます。レンダリングが完了すると、レイアウトが存在するかどうかを探します。`layout`が`false`であるか、存在しない場合は、結果が直接返されます。

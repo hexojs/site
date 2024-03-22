@@ -1,108 +1,108 @@
 ---
-title: Configuration
+title: 設定
 ---
-You can modify site settings in `_config.yml` or in an [alternate config file](#Using-an-Alternate-Config).
+`_config.yml`または[代替設定ファイル](#代替設定の使用)でサイトの設定を変更できます。
 
-### Site
+### サイト
 
-Setting | Description
+設定 | 説明
 --- | ---
-`title` | The title of your website
-`subtitle` | The subtitle of your website
-`description` | The description of your website
-`keywords` | The keywords of your website. Supports multiple values.
-`author` | Your name
-`language` | The language of your website. Use a [2-letter ISO-639-1 code](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) or optionally [its variant](/docs/internationalization). Default is `en`.
-`timezone` | The timezone of your website. Hexo uses the setting on your computer by default. You can find the list of available timezones [here](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones). Some examples are `America/New_York`, `Japan`, and `UTC`.
+`title` | ウェブサイトのタイトル
+`subtitle` | ウェブサイトのサブタイトル
+`description` | ウェブサイトの説明
+`keywords` | ウェブサイトのキーワード。複数の値をサポート。
+`author` | あなたの名前
+`language` | ウェブサイトの言語。[2文字のISO-639-1コード](https://ja.wikipedia.org/wiki/ISO_639-1%E3%82%B3%E3%83%BC%E3%83%89%E4%B8%80%E8%A6%A7)またはその[バリアント](internationalization)を使用。デフォルトは`en`。
+`timezone` | ウェブサイトのタイムゾーン。デフォルトではコンピューターの設定を使用。利用可能なタイムゾーンのリストは[こちら](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones)。例えば`America/New_York`、`Japan`、`UTC`など。
 
 ### URL
 
-Setting | Description | Default
+設定 | 説明 | デフォルト
 --- | --- | ---
-`url` | The URL of your website, must start with `http://` or `https://` |
-`root` | The root directory of your website | `url's pathname`
-`permalink` | The [permalink](permalinks.html) format of articles | `:year/:month/:day/:title/`
-`permalink_defaults` | Default values of each segment in permalink |
-`pretty_urls` | Rewrite the [`permalink`](permalinks.html) variables to pretty URLs |
-`pretty_urls.trailing_index` | Trailing `index.html`, set to `false` to remove it  | `true`
-`pretty_urls.trailing_html` | Trailing `.html`, set to `false` to remove it (_does not apply to trailing `index.html`_)  | `true`
+`url` | ウェブサイトのURL。`http://`または`https://`で始まる必要があります。 |
+`root` | ウェブサイトのルートディレクトリ | `urlのパス名`
+`permalink` | 記事の[パーマリンク](permalinks.html)形式 | `:year/:month/:day/:title/`
+`permalink_defaults` | パーマリンクの各セグメントのデフォルト値 |
+`pretty_urls` | [`permalink`](permalinks.html)変数をプリティURLに書き換え |
+`pretty_urls.trailing_index` | 末尾の`index.html`を削除する場合は`false`に設定 | `true`
+`pretty_urls.trailing_html` | 末尾の`.html`を削除する場合は`false`に設定（`index.html`の末尾には適用されない） | `true`
 
-{% note info Website in subdirectory %}
-If your website is in a subdirectory (such as `http://example.org/blog`) set `url` to `http://example.org/blog` and set `root` to `/blog/`.
+{% note info サブディレクトリ内のウェブサイト %}
+ウェブサイトがサブディレクトリ内にある場合（例：`http://example.org/blog`）は、`url`に`http://example.org/blog`を設定し、`root`を`/blog/`に設定します。
 {% endnote %}
 
-Examples:
+例:
 
 ``` yaml
-# e.g. page.permalink is http://example.com/foo/bar/index.html
+# 例: page.permalinkがhttp://example.com/foo/bar/index.htmlの場合
 pretty_urls:
   trailing_index: false
-# becomes http://example.com/foo/bar/
+# http://example.com/foo/bar/ になります
 ```
 
-### Directory
+### ディレクトリ
 
-Setting | Description | Default
+設定 | 説明 | デフォルト
 --- | --- | ---
-`source_dir` | Source folder. Where your content is stored | `source`
-`public_dir` | Public folder. Where the static site will be generated | `public`
-`tag_dir` | Tag directory | `tags`
-`archive_dir` | Archive directory | `archives`
-`category_dir` | Category directory | `categories`
-`code_dir` | Include code directory (subdirectory of `source_dir`) | `downloads/code`
-`i18n_dir` | i18n directory | `:lang`
-`skip_render` | Paths that will be copied to `public` raw, without being rendered. You can use [glob expressions](https://github.com/micromatch/micromatch#extended-globbing) for path matching.
+`source_dir` | ソースフォルダ。コンテンツが保存される場所 | `source`
+`public_dir` | パブリックフォルダ。静的サイトが生成される場所 | `public`
+`tag_dir` | タグディレクトリ | `tags`
+`archive_dir` | アーカイブディレクトリ | `archives`
+`category_dir` | カテゴリディレクトリ | `categories`
+`code_dir` | コードを含むディレクトリ（`source_dir`のサブディレクトリ） | `downloads/code`
+`i18n_dir` | i18nディレクトリ | `:lang`
+`skip_render` | レンダリングせずに`public`に直接コピーされるパス。パスのマッチングに[glob表現](https://github.com/micromatch/micromatch#extended-globbing)を使用できます。
 
-Examples:
+例:
 
 ``` yaml
 skip_render: "mypage/**/*"
-# will output `source/mypage/index.html` and `source/mypage/code.js` without altering them.
+# `source/mypage/index.html` と `source/mypage/code.js` を変更せずに出力します。
 
-## This also can be used to exclude posts,
+## 投稿を除外するためにも使用できます。
 skip_render: "_posts/test-post.md"
-# will ignore the `source/_posts/test-post.md`.
+# `source/_posts/test-post.md` を無視します。
 ```
 
-### Writing
+### 執筆
 
-Setting | Description | Default
+設定 | 説明 | デフォルト
 --- | --- | ---
-`new_post_name` | The filename format for new posts | `:title.md`
-`default_layout` | Default layout | `post`
-`titlecase` | Transform titles into title case? | `false`
-`external_link` | Open external links in a new tab? |
-`external_link.enable` | Open external links in a new tab? | `true`
-`external_link.field` | Applies to the whole `site` or `post` only | `site`
-`external_link.exclude` | Exclude hostname. Specify subdomain when applicable, including `www` | `[]`
-`filename_case` | Transform filenames to `1` lower case; `2` upper case | `0`
-`render_drafts` | Display drafts? | `false`
-`post_asset_folder` | Enable the [Asset Folder](asset-folders.html)? | `false`
-`relative_link` | Make links relative to the root folder? | `false`
-`future` | Display future posts? | `true`
-`syntax_highlighter` | Code block syntax highlight settings, see [Syntax Highlight](/docs/syntax-highlight) section for usage guide | `highlight.js`
-`highlight` | Code block syntax highlight settings, see [Highlight.js](/docs/syntax-highlight#Highlight-js) section for usage guide |
-`prismjs` | Code block syntax highlight settings, see [PrismJS](/docs/syntax-highlight#PrismJS) section for usage guide |
+`new_post_name` | 新しい投稿のファイル名形式 | `:title.md`
+`default_layout` | デフォルトのレイアウト | `post`
+`titlecase` | タイトルをタイトルケースに変換するか | `false`
+`external_link` | 外部リンクを新しいタブで開くか |
+`external_link.enable` | 外部リンクを新しいタブで開くか | `true`
+`external_link.field` | `site`全体に適用するか`post`のみか | `site`
+`external_link.exclude` | ホスト名を除外。該当する場合はサブドメインを指定、`www`も含む | `[]`
+`filename_case` | ファイル名を `1`小文字; `2`大文字 に変換 | `0`
+`render_drafts` | 下書きを表示するか | `false`
+`post_asset_folder` | [アセットフォルダ](asset-folders.html)を有効にするか | `false`
+`relative_link` | リンクをルートフォルダに対して相対的にするか | `false`
+`future` | 未来の投稿を表示するか | `true`
+`syntax_highlighter` | コードブロックのシンタックスハイライト設定。使い方は[シンタックスハイライト](syntax-highlight)セクションを参照。 | `highlight.js`
+`highlight` | コードブロックのシンタックスハイライト設定。使い方は[Highlight.js](syntax-highlight#Highlight-js)セクションを参照。 |
+`prismjs` | コードブロックのシンタックスハイライト設定。使い方は[PrismJS](syntax-highlight#PrismJS)セクションを参照。 |
 
-### Home page setting
+### ホームページの設定
 
-Setting | Description | Default
+設定 | 説明 | デフォルト
 --- | --- | ---
-`index_generator` | Generate an archive of posts, powered by [hexo-generator-index](https://github.com/hexojs/hexo-generator-index) |
-`index_generator.path` | Root path for your blog's index page | `''`
-`index_generator.per_page` | Posts displayed per page. | `10`
-`index_generator.order_by` | Posts order. Order by descending date (new to old) by default. | `-date`
-`index_generator.pagination_dir` | URL format, see [Pagination](#Pagination) setting below | `page`
+`index_generator` | [hexo-generator-index](https://github.com/hexojs/hexo-generator-index)による投稿のアーカイブ生成 |
+`index_generator.path` | ブログのインデックスページのパス | `''`
+`index_generator.per_page` | 1ページあたりの投稿数。 | `10`
+`index_generator.order_by` | 投稿の並び順。デフォルトでは日付降順（新しいものから古いものへ）。 | `-date`
+`index_generator.pagination_dir` | URL形式。[ページネーション](#ページネーション)設定を参照。 | `page`
 
-### Category & Tag
+### カテゴリー＆タグ
 
-Setting | Description | Default
+設定 | 説明 | デフォルト
 --- | --- | ---
-`default_category` | Default category | `uncategorized`
-`category_map` | Override category slugs |
-`tag_map` | Override tag slugs |
+`default_category` | デフォルトのカテゴリー | `uncategorized`
+`category_map` | カテゴリースラッグを上書き |
+`tag_map` | タグスラッグを上書き |
 
-Examples:
+例:
 
 ``` yaml
 category_map:
@@ -110,34 +110,34 @@ category_map:
   "C++": c-plus-plus
 ```
 
-### Date / Time format
+### 日付/時刻形式
 
-Hexo uses [Moment.js](http://momentjs.com/) to process dates.
+Hexoは日付の処理に[Moment.js](http://momentjs.com/)を使用します。
 
-Setting | Description | Default
+設定 | 説明 | デフォルト
 --- | --- | ---
-`date_format` | Date format | `YYYY-MM-DD`
-`time_format` | Time format | `HH:mm:ss`
-`updated_option` | The [`updated`](/docs/variables#Page-Variables) value to used when not provided in the front-matter | `mtime`
+`date_format` | 日付形式 | `YYYY-MM-DD`
+`time_format` | 時刻形式 | `HH:mm:ss`
+`updated_option` | フロントマターで提供されていない場合に使用する[`updated`](variables#ページ変数)の値 | `mtime`
 
 {% note info updated_option %}
-`updated_option` controls the `updated` value when not provided in the front-matter:
+`updated_option`はフロントマターで提供されていない場合の`updated`の値を制御します:
 
-- `mtime`: Use file modification date as `updated`. It has been the default behaviour of Hexo since 3.0.0
-- `date`: Use `date` as `updated`. Typically used with Git workflow when file modification date could be different.
-- `empty`: Simply drop `updated` when not provided. May not be compatible with most themes and plugins.
+- `mtime`: `updated`としてファイルの更新日を使用します。これはHexoが3.0.0以降のデフォルトの挙動です。
+- `date`: `updated`として`date`を使用します。ファイルの変更日が異なる可能性があるGitワークフローで一般的に使用されます。
+- `empty`: 提供されていない場合は`updated`を単純に削除します。多くののテーマやプラグインと互換性がないかもしれません。
 
-`use_date_for_updated` is removed in v7.0.0+. Please use `updated_option: 'date'` instead.
+`use_date_for_updated`はv7.0.0+で削除されました。代わりに`updated_option: 'date'`を使用してください。
 {% endnote %}
 
-### Pagination
+### ページネーション
 
-Setting | Description | Default
+設定 | 説明 | デフォルト
 --- | --- | ---
-`per_page` | Number of posts displayed on each page. `0` disables pagination | `10`
-`pagination_dir` | URL format | `page`
+`per_page` | 各ページに表示される投稿の数。`0`はページネーション無効化 | `10`
+`pagination_dir` | URL形式 | `page`
 
-Examples:
+例:
 
 ``` yaml
 pagination_dir: 'page'
@@ -147,95 +147,95 @@ pagination_dir: 'awesome-page'
 # http://example.com/awesome-page/2
 ```
 
-### Extensions
+### 拡張機能
 
-Setting | Description
+設定 | 説明
 --- | ---
-`theme` | Theme name. `false` disables theming
-`theme_config` | Theme configuration. Include any custom theme settings under this key to override theme defaults.
-`deploy` | Deployment settings
-`meta_generator` | [Meta generator](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta#Attributes) tag. `false` disables injection of the tag.
+`theme` | テーマ名。`false`はテーマを無効にします
+`theme_config` | テーマ設定。このキーの配下のカスタムテーマ設定は、テーマのデフォルトを上書きします。
+`deploy` | デプロイ設定
+`meta_generator` | [メタジェネレータ](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta#Attributes)タグ。`false`はタグの注入を無効にします。
 
-### Include/Exclude Files or Folders
+### ファイルやフォルダーを含める/除外する
 
-Use the following options to explicitly process or ignore certain files/folders. Support [glob expressions](https://github.com/micromatch/micromatch#extended-globbing) for path matching.
+特定のファイルやフォルダーを明示的に処理または無視するために、以下のオプションを使用します。パスの指定には[glob表現](https://github.com/micromatch/micromatch#extended-globbing)が使えます。
 
-`include` and `exclude` options only apply to the `source/` folder, whereas `ignore` option applies to all folders.
+`include`および`exclude`オプションは`source/`フォルダーにのみ適用され、`ignore`オプションはすべてのフォルダーに適用されます。
 
-Setting | Description
+設定 | 説明
 --- | ---
-`include` | Include hidden files (including files/folders with a name that starts with an underscore, with an exception*)
-`exclude` | Exclude files/folders
-`ignore` | Ignore files/folders
+`include` | 隠しファイル（名前がアンダースコアで始まるファイルやフォルダーを含む、例外あり*）を含める
+`exclude` | ファイルやフォルダーを除外
+`ignore` | ファイルやフォルダーを無視
 
-Examples:
+例:
 
 ```yaml
-# Include/Exclude Files/Folders
+# ファイルやフォルダー を 含める/除外する
 include:
   - ".nojekyll"
-  # Include 'source/css/_typing.css'.
+  # 'source/css/_typing.css'を含める。
   - "css/_typing.css"
-  # Include any file in 'source/_css/'.
+  # 'source/_css/'の全てのファイルを含める。
   - "_css/*"
-  # Include any file and subfolder in 'source/_css/'.
+  # 'source/_css/'の全てのファイルとサブフォルダーを含める。
   - "_css/**/*"
 
 exclude:
-  # Exclude 'source/js/test.js'.
+  # 'source/js/test.js'を除外する。
   - "js/test.js"
-  # Exclude any file in 'source/js/'.
+  # 'source/js/'の全てのファイルを除外する。
   - "js/*"
-  # Exclude any file and subfolder in 'source/js/'.
+  # 'source/js/'の全てのファイルとサブフォルダーを除外する。
   - "js/**/*"
-  # Exclude any file with filename that starts with 'test' in 'source/js/'.
+  # 'source/js/'とそのサブフォルダー内でファイル名が'test'で始まる全てのファイルを除外する。
   - "js/test*"
-  # Exclude any file with filename that starts with 'test' in 'source/js/' and its subfolders.
+  # 'source/js/'とそのサブフォルダー内の'test'で始まる全てのファイルを除外する。
   - "js/**/test*"
-  # Do not use this to exclude posts in the 'source/_posts/'.
-  # Use skip_render for that. Or prepend an underscore to the filename.
-  # - "_posts/hello-world.md" # Does not work.
+  # 'source/_posts/'内の投稿の除外にはこの設定は使えません。
+  # この場合、skip_renderを使用するか、ファイル名にアンダースコアを追加してください。
+  # - "_posts/hello-world.md" # 効果がありません。
 
 ignore:
-  # Ignore any folder named 'foo'.
+  # 'foo'という名前の全てのフォルダーを無視する。
   - "**/foo"
-  # Ignore 'foo' folder in 'themes/' only.
+  # 'themes/'内の'foo'フォルダーのみを無視する。
   - "**/themes/*/foo"
-  # Same as above, but applies to every subfolders of 'themes/'.
+  # 上記と同じですが、'themes/'のすべてのサブフォルダーに適用されます。
   - "**/themes/**/foo"
 ```
 
-Each value in the list must be enclosed with single/double quotes.
+リスト内の値はシングル/ダブルクォートで囲む必要があります。
 
-`include:` and `exclude:` do not apply to the `themes/` folder. Either use `ignore:` or alternatively, prepend an underscore to the file/folder name to exclude.
+`include:`および`exclude:`は`themes/`フォルダーには適用されません。代わりに`ignore:`を使用するか、ファイル/フォルダー名にアンダースコアを追加して除外してください。
 
-\* Notable exception is the `source/_posts` folder, but any file or folder with a name that starts with an underscore under that folder would still be ignored. Using `include:` rule in that folder is not recommended.
+\* `source/_posts`フォルダーは例外です。このフォルダー内で名前がアンダースコアで始まるファイルやフォルダーは依然として無視されます。ここで`include:`ルールを使用することは推奨されません。
 
-### Using an Alternate Config
+### 代替設定の使用
 
-A custom config file path can be specified by adding the `--config` flag to your `hexo` commands with a path to an alternate YAML or JSON config file, or a comma-separated list (no spaces) of multiple YAML or JSON files.
+`hexo`コマンドに`--config`フラグを追加し、代替のYAMLまたはJSON設定ファイルへのパスを指定することで、カスタム設定ファイルパスを指定できます。または、複数のYAMLまたはJSONファイルのカンマ区切りリスト（スペースなし）を指定できます。
 
 ``` bash
-# use 'custom.yml' in place of '_config.yml'
+# '_config.yml'の代わりに'custom.yml'を使用
 $ hexo server --config custom.yml
 
-# use 'custom.yml' & 'custom2.json', prioritizing 'custom2.json'
+# 'custom.yml'と'custom2.json'を使用し、'custom2.json'を優先
 $ hexo server --config custom.yml,custom2.json
 ```
 
-Using multiple files combines all the config files and saves the merged settings to `_multiconfig.yml`. The later values take precedence. It works with any number of JSON and YAML files with arbitrarily deep objects. Note that **no spaces are allowed in the list**.
+複数のファイルを指定するとすべての設定ファイルが結合され、マージされた設定が`_multiconfig.yml`に保存されます。この場合、後に指定された値が優先されます。任意の数のJSONおよびYAMLファイルで、任意の深さのオブジェクトで動作します。**リスト内にスペースを含めることはできません**。
 
-For instance, in the above example if `foo: bar` is in `custom.yml`, but `"foo": "dinosaur"` is in `custom2.json`, `_multiconfig.yml` will contain `foo: dinosaur`.
+たとえば、上記の例では`custom.yml`に`foo: bar`が含まれているが、`custom2.json`に`"foo": "dinosaur"`が含まれている場合、`_multiconfig.yml`には`foo: dinosaur`が含まれます。
 
-### Alternate Theme Config
+### 代替テーマ設定
 
-Hexo themes are independent projects, with separate `_config.yml` files.
+Hexoテーマは独立したプロジェクトであり、それぞれ別の`_config.yml`ファイルを持っています。
 
-Instead of forking a theme, and maintaining a custom version with your settings, you can configure it from somewhere else:
+テーマをフォークしてカスタムバージョンを維持する代わりに、他の場所から設定を行うことができます:
 
-**from `theme_config` in site's primary configuration file**
+**サイトのプライマリ設定ファイル内の`theme_config`から**
 
-> Supported since Hexo 2.8.2
+> Hexo 2.8.2以降でサポート
 
 ```yml
 # _config.yml
@@ -254,7 +254,7 @@ logo: "a-cool-image.png"
     baz: 'b'
 ```
 
-Resulting in theme configuration:
+テーマ設定の結果:
 
 ```json
 {
@@ -267,11 +267,11 @@ Resulting in theme configuration:
 }
 ```
 
-**from a dedicated `_config.[theme].yml` file**
+**専用の`_config.[theme].yml`ファイルから**
 
-> Supported since Hexo 5.0.0
+> Hexo 5.0.0以降でサポート
 
-The file should be placed in your site folder, both `yml` and `json` are supported. `theme` inside `_config.yml` must be configured for Hexo to read `_config.[theme].yml`
+ファイルはサイトフォルダ内に配置され、`yml`および`json`がサポートされています。`_config.yml`内の`theme`が設定されている必要があります。
 
 ```yml
 # _config.yml
@@ -293,7 +293,7 @@ logo: "a-cool-image.png"
     baz: 'b'
 ```
 
-Resulting in theme configuration:
+テーマ設定結果:
 
 ```json
 {
@@ -307,6 +307,6 @@ Resulting in theme configuration:
 ```
 
 {% note %}
-We strongly recommend that you store your theme configuration in one place. But in case you have to store your theme configuration separately, you need to know the priority of those configurations: The `theme_config` inside site's primary configuration file has the highest priority during merging, then the dedicated theme configuration file.
-The `_config.yml` file under the theme directory has the lowest priority.
+テーマ設定を1か所に保存することを強くお勧めします。しかし、テーマ設定を別々に保存する必要がある場合は、それらの設定の優先順位を知る必要があります：マージ中にサイトのプライマリ設定ファイル内の`theme_config`が最高優先順位を持ち、次に専用のテーマ設定ファイルが続きます。
+テーマディレクトリ下の`_config.yml`ファイルが最低優先順位を持ちます。
 {% endnote %}

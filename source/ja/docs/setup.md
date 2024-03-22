@@ -1,10 +1,8 @@
 ---
-title: Setup
+title: セットアップ
 ---
 
-{% youtube 0m2HnATkHOk %}
-
-Once Hexo is installed, run the following commands to initialize Hexo in the target `<folder>`.
+Hexoがインストールされたら、以下のコマンドを実行して対象の`<folder>`内でHexoを初期化します。
 
 ``` bash
 $ hexo init <folder>
@@ -12,7 +10,7 @@ $ cd <folder>
 $ npm install
 ```
 
-Once initialized, here's what your project folder will look like:
+初期化されると、プロジェクトフォルダは次のようになります:
 
 ``` plain
 .
@@ -27,11 +25,11 @@ Once initialized, here's what your project folder will look like:
 
 ### _config.yml
 
-Site [configuration](configuration.html) file. You can configure most settings here.
+サイトの[設定](configuration.html)ファイルです。ほとんどの設定はここで行います。
 
 ### package.json
 
-Application data. The [EJS](https://ejs.co/), [Stylus](http://learnboost.github.io/stylus/) and [Markdown](http://daringfireball.net/projects/markdown/) renderers are installed by default. If you want, you can uninstall them later.
+アプリケーションデータです。デフォルトで[EJS](https://ejs.co/)、[Stylus](http://learnboost.github.io/stylus/)、[Markdown](http://daringfireball.net/projects/markdown/)のレンダラーがインストールされています。必要に応じて、これらを後でアンインストールすることもできます。
 
 ``` json package.json
 {
@@ -58,12 +56,12 @@ Application data. The [EJS](https://ejs.co/), [Stylus](http://learnboost.github.
 
 ### scaffolds
 
-[Scaffold](writing.html#Scaffolds) folder. When you create a new post, Hexo bases the new file on the scaffold.
+[スキャフォールド](writing.html#スキャフォールド)フォルダです。新しい投稿を作成するとき、Hexoはスキャフォールドに基づいて新しいファイルを作成します。
 
 ### source
 
-Source folder. This is where you put your site's content. Hexo ignores hidden files and files or folders whose names are prefixed with `_` (underscore) - except the `_posts` folder. Renderable files (e.g. Markdown, HTML) will be processed and put into the `public` folder, while other files will simply be copied.
+ソースフォルダです。これはサイトのコンテンツを置く場所です。Hexoは隠しファイルや名前が`_`（アンダースコア）で始まるファイルやフォルダを無視します（`_posts`フォルダを除きます）。レンダリング可能なファイル（例：Markdown、HTML）は処理結果が`public`フォルダに配置されますが、それ以外のファイルは単にコピーされます。
 
 ### themes
 
-[Theme](themes.html) folder. Hexo generates a static website by combining the site contents with the theme.
+[テーマ](themes.html)フォルダです。Hexoはサイトのコンテンツとテーマを組み合わせて静的なウェブサイトを生成します。

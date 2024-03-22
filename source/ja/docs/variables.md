@@ -1,101 +1,101 @@
 ---
-title: Variables
+title: 変数
 ---
 
 {% youtube T9oAax-IRw0 %}
 
-### Global Variables
+### グローバル変数
 
-Variable | Description | Type
+変数 | 説明 | タイプ
 --- | --- | ---
-`site` | Sitewide information. | `object`; see [Site Variables]
-`page` | Page specific information and custom variables set in front-matter. | `object`; see [Page Variables]
-`config` | Site configuration. | `object` (your site's _config file)
-`theme` | Theme configuration. Inherits from site configuration. | `object` (your theme's _config file)
-`path` | Path of current page | `string`
-`url` | Full URL of current page | `string`
-`env` | Environment variables | ???
+`site` | サイト全体の情報。 | `object`; [サイト変数]を参照
+`page` | ページ固有の情報とフロントマターで設定されたカスタム変数。 | `object`; [ページ変数]を参照
+`config` | サイト設定。 | `object` (あなたのサイトの_configファイル)
+`theme` | テーマ設定。サイト設定から継承。 | `object` (あなたのテーマの_configファイル)
+`path` | 現在のページのパス | `string`
+`url` | 現在のページの完全なURL | `string`
+`env` | 環境変数 | ???
 
 {% note warn %}
-Lodash has been removed from global variables since Hexo 5.0.0. [You-Dont-Need-Lodash-Underscore](https://github.com/you-dont-need/You-Dont-Need-Lodash-Underscore) might be helpful for your migration.
+LodashはHexo 5.0.0以降、グローバル変数から削除されました。[You-Dont-Need-Lodash-Underscore](https://github.com/you-dont-need/You-Dont-Need-Lodash-Underscore)が移行に役立つかもしれません。
 {% endnote %}
 
-### Site Variables
+### サイト変数
 
-Variable | Description | Type
+変数 | 説明 | タイプ
 --- | --- | ---
-`site.posts` | All posts | `array` of `post` objects
-`site.pages` | All pages | `array` of `page` objects
-`site.categories` | All categories | `array` of ???
-`site.tags` | All tags | `array` of ???
+`site.posts` | 全ての投稿 | `array` of `post` objects
+`site.pages` | 全てのページ | `array` of `page` objects
+`site.categories` | 全てのカテゴリ | `array` of ???
+`site.tags` | 全てのタグ | `array` of ???
 
-### Page Variables
+### ページ変数
 
-**Article (`page`)**
+**記事 (`page`)**
 
-Variable | Description | Type
+変数 | 説明 | タイプ
 --- | --- | ---
-`page.title` | Article title | `string`
-`page.date` | Article created date | [Moment.js] object
-`page.updated` | Article last updated date | [Moment.js] object
-`page.comments` | Comment enabled or not | `boolean`
-`page.layout` | Layout name | `string`
-`page.content` | The full processed content of the article | `string`
-`page.excerpt` | Article excerpt | `string`
-`page.more` | Contents except article excerpt | `string`
-`page.source` | The path of the source file | `string`
-`page.full_source` | Full path of the source file | `string`
-`page.path` | The URL of the article without root URL. We usually use `url_for(page.path)` in theme. | `string`
-`page.permalink` | Full (encoded) URL of the article | `string`
-`page.prev` | The previous post, `null` if the post is the first post | ???
-`page.next` | The next post, `null` if the post is the last post | ???
-`page.raw` | The raw data of the article | ???
-`page.photos` | The photos of the article (Used in gallery posts) | array of ???
-`page.link` | The external link of the article (Used in link posts) | `string`
+`page.title` | 記事のタイトル | `string`
+`page.date` | 記事の作成日 | [Moment.js] オブジェクト
+`page.updated` | 記事の最終更新日 | [Moment.js] オブジェクト
+`page.comments` | コメントが有効かどうか | `boolean`
+`page.layout` | レイアウト名 | `string`
+`page.content` | 記事の完全な処理済みコンテンツ | `string`
+`page.excerpt` | 記事の抜粋 | `string`
+`page.more` | 抜粋を除いた記事の内容 | `string`
+`page.source` | ソースファイルのパス | `string`
+`page.full_source` | ソースファイルの完全なパス | `string`
+`page.path` | 記事のURL（ルートURLを除く）。テーマでは通常 `url_for(page.path)` を使用します。 | `string`
+`page.permalink` | 記事の完全な（エンコードされた）URL | `string`
+`page.prev` | 前の投稿、最初の投稿の場合は `null` | ???
+`page.next` | 次の投稿、最後の投稿の場合は `null` | ???
+`page.raw` | 記事の生データ | ???
+`page.photos` | 記事の写真（ギャラリー投稿で使用） | array of ???
+`page.link` | 記事の外部リンク（リンク投稿で使用） | `string`
 
-**Post (`post`):** Same as `page` layout but add the following variables.
+**投稿 (`post`):** `page` レイアウトと同じですが、以下の変数が追加されます。
 
-Variable | Description | Type
+変数 | 説明 | タイプ
 --- | --- | ---
-`page.published` | True if the post is not a draft | `boolean`
-`page.categories` | All categories of the post | `array` of ???
-`page.tags` | All tags of the post | `array` of ???
+`page.published` | 投稿が下書きでない場合はTrue | `boolean`
+`page.categories` | 投稿の全カテゴリ | `array` of ???
+`page.tags` | 投稿の全タグ | `array` of ???
 
-**Home (`index`)**
+**ホーム (`index`)**
 
-Variable | Description | Type
+変数 | 説明 | タイプ
 --- | --- | ---
-`page.per_page` | Posts displayed per page | `number`
-`page.total` | Total number of pages | `number`
-`page.current` | Current page number | `number`
-`page.current_url` | The URL of current page | `string`
-`page.posts` | Posts in this page ([Data Model](https://hexojs.github.io/warehouse/)) | `object`
-`page.prev` | Previous page number. `0` if the current page is the first. | `number`
-`page.prev_link` | The URL of previous page. `''` if the current page is the first. | `string`
-`page.next` | Next page number. `0` if the current page is the last. | `number`
-`page.next_link` | The URL of next page. `''` if the current page is the last. | `string`
-`page.path` | The URL of current page without root URL. We usually use `url_for(page.path)` in theme. | `string`
+`page.per_page` | 1ページあたりの投稿表示数 | `number`
+`page.total` | ページの総数 | `number`
+`page.current` | 現在のページ番号 | `number`
+`page.current_url` | 現在のページのURL | `string`
+`page.posts` | このページの投稿 ([データモデル](https://hexojs.github.io/warehouse/)) | `object`
+`page.prev` | 前のページ番号。現在のページが最初の場合は `0`。 | `number`
+`page.prev_link` | 前のページのURL。現在のページが最初の場合は `''`。 | `string`
+`page.next` | 次のページ番号。現在のページが最後の場合は `0`。 | `number`
+`page.next_link` | 次のページのURL。現在のページが最後の場合は `''`。 | `string`
+`page.path` | 現在のページのURL（ルートURLを除く）。テーマでは通常 `url_for(page.path)` を使用します。 | `string`
 
-**Archive (`archive`):** Same as `index` layout but add the following variables.
+**アーカイブ (`archive`):** `index` レイアウトと同じですが、以下の変数が追加されます。
 
-Variable | Description | Type
+変数 | 説明 | タイプ
 --- | --- | ---
-`page.archive` | Equals `true` | `boolean`
-`page.year` | Archive year (4-digit) | `number`
-`page.month` | Archive month (2-digit without leading zeros) | `number`
+`page.archive` | `true`に等しい | `boolean`
+`page.year` | アーカイブの年（4桁） | `number`
+`page.month` | アーカイブの月（先頭ゼロなしの2桁） | `number`
 
-**Category (`category`):** Same as `index` layout but add the following variables.
+**カテゴリ (`category`):** `index` レイアウトと同じですが、以下の変数が追加されます。
 
-Variable | Description | Type
+変数 | 説明 | タイプ
 --- | --- | ---
-`page.category` | Category name | `string`
+`page.category` | カテゴリ名 | `string`
 
-**Tag (`tag`):** Same as `index` layout but add the following variables.
+**タグ (`tag`):** `index` レイアウトと同じですが、以下の変数が追加されます。
 
-Variable | Description | Type
+変数 | 説明 | タイプ
 --- | --- | ---
-`page.tag` | Tag name | `string`
+`page.tag` | タグ名 | `string`
 
 [Moment.js]: http://momentjs.com/
-[Site Variables]: #Site-Variables
-[Page Variables]: #Page-Variables
+[サイト変数]: #サイト変数
+[ページ変数]: #ページ変数

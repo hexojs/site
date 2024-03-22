@@ -1,24 +1,24 @@
 ---
-title: Local Variables
+title: ローカル変数
 ---
-Local variables are used for template rendering, which is the `site` variable in templates.
+ローカル変数はテンプレートのレンダリングに使用され、テンプレート内の`site`変数です。
 
-## Default Variables
+## デフォルト変数
 
-Variable | Description
+変数 | 説明
 --- | ---
-`posts` | All posts
-`pages` | All pages
-`categories` | All categories
-`tags` | All tags
+`posts` | すべての投稿
+`pages` | すべてのページ
+`categories` | すべてのカテゴリー
+`tags` | すべてのタグ
 
-## Get a Variable
+## 変数の取得
 
 ``` js
 hexo.locals.get('posts')
 ```
 
-## Set a Variable
+## 変数の設定
 
 ``` js
 hexo.locals.set('posts', function(){
@@ -26,19 +26,19 @@ hexo.locals.set('posts', function(){
 });
 ```
 
-## Remove a Variable
+## 変数の削除
 
 ``` js
 hexo.locals.remove('posts');
 ```
 
-## Get All Variable
+## すべての変数を取得
 
 ``` js
 hexo.locals.toObject();
 ```
 
-## Invalidate the cache
+## キャッシュの無効化
 
 ``` js
 hexo.locals.invalidate();

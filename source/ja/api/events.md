@@ -1,31 +1,31 @@
 ---
-title: Events
+title: イベント
 ---
-Hexo inherits from [EventEmitter]. Use the `on` method to listen for events emitted by Hexo, and use the `emit` method to emit events. For more information, refer to the Node.js API documentation.
+Hexoは[EventEmitter]を継承しています。Hexoからのイベントの発火を監視するには`on`メソッドを、イベントを発火させには`emit`メソッドを使用します。詳細については、Node.jsのAPIドキュメントを参照してください。
 
 ### deployBefore
 
-Emitted before deployment begins.
+デプロイを開始する前に発火します。
 
 ### deployAfter
 
-Emitted after deployment finishes.
+デプロイが終了した後に発火します。
 
 ### exit
 
-Emitted before Hexo exits.
+Hexoが終了する前に発火します。
 
 ### generateBefore
 
-Emitted before generation begins.
+生成を開始する前に発火します。
 
 ### generateAfter
 
-Emitted after generation finishes.
+生成が終了した後に発火します。
 
 ### new
 
-Emitted after a new post has been created. This event returns the post data:
+新しい投稿が作成された後に発火します。このイベントには、投稿データが入力されます:
 
 ``` js
 hexo.on('new', function(post){
@@ -33,21 +33,21 @@ hexo.on('new', function(post){
 });
 ```
 
-Data | Description
+データ | 説明
 --- | ---
-`post.path` | Full path of the post file
-`post.content` | Content of the post file
+`post.path` | 投稿ファイルの完全なパス
+`post.content` | 投稿ファイルの内容
 
 ### processBefore
 
-Emitted before processing begins. This event returns a path representing the root directory of the box.
+プロセッサーによる処理が始まる前に発火します。このイベントには、ボックスのルートディレクトリを表すパスが入力されます。
 
 ### processAfter
 
-Emitted after processing finishes. This event returns a path representing the root directory of the box.
+プロセッサーによる処理が終了した後に発火します。このイベントには、ボックスのルートディレクトリを表すパスが入力されます。
 
 ### ready
 
-Emitted after initialization finishes.
+初期化が終了した後に発火します。
 
 [EventEmitter]: https://nodejs.org/dist/latest/docs/api/events.html
