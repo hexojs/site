@@ -33,7 +33,7 @@ $ npm install
 $ git submodule update --init
 ```
 
-3. 機能ブランチを作成します。
+3. ブランチを作成します。
 
 ``` bash
 $ git checkout -b new_feature
