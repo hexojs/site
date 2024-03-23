@@ -400,7 +400,7 @@ _hexo-renderer-marked 3.1.0+は、オプションで画像の投稿パスを自�
 
 ### url_for (7.0.0+)
 
-ルートパスがプレフィックスとして付加されたURLを返します。出力は自動的にエンコードされます。
+ルートパスをプレフィックスとして付加したURLを返します。出力は自動的にエンコードされます。
 
 ```
 {% url_for text path [relative] %}
@@ -449,7 +449,7 @@ relative_link: true
 
 ### full_url_for (7.0.0+)
 
-`config.url`がプレフィックスとして付加されたURLを返します。出力は自動的にエンコードされます。
+`config.url`をプレフィックスとして付加したURLを返します。出力は自動的にエンコードされます。
 
 ```
 {% full_url_for text path %}
