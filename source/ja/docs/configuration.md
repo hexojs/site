@@ -118,10 +118,10 @@ Hexoは日付の処理に[Moment.js](http://momentjs.com/)を使用します。
 --- | --- | ---
 `date_format` | 日付形式 | `YYYY-MM-DD`
 `time_format` | 時刻形式 | `HH:mm:ss`
-`updated_option` | フロントマターで提供されていない場合に使用する[`updated`](variables#ページ変数)の値 | `mtime`
+`updated_option` | Front Matterで提供されていない場合に使用する[`updated`](variables#ページ変数)の値 | `mtime`
 
 {% note info updated_option %}
-`updated_option`はフロントマターで提供されていない場合の`updated`の値を制御します:
+`updated_option`はFront Matterで提供されていない場合の`updated`の値を制御します:
 
 - `mtime`: `updated`としてファイルの更新日を使用します。これはHexoが3.0.0以降のデフォルトの挙動です。
 - `date`: `updated`として`date`を使用します。ファイルの変更日が異なる可能性があるGitワークフローで一般的に使用されます。

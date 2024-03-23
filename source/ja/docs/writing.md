@@ -21,7 +21,7 @@ Hexoには `post`、`page`、`draft` の3つのデフォルトレイアウトが
 `draft` | `source/_drafts`
 
 {% note tip レイアウトの無効化 %}
-テーマで処理されない記事（投稿/ページ）を作成する場合、フロントマターに`layout: false`を設定してください。詳細は[このセクション](front-matter#レイアウト)を参照してください。
+テーマで処理されない記事（投稿/ページ）を作成する場合、Front Matterに`layout: false`を設定してください。詳細は[このセクション](front-matter#レイアウト)を参照してください。
 {% endnote %}
 
 ## ファイル名

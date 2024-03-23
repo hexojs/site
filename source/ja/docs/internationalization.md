@@ -39,7 +39,7 @@ index:
 
 ### パス
 
-フロントマターでページの言語を設定するか、`_config.yml` の `i18n_dir` 設定を変更して、Hexoによる自動検出を有効にできます。
+Front Matterでページの言語を設定するか、`_config.yml` の `i18n_dir` 設定を変更して、Hexoによる自動検出を有効にできます。
 
 ``` yaml
 i18n_dir: :lang

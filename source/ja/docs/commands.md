@@ -35,7 +35,7 @@ $ hexo new [layout] <title>
 hexo new page --path about/me "About me"
 ```
 
-これは`source/about/me.md`ファイルを作成し、フロントマターに"About me"というタイトルを設定します。
+これは`source/about/me.md`ファイルを作成し、Front Matterに"About me"というタイトルを設定します。
 
 タイトルは必須です。例えば、以下は期待した通りの挙動にはなりません:
 
@@ -43,7 +43,7 @@ hexo new page --path about/me "About me"
 hexo new page --path about/me
 ```
 
-これは`source/_posts/about/me.md`に投稿を作成し、フロントマターに"page"というタイトルを設定します。これは引数が1つ(`page`)のみで、デフォルトレイアウトが`post`であるためです。
+これは`source/_posts/about/me.md`に投稿を作成し、Front Matterに"page"というタイトルを設定します。これは引数が1つ(`page`)のみで、デフォルトレイアウトが`post`であるためです。
 
 ## generate
 

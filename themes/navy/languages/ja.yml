@@ -30,7 +30,7 @@ sidebar:
     migration: 移行
     basic_usage: 基本的な使い方
     writing: 執筆
-    front_matter: フロントマター
+    front_matter: Front Matter
     tag_plugins: タグプラグイン
     asset_folders: アセットフォルダ
     data_files: データファイル
