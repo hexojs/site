@@ -1,24 +1,24 @@
 ---
 title: フィルター
 ---
-フィルターは特定のデータを変更するために使用されます。Hexoはデータをフィルターに順番に渡し、フィルターがデータを一つずつ変更します。この概念は[WordPress](http://codex.wordpress.org/Plugin_API#Filters)から借用されました。
+フィルターは特定のデータを変更します。Hexoはデータをフィルターに順番に渡し、フィルターがデータを1つずつ変更します。このコンセプトは[WordPress](http://codex.wordpress.org/Plugin_API#Filters)に基づいています。
 
 ## 概要
 
 ``` js
 hexo.extend.filter.register(type, function() {
-  // ユーザー設定
+  // User configuration
   const { config } = this;
-  if (config.external_link.enable) // 何かする...
+  if (config.external_link.enable) // do something...
 
-  // テーマ設定
+  // Theme configuration
   const { config: themeCfg } = this.theme;
-  if (themeCfg.fancybox) // 何かする...
+  if (themeCfg.fancybox) // do something...
 
 }, priority);
 ```
 
-`priority`を定義できます。`priority`が低いほど、先に実行されます。デフォルトの`priority`は10です。ユーザーが設定ファイルで指定できるユーザー設定可能な優先度値を使用することをお勧めします。例: `hexo.config.your_plugin.priority`。
+`priority`の設定が可能です。低い`priority`が先に実行されます。デフォルトの`priority`は10です。この値は、ユーザーが設定ファイルで指定可能な値を利用することをお勧めします。例: `hexo.config.your_plugin.priority`。
 
 ## フィルターの実行
 
@@ -32,7 +32,7 @@ hexo.extend.filter.execSync(type, data, options);
 `context` | コンテキスト
 `args` | 引数。これは配列である必要があります。
 
-各フィルターに渡される最初の引数は`data`です。次のフィルターに渡される`data`は、新しい値を返すことで変更できます。何も返されない場合、データは変更されません。`args`を使用してフィルターに他の引数を指定することもできます。例えば:
+各フィルターに渡される最初の引数は`data`です。新たな値を返却することで、次のフィルターに渡される`data`を変更できます。何も返却しない場合データは変更されません。`args`を使用してフィルターに他の引数を指定することもできます。例えば:
 
 ``` js
 hexo.extend.filter.register('test', function(data, arg1, arg2){
@@ -89,11 +89,11 @@ hexo.extend.filter.unregister('example', require('path/to/filter'));
 
 ## フィルターリスト
 
-Hexoで使用されるフィルターのリストです。
+Hexoで使用されるフィルターの一覧です。
 
 ### before_post_render
 
-投稿がレンダリングされる前に実行されます。実行手順については、[投稿のレンダリング](posts.html#Render)を参照してください。
+投稿がレンダリングされる前に実行されます。実行手順については、[投稿のレンダリング](posts.html#レンダリング)を参照してください。
 
 例えば、タイトルを小文字に変換するには:
 
@@ -106,8 +106,7 @@ hexo.extend.filter.register('before_post_render', function(data){
 
 ### after_post_render
 
-投稿がレンダリングされた後に実行されます。実行手順については、[投稿のレンダ
-リング](posts.html#Render)を参照してください。
+投稿がレンダリングされた後に実行されます。実行手順については、[投稿のレンダリング](posts.html#レンダリング)を参照してください。
 
 例えば、`@username`をTwitterプロファイルへのリンクに置き換えるには:
 
@@ -120,7 +119,7 @@ hexo.extend.filter.register('after_post_render', function(data){
 
 ### before_exit
 
-Hexoが終了しようとする直前に実行されます。これは`hexo.exit`が呼び出された直後に実行されます。
+Hexoが終了する直前、つまり`hexo.exit`が呼び出された直後に実行されます。
 
 ``` js
 hexo.extend.filter.register('before_exit', function(){
@@ -130,7 +129,7 @@ hexo.extend.filter.register('before_exit', function(){
 
 ### before_generate
 
-生成が始まる前に実行されます。
+生成が開始される直前に実行されます。
 
 ``` js
 hexo.extend.filter.register('before_generate', function(){
@@ -140,7 +139,7 @@ hexo.extend.filter.register('before_generate', function(){
 
 ### after_generate
 
-生成が終了した後に実行されます。
+生成が終了した直後に実行されます。
 
 ``` js
 hexo.extend.filter.register('after_generate', function(){
@@ -163,7 +162,7 @@ hexo.extend.filter.register('template_locals', function(locals){
 
 ### after_init
 
-Hexoが初期化された直後に実行されます。これは`hexo.init`が完了した直後に実行されます。
+Hexoが初期化、つまり`hexo.init`が完了した直後に実行されます。
 
 ``` js
 hexo.extend.filter.register('after_init', function(){
@@ -193,7 +192,7 @@ hexo.extend.filter.register('post_permalink', function(data){
 
 ### after_render
 
-レンダリングが完了した後に実行されます。詳細については、[レンダリング](rendering.html#after_render_Filters)を参照してください。
+レンダリングが完了した直後に実行されます。詳細については、[レンダリング](rendering.html#after-renderフィルター)を参照してください。
 
 ### after_clean
 

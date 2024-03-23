@@ -1,7 +1,7 @@
 ---
 title: レンダラー
 ---
-レンダラーは、コンテンツをレンダリングするために使用されます。
+レンダラーは、コンテンツをレンダリングします。
 
 ## 概要
 
@@ -21,7 +21,7 @@ hexo.extend.renderer.register(name, output, function(data, options){
 
 引数 | 説明
 --- | ---
-`data` | ファイルパス`path`とファイルコンテンツ`text`の2つの属性を含みます。`path`が必ずしも存在するわけではありません。
+`data` | ファイルパス`path`とファイルコンテンツ`text`の2つの属性を含みます。`path`は必ず存在するとは限りません。
 `option` | オプション
 `callback` | `err`, `value`の2つのパラメータを持つコールバック関数。
 
@@ -58,7 +58,7 @@ hexo.extend.renderer.register('ejs', 'html', function(data, options){
 
 ### Nunjucksタグを無効にする
 
-Nunjucksタグ`{{ }}`や`{% %}`（[タグプラグイン](/docs/tag-plugins)で使用される）はデフォルトで処理されますが、無効にするには:
+Nunjucksタグ`{{ }}`や`{% %}`（[タグプラグイン](../docs/tag-plugins)で使用される）はデフォルトで処理されますが、次の方法で無効にできます:
 
 ``` js
 function lessFn(data, options) {

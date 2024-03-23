@@ -1,7 +1,7 @@
 ---
 title: タグ
 ---
-タグを使用すると、ユーザーは投稿に簡単にスニペットを挿入できます。
+タグを使用することで、投稿に簡単にスニペットを挿入できます。
 
 ## 概要
 
@@ -11,9 +11,9 @@ hexo.extend.tag.register(name, function(args, content){
 }, options);
 ```
 
-タグ関数には`args`と`content`の2つの引数が渡されます。`args`にはタグプラグインに渡された引数が含まれ、`content`はタグプラグインからのラップされたコンテンツです。
+タグ関数には`args`と`content`の2つの引数が渡されます。`args`はタグに渡された引数、`content`はタグでラップされたコンテンツです。
 
-Hexo 3で非同期レンダリングが導入されて以来、レンダリングには[Nunjucks]が使用されています。その挙動は[Swig]のそれと多少異なる場合があります。
+Hexo 3での非同期レンダリングの導入以来、レンダリングには[Nunjucks]が使用されています。[Swig]の挙動とは少し異なる場合があります。
 
 ## タグの登録解除
 
@@ -41,11 +41,11 @@ hexo.extend.tag.register('youtube', tagFn);
 
 ### ends
 
-終了タグを使用します。このオプションはデフォルトで`false`です。
+終了タグを使用します。デフォルトで`false`です。
 
 ### async
 
-非同期モードを有効にします。このオプションはデフォルトで`false`です。
+非同期モードを有効にします。デフォルトで`false`です。
 
 ## 例
 
@@ -89,9 +89,9 @@ hexo.extend.tag.register('include_code', function(args){
 }, {async: true});
 ```
 
-## フロントマターとユーザー設定
+## Front Matterとユーザー設定
 
-以下のオプションが有効です:
+以下の方法で利用できます:
 
 1.
 
@@ -107,7 +107,7 @@ hexo.extend.tag.register('foo', function (args) {
   const { config: themeCfg } = hexo.theme;
   if (themeCfg.fancybox) // 何かする...
 
-  // フロントマター
+  // Front-matter
   const { title } = this; // 記事の（投稿/ページ）タイトル
 
   // 記事のコンテンツ
