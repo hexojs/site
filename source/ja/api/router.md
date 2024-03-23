@@ -5,7 +5,7 @@ title: ルーター
 
 ## パスの取得
 
-`get`メソッドは[Stream]を返します。たとえば、指定された宛先にパスデータを保存するには:
+`get`メソッドは[Stream]を返却します。たとえば、指定された宛先にパスデータを保存するには:
 
 ``` js
 var data = hexo.route.get('index.html');
