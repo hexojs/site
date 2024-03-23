@@ -127,7 +127,7 @@ Hexoは日付の処理に[Moment.js](http://momentjs.com/)を使用します。
 - `date`: `updated`として`date`を使用します。ファイルの変更日が異なる可能性があるGitワークフローで一般的に使用されます。
 - `empty`: 提供されていない場合は`updated`を単純に削除します。多くののテーマやプラグインと互換性がないかもしれません。
 
-`use_date_for_updated`はv7.0.0+で削除されました。代わりに`updated_option: 'date'`を使用してください。
+`use_date_for_updated`はv7.0.0で削除されました。代わりに`updated_option: 'date'`を使用してください。
 {% endnote %}
 
 ### ページネーション

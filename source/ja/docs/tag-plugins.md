@@ -179,7 +179,7 @@ jsFiddleスニペットを埋め込むには:
 ## Gist (v7.0.0で削除されました)
 
 {% note warn %}
-v7.0.0+を使用する場合は、代わりに[hexo-tag-embed](https://github.com/hexojs/hexo-tag-embed)を使用してください。
+v7.0.0 以上で使用する場合は、代わりに[hexo-tag-embed](https://github.com/hexojs/hexo-tag-embed)を使用してください。
 {% endnote %}
 
 Gistスニペットを埋め込むには:
@@ -255,7 +255,7 @@ iframeを埋め込むには:
 ## YouTube (v7.0.0で削除されました)
 
 {% note warn %}
-v7.0.0+を使用する場合は、代わりに[hexo-tag-embed](https://github.com/hexojs/hexo-tag-embed)を使用してください。
+v7.0.0 以上で使用する場合は、代わりに[hexo-tag-embed](https://github.com/hexojs/hexo-tag-embed)を使用してください。
 {% endnote %}
 
 YouTube動画を挿入します。
@@ -290,7 +290,7 @@ YouTube動画を挿入します。
 ## Vimeo (v7.0.0で削除されました)
 
 {% note warn %}
-v7.0.0+を使用する場合は、代わりに[hexo-tag-embed](https://github.com/hexojs/hexo-tag-embed)を使用してください。
+v7.0.0 以上で使用する場合は、代わりに[hexo-tag-embed](https://github.com/hexojs/hexo-tag-embed)を使用してください。
 {% endnote %}
 
 レスポンシブまたは指定されたサイズのVimeo動画を挿入します。
