@@ -70,16 +70,16 @@ skip_render: "_posts/test-post.md"
 --- | --- | ---
 `new_post_name` | 新しい投稿のファイル名形式 | `:title.md`
 `default_layout` | デフォルトのレイアウト | `post`
-`titlecase` | タイトルをタイトルケースに変換するか | `false`
-`external_link` | 外部リンクを新しいタブで開くか |
-`external_link.enable` | 外部リンクを新しいタブで開くか | `true`
-`external_link.field` | `site`全体に適用するか`post`のみか | `site`
+`titlecase` | タイトルをタイトルケースに変換するか？ | `false`
+`external_link` | 外部リンクを新しいタブで開くか？ |
+`external_link.enable` | 外部リンクを新しいタブで開くか？ | `true`
+`external_link.field` | `site`全体に適用するか？`post`のみか？ | `site`
 `external_link.exclude` | ホスト名を除外。該当する場合はサブドメインを指定、`www`も含む | `[]`
 `filename_case` | ファイル名を `1`小文字; `2`大文字 に変換 | `0`
-`render_drafts` | 下書きを表示するか | `false`
-`post_asset_folder` | [アセットフォルダ](asset-folders.html)を有効にするか | `false`
-`relative_link` | リンクをルートフォルダに対して相対的にするか | `false`
-`future` | 未来の投稿を表示するか | `true`
+`render_drafts` | 下書きを表示するか？ | `false`
+`post_asset_folder` | [アセットフォルダ](asset-folders.html)を有効にするか？ | `false`
+`relative_link` | リンクをルートフォルダに対して相対的にするか？ | `false`
+`future` | 未来の投稿を表示するか？ | `true`
 `syntax_highlighter` | コードブロックのシンタックスハイライト設定。使い方は[シンタックスハイライト](syntax-highlight)セクションを参照。 | `highlight.js`
 `highlight` | コードブロックのシンタックスハイライト設定。使い方は[Highlight.js](syntax-highlight#Highlight-js)セクションを参照。 |
 `prismjs` | コードブロックのシンタックスハイライト設定。使い方は[PrismJS](syntax-highlight#PrismJS)セクションを参照。 |

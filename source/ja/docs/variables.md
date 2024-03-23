@@ -38,7 +38,7 @@ LodashはHexo 5.0.0以降、グローバル変数から削除されました。[
 `page.title` | 記事のタイトル | `string`
 `page.date` | 記事の作成日 | [Moment.js] オブジェクト
 `page.updated` | 記事の最終更新日 | [Moment.js] オブジェクト
-`page.comments` | コメントが有効かどうか | `boolean`
+`page.comments` | コメントが有効か？ | `boolean`
 `page.layout` | レイアウト名 | `string`
 `page.content` | 記事の完全な処理済みコンテンツ | `string`
 `page.excerpt` | 記事の抜粋 | `string`

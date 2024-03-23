@@ -36,7 +36,7 @@ date: 2013/7/13 20:46:25
 `excerpt` | プレーンテキストでのページの抜粋。テキストのフォーマットには[このプラグイン](tag-plugins#投稿の抜粋)を使用 |
 `disableNunjucks` | 有効にするとNunjucksタグ`{{ }}`/`{% %}`と[タグプラグイン](tag-plugins)のレンダリングを無効にする | false
 `lang` | [自動検出](internationalization#パス)を上書きする言語を設定 | `_config.yml`から継承
-`published` | 投稿を公開するか | `_posts`配下の投稿では`true`、`_draft`配下の投稿では`false`
+`published` | 投稿を公開するか？ | `_posts`配下の投稿では`true`、`_draft`配下の投稿では`false`
 
 #### レイアウト
 

@@ -298,7 +298,7 @@ $ hexo generate —deploy && bip deploy
 | ----------------- | ---------------------- |
 | `endpoint` | RSS3ハブへのリンク |
 | `privateKey` | あなたのプライベートキー、64バイト |
-| `ipfs/deploy` | IPFSへのデプロイを実行するかどうか |
+| `ipfs/deploy` | IPFSへのデプロイを実行するか？ |
 | `ipfs/gateway` | IPFS APIゲートウェイ |
 | `ipfs/api/key` | IPFSゲートウェイ関連の認証コンテンツ |
 | `ipfs/api/secret` | IPFSゲートウェイ関連の認証コンテンツ |
