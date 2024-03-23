@@ -33,7 +33,7 @@ Node.jsはノンブロッキングI/Oを持っていますが、システムに�
 $ ulimit -n 10000
 ```
 
-**エラー：制限を変更できません**
+**Error: cannot modify limit**
 
 次のエラーに遭遇した場合:
 
@@ -96,7 +96,7 @@ fatal: 'username.github.io' does not appear to be a git repository
 
 コンピュータ上で[gitを適切に設定](https://help.github.com/articles/set-up-git)していることを確認するか、HTTPSリポジトリURLを代わりに使用してみてください。
 
-### エラー：ENOENT：そのようなファイルやディレクトリはありません
+### Error: ENOENT: no such file or directory
 
 `Error: ENOENT: no such file or directory`のようなエラーが発生した場合、タグ、カテゴリー、またはファイル名で大文字と小文字を混在させている可能性があります。Gitはこの変更を自動的にマージできないため、自動ブランチングが中断されます。
 
