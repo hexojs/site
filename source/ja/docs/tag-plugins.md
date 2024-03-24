@@ -76,7 +76,7 @@ Every interaction is both precious and an opportunity to delight.
 **エイリアス:** code
 
 ```
-{% codeblock [title] [lang:language] [url] [link text] [追加オプション] %}
+{% codeblock [title] [lang:language] [url] [link text] [additional options] %}
 code snippet
 {% endcodeblock %}
 ```
