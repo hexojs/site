@@ -2,20 +2,20 @@
 title: GitHub Pages
 ---
 
-このチュートリアルでは、[GitHub Actions](https://docs.github.com/en/actions) を使用して GitHub Pages をデプロイします。これは公開リポジトリとプライベートリポジトリの両方で機能します。ソースフォルダを GitHub にアップロードしたくない場合は、[ワンコマンドデプロイ](#One-command-deployment) セクションに進んでください。
+このチュートリアルでは、[GitHub Actions](https://docs.github.com/en/actions) を使用して GitHub Pages をデプロイします。これはパブリックリポジトリとプライベートリポジトリの両方で機能します。ソースフォルダを GitHub にアップロードしたくない場合は、[ワンコマンドデプロイ](#ワンコマンド・デプロイ) セクションに進んでください。
 
-1. *username*.github.io という名前のリポジトリを作成します。ここで username は GitHub 上のユーザーネームです。他のリポジトリにアップロードしている場合は、リポジトリの名前を変更してください。
-2. Hexo フォルダのファイルをリポジトリのデフォルトブランチにプッシュします。デフォルトブランチは通常 **main** ですが、古いリポジトリでは **master** ブランチを使用することがあります。
+1. <b>*username*.github.io</b> という名前のリポジトリを作成します。username は GitHub 上のユーザー名です。他のリポジトリにアップロードしている場合は、リポジトリの名前を変更してください。
+2. Hexo フォルダのファイルをリポジトリのデフォルトブランチにプッシュします。デフォルトブランチは通常 **main** ですが、古いリポジトリでは **master** ブランチかもしれません。
    - GitHub に `main` ブランチをプッシュするには:
 
     ```
     $ git push -u origin main
     ```
-   - `public/` フォルダはデフォルトでアップロードされません（されるべきではありません）。`.gitignore` ファイルに `public/` 行が含まれていることを確認してください。フォルダ構造は [このリポジトリ](https://github.com/hexojs/hexo-starter) に似ているべきです。
+   - `public/` フォルダはデフォルトでアップロードされません（されるべきではありません）。`.gitignore` ファイルに `public/` 行が含まれていることを確認してください。フォルダ構造は [このリポジトリ](https://github.com/hexojs/hexo-starter) 倣うべきです。
 
-3. ローカルマシンで使用している Node.js のバージョンを `node --version` で確認します。メジャーバージョン（例: `v16.y.z`）をメモします。
-4. GitHub リポの設定で、**Settings** > **Pages** > **Source** に移動します。ソースを **GitHub Actions** に変更して保存します。
-5. リポジトリに以下の内容で `.github/workflows/pages.yml` を作成します（前のステップでメモした Node.js のメジャーバージョンに `16` を置き換えます）:
+3. ローカルマシンで使用している Node.js のバージョンを `node --version` で確認し、メジャーバージョン（例: `v16.y.z`）を控えます。
+4. GitHubリポジトリの設定で、**Settings** > **Pages** > **Source** に移動します。ソースを **GitHub Actions** に変更し保存します。
+5. リポジトリに以下の内容で `.github/workflows/pages.yml` を作成します（前のステップで控えた Node.js のメジャーバージョンに `16` を置き換えます）:
 
 ```yml
 name: Pages
@@ -76,24 +76,24 @@ jobs:
 
 GitHub でプロジェクトページを持ちたい場合は:
 
-1. GitHub 上でリポジトリに移動します。**Settings** タブに移動します。**Repository name** を変更して、ブログが *username.github.io/*repository* で利用できるようにします。**repository** は *blog* や *hexo* のような任意の名前にできます。
-2. **_config.yml** を編集し、`url:` の値を *https://*username*.github.io/*repository* に変更します。
-3. GitHub リポの設定で、**Settings** > **Pages** > **Source** に移動します。ソースを **GitHub Actions** に変更して保存します。
+1. GitHubリポジトリで**Settings** タブを表示します。**Repository name** を変更して、ブログが <b>username.github.io/*repository*</b> で利用できるようにします。**repository** は *blog* や *hexo* など任意の名前にできます。
+2. **_config.yml** を編集し、`url:` の値を <b>https://*username*.github.io/*repository*</b> に変更します。
+3. GitHub リポジトリの設定で、**Settings** > **Pages** > **Source** に移動します。ソースを **GitHub Actions** に変更し保存します。
 4. デフォルトブランチにコミットしてプッシュします。
 5. デプロイが完了したら、*username*.github.io/*repository* でウェブページを確認します。
 
 ## ワンコマンド・デプロイ
 
-以下の指示は [ワンコマンド・デプロイ](/docs/one-command-deployment) ページからの適応です。
+以下の説明は [ワンコマンド・デプロイ](../docs/one-command-deployment) からの抜粋です。
 
 1. [hexo-deployer-git](https://github.com/hexojs/hexo-deployer-git) をインストールします。
-2. **_config.yml** に以下の設定を追加します（存在する場合は既存の行を削除します）。
+2. **_config.yml** に以下の設定を追加します（存在する場合は既存の行を修正します）。
 
-  ```yml
+  ``` yml
   deploy:
     type: git
     repo: https://github.com/<username>/<project>
-    # 例、https://github.com/hexojs/hexojs.github.io
+    # example, https://github.com/hexojs/hexojs.github.io
     branch: gh-pages
   ```
 
@@ -103,5 +103,5 @@ GitHub でプロジェクトページを持ちたい場合は:
 ## 便利なリンク
 
 - [GitHub Pages](https://docs.github.com/en/pages)
-- [カスタムGitHub Actionsワークフローで公開する](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site#publishing-with-a-custom-github-actions-workflow)
+- [Publishing with a custom GitHub Actions workflow](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site#publishing-with-a-custom-github-actions-workflow)
 - [actions/deploy-github-pages-site](https://github.com/marketplace/actions/deploy-github-pages-site)
