@@ -3,13 +3,13 @@ title: ヘルパー
 ---
 ヘルパーを使うことで、テンプレートにスニペットを素早く挿入できます。ソースファイル内では使用できません。
 
-あなた自身のカスタムヘルパーを簡単に[作成する](https://hexo.io/api/helper.html)ほか、既に用意されているヘルパーを利用することもできます。
+独自のカスタムヘルパーを簡単に[作成する](../api/helper.html)ほか、既に用意されているヘルパーを使うこともできます。
 
 ## URL
 
 ### url_for
 
-ルートパスが前置されたURLを返します。出力は自動的にエンコードされます。
+ルートパスが先頭に付与されたURLを返します。出力は自動的にエンコードされます。
 
 ``` js
 <%- url_for(path, [option]) %>
@@ -17,7 +17,7 @@ title: ヘルパー
 
 オプション | 説明 | デフォルト
 --- | --- | ---
-`relative` | 相対リンクを出力します | `config.relative_link`の値
+`relative` | 相対リンクを出力 | `config.relative_link`の値
 
 **例:**
 
@@ -31,7 +31,7 @@ root: /blog/ # example
 // /blog/a/path
 ```
 
-相対リンクは、デフォルトで`relative_link`オプションに従います。
+相対リンクはデフォルトで`relative_link`オプションに従います。
 例えば、投稿やページのパスが '/foo/bar/index.html' の場合:
 
 ``` yml
@@ -44,7 +44,8 @@ relative_link: true
 // ../../css/style.css
 
 /* オプションの上書き
- * `relative_link`が有効な状態でも、絶対リンクを出力、またはその逆も行えます。
+ * `relative_link`が有効な状態でも絶対リンクを出力、
+ * またはその逆も行えます。
  */
 <%- url_for('/css/style.css', {relative: false}) %>
 // /css/style.css
@@ -67,7 +68,7 @@ relative_link: true
 
 ### full_url_for
 
-`config.url`を前置したURLを返します。出力は自動的にエンコードされます。
+`config.url`を先頭に付与したURLを返します。出力は自動的にエンコードされます。
 
 ``` js
 <%- full_url_for(path) %>
@@ -88,6 +89,8 @@ url: https://example.com/blog # example
 ### gravatar
 
 メールアドレスからGravatar画像URLを返します。
+
+[options] パラメータを指定しない場合、デフォルトのオプションが適用されます。指定する場合、サイズパラメータとして Gravatar に渡される数値を設定します。最後に、これをオブジェクトに設定すると、Gravatar のパラメーターのクエリ文字列に変換されます。
 
 ``` js
 <%- gravatar(email, [options]) %>
@@ -119,7 +122,7 @@ url: https://example.com/blog # example
 
 ### css
 
-CSSファイルを読み込みます。 `path` は文字列、配列、オブジェクト、またはオブジェクトの配列にすることができます。[`/<root>/`](/docs/configuration#URL)の値が自動的に前置され、`.css` 拡張子が `path` に自動的に追加されます。カスタム属性にはオブジェクトタイプを指定します。
+CSSファイルを読み込みます。 `path` には文字列、配列、オブジェクト、またはオブジェクトの配列を指定できます。[`/<root>/`](configuration#URL)の値が先頭に付与され、`.css` 拡張子が `path` に追加されます。カスタム属性にはオブジェクトを指定します。
 
 ``` js
 <%- css(path, ...) %>
@@ -145,7 +148,7 @@ CSSファイルを読み込みます。 `path` は文字列、配列、オブジ
 
 ### js
 
-JavaScriptファイルを読み込みます。 `path` は文字列、配列、オブジェクト、またはオブジェクトの配列にすることができます。[`/<root>/`](/docs/configuration#URL)の値が自動的に前置され、`.js` 拡張子が `path` に自動的に追加されます。カスタム属性にはオブジェクトタイプを指定します。
+JavaScriptファイルを読み込みます。  `path` には文字列、配列、オブジェクト、またはオブジェクトの配列を指定できます。[`/<root>/`](configuration#URL)の値が先頭に付与され、`.js` 拡張子が `path` に追加されます。カスタム属性にはオブジェクトを指定します。
 
 ``` js
 <%- js(path, ...) %>
@@ -179,7 +182,7 @@ JavaScriptファイルを読み込みます。 `path` は文字列、配列、�
 
 オプション | 説明 | デフォルト
 --- | --- | ---
-`external` | リンクを新しいタブで開く | false
+`external` | リンクを新しいタブで開くか？ | false
 `class` | クラス名 |
 `id` | ID |
 
@@ -269,7 +272,7 @@ JavaScriptファイルを読み込みます。 `path` は文字列、配列、�
 <%- feed_tag('rss.xml', { title: 'RSS Feed', type: 'rss' }) %>
 // <link rel="alternate" href="/atom.xml" title="RSS Feed" type="application/atom+xml">
 
-/* 引数が指定されない場合 hexo-generator-feed のデフォルトに従う*/
+/* 引数を指定しない場合 hexo-generator-feed のデフォルトに従う*/
 <%- feed_tag() %>
 // <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
 ```
@@ -278,7 +281,7 @@ JavaScriptファイルを読み込みます。 `path` は文字列、配列、�
 
 ### is_current
 
-`path`が現在のページのURLと一致するかどうかをチェックします。厳密な一致を有効にするには`strict`オプションを使用します。
+`path`が現在のページのURLと一致するかチェックします。厳密な比較を行う場合`strict`オプションを指定します。
 
 ``` js
 <%- is_current(path, [strict]) %>
@@ -286,15 +289,15 @@ JavaScriptファイルを読み込みます。 `path` は文字列、配列、�
 
 ### is_home
 
-現在のページがホームページかどうかをチェックします。
+現在のページがホームページかチェックします。
 
 ``` js
 <%- is_home() %>
 ```
 
-### is_home_first_page (+6.3.0)
+### is_home_first_page (6.3.0以上)
 
-現在のページがホームページの最初のページかどうかをチェックします。
+現在のページがホームページの最初のページかチェックします。
 
 ``` js
 <%- is_home_first_page() %>
@@ -302,7 +305,7 @@ JavaScriptファイルを読み込みます。 `path` は文字列、配列、�
 
 ### is_post
 
-現在のページが投稿ページかどうかをチェックします。
+現在のページが投稿ページかチェックします。
 
 ``` js
 <%- is_post() %>
@@ -310,7 +313,7 @@ JavaScriptファイルを読み込みます。 `path` は文字列、配列、�
 
 ### is_page
 
-現在のページが固定ページかどうかをチェックします。
+現在のページが固定ページかチェックします。
 
 ``` js
 <%- is_page() %>
@@ -318,7 +321,7 @@ JavaScriptファイルを読み込みます。 `path` は文字列、配列、�
 
 ### is_archive
 
-現在のページがアーカイブページかどうかをチェックします。
+現在のページがアーカイブページかチェックします。
 
 ``` js
 <%- is_archive() %>
@@ -326,7 +329,7 @@ JavaScriptファイルを読み込みます。 `path` は文字列、配列、�
 
 ### is_year
 
-現在のページが年別アーカイブページかどうかをチェックします。
+現在のページが年別アーカイブページかチェックします。
 
 ``` js
 <%- is_year() %>
@@ -334,7 +337,7 @@ JavaScriptファイルを読み込みます。 `path` は文字列、配列、�
 
 ### is_month
 
-現在のページが月別アーカイブページかどうかをチェックします。
+現在のページが月別アーカイブページかチェックします。
 
 ``` js
 <%- is_month() %>
@@ -342,8 +345,8 @@ JavaScriptファイルを読み込みます。 `path` は文字列、配列、�
 
 ### is_category
 
-現在のページがカテゴリーページかどうかをチェックします。
-パラメータとして文字列が与えられた場合、与えられたカテゴリーと現在のページが一致するかどうかをチェックします。
+現在のページがカテゴリーページかチェックします。
+パラメータとして文字列が与えられた場合、現在のページが与えられたカテゴリーと一致するかチェックします。
 
 ``` js
 <%- is_category() %>
@@ -352,8 +355,8 @@ JavaScriptファイルを読み込みます。 `path` は文字列、配列、�
 
 ### is_tag
 
-現在のページがタグページかどうかをチェックします。
-パラメータとして文字列が与えられた場合、与えられたタグと現在のページが一致するかどうかをチェックします。
+現在のページがタグページかチェックします。
+パラメータとして文字列が与えられた場合、現在のページが与えられたタグと一致するかチェックします。
 
 ``` js
 <%- is_tag() %>
@@ -364,7 +367,7 @@ JavaScriptファイルを読み込みます。 `path` は文字列、配列、�
 
 ### trim
 
-文字列の前後の空白を削除します。
+文字列の前後の空白を除去します。
 
 ``` js
 <%- trim(string) %>
@@ -372,7 +375,7 @@ JavaScriptファイルを読み込みます。 `path` は文字列、配列、�
 
 ### strip_html
 
-文字列からすべてのHTMLタグを取り除きます。
+文字列からすべてのHTMLタグを除去します。
 
 ``` js
 <%- strip_html(string) %>
@@ -402,7 +405,7 @@ JavaScriptファイルを読み込みます。 `path` は文字列、配列、�
 
 ### markdown
 
-文字列をMarkdownでレンダリングします。
+Markdown文字列をレンダリングします。
 
 ``` js
 <%- markdown(str) %>
@@ -430,11 +433,11 @@ JavaScriptファイルを読み込みます。 `path` は文字列、配列、�
 // <p class="example">Test</p>
 ```
 
-詳細については、[レンダリング](https://hexo.io/api/rendering)を参照してください。
+詳細については、[レンダリング](../api/rendering)を参照してください。
 
 ### word_wrap
 
-テキストを指定された`length`より長くならないように折り返します。`length`はデフォルトで80です。
+テキストを指定された`length`以内に折り返します。`length`はデフォルトで80です。
 
 ``` js
 <%- word_wrap(str, [length]) %>
@@ -449,7 +452,7 @@ JavaScriptファイルを読み込みます。 `path` は文字列、配列、�
 
 ### truncate
 
-特定の`length`の後でテキストを切り捨てます。デフォルトは30文字です。
+テキストを指定された`length`以内に切り捨てます。デフォルトは30文字です。
 
 ``` js
 <%- truncate(text, [options]) %>
@@ -500,7 +503,7 @@ JavaScriptファイルを読み込みます。 `path` は文字列、配列、�
 
 ### fragment_cache
 
-フラグメント内のコンテンツをキャッシュします。フラグメント内のコンテンツを保存し、次のリクエストが来たときにキャッシュを提供します。
+フラグメント内のコンテンツをキャッシュし、以降のリクエストではそれを使います。
 
 ``` js
 <%- fragment_cache(id, fn);
@@ -514,11 +517,11 @@ JavaScriptファイルを読み込みます。 `path` は文字列、配列、�
 }) %>
 ```
 
-## 日付と時間
+## 日付と時刻
 
 ### date
 
-フォーマットされた日付を挿入します。`date`はunix時間、ISO文字列、日付オブジェクト、または[Moment.js]オブジェクトにすることができます。`format`はデフォルトで`date_format`の設定です。
+フォーマットされた日付を挿入します。`date`にはunix時刻、ISO文字列、Dateオブジェクト、または[Moment.js]オブジェクトを指定できます。`format`はデフォルトで`date_format`設定が使われます。
 
 ``` js
 <%- date(date, [format]) %>
@@ -536,7 +539,7 @@ JavaScriptファイルを読み込みます。 `path` は文字列、配列、�
 
 ### date_xml
 
-XMLフォーマットで日付を挿入します。`date`はunix時間、ISO文字列、日付オブジェクト、または[Moment.js]オブジェクトにすることができます。
+XMLフォーマットで日付を挿入します。`date`にはunix時刻、ISO文字列、Dateオブジェクト、または[Moment.js]オブジェクトを指定できます。
 
 ``` js
 <%- date_xml(date) %>
@@ -551,7 +554,7 @@ XMLフォーマットで日付を挿入します。`date`はunix時間、ISO文�
 
 ### time
 
-フォーマットされた時間を挿入します。`date`はunix時間、ISO文字列、日付オブジェクト、または[Moment.js]オブジェクトにすることができます。`format`はデフォルトで`time_format`の設定です。
+フォーマットされた時刻を挿入します。`date`にはunix時刻、ISO文字列、Dateオブジェクト、または[Moment.js]オブジェクトを指定できます。`format`はデフォルトで`time_format`設定が使われます。
 
 ``` js
 <%- time(date, [format]) %>
@@ -569,7 +572,7 @@ XMLフォーマットで日付を挿入します。`date`はunix時間、ISO文�
 
 ### full_date
 
-フォーマットされた日付と時間を挿入します。`date`はunix時間、ISO文字列、日付オブジェクト、または[Moment.js]オブジェクトにすることができます。`format`はデフォルトで`date_format + time_format`の設定です。
+フォーマットされた日付と時刻を挿入します。`date`にはunix時刻、ISO文字列、Dateオブジェクト、または[Moment.js]オブジェクトを指定できます。`format`はデフォルトで`date_format + time_format`の設定が使われます。
 
 ``` js
 <%- full_date(date, [format]) %>
@@ -587,7 +590,7 @@ XMLフォーマットで日付を挿入します。`date`はunix時間、ISO文�
 
 ### relative_date
 
-現在からの相対的な時間を挿入します。`date`はunix時間、ISO文字列、日付オブジェクト、または[Moment.js]オブジェクトにすることができます。
+現在からの相対的な時間を挿入します。`date`にはunix時刻、ISO文字列、Dateオブジェクト、または[Moment.js]オブジェクトを指定できます。
 
 ```js
 <%- relative_date(date) %>
@@ -605,7 +608,7 @@ XMLフォーマットで日付を挿入します。`date`はunix時間、ISO文�
 
 ### time_tag
 
-時間タグを挿入します。`date`はunix時間、ISO文字列、日付オブジェクト、または[Moment.js]オブジェクトにすることができます。`format`はデフォルトで`date_format`の設定です。
+timeタグを挿入します。`date`にはunix時刻、ISO文字列、Dateオブジェクト、または[Moment.js]オブジェクトを指定できます。`format`はデフォルトで`date_format`の設定です。
 
 ```js
 <%- time_tag(date, [format]) %>
@@ -625,11 +628,11 @@ XMLフォーマットで日付を挿入します。`date`はunix時間、ISO文�
 
 [Moment.js]ライブラリ。
 
-## リスト
+## 一覧
 
 ### list_categories
 
-すべてのカテゴリのリストを挿入します。
+カテゴリの一覧を挿入します。
 
 ``` js
 <%- list_categories([options]) %>
@@ -638,12 +641,12 @@ XMLフォーマットで日付を挿入します。`date`はunix時間、ISO文�
 オプション | 説明 | デフォルト
 --- | --- | ---
 `orderby` | カテゴリの順序 | name
-`order` | 並び替えの種類。`1`, `asc` で昇順；`-1`, `desc` で降順 | 1
-`show_count` | 各カテゴリの投稿数を表示 | true
-`style` | カテゴリリストの表示スタイル。`list` は無順序リストでカテゴリを表示します。`false` または他の値を使用して無効にします。 | list
-`separator` | カテゴリ間の区切り文字。（`style` が `list` でない場合のみ機能） | ,
-`depth` | 表示するカテゴリのレベル。`0` で全カテゴリと子カテゴリを表示；`-1` は `0` と似ていますが平らに表示；`1` でトップレベルのカテゴリのみ表示。 | 0
-`class` | カテゴリリストのクラス名。 | category
+`order` | 並び順。`1`,`asc` で昇順；`-1`,`desc` で降順 | 1
+`show_count` | 各カテゴリの投稿数を表示するか？ | true
+`style` | 一覧の表示スタイル。`list` は順序なしリストでカテゴリを表示。`false` または他の値で無効化。 | list
+`separator` | カテゴリの区切り文字。（`style` が `list` でない場合のみ機能） | ,
+`depth` | 表示するカテゴリのレベル。`0` で全カテゴリと子カテゴリを表示；`-1` は `0` と同様だがフラットに表示；`1` でトップレベルのカテゴリのみ表示。 | 0
+`class` | 一覧のクラス名。 | category
 `transform` | カテゴリ名の表示を変更する関数。 |
 `suffix` | リンクに接尾辞を追加。 | なし
 
@@ -667,7 +670,7 @@ XMLフォーマットで日付を挿入します。`date`はunix時間、ISO文�
 
 ### list_tags
 
-すべてのタグのリストを挿入します。
+タグの一覧を挿入します。
 
 ``` js
 <%- list_tags([options]) %>
@@ -675,12 +678,12 @@ XMLフォーマットで日付を挿入します。`date`はunix時間、ISO文�
 
 オプション | 説明 | デフォルト
 --- | --- | ---
-`orderby` | カテゴリの順序 | name
-`order` | 並び替えの種類。`1`, `asc` で昇順；`-1`, `desc` で降順 | 1
-`show_count` | 各タグの投稿数を表示 | true
-`style` | タグリストの表示スタイル。`list` は無順序リストでタグを表示します。`false` または他の値を使用して無効にします。 | list
-`separator` | カテゴリ間の区切り文字。（`style` が `list` でない場合のみ機能） | ,
-`class` | タグリストのクラス名（文字列）または各タグのクラスをカスタマイズ（オブジェクト、以下を参照）。 | tag
+`orderby` | タグの順序 | name
+`order` | 並び順。`1`,`asc` で昇順；`-1`,`desc` で降順 | 1
+`show_count` | 各タグの投稿数を表示するか？ | true
+`style` | 一覧の表示スタイル。`list` は順序なしリストでタグを表示。`false` または他の値で無効化。 | list
+`separator` | タグの区切り文字。（`style` が `list` でない場合のみ機能） | ,
+`class` | 一覧のクラス名（文字列）または各タグのクラスをカスタマイズ（オブジェクト、以下を参照）。 | tag
 `transform` | タグ名の表示を変更する関数。[list_categories](#list-categories) の例を参照。 |
 `amount` | 表示するタグの数（0 = 無制限） | 0
 `suffix` | リンクに接尾辞を追加。 | なし
@@ -692,7 +695,7 @@ XMLフォーマットで日付を挿入します。`date`はunix時間、ISO文�
 `class.ul` | `<ul>` のクラス名（`list` スタイルのみ） | `tag-list` (`list` スタイル)
 `class.li` | `<li>` のクラス名（`list` スタイルのみ） | `tag-list-item` (`list` スタイル)
 `class.a` | `<a>` のクラス名 | `tag-list-link` (`list` スタイル) `tag-link` (通常スタイル)
-`class.label` | タグラベルが格納される `<span>` のクラス名（通常スタイルでのみ、`class.label` が設定されている場合、ラベルは `<span>` に入れられます） | `tag-label` (通常スタイル)
+`class.label` | タグラベルを格納する `<span>` のクラス名（通常スタイルで`class.label` が設定されている場合のみ、ラベルは `<span>` に入れられます） | `tag-label` (通常スタイル)
 `class.count` | タグカウンタが格納される `<span>` のクラス名（`show_count` が `true` の場合のみ） | `tag-list-count` (`list` スタイル) `tag-count` (通常スタイル)
 
 例:
@@ -706,7 +709,7 @@ XMLフォーマットで日付を挿入します。`date`はunix時間、ISO文�
 
 ### list_archives
 
-アーカイブのリストを挿入します。
+アーカイブの一覧を挿入します。
 
 ``` js
 <%- list_archives([options]) %>
@@ -714,18 +717,18 @@ XMLフォーマットで日付を挿入します。`date`はunix時間、ISO文�
 
 オプション | 説明 | デフォルト
 --- | --- | ---
-`type` | 種類。この値は `yearly` または `monthly` にできます。 | monthly
-`order` | 並び替えの種類。`1`, `asc` で昇順；`-1`, `desc` で降順 | 1
-`show_count` | 各アーカイブの投稿数を表示 | true
+`type` | 一覧の種類。`yearly` または `monthly` を指定できます。 | monthly
+`order` | 並び順。`1`,`asc` で昇順；`-1`,`desc` で降順 | 1
+`show_count` | 各アーカイブの投稿数を表示するか？ | true
 `format` | 日付の形式 | MMMM YYYY
-`style` | アーカイブリストの表示スタイル。`list` は無順序リストでアーカイブを表示します。`false` または他の値を使用して無効にします。 | list
-`separator` | アーカイブ間の区切り文字。（`style` が `list` でない場合のみ機能） | ,
-`class` | アーカイブリストのクラス名。 | archive
+`style` | 一覧の表示スタイル。`list` は順序なしリストでアーカイブを表示。`false` または他の値で無効化。 | list
+`separator` | アーカイブの区切り文字。（`style` が `list` でない場合のみ機能） | ,
+`class` | 一覧のクラス名。 | archive
 `transform` | アーカイブ名の表示を変更する関数。[list_categories](#list-categories) の例を参照。 |
 
 ### list_posts
 
-投稿のリストを挿入します。
+投稿の一覧を挿入します。
 
 ``` js
 <%- list_posts([options]) %>
@@ -734,10 +737,10 @@ XMLフォーマットで日付を挿入します。`date`はunix時間、ISO文�
 オプション | 説明 | デフォルト
 --- | --- | ---
 `orderby` | 投稿の順序 | date
-`order` | 並び替えの種類。`1`, `asc` で昇順；`-1`, `desc` で降順 | 1
-`style` | 投稿リストの表示スタイル。`list` は無順序リストで投稿を表示します。`false` または他の値を使用して無効にします。 | list
-`separator` | 投稿間の区切り文字。（`style` が `list` でない場合のみ機能） | ,
-`class` | 投稿リストのクラス名。 | post
+`order` | 並び順。`1`,`asc` で昇順；`-1`,`desc` で降順 | 1
+`style` | 一覧の表示スタイル。`list` は順序なしリストで投稿を表示。`false` または他の値で無効化。 | list
+`separator` | 投稿の区切り文字。（`style` が `list` でない場合のみ機能） | ,
+`class` | 一覧のクラス名。 | post
 `amount` | 表示する投稿の数（0 = 無制限） | 6
 `transform` | 投稿名の表示を変更する関数。[list_categories](#list-categories) の例を参照。 |
 
@@ -756,14 +759,14 @@ XMLフォーマットで日付を挿入します。`date`はunix時間、ISO文�
 `unit` | フォントサイズの単位 | px
 `amount` | タグの総数 | 無制限
 `orderby` | タグの順序 | name
-`order` | 並び替えの順序。`1`, `asc` で昇順；`-1`, `desc` で降順 | 1
-`color` | タグクラウドを色付け | false
-`start_color` | 開始色。hex (`#b700ff`), rgba (`rgba(183, 0, 255, 1)`), hsla (`hsla(283, 100%, 50%, 1)`) または [色キーワード] を使用できます。このオプションは `color` が true の場合のみ機能します。 |
-`end_color` | 終了色。hex (`#b700ff`), rgba (`rgba(183, 0, 255, 1)`), hsla (`hsla(283, 100%, 50%, 1)`) または [色キーワード] を使用できます。このオプションは `color` が true の場合のみ機能します。 |
+`order` | 並び順。`1`,`asc` で昇順；`-1`,`desc` で降順 | 1
+`color` | タグクラウドを色付けするか？ | false
+`start_color` | 開始色。hex (`#b700ff`), rgba (`rgba(183, 0, 255, 1)`), hsla (`hsla(283, 100%, 50%, 1)`) または [色キーワード] を指定可能。このオプションは `color` が true の場合のみ機能します。 |
+`end_color` | 終了色。hex (`#b700ff`), rgba (`rgba(183, 0, 255, 1)`), hsla (`hsla(283, 100%, 50%, 1)`) または [色キーワード] を指定可能。このオプションは `color` が true の場合のみ機能します。 |
 `class` | タグのクラス名の接頭辞
 `level` | 異なるクラス名の数。このオプションは `class` が設定されている場合のみ機能します。 | 10
-`show_count` (+6.3.0) | 各タグの投稿数を表示 | false
-`count_class` (+6.3.0) | タグカウントのクラス名 | count
+`show_count` (6.3.0以上) | 各タグの投稿数を表示 | false
+`count_class` (6.3.0以上) | タグカウントのクラス名 | count
 
 **例:**
 
@@ -794,17 +797,17 @@ XMLフォーマットで日付を挿入します。`date`はunix時間、ISO文�
 `prev_text` | 前のページへのリンクテキスト。`prev_next`がtrueに設定されている場合のみ機能します。 | Prev
 `next_text` | 次のページへのリンクテキスト。`prev_next`がtrueに設定されている場合のみ機能します。 | Next
 `space` | スペーステキスト | &hellip;
-`prev_next` | 前後のリンクを表示 | true
-`end_size` | 開始と終了側に表示されるページの数 | 1
-`mid_size` | 現在のページを除いて表示されるページの数 | 2
-`show_all` | すべてのページを表示。これがtrueに設定されている場合、`end_size`と`mid_size`は機能しません | false
+`prev_next` | 前後のリンクを表示するか？ | true
+`end_size` | 開始と終了の直前と直後に表示されるページの数 | 1
+`mid_size` | 現在のページの前後に表示されるページの数 | 2
+`show_all` | すべてのページを表示するか？これがtrueに設定されている場合、`end_size`と`mid_size`は機能しません | false
 `escape` | HTMLタグをエスケープ | true
-`page_class` (+6.3.0) | ページクラス名 | `page-number`
-`current_class` (+6.3.0) | 現在のページクラス名 | `current`
-`space_class` (+6.3.0) | スペースクラス名 | `space`
-`prev_class` (+6.3.0) | 前のページクラス名 | `extend prev`
-`next_class` (+6.3.0) | 次のページクラス名 | `extend next`
-`force_prev_next` (+6.3.0) | 前後のリンクを強制的に表示 | false
+`page_class` (6.3.0以上) | ページクラス名 | `page-number`
+`current_class` (6.3.0以上) | 現在のページクラス名 | `current`
+`space_class` (6.3.0以上) | スペースクラス名 | `space`
+`prev_class` (6.3.0以上) | 前のページクラス名 | `extend prev`
+`next_class` (6.3.0以上) | 次のページクラス名 | `extend next`
+`force_prev_next` (6.3.0以上) | 前後のリンクを強制的に表示 | false
 
 
 **例:**
@@ -854,7 +857,7 @@ Google検索フォームを挿入します。
 --- | --- | ---
 `class` | フォームのクラス名 | search-form
 `text` | 検索ヒントワード | Search
-`button` | 検索ボタンを表示。値はbooleanまたはstringにすることができます。値がstringの場合、それはボタンのテキストになります。 | false
+`button` | 検索ボタンを表示。booleanまたはstringを指定できます。stringの場合、それはボタンのテキストになります。 | false
 
 ### number_format
 
@@ -866,7 +869,7 @@ Google検索フォームを挿入します。
 
 オプション | 説明 | デフォルト
 --- | --- | ---
-`precision` | 数値の精度。値は`false`または非負の整数にすることができます。 | false
+`precision` | 数値の精度。`false`または非負の整数を指定。 | false
 `delimiter` | 千の区切り文字 | ,
 `separator` | 整数部と小数部を分けるセパレータ | .
 
@@ -919,8 +922,8 @@ Google検索フォームを挿入します。
 `url` | ページURL (`og:url`) | `url`
 `image` | ページ画像 (`og:image`) | コンテンツ内の全画像
 `author` | 記事の著者 (`og:article:author`) | `config.author`
-`date` | 記事の公開時間 (`og:article:published_time`) | ページの公開時間
-`updated` | 記事の更新時間 (`og:article:modified_time`) | ページの更新時間
+`date` | 記事の公開時刻 (`og:article:published_time`) | ページの公開時刻
+`updated` | 記事の更新時刻 (`og:article:modified_time`) | ページの更新時刻
 `language` | 記事の言語 (`og:locale`) | `page.lang || page.language || config.language`
 `site_name` | サイト名 (`og:site_name`) | `config.title`
 `description` | ページの説明 (`og:description`) | ページの抜粋またはコンテンツの最初の200文字
@@ -943,13 +946,13 @@ Google検索フォームを挿入します。
 オプション | 説明 | デフォルト
 --- | --- | ---
 `class` | クラス名 | `toc`
-`class_item` (+6.3.0) | アイテムのクラス名 | `${class}-item`
-`class_link` (+6.3.0) | リンクのクラス名 | `${class}-link`
-`class_text` (+6.3.0) | テキストのクラス名 | `${class}-text`
-`class_child` (+6.3.0) | 子のクラス名 | `${class}-child`
-`class_number` (+6.3.0) | 番号のクラス名 | `${class}-number`
-`class_level` (+6.3.0) | レベルのクラス名接頭辞 | `${class}-level`
-`list_number` | リスト番号を表示 | true
+`class_item` (6.3.0以上) | アイテムのクラス名 | `${class}-item`
+`class_link` (6.3.0以上) | リンクのクラス名 | `${class}-link`
+`class_text` (6.3.0以上) | テキストのクラス名 | `${class}-text`
+`class_child` (6.3.0以上) | 子のクラス名 | `${class}-child`
+`class_number` (6.3.0以上) | 番号のクラス名 | `${class}-number`
+`class_level` (6.3.0以上) | レベルのクラス名接頭辞 | `${class}-level`
+`list_number` | リスト番号を表示するか？ | true
 `max_depth` | 生成される目次の最大見出し深さ | 6
 `min_depth` | 生成される目次の最小見出し深さ | 1
 
@@ -959,12 +962,12 @@ Google検索フォームを挿入します。
 <%- toc(page.content) %>
 ```
 
-#### data-toc-unnumbered (+6.1.0)
+#### data-toc-unnumbered (6.1.0以上)
 
 属性 `data-toc-unnumbered="true"` を持つ見出しは番号無しとしてマークされます（リスト番号が表示されません）。
 
 {% note warn "Warning!" %}
-`data-toc-unnumbered="true"` を使用するには、レンダラーがCSSクラスを追加するオプションを持っている必要があります。
+`data-toc-unnumbered="true"` を使用するには、CSSクラスを追加できるレンダラーを使う必要があります。
 
 以下のPRを参照してください。
 
@@ -973,6 +976,6 @@ Google検索フォームを挿入します。
 - https://github.com/hexojs/hexo-renderer-markdown-it/pull/174
 {% endnote %}
 
-[color keywords]: http://www.w3.org/TR/css3-color/#svg-color
+[色キーワード]: http://www.w3.org/TR/css3-color/#svg-color
 [Moment.js]: http://momentjs.com/
 [Open Graph]: http://ogp.me/
