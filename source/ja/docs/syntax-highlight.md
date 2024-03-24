@@ -2,29 +2,29 @@
 title: シンタックスハイライト
 ---
 
-Hexoには、[highlight.js](https://github.com/highlightjs/highlight.js)と[prismjs](https://github.com/PrismJS/prism)の2つの組み込みシンタックスハイライトライブラリがあります。このチュートリアルでは、Hexoの組み込みシンタックスハイライトをテンプレートに統合する方法を紹介します。
+Hexoには、[highlight.js](https://github.com/highlightjs/highlight.js)と[prismjs](https://github.com/PrismJS/prism)の2つのシンタックスハイライトライブラリが組み込まれています。このチュートリアルでは、Hexoの組み込みシンタックスハイライトをテンプレートに統合する方法を紹介します。
 
-## 投稿でのコードブロックの使用方法
+## 投稿でのコードブロックの使用
 
-Hexoは、コードブロックを書くための2つの方法をサポートしています：[タグプラグイン - コードブロック](tag-plugins#Code-Block)と[タグプラグイン - バックティックコードブロック](https://hexo.io/docs/tag-plugins#Backtick-Code-Block):
+Hexoは、コードブロックを書く2つの方法をサポートしています。[タグプラグイン - コードブロック](tag-plugins#コードブロック)と[タグプラグイン - バックティックコードブロック](tag-plugins#バックティックコードブロック)です:
 
 ````markdown
-{% codeblock [タイトル] [lang:言語] [url] [リンクテキスト] [追加オプション] %}
-コードスニペット
+{% codeblock [title] [lang:language] [url] [link text] [additional options] %}
+code snippet
 {% endcodeblock %}
 
-{% code [タイトル] [lang:言語] [url] [リンクテキスト] [追加オプション] %}
-コードスニペット
+{% code [title] [lang:language] [url] [link text] [additional options] %}
+code snippet
 {% endcode %}
 
-``` [言語] [タイトル] [url] [リンクテキスト] [追加オプション]
-コードスニペット
+``` [language] [title] [url] [link text] [additional options]
+code snippet
 ```
 ````
 
-3番目の構文はMarkdownの囲みコードブロックの構文で、Hexoはそれを拡張してより多くの機能をサポートしています。利用可能なオプションを見つけるには、[タグプラグインドキュメント](tag-plugins#Code-Block)をチェックしてください。
+3番目の構文はMarkdownの囲みコードブロックの構文で、Hexoはそれを拡張してより多くの機能をサポートしています。利用可能なオプションを見つけるには、[タグプラグインドキュメント](tag-plugins#コードブロック)をチェックしてください。
 
-> ヒント：Hexoは、対応するレンダラープラグインがインストールされていれば、どの形式で書かれた投稿もサポートしています。それがmarkdown、ejs、swig、nunjucks、pug、asciidocなどであってもです。使用された形式に関係なく、これらの三つのコードブロック構文は常に利用可能です。
+> ヒント：Hexoは、対応するレンダラープラグインがインストールされていれば、どの形式で書かれた投稿もサポートしています。それがmarkdown、ejs、swig、nunjucks、pug、asciidocなどであってもです。使用された形式に関係なく、これらの3つのコードブロック構文は常に利用可能です。
 
 ## 設定
 
@@ -89,7 +89,7 @@ v7.0.0以降:
 
 ```yaml
 # _config.yml
-syntax_highlighter:  # 空
+syntax_highlighter:  # empty
 ```
 
 `highlight.enable`と`prismjs.enable`が`false`（v7.0.0より前）か、`syntax_highlighter`が空（v7.0.0以降）の場合、コードブロックの出力HTMLは対応するレンダラーによって制御されます。例えば、[`marked.js`](https://github.com/markedjs/marked)（Hexoのデフォルトのmarkdownレンダラーである[`hexo-renderer-marked`](https://github.com/hexojs/hexo-renderer-marked)に使用されています）は、`<code>`の`class`に言語コードを追加します:
@@ -144,7 +144,7 @@ highlight:
   hljs: false
 ```
 
-`highlight.js`はデフォルトで有効になっており、Hexoでサーバーサイドのハイライトとして使用されます。ブラウザサイドで`highlight.js`を実行することを好む場合は、無効にする必要があります。
+`highlight.js`はデフォルトで有効になっており、Hexoでサーバーサイドのハイライトとして処理されます。ブラウザサイドで`highlight.js`を実行する場合、これを無効にする必要があります。
 
 > サーバーサイドとは、シンタックスハイライトが`hexo generate`または`hexo server`の間に生成されることを意味します。
 
@@ -152,17 +152,17 @@ highlight:
 
 `auto_detect`は、コードブロックの言語を自動的に検出する`highlight.js`の機能です。
 
-> ヒント：「サブランゲージハイライト」を使用したい場合は、`auto_detect`を有効にし、コードブロックを書くときに言語をマークしないでください。
+> ヒント："sublanguage highlight" を使用したい場合、`auto_detect`を有効にし、コードブロックで言語を無指定にします。
 
 {% note warn "警告！" %}
-`auto_detect`は非常にリソースを消費します。本当に「サブランゲージハイライト」が必要である場合や、コードブロックを書くときに言語をマークしたくない場合以外は、有効にしないでください。
+`auto_detect`は非常に多くのリソースを消費します。"sublanguage highlight"が必要でコードブロックに言語を指定しない場合以外、有効にしないでください。
 {% endnote %}
 
 ### line_number
 
 `highlight.js`は[行番号をサポートしていません](https://highlightjs.readthedocs.io/en/latest/line-numbers.html)。
 
-Hexoは、出力を`<figure>`と`<table>`内にラッピングすることで行番号を追加します:
+Hexoは、出力を`<figure>`と`<table>`でラップし行番号を追加します:
 
 ```html
 <figure class="highlight yaml">
@@ -181,13 +181,13 @@ Hexoは、出力を`<figure>`と`<table>`内にラッピングすることで行
 </figure>
 ```
 
-これは`highlight.js`の振る舞いではなく、`<figure>`と`<table>`要素のためのカスタムCSSが必要です。一部のテーマには組み込みのサポートがあります。
+これは`highlight.js`の動作ではないため、`<figure>`と`<table>`要素のためのカスタムCSSが必要です。一部のテーマには組み込みのサポートがあります。
 
-また、すべての`class`に`hljs-`の接頭辞がないことに気づくかもしれません。これについては[後の部分](#hljs)で再訪します。
+また、すべての`class`に`hljs-`の接頭辞がないことに気づくかもしれません。[後の部分](#hljs)で後述します。
 
 ### line_threshold (+6.1.0)
 
-コードブロックの行数がこの閾値を超えた場合にのみ行番号を表示するオプションの閾値を受け入れます。デフォルトは`0`です。
+コードブロックの行数がこの閾値を超えた場合のみ、行番号を表示します。デフォルトは`0`です。
 
 ### tab_replace
 
@@ -195,11 +195,11 @@ Hexoは、出力を`<figure>`と`<table>`内にラッピングすることで行
 
 ### exclude_languages (+6.1.0)
 
-このオプションに一致する言語がある場合、`<pre><code class="lang"></code></pre>`でラップし、コンテンツのすべてのタグ(`span`、`br`)をレンダリングしません。
+このオプションに一致する言語は、`<pre><code class="lang"></code></pre>`でラップし、コンテンツのすべてのタグ(`span`、`br`)をレンダリングしません。
 
 ### wrap
 
-Hexoは、行番号をサポートするために出力を`<figure>`と`<table>`内に_ラップ_します。`highlight.js`の振る舞いに戻すには、**両方の**`line_number`と`wrap`を無効にする必要があります:
+Hexoは、行番号をサポートするため出力を`<figure>`と`<table>`内に _ラップ_ します。`highlight.js`の元の振る舞いに戻すには、`line_number`と`wrap`の**両方**を無効にする必要があります:
 
 ```html
 <pre><code class="yaml">
@@ -209,12 +209,12 @@ Hexoは、行番号をサポートするために出力を`<figure>`と`<table>`
 ```
 
 {% note warn "警告！" %}
-`line_number`機能は`wrap`に依存しているため、`line_number`が有効な場合は`wrap`を無効にできません：`line_number`を`true`に設定すると、`wrap`は自動的に有効になります。
+`line_number`機能は`wrap`に依存しているため、`line_number`が有効な場合は`wrap`を無効にできません。`line_number`を`true`に設定すると、`wrap`も自動的に有効になります。
 {% endnote %}
 
 ### hljs
 
-`hljs`が`true`に設定されている場合、すべてのHTML出力には`hljs-`で接頭辞付きの`class`が付きます（`wrap`が有効かどうかに関わらず）:
+`hljs`が`true`に設定されている場合、すべてのHTML出力には`hljs-`で接頭辞付きの`class`が付きます（`wrap`が有効かは問いません）:
 
 ```html
 <pre><code class="yaml hljs">
@@ -223,7 +223,7 @@ Hexoは、行番号をサポートするために出力を`<figure>`と`<table>`
 </code></pre>
 ```
 
-> ヒント：`line_number`が`false`に設定され、`wrap`がfalseに設定され、`hljs`が`true`に設定されている場合、あなたのサイトで直接`highlight.js`の[テーマ](https://github.com/highlightjs/highlight.js/tree/master/src/styles)を使用できます。
+> ヒント：`line_number`が`false`、`wrap`がfalse、`hljs`が`true`に設定されている場合のみ、`highlight.js`の[テーマ](https://github.com/highlightjs/highlight.js/tree/master/src/styles)を直接使用できます。
 
 ## PrismJS
 
@@ -259,27 +259,27 @@ Prismjsはデフォルトで無効になっています。prismjsを有効にす
 
 Hexoの組み込みprismjsは、ブラウザサイド（`preprocess`を`false`に設定）とサーバーサイド（`preprocess`を`true`に設定）の両方をサポートしています。
 
-サーバーサイドモード（`preprocess`を`true`に設定）を使用する場合、あなたのウェブサイトにprismjsのテーマ（cssスタイルシート）を含めるだけでよいです。ブラウザサイドを使用する場合（`preprocess`を`false`に設定）、javascriptライブラリも含める必要があります。
+サーバーサイドモード（`preprocess`を`true`に設定）を使用する場合、ウェブサイトにはprismjsのテーマ（cssスタイルシート）のみロードします。ブラウザサイドを使用する場合（`preprocess`を`false`に設定）、javascriptライブラリもロードする必要があります。
 
 Prismjsはブラウザで使用するように設計されているため、`preprocess`モードでは限られたprismjsプラグインのみがサポートされます:
 
-- [行番号](https://prismjs.com/plugins/line-numbers/)：`prism-line-numbers.css`のみが必要です。ウェブサイトに`prism-line-numbers.js`を含める必要はありません。Hexoが必要なHTMLマークアップを生成します。
-- [言語の表示](https://prismjs.com/plugins/show-language/)：コードブロックに言語が与えられている限り、Hexoは常に`data-language`属性を追加します。
-- 特別なHTMLマークアップを必要としない他のすべてのprismプラグインもサポートされていますが、それらのプラグインに必要なJavaScriptを含める必要があります。
+- [Line Numbers](https://prismjs.com/plugins/line-numbers/)：`prism-line-numbers.css`のみが必要です。`prism-line-numbers.js`をロードする必要はありません。Hexoが必要なHTMLマークアップを生成します。
+- [Show Languages](https://prismjs.com/plugins/show-language/)：コードブロックに言語が設定されている場合に限り、Hexoは`data-language`属性を追加します。
+- 特別なHTMLマークアップを必要としない他のすべてのprismプラグインも同様にサポートされています。プラグインに応じたJavaScriptをロードしてください。
 
-`preprocess`が`false`に設定されている場合、すべてのprismプラグインがサポートされます。それでも注意すべきいくつかのことがあります:
+`preprocess`が`false`に設定されている場合、すべてのprismプラグインがサポートされます。その場合も、いくつか注意点があります:
 
-- [行番号](https://prismjs.com/plugins/line-numbers/)：`preprocess`が`false`に設定されている場合、Hexoは必要なHTMLマークアップを生成しません。`prism-line-numbers.css`と`prism-line-numbers.js`の両方が必要です。
-- [言語の表示](https://prismjs.com/plugins/show-language/)：コードブロックに言語が与えられている限り、Hexoは常に`data-language`属性を追加します。
-- [行のハイライト](https://prismjs.com/plugins/line-highlight/)：Hexoの[タグプラグイン - コードブロック](tag-plugins#Code-Block)と[タグプラグイン - バックティックコードブロック](https://hexo.io/docs/tag-plugins#Backtick-Code-Block)は、行のハイライト構文（`mark`オプション）をサポートしています。`mark`オプションが与えられた場合、Hexoは対応するHTMLマークアップを生成します。
+- [Line Numbers](https://prismjs.com/plugins/line-numbers/)：`preprocess`が`false`に設定されている場合、Hexoは必要なHTMLマークアップを生成しません。`prism-line-numbers.css`と`prism-line-numbers.js`の両方が必要です。
+- [Show Languages](https://prismjs.com/plugins/show-language/)：コードブロックに言語が与えられている限り、Hexoは常に`data-language`属性を追加します。
+- [Line Highlight](https://prismjs.com/plugins/line-highlight/)：Hexoの[タグプラグイン - コードブロック](tag-plugins#コードブロック)と[タグプラグイン - バックティックコードブロック](tag-plugins#バックティックコードブロック)は、行のハイライト構文（`mark`オプション）をサポートしています。`mark`オプションが与えられた場合、Hexoは対応するHTMLマークアップを生成します。
 
 ### line_number
 
-`preprocess`と`line_number`の両方が`true`に設定されている場合、行番号を機能させるために`prism-line-numbers.css`を含めるだけでよいです。`preprocess`と`line_number`の両方をfalseに設定した場合は、`prism-line-numbers.css`と`prism-line-numbers.js`の両方が必要です。
+`preprocess`と`line_number`の両方が`true`の場合、行番号の表示には`prism-line-numbers.css`のみロードします。`preprocess`と`line_number`の両方をfalseに設定した場合、`prism-line-numbers.css`と`prism-line-numbers.js`の両方をロードする必要があります。
 
 ### line_threshold (+6.1.0)
 
-コードブロックの行数がこの閾値を超えた場合にのみ行番号を表示するオプションの閾値を受け入れます。デフォルトは`0`です。
+コードブロックの行数がこの閾値を超えた場合のみ、行番号を表示します。デフォルトは`0`です。
 
 ### tab_replace
 

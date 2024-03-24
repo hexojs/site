@@ -1,7 +1,7 @@
 ---
 title: パーマリンク
 ---
-サイトのパーマリンクは、`_config.yml`または各投稿のFront Matterで指定することができます。
+`_config.yml`または各投稿のFront Matterで、サイトのパーマリンクを設定できます。
 
 ### 変数
 
@@ -11,16 +11,16 @@ title: パーマリンク
 --- | ---
 `:year` | 投稿の公開年（4桁）
 `:month` | 投稿の公開月（2桁）
-`:i_month` | 投稿の公開月（先行ゼロなし）
+`:i_month` | 投稿の公開月（先頭ゼロなし）
 `:day` | 投稿の公開日（2桁）
-`:i_day` | 投稿の公開日（先行ゼロなし）
+`:i_day` | 投稿の公開日（先頭ゼロなし）
 `:hour` | 投稿の公開時（2桁）
 `:minute` | 投稿の公開分（2桁）
 `:second` | 投稿の公開秒（2桁）
-`:title` | ファイル名（"source/_posts/"フォルダーに関連）
+`:title` | ファイル名（"source/_posts/"フォルダーからの相対）
 `:name` | ファイル名
 `:post_title` | 投稿のタイトル
-`:id` | 投稿ID（[キャッシュリセット](/docs/commands#clean)を跨いで永続しない）
+`:id` | 投稿ID(_[キャッシュ削除](commands#clean)を跨いで永続しない_)
 `:category` | カテゴリー。投稿が未分類の場合、`default_category`の値を使用します。
 `:hash` | ファイル名（`:title`と同じ）と日付のSHA1ハッシュ（12桁の16進数）
 

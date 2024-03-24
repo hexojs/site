@@ -2,7 +2,7 @@
 title: プラグイン
 ---
 
-Hexoには強力なプラグインシステムがあり、コアモジュールのソースコードを変更することなく機能を拡張することが簡単です。Hexoには2種類のプラグインがあります:
+Hexoの強力なプラグインシステムにより、コアモジュールのソースコードを変更することなく、簡単に機能を拡張することができます。Hexoには2種類のプラグインがあります:
 
 ### スクリプト
 
@@ -30,42 +30,42 @@ Hexoには強力なプラグインシステムがあり、コアモジュール�
 }
 ```
 
-Hexoが検出して読み込むためには、あなたのhexoインスタンスのルート`package.json`でプラグインを依存関係としてリストする必要があります。
+Hexoがこれを検出できるよう、hexoインスタンスのルート`package.json`で、プラグインを依存関係としてリストする必要があります。
 
 ### ツール
 
-Hexoが提供する公式ツールを使用して開発を加速することができます:
+Hexoが提供する公式ツールで開発を効率化できます:
 
 - [hexo-fs]：ファイルIO
 - [hexo-util]：ユーティリティ
-- [hexo-i18n]：ローカリゼーション (i18n)
+- [hexo-i18n]：ローカライズ (i18n)
 - [hexo-pagination]：ページネーションデータの生成
 
 ### 公開
 
-プラグインが完成したら、他の人に使用を開始してもらうために、[プラグインリスト](/plugins)に公開することを検討してみてください。自分のプラグインを公開することは、[ドキュメントの更新](contributing.html#Updating_Documentation)に非常に似ています。
+プラグインが完成したら、他の人もそれを利用できるよう[プラグインリスト](/plugins)に公開することを検討してみてください。プラグインを公開する手順は、[ドキュメントの更新](contributing.html#ドキュメントの更新)と非常に似ています。
 
 1. [hexojs/site]をフォークします。
 2. リポジトリをコンピュータにクローンし、依存関係をインストールします。
 
-   \\```shell
+   ```shell
    $ git clone https://github.com/<username>/site.git
    $ cd site
    $ npm install
-   \\```
+   ```
 
 3. `source/_data/plugins/`に新しいyamlファイルを作成し、ファイル名としてプラグイン名を使用します。
 
 4. `source/_data/plugins/<your-plugin-name>.yml`を編集し、プラグインを追加します。例えば:
 
-   \\```yaml
-   description: Hexoのサーバーモジュール。
+   ```yaml
+   description: Server module for Hexo.
    link: https://github.com/hexojs/hexo-server
    tags:
      - official
      - server
      - console
-   \\```
+   ```
 
 5. ブランチをプッシュします。
 6. プルリクエストを作成し、変更を説明します。

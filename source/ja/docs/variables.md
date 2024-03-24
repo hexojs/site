@@ -2,8 +2,6 @@
 title: 変数
 ---
 
-{% youtube T9oAax-IRw0 %}
-
 ### グローバル変数
 
 変数 | 説明 | タイプ
@@ -17,7 +15,7 @@ title: 変数
 `env` | 環境変数 | ???
 
 {% note warn %}
-LodashはHexo 5.0.0以降、グローバル変数から削除されました。[You-Dont-Need-Lodash-Underscore](https://github.com/you-dont-need/You-Dont-Need-Lodash-Underscore)が移行に役立つかもしれません。
+LodashはHexo 5.0.0でグローバル変数から削除されました。[You-Dont-Need-Lodash-Underscore](https://github.com/you-dont-need/You-Dont-Need-Lodash-Underscore)が移行に役立つかもしれません。
 {% endnote %}
 
 ### サイト変数
@@ -40,7 +38,7 @@ LodashはHexo 5.0.0以降、グローバル変数から削除されました。[
 `page.updated` | 記事の最終更新日 | [Moment.js] オブジェクト
 `page.comments` | コメントが有効か？ | `boolean`
 `page.layout` | レイアウト名 | `string`
-`page.content` | 記事の完全な処理済みコンテンツ | `string`
+`page.content` | 記事の完全な処理結果 | `string`
 `page.excerpt` | 記事の抜粋 | `string`
 `page.more` | 抜粋を除いた記事の内容 | `string`
 `page.source` | ソースファイルのパス | `string`
@@ -49,7 +47,7 @@ LodashはHexo 5.0.0以降、グローバル変数から削除されました。[
 `page.permalink` | 記事の完全な（エンコードされた）URL | `string`
 `page.prev` | 前の投稿、最初の投稿の場合は `null` | ???
 `page.next` | 次の投稿、最後の投稿の場合は `null` | ???
-`page.raw` | 記事の生データ | ???
+`page.raw` | 記事のローデータ | ???
 `page.photos` | 記事の写真（ギャラリー投稿で使用） | array of ???
 `page.link` | 記事の外部リンク（リンク投稿で使用） | `string`
 
@@ -80,7 +78,7 @@ LodashはHexo 5.0.0以降、グローバル変数から削除されました。[
 
 変数 | 説明 | タイプ
 --- | --- | ---
-`page.archive` | `true`に等しい | `boolean`
+`page.archive` | 固定値 `true` | `boolean`
 `page.year` | アーカイブの年（4桁） | `number`
 `page.month` | アーカイブの月（先頭ゼロなしの2桁） | `number`
 
