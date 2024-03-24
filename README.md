@@ -36,6 +36,7 @@ hexo server
 - 한국어 - [lazyrodi](https://github.com/lazyrodi)
 - Deutschland - [philippnagel](https://github.com/philippnagel)
 - Portuguese (Brazilian) - [lucianobarauna](https://github.com/lucianobarauna), [ramonsantos](https://github.com/ramonsantos), [MathMesquita](https://github.com/MathMesquita), [pedrorezende](https://github.com/pedrorezende), [gregoryfm](https://github.com/gregoryfm)
+- 日本語 - [KentarouTakeda](https://github.com/KentarouTakeda)
 
 ## License
 

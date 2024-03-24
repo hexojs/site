@@ -17,3 +17,6 @@ pt-br:
 th:
   name: ภาษาไทย
   disqus_lang: th
+ja:
+  name: 日本語
+  disqus_lang: ja
