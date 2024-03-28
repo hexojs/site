@@ -156,8 +156,7 @@ deploy:
   pass: <password>
   remote: [remote]
   port: [port]
-  ignore: [ignore]
-  connections: [connections]
+  clear: [true|false]
   verbose: [true|false]
 ```
 
@@ -168,8 +167,7 @@ deploy:
 `pass` | Пароль |
 `remote` | Корневой каталог на удалённом хосте | `/`
 `port` | Порт | 21
-`ignore` | Игнорировать файлы на удалённом хосте |
-`connections` | Количество подключений | 1
+`clear` | Remove all files and directories from the remote directory before upload | false
 `verbose` | Выводить подробные сообщения | false
 
 ## Vercel
