@@ -159,8 +159,7 @@ deploy:
   pass: <password>
   remote: [remote]
   port: [port]
-  ignore: [ignore]
-  connections: [connections]
+  clear: [true|false]
   verbose: [true|false]
 ```
 
@@ -171,8 +170,7 @@ deploy:
 `pass` | 密碼 |
 `remote` | 遠端主機的根目錄 | `/`
 `port` | 連接埠 | 21
-`ignore` | 忽略本機或遠端的檔案 |
-`connections` | 連接數 | 1
+`clear` | Remove all files and directories from the remote directory before upload | false
 `verbose` | 顯示除錯訊息 | false
 
 ## Vercel
