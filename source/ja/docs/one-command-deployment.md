@@ -337,7 +337,7 @@ edgio deploy
 
 ## その他の方法
 
-すべての生成されたファイルは、`public`フォルダに保存されます。好きな場所にコピーしてください。
+生成されたすべてのファイルは`public`フォルダに保存されます。好きな場所にコピーしてください。
 
 [hexo-deployer-git]: https://github.com/hexojs/hexo-deployer-git
 [hexo-deployer-heroku]: https://github.com/hexojs/hexo-deployer-heroku
