@@ -93,7 +93,7 @@ Hexoで使用されるフィルターの一覧です。
 
 ### before_post_render
 
-投稿がレンダリングされる前に実行されます。実行手順については、[投稿のレンダリング](posts.html#レンダリング)を参照してください。
+記事がレンダリングされる前に実行されます。実行手順については、[記事のレンダリング](posts.html#レンダリング)を参照してください。
 
 例えば、タイトルを小文字に変換するには:
 
@@ -106,7 +106,7 @@ hexo.extend.filter.register('before_post_render', function(data){
 
 ### after_post_render
 
-投稿がレンダリングされた後に実行されます。実行手順については、[投稿のレンダリング](posts.html#レンダリング)を参照してください。
+記事がレンダリングされた後に実行されます。実行手順については、[記事のレンダリング](posts.html#レンダリング)を参照してください。
 
 例えば、`@username`をTwitterプロファイルへのリンクに置き換えるには:
 
@@ -172,7 +172,7 @@ hexo.extend.filter.register('after_init', function(){
 
 ### new_post_path
 
-新しい投稿を作成する際に新しい投稿のパスを決定するために実行されます。
+新しい記事を作成する際に新しい記事のパスを決定するために実行されます。
 
 ``` js
 hexo.extend.filter.register('new_post_path', function(data, replace){
@@ -182,7 +182,7 @@ hexo.extend.filter.register('new_post_path', function(data, replace){
 
 ### post_permalink
 
-投稿のパーマリンクを決定するために使用されます。
+記事のパーマリンクを決定するために使用されます。
 
 ``` js
 hexo.extend.filter.register('post_permalink', function(data){

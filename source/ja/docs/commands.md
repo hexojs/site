@@ -21,13 +21,13 @@ $ hexo init [folder]
 $ hexo new [layout] <title>
 ```
 
-新しい記事を作成します。`layout`が指定されていない場合、Hexoは[_config.yml](configuration.html)の`default_layout`を使用します。下書きを作成するには`draft`レイアウトを使用します。`title`にスペースが含まれる場合は、引用符で囲んでください。
+新しい記事やページを作成します。`layout`が指定されていない場合、Hexoは[_config.yml](configuration.html)の`default_layout`を使用します。下書きを作成するには`draft`レイアウトを使用します。`title`にスペースが含まれる場合は、引用符で囲んでください。
 
 オプション | 説明
 --- | ---
-`-p`, `--path` | 投稿パス。投稿のパスをカスタマイズします。
-`-r`, `--replace` | 既存の投稿を置き換えます。
-`-s`, `--slug` | 投稿スラッグ。投稿のURLをカスタマイズします。
+`-p`, `--path` | 記事のパスをカスタマイズします。
+`-r`, `--replace` | 既存の記事を置き換えます。
+`-s`, `--slug` | 記事のURL（スラッグ）をカスタマイズします。
 
 デフォルトでは、Hexoはタイトルを使用してファイルのパスを定義します。ページの場合、その名前のディレクトリとその中に`index.md`ファイルを作成します。`--path`オプションを使用してこの挙動をオーバーライドし、ファイルパスを定義できます:
 
@@ -43,7 +43,7 @@ hexo new page --path about/me "About me"
 hexo new page --path about/me
 ```
 
-これは`source/_posts/about/me.md`に投稿を作成し、Front Matterに"page"というタイトルを設定します。これは引数が1つ(`page`)のみで、デフォルトレイアウトが`post`であるためです。
+これは`source/_posts/about/me.md`に記事を作成し、Front Matterに"page"というタイトルを設定します。これは引数が1つ(`page`)のみで、デフォルトレイアウトが`post`であるためです。
 
 ## generate
 

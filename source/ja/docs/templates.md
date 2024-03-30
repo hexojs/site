@@ -6,7 +6,7 @@ title: テンプレート
 テンプレート | ページ | フォールバック
 --- | --- | ---
 `index` | ホームページ |
-`post` | 投稿 | `index`
+`post` | 記事 | `index`
 `page` | ページ | `index`
 `archive` | アーカイブ | `index`
 `category` | カテゴリーアーカイブ | `archive`

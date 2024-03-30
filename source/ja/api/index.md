@@ -24,7 +24,7 @@ hexo.init().then(function(){
 `safe` | セーフモードを有効にします。プラグインを読み込みません。 | `false`
 `silent` | サイレントモードを有効にします。端末にメッセージを表示しません。 | `false`
 `config` | 設定ファイルのパスを指定します。 | `_config.yml`
-`draft` / `drafts`| 下書きを投稿リストに追加します。<br> 例：`hexo.locals.get('posts')`を使用するとき | _config.ymlの`render_drafts`
+`draft` / `drafts`| 下書きを記事リストに追加します。<br> 例：`hexo.locals.get('posts')`を使用するとき | _config.ymlの`render_drafts`
 
 ## ファイルの読み込み
 

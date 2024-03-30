@@ -32,7 +32,7 @@ root: /blog/ # example
 ```
 
 相対リンクはデフォルトで`relative_link`オプションに従います。
-例えば、投稿やページのパスが '/foo/bar/index.html' の場合:
+例えば、記事やページのパスが '/foo/bar/index.html' の場合:
 
 ``` yml
 _config.yml
@@ -305,7 +305,7 @@ JavaScriptファイルを読み込みます。  `path` には文字列、配列�
 
 ### is_post
 
-現在のページが投稿ページかチェックします。
+現在のページが記事ページかチェックします。
 
 ``` js
 <%- is_post() %>
@@ -642,7 +642,7 @@ timeタグを挿入します。`date`にはunix時刻、ISO文字列、Dateオ�
 --- | --- | ---
 `orderby` | カテゴリの順序 | name
 `order` | 並び順。`1`,`asc` で昇順；`-1`,`desc` で降順 | 1
-`show_count` | 各カテゴリの投稿数を表示するか？ | true
+`show_count` | 各カテゴリの記事数を表示するか？ | true
 `style` | 一覧の表示スタイル。`list` は順序なしリストでカテゴリを表示。`false` または他の値で無効化。 | list
 `separator` | カテゴリの区切り文字。（`style` が `list` でない場合のみ機能） | ,
 `depth` | 表示するカテゴリのレベル。`0` で全カテゴリと子カテゴリを表示；`-1` は `0` と同様だがフラットに表示；`1` でトップレベルのカテゴリのみ表示。 | 0
@@ -680,7 +680,7 @@ timeタグを挿入します。`date`にはunix時刻、ISO文字列、Dateオ�
 --- | --- | ---
 `orderby` | タグの順序 | name
 `order` | 並び順。`1`,`asc` で昇順；`-1`,`desc` で降順 | 1
-`show_count` | 各タグの投稿数を表示するか？ | true
+`show_count` | 各タグの記事数を表示するか？ | true
 `style` | 一覧の表示スタイル。`list` は順序なしリストでタグを表示。`false` または他の値で無効化。 | list
 `separator` | タグの区切り文字。（`style` が `list` でない場合のみ機能） | ,
 `class` | 一覧のクラス名（文字列）または各タグのクラスをカスタマイズ（オブジェクト、以下を参照）。 | tag
@@ -719,7 +719,7 @@ timeタグを挿入します。`date`にはunix時刻、ISO文字列、Dateオ�
 --- | --- | ---
 `type` | 一覧の種類。`yearly` または `monthly` を指定できます。 | monthly
 `order` | 並び順。`1`,`asc` で昇順；`-1`,`desc` で降順 | 1
-`show_count` | 各アーカイブの投稿数を表示するか？ | true
+`show_count` | 各アーカイブの記事数を表示するか？ | true
 `format` | 日付の形式 | MMMM YYYY
 `style` | 一覧の表示スタイル。`list` は順序なしリストでアーカイブを表示。`false` または他の値で無効化。 | list
 `separator` | アーカイブの区切り文字。（`style` が `list` でない場合のみ機能） | ,
@@ -728,7 +728,7 @@ timeタグを挿入します。`date`にはunix時刻、ISO文字列、Dateオ�
 
 ### list_posts
 
-投稿の一覧を挿入します。
+記事の一覧を挿入します。
 
 ``` js
 <%- list_posts([options]) %>
@@ -736,13 +736,13 @@ timeタグを挿入します。`date`にはunix時刻、ISO文字列、Dateオ�
 
 オプション | 説明 | デフォルト
 --- | --- | ---
-`orderby` | 投稿の順序 | date
+`orderby` | 記事の順序 | date
 `order` | 並び順。`1`,`asc` で昇順；`-1`,`desc` で降順 | 1
-`style` | 一覧の表示スタイル。`list` は順序なしリストで投稿を表示。`false` または他の値で無効化。 | list
-`separator` | 投稿の区切り文字。（`style` が `list` でない場合のみ機能） | ,
+`style` | 一覧の表示スタイル。`list` は順序なしリストで記事を表示。`false` または他の値で無効化。 | list
+`separator` | 記事の区切り文字。（`style` が `list` でない場合のみ機能） | ,
 `class` | 一覧のクラス名。 | post
-`amount` | 表示する投稿の数（0 = 無制限） | 6
-`transform` | 投稿名の表示を変更する関数。[list_categories](#list-categories) の例を参照。 |
+`amount` | 表示する記事の数（0 = 無制限） | 6
+`transform` | 記事名の表示を変更する関数。[list_categories](#list-categories) の例を参照。 |
 
 ### tagcloud
 
@@ -765,7 +765,7 @@ timeタグを挿入します。`date`にはunix時刻、ISO文字列、Dateオ�
 `end_color` | 終了色。hex (`#b700ff`), rgba (`rgba(183, 0, 255, 1)`), hsla (`hsla(283, 100%, 50%, 1)`) または [色キーワード] を指定可能。このオプションは `color` が true の場合のみ機能します。 |
 `class` | タグのクラス名の接頭辞
 `level` | 異なるクラス名の数。このオプションは `class` が設定されている場合のみ機能します。 | 10
-`show_count` (6.3.0以上) | 各タグの投稿数を表示 | false
+`show_count` (6.3.0以上) | 各タグの記事数を表示 | false
 `count_class` (6.3.0以上) | タグカウントのクラス名 | count
 
 **例:**

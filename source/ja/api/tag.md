@@ -1,7 +1,7 @@
 ---
 title: タグ
 ---
-タグを使用することで、投稿に簡単にスニペットを挿入できます。
+タグを使用することで、記事に簡単にスニペットを挿入できます。
 
 ## 概要
 
@@ -108,9 +108,9 @@ hexo.extend.tag.register('foo', function (args) {
   if (themeCfg.fancybox) // 何かする...
 
   // Front-matter
-  const { title } = this; // 記事の（投稿/ページ）タイトル
+  const { title } = this; // 記事やページのタイトル
 
-  // 記事のコンテンツ
+  // 記事やページのコンテンツ
   const { _content } = this; // 元のコンテンツ
   const { content } = this; // HTMLレンダリングされたコンテンツ
 

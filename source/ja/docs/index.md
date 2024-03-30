@@ -5,7 +5,7 @@ Hexoのドキュメントへようこそ。利用中に問題に遭遇した場�
 
 ## Hexoとは？
 
-Hexoは、高速でシンプルかつ強力なブログフレームワークです。[Markdown](http://daringfireball.net/projects/markdown/)（または他のマークアップ言語）で投稿を書くと、Hexoはすぐに美しいテーマの静的ファイルを生成します。
+Hexoは、高速でシンプルかつ強力なブログフレームワークです。[Markdown](http://daringfireball.net/projects/markdown/)（または他のマークアップ言語）で記事を書くと、Hexoはすぐに美しいテーマの静的ファイルを生成します。
 
 ## インストール
 

@@ -1,7 +1,7 @@
 ---
 title: パーマリンク
 ---
-`_config.yml`または各投稿のFront Matterで、サイトのパーマリンクを設定できます。
+`_config.yml`または各記事のFront Matterで、サイトのパーマリンクを設定できます。
 
 ### 変数
 
@@ -9,19 +9,19 @@ title: パーマリンク
 
 変数 | 説明
 --- | ---
-`:year` | 投稿の公開年（4桁）
-`:month` | 投稿の公開月（2桁）
-`:i_month` | 投稿の公開月（先頭ゼロなし）
-`:day` | 投稿の公開日（2桁）
-`:i_day` | 投稿の公開日（先頭ゼロなし）
-`:hour` | 投稿の公開時（2桁）
-`:minute` | 投稿の公開分（2桁）
-`:second` | 投稿の公開秒（2桁）
+`:year` | 記事の公開年（4桁）
+`:month` | 記事の公開月（2桁）
+`:i_month` | 記事の公開月（先頭ゼロなし）
+`:day` | 記事の公開日（2桁）
+`:i_day` | 記事の公開日（先頭ゼロなし）
+`:hour` | 記事の公開時（2桁）
+`:minute` | 記事の公開分（2桁）
+`:second` | 記事の公開秒（2桁）
 `:title` | ファイル名（"source/_posts/"フォルダーからの相対）
 `:name` | ファイル名
-`:post_title` | 投稿のタイトル
-`:id` | 投稿ID(_[キャッシュ削除](commands#clean)を跨いで永続しない_)
-`:category` | カテゴリー。投稿が未分類の場合、`default_category`の値を使用します。
+`:post_title` | 記事のタイトル
+`:id` | 記事ID(_[キャッシュ削除](commands#clean)を跨いで永続しない_)
+`:category` | カテゴリー。記事が未分類の場合、`default_category`の値を使用します。
 `:hash` | ファイル名（`:title`と同じ）と日付のSHA1ハッシュ（12桁の16進数）
 
 パーマリンク内の各変数のデフォルト値を`permalink_defaults`設定を通じて定義することができます:
@@ -70,7 +70,7 @@ new_post_name: :lang/:title.md
 permalink: :lang/:title/
 ```
 
-新しい投稿を作成すると、投稿は以下に保存されます:
+新しい記事を作成すると、記事は以下に保存されます:
 
 ``` bash
 $ hexo new "Hello World" --lang tw

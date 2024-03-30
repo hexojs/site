@@ -43,7 +43,7 @@ hexo.extend.generator.register('test', function(locals){
 
 ### アーカイブページ
 
-`archives/index.html`にアーカイブページを作成します。テンプレートにすべての投稿をデータとして渡します。このデータはテンプレート内の`page`変数と同等です。
+`archives/index.html`にアーカイブページを作成します。テンプレートにすべての記事をデータとして渡します。このデータはテンプレート内の`page`変数と同等です。
 
 次に、`layout`属性を設定してテーマテンプレートでレンダリングします。この例では2つのレイアウトを設定しています。`archive`レイアウトが存在しない場合は、代わりに`index`レイアウトが使用されます。
 
@@ -74,9 +74,9 @@ hexo.extend.generator.register('archive', function(locals){
 });
 ```
 
-### すべての投稿を生成
+### すべての記事を生成
 
-`locals.posts`内のすべての投稿を走査し、すべての投稿のルートを作成します。
+`locals.posts`内のすべての記事を走査し、すべての記事のルートを作成します。
 
 ``` js
 hexo.extend.generator.register('post', function(locals){

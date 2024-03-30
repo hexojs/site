@@ -1,7 +1,7 @@
 ---
-title: 投稿
+title: 記事
 ---
-## 投稿の作成
+## 記事の作成
 
 ``` js
 hexo.post.create(data, replace);
@@ -12,14 +12,14 @@ hexo.post.create(data, replace);
 `data` | データ
 `replace` | 既存のファイルを置き換えるか
 
-投稿の属性は`data`に定義されていますが、以下の表は全てを網羅していないかもしれません。追加の属性がFront Matterに存在する場合もあります。
+記事の属性は`data`に定義されていますが、以下の表は全てを網羅していないかもしれません。追加の属性がFront Matterに存在する場合もあります。
 
 データ | 説明
 --- | ---
 `title` | タイトル
 `slug` | URL
 `layout` | レイアウト。`default_layout`設定がデフォルトです。
-`path` | パス。デフォルトでは`new_post_path`設定に基づいて投稿のパスをHexoが構築します。
+`path` | パス。デフォルトでは`new_post_path`設定に基づいて記事のパスをHexoが構築します。
 `date` | 日付。デフォルトでは現在の日付です。
 
 ## 下書きの公開
@@ -33,7 +33,7 @@ hexo.post.publish(data, replace);
 `data` | データ
 `replace` | 既存のファイルを置き換えるか
 
-投稿の属性は`data`に定義されていますが、以下の表は全てを網羅していないかもしれません。追加の属性がFront Matterに存在する場合もあります。
+記事の属性は`data`に定義されていますが、以下の表は全てを網羅していないかもしれません。追加の属性がFront Matterに存在する場合もあります。
 
 データ | 説明
 --- | ---

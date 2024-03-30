@@ -25,7 +25,7 @@ Hexoが終了する前に発火します。
 
 ### new
 
-新しい投稿が作成された後に発火します。このイベントには、投稿データが入力されます:
+新しい記事が作成された後に発火します。このイベントには、記事データが入力されます:
 
 ``` js
 hexo.on('new', function(post){
@@ -35,8 +35,8 @@ hexo.on('new', function(post){
 
 データ | 説明
 --- | ---
-`post.path` | 投稿ファイルの完全なパス
-`post.content` | 投稿ファイルの内容
+`post.path` | 記事ファイルの完全なパス
+`post.content` | 記事ファイルの内容
 
 ### processBefore
 

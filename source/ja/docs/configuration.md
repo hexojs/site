@@ -59,7 +59,7 @@ pretty_urls:
 skip_render: "mypage/**/*"
 # `source/mypage/index.html` と `source/mypage/code.js` を変更せずに出力します。
 
-## 投稿を除外するためにも使用できます。
+## 記事を除外するためにも使用できます。
 skip_render: "_posts/test-post.md"
 # `source/_posts/test-post.md` を無視します。
 ```
@@ -68,7 +68,7 @@ skip_render: "_posts/test-post.md"
 
 設定 | 説明 | デフォルト
 --- | --- | ---
-`new_post_name` | 新しい投稿のファイル名形式 | `:title.md`
+`new_post_name` | 新しい記事のファイル名形式 | `:title.md`
 `default_layout` | デフォルトのレイアウト | `post`
 `titlecase` | タイトルをタイトルケースに変換するか？ | `false`
 `external_link` | 外部リンクを新しいタブで開くか？ |
@@ -79,7 +79,7 @@ skip_render: "_posts/test-post.md"
 `render_drafts` | 下書きを表示するか？ | `false`
 `post_asset_folder` | [アセットフォルダ](asset-folders.html)を有効にするか？ | `false`
 `relative_link` | リンクをルートフォルダに対して相対的にするか？ | `false`
-`future` | 未来の投稿を表示するか？ | `true`
+`future` | 未来の記事を表示するか？ | `true`
 `syntax_highlighter` | コードブロックのシンタックスハイライト設定。使い方は[シンタックスハイライト](syntax-highlight)セクションを参照。 | `highlight.js`
 `highlight` | コードブロックのシンタックスハイライト設定。使い方は[Highlight.js](syntax-highlight#Highlight-js)セクションを参照。 |
 `prismjs` | コードブロックのシンタックスハイライト設定。使い方は[PrismJS](syntax-highlight#PrismJS)セクションを参照。 |
@@ -88,10 +88,10 @@ skip_render: "_posts/test-post.md"
 
 設定 | 説明 | デフォルト
 --- | --- | ---
-`index_generator` | [hexo-generator-index](https://github.com/hexojs/hexo-generator-index)による投稿のアーカイブ生成 |
+`index_generator` | [hexo-generator-index](https://github.com/hexojs/hexo-generator-index)による記事のアーカイブ生成 |
 `index_generator.path` | ブログのインデックスページのパス | `''`
-`index_generator.per_page` | 1ページあたりの投稿数。 | `10`
-`index_generator.order_by` | 投稿の並び順。デフォルトでは日付降順（新しいものから古いものへ）。 | `-date`
+`index_generator.per_page` | 1ページあたりの記事数。 | `10`
+`index_generator.order_by` | 記事の並び順。デフォルトでは日付降順（新しいものから古いものへ）。 | `-date`
 `index_generator.pagination_dir` | URL形式。[ページネーション](#ページネーション)設定を参照。 | `page`
 
 ### カテゴリー＆タグ
@@ -134,7 +134,7 @@ Hexoは日付の処理に[Moment.js](http://momentjs.com/)を使用します。
 
 設定 | 説明 | デフォルト
 --- | --- | ---
-`per_page` | 各ページに表示される投稿の数。`0`はページネーション無効化 | `10`
+`per_page` | 各ページに表示される記事の数。`0`はページネーション無効化 | `10`
 `pagination_dir` | URL形式 | `page`
 
 例:
@@ -192,7 +192,7 @@ exclude:
   - "js/test*"
   # 'source/js/'とそのサブフォルダー内の'test'で始まる全てのファイルを除外する。
   - "js/**/test*"
-  # 'source/_posts/'内の投稿の除外にはこの設定は使えません。
+  # 'source/_posts/'内の記事の除外にはこの設定は使えません。
   # この場合、skip_renderを使用するか、ファイル名にアンダースコアを追加してください。
   # - "_posts/hello-world.md" # 効果がありません。
 

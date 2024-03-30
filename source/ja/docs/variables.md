@@ -22,52 +22,52 @@ LodashはHexo 5.0.0でグローバル変数から削除されました。[You-Do
 
 変数 | 説明 | タイプ
 --- | --- | ---
-`site.posts` | 全ての投稿 | `array` of `post` objects
+`site.posts` | 全ての記事 | `array` of `post` objects
 `site.pages` | 全てのページ | `array` of `page` objects
 `site.categories` | 全てのカテゴリ | `array` of ???
 `site.tags` | 全てのタグ | `array` of ???
 
 ### ページ変数
 
-**記事 (`page`)**
+**ページ (`page`)**
 
 変数 | 説明 | タイプ
 --- | --- | ---
-`page.title` | 記事のタイトル | `string`
-`page.date` | 記事の作成日 | [Moment.js] オブジェクト
-`page.updated` | 記事の最終更新日 | [Moment.js] オブジェクト
+`page.title` | ページのタイトル | `string`
+`page.date` | ページの作成日 | [Moment.js] オブジェクト
+`page.updated` | ページの最終更新日 | [Moment.js] オブジェクト
 `page.comments` | コメントが有効か？ | `boolean`
 `page.layout` | レイアウト名 | `string`
-`page.content` | 記事の完全な処理結果 | `string`
-`page.excerpt` | 記事の抜粋 | `string`
-`page.more` | 抜粋を除いた記事の内容 | `string`
+`page.content` | ページの完全な処理結果 | `string`
+`page.excerpt` | ページの抜粋 | `string`
+`page.more` | 抜粋を除いたページの内容 | `string`
 `page.source` | ソースファイルのパス | `string`
 `page.full_source` | ソースファイルの完全なパス | `string`
-`page.path` | 記事のURL（ルートURLを除く）。テーマでは通常 `url_for(page.path)` を使用します。 | `string`
-`page.permalink` | 記事の完全な（エンコードされた）URL | `string`
-`page.prev` | 前の投稿、最初の投稿の場合は `null` | ???
-`page.next` | 次の投稿、最後の投稿の場合は `null` | ???
-`page.raw` | 記事のローデータ | ???
-`page.photos` | 記事の写真（ギャラリー投稿で使用） | array of ???
-`page.link` | 記事の外部リンク（リンク投稿で使用） | `string`
+`page.path` | ページのURL（ルートURLを除く）。テーマでは通常 `url_for(page.path)` を使用します。 | `string`
+`page.permalink` | ページの完全な（エンコードされた）URL | `string`
+`page.prev` | 前のページ、最初のページの場合は `null` | ???
+`page.next` | 次のページ、最後のページの場合は `null` | ???
+`page.raw` | ページのローデータ | ???
+`page.photos` | ページの写真（ギャラリーページで使用） | array of ???
+`page.link` | ページの外部リンク（リンクページで使用） | `string`
 
-**投稿 (`post`):** `page` レイアウトと同じですが、以下の変数が追加されます。
+**記事 (`post`):** `page` レイアウトと同じですが、以下の変数が追加されます。
 
 変数 | 説明 | タイプ
 --- | --- | ---
-`page.published` | 投稿が下書きでない場合はTrue | `boolean`
-`page.categories` | 投稿の全カテゴリ | `array` of ???
-`page.tags` | 投稿の全タグ | `array` of ???
+`page.published` | 記事が下書きでない場合はTrue | `boolean`
+`page.categories` | 記事の全カテゴリ | `array` of ???
+`page.tags` | 記事の全タグ | `array` of ???
 
 **ホーム (`index`)**
 
 変数 | 説明 | タイプ
 --- | --- | ---
-`page.per_page` | 1ページあたりの投稿表示数 | `number`
+`page.per_page` | 1ページあたりの記事表示数 | `number`
 `page.total` | ページの総数 | `number`
 `page.current` | 現在のページ番号 | `number`
 `page.current_url` | 現在のページのURL | `string`
-`page.posts` | このページの投稿 ([データモデル](https://hexojs.github.io/warehouse/)) | `object`
+`page.posts` | このページの記事 ([データモデル](https://hexojs.github.io/warehouse/)) | `object`
 `page.prev` | 前のページ番号。現在のページが最初の場合は `0`。 | `number`
 `page.prev_link` | 前のページのURL。現在のページが最初の場合は `''`。 | `string`
 `page.next` | 次のページ番号。現在のページが最後の場合は `0`。 | `number`

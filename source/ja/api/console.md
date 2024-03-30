@@ -37,8 +37,8 @@ hexo.extend.console.register(name, desc, options, function(args){
 ``` js
 {
   arguments: [
-    {name: 'layout', desc: '投稿のレイアウト'},
-    {name: 'title', desc: '投稿のタイトル'}
+    {name: 'layout', desc: '記事のレイアウト'},
+    {name: 'title', desc: '記事のタイトル'}
   ]
 }
 ```
