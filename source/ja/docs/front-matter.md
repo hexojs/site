@@ -25,7 +25,7 @@ date: 2013/7/13 20:46:25
 
 設定 | 説明 | デフォルト
 --- | --- | ---
-`layout` | レイアウト | [`config.default_layout`](/docs/configuration#Writing)
+`layout` | レイアウト | [`config.default_layout`](configuration#執筆)
 `title` | タイトル | ファイル名（記事のみ）
 `date` | 公開日 | ファイル作成日
 `updated` | 更新日 | ファイル更新日

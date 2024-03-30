@@ -350,7 +350,7 @@ v7.0.0 以上で使用する場合は、代わりに[hexo-tag-embed](https://git
 
 ## アセットの参照
 
-[`post_asset_folder`](/docs/asset-folders)と一緒に使用する記事アセットを参照します。
+[`post_asset_folder`](asset-folders)と一緒に使用する記事アセットを参照します。
 
 ```
 {% asset_path filename %}
