@@ -70,7 +70,7 @@ jobs:
 
 6. デプロイが完了したら、*username*.github.io でウェブページを確認します。
 
-注 - `CNAME` でカスタムドメイン名を指定する場合は、`source/` フォルダに `CNAME` ファイルを追加する必要があります。[詳細情報](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site)。
+注 - `CNAME` でカスタムドメイン名を指定する場合は、`source/` フォルダに `CNAME` ファイルを追加する必要があります。[詳細情報](https://docs.github.com/ja/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site)。
 
 ## プロジェクトページ
 
