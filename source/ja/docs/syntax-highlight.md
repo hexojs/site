@@ -24,7 +24,7 @@ code snippet
 
 3番目の構文はMarkdownの囲みコードブロックの構文で、Hexoはそれを拡張してより多くの機能をサポートしています。利用可能なオプションを見つけるには、[タグプラグインドキュメント](tag-plugins#コードブロック)をチェックしてください。
 
-> ヒント：Hexoは、対応するレンダラープラグインがインストールされていれば、どの形式で書かれた記事もサポートしています。それがmarkdown、ejs、swig、nunjucks、pug、asciidocなどであってもです。使用された形式に関係なく、これらの3つのコードブロック構文は常に利用可能です。
+> ヒント: Hexoは、対応するレンダラープラグインがインストールされていれば、どの形式で書かれた記事もサポートしています。それがmarkdown、ejs、swig、nunjucks、pug、asciidocなどであってもです。使用された形式に関係なく、これらの3つのコードブロック構文は常に利用可能です。
 
 ## 設定
 
@@ -106,7 +106,7 @@ hello: hexo
 </pre>
 ```
 
-組み込みのシンタックスハイライトが有効になっていない場合は、サードパーティのシンタックスハイライトプラグインをインストールするか、ブラウザサイドのシンタックスハイライター（例：`highlight.js`や`prism.js`はブラウザで実行することをサポートしています）を使用できます。
+組み込みのシンタックスハイライトが有効になっていない場合は、サードパーティのシンタックスハイライトプラグインをインストールするか、ブラウザサイドのシンタックスハイライター（例: `highlight.js`や`prism.js`はブラウザで実行することをサポートしています）を使用できます。
 
 ## Highlight.js
 
@@ -152,7 +152,7 @@ highlight:
 
 `auto_detect`は、コードブロックの言語を自動的に検出する`highlight.js`の機能です。
 
-> ヒント："sublanguage highlight" を使用したい場合、`auto_detect`を有効にし、コードブロックで言語を無指定にします。
+> ヒント: "sublanguage highlight" を使用したい場合、`auto_detect`を有効にし、コードブロックで言語を無指定にします。
 
 {% note warn "警告！" %}
 `auto_detect`は非常に多くのリソースを消費します。"sublanguage highlight"が必要でコードブロックに言語を指定しない場合以外、有効にしないでください。
@@ -223,7 +223,7 @@ Hexoは、行番号をサポートするため出力を`<figure>`と`<table>`内
 </code></pre>
 ```
 
-> ヒント：`line_number`が`false`、`wrap`がfalse、`hljs`が`true`に設定されている場合のみ、`highlight.js`の[テーマ](https://github.com/highlightjs/highlight.js/tree/master/src/styles)を直接使用できます。
+> ヒント: `line_number`が`false`、`wrap`がfalse、`hljs`が`true`に設定されている場合のみ、`highlight.js`の[テーマ](https://github.com/highlightjs/highlight.js/tree/master/src/styles)を直接使用できます。
 
 ## PrismJS
 
@@ -263,15 +263,15 @@ Hexoの組み込みprismjsは、ブラウザサイド（`preprocess`を`false`�
 
 Prismjsはブラウザで使用するように設計されているため、`preprocess`モードでは限られたprismjsプラグインのみがサポートされます:
 
-- [Line Numbers](https://prismjs.com/plugins/line-numbers/)：`prism-line-numbers.css`のみが必要です。`prism-line-numbers.js`をロードする必要はありません。Hexoが必要なHTMLマークアップを生成します。
-- [Show Languages](https://prismjs.com/plugins/show-language/)：コードブロックに言語が設定されている場合に限り、Hexoは`data-language`属性を追加します。
+- [Line Numbers](https://prismjs.com/plugins/line-numbers/): `prism-line-numbers.css`のみが必要です。`prism-line-numbers.js`をロードする必要はありません。Hexoが必要なHTMLマークアップを生成します。
+- [Show Languages](https://prismjs.com/plugins/show-language/): コードブロックに言語が設定されている場合に限り、Hexoは`data-language`属性を追加します。
 - 特別なHTMLマークアップを必要としない他のすべてのprismプラグインも同様にサポートされています。プラグインに応じたJavaScriptをロードしてください。
 
 `preprocess`が`false`に設定されている場合、すべてのprismプラグインがサポートされます。その場合も、いくつか注意点があります:
 
-- [Line Numbers](https://prismjs.com/plugins/line-numbers/)：`preprocess`が`false`に設定されている場合、Hexoは必要なHTMLマークアップを生成しません。`prism-line-numbers.css`と`prism-line-numbers.js`の両方が必要です。
-- [Show Languages](https://prismjs.com/plugins/show-language/)：コードブロックに言語が与えられている限り、Hexoは常に`data-language`属性を追加します。
-- [Line Highlight](https://prismjs.com/plugins/line-highlight/)：Hexoの[タグプラグイン - コードブロック](tag-plugins#コードブロック)と[タグプラグイン - バックティックコードブロック](tag-plugins#バックティックコードブロック)は、行のハイライト構文（`mark`オプション）をサポートしています。`mark`オプションが与えられた場合、Hexoは対応するHTMLマークアップを生成します。
+- [Line Numbers](https://prismjs.com/plugins/line-numbers/): `preprocess`が`false`に設定されている場合、Hexoは必要なHTMLマークアップを生成しません。`prism-line-numbers.css`と`prism-line-numbers.js`の両方が必要です。
+- [Show Languages](https://prismjs.com/plugins/show-language/): コードブロックに言語が与えられている限り、Hexoは常に`data-language`属性を追加します。
+- [Line Highlight](https://prismjs.com/plugins/line-highlight/): Hexoの[タグプラグイン - コードブロック](tag-plugins#コードブロック)と[タグプラグイン - バックティックコードブロック](tag-plugins#バックティックコードブロック)は、行のハイライト構文（`mark`オプション）をサポートしています。`mark`オプションが与えられた場合、Hexoは対応するHTMLマークアップを生成します。
 
 ### line_number
 

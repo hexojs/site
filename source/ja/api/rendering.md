@@ -70,7 +70,7 @@ hexo.render.getOutput('image.png') // ''
 
 ``` js
 // 以下の例は'.md'ファイル拡張子にのみ適用されます
-// 他の拡張子も指定する必要があるかもしれません。例：'.markdown', '.mkd'
+// 他の拡張子も指定する必要があるかもしれません。例: '.markdown', '.mkd'
 const renderer = hexo.render.renderer.get('md')
 if (renderer) {
   renderer.disableNunjucks = true

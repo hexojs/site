@@ -13,7 +13,7 @@ $ hexo init [folder]
 このコマンドは、以下のステップを実行するショートカットです:
 
 1. [hexo-starter](https://github.com/hexojs/hexo-starter)を現在のディレクトリまたは指定されたフォルダにGitクローンします。これには[hexo-theme-landscape](https://github.com/hexojs/hexo-theme-landscape)が含まれます。
-2. パッケージマネージャーを使用して依存関係をインストールします：[Yarn 1](https://classic.yarnpkg.com/lang/en/)、[pnpm](https://pnpm.io)、または[npm](https://docs.npmjs.com/cli/install)。複数インストールされている場合、リストされている順に優先されます。npmはデフォルトで[Node.js](./#Node-jsのインストール)にバンドルされています。
+2. パッケージマネージャーを使用して依存関係をインストールします: [Yarn 1](https://classic.yarnpkg.com/lang/en/)、[pnpm](https://pnpm.io)、または[npm](https://docs.npmjs.com/cli/install)。複数インストールされている場合、リストされている順に優先されます。npmはデフォルトで[Node.js](./#Node-jsのインストール)にバンドルされています。
 
 ## new
 

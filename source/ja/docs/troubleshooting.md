@@ -104,12 +104,12 @@ fatal: 'username.github.io' does not appear to be a git repository
 
 1. すべてのタグとカテゴリーのケースを確認し、同じであることを確認します。
 1. コミット
-1. 初期化とビルド：`./node_modules/.bin/hexo clean && ./node_modules/.bin/hexo generate`
+1. 初期化とビルド: `./node_modules/.bin/hexo clean && ./node_modules/.bin/hexo generate`
 1. パブリックフォルダをデスクトップに手動でコピー
 1. マスターブランチからデプロイ用ブランチにローカルでブランチを切り替え
 1. デスクトップからのパブリックフォルダの内容をデプロイ用ブランチにコピー
 1. コミット。マージコンフリクトが表示され、手動で解決できます。
-1. マスターブランチに戻り、通常どおりデプロイ：`./node_modules/.bin/hexo deploy`
+1. マスターブランチに戻り、通常どおりデプロイ: `./node_modules/.bin/hexo deploy`
 
 ## サーバーの問題
 
@@ -270,7 +270,7 @@ YAMLException: Specified list of YAML types (or a single Type object) contains a
     at ...
 ```
 
-これは、パッケージマネージャーによって自動的に解決できない不正な依存関係設定（例：`js-yaml`）が原因である可能性があり、手動で更新する必要がある場合があります:
+これは、パッケージマネージャーによって自動的に解決できない不正な依存関係設定（例: `js-yaml`）が原因である可能性があり、手動で更新する必要がある場合があります:
 
 ```sh
 $ npm install js-yaml@latest
