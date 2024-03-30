@@ -74,7 +74,7 @@ Node.jsに慣れたユーザーであれば、代わりに`hexo`パッケージ�
 $ npm install hexo
 ```
 
-インストール後、Hexoを2つの方法で実行できます:
+インストール後、次の2つの方法でHexoを実行できます:
 
 1. `npx hexo <command>`
 2. Linuxユーザーは`node_modules/`フォルダの相対パスを設定できます:
