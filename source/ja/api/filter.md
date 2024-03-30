@@ -172,7 +172,7 @@ hexo.extend.filter.register('after_init', function(){
 
 ### new_post_path
 
-新しい記事を作成する際に新しい記事のパスを決定するために実行されます。
+新しい記事を作成する際のパスを決定するために実行されます。
 
 ``` js
 hexo.extend.filter.register('new_post_path', function(data, replace){

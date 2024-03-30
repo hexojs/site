@@ -61,7 +61,7 @@ hexo.extend.injector.register('body_end', () => {
 });
 ```
 
-上記の設定では、`music`レイアウトのある任意のページの`</head>`に`APlayer.min.css`（`<link>`タグ）、それらのページの`</body>`に`APlayer.min.js`（`<script>`タグ）を挿入し、生成されたすべてのページの`</body>`に`jquery.js`（`<script>`タグ）を挿入します。
+上記の設定では、`music`レイアウトの任意のページの`</head>`に`APlayer.min.css`（`<link>`タグ）を、`</body>`に`APlayer.min.js`（`<script>`タグ）を、またすべてのページの`</body>`に`jquery.js`（`<script>`タグ）を挿入します。
 
 ## ユーザー設定へのアクセス
 

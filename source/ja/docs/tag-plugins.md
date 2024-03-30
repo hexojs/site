@@ -1,7 +1,7 @@
 ---
 title: タグプラグイン
 ---
-タグプラグインは記事タグとは異なります。これらはOctopressから移植されました。特定のコンテンツを記事に素早く追加するのに便利です。
+タグプラグインは記事に付与するタグとは異なります。これらはOctopressから移植されました。特定のコンテンツを記事に素早く追加するのに便利です。
 
 記事は任意のフォーマットで書くことができますが、何れの場合もタグプラグインは利用可能です。構文には変わりはありません。
 
@@ -212,9 +212,9 @@ iframeを埋め込むには:
 {% link text url [external] [title] %}
 ```
 
-## コードを含める
+## コードの挿入
 
-`source/downloads/code`フォルダにあるコードスニペットを挿入します。フォルダの場所は`code_dir`オプションを通じて設定できます。
+`source/downloads/code`フォルダにあるコードスニペットを挿入します。フォルダの場所は`code_dir`オプションで設定できます。
 
 ```
 {% include_code [title] [lang:language] [from:line] [to:line] path/to/file %}
@@ -299,9 +299,9 @@ v7.0.0 以上で使用する場合は、代わりに[hexo-tag-embed](https://git
 {% vimeo video_id [width] [height] %}
 ```
 
-## 記事を含める
+## 記事へのリンク
 
-他の記事へのリンクを含めます。
+他の記事へのリンクを挿入します。
 
 ```
 {% post_path filename %}
@@ -348,9 +348,9 @@ v7.0.0 以上で使用する場合は、代わりに[hexo-tag-embed](https://git
 
 {% post_link hexo-4-released '<b>bold</b> custom title' false %}
 
-## アセットを含める
+## アセットの参照
 
-[`post_asset_folder`](/docs/asset-folders)と一緒に使用する記事アセットを含めます。
+[`post_asset_folder`](/docs/asset-folders)と一緒に使用する記事アセットを参照します。
 
 ```
 {% asset_path filename %}
