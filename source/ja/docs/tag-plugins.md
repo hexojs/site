@@ -328,7 +328,7 @@ v7.0.0 以上で使用する場合は、代わりに[hexo-tag-embed](https://git
 
 **カスタムテキストを表示。**
 
-\`{% raw %}{% post_link hexo-3-8-released 'Link to a post' %}{% endraw %}\`
+`{% raw %}{% post_link hexo-3-8-released 'Link to a post' %}{% endraw %}`
 
 {% post_link hexo-3-8-released 'Link to a post' %}
 
