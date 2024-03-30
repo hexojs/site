@@ -322,7 +322,7 @@ v7.0.0 以上で使用する場合は、代わりに[hexo-tag-embed](https://git
 
 **記事のタイトルを表示。**
 
-\`{% raw %}{% post_link hexo-3-8-released %}{% endraw %}\`
+`{% raw %}{% post_link hexo-3-8-released %}{% endraw %}`
 
 {% post_link hexo-3-8-released %}
 
