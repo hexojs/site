@@ -54,7 +54,7 @@ hexo.post.render(source, data);
 データには`content`属性が含まれている必要があります。そうでない場合、Hexoは元のファイルを読み込もうとします。この関数の実行手順は以下の通りです:
 
 - `before_post_render`フィルターを実行
-- Markdownや他のレンダラー（拡張名に依存）でレンダリング
+- Markdownや他のレンダラー（拡張子名に依存）でレンダリング
 - [Nunjucks]でレンダリング
 - `after_post_render`フィルターを実行
 
