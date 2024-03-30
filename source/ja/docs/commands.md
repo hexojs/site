@@ -163,7 +163,7 @@ $ hexo --safe
 $ hexo --debug
 ```
 
-端末と`debug.log`に詳細なメッセージをログします。Hexoで問題が発生した場合に試してください。エラーが見つかった場合は、[GitHub issueを提出](https://github.com/hexojs/hexo/issues/new?assignees=&labels=&projects=&template=bug_report.yml)してください。
+端末と`debug.log`に詳細なメッセージをログします。Hexoで問題が発生した場合に試してください。エラーが見つかった場合は、[GitHub issueを作成](https://github.com/hexojs/hexo/issues/new?assignees=&labels=&projects=&template=bug_report.yml)してください。
 
 ### サイレントモード
 
