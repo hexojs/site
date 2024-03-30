@@ -89,7 +89,7 @@ deploy:
 
 Netlifyでサイトをデプロイする方法は2つあります。最も一般的な方法は、Web UIを使用することです。[新しいサイトを作成](https://app.netlify.com/start)に移動し、GitHub、GitLab、Bitbucketからプロジェクトリポジトリを選択し、プロンプトに従ってください。
 
-または、Netlifyの[NodeベースのCLI](https://www.netlify.com/docs/cli/)ツールより、ターミナルのみでNetlifyでサイトを管理およびデプロイすることができます。
+または、Netlifyの[NodeベースのCLI](https://www.netlify.com/docs/cli/)ツールより、ターミナルのみでNetlify上のサイトを管理およびデプロイすることができます。
 
 READMEファイルに[Deploy to Netlify Button](https://www.netlify.com/docs/deploy-button/)を追加し、他の人があなたのリポジトリのコピーを作成した後、ワンクリックでNetlifyにデプロイされるようにすることもできます。
 
