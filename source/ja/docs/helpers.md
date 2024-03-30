@@ -857,7 +857,7 @@ Google検索フォームを挿入します。
 --- | --- | ---
 `class` | フォームのクラス名 | search-form
 `text` | 検索ヒントワード | Search
-`button` | 検索ボタンを表示。booleanまたはstringを指定できます。stringの場合、それはボタンのテキストになります。 | false
+`button` | 検索ボタンを表示。booleanまたはstringを指定できます。stringの場合はボタンのテキストになります。 | false
 
 ### number_format
 
