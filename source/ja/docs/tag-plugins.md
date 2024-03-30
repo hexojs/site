@@ -310,7 +310,7 @@ v7.0.0 以上で使用する場合は、代わりに[hexo-tag-embed](https://git
 
 このタグを使用するときは、パーマリンクやフォルダ情報（言語や日付など）を無視できます。
 
-例えば、\`{% raw %}{% post_link how-to-bake-a-cake %}{% endraw %}\`というように使用できます。
+例えば、`{% raw %}{% post_link how-to-bake-a-cake %}{% endraw %}`というように使用できます。
 
 これは記事のファイル名が`how-to-bake-a-cake.md`である限り、記事が`source/posts/2015-02-my-family-holiday`に位置し、パーマリンクが`2018/en/how-to-bake-a-cake`であっても機能します。
 
