@@ -40,7 +40,7 @@ date: 2013/7/13 20:46:25
 
 #### レイアウト
 
-デフォルトのレイアウトは`post`で、`_config.yml`の[`default_layout`](configuration#執筆)設定に従います。記事やページでレイアウトが無効にされた場合（`layout: false`）、それはテーマでは処理されません。しかし、利用可能なレンダラーでレンダリングされます。例えば記事やページがMarkdownで書かれ、Markdownレンダラー（デフォルトの[hexo-renderer-marked](https://github.com/hexojs/hexo-renderer-marked)など）がインストールされている場合、それはHTMLにレンダリングされます。
+デフォルトのレイアウトは`post`です。これは`_config.yml`の[`default_layout`](configuration#執筆)設定に従います。記事やページでレイアウトが無効にされた場合（`layout: false`）、テーマでは処理されませんが、任意のレンダラーによるレンダリングは行われます。例えば記事やページがMarkdownで書かれ、Markdownレンダラー（デフォルトの[hexo-renderer-marked](https://github.com/hexojs/hexo-renderer-marked)など）がインストールされている場合、それはHTMLにレンダリングされます。
 
 [タグプラグイン](tag-plugins)は、`disableNunjucks`設定や[レンダラー](../api/renderer#Nunjucksタグを無効にする)によって無効にされない限り、レイアウトに関わらず常に処理されます。
 
