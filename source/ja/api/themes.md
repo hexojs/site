@@ -23,7 +23,7 @@ hexo.theme.removeView(path);
 
 ## ビュー
 
-ビューには`render`と`renderSync`の2つのメソッドがあります。これら2つのメソッドは、前者は非同期であり後者は同期である以外は同じ処理です。簡単のため、ここでは`render`についてのみ説明します。
+ビューには`render`と`renderSync`の2つのメソッドがあります。これら2つのメソッドは、前者は非同期であり後者は同期である以外は同じです。簡略化のため、ここでは`render`についてのみ説明します。
 
 ``` js
 var view = hexo.theme.getView('layout.swig');
