@@ -17,7 +17,7 @@ Hexo 3での非同期レンダリングの導入以来、レンダリングに�
 
 ## タグの登録解除
 
-`unregister()`を使用して、既存の[タグプラグイン](/docs/tag-plugins)をカスタム関数で置き換えます。
+`unregister()`を使用して、既存の[タグプラグイン](../docs/tag-plugins)をカスタム関数で置き換えます。
 
 ``` js
 hexo.extend.tag.unregister(name);
