@@ -22,6 +22,7 @@
   - [ ] `ru` Russian
   - [ ] `zh-cn` simplified Chinese
   - [ ] `zh-tw` traditional Chinese
+  - [ ] `ja` Japanese
 
 
 > **Note**
