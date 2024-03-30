@@ -27,6 +27,10 @@ en:
           - "source/docs/**"
           - "source/api/**"
           - "source/index.md"
+ja:
+  - changed-files:
+      - any-glob-to-any-file:
+          - "source/ja/**"
 ko:
   - changed-files:
       - any-glob-to-any-file:
