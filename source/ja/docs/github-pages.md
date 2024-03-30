@@ -17,7 +17,7 @@ title: GitHub Pages
 4. GitHubリポジトリの設定で、**Settings** > **Pages** > **Source** に移動します。ソースを **GitHub Actions** に変更し保存します。
 5. リポジトリに以下の内容で `.github/workflows/pages.yml` を作成します（前のステップで控えた Node.js のメジャーバージョンに `16` を置き換えます）:
 
-```yml
+```yml .github/workflows/pages.yml
 name: Pages
 
 on:
