@@ -102,6 +102,6 @@ GitHub でプロジェクトページを持ちたい場合は:
 
 ## 便利なリンク
 
-- [GitHub Pages](https://docs.github.com/en/pages)
+- [GitHub Pages](https://docs.github.com/ja/pages)
 - [Publishing with a custom GitHub Actions workflow](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site#publishing-with-a-custom-github-actions-workflow)
 - [actions/deploy-github-pages-site](https://github.com/marketplace/actions/deploy-github-pages-site)
