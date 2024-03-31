@@ -169,8 +169,7 @@ deploy:
   pass: <password>
   remote: [remote]
   port: [port]
-  ignore: [ignore]
-  connections: [connections]
+  clear: [true|false]
   verbose: [true|false]
 ```
 
@@ -181,8 +180,7 @@ deploy:
 | `pass`        | パスワード                           |
 | `remote`      | リモートホストのルートディレクトリ   | `/`        |
 | `port`        | ポート                               | 21         |
-| `ignore`      | ホストまたはリモートのファイルを無視 |
-| `connections` | 接続数                               | 1          |
+| `clear`       | Remove all files and directories from the remote directory before upload | false      |
 | `verbose`     | 詳細なメッセージを表示               | false      |
 
 ## SFTP
