@@ -2,6 +2,7 @@
 layout: index
 description: Hexo - รวดเร็ว เรียบง่ายและมีประสิทธิภาพ กรอบบล็อกที่สนับสนุนโดย Node.js
 subtitle: 'กรอบบล็อกที่รวดเร็ว เรียบง่ายและมีประสิทธิภาพ'
+og_image: /themes/screenshots/landscape.png
 comments: false
 ---
 

@@ -2,6 +2,7 @@
 layout: index
 description: Hexo — это быстрый, простой и мощный фреймворк для блога на основе Node.js.
 subtitle: Быстрый, мощный и простой фреймворк для блога
+og_image: /themes/screenshots/landscape.png
 comments: false
 ---
 

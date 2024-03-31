@@ -2,6 +2,7 @@
 layout: index
 description: O Hexo é um rápido, simples & poderoso framework para blogs em Node.js.
 subtitle: Um rápido, simples e poderoso framework para blogs
+og_image: /themes/screenshots/landscape.png
 comments: false
 ---
 
