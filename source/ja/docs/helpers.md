@@ -918,7 +918,7 @@ Google検索フォームを挿入します。
 オプション | 説明 | デフォルト
 --- | --- | ---
 `title` | ページタイトル (`og:title`) | `page.title`
-`type` | ページタイプ (`og:type`) | blog
+`type` | ページタイプ (`og:type`) | article（記事ページ）<br>website（記事ページ以外）
 `url` | ページURL (`og:url`) | `url`
 `image` | ページ画像 (`og:image`) | コンテンツ内の全画像
 `author` | 記事の著者 (`og:article:author`) | `config.author`

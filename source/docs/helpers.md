@@ -920,7 +920,7 @@ Inserts [Open Graph] data.
 Option | Description | Default
 --- | --- | ---
 `title` | Page title (`og:title`) | `page.title`
-`type` | Page type (`og:type`) | blog
+`type` | Page type (`og:type`) | article(post page)<br>website(non-post page)
 `url` | Page URL (`og:url`) | `url`
 `image` | Page images (`og:image`) | All images in the content
 `author` | Article author (`og:article:author`) | `config.author`

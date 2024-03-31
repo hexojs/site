@@ -754,7 +754,7 @@ Inserts [generator tag](https://developer.mozilla.org/en-US/docs/Web/HTML/Elemen
 옵션 | 설명 | 기본 값
 --- | --- | ---
 `title` | 페이지 제목 (`og:title`) | `page.title`
-`type` | 페이지 형태 (`og:type`) | blog
+`type` | 페이지 형태 (`og:type`) | article(post page)<br>website(non-post page)
 `url` | 페이지 URL (`og:url`) | `url`
 `image` | 페이지 커버 (`og:image`) | All images in the content
 `author` | Article author (`og:article:author`) | `config.author`

@@ -788,7 +788,7 @@ Inserts time tag. `date` can be unix time, ISO string, date object, or [Moment.j
 Опция | Описание | Значение по умолчанию
 --- | --- | ---
 `title` | Заголовок страницы (`og:title`) | `page.title`
-`type` | Тип страницы (`og:type`) | blog
+`type` | Тип страницы (`og:type`) | article(post page)<br>website(non-post page)
 `url` | URL-адрес страницы (`og:url`) | `url`
 `image` | Обложка страницы (`og:image`) | Все изображения в материалах
 `author` | Автор статьи (`og:article:author`) | `config.author`

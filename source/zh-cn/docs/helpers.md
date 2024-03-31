@@ -902,7 +902,7 @@ url: https://example.com/blog # example
 参数 | 描述 | 默认值
 --- | --- | ---
 `title` | 页面标题 (`og:title`) | `page.title`
-`type` | 页面类型 (`og:type`) | blog
+`type` | 页面类型 (`og:type`) | article(post page)<br>website(non-post page)
 `url` | 页面网址 (`og:url`) | `url`
 `image` | 页面图片 (`og:image`) | 内容中的图片
 `author` | 文章作者 (`og:article:author`) | `config.author`

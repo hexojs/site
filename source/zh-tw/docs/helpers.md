@@ -778,7 +778,7 @@ Inserts [generator tag](https://developer.mozilla.org/en-US/docs/Web/HTML/Elemen
 選項 | 描述 | 預設值
 --- | --- | ---
 `title` | 頁面標題 (`og:title`) | `page.title`
-`type` | 頁面類型 (`og:type`) | blog
+`type` | 頁面類型 (`og:type`) | article(post page)<br>website(non-post page)
 `url` | 頁面網址 (`og:url`) | `url`
 `image` | 頁面圖片 (`og:image`) | 內容中的圖片
 `author` | Article author (`og:article:author`) | `config.author`
