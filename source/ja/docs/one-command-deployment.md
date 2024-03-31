@@ -180,7 +180,7 @@ deploy:
 | `pass`        | パスワード                           |
 | `remote`      | リモートホストのルートディレクトリ   | `/`        |
 | `port`        | ポート                               | 21         |
-| `clear`       | Remove all files and directories from the remote directory before upload | false      |
+| `clear`       | アップロード前にリモートのファイルとディレクトリを全て削除 | false      |
 | `verbose`     | 詳細なメッセージを表示               | false      |
 
 ## SFTP
