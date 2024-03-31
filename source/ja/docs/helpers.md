@@ -924,7 +924,7 @@ Google検索フォームを挿入します。
 `author` | 記事の著者 (`og:article:author`) | `config.author`
 `date` | 記事の公開時刻 (`og:article:published_time`) | ページの公開時刻
 `updated` | 記事の更新時刻 (`og:article:modified_time`) | ページの更新時刻
-`language` | 記事の言語 (`og:locale`) | `page.lang || page.language || config.language`
+`language` | 記事の言語 (`og:locale`) | `page.lang \|\| page.language \|\| config.language`
 `site_name` | サイト名 (`og:site_name`) | `config.title`
 `description` | ページの説明 (`og:description`) | ページの抜粋またはコンテンツの最初の200文字
 `twitter_card` | Twitter カードタイプ (`twitter:card`) | summary

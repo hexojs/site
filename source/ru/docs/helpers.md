@@ -794,7 +794,7 @@ Inserts time tag. `date` can be unix time, ISO string, date object, or [Moment.j
 `author` | Автор статьи (`og:article:author`) | `config.author`
 `date` | Время публикации статьи (`og:article:published_time`) | Время публикации страницы
 `updated` | Время изменения статьи (`og:article:modified_time`) | Время изменения страницы
-`language` | Язык статьи (`og:locale`) | `page.lang || page.language || config.language`
+`language` | Язык статьи (`og:locale`) | `page.lang \|\| page.language \|\| config.language`
 `site_name` | Имя сайта (`og:site_name`) | `config.title`
 `description` | Описание страницы (`og:description`) | Отрывок страницы или первые 200 символов содержимого
 `twitter_card` | Карточка Twitter (`twitter:card`) | Краткое изложение

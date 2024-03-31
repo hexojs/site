@@ -784,7 +784,7 @@ Inserts [generator tag](https://developer.mozilla.org/en-US/docs/Web/HTML/Elemen
 `author` | Article author (`og:article:author`) | `config.author`
 `date` | Article published time (`og:article:published_time`) | Page published time
 `updated` | Article modified time (`og:article:modified_time`) | Page modified time
-`language` | Article language (`og:locale`) | `page.lang || page.language || config.language`
+`language` | Article language (`og:locale`) | `page.lang \|\| page.language \|\| config.language`
 `site_name` | 網站名稱 (`og:site_name`) | `config.title`
 `description` | 頁面描述 (`og:description`) | 內容摘要或前 200 字
 `twitter_card` | Twitter 卡片類型 (`twitter:card`) | summary

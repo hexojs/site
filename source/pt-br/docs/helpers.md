@@ -765,7 +765,7 @@ Opção | Descrição | Padrão
 `author` | Article author (`og:article:author`) | `config.author`
 `date` | Article published time (`og:article:published_time`) | Page published time
 `updated` | Article modified time (`og:article:modified_time`) | Page modified time
-`language` | Article language (`og:locale`) | `page.lang || page.language || config.language`
+`language` | Article language (`og:locale`) | `page.lang \|\| page.language \|\| config.language`
 `site_name` | Nome do site (`og:site_name`) | `config.title`
 `description`| Descrição da página (`og:description`) | Trecho da página ou os 200 primeiros caracteres do conteúdo
 `twitter_card` | Tipo de Twitter card (`twitter:card`) | summary

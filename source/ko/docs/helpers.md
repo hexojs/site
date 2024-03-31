@@ -760,7 +760,7 @@ Inserts [generator tag](https://developer.mozilla.org/en-US/docs/Web/HTML/Elemen
 `author` | Article author (`og:article:author`) | `config.author`
 `date` | Article published time (`og:article:published_time`) | Page published time
 `updated` | Article modified time (`og:article:modified_time`) | Page modified time
-`language` | Article language (`og:locale`) | `page.lang || page.language || config.language`
+`language` | Article language (`og:locale`) | `page.lang \|\| page.language \|\| config.language`
 `site_name` | 사이트 이름 (`og:site_name`) | `config.title`
 `description` | 페이지 설명 (`og:description`) | Page excerpt or first 200 characters of the content
 `twitter_card` | Twitter card type (`twitter:card`) | summary
