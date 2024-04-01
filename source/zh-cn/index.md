@@ -2,7 +2,6 @@
 layout: index
 description: Hexo is a fast, simple & powerful blog framework powered by Node.js.
 subtitle: 快速、简洁且高效的博客框架
-og_image: /themes/screenshots/landscape.png
 comments: false
 ---
 

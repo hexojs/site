@@ -2,7 +2,6 @@
 layout: index
 description: HexoはNode.js製の高速でシンプルかつ強力なブログフレームワークです。
 subtitle: 高速・シンプル・強力な ブログフレームワーク
-og_image: /themes/screenshots/landscape.png
 comments: false
 ---
 

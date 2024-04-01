@@ -39,7 +39,7 @@
   <!-- Open Graph -->
   {{ open_graph({
     fb_admins: config.fb_admins,
-    image: url_for(page.og_image or 'icon/og-image-wide.png'),
+    image: url_for('icon/og-image-wide.png'),
     twitter_image: url_for('icon/twitter-summary.png'),
     twitter_site: config.twitter
   }) }}
