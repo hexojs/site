@@ -178,17 +178,17 @@ deploy:
   verbose: [true|false]
 ```
 
-| Option        | Description                               | Default |
-| ------------- | ----------------------------------------- | ------- |
-| `host`        | Address of remote host                    |
-| `user`        | Username                                  |
-| `pass`        | Password                                  |
-| `remote`      | Root directory of remote host             | `/`     |
-| `port`        | Port                                      | 21      |
-| `clear` | Remove all files and directories from the remote directory before upload | 1 |
-| `ignore`      | Ignore the files on either host or remote |
-| `connections` | Connections number                        | 1       |
-| `verbose`     | Display verbose messages                  | false   |
+| Option        | Description                                                              | Default |
+| ------------- | ------------------------------------------------------------------------ | ------- |
+| `host`        | Address of remote host                                                   |
+| `user`        | Username                                                                 |
+| `pass`        | Password                                                                 |
+| `remote`      | Root directory of remote host                                            | `/`     |
+| `port`        | Port                                                                     | 21      |
+| `clear`       | Remove all files and directories from the remote directory before upload | 1       |
+| `ignore`      | Ignore the files on either host or remote                                |
+| `connections` | Connections number                                                       | 1       |
+| `verbose`     | Display verbose messages                                                 | false   |
 
 ## SFTP
 

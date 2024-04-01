@@ -163,17 +163,17 @@ deploy:
   verbose: [true|false]
 ```
 
-| 選項          | 描述                 | 預設值 |
-| ------------- | -------------------- | ------ |
-| `host`        | 遠端主機位址         |
-| `user`        | 使用者名稱           |
-| `pass`        | 密碼                 |
-| `remote`      | 遠端主機的根目錄     | `/`    |
-| `port`        | 連接埠               | 21     |
-| `clear` | Remove all files and directories from the remote directory before upload | false |
-| `ignore`      | 忽略本機或遠端的檔案 |
-| `connections` | 連接數               | 1      |
-| `verbose`     | 顯示除錯訊息         | false  |
+| 選項          | 描述                                                                     | 預設值 |
+| ------------- | ------------------------------------------------------------------------ | ------ |
+| `host`        | 遠端主機位址                                                             |
+| `user`        | 使用者名稱                                                               |
+| `pass`        | 密碼                                                                     |
+| `remote`      | 遠端主機的根目錄                                                         | `/`    |
+| `port`        | 連接埠                                                                   | 21     |
+| `clear`       | Remove all files and directories from the remote directory before upload | false  |
+| `ignore`      | 忽略本機或遠端的檔案                                                     |
+| `connections` | 連接數                                                                   | 1      |
+| `verbose`     | 顯示除錯訊息                                                             | false  |
 
 ## Vercel
 

@@ -157,17 +157,17 @@ deploy:
   verbose: [true|false]
 ```
 
-| 옵션          | 설명                                      | 기본값 |
-| ------------- | ----------------------------------------- | ------ |
-| `host`        | 원격 호스트의 주소                        |
-| `user`        | 사용자명                                  |
-| `pass`        | 비밀번호                                  |
-| `remote`      | 원격 호스트의 루트 디렉토리               | `/`    |
-| `port`        | 포트                                      | 21     |
-| `clear` | Remove all files and directories from the remote directory before upload | false |
-| `ignore`      | 호스트 파일들과 원격 파일들을 무시합니다. |
-| `connections` | 연결 번호                                 | 1      |
-| `verbose`     | Verbose 메시지를 표시합니다.              | false  |
+| 옵션          | 설명                                                                     | 기본값 |
+| ------------- | ------------------------------------------------------------------------ | ------ |
+| `host`        | 원격 호스트의 주소                                                       |
+| `user`        | 사용자명                                                                 |
+| `pass`        | 비밀번호                                                                 |
+| `remote`      | 원격 호스트의 루트 디렉토리                                              | `/`    |
+| `port`        | 포트                                                                     | 21     |
+| `clear`       | Remove all files and directories from the remote directory before upload | false  |
+| `ignore`      | 호스트 파일들과 원격 파일들을 무시합니다.                                |
+| `connections` | 연결 번호                                                                | 1      |
+| `verbose`     | Verbose 메시지를 표시합니다.                                             | false  |
 
 ## Vercel
 

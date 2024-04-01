@@ -157,17 +157,17 @@ deploy:
   verbose: [true|false]
 ```
 
-| Opção         | Descrição                         | Padrão |
-| ------------- | --------------------------------- | ------ |
-| `host`        | Endereço do host remoto           |
-| `user`        | Nome de usuário                   |
-| `pass`        | Senha                             |
-| `remote`      | Diretório raiz do host remoto     | `/`    |
-| `port`        | Porta                             | 21     |
-| `clear` | Remove all files and directories from the remote directory before upload | false |
-| `ignore`      | Ignora os arquivos no host remoto |
-| `connections` | Número de conexões                | 1      |
-| `verbose`     | Exibi mensagens detalhadas        | false  |
+| Opção         | Descrição                                                                | Padrão |
+| ------------- | ------------------------------------------------------------------------ | ------ |
+| `host`        | Endereço do host remoto                                                  |
+| `user`        | Nome de usuário                                                          |
+| `pass`        | Senha                                                                    |
+| `remote`      | Diretório raiz do host remoto                                            | `/`    |
+| `port`        | Porta                                                                    | 21     |
+| `clear`       | Remove all files and directories from the remote directory before upload | false  |
+| `ignore`      | Ignora os arquivos no host remoto                                        |
+| `connections` | Número de conexões                                                       | 1      |
+| `verbose`     | Exibi mensagens detalhadas                                               | false  |
 
 ## SFTP
 
