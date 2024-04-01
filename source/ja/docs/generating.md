@@ -1,9 +1,10 @@
 ---
 title: 生成
 ---
+
 Hexoでの静的ファイルの生成は、とても簡単で高速です。
 
-``` bash
+```bash
 $ hexo generate
 ```
 
@@ -11,7 +12,7 @@ $ hexo generate
 
 Hexoはファイルの変更を監視し、即座にファイルを再生成できます。HexoはファイルのSHA1チェックサムを比較し、ファイルの変更が検出された場合にのみ書き込みます。
 
-``` bash
+```bash
 $ hexo generate --watch
 ```
 
@@ -19,7 +20,7 @@ $ hexo generate --watch
 
 生成後にデプロイするには、以下のコマンドのいずれかを実行します。2つのコマンドの間に違いはありません。
 
-``` bash
+```bash
 $ hexo generate --deploy
 $ hexo deploy --generate
 ```

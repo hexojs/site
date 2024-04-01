@@ -21,10 +21,10 @@ deploy:
 
 ```yaml
 deploy:
-- type: git
-  repo:
-- type: heroku
-  repo:
+  - type: git
+    repo:
+  - type: heroku
+    repo:
 ```
 
 他のデプロイプラグインについては、[プラグイン](https://hexo.io/plugins/)リストを参照してください。
@@ -47,12 +47,12 @@ deploy:
   message: [message]
 ```
 
-オプション | 説明 | デフォルト
---- | --- | ---
-`repo` | ターゲットリポジトリのURL |
-`branch` | ブランチ名 | `gh-pages` (GitHub)<br>`coding-pages` (Coding.net)<br>`master` (その他)
-`message` | コミットメッセージをカスタマイズ | `Site updated: {% raw %}{{ now('YYYY-MM-DD HH:mm:ss') }}{% endraw %}`
-`token` | リポジトリの認証に使うオプションのトークン値。環境変数からトークンを読み込むには`$`をプレフィックスとして使用。
+| オプション | 説明                                                                                                            | デフォルト                                                              |
+| ---------- | --------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| `repo`     | ターゲットリポジトリのURL                                                                                       |
+| `branch`   | ブランチ名                                                                                                      | `gh-pages` (GitHub)<br>`coding-pages` (Coding.net)<br>`master` (その他) |
+| `message`  | コミットメッセージをカスタマイズ                                                                                | `Site updated: {% raw %}{{ now('YYYY-MM-DD HH:mm:ss') }}{% endraw %}`   |
+| `token`    | リポジトリの認証に使うオプションのトークン値。環境変数からトークンを読み込むには`$`をプレフィックスとして使用。 |
 
 3. サイトをデプロイします `hexo clean && hexo deploy`。
 
@@ -173,15 +173,15 @@ deploy:
   verbose: [true|false]
 ```
 
-| オプション    | 説明                                 | デフォルト |
-| ------------- | -------------------------------------| ---------- |
-| `host`        | リモートホストのアドレス             |
-| `user`        | ユーザー名                           |
-| `pass`        | パスワード                           |
-| `remote`      | リモートホストのルートディレクトリ   | `/`        |
-| `port`        | ポート                               | 21         |
-| `clear`       | アップロード前にリモートのファイルとディレクトリを全て削除 | false      |
-| `verbose`     | 詳細なメッセージを表示               | false      |
+| オプション | 説明                                                       | デフォルト |
+| ---------- | ---------------------------------------------------------- | ---------- |
+| `host`     | リモートホストのアドレス                                   |
+| `user`     | ユーザー名                                                 |
+| `pass`     | パスワード                                                 |
+| `remote`   | リモートホストのルートディレクトリ                         | `/`        |
+| `port`     | ポート                                                     | 21         |
+| `clear`    | アップロード前にリモートのファイルとディレクトリを全て削除 | false      |
+| `verbose`  | 詳細なメッセージを表示                                     | false      |
 
 ## SFTP
 
@@ -206,7 +206,7 @@ deploy:
   agent: [path/to/agent/socket]
 ```
 
-| オプション        | 説明                                   | デフォルト       |
+| オプション    | 説明                                       | デフォルト       |
 | ------------- | ------------------------------------------ | ---------------- |
 | `host`        | リモートホストのアドレス                   |
 | `port`        | ポート                                     | 22               |
@@ -279,8 +279,8 @@ $ hexo generate —deploy && bip deploy
 
 2. 設定を変更します。
 
-  ```yaml
-  deploy: # The root configuration block for all deployers
+```yaml
+deploy: # The root configuration block for all deployers
   - type: rss3
     endpoint: https://hub.rss3.io
     privateKey: 47e18d6c386898b424025cd9db446f779ef24ad33a26c499c87bb3d9372540ba
@@ -290,15 +290,15 @@ $ hexo generate —deploy && bip deploy
       api:
         key: d693df715d3631e489d6
         secret: ee8b74626f12b61c1a4bde3b8c331ad390567c86ba779c9b18561ee92c1cbff0
-  ```
+```
 
-| パラメータ | 説明 |
-| ----------------- | ---------------------- |
-| `endpoint` | RSS3ハブへのリンク |
-| `privateKey` | あなたのプライベートキー、64バイト |
-| `ipfs/deploy` | IPFSへのデプロイを実行するか？ |
-| `ipfs/gateway` | IPFS APIゲートウェイ |
-| `ipfs/api/key` | IPFSゲートウェイ関連の認証コンテンツ |
+| パラメータ        | 説明                                 |
+| ----------------- | ------------------------------------ |
+| `endpoint`        | RSS3ハブへのリンク                   |
+| `privateKey`      | あなたのプライベートキー、64バイト   |
+| `ipfs/deploy`     | IPFSへのデプロイを実行するか？       |
+| `ipfs/gateway`    | IPFS APIゲートウェイ                 |
+| `ipfs/api/key`    | IPFSゲートウェイ関連の認証コンテンツ |
 | `ipfs/api/secret` | IPFSゲートウェイ関連の認証コンテンツ |
 
 3. 静的ファイルを生成します

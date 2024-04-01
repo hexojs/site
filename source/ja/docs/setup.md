@@ -4,7 +4,7 @@ title: セットアップ
 
 Hexoがインストールされたら、以下のコマンドを実行して対象の`<folder>`内でHexoを初期化します。
 
-``` bash
+```bash
 $ hexo init <folder>
 $ cd <folder>
 $ npm install
@@ -12,7 +12,7 @@ $ npm install
 
 初期化されると、プロジェクトフォルダは次のようになります:
 
-``` plain
+```plain
 .
 ├── _config.yml
 ├── package.json
@@ -23,7 +23,7 @@ $ npm install
 └── themes
 ```
 
-### _config.yml
+### \_config.yml
 
 サイトの[設定](configuration.html)ファイルです。ほとんどの設定はここで行います。
 
@@ -31,7 +31,7 @@ $ npm install
 
 アプリケーションデータです。デフォルトで[EJS](https://ejs.co/)、[Stylus](http://learnboost.github.io/stylus/)、[Markdown](http://daringfireball.net/projects/markdown/)のレンダラーがインストールされています。必要に応じて、これらを後でアンインストールすることもできます。
 
-``` json package.json
+```json package.json
 {
   "name": "hexo-site",
   "version": "0.0.0",

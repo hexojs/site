@@ -1,6 +1,7 @@
 ---
 title: イベント
 ---
+
 Hexoは[EventEmitter]を継承しています。Hexoからのイベントの発火を監視するには`on`メソッドを、イベントを発火させるには`emit`メソッドを使用します。詳細については、Node.jsのAPIドキュメントを参照してください。
 
 ### deployBefore
@@ -27,16 +28,16 @@ Hexoが終了する前に発火します。
 
 新しい記事が作成された後に発火します。このイベントには、記事データが返されます:
 
-``` js
-hexo.on('new', function(post){
+```js
+hexo.on("new", function (post) {
   //
 });
 ```
 
-データ | 説明
---- | ---
-`post.path` | 記事ファイルの完全なパス
-`post.content` | 記事ファイルの内容
+| データ         | 説明                     |
+| -------------- | ------------------------ |
+| `post.path`    | 記事ファイルの完全なパス |
+| `post.content` | 記事ファイルの内容       |
 
 ### processBefore
 
