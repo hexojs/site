@@ -189,8 +189,7 @@ deploy:
   pass: <password>
   remote: [remote]
   port: [port]
-  ignore: [ignore]
-  connections: [connections]
+  clear: [true|false]
   verbose: [true|false]
 ```
 
@@ -201,6 +200,7 @@ deploy:
 | `pass`        | 密码             |
 | `remote`      | 远程主机的根目录 | `/`    |
 | `port`        | 端口             | 21     |
+| `clear` | 在上传前移除远程主机的根目录下所有的文件和目录 | false |
 | `ignore`      | 忽略的文件或目录 |
 | `connections` | 使用的连接数     | 1      |
 | `verbose`     | 显示调试信息     | false  |
