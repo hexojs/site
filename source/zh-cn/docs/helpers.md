@@ -902,13 +902,13 @@ url: https://example.com/blog # example
 参数 | 描述 | 默认值
 --- | --- | ---
 `title` | 页面标题 (`og:title`) | `page.title`
-`type` | 页面类型 (`og:type`) | blog
+`type` | 页面类型 (`og:type`) | article(post page)<br>website(non-post page)
 `url` | 页面网址 (`og:url`) | `url`
 `image` | 页面图片 (`og:image`) | 内容中的图片
 `author` | 文章作者 (`og:article:author`) | `config.author`
 `date` | 文章发表时间 (`og:article:published_time`) | 页面发表时间
 `updated` | 文章修改时间 (`og:article:modified_time`) | 页面修改时间
-`language` | 文章语言 (`og:locale`) | `page.lang || page.language || config.language`
+`language` | 文章语言 (`og:locale`) | `page.lang \|\| page.language \|\| config.language`
 `site_name` | 网站名称 (`og:site_name`) | `config.title`
 `description` | 页面描述 (`og:description`) | 内容摘要或前 200 字
 `twitter_card` | Twitter 卡片类型 (`twitter:card`) | summary
