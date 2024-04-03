@@ -8,6 +8,7 @@
   "scripts": {
     "build": "hexo generate",
     "eslint": "eslint .",
+    "format:md": "prettier --write */**/docs/*.md */**/api/*.md",
     "prepare": "husky"
   },
   "dependencies": {
@@ -32,13 +33,15 @@
     "eslint-config-hexo": "^5.0.0",
     "husky": "^9.0.6",
     "imagemin-lint-staged": "^0.5.1",
-    "lint-staged": "^15.2.0"
+    "lint-staged": "^15.2.0",
+    "prettier": "3.2.5"
   },
   "lint-staged": {
     "*.{png,jpeg,jpg,gif,svg}": [
       "imagemin-lint-staged"
     ],
-    "*.js": "eslint --fix"
+    "*.js": "eslint --fix",
+    "*.md": "format:md"
   },
   "engines": {
     "node": ">=14"
