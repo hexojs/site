@@ -776,19 +776,19 @@ Inserts [generator tag](https://developer.mozilla.org/en-US/docs/Web/HTML/Elemen
 <%- open_graph([options]) %>
 ```
 
-| 選項            | 描述                                                 | 預設值              |
-| --------------- | ---------------------------------------------------- | ------------------- | --- | ------------- | --- | ---------------- |
-| `title`         | 頁面標題 (`og:title`)                                | `page.title`        |
-| `type`          | 頁面類型 (`og:type`)                                 | blog                |
-| `url`           | 頁面網址 (`og:url`)                                  | `url`               |
-| `image`         | 頁面圖片 (`og:image`)                                | 內容中的圖片        |
-| `author`        | Article author (`og:article:author`)                 | `config.author`     |
-| `date`          | Article published time (`og:article:published_time`) | Page published time |
-| `updated`       | Article modified time (`og:article:modified_time`)   | Page modified time  |
-| `language`      | Article language (`og:locale`)                       | `page.lang          |     | page.language |     | config.language` |
-| `site_name`     | 網站名稱 (`og:site_name`)                            | `config.title`      |
-| `description`   | 頁面描述 (`og:description`)                          | 內容摘要或前 200 字 |
-| `twitter_card`  | Twitter 卡片類型 (`twitter:card`)                    | summary             |
+| 選項            | 描述                                                 | 預設值                                              |
+| --------------- | ---------------------------------------------------- | --------------------------------------------------- |
+| `title`         | 頁面標題 (`og:title`)                                | `page.title`                                        |
+| `type`          | 頁面類型 (`og:type`)                                 | article(post page)<br>website(non-post page)        |
+| `url`           | 頁面網址 (`og:url`)                                  | `url`                                               |
+| `image`         | 頁面圖片 (`og:image`)                                | 內容中的圖片                                        |
+| `author`        | Article author (`og:article:author`)                 | `config.author`                                     |
+| `date`          | Article published time (`og:article:published_time`) | Page published time                                 |
+| `updated`       | Article modified time (`og:article:modified_time`)   | Page modified time                                  |
+| `language`      | Article language (`og:locale`)                       | `page.lang \|\| page.language \|\| config.language` |
+| `site_name`     | 網站名稱 (`og:site_name`)                            | `config.title`                                      |
+| `description`   | 頁面描述 (`og:description`)                          | 內容摘要或前 200 字                                 |
+| `twitter_card`  | Twitter 卡片類型 (`twitter:card`)                    | summary                                             |
 | `twitter_id`    | Twitter ID (`twitter:creator`)                       |
 | `twitter_site`  | Twitter 網站 (`twitter:site`)                        |
 | `twitter_image` | Twitter 圖片 (`twitter:image`)                       |

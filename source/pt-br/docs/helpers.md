@@ -757,15 +757,15 @@ Insere dados do [Open Graph].
 ```
 
 | Opção          | Descrição                                            | Padrão                                                      |
-| -------------- | ---------------------------------------------------- | ----------------------------------------------------------- | --- | ------------- | --- | ---------------- |
+| -------------- | ---------------------------------------------------- | ----------------------------------------------------------- |
 | `title`        | Título da página (`og:title`)                        | `page.title`                                                |
-| `type`         | Tipo de página (`og:type`)                           | blog                                                        |
+| `type`         | Tipo de página (`og:type`)                           | article(post page)<br>website(non-post page)                |
 | `url`          | URL da página (`og:url`)                             | `url`                                                       |
 | `image`        | Capa da página (`og:image`)                          | All images in the content                                   |
 | `author`       | Article author (`og:article:author`)                 | `config.author`                                             |
 | `date`         | Article published time (`og:article:published_time`) | Page published time                                         |
 | `updated`      | Article modified time (`og:article:modified_time`)   | Page modified time                                          |
-| `language`     | Article language (`og:locale`)                       | `page.lang                                                  |     | page.language |     | config.language` |
+| `language`     | Article language (`og:locale`)                       | `page.lang \|\| page.language \|\| config.language`         |
 | `site_name`    | Nome do site (`og:site_name`)                        | `config.title`                                              |
 | `description`  | Descrição da página (`og:description`)               | Trecho da página ou os 200 primeiros caracteres do conteúdo |
 | `twitter_card` | Tipo de Twitter card (`twitter:card`)                | summary                                                     |

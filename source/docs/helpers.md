@@ -918,15 +918,15 @@ Inserts [Open Graph] data.
 ```
 
 | Option          | Description                                          | Default                                             |
-| --------------- | ---------------------------------------------------- | --------------------------------------------------- | --- | ------------- | --- | ---------------- |
+| --------------- | ---------------------------------------------------- | --------------------------------------------------- |
 | `title`         | Page title (`og:title`)                              | `page.title`                                        |
-| `type`          | Page type (`og:type`)                                | blog                                                |
+| `type`          | Page type (`og:type`)                                | article(post page)<br>website(non-post page)        |
 | `url`           | Page URL (`og:url`)                                  | `url`                                               |
 | `image`         | Page images (`og:image`)                             | All images in the content                           |
 | `author`        | Article author (`og:article:author`)                 | `config.author`                                     |
 | `date`          | Article published time (`og:article:published_time`) | Page published time                                 |
 | `updated`       | Article modified time (`og:article:modified_time`)   | Page modified time                                  |
-| `language`      | Article language (`og:locale`)                       | `page.lang                                          |     | page.language |     | config.language` |
+| `language`      | Article language (`og:locale`)                       | `page.lang \|\| page.language \|\| config.language` |
 | `site_name`     | Site name (`og:site_name`)                           | `config.title`                                      |
 | `description`   | Page description (`og:description`)                  | Page excerpt or first 200 characters of the content |
 | `twitter_card`  | Twitter card type (`twitter:card`)                   | summary                                             |
