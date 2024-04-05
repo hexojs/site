@@ -41,7 +41,7 @@
       "imagemin-lint-staged"
     ],
     "*.js": "eslint --fix",
-    "*.md": "format:md"
+    "*.md": "prettier --write"
   },
   "engines": {
     "node": ">=14"
