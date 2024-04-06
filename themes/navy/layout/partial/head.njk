@@ -8,7 +8,9 @@
   <!-- Alternative links -->
   {% if page.layout == 'page' or page.layout == 'index' %}
     {% for lang, value in site.data.languages %}
-      <link rel="alternative" hreflang="{{ lang }}" href="{{ canonical_url(lang) }}">
+      {% if page.permalink !== canonical_url(lang) %}
+        <link rel="alternative" hreflang="{{ lang }}" href="{{ canonical_url(lang) }}">
+      {% endif %}
     {% endfor %}
   {% endif %}
   <!-- Icon -->
