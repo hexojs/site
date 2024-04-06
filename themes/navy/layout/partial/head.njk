@@ -12,6 +12,7 @@
         <link rel="alternative" hreflang="{{ lang }}" href="{{ canonical_url(lang) }}">
       {% endif %}
     {% endfor %}
+    <link rel="alternate" hreflang="x-default" href="{{ canonical_url('en') }}" />
   {% endif %}
   <!-- Icon -->
   <link rel="apple-touch-icon" sizes="57x57" href="{{ url_for('icon/apple-touch-icon-57x57.png') }}">
