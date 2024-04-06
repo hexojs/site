@@ -5,11 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Canonical links -->
   <link rel="canonical" href="{{ page.permalink }}">
-  <!-- Alternative links -->
+  <!-- Alternate links -->
   {% if page.layout == 'page' or page.layout == 'index' %}
     {% for lang, value in site.data.languages %}
       {% if page.permalink !== canonical_url(lang) %}
-        <link rel="alternative" hreflang="{{ lang }}" href="{{ canonical_url(lang) }}">
+        <link rel="alternate" hreflang="{{ lang }}" href="{{ canonical_url(lang) }}">
       {% endif %}
     {% endfor %}
     <link rel="alternate" hreflang="x-default" href="{{ canonical_url('en') }}" />
