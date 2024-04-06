@@ -81,8 +81,16 @@ hexo.extend.helper.register('header_menu', function(className) {
 });
 
 hexo.extend.helper.register('canonical_url', function(lang) {
-  let path = this.page.path;
-  if (lang && lang !== 'en') path = lang + '/' + path;
+  const slugs = this.page.path.split('/').filter(v => v !== '');
+
+  if (Object.keys(this.site.data.languages).includes(slugs.at(0))) {
+    slugs.shift();
+  }
+  if (lang !== 'en') {
+    slugs.unshift(lang);
+  }
+
+  const path = slugs.join('/');
 
   return full_url_for(path);
 });
