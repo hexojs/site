@@ -64,8 +64,8 @@ title: 配置
 `relative_link` | 把連結改為與根目錄的相對位址 | `false`
 `future` | 顯示未來的文章 | `true`
 `syntax_highlighter` | 程式碼區塊語法強調 (highlight) 設定，請見使用方式指南的[語法強調](/zh-tw/docs/syntax-highlight)區塊 | `highlight.js`
-`highlight` | 程式碼區塊語法強調設定，請見使用方式指南的 [Highlight.js](/docs/syntax-highlight#Highlight-js) 區塊 |
-`prismjs` | 程式碼區塊的設定，請見使用方式指南的 [PrismJS](/docs/syntax-highlight#PrismJS) 區塊 |
+`highlight` | 程式碼區塊語法強調設定，請見使用方式指南的 [Highlight.js](/zh-tw/docs/syntax-highlight#Highlight-js) 區塊 |
+`prismjs` | 程式碼區塊的設定，請見使用方式指南的 [PrismJS](/zh-tw/docs/syntax-highlight#PrismJS) 區塊 |
 
 ### 分類 & 標籤
 
@@ -183,7 +183,7 @@ $ hexo server --config custom.yml,custom2.json
 
 Hexo 主題是獨立的專案，具有個別的 `_config.yml` 檔案。
 
-除了複製一個主題並維護一個由您設定的自創分支，您也在任何地方餵它進行設定。
+除了複製一個主題並維護一個由您設定的自創分支，您也在任何地方為它進行設定。
 
 **頁面中的主要設定文件的 `theme_config`**
 
