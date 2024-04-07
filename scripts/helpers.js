@@ -83,7 +83,7 @@ hexo.extend.helper.register('header_menu', function(className) {
 hexo.extend.helper.register('canonical_url', function(lang) {
   const slugs = this.page.path.split('/').filter(v => v !== '');
 
-  if (Object.keys(this.site.data.languages).includes(slugs.at(0))) {
+  if (Object.keys(this.site.data.languages).includes(slugs[0])) {
     slugs.shift();
   }
   if (lang !== 'en') {
