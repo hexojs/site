@@ -1,5 +1,6 @@
 ---
 title: About
+layout: about
 ---
 
 [![github stars](https://img.shields.io/github/stars/hexojs/hexo?style=for-the-badge&color=0e83cd&logo=github)](https://github.com/hexojs/hexo) [![github forks](https://img.shields.io/github/forks/hexojs/hexo?style=for-the-badge&color=0e83cd&logo=github)](https://github.com/hexojs/hexo) [![npm stats](https://img.shields.io/npm/dm/hexo?style=for-the-badge&color=0e83cd&label=npm%20downloads&logo=npm)](https://www.npmjs.com/package/hexo)
