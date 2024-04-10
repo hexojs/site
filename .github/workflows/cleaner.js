@@ -47,6 +47,7 @@ function buildRepoQuery(owner, repo) {
         login
       }
       url
+      isArchived
       defaultBranchRef {
         target {
           ... on Commit {
@@ -130,8 +131,9 @@ async function validate(type) {
       if (result[repoKey]) {
         const entry = result[repoKey];
         const stars = entry.stargazers.totalCount;
+        const isArchived = entry.isArchived;
         const lastCommitDate = entry.defaultBranchRef.target.history.edges[0].node.committedDate;
-        console.log(`Repo: ${owner}/${repo}, Stars: ${stars}, Last Commit Date: ${lastCommitDate}`);
+        console.log(`Repo: ${owner}/${repo}, Stars: ${stars}, Archived: ${isArchived}, Last Commit Date: ${lastCommitDate}`);
         const newOwner = entry.owner.login;
         const newRepo = entry.name;
         if (owner !== newOwner || repo !== newRepo) {
