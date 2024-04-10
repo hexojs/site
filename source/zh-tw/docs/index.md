@@ -60,8 +60,8 @@ Node.js 為大多數平台提供了官方的 [安裝程序](https://nodejs.org/e
 如果在嘗試安裝Hexo 的過程中出現`EACCES` 權限錯誤，請遵循[由npmjs 發布的指導](https://docs.npmjs.com/resolving-eacces-permissions-errors-when-installing-packages-globally ) 修復該問題。強烈建議 **不要** 使用 root、sudo 等方法覆蓋權限
 {% endnote %}
 
-{% note info Linux %}
-If you installed Node.js using Snap, you may need to manually run `npm install` in the target folder when [initializing](/docs/commands#init) a blog.
+{% note info Linux 用戶 %}
+若您使用 Snap 安裝 Node.js，您則需要在[初始化](/zh-tw/docs/commands#init)一個部落格時，於目標資料夾中手動執行 `npm install`。
 {% endnote %}
 
 ### 安裝 Hexo
@@ -72,15 +72,15 @@ If you installed Node.js using Snap, you may need to manually run `npm install` 
 $ npm install -g hexo-cli
 ```
 
-### Required Node.js version
+### 必要的 Node.js 版本
 
-If you are stuck with older Node.js, you can consider installing a past version of Hexo.
+如果您堅持使用較舊版本的 Node.js，你可以考慮安裝過往版本的 Hexo。
 
-Please note we do not provide bugfixes to past versions of Hexo.
+請注意我們並不會對於過往版本的 Hexo 進行錯誤修復。 
 
-We highly recommend to always install the [latest version](https://www.npmjs.com/package/hexo?activeTab=versions) of Hexo and the [recommended version](#安裝需求) of Node.js, whenever possible.
+有可能的話，我們強烈建議總是安裝[最新版本](https://www.npmjs.com/package/hexo?activeTab=versions)的 Hexo 以及[推薦版本](#安裝需求)的 Node.js。
 
-Hexo version | Minimum (Node.js version) | Less than (Node.js version)
+Hexo 版本 | 最小可行 (Node.js 版本) | 小於 (Node.js 版本)
 --- | --- | ---
 7.0+ | 14.0.0 | latest
 6.2+ | 12.13.0 | latest

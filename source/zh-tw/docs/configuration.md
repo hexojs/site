@@ -56,16 +56,16 @@ title: 配置
 `titlecase` | 把標題轉換為 title case | `false`
 `external_link` | 在新頁籤中開啟連結 | `true`
 `external_link.enable` | 在新頁籤中開啟連結 | `true`
-`external_link.field` | Applies to the whole `site` or `post` only | `site`
-`external_link.exclude` | Exclude hostname. Specify subdomain when applicable, including `www` | `[]`
+`external_link.field` | 應用至整個 `site` 或僅只於 `post` | `site`
+`external_link.exclude` | 主機名稱除外。適用於特指子網域，包含 `www` | `[]`
 `filename_case` | 把檔案名稱轉換為: `1` 小寫或 `2` 大寫 | `0`
 `render_drafts` | 顯示草稿 | `false`
 `post_asset_folder` | 啟動 [Asset 資料夾](asset-folders.html) | `false`
 `relative_link` | 把連結改為與根目錄的相對位址 | `false`
 `future` | 顯示未來的文章 | `true`
-`syntax_highlighter` | Code block syntax highlight settings, see [Syntax Highlight](/docs/syntax-highlight) section for usage guide | `highlight.js`
-`highlight` | 程式碼區塊的設定, see [Highlight.js](/docs/syntax-highlight#Highlight-js) section for usage guide |
-`prismjs` | 程式碼區塊的設定, see [PrismJS](/docs/syntax-highlight#PrismJS) section for usage guide |
+`syntax_highlighter` | 程式碼區塊語法強調 (highlight) 設定，請見使用方式指南的[語法強調](/zh-tw/docs/syntax-highlight)區塊 | `highlight.js`
+`highlight` | 程式碼區塊語法強調設定，請見使用方式指南的 [Highlight.js](/zh-tw/docs/syntax-highlight#Highlight-js) 區塊 |
+`prismjs` | 程式碼區塊的設定，請見使用方式指南的 [PrismJS](/zh-tw/docs/syntax-highlight#PrismJS) 區塊 |
 
 ### 分類 & 標籤
 
@@ -83,16 +83,16 @@ Hexo 使用 [Moment.js](http://momentjs.com/) 來解析和顯示時間。
 --- | --- | ---
 `date_format` | 日期格式 | `YYYY-MM-DD`
 `time_format` | 時間格式 | `HH:mm:ss`
-`updated_option` | The [`updated`](/zh-tw/docs/variables#頁面變數) value to used when not provided in the front-matter | `mtime`
+`updated_option` | 當 front-matter 沒有提供 [`updated`](/zh-tw/docs/variables#頁面變數) 的值則使用此值| `mtime`
 
 {% note info updated_option %}
-`updated_option` controls the `updated` value when not provided in the front-matter:
+當 front-matter 沒有提供 `updated` 值，則 `updated_option` 控制此值：
 
-- `mtime`: Use file modification date as `updated`. It is the default behavior of Hexo since 3.0.0
-- `date`: Use `date` as `updated`. Typically used with Git workflow when file modification date could be different.
-- `empty`: Simply drop `updated` when not provided. May not be compatible with most themes and plugins.
+- `mtime`: 使用檔案修改日期作為 `updated`。Hexo 自從 3.0.0 版本開始有這個預設行為。
+- `date`: 使用 `date` 作為 `updated`。 通常與 Git 的工作流程搭配使用，與檔案修改日期可能不同。
+- `empty`: 當沒有提供時直接捨棄 `updated`。 可能與多數的主題及外掛不相容。
 
-`use_date_for_updated` is removed in v7.0.0+. Please use `updated_option: 'date'` instead.
+`use_date_for_updated` 已在版本 v7.0.0 開始移除。請使用 `updated_option: 'date'` 作為代替。
 {% endnote %}
 
 ### 分頁
@@ -113,13 +113,13 @@ Hexo 使用 [Moment.js](http://momentjs.com/) 來解析和顯示時間。
 
 Hexo 會根據配置檔中 `include` / `exlude` 欄位設定，了解要 處理/忽略 哪些特定的檔案或資料夾。
 
-`include` and `exclude` options only apply to the `source/` folder, whereas `ignore` option applies to all folders.
+`include` 以及 `exclude` 選項只會應用在 `source/` 資料夾， 然而 `ignore` 選項則會應用在所有的資料夾。
 
 設定 | 描述
 --- | ---
-`include` | Hexo 預設會忽略隱藏檔與隱藏資料夾，但列在這個欄位中的檔案，Hexo 仍然會去處理
+`include` | Hexo 預設會忽略隱藏檔案與隱藏資料夾，但列在這個欄位中的檔案，Hexo 仍然會去處理
 `exclude` | 列在這裡的檔案將會被 Hexo 忽略
-`ignore` | Ignore files/folders
+`ignore` | 忽略檔案以及資料夾
 
 範例:
 
@@ -149,11 +149,11 @@ exclude:
   # 在这里配置一个 - "_posts/hello-world.md" 是没有用的。
 
 ignore:
-  # Ignore any folder named 'foo'.
+  # 忽略任何名稱為 'foo' 的資料夾。
   - "**/foo"
-  # Ignore 'foo' folder in 'themes/' only.
+  # 只忽略 'themes/' 中的 'foo' 資料夾。
   - "**/themes/*/foo"
-  # Same as above, but applies to every subfolders of 'themes/'.
+  # 與上一個相同，但應用至每個 'themes/' 的子資料夾。
   - "**/themes/**/foo"
 ```
 
@@ -179,15 +179,15 @@ $ hexo server --config custom.yml,custom2.json
 
 以前述的多個配置檔範例來說明，若 `custom.yml` 中有 `foo: bar`，且 `custom2.json` 中有 `"foo": "dinosaur"`，最終在 `_multiconfig.yml` 裡的將會是 `foo: dinosaur`。
 
-### Alternate Theme Config
+### 備用的主題設定
 
-Hexo themes are independent projects, with separate `_config.yml` files.
+Hexo 主題是獨立的專案，具有個別的 `_config.yml` 檔案。
 
-Instead of forking a theme, and maintaining a custom branch with your settings, you can configure it from somewhere else.
+除了複製一個主題並維護一個由您設定的自創分支，您也在任何地方為它進行設定。
 
-**`theme_config` in site's primary configuration file**
+**頁面中的主要設定文件的 `theme_config`**
 
-> Supported since Hexo 2.8.2
+> 從 Hexo 2.8.2 後開始支援
 
 ```yml
 # _config.yml
@@ -206,7 +206,7 @@ logo: "a-cool-image.png"
     baz: 'b'
 ```
 
-Resulting in theme configuration:
+在主題設定中的結果：
 
 ```json
 {
@@ -219,11 +219,11 @@ Resulting in theme configuration:
 }
 ```
 
-**dedicated `_config.[theme].yml` file**
+**專用的 `_config.[theme].yml` 檔案**
 
-> Supported since Hexo 5.0.0
+> 從 Hexo 5.0.0 後開始支援
 
-The file should be placed in your site folder, both `yml` and `json` are supported. `theme` inside `_config.yml` must be configured for Hexo to read `_config.[theme].yml`
+檔案應該要被放在 site 資料夾中，`yml` 和 `json` 兩種格式都支援。在 `_config.yml` 中的 `theme` 必須進行設定，讓 Hexo 可以讀取 `_config.[theme].yml`
 
 ```yml
 # _config.yml
@@ -245,7 +245,7 @@ logo: "a-cool-image.png"
     baz: 'b'
 ```
 
-Resulting in theme configuration:
+在主題設定中的結果：
 
 ```json
 {
@@ -259,5 +259,5 @@ Resulting in theme configuration:
 ```
 
 {% note %}
-We strongly recommends you to store your theme configuration in one place. But in case you have to store your theme configuration separately, those information is quite important: The `theme_config` inside site's primary configuration file has the highest priority during merging, then the dedicated theme configuration file, while the `_config.yml` file under the theme directory has the lowest priority.
+我們強烈建議您將主題設定只存放在一個地方。但如果你有將主題設定存放在不同地方，下列的資訊是有些重要的：在頁面主要設定檔案中的 `theme_config` 在合併的時候具有最高優先權，而在專用的主題設定檔案中，主題資料夾中的 `_config.yml` 檔案則是最低優先權。
 {% endnote %}
