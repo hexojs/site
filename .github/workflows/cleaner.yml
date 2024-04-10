@@ -4,7 +4,9 @@ on:
   schedule:
     - cron: '0 0 * * 0'
   workflow_dispatch:
-
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: true
 jobs:
   cleanup:
     runs-on: ubuntu-latest
