@@ -1,7 +1,7 @@
 description: >-
   A pandoc-flavored-markdown renderer for Hexo. Also supports rendering textile,
   reStructedText, etc.
-link: https://github.com/wzpan/hexo-renderer-pandoc
+link: https://github.com/hexojs/hexo-renderer-pandoc
 tags:
   - renderer
   - pandoc
