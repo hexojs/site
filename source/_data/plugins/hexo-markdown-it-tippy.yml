@@ -1,7 +1,7 @@
 description: >-
   A hexo plugin to add tooltips to your blog posts using tippy. Supporting rich
   text. This is the markdown-it edition.
-link: https://github.com/RichardYan314/hexo-markdown-it-tippy
+link: https://github.com/Ritsuka314/hexo-markdown-it-tippy
 tags:
   - tooltip
   - hint

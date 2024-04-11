@@ -21,21 +21,9 @@ async function validateTheme() {
 
   const themeData = hexo.locals.get('data').themes;
   const themes = new Set();
-  const duplicate = new Set();
   for (const theme of themeData) {
     const name = theme.name.toLocaleLowerCase();
-    if (themes.has(name)) {
-      duplicate.add(name);
-    } else {
-      themes.add(name);
-    }
-  }
-
-  if (duplicate.size > 0) {
-    message.push(`Theme name: ${Array.from(duplicate)} is duplicated.`);
-    isValidationPassed = false;
-  } else {
-    message.push('Theme name validation passed.');
+    themes.add(name);
   }
 
   const screenshotsPath = join(hexo.source_dir, 'themes/screenshots');

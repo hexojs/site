@@ -42,15 +42,16 @@ Application data. The [EJS](https://ejs.co/), [Stylus](http://learnboost.github.
     "version": ""
   },
   "dependencies": {
-    "hexo": "^3.8.0",
-    "hexo-generator-archive": "^0.1.5",
-    "hexo-generator-category": "^0.1.3",
-    "hexo-generator-index": "^0.2.1",
-    "hexo-generator-tag": "^0.2.0",
-    "hexo-renderer-ejs": "^0.3.1",
-    "hexo-renderer-stylus": "^0.3.3",
-    "hexo-renderer-marked": "^0.3.2",
-    "hexo-server": "^0.3.3"
+    "hexo": "^7.0.0",
+    "hexo-generator-archive": "^2.0.0",
+    "hexo-generator-category": "^2.0.0",
+    "hexo-generator-index": "^3.0.0",
+    "hexo-generator-tag": "^2.0.0",
+    "hexo-renderer-ejs": "^2.0.0",
+    "hexo-renderer-stylus": "^3.0.0",
+    "hexo-renderer-marked": "^6.0.0",
+    "hexo-server": "^3.0.0",
+    "hexo-theme-landscape": "^1.0.0"
   }
 }
 ```

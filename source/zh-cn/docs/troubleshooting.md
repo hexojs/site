@@ -122,18 +122,18 @@ $ npm install hexo --no-optional
 
 参考 [#1326](https://github.com/hexojs/hexo/issues/1326#issuecomment-113871796)
 
-## 在 Jade 或 Swig 遍历资料
+## 在 Jade 或 Swig 遍历数据
 
-Hexo 使用 [Warehouse] 存储资料，它不是一般数组所以必须先进行类型转型才能遍历。
+Hexo 使用 [Warehouse] 存储数据，它不是一般数组所以必须先进行类型转型才能遍历。
 
 ```
 {% for post in site.posts.toArray() %}
 {% endfor %}
 ```
 
-## 资料没有更新
+## 数据没有更新
 
-有时资料可能没有被更新，或是生成的文件与修改前的相同，您可以尝试清除缓存并再执行一次。
+有时数据可能没有被更新，或是生成的文件与修改前的相同，您可以尝试清除缓存并再执行一次。
 
 ``` bash
 $ hexo clean

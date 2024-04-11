@@ -5,7 +5,7 @@ title: 路由
 
 ## 获取路径
 
-`get` 方法会传回一个 [Stream]，例如把该路径的资料存储到某个指定位置。
+`get` 方法会传回一个 [Stream]，例如把该路径的数据存储到某个指定位置。
 
 ``` js
 var data = hexo.route.get('index.html');

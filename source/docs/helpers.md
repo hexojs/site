@@ -11,7 +11,7 @@ You could easily [write your own custom helper](https://hexo.io/api/helper.html)
 
 ### url_for
 
-Returns a url with the root path prefixed. Output is encoded automatically.
+Returns a URL with the root path prefixed. Output is encoded automatically.
 
 ``` js
 <%- url_for(path, [option]) %>
@@ -70,7 +70,7 @@ Returns the relative URL from `from` to `to`.
 
 ### full_url_for
 
-Returns a url with the `config.url` prefixed. Output is encoded automatically.
+Returns a URL with the `config.url` prefixed. Output is encoded automatically.
 
 ``` js
 <%- full_url_for(path) %>
@@ -90,9 +90,9 @@ url: https://example.com/blog # example
 
 ### gravatar
 
-Returns the gravatar image url from an email.
+Returns the gravatar image URL from an email.
 
-If you didn't specify the [options] parameter, the default options will apply. Otherwise, you can set it to a number which will then be passed on as the size parameter to Gravatar. Finally, if you set it to an object, it will be converted into a query string of parameters for Gravatar.
+If you don't specify the [options] parameter, the default options will apply. Otherwise, you can set it to a number which will then be passed on as the size parameter to Gravatar. Finally, if you set it to an object, it will be converted into a query string of parameters for Gravatar.
 
 ``` js
 <%- gravatar(email, [options]) %>
@@ -590,6 +590,42 @@ Inserts formatted date and time. `date` can be unix time, ISO string, date objec
 // Tuesday, January 1st 2013, 12:00:00 am
 ```
 
+### relative_date
+
+Inserts relative time from now. `date` can be unix time, ISO string, date object, or [Moment.js] object.
+
+```js
+<%- relative_date(date) %>
+```
+
+**Examples:**
+
+``` js
+<%- relative_date(new Date()) %>
+// a few seconds ago
+
+<%- relative_date(new Date(1000000000000)) %>
+// 22 years ago
+```
+
+### time_tag
+
+Inserts time tag. `date` can be unix time, ISO string, date object, or [Moment.js] object. `format` is `date_format` setting by default.
+
+```js
+<%- time_tag(date, [format]) %>
+```
+
+**Examples:**
+
+``` js
+<%- time_tag(new Date()) %>
+// <time datetime="2024-01-22T06:35:31.108Z">2024-01-22</time>
+
+<%- time_tag(new Date(), 'MMM-D-YYYY') %>
+// <time datetime="2024-01-22T06:35:31.108Z">Jan-22-2024</time>
+```
+
 ### moment
 
 [Moment.js] library.
@@ -884,18 +920,19 @@ Inserts [Open Graph] data.
 Option | Description | Default
 --- | --- | ---
 `title` | Page title (`og:title`) | `page.title`
-`type` | Page type (`og:type`) | blog
+`type` | Page type (`og:type`) | article(post page)<br>website(non-post page)
 `url` | Page URL (`og:url`) | `url`
 `image` | Page images (`og:image`) | All images in the content
 `author` | Article author (`og:article:author`) | `config.author`
 `date` | Article published time (`og:article:published_time`) | Page published time
 `updated` | Article modified time (`og:article:modified_time`) | Page modified time
-`language` | Article language (`og:locale`) | `page.lang || page.language || config.language`
+`language` | Article language (`og:locale`) | `page.lang \|\| page.language \|\| config.language`
 `site_name` | Site name (`og:site_name`) | `config.title`
 `description` | Page description (`og:description`) | Page excerpt or first 200 characters of the content
 `twitter_card` | Twitter card type (`twitter:card`) | summary
 `twitter_id` | Twitter ID (`twitter:creator`) |
 `twitter_site` | Twitter Site (`twitter:site`) |
+`twitter_image` | Twitter Image (`twitter:image`) |
 `google_plus` | Google+ profile link |
 `fb_admins` | Facebook admin ID |
 `fb_app_id` | Facebook App ID |
@@ -929,12 +966,12 @@ Option | Description | Default
 
 #### data-toc-unnumbered (+6.1.0)
 
-Headings with attribute `data-toc-unnumbered="true"` will be marked as unnumbered (list number will not be display).
+Headings with attribute `data-toc-unnumbered="true"` will be marked as unnumbered (list number will not be displayed).
 
 {% note warn "Warning!" %}
 For using `data-toc-unnumbered="true"`, the renderer must have the option to add CSS classes.
 
-Please see below PRs.
+Please see the below PRs.
 
 - https://github.com/hexojs/hexo/pull/4871
 - https://github.com/hexojs/hexo-util/pull/269

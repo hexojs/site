@@ -496,6 +496,42 @@ Escapes HTML entities in a string.
 // Tuesday, January 1st 2013, 12:00:00 am
 ```
 
+### relative_date
+
+Inserts relative time from now. `date` can be unix time, ISO string, date object, or [Moment.js] object.
+
+```js
+<%- relative_date(date) %>
+```
+
+**Examples:**
+
+``` js
+<%- relative_date(new Date()) %>
+// a few seconds ago
+
+<%- relative_date(new Date(1000000000000)) %>
+// 22 years ago
+```
+
+### time_tag
+
+Inserts time tag. `date` can be unix time, ISO string, date object, or [Moment.js] object. `format` is `date_format` setting by default.
+
+```js
+<%- time_tag(date, [format]) %>
+```
+
+**Examples:**
+
+``` js
+<%- time_tag(new Date()) %>
+// <time datetime="2024-01-22T06:35:31.108Z">2024-01-22</time>
+
+<%- time_tag(new Date(), 'MMM-D-YYYY') %>
+// <time datetime="2024-01-22T06:35:31.108Z">Jan-22-2024</time>
+```
+
 ### moment
 
 Библиотека [Moment.js](https://momentjs.com/).
@@ -752,13 +788,13 @@ Escapes HTML entities in a string.
 Опция | Описание | Значение по умолчанию
 --- | --- | ---
 `title` | Заголовок страницы (`og:title`) | `page.title`
-`type` | Тип страницы (`og:type`) | blog
+`type` | Тип страницы (`og:type`) | article(post page)<br>website(non-post page)
 `url` | URL-адрес страницы (`og:url`) | `url`
 `image` | Обложка страницы (`og:image`) | Все изображения в материалах
 `author` | Автор статьи (`og:article:author`) | `config.author`
 `date` | Время публикации статьи (`og:article:published_time`) | Время публикации страницы
 `updated` | Время изменения статьи (`og:article:modified_time`) | Время изменения страницы
-`language` | Язык статьи (`og:locale`) | `page.lang || page.language || config.language`
+`language` | Язык статьи (`og:locale`) | `page.lang \|\| page.language \|\| config.language`
 `site_name` | Имя сайта (`og:site_name`) | `config.title`
 `description` | Описание страницы (`og:description`) | Отрывок страницы или первые 200 символов содержимого
 `twitter_card` | Карточка Twitter (`twitter:card`) | Краткое изложение

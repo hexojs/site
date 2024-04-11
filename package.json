@@ -3,16 +3,16 @@
   "version": "0.0.0",
   "private": true,
   "hexo": {
-    "version": "7.0.0-rc1"
+    "version": "7.0.0"
   },
   "scripts": {
     "build": "hexo generate",
     "eslint": "eslint .",
-    "prepare": "husky install"
+    "prepare": "husky"
   },
   "dependencies": {
     "cheerio": "^0.22.0",
-    "hexo": "7.0.0-rc1",
+    "hexo": "^7.0.0",
     "hexo-clean-css": "^2.0.0",
     "hexo-filter-nofollow": "^2.0.2",
     "hexo-fs": "^4.1.1",
@@ -25,14 +25,14 @@
     "hexo-tag-embed": "^1.0.0-rc.1",
     "hexo-uglify": "^2.0.0",
     "lunr": "2.3.9",
-    "sharp": "^0.32.0"
+    "sharp": "^0.33.1"
   },
   "devDependencies": {
     "eslint": "^8.0.1",
     "eslint-config-hexo": "^5.0.0",
-    "husky": "^8.0.1",
+    "husky": "^9.0.6",
     "imagemin-lint-staged": "^0.5.1",
-    "lint-staged": "^14.0.1"
+    "lint-staged": "^15.2.0"
   },
   "lint-staged": {
     "*.{png,jpeg,jpg,gif,svg}": [

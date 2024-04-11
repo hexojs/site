@@ -87,8 +87,8 @@ $ hexo server
 
 ### 翻译
 
-1. 在 `source` 资料夹中建立一个新的语言资料夹（全小写）。
-2. 把 `source` 资料夹中相关的文件（Markdown 和模板文件）复制到新的语言资料夹中。
+1. 在 `source` 文件夹中建立一个新的语言文件夹（全小写）。
+2. 把 `source` 文件夹中相关的文件（Markdown 和模板文件）复制到新的语言文件夹中。
 3. 在 `source/_data/language.yml` 中新增语言。
 4. 将 `en.yml` 复制到 `themes/navy/languages`中并命名为语言名称（全小写）。
 

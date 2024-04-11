@@ -196,7 +196,7 @@ hexo.extend.filter.register('post_permalink', function(data){
 
 ### server_middleware
 
-新增服务器的 Middleware。`app` 是一个 [Connect] 实例。
+向服务器添加中间件（Middleware）。`app` 是一个 [Connect] 实例。
 
 举例来说，在响应头中新增 `X-Powered-By: Hexo`。
 
