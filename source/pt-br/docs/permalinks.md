@@ -6,7 +6,7 @@ Você pode especificar os links permanentes (permalinks) para o seu site em `_co
 
 ### Variáveis
 
-Além das seguintes variáveis, você pode usar quaisquer atributos no permalink.
+Besides the following variables, you can use any attributes in the permalink except `:path` and `:permalink`.
 
 Variável | Descrição
 --- | ---
