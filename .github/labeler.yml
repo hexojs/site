@@ -1,0 +1,64 @@
+Plugins:
+  - changed-files:
+      - any-glob-to-any-file:
+          - "source/_data/plugins/**"
+Themes:
+  - changed-files:
+      - any-glob-to-any-file:
+          - "source/_data/themes/**"
+          - "source/themes/screenshots/**"
+Docs:
+  - changed-files:
+      - any-glob-to-any-file:
+          - "source/docs/**"
+          - "source/*/docs/**"
+API:
+  - changed-files:
+      - any-glob-to-any-file:
+          - "source/api/**"
+          - "source/*/api/**"
+News:
+  - changed-files:
+      - any-glob-to-any-file:
+          - "source/_posts/**"
+en:
+  - changed-files:
+      - any-glob-to-any-file:
+          - "source/docs/**"
+          - "source/api/**"
+          - "source/index.md"
+ja:
+  - changed-files:
+      - any-glob-to-any-file:
+          - "source/ja/**"
+ko:
+  - changed-files:
+      - any-glob-to-any-file:
+          - "source/ko/**"
+pt-br:
+  - changed-files:
+      - any-glob-to-any-file:
+          - "source/pt-br/**"
+ru:
+  - changed-files:
+      - any-glob-to-any-file:
+          - "source/ru/**"
+th:
+  - changed-files:
+      - any-glob-to-any-file:
+          - "source/th/**"
+zh:
+  - changed-files:
+      - any-glob-to-any-file:
+          - "source/zh-cn/**"
+          - "source/zh-tw/**"
+infra:
+  - changed-files:
+      - any-glob-to-any-file:
+          - ".github/**"
+          - ".husky/**"
+          - "scaffolds/**"
+          - "themes/**"
+          - "scripts/**"
+          - "*"
+          - ".*"

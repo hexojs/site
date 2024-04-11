@@ -232,5 +232,5 @@ The source codes behind Hexo's syntax highlighting are available in:
 
 - [Highlight.js Utility Functions](https://github.com/hexojs/hexo-util/blob/master/lib/highlight.ts)
 - [PrismJS Utility Functions](https://github.com/hexojs/hexo-util/blob/master/lib/prism.ts)
-- [Tag Plugin - Code Block](https://github.com/hexojs/hexo/blob/master/lib/plugins/tag/code.js)
-- [Tag Plugin - Backtick Code Block](https://github.com/hexojs/hexo/blob/master/lib/plugins/filter/before_post_render/backtick_code_block.js)
+- [Tag Plugin - Code Block](https://github.com/hexojs/hexo/blob/master/lib/plugins/tag/code.ts)
+- [Tag Plugin - Backtick Code Block](https://github.com/hexojs/hexo/blob/master/lib/plugins/filter/before_post_render/backtick_code_block.ts)

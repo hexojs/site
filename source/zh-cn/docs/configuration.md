@@ -85,9 +85,10 @@ skip_render: "_posts/test-post.md"
 `external_link.exclude` | 需要排除的域名。主域名和子域名如 `www` 需分别配置 | `[]`
 `filename_case` | 把文件名称转换为 (1) 小写或 (2) 大写 | `0`
 `render_drafts` | 显示草稿 | `false`
-`post_asset_folder` | 启动 [Asset 文件夹](asset-folders.html) | `false`
+`post_asset_folder` | 启用 [资源文件夹](asset-folders.html) | `false`
 `relative_link` | 把链接改为与根目录的相对位址 | `false`
 `future` | 显示未来的文章 | `true`
+`syntax_highlighter` | 代码块的设置, 请参考 [代码高亮](/zh-cn/docs/syntax-highlight) 进行设置 | `highlight.js`
 `highlight` | 代码块的设置, 请参考 [Highlight.js](/zh-cn/docs/syntax-highlight#Highlight-js) 进行设置 |
 `prismjs` | 代码块的设置, 请参考 [PrismJS](/zh-cn/docs/syntax-highlight#PrismJS) 进行设置 |
 
@@ -120,7 +121,7 @@ Hexo 使用 [Moment.js](http://momentjs.com/) 来解析和显示时间。
 - `date`: 使用 `date` 作为 `updated` 的值。可被用于 Git 工作流之中，因为使用 Git 管理站点时，文件的最后修改日期常常会发生改变
 - `empty`: 直接删除 `updated`。使用这一选项可能会导致大部分主题和插件无法正常工作。
 
-`use_date_for_updated` 选项已经被废弃，将会在下个重大版本发布时去除。请改为使用 `updated_option: 'date'`。
+`use_date_for_updated` 选项已经在 v7.0.0+ 中被移除。请改为使用 `updated_option: 'date'`。
 {% endnote %}
 
 ## 分页
@@ -217,7 +218,7 @@ $ hexo generate --config custom.yml,custom2.json,custom3.yml
 
 当你指定了多个配置文件以后，Hexo 会按顺序将这部分配置文件合并成一个 `_multiconfig.yml`。如果遇到重复的配置，排在后面的文件的配置会覆盖排在前面的文件的配置。这个原则适用于任意数量、任意深度的 YAML 和 JSON 文件。
 
-例如，使用 `--options` 指定了两个自定义配置文件：
+例如，使用 `--config` 指定了两个自定义配置文件：
 
 ```
 $ hexo generate --config custom.yml,custom2.json

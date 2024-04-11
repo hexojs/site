@@ -90,14 +90,14 @@ $ hexo server
 1. Add a new language folder in `source` folder. (All lower case)
 2. Copy Markdown and template files in `source` folder to the new language folder.
 3. Add the new language to `source/_data/language.yml`.
-4. Copy `en.yml` in `themes/navy/languages` and rename to the language name (all lower case).
+4. Copy `en.yml` in `themes/navy/languages` and rename it to the language name (all lower case).
 
 ## Reporting Issues
 
 When you encounter some problems when using Hexo, you can find the solutions in [Troubleshooting](troubleshooting.html) or ask me on [GitHub](https://github.com/hexojs/hexo/issues) or [Google Group](https://groups.google.com/group/hexo). If you can't find the answer, please report it on GitHub.
 
 1. Represent the problem in [debug mode](commands.html#Debug_mode).
-2. Follow the steps from issue template to provide debug message and version when submitting a new issue at GitHub.
+2. Follow the steps from the issue template to provide a debug message and version when submitting a new issue at GitHub.
 
 [hexojs/hexo]: https://github.com/hexojs/hexo
 [hexojs/site]: https://github.com/hexojs/site

@@ -42,5 +42,5 @@ pages:
 ## 参考链接
 
 - [GitLab Pages 相关文档](https://docs.gitlab.com/ee/user/project/pages/index.html)
-- [GitLab CI 相关文档](https://docs.gitlab.com/ee/ci/README.html)
+- [GitLab CI 相关文档](https://docs.gitlab.com/ee/ci/yaml/)
 - [在百度上搜索 "Hexo GitLab"](https://www.baidu.com/s?wd=Hexo%20GitLab)

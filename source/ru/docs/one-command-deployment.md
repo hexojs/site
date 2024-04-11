@@ -114,6 +114,10 @@ deploy:
 
 ## OpenShift
 
+{% note warn %}
+`hexo-deployer-openshift` has been deprecated in 2022.
+{% endnote %}
+
 Установите [hexo-deployer-openshift].
 
 ``` bash
@@ -152,8 +156,7 @@ deploy:
   pass: <password>
   remote: [remote]
   port: [port]
-  ignore: [ignore]
-  connections: [connections]
+  clear: [true|false]
   verbose: [true|false]
 ```
 
@@ -164,8 +167,7 @@ deploy:
 `pass` | Пароль |
 `remote` | Корневой каталог на удалённом хосте | `/`
 `port` | Порт | 21
-`ignore` | Игнорировать файлы на удалённом хосте |
-`connections` | Количество подключений | 1
+`clear` | Remove all files and directories from the remote directory before upload | false
 `verbose` | Выводить подробные сообщения | false
 
 ## Vercel
@@ -219,6 +221,10 @@ $ hexo generate —deploy && bip deploy
 Через несколько мгновений ваш веб-сайт будет размещён.
 
 ## RSS3
+
+{% note warn %}
+`hexo-deployer-rss3` has been deprecated in 2023.
+{% endnote %}
 
 [RSS3] (https://rss3.io) - это открытый протокол, разработанный для контента и социальных сетей в эпоху Web 3.0.
 

@@ -164,7 +164,11 @@ content
 {% endpullquote %}
 ```
 
-## jsFiddle
+## jsFiddle (`v7.0.0` 中被移除)
+
+{% note warn %}
+如果你正在使用 `v7.0.0+`，请使用 [hexo-tag-embed](https://github.com/hexojs/hexo-tag-embed) 替代。
+{% endnote %}
 
 在文章中嵌入 jsFiddle。
 
@@ -172,7 +176,11 @@ content
 {% jsfiddle shorttag [tabs] [skin] [width] [height] %}
 ```
 
-## Gist
+## Gist (`v7.0.0` 中被移除)
+
+{% note warn %}
+如果你正在使用 `v7.0.0+`，请使用 [hexo-tag-embed](https://github.com/hexojs/hexo-tag-embed) 替代。
+{% endnote %}
 
 在文章中嵌入 Gist。
 
@@ -244,7 +252,11 @@ content
 {% include_code lang:javascript to:8 test.js %}
 ```
 
-## Youtube
+## Youtube (`v7.0.0` 中被移除)
+
+{% note warn %}
+如果你正在使用 `v7.0.0+`，请使用 [hexo-tag-embed](https://github.com/hexojs/hexo-tag-embed) 替代。
+{% endnote %}
 
 在文章中插入 Youtube 视频。
 
@@ -275,7 +287,11 @@ content
 {% youtube PL9hW1uS6HUfscJ9DHkOSoOX45MjXduUxo 'playlist' false %}
 ```
 
-## Vimeo
+## Vimeo (`v7.0.0` 中被移除)
+
+{% note warn %}
+如果你正在使用 `v7.0.0+`，请使用 [hexo-tag-embed](https://github.com/hexojs/hexo-tag-embed) 替代。
+{% endnote %}
 
 在文章中插入 Vimeo 视频。
 
@@ -374,6 +390,80 @@ _hexo-renderer-marked 3.1.0+ 可以（可选）自动解析图片的文章路径
 
 ``` html
 <img src="/2020/01/02/hello/foo.jpg" title="lorem ipsum" alt="dolor">
+```
+
+## URL
+
+### url_for (7.0.0+)
+
+返回一个带有根路径前缀的URL。输出将会自动编码。
+
+```
+{% url_for text path [relative] %}
+```
+
+**示例：**
+
+``` yml
+_config.yml
+root: /blog/ # example
+```
+
+``` 
+{% url_for blog index.html %}
+```
+
+``` html
+<a href="/blog/index.html">blog</a>
+```
+
+是否输出相对链接，默认遵循配置文件中 `relative_link` 的值
+例如， post/page 的路径值可能是 `/foo/bar/index.html`
+
+``` yml
+_config.yml
+relative_link: true
+```
+
+```
+{% url_for blog index.html %}
+```
+
+``` html
+<a href="../../index.html">blog</a>
+```
+
+即使配置文件中启用了 `relative_link`，你也可以使用 `relative` 参数禁用相对链接输出，反之亦然
+
+```
+{% url_for blog index.html false %}
+```
+
+``` html
+<a href="/index.html">blog</a>
+```
+
+### full_url_for (7.0.0+)
+
+返回一个以 `config.url` 为前缀的URL。输出将会自动编码。
+
+```
+{% full_url_for text path %}
+```
+
+**示例：**
+
+``` yml
+_config.yml
+url: https://example.com/blog # example
+```
+
+```
+{% full_url_for index /a/path %}
+```
+
+``` html
+<a href="https://example.com/blog/a/path">index</a>
 ```
 
 ## Raw

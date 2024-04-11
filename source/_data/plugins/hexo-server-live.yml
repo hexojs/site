@@ -1,0 +1,5 @@
+description: Live reload while source file changed for Hexo.
+link: https://github.com/KazariEX/hexo-server-live
+tags:
+  - server
+  - livereload
