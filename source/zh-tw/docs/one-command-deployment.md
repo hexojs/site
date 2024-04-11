@@ -17,7 +17,7 @@ deploy:
   type: git
 ```
 
-您可同時使用多個 deployer，Hexo 會依照順序執行每個 deployer。
+您可同時使用多個佈署器 (deployer)，Hexo 會依照順序執行每個佈署器。
 
 ``` yaml
 deploy:
@@ -28,6 +28,7 @@ deploy:
 ```
 
 Refer to the [Plugins](https://hexo.io/plugins/) list for more deployment plugins.
+更多佈署外掛，請參照[外掛](https://hexo.io/plugins/)清單。
 
 ## Git
 
@@ -47,19 +48,19 @@ deploy:
   message: [message]
 ```
 
-選項 | 描述 | 默認
+選項 | 描述 | 預設
 --- | --- | ---
 `repo` | 儲存庫（Repository）網址 |
-`branch` | 分支名稱。| `gh-pages` (GitHub)<br>`coding-pages` (Coding.net)<br>`master` (others)
-`message` | 自定提交訊息 | `Site updated: {% raw %}{{ now('YYYY-MM-DD HH:mm:ss') }}{% endraw %}`)
-`token` | Optional token value to authenticate with the repo. Prefix with `$` to read token from environment variable
+`branch` | 分支名稱。| `gh-pages` (GitHub)<br>`coding-pages` (Coding.net)<br>`master` (其他)
+`message` | 自訂提交訊息 | `Site updated: {% raw %}{{ now('YYYY-MM-DD HH:mm:ss') }}{% endraw %}`)
+`token` | 選填的 token 值用來儲存庫存取身份認證。以 `$` 作為前綴從環境變數中讀取 token
 
 3. 上傳你的網站。執行 `hexo clean && hexo deploy`。
 
-  - You will be prompted with username and password of the target repository, unless you authenticate with a token or ssh key.
-  - hexo-deployer-git does not store your username and password. Use [git-credential-cache](https://git-scm.com/docs/git-credential-cache) to store them temporarily.
+  - 你將會被提示提供目標儲存庫的使用者名稱及密碼，除非你用 token 或是 ssh 金鑰進行身份驗證。
+  - hexo-deployer-git 不會儲存你的使用者名稱及密碼。使用 [git-credential-cache](https://git-scm.com/docs/git-credential-cache) 來暫時儲存它們。
 
-4. 在Github/BitBucket/Gitlab前往妳的repo設定，並將你的主要分支從`master`設為`gh-pages`(或著任何你在_config.yml裡設定的名子)。現在你的網站就是你的帳號首頁。
+4. 在 Github / BitBucket / Gitlab 前往你的儲存庫設定，並將你的主要分支從 `master` 設為 `gh-pages`（或者任何你在 _config.yml 中設定的名字)。現在你的網站就是你的帳號首頁。
 
 ## Heroku
 
@@ -80,8 +81,8 @@ deploy:
 
 選項 | 描述
 --- | ---
-`repo` | Heroku 儲存庫（Repository）網址
-`message` | 自定提交訊息 (預設是 `Site updated: {% raw %}{{ now('YYYY-MM-DD HH:mm:ss') }}{% endraw %}`)
+`repo` | Heroku 儲存庫網址
+`message` | 自訂提交訊息 (預設是 `Site updated: {% raw %}{{ now('YYYY-MM-DD HH:mm:ss') }}{% endraw %}`)
 
 ## Rsync
 
@@ -118,7 +119,7 @@ deploy:
 ## OpenShift
 
 {% note warn %}
-`hexo-deployer-openshift` has been deprecated in 2022.
+`hexo-deployer-openshift` 在 2022 時已被棄用。
 {% endnote %}
 
 安裝 [hexo-deployer-openshift]。
@@ -138,8 +139,8 @@ deploy:
 
 選項 | 描述
 --- | ---
-`repo` | OpenShift 儲存庫（Repository）網址
-`message` | 自定提交訊息 (預設是 `Site updated: {% raw %}{{ now('YYYY-MM-DD HH:mm:ss') }}{% endraw %}`)
+`repo` | OpenShift 儲存庫網址
+`message` | 自訂提交訊息 (預設是 `Site updated: {% raw %}{{ now('YYYY-MM-DD HH:mm:ss') }}{% endraw %}`)
 
 ## FTPSync
 
@@ -170,14 +171,14 @@ deploy:
 `pass` | 密碼 |
 `remote` | 遠端主機的根目錄 | `/`
 `port` | 連接埠 | 21
-`clear` | Remove all files and directories from the remote directory before upload | false
+`clear` | 在上傳之前，移除遠端目錄中所有檔案及目錄 | false
 `verbose` | 顯示除錯訊息 | false
 
 ## Vercel
 
-[Vercel](https://vercel.com) is a cloud platform that enables developers to host Jamstack websites and web services that deploy instantly, scale automatically, and requires no supervision, all with zero configuration. They provide a global edge network, SSL encryption, asset compression, cache invalidation, and more.
+[Vercel](https://vercel.com) 是一個雲端平台讓開發者可以架設 Jamstack 網站以及網路服務，且可以快速佈署、自動調整大小 (auto scaling)，且不須監督、無須設定。他們提供全球邊緣網路、SSL 加密、資產壓縮、快取無效化等服務。
 
-Step 1: Add a build script to your `package.json` file:
+第一步：新增一個建構腳本至到你的 `package.json` 檔案：
 
 ```json
 {
@@ -187,21 +188,21 @@ Step 1: Add a build script to your `package.json` file:
 }
 ```
 
-Step 2: Deploy your Hexo Website to Vercel
+第二步：佈署你的 Hexo 網站至 Vercel
 
-To deploy your Hexo app with a [Vercel for Git Integration](https://vercel.com/docs/git-integrations), make sure it has been pushed to a Git repository.
+為了使用 [Vercel for Git Integration](https://vercel.com/docs/git-integrations) 佈署你的 Hexo 應用程式，請確認它已推送到 Git 儲存庫中。
 
-Import the project into Vercel using the [Import Flow](https://vercel.com/import/git). During the import, you will find all relevant options preconfigured for you; however, you can choose to change any of these options, a list of which can be found [here](https://vercel.com/docs/build-step#build-&-development-settings).
+使用 [Import Flow](https://vercel.com/import/git) 輸入專案到 Vercel 中。在輸入期間，你可以找到所有有關的選項已預先為你進行設定；然而，你可以選擇更改任何選項，你可以在[這裡](https://vercel.com/docs/build-step#build-&-development-settings)找到選項清單。
 
-After your project has been imported, all subsequent pushes to branches will generate [Preview Deployments](https://vercel.com/docs/platform/deployments#preview), and all changes made to the [Production Branch](https://vercel.com/docs/git-integrations#production-branch) (commonly "main") will result in a [Production Deployment](https://vercel.com/docs/platform/deployments#production).
+當你的專案完成輸入之後，所有往後分支中的推送皆會產生[預覽佈署](https://vercel.com/docs/platform/deployments#preview)，在[生產環境分支](https://vercel.com/docs/git-integrations#production-branch)所有的更動，都會呈現結果在[生產環境佈署](https://vercel.com/docs/platform/deployments#production)。
 
-Alternatively, you can click the deploy button below to create a new project:
+或者，你可以點擊下方的佈署按鈕來建立一個新專案：
 
 [![Deploy Vercel](https://vercel.com/button)](https://vercel.com/new/hexo)
 
 ## Bip
 
-[Bip](https://bip.sh) is a commercial hosting service which provides zero downtime deployment, a global CDN, SSL, unlimited bandwidth and more for static websites. Plans are available on a pay as you go, per domain basis.
+[Bip](https://bip.sh) 是一個商業架設服務並提供不斷線佈署，專為靜態網頁提供全球 CDN、SSL、無限頻寬等服務。提供實支實付 (pay as you go) 的方案，以一個網域為單位。
 
 Getting started is quick and easy, as Bip provides out the box support for Hexo. This guide assumes you already have [a Bip domain and Bip CLI installed](https://bip.sh/getstarted).
 

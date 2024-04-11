@@ -56,11 +56,11 @@ $ git push origin new_feature
 $ npm test
 ```
 
-## Updating official-plugins
+## 更新官方外掛 (official-plugins)
 
-Also, we welcome PR or issue to [official-plugins](https://github.com/hexojs). 🤗
+此外，我們歡迎你發 PR 或是 Issue 至[official-plugins](https://github.com/hexojs)。 🤗
 
-## 更新文件
+## 更新文件。
 
 Hexo 文件開放原始碼，您可以在 [hexojs/site] 找到原始碼。
 

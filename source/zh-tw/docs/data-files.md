@@ -19,7 +19,7 @@ Archives: /archives/
 <% } %>
 ```
 
-输出结果如下:
+輸出结果如下:
 
 ```
 <a href="/"> Home </a>
