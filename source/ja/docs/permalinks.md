@@ -5,7 +5,7 @@ title: パーマリンク
 
 ### 変数
 
-以下の変数の他に、パーマリンク内で任意の属性を使用することができます。
+Besides the following variables, you can use any attributes in the permalink except `:path` and `:permalink`.
 
 変数 | 説明
 --- | ---
