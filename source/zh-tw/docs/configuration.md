@@ -137,7 +137,7 @@ include:
 exclude:
   # 不包括 'source/js/test.js'
   - "js/test.js"
-  # 不包括 'source/js/' 中的檔案、但包子目錄下的所有目录和檔案
+  # 不包括 'source/js/' 中的檔案、但包含子目錄下的所有目錄和檔案
   - "js/*"
   # 不包括 'source/js/' 中的檔案和子目錄下的任何檔案
   - "js/**/*"
@@ -159,7 +159,7 @@ ignore:
 
 列表中的每一項都必須用單引號或雙引號包裹起來。
 
-`include` 和 `exclude` 並不適用於 `themes/` 目錄下的檔案。如果需要忽略 `themes/` 目錄下的部分檔案資料夾，可以使用 `ignore` 或在檔案名之前添加下劃線 `_`。
+`include` 和 `exclude` 並不適用於 `themes/` 目錄下的檔案。如果需要忽略 `themes/` 目錄下的部分檔案或資料夾，可以使用 `ignore` 或在檔案名之前添加下劃線 `_`。
 
 ### 使用替代配置檔
 

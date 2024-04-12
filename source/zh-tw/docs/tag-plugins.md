@@ -362,7 +362,6 @@ _hexo-renderer-marked 3.1.0+ 可以（可選的）自動解析文章內的圖片
 
 ### url_for (7.0.0+)
 
-Returns a url with the root path prefixed. Output is encoded automatically.
 回傳一個具有前綴根路徑 URL。輸出將會自動編碼。
 
 ```
@@ -412,7 +411,6 @@ relative_link: true
 
 ### full_url_for (7.0.0+)
 
-Returns a url with the `config.url` prefixed. Output is encoded automatically.
 回傳一個 `config.url` 前綴的 URL。輸出將會自動編碼。
 
 ```
