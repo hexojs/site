@@ -1,0 +1,7 @@
+description: Transfer wiki links (based on the title) in Markdown files to permalink. 将基于标题的双向链接转换为 Hexo 设定的永久链接。
+link: https://github.com/uuanqin/hexo-filter-titlebased-link
+tags:
+  - link
+  - obsidian
+  - wiki
+  - title-based
