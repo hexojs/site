@@ -102,9 +102,9 @@ async function queryRepos(reposList, batchSize = 100) {
 }
 
 async function validate(type) {
-  const themes = load(type);
+  const list = load(type);
   const repos = [];
-  themes.forEach(({ file, content }) => {
+  list.forEach(({ file, content }) => {
     const { link } = content;
     if (!link.startsWith('https://github.com/')) {
       console.log('Skip', link);
@@ -118,7 +118,7 @@ async function validate(type) {
     }
   });
   const result = await queryRepos(repos);
-  themes.forEach(({ file, content }) => {
+  list.forEach(({ file, content }) => {
     const { link } = content;
     if (!link.startsWith('https://github.com/')) {
       console.log('Skip', link);
