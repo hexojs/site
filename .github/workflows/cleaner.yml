@@ -1,0 +1,63 @@
+name: Cleaner
+
+on:
+  schedule:
+    - cron: '0 0 * * 0'
+  workflow_dispatch:
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: true
+permissions:
+  contents: write
+  pull-requests: write
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          cache: "npm"
+          cache-dependency-path: "package.json"
+      - name: Install Dependencies
+        run: npm install
+      - name: Cleanup
+        run: node .github/workflows/cleaner.js
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Config
+        run: |
+          git config --global user.name 'Hexo'
+          git config --global user.email 'hexojs@users.noreply.github.com'
+      - name: Commit
+        run: |
+          git checkout -b cleanup
+          git add .
+          git commit -m 'chore: clean up themes & plugins'
+      - name: Push
+        run: |
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
+          git push origin cleanup -f
+      - name: Check for existing PR
+        id: check_pr
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const owner = context.repo.owner;
+            const headBranch = `${owner}:cleanup`;
+            const { data: pullRequests } = await github.rest.pulls.list({
+              owner: owner,
+              repo: context.repo.repo,
+              state: 'open',
+              head: headBranch,
+              base: 'master'
+            });
+            return pullRequests.length > 0;
+          result-encoding: string
+      - name: Open PR
+        if: steps.check_pr.outputs.result == 'false'
+        run: |
+          gh pr create -B master -H cleanup --title 'chore: clean up themes & plugins' --body 'Created by Github Actions'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
