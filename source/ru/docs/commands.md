@@ -13,7 +13,7 @@ $ hexo init [folder]
 Эта команда представляет собой ярлык, который выполняет следующие действия:
 
 1. Создаёт слон Git репозитория [hexo-starter](https://github.com/hexojs/hexo-starter) включая [hexo-theme-landscape](https://github.com/hexojs/hexo-theme-landscape) в текущий каталог или,если указана, в целевую папку.
-2. Установите зависимости с помощью менеджера пакетов: [Yarn 1](https://classic.yarnpkg.com/lang/en/), [pnpm](https://pnpm.js.org) или [npm](https://docs.npmjs.com/cli/install), в зависимости от того, что установлено; если установлено более одного, приоритет указан в списке. npm поставляется в комплекте с [Node.js](/docs/#Install-Node-js) by default.
+2. Установите зависимости с помощью менеджера пакетов: [Yarn 1](https://classic.yarnpkg.com/lang/en/), [pnpm](https://pnpm.io/ru/) или [npm](https://docs.npmjs.com/cli/install), в зависимости от того, что установлено; если установлено более одного, приоритет указан в списке. npm поставляется в комплекте с [Node.js](/docs/#Install-Node-js) by default.
 
 ## new
 
@@ -130,7 +130,7 @@ $ hexo --safe
 $ hexo --debug
 ```
 
-Журнал подробных сообщений в терминале и `debug.log`. Применяется при возникновении проблем с Hexo. Если выдаются ошибки, пожалуйста, задайте вопрос на [GitHub](https://github.com/hexojs/hexo/issues/new).
+Журнал подробных сообщений в терминале и `debug.log`. Применяется при возникновении проблем с Hexo. Если выдаются ошибки, пожалуйста, задайте вопрос на [GitHub](https://github.com/hexojs/hexo/issues/new?assignees=&labels=&projects=&template=bug_report.yml).
 
 ### Тихий режим
 

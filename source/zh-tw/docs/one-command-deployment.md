@@ -117,6 +117,10 @@ deploy:
 
 ## OpenShift
 
+{% note warn %}
+`hexo-deployer-openshift` has been deprecated in 2022.
+{% endnote %}
+
 安裝 [hexo-deployer-openshift]。
 
 ``` bash
@@ -155,8 +159,7 @@ deploy:
   pass: <password>
   remote: [remote]
   port: [port]
-  ignore: [ignore]
-  connections: [connections]
+  clear: [true|false]
   verbose: [true|false]
 ```
 
@@ -167,8 +170,7 @@ deploy:
 `pass` | 密碼 |
 `remote` | 遠端主機的根目錄 | `/`
 `port` | 連接埠 | 21
-`ignore` | 忽略本機或遠端的檔案 |
-`connections` | 連接數 | 1
+`clear` | Remove all files and directories from the remote directory before upload | false
 `verbose` | 顯示除錯訊息 | false
 
 ## Vercel
@@ -220,6 +222,10 @@ $ hexo generate —deploy && bip deploy
 After a few moments, your website will be deployed.
 
 ## RSS3
+
+{% note warn %}
+`hexo-deployer-rss3` has been deprecated in 2023.
+{% endnote %}
 
 [RSS3](https://rss3.io) 是一個為 Web 3.0 時代的內容和社交網路設計的開放協議。
 

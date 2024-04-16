@@ -21,13 +21,14 @@ date: 2013/7/13 20:46:25
 `title` | 标题 | 文章的文件名
 `date` | 建立日期 | 文件建立日期
 `updated` | 更新日期 | 文件更新日期
-`comments` | 开启文章的评论功能 | true
+`comments` | 开启文章的评论功能 | `true`
 `tags` | 标签（不适用于分页） |
 `categories` | 分类（不适用于分页）|
 `permalink` | 覆盖文章的永久链接，永久链接应该以 `/` 或 `.html` 结尾 | `null`
 `excerpt` | 纯文本的页面摘要。使用 [该插件](/zh-cn/docs/tag-plugins#文章摘要和截断) 来格式化文本 |
 `disableNunjucks` | 启用时禁用 Nunjucks 标签 `{{ }}`/`{% %}` 和 [标签插件](/zh-cn/docs/tag-plugins) 的渲染功能 | false
 `lang` | 设置语言以覆盖 [自动检测](/zh-cn/docs/internationalization#路径) | 继承自 `_config.yml`
+`published` | 文章是否发布 | 对于 `_posts` 下的文章为 `true`，对于 `_draft` 下的文章为 `false`
 
 ## 布局
 

@@ -1,0 +1,6 @@
+description: Encrypt the article body plugin
+link: https://github.com/YaoXuanZhi/hexo-encrypted-package-html
+tags:
+  - encrypt
+  - package
+  - base64_with_xor

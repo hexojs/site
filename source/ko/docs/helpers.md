@@ -186,7 +186,7 @@ Feed 링크를 삽입합니다.
 옵션 | 설명 | 기본 값
 --- | --- | ---
 `title` | Feed 제목 | `config.title`
-`type` | Feed 형식 | atom
+`type` | Feed 형식 | 
 
 **Examples:**
 
@@ -754,13 +754,13 @@ Inserts [generator tag](https://developer.mozilla.org/en-US/docs/Web/HTML/Elemen
 옵션 | 설명 | 기본 값
 --- | --- | ---
 `title` | 페이지 제목 (`og:title`) | `page.title`
-`type` | 페이지 형태 (`og:type`) | blog
+`type` | 페이지 형태 (`og:type`) | article(post page)<br>website(non-post page)
 `url` | 페이지 URL (`og:url`) | `url`
 `image` | 페이지 커버 (`og:image`) | All images in the content
 `author` | Article author (`og:article:author`) | `config.author`
 `date` | Article published time (`og:article:published_time`) | Page published time
 `updated` | Article modified time (`og:article:modified_time`) | Page modified time
-`language` | Article language (`og:locale`) | `page.lang || page.language || config.language`
+`language` | Article language (`og:locale`) | `page.lang \|\| page.language \|\| config.language`
 `site_name` | 사이트 이름 (`og:site_name`) | `config.title`
 `description` | 페이지 설명 (`og:description`) | Page excerpt or first 200 characters of the content
 `twitter_card` | Twitter card type (`twitter:card`) | summary

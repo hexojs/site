@@ -2,7 +2,7 @@
 title: 貢獻
 ---
 
-We welcome you to join the development of Hexo. 🤗
+我們歡迎你加入 Hexo 的開發。🤗
 
 ## 開發
 

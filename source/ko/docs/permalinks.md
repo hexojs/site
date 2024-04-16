@@ -5,7 +5,7 @@ title: Permalinks
 
 ### 변수
 
-당신은 아래의 변수들은 물론 permalink의 모든 속성을 다 사용할 수 있습니다.
+Besides the following variables, you can use any attributes in the permalink except `:path` and `:permalink`.
 
 변수 | 설명
 --- | ---

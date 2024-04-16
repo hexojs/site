@@ -118,7 +118,7 @@ url: https://example.com/blog # example
 
 ### css
 
-载入 CSS 文件。`path` 可以是数组或字符串，如果 `path` 开头不是 `/` 或任何协议，则会自动加上根路径；如果后面没有加上 `.css` 扩展名的话，也会自动加上。对于自定义属性请使用对象类型。
+加载 CSS 文件。`path` 可以是数组或字符串，如果 `path` 开头不是 `/` 或任何协议，则会自动加上根路径；如果后面没有加上 `.css` 扩展名的话，也会自动加上。对于自定义属性请使用对象类型。
 
 ``` js
 <%- css(path, ...) %>
@@ -144,7 +144,7 @@ url: https://example.com/blog # example
 
 ### js
 
-载入 JavaScript 文件。`path` 可以是数组或字符串，如果 `path` 开头不是 `/` 或任何协议，则会自动加上根路径；如果后面没有加上 `.js` 扩展名的话，也会自动加上。对于自定义属性请使用对象类型。
+加载 JavaScript 文件。`path` 可以是数组或字符串，如果 `path` 开头不是 `/` 或任何协议，则会自动加上根路径；如果后面没有加上 `.js` 扩展名的话，也会自动加上。对于自定义属性请使用对象类型。
 
 ``` js
 <%- js(path, ...) %>
@@ -257,7 +257,7 @@ url: https://example.com/blog # example
 参数 | 描述 | 默认值
 --- | --- | ---
 `title` | Feed 标题 | `config.title`
-`type` | Feed 类型 | atom
+`type` | Feed 类型 | 
 
 **示例：**
 
@@ -486,7 +486,7 @@ url: https://example.com/blog # example
 
 ### partial
 
-载入其他模板文件，您可在 `locals` 设定区域变量。
+加载其他模板文件，您可在 `locals` 设定区域变量。
 
 ``` js
 <%- partial(layout, [locals], [options]) %>
@@ -582,6 +582,42 @@ url: https://example.com/blog # example
 
 <%- full_date(new Date(), 'dddd, MMMM Do YYYY, h:mm:ss a') %>
 // Tuesday, January 1st 2013, 12:00:00 am
+```
+
+### relative_date
+
+插入相对当前的时间。`date` 可以是 UNIX 时间、ISO 字符串、Date 对象或 [Moment.js] 对象。
+
+```js
+<%- relative_date(date) %>
+```
+
+**示例：**
+
+``` js
+<%- relative_date(new Date()) %>
+// a few seconds ago
+
+<%- relative_date(new Date(1000000000000)) %>
+// 22 years ago
+```
+
+### time_tag
+
+插入时间标签。`date` 可以是 UNIX 时间、ISO 字符串、Date 对象或 [Moment.js] 对象。`format` 默认为 `date_format` 配置信息。
+
+```js
+<%- time_tag(date, [format]) %>
+```
+
+**示例：**
+
+``` js
+<%- time_tag(new Date()) %>
+// <time datetime="2024-01-22T06:35:31.108Z">2024-01-22</time>
+
+<%- time_tag(new Date(), 'MMM-D-YYYY') %>
+// <time datetime="2024-01-22T06:35:31.108Z">Jan-22-2024</time>
 ```
 
 ### moment
@@ -866,18 +902,19 @@ url: https://example.com/blog # example
 参数 | 描述 | 默认值
 --- | --- | ---
 `title` | 页面标题 (`og:title`) | `page.title`
-`type` | 页面类型 (`og:type`) | blog
+`type` | 页面类型 (`og:type`) | article(post page)<br>website(non-post page)
 `url` | 页面网址 (`og:url`) | `url`
 `image` | 页面图片 (`og:image`) | 内容中的图片
 `author` | 文章作者 (`og:article:author`) | `config.author`
 `date` | 文章发表时间 (`og:article:published_time`) | 页面发表时间
 `updated` | 文章修改时间 (`og:article:modified_time`) | 页面修改时间
-`language` | 文章语言 (`og:locale`) | `page.lang || page.language || config.language`
+`language` | 文章语言 (`og:locale`) | `page.lang \|\| page.language \|\| config.language`
 `site_name` | 网站名称 (`og:site_name`) | `config.title`
 `description` | 页面描述 (`og:description`) | 内容摘要或前 200 字
 `twitter_card` | Twitter 卡片类型 (`twitter:card`) | summary
 `twitter_id` | Twitter ID (`twitter:creator`) |
 `twitter_site` | Twitter 网站 (`twitter:site`) |
+`twitter_image` | Twitter 图片 (`twitter:image`) |
 `google_plus` | Google+ 个人资料链接 |
 `fb_admins` | Facebook 管理者 ID |
 `fb_app_id` | Facebook 应用程序 ID |

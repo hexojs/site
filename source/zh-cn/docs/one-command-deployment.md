@@ -147,6 +147,10 @@ deploy:
 
 ## OpenShift
 
+{% note warn %}
+`hexo-deployer-openshift` 已于2022年被弃用。
+{% endnote %}
+
 安装 [hexo-deployer-openshift]。
 
 ``` bash
@@ -185,8 +189,7 @@ deploy:
   pass: <password>
   remote: [remote]
   port: [port]
-  ignore: [ignore]
-  connections: [connections]
+  clear: [true|false]
   verbose: [true|false]
 ```
 
@@ -197,8 +200,7 @@ deploy:
 `pass` | 密码 |
 `remote` | 远程主机的根目录 | `/`
 `port` | 端口 | 21
-`ignore` | 忽略的文件或目录 |
-`connections` | 使用的连接数 | 1
+`clear` | 在上传前移除远程主机的根目录下所有的文件和目录 | false
 `verbose` | 显示调试信息 | false
 
 {% note warn FTP部署可能出现的问题 %}
@@ -288,6 +290,10 @@ $ hexo generate —deploy && bip deploy
 几分钟后，你的网站将被部署。
 
 ## RSS3
+
+{% note warn %}
+`hexo-deployer-rss3` 已于2023年被弃用。
+{% endnote %}
 
 [RSS3](https://rss3.io) 是一个为 Web 3.0 时代的内容和社交网络设计的开放协议。
 

@@ -152,8 +152,7 @@ deploy:
   pass: <password>
   remote: [remote]
   port: [port]
-  ignore: [ignore]
-  connections: [connections]
+  clear: [true|false]
   verbose: [true|false]
 ```
 
@@ -164,8 +163,7 @@ Opção | Descrição | Padrão
 `pass` | Senha |
 `remote` | Diretório raiz do host remoto | `/`
 `port` | Porta | 21
-`ignore` | Ignora os arquivos no host remoto |
-`connections` | Número de conexões | 1
+`clear` | Remove all files and directories from the remote directory before upload | false
 `verbose` | Exibi mensagens detalhadas | false
 
 ## SFTP
