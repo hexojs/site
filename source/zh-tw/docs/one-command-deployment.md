@@ -27,7 +27,6 @@ deploy:
   repo:
 ```
 
-Refer to the [Plugins](https://hexo.io/plugins/) list for more deployment plugins.
 更多佈署外掛，請參照[外掛](https://hexo.io/plugins/)清單。
 
 ## Git
