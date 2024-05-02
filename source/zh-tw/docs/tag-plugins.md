@@ -444,28 +444,13 @@ content
 
 ## 文章摘要
 
-在文章中使用 `<!-- more -->`，那麼在 `<!-- more -->` 之前的文字將會被視為摘要。首頁中只出現這部份文字，同時這部份文字也會出現在文章當中。
+使用在 `<!-- more -->` 標籤之前的文字作為為這篇文章的摘要。[front-matter](/docs/front-matter#Settings-amp-Their-Default-Values) 中的 `excerpt:` 值如果被特指的話，將會將其優先使用。
 
-例如：
+
+**範例：**
 
 ```
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 <!-- more -->
 Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 ```
-
-首頁中將只會出現
-
-```
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-```
-
-正文中則會出現
-
-```
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-
-Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-```
-
-請注意，摘要可能會被 Front Matter 中的 `excerpt` 覆寫。
