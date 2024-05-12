@@ -79,6 +79,7 @@ For advanced users familiar with npm, you can opt for a local installation of th
 
 ``` bash
 $ git clone https://github.com/hexojs/hexo-starter
+$ cd hexo-starter
 $ npm install
 $ npx hexo --version
 ```
