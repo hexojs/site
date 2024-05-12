@@ -83,7 +83,7 @@ $ hexo --version
 对于熟悉 npm 的进阶用户，可以仅局部安装 `hexo` 包，而不是全局安装，这样可以避免全局安装 Hexo 可能出现的权限问题。例如，可以克隆一个已有的 Hexo 博客源码仓库，在安装依赖包后，即可通过 `npx hexo` 执行 Hexo 的命令。
 
 ``` bash
-$ https://github.com/hexojs/hexo-starter
+$ git clone https://github.com/hexojs/hexo-starter
 $ npm install
 $ npx hexo --version
 ```
