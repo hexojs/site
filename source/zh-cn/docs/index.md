@@ -84,6 +84,7 @@ $ hexo --version
 
 ``` bash
 $ git clone https://github.com/hexojs/hexo-starter
+$ cd hexo-starter
 $ npm install
 $ npx hexo --version
 ```
