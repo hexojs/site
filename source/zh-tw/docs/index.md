@@ -20,17 +20,9 @@ Hexo 是一個快速、簡單且強大的網誌框架。Hexo 使用 [Markdown](h
 - [Node.js](http://nodejs.org/) (Node.js 版本需不低於8.10，建議使用 Node.js 10.0 及以上版本)
 - [Git](http://git-scm.com/)
 
-若您的電腦已經安裝上述的必備軟體，那麼恭喜您！只需要透過 npm 即可完成 Hexo 的安裝。
-
-``` bash
-$ npm install -g hexo-cli
-```
+若您的電腦已經安裝上述的必備軟體，那麼恭喜您！You can skip to the [安裝 Hexo](#安裝-Hexo) step.
 
 如果您的電腦尚未安裝必備軟體的話，請根據下列的安裝指示來完成安裝。
-
-{% note warn Mac 使用者 %}
-您在編譯時可能會碰到問題，請先至 App Store 安裝 Xcode，一旦 Xcode 安裝完成後，開啟它並前往 **Preferences -> Download -> Command Line Tools -> Install** 安裝命令列工具。
-{% endnote %}
 
 ### 安裝 Git
 
@@ -38,6 +30,10 @@ $ npm install -g hexo-cli
 - Mac：使用 [Homebrew](http://mxcl.github.com/homebrew/), [MacPorts](http://www.macports.org/) 或 [安裝程式](http://sourceforge.net/projects/git-osx-installer/) 安裝。
 - Linux (Ubuntu, Debian)：`sudo apt-get install git-core`
 - Linux (Fedora, Red Hat, CentOS)：`sudo yum install git-core`
+
+{% note warn Mac 使用者 %}
+您在編譯時可能會碰到問題，請先至 App Store 安裝 Xcode，一旦 Xcode 安裝完成後，開啟它並前往 **Preferences -> Download -> Command Line Tools -> Install** 安裝命令列工具。
+{% endnote %}
 
 ### 安裝 Node.js
 
@@ -71,6 +67,28 @@ Node.js 為大多數平台提供了官方的 [安裝程序](https://nodejs.org/e
 ``` bash
 $ npm install -g hexo-cli
 ```
+
+The Hexo installed using the commands above is globally effective. If the installation is successful, executing the following command will display the version information.
+
+``` bash
+$ hexo --version
+```
+
+{% note info %}
+For advanced users familiar with npm, you can opt for a local installation of the `hexo` package instead of a global one. This approach can help avoid potential permission issues associated with global installations. For example, you can clone an existing Hexo blog repository, and after installing dependencies, execute Hexo commands using `npx hexo`.
+
+``` bash
+$ git clone https://github.com/hexojs/hexo-starter
+$ npm install
+$ npx hexo --version
+```
+
+If you choose a local installation of `hexo`, Linux users can add the `node_modules` directory in the Hexo directory to their PATH environment variable to directly use `hexo <command>`:
+
+```bash
+echo 'PATH="$PATH:./node_modules/.bin"' >> ~/.profile
+```
+{% endnote %}
 
 ### 必要的 Node.js 版本
 

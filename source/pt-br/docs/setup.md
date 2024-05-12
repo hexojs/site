@@ -9,7 +9,6 @@ Uma vez instalado o Hexo, execute os seguintes comandos para inicializar um site
 ``` bash
 $ hexo init <folder>
 $ cd <folder>
-$ npm install
 ```
 
 Após inicializado, o diretório do seu projeto ficará com a seguinte estrutura:

@@ -21,7 +21,7 @@ Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 [Markdown](h
 - [Node.js](http://nodejs.org/) (Node.js 版本需不低于 10.13，建议使用 Node.js 12.0 及以上版本)
 - [Git](http://git-scm.com/)
 
-如果您的电脑中已经安装上述必备程序，那么恭喜您！你可以直接前往 [安装 Hexo](#安装-Hexo) 步骤。
+如果您的电脑中已经安装上述必备程序，那么恭喜您！您可以直接前往 [安装 Hexo](#安装-Hexo) 步骤。
 
 如果您的电脑中尚未安装所需要的程序，请根据以下安装指示完成安装。
 
@@ -73,22 +73,27 @@ Node.js 为大多数平台提供了官方的 [安装程序](https://nodejs.org/z
 $ npm install -g hexo-cli
 ```
 
-### 进阶安装和使用
-
-对于熟悉 npm 的进阶用户，可以仅局部安装 `hexo` 包。
+通过以上命令安装的 Hexo 是全局有效的，如果安装成功，执行以下命令将会显示版本信息。
 
 ``` bash
-$ npm install hexo
+$ hexo --version
 ```
 
-安装以后，可以使用以下两种方式执行 Hexo：
+{% note info %}
+对于熟悉 npm 的进阶用户，可以仅局部安装 `hexo` 包，而不是全局安装，这样可以避免全局安装 Hexo 可能出现的权限问题。例如，可以克隆一个已有的 Hexo 博客源码仓库，在安装依赖包后，即可通过 `npx hexo` 执行 Hexo 的命令。
 
-1. `npx hexo <command>`
-2. Linux 用户可以将 Hexo 所在的目录下的 `node_modules` 添加到环境变量之中即可直接使用 `hexo <command>`：
+``` bash
+$ https://github.com/hexojs/hexo-starter
+$ npm install
+$ npx hexo --version
+```
 
-  ``` bash
-  echo 'PATH="$PATH:./node_modules/.bin"' >> ~/.profile
-  ```
+如果选择局部安装 `hexo`，Linux 用户可以将 Hexo 所在的目录下的 `node_modules` 添加到环境变量之中即可直接使用 `hexo <command>`：
+
+``` bash
+echo 'PATH="$PATH:./node_modules/.bin"' >> ~/.profile
+```
+{% endnote %}
 
 ### Node.js 版本限制
 

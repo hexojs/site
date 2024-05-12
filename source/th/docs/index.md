@@ -26,18 +26,9 @@ hexo เป็นกรอบบล็อกท่ีรวดเร็ว เ�
 - [Node.js](http://nodejs.org/) (Should be at least Node.js 10.13, recommends 12.0 or higher)
 - [Git](http://git-scm.com/)
 
-ถ้าคุณติดตั้งสองสิ่งนี้อยู่แล้วในคอม ขอแสดงความยินดี คุณจะติดตั้ง hexo ด้วย npm ได้อย่างนี้:
-
-``` bash
-$ npm install -g hexo-cli
-```
+ถ้าคุณติดตั้งสองสิ่งนี้อยู่แล้วในคอม ขอแสดงความยินดี You can skip to the [Hexo installation](#Install-Hexo) step.
 
 ถ้าคุณยังไม่ได้ติดตั้งสองสิ่งนี้ กรุณาปฏิบัติตามวิธีการใช้เพื่อติดตั้งทุกสิ่งท่ีต้องการ
-{% note warn For Mac users %}
-คุณอาจจะพบปัญหาบ้างเมื่อ compiling กรุณาติดตั้ง Xcode จาก App Store ก่อน 
-เสร็จแล้วค่อยไปเปิด Xcode และ ไปถึง **Preferences -> Download -> Command Line
- Tools -> Install** เพื่อติดตั้งเครื่องมือคำสั่ง
-{% endnote %}
 
 ### Install Git
 
@@ -47,6 +38,11 @@ $ npm install -g hexo-cli
 .net/projects/git-osx-installer/).
 - Linux (Ubuntu, Debian): `sudo apt-get install git-core`
 - Linux (Fedora, Red Hat, CentOS): `sudo yum install git-core`
+{% note warn For Mac users %}
+คุณอาจจะพบปัญหาบ้างเมื่อ compiling กรุณาติดตั้ง Xcode จาก App Store ก่อน 
+เสร็จแล้วค่อยไปเปิด Xcode และ ไปถึง **Preferences -> Download -> Command Line
+ Tools -> Install** เพื่อติดตั้งเครื่องมือคำสั่ง
+{% endnote %}
 
 ### Install Node.js
 
@@ -80,6 +76,28 @@ If you installed Node.js using Snap, you may need to manually run `npm install` 
 ``` bash
 $ npm install -g hexo-cli
 ```
+
+The Hexo installed using the commands above is globally effective. If the installation is successful, executing the following command will display the version information.
+
+``` bash
+$ hexo --version
+```
+
+{% note info %}
+For advanced users familiar with npm, you can opt for a local installation of the `hexo` package instead of a global one. This approach can help avoid potential permission issues associated with global installations. For example, you can clone an existing Hexo blog repository, and after installing dependencies, execute Hexo commands using `npx hexo`.
+
+``` bash
+$ git clone https://github.com/hexojs/hexo-starter
+$ npm install
+$ npx hexo --version
+```
+
+If you choose a local installation of `hexo`, Linux users can add the `node_modules` directory in the Hexo directory to their PATH environment variable to directly use `hexo <command>`:
+
+```bash
+echo 'PATH="$PATH:./node_modules/.bin"' >> ~/.profile
+```
+{% endnote %}
 
 ### Required Node.js version
 

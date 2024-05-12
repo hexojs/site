@@ -6,7 +6,6 @@ Hexo를 설치했다면, 타겟 `<folder>`의 Hexo를 초기화하기 위해 아
 ``` bash
 $ hexo init <folder>
 $ cd <folder>
-$ npm install
 ```
 
 초기화가 완료되면 다음과 같은 폴더 구조를 가지게 될 것입니다.

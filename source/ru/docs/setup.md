@@ -6,7 +6,6 @@ title: Установка
 ``` bash
 $ hexo init <folder>
 $ cd <folder>
-$ npm install
 ```
 
 После инициализации папка будет выглядеть так:
