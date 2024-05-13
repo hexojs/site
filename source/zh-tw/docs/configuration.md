@@ -129,23 +129,23 @@ include:
   - ".nojekyll"
   # 包括 'source/css/_typing.css'
   - "css/_typing.css"
-  # 包括 'source/_css/' 中的任何文件，但不包括子目录及其其中的文件。
+  # 包括 'source/_css/' 中的任何檔案，但不包括子目錄及其其中的檔案。
   - "_css/*"
-  # 包含 'source/_css/' 中的任何文件和子目录下的任何文件
+  # 包含 'source/_css/' 中的任何檔案和子目錄下的任何檔案
   - "_css/**/*"
 
 exclude:
   # 不包括 'source/js/test.js'
   - "js/test.js"
-  # 不包括 'source/js/' 中的文件、但包括子目录下的所有目录和文件
+  # 不包括 'source/js/' 中的檔案、但包含子目錄下的所有目錄和檔案
   - "js/*"
-  # 不包括 'source/js/' 中的文件和子目录下的任何文件
+  # 不包括 'source/js/' 中的檔案和子目錄下的任何檔案
   - "js/**/*"
-  # 不包括 'source/js/' 目录下的所有文件名以 'test' 开头的文件，但包括其它文件和子目录下的单文件
+  # 不包括 'source/js/' 目錄下的所有檔案名以 'test' 開頭的檔案，但包括其它檔案和子目錄的單一檔案
   - "js/test*"
-  # 不包括 'source/js/' 及其子目录中任何以 'test' 开头的文件
+  # 不包括 'source/js/' 及其子目錄中任何以 'test' 開頭的檔案
   - "js/**/test*"
-  # 不要用 exclude 来忽略 'source/_posts/' 中的文件。你应该使用 'skip_render'，或者在要忽略的文件的文件名之前加一个下划线 '_'
+  # 不要用 exclude 来忽略 'source/_posts/' 中的檔案。你应该使用 'skip_render'，或者在要忽略的檔案的檔案名之前加一个下划线 '_'
   # 在这里配置一个 - "_posts/hello-world.md" 是没有用的。
 
 ignore:
@@ -159,7 +159,7 @@ ignore:
 
 列表中的每一項都必須用單引號或雙引號包裹起來。
 
-`include` 和 `exclude` 並不適用於 `themes/` 目錄下的文件。如果需要忽略 `themes/` 目錄下的部分文件或文件夾，可以使用 `ignore` 或在文件名之前添加下劃線 `_`。
+`include` 和 `exclude` 並不適用於 `themes/` 目錄下的檔案。如果需要忽略 `themes/` 目錄下的部分檔案或資料夾，可以使用 `ignore` 或在檔案名之前添加下劃線 `_`。
 
 ### 使用替代配置檔
 
@@ -185,7 +185,7 @@ Hexo 主題是獨立的專案，具有個別的 `_config.yml` 檔案。
 
 除了複製一個主題並維護一個由您設定的自創分支，您也在任何地方為它進行設定。
 
-**頁面中的主要設定文件的 `theme_config`**
+**頁面中的主要設定檔案的 `theme_config`**
 
 > 從 Hexo 2.8.2 後開始支援
 
