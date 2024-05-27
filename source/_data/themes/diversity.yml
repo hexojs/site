@@ -2,8 +2,8 @@ description: A theme that supports free switching between multiple themes for [H
 link: https://github.com/huazie/hexo-theme-diversity
 preview: https://blog.huazie.com/
 tags:
-  - hexo-theme
   - diversity
+  - switcher
   - multiple
   - rotate
   - flip
