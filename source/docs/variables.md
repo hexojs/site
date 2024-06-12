@@ -24,10 +24,12 @@ Lodash has been removed from global variables since Hexo 5.0.0. [You-Dont-Need-L
 
 Variable | Description | Type
 --- | --- | ---
-`site.posts` | All posts | `array` of `post` objects
-`site.pages` | All pages | `array` of `page` objects
+`site.posts` | All posts | [Query][queryo] object
+`site.pages` | All pages | [Query][queryo] object
 `site.categories` | All categories | `array` of ???
 `site.tags` | All tags | `array` of ???
+
+[queryo]:http://hexojs.github.io/warehouse/Query.html
 
 ### Page Variables
 
