@@ -1,0 +1,6 @@
+description: A Hexo plugin that can help you view images in both any Markdown editor and Hexo server.
+link: https://github.com/chen-qingyu/hexo-markdown-image
+tags:
+  - image
+  - markdown
+  - link
