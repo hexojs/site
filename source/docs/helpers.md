@@ -655,14 +655,14 @@ Option | Description | Default
 **Examples:**
 
 ``` js
-<%- list_categories(post.categories, {
+<%- list_categories(page.categories, {
   class: 'post-category',
   transform(str) {
     return titlecase(str);
   }
 }) %>
 
-<%- list_categories(post.categories, {
+<%- list_categories(page.categories, {
   class: 'post-category',
   transform(str) {
     return str.toUpperCase();
