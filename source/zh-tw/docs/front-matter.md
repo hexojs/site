@@ -32,7 +32,7 @@ date: 2013/7/13 20:46:25
 
 ### 佈局
 
-依照 `_config.yml` 中所設定的 [`default_layout`](<(/zh-tw/docs/configuration#寫作)>) 值，預設的佈局為 `post`。當在文章中取消佈局 (`layout: false`)，則不會為它套用主題。然而，這依然會在任意的渲染引擎 (renderer) 中渲染，若一個文章是用 Markdown 編寫且已經安裝了 Markdown 算圖引擎（如預設的[hexo-renderer-marked](https://github.com/hexojs/hexo-renderer-marked)），則會被渲染為 HTML。
+依照 `_config.yml` 中所設定的 [`default_layout`](/zh-tw/docs/configuration#寫作) 值，預設的佈局為 `post`。當在文章中取消佈局 (`layout: false`)，則不會為它套用主題。然而，這依然會在任意的渲染引擎 (renderer) 中渲染，若一個文章是用 Markdown 編寫且已經安裝了 Markdown 算圖引擎（如預設的[hexo-renderer-marked](https://github.com/hexojs/hexo-renderer-marked)），則會被渲染為 HTML。
 
 無論任何佈局，[標籤外掛](/zh-tw/docs/tag-plugins)一定會進行處理，除非禁止 `disableNunjucks` 的設定或是[渲染引擎](/zh-tw/api/renderer#Disable-Nunjucks-tags).
 
