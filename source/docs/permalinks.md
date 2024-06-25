@@ -6,7 +6,7 @@ You can specify the permalinks for your site in `_config.yml` or in the front-ma
 
 ### Variables
 
-Besides the following variables, you can use any attributes in the permalink.
+Besides the following variables, you can use any attributes in the permalink except `:path` and `:permalink`.
 
 | Variable      | Description                                                                         |
 | ------------- | ----------------------------------------------------------------------------------- |

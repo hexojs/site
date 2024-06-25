@@ -1,7 +1,7 @@
 description: >-
   Ruby character tag for Hexo, like <ruby>博客<rp> (</rp><rt>bó kè</rt><rp>)
   </rp></ruby>.
-link: https://github.com/JamesPan/hexo-ruby-character
+link: https://github.com/jamespan/hexo-ruby-character
 tags:
   - tag
   - ruby-character

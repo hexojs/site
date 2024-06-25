@@ -1,0 +1,7 @@
+description: Minify JavaScripts, CSS files via esbuild.
+link: https://github.com/uiolee/hexo-esbuild
+tags:
+  - javascripts
+  - css
+  - esbuild
+  - optimize

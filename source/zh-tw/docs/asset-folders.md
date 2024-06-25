@@ -20,11 +20,11 @@ Hexo 3 新增了幾個[外掛](/docs/tag-plugins#Include-Assets)，讓您更方�
 {% asset_link slug [title] %}
 ```
 
-## Embedding an image using markdown
+## 使用 markdown 嵌入一張圖片
 
-[hexo-renderer-marked](https://github.com/hexojs/hexo-renderer-marked) 3.1.0 introduced a new option that allows you to embed an image in markdown without using `asset_img` tag plugin.
+[hexo-renderer-marked](https://github.com/hexojs/hexo-renderer-marked) 3.1.0 推出了一個新的選項，讓您可以在 markdown 中嵌入一張圖片且無須使用 `asset_img` 外掛。
 
-To enable:
+如需啟用：
 
 ```yml _config.yml
 post_asset_folder: true
@@ -33,4 +33,4 @@ marked:
   postAsset: true
 ```
 
-Once enabled, an asset image will be automatically resolved to its corresponding post's path. For example, "image.jpg" is located at "/2020/01/02/foo/image.jpg", meaning it is an asset image of "/2020/01/02/foo/" post, `![](image.jpg)` will be rendered as `<img src="/2020/01/02/foo/image.jpg">`.
+一旦啟用，資產圖片便會自動解析成其對應的文章路徑。舉例來說，"image.jpg" 的位置在 "/2020/01/02/foo/image.jpg"，意味著他是 "/2020/01/02/foo/" 文章中的一張資產圖片，`![](image.jpg)` 將會呈現為 `<img src="/2020/01/02/foo/image.jpg">`。

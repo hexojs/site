@@ -7,7 +7,7 @@ front-matter ของทุกโพสต์
 
 ### Variables
 
-นอกจาก variable ต่อไป คุณสามารถตั้งค่า attribute ใดๆ ใน permalink ได้เช่นกัน
+Besides the following variables, you can use any attributes in the permalink except `:path` and `:permalink`.
 
 | Variable      | Description                                                                         |
 | ------------- | ----------------------------------------------------------------------------------- |

@@ -15,9 +15,9 @@ In this tutorial, we use [GitHub Actions](https://docs.github.com/en/actions) to
 
 - The `public/` folder is not (and should not be) uploaded by default, make sure the `.gitignore` file contains `public/` line. The folder structure should be roughly similar to [this repo](https://github.com/hexojs/hexo-starter).
 
-3. Check what version of Node.js you are using on your local machine with `node --version`. Make a note of the major version (e.g., `v16.y.z`)
+3. Check what version of Node.js you are using on your local machine with `node --version`. Make a note of the major version (e.g., `v20.y.z`)
 4. In your GitHub repo's setting, navigate to **Settings** > **Pages** > **Source**. Change the source to **GitHub Actions** and save.
-5. Create `.github/workflows/pages.yml` in your repo with the following contents (substituting `16` to the major version of Node.js that you noted in previous step):
+5. Create `.github/workflows/pages.yml` in your repo with the following contents (substituting `20` to the major version of Node.js that you noted in previous step):
 
 ```yml .github/workflows/pages.yml
 name: Pages
@@ -31,17 +31,19 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           # If your repository depends on submodule, please see: https://github.com/actions/checkout
           submodules: recursive
-      - name: Use Node.js 16.x
-        uses: actions/setup-node@v2
+      - name: Use Node.js 20
+        uses: actions/setup-node@v4
         with:
-          node-version: "16"
+          # Examples: 20, 18.19, >=16.20.2, lts/Iron, lts/Hydrogen, *, latest, current, node
+          # Ref: https://github.com/actions/setup-node#supported-version-syntax
+          node-version: '20'
       - name: Cache NPM dependencies
-        uses: actions/cache@v2
+        uses: actions/cache@v4
         with:
           path: node_modules
           key: ${{ runner.OS }}-npm-cache
@@ -52,7 +54,7 @@ jobs:
       - name: Build
         run: npm run build
       - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v2
+        uses: actions/upload-pages-artifact@v3
         with:
           path: ./public
   deploy:
@@ -67,7 +69,7 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v2
+        uses: actions/deploy-pages@v4
 ```
 
 6. Once the deployment is finished, check the webpage at _username_.github.io.
