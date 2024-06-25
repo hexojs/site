@@ -1,0 +1,6 @@
+description: A command-line tool to help publish Hexo articles on Zhihu.
+link: https://github.com/chen-qingyu/hexo-console-zhihu
+tags:
+  - console
+  - markdown
+  - zhihu
