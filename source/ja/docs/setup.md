@@ -7,7 +7,6 @@ Hexoがインストールされたら、以下のコマンドを実行して対�
 ``` bash
 $ hexo init <folder>
 $ cd <folder>
-$ npm install
 ```
 
 初期化されると、プロジェクトフォルダは次のようになります:

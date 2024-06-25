@@ -9,7 +9,6 @@ title: 建立
 ``` bash
 $ hexo init <folder>
 $ cd <folder>
-$ npm install
 ```
 
 建立完成後，專案資料夾會有下列檔案：

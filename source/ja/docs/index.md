@@ -66,24 +66,28 @@ Snapを使用してNode.jsをインストールした場合、ブログを[初�
 $ npm install -g hexo-cli
 ```
 
-### 高度なインストール方法
-
-Node.jsに慣れたユーザーであれば、代わりに`hexo`パッケージをインストールして使用することを好むかもしれません。
+The Hexo installed using the commands above is globally effective. If the installation is successful, executing the following command will display the version information.
 
 ``` bash
-$ npm install hexo
+$ hexo --version
 ```
 
-インストール後、次の2つの方法でHexoを実行できます:
+{% note info %}
+For advanced users familiar with npm, you can opt for a local installation of the `hexo` package instead of a global one. This approach can help avoid potential permission issues associated with global installations. For example, you can clone an existing Hexo blog repository, and after installing dependencies, execute Hexo commands using `npx hexo`.
 
-1. `npx hexo <command>`
-2. Linuxユーザーは`node_modules/`フォルダの相対パスを設定できます:
+``` bash
+$ git clone https://github.com/hexojs/hexo-starter
+$ cd hexo-starter
+$ npm install
+$ npx hexo --version
+```
 
-  ``` bash
-  echo 'PATH="$PATH:./node_modules/.bin"' >> ~/.profile
-  ```
+If you choose a local installation of `hexo`, Linux users can add the `node_modules` directory in the Hexo directory to their PATH environment variable to directly use `hexo <command>`:
 
-  その後、`hexo <command>`を使用してHexoを実行します。
+```bash
+echo 'PATH="$PATH:./node_modules/.bin"' >> ~/.profile
+```
+{% endnote %}
 
 ### 必要なNode.jsのバージョン
 

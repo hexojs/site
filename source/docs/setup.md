@@ -9,7 +9,6 @@ Once Hexo is installed, run the following commands to initialize Hexo in the tar
 ``` bash
 $ hexo init <folder>
 $ cd <folder>
-$ npm install
 ```
 
 Once initialized, here's what your project folder will look like:

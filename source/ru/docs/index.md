@@ -18,17 +18,9 @@ Hexo — это быстрый, простой и мощный фреймвор�
 - [Node.js](http://nodejs.org/) (Версия должна быть как минимум Node.js 8.10, рекомендовано использовать 10.0 или выше)
 - [Git](http://git-scm.com/)
 
-Если всё это уже есть, поздравляю! Просто установите Hexo с помощью npm:
-
-``` bash
-$ npm install -g hexo-cli
-```
+Если всё это уже есть, поздравляю! You can skip to the [Установка Hexo](#Установка-Hexo) step.
 
 Если нет, выполните следующие действия, чтобы установить всё, что требуется.
-
-{% note warn Для пользователей Mac %}
-Вы можете столкнуться с проблемами при компиляции. Пожалуйста, сначала установите Xcode из магазина App Store. После установки откройте xcode и перейдите в **Настройки -> Загрузки -> Командная строка -> Установить** (**Preferences -> Download -> Command Line Tools -> Install**), чтобы установить утилиту командной строки.
-{% endnote %}
 
 ### Установка Git
 
@@ -36,6 +28,10 @@ $ npm install -g hexo-cli
 - Mac: Установите с помощью [Homebrew](http://mxcl.github.com/homebrew/), [MacPorts](http://www.macports.org/) или [установочного файла](http://sourceforge.net/projects/git-osx-installer/).
 - Linux (Ubuntu, Debian): `sudo apt-get install git-core`
 - Linux (Fedora, Red Hat, CentOS): `sudo yum install git-core`
+
+{% note warn Для пользователей Mac %}
+Вы можете столкнуться с проблемами при компиляции. Пожалуйста, сначала установите Xcode из магазина App Store. После установки откройте xcode и перейдите в **Настройки -> Загрузки -> Командная строка -> Установить** (**Preferences -> Download -> Command Line Tools -> Install**), чтобы установить утилиту командной строки.
+{% endnote %}
 
 ### Установка Node.js
 
@@ -69,6 +65,29 @@ nvs также рекомендуется для Mac и Linux, чтобы изб
 ``` bash
 $ npm install -g hexo-cli
 ```
+
+The Hexo installed using the commands above is globally effective. If the installation is successful, executing the following command will display the version information.
+
+``` bash
+$ hexo --version
+```
+
+{% note info %}
+For advanced users familiar with npm, you can opt for a local installation of the `hexo` package instead of a global one. This approach can help avoid potential permission issues associated with global installations. For example, you can clone an existing Hexo blog repository, and after installing dependencies, execute Hexo commands using `npx hexo`.
+
+``` bash
+$ git clone https://github.com/hexojs/hexo-starter
+$ cd hexo-starter
+$ npm install
+$ npx hexo --version
+```
+
+If you choose a local installation of `hexo`, Linux users can add the `node_modules` directory in the Hexo directory to their PATH environment variable to directly use `hexo <command>`:
+
+```bash
+echo 'PATH="$PATH:./node_modules/.bin"' >> ~/.profile
+```
+{% endnote %}
 
 ### необходимая версия Node.js
 

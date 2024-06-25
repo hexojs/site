@@ -9,7 +9,6 @@ title: Setup
 ``` bash
 $ hexo init <folder>
 $ cd <folder>
-$ npm install
 ```
 
 เมื่อเสร็จการ initialization โครงสร้าง folder ของ project คุณจะเป็นอย่างนี้:
