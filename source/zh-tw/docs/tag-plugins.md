@@ -82,14 +82,14 @@ code snippet
 
 以 `option:value` 格式設定額外的選項，例如：`line_number:false first_line:5`。
 
-額外選項 | 說明 | 預設值
---- | --- | ---
-`line_number` | 顯示行號 | `true`
-`line_threshold` | 當程式碼區塊的行數超過臨界值時，才顯示行號。 | `0` |
-`highlight` | 啟用程式碼強調 | `true`
-`first_line` | 設定起始的程式碼行號 | `1`
-`mark` | 強調特定的程式碼行號，每個值會以逗點區分。特定的程式碼區間則使用破折號 (dash)<br>範例：`mark:1,4-7,10` 會標示行號 1、 4 到 7 以及 10。 |
-`wrap` | 將程式碼區塊包裝在 [`<table>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table) 中 | `true`
+| 額外選項         | 說明                                                                                                                                   | 預設值 |
+| ---------------- | -------------------------------------------------------------------------------------------------------------------------------------- | ------ |
+| `line_number`    | 顯示行號                                                                                                                               | `true` |
+| `line_threshold` | 當程式碼區塊的行數超過臨界值時，才顯示行號。                                                                                           | `0`    |
+| `highlight`      | 啟用程式碼強調                                                                                                                         | `true` |
+| `first_line`     | 設定起始的程式碼行號                                                                                                                   | `1`    |
+| `mark`           | 強調特定的程式碼行號，每個值會以逗點區分。特定的程式碼區間則使用破折號 (dash)<br>範例：`mark:1,4-7,10` 會標示行號 1、 4 到 7 以及 10。 |
+| `wrap`           | 將程式碼區塊包裝在 [`<table>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table) 中                                     | `true` |
 
 **普通的程式碼區塊**
 
@@ -448,7 +448,6 @@ content
 ## 文章摘要
 
 使用在 `<!-- more -->` 標籤之前的文字作為為這篇文章的摘要。[front-matter](/docs/front-matter#Settings-amp-Their-Default-Values) 中的 `excerpt:` 值如果被特指的話，將會將其優先使用。
-
 
 **範例：**
 

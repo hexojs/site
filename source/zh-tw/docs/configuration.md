@@ -1,6 +1,7 @@
 ---
 title: 配置
 ---
+
 您可以在 `_config.yml` 或 [替代配置檔](#使用替代配置檔) 中修改網站配置。
 
 {% youtube A0Enyn70jKU %}
@@ -48,24 +49,24 @@ title: 配置
 
 ### 寫作
 
-設定 | 描述 | 預設值
---- | --- | ---
-`new_post_name` | 新文章的檔案名稱 | `:title.md`
-`default_layout` | 預設佈局 | `post`
-`auto_spacing` | 在西方文字與東方文字中加入空白 | `false`
-`titlecase` | 把標題轉換為 title case | `false`
-`external_link` | 在新頁籤中開啟連結 | `true`
-`external_link.enable` | 在新頁籤中開啟連結 | `true`
-`external_link.field` | 應用至整個 `site` 或僅只於 `post` | `site`
-`external_link.exclude` | 主機名稱除外。適用於特指子網域，包含 `www` | `[]`
-`filename_case` | 把檔案名稱轉換為: `1` 小寫或 `2` 大寫 | `0`
-`render_drafts` | 顯示草稿 | `false`
-`post_asset_folder` | 啟動 [Asset 資料夾](asset-folders.html) | `false`
-`relative_link` | 把連結改為與根目錄的相對位址 | `false`
-`future` | 顯示未來的文章 | `true`
-`syntax_highlighter` | 程式碼區塊語法強調 (highlight) 設定，請見使用方式指南的[語法強調](/zh-tw/docs/syntax-highlight)區塊 | `highlight.js`
-`highlight` | 程式碼區塊語法強調設定，請見使用方式指南的 [Highlight.js](/zh-tw/docs/syntax-highlight#Highlight-js) 區塊 |
-`prismjs` | 程式碼區塊的設定，請見使用方式指南的 [PrismJS](/zh-tw/docs/syntax-highlight#PrismJS) 區塊 |
+| 設定                    | 描述                                                                                                      | 預設值         |
+| ----------------------- | --------------------------------------------------------------------------------------------------------- | -------------- |
+| `new_post_name`         | 新文章的檔案名稱                                                                                          | `:title.md`    |
+| `default_layout`        | 預設佈局                                                                                                  | `post`         |
+| `auto_spacing`          | 在西方文字與東方文字中加入空白                                                                            | `false`        |
+| `titlecase`             | 把標題轉換為 title case                                                                                   | `false`        |
+| `external_link`         | 在新頁籤中開啟連結                                                                                        | `true`         |
+| `external_link.enable`  | 在新頁籤中開啟連結                                                                                        | `true`         |
+| `external_link.field`   | 應用至整個 `site` 或僅只於 `post`                                                                         | `site`         |
+| `external_link.exclude` | 主機名稱除外。適用於特指子網域，包含 `www`                                                                | `[]`           |
+| `filename_case`         | 把檔案名稱轉換為: `1` 小寫或 `2` 大寫                                                                     | `0`            |
+| `render_drafts`         | 顯示草稿                                                                                                  | `false`        |
+| `post_asset_folder`     | 啟動 [Asset 資料夾](asset-folders.html)                                                                   | `false`        |
+| `relative_link`         | 把連結改為與根目錄的相對位址                                                                              | `false`        |
+| `future`                | 顯示未來的文章                                                                                            | `true`         |
+| `syntax_highlighter`    | 程式碼區塊語法強調 (highlight) 設定，請見使用方式指南的[語法強調](/zh-tw/docs/syntax-highlight)區塊       | `highlight.js` |
+| `highlight`             | 程式碼區塊語法強調設定，請見使用方式指南的 [Highlight.js](/zh-tw/docs/syntax-highlight#Highlight-js) 區塊 |
+| `prismjs`               | 程式碼區塊的設定，請見使用方式指南的 [PrismJS](/zh-tw/docs/syntax-highlight#PrismJS) 區塊                 |
 
 ### 分類 & 標籤
 
@@ -79,11 +80,11 @@ title: 配置
 
 Hexo 使用 [Moment.js](http://momentjs.com/) 來解析和顯示時間。
 
-設定 | 描述 | 預設值
---- | --- | ---
-`date_format` | 日期格式 | `YYYY-MM-DD`
-`time_format` | 時間格式 | `HH:mm:ss`
-`updated_option` | 當 front-matter 沒有提供 [`updated`](/zh-tw/docs/variables#頁面變數) 的值則使用此值| `mtime`
+| 設定             | 描述                                                                                | 預設值       |
+| ---------------- | ----------------------------------------------------------------------------------- | ------------ |
+| `date_format`    | 日期格式                                                                            | `YYYY-MM-DD` |
+| `time_format`    | 時間格式                                                                            | `HH:mm:ss`   |
+| `updated_option` | 當 front-matter 沒有提供 [`updated`](/zh-tw/docs/variables#頁面變數) 的值則使用此值 | `mtime`      |
 
 {% note info updated_option %}
 當 front-matter 沒有提供 `updated` 值，則 `updated_option` 控制此值：
@@ -115,11 +116,11 @@ Hexo 會根據配置檔中 `include` / `exlude` 欄位設定，了解要 處理/
 
 `include` 以及 `exclude` 選項只會應用在 `source/` 資料夾， 然而 `ignore` 選項則會應用在所有的資料夾。
 
-設定 | 描述
---- | ---
-`include` | Hexo 預設會忽略隱藏檔案與隱藏資料夾，但列在這個欄位中的檔案，Hexo 仍然會去處理
-`exclude` | 列在這裡的檔案將會被 Hexo 忽略
-`ignore` | 忽略檔案以及資料夾
+| 設定      | 描述                                                                           |
+| --------- | ------------------------------------------------------------------------------ |
+| `include` | Hexo 預設會忽略隱藏檔案與隱藏資料夾，但列在這個欄位中的檔案，Hexo 仍然會去處理 |
+| `exclude` | 列在這裡的檔案將會被 Hexo 忽略                                                 |
+| `ignore`  | 忽略檔案以及資料夾                                                             |
 
 範例:
 

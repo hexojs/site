@@ -47,19 +47,19 @@ deploy:
   message: [message]
 ```
 
-選項 | 描述 | 預設
---- | --- | ---
-`repo` | 儲存庫（Repository）網址 |
-`branch` | 分支名稱。| `gh-pages` (GitHub)<br>`coding-pages` (Coding.net)<br>`master` (其他)
-`message` | 自訂提交訊息 | `Site updated: {% raw %}{{ now('YYYY-MM-DD HH:mm:ss') }}{% endraw %}`)
-`token` | 選填的 token 值用來儲存庫存取身份認證。以 `$` 作為前綴從環境變數中讀取 token
+| 選項      | 描述                                                                         | 預設                                                                   |
+| --------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------- |
+| `repo`    | 儲存庫（Repository）網址                                                     |
+| `branch`  | 分支名稱。                                                                   | `gh-pages` (GitHub)<br>`coding-pages` (Coding.net)<br>`master` (其他)  |
+| `message` | 自訂提交訊息                                                                 | `Site updated: {% raw %}{{ now('YYYY-MM-DD HH:mm:ss') }}{% endraw %}`) |
+| `token`   | 選填的 token 值用來儲存庫存取身份認證。以 `$` 作為前綴從環境變數中讀取 token |
 
 3. 上傳你的網站。執行 `hexo clean && hexo deploy`。
 
-  - 你將會被提示提供目標儲存庫的使用者名稱及密碼，除非你用 token 或是 ssh 金鑰進行身份驗證。
-  - hexo-deployer-git 不會儲存你的使用者名稱及密碼。使用 [git-credential-cache](https://git-scm.com/docs/git-credential-cache) 來暫時儲存它們。
+- 你將會被提示提供目標儲存庫的使用者名稱及密碼，除非你用 token 或是 ssh 金鑰進行身份驗證。
+- hexo-deployer-git 不會儲存你的使用者名稱及密碼。使用 [git-credential-cache](https://git-scm.com/docs/git-credential-cache) 來暫時儲存它們。
 
-4. 在 Github / BitBucket / Gitlab 前往你的儲存庫設定，並將你的主要分支從 `master` 設為 `gh-pages`（或者任何你在 _config.yml 中設定的名字)。現在你的網站就是你的帳號首頁。
+4. 在 Github / BitBucket / Gitlab 前往你的儲存庫設定，並將你的主要分支從 `master` 設為 `gh-pages`（或者任何你在 \_config.yml 中設定的名字)。現在你的網站就是你的帳號首頁。
 
 ## Heroku
 
@@ -78,10 +78,10 @@ deploy:
   message: [message]
 ```
 
-選項 | 描述
---- | ---
-`repo` | Heroku 儲存庫網址
-`message` | 自訂提交訊息 (預設是 `Site updated: {% raw %}{{ now('YYYY-MM-DD HH:mm:ss') }}{% endraw %}`)
+| 選項      | 描述                                                                                        |
+| --------- | ------------------------------------------------------------------------------------------- |
+| `repo`    | Heroku 儲存庫網址                                                                           |
+| `message` | 自訂提交訊息 (預設是 `Site updated: {% raw %}{{ now('YYYY-MM-DD HH:mm:ss') }}{% endraw %}`) |
 
 ## Rsync
 
@@ -136,10 +136,10 @@ deploy:
   message: [message]
 ```
 
-選項 | 描述
---- | ---
-`repo` | OpenShift 儲存庫網址
-`message` | 自訂提交訊息 (預設是 `Site updated: {% raw %}{{ now('YYYY-MM-DD HH:mm:ss') }}{% endraw %}`)
+| 選項      | 描述                                                                                        |
+| --------- | ------------------------------------------------------------------------------------------- |
+| `repo`    | OpenShift 儲存庫網址                                                                        |
+| `message` | 自訂提交訊息 (預設是 `Site updated: {% raw %}{{ now('YYYY-MM-DD HH:mm:ss') }}{% endraw %}`) |
 
 ## FTPSync
 
@@ -163,15 +163,15 @@ deploy:
   verbose: [true|false]
 ```
 
-選項 | 描述 | 預設值
---- | --- | ---
-`host` | 遠端主機位址 |
-`user` | 使用者名稱 |
-`pass` | 密碼 |
-`remote` | 遠端主機的根目錄 | `/`
-`port` | 連接埠 | 21
-`clear` | 在上傳之前，移除遠端目錄中所有檔案及目錄 | false
-`verbose` | 顯示除錯訊息 | false
+| 選項      | 描述                                     | 預設值 |
+| --------- | ---------------------------------------- | ------ |
+| `host`    | 遠端主機位址                             |
+| `user`    | 使用者名稱                               |
+| `pass`    | 密碼                                     |
+| `remote`  | 遠端主機的根目錄                         | `/`    |
+| `port`    | 連接埠                                   | 21     |
+| `clear`   | 在上傳之前，移除遠端目錄中所有檔案及目錄 | false  |
+| `verbose` | 顯示除錯訊息                             | false  |
 
 ## Vercel
 
