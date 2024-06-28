@@ -41,7 +41,7 @@ jobs:
           repositories: "site"
 
       - name: Download Translations && Create PR
-        uses: crowdin/github-action@v1
+        uses: crowdin/github-action@v2
         with:
           upload_sources: false
           push_sources: false
