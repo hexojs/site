@@ -5,6 +5,9 @@
 const { basename } = require('path');
 const cheerio = require('cheerio');
 const lunr = require('lunr');
+require('lunr-languages/lunr.stemmer.support.js')(lunr);
+require('lunr-languages/lunr.zh.js')(lunr);
+require('lunr-languages/lunr.multi.js')(lunr);
 const full_url_for = hexo.extend.helper.get('full_url_for').bind(hexo);
 
 const localizedPath = ['docs', 'api'];
@@ -151,6 +154,7 @@ hexo.extend.helper.register('plugin_list', function() {
 
 hexo.extend.helper.register('lunr_index', data => {
   const index = lunr(function() {
+    this.use(lunr.multiLanguage('en', 'zh'));
     this.field('name', {boost: 10});
     this.field('tags', {boost: 50});
     this.field('description');
