@@ -1,0 +1,7 @@
+description: A package that generates index, archive, categories and tags pages for Hexo. It supports i18n and index pages for categories and tags.
+link: https://github.com/kiwirafe/hexo-generator-plus/
+tags:
+  - i18n
+  - generator
+  - helper
+  - index
