@@ -12,10 +12,10 @@ helper จะถูกใช้ใน template เพื่อช่วยเส
 
 ### url_for
 
-ส่งกลับ url ท่ีมี root path ตั้งขึ้นไว้  คุณต้องใช้ helper นี้แทน `config
+ส่งกลับ url ท่ีมี root path ตั้งขึ้นไว้ คุณต้องใช้ helper นี้แทน `config
 .root + path` ของ hexo 2.7
 
-``` js
+```js
 <%- url_for(path) %>
 ```
 
@@ -23,7 +23,7 @@ helper จะถูกใช้ใน template เพื่อช่วยเส
 
 ส่งกลับ relative URL จาก `from` ไปเป็น `to`
 
-``` js
+```js
 <%- relative_url(from, to) %>
 ```
 
@@ -31,17 +31,17 @@ helper จะถูกใช้ใน template เพื่อช่วยเส
 
 เสียบรูปภาพ Gravatar เข้า:
 
-ถ้าคุณไม่ได้ป่งชี้ parameter ของ [options] ให้ชัดเจน จะมีการตั้งค่าให้  by
-default  แล้วคุณก็สามารถตั้งค่า option ด้วยตนเอง ถ้าคุณตั้งค่านี้เป็น object
+ถ้าคุณไม่ได้ป่งชี้ parameter ของ [options] ให้ชัดเจน จะมีการตั้งค่าให้ by
+default แล้วคุณก็สามารถตั้งค่า option ด้วยตนเอง ถ้าคุณตั้งค่านี้เป็น object
 object นั้นจะถูกเปลี่ยนไปเป็น query string
 
-``` js
+```js
 <%- gravatar(email, [options]) %>
 ```
 
 **ยกตัวอย่างเช่น:**
 
-``` js
+```js
 <%- gravatar('a@abc.com') %>
 // https://www.gravatar.com/avatar/b9b00e66c6b8a70f88c73cb6bdb06787
 
@@ -56,19 +56,19 @@ object นั้นจะถูกเปลี่ยนไปเป็น query 
 
 ### css
 
-โหลดไฟล์ CSS  `path` นั้นเป็น array หรือ string ได้  ถ้า `path` นั้นไม่มี `/`
+โหลดไฟล์ CSS `path` นั้นเป็น array หรือ string ได้ ถ้า `path` นั้นไม่มี `/`
 หรือ protocol ใดๆ เป็นคำนำหน้า มันจะมี root URL เป็นคำนำหน้า
-ถ้าคุณไม่ได้เพิ่ม extension ท่ีเป็น `.css`  หลัง `path`  extension
+ถ้าคุณไม่ได้เพิ่ม extension ท่ีเป็น `.css` หลัง `path` extension
 นั้นจะถูกเพิ่มให้ไฟล์โดยอัตโนมัติ
 Use object type for custom attributes.
 
-``` js
+```js
 <%- css(path, ...) %>
 ```
 
 **ยกตัวอย่างเช่น:**
 
-``` js
+```js
 <%- css('style.css') %>
 // <link rel="stylesheet" href="/style.css">
 
@@ -86,19 +86,19 @@ Use object type for custom attributes.
 
 ### js
 
-โหลดไฟล์ JavaScript  `path` นั้นเป็น array หรือ string ได้  ถ้า `path`
+โหลดไฟล์ JavaScript `path` นั้นเป็น array หรือ string ได้ ถ้า `path`
 นั้นไม่มี `/` หรือ protocol ใดๆ เป็นคำนำหน้า มันจะมี root URL เป็นคำนำหน้า
-ถ้าคุณไม่ได้เพิ่ม extension ท่ีเป็น `.js`  หลัง `path`  extension
+ถ้าคุณไม่ได้เพิ่ม extension ท่ีเป็น `.js` หลัง `path` extension
 นั้นจะถูกเพิ่มให้ไฟล์โดยอัตโนมัติ
 Use object type for custom attributes.
 
-``` js
+```js
 <%- js(path, ...) %>
 ```
 
 **ยกตัวอย่างเช่น:**
 
-``` js
+```js
 <%- js('script.js') %>
 // <script src="/script.js"></script>
 
@@ -118,19 +118,19 @@ Use object type for custom attributes.
 
 เสียบลิงก์เข้า:
 
-``` js
+```js
 <%- link_to(path, [text], [options]) %>
 ```
 
-Option | Description | Default
---- | --- | ---
-`external` | Opens the link in a new tab | false
-`class` | Class name |
-`id` | ID |
+| Option     | Description                 | Default |
+| ---------- | --------------------------- | ------- |
+| `external` | Opens the link in a new tab | false   |
+| `class`    | Class name                  |
+| `id`       | ID                          |
 
 **ยกตัวอย่างเช่น:**
 
-``` js
+```js
 <%- link_to('http://www.google.com') %>
 // <a href="http://www.google.com" title="http://www.google.com">http://www.google.com</a>
 
@@ -145,22 +145,22 @@ Option | Description | Default
 
 เสียบลิงก์ของเมล์เข้า:
 
-``` js
+```js
 <%- mail_to(path, [text], [options]) %>
 ```
 
-Option | Description
---- | ---
-`class` | Class name
-`id` | ID
-`subject` | Mail subject
-`cc` | CC
-`bcc` | BCC
-`body` | Mail content
+| Option    | Description  |
+| --------- | ------------ |
+| `class`   | Class name   |
+| `id`      | ID           |
+| `subject` | Mail subject |
+| `cc`      | CC           |
+| `bcc`     | BCC          |
+| `body`    | Mail content |
 
 **ยกตัวอย่างเช่น:**
 
-``` js
+```js
 <%- mail_to('a@abc.com') %>
 // <a href="mailto:a@abc.com" title="a@abc.com">a@abc.com</a>
 
@@ -172,23 +172,23 @@ Option | Description
 
 เสียบรูปภาพเข้า:
 
-``` js
+```js
 <%- image_tag(path, [options]) %>
 ```
 
-Option | Description
---- | ---
-`alt` | Alternative text of the image
-`class` | Class name
-`id` | ID
-`width` | Image width
-`height` | Image height
+| Option   | Description                   |
+| -------- | ----------------------------- |
+| `alt`    | Alternative text of the image |
+| `class`  | Class name                    |
+| `id`     | ID                            |
+| `width`  | Image width                   |
+| `height` | Image height                  |
 
 ### favicon_tag
 
 เสียบ favicon เข้า:
 
-``` js
+```js
 <%- favicon_tag(path) %>
 ```
 
@@ -196,18 +196,18 @@ Option | Description
 
 เสียบลิงก์ฟีดเข้า:
 
-``` js
+```js
 <%- feed_tag(path, [options]) %>
 ```
 
-Option | Description | Default
---- | --- | ---
-`title` | Feed title | `config.title`
-`type` | Feed type | 
+| Option  | Description | Default        |
+| ------- | ----------- | -------------- |
+| `title` | Feed title  | `config.title` |
+| `type`  | Feed type   |
 
 **Examples:**
 
-``` js
+```js
 <%- feed_tag('atom.xml') %>
 // <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
 
@@ -223,10 +223,10 @@ Option | Description | Default
 
 ### is_current
 
-ตรวจได้ว่า `path` นั้นเหมาะกับ URL ของเพจปัจจุบันหรือไม่  คุณใช้ตัวเลือก
+ตรวจได้ว่า `path` นั้นเหมาะกับ URL ของเพจปัจจุบันหรือไม่ คุณใช้ตัวเลือก
 `strict` ไปเปิด strict matching ได้
 
-``` js
+```js
 <%- is_current(path, [strict]) %>
 ```
 
@@ -234,7 +234,7 @@ Option | Description | Default
 
 ตรวจได้ว่าเพจปัจจุบันเป็นหน้าหลักหรือไม่
 
-``` js
+```js
 <%- is_home() %>
 ```
 
@@ -242,7 +242,7 @@ Option | Description | Default
 
 ตรวจได้ว่าเพจปัจจุบันเป็นโพสต์หรือไม่
 
-``` js
+```js
 <%- is_post() %>
 ```
 
@@ -250,7 +250,7 @@ Option | Description | Default
 
 ตรวจได้ว่าเพจปัจจุบันเป็นเพจ archive หรือไม่
 
-``` js
+```js
 <%- is_archive() %>
 ```
 
@@ -258,7 +258,7 @@ Option | Description | Default
 
 ตรวจได้ว่าเพจปัจจุบันเป็นเพจ archive ต่อปีหรือไม่
 
-``` js
+```js
 <%- is_year() %>
 ```
 
@@ -266,17 +266,17 @@ Option | Description | Default
 
 ตรวจได้ว่าเพจปัจจุบันเป็นเพจ archive ต่อเดือนหรือไม่
 
-``` js
+```js
 <%- is_month() %>
 ```
 
 ### is_category
 
 ตรวจได้ว่าเพจปัจจุบันเป็นเพจ category หรือไม่
-ถ้า parameter นั้นเป็น string  จะตรวจได้ว่าเพจปัจจุบันอยู่ใน category
+ถ้า parameter นั้นเป็น string จะตรวจได้ว่าเพจปัจจุบันอยู่ใน category
 นั้นหรือไม่
 
-``` js
+```js
 <%- is_category() %>
 <%- is_category('hobby') %>
 ```
@@ -286,7 +286,7 @@ Option | Description | Default
 ตรวจได้ว่าเพจปัจจุบันเป็นเพจแท็กหรือไม่
 ถ้า parameter นั้นเป็น string จะตรวจได้ว่าเพจปัจจุบันเหมาะกับแท็กนั้นหรือไม่
 
-``` js
+```js
 <%- is_tag() %>
 <%- is_tag('hobby') %>
 ```
@@ -297,7 +297,7 @@ Option | Description | Default
 
 ลบ space ท่ีอยู่ข้่างต้นหรือระหว่างตัวอักษรต่างๆของ string
 
-``` js
+```js
 <%- trim(string) %>
 ```
 
@@ -305,13 +305,13 @@ Option | Description | Default
 
 ลบแท็ก HTML ทั้งหมดของ string
 
-``` js
+```js
 <%- strip_html(string) %>
 ```
 
 **ยกตัวอย่างเช่น:**
 
-``` js
+```js
 <%- strip_html('It\'s not <b>important</b> anymore!') %>
 // It's not important anymore!
 ```
@@ -320,13 +320,13 @@ Option | Description | Default
 
 เปลี่ยน string ไปเป็นตัวอักษรท่ีถูกต้อง
 
-``` js
+```js
 <%- titlecase(string) %>
 ```
 
 **ยกตัวอย่างเช่น:**
 
-``` js
+```js
 <%- titlecase('this is an apple') %>
 # This is an Apple
 ```
@@ -335,13 +335,13 @@ Option | Description | Default
 
 render string ด้วย Markdown
 
-``` js
+```js
 <%- markdown(str) %>
 ```
 
 **ยกตัวอย่างเช่น:**
 
-``` js
+```js
 <%- markdown('make me **strong**') %>
 // make me <strong>strong</strong>
 ```
@@ -350,13 +350,13 @@ render string ด้วย Markdown
 
 Renders a string.
 
-``` js
+```js
 <%- render(str, engine, [options]) %>
 ```
 
 **Examples:**
 
-``` js
+```js
 <%- render('p(class="example") Test', 'pug'); %>
 // <p class="example">Test</p>
 ```
@@ -365,16 +365,16 @@ See [Rendering](https://hexo.io/th/api/rendering) for more details.
 
 ### word_wrap
 
-ทุกบรรทัดของ text จะไม่ยาวเกิน  `length` ค่า  `length` นั้นจะเป็น 80 ตัวอักษร
- by default
+ทุกบรรทัดของ text จะไม่ยาวเกิน `length` ค่า `length` นั้นจะเป็น 80 ตัวอักษร
+by default
 
-``` js
+```js
 <%- word_wrap(str, [length]) %>
 ```
 
 **ยกตัวอย่างเช่น:**
 
-``` js
+```js
 <%- word_wrap('Once upon a time', 8) %>
 // Once upon\n a time
 ```
@@ -384,13 +384,13 @@ See [Rendering](https://hexo.io/th/api/rendering) for more details.
 ตัด text ให้สั้นตามการตั้งค่าของ `length` การตั้งค่า `length` default
 เป็นตัวอักษร 30 ตัว
 
-``` js
+```js
 <%- truncate(text, [options]) %>
 ```
 
 **ยกตัวอย่างเช่น:**
 
-``` js
+```js
 <%- truncate('Once upon a time in a world far far away', {length: 17}) %>
 // Once upon a ti...
 
@@ -405,13 +405,13 @@ See [Rendering](https://hexo.io/th/api/rendering) for more details.
 
 Escapes HTML entities in a string.
 
-``` js
+```js
 <%- escape_html(str) %>
 ```
 
 **Examples:**
 
-``` js
+```js
 <%- escape_html('<p>Hello "world".</p>') %>
 // &lt;p&gt;Hello &quot;world&quot;.&lt;&#x2F;p&gt;
 ```
@@ -422,27 +422,27 @@ Escapes HTML entities in a string.
 
 โหลดไฟล์ template อื่นๆ คุณสามารถตั้งค่า local variable ใน `locals`
 
-``` js
+```js
 <%- partial(layout, [locals], [options]) %>
 ```
 
-Option | Description | Default
---- | --- | ---
-`cache` | Cache contents (Use fragment cache) | `false`
-`only` | Strict local variables. Only use variables set in `locals` in templates. | `false`
+| Option  | Description                                                              | Default |
+| ------- | ------------------------------------------------------------------------ | ------- |
+| `cache` | Cache contents (Use fragment cache)                                      | `false` |
+| `only`  | Strict local variables. Only use variables set in `locals` in templates. | `false` |
 
 ### fragment_cache
 
 cache เนื้อหาอยู่ใน fragment มันจะบันทึกเนื้อหาอยู่ใน fragment และ cache
 นั้นจะทำให้ request ท่ีเกี่ยวข้องนั้นมีการตอบรับเร็วขึ้น
 
-``` js
+```js
 <%- fragment_cache(id, fn);
 ```
 
 **ยกตัวอย่างเช่น:**
 
-``` js
+```js
 <%- fragment_cache('header', function(){
   return '<header></header>';
 }) %>
@@ -455,15 +455,15 @@ cache เนื้อหาอยู่ใน fragment มันจะบัน�
 เสียบวันเดือนปีท่ีได้จัดรูปแบบแล้วเข้า:
 
 `date` นั้นจะเป็น unix time, ISO string, date object, หรือ [Moment.js] object
- ได้ `format` นั้นถูกตั้งค่าเป็น `date_format` อยู่แล้ว by default
+ได้ `format` นั้นถูกตั้งค่าเป็น `date_format` อยู่แล้ว by default
 
-``` js
+```js
 <%- date(date, [format]) %>
 ```
 
 **ยกตัวอย่างเช่น:**
 
-``` js
+```js
 <%- date(Date.now()) %>
 // 2013-01-01
 
@@ -476,15 +476,15 @@ cache เนื้อหาอยู่ใน fragment มันจะบัน�
 เสียบวันเดือนปีเข้าในรูปแบบ XML :
 
 `date` นั้นจะเป็น unix time, ISO string, date object, หรือ [Moment.js] object
- ได้
+ได้
 
-``` js
+```js
 <%- date_xml(date) %>
 ```
 
 **ยกตัวอย่างเช่น:**
 
-``` js
+```js
 <%- date_xml(Date.now()) %>
 // 2013-01-01T00:00:00.000Z
 ```
@@ -496,13 +496,13 @@ cache เนื้อหาอยู่ใน fragment มันจะบัน�
 `date` นั้นเป็น unix time, ISO string, date object, หรือ [Moment.js] object ได้
 `format` นั้นถูกตั้งค่าเป็น `time_format` อยู่แล้ว by default
 
-``` js
+```js
 <%- time(date, [format]) %>
 ```
 
 **ยกตัวอย่างเช่น:**
 
-``` js
+```js
 <%- time(Date.now()) %>
 // 13:05:12
 
@@ -517,13 +517,13 @@ cache เนื้อหาอยู่ใน fragment มันจะบัน�
 `date` นั้นเป็น unix time, ISO string, date object, หรือ [Moment.js] object ได้
 `format` นั้นถูกตั้งค่าเป็น `date_format + time_format` อยู่แล้ว by default
 
-``` js
+```js
 <%- full_date(date, [format]) %>
 ```
 
 **ยกตัวอย่างเช่น:**
 
-``` js
+```js
 <%- full_date(new Date()) %>
 // Jan 1, 2013 0:00:00
 
@@ -541,31 +541,31 @@ cache เนื้อหาอยู่ใน fragment มันจะบัน�
 
 เสียบรายชื่อของ category ทั้งหมดเข้า:
 
-``` js
+```js
 <%- list_categories([options]) %>
 ```
 
-Option | Description | Default
---- | --- | ---
-`orderby` | Order of categories | name
-`order` | Sort of order. `1`, `asc` for ascending; `-1`, `desc` for descending | 1
-`show_count` | Display the number of posts for each category | true
-`style` | Style to display the category list. `list` displays categories in an unordered list.  | list
-`separator` | Separator between categories. (Only works if `style` is not `list`) | ,
-`depth` | Levels of categories to be displayed. `0` displays all categories and child categories; `-1` is similar to `0` but displayed in flat; `1` displays only top level categories. | 0
-`class` | Class name of tag list (string) or customize each tag's class (object, see below). | tag
-`transform` | The function that changes the display of category name. |
-`suffix` | Add a suffix to link. | None
+| Option       | Description                                                                                                                                                                   | Default |
+| ------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
+| `orderby`    | Order of categories                                                                                                                                                           | name    |
+| `order`      | Sort of order. `1`, `asc` for ascending; `-1`, `desc` for descending                                                                                                          | 1       |
+| `show_count` | Display the number of posts for each category                                                                                                                                 | true    |
+| `style`      | Style to display the category list. `list` displays categories in an unordered list.                                                                                          | list    |
+| `separator`  | Separator between categories. (Only works if `style` is not `list`)                                                                                                           | ,       |
+| `depth`      | Levels of categories to be displayed. `0` displays all categories and child categories; `-1` is similar to `0` but displayed in flat; `1` displays only top level categories. | 0       |
+| `class`      | Class name of tag list (string) or customize each tag's class (object, see below).                                                                                            | tag     |
+| `transform`  | The function that changes the display of category name.                                                                                                                       |
+| `suffix`     | Add a suffix to link.                                                                                                                                                         | None    |
 
 Class advanced customization:
 
-Option | Description | Default
---- | --- | ---
-`class.ul` | `<ul>` class name (only for style `list`) | `tag-list` (list style)
-`class.li` | `<li>` class name (only for style `list`) | `tag-list-item` (list style)
-`class.a` | `<a>` class name | `tag-list-link` (list style) `tag-link` (normal style)
-`class.label` | `<span>` class name where the tag label is stored (only for normal style, when `class.label` is set the label is put in a `<span>`) | `tag-label` (normal style)
-`class.count` | `<span>` class name where the tag counter is stored (only when `show_count` is `true`) | `tag-list-count` (list style) `tag-count` (normal style)
+| Option        | Description                                                                                                                         | Default                                                  |
+| ------------- | ----------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------- |
+| `class.ul`    | `<ul>` class name (only for style `list`)                                                                                           | `tag-list` (list style)                                  |
+| `class.li`    | `<li>` class name (only for style `list`)                                                                                           | `tag-list-item` (list style)                             |
+| `class.a`     | `<a>` class name                                                                                                                    | `tag-list-link` (list style) `tag-link` (normal style)   |
+| `class.label` | `<span>` class name where the tag label is stored (only for normal style, when `class.label` is set the label is put in a `<span>`) | `tag-label` (normal style)                               |
+| `class.count` | `<span>` class name where the tag counter is stored (only when `show_count` is `true`)                                              | `tag-list-count` (list style) `tag-count` (normal style) |
 
 Examples:
 
@@ -580,30 +580,30 @@ Examples:
 
 เสียบรายชื่อของแท็กทั้งหมดเข้า:
 
-``` js
+```js
 <%- list_tags([options]) %>
 ```
 
-Option | Description | Default
---- | --- | ---
-`orderby` | Order of categories | name
-`order` | Sort of order. `1`, `asc` for ascending; `-1`, `desc` for descending | 1
-`show_count` | Display the number of posts for each tag | true
-`style` | Style to display the tag list. `list` displays tags in an unordered list.  | list
-`separator` | Separator between categories. (Only works if `style` is not `list`) | ,
-`class` | Class name of tag list. | tag
-`transform` | The function that changes the display of tag name. |
-`amount` | The number of tags to display (0 = unlimited) | 0
-`suffix` | Add a suffix to link. | None
+| Option       | Description                                                               | Default |
+| ------------ | ------------------------------------------------------------------------- | ------- |
+| `orderby`    | Order of categories                                                       | name    |
+| `order`      | Sort of order. `1`, `asc` for ascending; `-1`, `desc` for descending      | 1       |
+| `show_count` | Display the number of posts for each tag                                  | true    |
+| `style`      | Style to display the tag list. `list` displays tags in an unordered list. | list    |
+| `separator`  | Separator between categories. (Only works if `style` is not `list`)       | ,       |
+| `class`      | Class name of tag list.                                                   | tag     |
+| `transform`  | The function that changes the display of tag name.                        |
+| `amount`     | The number of tags to display (0 = unlimited)                             | 0       |
+| `suffix`     | Add a suffix to link.                                                     | None    |
 
 Class advanced customization:
 
-Option | Description | Default
---- | --- | ---
-`class.ul` | `<ul>` class name (only for style `list`) | `tag-list` (list style)
-`class.li` | `<li>` class name (only for style `list`) | `tag-list-item` (list style)
-`class.a` | `<a>` class name | `tag-list-link` (list style) `tag-link` (normal style)
-`class.count` | `<span>` class name where the tag counter is stored (only when `show_count` is `true`) | `tag-list-count` (list style) `tag-count` (normal style)
+| Option        | Description                                                                            | Default                                                  |
+| ------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------- |
+| `class.ul`    | `<ul>` class name (only for style `list`)                                              | `tag-list` (list style)                                  |
+| `class.li`    | `<li>` class name (only for style `list`)                                              | `tag-list-item` (list style)                             |
+| `class.a`     | `<a>` class name                                                                       | `tag-list-link` (list style) `tag-link` (normal style)   |
+| `class.count` | `<span>` class name where the tag counter is stored (only when `show_count` is `true`) | `tag-list-count` (list style) `tag-count` (normal style) |
 
 Examples:
 
@@ -618,60 +618,60 @@ Examples:
 
 เสียบรายชื่อ archive เข้า:
 
-``` js
+```js
 <%- list_archives([options]) %>
 ```
 
-Option | Description | Default
---- | --- | ---
-`type` | Type. This value can be `yearly` or `monthly`. | monthly
-`order` | Sort of order. `1`, `asc` for ascending; `-1`, `desc` for descending | 1
-`show_count` | Display the number of posts for each archive | true
-`format` | Date format | MMMM YYYY
-`style` | Style to display the archive list. `list` displays archives in an unordered list.  | list
-`separator` | Separator between archives. (Only works if `style` is not `list`) | ,
-`class` | Class name of archive list. | archive
-`transform` | The function that changes the display of archive name. |
+| Option       | Description                                                                       | Default   |
+| ------------ | --------------------------------------------------------------------------------- | --------- |
+| `type`       | Type. This value can be `yearly` or `monthly`.                                    | monthly   |
+| `order`      | Sort of order. `1`, `asc` for ascending; `-1`, `desc` for descending              | 1         |
+| `show_count` | Display the number of posts for each archive                                      | true      |
+| `format`     | Date format                                                                       | MMMM YYYY |
+| `style`      | Style to display the archive list. `list` displays archives in an unordered list. | list      |
+| `separator`  | Separator between archives. (Only works if `style` is not `list`)                 | ,         |
+| `class`      | Class name of archive list.                                                       | archive   |
+| `transform`  | The function that changes the display of archive name.                            |
 
 ### list_posts
 
 เสียบรายชื่อโพสต์เข้า:
 
-``` js
+```js
 <%- list_posts([options]) %>
 ```
 
-Option | Description | Default
---- | --- | ---
-`orderby` | Order of posts | date
-`order` | Sort of order. `1`, `asc` for ascending; `-1`, `desc` for descending | 1
-`style` | Style to display the post list. `list` displays posts in an unordered list.  | list
-`separator` | Separator between posts. (Only works if `style` is not `list`) | ,
-`class` | Class name of post list. | post
-`amount` | The number of posts to display (0 = unlimited) | 6
-`transform` | The function that changes the display of post name. |
+| Option      | Description                                                                 | Default |
+| ----------- | --------------------------------------------------------------------------- | ------- |
+| `orderby`   | Order of posts                                                              | date    |
+| `order`     | Sort of order. `1`, `asc` for ascending; `-1`, `desc` for descending        | 1       |
+| `style`     | Style to display the post list. `list` displays posts in an unordered list. | list    |
+| `separator` | Separator between posts. (Only works if `style` is not `list`)              | ,       |
+| `class`     | Class name of post list.                                                    | post    |
+| `amount`    | The number of posts to display (0 = unlimited)                              | 6       |
+| `transform` | The function that changes the display of post name.                         |
 
 ### tagcloud
 
 เสียบ tag cloud เข้า:
 
-``` js
+```js
 <%- tagcloud([tags], [options]) %>
 ```
 
-Option | Description | Default
---- | --- | ---
-`min_font` | Minimal font size | 10
-`max_font` | Maximum font size | 20
-`unit` | Unit of font size | px
-`amount` | Total amount of tags | 40
-`orderby` | Order of tags | name
-`order` | Sort order. `1`, `sac` as ascending; `-1`, `desc` as descending | 1
-`color` | Colorizes the tag cloud | false
-`start_color` | Start color. You can use hex (`#b700ff`), rgba (`rgba(183, 0, 255, 1)`), hsla (`hsla(283, 100%, 50%, 1)`) or [color keywords]. This option only works when `color` is true. |
-`end_color` | End color. You can use hex (`#b700ff`), rgba (`rgba(183, 0, 255, 1)`), hsla (`hsla(283, 100%, 50%, 1)`) or [color keywords]. This option only works when `color` is true. |
-`class` | Class name prefix of tags
-`level` | The number of different class names. This option only works when `class` is set. | 10
+| Option        | Description                                                                                                                                                                 | Default |
+| ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
+| `min_font`    | Minimal font size                                                                                                                                                           | 10      |
+| `max_font`    | Maximum font size                                                                                                                                                           | 20      |
+| `unit`        | Unit of font size                                                                                                                                                           | px      |
+| `amount`      | Total amount of tags                                                                                                                                                        | 40      |
+| `orderby`     | Order of tags                                                                                                                                                               | name    |
+| `order`       | Sort order. `1`, `sac` as ascending; `-1`, `desc` as descending                                                                                                             | 1       |
+| `color`       | Colorizes the tag cloud                                                                                                                                                     | false   |
+| `start_color` | Start color. You can use hex (`#b700ff`), rgba (`rgba(183, 0, 255, 1)`), hsla (`hsla(283, 100%, 50%, 1)`) or [color keywords]. This option only works when `color` is true. |
+| `end_color`   | End color. You can use hex (`#b700ff`), rgba (`rgba(183, 0, 255, 1)`), hsla (`hsla(283, 100%, 50%, 1)`) or [color keywords]. This option only works when `color` is true.   |
+| `class`       | Class name prefix of tags                                                                                                                                                   |
+| `level`       | The number of different class names. This option only works when `class` is set.                                                                                            | 10      |
 
 ## Miscellaneous
 
@@ -679,35 +679,35 @@ Option | Description | Default
 
 เสียบ paginator เข้า:
 
-``` js
+```js
 <%- paginator(options) %>
 ```
 
-Option | Description | Default
---- | --- | ---
-`base` | Base URL | /
-`format` | URL format | page/%d/
-`total` | The number of pages | 1
-`current` | Current page number | 0
-`prev_text` | The link text of previous page. Works only if `prev_next` is set to true. | Prev
-`next_text` | The link text of next page. Works only if `prev_next` is set to true. | Next
-`space` | The space text | &hellp;
-`prev_next` | Display previous and next links | true
-`end_size` | The number of pages displayed on the start and the end side | 1
-`mid_size` | The number of pages displayed between current page, but not including current page | 2
-`show_all` | Display all pages. If this is set true, `end_size` and `mid_size` will not works. | false
-`escape` | Escape HTML tags | true
+| Option      | Description                                                                        | Default  |
+| ----------- | ---------------------------------------------------------------------------------- | -------- |
+| `base`      | Base URL                                                                           | /        |
+| `format`    | URL format                                                                         | page/%d/ |
+| `total`     | The number of pages                                                                | 1        |
+| `current`   | Current page number                                                                | 0        |
+| `prev_text` | The link text of previous page. Works only if `prev_next` is set to true.          | Prev     |
+| `next_text` | The link text of next page. Works only if `prev_next` is set to true.              | Next     |
+| `space`     | The space text                                                                     | &hellp;  |
+| `prev_next` | Display previous and next links                                                    | true     |
+| `end_size`  | The number of pages displayed on the start and the end side                        | 1        |
+| `mid_size`  | The number of pages displayed between current page, but not including current page | 2        |
+| `show_all`  | Display all pages. If this is set true, `end_size` and `mid_size` will not works.  | false    |
+| `escape`    | Escape HTML tags                                                                   | true     |
 
 **Examples:**
 
-``` js
+```js
 <%- paginator({
   prev_text: '<',
   next_text: '>'
 }) %>
 ```
 
-``` html
+```html
 <!-- Rendered as -->
 <a href="/1/">&lt;</a>
 <a href="/1/">1</a>
@@ -716,7 +716,7 @@ Option | Description | Default
 <a href="/3/">&gt;</a>
 ```
 
-``` js
+```js
 <%- paginator({
   prev_text: '<i class="fa fa-angle-left"></i>',
   next_text: '<i class="fa fa-angle-right"></i>',
@@ -724,7 +724,7 @@ Option | Description | Default
 }) %>
 ```
 
-``` html
+```html
 <!-- Rendered as -->
 <a href="/1/"><i class="fa fa-angle-left"></i></a>
 <a href="/1/">1</a>
@@ -737,33 +737,33 @@ Option | Description | Default
 
 เสียบฟอร์ม search ของ Google เข้า:
 
-``` js
+```js
 <%- search_form(options) %>
 ```
 
-Option | Description | Default
---- | --- | ---
-`class` | The class name of form | search-form
-`text` | Search hint word | Search
-`button` | Display search button. The value can be a boolean or a string. When the value is a string, it'll be the text of the button. | false
+| Option   | Description                                                                                                                 | Default     |
+| -------- | --------------------------------------------------------------------------------------------------------------------------- | ----------- |
+| `class`  | The class name of form                                                                                                      | search-form |
+| `text`   | Search hint word                                                                                                            | Search      |
+| `button` | Display search button. The value can be a boolean or a string. When the value is a string, it'll be the text of the button. | false       |
 
 ### number_format
 
 จัดรูปแบบตัวเลข:
 
-``` js
+```js
 <%- number_format(number, [options]) %>
 ```
 
-Option | Description | Default
---- | --- | ---
-`precision` | The precision of number. The value can be `false` or a nonnegative integer. | false
-`delimiter` | The thousands delimiter | ,
-`separator` | The separator between the fractional and integer digits. | .
+| Option      | Description                                                                 | Default |
+| ----------- | --------------------------------------------------------------------------- | ------- |
+| `precision` | The precision of number. The value can be `false` or a nonnegative integer. | false   |
+| `delimiter` | The thousands delimiter                                                     | ,       |
+| `separator` | The separator between the fractional and integer digits.                    | .       |
 
 **ยกตัวอย่างเช่น:**
 
-``` js
+```js
 <%- number_format(12345.67, {precision: 1}) %>
 // 12,345.68
 
@@ -784,13 +784,13 @@ Option | Description | Default
 
 Inserts [generator tag](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta).
 
-``` js
+```js
 <%- meta_generator() %>
 ```
 
 **Examples:**
 
-``` js
+```js
 <%- meta_generator() %>
 // <meta name="generator" content="Hexo 4.0.0">
 ```
@@ -799,47 +799,47 @@ Inserts [generator tag](https://developer.mozilla.org/en-US/docs/Web/HTML/Elemen
 
 เสียบข้อมูล [Open Graph] เข้า:
 
-``` js
+```js
 <%- open_graph([options]) %>
 ```
 
-Option | Description | Default
---- | --- | ---
-`title` | Page title (`og:title`) | `page.title`
-`type` | Page type (`og:type`) | article(post page)<br>website(non-post page)
-`url` | Page URL (`og:url`) | `url`
-`image` | Page images (`og:image`) | All images in the content
-`author` | Article author (`og:article:author`) | `config.author`
-`date` | Article published time (`og:article:published_time`) | Page published time
-`updated` | Article modified time (`og:article:modified_time`) | Page modified time
-`language` | Article language (`og:locale`) | `page.lang \|\| page.language \|\| config.language`
-`site_name` | Site name (`og:site_name`) | `config.title`
-`description` | Page description (`og:description`) | Page excerpt or first 200 characters of the content
-`twitter_card` | Twitter card type (`twitter:card`) | summary
-`twitter_id` | Twitter ID (`twitter:creator`) |
-`twitter_site` | Twitter Site (`twitter:site`) |
-`google_plus` | Google+ profile link |
-`fb_admins` | Facebook admin ID |
-`fb_app_id` | Facebook App ID |
+| Option         | Description                                          | Default                                             |
+| -------------- | ---------------------------------------------------- | --------------------------------------------------- |
+| `title`        | Page title (`og:title`)                              | `page.title`                                        |
+| `type`         | Page type (`og:type`)                                | article(post page)<br>website(non-post page)        |
+| `url`          | Page URL (`og:url`)                                  | `url`                                               |
+| `image`        | Page images (`og:image`)                             | All images in the content                           |
+| `author`       | Article author (`og:article:author`)                 | `config.author`                                     |
+| `date`         | Article published time (`og:article:published_time`) | Page published time                                 |
+| `updated`      | Article modified time (`og:article:modified_time`)   | Page modified time                                  |
+| `language`     | Article language (`og:locale`)                       | `page.lang \|\| page.language \|\| config.language` |
+| `site_name`    | Site name (`og:site_name`)                           | `config.title`                                      |
+| `description`  | Page description (`og:description`)                  | Page excerpt or first 200 characters of the content |
+| `twitter_card` | Twitter card type (`twitter:card`)                   | summary                                             |
+| `twitter_id`   | Twitter ID (`twitter:creator`)                       |
+| `twitter_site` | Twitter Site (`twitter:site`)                        |
+| `google_plus`  | Google+ profile link                                 |
+| `fb_admins`    | Facebook admin ID                                    |
+| `fb_app_id`    | Facebook App ID                                      |
 
 ### toc
 
 parse แท็ก heading (h1~h6) ในโพสต์และเสียบสารบัญเข้า:
 
-``` js
+```js
 <%- toc(str, [options]) %>
 ```
 
-Option | Description | Default
---- | --- | ---
-`class` | Class name | toc
-`list_number` | Displays list number | true
-`max_depth` | Maximum heading depth of generated toc | 6
-`min_depth` | Minimum heading depth of generated toc | 1
+| Option        | Description                            | Default |
+| ------------- | -------------------------------------- | ------- |
+| `class`       | Class name                             | toc     |
+| `list_number` | Displays list number                   | true    |
+| `max_depth`   | Maximum heading depth of generated toc | 6       |
+| `min_depth`   | Minimum heading depth of generated toc | 1       |
 
 **ยกตัวอย่างเช่น:**
 
-``` js
+```js
 <%- toc(page.content) %>
 ```
 
@@ -855,7 +855,7 @@ Please see below PRs.
 - https://github.com/hexojs/hexo/pull/4871
 - https://github.com/hexojs/hexo-util/pull/269
 - https://github.com/hexojs/hexo-renderer-markdown-it/pull/174
-{% endnote %}
+  {% endnote %}
 
 [color keywords]: http://www.w3.org/TR/css3-color/#svg-color
 [Moment.js]: http://momentjs.com/

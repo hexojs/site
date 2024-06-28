@@ -17,7 +17,7 @@ code snippet
 code snippet
 {% endcode %}
 
-``` [language] [title] [url] [link text] [additional options]
+```[language] [title] [url] [link text] [additional options]
 code snippet
 ```
 ````
@@ -37,7 +37,7 @@ highlight:
   auto_detect: false
   line_number: true
   line_threshold: 0
-  tab_replace: ''
+  tab_replace: ""
   exclude_languages:
     - example
   wrap: true
@@ -47,7 +47,7 @@ prismjs:
   preprocess: true
   line_number: true
   line_threshold: 0
-  tab_replace: ''
+  tab_replace: ""
 ```
 
 v7.0.0以降:
@@ -59,7 +59,7 @@ highlight:
   auto_detect: false
   line_number: true
   line_threshold: 0
-  tab_replace: ''
+  tab_replace: ""
   exclude_languages:
     - example
   wrap: true
@@ -68,7 +68,7 @@ prismjs:
   preprocess: true
   line_number: true
   line_threshold: 0
-  tab_replace: ''
+  tab_replace: ""
 ```
 
 上記のYAMLはHexoのデフォルト設定です。
@@ -89,7 +89,7 @@ v7.0.0以降:
 
 ```yaml
 # _config.yml
-syntax_highlighter:  # empty
+syntax_highlighter: # empty
 ```
 
 `highlight.enable`と`prismjs.enable`が`false`（v7.0.0より前）か、`syntax_highlighter`が空（v7.0.0以降）の場合、コードブロックの出力HTMLは対応するレンダラーによって制御されます。例えば、[`marked.js`](https://github.com/markedjs/marked)（Hexoのデフォルトのmarkdownレンダラーである[`hexo-renderer-marked`](https://github.com/hexojs/hexo-renderer-marked)に使用されています）は、`<code>`の`class`に言語コードを追加します:
@@ -119,7 +119,7 @@ highlight:
   auto_detect: false
   line_number: true
   line_threshold: 0
-  tab_replace: '  '
+  tab_replace: "  "
   exclude_languages:
     - example
   wrap: true
@@ -137,7 +137,7 @@ highlight:
   auto_detect: false
   line_number: true
   line_threshold: 0
-  tab_replace: '  '
+  tab_replace: "  "
   exclude_languages:
     - example
   wrap: true
@@ -166,18 +166,18 @@ Hexoは、出力を`<figure>`と`<table>`でラップし行番号を追加しま
 
 ```html
 <figure class="highlight yaml">
-<table>
-<tbody>
-<tr>
-  <td class="gutter">
-    <pre><span class="line">1</span><br></pre>
-  </td>
-  <td class="code">
-    <pre><span class="line"><span class="attr">hello:</span><span class="string">hexo</span></span><br></pre>
-  </td>
-</tr>
-</tbody>
-</table>
+  <table>
+    <tbody>
+      <tr>
+        <td class="gutter">
+          <pre><span class="line">1</span><br></pre>
+        </td>
+        <td class="code">
+          <pre><span class="line"><span class="attr">hello:</span><span class="string">hexo</span></span><br></pre>
+        </td>
+      </tr>
+    </tbody>
+  </table>
 </figure>
 ```
 
@@ -238,7 +238,7 @@ prismjs:
   preprocess: true
   line_number: true
   line_threshold: 0
-  tab_replace: ''
+  tab_replace: ""
 ```
 
 v7.0.0以降:
@@ -250,7 +250,7 @@ prismjs:
   preprocess: true
   line_number: true
   line_threshold: 0
-  tab_replace: ''
+  tab_replace: ""
 ```
 
 Prismjsはデフォルトで無効になっています。prismjsを有効にする前に、v7.0.0より前では`highlight.enable`を`false`に設定するか、v7.0.0以降では`syntax_highlighter`を`prismjs`に設定する必要があります。

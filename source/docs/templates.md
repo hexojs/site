@@ -1,40 +1,45 @@
 ---
 title: Templates
 ---
+
 Templates define the presentation of your website by describing what each page should look like. The table below shows the corresponding template for every available page. At the very least, a theme should contain an `index` template.
 
 {% youtube mb65bQ4iUc4 %}
 
-Template | Page | Fallback
---- | --- | ---
-`index` | Home page |
-`post` | Posts | `index`
-`page` | Pages | `index`
-`archive` | Archives | `index`
-`category` | Category archives | `archive`
-`tag` | Tag archives | `archive`
+| Template   | Page              | Fallback  |
+| ---------- | ----------------- | --------- |
+| `index`    | Home page         |
+| `post`     | Posts             | `index`   |
+| `page`     | Pages             | `index`   |
+| `archive`  | Archives          | `index`   |
+| `category` | Category archives | `archive` |
+| `tag`      | Tag archives      | `archive` |
 
 ## Layouts
 
 When pages share a similar structure - for instance, when two templates have both a header and a footer - you can consider using a `layout` to declare these structural similarities. Every layout file should contain a `body` variable to display the contents of the template in question. For example:
 
-``` html index.ejs
+```html index.ejs
 index
 ```
 
-``` html layout.ejs
-<!DOCTYPE html>
+```html layout.ejs
+<!doctype html>
 <html>
-  <body><%- body %></body>
+  <body>
+    <%- body %>
+  </body>
 </html>
 ```
 
 yields:
 
-``` html
-<!DOCTYPE html>
+```html
+<!doctype html>
 <html>
-  <body>index</body>
+  <body>
+    index
+  </body>
 </html>
 ```
 
@@ -44,18 +49,18 @@ By default, the `layout` template is used by all other templates. You can specif
 
 Partials are useful for sharing components between your templates. Typical examples include headers, footers or sidebars. You may want to put your partials in separate files to make maintaining your website significantly more convenient. For example:
 
-``` html partial/header.ejs
+```html partial/header.ejs
 <h1 id="logo"><%= config.title %></h1>
 ```
 
-``` html index.ejs
+```html index.ejs
 <%- partial('partial/header') %>
 <div id="content">Home page</div>
 ```
 
 yields:
 
-``` html
+```html
 <h1 id="logo">My Site</h1>
 <div id="content">Home page</div>
 ```
@@ -64,18 +69,18 @@ yields:
 
 You can define local variables in templates and use them in other templates.
 
-``` html partial/header.ejs
+```html partial/header.ejs
 <h1 id="logo"><%= title %></h1>
 ```
 
-``` html index.ejs
+```html index.ejs
 <%- partial('partial/header', {title: 'Hello World'}) %>
 <div id="content">Home page</div>
 ```
 
 yields:
 
-``` html
+```html
 <h1 id="logo">Hello World</h1>
 <div id="content">Home page</div>
 ```
@@ -88,7 +93,7 @@ This feature was borrowed from [Ruby on Rails](http://guides.rubyonrails.org/cac
 
 Fragment caching is best used for headers, footers, sidebars or other static content that is unlikely to change from template to template. For example:
 
-``` js
+```js
 <%- fragment_cache('header', function(){
   return '<header></header>';
 });
@@ -96,7 +101,7 @@ Fragment caching is best used for headers, footers, sidebars or other static con
 
 Though it may be easier to use partials:
 
-``` js
+```js
 <%- partial('header', {}, {cache: true});
 ```
 

@@ -1,6 +1,7 @@
 ---
 title: 外掛
 ---
+
 Hexo 有強大的外掛系統，使您能輕鬆擴展功能而不用修改核心模組的原始碼。在 Hexo 中有兩種形式的外掛：
 
 ### 腳本（Scripts）
@@ -13,7 +14,7 @@ Hexo 有強大的外掛系統，使您能輕鬆擴展功能而不用修改核心
 
 資料夾內至少要包含 2 個檔案：一個是主程式，另一個是 `package.json`，描述套件的用途和相依套件。
 
-``` plain
+```plain
 .
 ├── index.js
 └── package.json
@@ -21,7 +22,7 @@ Hexo 有強大的外掛系統，使您能輕鬆擴展功能而不用修改核心
 
 `package.json` 中至少要包含 `name`, `version`, `main` 屬性，例如：
 
-``` json package.json
+```json package.json
 {
   "name": "hexo-my-plugin",
   "version": "0.0.1",
@@ -45,23 +46,21 @@ Hexo 有強大的外掛系統，使您能輕鬆擴展功能而不用修改核心
 1. Fork [hexojs/site]
 2. 把檔案庫（repository）複製到電腦上，並安裝相依套件。
 
-    {% code %}
-    $ git clone https://github.com/<username>/site.git
-    $ cd site
-    $ npm install
-    {% endcode %}
+   {% code %}
+   $ git clone https://github.com/<username>/site.git
+   $ cd site
+   $ npm install
+   {% endcode %}
 
 3. 編輯 `source/_data/plugins.yml`，在檔案中新增您的外掛，例如：
 
-    {% code %}
-    - name: hexo-server
-      description: Server module for Hexo.
-      link: https://github.com/hexojs/hexo-server
-      tags:
-        - official
-        - server
-        - console
-    {% endcode %}
+   {% code %}
+
+   - name: hexo-server
+     description: Server module for Hexo.
+     link: https://github.com/hexojs/hexo-server
+     tags: - official - server - console
+     {% endcode %}
 
 4. 推送（push）分支。
 5. 建立一個新的合併申請（pull request）。

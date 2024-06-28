@@ -9,10 +9,11 @@ title: 在 GitHub Pages 上部署 Hexo
 
 - 將 `main` 分支 push 到 GitHub：
 
-    ```
-    $ git push -u origin main
-    ```
-  - 預設情況下 `public/` 不會被上傳(也不該被上傳)，確認 `.gitignore` 檔案中包含一行 `public/`。整體資料夾結構應會與[範例儲存庫](https://github.com/hexojs/hexo-starter)極為相似。
+  ```
+  $ git push -u origin main
+  ```
+
+- 預設情況下 `public/` 不會被上傳(也不該被上傳)，確認 `.gitignore` 檔案中包含一行 `public/`。整體資料夾結構應會與[範例儲存庫](https://github.com/hexojs/hexo-starter)極為相似。
 
 3. 使用 `node --version` 指令檢查你電腦上的 Node.js 版本，並記下該版本 (例如：`v20.y.z`)
 4. 在儲存庫中前往 `Settings > Pages > Source`，並將 `Source` 改為 `GitHub Actions`。
@@ -24,7 +25,7 @@ name: Pages
 on:
   push:
     branches:
-      - main  # default branch
+      - main # default branch
 
 jobs:
   build:
@@ -40,7 +41,7 @@ jobs:
         with:
           # Examples: 20, 18.19, >=16.20.2, lts/Iron, lts/Hydrogen, *, latest, current, node
           # Ref: https://github.com/actions/setup-node#supported-version-syntax
-          node-version: '20'
+          node-version: "20"
       - name: Cache NPM dependencies
         uses: actions/cache@v4
         with:
@@ -94,13 +95,13 @@ jobs:
 1. 安裝 [hexo-deployer-git](https://github.com/hexojs/hexo-deployer-git).
 2. 清空 `_config.yml` 的現有資料，並新增以下組態:
 
-  ``` yml
-  deploy:
-    type: git
-    repo: https://github.com/<username>/<project>
-    # example, https://github.com/hexojs/hexojs.github.io
-    branch: gh-pages
-  ```
+```yml
+deploy:
+  type: git
+  repo: https://github.com/<username>/<project>
+  # example, https://github.com/hexojs/hexojs.github.io
+  branch: gh-pages
+```
 
 3. 執行 `hexo clean && hexo deploy` 。
 4. 瀏覽 `<GitHub 用戶名>.github.io` 檢查你的網站能否運作。

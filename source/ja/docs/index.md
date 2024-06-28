@@ -1,6 +1,7 @@
 ---
 title: 概要
 ---
+
 Hexoのドキュメントへようこそ。利用中に問題に遭遇した場合は、[トラブルシューティング](troubleshooting.html)をご覧になるか、[GitHub](https://github.com/hexojs/hexo/issues)でIssueを報告したり、[Google Group](https://groups.google.com/group/hexo)でトピックを開始してください。
 
 ## Hexoとは？
@@ -62,7 +63,7 @@ Snapを使用してNode.jsをインストールした場合、ブログを[初�
 
 すべての要件がインストールされたら、npmでHexoをインストールできます:
 
-``` bash
+```bash
 $ npm install -g hexo-cli
 ```
 
@@ -70,7 +71,7 @@ $ npm install -g hexo-cli
 
 Node.jsに慣れたユーザーであれば、代わりに`hexo`パッケージをインストールして使用することを好むかもしれません。
 
-``` bash
+```bash
 $ npm install hexo
 ```
 
@@ -79,11 +80,11 @@ $ npm install hexo
 1. `npx hexo <command>`
 2. Linuxユーザーは`node_modules/`フォルダの相対パスを設定できます:
 
-  ``` bash
-  echo 'PATH="$PATH:./node_modules/.bin"' >> ~/.profile
-  ```
+```bash
+echo 'PATH="$PATH:./node_modules/.bin"' >> ~/.profile
+```
 
-  その後、`hexo <command>`を使用してHexoを実行します。
+その後、`hexo <command>`を使用してHexoを実行します。
 
 ### 必要なNode.jsのバージョン
 
@@ -93,15 +94,15 @@ Hexoの過去のバージョンへはバグ修正を提供していないこと�
 
 可能な限り、常にHexoの[最新バージョン](https://www.npmjs.com/package/hexo?activeTab=versions)と[推奨されるバージョン](#必要要件)のNode.jsをインストールすることを強く推奨します。
 
-Hexoバージョン | 最小 (Node.jsバージョン) | 未満 (Node.jsバージョン)
---- | --- | ---
-7.0+ | 14.0.0 | latest
-6.2+ | 12.13.0 | latest
-6.0+ | 12.13.0 | 18.5.0
-5.0+ | 10.13.0 | 12.0.0
-4.1 - 4.2 | 8.10 | 10.0.0
-4.0 | 8.6 | 8.10.0
-3.3 - 3.9 | 6.9 | 8.0.0
-3.2 - 3.3 | 0.12 | unknown
-3.0 - 3.1 | 0.10 or iojs | unknown
-0.0.1 - 2.8 | 0.10 | unknown
+| Hexoバージョン | 最小 (Node.jsバージョン) | 未満 (Node.jsバージョン) |
+| -------------- | ------------------------ | ------------------------ |
+| 7.0+           | 14.0.0                   | latest                   |
+| 6.2+           | 12.13.0                  | latest                   |
+| 6.0+           | 12.13.0                  | 18.5.0                   |
+| 5.0+           | 10.13.0                  | 12.0.0                   |
+| 4.1 - 4.2      | 8.10                     | 10.0.0                   |
+| 4.0            | 8.6                      | 8.10.0                   |
+| 3.3 - 3.9      | 6.9                      | 8.0.0                    |
+| 3.2 - 3.3      | 0.12                     | unknown                  |
+| 3.0 - 3.1      | 0.10 or iojs             | unknown                  |
+| 0.0.1 - 2.8    | 0.10                     | unknown                  |

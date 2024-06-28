@@ -18,7 +18,6 @@ title: 貢献
 - ソフトタブを使用し、2スペースのインデントを使ってください。
 - コンマを先頭に置かないでください。
 
-
 また、Hexoには独自の[ESLint設定](https://github.com/hexojs/eslint-config-hexo)があるため、貢献の際はESLintのルールに従っていることを確認してください。
 
 ### ワークフロー
@@ -26,7 +25,7 @@ title: 貢献
 1. [hexojs/hexo]をフォークします。
 2. リポジトリをコンピューターにクローンし、依存関係をインストールします。
 
-``` bash
+```bash
 $ git clone https://github.com/<username>/hexo.git
 $ cd hexo
 $ npm install
@@ -35,7 +34,7 @@ $ git submodule update --init
 
 3. ブランチを作成します。
 
-``` bash
+```bash
 $ git checkout -b new_feature
 ```
 
@@ -53,7 +52,7 @@ $ git push origin new_feature
 - `package.json`のバージョン番号は変更しないでください。
 - プルリクエストは、テストが通った場合にのみマージされます。提出前にテストを実行してください。
 
-``` bash
+```bash
 $ npm test
 ```
 
@@ -70,7 +69,7 @@ Hexoのドキュメントはオープンソースで、ソースコードは[hex
 1. [hexojs/site]をフォークします。
 2. リポジトリをコンピューターにクローンし、依存関係をインストールします。
 
-``` bash
+```bash
 $ npm install hexo-cli -g # hexo-cliがインストールされていない場合
 $ git clone https://github.com/<username>/site.git
 $ cd site
@@ -79,7 +78,7 @@ $ npm install
 
 3. ドキュメントの編集を始めます。ライブプレビューのためにサーバーを起動することができます。
 
-``` bash
+```bash
 $ hexo server
 ```
 

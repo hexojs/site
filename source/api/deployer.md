@@ -1,12 +1,13 @@
 ---
 title: Deployer
 ---
+
 A deployer helps users quickly deploy their site to a remote server without complicated commands.
 
 ## Synopsis
 
-``` js
-hexo.extend.deployer.register(name, function(args){
+```js
+hexo.extend.deployer.register(name, function (args) {
   // ...
 });
 ```

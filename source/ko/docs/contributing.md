@@ -25,7 +25,7 @@ Also, Hexo has its own [ESLint config](https://github.com/hexojs/eslint-config-h
 1. Fork [hexojs/hexo].
 2. 저장소를 당신의 컴퓨터에 clone하고 의존 사항들을 설치합니다.
 
-``` bash
+```bash
 $ git clone https://github.com/<username>/hexo.git
 $ cd hexo
 $ npm install
@@ -34,7 +34,7 @@ $ git submodule update --init
 
 3. 기능 branch를 생성합니다.
 
-``` bash
+```bash
 $ git checkout -b new_feature
 ```
 
@@ -52,7 +52,7 @@ $ git push origin new_feature
 - `package.json`의 version number는 수정하지 마세요.
 - 당신의 Pull request는 테스트를 통과했을 때에만 merge됩니다. 반영하기 전에 test를 돌려보세요.
 
-``` bash
+```bash
 $ npm test
 ```
 
@@ -69,7 +69,7 @@ Hexo 문서는 opensource이며 [hexojs/site]에서 소스 코드를 검색할 �
 1. Fork [hexojs/site]
 2. 저장소를 당신의 컴퓨터에 clone하고 의존 사항들을 설치합니다.
 
-``` bash
+```bash
 $ npm install hexo-cli -g # If you don't have hexo-cli installed
 $ git clone https://github.com/<username>/site.git
 $ cd site
@@ -78,7 +78,7 @@ $ npm install
 
 3. 문서를 수정하세요. Server를 돌려서 실시간으로 확인할 수 있습니다.
 
-``` bash
+```bash
 $ hexo server
 ```
 

@@ -1,12 +1,13 @@
 ---
 title: ジェネレータ
 ---
+
 ジェネレータは、処理されたファイルに基づいてルートを構築します。
 
 ## 概要
 
-``` js
-hexo.extend.generator.register(name, function(locals){
+```js
+hexo.extend.generator.register(name, function (locals) {
   // ...
 });
 ```
@@ -15,27 +16,27 @@ hexo.extend.generator.register(name, function(locals){
 
 ## ルートの更新
 
-``` js
-hexo.extend.generator.register('test', function(locals){
+```js
+hexo.extend.generator.register("test", function (locals) {
   // オブジェクト
   return {
-    path: 'foo',
-    data: 'foo'
+    path: "foo",
+    data: "foo",
   };
 
   // 配列
   return [
-    {path: 'foo', data: 'foo'},
-    {path: 'bar', data: 'bar'}
+    { path: "foo", data: "foo" },
+    { path: "bar", data: "bar" },
   ];
 });
 ```
 
-属性 | 説明
---- | ---
-`path` | 先頭の`/`を含まないパス。
-`data` | データ
-`layout` | レイアウト。レンダリングに使用するレイアウトを文字列または配列で指定します。無指定の場合、ルートは`data`を直接返します。
+| 属性     | 説明                                                                                                                     |
+| -------- | ------------------------------------------------------------------------------------------------------------------------ |
+| `path`   | 先頭の`/`を含まないパス。                                                                                                |
+| `data`   | データ                                                                                                                   |
+| `layout` | レイアウト。レンダリングに使用するレイアウトを文字列または配列で指定します。無指定の場合、ルートは`data`を直接返します。 |
 
 ソースファイルが更新されると、Hexoはすべてのジェネレータを実行し、ルートを再構築します。**ここではあくまでデータを返し、直接ルーターにアクセスしないでください。**
 
@@ -48,12 +49,12 @@ hexo.extend.generator.register('test', function(locals){
 次に、`layout`属性を設定してテーマテンプレートでレンダリングします。この例では2つのレイアウトを設定しています。`archive`レイアウトが存在しない場合は、代わりに`index`レイアウトが使用されます。
 
 ```js
-hexo.extend.generator.register('archive', function(locals){
+hexo.extend.generator.register("archive", function (locals) {
   return {
-    path: 'archives/index.html',
+    path: "archives/index.html",
     data: locals,
-    layout: ['archive', 'index']
-  }
+    layout: ["archive", "index"],
+  };
 });
 ```
 
@@ -61,15 +62,15 @@ hexo.extend.generator.register('archive', function(locals){
 
 公式ツール[hexo-pagination]を使用して、ページネーション付きのアーカイブページを簡単に構築できます。
 
-``` js
-var pagination = require('hexo-pagination');
+```js
+var pagination = require("hexo-pagination");
 
-hexo.extend.generator.register('archive', function(locals){
+hexo.extend.generator.register("archive", function (locals) {
   // hexo-paginationは/archivesルートにindex.htmlを作成します
-  return pagination('archives', locals.posts, {
+  return pagination("archives", locals.posts, {
     perPage: 10,
-    layout: ['archive', 'index'],
-    data: {}
+    layout: ["archive", "index"],
+    data: {},
   });
 });
 ```
@@ -78,13 +79,13 @@ hexo.extend.generator.register('archive', function(locals){
 
 `locals.posts`内のすべての記事を走査し、すべての記事のルートを作成します。
 
-``` js
-hexo.extend.generator.register('post', function(locals){
-  return locals.posts.map(function(post){
+```js
+hexo.extend.generator.register("post", function (locals) {
+  return locals.posts.map(function (post) {
     return {
       path: post.path,
       data: post,
-      layout: 'post'
+      layout: "post",
     };
   });
 });
@@ -94,15 +95,15 @@ hexo.extend.generator.register('post', function(locals){
 
 この例ではデータを明示的に返さず、ルートが必要なときにのみ`fs.ReadStream`を生成する関数を`data`に設定しています。
 
-``` js
-var fs = require('hexo-fs');
+```js
+var fs = require("hexo-fs");
 
-hexo.extend.generator.register('asset', function(locals){
+hexo.extend.generator.register("asset", function (locals) {
   return {
-    path: 'file.txt',
-    data: function(){
-      return fs.createReadStream('path/to/file.txt')
-    }
+    path: "file.txt",
+    data: function () {
+      return fs.createReadStream("path/to/file.txt");
+    },
   };
 });
 ```

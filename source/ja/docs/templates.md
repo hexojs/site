@@ -1,38 +1,43 @@
 ---
 title: テンプレート
 ---
+
 テンプレートは、ウェブサイトの外観の構造を定義します。つまり、各ページがどのように表示されるべきか記述します。下記の表は、利用可能な各ページに対応するテンプレートを示しています。最低限、テーマには`index`テンプレートが必要です。
 
-テンプレート | ページ | フォールバック
---- | --- | ---
-`index` | ホームページ |
-`post` | 記事 | `index`
-`page` | ページ | `index`
-`archive` | アーカイブ | `index`
-`category` | カテゴリーアーカイブ | `archive`
-`tag` | タグアーカイブ | `archive`
+| テンプレート | ページ               | フォールバック |
+| ------------ | -------------------- | -------------- |
+| `index`      | ホームページ         |
+| `post`       | 記事                 | `index`        |
+| `page`       | ページ               | `index`        |
+| `archive`    | アーカイブ           | `index`        |
+| `category`   | カテゴリーアーカイブ | `archive`      |
+| `tag`        | タグアーカイブ       | `archive`      |
 
 ## レイアウト
 
 ページが似通った構造を持つ場合（例えば、二つのテンプレートがヘッダーとフッターを持つ場合）、これらの構造上の類似性を宣言するために`layout`を使用できます。すべてのレイアウトファイルには、該当するテンプレートの内容を表示するための`body`変数が必要です。例えば:
 
-``` html index.ejs
+```html index.ejs
 index
 ```
 
-``` html layout.ejs
-<!DOCTYPE html>
+```html layout.ejs
+<!doctype html>
 <html>
-  <body><%- body %></body>
+  <body>
+    <%- body %>
+  </body>
 </html>
 ```
 
 は次のようになります:
 
-``` html
-<!DOCTYPE html>
+```html
+<!doctype html>
 <html>
-  <body>index</body>
+  <body>
+    index
+  </body>
 </html>
 ```
 
@@ -42,18 +47,18 @@ index
 
 パーシャルを利用し、テンプレート間でコンポーネントを共有できます。典型的な例には、ヘッダー、フッター、サイドバーなどがあります。メンテナンスを便利にするために、パーシャルを別のファイルに置くことができます。例えば:
 
-``` html partial/header.ejs
+```html partial/header.ejs
 <h1 id="logo"><%= config.title %></h1>
 ```
 
-``` html index.ejs
+```html index.ejs
 <%- partial('partial/header') %>
 <div id="content">Home page</div>
 ```
 
 は次のようになります:
 
-``` html
+```html
 <h1 id="logo">My Site</h1>
 <div id="content">Home page</div>
 ```
@@ -62,18 +67,18 @@ index
 
 テンプレート内でローカル変数を定義し、他のテンプレートから利用できます。
 
-``` html partial/header.ejs
+```html partial/header.ejs
 <h1 id="logo"><%= title %></h1>
 ```
 
-``` html index.ejs
+```html index.ejs
 <%- partial('partial/header', {title: 'Hello World'}) %>
 <div id="content">Home page</div>
 ```
 
 は次のようになります:
 
-``` html
+```html
 <h1 id="logo">Hello World</h1>
 <div id="content">Home page</div>
 ```
@@ -86,7 +91,7 @@ index
 
 Fragment cachingは、テンプレート間で変わらないと予想される、ヘッダー、フッター、サイドバー、その他の静的コンテンツに最適です。例えば:
 
-``` js
+```js
 <%- fragment_cache('header', function(){
   return '<header></header>';
 });
@@ -94,7 +99,7 @@ Fragment cachingは、テンプレート間で変わらないと予想される�
 
 パーシャルを使用する方が簡単かもしれません:
 
-``` js
+```js
 <%- partial('header', {}, {cache: true});
 ```
 

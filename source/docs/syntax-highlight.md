@@ -17,7 +17,7 @@ code snippet
 code snippet
 {% endcode %}
 
-``` [language] [title] [url] [link text] [additional options]
+```[language] [title] [url] [link text] [additional options]
 code snippet
 ```
 ````
@@ -37,7 +37,7 @@ highlight:
   auto_detect: false
   line_number: true
   line_threshold: 0
-  tab_replace: ''
+  tab_replace: ""
   exclude_languages:
     - example
   wrap: true
@@ -47,7 +47,7 @@ prismjs:
   preprocess: true
   line_number: true
   line_threshold: 0
-  tab_replace: ''
+  tab_replace: ""
 ```
 
 v7.0.0+:
@@ -59,7 +59,7 @@ highlight:
   auto_detect: false
   line_number: true
   line_threshold: 0
-  tab_replace: ''
+  tab_replace: ""
   exclude_languages:
     - example
   wrap: true
@@ -68,7 +68,7 @@ prismjs:
   preprocess: true
   line_number: true
   line_threshold: 0
-  tab_replace: ''
+  tab_replace: ""
 ```
 
 The YAML above is Hexo's default configuration.
@@ -89,7 +89,7 @@ v7.0.0+:
 
 ```yaml
 # _config.yml
-syntax_highlighter:  # empty
+syntax_highlighter: # empty
 ```
 
 When both `highlight.enable` and `prismjs.enable` are `false` (below v7.0.0) or `syntax_highlighter` is empty (v7.0.0+), the output HTML of the code block is controlled by the corresponding renderer. For example, [`marked.js`](https://github.com/markedjs/marked) (used by [`hexo-renderer-marked`](https://github.com/hexojs/hexo-renderer-marked), the default markdown renderer of Hexo) will add the language code to the `class` of `<code>`:
@@ -119,7 +119,7 @@ highlight:
   auto_detect: false
   line_number: true
   line_threshold: 0
-  tab_replace: '  '
+  tab_replace: "  "
   exclude_languages:
     - example
   wrap: true
@@ -137,7 +137,7 @@ highlight:
   auto_detect: false
   line_number: true
   line_threshold: 0
-  tab_replace: '  '
+  tab_replace: "  "
   exclude_languages:
     - example
   wrap: true
@@ -166,18 +166,18 @@ Hexo adds line number by wrapping output inside `<figure>` and `<table>`:
 
 ```html
 <figure class="highlight yaml">
-<table>
-<tbody>
-<tr>
-  <td class="gutter">
-    <pre><span class="line">1</span><br></pre>
-  </td>
-  <td class="code">
-    <pre><span class="line"><span class="attr">hello:</span><span class="string">hexo</span></span><br></pre>
-  </td>
-</tr>
-</tbody>
-</table>
+  <table>
+    <tbody>
+      <tr>
+        <td class="gutter">
+          <pre><span class="line">1</span><br></pre>
+        </td>
+        <td class="code">
+          <pre><span class="line"><span class="attr">hello:</span><span class="string">hexo</span></span><br></pre>
+        </td>
+      </tr>
+    </tbody>
+  </table>
 </figure>
 ```
 
@@ -238,7 +238,7 @@ prismjs:
   preprocess: true
   line_number: true
   line_threshold: 0
-  tab_replace: ''
+  tab_replace: ""
 ```
 
 v7.0.0+:
@@ -250,7 +250,7 @@ prismjs:
   preprocess: true
   line_number: true
   line_threshold: 0
-  tab_replace: ''
+  tab_replace: ""
 ```
 
 Prismjs is disabled by default. You should set `highlight.enable` to `false` (below v7.0.0) or set `syntax_highlighter` to `prismjs` (v7.0.0+) before enabling prismjs.

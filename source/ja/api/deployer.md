@@ -1,12 +1,13 @@
 ---
 title: デプロイヤー
 ---
+
 デプロイヤーは、複雑なコマンドなしにウェブサイトをサーバーに素早くデプロイします。
 
 ## 概要
 
-``` js
-hexo.extend.deployer.register(name, function(args){
+```js
+hexo.extend.deployer.register(name, function (args) {
   // ...
 });
 ```

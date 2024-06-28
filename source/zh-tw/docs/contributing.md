@@ -25,7 +25,7 @@ title: 貢獻
 1. Fork [hexojs/hexo]
 2. 把檔案庫（repository）複製到電腦上，並安裝相依套件。
 
-``` bash
+```bash
 $ git clone https://github.com/<username>/hexo.git
 $ cd hexo
 $ npm install
@@ -34,7 +34,7 @@ $ git submodule update --init
 
 3. 新增一個功能分支。
 
-``` bash
+```bash
 $ git checkout -b new_feature
 ```
 
@@ -52,7 +52,7 @@ $ git push origin new_feature
 - 不要修改 `package.json` 的版本號。
 - 只有在測試通過的情況下您的合併申請才會被核准，在提交前別忘了進行測試。
 
-``` bash
+```bash
 $ npm test
 ```
 
@@ -69,7 +69,7 @@ Hexo 文件開放原始碼，您可以在 [hexojs/site] 找到原始碼。
 1. Fork [hexojs/site]
 2. 把檔案庫（repository）複製到電腦上，並安裝相依套件。
 
-``` bash
+```bash
 $ npm install hexo-cli -g # If you don't have hexo-cli installed
 $ git clone https://github.com/<username>/site.git
 $ cd site
@@ -78,7 +78,7 @@ $ npm install
 
 3. 開始編輯文件，您可透過伺服器預覽變更。
 
-``` bash
+```bash
 $ hexo server
 ```
 

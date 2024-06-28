@@ -1,14 +1,19 @@
 ---
 title: Tag
 ---
+
 태그는 사용자가 포스트 내부에 정보(snippet)을 쉽고 빠르게 삽입할 수 있게 도와줍니다.
 
 ## 개요
 
-``` js
-hexo.extend.tag.register(name, function(args, content){
-  // ...
-}, options);
+```js
+hexo.extend.tag.register(
+  name,
+  function (args, content) {
+    // ...
+  },
+  options,
+);
 ```
 
 `args`, `content` 두 개의 인자가 함수를 통해 전달됩니다. `args`는 태그 플러그인으로 전달되는 인자들을 포함하고 `content`는 태그 플러그인에서 사용할 포장된 내용(wrapped content)을 나타냅니다.
@@ -19,22 +24,22 @@ Hexo 3에서 비동기 렌더링을 도입한 이후, 우리는 렌더링을 위
 
 Use `unregister()` to replace existing [tag plugins](/docs/tag-plugins) with custom functions.
 
-``` js
+```js
 hexo.extend.tag.unregister(name);
 ```
 
 **Example**
 
-``` js
+```js
 const tagFn = (args, content) => {
-  content = 'something';
+  content = "something";
   return content;
 };
 
 // https://hexo.io/docs/tag-plugins#YouTube
-hexo.extend.tag.unregister('youtube');
+hexo.extend.tag.unregister("youtube");
 
-hexo.extend.tag.register('youtube', tagFn);
+hexo.extend.tag.register("youtube", tagFn);
 ```
 
 ## 옵션
@@ -53,10 +58,14 @@ end 태그를 사용합니다. 기본값은 `false`입니다.
 
 Youtube video를 삽입하는 예시입니다.
 
-``` js
-hexo.extend.tag.register('youtube', function(args){
+```js
+hexo.extend.tag.register("youtube", function (args) {
   var id = args[0];
-  return '<div class="video-container"><iframe width="560" height="315" src="http://www.youtube.com/embed/' + id + '" frameborder="0" allowfullscreen></iframe></div>';
+  return (
+    '<div class="video-container"><iframe width="560" height="315" src="http://www.youtube.com/embed/' +
+    id +
+    '" frameborder="0" allowfullscreen></iframe></div>'
+  );
 });
 ```
 
@@ -64,29 +73,43 @@ hexo.extend.tag.register('youtube', function(args){
 
 Pull quote를 삽입하는 예시입니다.
 
-``` js
-hexo.extend.tag.register('pullquote', function(args, content){
-  var className =  args.join(' ');
-  return '<blockquote class="pullquote' + className + '">' + content + '</blockquote>';
-}, {ends: true});
+```js
+hexo.extend.tag.register(
+  "pullquote",
+  function (args, content) {
+    var className = args.join(" ");
+    return (
+      '<blockquote class="pullquote' +
+      className +
+      '">' +
+      content +
+      "</blockquote>"
+    );
+  },
+  { ends: true },
+);
 ```
 
 ### 비동기 렌더링
 
 파일을 삽입하는 예시입니다.
 
-``` js
-var fs = require('hexo-fs');
-var pathFn = require('path');
+```js
+var fs = require("hexo-fs");
+var pathFn = require("path");
 
-hexo.extend.tag.register('include_code', function(args){
-  var filename = args[0];
-  var path = pathFn.join(hexo.source_dir, filename);
+hexo.extend.tag.register(
+  "include_code",
+  function (args) {
+    var filename = args[0];
+    var path = pathFn.join(hexo.source_dir, filename);
 
-  return fs.readFile(path).then(function(content){
-    return '<pre><code>' + content + '</code></pre>';
-  });
-}, {async: true});
+    return fs.readFile(path).then(function (content) {
+      return "<pre><code>" + content + "</code></pre>";
+    });
+  },
+  { async: true },
+);
 ```
 
 ## Front-matter and user configuration
@@ -95,7 +118,7 @@ Any of the following options is valid:
 
 1.
 
-``` js
+```js
 hexo.extend.tag.register('foo', function (args) {
   const [firstArg] = args;
 
@@ -120,11 +143,11 @@ hexo.extend.tag.register('foo', function (args) {
 
 2.
 
-``` js index.js
-hexo.extend.tag.register('foo', require('./lib/foo')(hexo));
+```js index.js
+hexo.extend.tag.register("foo", require("./lib/foo")(hexo));
 ```
 
-``` js lib/foo.js
+```js lib/foo.js
 module.exports = hexo => {
   return function fooFn(args) {
     const [firstArg] = args;

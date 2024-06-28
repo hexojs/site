@@ -1,6 +1,7 @@
 ---
 title: アセットフォルダ
 ---
+
 ## グローバルアセットフォルダ
 
 アセットとは、`source`フォルダ内の記事以外のファイルです。例えば、画像、CSS、JavaScriptファイルなどがこれにあたります。Hexoプロジェクトで数枚の画像を使用するだけの場合、`source/images`ディレクトリに保管するのが最も簡単な方法です。それから、`![](/images/image.jpg)`のようにしてアクセスできます。
@@ -9,7 +10,7 @@ title: アセットフォルダ
 
 定期的に画像やその他のアセットを提供する予定のユーザーや、記事ごとにアセットを分けたいと考えるユーザーのために、Hexoはもっと整理された方法でアセットを管理する方法を提供します。これは少し複雑ですが、非常に便利なアセット管理方法で、`_config.yml`の`post_asset_folder`設定をtrueに設定することで有効にできます。
 
-``` yaml _config.yml
+```yaml _config.yml
 post_asset_folder: true
 ```
 
@@ -42,7 +43,7 @@ post_asset_folder: true
 
 有効にするには:
 
-``` yml _config.yml
+```yml _config.yml
 post_asset_folder: true
 marked:
   prependRoot: true

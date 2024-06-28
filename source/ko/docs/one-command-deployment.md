@@ -1,27 +1,28 @@
 ---
 title: Deployment
 ---
+
 Hexo는 빠르고 쉬운 deployment전략을 제공합니다. 웹 사이트를 서버에 deploy하기 위해 하나의 명령어만 수행하면 됩니다.
 
-``` bash
+```bash
 $ hexo deploy
 ```
 
 처음 개발을 진행하기 전에, `_config.yml` 파일의 설정을 수정할 필요가 있습니다. Deployment를 원하는 곳을 아래 예시처럼 `type` 필드에 넣습니다.
 
-``` yaml
+```yaml
 deploy:
   type: git
 ```
 
 여러 곳에 동시에 deploy할 수도 있습니다. Hexo는 순차적으로 deploy를 수행합니다.
 
-``` yaml
+```yaml
 deploy:
-- type: git
-  repo:
-- type: heroku
-  repo:
+  - type: git
+    repo:
+  - type: heroku
+    repo:
 ```
 
 Refer to the [Plugins](https://hexo.io/plugins/) list for more deployment plugins.
@@ -44,17 +45,17 @@ deploy:
   message: [message]
 ```
 
-Option | Description | Default
---- | --- | ---
-`repo` | URL of the target repository |
-`branch` | Branch name. | `gh-pages` (GitHub)<br>`coding-pages` (Coding.net)<br>`master` (others)
-`message` | Customize commit message. | `Site updated: {% raw %}{{ now('YYYY-MM-DD HH:mm:ss') }}{% endraw %}`
-`token` | Optional token value to authenticate with the repo. Prefix with `$` to read token from environment variable
+| Option    | Description                                                                                                 | Default                                                                 |
+| --------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| `repo`    | URL of the target repository                                                                                |
+| `branch`  | Branch name.                                                                                                | `gh-pages` (GitHub)<br>`coding-pages` (Coding.net)<br>`master` (others) |
+| `message` | Customize commit message.                                                                                   | `Site updated: {% raw %}{{ now('YYYY-MM-DD HH:mm:ss') }}{% endraw %}`   |
+| `token`   | Optional token value to authenticate with the repo. Prefix with `$` to read token from environment variable |
 
 3. Deploy your site `hexo clean && hexo deploy`.
 
-  - You will be prompted with username and password of the target repository, unless you authenticate with a token or ssh key.
-  - hexo-deployer-git does not store your username and password. Use [git-credential-cache](https://git-scm.com/docs/git-credential-cache) to store them temporarily.
+- You will be prompted with username and password of the target repository, unless you authenticate with a token or ssh key.
+- hexo-deployer-git does not store your username and password. Use [git-credential-cache](https://git-scm.com/docs/git-credential-cache) to store them temporarily.
 
 4. Navigate to your repository settings and change the "Pages" branch to `gh-pages` (or the branch specified in your config). The deployed site should be live on the link shown on the "Pages" setting.
 
@@ -62,35 +63,35 @@ Option | Description | Default
 
 [hexo-deployer-heroku]을 설치합니다.
 
-``` bash
+```bash
 $ npm install hexo-deployer-heroku --save
 ```
 
 설정을 수정합니다.
 
-``` yaml
+```yaml
 deploy:
   type: heroku
   repo: <repository url>
   message: [message]
 ```
 
-옵션 | 설명
---- | ---
-`repo`, `repository` | Heroku 저장소 URL
-`message` | Commit message를 수정합니다. (기본값 - `Site updated: {% raw %}{{ now('YYYY-MM-DD HH:mm:ss') }}{% endraw %}`)
+| 옵션                 | 설명                                                                                                          |
+| -------------------- | ------------------------------------------------------------------------------------------------------------- |
+| `repo`, `repository` | Heroku 저장소 URL                                                                                             |
+| `message`            | Commit message를 수정합니다. (기본값 - `Site updated: {% raw %}{{ now('YYYY-MM-DD HH:mm:ss') }}{% endraw %}`) |
 
 ## Rsync
 
 [hexo-deployer-rsync]를 설치합니다.
 
-``` bash
+```bash
 $ npm install hexo-deployer-rsync --save
 ```
 
 설정을 수정합니다.
 
-``` yaml
+```yaml
 deploy:
   type: rsync
   host: <host>
@@ -102,49 +103,49 @@ deploy:
   ignore_errors: [true|false]
 ```
 
-옵션 | 설명 | 기본값
---- | --- | ---
-`host` | 원격 호스트의 주소 |
-`user` | 사용자명 |
-`root` | 원격 호스트의 루트 디렉토리 |
-`port` | 포트 | 22
-`delete` | 원격 호스트의 오래된 파일을 삭제합니다. | true
-`verbose` | Verbose 메시지를 표시합니다. | true
-`ignore_errors` | 에러를 무시합니다. | false
+| 옵션            | 설명                                    | 기본값 |
+| --------------- | --------------------------------------- | ------ |
+| `host`          | 원격 호스트의 주소                      |
+| `user`          | 사용자명                                |
+| `root`          | 원격 호스트의 루트 디렉토리             |
+| `port`          | 포트                                    | 22     |
+| `delete`        | 원격 호스트의 오래된 파일을 삭제합니다. | true   |
+| `verbose`       | Verbose 메시지를 표시합니다.            | true   |
+| `ignore_errors` | 에러를 무시합니다.                      | false  |
 
 ## OpenShift
 
 [hexo-deployer-openshift]를 설치합니다.
 
-``` bash
+```bash
 $ npm install hexo-deployer-openshift --save
 ```
 
 설정을 수정합니다.
 
-``` yaml
+```yaml
 deploy:
   type: openshift
   repo: <repository url>
   message: [message]
 ```
 
-옵션 | 설명
---- | ---
-`repo` | OpenShift 저장소 URL
-`message` | Commit message를 수정합니다. (기본값 - `Site updated: {% raw %}{{ now('YYYY-MM-DD HH:mm:ss') }}{% endraw %}`)
+| 옵션      | 설명                                                                                                          |
+| --------- | ------------------------------------------------------------------------------------------------------------- |
+| `repo`    | OpenShift 저장소 URL                                                                                          |
+| `message` | Commit message를 수정합니다. (기본값 - `Site updated: {% raw %}{{ now('YYYY-MM-DD HH:mm:ss') }}{% endraw %}`) |
 
 ## FTPSync
 
 [hexo-deployer-ftpsync]를 설치합니다.
 
-``` bash
+```bash
 $ npm install hexo-deployer-ftpsync --save
 ```
 
 설정을 수정합니다.
 
-``` yaml
+```yaml
 deploy:
   type: ftpsync
   host: <host>
@@ -156,15 +157,17 @@ deploy:
   verbose: [true|false]
 ```
 
-옵션 | 설명 | 기본값
---- | --- | ---
-`host` | 원격 호스트의 주소 |
-`user` | 사용자명 |
-`pass` | 비밀번호 |
-`remote` | 원격 호스트의 루트 디렉토리 | `/`
-`port` | 포트 | 21
-`clear` | Remove all files and directories from the remote directory before upload | false
-`verbose` | Verbose 메시지를 표시합니다. | false
+| 옵션          | 설명                                                                     | 기본값 |
+| ------------- | ------------------------------------------------------------------------ | ------ |
+| `host`        | 원격 호스트의 주소                                                       |
+| `user`        | 사용자명                                                                 |
+| `pass`        | 비밀번호                                                                 |
+| `remote`      | 원격 호스트의 루트 디렉토리                                              | `/`    |
+| `port`        | 포트                                                                     | 21     |
+| `clear`       | Remove all files and directories from the remote directory before upload | false  |
+| `ignore`      | 호스트 파일들과 원격 파일들을 무시합니다.                                |
+| `connections` | 연결 번호                                                                | 1      |
+| `verbose`     | Verbose 메시지를 표시합니다.                                             | false  |
 
 ## Vercel
 
@@ -222,8 +225,8 @@ After a few moments, your website will be deployed.
 
 2. 구성을 수정합니다.
 
-  ``` yaml
-  deploy:
+```yaml
+deploy:
   - type: rss3
     endpoint: https://hub.rss3.io
     privateKey: 47e18d6c386898b424025cd9db446f779ef24ad33a26c499c87bb3d9372540ba
@@ -233,15 +236,15 @@ After a few moments, your website will be deployed.
       api:
         key: d693df715d3631e489d6
         secret: ee8b74626f12b61c1a4bde3b8c331ad390567c86ba779c9b18561ee92c1cbff0
-  ```
+```
 
-|매개변수 |설명 |
-| ------------------ | ---------------------- |
-| `endpoint` | RSS3 Hub에 대한 링크 |
-| `privateKey` | 개인 키, 64바이트 |
-| `ipfs/deploy` | IPFS에 배포할지 여부 |
-| `ipfs/gateway` | IPFS API 게이트웨이 |
-| `ipfs/api/key` | IPFS 게이트웨이 관련 검증 내용 |
+| 매개변수          | 설명                           |
+| ----------------- | ------------------------------ |
+| `endpoint`        | RSS3 Hub에 대한 링크           |
+| `privateKey`      | 개인 키, 64바이트              |
+| `ipfs/deploy`     | IPFS에 배포할지 여부           |
+| `ipfs/gateway`    | IPFS API 게이트웨이            |
+| `ipfs/api/key`    | IPFS 게이트웨이 관련 검증 내용 |
 | `ipfs/api/secret` | IPFS 게이트웨이 관련 검증 내용 |
 
 3. 정적 파일 생성
