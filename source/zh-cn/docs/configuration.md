@@ -78,7 +78,6 @@ skip_render: "_posts/test-post.md"
 | ----------------------- | --------------------------------------------------------------------------------------- | -------------- |
 | `new_post_name`         | 新文章的文件名称                                                                        | `:title.md`    |
 | `default_layout`        | 预设布局                                                                                | `post`         |
-| `auto_spacing`          | 在中文和英文之间加入空格                                                                | `false`        |
 | `titlecase`             | 把标题转换为 title case                                                                 | `false`        |
 | `external_link`         | 在新标签中打开链接                                                                      | `true`         |
 | `external_link.enable`  | 在新标签中打开链接                                                                      | `true`         |
