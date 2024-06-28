@@ -1,14 +1,19 @@
 ---
 title: タグ
 ---
+
 タグを使用することで、記事に簡単にスニペットを挿入できます。
 
 ## 概要
 
-``` js
-hexo.extend.tag.register(name, function(args, content){
-  // ...
-}, options);
+```js
+hexo.extend.tag.register(
+  name,
+  function (args, content) {
+    // ...
+  },
+  options,
+);
 ```
 
 タグ関数には`args`と`content`の2つの引数が渡されます。`args`はタグに渡された引数、`content`はタグでラップされたコンテンツです。
@@ -19,22 +24,22 @@ Hexo 3での非同期レンダリングの導入以来、レンダリングに�
 
 `unregister()`を使用して、既存の[タグプラグイン](../docs/tag-plugins)をカスタム関数で置き換えます。
 
-``` js
+```js
 hexo.extend.tag.unregister(name);
 ```
 
 **例**
 
-``` js
+```js
 const tagFn = (args, content) => {
-  content = 'something';
+  content = "something";
   return content;
 };
 
 // https://hexo.io/docs/tag-plugins#YouTube
-hexo.extend.tag.unregister('youtube');
+hexo.extend.tag.unregister("youtube");
 
-hexo.extend.tag.register('youtube', tagFn);
+hexo.extend.tag.register("youtube", tagFn);
 ```
 
 ## オプション
@@ -53,10 +58,14 @@ hexo.extend.tag.register('youtube', tagFn);
 
 Youtubeビデオを挿入します。
 
-``` js
-hexo.extend.tag.register('youtube', function(args){
+```js
+hexo.extend.tag.register("youtube", function (args) {
   var id = args[0];
-  return '<div class="video-container"><iframe width="560" height="315" src="http://www.youtube.com/embed/' + id + '" frameborder="0" allowfullscreen></iframe></div>';
+  return (
+    '<div class="video-container"><iframe width="560" height="315" src="http://www.youtube.com/embed/' +
+    id +
+    '" frameborder="0" allowfullscreen></iframe></div>'
+  );
 });
 ```
 
@@ -64,29 +73,43 @@ hexo.extend.tag.register('youtube', function(args){
 
 プルクオートを挿入します。
 
-``` js
-hexo.extend.tag.register('pullquote', function(args, content){
-  var className =  args.join(' ');
-  return '<blockquote class="pullquote' + className + '">' + content + '</blockquote>';
-}, {ends: true});
+```js
+hexo.extend.tag.register(
+  "pullquote",
+  function (args, content) {
+    var className = args.join(" ");
+    return (
+      '<blockquote class="pullquote' +
+      className +
+      '">' +
+      content +
+      "</blockquote>"
+    );
+  },
+  { ends: true },
+);
 ```
 
 ### 非同期レンダリング
 
 ファイルを挿入します。
 
-``` js
-var fs = require('hexo-fs');
-var pathFn = require('path');
+```js
+var fs = require("hexo-fs");
+var pathFn = require("path");
 
-hexo.extend.tag.register('include_code', function(args){
-  var filename = args[0];
-  var path = pathFn.join(hexo.source_dir, filename);
+hexo.extend.tag.register(
+  "include_code",
+  function (args) {
+    var filename = args[0];
+    var path = pathFn.join(hexo.source_dir, filename);
 
-  return fs.readFile(path).then(function(content){
-    return '<pre><code>' + content + '</code></pre>';
-  });
-}, {async: true});
+    return fs.readFile(path).then(function (content) {
+      return "<pre><code>" + content + "</code></pre>";
+    });
+  },
+  { async: true },
+);
 ```
 
 ## Front Matterとユーザー設定
@@ -95,7 +118,7 @@ hexo.extend.tag.register('include_code', function(args){
 
 1.
 
-``` js
+```js
 hexo.extend.tag.register('foo', function (args) {
   const [firstArg] = args;
 
@@ -120,11 +143,11 @@ hexo.extend.tag.register('foo', function (args) {
 
 2.
 
-``` js index.js
-hexo.extend.tag.register('foo', require('./lib/foo')(hexo));
+```js index.js
+hexo.extend.tag.register("foo", require("./lib/foo")(hexo));
 ```
 
-``` js lib/foo.js
+```js lib/foo.js
 module.exports = hexo => {
   return function fooFn(args) {
     const [firstArg] = args;

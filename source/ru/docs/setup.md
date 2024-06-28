@@ -1,9 +1,10 @@
 ---
 title: Установка
 ---
+
 После установки Hexo, запустите следующие команды в консоли для инициализации Hexo в папке `<folder>`.
 
-``` bash
+```bash
 $ hexo init <folder>
 $ cd <folder>
 $ npm install
@@ -11,7 +12,7 @@ $ npm install
 
 После инициализации папка будет выглядеть так:
 
-``` plain
+```plain
 .
 ├── _config.yml
 ├── package.json
@@ -22,7 +23,7 @@ $ npm install
 └── themes
 ```
 
-### _config.yml
+### \_config.yml
 
 Файл [конфигурации](configuration.html) сайта. В нём возможно настроить большинство параметров.
 
@@ -30,7 +31,7 @@ $ npm install
 
 Данные приложений. [EJS](https://ejs.co/)-, [Stylus](http://learnboost.github.io/stylus/)- и [Markdown](http://daringfireball.net/projects/markdown/)-обработчики устанавливаются по умолчанию. При желании можно удалить их позже.
 
-``` json package.json
+```json package.json
 {
   "name": "hexo-site",
   "version": "0.0.0",

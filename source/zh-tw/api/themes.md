@@ -1,23 +1,24 @@
 ---
 title: 主題
 ---
+
 `hexo.theme` 除了繼承 [盒子](box.html) 外，還身兼儲存模板的功能。
 
 ## 取得模板
 
-``` js
+```js
 hexo.theme.getView(path);
 ```
 
 ## 設定模板
 
-``` js
+```js
 hexo.theme.setView(path, data);
 ```
 
 ## 移除模板
 
-``` js
+```js
 hexo.theme.removeView(path);
 ```
 
@@ -25,10 +26,10 @@ hexo.theme.removeView(path);
 
 模板本身有兩個方法可供使用：`render` 和 `renderSync`，兩者功能一樣，只是前者為非同步函數，而後者為同步函數，因此以下僅以 `render` 舉例。
 
-``` js
-var view = hexo.theme.getView('layout.swig');
+```js
+var view = hexo.theme.getView("layout.swig");
 
-view.render({foo: 1, bar: 2}).then(function(result){
+view.render({ foo: 1, bar: 2 }).then(function (result) {
   // ...
 });
 ```

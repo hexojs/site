@@ -1,11 +1,12 @@
 ---
 title: フィルター
 ---
+
 フィルターは特定のデータを変更します。Hexoはデータをフィルターに順番に渡し、フィルターがデータを1つずつ変更します。このコンセプトは[WordPress](http://codex.wordpress.org/Plugin_API#Filters)に基づいています。
 
 ## 概要
 
-``` js
+```js
 hexo.extend.filter.register(type, function() {
   // User configuration
   const { config } = this;
@@ -22,69 +23,69 @@ hexo.extend.filter.register(type, function() {
 
 ## フィルターの実行
 
-``` js
+```js
 hexo.extend.filter.exec(type, data, options);
 hexo.extend.filter.execSync(type, data, options);
 ```
 
-オプション | 説明
---- | ---
-`context` | コンテキスト
-`args` | 引数。配列でなければなりません。
+| オプション | 説明                             |
+| ---------- | -------------------------------- |
+| `context`  | コンテキスト                     |
+| `args`     | 引数。配列でなければなりません。 |
 
 各フィルターに渡される最初の引数は`data`です。新たな値を返却することで、次のフィルターに渡される`data`を変更できます。何も返却しない場合データは変更されません。`args`を使用してフィルターに他の引数を指定することもできます。例えば:
 
-``` js
-hexo.extend.filter.register('test', function(data, arg1, arg2){
+```js
+hexo.extend.filter.register("test", function (data, arg1, arg2) {
   // data === 'some data'
   // arg1 === 'foo'
   // arg2 === 'bar'
 
-  return 'something';
+  return "something";
 });
 
-hexo.extend.filter.register('test', function(data, arg1, arg2){
+hexo.extend.filter.register("test", function (data, arg1, arg2) {
   // data === 'something'
 });
 
-hexo.extend.filter.exec('test', 'some data', {
-  args: ['foo', 'bar']
+hexo.extend.filter.exec("test", "some data", {
+  args: ["foo", "bar"],
 });
 ```
 
 フィルターを実行するために以下の方法も使用できます:
 
-``` js
+```js
 hexo.execFilter(type, data, options);
 hexo.execFilterSync(type, data, options);
 ```
 
 ## フィルターの登録解除
 
-``` js
+```js
 hexo.extend.filter.unregister(type, filter);
 ```
 
 **例**
 
-``` js
+```js
 // 名前付き関数で登録されたフィルターを登録解除
 
 const filterFn = (data) => {
-  data = 'something';
+  data = "something";
   return data;
 };
-hexo.extend.filter.register('example', filterFn);
+hexo.extend.filter.register("example", filterFn);
 
-hexo.extend.filter.unregister('example', filterFn);
+hexo.extend.filter.unregister("example", filterFn);
 ```
 
-``` js
+```js
 // commonjsモジュールで登録されたフィルターを登録解除
 
-hexo.extend.filter.register('example', require('path/to/filter'));
+hexo.extend.filter.register("example", require("path/to/filter"));
 
-hexo.extend.filter.unregister('example', require('path/to/filter'));
+hexo.extend.filter.unregister("example", require("path/to/filter"));
 ```
 
 ## フィルターリスト
@@ -97,8 +98,8 @@ Hexoで使用されるフィルターの一覧です。
 
 例えば、タイトルを小文字に変換するには:
 
-``` js
-hexo.extend.filter.register('before_post_render', function(data){
+```js
+hexo.extend.filter.register("before_post_render", function (data) {
   data.title = data.title.toLowerCase();
   return data;
 });
@@ -110,9 +111,12 @@ hexo.extend.filter.register('before_post_render', function(data){
 
 例えば、`@username`をTwitterプロファイルへのリンクに置き換えるには:
 
-``` js
-hexo.extend.filter.register('after_post_render', function(data){
-  data.content = data.content.replace(/@(\d+)/, '<a href="http://twitter.com/$1">#$1</a>');
+```js
+hexo.extend.filter.register("after_post_render", function (data) {
+  data.content = data.content.replace(
+    /@(\d+)/,
+    '<a href="http://twitter.com/$1">#$1</a>',
+  );
   return data;
 });
 ```
@@ -121,8 +125,8 @@ hexo.extend.filter.register('after_post_render', function(data){
 
 Hexoが終了する直前、つまり`hexo.exit`が呼び出された直後に実行されます。
 
-``` js
-hexo.extend.filter.register('before_exit', function(){
+```js
+hexo.extend.filter.register("before_exit", function () {
   // ...
 });
 ```
@@ -131,8 +135,8 @@ hexo.extend.filter.register('before_exit', function(){
 
 生成が開始される直前に実行されます。
 
-``` js
-hexo.extend.filter.register('before_generate', function(){
+```js
+hexo.extend.filter.register("before_generate", function () {
   // ...
 });
 ```
@@ -141,8 +145,8 @@ hexo.extend.filter.register('before_generate', function(){
 
 生成が終了した直後に実行されます。
 
-``` js
-hexo.extend.filter.register('after_generate', function(){
+```js
+hexo.extend.filter.register("after_generate", function () {
   // ...
 });
 ```
@@ -153,8 +157,8 @@ hexo.extend.filter.register('after_generate', function(){
 
 例えば、テンプレートのローカル変数に現在の時間を追加するには:
 
-``` js
-hexo.extend.filter.register('template_locals', function(locals){
+```js
+hexo.extend.filter.register("template_locals", function (locals) {
   locals.now = Date.now();
   return locals;
 });
@@ -164,8 +168,8 @@ hexo.extend.filter.register('template_locals', function(locals){
 
 Hexoが初期化、つまり`hexo.init`が完了した直後に実行されます。
 
-``` js
-hexo.extend.filter.register('after_init', function(){
+```js
+hexo.extend.filter.register("after_init", function () {
   // ...
 });
 ```
@@ -174,8 +178,8 @@ hexo.extend.filter.register('after_init', function(){
 
 新しい記事を作成する際のパスを決定するために実行されます。
 
-``` js
-hexo.extend.filter.register('new_post_path', function(data, replace){
+```js
+hexo.extend.filter.register("new_post_path", function (data, replace) {
   // ...
 });
 ```
@@ -184,8 +188,8 @@ hexo.extend.filter.register('new_post_path', function(data, replace){
 
 記事のパーマリンクを決定するために使用されます。
 
-``` js
-hexo.extend.filter.register('post_permalink', function(data){
+```js
+hexo.extend.filter.register("post_permalink", function (data) {
   // ...
 });
 ```
@@ -198,8 +202,8 @@ hexo.extend.filter.register('post_permalink', function(data){
 
 `hexo clean`コマンドで生成されたファイルとキャッシュが削除された後に実行されます。
 
-``` js
-hexo.extend.filter.register('after_clean', function(){
+```js
+hexo.extend.filter.register("after_clean", function () {
   // 他の一時ファイルを削除する
 });
 ```
@@ -210,10 +214,10 @@ hexo.extend.filter.register('after_clean', function(){
 
 例えば、レスポンスヘッダーに`X-Powered-By: Hexo`を追加するには:
 
-``` js
-hexo.extend.filter.register('server_middleware', function(app){
-  app.use(function(req, res, next){
-    res.setHeader('X-Powered-By', 'Hexo');
+```js
+hexo.extend.filter.register("server_middleware", function (app) {
+  app.use(function (req, res, next) {
+    res.setHeader("X-Powered-By", "Hexo");
     next();
   });
 });

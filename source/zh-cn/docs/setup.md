@@ -6,7 +6,7 @@ title: 建站
 
 安装 Hexo 完成后，请执行下列命令，Hexo 将会在指定文件夹中新建所需要的文件。
 
-``` bash
+```bash
 $ hexo init <folder>
 $ cd <folder>
 $ npm install
@@ -14,7 +14,7 @@ $ npm install
 
 新建完成后，指定文件夹的目录如下：
 
-``` plain
+```plain
 .
 ├── _config.yml
 ├── package.json
@@ -25,7 +25,7 @@ $ npm install
 └── themes
 ```
 
-### _config.yml
+### \_config.yml
 
 网站的 [配置](configuration.html) 信息，您可以在此配置大部分的参数。
 
@@ -33,7 +33,7 @@ $ npm install
 
 应用程序的信息。[EJS](https://ejs.co/), [Stylus](http://learnboost.github.io/stylus/) 和 [Markdown](http://daringfireball.net/projects/markdown/) 渲染引擎 已默认安装，您可以自由移除。
 
-``` json package.json
+```json package.json
 {
   "name": "hexo-site",
   "version": "0.0.0",

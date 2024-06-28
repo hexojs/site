@@ -1,6 +1,7 @@
 ---
 title: 標籤外掛（Tag Plugins）
 ---
+
 標籤外掛和 Front-matter 中的標籤不同，它們是用於在文章中快速插入特定內容的外掛。
 
 雖然你可以以任何格式寫你的文章，但標籤外掛會永遠可用，且語法都會相同。
@@ -81,14 +82,14 @@ code snippet
 
 以 `option:value` 格式設定額外的選項，例如：`line_number:false first_line:5`。
 
-額外選項 | 說明 | 預設值
---- | --- | ---
-`line_number` | 顯示行號 | `true`
-`line_threshold` | 當程式碼區塊的行數超過臨界值時，才顯示行號。 | `0` |
-`highlight` | 啟用程式碼強調 | `true`
-`first_line` | 設定起始的程式碼行號 | `1`
-`mark` | 強調特定的程式碼行號，每個值會以逗點區分。特定的程式碼區間則使用破折號 (dash)<br>範例：`mark:1,4-7,10` 會標示行號 1、 4 到 7 以及 10。 |
-`wrap` | 將程式碼區塊包裝在 [`<table>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table) 中 | `true`
+| 額外選項         | 說明                                                                                                                                   | 預設值 |
+| ---------------- | -------------------------------------------------------------------------------------------------------------------------------------- | ------ |
+| `line_number`    | 顯示行號                                                                                                                               | `true` |
+| `line_threshold` | 當程式碼區塊的行數超過臨界值時，才顯示行號。                                                                                           | `0`    |
+| `highlight`      | 啟用程式碼強調                                                                                                                         | `true` |
+| `first_line`     | 設定起始的程式碼行號                                                                                                                   | `1`    |
+| `mark`           | 強調特定的程式碼行號，每個值會以逗點區分。特定的程式碼區間則使用破折號 (dash)<br>範例：`mark:1,4-7,10` 會標示行號 1、 4 到 7 以及 10。 |
+| `wrap`           | 將程式碼區塊包裝在 [`<table>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table) 中                                     | `true` |
 
 **普通的程式碼區塊**
 
@@ -136,7 +137,7 @@ _.compact([0, 1, false, 2, '', 3]);
 ```
 
 {% codeblock _.compact http://underscorejs.org/#compact Underscore.js %}
-_.compact([0, 1, false, 2, '', 3]);
+\_.compact([0, 1, false, 2, '', 3]);
 => [1, 2, 3]
 {% endcodeblock %}
 
@@ -145,9 +146,9 @@ _.compact([0, 1, false, 2, '', 3]);
 另一種形式的程式碼區塊。
 
 {% raw %}
-&#96``[language] [title] [url] [link text]
+&#96`[language] [title] [url] [link text]
 code snippet
-&#96``
+&#96`
 {% endraw %}
 
 ## 抬升式引用區塊 (Pull Quote)
@@ -301,6 +302,7 @@ content
 ```
 {% post_link hexo-4-released 'How to use <b> tag in title' %}
 ```
+
 {% post_link hexo-4-released 'How to use <b> tag in title' %}
 
 **不要逸出標題。**
@@ -308,6 +310,7 @@ content
 ```
 {% post_link hexo-4-released '<b>bold</b> custom title' false %}
 ```
+
 {% post_link hexo-4-released '<b>bold</b> custom title' false %}
 
 ## 引用資產
@@ -330,32 +333,32 @@ _hexo-renderer-marked 3.1.0+ 可以（可選的）自動解析文章內的圖片
 
 `{% asset_img foo.jpg %}`
 
-``` html
-<img src="/2020/01/02/hello/foo.jpg">
+```html
+<img src="/2020/01/02/hello/foo.jpg" />
 ```
 
 **自訂 Class**
 
 `{% asset_img post-image foo.jpg %}`
 
-``` html
-<img src="/2020/01/02/hello/foo.jpg" class="post-image">
+```html
+<img src="/2020/01/02/hello/foo.jpg" class="post-image" />
 ```
 
 **顯示尺寸**
 
 `{% asset_img foo.jpg 500 400 %}`
 
-``` html
-<img src="/2020/01/02/hello/foo.jpg" width="500" height="400">
+```html
+<img src="/2020/01/02/hello/foo.jpg" width="500" height="400" />
 ```
 
 **標題及替代文字**
 
 `{% asset_img logo.svg "lorem ipsum'dolor'" %}`
 
-``` html
-<img src="/2020/01/02/hello/foo.jpg" title="lorem ipsum" alt="dolor">
+```html
+<img src="/2020/01/02/hello/foo.jpg" title="lorem ipsum" alt="dolor" />
 ```
 
 ## URL
@@ -370,23 +373,23 @@ _hexo-renderer-marked 3.1.0+ 可以（可選的）自動解析文章內的圖片
 
 **範例：**
 
-``` yml
+```yml
 _config.yml
 root: /blog/ # 範例
 ```
 
-``` 
+```
 {% url_for blog index.html %}
 ```
 
-``` html
+```html
 <a href="/blog/index.html">blog</a>
 ```
 
 相對路徑連結則預設依照選項 `relative_link`
 例如：post/page 路徑是 '/foo/bar/index.html'
 
-``` yml
+```yml
 _config.yml
 relative_link: true
 ```
@@ -395,7 +398,7 @@ relative_link: true
 {% url_for blog index.html %}
 ```
 
-``` html
+```html
 <a href="../../index.html">blog</a>
 ```
 
@@ -405,7 +408,7 @@ relative_link: true
 {% url_for blog index.html false %}
 ```
 
-``` html
+```html
 <a href="/index.html">blog</a>
 ```
 
@@ -419,7 +422,7 @@ relative_link: true
 
 **範例：**
 
-``` yml
+```yml
 _config.yml
 url: https://example.com/blog # 範例
 ```
@@ -428,7 +431,7 @@ url: https://example.com/blog # 範例
 {% full_url_for index /a/path %}
 ```
 
-``` html
+```html
 <a href="https://example.com/blog/a/path">index</a>
 ```
 
@@ -445,7 +448,6 @@ content
 ## 文章摘要
 
 使用在 `<!-- more -->` 標籤之前的文字作為為這篇文章的摘要。[front-matter](/docs/front-matter#Settings-amp-Their-Default-Values) 中的 `excerpt:` 值如果被特指的話，將會將其優先使用。
-
 
 **範例：**
 

@@ -1,13 +1,14 @@
 ---
 title: プロセッサー
 ---
+
 プロセッサーは、`source`フォルダ内のソースファイルの処理を行います。
 
 ## 概要
 
-``` js
-hexo.extend.processor.register(rule, function(file){
- // ...
+```js
+hexo.extend.processor.register(rule, function (file) {
+  // ...
 });
 ```
 

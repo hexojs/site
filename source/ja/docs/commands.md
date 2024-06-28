@@ -4,7 +4,7 @@ title: コマンド
 
 ## init
 
-``` bash
+```bash
 $ hexo init [folder]
 ```
 
@@ -17,17 +17,17 @@ $ hexo init [folder]
 
 ## new
 
-``` bash
+```bash
 $ hexo new [layout] <title>
 ```
 
-新しい記事やページを作成します。`layout`が指定されていない場合、Hexoは[_config.yml](configuration.html)の`default_layout`を使用します。下書きを作成するには`draft`レイアウトを使用します。`title`にスペースが含まれる場合は、引用符で囲んでください。
+新しい記事やページを作成します。`layout`が指定されていない場合、Hexoは[\_config.yml](configuration.html)の`default_layout`を使用します。下書きを作成するには`draft`レイアウトを使用します。`title`にスペースが含まれる場合は、引用符で囲んでください。
 
-オプション | 説明
---- | ---
-`-p`, `--path` | 記事のパスをカスタマイズします。
-`-r`, `--replace` | 既存の記事を置き換えます。
-`-s`, `--slug` | 記事のURL（スラッグ）をカスタマイズします。
+| オプション        | 説明                                        |
+| ----------------- | ------------------------------------------- |
+| `-p`, `--path`    | 記事のパスをカスタマイズします。            |
+| `-r`, `--replace` | 既存の記事を置き換えます。                  |
+| `-s`, `--slug`    | 記事のURL（スラッグ）をカスタマイズします。 |
 
 デフォルトでは、Hexoはタイトルを使用してファイルのパスを定義します。ページの場合、その名前のディレクトリとその中に`index.md`ファイルを作成します。`--path`オプションを使用してこの挙動をオーバーライドし、ファイルパスを定義できます:
 
@@ -47,23 +47,23 @@ hexo new page --path about/me
 
 ## generate
 
-``` bash
+```bash
 $ hexo generate
 ```
 
 静的ファイルを生成します。
 
-オプション | 説明
---- | ---
-`-d`, `--deploy` | 生成が完了した後にデプロイします
-`-w`, `--watch` | ファイルの変更を監視します
-`-b`, `--bail` | 生成中に取り扱いされない例外がスローされた場合にエラーを発生させます
-`-f`, `--force` | 強制的に再生成します
-`-c`, `--concurrency` | 並行して生成されるファイルの最大数。デフォルトは無限です
+| オプション            | 説明                                                                 |
+| --------------------- | -------------------------------------------------------------------- |
+| `-d`, `--deploy`      | 生成が完了した後にデプロイします                                     |
+| `-w`, `--watch`       | ファイルの変更を監視します                                           |
+| `-b`, `--bail`        | 生成中に取り扱いされない例外がスローされた場合にエラーを発生させます |
+| `-f`, `--force`       | 強制的に再生成します                                                 |
+| `-c`, `--concurrency` | 並行して生成されるファイルの最大数。デフォルトは無限です             |
 
 ## publish
 
-``` bash
+```bash
 $ hexo publish [layout] <filename>
 ```
 
@@ -71,45 +71,45 @@ $ hexo publish [layout] <filename>
 
 ## server
 
-``` bash
+```bash
 $ hexo server
 ```
 
 ローカルサーバーを起動します。デフォルトでは`http://localhost:4000/`です。
 
-オプション | 説明
---- | ---
-`-p`, `--port` | デフォルトポートを上書きします
-`-s`, `--static` | 静的ファイルのみを提供します
-`-l`, `--log` | ロガーを有効にします。ログ形式を上書きします。
+| オプション       | 説明                                           |
+| ---------------- | ---------------------------------------------- |
+| `-p`, `--port`   | デフォルトポートを上書きします                 |
+| `-s`, `--static` | 静的ファイルのみを提供します                   |
+| `-l`, `--log`    | ロガーを有効にします。ログ形式を上書きします。 |
 
 ## deploy
 
-``` bash
+```bash
 $ hexo deploy
 ```
 
 ウェブサイトをデプロイします。
 
-オプション | 説明
---- | ---
-`-g`, `--generate` | デプロイ前に生成を行います
+| オプション         | 説明                       |
+| ------------------ | -------------------------- |
+| `-g`, `--generate` | デプロイ前に生成を行います |
 
 ## render
 
-``` bash
+```bash
 $ hexo render <file1> [file2] ...
 ```
 
 ファイルをレンダリングします。
 
-オプション | 説明
---- | ---
-`-o`, `--output` | 出力先
+| オプション       | 説明   |
+| ---------------- | ------ |
+| `-o`, `--output` | 出力先 |
 
 ## migrate
 
-``` bash
+```bash
 $ hexo migrate <type>
 ```
 
@@ -117,7 +117,7 @@ $ hexo migrate <type>
 
 ## clean
 
-``` bash
+```bash
 $ hexo clean
 ```
 
@@ -125,7 +125,7 @@ $ hexo clean
 
 ## list
 
-``` bash
+```bash
 $ hexo list <type>
 ```
 
@@ -133,7 +133,7 @@ $ hexo list <type>
 
 ## version
 
-``` bash
+```bash
 $ hexo version
 ```
 
@@ -151,7 +151,7 @@ $ hexo config [key] [value]
 
 ### セーフモード
 
-``` bash
+```bash
 $ hexo --safe
 ```
 
@@ -159,7 +159,7 @@ $ hexo --safe
 
 ### デバッグモード
 
-``` bash
+```bash
 $ hexo --debug
 ```
 
@@ -167,7 +167,7 @@ $ hexo --debug
 
 ### サイレントモード
 
-``` bash
+```bash
 $ hexo --silent
 ```
 
@@ -175,19 +175,19 @@ $ hexo --silent
 
 ### 設定ファイルパスのカスタマイズ
 
-``` bash
+```bash
 $ hexo --config custom.yml
 ```
 
 カスタム設定ファイル(`_config.yml`の代わり)を使用します。JSONまたはYAML設定ファイルのカンマ区切りリスト（スペースなし）も受け入れ、ファイルを単一の`_multiconfig.yml`に結合します。
 
-``` bash
+```bash
 $ hexo --config custom.yml,custom2.json
 ```
 
 ### 下書きの表示
 
-``` bash
+```bash
 $ hexo --draft
 ```
 
@@ -195,7 +195,7 @@ $ hexo --draft
 
 ### 現在の作業ディレクトリのカスタマイズ
 
-``` bash
+```bash
 $ hexo --cwd /path/to/cwd
 ```
 

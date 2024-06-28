@@ -1,12 +1,13 @@
 ---
 title: Мигратор
 ---
+
 Мигратор позволяет переходить на Hexo из других систем.
 
 ## Краткий обзор
 
-``` js
-hexo.extend.migrator.register(name, function(args){
+```js
+hexo.extend.migrator.register(name, function (args) {
   // ...
 });
 ```

@@ -1,6 +1,7 @@
 ---
 title: 插件
 ---
+
 Hexo 有强大的插件系统，使您能轻松扩展功能而不用修改核心模块的源码。在 Hexo 中有两种形式的插件：
 
 ### 脚本（Scripts）
@@ -13,7 +14,7 @@ Hexo 有强大的插件系统，使您能轻松扩展功能而不用修改核心
 
 文件夹内至少要包含 2 个文件：一个是主程序，另一个是 `package.json`，描述插件的用途和所依赖的插件。
 
-``` plain
+```plain
 .
 ├── index.js
 └── package.json
@@ -21,7 +22,7 @@ Hexo 有强大的插件系统，使您能轻松扩展功能而不用修改核心
 
 `package.json` 中至少要包含 `name`, `version`, `main` 属性，例如：
 
-``` json package.json
+```json package.json
 {
   "name": "hexo-my-plugin",
   "version": "0.0.1",

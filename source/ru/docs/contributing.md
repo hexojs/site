@@ -25,7 +25,7 @@ title: Содействие
 1. Создайте форк [hexojs/site]
 2. Клонируйте репозиторий на компьютер и установите все зависимости.
 
-``` bash
+```bash
 $ git clone https://github.com/<username>/hexo.git
 $ cd hexo
 $ npm install
@@ -34,7 +34,7 @@ $ git submodule update --init
 
 3. Создать отдельную ветку.
 
-``` bash
+```bash
 $ git checkout -b new_feature
 ```
 
@@ -52,7 +52,7 @@ $ git push origin new_feature
 - Не изменяйте номер версии в `package.json`.
 - Ваш запрос могут только принять, когда все тесты пройдут. Не забудьте провести испытания перед отправкой.
 
-``` bash
+```bash
 $ npm test
 ```
 
@@ -69,7 +69,7 @@ $ npm test
 1. Создайте форк [hexojs/site]
 2. Клонируйте репозиторий на компьютер и установите все зависимости.
 
-``` bash
+```bash
 $ npm install hexo-cli -g # If you don't have hexo-cli installed
 $ git clone https://github.com/<username>/site.git
 $ cd site
@@ -78,7 +78,7 @@ $ npm install
 
 3. Начать редактировать документацию. Вы можете запустить сервер для просмотра изменений.
 
-``` bash
+```bash
 $ hexo server
 ```
 

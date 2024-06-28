@@ -1,9 +1,10 @@
 ---
 title: Generating
 ---
+
 การ generate ไฟล์คงท่ีใน hexo จะค่อนข้างรวดเร็วและง่าย
 
-``` bash
+```bash
 $ hexo generate
 ```
 
@@ -14,7 +15,7 @@ $ hexo generate
 hexo จะเฝ้าดูการเปลี่ยนแปลงของไฟล์และ generate ไฟล์ ทันที  
 เฝ้าดูการเปลี่ยนแปลงของไฟล์นั้นจะเป็นการเปรียนเทียบ SHA1 checksum ของไฟล์
 
-``` bash
+```bash
 $ hexo generate --watch
 ```
 
@@ -22,7 +23,7 @@ $ hexo generate --watch
 
 คำสั่งสองบรรทัดต่อไปจะมีการปฏิบัติเหมือนกันสำหรับการ deploy หลังการ generate ไฟล์
 
-``` bash
+```bash
 $ hexo generate --deploy
 $ hexo deploy --generate
 ```

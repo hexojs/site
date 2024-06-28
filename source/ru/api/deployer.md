@@ -1,12 +1,13 @@
 ---
 title: Инструмент размещения
 ---
+
 Позволяет быстро развернуть свой сайт на удалённом сервере без сложных команд.
 
 ## Краткий обзор
 
-``` js
-hexo.extend.deployer.register(name, function(args){
+```js
+hexo.extend.deployer.register(name, function (args) {
   // ...
 });
 ```

@@ -6,8 +6,8 @@ Um `deployer` ajuda os usuários a implantar o seu site rapidamente em um servid
 
 ## Resumo
 
-``` js
-hexo.extend.deployer.register(name, function(args){
+```js
+hexo.extend.deployer.register(name, function (args) {
   // ...
 });
 ```

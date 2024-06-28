@@ -6,7 +6,7 @@ title: 指令
 
 ## init
 
-``` bash
+```bash
 $ hexo init [folder]
 ```
 
@@ -19,28 +19,28 @@ $ hexo init [folder]
 
 ## new
 
-``` bash
+```bash
 $ hexo new [layout] <title>
 ```
 
-建立一篇新的文章。如果沒有設定 `layout` 的話，則會使用 [_config.yml](configuration.html) 中的 `default_layout` 設定代替。如果標題包含空格的話，請使用引號括起來。
+建立一篇新的文章。如果沒有設定 `layout` 的話，則會使用 [\_config.yml](configuration.html) 中的 `default_layout` 設定代替。如果標題包含空格的話，請使用引號括起來。
 
 ## generate
 
-``` bash
+```bash
 $ hexo generate
 ```
 
 產生靜態檔案。
 
-選項 | 描述
---- | ---
-`-d`, `--deploy` | 產生完成即部署網站
-`-w`, `--watch` | 監看檔案變更
+| 選項             | 描述               |
+| ---------------- | ------------------ |
+| `-d`, `--deploy` | 產生完成即部署網站 |
+| `-w`, `--watch`  | 監看檔案變更       |
 
 ## publish
 
-``` bash
+```bash
 $ hexo publish [layout] <filename>
 ```
 
@@ -48,45 +48,45 @@ $ hexo publish [layout] <filename>
 
 ## server
 
-``` bash
+```bash
 $ hexo server
 ```
 
 啟動伺服器，預設是 `http://localhost:4000/`。
 
-選項 | 描述
---- | ---
-`-p`, `--port` | 覆蓋連接埠設定
-`-s`, `--static` | 只使用靜態檔案
-`-l`, `--log` | 啟動記錄器，或覆蓋記錄格式
+| 選項             | 描述                       |
+| ---------------- | -------------------------- |
+| `-p`, `--port`   | 覆蓋連接埠設定             |
+| `-s`, `--static` | 只使用靜態檔案             |
+| `-l`, `--log`    | 啟動記錄器，或覆蓋記錄格式 |
 
 ## deploy
 
-``` bash
+```bash
 $ hexo deploy
 ```
 
 部署網站。
 
-選項 | 描述
---- | ---
-`-g`, `--generate` | 部署網站前先產生靜態檔案
+| 選項               | 描述                     |
+| ------------------ | ------------------------ |
+| `-g`, `--generate` | 部署網站前先產生靜態檔案 |
 
 ## render
 
-``` bash
+```bash
 $ hexo render <file> [file2] ...
 ```
 
 渲染檔案。
 
-選項 | 描述
---- | ---
-`-o`, `--output` | 輸出位置
+| 選項             | 描述     |
+| ---------------- | -------- |
+| `-o`, `--output` | 輸出位置 |
 
 ## migrate
 
-``` bash
+```bash
 $ hexo migrate <type>
 ```
 
@@ -94,7 +94,7 @@ $ hexo migrate <type>
 
 ## clean
 
-``` bash
+```bash
 $ hexo clean
 ```
 
@@ -102,7 +102,7 @@ $ hexo clean
 
 ## list
 
-``` bash
+```bash
 $ hexo list <type>
 ```
 
@@ -110,7 +110,7 @@ $ hexo list <type>
 
 ## version
 
-``` bash
+```bash
 $ hexo version
 ```
 
@@ -120,7 +120,7 @@ $ hexo version
 
 ### 安全模式
 
-``` bash
+```bash
 $ hexo --safe
 ```
 
@@ -128,7 +128,7 @@ $ hexo --safe
 
 ### 除錯模式
 
-``` bash
+```bash
 $ hexo --debug
 ```
 
@@ -136,7 +136,7 @@ $ hexo --debug
 
 ### 安靜模式
 
-``` bash
+```bash
 $ hexo --silent
 ```
 
@@ -144,19 +144,19 @@ $ hexo --silent
 
 ### 自訂配置檔的路徑
 
-``` bash
+```bash
 $ hexo --config custom.yml
 ```
 
 自訂配置檔的路徑而不是使用 `_config.yml`。此參數也接受以逗號分隔的 JSON 或 YAML 檔列表字串 (不得含有空格)，它們將會被合併產生一個 `_multiconfig.yml`。
 
-``` bash
+```bash
 $ hexo --config custom.yml,custom2.json
 ```
 
 ### 顯示草稿
 
-``` bash
+```bash
 $ hexo --draft
 ```
 
@@ -164,7 +164,7 @@ $ hexo --draft
 
 ### 自定 CWD
 
-``` bash
+```bash
 $ hexo --cwd /path/to/cwd
 ```
 

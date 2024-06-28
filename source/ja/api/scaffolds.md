@@ -1,20 +1,21 @@
 ---
 title: スキャフォールド
 ---
+
 ## スキャフォールドの取得
 
-``` js
+```js
 hexo.scaffold.get(name);
 ```
 
 ## スキャフォールドの設定
 
-``` js
+```js
 hexo.scaffold.set(name, content);
 ```
 
 ## スキャフォールドの削除
 
-``` js
+```js
 hexo.scaffold.remove(name);
 ```

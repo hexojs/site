@@ -1,12 +1,13 @@
 ---
 title: マイグレーター
 ---
+
 マイグレーターは、他のシステムからHexoへのウェブサイトの移行を行います。
 
 ## 概要
 
-``` js
-hexo.extend.migrator.register(name, function(args){
+```js
+hexo.extend.migrator.register(name, function (args) {
   // ...
 });
 ```

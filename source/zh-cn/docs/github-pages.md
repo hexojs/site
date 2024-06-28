@@ -25,7 +25,7 @@ name: Pages
 on:
   push:
     branches:
-      - main  # default branch
+      - main # default branch
 
 jobs:
   build:
@@ -41,7 +41,7 @@ jobs:
         with:
           # Examples: 20, 18.19, >=16.20.2, lts/Iron, lts/Hydrogen, *, latest, current, node
           # Ref: https://github.com/actions/setup-node#supported-version-syntax
-          node-version: '20'
+          node-version: "20"
       - name: Cache NPM dependencies
         uses: actions/cache@v4
         with:

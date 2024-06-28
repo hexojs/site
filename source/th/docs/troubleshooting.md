@@ -1,21 +1,22 @@
 ---
 title: Troubleshooting
 ---
-ถ้าหากว่าคุณพบเจอปัญหาเมื่อใช้  hexo
+
+ถ้าหากว่าคุณพบเจอปัญหาเมื่อใช้ hexo
 ท่ีนี่มีตารางของวิธีการแก้ปัญหาที่พบเจอบ่อยครั้ง ถ้าเกิดปัญหาท่ีไซตืนี้ไม่มี
-ลองค้นหาวิธีการแก้ไขปัญหาใน  [GitHub](https://github.com/hexojs/hexo/issues)
-หรือ  [Google Group](https://groups.google.com/group/hexo)
+ลองค้นหาวิธีการแก้ไขปัญหาใน [GitHub](https://github.com/hexojs/hexo/issues)
+หรือ [Google Group](https://groups.google.com/group/hexo)
 
 ## YAML Parsing Error
 
-``` plain
+```plain
 JS-YAML: incomplete explicit mapping pair; a key node is missed at line 18, column 29:
       last_updated: Last updated: %s
 ```
 
 ปกคลุม string ด้วย quotation ถ้ามันมีเครื่องหมาย (:) อยู่ด้วย
 
-``` plain
+```plain
 JS-YAML: bad indentation of a mapping entry at line 18, column 31:
       last_updated:"Last updated: %s"
 ```
@@ -26,17 +27,17 @@ JS-YAML: bad indentation of a mapping entry at line 18, column 31:
 
 ## EMFILE Error
 
-``` plain
+```plain
 Error: EMFILE, too many open files
 ```
 
 แม้ว่า Node.js มี I/O ท่ี non-blocking ปริมาณมากท่ีสุดของ I/O ท่ี synchronous
- ยังจำกัดอยู่เนื่องด้วยระบบของ hexo  คุณอาจจะพบเจอข้อผิดพลาดท่ีเป็น EMFILE
- error ในเมื่อลอง generate ไฟล์เป็นจำนวนมาก
- คุณอาจจะลองรันคำสั่งต่อไปเพื่อเพิ่มจำนวนของ I/O operation ท่ี synchronous
- และถูกอนุญาตแล้ว
+ยังจำกัดอยู่เนื่องด้วยระบบของ hexo คุณอาจจะพบเจอข้อผิดพลาดท่ีเป็น EMFILE
+error ในเมื่อลอง generate ไฟล์เป็นจำนวนมาก
+คุณอาจจะลองรันคำสั่งต่อไปเพื่อเพิ่มจำนวนของ I/O operation ท่ี synchronous
+และถูกอนุญาตแล้ว
 
-``` bash
+```bash
 $ ulimit -n 10000
 ```
 
@@ -44,7 +45,7 @@ $ ulimit -n 10000
 
 If you encounter the following error:
 
-``` bash
+```bash
 $ ulimit -n 10000
 ulimit: open files: cannot modify limit: Operation not permitted
 ```
@@ -55,13 +56,13 @@ To override the limit:
 
 1. Add the following line to "/etc/security/limits.conf":
 
-  ```
-  * - nofile 10000
+```
+* - nofile 10000
 
-  # '*' applies to all users and '-' set both soft and hard limits
-  ```
+# '*' applies to all users and '-' set both soft and hard limits
+```
 
-* The above setting may not apply in some cases, ensure "/etc/pam.d/login" and "/etc/pam.d/lightdm" have the following line. (Ignore this step if those files do not exist)
+- The above setting may not apply in some cases, ensure "/etc/pam.d/login" and "/etc/pam.d/lightdm" have the following line. (Ignore this step if those files do not exist)
 
   ```
   session required pam_limits.so
@@ -69,9 +70,9 @@ To override the limit:
 
 2. If you are on a [systemd-based](https://en.wikipedia.org/wiki/Systemd#Adoption) distribution, systemd may override "limits.conf". To set the limit in systemd, add the following line in "/etc/systemd/system.conf" and "/etc/systemd/user.conf":
 
-  ```
-  DefaultLimitNOFILE=10000
-  ```
+```
+DefaultLimitNOFILE=10000
+```
 
 3. Reboot
 
@@ -83,7 +84,7 @@ To override the limit:
 FATAL ERROR: CALL_AND_RETRY_LAST Allocation failed - process out of memory
 ```
 
-คุณเพิ่มขนาด heap memory ของ  Node.js ได้ด้วยการเปลี่ยนบรรทัดแรกของ `hexo-cli` (หาไฟล์นี้ได้ด้วยคำสั่ง `which hexo`)
+คุณเพิ่มขนาด heap memory ของ Node.js ได้ด้วยการเปลี่ยนบรรทัดแรกของ `hexo-cli` (หาไฟล์นี้ได้ด้วยคำสั่ง `which hexo`)
 
 ```
 #!/usr/bin/env node --max_old_space_size=8192
@@ -95,7 +96,7 @@ FATAL ERROR: CALL_AND_RETRY_LAST Allocation failed - process out of memory
 
 ### RPC failed
 
-``` plain
+```plain
 error: RPC failed; result=22, HTTP code = 403
 
 fatal: 'username.github.io' does not appear to be a git repository
@@ -124,7 +125,7 @@ fatal: 'username.github.io' does not appear to be a git repository
 
 ## Server Problems
 
-``` plain
+```plain
 Error: listen EADDRINUSE
 ```
 
@@ -132,13 +133,13 @@ Error: listen EADDRINUSE
 port เดียวกัน สำหรับการแก้ไขเรื่องนี้ลองแก้ไขการตั้งค่าของ
 `port`หรือเปิดเซร์ฟเวอร์ hexo ใน port ท่ีตั้งค่าโดยแท็ก`-p`
 
-``` bash
+```bash
 $ hexo server -p 5000
 ```
 
 ## Plugin Installation Problems
 
-``` plain
+```plain
 npm ERR! node-waf configure build
 ```
 
@@ -177,15 +178,15 @@ data บางอย่างอัพเดทไม่ได้ หรือ�
 ใหม่นั้นเหมือกับไฟล์ของเวอร์ชั่นล่าสุด ถ้าเป็นอย่างนี้ กรุณาเคลีย cache
 และลองอีกครั้ง
 
-``` bash
+```bash
 $ hexo clean
 ```
 
 ## No command is executed
 
-ุถ้าคุณไม่สามารถรันคำสั่งนอกจาก `help` `init` และ  `version`
+ุถ้าคุณไม่สามารถรันคำสั่งนอกจาก `help` `init` และ `version`
 และผลท่ีส่งกลับจากคำสั่งนั้นมีแต่เนื้อหาของ `hexo help`
-ปัญหานี้อาจเกิดจากการขาดแคลน  `hexo` ในไฟล์ `package.json`:
+ปัญหานี้อาจเกิดจากการขาดแคลน `hexo` ในไฟล์ `package.json`:
 
 ```json
 {
@@ -200,7 +201,7 @@ $ hexo clean
 hexo ใช้ [Nunjucks] เพื่อ render โพสต์ (ในเวอร์ชั่นเก่าใช้ [Swig] ซึ่งมี
 syntax เหมือนกัน) เนื้อหาที่ห่อด้วย `{{ }}` หรือ `{% %}` อาจจะถูก parse ไม่ถูกต้องและเกิดปัญหาบ้าง
 เพื่อป้องกันเรื่องนี้เกิดขึ้น คุณสามารถติดตั้งปลั๊กอินแท็ก
-You can skip the parsing by wrapping it with the [`raw`](/docs/tag-plugins#Raw) tag plugin, single backtick ```` `{{ }}` ```` or triple backtick.
+You can skip the parsing by wrapping it with the [`raw`](/docs/tag-plugins#Raw) tag plugin, single backtick `` `{{ }}` `` or triple backtick.
 Alternatively, Nunjucks tags can be disabled through the renderer's option (if supported), [API](/api/renderer#Disable-Nunjucks-tags) or [front-matter](/docs/front-matter).
 
 ```
@@ -246,7 +247,7 @@ Error: watch /path/to/hexo/theme/ EMPERM
 จะไม่สามารถใช้ประโยชน์ได้ แต่คุณยังรันเซร์ฟเวอร์ได้ภายในสภาพแวดล้อม WSL โดย
 generate ไฟล์ก่อนแลัวรันเซร์ฟเวอร์แบบคงที่:
 
-``` sh
+```sh
 $ hexo generate
 $ hexo server -s
 ```

@@ -1,12 +1,13 @@
 ---
 title: Migrator
 ---
+
 A migrator helps users migrate from other systems to Hexo.
 
 ## Synopsis
 
-``` js
-hexo.extend.migrator.register(name, function(args){
+```js
+hexo.extend.migrator.register(name, function (args) {
   // ...
 });
 ```
