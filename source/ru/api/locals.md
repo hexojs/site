@@ -6,7 +6,7 @@ title: Локальные переменные
 
 ## Переменные по умолчанию
 
-| Переменная   | Описание      |
+| Variable     | Описание      |
 | ------------ | ------------- |
 | `posts`      | Все посты     |
 | `pages`      | Все страницы  |
@@ -39,7 +39,7 @@ hexo.locals.remove("posts");
 hexo.locals.toObject();
 ```
 
-## Очистка кэша
+## Invalidate the cache
 
 ```js
 hexo.locals.invalidate();

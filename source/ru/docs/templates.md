@@ -4,16 +4,18 @@ title: Шаблоны
 
 Шаблон определяет, как страница определённого вида будет выглядеть на вашем сайте. В таблице ниже приведены соответствующие шаблоны для любой страницы. Как минимум, тема должна содержать шаблон `index`.
 
-| Шаблон     | Страница          | Резерв    |
+{% youtube mb65bQ4iUc4 %}
+
+| Шаблон     | Страница          | Fallback  |
 | ---------- | ----------------- | --------- |
-| `index`    | Домашняя страница |
-| `post`     | Посты             | `index`   |
+| `index`    | Домашняя страница |           |
+| `post`     | Posts             | `index`   |
 | `page`     | Страницы          | `index`   |
 | `archive`  | Архив             | `index`   |
 | `category` | Категории архивов | `archive` |
 | `tag`      | Архив тегов       | `archive` |
 
-## Макеты
+## Layouts
 
 Если страницы имеют схожую структуру, например, когда два шаблона имеют как верхний, так и нижний колонтитулы, тогда можно рассмотреть возможность использования макета `layout` для вынесения этих структурных сходств. Каждый файл разметки должен содержать переменную `body`, для отображения содержимого шаблона. Например:
 
@@ -30,7 +32,7 @@ index
 </html>
 ```
 
-сформируется в:
+yields:
 
 ```html
 <!doctype html>
@@ -42,8 +44,6 @@ index
 ```
 
 По умолчанию макет `layout` используется всеми другими шаблонами. Вы можете указать дополнительные макеты в шапке файла или установить его значение в `false`, чтобы отключить. Также можно построить сложную вложенную структуру включив в верхней части макета другие макеты.
-
-<!-- TODO: Добавить примеры использования -->
 
 ## Части
 
@@ -58,7 +58,7 @@ index
 <div id="content">Home page</div>
 ```
 
-сформируется в:
+yields:
 
 ```html
 <h1 id="logo">My Site</h1>
@@ -78,7 +78,7 @@ index
 <div id="content">Home page</div>
 ```
 
-сформируется в:
+yields:
 
 ```html
 <h1 id="logo">Hello World</h1>
@@ -106,6 +106,5 @@ index
 ```
 
 {% note warn %}
-`fragment_cache()` will cache the rendered result and output the cached result to other pages. This should only be used on partials that are expected **not** to change across different pages. Otherwise, it should **not** be enabled.
-For example, it should be disabled when `relative_link` is enabled in the config. This is because relative links may appear differently across pages.
+`fragment_cache()` will cache the rendered result and output the cached result to other pages. This should only be used on partials that are expected **not** to change across different pages. Otherwise, it should **not** be enabled. For example, it should be disabled when `relative_link` is enabled in the config. This is because relative links may appear differently across pages.
 {% endnote %}

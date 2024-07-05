@@ -20,9 +20,9 @@ title: Содействие
 
 Кроме того, у Hexo есть своя собственная конфигурация [ESLint config](https://github.com/hexojs/eslint-config-hexo), поэтому, пожалуйста, убедитесь, что ваш вклад пройдёт ESLint проверку.
 
-### Рабочее пространство
+### Workflow
 
-1. Создайте форк [hexojs/site]
+1. Создайте форк [hexojs/site][]
 2. Клонируйте репозиторий на компьютер и установите все зависимости.
 
 ```bash
@@ -38,8 +38,8 @@ $ git submodule update --init
 $ git checkout -b new_feature
 ```
 
-4. Вносите изменения.
-5. Выгрузите ветку:
+4. Start hacking.
+5. Push the branch:
 
 ```
 $ git push origin new_feature
@@ -64,9 +64,9 @@ $ npm test
 
 Документация Hexo имеет открытый исходный код, его можно найти по адресу [hexojs/site](https://github.com/hexojs/site).
 
-### Рабочее пространство
+### Workflow
 
-1. Создайте форк [hexojs/site]
+1. Создайте форк [hexojs/site][]
 2. Клонируйте репозиторий на компьютер и установите все зависимости.
 
 ```bash
@@ -99,5 +99,4 @@ $ hexo server
 1. Воспроизведите проблему в режиме отладки [debug mode](commands.html#Режим-отладки).
 2. Следуйте инструкциям из шаблона issue, чтобы предоставить сообщение об отладке и версию при создании нового issue на GitHub.
 
-[hexojs/hexo]: https://github.com/hexojs/hexo
 [hexojs/site]: https://github.com/hexojs/site

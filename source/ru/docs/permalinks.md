@@ -1,5 +1,5 @@
 ---
-title: Постоянные ссылки
+title: Permalinks
 ---
 
 Вы можете указать формат постоянных ссылок на вашем сайте в файле `_config.yml`. Или в шапке каждого поста.
@@ -8,7 +8,7 @@ title: Постоянные ссылки
 
 Besides the following variables, you can use any attributes in the permalink except `:path` and `:permalink`.
 
-| Переменная    | Описание                                                                                           |
+| Variable      | Описание                                                                                           |
 | ------------- | -------------------------------------------------------------------------------------------------- |
 | `:year`       | Год публикации поста (4-х значный)                                                                 |
 | `:month`      | Месяц публикации поста (2-х значный)                                                               |
@@ -18,7 +18,7 @@ Besides the following variables, you can use any attributes in the permalink exc
 | `:hour`       | Published hour of posts (2-digit)                                                                  |
 | `:minute`     | Published minute of posts (2-digit)                                                                |
 | `:second`     | Published second of posts (2-digit)                                                                |
-| `:title`      | Имя файла (relative to "source/\_posts/" folder)                                                   |
+| `:title`      | Имя файла (relative to "source/\_posts/" folder)                                                 |
 | `:name`       | Имя файла                                                                                          |
 | `:post_title` | Post title                                                                                         |
 | `:id`         | ID поста (_not persistent across [cache reset](/ru/docs/commands#clean)_)                          |
@@ -78,7 +78,7 @@ $ hexo new "Hello World" --lang tw
 # => source/_posts/tw/Hello-World.md
 ```
 
-ссылка на пост будет:
+and the URL will be:
 
 ```plain
 http://localhost:4000/tw/hello-world/

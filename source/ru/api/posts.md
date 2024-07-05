@@ -1,5 +1,5 @@
 ---
-title: Посты
+title: Posts
 ---
 
 ## Создание поста
@@ -23,7 +23,7 @@ hexo.post.create(data, replace);
 | `path`   | Путь. По умолчанию Hexo строит пути на основе переменной `new_post_path`, указанной в настройках. |
 | `date`   | Дата. По умолчанию — текущая дата.                                                                |
 
-## Публикация черновиков
+## Publish a Draft
 
 ```js
 hexo.post.publish(data, replace);
@@ -41,7 +41,7 @@ hexo.post.publish(data, replace);
 | `slug`   | Имя файла (Обязательно)                                                              |
 | `layout` | Шаблон. По умолчанию берется из переменной `default_layout`, указанной в настройках. |
 
-## Обработка
+## Render
 
 ```js
 hexo.post.render(source, data);
@@ -56,7 +56,7 @@ hexo.post.render(source, data);
 
 - Предобработка фильтрами `before_post_render`
 - Обработка с помощью Markdown или другого обработчика (выбирается в зависимости от расширения)
-- Обработка [Nunjucks]
+- Обработка [Nunjucks][]
 - Постобработка фильтрами `after_post_render`
 
 [Nunjucks]: https://mozilla.github.io/nunjucks/

@@ -11,7 +11,7 @@ comments: false
       <div class="intro-feature-icon">
         <i class="fa fa-bolt"></i>
       </div>
-      <h3 class="intro-feature-title">Молниеносный</h3>
+      <h3 class="intro-feature-title">Blazing Fast</h3>
       <p class="intro-feature-desc">Node.js даёт молниеносную скорость. Генерация сотни файлов занимает всего несколько секунд.</p>
     </div>
   </li>

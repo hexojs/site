@@ -176,7 +176,7 @@ hexo.extend.filter.register("after_init", function () {
 
 ### new_post_path
 
-Используется при создании поста для определения пути постоянной ссылки.
+Выполняется при создании поста для определения пути постоянной ссылки.
 
 ```js
 hexo.extend.filter.register("new_post_path", function (data, replace) {
@@ -186,7 +186,7 @@ hexo.extend.filter.register("new_post_path", function (data, replace) {
 
 ### post_permalink
 
-Выполняется при создании поста для определения пути постоянной ссылки.
+Используется при создании поста для определения пути постоянной ссылки.
 
 ```js
 hexo.extend.filter.register("post_permalink", function (data) {
@@ -198,9 +198,19 @@ hexo.extend.filter.register("post_permalink", function (data) {
 
 Выполнится после завершения обработки. См. [рендеринг](rendering.html#after_render_Filters) для подробностей.
 
+### after_clean
+
+Executed after generated files and cache are removed with `hexo clean` command.
+
+```js
+hexo.extend.filter.register("after_clean", function () {
+  // remove some other temporary files
+});
+```
+
 ### server_middleware
 
-Добавляет промежуточные задачи для сервера. `app` является экземпляром [Connect].
+Добавляет промежуточные задачи для сервера. `app` является экземпляром [Connect][].
 
 Например, чтобы добавить `X-Powered-By: Hexo` в заголовке ответа:
 

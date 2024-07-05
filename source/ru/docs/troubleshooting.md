@@ -69,7 +69,7 @@ DefaultLimitNOFILE=10000
 
 3. Reboot
 
-## `process out of memory`
+## process out of memory
 
 Когда вы сталкиваетесь с этой ошибкой во время создания
 
@@ -87,6 +87,8 @@ FATAL ERROR: CALL_AND_RETRY_LAST Allocation failed - process out of memory
 
 ## Проблемы с публикацией в Git
 
+### RPC failed
+
 ```plain
 error: RPC failed; result=22, HTTP code = 403
 
@@ -94,6 +96,21 @@ fatal: 'username.github.io' does not appear to be a git repository
 ```
 
 Убедитесь, что вы настроили [git](https://help.github.com/articles/set-up-git/#setting-up-git) на своём компьютере. Или можно попробовать использовать вместо репозитория URL-адрес https.
+
+### Error: ENOENT: no such file or directory
+
+If you get an error like `Error: ENOENT: no such file or directory` it's probably due to mixing uppercase and lowercase letters in your tags, categories, or filenames. Git cannot automatically merge this change, so it breaks the automatic branching.
+
+To fix this, try
+
+1. Check every tag's and category's case and make sure they are the same.
+1. Commit
+1. Clean and build: `./node_modules/.bin/hexo clean && ./node_modules/.bin/hexo generate`
+1. Manually copy the public folder to your desktop
+1. Switch branch from your master branch to your deployment branch locally
+1. Copy the contents of the public folder from your desktop into the deployment branch
+1. Commit. You should see any merge conflicts appear that you can manually resolve.
+1. Switch back to your master branch and deploy normally: `./node_modules/.bin/hexo deploy`
 
 ## Проблемы с сервером
 
@@ -133,7 +150,7 @@ $ npm install hexo --no-optional
 
 ## Iterate Data Model on Jade or Swig
 
-Hexo использует склад [Warehouse] для своей модели данных. Это не массив, так что его можно использовать для преобразования списка объектов в итераторы.
+Hexo использует склад [Warehouse][] для своей модели данных. Это не массив, так что его можно использовать для преобразования списка объектов в итераторы.
 
 ```
 {% for post in site.posts.toArray() %}
@@ -148,10 +165,21 @@ Hexo использует склад [Warehouse] для своей модели 
 $ hexo clean
 ```
 
-## Содержимое не найдено
+## No command is executed
 
-Hexo использует [Nunjucks] для отображения сообщения ([Swig] использовался в предыдущей версии, он использует похожий синтаксис). Содержимое, обёрнутое, в `{{ }}` или `{% %}`, поможет вам разобраться, какая часть вызвала проблемы. You can skip the parsing by wrapping it with the [`raw`](/docs/tag-plugins#Raw) tag plugin, single backtick `` `{{ }}` `` or triple backtick.
-Alternatively, Nunjucks tags can be disabled through the renderer's option (if supported), [API](/api/renderer#Disable-Nunjucks-tags) or [front-matter](/docs/front-matter).
+When you can't get any command except `help`, `init` and `version` to work and you keep getting content of `hexo help`, it could be caused by a missing `hexo` in `package.json`:
+
+```json
+{
+  "hexo": {
+    "version": "3.2.2"
+  }
+}
+```
+
+## Escape Contents
+
+Hexo использует [Nunjucks][] для отображения сообщения ([Swig][] использовался в предыдущей версии, он использует похожий синтаксис). Содержимое, обёрнутое, в `{{ }}` или `{% %}`, поможет вам разобраться, какая часть вызвала проблемы. You can skip the parsing by wrapping it with the [`raw`](/docs/tag-plugins#Raw) tag plugin, single backtick `` `{{ }}` `` or triple backtick. Alternatively, Nunjucks tags can be disabled through the renderer's option (if supported), [API](/api/renderer#Disable-Nunjucks-tags) or [front-matter](/docs/front-matter).
 
 ```
 {% raw %}
@@ -169,17 +197,97 @@ Hello {{ world }}
 
 Иногда команда `$ hexo server` возвращает ошибку:
 
-```plain
+```
 Error: watch ENOSPC ...
 ```
 
 Это может быть исправлено путем запуска `$ npm dedupe`, или, если это не поможет, попробуйте выполнить следующие действия в консоли Linux.
 
-```plain
+```
 $ echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
 ```
 
 Это позволит увеличить лимит количества файлов, которые можно просматривать одновременно.
+
+## EMPERM Error (Windows Subsystem for Linux)
+
+When running `$ hexo server` in a BashOnWindows environment, it returns the following error:
+
+```
+Error: watch /path/to/hexo/theme/ EMPERM
+```
+
+Unfortunately, WSL does not currently support filesystem watchers. Therefore, the live updating feature of hexo's server is currently unavailable. You can still run the server from a WSL environment by first generating the files and then running it as a static server:
+
+```sh
+$ hexo generate
+$ hexo server -s
+```
+
+This is [a known BashOnWindows issue](https://github.com/Microsoft/BashOnWindows/issues/216), and on 15 Aug 2016, the Windows team said they would work on it. You can get progress updates and encourage them to prioritize it on [the issue's UserVoice suggestion page](https://wpdev.uservoice.com/forums/266908-command-prompt-console-bash-on-ubuntu-on-windo/suggestions/13469097-support-for-filesystem-watchers-like-inotify).
+
+## Template render error
+
+Sometimes when running the command `$ hexo generate` it returns an error:
+
+```
+FATAL Something's wrong. Maybe you can find the solution here: http://hexo.io/docs/troubleshooting.html
+Template render error: (unknown path)
+```
+
+Possible cause:
+
+- There are some unrecognizable words in your file, e.g. invisible zero width characters.
+- Incorrect use or limitation of [tag plugin](/docs/tag-plugins).
+
+  - Block-style tag plugin with content is not enclosed with `{% endplugin_name %}`
+
+  ```
+  # Incorrect
+  {% codeblock %}
+  fn()
+  {% codeblock %}
+
+  # Incorrect
+  {% codeblock %}
+  fn()
+
+  # Correct
+  {% codeblock %}
+  fn()
+  {% endcodeblock %}
+  ```
+
+  - Having Nunjucks-like syntax in a tag plugin, e.g. [`{#`](https://mozilla.github.io/nunjucks/templating.html#comments). A workaround for this example is to use [triple backtick](/docs/tag-plugins#Backtick-Code-Block) instead. [Escape Contents](/docs/troubleshooting#Escape-Contents) section has more details.
+
+  ```
+  {% codeblock lang:bash %}
+  Size of array is ${#ARRAY}
+  {% endcodeblock %}
+  ```
+
+## Содержимое не найдено
+
+Upgrading to `hexo^6.1.0` from an older version may cause the following error when running `$ hexo generate`:
+
+```
+YAMLException: Specified list of YAML types (or a single Type object) contains a non-Type object.
+    at ...
+```
+
+This may be caused by an incorrect dependency(i.e. `js-yaml`) setting that can't be solved automatically by the package manager, and you may have to update it manually running:
+
+```sh
+$ npm install js-yaml@latest
+```
+
+or
+
+```sh
+$ yarn add js-yaml@latest
+```
+
+if you use `yarn`.
 
 [Warehouse]: https://github.com/hexojs/warehouse
 [Swig]: https://node-swig.github.io/swig-templates/
