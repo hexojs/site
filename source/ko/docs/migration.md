@@ -46,7 +46,7 @@ $ npm install hexo-migrator-wordpress --save
 
 WordPress의 dashboard에서 "Tools" → "Export" → "WordPress" 를 통해 사용하던 WordPress 사이트를 Export하세요. ([WordPress support page](http://en.support.wordpress.com/export/)에 더 자세한 정보가 있습니다.)
 
-그 후 아래 명령어를 수행하세요:
+Now run:
 
 ```bash
 $ hexo migrate wordpress <source>
@@ -64,7 +64,7 @@ $ npm install hexo-migrator-joomla --save
 
 Joomla 게시물을 [J2XML](http://extensions.joomla.org/extensions/migration-a-conversion/data-import-a-export/12816?qh=YToxOntpOjA7czo1OiJqMnhtbCI7fQ%3D%3D)를 사용하여 export하세요.
 
-그 후 아래 명령어를 ㅅ수행하세요:
+Now run:
 
 ```bash
 $ hexo migrate joomla <source>

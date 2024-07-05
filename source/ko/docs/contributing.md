@@ -20,9 +20,9 @@ Please read [Contributor Covenant Code of Conduct](https://github.com/hexojs/hex
 
 Also, Hexo has its own [ESLint config](https://github.com/hexojs/eslint-config-hexo), so please make sure your contribution will make ESLint happy.
 
-### 워크플로우
+### Workflow
 
-1. Fork [hexojs/hexo].
+1. Fork [hexojs/hexo][].
 2. 저장소를 당신의 컴퓨터에 clone하고 의존 사항들을 설치합니다.
 
 ```bash
@@ -38,7 +38,7 @@ $ git submodule update --init
 $ git checkout -b new_feature
 ```
 
-4. 개발합니다.
+4. Start hacking.
 5. Branch를 push합니다.
 
 ```
@@ -62,11 +62,11 @@ Also, we welcome PR or issue to [official-plugins](https://github.com/hexojs). �
 
 ## 문서의 갱신
 
-Hexo 문서는 opensource이며 [hexojs/site]에서 소스 코드를 검색할 수 있습니다.
+Hexo 문서는 opensource이며 [hexojs/site][]에서 소스 코드를 검색할 수 있습니다.
 
 ### Workflow
 
-1. Fork [hexojs/site]
+1. Fork [hexojs/site][]
 2. 저장소를 당신의 컴퓨터에 clone하고 의존 사항들을 설치합니다.
 
 ```bash

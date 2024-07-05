@@ -12,4 +12,4 @@ hexo.extend.deployer.register(name, function (args) {
 });
 ```
 
-`args`인자는 사용자가 터미널을 통해 입력한 값은 물론 `_config.yml` 파일 내의 `deploy` 값도 포함하여 함수 내로 전달됩니다.
+An argument `args` will be passed into the function. `args`인자는 사용자가 터미널을 통해 입력한 값은 물론 `_config.yml` 파일 내의 `deploy` 값도 포함하여 함수 내로 전달됩니다.

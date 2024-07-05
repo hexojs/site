@@ -12,4 +12,4 @@ hexo.extend.migrator.register(name, function (args) {
 });
 ```
 
-`args` 인자는 사용자가 터미널에 입력한 값을 포함하여 함수 내로 전달됩니다.
+`args` 인자는 사용자가 터미널에 입력한 값을 포함하여 함수 내로 전달됩니다. This argument will contain the user's input into the terminal.

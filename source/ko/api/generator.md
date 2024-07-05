@@ -32,10 +32,10 @@ hexo.extend.generator.register("test", function (locals) {
 });
 ```
 
-| 속성     | 설명                                                                                                                               |
-| -------- | ---------------------------------------------------------------------------------------------------------------------------------- |
-| `path`   | 접두사 `/`를 포함하지 않는 경로.                                                                                                   |
-| `data`   | 데이터                                                                                                                             |
+| 속성       | 설명                                                                                  |
+| -------- | ----------------------------------------------------------------------------------- |
+| `path`   | 접두사 `/`를 포함하지 않는 경로.                                                                |
+| `data`   | 데이터                                                                                 |
 | `layout` | 레이아웃. 렌더링할 레이아웃을 지정합니다. 이 값은 string 또는 array입니다. 이 값이 무시된다면 `data`의 직접적인 경로가 반환됩니다. |
 
 소스 파일들이 업데이트 되면, Hexo는 모든 generator들을 실행하고 경로(route)를 재구성합니다. **제발 라우터에 직접 접근하지 마시고 데이터를 리턴하세요.**
@@ -44,7 +44,7 @@ hexo.extend.generator.register("test", function (locals) {
 
 ### Archive Page
 
-Archive page를 `archives/index.html`에 생성합니다. 우리는 모든 포스트 데이터를 템플릿으로 전달합니다.이 데이터는 템플릿의 `page` 변수와 같습니다.
+Archive page를 `archives/index.html`에 생성합니다. We pass all posts as data to the templates. 우리는 모든 포스트 데이터를 템플릿으로 전달합니다.이 데이터는 템플릿의 `page` 변수와 같습니다.
 
 다음, 테마 템플릿 렌더링을 위한 `layout` 속성을 설정합니다. 아래 예시에서 두 개의 레이아웃 설정을 확인할 수 있습니다. 만약 `archive` 레이아웃이 존재하지 않는다면 `index` 레이아웃이 사용될 것입니다.
 
@@ -60,7 +60,7 @@ hexo.extend.generator.register("archive", function (locals) {
 
 ### Archive Page에 Pagination 사용하기
 
-Hexo 공식 툴인 [hexo-pagination]을 사용하여 간편하게 pagination을 구현할 수 있습니다.
+Hexo 공식 툴인 [hexo-pagination][]을 사용하여 간편하게 pagination을 구현할 수 있습니다.
 
 ```js
 var pagination = require("hexo-pagination");

@@ -26,7 +26,7 @@ hexo.render.render({ path: "path/to/file.swig" }).then(function (result) {
 
 ## 렌더링 옵션
 
-두 번째 인자인 옵션은 꼭 넣지 않아도 됩니다.
+You can pass in an options object as the second argument.
 
 ```js
 hexo.render.render({ text: "" }, { foo: "foo" }).then(function (result) {
