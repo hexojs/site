@@ -8,6 +8,7 @@ title: 处理器（Processor）
 
 ```js
 hexo.extend.processor.register(rule, function (file) {});
+});
 ```
 
 完整说明请参考 [Box](box.html)。

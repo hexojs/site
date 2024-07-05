@@ -6,8 +6,8 @@ title: 局部变量
 
 ## 默认变量
 
-| 变量         | 描述     |
-| ------------ | -------- |
+| 变量           | 描述   |
+| ------------ | ---- |
 | `posts`      | 所有文章 |
 | `pages`      | 所有分页 |
 | `categories` | 所有分类 |
@@ -24,6 +24,7 @@ hexo.locals.get("posts");
 ```js
 hexo.locals.set('posts', function(){
   return ...
+});
 });
 ```
 

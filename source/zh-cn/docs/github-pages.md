@@ -2,10 +2,10 @@
 title: 在 GitHub Pages 上部署 Hexo
 ---
 
-本文将使用 [GitHub Actions](https://docs.github.com/zh/actions) 部署至 GitHub Pages，此方法适用于公开或私人储存库。若你不希望将源文件夹上传到 GitHub，请参阅 [一键部署](#一键部署)。
+本文将使用 [GitHub Actions](https://docs.github.com/zh/actions) 部署至 GitHub Pages，此方法适用于公开或私人储存库。 It works in both public and private repositories. 若你不希望将源文件夹上传到 GitHub，请参阅 [一键部署](#一键部署)。
 
-1. 建立名为 `<你的 GitHub 用户名>.github.io` 的储存库，若之前已将 Hexo 上传至其他储存库，将该储存库重命名即可。
-2. 将 Hexo 文件夹中的文件 push 到储存库的默认分支，默认分支通常名为 `main`，旧一点的储存库可能名为 `master`。
+1. 部署完成后，前往 `https://<你的 GitHub 用户名>.github.io/<repository 的名字>` 查看网站。 If you have already uploaded to another repo, rename the repo instead.
+2. 将 Hexo 文件夹中的文件 push 到储存库的默认分支，默认分支通常名为 `main`，旧一点的储存库可能名为 `master`。 The default branch is usually **main**, older repositories may use **master** branch.
 
 - 将 `main` 分支 push 到 GitHub：
 
@@ -13,10 +13,10 @@ title: 在 GitHub Pages 上部署 Hexo
   $ git push -u origin main
   ```
 
-- 默认情况下 `public/` 不会被上传(也不该被上传)，确保 `.gitignore` 文件中包含一行 `public/`。整体文件夹结构应该与 [示例储存库](https://github.com/hexojs/hexo-starter) 大致相似。
+- 默认情况下 `public/` 不会被上传(也不该被上传)，确保 `.gitignore` 文件中包含一行 `public/`。 整体文件夹结构应该与 [示例储存库](https://github.com/hexojs/hexo-starter) 大致相似。
 
-3. 使用 `node --version` 指令检查你电脑上的 Node.js 版本，并记下该版本 (例如：`v20.y.z`)
-4. 在储存库中前往 `Settings > Pages > Source`，并将 `Source` 改为 `GitHub Actions`。
+3. 使用 `node --version` 指令检查你电脑上的 Node.js 版本，并记下该版本 (例如：`v20.y.z`) Make a note of the major version (e.g., `v20.y.z`)
+4. In your GitHub repo's setting, navigate to **Settings** > **Pages** > **Source**. Change the source to **GitHub Actions** and save.
 5. 在储存库中建立 `.github/workflows/pages.yml`，并填入以下内容 (将 `20` 替换为上个步骤中记下的版本)：
 
 ```yml .github/workflows/pages.yml
@@ -72,23 +72,21 @@ jobs:
         uses: actions/deploy-pages@v4
 ```
 
-6. 部署完成后，前往 `https://<你的 GitHub 用户名>.github.io` 查看网站。
+6. Once the deployment is finished, check the webpage at _username_.github.io.
 
-{% note info CNAME %}
 若你使用了一个带有 `CNAME` 的自定义域名，你需要在 `source/` 文件夹中新增 `CNAME` 文件。 [更多信息](https://docs.github.com/zh/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site)
-{% endnote %}
 
 ## 项目页面
 
-如果你希望网站部署在 `<你的 GitHub 用户名>.github.io` 的子目录中：
+If you prefer to have a project page on GitHub:
 
-1. 建立名为 `<repository 的名字>` 的储存库，这样你的博客网址为 `<你的 GitHub 用户名>.github.io/<repository 的名字>`，repository 的名字可以任意，例如 blog 或 hexo。
+1. Navigate to your repo on GitHub. Go to the **Settings** tab. 建立名为 `<repository 的名字>` 的储存库，这样你的博客网址为 `<你的 GitHub 用户名>.github.io/<repository 的名字>`，repository 的名字可以任意，例如 blog 或 hexo。
 2. 编辑你的 `_config.yml`，将 `url:` 更改为 `<你的 GitHub 用户名>.github.io/<repository 的名字>`。
-3. 在储存库中前往 `Settings > Pages > Source`，并将 `Source` 改为 `GitHub Actions`。
+3. In your GitHub repo's setting, navigate to **Settings** > **Pages** > **Source**. Change the source to **GitHub Actions** and save.
 4. Commit 并 push 到默认分支上。
-5. 部署完成后，前往 `https://<你的 GitHub 用户名>.github.io/<repository 的名字>` 查看网站。
+5. Once the deployment is finished, check the webpage at _username_.github.io/_repository_.
 
-## 一键部署
+## One-command deployment
 
 以下教学改编自 [一键部署](/zh-cn/docs/one-command-deployment)。
 
@@ -104,15 +102,10 @@ deploy:
 ```
 
 3. 执行 `hexo clean && hexo deploy` 。
-4. 浏览 `<GitHub 用户名>.github.io` 检查你的网站能否运作。
-
-{% note info Windows 用户 %}
-[Awesome Hexo](https://github.com/hexojs/awesome-hexo) 中收录了更多有关在 GitHub Pages 上部署 Hexo ，你也可通过搜索引擎了解更多。
-欢迎更多有志之士前来改善 Hexo 文档，不胜感激。
-{% endnote %}
+4. Check the webpage at _username_.github.io.
 
 ## 参考链接
 
-- [GitHub Pages 使用文档](https://docs.github.com/zh/pages)
-- [使用自定义 GitHub Actions 工作流进行发布](https://docs.github.com/zh/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site#使用自定义-github-actions-工作流进行发布)
+- [GitHub Pages 使用文档](https://docs.github.com/en/pages)
+- [使用自定义 GitHub Actions 工作流进行发布](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site#publishing-with-a-custom-github-actions-workflow)
 - [actions/deploy-github-pages-site](https://github.com/marketplace/actions/deploy-github-pages-site)
