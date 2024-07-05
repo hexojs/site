@@ -1,24 +1,23 @@
 ---
-title: Deployment
+title: One-Command Deployment
 ---
 
-hexo สนับสนุนวิธีรวดเร็วและเรียบง่ายสำหรับ deployment คุณ deploy
-เว็บไซต์ของคุณไปถึงเซร์ฟเวอร์ได้ด้วยคำสั่งบรรทัดเดียว
+Hexo provides a fast and easy deployment strategy. You only need one single command to deploy your site to your server.
 
 ```bash
 $ hexo deploy
 ```
 
-ก่อน deployment ครั้งแรกของคุณ คุณต้องการแก้ไขการตั้งค่าบางอย่างใน `_config
-.yml` การตั้งค่า deployment ท่ีเกิดผลได้ต้องมี field ท่ีเป็น `type`
-ยกตัวอย่างเช่น:
+Install the necessary plugin(s) that is compatible with the deployment method provided by your server/repository.
+
+Deployment is usually configured through **\_config.yml**. A valid configuration must have the `type` field. For example:
 
 ```yaml
 deploy:
   type: git
 ```
 
-คุณยังเลื่อก deployer ได้หลายตัว hexo จะ execute deployer ทุกตัวตามลำดับ
+You can use multiple deployers. คุณยังเลื่อก deployer ได้หลายตัว hexo จะ execute deployer ทุกตัวตามลำดับ
 
 ```yaml
 deploy:
@@ -32,7 +31,7 @@ Refer to the [Plugins](https://hexo.io/plugins/) list for more deployment plugin
 
 ## Git
 
-1. Install [hexo-deployer-git].
+1. Install [hexo-deployer-git][].
 
 ```bash
 $ npm install hexo-deployer-git --save
@@ -48,12 +47,12 @@ deploy:
   message: [message]
 ```
 
-| Option    | Description                                                                                                 | Default                                                                 |
-| --------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------- |
-| `repo`    | URL of the target repository                                                                                |
+| Option    | Description                                                                                                 | Default                                                                             |
+| --------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| `repo`    | URL of the target repository                                                                                |                                                                                     |
 | `branch`  | Branch name.                                                                                                | `gh-pages` (GitHub)<br>`coding-pages` (Coding.net)<br>`master` (others) |
-| `message` | Customize commit message.                                                                                   | `Site updated: {% raw %}{{ now('YYYY-MM-DD HH:mm:ss') }}{% endraw %}`   |
-| `token`   | Optional token value to authenticate with the repo. Prefix with `$` to read token from environment variable |
+| `message` | Customize commit message.                                                                                   | `Site updated: {% raw %}{{ now('YYYY-MM-DD HH:mm:ss') }}{% endraw %}`               |
+| `token`   | Optional token value to authenticate with the repo. Prefix with `$` to read token from environment variable |                                                                                     |
 
 3. Deploy your site `hexo clean && hexo deploy`.
 
@@ -64,7 +63,7 @@ deploy:
 
 ## Heroku
 
-ติดตั้ง [hexo-deployer-heroku].
+ติดตั้ง [hexo-deployer-heroku][].
 
 ```bash
 $ npm install hexo-deployer-heroku --save
@@ -86,25 +85,17 @@ deploy:
 
 ## Netlify
 
-[Netlify](https://www.netlify.com/) สนับสนุน deployment ต่อเนื่องกัน
-(ซึ้งสร้างด้วย git) สนับสนุน CDN แบบทั่วโลก DNS ทุกอย่าง（รวม domain
-ท่ีตั้งค่าด้วยตนด้วย）HTTPS ท่ีควบคุมโดยขบวนการอัตโนมัติ
-การเพิ่มความเร็วของวัตถุดิบ และสิ่งอื่นๆอีกมากมาย Netlify
-เป็นแพลตฟอร์มซึ่งรวมทุกอย่างเป็นหนึ่งเดียว
-ทำให้การสร้างไซต์หรือแอปของแว็บท่ีมีแระสิทธิภาพและรักษาได้ง่ายนั้นเป็นขบวนการอัตโนมัติ
+[Netlify](https://www.netlify.com/) สนับสนุน deployment ต่อเนื่องกัน (ซึ้งสร้างด้วย git) สนับสนุน CDN แบบทั่วโลก DNS ทุกอย่าง（รวม domain ท่ีตั้งค่าด้วยตนด้วย）HTTPS ท่ีควบคุมโดยขบวนการอัตโนมัติ การเพิ่มความเร็วของวัตถุดิบ และสิ่งอื่นๆอีกมากมาย Netlify เป็นแพลตฟอร์มซึ่งรวมทุกอย่างเป็นหนึ่งเดียว ทำให้การสร้างไซต์หรือแอปของแว็บท่ีมีแระสิทธิภาพและรักษาได้ง่ายนั้นเป็นขบวนการอัตโนมัติ It is a unified platform that automates your code to create high-performance, easily maintainable sites and web apps.
 
-มีทั้งหมดสองวิธีในเรื่อง deploy เว็บไซต์ของตน วิธีทั่วไปท่ีสุดคือการใช้ web
-UI คุณสามารถไปท่ี [create a new site page](https://app.netlify.com/start) และเลือก repo ของ project คุณจาก Github Gitlab หรือ Bitbucket และทำตามวิธีการใช้
+There are two different ways to deploy your sites on Netlify. The most common way is to use the web UI. มีทั้งหมดสองวิธีในเรื่อง deploy เว็บไซต์ของตน วิธีทั่วไปท่ีสุดคือการใช้ web UI คุณสามารถไปท่ี [create a new site page](https://app.netlify.com/start) และเลือก repo ของ project คุณจาก Github Gitlab หรือ Bitbucket และทำตามวิธีการใช้
 
-วิธีท่ีสองคือ การใช้เครื่องมือ [Node based CLI](https://www.netlify.com/docs/cli/) ของ Netlify เพื่อบริหารและ deploy ไซต์บน Netlify
-โดยไม่ต้องผ่าน terminal
+วิธีท่ีสองคือ การใช้เครื่องมือ [Node based CLI](https://www.netlify.com/docs/cli/) ของ Netlify เพื่อบริหารและ deploy ไซต์บน Netlify โดยไม่ต้องผ่าน terminal
 
-คุณสามารถเพิ่ม [Deploy to Netlify Button](https://www.netlify.com/docs/deploy-button/) ไปถึงไฟล์ README ของคุณ ดังนั้นจะอนุญาตให้คนอื่น
-copy respository ของคุณและ deploy ไปถึง Netlify ด้วยคลิกเดียว
+คุณสามารถเพิ่ม [Deploy to Netlify Button](https://www.netlify.com/docs/deploy-button/) ไปถึงไฟล์ README ของคุณ ดังนั้นจะอนุญาตให้คนอื่น copy respository ของคุณและ deploy ไปถึง Netlify ด้วยคลิกเดียว
 
 ## Rsync
 
-ติดตั้ง [hexo-deployer-rsync].
+ติดตั้ง [hexo-deployer-rsync][].
 
 ```bash
 $ npm install hexo-deployer-rsync --save
@@ -126,9 +117,9 @@ deploy:
 
 | Option          | Description                     | Default |
 | --------------- | ------------------------------- | ------- |
-| `host`          | Address of remote host          |
-| `user`          | Username                        |
-| `root`          | Root directory of remote host   |
+| `host`          | Address of remote host          |         |
+| `user`          | Username                        |         |
+| `root`          | Root directory of remote host   |         |
 | `port`          | Port                            | 22      |
 | `delete`        | Delete old files on remote host | true    |
 | `verbose`       | Display verbose messages        | true    |
@@ -136,7 +127,11 @@ deploy:
 
 ## OpenShift
 
-ติดตั้ง [hexo-deployer-openshift].
+{% note warn %}
+`hexo-deployer-openshift` has been deprecated in 2022.
+{% endnote %}
+
+ติดตั้ง [hexo-deployer-openshift][].
 
 ```bash
 $ npm install hexo-deployer-openshift --save
@@ -158,7 +153,7 @@ deploy:
 
 ## FTPSync
 
-ติดตั้ง [hexo-deployer-ftpsync].
+ติดตั้ง [hexo-deployer-ftpsync][].
 
 ```bash
 $ npm install hexo-deployer-ftpsync --save
@@ -178,17 +173,15 @@ deploy:
   verbose: [true|false]
 ```
 
-| Option        | Description                                                              | Default |
-| ------------- | ------------------------------------------------------------------------ | ------- |
-| `host`        | Address of remote host                                                   |
-| `user`        | Username                                                                 |
-| `pass`        | Password                                                                 |
-| `remote`      | Root directory of remote host                                            | `/`     |
-| `port`        | Port                                                                     | 21      |
-| `clear`       | Remove all files and directories from the remote directory before upload | 1       |
-| `ignore`      | Ignore the files on either host or remote                                |
-| `connections` | Connections number                                                       | 1       |
-| `verbose`     | Display verbose messages                                                 | false   |
+| Option    | Description                                                              | Default |
+| --------- | ------------------------------------------------------------------------ | ------- |
+| `host`    | Address of remote host                                                   |         |
+| `user`    | Username                                                                 |         |
+| `pass`    | Password                                                                 |         |
+| `remote`  | Root directory of remote host                                            | `/`     |
+| `port`    | Port                                                                     | 21      |
+| `clear`   | Remove all files and directories from the remote directory before upload | false   |
+| `verbose` | Display verbose messages                                                 | false   |
 
 ## SFTP
 
@@ -213,16 +206,18 @@ deploy:
   agent: [path/to/agent/socket]
 ```
 
-| Option       | Description                             | Default          |
-| ------------ | --------------------------------------- | ---------------- |
-| `host`       | Address of remote host                  |
-| `user`       | Username                                |
-| `pass`       | Password                                |
-| `remotePath` | Root directory of remote host           | `/`              |
-| `port`       | Port                                    | 22               |
-| `privateKey` | Path to a ssh private key               |
-| `passphrase` | Optional passphrase for the private key |
-| `agent`      | Path to the ssh-agent socket            | `$SSH_AUTH_SOCK` |
+| Option        | Description                                     | Default          |
+| ------------- | ----------------------------------------------- | ---------------- |
+| `host`        | Address of remote host                          |                  |
+| `port`        | Port                                            | 22               |
+| `user`        | Username                                        |                  |
+| `pass`        | Password                                        |                  |
+| `privateKey`  | Path to a ssh private key                       |                  |
+| `passphrase`  | Optional passphrase for the private key         |                  |
+| `agent`       | Path to the ssh-agent socket                    | `$SSH_AUTH_SOCK` |
+| `remotePath`  | Root directory of remote host                   | `/`              |
+| `forceUpload` | Override existing files                         | false            |
+| `concurrency` | Max number of SFTP tasks processed concurrently | 100              |
 
 ## Vercel
 
@@ -274,9 +269,13 @@ After a few moments, your website will be deployed.
 
 ## RSS3
 
+{% note warn %}
+`hexo-deployer-rss3` has been deprecated in 2023.
+{% endnote %}
+
 [RSS3](https://rss3.io) เป็นโปรโตคอลแบบเปิดที่ออกแบบมาสำหรับเนื้อหาและเครือข่ายโซเชียลในยุค Web 3.0
 
-1. ติดตั้ง [hexo-deployer-rss3]
+1. ติดตั้ง [hexo-deployer-rss3][]
 
 2. แก้ไขการกำหนดค่า
 
@@ -293,9 +292,9 @@ deploy:
         secret: ee8b74626f12b61c1a4bde3b8c331ad390567c86ba779c9b18561ee92c1cbff0
 ```
 
-| พารามิเตอร์       | คำอธิบาย                                      |
+| พารามิเตอร์       | Description                                   |
 | ----------------- | --------------------------------------------- |
-| `deploy`          | ลิงก์ไปยัง RSS3 Hub                           |
+| `endpoint`        | ลิงก์ไปยัง RSS3 Hub                           |
 | `privateKey`      | คีย์ส่วนตัวของคุณ 64 ไบต์                     |
 | `ipfs/deploy`     | ว่าจะปรับใช้กับ IPFS หรือไม่                  |
 | `ipfs/gateway`    | IPFS API เกตเวย์                              |
@@ -304,14 +303,39 @@ deploy:
 
 3. สร้างไฟล์แบบคงที่
 
-4. การปรับใช้
+4. deploy
 
 สำหรับข้อควรระวังที่เกี่ยวข้องกับการทำให้ใช้งานได้โดยเฉพาะ โปรดดู[เอกสารประกอบของเรา](https://github.com/NaturalSelectionLabs/hexo-deployer-rss3/tree/develop/docs/zh_CN/start.md)
 
+## Edgio (formerly Layer0)
+
+[Edgio (formerly Layer0)](https://docs.edg.io) is an Internet-scale platform that makes it easy for teams to build, release, protect, and accelerate their web apps and APIs.
+
+1. In your hexo project directory, install the Edgio CLI:
+
+```bash
+npm i -g @edgio/cli
+```
+
+2. Install Hexo connector by Edgio:
+
+```bash
+edgio init --connector=@edgio/hexo
+```
+
+3. Deployment
+
+```bash
+การปรับใช้
+```
+
+Alternatively, you can click the deploy button below to create a new project:
+
+[![Deploy To Edgio](https://docs.edg.io/button.svg)](https://app.layer0.co/deploy?repo=https%3A%2F%2Fgithub.com%2Fedgio-docs%2Fedgio-hexo-example)
+
 ## Other Methods
 
-ไฟล์ท่ีต้องการ generate จะบันทึกอยู่ใน folder `public` คุณสามารถ copy
-ไลฟ์เหล่านี้ไปถึงท่ีท่ีคุณอยากย้ายไป
+All generated files are saved in the `public` folder. You can copy them to wherever you like.
 
 [hexo-deployer-git]: https://github.com/hexojs/hexo-deployer-git
 [hexo-deployer-heroku]: https://github.com/hexojs/hexo-deployer-heroku

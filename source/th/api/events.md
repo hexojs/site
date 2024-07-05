@@ -2,8 +2,7 @@
 title: Events
 ---
 
-hexo สืบทอดจาก [EventEmitter] มันใช้วิธี `on` มาคอยฟัง event ที่ hexo
-ส่งออกไป
+hexo สืบทอดจาก [EventEmitter][] มันใช้วิธี `on` มาคอยฟัง event ที่ hexo ส่งออกไป Use the `on` method to listen for events emitted by Hexo, and use the `emit` method to emit events. For more information, refer to the Node.js API documentation.
 
 ### deployBefore
 
@@ -27,7 +26,7 @@ hexo สืบทอดจาก [EventEmitter] มันใช้วิธี `
 
 ### new
 
-ส่งออกไปหลังการสร้างโพสต์ใหม่ event นี้ส่ง data โพสต์กลับ
+Emitted after a new post has been created. ส่งออกไปหลังการสร้างโพสต์ใหม่ event นี้ส่ง data โพสต์กลับ
 
 ```js
 hexo.on("new", function (post) {
@@ -42,12 +41,11 @@ hexo.on("new", function (post) {
 
 ### processBefore
 
-ส่งออกไปก่อนการเกิดขึ้นของ processing event นี้ส่งกลับ path ท่ีบ่งบอก root
-directory ของ box
+Emitted before processing begins. This event returns a path representing the root directory of the box.
 
 ### processAfter
 
-ส่งออกไปหลังการจบลงของ processing event นี้ส่งกลับ path ท่ีบ่งบอก root directory ของ box
+Emitted after processing finishes. ส่งออกไปก่อนการเกิดขึ้นของ processing event นี้ส่งกลับ path ท่ีบ่งบอก root directory ของ box
 
 ### ready
 

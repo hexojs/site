@@ -21,12 +21,10 @@ code snippet
 code snippet
 ```
 ````
-
 The third syntax is a Markdown's fenced code block syntax and Hexo extends it to support more features. Check out [Tag Plugin Docs](tag-plugins#Code-Block) to find out options available.
-
 > Tip: Hexo support posts written in any format, so long the corresponding renderer plugin is installed. It can be in markdown, ejs, swig, nunjucks, pug, asciidoc, etc. Regardless of the format used, those three code block syntax will always be available.
-
 ## Configuration
+below v7.0.0:
 
 ```yaml
 # _config.yml
@@ -48,9 +46,32 @@ prismjs:
   tab_replace: ""
 ```
 
+v7.0.0+:
+
+```yaml
+# _config.yml
+syntax_highlighter: highlight.js
+highlight:
+  auto_detect: false
+  line_number: true
+  line_threshold: 0
+  tab_replace: ""
+  exclude_languages:
+    - example
+  wrap: true
+  hljs: false
+prismjs:
+  preprocess: true
+  line_number: true
+  line_threshold: 0
+  tab_replace: ""
+```
+
 The YAML above is Hexo's default configuration.
 
 ## Disabled
+
+below v7.0.0:
 
 ```yaml
 # _config.yml
@@ -58,6 +79,13 @@ highlight:
   enable: false
 prismjs:
   enable: false
+```
+
+v7.0.0+:
+
+```yaml
+# _config.yml
+syntax_highlighter: # empty
 ```
 
 When both `highlight.enable` and `prismjs.enable` are `false`, the output HTML of the code block is controlled by the corresponding renderer. For example, [`marked.js`](https://github.com/markedjs/marked) (used by [`hexo-renderer-marked`](https://github.com/hexojs/hexo-renderer-marked), the default markdown renderer of Hexo) will add the language code to the `class` of `<code>`:
@@ -78,6 +106,8 @@ When no built-in syntax highlight is enabled, you can either install third-party
 
 ## Highlight.js
 
+below v7.0.0:
+
 ```yaml
 # _config.yml
 highlight:
@@ -92,6 +122,22 @@ highlight:
   hljs: false
 prismjs:
   enable: false
+```
+
+v7.0.0+:
+
+```yaml
+# _config.yml
+syntax_highlighter: highlight.js
+highlight:
+  auto_detect: false
+  line_number: true
+  line_threshold: 0
+  tab_replace: "  "
+  exclude_languages:
+    - example
+  wrap: true
+  hljs: false
 ```
 
 `highlight.js` is enabled by default and used as server-side highlighting in Hexo; it needs to be disabled if you prefer to run `highlight.js` on browser-side.
@@ -177,12 +223,26 @@ When `hljs` is set to `true`, all the HTML output will have `class` prefixed wit
 
 ## PrismJS
 
+below v7.0.0:
+
 ```yaml
 # _config.yml
 highlight:
   enable: false
 prismjs:
   enable: true
+  preprocess: true
+  line_number: true
+  line_threshold: 0
+  tab_replace: ""
+```
+
+v7.0.0+:
+
+```yaml
+# _config.yml
+syntax_highlighter: prismjs
+prismjs:
   preprocess: true
   line_number: true
   line_threshold: 0
@@ -228,7 +288,7 @@ Replace `\t` inside code block with given string. By default it is 2 spaces.
 
 The source codes behind Hexo's syntax highlighting are available in:
 
-- [Highlight.js Utility Functions](https://github.com/hexojs/hexo-util/blob/master/lib/highlight.js)
-- [PrismJS Utility Functions](https://github.com/hexojs/hexo-util/blob/master/lib/prism.js)
-- [Tag Plugin - Code Block](https://github.com/hexojs/hexo/blob/master/lib/plugins/tag/code.js)
-- [Tag Plugin - Backtick Code Block](https://github.com/hexojs/hexo/blob/master/lib/plugins/filter/before_post_render/backtick_code_block.js)
+- [Highlight.js Utility Functions](https://github.com/hexojs/hexo-util/blob/master/lib/highlight.ts)
+- [PrismJS Utility Functions](https://github.com/hexojs/hexo-util/blob/master/lib/prism.ts)
+- [Tag Plugin - Code Block](https://github.com/hexojs/hexo/blob/master/lib/plugins/tag/code.ts)
+- [Tag Plugin - Backtick Code Block](https://github.com/hexojs/hexo/blob/master/lib/plugins/filter/before_post_render/backtick_code_block.ts)

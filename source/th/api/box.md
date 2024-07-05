@@ -2,12 +2,11 @@
 title: Box
 ---
 
-box เป็น container ที่ใช้มาจัดการไฟล์ภายใน folder เฉพาะ Hexo ใช้ box ที่แตกต่างกันสองตัว ซึ้งก็คือ `hexo.source` และ `hexo.theme` ตัวแรกใช้มาจัดการ folder `source` และตัวท่ีสองใช้มาจัดการ folder `theme`
+Box is a container used for processing files in a specified folder. box เป็น container ที่ใช้มาจัดการไฟล์ภายใน folder เฉพาะ Hexo ใช้ box ที่แตกต่างกันสองตัว ซึ้งก็คือ `hexo.source` และ `hexo.theme` ตัวแรกใช้มาจัดการ folder `source` และตัวท่ีสองใช้มาจัดการ folder `theme` The former is used to process the `source` folder and the latter to process the `theme` folder.
 
 ## Files Loading
 
-box สนับสนุนวิธีการโหลดไฟล์สองวิธี ซึ้งก็คือ `process` และ `watch` วิธีตัว `process` จะโหลดไฟล์ทั้งหมดใน folder ส่วนวิธีตัว `watch`
-นอกจากจะมีการกระทำที่เหมือนวิธีตัว `process` แล้วแถมยังเฝ้าดูการเปลี่ยนแปลงของไฟล์ที่อยู่ใน folder นั้นด้วย
+box สนับสนุนวิธีการโหลดไฟล์สองวิธี ซึ้งก็คือ `process` และ `watch` วิธีตัว `process` จะโหลดไฟล์ทั้งหมดใน folder ส่วนวิธีตัว `watch` นอกจากจะมีการกระทำที่เหมือนวิธีตัว `process` แล้วแถมยังเฝ้าดูการเปลี่ยนแปลงของไฟล์ที่อยู่ใน folder นั้นด้วย `process` loads all files in the folder. `watch` does the same, but also starts watching for file changes.
 
 ```js
 box.process().then(function () {
@@ -21,18 +20,18 @@ box.watch().then(function () {
 
 ## Path Matching
 
-box สนับสนุนวิธีหลายอย่างสำหรับ path matching คุณสามารถใช้ regExp function หรือ Express-style pattern string เวลาทำเรื่อง path mathching
+Box provides many ways for path matching. You can use a regular expression, a function or an Express-style pattern string. For example:
 
 ```plain
 posts/:id => posts/89
 posts/*path => posts/2015/title
 ```
 
-สำหรับข้อมูลเพิ่มเติม สามารถดูได้ที่ [util.Pattern]
+สำหรับข้อมูลเพิ่มเติม สามารถดูได้ที่ [util.Pattern][]
 
 ## Processors
 
-processor เป็น element จำเป็นสำหรับ box และใช้มาจัดการไฟล์ คุณสามารถใช้ path matching ที่กล่าวข้างบนมาจำกัดขอบแขดไฟล์ที่อยากจัดการจริงๆ คุณลงทะเบียน processor ตัวใหม่ได้ด้วยวิธี `addProcessor`
+A processor is an essential element of Box and is used to process files. You can use path matching as described above to restrict what exactly the processor should process. Register a new processor with the `addProcessor` method.
 
 ```js
 box.addProcessor("posts/:id", function (file) {
@@ -40,7 +39,7 @@ box.addProcessor("posts/:id", function (file) {
 });
 ```
 
-box ส่งเนื้อหาของไฟล์ที่ถูกคัดเลือกไปให้ processor ข้อมูลที่เกี่ยวกับปฎิบัติการนี้จะอ่านได้จาก `file` ที่เป็น argument ของ callback ได้
+Box passes the content of matched files to processors. box ส่งเนื้อหาของไฟล์ที่ถูกคัดเลือกไปให้ processor ข้อมูลที่เกี่ยวกับปฎิบัติการนี้จะอ่านได้จาก `file` ที่เป็น argument ของ callback ได้
 
 | Attribute | Description                                                       |
 | --------- | ----------------------------------------------------------------- |
