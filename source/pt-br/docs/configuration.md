@@ -20,17 +20,26 @@ Você pode modificar as configurações do site em `_config.yml` ou em um [arqui
 
 | Configuração                 | Descrição                                                                                 | Padrão                      |
 | ---------------------------- | ----------------------------------------------------------------------------------------- | --------------------------- |
-| `url`                        | A URL do seu site, must starts with `http://` or `https://`                               |
+| `url`                        | A URL do seu site, must starts with `http://` or `https://`                               |                             |
 | `root`                       | O diretório raiz do seu site                                                              | `url's pathname`            |
 | `permalink`                  | O formato de [permalink](permalinks.html) dos artigos                                     | `:year/:month/:day/:title/` |
-| `permalink_defaults`         | Valores padrão de cada segmento no permalink                                              |
-| `pretty_urls`                | Rewrite the [`permalink`](variables.html) variables to pretty URLs                        |
+| `permalink_defaults`         | Valores padrão de cada segmento no permalink                                              |                             |
+| `pretty_urls`                | Rewrite the [`permalink`](variables.html) variables to pretty URLs                        |                             |
 | `pretty_urls.trailing_index` | Trailing `index.html`, set to `false` to remove it                                        | `true`                      |
 | `pretty_urls.trailing_html`  | Trailing `.html`, set to `false` to remove it (_does not apply to trailing `index.html`_) | `true`                      |
 
 {% note info Site em subdiretório %}
 Se o seu site estiver em um subdiretório (como por exemplo `http://example.org/blog`) defina `url` para `http://example.org/blog` e defina `root` para `/blog/`.
 {% endnote %}
+
+Transformar títulos em maiúsculo?
+
+```yaml
+# e.g. page.permalink is http://example.com/foo/bar/index.html
+pretty_urls:
+  trailing_index: false
+# becomes http://example.com/foo/bar/
+```
 
 ### Diretório
 
@@ -43,34 +52,64 @@ Se o seu site estiver em um subdiretório (como por exemplo `http://example.org/
 | `category_dir` | Diretório de categorias                                                                                                                                                        | `categories`     |
 | `code_dir`     | Diretório de código (subdiretório de `source_dir`)                                                                                                                             | `downloads/code` |
 | `i18n_dir`     | Diretório de internacionalização (i18n)                                                                                                                                        | `:lang`          |
-| `skip_render`  | Caminhos que não devem ser renderizados. Você pode usar [expressões globais](https://github.com/micromatch/micromatch#extended-globbing) para fazer correspondência de caminho |
+| `skip_render`  | Caminhos que não devem ser renderizados. Você pode usar [expressões globais](https://github.com/micromatch/micromatch#extended-globbing) para fazer correspondência de caminho |                  |
+
+O Hexo irá ignorar os arquivos e diretórios listados abaixo deste campo
+
+```yaml
+skip_render: "mypage/**/*"
+# will output `source/mypage/index.html` and `source/mypage/code.js` without altering them.
+
+## This also can be used to exclude posts,
+skip_render: "_posts/test-post.md"
+# will ignore the `source/_posts/test-post.md`.
+```
 
 ### Escrita
 
-| Configuração            | Descrição                                                                                                         | Padrão      |
-| ----------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------- |
-| `new_post_name`         | O formato do nome do arquivo para novas postagens                                                                 | `:title.md` |
-| `default_layout`        | Layout padrão                                                                                                     | `post`      |
-| `titlecase`             | Transformar títulos em maiúsculo?                                                                                 | `false`     |
-| `external_link`         | Abrir links externos em uma nova aba?                                                                             |
-| `external_link.enable`  | Abrir links externos em uma nova aba?                                                                             | `true`      |
-| `external_link.field`   | Applies to the whole `site` or `post` only                                                                        | `site`      |
-| `external_link.exclude` | Exclude hostname. Specify subdomain when applicable, including `www`                                              | `[]`        |
-| `filename_case`         | Converter nomes de arquivos para minúsculos `1`; maiúsculos `2`                                                   | `0`         |
-| `render_drafts`         | Exibir rascunhos?                                                                                                 | `false`     |
-| `post_asset_folder`     | Ativar o [diretório de Asset](asset-folders.html)?                                                                | `false`     |
-| `relative_link`         | Links para o diretório raiz?                                                                                      | `false`     |
-| `future`                | Exibir postagens futuras?                                                                                         | `true`      |
-| `highlight`             | Configurações de bloco de código, see [Highlight.js](/docs/syntax-highlight#Highlight-js) section for usage guide |
-| `prismjs`               | Configurações de bloco de código, see [PrismJS](/docs/syntax-highlight#PrismJS) section for usage guide           |
+| Configuração            | Descrição                                                                                                         | Padrão         |
+| ----------------------- | ----------------------------------------------------------------------------------------------------------------- | -------------- |
+| `new_post_name`         | O formato do nome do arquivo para novas postagens                                                                 | `:title.md`    |
+| `default_layout`        | Layout padrão                                                                                                     | `post`         |
+| `titlecase`             | Transform titles into title case?                                                                                 | `false`        |
+| `external_link`         | Abrir links externos em uma nova aba?                                                                             |                |
+| `external_link.enable`  | Abrir links externos em uma nova aba?                                                                             | `true`         |
+| `external_link.field`   | Applies to the whole `site` or `post` only                                                                        | `site`         |
+| `external_link.exclude` | Exclude hostname. Specify subdomain when applicable, including `www`                                              | `[]`           |
+| `filename_case`         | Converter nomes de arquivos para minúsculos `1`; maiúsculos `2`                                                   | `0`            |
+| `render_drafts`         | Display drafts?                                                                                                   | `false`        |
+| `post_asset_folder`     | Ativar o [diretório de Asset](asset-folders.html)?                                                                | `false`        |
+| `relative_link`         | Links para o diretório raiz?                                                                                      | `false`        |
+| `future`                | Exibir postagens futuras?                                                                                         | `true`         |
+| `syntax_highlighter`    | Configurações de bloco de código, see [Highlight.js](/docs/syntax-highlight#Highlight-js) section for usage guide | `highlight.js` |
+| `highlight`             | Configurações de bloco de código, see [PrismJS](/docs/syntax-highlight#PrismJS) section for usage guide           |                |
+| `prismjs`               | Code block syntax highlight settings, see [PrismJS](/docs/syntax-highlight#PrismJS) section for usage guide       |                |
+
+### Home page setting
+
+| Configuração               | Descrição                                                                                                       | Padrão  |
+| -------------------------- | --------------------------------------------------------------------------------------------------------------- | ------- |
+| `index_generator`          | Generate an archive of posts, powered by [hexo-generator-index](https://github.com/hexojs/hexo-generator-index) |         |
+| `index_generator.path`     | Root path for your blog's index page                                                                            | `''`    |
+| `index_generator.per_page` | Posts displayed per page.                                                                                       | `10`    |
+| `index_generator.order_by` | Posts order. Order by descending date (new to old) by default.                                                  | `-date` |
+| `Diretório de paginação`   | URL format, see [Pagination](#Pagination) setting below                                                         | `page`  |
 
 ### Categoria & Tag
 
-| Configuração       | Descrição         | Padrão          |
-| ------------------ | ----------------- | --------------- |
-| `default_category` | Categoria padrão  | `uncategorized` |
-| `category_map`     | Mapa de Categoria |
-| `tag_map`          | Mapa de Tag       |
+| Configuração       | Descrição               | Padrão          |
+| ------------------ | ----------------------- | --------------- |
+| `default_category` | Mapa de Categoria       | `uncategorized` |
+| `category_map`     | Override category slugs |                 |
+| `tag_map`          | Override tag slugs      |                 |
+
+Exibir rascunhos?
+
+```yaml
+category_map:
+  "yesterday's thoughts": yesterdays-thoughts
+  "C++": c-plus-plus
+```
 
 ### Formato de Data / Hora
 
@@ -94,10 +133,20 @@ Hexo usa [Moment.js](http://momentjs.com/) para processar datas.
 
 ### Paginação
 
-| Configuração     | Descrição                                                                        | Padrão |
-| ---------------- | -------------------------------------------------------------------------------- | ------ |
-| `per_page`       | A quantidade de postagens exibidas em uma única página. `0` desabilita paginação | `10`   |
-| `pagination_dir` | Diretório de paginação                                                           | `page` |
+| Configuração     | Descrição                                                                        | Categoria padrão |
+| ---------------- | -------------------------------------------------------------------------------- | ---------------- |
+| `per_page`       | A quantidade de postagens exibidas em uma única página. `0` desabilita paginação | `10`             |
+| `pagination_dir` | URL format                                                                       | `page`           |
+
+Mapa de Tag
+
+```yaml
+pagination_dir: 'page'
+# http://example.com/page/2
+
+pagination_dir: 'awesome-page'
+# http://example.com/awesome-page/2
+```
 
 ### Extensões
 
@@ -110,15 +159,15 @@ Hexo usa [Moment.js](http://momentjs.com/) para processar datas.
 
 ### Incluir/Excluir Arquivos ou Diretórios
 
-No arquivo de configuração, defina a chave de include/exclude para que o hexo processe ou ignore, explicitamente, determinados arquivos/diretórios.
+Use the following options to explicitly process or ignore certain files/folders. Support [glob expressions](https://github.com/micromatch/micromatch#extended-globbing) for path matching.
 
 `include` and `exclude` options only apply to the `source/` folder, whereas `ignore` option applies to all folders.
 
-| Configuração | Descrição                                                                                                                    |
-| ------------ | ---------------------------------------------------------------------------------------------------------------------------- |
-| `include`    | Por padrão, o Hexo ignora os arquivos e diretórios ocultos, mas configurar este campo fará com que o Hexo os processe também |
-| `exclude`    | O Hexo irá ignorar os arquivos e diretórios listados abaixo deste campo                                                      |
-| `ignore`     | Ignore files/folders                                                                                                         |
+| Por padrão, o Hexo ignora os arquivos e diretórios ocultos, mas configurar este campo fará com que o Hexo os processe também | Description                                                                                                                                         |
+| ---------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `include`                                                                                                                    | Include hidden files (including files/folders with a name that starts with an underscore, with an exception\*)                                    |
+| `exclude`                                                                                                                    | No arquivo de configuração, defina a chave de include/exclude para que o hexo processe ou ignore, explicitamente, determinados arquivos/diretórios. |
+| `ignore`                                                                                                                     | Ignore files/folders                                                                                                                                |
 
 Exemplo:
 
@@ -162,6 +211,22 @@ Each value in the list must be enclosed with single/double quotes.
 `include:` and `exclude:` do not apply to the `themes/` folder. Either use `ignore:` or alternatively, prepend an underscore to the file/folder name to exclude.
 
 \* Notable exception is the `source/_posts` folder, but any file or folder with a name that starts with an underscore under that folder would still be ignored. Using `include:` rule in that folder is not recommended.
+
+### Using an Alternate Config
+
+A custom config file path can be specified by adding the `--config` flag to your `hexo` commands with a path to an alternate YAML or JSON config file, or a comma-separated list (no spaces) of multiple YAML or JSON files.
+
+```bash
+# use 'custom.yml' in place of '_config.yml'
+$ hexo server --config custom.yml
+
+# use 'custom.yml' & 'custom2.json', prioritizing 'custom2.json'
+$ hexo server --config custom.yml,custom2.json
+```
+
+Using multiple files combines all the config files and saves the merged settings to `_multiconfig.yml`. The later values take precedence. It works with any number of JSON and YAML files with arbitrarily deep objects. Note that **no spaces are allowed in the list**.
+
+For instance, in the above example if `foo: bar` is in `custom.yml`, but `"foo": "dinosaur"` is in `custom2.json`, `_multiconfig.yml` will contain `foo: dinosaur`.
 
 ### Alternate Theme Config
 

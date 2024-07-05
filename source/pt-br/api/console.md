@@ -18,7 +18,7 @@ hexo.extend.console.register(name, desc, options, function (args) {
 | `desc`    | Descrição |
 | `options` | Opções    |
 
-Um argumento `args` será passado para a função. Este é o argumento que os usuários digitam no terminal. Ele é analisado pelo [Minimist].
+Um argumento `args` será passado para a função. Este é o argumento que os usuários digitam no terminal. Ele é analisado pelo [Minimist][].
 
 ## Opções
 

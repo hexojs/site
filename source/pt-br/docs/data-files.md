@@ -9,9 +9,7 @@ title: Arquivos de Dados
 Por exemplo, adicione `menu.yml` no diretório `source/_data`.
 
 ```yaml
-Home: /
-Gallery: /gallery/
-Archives: /archives/
+Home: / Gallery: /gallery/ Archives: /archives/
 ```
 
 E você pode usá-los nos templates:

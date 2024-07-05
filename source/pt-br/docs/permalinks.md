@@ -18,7 +18,7 @@ Besides the following variables, you can use any attributes in the permalink exc
 | `:hour`       | Published hour of posts (2-digit)                                                              |
 | `:minute`     | Published minute of posts (2-digit)                                                            |
 | `:second`     | Published second of posts (2-digit)                                                            |
-| `:title`      | Filename (relative to "source/\_posts/" folder)                                                |
+| `:title`      | Filename (relative to "source/\_posts/" folder)                                              |
 | `:name`       | Filename                                                                                       |
 | `:post_title` | Título da postagem                                                                             |
 | `:id`         | ID da postagem (_not persistent across [cache reset](/pt-br/docs/commands#clean)_)             |
@@ -42,7 +42,7 @@ categories:
   - bar
 ```
 
-| Definição                       | Resultado                   |
+| Setting                         | Resultado                   |
 | ------------------------------- | --------------------------- |
 | `:year/:month/:day/:title/`     | 2013/07/14/hello-world/     |
 | `:year-:month-:day-:title.html` | 2013-07-14-hello-world.html |
@@ -57,7 +57,7 @@ categories:
   - bar
 ```
 
-| Definição                   | Resultado                     |
+| Setting                     | Resultado                     |
 | --------------------------- | ----------------------------- |
 | `:year/:month/:day/:title/` | 2013/07/14/lorem/hello-world/ |
 | `:year/:month/:day/:name/`  | 2013/07/14/hello-world/       |

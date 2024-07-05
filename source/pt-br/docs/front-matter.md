@@ -25,19 +25,20 @@ date: 2013/7/13 20:46:25
 
 ### Configurações e Seus Valores Padrão
 
-| Configuração      | Descrição                                                                                           | Padrão                                                       |
-| ----------------- | --------------------------------------------------------------------------------------------------- | ------------------------------------------------------------ |
-| `layout`          | Layout                                                                                              | [`config.default_layout`](/pt-br/docs/configuration#Escrita) |
-| `title`           | Título                                                                                              | Filename (posts only)                                        |
-| `date`            | Data de publicação                                                                                  | Data de criação do arquivo                                   |
-| `updated`         | Data de atualização                                                                                 | Data de atualização do arquivo                               |
-| `comments`        | Habilita o recurso de comentário para a postagem                                                    | true                                                         |
-| `tags`            | Tags (Não disponível para páginas)                                                                  |
-| `categories`      | Categorias (Não disponível para páginas)                                                            |
-| `permalink`       | Substitui o permalink padrão da postagem                                                            |
-| `excerpt`         | Page excerpt in plain text. Use [this plugin](/docs/tag-plugins#Post-Excerpt) to format the text    |
-| `disableNunjucks` | Disable rendering of Nunjucks tag `{{ }}`/`{% %}` and [tag plugins](/docs/tag-plugins) when enabled |
-| `lang`            | Set the language to override [auto-detection](/docs/internationalization#Path)                      | Inherited from `_config.yml`                                 |
+| Configuração      | Descrição                                                                                           | Padrão                                                                              |
+| ----------------- | --------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| `layout`          | Layout                                                                                              | [`config.default_layout`](/docs/configuration#Writing)                              |
+| `title`           | Título                                                                                              | Filename (posts only)                                                               |
+| `date`            | Data de publicação                                                                                  | Data de criação do arquivo                                                          |
+| `updated`         | Data de atualização                                                                                 | Data de atualização do arquivo                                                      |
+| `comments`        | Habilita o recurso de comentário para a postagem                                                    | `true`                                                                              |
+| `tags`            | Tags (Não disponível para páginas)                                                                  |                                                                                     |
+| `categories`      | Categorias (Não disponível para páginas)                                                            |                                                                                     |
+| `permalink`       | Substitui o permalink padrão da postagem Permalink should end with `/` or `.html`                   | `null`                                                                              |
+| `excerpt`         | Page excerpt in plain text. Use [this plugin](/docs/tag-plugins#Post-Excerpt) to format the text    |                                                                                     |
+| `disableNunjucks` | Disable rendering of Nunjucks tag `{{ }}`/`{% %}` and [tag plugins](/docs/tag-plugins) when enabled | false                                                                               |
+| `lang`            | Set the language to override [auto-detection](/docs/internationalization#Path)                      | Inherited from `_config.yml`                                                        |
+| `published`       | Whether the post should be published                                                                | For posts under `_posts`, it is `true`, and for posts under `_draft`, it is `false` |
 
 #### Layout
 

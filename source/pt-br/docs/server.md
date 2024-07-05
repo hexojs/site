@@ -2,9 +2,9 @@
 title: Servidor
 ---
 
-## [hexo-server]
+## [hexo-server][]
 
-Com o lançamento do Hexo 3, o servidor foi separado do módulo principal. Para começar a usar o servidor, primeiro você deve instalar o pacote [hexo-server].
+Com o lançamento do Hexo 3, o servidor foi separado do módulo principal. Para começar a usar o servidor, primeiro você deve instalar o pacote [hexo-server][].
 
 ```bash
 $ npm install hexo-server --save
@@ -38,26 +38,4 @@ O Hexo executa o servidor em `0.0.0.0` por padrão. Você pode substituir a conf
 $ hexo server -i 192.168.1.1
 ```
 
-## Pow
-
-[Pow] é um servidor Rack sem configuração para Mac.
-
-### Instalaçãos
-
-```bash
-$ curl get.pow.cx | sh
-```
-
-### Configuração
-
-Link simbólico no diretório `~/.pow`
-
-```bash
-$ cd ~/.pow
-$ ln -s /path/to/myapp
-```
-
-Seu site estará funcionando em `http://myapp.dev`. A URL é baseada no nome do link simbólico.
-
 [hexo-server]: https://github.com/hexojs/hexo-server
-[Pow]: http://pow.cx/

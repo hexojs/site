@@ -19,12 +19,13 @@ hexo.init().then(function () {
 });
 ```
 
-| Opção    | Descrição                                                                                                       | Padrão        |
-| -------- | --------------------------------------------------------------------------------------------------------------- | ------------- |
-| `debug`  | Habilita o modo debug. Mostra as mensagens de debug no terminal e cria o arquivo `debug.log` no diretório raiz. | `false`       |
-| `safe`   | Habilita o modo seguro. Não carrega nenhum plugin.                                                              | `false`       |
-| `silent` | Habilita o modo silencioso. Não mostra nenhuma mensagem no terminal.                                            | `false`       |
-| `config` | Especifica o caminho do arquivo de configuração.                                                                | `_config.yml` |
+| Opção              | Descrição                                                                                                       | Padrão                            |
+| ------------------ | --------------------------------------------------------------------------------------------------------------- | --------------------------------- |
+| `debug`            | Habilita o modo debug. Mostra as mensagens de debug no terminal e cria o arquivo `debug.log` no diretório raiz. | `false`                           |
+| `safe`             | Habilita o modo seguro. Não carrega nenhum plugin.                                                              | `false`                           |
+| `silent`           | Habilita o modo silencioso. Não mostra nenhuma mensagem no terminal.                                            | `false`                           |
+| `config`           | Especifica o caminho do arquivo de configuração.                                                                | `_config.yml`                     |
+| `draft` / `drafts` | Enable to add drafts to the posts list.<br> example: when you use `hexo.locals.get('posts')`              | `render_drafts` of \_config.yml |
 
 ## Carregar Arquivos
 
@@ -52,7 +53,13 @@ hexo.call("generate", {}).then(function () {
 });
 ```
 
-## Sair
+```js
+hexo.call("list", { _: ["post"] }).then(function () {
+  // ...
+});
+```
+
+## Exit
 
 Você deve chamar o método `exit` após a conclusão bem sucedida ou mal sucedida de um comando. Isso permite que o Hexo saia e termine coisas importantes, como salvar o banco de dados.
 

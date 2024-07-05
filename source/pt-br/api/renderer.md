@@ -25,10 +25,11 @@ hexo.extend.renderer.register(
 
 Dois argumentos devem ser passados para a função renderer:
 
-| Argumento | Descrição                                                                                                                |
-| --------- | ------------------------------------------------------------------------------------------------------------------------ |
-| `data`    | Inclui dois atributos: Caminho do arquivo (`path`) e o conteúdo do arquivo (`text`). Não é necessário que `path` exista. |
-| `option`  | Opções                                                                                                                   |
+| Argumento  | Descrição                                                                                                                |
+| ---------- | ------------------------------------------------------------------------------------------------------------------------ |
+| `data`     | Inclui dois atributos: Caminho do arquivo (`path`) e o conteúdo do arquivo (`text`). Não é necessário que `path` exista. |
+| `option`   | Opções                                                                                                                   |
+| `callback` | Callback function of two parameters `err`, `value`.                                                                      |
 
 ## Exemplo
 
