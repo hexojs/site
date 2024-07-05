@@ -10,7 +10,9 @@ Hexo는 빠르고 간단하고 파워풀한 블로그 프레임워크입니다. 
 
 ## 설치하기
 
-Hexo는 눈 깜박할 새에 설치할 수 있습니다. 설치 시 문제가 생겼는데 해결책을 찾지 못했다면, [submit a GitHub issue](https://github.com/hexojs/hexo/issues)에 등록해 주세요. 제가 해결해 드리겠습니다.
+It only takes a few minutes to set up Hexo. 설치 시 문제가 생겼는데 해결책을 찾지 못했다면, [submit a GitHub issue](https://github.com/hexojs/hexo/issues)에 등록해 주세요. 제가 해결해 드리겠습니다.
+
+{% youtube ARted4RniaU %}
 
 ### 요구사항
 
@@ -21,15 +23,7 @@ Hexo의 설치는 꽤 쉽습니다. 하지만, 설치 전에 몇 가지 요구�
 
 컴퓨터에 이미 이런 것들이 설치되어 있다면, 축하드립니다! 이제 npm을 이용하여 Hexo를 설치하기만 하면 됩니다.
 
-```bash
-$ npm install -g hexo-cli
-```
-
 설치되어 있지 않다면, 아래의 설명을 따라 요구사항들을 설치하세요.
-
-{% note warn For Mac users %}
-컴파일 중에 몇 가지 문제가 발생할 수 있습니다. 우선 앱스토어를 통해 Xcode를 설치하세요. 그 다음, Xcode를 실행하고 **Preferences -> Download -> Command Line Tools -> Install** 의 방법으로 command line tool을 설치하세요.
-{% endnote %}
 
 ### Git을 설치하세요
 
@@ -37,6 +31,10 @@ $ npm install -g hexo-cli
 - Mac: [Homebrew](http://mxcl.github.com/homebrew/), [MacPorts](http://www.macports.org/), [installer](http://sourceforge.net/projects/git-osx-installer/) 중 하나 선택해서 설치하세요.
 - Linux (Ubuntu, Debian): `sudo apt-get install git-core`
 - Linux (Fedora, Red Hat, CentOS): `sudo yum install git-core`
+
+{% note warn For Mac users %}
+컴파일 중에 몇 가지 문제가 발생할 수 있습니다. 우선 앱스토어를 통해 Xcode를 설치하세요. 그 다음, Xcode를 실행하고 **Preferences -> Download -> Command Line Tools -> Install** 의 방법으로 command line tool을 설치하세요.
+{% endnote %}
 
 ### Node.js를 설치하세요
 
@@ -70,6 +68,25 @@ If you installed Node.js using Snap, you may need to manually run `npm install` 
 ```bash
 $ npm install -g hexo-cli
 ```
+
+### Advanced installation and usage
+
+Advanced users may prefer to install and use `hexo` package instead.
+
+```bash
+$ npm install hexo
+```
+
+Once installed, you can run Hexo in two ways:
+
+1. `npx hexo <command>`
+2. Linux users can set relative path of `node_modules/` folder:
+
+```bash
+echo 'PATH="$PATH:./node_modules/.bin"' >> ~/.profile
+```
+
+then run Hexo using `hexo <command>`
 
 ### Required Node.js version
 

@@ -2,7 +2,7 @@
 title: Troubleshooting
 ---
 
-Hexo 사용 중에 문제가 발생할 경우, 이 문서에 있는 해결책을 확인해 보세요. 자주 발생하는 문제에 대해 정리해 두었습니다. 만약 이 문서에서 해결 방안을 찾지 못하였다면 [GitHub](https://github.com/hexojs/hexo/issues) 또는 [Google Group](https://groups.google.com/group/hexo)을 검색해 보세요.
+In case you're experiencing problems with using Hexo, here is a list of solutions to some frequently encountered issues. 자주 발생하는 문제에 대해 정리해 두었습니다. 만약 이 문서에서 해결 방안을 찾지 못하였다면 [GitHub](https://github.com/hexojs/hexo/issues) 또는 [Google Group](https://groups.google.com/group/hexo)을 검색해 보세요.
 
 ## YAML Parsing Error
 
@@ -69,7 +69,7 @@ DefaultLimitNOFILE=10000
 
 3. Reboot
 
-## `process out of memory`
+## process out of memory
 
 생성(generation)중에 이 error가 발생할 수 있습니다.:
 
@@ -87,6 +87,8 @@ FATAL ERROR: CALL_AND_RETRY_LAST Allocation failed - process out of memory
 
 ## Git Deployment Problems
 
+### RPC failed
+
 ```plain
 error: RPC failed; result=22, HTTP code = 403
 
@@ -94,6 +96,21 @@ fatal: 'username.github.io' does not appear to be a git repository
 ```
 
 당신의 컴퓨터에 [GIT 설정](https://help.github.com/articles/set-up-git)이 제대로 되어있는지 확인하거나 HTTPS 저장소 URL을 사용해 보세요.
+
+### Error: ENOENT: no such file or directory
+
+If you get an error like `Error: ENOENT: no such file or directory` it's probably due to mixing uppercase and lowercase letters in your tags, categories, or filenames. Git cannot automatically merge this change, so it breaks the automatic branching.
+
+To fix this, try
+
+1. Check every tag's and category's case and make sure they are the same.
+1. Commit
+1. Clean and build: `./node_modules/.bin/hexo clean && ./node_modules/.bin/hexo generate`
+1. Manually copy the public folder to your desktop
+1. Switch branch from your master branch to your deployment branch locally
+1. Copy the contents of the public folder from your desktop into the deployment branch
+1. Commit. You should see any merge conflicts appear that you can manually resolve.
+1. Switch back to your master branch and deploy normally: `./node_modules/.bin/hexo deploy`
 
 ## Server Problems
 
@@ -133,7 +150,7 @@ $ npm install hexo --no-optional
 
 ## Iterate Data Model on Jade or Swig
 
-Hexo는 데이터 모델로 [Warehouse]을 사용합니다. 이는 배열(array)이 아니기 때문에 iterable하게 object를 변환해야 합니다.
+Hexo는 데이터 모델로 [Warehouse][]을 사용합니다. 이는 배열(array)이 아니기 때문에 iterable하게 object를 변환해야 합니다.
 
 ```
 {% for post in site.posts.toArray() %}
@@ -148,10 +165,21 @@ Hexo는 데이터 모델로 [Warehouse]을 사용합니다. 이는 배열(array)
 $ hexo clean
 ```
 
+## No command is executed
+
+When you can't get any command except `help`, `init` and `version` to work and you keep getting content of `hexo help`, it could be caused by a missing `hexo` in `package.json`:
+
+```json
+{
+  "hexo": {
+    "version": "3.2.2"
+  }
+}
+```
+
 ## Escape Contents
 
-Hexo는 포스트를 렌더링하는데 [Nunjucks]를 사용합니다([Swig]은 이전 버전에서 사용했었습니다. 문법은 비슷합니다.). `{{ }}` 또는 `{% %}`로 감싼 컨텐츠는 파싱된 후에 문제를 발생시킵니다. You can skip the parsing by wrapping it with the [`raw`](/docs/tag-plugins#Raw) tag plugin, single backtick `` `{{ }}` `` or triple backtick.
-Alternatively, Nunjucks tags can be disabled through the renderer's option (if supported), [API](/api/renderer#Disable-Nunjucks-tags) or [front-matter](/docs/front-matter).
+Hexo는 포스트를 렌더링하는데 [Nunjucks][]를 사용합니다([Swig][]은 이전 버전에서 사용했었습니다. `{{ }}` 또는 `{% %}`로 감싼 컨텐츠는 파싱된 후에 문제를 발생시킵니다. You can skip the parsing by wrapping it with the [`raw`](/docs/tag-plugins#Raw) tag plugin, single backtick `` `{{ }}` `` or triple backtick. Alternatively, Nunjucks tags can be disabled through the renderer's option (if supported), [API](/api/renderer#Disable-Nunjucks-tags) or [front-matter](/docs/front-matter).
 
 ```
 {% raw %}
@@ -180,6 +208,86 @@ $ echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo
 ```
 
 이 명령어는 감시(watch)할 수 있는 파일의 개수 제한을 증가시킵니다.
+
+## EMPERM Error (Windows Subsystem for Linux)
+
+When running `$ hexo server` in a BashOnWindows environment, it returns the following error:
+
+```
+Error: watch /path/to/hexo/theme/ EMPERM
+```
+
+Unfortunately, WSL does not currently support filesystem watchers. Therefore, the live updating feature of hexo's server is currently unavailable. You can still run the server from a WSL environment by first generating the files and then running it as a static server:
+
+```sh
+$ hexo generate
+$ hexo server -s
+```
+
+This is [a known BashOnWindows issue](https://github.com/Microsoft/BashOnWindows/issues/216), and on 15 Aug 2016, the Windows team said they would work on it. You can get progress updates and encourage them to prioritize it on [the issue's UserVoice suggestion page](https://wpdev.uservoice.com/forums/266908-command-prompt-console-bash-on-ubuntu-on-windo/suggestions/13469097-support-for-filesystem-watchers-like-inotify).
+
+## Template render error
+
+Sometimes when running the command `$ hexo generate` it returns an error:
+
+```
+FATAL Something's wrong. Maybe you can find the solution here: http://hexo.io/docs/troubleshooting.html
+Template render error: (unknown path)
+```
+
+Possible cause:
+
+- There are some unrecognizable words in your file, e.g. invisible zero width characters.
+- Incorrect use or limitation of [tag plugin](/docs/tag-plugins).
+
+  - Block-style tag plugin with content is not enclosed with `{% endplugin_name %}`
+
+  ```
+  # Incorrect
+  {% codeblock %}
+  fn()
+  {% codeblock %}
+
+  # Incorrect
+  {% codeblock %}
+  fn()
+
+  # Correct
+  {% codeblock %}
+  fn()
+  {% endcodeblock %}
+  ```
+
+  - Having Nunjucks-like syntax in a tag plugin, e.g. [`{#`](https://mozilla.github.io/nunjucks/templating.html#comments). A workaround for this example is to use [triple backtick](/docs/tag-plugins#Backtick-Code-Block) instead. [Escape Contents](/docs/troubleshooting#Escape-Contents) section has more details.
+
+  ```
+  {% codeblock lang:bash %}
+  Size of array is ${#ARRAY}
+  {% endcodeblock %}
+  ```
+
+## YAMLException (Issue [#4917](https://github.com/hexojs/hexo/issues/4917))
+
+Upgrading to `hexo^6.1.0` from an older version may cause the following error when running `$ hexo generate`:
+
+```
+YAMLException: Specified list of YAML types (or a single Type object) contains a non-Type object.
+    at ...
+```
+
+This may be caused by an incorrect dependency(i.e. `js-yaml`) setting that can't be solved automatically by the package manager, and you may have to update it manually running:
+
+```sh
+$ npm install js-yaml@latest
+```
+
+or
+
+```sh
+$ yarn add js-yaml@latest
+```
+
+if you use `yarn`.
 
 [Warehouse]: https://github.com/hexojs/warehouse
 [Swig]: http://paularmstrong.github.io/swig/

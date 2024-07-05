@@ -19,7 +19,7 @@ hexo.extend.filter.register(type, function() {
 }, priority);
 ```
 
-당신은 `priority`을 정의할 수 있습니다. 기본값은 10이며, 값이 낮을 수록 먼저 실행됩니다.
+당신은 `priority`을 정의할 수 있습니다. Lower `priority` means that it will be executed first. The default `priority` is 10. We recommend using user-configurable priority value that user can specify in the config, e.g. `hexo.config.your_plugin.priority`.
 
 ## Filter의 실행
 
@@ -28,9 +28,9 @@ hexo.extend.filter.exec(type, data, options);
 hexo.extend.filter.execSync(type, data, options);
 ```
 
-| 옵션      | 설명                             |
-| --------- | -------------------------------- |
-| `context` | Context                          |
+| 옵션        | 설명                     |
+| --------- | ---------------------- |
+| `context` | Context                |
 | `args`    | 인자. 이 값은 배열(array)입니다. |
 
 Filter의 첫 번째 인자는 `data` 입니다. 다음 filter로 전달 된 `data`는 새 값으로 변경되어 반환될 수 있습니다. 아무런 값도 반환되지 않았다면 data의 값이 변경되지 않았다는 의미입니다. Filter의 다른 인자를 지정하기 위해 `args`를 사용할 수도 있습니다. 아래 예시를 봐주세요.
@@ -107,8 +107,7 @@ hexo.extend.filter.register("before_post_render", function (data) {
 
 ### after_post_render
 
-Post가 생성된 후 실행됩니다.
-Executed after a post is rendered. 실행 단계에 대해 더 알아보시길 원한다면 [post rendering](posts.html#Render)를 참조해 주세요.
+렌더링이 완료된 후 실행됩니다. [Rendering](rendering.html#after_render_Filters)에서 더 많은 정보를 확인하실 수 있습니다.
 
 아래 예시는 `@username`을 Twitter link로 대체하는 것을 보여줍니다.
 
@@ -197,11 +196,21 @@ hexo.extend.filter.register("post_permalink", function (data) {
 
 ### after_render
 
-렌더링이 완료된 후 실행됩니다. [Rendering](rendering.html#after_render_Filters)에서 더 많은 정보를 확인하실 수 있습니다.
+Executed after a post is rendered. 실행 단계에 대해 더 알아보시길 원한다면 [post rendering](posts.html#Render)를 참조해 주세요.
+
+### after_clean
+
+Executed after generated files and cache are removed with `hexo clean` command.
+
+```js
+hexo.extend.filter.register("after_clean", function () {
+  // remove some other temporary files
+});
+```
 
 ### server_middleware
 
-서버에 미들웨어를 추가합니다. `app`은 [Connect] 인스턴스입니다.
+서버에 미들웨어를 추가합니다. `app`은 [Connect][] 인스턴스입니다.
 
 아래 예시는 response header에 `X-Powered-By: Hexo`를 추가합니다.
 

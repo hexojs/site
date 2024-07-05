@@ -2,9 +2,9 @@
 title: Server
 ---
 
-## [hexo-server]
+## [hexo-server][]
 
-Hexo 3의 릴리즈와 함께, server를 메인 모듈과 분리시켰습니다. server를 사용하여 시작하기 위해서는 먼저 [hexo-server]를 설치해야 합니다.
+Hexo 3의 릴리즈와 함께, server를 메인 모듈과 분리시켰습니다. server를 사용하여 시작하기 위해서는 먼저 [hexo-server][]를 설치해야 합니다.
 
 ```bash
 $ npm install hexo-server --save
@@ -38,26 +38,4 @@ Hexo는 기본적으로 `0.0.0.0`을 기본값으로 수행됩니다. 아래와 
 $ hexo server -i 192.168.1.1
 ```
 
-## Pow
-
-[Pow]는 Mac을 위한 zero-config Rack server입니다.
-
-### 설치하기
-
-```bash
-$ curl get.pow.cx | sh
-```
-
-### 설정하기
-
-`~/.pow`에 대해 심볼릭 링크를 설정합니다.
-
-```bash
-$ cd ~/.pow
-$ ln -s /path/to/myapp
-```
-
-당신의 웹 사이트는 `http://myapp.dev` 상에서 실행될 것입니다. URL은 심볼릭 링크의 이름을 기준으로 합니다.
-
 [hexo-server]: https://github.com/hexojs/hexo-server
-[Pow]: http://pow.cx/

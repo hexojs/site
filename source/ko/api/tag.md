@@ -18,7 +18,7 @@ hexo.extend.tag.register(
 
 `args`, `content` 두 개의 인자가 함수를 통해 전달됩니다. `args`는 태그 플러그인으로 전달되는 인자들을 포함하고 `content`는 태그 플러그인에서 사용할 포장된 내용(wrapped content)을 나타냅니다.
 
-Hexo 3에서 비동기 렌더링을 도입한 이후, 우리는 렌더링을 위해 [Nunjucks]를 사용합니다. 이 동작은 [Swig]과는 조금 다를 수 있습니다.
+Hexo 3에서 비동기 렌더링을 도입한 이후, 우리는 렌더링을 위해 [Nunjucks][]를 사용합니다. 이 동작은 [Swig][]과는 조금 다를 수 있습니다.
 
 ## Unregister Tags
 
@@ -52,7 +52,7 @@ end 태그를 사용합니다. 기본값은 `false`입니다.
 
 비동기(async) 모드를 활성화 합니다. 기본값은 `false`입니다.
 
-## 예시
+## Examples
 
 ### End 태그를 사용하지 않을 때
 
@@ -90,7 +90,7 @@ hexo.extend.tag.register(
 );
 ```
 
-### 비동기 렌더링
+### Async Rendering
 
 파일을 삽입하는 예시입니다.
 
