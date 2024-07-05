@@ -12,7 +12,7 @@ hexo.extend.generator.register(name, function (locals) {
 });
 ```
 
-argument `locals` จะส่งเข้า function โดยมี [site variables](../docs/variables.html#Site-Variables) เข้าด้วยกัน ผู้ใช้สามารถใช้ argument นี้เพื่อได้ data ของเว็บไซต์ ด้งนั้นจะไม่ต้องเข้าถึง database โดยตรง
+argument `locals` จะส่งเข้า function โดยมี [site variables](../docs/variables.html#Site-Variables) เข้าด้วยกัน ผู้ใช้สามารถใช้ argument นี้เพื่อได้ data ของเว็บไซต์ ด้งนั้นจะไม่ต้องเข้าถึง database โดยตรง You should use this argument to get the website data, thereby avoiding having to access the database directly.
 
 ## Update Routes
 
@@ -38,15 +38,15 @@ hexo.extend.generator.register("test", function (locals) {
 | `data`    | Data                                                                                                                                          |
 | `layout`  | Layout. Specify the layouts for rendering. The value can be a string or an array. If it's ignored then the route will return `data` directly. |
 
-เมื่ออัปเดท source file แฃ้ว hexo จะ execute generator ทั้งหมดและสร้างขึ้น route ใหม่ **กรุณาอย่าเข้าถึง router โดยตรง**
+เมื่ออัปเดท source file แฃ้ว hexo จะ execute generator ทั้งหมดและสร้างขึ้น route ใหม่ **กรุณาอย่าเข้าถึง router โดยตรง** **Please return the data and do not access the router directly.**
 
 ## Example
 
 ### Archive Page
 
-สร้างเพจ archive ได้ท่ี `archives/index.html` โพสต์จะเป็นแบบ data ท่ีส่งเข้า template. data นี้คล้ายกับ variable `page` ของ template
+สร้างเพจ archive ได้ท่ี `archives/index.html` โพสต์จะเป็นแบบ data ท่ีส่งเข้า template. We pass all posts as data to the templates. data นี้คล้ายกับ variable `page` ของ template
 
-ต่อไปจะตั้งค่า attribute ของ `layout` เพื่อ render theme template เฉพาะ ในตัวอย่างต่อไปจะตั้งค่า layout อย่างนี้: ถ้า layout `archive` ไม่มี จะใช้ layout `index` แทน
+ต่อไปจะตั้งค่า attribute ของ `layout` เพื่อ render theme template เฉพาะ ในตัวอย่างต่อไปจะตั้งค่า layout อย่างนี้: ถ้า layout `archive` ไม่มี จะใช้ layout `index` แทน We're setting two layouts in this example: if the `archive` layout doesn't exist, the `index` layout will be used instead.
 
 ```js
 hexo.extend.generator.register("archive", function (locals) {
@@ -60,7 +60,7 @@ hexo.extend.generator.register("archive", function (locals) {
 
 ### Archive Page with Pagination
 
-ผู้ใช้สามารถใช้เครื่องมือทางการ [hexo-pagination] อย่างสะดวกไปสร้างเพจ archive ท่ีมีหมายเลขหน้า
+ผู้ใช้สามารถใช้เครื่องมือทางการ [hexo-pagination][] อย่างสะดวกไปสร้างเพจ archive ท่ีมีหมายเลขหน้า
 
 ```js
 var pagination = require("hexo-pagination");

@@ -5,7 +5,8 @@ title: GitLab Pages
 1. Create a new repository named <b>_username_.gitlab.io</b>, where username is your username on GitLab. If you have already uploaded to other repo, rename the repo instead.
 2. Enable Shared Runners via `Settings -> CI / CD -> Shared Runners`.
 3. Push the files of your Hexo folder to the repository. The `public/` folder is not (and should not be) uploaded by default, make sure the `.gitignore` file contains `public/` line. The folder structure should be roughly similar to [this repo](https://gitlab.com/pages/hexo).
-4. Add `.gitlab-ci.yml` file to your repo (alongside \_config.yml & package.json) with the following content:
+4. Check what version of Node.js you are using on your local machine with `node --version`. Make a note of the major version (e.g., `v16.y.z`)
+5. Add `.gitlab-ci.yml` file to your repo (alongside \_config.yml & package.json) with the following content:
 
 ```yml
 image: node:10-alpine # use nodejs v10 LTS
@@ -27,8 +28,8 @@ pages:
     - master
 ```
 
-5. _username_.gitlab.io should be up and running, once GitLab CI finishes the deployment job,
-6. (Optional) If you wish to inspect the generated site assets (html, css, js, etc), they can be found in the [job artifact](https://docs.gitlab.com/ee/user/project/pipelines/job_artifacts.html).
+6. _username_.gitlab.io should be up and running, once GitLab CI finishes the deployment job,
+7. (Optional) If you wish to inspect the generated site assets (html, css, js, etc), they can be found in the [job artifact](https://docs.gitlab.com/ee/user/project/pipelines/job_artifacts.html).
 
 ## Project page
 
@@ -40,5 +41,5 @@ If you prefer to have a project page on GitLab:
 
 ## Useful links
 
-- [GitLab Pages](https://docs.gitlab.com/ee/user/project/pages/index.html)
-- [GitLab CI Docs](https://docs.gitlab.com/ee/ci/README.html)
+- [GitLab Pages](https://docs.gitlab.com/ee/user/project/pages/)
+- [GitLab CI Docs](https://docs.gitlab.com/ee/ci/yaml/)

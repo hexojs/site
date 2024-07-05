@@ -6,15 +6,15 @@ title: Variables
 
 ### Global Variables
 
-| Variable | Description                                                         | Type                                  |
-| -------- | ------------------------------------------------------------------- | ------------------------------------- |
-| `site`   | Sitewide information.                                               | `object`; see [Site Variables]        |
-| `page`   | Page specific information and custom variables set in front-matter. | `object`; see [Page Variables]        |
+| Variable | Description                                                         | Type                                    |
+| -------- | ------------------------------------------------------------------- | --------------------------------------- |
+| `site`   | Sitewide information.                                               | `object`; see [Site Variables][]        |
+| `page`   | Page specific information and custom variables set in front-matter. | `object`; see [Page Variables][]        |
 | `config` | Site configuration.                                                 | `object` (your site's \_config file)  |
 | `theme`  | Theme configuration. Inherits from site configuration.              | `object` (your theme's \_config file) |
-| `path`   | Path of current page                                                | `string`                              |
-| `url`    | Full URL of current page                                            | `string`                              |
-| `env`    | Environment variables                                               | ???                                   |
+| `path`   | Path of current page                                                | `string`                                |
+| `url`    | Full URL of current page                                            | `string`                                |
+| `env`    | Environment variables                                               | ???                                     |
 
 {% note warn %}
 Lodash has been removed from global variables since Hexo 5.0.0. [You-Dont-Need-Lodash-Underscore](https://github.com/you-dont-need/You-Dont-Need-Lodash-Underscore) might be helpful for your migration.
@@ -33,25 +33,25 @@ Lodash has been removed from global variables since Hexo 5.0.0. [You-Dont-Need-L
 
 **บทความ (`page`)**
 
-| Variable           | Description                                                                            | Type               |
-| ------------------ | -------------------------------------------------------------------------------------- | ------------------ |
-| `page.title`       | Article title                                                                          | `string`           |
-| `page.date`        | Article created date                                                                   | [Moment.js] object |
-| `page.updated`     | Article last updated date                                                              | [Moment.js] object |
-| `page.comments`    | Comment enabled or not                                                                 | `boolean`          |
-| `page.layout`      | Layout name                                                                            | `string`           |
-| `page.content`     | The full processed content of the article                                              | `string`           |
-| `page.excerpt`     | Article excerpt                                                                        | `string`           |
-| `page.more`        | Contents except article excerpt                                                        | `string`           |
-| `page.source`      | The path of the source file                                                            | `string`           |
-| `page.full_source` | Full path of the source file                                                           | `string`           |
-| `page.path`        | The URL of the article without root URL. We usually use `url_for(page.path)` in theme. | `string`           |
-| `page.permalink`   | Full URL of the article                                                                | `string`           |
-| `page.prev`        | The previous post, `null` if the post is the first post                                | ???                |
-| `page.next`        | The next post, `null` if the post is the last post                                     | ???                |
-| `page.raw`         | The raw data of the article                                                            | ???                |
-| `page.photos`      | The photos of the article (Used in gallery posts)                                      | array of ???       |
-| `page.link`        | The external link of the article (Used in link posts)                                  | `string`           |
+| Variable           | Description                                                                            | Type                 |
+| ------------------ | -------------------------------------------------------------------------------------- | -------------------- |
+| `page.title`       | Article title                                                                          | `string`             |
+| `page.date`        | Article created date                                                                   | [Moment.js][] object |
+| `page.updated`     | Article last updated date                                                              | [Moment.js][] object |
+| `page.comments`    | Comment enabled or not                                                                 | `boolean`            |
+| `page.layout`      | Layout name                                                                            | `string`             |
+| `page.content`     | The full processed content of the article                                              | `string`             |
+| `page.excerpt`     | Article excerpt                                                                        | `string`             |
+| `page.more`        | Contents except article excerpt                                                        | `string`             |
+| `page.source`      | The path of the source file                                                            | `string`             |
+| `page.full_source` | Full path of the source file                                                           | `string`             |
+| `page.path`        | The URL of the article without root URL. We usually use `url_for(page.path)` in theme. | `string`             |
+| `page.permalink`   | Full URL of the article                                                                | `string`             |
+| `page.prev`        | The previous post, `null` if the post is the first post                                | ???                  |
+| `page.next`        | The next post, `null` if the post is the last post                                     | ???                  |
+| `page.raw`         | The raw data of the article                                                            | ???                  |
+| `page.photos`      | The photos of the article (Used in gallery posts)                                      | array of ???         |
+| `page.link`        | The external link of the article (Used in link posts)                                  | `string`             |
 
 **โพสต์ (`post`):** เหมือนกับ layout `page` แต่เพิ่ม variable ต่อไป
 

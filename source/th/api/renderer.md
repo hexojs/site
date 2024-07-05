@@ -25,10 +25,11 @@ hexo.extend.renderer.register(
 
 argument สองตัวนั้นจะส่งเข้า render function:
 
-| Argument | Description                                                                                       |
-| -------- | ------------------------------------------------------------------------------------------------- |
-| `data`   | Include two attributes: file path `path` and file content `text`. `path` won't necessarily exist. |
-| `option` | Options                                                                                           |
+| Argument   | Description                                                                                       |
+| ---------- | ------------------------------------------------------------------------------------------------- |
+| `data`     | Include two attributes: file path `path` and file content `text`. `path` won't necessarily exist. |
+| `option`   | Options                                                                                           |
+| `callback` | Callback function of two parameters `err`, `value`.                                               |
 
 ## ตัวอย่าง
 

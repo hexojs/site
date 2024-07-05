@@ -2,8 +2,7 @@
 title: Permalinks
 ---
 
-คุณสามารถตั้งค่า permalink ของเว็บไซตืตนในไฟล์ `_config.yml` หรือใน
-front-matter ของทุกโพสต์
+คุณสามารถตั้งค่า permalink ของเว็บไซตืตนในไฟล์ `_config.yml` หรือใน front-matter ของทุกโพสต์
 
 ### Variables
 
@@ -19,15 +18,14 @@ Besides the following variables, you can use any attributes in the permalink exc
 | `:hour`       | Published hour of posts (2-digit)                                                   |
 | `:minute`     | Published minute of posts (2-digit)                                                 |
 | `:second`     | Published second of posts (2-digit)                                                 |
-| `:title`      | Filename (relative to "source/\_posts/" folder)                                     |
+| `:title`      | Filename (relative to "source/\_posts/" folder)                                   |
 | `:name`       | Filename                                                                            |
 | `:post_title` | Post title                                                                          |
 | `:id`         | Post ID (_not persistent across [cache reset](/th/docs/commands#clean)_)            |
 | `:category`   | Categories. If the post is uncategorized, it will use the `default_category` value. |
 | `:hash`       | SHA1 hash of filename (same as `:title`) and date (12-hexadecimal)                  |
 
-ตุณสามารถตั้งค่า default value ของทุก variable ใน permalink โดยตั้งค่า
-`permalink_defaults`:
+ตุณสามารถตั้งค่า default value ของทุก variable ใน permalink โดยตั้งค่า `permalink_defaults`:
 
 ```yaml
 permalink_defaults:
