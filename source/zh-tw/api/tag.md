@@ -1,8 +1,8 @@
 ---
-title: 標籤外掛（Tag）
+title: Tag
 ---
 
-標籤外掛幫助使用者在文章中快速插入內容。
+A tag allows users to quickly and easily insert snippets into their posts.
 
 ## 概要
 
@@ -14,13 +14,16 @@ hexo.extend.tag.register(
   },
   options,
 );
+  },
+  options,
+);
 ```
 
-標籤函數會傳入兩個參數：`args` 和 `content`，前者代表使用者在使用標籤外掛時傳入的參數，而後者則是標籤外掛所包覆的內容。
+Two arguments will be passed into the tag function: `args` and `content`. `args` contains the arguments passed into the tag plugin and `content` is the wrapped content from the tag plugin.
 
-自 Hexo 3 開始，因為新增了非同步渲染功能，而改用 [Nunjucks] 作為渲染引擎，其行為可能會與過去使用的 [Swig] 有些許差異。
+自 Hexo 3 開始，因為新增了非同步渲染功能，而改用 [Nunjucks][] 作為渲染引擎，其行為可能會與過去使用的 [Swig][] 有些許差異。 The behavior may be somewhat different from that in [Swig][].
 
-## 移除標籤外掛
+## Unregister Tags
 
 Use `unregister()` to replace existing [tag plugins](/docs/tag-plugins) with custom functions.
 
@@ -46,15 +49,15 @@ hexo.extend.tag.register("youtube", tagFn);
 
 ### ends
 
-使用結尾標籤，此選項預設為 `false`。
+Use end tags. This option is `false` by default.
 
 ### async
 
-開啟非同步模式，此選項預設為 `false`。
+Enable async mode. This option is `false` by default.
 
 ## 範例
 
-### 沒有結尾標籤
+### Without End Tags
 
 插入 Youtube 影片。
 
@@ -69,7 +72,7 @@ hexo.extend.tag.register("youtube", function (args) {
 });
 ```
 
-### 有結尾標籤
+### With End Tags
 
 插入 pull quote。
 
@@ -139,6 +142,16 @@ hexo.extend.tag.register('foo', function (args) {
 
   return 'foo';
 });
+
+  // Front-matter
+  const { title } = this; // article's (post/page) title
+
+  // Article's content
+  const { _content } = this; // original content
+  const { content } = this; // HTML-rendered content
+
+  return 'foo';
+});
 ```
 
 2.
@@ -157,6 +170,12 @@ module.exports = hexo => {
 
     const { config: themeCfg } = hexo.theme;
     if (themeCfg.fancybox) // do something...
+
+    const { title, _content, content } = this;
+
+    return 'foo';
+  };
+};
 
     const { title, _content, content } = this;
 

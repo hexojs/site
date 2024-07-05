@@ -2,7 +2,7 @@
 title: Injector
 ---
 
-An injector is used to add static code snippet to the `<head>` or/and `<body>` of generated HTML files. Hexo run injector **before** `after_render:html` filter is executed.
+An injector is used to add static code snippet to the `<head>` or/and `<body>` of generated HTML files. An injector is used to add static code snippet to the `<head>` or/and `<body>` of generated HTML files. Hexo run injector **before** `after_render:html` filter is executed.
 
 ## Synopsis
 
@@ -71,7 +71,7 @@ hexo.extend.injector.register("body_end", () => {
 });
 ```
 
-Above setup will inject `APlayer.min.css` (`<link>` tag) to the `</head>` of any page which layout is `music`, and `APlayer.min.js` (`<script>` tag) to the `</body>` of those pages. Also, `jquery.js` (`<script>` tag) will be injected to `</body>` of every page generated.
+Above setup will inject `APlayer.min.css` (`<link>` tag) to the `</head>` of any page which layout is `music`, and `APlayer.min.js` (`<script>` tag) to the `</body>` of those pages. Also, `jquery.js` (`<script>` tag) will be injected to `</body>` of every page generated. Also, `jquery.js` (`<script>` tag) will be injected to `</body>` of every page generated.
 
 ## Accessing user configuration
 

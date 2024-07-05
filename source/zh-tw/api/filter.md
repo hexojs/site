@@ -2,7 +2,7 @@
 title: 過濾器（Filter）
 ---
 
-過濾器用於修改特定資料，Hexo 將資料依序傳給過濾器，而過濾器可以針對資料進行修改，這個概念是從 [WordPress](http://codex.wordpress.org/Plugin_API#Filters) 借來的。
+A filter is used to modify some specified data. Hexo passes data to filters in sequence and the filters then modify the data one after the other. This concept was borrowed from [WordPress](http://codex.wordpress.org/Plugin_API#Filters).
 
 ## 概要
 
@@ -17,9 +17,15 @@ hexo.extend.filter.register(type, function() {
   if (themeCfg.fancybox) // do something...
 
 }, priority);
+
+  // Theme configuration
+  const { config: themeCfg } = this.theme;
+  if (themeCfg.fancybox) // do something...
+
+}, priority);
 ```
 
-您可指定過濾器的優先度 `priority`，`priority` 值越低的過濾器會越先執行，預設的 `priority` 是 10。
+You can define the `priority`. Lower `priority` means that it will be executed first. 您可指定過濾器的優先度 `priority`，`priority` 值越低的過濾器會越先執行，預設的 `priority` 是 10。 We recommend using user-configurable priority value that user can specify in the config, e.g. `hexo.config.your_plugin.priority`.
 
 ## 執行過濾器
 
@@ -28,12 +34,12 @@ hexo.extend.filter.exec(type, data, options);
 hexo.extend.filter.execSync(type, data, options);
 ```
 
-| 選項      | 描述               |
-| --------- | ------------------ |
-| `context` | Context            |
-| `args`    | 參數。必須為陣列。 |
+| 選項        | 描述                                |
+| --------- | --------------------------------- |
+| `context` | Context                           |
+| `args`    | Arguments. This must be an array. |
 
-`data` 會作為第一個參數傳入每個過濾器，而您可在過濾器中透過回傳值改變下一個過濾器中的 `data`，如果什麼都沒回傳的話則會保持原本的 `data`。您還可使用 `args` 指定過濾器的其他參數。舉例來說：
+The first argument passed into each filter is `data`. The `data` passed into the next filter can be modified by returning a new value. If nothing is returned, the data remains unmodified. 您還可使用 `args` 指定過濾器的其他參數。 舉例來說：
 
 ```js
 hexo.extend.filter.register("test", function (data, arg1, arg2) {
@@ -94,9 +100,9 @@ hexo.extend.filter.unregister("example", require("path/to/filter"));
 
 ### before_post_render
 
-在文章開始渲染前執行。您可參考 [文章渲染](posts.html#渲染) 以瞭解執行順序。
+在文章開始渲染前執行。 您可參考 [文章渲染](posts.html#渲染) 以瞭解執行順序。
 
-舉例來說，把標題轉為小寫：
+For example, to transform the title to lower case:
 
 ```js
 hexo.extend.filter.register("before_post_render", function (data) {
@@ -107,7 +113,7 @@ hexo.extend.filter.register("before_post_render", function (data) {
 
 ### after_post_render
 
-在文章渲染完成後執行。您可參考 [文章渲染](posts.html#渲染) 以瞭解執行順序。
+在文章渲染完成後執行。 您可參考 [文章渲染](posts.html#渲染) 以瞭解執行順序。
 
 舉例來說，把 `@username` 取代為 Twitter 的使用者連結。
 
@@ -139,15 +145,17 @@ hexo.extend.filter.register("before_exit", function () {
 hexo.extend.filter.register("before_generate", function () {
   // ...
 });
+});
 ```
 
 ### after_generate
 
-在產生器執行結束後執行。
+Executed after generation finishes.
 
 ```js
 hexo.extend.filter.register("after_generate", function () {
   // ...
+});
 });
 ```
 
@@ -172,35 +180,48 @@ hexo.extend.filter.register("template_locals", function (locals) {
 hexo.extend.filter.register("after_init", function () {
   // ...
 });
+});
 ```
 
 ### new_post_path
 
-用來決定新建文章的路徑，在建立文章時執行。
+Executed when creating a post to determine the path of new posts.
 
 ```js
 hexo.extend.filter.register("new_post_path", function (data, replace) {
   // ...
 });
+});
 ```
 
 ### post_permalink
 
-用來決定文章的永久連結。
+Used to determine the permalink of posts.
 
 ```js
 hexo.extend.filter.register("post_permalink", function (data) {
   // ...
 });
+});
 ```
 
 ### after_render
 
-在渲染後執行，您可參考 [渲染](rendering.html#after_render_過濾器) 以瞭解更多資訊。
+Executed after rendering finishes. 在渲染後執行，您可參考 [渲染](rendering.html#after_render_過濾器) 以瞭解更多資訊。
+
+### after_clean
+
+Executed after generated files and cache are removed with `hexo clean` command.
+
+```js
+hexo.extend.filter.register("before_exit", function () {
+  // ...
+});
+```
 
 ### server_middleware
 
-新增伺服器的 Middleware。`app` 是一個 [Connect] 實例。
+新增伺服器的 Middleware。 `app` 是一個 [Connect][] 實例。
 
 舉例來說，在回應標頭中新增 `X-Powered-By: Hexo`。
 

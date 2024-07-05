@@ -1,8 +1,8 @@
 ---
-title: 渲染引擎（Renderer）
+title: Renderer
 ---
 
-渲染引擎用於渲染內容。
+A renderer is used to render content.
 
 ## 概要
 
@@ -15,20 +15,24 @@ hexo.extend.renderer.register(
   },
   sync,
 );
+  },
+  sync,
+);
 ```
 
-| 參數     | 描述                                 |
-| -------- | ------------------------------------ |
+| Argument | 描述                   |
+| -------- | -------------------- |
 | `name`   | 輸入的副檔名（小寫，不含開頭的 `.`） |
 | `output` | 輸出的副檔名（小寫，不含開頭的 `.`） |
-| `sync`   | 同步模式                             |
+| `sync`   | 同步模式                 |
 
-渲染函數中會傳入兩個參數：
+Three arguments will be passed into the render function:
 
-| 參數     | 描述                                                                 |
-| -------- | -------------------------------------------------------------------- |
-| `data`   | 包含兩個屬性：檔案路徑 `path` 和檔案內容 `text`。`path` 不一定存在。 |
-| `option` | 選項                                                                 |
+| Argument   | 描述                                                  |
+| ---------- | --------------------------------------------------- |
+| `data`     | 包含兩個屬性：檔案路徑 `path` 和檔案內容 `text`。 `path` 不一定存在。      |
+| `option`   | 選項                                                  |
+| `callback` | Callback function of two parameters `err`, `value`. |
 
 ## 範例
 

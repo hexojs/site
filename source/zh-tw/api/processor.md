@@ -10,6 +10,7 @@ title: 處理器（Processor）
 hexo.extend.processor.register(rule, function (file) {
   // ...
 });
+});
 ```
 
 完整說明請參照 [箱子](box.html)。

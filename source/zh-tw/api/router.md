@@ -6,7 +6,7 @@ title: 路由
 
 ## 取得路徑
 
-`get` 方法會傳回一個 [Stream]，例如把該路徑的資料儲存到某個指定位置。
+`get` 方法會傳回一個 [Stream][]，例如把該路徑的資料儲存到某個指定位置。 For example, to save the path data to a specified destination:
 
 ```js
 var data = hexo.route.get("index.html");
@@ -17,7 +17,7 @@ data.pipe(dest);
 
 ## 設定路徑
 
-您可在 `set` 方法中使用字串、[Buffer] 或函數，如下：
+您可在 `set` 方法中使用字串、[Buffer][] 或函數，如下：
 
 ```js
 // String
@@ -39,7 +39,7 @@ hexo.route.set("index.html", function (callback) {
 });
 ```
 
-您還可設定該路徑是否更新，這樣在生成檔案時便能忽略未更動的檔案，加快生成時間。
+You can also set a boolean for whether a path has been modified or not. This can speed up file generation as it allows for ignoring the unmodified files.
 
 ```js
 hexo.route.set("index.html", {
@@ -56,7 +56,7 @@ hexo.route.set("index.html", {
 hexo.route.remove("index.html");
 ```
 
-## 取得路由表
+## Get the List of Routes
 
 ```js
 hexo.route.list();
