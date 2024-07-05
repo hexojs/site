@@ -6,7 +6,7 @@ title: Маршрутизатор
 
 ## Получение пути
 
-Метод `get` возвращает поток [Stream]. Пример для сохранения данных о ссылках в указанное место:
+Метод `get` возвращает поток [Stream][]. Пример для сохранения данных о ссылках в указанное место:
 
 ```js
 var data = hexo.route.get("index.html");
@@ -17,7 +17,7 @@ data.pipe(dest);
 
 ## Установка пути
 
-Метод `set` принимает строку, [Buffer] или функцию.
+Метод `set` принимает строку, [Buffer][] или функцию.
 
 ```js
 // Строка
@@ -50,7 +50,7 @@ hexo.route.set("index.html", {
 // hexo.route.isModified('index.html') => false
 ```
 
-## Удаление ссылки
+## Remove a Path
 
 ```js
 hexo.route.remove("index.html");

@@ -2,7 +2,7 @@
 title: Рендеринг
 ---
 
-Существует два метода обработки файлов или строк для рендеринга: асинхронный `hexo.render.render` и синхронный `hexo.render.renderSync`. Нет ничего удивительного в похожести этих методов. Ниже описываются только асинхронные методы.
+Существует два метода обработки файлов или строк для рендеринга: асинхронный `hexo.render.render` и синхронный `hexo.render.renderSync`. Unsurprisingly, the two methods are very similar so only the asynchronous `hexo.render.render` will be further discussed in the below paragraphs.
 
 ## Обработка строки
 
