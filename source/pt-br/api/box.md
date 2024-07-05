@@ -27,7 +27,7 @@ posts/:id => posts/89
 posts/*path => posts/2015/title
 ```
 
-Veja [util.Pattern] para mais informações.
+Veja [util. Pattern][] para mais informações.
 
 ## Processors
 
@@ -59,4 +59,4 @@ O Box também fornece alguns métodos para que você não precise fazer o IO (en
 | `render`     | Renderizar um arquivo.                        |
 | `renderSync` | Renderizar um arquivo de forma síncrona.      |
 
-[util.Pattern]: https://github.com/hexojs/hexo-util#patternrule
+[util. Pattern]: https://github.com/hexojs/hexo-util#patternrule

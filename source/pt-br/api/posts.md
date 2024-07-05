@@ -13,9 +13,9 @@ hexo.post.create(data, replace);
 | `data`    | Dados                         |
 | `replace` | Substitui arquivos existentes |
 
-Os atributos de uma postagem podem ser definidos em `data`. A tabela abaixo inclui as informações mais importantes. Atributos adicionais podem vir a ser adicionados no [front-matter](front-matter.html).
+Os atributos de uma postagem podem ser definidos em `data`. A tabela abaixo inclui as informações mais importantes. Atributos adicionais podem vir a ser adicionados no front-matter.
 
-| Variável | Descrição                                                                                             |
+| Data     | Descrição                                                                                             |
 | -------- | ----------------------------------------------------------------------------------------------------- |
 | `title`  | Título                                                                                                |
 | `slug`   | URL                                                                                                   |
@@ -34,7 +34,7 @@ hexo.post.publish(data, replace);
 | `data`    | Dados                         |
 | `replace` | Substitui arquivos existentes |
 
-Os atributos de uma postagem podem ser definidos em `data`. A tabela abaixo inclui as informações mais importantes. Atributos adicionais podem vir a ser adicionados no front-matter.
+Os atributos de uma postagem podem ser definidos em `data`. A tabela abaixo inclui as informações mais importantes. Atributos adicionais podem vir a ser adicionados no [front-matter](front-matter.html).
 
 | Dados    | Descrição                                             |
 | -------- | ----------------------------------------------------- |
@@ -56,7 +56,7 @@ O argumento `data` deve conter o atributo `content`. Caso não inclua, o Hexo te
 
 - Executa os filtros de `before_post_render`
 - Renderiza utilizando Markdown ou outros renderizadores (dependendo da extensão do arquivo)
-- Renderiza utilizando [Nunjucks]
+- Renderiza utilizando [Nunjucks][]
 - Executa os filtros de `after_post_render`
 
 [Nunjucks]: https://mozilla.github.io/nunjucks/

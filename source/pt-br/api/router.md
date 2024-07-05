@@ -6,7 +6,7 @@ O `router` salva todos os caminhos usados no site.
 
 ## Obter um Caminho
 
-O método `get` retorna uma [Stream]. Por exemplo, para salvar os dados do caminho para um destino especificado:
+O método `get` retorna uma [Stream][]. Por exemplo, para salvar os dados do caminho para um destino especificado:
 
 ```js
 var data = hexo.route.get("index.html");
@@ -17,7 +17,7 @@ data.pipe(dest);
 
 ## Definir um Caminho
 
-O método `set` recebe uma string, um [Buffer] ou uma função.
+O método `set` recebe uma string, um [Buffer][] ou uma função.
 
 ```js
 // String

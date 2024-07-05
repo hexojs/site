@@ -5,10 +5,6 @@ subtitle: Um rápido, simples e poderoso framework para blogs
 comments: false
 ---
 
-<div class="intro-warning">
-  <h3>This language documentaion is not maintained. Please see English version document.</h3>
-</div>
-
 <ul id="intro-feature-list">
   <li class="intro-feature-wrap">
     <div class="intro-feature">
@@ -39,7 +35,7 @@ comments: false
         <i class="fa fa-cog"></i>
       </div>
       <h3 class="intro-feature-title">Vários Plugins</h3>
-      <p class="intro-feature-desc">O Hexo tem um poderoso sistema de plugins. Você pode instalar mais plugins como: Jade/Pug, CoffeeScript e etc....</p>
+      <p class="intro-feature-desc">Features powerful APIs for limitless extensibility. Various plugins are available to support most template engines (EJS, Pug, Nunjucks, and many others). Easily integrate with existing NPM packages (Babel, PostCSS, Less/Sass, etc).</p>
     </div>
   </li>
 </ul>

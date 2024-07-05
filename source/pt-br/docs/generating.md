@@ -1,5 +1,5 @@
 ---
-title: Gerando
+title: Generating
 ---
 
 Gerar arquivos estáticos com o Hexo é bastante fácil e rápido.

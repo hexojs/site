@@ -14,7 +14,7 @@ Demora apenas alguns minutos para configurar o Hexo. Se você encontrar um probl
 
 {% youtube ARted4RniaU %}
 
-### Requerimentos
+### Requirements
 
 Instalar o Hexo é bastante fácil. No entanto, você precisa ter algumas outras coisas instaladas primeiro:
 
@@ -23,15 +23,7 @@ Instalar o Hexo é bastante fácil. No entanto, você precisa ter algumas outras
 
 Se o seu computador já possui estes, parabéns! Basta instalar o Hexo com o npm:
 
-```bash
-$ npm install -g hexo-cli
-```
-
 Caso contrário, siga as instruções a seguir para instalar todos os requisitos.
-
-{% note warn Para usuários Mac %}
-Você pode encontrar alguns problemas ao compilar. Instale o Xcode da App Store primeiro. Depois que o Xcode estiver instalado, abra o Xcode e vá para **Preferences -> Download -> Command Line Tools -> Install** para instalar as ferramentas de linhas de comandos.
-{% endnote %}
 
 ### Instalando o Git
 
@@ -39,6 +31,10 @@ Você pode encontrar alguns problemas ao compilar. Instale o Xcode da App Store 
 - Mac: Intalação com o [Homebrew](http://mxcl.github.com/homebrew/), [MacPorts](http://www.macports.org/) ou [installer](http://sourceforge.net/projects/git-osx-installer/).
 - Linux (Ubuntu, Debian): `sudo apt-get install git-core`
 - Linux (Fedora, Red Hat, CentOS): `sudo yum install git-core`
+
+{% note warn Para usuários Mac %}
+Você pode encontrar alguns problemas ao compilar. Instale o Xcode da App Store primeiro. Depois que o Xcode estiver instalado, abra o Xcode e vá para **Preferences -> Download -> Command Line Tools -> Install** para instalar as ferramentas de linhas de comandos.
+{% endnote %}
 
 ### Instalando o Node.js
 
@@ -72,6 +68,25 @@ Uma vez que todos os requisitos estão instalados, você pode instalar o Hexo co
 ```bash
 $ npm install -g hexo-cli
 ```
+
+### Advanced installation and usage
+
+Advanced users may prefer to install and use `hexo` package instead.
+
+```bash
+$ npm install hexo
+```
+
+Once installed, you can run Hexo in two ways:
+
+1. `npx hexo <command>`
+2. Linux users can set relative path of `node_modules/` folder:
+
+```bash
+echo 'PATH="$PATH:./node_modules/.bin"' >> ~/.profile
+```
+
+then run Hexo using `hexo <command>`
 
 ### Required Node.js version
 

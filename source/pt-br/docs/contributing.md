@@ -22,7 +22,7 @@ Also, Hexo has its own [ESLint config](https://github.com/hexojs/eslint-config-h
 
 ### Fluxo de Trabalho
 
-1. Faça um fork [hexojs/hexo].
+1. Faça um fork [hexojs/hexo][].
 2. Clone o repositório no seu computador e instale as dependências.
 
 ```bash
@@ -38,8 +38,8 @@ $ git submodule update --init
 $ git checkout -b new_feature
 ```
 
-4. Comece a implementação.
-5. Faça o push da branch para seu repositório remoto:
+4. Start hacking.
+5. Push the branch:
 
 ```
 $ git push origin new_feature
@@ -47,7 +47,7 @@ $ git push origin new_feature
 
 6. Crie um pull request e descreva as mudanças.
 
-### Aviso Prévio
+### Notice
 
 - Não modifique o número da versão no arquivo `package.json`.
 - Seu pedido de pull request só será aceito quando os testes tiverem passado. Não se esqueça de executar testes antes da submissão.
@@ -62,11 +62,11 @@ Also, we welcome PR or issue to [official-plugins](https://github.com/hexojs). �
 
 ## Atualizando a Documentação
 
-A documentação do Hexo é de código aberto e você pode encontrar o código-fonte em [hexojs/site].
+A documentação do Hexo é de código aberto e você pode encontrar o código-fonte em [hexojs/site][].
 
 ### Fluxo de trabalho
 
-1. Faça um fork [hexojs/site]
+1. Faça um fork [hexojs/site][]
 2. Clone o repositório no seu computador e instale as dependências.
 
 ```bash
@@ -82,7 +82,7 @@ $ npm install
 $ hexo server
 ```
 
-4. Faça o push da branch para seu repositório remoto:
+4. Push the branch.
 5. Crie um pull request e descreva as mudanças.
 
 ### Traduzindo

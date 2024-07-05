@@ -1,5 +1,5 @@
 ---
-title: Variáveis Locais
+title: Local Variables
 ---
 
 As variáveis locais são usadas para renderização de template, que é a variável `site` em templates.

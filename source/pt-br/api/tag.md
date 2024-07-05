@@ -18,7 +18,7 @@ hexo.extend.tag.register(
 
 Dois argumentos serão passados para dentro da função: `args` e `content`. `args` contém os argumentos passados para o tag plugin e `content` é o conteúdo envolvido do tag plugin.
 
-Desde a introdução da renderização assíncrona, na versão 3 do Hexo, estamos usando o [Nunjucks] para renderização. O comportamento pode ser um pouco diferente do [Swig].
+Desde a introdução da renderização assíncrona, na versão 3 do Hexo, estamos usando o [Nunjucks][] para renderização. O comportamento pode ser um pouco diferente do [Swig][].
 
 ## Unregister Tags
 

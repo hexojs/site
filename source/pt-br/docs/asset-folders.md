@@ -1,12 +1,12 @@
 ---
-title: Diretórios de Recursos (Asset)
+title: Asset Folders
 ---
 
 ## Diretório Global de Recursos
 
 Os recursos, ou assets, são arquivos (imagens, CSS, JavaScript e etc) usados para compor as páginas do site. No Hexo, os recursos ficam dentro do diretório `source`. Por exemplo, se você só vai ter algumas imagens no projeto Hexo, então a maneira mais fácil é mantê-las em um diretório como `source/images`. Então, você pode acessá-las usando algo como `![](images/image.jpg)`.
 
-## Diretório de Recursos por Postagem
+## Post Asset Folder
 
 {% youtube feIDVQ2tz0o %}
 

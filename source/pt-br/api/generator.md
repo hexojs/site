@@ -60,7 +60,7 @@ hexo.extend.generator.register("archive", function (locals) {
 
 ### Páginas de Arquivo com Paginação
 
-Você pode utilizar uma ótima ferramenta oficial chamada [hexo-pagination] para criar facilmente uma página de arquivos com paginação.
+Você pode utilizar uma ótima ferramenta oficial chamada [hexo-pagination][] para criar facilmente uma página de arquivos com paginação.
 
 ```js
 var pagination = require("hexo-pagination");
@@ -93,7 +93,7 @@ hexo.extend.generator.register("post", function (locals) {
 
 ### Copiar Arquivos
 
-Dessa vez não iremos retornar `data` explicitamente, mas atribuir uma função para que a rota construa `fs.ReadStream` apenas quando necessário.
+Dessa vez não iremos retornar `data` explicitamente, mas atribuir uma função para que a rota construa `fs. ReadStream` apenas quando necessário.
 
 ```js
 var fs = require("hexo-fs");

@@ -25,7 +25,7 @@ Diretório de idiomas. Veja [internacionalização (i18n)](internationalization.
 
 ### layout
 
-Diretório de layouts. Este diretório contém os arquivos de template do tema, que definem a aparência do seu site. O Hexo fornece o mecanismo de template [Nunjucks] por padrão, mas você pode instalar plugins adicionais para suportar mecanismos alternativos, como [EJS], [Haml], [Jade] ou [Pug]. O Hexo escolhe o mecanismo de template com base na extensão do arquivo deste. Por exemplo:
+Diretório de layouts. Este diretório contém os arquivos de template do tema, que definem a aparência do seu site. O Hexo fornece o mecanismo de template [Nunjucks][] por padrão, mas você pode instalar plugins adicionais para suportar mecanismos alternativos, como [EJS][], [Haml][], [Jade][] ou [Pug][]. O Hexo escolhe o mecanismo de template com base na extensão do arquivo deste. Por exemplo:
 
 ```plain
 layout.ejs   - uses EJS
@@ -48,7 +48,7 @@ O Hexo processará e salvará todos os arquivos renderizáveis no diretório `pu
 
 Quando você terminar de criar seu tema, você pode publicá-lo na [lista de temas](/themes). Antes de fazer isso, você deve executar o [teste da unidade do tema](https://github.com/hexojs/hexo-theme-unit-test) para ter certeza de que tudo está funcionando corretamente. As etapas para publicar um tema são muito semelhantes às de [atualizar a documentação](contributing.html#Updating_Documentation).
 
-1. Faça um fork [hexojs/site]
+1. Faça um fork [hexojs/site][]
 2. Clone o repositório no seu computador e instale dependências.
 
    ```shell
@@ -57,12 +57,14 @@ Quando você terminar de criar seu tema, você pode publicá-lo na [lista de tem
    $ npm install
    ```
 
-3. Edite o arquivo `source/_data/themes.yml` e adicione seu tema. Por exemplo:
+3. Create a new yaml file in `source/_data/themes/`, use your theme name as the file name
+
+4. Edite o arquivo `source/_data/themes.yml` e adicione seu tema. Por exemplo:
 
    ```yaml
    - name: landscape
      description: A brand new default theme for Hexo.
-     link: https://github.com/hexojs/hexo-theme-landscape
+   link: https://github.com/hexojs/hexo-theme-landscape
      preview: http://hexo.io/hexo-theme-landscape
      tags:
        - official
@@ -72,9 +74,9 @@ Quando você terminar de criar seu tema, você pode publicá-lo na [lista de tem
        - one_column
    ```
 
-4. Adicione um print de tela (com o mesmo nome do tema) no diretório `source/themes/screenshots`. Deve ser um arquivo PNG com resolução de 800x500 pixels.
-5. Faça um push para o seu repositório remoto.
-6. Crie um pull request e descreva as mudanças.
+5. Adicione um print de tela (com o mesmo nome do tema) no diretório `source/themes/screenshots`. Deve ser um arquivo PNG com resolução de 800x500 pixels.
+6. Push the branch.
+7. Crie um pull request e descreva as mudanças.
 
 [EJS]: https://github.com/hexojs/hexo-renderer-ejs
 [Haml]: https://github.com/hexojs/hexo-renderer-haml
