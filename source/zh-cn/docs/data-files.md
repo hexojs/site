@@ -2,7 +2,9 @@
 title: 数据文件
 ---
 
-有时您可能需要在主题中使用某些数据，而这些数据并不在文章内，并且是需要重复使用的，那么您可以考虑使用 Hexo 3.0 新增的「数据文件」功能。此功能会加载 `source/_data` 内的 YAML 或 JSON 文件，如此一来您便能在网站中复用这些文件了。
+Sometimes you may need to use some data in templates which is not directly available in your posts, or you want to reuse the data elsewhere. For such use cases, Hexo 3 introduced the new **Data files**. 此功能会加载 `source/_data` 内的 YAML 或 JSON 文件，如此一来您便能在网站中复用这些文件了。
+
+{% youtube CN31plHbI-w %}
 
 举例来说，在 `source/_data` 文件夹中新建 `menu.yml` 文件：
 
@@ -20,7 +22,7 @@ Archives: /archives/
 <% } %>
 ```
 
-渲染结果如下 :
+render like this :
 
 ```
 <a href="/"> Home </a>

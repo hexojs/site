@@ -2,7 +2,7 @@
 title: 国际化（i18n）
 ---
 
-若要让您的网站以不同语言呈现，您可使用国际化（internationalization）功能。请先在 `_config.yml` 中调整 `language` 设定，这代表的是预设语言，您也可设定多个语言来调整预设语言的顺位。
+若要让您的网站以不同语言呈现，您可使用国际化（internationalization）功能。 请先在 `_config.yml` 中调整 `language` 设定，这代表的是预设语言，您也可设定多个语言来调整预设语言的顺位。 You can also set multiple languages and modify the order of default languages.
 
 ```yaml
 language: zh-tw
@@ -14,11 +14,11 @@ language:
 
 ### 语言文件
 
-语言文件可以使用 YAML 或 JSON 编写，并放在主题文件夹中的 `languages` 文件夹。您可以在语言文件中使用 [printf 格式](https://github.com/alexei/sprintf.js)。
+Language files can be YAML or JSON files. 语言文件可以使用 YAML 或 JSON 编写，并放在主题文件夹中的 `languages` 文件夹。 您可以在语言文件中使用 [printf 格式](https://github.com/alexei/sprintf.js)。
 
 ### 模板
 
-在模板中，通过 `__` 或 `_p` 辅助函数，即可取得翻译后的字符串，前者用于一般使用；而后者用于复数字符串。例如：
+Use `__` or `_p` helpers in templates to get the translated strings. The former is for normal usage and the latter is for plural strings. For example:
 
 ```yaml en.yml
 index:
@@ -46,7 +46,7 @@ index:
 i18n_dir: :lang
 ```
 
-`i18n_dir` 的预设值是 `:lang`，也就是说 Hexo 会捕获网址中的第一段以检测语言，举例来说：
+在模板中，通过 `__` 或 `_p` 辅助函数，即可取得翻译后的字符串，前者用于一般使用；而后者用于复数字符串。 例如：
 
 ```plain
 /index.html => en
@@ -54,4 +54,4 @@ i18n_dir: :lang
 /zh-tw/index.html => zh-tw
 ```
 
-捕获到的字符串唯有在语言文件存在的情况下，才会被当作是语言，因此例二 `/archives/index.html` 中的 `archives` 就不被当成是语言。
+The string will only be served as a language when the language file exists. 捕获到的字符串唯有在语言文件存在的情况下，才会被当作是语言，因此例二 `/archives/index.html` 中的 `archives` 就不被当成是语言。

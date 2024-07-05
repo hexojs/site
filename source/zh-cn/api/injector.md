@@ -2,7 +2,7 @@
 title: 注入器（Injector）
 ---
 
-注入器被用于将静态代码片段注入生成的 HTML 的 `<head>` 和/或 `<body>` 中。Hexo 将在 `after_render:html` 过滤器 **之前** 完成注入。
+注入器被用于将静态代码片段注入生成的 HTML 的 `<head>` 和/或 `<body>` 中。 Hexo 将在 `after_render:html` 过滤器 **之前** 完成注入。
 
 ## 概要
 
@@ -12,7 +12,9 @@ hexo.extend.injector.register(entry, value, to);
 
 ### entry `<string>`
 
-代码片段注入的位置，接受以下值：
+Where the code will be injected inside the HTML.
+
+Support those values:
 
 - `head_begin`: 注入在 `<head>` 之后（默认）
 - `head_end`: 注入在 `</head>` 之前
@@ -27,7 +29,7 @@ hexo.extend.injector.register(entry, value, to);
 
 ### to `<string>`
 
-需要注入代码片段的页面类型，接受以下值：
+Which page will code snippets being injected.
 
 - `default`: 注入到每个页面（默认值）
 - `home`: 只注入到主页（`is_home()` 为 `true` 的页面）
@@ -69,7 +71,7 @@ hexo.extend.injector.register("body_end", () => {
 });
 ```
 
-上述代码将会把 `APlayer.min.css`（`<link>` 标签）和 `APlayer.min.js` （`<script>` 标签）注入到所有 layout 为 `music` 的页面的 `</head>` 和 `</body>` 之前，以及将 `jquery.js`（`<script>` 标签）注入到每一个生成的页面的 `</body>` 之前。
+上述代码将会把 `APlayer.min.css`（`<link>` 标签）和 `APlayer.min.js` （`<script>` 标签）注入到所有 layout 为 `music` 的页面的 `</head>` 和 `</body>` 之前，以及将 `jquery.js`（`<script>` 标签）注入到每一个生成的页面的 `</body>` 之前。 Also, `jquery.js` (`<script>` tag) will be injected to `</body>` of every page generated.
 
 ## 访问用户配置
 

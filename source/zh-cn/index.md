@@ -12,7 +12,7 @@ comments: false
         <i class="fa fa-bolt"></i>
       </div>
       <h3 class="intro-feature-title">超快速度</h3>
-      <p class="intro-feature-desc">Node.js 所带来的超快生成速度，让上百个页面在几秒内瞬间完成渲染。</p>
+      <p class="intro-feature-desc">Node.js 所带来的超快生成速度，让上百个页面在几秒内瞬间完成渲染。 Hundreds of files take only seconds to build.</p>
     </div>
   </li>
   <li class="intro-feature-wrap">
@@ -34,8 +34,8 @@ comments: false
       <div class="intro-feature-icon">
         <i class="fa fa-cog"></i>
       </div>
-      <h3 class="intro-feature-title">插件和可扩展性</h3>
-      <p class="intro-feature-desc">强大的 API 带来无限的可能，与数种模板引擎（EJS，Pug，Nunjucks）和工具（Babel，PostCSS，Less/Sass）轻易集成</p>
+      <h3 class="intro-feature-title">Plugins</h3>
+      <p class="intro-feature-desc">Features powerful APIs for limitless extensibility. 强大的 API 带来无限的可能，与数种模板引擎（EJS，Pug，Nunjucks）和工具（Babel，PostCSS，Less/Sass）轻易集成 Easily integrate with existing NPM packages (Babel, PostCSS, Less/Sass, etc).</p>
     </div>
   </li>
 </ul>
