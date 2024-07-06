@@ -125,7 +125,7 @@ More info: [Gravatar](https://en.gravatar.com/site/implement/images/)
 
 ### css
 
-Loads CSS files. `path` can be an array or a string. `path` can be a string, an array, an object or an array of objects. [`/<root>/`](/docs/configuration#URL) value is prepended while `.css` extension is appended to the `path` automatically. Use object type for custom attributes.
+Loads CSS files. `path` can be a string, an array, an object or an array of objects. [`/<root>/`](/docs/configuration#URL) value is prepended while `.css` extension is appended to the `path` automatically. Use object type for custom attributes.
 
 ```js
 <%- css(path, ...) %>
