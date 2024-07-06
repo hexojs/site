@@ -681,7 +681,7 @@ Inserts a list of all tags.
 
 | Option       | Description                                                                                                             | Default |
 | ------------ | ----------------------------------------------------------------------------------------------------------------------- | ------- |
-| `orderby`    | Order of categories                                                                                                     | name    |
+| `orderby`    | Order of tags                                                                                                           | name    |
 | `order`      | Sort of order. `1`, `asc` for ascending; `-1`, `desc` for descending                                                    | 1       |
 | `show_count` | Display the number of posts for each tag                                                                                | true    |
 | `style`      | Style to display the tag list. `list` displays tags in an unordered list. Use `false` or any other value to disable it. | list    |
