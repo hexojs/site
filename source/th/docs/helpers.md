@@ -124,7 +124,7 @@ More info: [Gravatar](https://en.gravatar.com/site/implement/images/)
 
 ### css
 
-Loads CSS files. `path` can be an array or a string. `path` can be a string, an array, an object or an array of objects. [`/<root>/`](/docs/configuration#URL) value is prepended while `.css` extension is appended to the `path` automatically. Use object type for custom attributes.
+Loads CSS files. `path` can be a string, an array, an object or an array of objects. [`/<root>/`](/docs/configuration#URL) value is prepended while `.css` extension is appended to the `path` automatically. Use object type for custom attributes.
 
 ```js
 <%- css(path, ...) %>
@@ -678,7 +678,7 @@ Inserts time tag. `date` นั้นจะเป็น unix time, ISO string, d
 
 | Option       | Description                                                                                                             | Default |
 | ------------ | ----------------------------------------------------------------------------------------------------------------------- | ------- |
-| `orderby`    | Order of categories                                                                                                     | name    |
+| `orderby`    | Order of tags                                                                                                           | name    |
 | `order`      | Sort of order. `1`, `asc` for ascending; `-1`, `desc` for descending                                                    | 1       |
 | `show_count` | Display the number of posts for each tag                                                                                | true    |
 | `style`      | Style to display the tag list. `list` displays tags in an unordered list. Use `false` or any other value to disable it. | list    |
@@ -954,6 +954,7 @@ parse แท็ก heading (h1~h6) ในโพสต์และเสียบ
 | `list_number`           | Displays list number                                                                                                                                                                                                                                                               | true              |
 | `max_depth`             | Maximum heading depth of generated toc                                                                                                                                                                                                                                             | 6                 |
 | `min_depth`             | Minimum heading depth of generated toc                                                                                                                                                                                                                                             | 1                 |
+| `max_items` (+7.3.0)    | Maximum number of items in generated toc                                                                                                                                                                                                                                           | `Infinity`        |
 
 **Examples:**
 

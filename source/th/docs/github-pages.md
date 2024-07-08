@@ -10,7 +10,7 @@ In this tutorial, we use [Travis CI](https://travis-ci.com/) to deploy Github Pa
 - To push `main` branch to GitHub:
 
   ```
-  $ git checkout master
+  $ git push -u origin main
   ```
 
 - The `public/` folder is not (and should not be) uploaded by default, make sure the `.gitignore` file contains `public/` line. The folder structure should be roughly similar to [this repo](https://github.com/hexojs/hexo-starter), without the `.gitmodules` file.

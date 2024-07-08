@@ -74,8 +74,7 @@ $ npm install -g hexo-cli
 Advanced users may prefer to install and use `hexo` package instead.
 
 ```bash
-การติดตั้ง hexo ต้องการเวลาหลายนาทีเท่านั้น ถ้าคุณพบเจอปัญหาท่ีแก้ไขไม่ได้
-กรุณาไปเสนอ issue ได้ท่ี <a href="https://github.com/hexojs/hexo/issues">submit a GitHub issue</a>
+$ npm install hexo
 ```
 
 ถ้าคุณติดตั้งสองสิ่งนี้อยู่แล้วในคอม ขอแสดงความยินดี คุณจะติดตั้ง hexo ด้วย npm ได้อย่างนี้:

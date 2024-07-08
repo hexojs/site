@@ -49,9 +49,9 @@ Edit `source/_data/plugins.yml` and add your plugin. For example:
 2. Clone the repository to your computer and install dependencies.
 
    ```shell
-   /site.git
-$ cd site
-$ npm install
+   $ git clone https://github.com/<username>/site.git
+   $ cd site
+   $ npm install
    ```
 
 3. Create a new yaml file in `source/_data/plugins/`, use your plugin name as the file name
@@ -59,10 +59,12 @@ $ npm install
 4. Edit `source/_data/plugins/<your-plugin-name>.yml` and add your plugin. For example:
 
    ```yaml
-   name: hexo-server
-description: Server module for Hexo.
-   link: <a href="https://github.com/hexojs/hexo-server" x-nc="1">https://github.com/hexojs/hexo-server</a>
-tags: - official - server - console
+   description: Server module for Hexo.
+   link: https://github.com/hexojs/hexo-server
+   tags:
+     - official
+     - server
+     - console
    ```
 
 5. Push the branch.
