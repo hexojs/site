@@ -42,7 +42,7 @@ $ npm install hexo-deployer-git --save
 ```yaml
 deploy:
   type: git
-  repo: <repository url> #https://bitbucket.org/JohnSmith/johnsmith.bitbucket.io
+  repo: <repository url> # https://bitbucket.org/JohnSmith/johnsmith.bitbucket.io
   branch: [branch]
   message: [message]
 ```
@@ -280,7 +280,7 @@ After a few moments, your website will be deployed.
 2. Modifique a configuração.
 
 ```yaml
-deploy:
+deploy: # The root configuration block for all deployers
   - type: rss3
     endpoint: https://hub.rss3.io
     privateKey: 47e18d6c386898b424025cd9db446f779ef24ad33a26c499c87bb3d9372540ba

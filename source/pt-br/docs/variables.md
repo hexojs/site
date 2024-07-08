@@ -26,8 +26,8 @@ Lodash has been removed from global variables since Hexo 5.0.0. [You-Dont-Need-L
 | ----------------- | ------------------- | ------------------------- |
 | `site.posts`      | Todos as postagens  | `array` de objetos `post` |
 | `site.pages`      | Todas as páginas    | `array` de objetos `page` |
-| `site.categories` | Todas as categorias | `array` de ???            |
-| `site.tags`       | Todas as tags       | `array` de ???            |
+| `site.categories` | Todas as categorias | `array` of ???            |
+| `site.tags`       | Todas as tags       | `array` of ???            |
 
 ### Variáveis da Página
 
@@ -50,7 +50,7 @@ Lodash has been removed from global variables since Hexo 5.0.0. [You-Dont-Need-L
 | `page.prev`        | A postagem anterior, `null` se for a primeira postagem                          | ???                  |
 | `page.next`        | A próxima postagem, `null` se for a última postagem                             | ???                  |
 | `page.raw`         | Os dados brutos do artigo                                                       | ???                  |
-| `page.photos`      | As fotos do artigo (Usado em postagens de galeria)                              | array de ???         |
+| `page.photos`      | As fotos do artigo (Usado em postagens de galeria)                              | array of ???         |
 | `page.link`        | O link externo do artigo (Usado em postagens de link)                           | `string`             |
 
 **Post (`post`):** O mesmo que o layout `page` mas adicione as seguintes variáveis.
@@ -58,8 +58,8 @@ Lodash has been removed from global variables since Hexo 5.0.0. [You-Dont-Need-L
 | Variável          | Descrição                       | Tipo           |
 | ----------------- | ------------------------------- | -------------- |
 | `page.published`  | True if the post is not a draft | `boolean`      |
-| `page.categories` | Todas as categorias da postagem | `array` de ??? |
-| `page.tags`       | Todas as tags da postagem       | `array` de ??? |
+| `page.categories` | Todas as categorias da postagem | `array` of ??? |
+| `page.tags`       | Todas as tags da postagem       | `array` of ??? |
 
 **Home (`index`)**
 

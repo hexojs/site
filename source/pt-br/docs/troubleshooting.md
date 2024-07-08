@@ -182,12 +182,14 @@ Quando você não consegue executar nenhum comando do Hexo, com exceção de `he
 O Hexo usa [Nunjucks][] para renderizar posts ([Swig][] foi usado na versão mais antiga, que compartilha uma sintaxe semelhante). O conteúdo delimitado com `{{ }}` ou `{% %}` será "parseado" e pode causar problemas. Você pode empacotar um conteúdo sensível com a tag plugin [`raw`](/docs/tag-plugins#Raw), single backtick `` `{{ }}` `` or triple backtick. Alternatively, Nunjucks tags can be disabled through the renderer's option (if supported), [API](/api/renderer#Disable-Nunjucks-tags) or [front-matter](/docs/front-matter).
 
 ```
-{% raw %} Hello {{ world }}
+{% raw %}
+Hello {{ world }}
 {% endraw %}
 ```
 
 ````
-``` Hello {{ world }}
+```
+Hello {{ world }}
 ```
 ````
 
