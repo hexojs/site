@@ -43,5 +43,4 @@ hexo.locals.toObject();
 
 ```js
 hexo.locals.invalidate();
-``;
 ```

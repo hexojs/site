@@ -52,9 +52,9 @@ Hexo будет сохранять все обработанные файлы в
 2. Клонируйте репозиторий на компьютер и установите все зависимости.
 
    ```shell
-   git clone ttps://github.com/<username>/site.git
-   cd site
-   npm install
+   $ git clone https://github.com/<username>/site.git
+   $ cd site
+   $ npm install
    ```
 
 3. Create a new yaml file in `source/_data/themes/`, use your theme name as the file name
@@ -62,16 +62,15 @@ Hexo будет сохранять все обработанные файлы в
 4. Отредактируйте `source/_data/themes.yml` и добавьте свою тему. Например:
 
    ```yaml
-   - name: landscape
-     description: Новая тема по умолчанию для Hexo.
+   description: A brand new default theme for Hexo.
    link: https://github.com/hexojs/hexo-theme-landscape
-     preview: http://hexo.io/hexo-theme-landscape
-     tags:
-       - official
-       - responsive
-       - widget
-       - two_column
-       - one_column
+   preview: http://hexo.io/hexo-theme-landscape
+   tags:
+     - official
+     - responsive
+     - widget
+     - two_column
+     - one_column
    ```
 
 5. Добавьте скриншот темы (с таким же, как и тема, названием) в папку `source/themes/screenshots`. Он должен быть размером 800\*500px в формате PNG.

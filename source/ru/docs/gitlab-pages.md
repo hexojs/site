@@ -9,7 +9,7 @@ title: GitLab Pages
 5. Добавьте файл `.gitlab-ci.yml` в ваш репозиторий (рядом с \_config.yml & package.json) со следующий контентом:
 
 ```yml
-image: node:10-alpine # use nodejs v10 LTS
+image: node:16-alpine
 cache:
   paths:
     - node_modules/
@@ -20,12 +20,12 @@ before_script:
 
 pages:
   script:
-    - hexo generate
+    - npm run build
   artifacts:
     paths:
       - public
-  only:
-    - master
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
 ```
 
 6. _username_.gitlab.io должен заработать, как только GitLab CI закончит деплой.

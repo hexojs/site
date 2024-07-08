@@ -217,10 +217,10 @@ ignore:
 Пользовательский файл конфигурации может быть указан при добавлении флага `--config` в команду `hexo` с указанием пути к альтрнативному файу конфигурации YAML или JSON, или даже списку с разделителями-запятыми (без пробелов) нескольких файлов YAML или JSON.
 
 ```bash
-# usando 'custom.yml' no lugar de '_config.yml'
+# use 'custom.yml' in place of '_config.yml'
 $ hexo server --config custom.yml
 
-# usando 'custom.yml' e 'custom2.json', priorizando 'custom2.json'
+# use 'custom.yml' & 'custom2.json', prioritizing 'custom2.json'
 $ hexo server --config custom.yml,custom2.json
 ```
 
