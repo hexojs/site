@@ -6,7 +6,7 @@ title: Tag Plugins
 
 Although you can write your posts in any formats, but the tag plugins will always be available and syntax remains the same.
 
-YouTube
+{% youtube I07XMi7MHd4 %}
 
 _Tag plugins should not be wrapped inside Markdown syntax, e.g. `[]({% post_path lorem-ipsum %})` is not supported._
 
@@ -219,7 +219,7 @@ iframe을 포함시킬 수 있습니다.
 `source/downloads/code` 폴더에 있는 코드를 포함시킬 수 있습니다. The folder location can be specified through the `code_dir` option in the config.
 
 ```
-{% include_code [title] [lang:language] path/to/file %}
+{% include_code [title] [lang:language] [from:line] [to:line] path/to/file %}
 ```
 
 ### Examples
@@ -285,7 +285,7 @@ YouTube video를 포함시킬 수 있습니다.
 YouTube's cookie is not used in this mode.
 
 ```
-{% youtube lJIrF4YjHfQ 'video' false %}
+{% youtube lJIrF4YjHfQ false %}
 {% youtube PL9hW1uS6HUfscJ9DHkOSoOX45MjXduUxo 'playlist' false %}
 ```
 
@@ -298,7 +298,7 @@ Please use [hexo-tag-embed](https://github.com/hexojs/hexo-tag-embed) instead if
 Inserts a responsive or specified size Vimeo video.
 
 ```
-{% vimeo video_id %}
+{% vimeo video_id [width] [height] %}
 ```
 
 ## Include Posts
@@ -391,7 +391,7 @@ _hexo-renderer-marked 3.1.0+ can (optionally) resolves the post's path of an ima
 
 **Title & Alt**
 
-`{% asset_img logo.svg "lorem ipsum'dolor'" %}`
+`{% asset_img foo.jpg "lorem ipsum'dolor'" %}`
 
 ```html
 <img src="/2020/01/02/hello/foo.jpg" title="lorem ipsum" alt="dolor" />

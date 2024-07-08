@@ -49,9 +49,9 @@ Hexo는 파워풀한 플러그인 시스템을 가지고 있습니다. 코어 �
 2. 저장소를 당신의 컴퓨터에 clone하고 종속성이 있는 것들을 모두 설치합니다.
 
    ```shell
-   /site.git
-$ cd site
-$ npm install
+   $ git clone https://github.com/<username>/site.git
+   $ cd site
+   $ npm install
    ```
 
 3. `source/_data/plugins.yml` 파일을 수정하여 당신의 플러그인을 추가합니다.
@@ -59,10 +59,12 @@ $ npm install
 4. Edit `source/_data/plugins/<your-plugin-name>.yml` and add your plugin. For example:
 
    ```yaml
-   name: hexo-server
-description: Server module for Hexo.
+   description: Server module for Hexo.
    link: https://github.com/hexojs/hexo-server
-tags: - official - server - console
+   tags:
+     - official
+     - server
+     - console
    ```
 
 5. Branch에 push합니다.
