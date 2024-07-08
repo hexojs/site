@@ -6,7 +6,7 @@ title: ルーター
 
 ## パスの取得
 
-`get`メソッドは[Stream]を返却します。たとえば、指定された宛先にパスデータを保存するには:
+`get`メソッドは[Stream][]を返却します。 たとえば、指定された宛先にパスデータを保存するには:
 
 ```js
 var data = hexo.route.get("index.html");
@@ -17,29 +17,29 @@ data.pipe(dest);
 
 ## パスの設定
 
-`set`メソッドは文字列、[Buffer]、または関数を引数に取ります。
+`set`メソッドは文字列、[Buffer][]、または関数を引数に取ります。
 
 ```js
-// 文字列
+// String
 hexo.route.set("index.html", "index");
 
 // Buffer
 hexo.route.set("index.html", new Buffer("index"));
 
-// 関数 (Promise)
+// Function (Promise)
 hexo.route.set("index.html", function () {
   return new Promise(function (resolve, reject) {
     resolve("index");
   });
 });
 
-// 関数 (コールバック)
+// Function (Callback)
 hexo.route.set("index.html", function (callback) {
   callback(null, "index");
 });
 ```
 
-パスが変更されたかどうかのブール値も設定できます。これにより、変更されていないファイルを無視することでファイル生成を高速化できます。
+パスが変更されたかどうかのブール値も設定できます。 これにより、変更されていないファイルを無視することでファイル生成を高速化できます。
 
 ```js
 hexo.route.set("index.html", {

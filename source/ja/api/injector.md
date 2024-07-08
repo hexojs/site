@@ -2,7 +2,7 @@
 title: インジェクター
 ---
 
-インジェクターは、生成されたHTMLファイルの`<head>`や`<body>`に静的なコードスニペットを追加します。Hexoは`after_render:html`フィルターが実行される**前に**インジェクターを実行します。
+インジェクターは、生成されたHTMLファイルの`<head>`や`<body>`に静的なコードスニペットを追加します。 Hexoは`after_render:html`フィルターが実行される**前に**インジェクターを実行します。
 
 ## 概要
 
@@ -38,11 +38,11 @@ HTML内でコードが挿入される場所です。
 - `archive`: アーカイブページのみに挿入します（`is_archive()`ヘルパーが`true`の場合）。
 - `category`: カテゴリページのみに挿入します（`is_category()`ヘルパーが`true`の場合）。
 - `tag`: タグページのみに挿入します（`is_tag()`ヘルパーが`true`の場合）。
-- カスタムレイアウト名も使用可能です。詳細は[執筆 - レイアウト](../docs/writing#レイアウト)を参照してください。
+- カスタムレイアウト名も使用可能です。 詳細は[執筆 - レイアウト](../docs/writing#レイアウト)を参照してください。
 
 ---
 
-他にも内部関数があります。詳細は、[hexojs/hexo#4049](https://github.com/hexojs/hexo/pull/4049) を参照してください。
+他にも内部関数があります。 詳細は、[hexojs/hexo#4049](https://github.com/hexojs/hexo/pull/4049) を参照してください。
 
 ## 例
 
@@ -71,7 +71,7 @@ hexo.extend.injector.register("body_end", () => {
 });
 ```
 
-上記の設定では、`music`レイアウトの任意のページの`</head>`に`APlayer.min.css`（`<link>`タグ）を、`</body>`に`APlayer.min.js`（`<script>`タグ）を、またすべてのページの`</body>`に`jquery.js`（`<script>`タグ）を挿入します。
+上記の設定では、`music`レイアウトの任意のページの`</head>`に`APlayer.min.css` (`<link>`タグ) を、`</body>`に`APlayer.min.js` (`<script>`タグ) を、 またすべてのページの`</body>`に`jquery.js` (`<script>` タグ) を挿入します。
 
 ## ユーザー設定へのアクセス
 

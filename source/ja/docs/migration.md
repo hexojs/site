@@ -10,7 +10,7 @@ title: 移行
 $ npm install hexo-migrator-rss --save
 ```
 
-プラグインがインストールされたら、以下のコマンドを実行してRSSからすべての記事を移行します。`source`はファイルパスまたはURLです。
+プラグインがインストールされたら、以下のコマンドを実行してRSSからすべての記事を移行します。 `source`はファイルパスまたはURLです。
 
 ```bash
 $ hexo migrate rss <source>

@@ -2,7 +2,7 @@
 title: コンソール
 ---
 
-コンソールはHexoとユーザーとの橋渡しをします。コンソールコマンドの登録方法を説明します。
+コンソールはHexoとユーザーとの橋渡しをします。 コンソールコマンドの登録方法を説明します。
 
 ## 概要
 
@@ -12,19 +12,19 @@ hexo.extend.console.register(name, desc, options, function (args) {
 });
 ```
 
-| 引数      | 説明       |
-| --------- | ---------- |
-| `name`    | 名前       |
-| `desc`    | 説明       |
+| 引数        | 説明    |
+| --------- | ----- |
+| `name`    | 名前    |
+| `desc`    | 説明    |
 | `options` | オプション |
 
-関数には引数`args`が渡されます。これはユーザーがターミナルに入力する引数です。[Minimist]によって解析されます。
+関数には引数`args`が渡されます。 これはユーザーがターミナルに入力する引数です。 [Minimist][]によって解析されます。
 
 ## オプション
 
 ### usage
 
-コンソールコマンドの使用方法。例えば:
+コンソールコマンドの使用方法。 例えば:
 
 ```js
 {
@@ -35,24 +35,24 @@ hexo.extend.console.register(name, desc, options, function (args) {
 
 ### arguments
 
-コンソールコマンドの各引数の説明。例えば:
+コンソールコマンドの各引数の説明。 例えば:
 
 ```js
 {
   arguments: [
-    { name: "layout", desc: "記事のレイアウト" },
-    { name: "title", desc: "記事のタイトル" },
+    { name: "layout", desc: "Post layout" },
+    { name: "title", desc: "Post title" },
   ];
 }
 ```
 
 ### options
 
-コンソールコマンドの各オプションの説明。例えば:
+コンソールコマンドの各オプションの説明。 例えば:
 
 ```js
 {
-  options: [{ name: "-r, --replace", desc: "既存のファイルを置き換える" }];
+  options: [{ name: "-r, --replace", desc: "Replace existing files" }];
 }
 ```
 
@@ -63,9 +63,13 @@ hexo.extend.console.register(name, desc, options, function (args) {
 ## 例
 
 ```js
-hexo.extend.console.register("config", "設定を表示する", function (args) {
-  console.log(hexo.config);
-});
+hexo.extend.console.register(
+  "config",
+  "Display configuration",
+  function (args) {
+    console.log(hexo.config);
+  },
+);
 ```
 
 [Minimist]: https://github.com/minimistjs/minimist
