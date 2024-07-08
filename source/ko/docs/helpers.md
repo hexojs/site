@@ -124,7 +124,7 @@ More info: [Gravatar](https://en.gravatar.com/site/implement/images/)
 
 ### css
 
-CSS 파일들을 불러옵니다. `path`에는 문자열(string) 또는 배열(array)을 사용할 수 있습니다. 만약 `path`가 `/` 또는 프로토콜명으로 시작하지 않는다면, 루트 URL이 접두어로 붙습니다. `path` 뒤에 `.css` 파일을 기입하지 않으면 자동으로 추가합니다. Use object type for custom attributes.
+CSS 파일들을 불러옵니다. 만약 `path`가 `/` 또는 프로토콜명으로 시작하지 않는다면, 루트 URL이 접두어로 붙습니다. `path` 뒤에 `.css` 파일을 기입하지 않으면 자동으로 추가합니다. Use object type for custom attributes.
 
 ```js
 <%- css(path, ...) %>
@@ -942,18 +942,19 @@ Inserts [generator tag](https://developer.mozilla.org/en-US/docs/Web/HTML/Elemen
 <%- toc(str, [options]) %>
 ```
 
-| Option                  | Description                            | Default           |
-| ----------------------- | -------------------------------------- | ----------------- |
-| `class`                 | Class명                                 | `toc`             |
-| `class_item` (+6.3.0)   | 옵션                                     | `${class}-item`   |
-| `class_link` (+6.3.0)   | 참조                                     | `${class}-link`   |
-| `class_text` (+6.3.0)   | 포스트 이름의 표시 방식을 변경하는 기능.                | `${class}-text`   |
-| `class_child` (+6.3.0)  | 기본 값                                   | `${class}-child`  |
-| `class_number` (+6.3.0) | 기본 값                                   | `${class}-number` |
-| `class_level` (+6.3.0)  | 기본 값                                   | `${class}-level`  |
-| `list_number`           | 목록 번호를 표시합니다.                          | true              |
-| `max_depth`             | Maximum heading depth of generated toc | 6                 |
-| `min_depth`             | Minimum heading depth of generated toc | 1                 |
+| Option                  | Description                              | Default           |
+| ----------------------- | ---------------------------------------- | ----------------- |
+| `class`                 | Class명                                   | `toc`             |
+| `class_item` (+6.3.0)   | 옵션                                       | `${class}-item`   |
+| `class_link` (+6.3.0)   | 참조                                       | `${class}-link`   |
+| `class_text` (+6.3.0)   | 포스트 이름의 표시 방식을 변경하는 기능.                  | `${class}-text`   |
+| `class_child` (+6.3.0)  | 기본 값                                     | `${class}-child`  |
+| `class_number` (+6.3.0) | 기본 값                                     | `${class}-number` |
+| `class_level` (+6.3.0)  | 기본 값                                     | `${class}-level`  |
+| `list_number`           | 목록 번호를 표시합니다.                            | true              |
+| `max_depth`             | Maximum heading depth of generated toc   | 6                 |
+| `min_depth`             | Minimum heading depth of generated toc   | 1                 |
+| `max_items` (+7.3.0)    | Maximum number of items in generated toc | `Infinity`        |
 
 **Examples:**
 

@@ -52,7 +52,7 @@ Archive page를 `archives/index.html`에 생성합니다. We pass all posts as d
 hexo.extend.generator.register("archive", function (locals) {
   return {
     path: "archives/index.html",
-    data: locals.posts,
+    data: locals,
     layout: ["archive", "index"],
   };
 });
@@ -66,7 +66,8 @@ Hexo 공식 툴인 [hexo-pagination][]을 사용하여 간편하게 pagination�
 var pagination = require("hexo-pagination");
 
 hexo.extend.generator.register("archive", function (locals) {
-  return pagination("archives/index.html", locals.posts, {
+  // hexo-pagination makes an index.html for the /archives route
+  return pagination("archives", locals.posts, {
     perPage: 10,
     layout: ["archive", "index"],
     data: {},

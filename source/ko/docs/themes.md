@@ -62,16 +62,15 @@ Hexo는 모든 렌더링 가능한 파일들을 처리한 후 `public` 폴더에
 4. Edit `source/_data/themes/<your-theme-name>.yml` and add your theme. For example:
 
    ```yaml
-   - name: landscape
-     description: A brand new default theme for Hexo.
+   description: A brand new default theme for Hexo.
    link: https://github.com/hexojs/hexo-theme-landscape
-     preview: http://hexo.io/hexo-theme-landscape
-     tags:
-       - official
-       - responsive
-       - widget
-       - two_column
-       - one_column
+   preview: http://hexo.io/hexo-theme-landscape
+   tags:
+     - official
+     - responsive
+     - widget
+     - two_column
+     - one_column
    ```
 
 5. `source/themes/screenshots`에 스크린샷을 추가하세요. 스크린샷의 이름은 테마와 동일해야 하며 반드시 사이즈가 800\*500 픽셀인 PNG 파일이어야 합니다.
