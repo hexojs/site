@@ -71,7 +71,7 @@ If you are not using a [tag plugin](/docs/tag-plugins) and want to use `{{ }}` o
 
 ```js
 // following example only applies to '.md' file extension
-// you may need to cover other extensions, e.g. '.markdown', '.mkd', etc
+// you may need to cover other extensions, e.g. '.markdown', '.mkd'
 const renderer = hexo.render.renderer.get("md");
 if (renderer) {
   renderer.disableNunjucks = true;

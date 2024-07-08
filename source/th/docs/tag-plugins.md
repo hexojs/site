@@ -56,8 +56,8 @@ NEW: DevDocs now comes with syntax highlighting. http://devdocs.io
 {% endblockquote %}
 ```
 
-{% blockquote @DevDocs <https://twitter.com/devdocs/status/356095192085962752> %}
-NEW: DevDocs now comes with syntax highlighting. <http://devdocs.io>
+{% blockquote @DevDocs https://twitter.com/devdocs/status/356095192085962752 %}
+NEW: DevDocs now comes with syntax highlighting. http://devdocs.io
 {% endblockquote %}
 
 **การอ้างอิงจากบทความในแว็บ**
@@ -68,7 +68,7 @@ Every interaction is both precious and an opportunity to delight.
 {% endblockquote %}
 ```
 
-{% blockquote Seth Godin <http://sethgodin.typepad.com/seths_blog/2009/07/welcome-to-island-marketing.html> Welcome to Island Marketing %}
+{% blockquote Seth Godin http://sethgodin.typepad.com/seths_blog/2009/07/welcome-to-island-marketing.html Welcome to Island Marketing %}
 Every interaction is both precious and an opportunity to delight.
 {% endblockquote %}
 
@@ -142,7 +142,7 @@ _.compact([0, 1, false, 2, '', 3]);
 {% endcodeblock %}
 ```
 
-{% codeblock _.compact <http://underscorejs.org/#compact> Underscore.js %}
+{% codeblock _.compact http://underscorejs.org/#compact Underscore.js %}
 \_.compact([0, 1, false, 2, '', 3]); => [1, 2, 3]
 {% endcodeblock %}
 
@@ -219,7 +219,7 @@ Please use [hexo-tag-embed](https://github.com/hexojs/hexo-tag-embed) instead if
 เสียบ code snippet เข้าไปใน folder `source/downloads/code`: The folder location can be specified through the `code_dir` option in the config.
 
 ```
-{% include_code [title] [lang:language] path/to/file %}
+{% include_code [title] [lang:language] [from:line] [to:line] path/to/file %}
 ```
 
 ### Examples
@@ -391,7 +391,7 @@ _hexo-renderer-marked 3.1.0+ can (optionally) resolves the post's path of an ima
 
 **Title & Alt**
 
-`{% asset_img logo.svg "lorem ipsum'dolor'" %}`
+`{% asset_img foo.jpg "lorem ipsum'dolor'" %}`
 
 ```html
 <img src="/2020/01/02/hello/foo.jpg" title="lorem ipsum" alt="dolor" />

@@ -62,16 +62,15 @@ When you have finished building your theme, you can publish it to the [theme lis
 4. Edit `source/_data/themes.yml` and add your theme. For example:
 
    ```yaml
-   - name: landscape
-     description: A brand new default theme for Hexo.
+   description: A brand new default theme for Hexo.
    link: https://github.com/hexojs/hexo-theme-landscape
-     preview: http://hexo.io/hexo-theme-landscape
-     tags:
-       - official
-       - responsive
-       - widget
-       - two_column
-       - one_column
+   preview: http://hexo.io/hexo-theme-landscape
+   tags:
+     - official
+     - responsive
+     - widget
+     - two_column
+     - one_column
    ```
 
 5. Add a screenshot (with the same name as the theme) to `source/themes/screenshots`. It must be a 800\*500px PNG.
