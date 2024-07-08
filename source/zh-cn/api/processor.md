@@ -7,7 +7,8 @@ title: 处理器（Processor）
 ## 概要
 
 ```js
-hexo.extend.processor.register(rule, function (file) {});
+hexo.extend.processor.register(rule, function (file) {
+  // ...
 });
 ```
 

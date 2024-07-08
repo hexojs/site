@@ -12,10 +12,9 @@ $ cd <folder>
 $ npm install
 ```
 
-Once initialized, here's what your project folder will look like:
+初始化后，您的项目文件夹将如下所示：
 
 ```plain
-.
 .
 ├── _config.yml
 ├── package.json
@@ -28,11 +27,11 @@ Once initialized, here's what your project folder will look like:
 
 ### \_config.yml
 
-网站的 [配置](configuration.html) 信息，您可以在此配置大部分的参数。 You can configure most settings here.
+网站的 [配置](configuration.html) 文件。 您可以在此配置大部分的参数。
 
 ### package.json
 
-应用程序的信息。 [EJS](https://ejs.co/), [Stylus](http://learnboost.github.io/stylus/) 和 [Markdown](http://daringfireball.net/projects/markdown/) 渲染引擎 已默认安装，您可以自由移除。 If you want, you can uninstall them later.
+应用程序的信息。 [EJS](https://ejs.co/), [Stylus](http://learnboost.github.io/stylus/) 和 [Markdown](http://daringfireball.net/projects/markdown/) 渲染引擎 已默认安装，您可以自由移除。 如果您想，可以稍后卸载它们。
 
 ```json package.json
 {
@@ -63,7 +62,7 @@ Once initialized, here's what your project folder will look like:
 
 ### source
 
-资源文件夹是存放用户资源的地方。 This is where you put your site's content. 除 `_posts` 文件夹之外，开头命名为 `_` (下划线)的文件 / 文件夹和隐藏的文件将会被忽略。 Markdown 和 HTML 文件会被解析并放到 `public` 文件夹，而其他文件会被拷贝过去。
+资源文件夹。 是存放用户资源的地方。 除 `_posts` 文件夹之外，开头命名为 `_` (下划线)的文件 / 文件夹和隐藏的文件将会被忽略。 Markdown 和 HTML 文件会被解析并放到 `public` 文件夹，而其他文件会被拷贝过去。
 
 ### themes
 

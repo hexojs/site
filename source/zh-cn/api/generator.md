@@ -7,11 +7,12 @@ title: 生成器（Generator）
 ## 概要
 
 ```js
-hexo.extend.generator.register(name, function (locals) {});
+hexo.extend.generator.register(name, function (locals) {
+  // ...
 });
 ```
 
-`locals` 参数会被传递到此函数，其中包含 [网站变量](../docs/variables.html#网站变量)，请尽量利用此参数取得网站数据，避免直接访问数据库。 You should use this argument to get the website data, thereby avoiding having to access the database directly.
+`locals` 参数会被传递到此函数，其中包含 [网站变量](../docs/variables.html#网站变量)。 请尽量利用此参数取得网站数据，避免直接访问数据库。
 
 ## 更新路由
 
@@ -37,13 +38,13 @@ hexo.extend.generator.register("test", function (locals) {
 | `data`   | 数据                                                                                                                                        |
 | `layout` | 布局。 Specify the layouts for rendering. The value can be a string or an array. If it's ignored then the route will return `data` directly. |
 
-在原始文件更新时，Hexo 会执行所有生成器并重建路由，**请直接回传数据，不要直接操作路由**。 **Please return the data and do not access the router directly.**
+在原始文件更新时，Hexo 会执行所有生成器并重建路由。 **请直接回传数据，不要直接访问路由。**
 
 ## 示例
 
 ### 归档页面
 
-Create an archive page at `archives/index.html`. We pass all posts as data to the templates. 在 `archives/index.html` 建立一归档页面，把所有文章当作数据传入模板内，这个数据也就等同于模板中的 `page` 变量。
+在 `archives/index.html` 建立一归档页面。 把所有文章当作数据传入模板内。 这个数据也就等同于模板中的 `page` 变量。
 
 Next, set the `layout` attribute to render with the theme templates. We're setting two layouts in this example: if the `archive` layout doesn't exist, the `index` layout will be used instead.
 
@@ -51,7 +52,7 @@ Next, set the `layout` attribute to render with the theme templates. We're setti
 hexo.extend.generator.register("archive", function (locals) {
   return {
     path: "archives/index.html",
-    data: locals.posts,
+    data: locals,
     layout: ["archive", "index"],
   };
 });
@@ -65,7 +66,8 @@ hexo.extend.generator.register("archive", function (locals) {
 var pagination = require("hexo-pagination");
 
 hexo.extend.generator.register("archive", function (locals) {
-  return pagination("archives/index.html", locals.posts, {
+  // hexo-pagination makes an index.html for the /archives route
+  return pagination("archives", locals.posts, {
     perPage: 10,
     layout: ["archive", "index"],
     data: {},

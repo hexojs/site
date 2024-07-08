@@ -6,7 +6,7 @@ title: 贡献
 
 ## 开发
 
-我们非常欢迎您加入 Hexo 的开发，这份文件将帮助您了解开发流程。 This document will help you through the process.
+我们非常欢迎您加入 Hexo 的开发。 这份文件将帮助您了解开发流程。
 
 ### 开始之前
 
@@ -22,7 +22,7 @@ title: 贡献
 
 ### 工作流
 
-1. Fork [hexojs/hexo][]
+1. Fork [hexojs/hexo][].
 2. 把库（repository）复制到电脑上，并安装所依赖的插件。
 
 ```bash
@@ -32,14 +32,14 @@ $ npm install
 $ git submodule update --init
 ```
 
-3. Create a feature branch.
+3. 创建一个功能分支。
 
 ```bash
 $ git checkout -b new_feature
 ```
 
 4. Start hacking.
-5. Push the branch:
+5. 推送分支：
 
 ```
 $ git push origin new_feature
@@ -50,13 +50,13 @@ $ git push origin new_feature
 ### 注意事项
 
 - 不要修改 `package.json` 的版本号。
-- 只有在测试通过的情况下您的合并申请才会被批准，在提交前别忘了进行测试。 Don't forget to run tests before submission.
+- 只有在测试通过的情况下您的合并申请才会被批准。 在提交前别忘了进行测试。
 
 ```bash
 $ npm test
 ```
 
-## Updating official-plugins
+## 更新官方插件
 
 我们也欢迎给 [Hexo 官方插件](https://github.com/hexojs) 提交 PR 和 Issue 🤗 🤗
 
@@ -76,7 +76,7 @@ $ cd site
 $ npm install
 ```
 
-3. Start editing the documentation. 开始编辑文件，您可以通过服务器预览变动。
+3. 开始编辑文件。 您可以通过服务器预览变动。
 
 ```bash
 $ hexo server
@@ -87,12 +87,12 @@ $ hexo server
 
 ### 翻译
 
-1. 在 `source` 文件夹中建立一个新的语言文件夹（全小写）。 (All lower case)
+1. 在 `source` 文件夹中建立一个新的语言文件夹。 （全小写）
 2. 把 `source` 文件夹中相关的文件（Markdown 和模板文件）复制到新的语言文件夹中。
 3. 在 `source/_data/language.yml` 中新增语言。
 4. 将 `en.yml` 复制到 `themes/navy/languages`中并命名为语言名称（全小写）。
 
-## Reporting Issues
+## 报告问题
 
 当您在使用 Hexo 时遇到问题，您可以尝试在 [问题解答](troubleshooting.html) 中寻找解答，或是在 [GitHub](https://github.com/hexojs/hexo/issues) 或 [Google Group](https://groups.google.com/group/hexo) 上提问。 如果你没有找答案，请在 Github 报告它。
 

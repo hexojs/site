@@ -8,10 +8,10 @@ title: 变量
 
 | 变量       | 描述                               | 类型                        |
 | -------- | -------------------------------- | ------------------------- |
-| `site`   | Sitewide information.            | `object`; 见 [网站变量](#网站变量) |
+| `site`   | 全站信息                             | `object`; 见 [网站变量](#网站变量) |
 | `page`   | 针对该页面的内容以及 front-matter 中自定义的变量。 | `object`; 见 [页面变量](#页面变量) |
 | `config` | 网站配置                             | `object` (站点的配置文件)        |
-| `theme`  | 主题配置。 继承自网站配置。                   | `object` (主题配置文件)         |
+| `theme`  | 主题配置。 继承自网站配置。                   | `object` (主题的配置文件)        |
 | `path`   | 当前页面的路径（不含根路径）                   | `string`                  |
 | `url`    | 当前页面的完整网址                        | `string`                  |
 | `env`    | 环境变量                             | ???                       |
@@ -26,8 +26,8 @@ title: 变量
 | ----------------- | ---- | --------------------------- |
 | `site.posts`      | 所有文章 | `array`，包含了站点全部的文章 `object` |
 | `site.pages`      | 所有分页 | `array`，包含了站点全部的分页 `object` |
-| `site.categories` | 所有分类 | `array`，包含了站点全部的分类 `object` |
-| `site.tags`       | 所有标签 | `object` 或 `null`           |
+| `site.categories` | 所有分类 | `array` of ???              |
+| `site.tags`       | 所有标签 | `array` of ???              |
 
 ### 页面变量
 
@@ -35,31 +35,31 @@ title: 变量
 
 | 变量                 | 描述                                            | 类型               |
 | ------------------ | --------------------------------------------- | ---------------- |
-| `page.title`       | Article title                                 | `string`         |
-| `page.date`        | Article created date                          | [Moment.js][] 对象 |
+| `page.title`       | 文章标题                                          | `string`         |
+| `page.date`        | 文章建立日期                                        | [Moment.js][] 对象 |
 | `page.updated`     | 页面更新日期                                        | [Moment.js][] 对象 |
-| `page.comments`    | Comment enabled or not                        | `boolean`        |
+| `page.comments`    | 评论是否启用                                        | `boolean`        |
 | `page.layout`      | 布局名称                                          | `string`         |
 | `page.content`     | 页面的完整内容                                       | `string`         |
-| `page.excerpt`     | Article excerpt                               | `string`         |
+| `page.excerpt`     | 文章摘要                                          | `string`         |
 | `page.more`        | 除了页面摘要的其余内容                                   | `string`         |
-| `page.source`      | The path of the source file                   | `string`         |
+| `page.source`      | 源文件的路径                                        | `string`         |
 | `page.full_source` | 页面的完整原始路径                                     | `string`         |
 | `page.path`        | 页面网址（不含根路径）。 我们通常在主题中使用 `url_for(page.path)`。 | `string`         |
-| `page.permalink`   | Full (encoded) URL of the article             | `string`         |
+| `page.permalink`   | 文章的完整（编码的）URL                                 | `string`         |
 | `page.prev`        | 上一个页面。 如果此为第一个页面则为 `null`。                    | ???              |
 | `page.next`        | 下一个页面。 如果此为最后一个页面则为 `null`。                   | ???              |
 | `page.raw`         | 文章的原始内容                                       | ???              |
-| `page.photos`      | 文章的照片（用于相簿）                                   | array            |
+| `page.photos`      | 文章的照片（用于相簿）                                   | array of ???     |
 | `page.link`        | 文章的外部链接（用于链接文章）                               | `string`         |
 
 **文章 (`post`):** 与 `page` 布局相同，但新增以下变量。
 
-| 变量                | 描述                              | 类型                          |
-| ----------------- | ------------------------------- | --------------------------- |
-| `page.published`  | True if the post is not a draft | `boolean`                   |
-| `page.categories` | 该文章的所有分类                        | `array`，包含了站点全部的标签 `object` |
-| `page.tags`       | 该文章的所有标签                        | `object` 或 `null`           |
+| 变量                | 描述               | 类型             |
+| ----------------- | ---------------- | -------------- |
+| `page.published`  | 如果帖子不是草稿，则为 true | `boolean`      |
+| `page.categories` | 该文章的所有分类         | `array` of ??? |
+| `page.tags`       | 该文章的所有标签         | `array` of ??? |
 
 **首页（`index`）**
 

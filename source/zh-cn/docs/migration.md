@@ -28,9 +28,9 @@ new_post_name: :year-:month-:day-:title.md
 
 ## Octopress
 
-Move all files in the Octopress `source/_posts` folder to `source/_posts`
+将 Octopress `source/_posts` 文件夹中的所有文件移到 `source/_posts` 文件夹中
 
-Modify the `new_post_name` setting in `_config.yml`:
+修改`_config.yml`中的`new_post_name`设置：
 
 ```yaml
 new_post_name: :year-:month-:day-:title.md
@@ -46,7 +46,7 @@ $ npm install hexo-migrator-wordpress --save
 
 在 WordPress 仪表盘中导出数据("Tools" → "Export" → "WordPress")（详情参考[WP支持页面](https://wordpress.com/zh-cn/support/export/)）。
 
-Now run:
+运行：
 
 ```bash
 $ hexo migrate wordpress <source>
@@ -64,7 +64,7 @@ $ npm install hexo-migrator-joomla --save
 
 使用 [J2XML](http://extensions.joomla.org/extensions/migration-a-conversion/data-import-a-export/12816?qh=YToxOntpOjA7czo1OiJqMnhtbCI7fQ%3D%3D) 组件导出 Joomla 文章。
 
-Now run:
+运行：
 
 ```bash
 $ hexo migrate joomla <source>

@@ -17,15 +17,9 @@ hexo.extend.filter.register(type, function() {
   if (themeCfg.fancybox) // do something...
 
 }, priority);
-
-  // Theme configuration
-  const { config: themeCfg } = this.theme;
-  if (themeCfg.fancybox) // do something...
-
-}, priority);
 ```
 
-You can define the `priority`. Lower `priority` means that it will be executed first. 您可以指定过滤器的优先级 `priority`，`priority` 值越低，过滤器会越早执行，默认的 `priority` 是 10。 我们建议提供配置选项如 `hexo.config.your_plugin.priority`、让用户自行决定过滤器的优先级。
+您可以指定过滤器的优先级 `priority`。 `priority` 值越低，过滤器会越早执行。 默认的 `priority` 是 10。 我们建议提供配置选项如 `hexo.config.your_plugin.priority`、让用户自行决定过滤器的优先级。
 
 ## 执行过滤器
 
@@ -39,7 +33,7 @@ hexo.extend.filter.execSync(type, data, options);
 | `context` | Context    |
 | `args`    | 参数。 必须为数组。 |
 
-`data` 会作为第一个参数传入每个过滤器，而您可以在过滤器中通过返回值改变下一个过滤器中的 `data`，如果什么都没有返回的话则会保持原本的 `data`。 The `data` passed into the next filter can be modified by returning a new value. If nothing is returned, the data remains unmodified. 您还可以使用 `args` 指定过滤器的其他参数。 举例来说：
+`data` 会作为第一个参数传入每个过滤器。 而您可以在过滤器中通过返回值改变下一个过滤器中的 `data`。 如果什么都没有返回的话则会保持原本的 data。 您还可以使用 `args` 指定过滤器的其他参数。 举例来说：
 
 ```js
 hexo.extend.filter.register("test", function (data, arg1, arg2) {
@@ -145,7 +139,6 @@ hexo.extend.filter.register("before_exit", function () {
 hexo.extend.filter.register("before_generate", function () {
   // ...
 });
-});
 ```
 
 ### after_generate
@@ -155,7 +148,6 @@ Executed after generation finishes.
 ```js
 hexo.extend.filter.register("after_generate", function () {
   // ...
-});
 });
 ```
 
@@ -180,7 +172,6 @@ hexo.extend.filter.register("template_locals", function (locals) {
 hexo.extend.filter.register("after_init", function () {
   // ...
 });
-});
 ```
 
 ### new_post_path
@@ -190,7 +181,6 @@ hexo.extend.filter.register("after_init", function () {
 ```js
 hexo.extend.filter.register("new_post_path", function (data, replace) {
   // ...
-});
 });
 ```
 
@@ -202,20 +192,19 @@ Used to determine the permalink of posts.
 hexo.extend.filter.register("post_permalink", function (data) {
   // ...
 });
-});
 ```
 
 ### after_render
 
-Executed after rendering finishes. 在渲染后执行，您可以参考 [渲染](rendering.html#after-render-过滤器) 以了解更多信息。
+在渲染后执行。 您可以参考 [渲染](rendering.html#after-render-过滤器) 以了解更多信息。
 
 ### after_clean
 
 Executed after generated files and cache are removed with `hexo clean` command.
 
 ```js
-hexo.extend.filter.register("before_exit", function () {
-  // ...
+hexo.extend.filter.register("after_clean", function () {
+  // remove some other temporary files
 });
 ```
 

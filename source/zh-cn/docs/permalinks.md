@@ -42,7 +42,7 @@ categories:
   - bar
 ```
 
-| Setting                         | 结果                          |
+| 设置                              | 结果                          |
 | ------------------------------- | --------------------------- |
 | `:year/:month/:day/:title/`     | 2013/07/14/hello-world/     |
 | `:year-:month-:day-:title.html` | 2013-07-14-hello-world.html |
@@ -57,7 +57,7 @@ categories:
   - bar
 ```
 
-| Setting                     | 结果                            |
+| 设置                          | 结果                            |
 | --------------------------- | ----------------------------- |
 | `:year/:month/:day/:title/` | 2013/07/14/lorem/hello-world/ |
 | `:year/:month/:day/:name/`  | 2013/07/14/hello-world/       |

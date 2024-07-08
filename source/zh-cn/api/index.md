@@ -8,7 +8,7 @@ title: API
 
 ## 初始化
 
-First, we have to create a Hexo instance. 首先，我们必须建立一个 Hexo 实例（instance），第一个参数是网站的根目录，也就是 `base_dir`，而第二个参数则是初始化的选项。 接着执行 `init` 方法后，Hexo 会加载插件及配置文件。
+首先，我们必须建立一个 Hexo 实例（instance）。 一个新的实例需要两个参数：网站根目录 `base_dir`，以及包含初始化选项的对象。 接着执行 `init` 方法后，Hexo 会加载插件及配置文件。
 
 ```js
 var Hexo = require("hexo");
@@ -17,10 +17,9 @@ var hexo = new Hexo(process.cwd(), {});
 hexo.init().then(function () {
   // ...
 });
-});
 ```
 
-| Option             | 描述                                                              | 默认值                                 |
+| 选项                 | 描述                                                              | 默认值                                 |
 | ------------------ | --------------------------------------------------------------- | ----------------------------------- |
 | `debug`            | 开启调试模式。 在终端中显示调试信息，并在根目录中存储 `debug.log` 日志文件。                   | `false`                             |
 | `safe`             | 开启安全模式。 不加载任何插件。                                                | `false`                             |
@@ -30,20 +29,17 @@ hexo.init().then(function () {
 
 ## 加载文件
 
-Hexo 提供了两种方法来加载文件：`load`, `watch`，前者用于加载 `source` 文件夹内的所有文件及主题资源；而后者除了执行 `load` 以外，还会继续监视文件变动。 `load` is used for loading all files in the `source` folder as well as the theme data. `watch` does the same things `load` does, but will also start watching for file changes continuously.
+Hexo 提供了两种方法来加载文件：`load` 和 `watch`。 `load` 用于加载 `source` 文件夹中的所有文件以及主题数据。 `watch` 执行与 `load` 相同的操作，但还会开始连续监视文件更改。
 
 Both methods will load the list of files and pass them to the corresponding processors. After all files have been processed, they will call upon the generators to create the routes.
 
 ```js
 hexo.load().then(function () {
   // ...
-hexo.load().then(function () {
-  // ...
 });
 
 hexo.watch().then(function () {
   // 之后可以调用 hexo.unwatch()，停止监视文件
-});
 });
 ```
 
@@ -54,7 +50,6 @@ Any console command can be called explicitly using the `call` method on the Hexo
 ```js
 hexo.call("generate", {}).then(function () {
   // ...
-});
 });
 ```
 

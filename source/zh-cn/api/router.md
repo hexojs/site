@@ -6,7 +6,7 @@ title: 路由
 
 ## 获取路径
 
-`get` 方法会传回一个 [Stream][]，例如把该路径的数据存储到某个指定位置。 For example, to save the path data to a specified destination:
+`get` 方法会传回一个 [Stream][]。 例如，把该路径的数据存储到某个指定位置：
 
 ```js
 var data = hexo.route.get("index.html");
@@ -56,7 +56,7 @@ hexo.route.set("index.html", {
 hexo.route.remove("index.html");
 ```
 
-## Get the List of Routes
+## 获取路由列表
 
 ```js
 hexo.route.list();

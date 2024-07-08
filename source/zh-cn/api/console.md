@@ -10,10 +10,9 @@ title: 控制台（Console）
 hexo.extend.console.register(name, desc, options, function (args) {
   // ...
 });
-});
 ```
 
-| Argument  | 描述 |
+| 参数        | 描述 |
 | --------- | -- |
 | `name`    | 名称 |
 | `desc`    | 描述 |
@@ -25,7 +24,7 @@ An argument `args` will be passed into the function. This is the argument that u
 
 ### 用法
 
-The usage of a console command. For example:
+The usage of a console command. 例如：
 
 ```js
 {
@@ -36,7 +35,7 @@ The usage of a console command. For example:
 
 ### arguments
 
-控制台各个参数的说明，例如： For example:
+控制台各个参数的说明。 例如：
 
 ```js
 {
@@ -49,7 +48,7 @@ The usage of a console command. For example:
 
 ### options
 
-控制台的各个选项的说明，例如： For example:
+控制台的各个选项的说明。 例如：
 
 ```js
 {

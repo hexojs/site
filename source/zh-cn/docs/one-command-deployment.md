@@ -1,23 +1,23 @@
 ---
-title: One-Command Deployment
+title: 一键部署
 ---
 
-Hexo provides a fast and easy deployment strategy. You only need one single command to deploy your site to your server.
+Hexo 提供快速、简便的部署策略。 您只需一条命令即可将网站部署到服务器上。
 
 ```bash
 $ hexo deploy
 ```
 
-Install the necessary plugin(s) that is compatible with the deployment method provided by your server/repository.
+安装与服务器/存储库提供的部署方法兼容的必要插件。
 
-Deployment is usually configured through **\_config.yml**. A valid configuration must have the `type` field. For example:
+部署通常通过**\_config.yml**进行配置。 有效配置必须有 `type` 字段。 例如：
 
 ```yaml
 deploy:
   type: git
 ```
 
-您可同时使用多个 deployer，Hexo 会依照顺序执行每个 deployer。 Hexo will execute each deployer in order.
+您可同时使用多个 deployer。 Hexo 会依照顺序执行每个 deployer。
 
 ```yaml
 deploy:
@@ -37,27 +37,27 @@ deploy:
 $ npm install hexo-deployer-git --save
 ```
 
-2. Edit **\_config.yml** (with example values shown below as comments):
+2. 编辑 **\_config.yml** （示例值如下所示）：
 
 ```yaml
 deploy:
   type: git
-  repo: <repository url> #https://bitbucket.org/JohnSmith/johnsmith.bitbucket.io
+  repo: <repository url> # https://bitbucket.org/JohnSmith/johnsmith.bitbucket.io
   branch: [branch]
   message: [message]
 ```
 
-| Option    | 描述                                       | 默认                                                                                     |
-| --------- | ---------------------------------------- | -------------------------------------------------------------------------------------- |
-| `repo`    | URL of the target repository             |                                                                                        |
-| `branch`  | 分支名称                                     | `gh-pages` (GitHub)<br>`coding-pages` (Coding.net)<br>`master` (others)    |
-| `message` | 自定义提交信息                                  | `<code>Site updated: {% raw %}{{ now('YYYY-MM-DD HH:mm:ss') }}{% endraw %}`)</code> |
-| `token`   | 可选的令牌值，用于认证 repo。 用 `$` 作为前缀从而从环境变量中读取令牌 |                                                                                        |
+| 选项        | 描述                                       | 默认                                                                                  |
+| --------- | ---------------------------------------- | ----------------------------------------------------------------------------------- |
+| `repo`    | 目标存储库的 URL                               |                                                                                     |
+| `branch`  | 分支名称                                     | `gh-pages` (GitHub)<br>`coding-pages` (Coding.net)<br>`master` (others) |
+| `message` | 自定义提交信息                                  | `Site updated: {% raw %}{{ now('YYYY-MM-DD HH:mm:ss') }}{% endraw %}`               |
+| `token`   | 可选的令牌值，用于认证 repo。 用 `$` 作为前缀从而从环境变量中读取令牌 |                                                                                     |
 
 3. 此外，如果您的 Github Pages 需要使用 CNAME 文件**自定义域名**，请将 CNAME 文件置于 `source` 目录下，只有这样 `hexo deploy` 才能将 CNAME 文件一并推送至部署分支。
 
 - 除非你使用令牌或 SSH 密钥认证，否则你会被提示提供目标仓库的用户名和密码。
-- hexo-deployer-git 并不会存储你的用户名和密码. 请使用 [git-credential-cache](https://git-scm.com/docs/git-credential-cache) 来临时存储它们。 Use [git-credential-cache](https://git-scm.com/docs/git-credential-cache) to store them temporarily.
+- hexo-deployer-git 并不会存储你的用户名和密码。 请使用 [git-credential-cache](https://git-scm.com/docs/git-credential-cache) 来临时存储它们。
 
 4. 登入 Github/BitBucket/Gitlab，请在库设置（Repository Settings）中将默认分支设置为`_config.yml`配置中的分支名称。 稍等片刻，您的站点就会显示在您的Github Pages中。
 
@@ -78,14 +78,14 @@ deploy:
   message: [message]
 ```
 
-| Option               | 描述                                                                                 |
+| 选项                   | 描述                                                                                 |
 | -------------------- | ---------------------------------------------------------------------------------- |
 | `repo`, `repository` | Heroku 库（Repository）地址                                                             |
 | `message`            | 自定提交信息 (默认为 `Site updated: {% raw %}{{ now('YYYY-MM-DD HH:mm:ss') }}{% endraw %}`) |
 
 ## Netlify
 
-[Netlify](https://www.netlify.com/) provides continuous deployment (Git-triggered builds), an intelligent global CDN, full DNS (including custom domains), automated HTTPS, asset acceleration, and a lot more. It is a unified platform that automates your code to create high-performance, easily maintainable sites and web apps.
+[Netlify](https://www.netlify.com/) 提供持续部署（Git 触发构建）、智能全球 CDN、完整 DNS（包括自定义域）、自动 HTTPS、资产加速等功能。 它是一个统一的平台，可自动执行代码，创建高性能、易于维护的网站和网络应用程序。
 
 There are two different ways to deploy your sites on Netlify. 首先，也是最通用的方式，就是使用Netlify提供的网页端用户界面。 前往[新建一个网站页面](https://app.netlify.com/start)，选择需要关联的 Github/BitBucket/Gitlab 库，然后遵循网站提示。
 
@@ -115,7 +115,7 @@ deploy:
   ignore_errors: [true|false]
 ```
 
-| Option          | 描述          | 默认值   |
+| 选项              | 描述          | 默认值   |
 | --------------- | ----------- | ----- |
 | `host`          | 远程主机的地址     |       |
 | `user`          | 使用者名称       |       |
@@ -146,10 +146,10 @@ deploy:
   message: [message]
 ```
 
-| Option    | 描述                                                                                 |
-| --------- | ---------------------------------------------------------------------------------- |
-| `repo`    | OpenShift 库（Repository）地址                                                          |
-| `message` | 自定提交信息 (默认为 `Site updated: {% raw %}{{ now('YYYY-MM-DD HH:mm:ss') }}{% endraw %}`) |
+| 选项        | 描述                                                                                |
+| --------- | --------------------------------------------------------------------------------- |
+| `repo`    | OpenShift 库（Repository）地址                                                         |
+| `message` | 自定提交信息（默认为 `Site updated： {% raw %}{{ now('YYYY-MM-DD HH:mm:ss') }}{% endraw %}`) |
 
 ## FTPSync
 
@@ -173,7 +173,7 @@ deploy:
   verbose: [true|false]
 ```
 
-| Option    | 描述                      | 默认值   |
+| 选项        | 描述                      | 默认值   |
 | --------- | ----------------------- | ----- |
 | `host`    | 远程主机的地址                 |       |
 | `user`    | 使用者名称                   |       |
@@ -206,18 +206,18 @@ deploy:
   agent: [path/to/agent/socket]
 ```
 
-| Option        | 描述                                              | 默认值              |
-| ------------- | ----------------------------------------------- | ---------------- |
-| `host`        | 远程主机的地址                                         |                  |
-| `port`        | 端口                                              | 22               |
-| `user`        | 使用者名称                                           |                  |
-| `pass`        | 密码                                              |                  |
-| `privateKey`  | ssh私钥的目录地址                                      |                  |
-| `passphrase`  | Optional passphrase for the private key         |                  |
-| `agent`       | ssh套接字的目录地址                                     | `$SSH_AUTH_SOCK` |
-| `remotePath`  | 远程主机的根目录                                        | `/`              |
-| `forceUpload` | Override existing files                         | false            |
-| `concurrency` | Max number of SFTP tasks processed concurrently | 100              |
+| 选项            | 描述                                      | 默认值              |
+| ------------- | --------------------------------------- | ---------------- |
+| `host`        | 远程主机的地址                                 |                  |
+| `port`        | 端口                                      | 22               |
+| `user`        | 使用者名称                                   |                  |
+| `pass`        | 密码                                      |                  |
+| `privateKey`  | SSH 私钥的目录地址                             |                  |
+| `passphrase`  | Optional passphrase for the private key |                  |
+| `agent`       | ssh套接字的目录地址                             | `$SSH_AUTH_SOCK` |
+| `remotePath`  | 远程主机的根目录                                | `/`              |
+| `forceUpload` | 覆盖现有的文件                                 | false            |
+| `concurrency` | 同时处理的 SFTP 任务的最大数量                      | 100              |
 
 ## Vercel
 
@@ -280,7 +280,7 @@ $ hexo generate —deploy && bip deploy
 2. 修改配置。
 
 ```yaml
-deploy: # 所有部署器的根配置块
+deploy: # The root configuration block for all deployers
   - type: rss3
     endpoint: https://hub.rss3.io
     privateKey: 47e18d6c386898b424025cd9db446f779ef24ad33a26c499c87bb3d9372540ba
@@ -331,11 +331,11 @@ edgio deploy
 
 此外，你也可以点击下面的部署按钮来创建一个新的项目：
 
-[![Deploy To Edgio](https://docs.edg.io/button.svg)](https://app.layer0.co/deploy?repo=https%3A%2F%2Fgithub.com%2Fedgio-docs%2Fedgio-hexo-example)
+[![部署到 Edgio](https://docs.edg.io/button.svg)](https://app.layer0.co/deploy?repo=https%3A%2F%2Fgithub.com%2Fedgio-docs%2Fedgio-hexo-example)
 
 ## 其他方法
 
-Hexo 生成的所有文件都放在 `public` 文件夹中，您可以将它们复制到您喜欢的地方。 You can copy them to wherever you like.
+Hexo 生成的所有文件都放在 `public` 文件夹中。 您可以将它们复制到您喜欢的地方。
 
 [hexo-deployer-git]: https://github.com/hexojs/hexo-deployer-git
 [hexo-deployer-heroku]: https://github.com/hexojs/hexo-deployer-heroku
