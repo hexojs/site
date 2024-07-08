@@ -34,6 +34,7 @@ post_asset_folder: true
 
 ```
 {% asset_img example.jpg This is an example image %}
+{% asset_img "spaced asset.jpg" "spaced title" %}
 ```
 
 通过这种方式，图片将会同时出现在文章和主页以及归档页中。

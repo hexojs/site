@@ -2,13 +2,13 @@
 title: 文章
 ---
 
-## Create a Post
+## 创建一个文章
 
 ```js
 hexo.post.create(data, replace);
 ```
 
-| Argument  | 描述     |
+| 参数        | 描述     |
 | --------- | ------ |
 | `data`    | 数据     |
 | `replace` | 替换现有文件 |
@@ -29,7 +29,7 @@ The attributes of a post can be defined in `data`. The table below is not exhaus
 hexo.post.publish(data, replace);
 ```
 
-| Argument  | 描述     |
+| 参数        | 描述     |
 | --------- | ------ |
 | `data`    | 数据     |
 | `replace` | 替换现有文件 |
@@ -47,7 +47,7 @@ The attributes of a post can be defined in `data`. The table below is not exhaus
 hexo.post.render(source, data);
 ```
 
-| Argument | 描述           |
+| 参数       | 描述           |
 | -------- | ------------ |
 | `source` | 文件的完整路径（可忽略） |
 | `data`   | 数据           |

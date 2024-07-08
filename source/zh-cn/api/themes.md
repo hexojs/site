@@ -32,7 +32,6 @@ var view = hexo.theme.getView("layout.swig");
 view.render({ foo: 1, bar: 2 }).then(function (result) {
   // ...
 });
-});
 ```
 
 您可以以向 `render` 方法传入对象作为参数，`render` 方法会先使用对应的渲染引擎进行解析，并加载 [辅助函数](helper.html)。 When rendering is complete, it will try to find whether a layout exists. If `layout` is `false` or if it doesn't exist, the result will be returned directly.

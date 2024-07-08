@@ -6,19 +6,19 @@ title: 配置
 
 ### 网站
 
-| Setting       | 描述                                                                                                                                                                              |
+| 设置            | 描述                                                                                                                                                                              |
 | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `title`       | 网站标题                                                                                                                                                                            |
 | `subtitle`    | 网站副标题                                                                                                                                                                           |
 | `description` | 网站描述                                                                                                                                                                            |
 | `keywords`    | 网站的关键词。 支持多个关键词。                                                                                                                                                                |
 | `author`      | 您的名字                                                                                                                                                                            |
-| `language`    | 网站使用的语言。 Use a [2-letter ISO-639-1 code](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) or optionally [its variant](/docs/internationalization). Default is `en`.       |
+| `language`    | 网站使用的语言。 使用 [2 个字母的 ISO-639-1 代码](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes)，或 [它的变体](/docs/internationalization)。 默认为 `en`。                                        |
 | `timezone`    | 网站时区。 Hexo 默认使用您电脑的时区。 请参考 [时区列表](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) 进行设置，如 `America/New_York`, `Japan`, 和 `UTC` 。 一般的，对于中国大陆地区可以使用 `Asia/Shanghai`。 |
 
 ### 网址
 
-| Setting                      | 描述                                                             | 默认值                         |
+| 设置                           | 描述                                                             | 默认值                         |
 | ---------------------------- | -------------------------------------------------------------- | --------------------------- |
 | `url`                        | 网址, 必须以 `http://` 或 `https://` 开头                              |                             |
 | `root`                       | 网站根目录                                                          | `url's pathname`            |
@@ -35,15 +35,15 @@ title: 配置
 例如：
 
 ```yaml
-# 比如，一个页面的永久链接是 http://example.com/foo/bar/index.html
+# e.g. page.permalink is http://example.com/foo/bar/index.html
 pretty_urls:
   trailing_index: false
-# 此时页面的永久链接会变为 http://example.com/foo/bar/
+# becomes http://example.com/foo/bar/
 ```
 
 ### 目录
 
-| Setting        | 描述                                                                                                                | 默认值              |
+| 设置             | 描述                                                                                                                | 默认值              |
 | -------------- | ----------------------------------------------------------------------------------------------------------------- | ---------------- |
 | `source_dir`   | Source folder. Where your content is stored                                                                       | `source`         |
 | `public_dir`   | Public folder. Where the static site will be generated                                                            | `public`         |
@@ -70,7 +70,7 @@ skip_render: "_posts/test-post.md"
 
 ### 文章
 
-| Setting                 | 描述                                                                         | 默认值            |
+| 设置                      | 描述                                                                         | 默认值            |
 | ----------------------- | -------------------------------------------------------------------------- | -------------- |
 | `new_post_name`         | 新文章的文件名称                                                                   | `:title.md`    |
 | `default_layout`        | 预设布局                                                                       | `post`         |
@@ -88,9 +88,9 @@ skip_render: "_posts/test-post.md"
 | `highlight`             | 代码块的设置, 请参考 [Highlight.js](/zh-cn/docs/syntax-highlight#Highlight-js) 进行设置 |                |
 | `prismjs`               | 代码块的设置, 请参考 [PrismJS](/zh-cn/docs/syntax-highlight#PrismJS) 进行设置           |                |
 
-### Home page setting
+### 首页设置
 
-| Setting                          | 描述                                                                                                              | 默认值     |
+| 设置                               | 描述                                                                                                              | 默认值     |
 | -------------------------------- | --------------------------------------------------------------------------------------------------------------- | ------- |
 | `index_generator`                | Generate an archive of posts, powered by [hexo-generator-index](https://github.com/hexojs/hexo-generator-index) |         |
 | `index_generator.path`           | Root path for your blog's index page                                                                            | `''`    |
@@ -100,7 +100,7 @@ skip_render: "_posts/test-post.md"
 
 ### 分类 & 标签
 
-| Setting            | 描述   | 默认值             |
+| 设置                 | 描述   | 默认值             |
 | ------------------ | ---- | --------------- |
 | `default_category` | 默认分类 | `uncategorized` |
 | `category_map`     | 分类别名 |                 |
@@ -118,7 +118,7 @@ category_map:
 
 Hexo 使用 [Moment.js](http://momentjs.com/) 来解析和显示时间。
 
-| Setting          | 描述                                                                           | 默认值          |
+| 设置               | 描述                                                                           | 默认值          |
 | ---------------- | ---------------------------------------------------------------------------- | ------------ |
 | `date_format`    | 日期格式                                                                         | `YYYY-MM-DD` |
 | `time_format`    | 时间格式                                                                         | `HH:mm:ss`   |
@@ -136,10 +136,10 @@ Hexo 使用 [Moment.js](http://momentjs.com/) 来解析和显示时间。
 
 ### 分页
 
-| Setting          | 描述                                                              | 参数     |
-| ---------------- | --------------------------------------------------------------- | ------ |
-| `per_page`       | Number of posts displayed on each page. `0` disables pagination | `10`   |
-| `pagination_dir` | URL format                                                      | `page` |
+| 设置               | 描述                   | 参数     |
+| ---------------- | -------------------- | ------ |
+| `per_page`       | 每页显示的帖子数。 `0` 关闭分页功能 | `10`   |
+| `pagination_dir` | URL format           | `page` |
 
 例如：
 
@@ -153,7 +153,7 @@ pagination_dir: 'awesome-page'
 
 ### 扩展
 
-| Setting          | 描述                                                                                                                                   |
+| 设置               | 描述                                                                                                                                   |
 | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
 | `theme`          | 当前主题名称。 值为`false`时禁用主题                                                                                                               |
 | `theme_config`   | 主题的配置文件。 在这里放置的配置会覆盖主题目录下的 `_config.yml` 中的配置                                                                                        |
@@ -162,17 +162,17 @@ pagination_dir: 'awesome-page'
 
 ### 包括或不包括目录和文件
 
-Use the following options to explicitly process or ignore certain files/folders. Support [glob expressions](https://github.com/micromatch/micromatch#extended-globbing) for path matching.
+使用以下选项可明确处理或忽略某些文件/文件夹。 可以使用 [glob 表达式](https://github.com/micromatch/micromatch#extended-globbing) 进行路径匹配。
 
 `include` 和 `exclude` 选项只会应用到 `source/` ，而 `ignore` 选项会应用到所有文件夹.
 
-| Setting   | Description                                                                                                      |
-| --------- | ---------------------------------------------------------------------------------------------------------------- |
-| `include` | Include hidden files (including files/folders with a name that starts with an underscore, with an exception\*) |
-| `exclude` | 资源文件夹，这个文件夹用来存放内容。                                                                                               |
-| `ignore`  | Ignore files/folders                                                                                             |
+| 设置        | 描述                                |
+| --------- | --------------------------------- |
+| `include` | 包含隐藏文件（包括名称以下划线开头的文件/文件夹，\* 除外） |
+| `exclude` | 排除文件或文件夹                          |
+| `ignore`  | 忽略文件/文件夹                          |
 
-例如，使用 `--config` 指定了两个自定义配置文件：
+例如：
 
 ```yaml
 # 处理或不处理目录或文件
@@ -181,50 +181,31 @@ include:
   # 处理 'source/css/_typing.css'
   - "css/_typing.css"
   # 处理 'source/_css/' 中的任何文件，但不包括子目录及其其中的文件。
-  - "css/_typing.css"
-  # Include any file in 'source/_css/'.
   - "_css/*"
-  # Include any file and subfolder in 'source/_css/'.
-  - "_css/*"
-  # 处理 'source/_css/' 中的任何文件和子目录下的任何文件
+  # 处理 'source/_css/' 中的任何文件和子目录下的任何文件。
   - "_css/**/*"
 
 exclude:
-  # 不处理 'source/js/test.js'
+  # 不处理 'source/js/test.js'。
   - "js/test.js"
-  # 不处理 'source/js/' 中的文件、但包括子目录下的所有目录和文件
+  # 不处理 'source/js/' 中的文件、但包括子目录下的所有目录和文件。
   - "js/*"
-  # 不处理 'source/js/' 中的文件和子目录下的任何文件
+  # 不处理 'source/js/' 中的文件和子目录下的任何文件。
   - "js/**/*"
-  # 不处理 'source/js/' 目录下的所有文件名以 'test' 开头的文件，但包括其它文件和子目录下的单文件
+  # 不处理 'source/js/' 目录下的所有文件名以 'test' 开头的文件，但包括其它文件和子目录下的单文件。
   - "js/test*"
-  # 不处理 'source/js/' 及其子目录中任何以 'test' 开头的文件
+  # 不处理 'source/js/' 及其子目录中任何以 'test' 开头的文件。
   - "js/**/test*"
   # 不要用 exclude 来忽略 'source/_posts/' 中的文件。
-  - "js/test.js"
-  # Exclude any file in 'source/js/'.
-  - "js/*"
-  # Exclude any file and subfolder in 'source/js/'.
-  - "js/**/*"
-  # Exclude any file with filename that starts with 'test' in 'source/js/'.
-  - "js/test*"
-  # Exclude any file with filename that starts with 'test' in 'source/js/' and its subfolders.
-  - "js/**/test*"
-  # Do not use this to exclude posts in the 'source/_posts/'.
-  # Use skip_render for that. Or prepend an underscore to the filename.
-  # - "_posts/hello-world.md" # Does not work.
+  # 你应该使用 'skip_render'。 或者在要忽略的文件的文件名之前加一个下划线 '_'。
+  # - "_posts/hello-world.md" # 在这里配置是没有用的。
 
 ignore:
-  # Ignore any folder named 'foo'.
-  ignore:
-  # 忽略任何一个名叫 'foo' 的文件夹
+  # 忽略任何一个名叫 'foo' 的文件夹。
   - "**/foo"
-  # 只忽略 'themes/' 下的 'foo' 文件夹
+  # 只忽略 'themes/' 下的 'foo' 文件夹。
   - "**/themes/*/foo"
-  # 对 'themes/' 目录下的每个文件夹中忽略名叫 'foo' 的子文件夹
-  - "**/themes/**/foo"
-  - "**/themes/*/foo"
-  # Same as above, but applies to every subfolders of 'themes/'.
+  # 对 'themes/' 目录下的每个文件夹中忽略名叫 'foo' 的子文件夹。
   - "**/themes/**/foo"
 ```
 
@@ -239,10 +220,14 @@ ignore:
 可以在 hexo-cli 中使用 `--config` 参数来指定自定义配置文件的路径。 你可以使用一个 YAML 或 JSON 文件的路径，也可以使用逗号分隔（无空格）的多个 YAML 或 JSON 文件的路径。
 
 ```bash
-$ hexo generate --config custom.yml,custom2.json
+# use 'custom.yml' in place of '_config.yml'
+$ hexo server --config custom.yml
+
+# use 'custom.yml' & 'custom2.json', prioritizing 'custom2.json'
+$ hexo server --config custom.yml,custom2.json
 ```
 
-当你指定了多个配置文件以后，Hexo 会按顺序将这部分配置文件合并成一个 `_multiconfig.yml`。 The later values take precedence. 这个原则适用于任意数量、任意深度的 YAML 和 JSON 文件。 Note that **no spaces are allowed in the list**.
+当你指定了多个配置文件以后，Hexo 会按顺序将这部分配置文件合并成一个 `_multiconfig.yml`。 后面的值优先。 这个原则适用于任意数量、任意深度的 YAML 和 JSON 文件。 请注意，**列表中不允许有空格**。
 
 如果 `custom.yml` 中指定了 `foo: bar`，在 custom2.json 中指定了 `"foo": "dinosaur"`，那么在 `_multiconfig.yml` 中你会得到 `foo: dinosaur`。
 
@@ -326,5 +311,5 @@ logo: "a-cool-image.png"
 ```
 
 {% note %}
-我们强烈建议你将所有的主题配置集中在一处。 如果你不得不在多处配置你的主题，那么这些信息对你将会非常有用：Hexo 在合并主题配置时，Hexo 配置文件中的 `theme_config` 的优先级最高，其次是 `_config.[theme].yml` 文件，最后是位于主题目录下的 `_config.yml` 文件。 The `_config.yml` file under the theme directory has the lowest priority.
+我们强烈建议你将所有的主题配置集中在一处。 如果你不得不在多处配置你的主题，那么这些信息对你将会非常有用：Hexo 在合并主题配置时，Hexo 配置文件中的 `theme_config` 的优先级最高，其次是 `_config.[theme].yml` 文件。 最后是位于主题目录下的 `_config.yml` 文件。
 {% endnote %}

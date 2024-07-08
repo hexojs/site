@@ -10,7 +10,7 @@ title: 写作
 $ hexo new [layout] <title>
 ```
 
-`post` is the default `layout`, but you can supply your own. 您可以在命令中指定文章的布局（layout），默认为 `post`，可以通过修改 `_config.yml` 中的 `default_layout` 参数来指定默认布局。
+`post`是默认的`布局`，但你也可以提供自己的布局。 您可以通过编辑 `_config.yml` 中的 `default_layout` 设置来更改默认布局。
 
 ## 布局（Layout）
 
@@ -51,13 +51,13 @@ Drafts are not displayed by default. You can add the `--draft` option when runni
 
 ## Scaffolds
 
-在新建文章时，Hexo 会根据 `scaffolds` 文件夹内相对应的文件来建立文件，例如： For example:
+在新建文章时，Hexo 会根据 `scaffolds` 文件夹内相对应的文件来建立文件。 例如：
 
 ```bash
 $ hexo new photo "My Gallery"
 ```
 
-在执行这行指令时，Hexo 会尝试在 `scaffolds` 文件夹中寻找 `photo.md`，并根据其内容建立文章，以下是您可以在模版中使用的变量： The following placeholders are available in scaffolds:
+在执行这行指令时，Hexo 会尝试在 `scaffolds` 文件夹中寻找 `photo.md`，并根据其内容建立文章。 以下是您可以在模版中使用的变量：
 
 | Placeholder | 描述     |
 | ----------- | ------ |

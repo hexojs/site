@@ -22,7 +22,7 @@ code snippet
 ```
 ````
 上面的第三种是 Markdown 的 fenced code block 语法。 Hexo 对其进行了扩展，使其支持更多特性。 在[标签插件文档](tag-plugins#代码块)中你可以找到可用的选项。
-> 提示：Hexo 支持用任何格式书写文章，只需安装相应渲染插件即可。 It can be in markdown, ejs, swig, nunjucks, pug, asciidoc, etc. Regardless of the format used, those three code block syntax will always be available.
+> 提示：Hexo 支持用任何格式书写文章，只需安装相应渲染插件即可。 可以使用 markdown、ejs、swig、nunjucks、pug、asciidoc 等。 无论使用哪种格式，这三种代码块语法始终可用。
 ## 配置
 v7.0.0以下：
 
@@ -150,7 +150,7 @@ highlight:
 
 > 提示：如果你想使用「子语言高亮」功能（例如在高亮 HTML 时同时高亮内部嵌入的 JavaScript 代码），请开启 `auto_detect`，并且在文章中插入代码块时不要标注语言。
 
-{% note warn "警告！" %} %}
+{% note warn "警告！" %}
 `auto_detect` 十分耗费资源。 如果你不需要使用「子语言高亮」功能，或者不介意在书写代码块时标记语言，请不要启用此功能。
 {% endnote %}
 
@@ -187,7 +187,7 @@ Hexo 通过用 `<figure>` 和 `<table>` 包裹其代码块为其添加了行号�
 
 ### tab_replace
 
-Replace tabs inside code block with given string. By default it is 2 spaces.
+用给定字符串替换代码块内的制表符。 默认为 2 个空格。
 
 ### exclude_languages (+6.1.0)
 
@@ -263,7 +263,7 @@ Hexo 内建的 PrismJS 支持浏览器端高亮（`preprocess` 设置为 `false`
 - [语言显示](https://prismjs.com/plugins/show-language/)：当代码块有标注语言时，Hexo 总会添加 `data-language` 属性。
 - Hexo 也支持其它不需要特殊 HTML 代码格式的 PrismJS 插件，不过你需要引入它们的 JavaScript 文件。
 
-All prism plugins are supported if `preprocess` is set to `false`. Here are a few things you should still pay attention to:
+如果 `preprocess` 设置为 `false`，则支持所有 prism 插件。 以下是您仍需注意的几件事：
 
 - [行号显示](https://prismjs.com/plugins/line-numbers/)：当 `preprocess` 设置为 `false` 时，Hexo 不会生成插件所需的 HTML 代码格式。 `prism-line-numbers.css` 和 `prism-line-numbers.js`均需被引入。
 - [语言显示](https://prismjs.com/plugins/show-language/)：当代码块有标注语言时，Hexo 总会添加 `data-language` 属性。
@@ -279,7 +279,7 @@ All prism plugins are supported if `preprocess` is set to `false`. Here are a fe
 
 ### tab_replace
 
-Replace `\t` inside code block with given string. By default it is 2 spaces.
+将代码块内的 `\t` 替换为给定的字符串。 默认为 2 个空格。
 
 ## 其它参考资料
 

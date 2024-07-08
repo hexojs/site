@@ -4,7 +4,7 @@ title: Front-matter
 
 {% youtube Rl48Yk4A_V8 %}
 
-Front-matter is a block of YAML or JSON at the beginning of the file that is used to configure settings for your writings. Front-matter is terminated by three dashes when written in YAML or three semicolons when written in JSON.
+Front-matter 是文件开头的 YAML 或 JSON 代码块，用于配置写作设置。 以 YAML 格式书写时，Front-matter 以三个破折号结束；以 JSON 格式书写时，Front-matter 以三个分号结束。
 
 **YAML**
 
@@ -15,7 +15,7 @@ date: 2013/7/13 20:46:25
 ---
 ```
 
-**JSON Front-matter**
+**JSON**
 
 ```json
 "title": "Hello World",
@@ -23,22 +23,22 @@ date: 2013/7/13 20:46:25
 ;;;
 ```
 
-### Settings & Their Default Values
+### 设置 & 默认值
 
-| Setting           | 描述                                                                              | 默认值                                                    |
-| ----------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------ |
-| `layout`          | 布局                                                                              | [`config.default_layout`](/docs/configuration#Writing) |
-| `title`           | 标题                                                                              | 文章的文件名                                                 |
-| `date`            | 建立日期                                                                            | 文件建立日期                                                 |
-| `updated`         | 更新日期                                                                            | 文件更新日期                                                 |
-| `comments`        | 开启文章的评论功能                                                                       | `true`                                                 |
-| `tags`            | 标签（不适用于分页）                                                                      |                                                        |
-| `categories`      | 分类（不适用于分页）                                                                      |                                                        |
-| `permalink`       | Overrides the default permalink of the post. 覆盖文章的永久链接，永久链接应该以 `/` 或 `.html` 结尾 | `null`                                                 |
-| `excerpt`         | 纯文本的页面摘要。 使用 [该插件](/zh-cn/docs/tag-plugins#文章摘要和截断) 来格式化文本                      |                                                        |
-| `disableNunjucks` | 启用时禁用 Nunjucks 标签 `{{ }}`/`{% %}` 和 [标签插件](/zh-cn/docs/tag-plugins) 的渲染功能       | false                                                  |
-| `lang`            | 设置语言以覆盖 [自动检测](/zh-cn/docs/internationalization#路径)                             | 继承自 `_config.yml`                                      |
-| `published`       | 文章是否发布                                                                          | 对于 `_posts` 下的文章为 `true`，对于 `_draft` 下的文章为 `false`     |
+| 设置                | 描述                                                                        | 默认值                                                    |
+| ----------------- | ------------------------------------------------------------------------- | ------------------------------------------------------ |
+| `layout`          | 布局                                                                        | [`config.default_layout`](/docs/configuration#Writing) |
+| `title`           | 标题                                                                        | 文章的文件名                                                 |
+| `date`            | 建立日期                                                                      | 文件建立日期                                                 |
+| `updated`         | 更新日期                                                                      | 文件更新日期                                                 |
+| `comments`        | 开启文章的评论功能                                                                 | `true`                                                 |
+| `tags`            | 标签（不适用于分页）                                                                |                                                        |
+| `categories`      | 分类（不适用于分页）                                                                |                                                        |
+| `permalink`       | 覆盖文章的永久链接. 永久链接应该以 `/` 或 `.html` 结尾                                       | `null`                                                 |
+| `excerpt`         | 纯文本的页面摘要。 使用 [该插件](/zh-cn/docs/tag-plugins#文章摘要和截断) 来格式化文本                |                                                        |
+| `disableNunjucks` | 启用时禁用 Nunjucks 标签 `{{ }}`/`{% %}` 和 [标签插件](/zh-cn/docs/tag-plugins) 的渲染功能 | false                                                  |
+| `lang`            | 设置语言以覆盖 [自动检测](/zh-cn/docs/internationalization#路径)                       | 继承自 `_config.yml`                                      |
+| `published`       | 文章是否发布                                                                    | 对于 `_posts` 下的文章为 `true`，对于 `_draft` 下的文章为 `false`     |
 
 #### 布局
 
@@ -48,25 +48,28 @@ date: 2013/7/13 20:46:25
 
 #### 分类和标签
 
-Only posts support the use of categories and tags. Categories apply to posts in order, resulting in a hierarchy of classifications and sub-classifications. Tags are all defined on the same hierarchical level so the order in which they appear is not important.
+只有文章支持分类和标签。 Categories apply to posts in order, resulting in a hierarchy of classifications and sub-classifications. Tags are all defined on the same hierarchical level so the order in which they appear is not important.
 
-**Example**
+**示例**
 
 ```yaml
 categories:
-  - Diary
+  - Sports
+  - Baseball
 tags:
-  - PS3
-  - Games
+  - Injury
+  - Fight
+  - Shocking
 ```
 
 If you want to apply multiple category hierarchies, use a list of names instead of a single name. If Hexo sees any categories defined this way on a post, it will treat each category for that post as its own independent hierarchy.
 
-**Example**
+**示例**
 
 ```yaml
 categories:
-  - [Diary, PlayStation]
-  - [Diary, Games]
-  - [Life]
+  - [Sports, Baseball]
+  - [MLB, American League, Boston Red Sox]
+  - [MLB, American League, New York Yankees]
+  - Rivalries
 ```

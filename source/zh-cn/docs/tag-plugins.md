@@ -2,7 +2,7 @@
 title: 标签插件（Tag Plugins）
 ---
 
-标签插件和 Front-matter 中的标签不同，它们是用于在文章中快速插入特定内容的插件。 They are ported from Octopress and provide a useful way for you to quickly add specific content to your posts.
+标签插件和 Front-matter 中的标签不同。 它们是从 Octopress 移植的，为您提供了一种快速向帖子添加特定内容的有用方法。
 
 虽然你可以使用任何格式书写你的文章，但是标签插件永远可用，且语法也都是一致的。
 
@@ -41,12 +41,11 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque hendrerit 
 ```
 {% blockquote David Levithan, Wide Awake %}
 Do not just seek happiness for yourself. Seek happiness for all. Through kindness. Through mercy.
-{% endblockquote %} Seek happiness for all. Through kindness. Through mercy.
 {% endblockquote %}
 ```
 
 {% blockquote David Levithan, Wide Awake %}
-Do not just seek happiness for yourself. Seek happiness for all. Through kindness. Through mercy. Seek happiness for all. Through kindness. Through mercy.
+Do not just seek happiness for yourself. Seek happiness for all. Through kindness. Through mercy.
 {% endblockquote %}
 
 **引用 Twitter**
@@ -54,12 +53,11 @@ Do not just seek happiness for yourself. Seek happiness for all. Through kindnes
 ```
 {% blockquote @DevDocs https://twitter.com/devdocs/status/356095192085962752 %}
 NEW: DevDocs now comes with syntax highlighting. http://devdocs.io
-{% endblockquote %} http://devdocs.io
 {% endblockquote %}
 ```
 
 {% blockquote @DevDocs https://twitter.com/devdocs/status/356095192085962752 %}
-NEW: DevDocs now comes with syntax highlighting. http://devdocs.io http://devdocs.io
+NEW: DevDocs now comes with syntax highlighting. http://devdocs.io
 {% endblockquote %}
 
 **引用网络上的文章**
@@ -67,7 +65,6 @@ NEW: DevDocs now comes with syntax highlighting. http://devdocs.io http://devdoc
 ```
 {% blockquote Seth Godin http://sethgodin.typepad.com/seths_blog/2009/07/welcome-to-island-marketing.html Welcome to Island Marketing %}
 Every interaction is both precious and an opportunity to delight.
-{% endblockquote %}
 {% endblockquote %}
 ```
 
@@ -172,7 +169,7 @@ content
 ## jsFiddle (`v7.0.0` 中被移除)
 
 {% note warn %}
-The tag was removed in Hexo 7.0.0. 如果你正在使用 `v7.0.0+`，请使用 [hexo-tag-embed](https://github.com/hexojs/hexo-tag-embed) 替代。
+该标签在 Hexo 7.0.0 中被删除。 如果你正在使用 `v7.0.0+`，请使用 [hexo-tag-embed](https://github.com/hexojs/hexo-tag-embed) 替代。
 {% endnote %}
 
 在文章中嵌入 jsFiddle。
@@ -301,7 +298,7 @@ To embed a Gist snippet:
 Inserts a responsive or specified size Vimeo video.
 
 ```
-{% vimeo video_id %}
+{% vimeo video_id [width] [height] %}
 ```
 
 ## Include Posts
@@ -333,9 +330,9 @@ This will work as long as the filename of the post is `how-to-bake-a-cake.md`, e
 
 **Display custom text.**
 
-`{% raw %}{% post_link hexo-3-8-released '通往文章的链接' %}{% endraw %}`
+`{% raw %}{% post_link hexo-3-8-released 'Link to a post' %}{% endraw %}`
 
-{% post_link hexo-3-8-released '通往文章的链接' %}
+{% post_link hexo-3-8-released 'Link to a post' %}
 
 **Escape title.**
 
@@ -394,7 +391,7 @@ _hexo-renderer-marked 3.1.0+ 可以（可选）自动解析图片的文章路径
 
 **title 和 alt 属性**
 
-`{% asset_img logo.svg "lorem ipsum'dolor'" %}`
+`{% asset_img foo.jpg "lorem ipsum'dolor'" %}`
 
 ```html
 <img src="/2020/01/02/hello/foo.jpg" title="lorem ipsum" alt="dolor" />

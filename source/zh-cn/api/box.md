@@ -2,28 +2,25 @@
 title: Box
 ---
 
-Box is a container used for processing files in a specified folder. 「Box」是 Hexo 用来处理特定文件夹中的文件的容器，在 Hexo 中有两个 Box，分别是 `hexo.source` 和 `hexo.theme`，前者用于处理 `source` 文件夹，而后者用于处理主题文件夹。 The former is used to process the `source` folder and the latter to process the `theme` folder.
+Box 是 Hexo 用来处理特定文件夹中的文件的容器。 在 Hexo 中有两个 Box，分别是 `hexo.source` 和 `hexo.theme`。 前者用于处理 `source` 文件夹，后者用于处理 `theme` 文件夹。
 
 ## 加载文件
 
-Box 提供了两种方法来加载文件：`process`, `watch`，前者用于加载文件夹内的所有文件；而后者除了执行 `process` 以外，还会继续监视文件变动。 `process` loads all files in the folder. `watch` does the same, but also starts watching for file changes.
+Box 提供了两种方法来加载文件：`process` 和 `watch`。 `process` 加载文件夹中的所有文件。 `watch` 做了与前者相同的操作，但还会开始监视文件的更改。
 
 ```js
-box.process().then(function () {
-  // ...
 box.process().then(function () {
   // ...
 });
 
 box.watch().then(function () {
-  // 之后可调用 box.unwatch()，停止监视文件
-});
+  // 之后可调用 box.unwatch()，停止监视文件。
 });
 ```
 
 ## 比对路径
 
-Box provides many ways for path matching. Box 提供了多种比对路径的模式，您可以以使用正则表达式（regular expression）、函数、或是 Express 风格的模式字符串，例如： For example:
+Box 提供了多种比对路径的模式。 您可以以使用正则表达式（regular expression）、函数、或是 Express 风格的模式字符串。 例如：
 
 ```plain
 posts/:id => posts/89
@@ -34,7 +31,7 @@ posts/*path => posts/2015/title
 
 ## 处理器（Processor）
 
-处理器（Processor）是 Box 中非常重要的元素，它用于处理文件，您可以使用上述的路径对比来限制该处理器所要处理的文件类型。 You can use path matching as described above to restrict what exactly the processor should process. 使用 `addProcessor` 来添加处理器。
+处理器（Processor）是 Box 中非常重要的元素，它用于处理文件。 您可以使用上述的路径对比来限制该处理器所要处理的文件类型。 使用 `addProcessor` 来添加处理器。
 
 ```js
 box.addProcessor("posts/:id", function (file) {

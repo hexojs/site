@@ -23,11 +23,11 @@ $ hexo new [layout] <title>
 
 新建一篇文章。 如果没有设置 `layout` 的话，默认使用 [\_config.yml](configuration.html) 中的 `default_layout` 参数代替。 Use the layout `draft` to create a draft. 如果标题包含空格的话，请使用引号括起来。
 
-| Option            | 描述                                        |
-| ----------------- | ----------------------------------------- |
-| `-p`, `--path`    | Post path. 自定义新文章的路径                      |
-| `-r`, `--replace` | Replace the current post if existed.      |
-| `-s`, `--slug`    | Post slug. Customize the URL of the post. |
+| 选项                | 描述                |
+| ----------------- | ----------------- |
+| `-p`, `--path`    | 文章的路径。 自定义文章的路径。  |
+| `-r`, `--replace` | 如果存在的话，替换当前的文章。   |
+| `-s`, `--slug`    | 文章别名。 自定义文章的 URL。 |
 
 默认情况下，Hexo 会使用文章的标题来决定文章文件的路径。 对于独立页面来说，Hexo 会创建一个以标题为名字的目录，并在目录中放置一个 `index.md` 文件。 你可以使用 `--path` 参数来覆盖上述行为、自行决定文件的目录：
 
@@ -53,13 +53,13 @@ $ hexo generate
 
 生成静态文件。
 
-| 选项                    | 描述                                    |
-| --------------------- | ------------------------------------- |
-| `-d`, `--deploy`      | Deploy after generation finishes      |
-| `-w`, `--watch`       | 监视文件变动                                |
-| `-b`, `--bail`        | 生成过程中如果发生任何未处理的异常则抛出异常                |
-| `-f`, `--force`       | Force regenerate                      |
-| `-c`, `--concurrency` | 最大同时生成文件的数量，默认无限制 Default is infinity |
+| 选项                    | 描述                               |
+| --------------------- | -------------------------------- |
+| `-d`, `--deploy`      | Deploy after generation finishes |
+| `-w`, `--watch`       | 监视文件变动                           |
+| `-b`, `--bail`        | 生成过程中如果发生任何未处理的异常则抛出异常           |
+| `-f`, `--force`       | 强制重新生成                           |
+| `-c`, `--concurrency` | 要同时生成的文件的最大数量。 默认无限制             |
 
 ## publish
 
@@ -89,9 +89,9 @@ $ hexo server
 $ hexo deploy
 ```
 
-Deploys your website.
+部署你的网站。
 
-| Option             | 描述                         |
+| 选项                 | 描述                         |
 | ------------------ | -------------------------- |
 | `-g`, `--generate` | Generate before deployment |
 
@@ -103,7 +103,7 @@ $ hexo render <file1> [file2] ...
 
 渲染文件。
 
-| Option           | 描述                 |
+| 选项               | 描述                 |
 | ---------------- | ------------------ |
 | `-o`, `--output` | Output destination |
 
@@ -129,7 +129,7 @@ $ hexo clean
 $ hexo list <type>
 ```
 
-Lists all routes.
+列出所有路由。
 
 ## version
 
@@ -137,7 +137,7 @@ Lists all routes.
 $ hexo version
 ```
 
-Displays version information.
+显示版本信息。
 
 ## config
 
@@ -163,7 +163,7 @@ $ hexo --safe
 $ hexo --debug
 ```
 
-在终端中显示调试信息并记录到 `debug.log`。 Try this if you encounter any problems with Hexo. 当您碰到问题时，可以尝试用调试模式重新执行一次，并 [提交调试信息到 GitHub](https://github.com/hexojs/hexo/issues/new?assignees=&labels=&projects=&template=bug_report.yml)。
+在终端中显示调试信息并记录到 `debug.log`。 当您使用 Hexo 时遇到问题，可以尝试用调试模式重新执行一次。 如果您发现错误，请[在 GitHub 上提出 issue](https://github.com/hexojs/hexo/issues/new?assignees=&labels=&projects=&template=bug_report.yml)。
 
 ### 简洁模式
 
@@ -176,21 +176,13 @@ Silences output to the terminal.
 ### 自定义配置文件的路径
 
 ```bash
-# 使用 custom.yml 代替默认的 _config.yml
-$ hexo server --config custom.yml
-
-# 使用 custom.yml 和 custom2.json，其中 custom2.json 优先级更高
-$ hexo generate --config custom.yml,custom2.json,custom3.yml
+$ hexo --config custom.yml
 ```
 
-自定义配置文件的路径，指定这个参数后将不再使用默认的 `_config.yml`。 Also accepts a comma-separated list (no spaces) of JSON or YAML config files that will combine the files into a single `_multiconfig.yml`.
+自定义配置文件的路径，指定这个参数后将不再使用默认的 `_config.yml`。 还接受一个以逗号分隔的 JSON 或 YAML 配置文件列表（无空格），该列表将把这些文件合并为一个 `_multiconfig.yml` 文件。
 
 ```bash
-# 使用 custom.yml 代替默认的 _config.yml
-$ hexo server --config custom.yml
-
-# 使用 custom.yml, custom2.json 和 custom3.yml，其中 custom3.yml 优先级最高，其次是 custom2.json
-$ hexo generate --config custom.yml,custom2.json,custom3.yml
+$ hexo --config custom.yml,custom2.json
 ```
 
 ### 显示草稿

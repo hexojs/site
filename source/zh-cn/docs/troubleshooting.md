@@ -1,5 +1,5 @@
 ---
-title: Troubleshooting
+title: 故障排除
 ---
 
 在使用 Hexo 时，您可能会遇到一些问题，下列的常见问题解答可能会对您有所帮助。 如果您在这里找不到解答，可以在 [GitHub](https://github.com/hexojs/hexo/issues) 或 [Google Group](https://groups.google.com/group/hexo) 上提问。
@@ -28,7 +28,7 @@ JS-YAML: bad indentation of a mapping entry at line 18, column 31:
 Error: EMFILE, too many open files
 ```
 
-虽然 Node.js 有非阻塞 I/O，同步 I/O 的数量仍被系统所限制，在生成大量静态文件的时候，您可能会碰到 EMFILE 错误，您可以尝试提高同步 I/O 的限制数量来解决此问题。 You may come across an EMFILE error when trying to generate a large number of files. You can try to run the following command to increase the number of allowed synchronous I/O operations.
+虽然 Node.js 有非阻塞 I/O，同步 I/O 的数量仍被系统所限制，在生成大量静态文件的时候，您可能会碰到 EMFILE 错误，您可以尝试提高同步 I/O 的限制数量来解决此问题。 在生成大量静态文件的时候，您可能会碰到 EMFILE 错误。 您可以尝试提高同步 I/O 的限制数量来解决此问题。
 
 ```bash
 $ ulimit -n 10000
@@ -55,7 +55,7 @@ ulimit: open files: cannot modify limit: Operation not permitted
 # '*' applies to all users and '-' set both soft and hard limits
 ```
 
-- 上述设置在某些情况下可能不适用，请确保 `/etc/pam.d/login` 和 `/etc/pam.d/lightdm` 有以下一行(如果这些文件不存在，请忽略此步骤)： (Ignore this step if those files do not exist)
+- 上述设置在某些情况下可能不适用，请确保 "/etc/pam.d/login" 和 "/etc/pam.d/lightdm" 中有以下一行。 (如果这些文件不存在，请忽略此步骤)
 
 ```
 session required pam_limits.so
@@ -118,7 +118,7 @@ To fix this, try
 Error: listen EADDRINUSE
 ```
 
-您可能同时开启两个 Hexo 服务器，或者有其他应用程序正在占用相同的端口，请尝试修改 `port` 参数，或是在启动 Hexo 服务器时加上 `-p` 选项。 Try to modify the `port` setting or start the Hexo server with the `-p` flag.
+您可能同时开启两个 Hexo 服务器，或者有其他应用程序正在占用相同的端口。 请尝试修改 `port` 参数，或是在启动 Hexo 服务器时加上 `-p` 选项。
 
 ```bash
 $ hexo server -p 5000
@@ -130,7 +130,7 @@ $ hexo server -p 5000
 npm ERR! node-waf configure build
 ```
 
-当您尝试安装以 C/C++ 或其他非 JavaScript 语言所编写的插件时，可能会遇到此类问题，请确认您已经在电脑上安装相对应的编译器。 Make sure you have installed the right compiler on your computer.
+当您尝试安装以 C/C++ 或其他非 JavaScript 语言所编写的插件时，可能会遇到此类问题。 请确认您已经在电脑上安装相对应的编译器。
 
 ## DTrace 错误 （Mac OS X）
 
@@ -150,7 +150,7 @@ $ npm install hexo --no-optional
 
 ## 在 Jade 或 Swig 遍历数据
 
-Hexo 使用 [Warehouse][] 存储数据，它不是一般数组所以必须先进行类型转型才能遍历。 It's not an array so you may have to transform objects into iterables.
+Hexo 使用 [Warehouse][] 存储数据。 它不是一般数组所以必须先进行类型转型才能遍历。
 
 ```
 {% for post in site.posts.toArray() %}
@@ -172,14 +172,14 @@ $ hexo clean
 ```json
 {
   "hexo": {
-    "version": "3.9.0"
+    "version": "3.2.2"
   }
 }
 ```
 
 ## Escape Contents
 
-Hexo 使用 [Nunjucks][] 来解析文章（旧版本使用 [Swig][]，两者语法类似），内容若包含 `{{ }}` 或 `{% %}` 可能导致解析错误，您可以用 [`raw`](/zh-cn/docs/tag-plugins#Raw) 标签包裹，单反引号 `` `{{ }}` `` 或 三反引号 来避免潜在问题发生。 Content wrapped with `{{ }}` or `{% %}` will get parsed and may cause problems. You can skip the parsing by wrapping it with the [`raw`](/docs/tag-plugins#Raw) tag plugin, a single backtick `` `{{ }}` `` or a triple backtick. 此外，Nunjucks 标签也可以通过渲染器的选项（如果支持的话）、[API](/zh-cn/api/renderer#禁用-Nunjucks-标签) 或 [front-matter](/zh-cn/docs/front-matter) 来禁用。
+Hexo 使用 [Nunjucks][] 来解析文章（旧版本使用 [Swig][]，两者语法类似）。 内容若包含 `{{ }}` 或 `{% %}` 可能导致解析错误。 您可以使用 [`raw`](/docs/tag-plugins#Raw) 标记插件、单反引号 `` `{{ }}` `` 或三反引号对其进行包裹，从而跳过解析过程。 此外，Nunjucks 标签也可以通过渲染器的选项（如果支持的话）、[API](/zh-cn/api/renderer#禁用-Nunjucks-标签) 或 [front-matter](/zh-cn/docs/front-matter) 来禁用。
 
 ```
 {% raw %}
@@ -273,24 +273,21 @@ Possible cause:
 ```
 YAMLException: Specified list of YAML types (or a single Type object) contains a non-Type object.
     at ...
-    at ...
 ```
 
 这可能是由于存在包管理器无法自动修复的不正确的依赖项（即 `js-yaml`）引起的，您需要手动更新它：
 
 ```sh
-npm ERR! node-waf configure build
+$ npm install js-yaml@latest
 ```
 
-or
+或者
 
 ```sh
-$ npm install js-yaml@latest
-# 如果您使用 yarn 作为包管理器，请运行下面这个命令：
 $ yarn add js-yaml@latest
 ```
 
-if you use `yarn`.
+如果您使用 `yarn`。
 
 [Warehouse]: https://github.com/hexojs/warehouse
 [Swig]: https://node-swig.github.io/swig-templates/

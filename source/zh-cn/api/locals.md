@@ -25,7 +25,6 @@ hexo.locals.get("posts");
 hexo.locals.set('posts', function(){
   return ...
 });
-});
 ```
 
 ## 移除变量
