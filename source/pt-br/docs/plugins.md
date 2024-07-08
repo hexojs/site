@@ -49,9 +49,9 @@ Quando o seu plug-in estiver pronto, você pode considerar publicá-lo na [lista
 2. Clone o repositório no seu computador e instale as dependências.
 
    ```shell
-   /site.git
-$ cd site
-$ npm install
+   $ git clone https://github.com/<username>/site.git
+   $ cd site
+   $ npm install
    ```
 
 3. Create a new yaml file in `source/_data/plugins/`, use your plugin name as the file name
@@ -59,10 +59,12 @@ $ npm install
 4. Edite `source/_data/plugins.yml` e adicione seu plugin. Por exemplo:
 
    ```yaml
-   name: hexo-server
-description: Server module for Hexo.
+   description: Server module for Hexo.
    link: https://github.com/hexojs/hexo-server
-tags: - official - server - console
+   tags:
+     - official
+     - server
+     - console
    ```
 
 5. Push para a branch.

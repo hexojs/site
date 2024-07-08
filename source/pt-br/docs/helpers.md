@@ -124,7 +124,7 @@ More info: [Gravatar](https://en.gravatar.com/site/implement/images/)
 
 ### css
 
-Carrega arquivos CSS. Onde `path` pode ser um array ou uma string. Se `path` não for prefixado com `/` ou com qualquer protocolo, ele será prefixado com a URL raiz. Se você não adicionar a extensão `.css` após `path`, ela será adicionada automaticamente. Use object type for custom attributes.
+Carrega arquivos CSS. Se `path` não for prefixado com `/` ou com qualquer protocolo, ele será prefixado com a URL raiz. Se você não adicionar a extensão `.css` após `path`, ela será adicionada automaticamente. Use object type for custom attributes.
 
 ```js
 <%- css(path, ...) %>
@@ -942,18 +942,19 @@ Analisa todas as tags de título (h1~h6) no conteúdo e insere um índice.
 <%- toc(str, [options]) %>
 ```
 
-| Option                  | Description                             | Default           |
-| ----------------------- | --------------------------------------- | ----------------- |
-| `class`                 | Nome da classe                          | `toc`             |
-| `class_item` (+6.3.0)   | Descrição                               | `${class}-item`   |
-| `class_link` (+6.3.0)   | Descrição                               | `${class}-link`   |
-| `class_text` (+6.3.0)   | Descrição                               | `${class}-text`   |
-| `class_child` (+6.3.0)  | Nome da classe                          | `${class}-child`  |
-| `class_number` (+6.3.0) | Padrão                                  | `${class}-number` |
-| `class_level` (+6.3.0)  | Critério de ordenação de tags           | `${class}-level`  |
-| `list_number`           | Exibe o número da lista                 | true              |
-| `max_depth`             | Profundidade máxima do cabeçalho gerado | 6                 |
-| `min_depth`             | Minimum heading depth of generated toc  | 1                 |
+| Option                  | Description                              | Default           |
+| ----------------------- | ---------------------------------------- | ----------------- |
+| `class`                 | Nome da classe                           | `toc`             |
+| `class_item` (+6.3.0)   | Descrição                                | `${class}-item`   |
+| `class_link` (+6.3.0)   | Descrição                                | `${class}-link`   |
+| `class_text` (+6.3.0)   | Descrição                                | `${class}-text`   |
+| `class_child` (+6.3.0)  | Nome da classe                           | `${class}-child`  |
+| `class_number` (+6.3.0) | Padrão                                   | `${class}-number` |
+| `class_level` (+6.3.0)  | Critério de ordenação de tags            | `${class}-level`  |
+| `list_number`           | Exibe o número da lista                  | true              |
+| `max_depth`             | Profundidade máxima do cabeçalho gerado  | 6                 |
+| `min_depth`             | Minimum heading depth of generated toc   | 1                 |
+| `max_items` (+7.3.0)    | Maximum number of items in generated toc | `Infinity`        |
 
 **Examples:**
 

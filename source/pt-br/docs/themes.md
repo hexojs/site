@@ -62,16 +62,15 @@ Quando você terminar de criar seu tema, você pode publicá-lo na [lista de tem
 4. Edite o arquivo `source/_data/themes.yml` e adicione seu tema. Por exemplo:
 
    ```yaml
-   - name: landscape
-     description: A brand new default theme for Hexo.
+   description: A brand new default theme for Hexo.
    link: https://github.com/hexojs/hexo-theme-landscape
-     preview: http://hexo.io/hexo-theme-landscape
-     tags:
-       - official
-       - responsive
-       - widget
-       - two_column
-       - one_column
+   preview: http://hexo.io/hexo-theme-landscape
+   tags:
+     - official
+     - responsive
+     - widget
+     - two_column
+     - one_column
    ```
 
 5. Adicione um print de tela (com o mesmo nome do tema) no diretório `source/themes/screenshots`. Deve ser um arquivo PNG com resolução de 800x500 pixels.
