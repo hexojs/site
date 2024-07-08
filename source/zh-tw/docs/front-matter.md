@@ -54,10 +54,12 @@ Only posts support the use of categories and tags. Categories apply to posts in 
 
 ```yaml
 categories:
-  - Diary
+  - Sports
+  - Baseball
 tags:
-  - PS3
-  - Games
+  - Injury
+  - Fight
+  - Shocking
 ```
 
 If you want to apply multiple category hierarchies, use a list of names instead of a single name. If Hexo sees any categories defined this way on a post, it will treat each category for that post as its own independent hierarchy.
@@ -66,7 +68,8 @@ If you want to apply multiple category hierarchies, use a list of names instead 
 
 ```yaml
 categories:
-  - [Diary, PlayStation]
-  - [Diary, Games]
-  - [Life]
+  - [Sports, Baseball]
+  - [MLB, American League, Boston Red Sox]
+  - [MLB, American League, New York Yankees]
+  - Rivalries
 ```

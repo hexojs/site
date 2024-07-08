@@ -177,27 +177,13 @@ include:
   - ".nojekyll"
   # 包括 'source/css/_typing.css'
   - "css/_typing.css"
-  # 包括 'source/_css/' 中的任何檔案，但不包括子目錄及其其中的檔案。
-  - "css/_typing.css"
   # Include any file in 'source/_css/'.
   - "_css/*"
   # Include any file and subfolder in 'source/_css/'.
-  - "_css/*"
-  # 包含 'source/_css/' 中的任何檔案和子目錄下的任何檔案
   - "_css/**/*"
 
 exclude:
-  # 不包括 'source/js/test.js'
-  - "js/test.js"
-  # 不包括 'source/js/' 中的檔案、但包含子目錄下的所有目錄和檔案
-  - "js/*"
-  # 不包括 'source/js/' 中的檔案和子目錄下的任何檔案
-  - "js/**/*"
-  # 不包括 'source/js/' 目錄下的所有檔案名以 'test' 開頭的檔案，但包括其它檔案和子目錄的單一檔案
-  - "js/test*"
-  # 不包括 'source/js/' 及其子目錄中任何以 'test' 開頭的檔案
-  - "js/**/test*"
-  # 不要用 exclude 来忽略 'source/_posts/' 中的檔案。
+  # Exclude 'source/js/test.js'.
   - "js/test.js"
   # Exclude any file in 'source/js/'.
   - "js/*"
@@ -231,10 +217,10 @@ Each value in the list must be enclosed with single/double quotes.
 使用 `hexo` 指令時，只要在指令後面加上 `--config` 參數與自訂配置檔 (需為 JSON 或 YAML 檔) 路徑即可指定此次想要搭配使用的配置檔。 該參數也可以是以逗號分隔的檔案列表 (注意中間不得有空格) 來滿足一次使用多個配置檔的需求。
 
 ```bash
-# 使用自訂的 'custom.yml' 取代預設的 '_config.yml'
+# use 'custom.yml' in place of '_config.yml'
 $ hexo server --config custom.yml
 
-# 使用多個配置檔, 有衝突時優先使用 'custom2.json'
+# use 'custom.yml' & 'custom2.json', prioritizing 'custom2.json'
 $ hexo server --config custom.yml,custom2.json
 ```
 

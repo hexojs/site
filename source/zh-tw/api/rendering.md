@@ -12,7 +12,6 @@ title: 渲染
 hexo.render.render({ text: "example", engine: "swig" }).then(function (result) {
   // ...
 });
-});
 ```
 
 ## 渲染檔案
@@ -23,7 +22,6 @@ hexo.render.render({ text: "example", engine: "swig" }).then(function (result) {
 hexo.render.render({ path: "path/to/file.swig" }).then(function (result) {
   // ...
 });
-});
 ```
 
 ## 渲染選項
@@ -33,7 +31,6 @@ You can pass in an options object as the second argument.
 ```js
 hexo.render.render({ text: "" }, { foo: "foo" }).then(function (result) {
   // ...
-});
 });
 ```
 

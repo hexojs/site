@@ -90,6 +90,8 @@ Increase Node.js heap memory size by changing the first line of `hexo-cli` (`whi
 ### RPC failed
 
 ```plain
+error: RPC failed; result=22, HTTP code = 403
+
 fatal: 'username.github.io' does not appear to be a git repository
 ```
 
@@ -278,7 +280,7 @@ YAMLException: Specified list of YAML types (or a single Type object) contains a
 This may be caused by an incorrect dependency(i.e. `js-yaml`) setting that can't be solved automatically by the package manager, and you may have to update it manually running:
 
 ```sh
-npm ERR! node-waf configure build
+$ npm install js-yaml@latest
 ```
 
 or

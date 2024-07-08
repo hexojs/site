@@ -49,15 +49,15 @@ Node.js 為大多數平台提供了官方的 [安裝程序](https://nodejs.org/e
 
 對於 Mac 和 Linux 同樣建議使用 nvs 或者 nvm，以避免可能會出現的權限問題。
 
-{% note info Windows 用戶 %}
+{% note info Windows %}
 使用 Node.js 官方安裝程序時，請確保勾選 **Add to PATH** 選項（默認已勾選）
 {% endnote %}
 
-{% note warn For Mac / Linux 用戶 %}
+{% note warn Mac / Linux %}
 如果在嘗試安裝Hexo 的過程中出現`EACCES` 權限錯誤，請遵循[由npmjs 發布的指導](https://docs.npmjs.com/resolving-eacces-permissions-errors-when-installing-packages-globally) 修復該問題。
 {% endnote %}
 
-{% note info Linux 用戶 %}
+{% note info Linux %}
 若您使用 Snap 安裝 Node.js，您則需要在[初始化](/zh-tw/docs/commands#init)一個部落格時，於目標資料夾中手動執行 `npm install`。
 {% endnote %}
 
@@ -74,7 +74,7 @@ $ npm install -g hexo-cli
 Advanced users may prefer to install and use `hexo` package instead.
 
 ```bash
-讓 Hexo 準備就緒僅需幾分鐘，若您在安裝時遭遇問題而且找不到任何解決方式，請 <a href="https://github.com/hexojs/hexo/issues">回報問題</a>，我會試著解決您的問題。
+$ npm install hexo
 ```
 
 Once installed, you can run Hexo in two ways:

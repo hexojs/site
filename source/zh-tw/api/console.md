@@ -10,7 +10,6 @@ title: 控制台（Console）
 hexo.extend.console.register(name, desc, options, function (args) {
   // ...
 });
-});
 ```
 
 | Argument  | 描述 |

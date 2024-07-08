@@ -124,7 +124,7 @@ More info: [Gravatar](https://en.gravatar.com/site/implement/images/)
 
 ### css
 
-載入 CSS 檔案。 `path` can be an array or a string. `path` can be a string, an array, an object or an array of objects. `path` 可以是陣列或字串，如果 `path` 開頭不是 `/` 或任何協議，則會自動加上根路徑；如果後面沒有加上 `.css` 副檔名的話，也會自動加上。 Use object type for custom attributes.
+載入 CSS 檔案。 `path` can be a string, an array, an object or an array of objects. `path` 可以是陣列或字串，如果 `path` 開頭不是 `/` 或任何協議，則會自動加上根路徑；如果後面沒有加上 `.css` 副檔名的話，也會自動加上。 Use object type for custom attributes.
 
 ```js
 <%- css(path, ...) %>
@@ -929,18 +929,19 @@ Parses all heading tags (h1~h6) in the content and inserts a table of contents.
 <%- toc(str, [options]) %>
 ```
 
-| Option                  | Description          | Default           |
-| ----------------------- | -------------------- | ----------------- |
-| `class`                 | Class 名稱             | `toc`             |
-| `class_item` (+6.3.0)   | 文章列表的 class 名稱。      | `${class}-item`   |
-| `class_link` (+6.3.0)   | 插入分頁連結。              | `${class}-link`   |
-| `class_text` (+6.3.0)   | 改變文章名稱顯示方法的函數        | `${class}-text`   |
-| `class_child` (+6.3.0)  | 改變彙整名稱顯示方法的函數        | `${class}-child`  |
-| `class_number` (+6.3.0) | 顯示編號                 | `${class}-number` |
-| `class_level` (+6.3.0)  | 改變分類名稱顯示方法的函數        | `${class}-level`  |
-| `list_number`           | Displays list number | true              |
-| `max_depth`             | 生成 TOC 的最大深度         | 6                 |
-| `min_depth`             | 生成 TOC 的最小深度         | 1                 |
+| Option                  | Description                              | Default           |
+| ----------------------- | ---------------------------------------- | ----------------- |
+| `class`                 | Class 名稱                                 | `toc`             |
+| `class_item` (+6.3.0)   | 文章列表的 class 名稱。                          | `${class}-item`   |
+| `class_link` (+6.3.0)   | 插入分頁連結。                                  | `${class}-link`   |
+| `class_text` (+6.3.0)   | 改變文章名稱顯示方法的函數                            | `${class}-text`   |
+| `class_child` (+6.3.0)  | 改變彙整名稱顯示方法的函數                            | `${class}-child`  |
+| `class_number` (+6.3.0) | 顯示編號                                     | `${class}-number` |
+| `class_level` (+6.3.0)  | 改變分類名稱顯示方法的函數                            | `${class}-level`  |
+| `list_number`           | Displays list number                     | true              |
+| `max_depth`             | 生成 TOC 的最大深度                             | 6                 |
+| `min_depth`             | 生成 TOC 的最小深度                             | 1                 |
+| `max_items` (+7.3.0)    | Maximum number of items in generated toc | `Infinity`        |
 
 **Examples:**
 

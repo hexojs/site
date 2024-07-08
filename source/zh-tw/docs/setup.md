@@ -16,7 +16,6 @@ Once initialized, here's what your project folder will look like:
 
 ```plain
 .
-.
 ├── _config.yml
 ├── package.json
 ├── scaffolds

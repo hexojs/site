@@ -33,7 +33,7 @@ highlight:
   auto_detect: false
   line_number: true
   line_threshold: 0
-  tab_replace: ''
+  tab_replace: ""
   exclude_languages:
     - example
   wrap: true
@@ -43,8 +43,7 @@ prismjs:
   preprocess: true
   line_number: true
   line_threshold: 0
-  line_threshold: 0
-  tab_replace: ''
+  tab_replace: ""
 ```
 
 v7.0.0+:
@@ -151,7 +150,7 @@ highlight:
 
 > Tip: When you want to use "sublanguage highlight", enable `auto_detect` and don't mark language when writing code block.
 
-{% note warn "Warning!" %} %}
+{% note warn "Warning!" %}
 `auto_detect` is very resource-intensive. `auto_detect` is very resource-intensive. Do not enable it unless you really need "sublanguage highlight" or prefer not to mark language when writing code block.
 {% endnote %}
 
@@ -205,7 +204,7 @@ Hexo _wraps_ the output inside `<figure>` and `<table>` to support line number. 
 </code></pre>
 ```
 
-{% note warn "Warning!" %} %}
+{% note warn "Warning!" %}
 Because `line_number` feature relies on `wrap`, you can't disable `wrap` with `line_number` enabled: If you set `line_number` to `true`, `wrap` will be automatically enabled.
 {% endnote %}
 
@@ -241,10 +240,14 @@ prismjs:
 v7.0.0+:
 
 ```yaml
-Prismjs is disabled by default. You should set <code>highlight.enable</code> to <code>false</code> before enabling prismjs.
+# _config.yml
+syntax_highlighter: prismjs
+prismjs:
+  preprocess: true
+  line_number: true
+  line_threshold: 0
+  tab_replace: ""
 ```
- to false before enabling prismjs.
-</code>
 
 Prismjs is disabled by default. You should set `highlight.enable` to `false` (below v7.0.0) or set `syntax_highlighter` to `prismjs` (v7.0.0+) before enabling prismjs.
 

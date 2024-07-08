@@ -17,7 +17,6 @@ var hexo = new Hexo(process.cwd(), {});
 hexo.init().then(function () {
   // ...
 });
-});
 ```
 
 | 選項                 | 描述                                                                                                 | Default                           |
@@ -37,13 +36,10 @@ Both methods will load the list of files and pass them to the corresponding proc
 ```js
 hexo.load().then(function () {
   // ...
-hexo.load().then(function () {
-  // ...
 });
 
 hexo.watch().then(function () {
   // 之後可呼叫 hexo.unwatch() 停止檔案監看
-});
 });
 ```
 
@@ -54,7 +50,6 @@ Any console command can be called explicitly using the `call` method on the Hexo
 ```js
 hexo.call("generate", {}).then(function () {
   // ...
-});
 });
 ```
 
