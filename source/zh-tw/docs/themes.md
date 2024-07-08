@@ -8,7 +8,6 @@ title: 主題
 
 ```plain
 .
-.
 ├── _config.yml
 ├── languages
 ├── layout
@@ -53,9 +52,9 @@ When you have finished building your theme, you can publish it to the [theme lis
 2. Clone the repository to your computer and install dependencies.
 
    ```shell
-   /site.git
-$ cd site
-$ npm install
+   $ git clone https://github.com/<username>/site.git
+   $ cd site
+   $ npm install
    ```
 
 3. 編輯 `source/_data/themes.yml`，在檔案中新增您的主題，例如：
@@ -64,11 +63,14 @@ $ npm install
 
    ```yaml
    description: A brand new default theme for Hexo.
-   name: landscape
-description: A brand new default theme for Hexo.
-link: https://github.com/hexojs/hexo-theme-landscape
-preview: http://hexo.io/hexo-theme-landscape
-tags: - official - responsive - widget - two_column - one_column
+   link: https://github.com/hexojs/hexo-theme-landscape
+   preview: http://hexo.io/hexo-theme-landscape
+   tags:
+     - official
+     - responsive
+     - widget
+     - two_column
+     - one_column
    ```
 
 5. 在 `source/themes/screenshots` 新增同名的截圖檔案，圖片必須為 800x500 的 PNG 檔案。 It must be a 800\*500px PNG.

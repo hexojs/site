@@ -11,13 +11,10 @@ Box is a container used for processing files in a specified folder. 「箱子」
 ```js
 box.process().then(function () {
   // ...
-box.process().then(function () {
-  // ...
 });
 
 box.watch().then(function () {
   // 之後可呼叫 box.unwatch() 停止檔案監看
-});
 });
 ```
 

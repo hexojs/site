@@ -10,7 +10,6 @@ title: 佈署器（Deployer）
 hexo.extend.deployer.register(name, function (args) {
   // ...
 });
-});
 ```
 
 An argument `args` will be passed into the function. 在函數中會傳入 `args` 參數，此參數包含了 `_config.yml` 中的 `deploy` 設定，及使用者在終端機所傳入的參數。

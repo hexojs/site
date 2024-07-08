@@ -42,17 +42,17 @@ $ npm install hexo-deployer-git --save
 ```yaml
 deploy:
   type: git
-  repo: <repository url> #https://bitbucket.org/JohnSmith/johnsmith.bitbucket.io
+  repo: <repository url> # https://bitbucket.org/JohnSmith/johnsmith.bitbucket.io
   branch: [branch]
   message: [message]
 ```
 
-| 選項        | 描述                                               | Default                                                                                |
-| --------- | ------------------------------------------------ | -------------------------------------------------------------------------------------- |
-| `repo`    | URL of the target repository                     |                                                                                        |
-| `branch`  | 分支名稱。                                            | `gh-pages` (GitHub)<br>`coding-pages` (Coding.net)<br>`master` (其他)        |
-| `message` | Customize commit message.                        | `<code>Site updated: {% raw %}{{ now('YYYY-MM-DD HH:mm:ss') }}{% endraw %}`)</code> |
-| `token`   | 選填的 token 值用來儲存庫存取身份認證。 以 `$` 作為前綴從環境變數中讀取 token |                                                                                        |
+| 選項        | 描述                                               | Default                                                                         |
+| --------- | ------------------------------------------------ | ------------------------------------------------------------------------------- |
+| `repo`    | URL of the target repository                     |                                                                                 |
+| `branch`  | 分支名稱。                                            | `gh-pages` (GitHub)<br>`coding-pages` (Coding.net)<br>`master` (其他) |
+| `message` | Customize commit message.                        | `Site updated: {% raw %}{{ now('YYYY-MM-DD HH:mm:ss') }}{% endraw %}`           |
+| `token`   | 選填的 token 值用來儲存庫存取身份認證。 以 `$` 作為前綴從環境變數中讀取 token |                                                                                 |
 
 3. 上傳你的網站。 執行 `hexo clean && hexo deploy`。
 
@@ -280,7 +280,7 @@ After a few moments, your website will be deployed.
 2. 修改配置。
 
 ```yaml
-deploy: # 所有部署器的根配置塊
+deploy: # The root configuration block for all deployers
   - type: rss3
     endpoint: https://hub.rss3.io
     privateKey: 47e18d6c386898b424025cd9db446f779ef24ad33a26c499c87bb3d9372540ba

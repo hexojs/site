@@ -16,7 +16,6 @@ If your code is complicated or if you want to publish it to the NPM registry, we
 
 ```plain
 .
-.
 ├── index.js
 └── package.json
 ```
@@ -50,9 +49,9 @@ You'll also need to list your plugin as a dependency in the root `package.json` 
 2. Clone the repository to your computer and install dependencies.
 
    ```shell
-   /site.git
-$ cd site
-$ npm install
+   $ git clone https://github.com/<username>/site.git
+   $ cd site
+   $ npm install
    ```
 
 3. 編輯 `source/_data/plugins.yml`，在檔案中新增您的外掛，例如：
@@ -61,10 +60,11 @@ $ npm install
 
    ```yaml
    description: Server module for Hexo.
-   name: hexo-server
-description: Server module for Hexo.
-link: https://github.com/hexojs/hexo-server
-tags: - official - server - console
+   link: https://github.com/hexojs/hexo-server
+   tags:
+     - official
+     - server
+     - console
    ```
 
 5. 推送（push）分支。

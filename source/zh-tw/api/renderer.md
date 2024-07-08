@@ -15,9 +15,6 @@ hexo.extend.renderer.register(
   },
   sync,
 );
-  },
-  sync,
-);
 ```
 
 | Argument | 描述                   |

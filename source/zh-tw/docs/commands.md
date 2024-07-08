@@ -98,7 +98,7 @@ Deploys your website.
 ## render
 
 ```bash
-$ hexo render <file> [file2] ...
+$ hexo render <file1> [file2] ...
 ```
 
 渲染檔案。

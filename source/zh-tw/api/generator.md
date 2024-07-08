@@ -10,7 +10,6 @@ A generator builds routes based on processed files.
 hexo.extend.generator.register(name, function (locals) {
   // ...
 });
-});
 ```
 
 A `locals` argument will get passed into the function, containing the [site variables](../docs/variables.html#Site-Variables). You should use this argument to get the website data, thereby avoiding having to access the database directly.
@@ -53,7 +52,7 @@ Next, set the `layout` attribute to render with the theme templates. We're setti
 hexo.extend.generator.register("archive", function (locals) {
   return {
     path: "archives/index.html",
-    data: locals.posts,
+    data: locals,
     layout: ["archive", "index"],
   };
 });
@@ -67,7 +66,8 @@ hexo.extend.generator.register("archive", function (locals) {
 var pagination = require("hexo-pagination");
 
 hexo.extend.generator.register("archive", function (locals) {
-  return pagination("archives/index.html", locals.posts, {
+  // hexo-pagination makes an index.html for the /archives route
+  return pagination("archives", locals.posts, {
     perPage: 10,
     layout: ["archive", "index"],
     data: {},

@@ -9,7 +9,7 @@ title: GitLab Pages
 5. Add `.gitlab-ci.yml` file to the root folder of your repo (alongside \_config.yml & package.json) with the following content (replacing `16` with the major version of Node.js you noted in previous step):
 
 ```yml
-image: node:10-alpine # use nodejs v10 LTS
+image: node:16-alpine
 cache:
   paths:
     - node_modules/
@@ -20,12 +20,12 @@ before_script:
 
 pages:
   script:
-    - hexo generate
+    - npm run build
   artifacts:
     paths:
       - public
-  only:
-    - master
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
 ```
 
 6. GitLab CI 完成部署後，你應該能瀏覽 `<GitLab 用戶名>.gitlab.io` 頁面。

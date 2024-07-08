@@ -6,7 +6,7 @@ Tag plugins are different from post tags. They are ported from Octopress and pro
 
 Although you can write your posts in any format, the tag plugins will always be available and syntax remains the same.
 
-禁止 YouTube cookie
+{% youtube I07XMi7MHd4 %}
 
 _標籤外掛不應該被包裝在 Markdown 語法當中，例如： `[]({% post_path lorem-ipsum %})` 是不支援的。_
 
@@ -41,7 +41,6 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque hendrerit 
 ```
 {% blockquote David Levithan, Wide Awake %}
 Do not just seek happiness for yourself. Seek happiness for all. Through kindness. Through mercy.
-{% endblockquote %} Seek happiness for all. Through kindness. Through mercy.
 {% endblockquote %}
 ```
 
@@ -54,12 +53,11 @@ Do not just seek happiness for yourself. Seek happiness for all. Through kindnes
 ```
 {% blockquote @DevDocs https://twitter.com/devdocs/status/356095192085962752 %}
 NEW: DevDocs now comes with syntax highlighting. http://devdocs.io
-{% endblockquote %} http://devdocs.io
 {% endblockquote %}
 ```
 
 {% blockquote @DevDocs https://twitter.com/devdocs/status/356095192085962752 %}
-NEW: DevDocs now comes with syntax highlighting. http://devdocs.io http://devdocs.io
+NEW: DevDocs now comes with syntax highlighting. http://devdocs.io
 {% endblockquote %}
 
 **引用網路上的文章**
@@ -67,7 +65,6 @@ NEW: DevDocs now comes with syntax highlighting. http://devdocs.io http://devdoc
 ```
 {% blockquote Seth Godin http://sethgodin.typepad.com/seths_blog/2009/07/welcome-to-island-marketing.html Welcome to Island Marketing %}
 Every interaction is both precious and an opportunity to delight.
-{% endblockquote %}
 {% endblockquote %}
 ```
 
@@ -156,7 +153,7 @@ This is identical to using a code block, but instead uses three backticks to del
 {% raw %}
 &#96`[language] [title] [url] [link text]
 code snippet
-&#96`
+&#96;`
 {% endraw %}
 
 ## Pull Quote
@@ -222,7 +219,7 @@ To embed a Gist snippet:
 插入 `source/downloads/code` 資料夾內的程式檔，資料夾取決於你在設定文件中 `code_dir` 的設定。 The folder location can be specified through the `code_dir` option in the config.
 
 ```
-{% include_code [title] [lang:language] path/to/file %}
+{% include_code [title] [lang:language] [from:line] [to:line] path/to/file %}
 ```
 
 ### 影片
@@ -301,7 +298,7 @@ YouTube's cookie is not used in this mode.
 Inserts a responsive or specified size Vimeo video.
 
 ```
-{% vimeo video_id %}
+{% vimeo video_id [width] [height] %}
 ```
 
 ## Include Posts
@@ -394,7 +391,7 @@ _hexo-renderer-marked 3.1.0+ 可以（可選的）自動解析文章內的圖片
 
 **Title & Alt**
 
-`{% asset_img logo.svg "lorem ipsum'dolor'" %}`
+`{% asset_img foo.jpg "lorem ipsum'dolor'" %}`
 
 ```html
 <img src="/2020/01/02/hello/foo.jpg" title="lorem ipsum" alt="dolor" />
@@ -414,7 +411,7 @@ _hexo-renderer-marked 3.1.0+ 可以（可選的）自動解析文章內的圖片
 
 ```yml
 _config.yml
-root: /blog/ # 範例
+root: /blog/ # example
 ```
 
 ```
@@ -491,8 +488,6 @@ content
 
 ```
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-<!-- more -->
-Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 <!-- more -->
 Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 ```

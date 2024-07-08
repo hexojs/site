@@ -14,9 +14,6 @@ hexo.extend.tag.register(
   },
   options,
 );
-  },
-  options,
-);
 ```
 
 Two arguments will be passed into the tag function: `args` and `content`. `args` contains the arguments passed into the tag plugin and `content` is the wrapped content from the tag plugin.
@@ -142,16 +139,6 @@ hexo.extend.tag.register('foo', function (args) {
 
   return 'foo';
 });
-
-  // Front-matter
-  const { title } = this; // article's (post/page) title
-
-  // Article's content
-  const { _content } = this; // original content
-  const { content } = this; // HTML-rendered content
-
-  return 'foo';
-});
 ```
 
 2.
@@ -170,12 +157,6 @@ module.exports = hexo => {
 
     const { config: themeCfg } = hexo.theme;
     if (themeCfg.fancybox) // do something...
-
-    const { title, _content, content } = this;
-
-    return 'foo';
-  };
-};
 
     const { title, _content, content } = this;
 

@@ -17,12 +17,6 @@ hexo.extend.filter.register(type, function() {
   if (themeCfg.fancybox) // do something...
 
 }, priority);
-
-  // Theme configuration
-  const { config: themeCfg } = this.theme;
-  if (themeCfg.fancybox) // do something...
-
-}, priority);
 ```
 
 You can define the `priority`. Lower `priority` means that it will be executed first. 您可指定過濾器的優先度 `priority`，`priority` 值越低的過濾器會越先執行，預設的 `priority` 是 10。 We recommend using user-configurable priority value that user can specify in the config, e.g. `hexo.config.your_plugin.priority`.
@@ -156,7 +150,6 @@ Executed after generation finishes.
 hexo.extend.filter.register("after_generate", function () {
   // ...
 });
-});
 ```
 
 ### template_locals
@@ -180,7 +173,6 @@ hexo.extend.filter.register("template_locals", function (locals) {
 hexo.extend.filter.register("after_init", function () {
   // ...
 });
-});
 ```
 
 ### new_post_path
@@ -191,7 +183,6 @@ Executed when creating a post to determine the path of new posts.
 hexo.extend.filter.register("new_post_path", function (data, replace) {
   // ...
 });
-});
 ```
 
 ### post_permalink
@@ -201,7 +192,6 @@ Used to determine the permalink of posts.
 ```js
 hexo.extend.filter.register("post_permalink", function (data) {
   // ...
-});
 });
 ```
 
@@ -214,8 +204,8 @@ Executed after rendering finishes. 在渲染後執行，您可參考 [渲染](re
 Executed after generated files and cache are removed with `hexo clean` command.
 
 ```js
-hexo.extend.filter.register("before_exit", function () {
-  // ...
+hexo.extend.filter.register("after_clean", function () {
+  // remove some other temporary files
 });
 ```
 
