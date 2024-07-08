@@ -49,9 +49,9 @@ Hexo имеет мощную систему плагинов, это делае�
 2. Клонируйте репозиторий на компьютер и установите все зависимости.
 
    ```shell
-   /site.git
-$ cd site
-$ npm install
+   $ git clone https://github.com/<username>/site.git
+   $ cd site
+   $ npm install
    ```
 
 3. Create a new yaml file in `source/_data/plugins/`, use your plugin name as the file name
@@ -59,10 +59,12 @@ $ npm install
 4. Отредактируйте `source/_data/plugins.yml` добавив свой плагин. Например:
 
    ```yaml
-   name: hexo-server
-description: Server module for Hexo.
+   description: Server module for Hexo.
    link: https://github.com/hexojs/hexo-server
-tags: - official - server - console
+   tags:
+     - official
+     - server
+     - console
    ```
 
 5. Push the branch.

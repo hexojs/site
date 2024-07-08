@@ -20,20 +20,20 @@ data.pipe(dest);
 Метод `set` принимает строку, [Buffer][] или функцию.
 
 ```js
-// Строка
+// String
 hexo.route.set("index.html", "index");
 
 // Buffer
 hexo.route.set("index.html", new Buffer("index"));
 
-// Функция (Запрос)
+// Function (Promise)
 hexo.route.set("index.html", function () {
   return new Promise(function (resolve, reject) {
     resolve("index");
   });
 });
 
-// Функция (Обратный вызов)
+// Function (Callback)
 hexo.route.set("index.html", function (callback) {
   callback(null, "index");
 });

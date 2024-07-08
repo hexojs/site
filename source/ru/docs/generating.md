@@ -5,7 +5,7 @@ title: Генерация
 С помощью Hexo генерировать статические файлы просто и легко.
 
 ```bash
-hexo generate
+$ hexo generate
 ```
 
 {% youtube viEJQPVCoLU %}

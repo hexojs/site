@@ -38,7 +38,7 @@ hexo.extend.renderer.register(
 ```js
 var stylus = require("stylus");
 
-// Обратный вызов
+// Callback
 hexo.extend.renderer.register(
   "styl",
   "css",
@@ -47,7 +47,7 @@ hexo.extend.renderer.register(
   },
 );
 
-// Запрос
+// Promise
 hexo.extend.renderer.register("styl", "css", function (data, options) {
   return new Promise(function (resolve, reject) {
     resolve("test");

@@ -5,12 +5,11 @@ title: Интернационализация (i18n)
 Можно использовать интернационализацию на вашем сайте для поддержки многоязычности. Язык по умолчанию устанавливается путём изменения настройки языка `language` в `_config.yml`. Возможно также установить несколько языков и изменить их порядок по умолчанию.
 
 ```yaml
-language: ru
+language: zh-tw
 
 language:
-- ru
-- en
 - zh-tw
+- en
 ```
 
 ### Языковые файлы
@@ -23,12 +22,12 @@ language:
 
 ```yaml en.yml
 index:
-  title: Главная
-  add: Добавить
+  title: Home
+  add: Add
   video:
-    zero: Нет видео
-    one: Одно видео
-    other: %d видео
+    zero: No videos
+    one: One video
+    other: %d videos
 ```
 
 ```js

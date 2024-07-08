@@ -6,7 +6,7 @@ title: Плагины тегов
 
 Although you can write your posts in any formats, but the tag plugins will always be available and syntax remains the same.
 
-Вставка видео с Vimeo.
+{% youtube I07XMi7MHd4 %}
 
 _Tag plugins should not be wrapped inside Markdown syntax, e.g. `[]({% post_path lorem-ipsum %})` is not supported._
 
@@ -219,7 +219,7 @@ Please use [hexo-tag-embed](https://github.com/hexojs/hexo-tag-embed) instead if
 Вставляет фрагменты кода из папки `source/downloads/code`. The folder location can be specified through the `code_dir` option in the config.
 
 ```
-{% include_code [title] [lang:language] path/to/file %}
+{% include_code [title] [lang:language] [from:line] [to:line] path/to/file %}
 ```
 
 ### Examples
@@ -298,7 +298,7 @@ Please use [hexo-tag-embed](https://github.com/hexojs/hexo-tag-embed) instead if
 Inserts a responsive or specified size Vimeo video.
 
 ```
-{% vimeo video_id %}
+{% vimeo video_id [width] [height] %}
 ```
 
 ## Include Posts
@@ -391,7 +391,7 @@ _hexo-renderer-marked 3.1.0+ can (optionally) resolves the post's path of an ima
 
 **Title & Alt**
 
-`{% asset_img logo.svg "lorem ipsum'dolor'" %}`
+`{% asset_img foo.jpg "lorem ipsum'dolor'" %}`
 
 ```html
 <img src="/2020/01/02/hello/foo.jpg" title="lorem ipsum" alt="dolor" />
