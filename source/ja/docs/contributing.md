@@ -2,11 +2,11 @@
 title: 貢献
 ---
 
-私達は、Hexoの開発への参加を歓迎しています。🤗
+私達は、Hexoの開発への参加を歓迎しています。 🤗
 
 ## 開発
 
-私達は、Hexoの開発への参加を歓迎しています。この文書は、そのプロセスをサポートします。
+私達は、Hexoの開発への参加を歓迎しています。 この文書は、そのプロセスをサポートします。
 
 ### 始める前に
 
@@ -22,7 +22,7 @@ title: 貢献
 
 ### ワークフロー
 
-1. [hexojs/hexo]をフォークします。
+1. [hexojs/hexo][]をフォークします。
 2. リポジトリをコンピューターにクローンし、依存関係をインストールします。
 
 ```bash
@@ -50,7 +50,7 @@ $ git push origin new_feature
 ### 注意
 
 - `package.json`のバージョン番号は変更しないでください。
-- プルリクエストは、テストが通った場合にのみマージされます。提出前にテストを実行してください。
+- プルリクエストは、テストが通った場合にのみマージされます。 提出前にテストを実行してください。
 
 ```bash
 $ npm test
@@ -58,25 +58,25 @@ $ npm test
 
 ## 公式プラグインの更新
 
-公式プラグインに対するプルリクエストやIssueも歓迎します。🤗
+公式プラグインに対するプルリクエストやIssueも歓迎します。 🤗
 
 ## ドキュメントの更新
 
-Hexoのドキュメントはオープンソースで、ソースコードは[hexojs/site]で見つけることができます。
+Hexoのドキュメントはオープンソースで、ソースコードは[hexojs/site][]で見つけることができます。
 
 ### ワークフロー
 
-1. [hexojs/site]をフォークします。
+1. [hexojs/site][]をフォークします。
 2. リポジトリをコンピューターにクローンし、依存関係をインストールします。
 
 ```bash
-$ npm install hexo-cli -g # hexo-cliがインストールされていない場合
+$ npm install hexo-cli -g # If you don't have hexo-cli installed
 $ git clone https://github.com/<username>/site.git
 $ cd site
 $ npm install
 ```
 
-3. ドキュメントの編集を始めます。ライブプレビューのためにサーバーを起動することができます。
+3. ドキュメントの編集を始めます。 ライブプレビューのためにサーバーを起動することができます。
 
 ```bash
 $ hexo server
@@ -87,14 +87,14 @@ $ hexo server
 
 ### 翻訳
 
-1. `source`フォルダ内に新しい言語フォルダを追加します。（すべて小文字）
+1. `source`フォルダ内に新しい言語フォルダを追加します。 （すべて小文字）
 2. `source`フォルダのマークダウンとテンプレートファイルを新しい言語フォルダにコピーします。
 3. `source/_data/language.yml`に新しい言語を追加します。
 4. `themes/navy/languages`内の`en.yml`をコピーし、言語名（すべて小文字）にリネームします。
 
 ## 問題の報告
 
-Hexoの使用中に問題に遭遇した場合、[トラブルシューティング](troubleshooting.html)で解決策を見つけるか、[GitHub](https://github.com/hexojs/hexo/issues)や[Google Group](https://groups.google.com/group/hexo)で質問してください。解決策が見つからない場合は、GitHubで報告してください。
+Hexoの使用中に問題に遭遇した場合、[トラブルシューティング](troubleshooting.html)で解決策を見つけるか、[GitHub](https://github.com/hexojs/hexo/issues)や[Google Group](https://groups.google.com/group/hexo)で質問してください。 解決策が見つからない場合は、GitHubで報告してください。
 
 1. [デバッグモード](commands.html#デバッグモード)で問題を示してください。
 2. 新しい問題をGitHubで作成するときは、Issueテンプレートの手順に従い、デバッグメッセージとバージョンを提供してください。

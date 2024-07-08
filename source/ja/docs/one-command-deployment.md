@@ -2,7 +2,7 @@
 title: ワンコマンド・デプロイ
 ---
 
-Hexoは迅速かつ簡単なデプロイ戦略を提供します。サイトをサーバーにデプロイするために必要なコマンドはたった一つです。
+Hexoは迅速かつ簡単なデプロイ戦略を提供します。 サイトをサーバーにデプロイするために必要なコマンドはたった一つです。
 
 ```bash
 $ hexo deploy
@@ -10,14 +10,14 @@ $ hexo deploy
 
 デプロイを行うサーバやリポジトリに対応するプラグインをインストールします。
 
-デプロイは通常、**\_config.yml**に設定します。設定には`type`フィールドが必要です。例えば:
+デプロイは通常、**\_config.yml**に設定します。 設定には`type`フィールドが必要です。 例えば:
 
 ```yaml
 deploy:
   type: git
 ```
 
-複数のデプロイを設定することにできます。Hexoは順番に各デプロイを実行します。
+複数のデプロイを設定することにできます。 Hexoは順番に各デプロイを実行します。
 
 ```yaml
 deploy:
@@ -31,7 +31,7 @@ deploy:
 
 ## Git
 
-1. [hexo-deployer-git]をインストールします。
+1. [hexo-deployer-git][]をインストールします。
 
 ```bash
 $ npm install hexo-deployer-git --save
@@ -47,23 +47,23 @@ deploy:
   message: [message]
 ```
 
-| オプション | 説明                                                                                                            | デフォルト                                                              |
-| ---------- | --------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------- |
-| `repo`     | ターゲットリポジトリのURL                                                                                       |
-| `branch`   | ブランチ名                                                                                                      | `gh-pages` (GitHub)<br>`coding-pages` (Coding.net)<br>`master` (その他) |
-| `message`  | コミットメッセージをカスタマイズ                                                                                | `Site updated: {% raw %}{{ now('YYYY-MM-DD HH:mm:ss') }}{% endraw %}`   |
-| `token`    | リポジトリの認証に使うオプションのトークン値。環境変数からトークンを読み込むには`$`をプレフィックスとして使用。 |
+| オプション     | 説明                                                         | デフォルト                                                                            |
+| --------- | ---------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| `repo`    | ターゲットリポジトリのURL                                             |                                                                                  |
+| `branch`  | ブランチ名                                                      | `gh-pages` (GitHub)<br>`coding-pages` (Coding.net)<br>`master` (その他) |
+| `message` | コミットメッセージをカスタマイズ                                           | `Site updated: {% raw %}{{ now('YYYY-MM-DD HH:mm:ss') }}{% endraw %}`            |
+| `token`   | リポジトリの認証に使うオプションのトークン値。 環境変数からトークンを読み込むには`$`をプレフィックスとして使用。 |                                                                                  |
 
 3. サイトをデプロイします `hexo clean && hexo deploy`。
 
-   - ターゲットリポジトリのユーザー名とパスワードが求められますが、トークンまたはsshキーで認証している場合は必要ありません。
-   - hexo-deployer-gitはユーザー名とパスワードを保存しません。これらを一時的に保存するには [git-credential-cache](https://git-scm.com/docs/git-credential-cache)を使います。
+- ターゲットリポジトリのユーザー名とパスワードが求められますが、トークンまたはsshキーで認証している場合は必要ありません。
+- hexo-deployer-gitはユーザー名とパスワードを保存しません。 これらを一時的に保存するには [git-credential-cache](https://git-scm.com/docs/git-credential-cache)を使います。
 
-4. リポジトリの設定に移動し、"Pages"ブランチを`gh-pages`（または任意に設定されたブランチ）に変更します。"Pages"設定に表示されるリンクでデプロイされたサイトを表示できます。
+4. リポジトリの設定に移動し、"Pages"ブランチを`gh-pages`（または任意に設定されたブランチ）に変更します。 "Pages"設定に表示されるリンクでデプロイされたサイトを表示できます。
 
 ## Heroku
 
-[hexo-deployer-heroku]をインストールします。
+[hexo-deployer-heroku][]をインストールします。
 
 ```bash
 $ npm install hexo-deployer-heroku --save
@@ -78,16 +78,16 @@ deploy:
   message: [message]
 ```
 
-| オプション           | 説明                                                                                                                 |
-| -------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| `repo`, `repository` | HerokuリポジトリURL                                                                                                  |
+| オプション                | 説明                                                                                              |
+| -------------------- | ----------------------------------------------------------------------------------------------- |
+| `repo`, `repository` | HerokuリポジトリURL                                                                                  |
 | `message`            | コミットメッセージをカスタマイズ (デフォルト: `Site updated: {% raw %}{{ now('YYYY-MM-DD HH:mm:ss') }}{% endraw %}`) |
 
 ## Netlify
 
-[Netlify](https://www.netlify.com/)は、Gitトリガーのビルド、インテリジェントなグローバルCDN、完全なDNS（カスタムドメインを含む）、自動化されたHTTPS、アセットの高速化、さらに多くを提供する統合プラットフォームです。高性能でメンテナンスが容易なサイトやWebアプリケーションの作成を自動化します。
+[Netlify](https://www.netlify.com/)は、Gitトリガーのビルド、インテリジェントなグローバルCDN、完全なDNS（カスタムドメインを含む）、自動化されたHTTPS、アセットの高速化、さらに多くを提供する統合プラットフォームです。 高性能でメンテナンスが容易なサイトやWebアプリケーションの作成を自動化します。
 
-Netlifyでサイトをデプロイする方法は2つあります。最も一般的な方法は、Web UIを使用することです。[新しいサイトを作成](https://app.netlify.com/start)に移動し、GitHub、GitLab、Bitbucketからプロジェクトリポジトリを選択し、プロンプトに従ってください。
+Netlifyでサイトをデプロイする方法は2つあります。 最も一般的な方法は、Web UIを使用することです。 [新しいサイトを作成](https://app.netlify.com/start)に移動し、GitHub、GitLab、Bitbucketからプロジェクトリポジトリを選択し、プロンプトに従ってください。
 
 または、Netlifyの[NodeベースのCLI](https://www.netlify.com/docs/cli/)ツールより、ターミナルのみでNetlify上のサイトを管理およびデプロイすることができます。
 
@@ -95,7 +95,7 @@ READMEファイルに[Deploy to Netlify Button](https://www.netlify.com/docs/dep
 
 ## Rsync
 
-[hexo-deployer-rsync]をインストールします。
+[hexo-deployer-rsync][]をインストールします。
 
 ```bash
 $ npm install hexo-deployer-rsync --save
@@ -115,15 +115,15 @@ deploy:
   ignore_errors: [true|false]
 ```
 
-| オプション      | 説明                                 | デフォルト |
-| --------------- | ------------------------------------ | ---------- |
-| `host`          | リモートホストのアドレス             |
-| `user`          | ユーザー名                           |
-| `root`          | リモートホストのルートディレクトリ   |
-| `port`          | ポート                               | 22         |
-| `delete`        | リモートホスト上の古いファイルを削除 | true       |
-| `verbose`       | 詳細なメッセージを表示               | true       |
-| `ignore_errors` | エラーを無視                         | false      |
+| オプション           | 説明                 | デフォルト |
+| --------------- | ------------------ | ----- |
+| `host`          | リモートホストのアドレス       |       |
+| `user`          | ユーザー名              |       |
+| `root`          | リモートホストのルートディレクトリ  |       |
+| `port`          | ポート                | 22    |
+| `delete`        | リモートホスト上の古いファイルを削除 | true  |
+| `verbose`       | 詳細なメッセージを表示        | true  |
+| `ignore_errors` | エラーを無視             | false |
 
 ## OpenShift
 
@@ -131,7 +131,7 @@ deploy:
 `hexo-deployer-openshift`は2022年に非推奨となりました。
 {% endnote %}
 
-[hexo-deployer-openshift]をインストールします。
+[hexo-deployer-openshift][]をインストールします。
 
 ```bash
 $ npm install hexo-deployer-openshift --save
@@ -146,14 +146,14 @@ deploy:
   message: [message]
 ```
 
-| オプション | 説明                                                                                                                 |
-| ---------- | -------------------------------------------------------------------------------------------------------------------- |
-| `repo`     | OpenShiftリポジトリURL                                                                                               |
-| `message`  | コミットメッセージをカスタマイズ (デフォルト: `Site updated: {% raw %}{{ now('YYYY-MM-DD HH:mm:ss') }}{% endraw %}`) |
+| オプション     | 説明                                                                                              |
+| --------- | ----------------------------------------------------------------------------------------------- |
+| `repo`    | OpenShiftリポジトリURL                                                                               |
+| `message` | コミットメッセージをカスタマイズ (デフォルト: `Site updated: {% raw %}{{ now('YYYY-MM-DD HH:mm:ss') }}{% endraw %}`) |
 
 ## FTPSync
 
-[hexo-deployer-ftpsync]をインストールします。
+[hexo-deployer-ftpsync][]をインストールします。
 
 ```bash
 $ npm install hexo-deployer-ftpsync --save
@@ -173,19 +173,19 @@ deploy:
   verbose: [true|false]
 ```
 
-| オプション | 説明                                                       | デフォルト |
-| ---------- | ---------------------------------------------------------- | ---------- |
-| `host`     | リモートホストのアドレス                                   |
-| `user`     | ユーザー名                                                 |
-| `pass`     | パスワード                                                 |
-| `remote`   | リモートホストのルートディレクトリ                         | `/`        |
-| `port`     | ポート                                                     | 21         |
-| `clear`    | アップロード前にリモートのファイルとディレクトリを全て削除 | false      |
-| `verbose`  | 詳細なメッセージを表示                                     | false      |
+| オプション     | 説明                            | デフォルト |
+| --------- | ----------------------------- | ----- |
+| `host`    | リモートホストのアドレス                  |       |
+| `user`    | ユーザー名                         |       |
+| `pass`    | パスワード                         |       |
+| `remote`  | リモートホストのルートディレクトリ             | `/`   |
+| `port`    | ポート                           | 21    |
+| `clear`   | アップロード前にリモートのファイルとディレクトリを全て削除 | false |
+| `verbose` | 詳細なメッセージを表示                   | false |
 
 ## SFTP
 
-[hexo-deployer-sftp]をインストールします。sshエージェントを利用しパスワードなしでSFTP経由でサイトをデプロイできます。
+[hexo-deployer-sftp][]をインストールします。 sshエージェントを利用しパスワードなしでSFTP経由でサイトをデプロイできます。
 
 ```bash
 $ npm install hexo-deployer-sftp --save
@@ -206,22 +206,22 @@ deploy:
   agent: [path/to/agent/socket]
 ```
 
-| オプション    | 説明                                       | デフォルト       |
-| ------------- | ------------------------------------------ | ---------------- |
-| `host`        | リモートホストのアドレス                   |
-| `port`        | ポート                                     | 22               |
-| `user`        | ユーザー名                                 |
-| `pass`        | パスワード                                 |
-| `privateKey`  | sshプライベートキーのパス                  |
-| `passphrase`  | プライベートキーのオプションのパスフレーズ |
-| `agent`       | sshエージェントのソケットのパス            | `$SSH_AUTH_SOCK` |
-| `remotePath`  | リモートホストのルートディレクトリ         | `/`              |
-| `forceUpload` | 既存のファイルを上書き                     | false            |
-| `concurrency` | SFTPタスクを並行して処理する最大数         | 100              |
+| オプション         | 説明                    | デフォルト            |
+| ------------- | --------------------- | ---------------- |
+| `host`        | リモートホストのアドレス          |                  |
+| `port`        | ポート                   | 22               |
+| `user`        | ユーザー名                 |                  |
+| `pass`        | パスワード                 |                  |
+| `privateKey`  | sshプライベートキーのパス        |                  |
+| `passphrase`  | プライベートキーのオプションのパスフレーズ |                  |
+| `agent`       | sshエージェントのソケットのパス     | `$SSH_AUTH_SOCK` |
+| `remotePath`  | リモートホストのルートディレクトリ     | `/`              |
+| `forceUpload` | 既存のファイルを上書き           | false            |
+| `concurrency` | SFTPタスクを並行して処理する最大数   | 100              |
 
 ## Vercel
 
-[Vercel](https://vercel.com)は、ゼロコンフィグでJamstackなウェブサイトをインスタントにデプロイし、自動的にスケールする、監理不要なクラウドプラットフォームです。グローバルエッジネットワーク、SSL暗号化、アセットの圧縮、キャッシュの無効化などを提供します。
+[Vercel](https://vercel.com)は、ゼロコンフィグでJamstackなウェブサイトをインスタントにデプロイし、自動的にスケールする、監理不要なクラウドプラットフォームです。 グローバルエッジネットワーク、SSL暗号化、アセットの圧縮、キャッシュの無効化などを提供します。
 
 ステップ1: `package.json`ファイルにビルドスクリプトを追加します:
 
@@ -237,7 +237,7 @@ deploy:
 
 [Vercel for Git Integration](https://vercel.com/docs/git-integrations)を使用してHexoアプリをデプロイするには、Gitリポジトリにプッシュされていることを確認してください。
 
-[Import Flow](https://vercel.com/import/git)を使用してプロジェクトをVercelにインポートします。オプションはインポート時に事前設定されますが、何れかを変更することもできます。これらのオプションのリストは[こちら](https://vercel.com/docs/build-step#build-&-development-settings)にあります。
+[Import Flow](https://vercel.com/import/git)を使用してプロジェクトをVercelにインポートします。 オプションはインポート時に事前設定されますが、何れかを変更することもできます。 これらのオプションのリストは[こちら](https://vercel.com/docs/build-step#build-&-development-settings)にあります。
 
 プロジェクトのインポートが完了すると、以降のブランチへのプッシュは[Preview Deployments](https://vercel.com/docs/platform/deployments#preview)を生成し、[Production Branch](https://vercel.com/docs/git-integrations#production-branch)（通常は"main"）に加えられたすべての変更は[Production Deployment](https://vercel.com/docs/platform/deployments#production)に反映されます。
 
@@ -247,9 +247,9 @@ deploy:
 
 ## Bip
 
-[Bip](https://bip.sh)は、静的ウェブサイトにゼロダウンタイムデプロイ、グローバルCDN、SSL、無制限の帯域幅などを提供する商用ホスティングサービスです。支払いはドメインごとに従量制で行われます。
+[Bip](https://bip.sh)は、静的ウェブサイトにゼロダウンタイムデプロイ、グローバルCDN、SSL、無制限の帯域幅などを提供する商用ホスティングサービスです。 支払いはドメインごとに従量制で行われます。
 
-BipはHexoをサポートしており、すぐ簡単に初められます。このガイドでは、すでに[Bipドメインを所有しBip CLIをインストールしている](https://bip.sh/getstarted)ことを前提としています。
+BipはHexoをサポートしており、すぐ簡単に初められます。 このガイドでは、すでに[Bipドメインを所有しBip CLIをインストールしている](https://bip.sh/getstarted)ことを前提としています。
 
 1: プロジェクトディレクトリを初期化します
 
@@ -257,7 +257,7 @@ BipはHexoをサポートしており、すぐ簡単に初められます。こ�
 $ bip init
 ```
 
-プロンプトに従います。どのドメインにデプロイしたいか尋ねられます。BipはあなたがHexoを使用していることを検出し、ソースファイルディレクトリなどのプロジェクト設定を自動的に設定します。
+プロンプトに従います。 どのドメインにデプロイしたいか尋ねられます。 BipはあなたがHexoを使用していることを検出し、ソースファイルディレクトリなどのプロジェクト設定を自動的に設定します。
 
 2: ウェブサイトをデプロイします
 
@@ -275,7 +275,7 @@ $ hexo generate —deploy && bip deploy
 
 [RSS3](https://rss3.io)は、Web 3.0時代のコンテンツおよびソーシャルネットワークのために設計されたオープンプロトコルです。
 
-1. [hexo-deployer-rss3]をインストールします。
+1. [hexo-deployer-rss3][]をインストールします。
 
 2. 設定を変更します。
 
@@ -292,12 +292,12 @@ deploy: # The root configuration block for all deployers
         secret: ee8b74626f12b61c1a4bde3b8c331ad390567c86ba779c9b18561ee92c1cbff0
 ```
 
-| パラメータ        | 説明                                 |
-| ----------------- | ------------------------------------ |
-| `endpoint`        | RSS3ハブへのリンク                   |
+| パラメータ             | 説明                   |
+| ----------------- | -------------------- |
+| `endpoint`        | RSS3ハブへのリンク          |
 | `privateKey`      | あなたのプライベートキー、64バイト   |
-| `ipfs/deploy`     | IPFSへのデプロイを実行するか？       |
-| `ipfs/gateway`    | IPFS APIゲートウェイ                 |
+| `ipfs/deploy`     | IPFSへのデプロイを実行するか？    |
+| `ipfs/gateway`    | IPFS APIゲートウェイ       |
 | `ipfs/api/key`    | IPFSゲートウェイ関連の認証コンテンツ |
 | `ipfs/api/secret` | IPFSゲートウェイ関連の認証コンテンツ |
 
@@ -335,7 +335,7 @@ edgio deploy
 
 ## その他の方法
 
-生成されたすべてのファイルは`public`フォルダに保存されます。好きな場所にコピーしてください。
+生成されたすべてのファイルは`public`フォルダに保存されます。 好きな場所にコピーしてください。
 
 [hexo-deployer-git]: https://github.com/hexojs/hexo-deployer-git
 [hexo-deployer-heroku]: https://github.com/hexojs/hexo-deployer-heroku

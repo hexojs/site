@@ -16,9 +16,9 @@ hexo.extend.tag.register(
 );
 ```
 
-タグ関数には`args`と`content`の2つの引数が渡されます。`args`はタグに渡された引数、`content`はタグでラップされたコンテンツです。
+タグ関数には`args`と`content`の2つの引数が渡されます。 `args`はタグに渡された引数、`content`はタグでラップされたコンテンツです。
 
-Hexo 3での非同期レンダリングの導入以来、レンダリングには[Nunjucks]が使用されています。[Swig]の挙動とは少し異なる場合があります。
+Hexo 3での非同期レンダリングの導入以来、レンダリングには[Nunjucks][]が使用されています。 [Swig][]の挙動とは少し異なる場合があります。
 
 ## タグの登録解除
 
@@ -42,15 +42,15 @@ hexo.extend.tag.unregister("youtube");
 hexo.extend.tag.register("youtube", tagFn);
 ```
 
-## オプション
+## Options
 
 ### ends
 
-終了タグを使用します。デフォルトで`false`です。
+終了タグを使用します。 デフォルトで`false`です。
 
 ### async
 
-非同期モードを有効にします。デフォルトで`false`です。
+非同期モードを有効にします。 デフォルトで`false`です。
 
 ## 例
 
@@ -122,20 +122,20 @@ hexo.extend.tag.register(
 hexo.extend.tag.register('foo', function (args) {
   const [firstArg] = args;
 
-  // ユーザー設定
+  // User config
   const { config } = hexo;
   const editor = config.author + firstArg;
 
-  // テーマ設定
+  // Theme config
   const { config: themeCfg } = hexo.theme;
-  if (themeCfg.fancybox) // 何かする...
+  if (themeCfg.fancybox) // do something...
 
   // Front-matter
-  const { title } = this; // 記事やページのタイトル
+  const { title } = this; // article's (post/page) title
 
-  // 記事やページのコンテンツ
-  const { _content } = this; // 元のコンテンツ
-  const { content } = this; // HTMLレンダリングされたコンテンツ
+  // Article's content
+  const { _content } = this; // original content
+  const { content } = this; // HTML-rendered content
 
   return 'foo';
 });
