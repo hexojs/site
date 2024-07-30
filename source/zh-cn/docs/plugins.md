@@ -30,7 +30,7 @@ Hexo 有强大的插件系统，使您能轻松扩展功能而不用修改核心
 }
 ```
 
-You'll also need to list your plugin as a dependency in the root `package.json` of your hexo instance in order for Hexo to detect and load it.
+您还需要将您的插件列在您的 hexo 项目实例根目录下的 `package.json` 文件中的依赖项中，以便 Hexo 检测并加载它。
 
 ### 工具
 
@@ -45,7 +45,7 @@ You'll also need to list your plugin as a dependency in the root `package.json` 
 
 当您完成插件后，可以考虑将它发布到 [插件列表](/plugins)，让更多人能够使用您的插件。 发布插件的步骤和 [更新文档](contributing.html#更新文档) 非常类似。
 
-1. Fork [hexojs/site][]
+1. 复刻 [hexojs/site][]
 2. 把库（repository）复制到电脑上，并安装所依赖的插件。
 
    ```shell

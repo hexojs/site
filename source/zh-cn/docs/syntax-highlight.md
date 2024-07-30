@@ -1,5 +1,5 @@
 ---
-title: Syntax Highlighting
+title: 语法高亮
 ---
 
 Hexo 对 [highlight.js](https://github.com/highlightjs/highlight.js) 与 [prismjs](https://github.com/PrismJS/prism) 两种代码高亮库提供内建支持。 本篇教程将展示如何将 Hexo 的内建语法高亮组件整合至你的模板中。
