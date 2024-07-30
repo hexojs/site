@@ -12,9 +12,9 @@ _标签插件不应该被包裹在 Markdown 语法中，例如： `[]({% post_pa
 
 ## 引用块
 
-Perfect for adding quotes to your post, with optional author, source and title information.
+非常适用于将引文添加到您的帖子中，包括可选的作者、原文和标题信息。
 
-**别号：** quote
+**别名：** quote
 
 ```
 {% blockquote [author[, source]] [link] [source_link_title] %}
@@ -24,7 +24,7 @@ content
 
 ### 示例
 
-**No arguments. Plain blockquote.**
+**无参数。 普通引用块。**
 
 ```
 {% blockquote %}
@@ -74,7 +74,7 @@ Every interaction is both precious and an opportunity to delight.
 
 ## 代码块
 
-A useful feature for adding code snippets to your post.
+可以将代码片段添加到您的帖子的有用功能。
 
 **别名：** code
 
@@ -198,7 +198,7 @@ To embed a Gist snippet:
 {% iframe url [width] [height] %}
 ```
 
-## Image
+## 图像
 
 在文章中插入指定大小的图片。
 
@@ -206,7 +206,7 @@ To embed a Gist snippet:
 {% img [class names] /path/to/image [width] [height] '"title text" "alt text"' %}
 ```
 
-## Link
+## 链接
 
 在文章中插入链接，并自动给外部链接添加 `target="_blank"` 属性。
 
@@ -214,7 +214,7 @@ To embed a Gist snippet:
 {% link text url [external] [title] %}
 ```
 
-## Include Code
+## 包含代码
 
 插入 `source/downloads/code` 文件夹内的代码文件。 `source/downloads/code` 不是固定的，取决于你在配置文件中 `code_dir` 的配置。
 
@@ -295,15 +295,15 @@ To embed a Gist snippet:
 如果你正在使用 `v7.0.0+`，请使用 [hexo-tag-embed](https://github.com/hexojs/hexo-tag-embed) 替代。
 {% endnote %}
 
-Inserts a responsive or specified size Vimeo video.
+添加响应式或指定大小的 Vimeo 视频。
 
 ```
 {% vimeo video_id [width] [height] %}
 ```
 
-## Include Posts
+## 包含帖子
 
-Include links to other posts.
+包含到其他帖子的链接。
 
 ```
 {% post_path filename %}
@@ -322,26 +322,26 @@ This will work as long as the filename of the post is `how-to-bake-a-cake.md`, e
 
 例如：
 
-**Display title of the post.**
+**帖子的外显标题。**
 
 `{% raw %}{% post_link hexo-3-8-released %}{% endraw %}`
 
 {% post_link hexo-3-8-released %}
 
-**Display custom text.**
+**显示自定义文本。**
 
 `{% raw %}{% post_link hexo-3-8-released 'Link to a post' %}{% endraw %}`
 
 {% post_link hexo-3-8-released 'Link to a post' %}
 
-**Escape title.**
+**转义标题。**
 
 ```
 {% post_link hexo-4-released 'How to use <b> tag in title' %}
 ```
 {% post_link hexo-4-released 'How to use <b> tag in title' %}
 
-**Do not escape title.**
+**不转义标题。**
 
 ```
 {% post_link hexo-4-released '<b>bold</b> custom title' false %}
@@ -349,7 +349,7 @@ This will work as long as the filename of the post is `how-to-bake-a-cake.md`, e
 
 {% post_link hexo-4-released '<b>bold</b> custom title' false %}
 
-## Include Assets
+## 包含资源
 
 引用文章的资源，与 [资源文件夹](/zh-cn/docs/asset-folders) 一起使用。
 
@@ -472,7 +472,7 @@ url: https://example.com/blog # example
 
 ## Raw
 
-If certain content is causing processing issues in your posts, wrap it with the `raw` tag to avoid rendering errors.
+如果帖子中的某些内容会导致处理问题，将其封装在 `raw` 标签中，以避免渲染错误。
 
 ```
 {% raw %}
@@ -480,9 +480,9 @@ content
 {% endraw %}
 ```
 
-## Post Excerpt
+## 帖子摘要
 
-在文章中使用 `<!-- more -->`，那么 `<!-- more -->` 之前的文字将会被视为摘要。 `excerpt:` value in the [front-matter](/docs/front-matter#Settings-amp-Their-Default-Values), if specified, will take precedent.
+在文章中使用 `<!-- more -->`，那么 `<!-- more -->` 之前的文字将会被视为摘要。 如果在 [front-matter](/docs/front-matter#Settings-amp-Their-Default-Values) 中指定了 `excerpt:` 值，则优先使用此值。
 
 **示例：**
 

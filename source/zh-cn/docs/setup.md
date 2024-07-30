@@ -1,5 +1,5 @@
 ---
-title: Setup
+title: 安装
 ---
 
 {% youtube xvIRGmKWpFM %}

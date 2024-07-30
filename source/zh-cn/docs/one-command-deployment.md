@@ -87,7 +87,7 @@ deploy:
 
 [Netlify](https://www.netlify.com/) 提供持续部署（Git 触发构建）、智能全球 CDN、完整 DNS（包括自定义域）、自动 HTTPS、资产加速等功能。 它是一个统一的平台，可自动执行代码，创建高性能、易于维护的网站和网络应用程序。
 
-There are two different ways to deploy your sites on Netlify. 首先，也是最通用的方式，就是使用Netlify提供的网页端用户界面。 前往[新建一个网站页面](https://app.netlify.com/start)，选择需要关联的 Github/BitBucket/Gitlab 库，然后遵循网站提示。
+在 Netlify 上部署站点，有两种不同的方式。 首先，也是最通用的方式，就是使用Netlify提供的网页端用户界面。 前往[新建一个网站页面](https://app.netlify.com/start)，选择需要关联的 Github/BitBucket/Gitlab 库，然后遵循网站提示。
 
 另一种方式是使用Netlify提供的命令行客户端工具 [Node based CLI](https://www.netlify.com/docs/cli/) 管理和部署您的站点。
 
@@ -185,7 +185,7 @@ deploy:
 
 ## SFTP
 
-安装 [hexo-deployer-sftp][]。 Deploys the site via SFTP, allowing for passwordless connections using ssh-agent.
+安装 [hexo-deployer-sftp][]。 通过 SFTP 部署站点，允许使用 ssh-agent 进行无密码连接。
 
 ```bash
 $ npm install hexo-deployer-sftp --save
@@ -206,18 +206,18 @@ deploy:
   agent: [path/to/agent/socket]
 ```
 
-| 选项            | 描述                                      | 默认值              |
-| ------------- | --------------------------------------- | ---------------- |
-| `host`        | 远程主机的地址                                 |                  |
-| `port`        | 端口                                      | 22               |
-| `user`        | 使用者名称                                   |                  |
-| `pass`        | 密码                                      |                  |
-| `privateKey`  | SSH 私钥的目录地址                             |                  |
-| `passphrase`  | Optional passphrase for the private key |                  |
-| `agent`       | ssh套接字的目录地址                             | `$SSH_AUTH_SOCK` |
-| `remotePath`  | 远程主机的根目录                                | `/`              |
-| `forceUpload` | 覆盖现有的文件                                 | false            |
-| `concurrency` | 同时处理的 SFTP 任务的最大数量                      | 100              |
+| 选项            | 描述                 | 默认值              |
+| ------------- | ------------------ | ---------------- |
+| `host`        | 远程主机的地址            |                  |
+| `port`        | 端口                 | 22               |
+| `user`        | 使用者名称              |                  |
+| `pass`        | 密码                 |                  |
+| `privateKey`  | SSH 私钥的目录地址        |                  |
+| `passphrase`  | 私钥的可选密码            |                  |
+| `agent`       | ssh套接字的目录地址        | `$SSH_AUTH_SOCK` |
+| `remotePath`  | 远程主机的根目录           | `/`              |
+| `forceUpload` | 覆盖现有的文件            | false            |
+| `concurrency` | 同时处理的 SFTP 任务的最大数量 | 100              |
 
 ## Vercel
 

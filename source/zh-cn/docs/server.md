@@ -4,7 +4,7 @@ title: 服务器
 
 ## [hexo-server][]
 
-Hexo 3.0 把服务器独立成了个别模块 您必须先安装 [hexo-server][] 才能使用。
+Hexo 3.0 把服务器独立成了个别模块。 您必须先安装 [hexo-server][] 才能使用。
 
 ```bash
 $ npm install hexo-server --save

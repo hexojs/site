@@ -39,14 +39,14 @@ box.addProcessor("posts/:id", function (file) {
 });
 ```
 
-Box passes the content of matched files to processors. This information can then be read straight from the `file` argument in the callback:
+Box 将匹配文件的内容传递给处理器。 然后，可以从回调中的 `file` 参数直接读取该信息。
 
-| 属性       | 描述                                            |
-| -------- | --------------------------------------------- |
-| `source` | 文件完整路径                                        |
-| `path`   | 文件相对于 Box 的路径                                 |
-| `type`   | 文件类型。 有 `create`, `update`, `skip`, `delete`。 |
-| `params` | 从路径对比中取得的信息                                   |
+| 属性       | 描述                                              |
+| -------- | ----------------------------------------------- |
+| `source` | 文件完整路径                                          |
+| `path`   | 文件相对于 Box 的路径                                   |
+| `type`   | 文件类型。 值可以是 `create`、`update`、`skip` 和 `delete`。 |
+| `params` | 从路径对比中取得的信息                                     |
 
 Box 还提供了一些方法，让您无须手动处理文件 I/O。
 

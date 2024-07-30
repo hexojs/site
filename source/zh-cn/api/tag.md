@@ -50,7 +50,7 @@ hexo.extend.tag.register("youtube", tagFn);
 
 ### async
 
-启用异步模式。 This option is `false` by default.
+启用异步模式。 此选项默认为 `false`。
 
 ## 示例
 
@@ -90,7 +90,7 @@ hexo.extend.tag.register(
 );
 ```
 
-### Async Rendering
+### 异步渲染
 
 插入文件。
 

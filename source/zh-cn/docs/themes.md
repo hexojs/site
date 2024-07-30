@@ -40,15 +40,15 @@ layout.njk   - 使用 Nunjucks
 
 ### source
 
-Source 文件夹。 Place your assets (e.g. CSS and JavaScript files) here. 文件或文件夹开头名称为 `_`（下划线）或隐藏的文件会被忽略。
+Source 文件夹。 将您的素材（如 CSS 和 JavaScript 文件）放在这里。 文件或文件夹开头名称为 `_`（下划线）或隐藏的文件会被忽略。
 
-Hexo will process and save all renderable files to the `public` folder. Non-renderable files will be copied to the `public` folder directly.
+Hexo 将处理所有可渲染的文件，并将它们保存到 `public` 文件夹下。 不可渲染的文件将直接复制到 `public` 文件夹。
 
 ### 发布
 
 当您完成主题后，可以考虑将它发布到 [主题列表](/themes)，让更多人能够使用您的主题。 在发布前建议先进行 [主题单元测试](https://github.com/hexojs/hexo-theme-unit-test)，确保每一项功能都能正常使用。 发布主题的步骤和 [更新文档](contributing.html#更新文档) 非常类似。
 
-1. Fork [hexojs/site][]
+1. 复刻 [hexojs/site][]
 2. 把库（repository）复制到电脑上，并安装所依赖的插件。
 
    ```shell
