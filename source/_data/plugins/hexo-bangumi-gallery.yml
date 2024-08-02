@@ -1,0 +1,5 @@
+description: Display bangumi gallery in hexo. Support bgm.tv and myanimelist.net | 在 Hexo 中添加番剧页面，支持 bgm.tv 和 myanimelist.net
+link: https://github.com/ChiyukiRuon/hexo-bangumi-gallery
+tags:
+  - bangumi
+  - anime
