@@ -9,7 +9,7 @@
     "build": "hexo generate",
     "eslint": "eslint .",
     "format:md": "prettier --write */**/docs/*.md */**/api/*.md",
-    "prepare": "husky"
+    "prepare": "node .husky/install.mjs"
   },
   "dependencies": {
     "cheerio": "^0.22.0",
