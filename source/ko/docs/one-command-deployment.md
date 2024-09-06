@@ -333,6 +333,38 @@ Alternatively, you can click the deploy button below to create a new project:
 
 [![Deploy To Edgio](https://docs.edg.io/button.svg)](https://app.layer0.co/deploy?repo=https%3A%2F%2Fgithub.com%2Fedgio-docs%2Fedgio-hexo-example)
 
+## Azion
+
+[Azion](https://www.azion.com.br/) Azion은 모든 워크로드에 대해 더 나은 성능, 보안, 신뢰성 및 효율성을 제공하는 완전 통합된 엣지 컴퓨팅 플랫폼입니다. 우리의 고도로 분산된 아키텍처는 전 세계 인터넷 서비스 제공업체(ISP)에 전략적으로 배치된 엣지 노드를 포함하며, 4개 대륙에 걸쳐 가장 빠르고 신뢰할 수 있는 연결을 보장합니다.
+
+### GitHub에서 가져오기
+
+1. [Azion 콘솔](https://console.azion.com)에 접속합니다.  
+2. 홈페이지에서 **\+ 생성** 버튼을 클릭합니다.  
+   - 새로운 애플리케이션과 리소스를 생성할 수 있는 옵션이 포함된 모달 창이 열립니다.  
+3. **GitHub에서 가져오기** 옵션을 선택하고 카드를 클릭합니다.  
+   - 이 작업은 설정 페이지를 엽니다.  
+4. Azion 계정을 GitHub와 연결합니다.  
+   - 인증을 요청하는 팝업 창이 나타납니다.  
+5. GitHub에서 가져오려는 저장소를 선택합니다.  
+6. 빌드 설정을 구성합니다.  
+7. **Azion 실시간 메트릭스**를 사용하여 배포를 모니터링하고 사이트가 엣지에서 활성 상태인지 확인합니다.
+
+### Azion CLI로 배포하기
+
+1. **Azion CLI 설치:** [Azion CLI](https://www.azion.com/en/documentation/products/azion-cli/overview/)를 다운로드하고 설치합니다.
+
+2. **인증:** `azion login`을 실행하여 Azion 계정에 CLI를 인증합니다.
+
+3. **초기화:** `azion init`을 사용하여 프로젝트를 설정합니다.
+
+4. **빌드:** `azion build`를 실행하여 Hexo 프로젝트를 빌드합니다.
+
+5. **배포:** `azion deploy`를 실행하여 정적 파일을 Azion의 엣지 네트워크에 배포합니다.
+
+또는 아래 배포 버튼을 사용하여 애플리케이션을 설정할 수 있습니다:
+
+[![Deploy To Azion](https://github.com/aziontech/azion-samples/raw/dev/static/button.png)](https://console.azion.com/create/hexo/hexo-boilerplate)
 ## 다른 메소드들
 
 생성되는 모든 파일들은 `public` 폴더에 저장됩니다. 이 파일들을 당신이 원하는 곳 아무데나 복사하여 사용할 수 있습니다.
