@@ -366,11 +366,13 @@ azion login
 ```bash
 azion init
 ```  
+
 4. **Build Your Hexo Project:** Run your build command locally:
 
 ```bash
 azion build
 ```
+
 5. **Deploy Your Static Files:** Deploy your static files using the Azion CLI:
 
 ```bash
