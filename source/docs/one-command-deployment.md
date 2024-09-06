@@ -361,16 +361,17 @@ Alternatively, you can click the deploy button below to create a new project:
 azion login
 ```
 
-1. **Set Up Your Application:** Use the following commands to initialize and configure your project:
+3. **Set Up Your Application:** Use the following commands to initialize and configure your project:
+
 ```bash
 azion init
 ```  
-1. **Build Your Hexo Project:** Run your build command locally:
+4. **Build Your Hexo Project:** Run your build command locally:
 
 ```bash
 azion build
 ```
-1. **Deploy Your Static Files:** Deploy your static files using the Azion CLI:
+5. **Deploy Your Static Files:** Deploy your static files using the Azion CLI:
 
 ```bash
 azion deploy
