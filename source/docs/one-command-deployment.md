@@ -333,6 +333,53 @@ Alternatively, you can click the deploy button below to create a new project:
 
 [![Deploy To Edgio](https://docs.edg.io/button.svg)](https://app.layer0.co/deploy?repo=https%3A%2F%2Fgithub.com%2Fedgio-docs%2Fedgio-hexo-example)
 
+## Azion
+
+[Azion](https://www.azion.com.br/) Azion is a fully integrated edge computing platform that delivers better performance, security, reliability, and efficiency for any workload. Our highly distributed architecture includes edge nodes strategically located within Internet Service Providers (ISPs) around the world, spanning across four continents, guaranteeing the fastest and most reliable connectivity.
+
+### Importing from GitHub
+
+1. Access [Azion Console](https://console.azion.com).  
+2. On the homepage, click the **\+ Create** button.  
+   - This opens a modal with the options to create new applications and resources.  
+3. Select the **Import from GitHub** option and click the card.  
+   - This action opens the settings page.  
+4. Connect your Azion account with GitHub.  
+   - A pop-up window will appear asking for authorization.  
+5. Select the repository you want to import from GitHub.  
+6. Configure the build settings. 
+7. Monitor the deployment using **Azion Real-Time Metrics** and verify your site is live on the edge.
+
+
+### Deploying with Azion CLI
+
+1. **Install the Azion CLI:**  Download and install the [Azion CLI](https://www.azion.com/en/documentation/products/azion-cli/overview/) for easier management and deployment.
+
+2. **Authenticate the CLI:** Run the following command to authenticate your CLI with your Azion account.
+
+```bash
+azion login
+```
+
+1. **Set Up Your Application:** Use the following commands to initialize and configure your project:
+```bash
+azion init
+```  
+1. **Build Your Hexo Project:** Run your build command locally:
+
+```bash
+azion build
+```
+1. **Deploy Your Static Files:** Deploy your static files using the Azion CLI:
+
+```bash
+azion deploy
+```
+
+Otherwise, you can setup your application with the deploy button below:
+
+[![Deploy To Azion](https://github.com/aziontech/azion-samples/raw/dev/static/button.png)](https://console.azion.com/create/hexo/hexo-boilerplate)
+
 ## Other Methods
 
 All generated files are saved in the `public` folder. You can copy them to wherever you like.
