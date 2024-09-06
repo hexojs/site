@@ -353,32 +353,15 @@ Alternatively, you can click the deploy button below to create a new project:
 
 ### Deploying with Azion CLI
 
-1. **Install the Azion CLI:**  Download and install the [Azion CLI](https://www.azion.com/en/documentation/products/azion-cli/overview/) for easier management and deployment.
+1. **Install the Azion CLI:** Download and install the [Azion CLI](https://www.azion.com/en/documentation/products/azion-cli/overview/).
 
-2. **Authenticate the CLI:** Run the following command to authenticate your CLI with your Azion account.
+2. **Authenticate:** Run `azion login` to authenticate your CLI with your Azion account.
 
-```bash
-azion login
-```
+3. **Initialize:** Use `azion init` to set up your project.
 
-3. **Set Up Your Application:** Use the following commands to initialize and configure your project:
+4. **Build:** Execute `azion build` to build your Hexo project.
 
-```bash
-azion init
-```  
-
-4. **Build Your Hexo Project:** Run your build command locally:
-
-
-```bash
-azion build
-```
-
-1. **Deploy Your Static Files:** Deploy your static files using the Azion CLI:
-
-```bash
-azion deploy
-```
+5. **Deploy:** Run `azion deploy` to deploy your static files to Azion's edge network.
 
 Otherwise, you can setup your application with the deploy button below:
 
