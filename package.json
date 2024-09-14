@@ -12,7 +12,7 @@
     "prepare": "node .husky/install.mjs"
   },
   "dependencies": {
-    "cheerio": "^0.22.0",
+    "cheerio": "^1.0.0",
     "hexo": "^7.3.0",
     "hexo-clean-css": "^2.0.0",
     "hexo-filter-nofollow": "^2.0.2",
