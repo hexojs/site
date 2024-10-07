@@ -10,7 +10,7 @@ The website for Hexo.
 
 Install dependencies:
 
-``` bash
+```bash
 git clone https://github.com/hexojs/site.git
 cd site
 npm install
@@ -18,15 +18,23 @@ npm install
 
 Generate:
 
-``` bash
+```bash
 hexo generate
 ```
 
 Run server:
 
-``` bash
+```bash
 hexo server
 ```
+
+## Contributing
+
+Before you open pull requests, please refer to the guide:
+
+- [Add your plugin to `hexo.io/plugins/`](https://hexo.io/docs/plugins#Publishing)
+- [Add your theme to `hexo.io/themes/`](https://hexo.io/docs/themes#Publishing)
+- [Update Documentation](https://hexo.io/docs/contributing#Updating-Documentation)
 
 ## Contributors
 
