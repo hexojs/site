@@ -87,10 +87,18 @@ $ hexo server
 
 ### Traduzindo
 
+#### Contribute translations
+
+[![Crowdin](https://badges.crowdin.net/hexo/localized.svg)](https://crowdin.com/project/hexo)
+
+Now we use the [Crowdin](https://crowdin.com/project/hexo) platform for translation, where anyone can contribute translations and vote for translations without manual git operations.
+
+#### Add a new language
+
 1. Adicione um diretório para o novo idioma dentro do repositório `source`. (Todas as letras minúsculas)
-2. Copie os arquivos de template e Markdown que estão no `source` para o diretório do novo idioma.
-3. Adicione o novo idioma a `source/_data/language.yml`.
-4. Copie o arquivo `en.yml` em `themes/navy/languages` e o renomeie para o nome do novo idioma (todas as minúsculas).
+1. Copie os arquivos de template e Markdown que estão no `source` para o diretório do novo idioma.
+1. Adicione o novo idioma a `source/_data/language.yml`.
+1. Copie o arquivo `en.yml` em `themes/navy/languages` e o renomeie para o nome do novo idioma (todas as minúsculas).
 
 ## Reportando Issues
 
