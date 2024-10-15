@@ -87,10 +87,18 @@ $ hexo server
 
 ### Перевод
 
+#### Contribute translations
+
+[![Crowdin](https://badges.crowdin.net/hexo/localized.svg)](https://crowdin.com/project/hexo)
+
+Now we use the [Crowdin](https://crowdin.com/project/hexo) platform for translation, where anyone can contribute translations and vote for translations without manual git operations.
+
+#### Add a new language
+
 1. Добавьте новую папку с языком в папке `source`. (Всё в нижнем регистре)
-2. Скопируйте markdown файлы и шаблоны из папки `source` в папку с создаваемым переводом.
-3. Добавьте новый язык в файл `source/_data/language.yml`.
-4. Скопируйте `en.yml` в `themes/navy/languages` и измените имя (всё в нижнем регистре).
+1. Скопируйте markdown файлы и шаблоны из папки `source` в папку с создаваемым переводом.
+1. Добавьте новый язык в файл `source/_data/language.yml`.
+1. Скопируйте `en.yml` в `themes/navy/languages` и измените имя (всё в нижнем регистре).
 
 ## Сообщение о проблеме
 
