@@ -95,7 +95,7 @@ Now we use the [Crowdin](https://crowdin.com/project/hexo) platform for translat
 
 #### Add a new language
 
-1. Summit a new issue to let us know. The members with access to the [Crowdin Project](https://crowdin.com/project/hexo) add the language in settings.
+1. Submit a new issue to let us know. The members with access to the [Crowdin Project](https://crowdin.com/project/hexo) add the language in settings.
 1. After adding language in Crowdin, anyone can contribute translations on it.
 1. Add the new language to [`source/_data/language.yml`](https://github.com/hexojs/site/blob/master/source/_data/languages.yml).
 1. Copy `en.yml` in [`themes/navy/languages`](https://github.com/hexojs/site/tree/master/themes/navy/languages) and rename it to the language name (all lower case).
