@@ -87,10 +87,18 @@ $ hexo server
 
 ### 翻訳
 
-1. `source`フォルダ内に新しい言語フォルダを追加します。 （すべて小文字）
-2. `source`フォルダのマークダウンとテンプレートファイルを新しい言語フォルダにコピーします。
-3. `source/_data/language.yml`に新しい言語を追加します。
-4. `themes/navy/languages`内の`en.yml`をコピーし、言語名（すべて小文字）にリネームします。
+#### 翻訳での貢献
+
+[![Crowdin](https://badges.crowdin.net/hexo/localized.svg)](https://crowdin.com/project/hexo)
+
+現在、翻訳には [Crowdin](https://crowdin.com/project/hexo) プラットフォームを使用しており、手動の git 操作なしで誰でも翻訳への貢献や投票ができます。
+
+#### 新たな言語の追加
+
+1. 新たなIssueを作成し私達にお知らせください。 [Crowdin プロジェクト](https://crowdin.com/project/hexo) へのアクセス権を持つメンバーが言語設定を追加します。
+1. Crowdinに言語が追加された後は、誰でも翻訳を行うことができます。
+1. `source/_data/language.yml`に新しい言語を追加します。
+1. `themes/navy/languages`内の`en.yml`をコピーし、言語名（すべて小文字）にリネームします。
 
 ## 問題の報告
 
