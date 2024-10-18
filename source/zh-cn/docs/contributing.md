@@ -87,10 +87,18 @@ $ hexo server
 
 ### 翻译
 
-1. 在 `source` 文件夹中建立一个新的语言文件夹。 （全小写）
-2. 把 `source` 文件夹中相关的文件（Markdown 和模板文件）复制到新的语言文件夹中。
-3. 在 `source/_data/language.yml` 中新增语言。
-4. 将 `en.yml` 复制到 `themes/navy/languages`中并命名为语言名称（全小写）。
+#### Contribute translations
+
+[![Crowdin](https://badges.crowdin.net/hexo/localized.svg)](https://crowdin.com/project/hexo)
+
+Now we use the [Crowdin](https://crowdin.com/project/hexo) platform for translation, where anyone can contribute translations and vote for translations without manual git operations.
+
+#### Add a new language
+
+1. Submit a new issue to let us know. The members with access to the [Crowdin Project](https://crowdin.com/project/hexo) add the language in settings.
+1. After adding language in Crowdin, anyone can contribute translations on it.
+1. 在 `source/_data/language.yml` 中新增语言。
+1. 将 `en.yml` 复制到 `themes/navy/languages`中并命名为语言名称（全小写）。
 
 ## 报告问题
 
