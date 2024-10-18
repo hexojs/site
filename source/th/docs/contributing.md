@@ -87,10 +87,18 @@ $ hexo server
 
 ### Translating
 
-1. Add a new language folder in `source` folder. (All lower case)
-2. Copy Markdown and template files in `source` folder to the new language folder.
-3. Add the new language to `source/_data/language.yml`.
-4. Copy `en.yml` in `themes/navy/languages` and rename to the language name (all lower case).
+#### Contribute translations
+
+[![Crowdin](https://badges.crowdin.net/hexo/localized.svg)](https://crowdin.com/project/hexo)
+
+Now we use the [Crowdin](https://crowdin.com/project/hexo) platform for translation, where anyone can contribute translations and vote for translations without manual git operations.
+
+#### Add a new language
+
+1. Submit a new issue to let us know. The members with access to the [Crowdin Project](https://crowdin.com/project/hexo) add the language in settings.
+1. After adding language in Crowdin, anyone can contribute translations on it.
+1. Add the new language to [`source/_data/language.yml`](https://github.com/hexojs/site/blob/master/source/_data/languages.yml).
+1. Copy `en.yml` in `themes/navy/languages` and rename to the language name (all lower case).
 
 ## Reporting Issues
 
