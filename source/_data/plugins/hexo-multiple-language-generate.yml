@@ -1,0 +1,6 @@
+description: A plugin that simplifies the generation and management of multi-language blogs in Hexo. With simple configuration, you can easily generate blogs in different languages. | 一个简化 Hexo 博客多语言生成和管理的插件。通过简单配置，轻松实现不同语言版本博客的生成。
+link: https://www.npmjs.com/package/hexo-multiple-language-generate
+tags:
+  - hexo
+  - translate
+  - language
