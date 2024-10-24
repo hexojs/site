@@ -29,7 +29,7 @@ pages:
 ```
 
 6. _username_.gitlab.io should be up and running, once GitLab CI finishes the deployment job,
-7. (Optional) If you wish to inspect the generated site assets (html, css, js, etc), they can be found in the [job artifact](https://docs.gitlab.com/ee/ci/pipelines/job_artifacts.html).
+7. (Optional) If you wish to inspect the generated site assets (html, css, js, etc), they can be found in the [job artifact](https://docs.gitlab.com/ee/ci/jobs/job_artifacts.html).
 
 ## Project page
 
