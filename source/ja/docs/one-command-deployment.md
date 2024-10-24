@@ -333,6 +333,38 @@ edgio deploy
 
 [![Deploy To Edgio](https://docs.edg.io/button.svg)](https://app.layer0.co/deploy?repo=https%3A%2F%2Fgithub.com%2Fedgio-docs%2Fedgio-hexo-example)
 
+## Azion
+
+[Azion](https://www.azion.com.br/) Azion は、あらゆるワークロードに対して優れたパフォーマンス、セキュリティ、信頼性、効率を提供する、完全に統合されたエッジコンピューティングプラットフォームです。当社の高度に分散されたアーキテクチャには、世界中のインターネットサービスプロバイダー（ISP）内に戦略的に配置されたエッジノードが含まれており、4大陸にまたがる最速かつ最も信頼性の高い接続を保証します。
+
+### GitHub からのインポート
+
+1. [Azion コンソール](https://console.azion.com)にアクセスします。  
+2. ホームページで **\+ 作成** ボタンをクリックします。  
+   - 新しいアプリケーションやリソースを作成するオプションが表示されるモーダルが開きます。  
+3. **GitHub からインポート** オプションを選択し、カードをクリックします。  
+   - これにより、設定ページが開きます。  
+4. Azion アカウントを GitHub と接続します。  
+   - 認証を求めるポップアップウィンドウが表示されます。  
+5. GitHub からインポートしたいリポジトリを選択します。  
+6. ビルド設定を構成します。  
+7. **Azion リアルタイムメトリクス** を使用してデプロイを監視し、サイトがエッジ上で稼働していることを確認します。
+
+### Azion CLI でのデプロイ
+
+1. **Azion CLI のインストール:** [Azion CLI](https://www.azion.com/en/documentation/products/azion-cli/overview/)をダウンロードしてインストールします。
+
+2. **認証:** `azion login` を実行して、CLI を Azion アカウントに認証します。
+
+3. **初期化:** `azion init` を使用してプロジェクトを設定します。
+
+4. **ビルド:** `azion build` を実行して、Hexo プロジェクトをビルドします。
+
+5. **デプロイ:** `azion deploy` を実行して、静的ファイルを Azion のエッジネットワークにデプロイします。
+
+また、以下のデプロイボタンを使用してアプリケーションをセットアップすることもできます：
+
+[![Deploy To Azion](https://github.com/aziontech/azion-samples/raw/dev/static/button.png)](https://console.azion.com/create/hexo/hexo-boilerplate)
 ## その他の方法
 
 生成されたすべてのファイルは`public`フォルダに保存されます。 好きな場所にコピーしてください。

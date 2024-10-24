@@ -333,6 +333,40 @@ Alternatively, you can click the deploy button below to create a new project:
 
 [![Deploy To Edgio](https://docs.edg.io/button.svg)](https://app.layer0.co/deploy?repo=https%3A%2F%2Fgithub.com%2Fedgio-docs%2Fedgio-hexo-example)
 
+## Azion
+
+[Azion](https://www.azion.com.br/) Azion is a fully integrated edge computing platform that delivers better performance, security, reliability, and efficiency for any workload. Our highly distributed architecture includes edge nodes strategically located within Internet Service Providers (ISPs) around the world, spanning across four continents, guaranteeing the fastest and most reliable connectivity.
+
+### Importing from GitHub
+
+1. Access [Azion Console](https://console.azion.com).  
+2. On the homepage, click the **\+ Create** button.  
+   - This opens a modal with the options to create new applications and resources.  
+3. Select the **Import from GitHub** option and click the card.  
+   - This action opens the settings page.  
+4. Connect your Azion account with GitHub.  
+   - A pop-up window will appear asking for authorization.  
+5. Select the repository you want to import from GitHub.  
+6. Configure the build settings. 
+7. Monitor the deployment using **Azion Real-Time Metrics** and verify your site is live on the edge.
+
+
+### Deploying with Azion CLI
+
+1. **Install the Azion CLI:** Download and install the [Azion CLI](https://www.azion.com/en/documentation/products/azion-cli/overview/).
+
+2. **Authenticate:** Run `azion login` to authenticate your CLI with your Azion account.
+
+3. **Initialize:** Use `azion init` to set up your project.
+
+4. **Build:** Execute `azion build` to build your Hexo project.
+
+5. **Deploy:** Run `azion deploy` to deploy your static files to Azion's edge network.
+
+Otherwise, you can setup your application with the deploy button below:
+
+[![Deploy To Azion](https://github.com/aziontech/azion-samples/raw/dev/static/button.png)](https://console.azion.com/create/hexo/hexo-boilerplate)
+
 ## Other Methods
 
 All generated files are saved in the `public` folder. You can copy them to wherever you like.
