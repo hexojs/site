@@ -333,6 +333,38 @@ edgio deploy
 
 [![部署到 Edgio](https://docs.edg.io/button.svg)](https://app.layer0.co/deploy?repo=https%3A%2F%2Fgithub.com%2Fedgio-docs%2Fedgio-hexo-example)
 
+## Azion
+
+[Azion](https://www.azion.com.br/) Azion 是一个完全集成的边缘计算平台，能够为任何工作负载提供更好的性能、安全性、可靠性和效率。我们高度分布的架构包含战略性部署在全球互联网服务提供商 (ISP) 中的边缘节点，覆盖四大洲，确保最快速和最可靠的连接。
+
+### 从 GitHub 导入
+
+1. 访问 [Azion 控制台](https://console.azion.com)。  
+2. 在首页点击 **\+ 创建** 按钮。  
+   - 这将打开一个模态窗口，提供创建新应用程序和资源的选项。  
+3. 选择 **从 GitHub 导入** 选项并点击卡片。  
+   - 这将打开设置页面。  
+4. 将您的 Azion 账户与 GitHub 连接。  
+   - 会弹出一个窗口请求授权。  
+5. 选择您想从 GitHub 导入的仓库。  
+6. 配置构建设置。  
+7. 使用 **Azion 实时指标** 监控部署，确保您的站点在边缘上运行。
+
+### 使用 Azion CLI 进行部署
+
+1. **安装 Azion CLI:** 下载并安装 [Azion CLI](https://www.azion.com/en/documentation/products/azion-cli/overview/)。
+
+2. **认证:** 运行 `azion login` 来认证您的 CLI 和 Azion 账户。
+
+3. **初始化:** 使用 `azion init` 来设置您的项目。
+
+4. **构建:** 执行 `azion build` 来构建您的 Hexo 项目。
+
+5. **部署:** 运行 `azion deploy` 将您的静态文件部署到 Azion 的边缘网络。
+
+您也可以通过下面的部署按钮设置您的应用程序：
+
+[![Deploy To Azion](https://github.com/aziontech/azion-samples/raw/dev/static/button.png)](https://console.azion.com/create/hexo/hexo-boilerplate)
 ## 其他方法
 
 Hexo 生成的所有文件都放在 `public` 文件夹中。 您可以将它们复制到您喜欢的地方。
