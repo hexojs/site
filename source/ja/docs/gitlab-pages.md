@@ -29,7 +29,7 @@ pages:
 ```
 
 6. GitLab CIがデプロイジョブを終了すると、_username_.gitlab.io が動作しているはずです。
-7. （任意）生成されたサイトアセット（html、css、jsなど）は [ジョブアーティファクト](https://docs.gitlab.com/ee/ci/pipelines/job_artifacts.html) でから見つけることができます。
+7. （任意）生成されたサイトアセット（html、css、jsなど）は [ジョブアーティファクト](https://docs.gitlab.com/ee/ci/jobs/job_artifacts.html) でから見つけることができます。
 
 ## プロジェクトページ
 
