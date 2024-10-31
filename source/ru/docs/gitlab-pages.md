@@ -29,7 +29,7 @@ pages:
 ```
 
 6. _username_.gitlab.io должен заработать, как только GitLab CI закончит деплой.
-7. (Опционально) Если вы хотите проверить содержимое папок с материалами (html, css, js и т.д.), они могут быть найдены в разделе [job artifact](https://docs.gitlab.com/ee/user/project/pipelines/job_artifacts.html).
+7. (Опционально) Если вы хотите проверить содержимое папок с материалами (html, css, js и т.д.), они могут быть найдены в разделе[job artifact](https://docs.gitlab.com/ee/ci/jobs/job_artifacts.html).
 
 ## Страница проекта
 
