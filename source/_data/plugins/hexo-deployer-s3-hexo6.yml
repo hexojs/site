@@ -1,0 +1,6 @@
+description: Amazon S3 deployer plugin for Hexo 6.x.
+link: https://github.com/matian2014/hexo-deployer-s3-hexo6
+tags:
+  - deployer
+  - s3
+  - Hexo 6.x
