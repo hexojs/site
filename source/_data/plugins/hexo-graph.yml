@@ -1,0 +1,6 @@
+description: A versatile plugin based on ECharts that integrates blog heatmap, monthly statistics chart, category statistics chart, and tag statistics chart.
+link: https://github.com/codepzj/hexo-graph
+tags:
+  - hexo
+  - echarts
+  - graph
