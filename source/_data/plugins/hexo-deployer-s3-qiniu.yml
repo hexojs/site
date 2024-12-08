@@ -1,0 +1,6 @@
+description: Qiniu S3 deployer plugin for Hexo.
+link: https://github.com/matian2014/hexo-deployer-s3-qiniu
+tags:
+  - deployer
+  - s3
+  - qiniu
