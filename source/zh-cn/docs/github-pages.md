@@ -51,6 +51,8 @@ jobs:
             ${{ runner.OS }}-npm-cache
       - name: Install Dependencies
         run: npm install
+      - name: Install Hexo globally
+        run: npm install -g hexo-cli
       - name: Build
         run: npm run build
       - name: Upload Pages artifact
