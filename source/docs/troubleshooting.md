@@ -97,6 +97,8 @@ fatal: 'username.github.io' does not appear to be a git repository
 
 Make sure you have [set up git](https://help.github.com/articles/set-up-git) on your computer properly or try to use HTTPS repository URL instead.
 
+If your commit is very large (contains many inserts and deletes), GitHub might reject your push. Try going to `.deploy_git` directory and run `git repack --max-pack-size=100M -a -d`.
+
 ### Error: ENOENT: no such file or directory
 
 If you get an error like `Error: ENOENT: no such file or directory` it's probably due to mixing uppercase and lowercase letters in your tags, categories, or filenames. Git cannot automatically merge this change, so it breaks the automatic branching.
