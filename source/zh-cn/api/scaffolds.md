@@ -1,5 +1,5 @@
 ---
-title: Scaffolds
+title: 脚手架
 ---
 
 ## 获得脚手架

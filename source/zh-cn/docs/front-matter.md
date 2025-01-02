@@ -48,7 +48,7 @@ date: 2013/7/13 20:46:25
 
 #### 分类和标签
 
-只有文章支持分类和标签。 Categories apply to posts in order, resulting in a hierarchy of classifications and sub-classifications. Tags are all defined on the same hierarchical level so the order in which they appear is not important.
+只有文章支持分类和标签。 分类按顺序应用于文章，从而形成分类和子分类的层次结构。 标签是在相同的层次结构上定义的，因此它们的出现顺序不重要。
 
 **示例**
 
@@ -62,7 +62,7 @@ tags:
   - Shocking
 ```
 
-If you want to apply multiple category hierarchies, use a list of names instead of a single name. If Hexo sees any categories defined this way on a post, it will treat each category for that post as its own independent hierarchy.
+如果你想应用多个分类层次结构，请使用一个名称列表而不是一个单个名称。 如果 Hexo 在帖子上看到像这种方式定义的分类，它会将该帖子的每个分类视为其自己的独立层次结构。
 
 **示例**
 

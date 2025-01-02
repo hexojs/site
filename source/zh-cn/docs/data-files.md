@@ -22,7 +22,7 @@ Archives: /archives/
 <% } %>
 ```
 
-render like this :
+渲染就像这样：
 
 ```
 <a href="/"> Home </a>

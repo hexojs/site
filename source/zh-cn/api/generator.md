@@ -32,11 +32,11 @@ hexo.extend.generator.register("test", function (locals) {
 });
 ```
 
-| 属性       | 描述                                                                                                                                        |
-| -------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| `path`   | 路径。 不可包含开头的 `/`。                                                                                                                          |
-| `data`   | 数据                                                                                                                                        |
-| `layout` | 布局。 Specify the layouts for rendering. The value can be a string or an array. If it's ignored then the route will return `data` directly. |
+| 属性       | 描述                                                   |
+| -------- | ---------------------------------------------------- |
+| `path`   | 路径。 不可包含开头的 `/`。                                     |
+| `data`   | 数据                                                   |
+| `layout` | 布局。 指定用于渲染的布局。 该值可以是一个字符串或数组。 如果它被忽略，路由将直接返回 `data`。 |
 
 在原始文件更新时，Hexo 会执行所有生成器并重建路由。 **请直接回传数据，不要直接访问路由。**
 
@@ -46,7 +46,7 @@ hexo.extend.generator.register("test", function (locals) {
 
 在 `archives/index.html` 建立一归档页面。 把所有文章当作数据传入模板内。 这个数据也就等同于模板中的 `page` 变量。
 
-Next, set the `layout` attribute to render with the theme templates. We're setting two layouts in this example: if the `archive` layout doesn't exist, the `index` layout will be used instead.
+接下来，设置 `layout` 属性以使用主题模板进行渲染。 我们在此示例中设置了两个布局：如果 `archive` 布局不存在，则将使用 `index` 布局。
 
 ```js
 hexo.extend.generator.register("archive", function (locals) {

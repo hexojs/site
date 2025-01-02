@@ -45,8 +45,8 @@ pretty_urls:
 
 | 设置             | 描述                                                                                                                | 默认值              |
 | -------------- | ----------------------------------------------------------------------------------------------------------------- | ---------------- |
-| `source_dir`   | Source folder. Where your content is stored                                                                       | `source`         |
-| `public_dir`   | Public folder. Where the static site will be generated                                                            | `public`         |
+| `source_dir`   | Source 文件夹 存储内容的位置                                                                                                | `source`         |
+| `public_dir`   | Public 文件夹 生成静态站点的位置                                                                                              | `public`         |
 | `tag_dir`      | 标签文件夹                                                                                                             | `tags`           |
 | `archive_dir`  | 归档文件夹                                                                                                             | `archives`       |
 | `category_dir` | 分类文件夹                                                                                                             | `categories`     |
@@ -79,7 +79,7 @@ skip_render: "_posts/test-post.md"
 | `external_link.enable`  | 在新标签中打开链接                                                                  | `true`         |
 | `external_link.field`   | 对整个网站（`site`）生效或仅对文章（`post`）生效                                             | `site`         |
 | `external_link.exclude` | 需要排除的域名。 主域名和子域名如 `www` 需分别配置                                              | `[]`           |
-| `filename_case`         | Transform filenames to `1` lower case; `2` upper case                      | `0`            |
+| `filename_case`         | 设置为 `1` ，将文件名转换为小写形式； 设置为 `2` ，将文件名转换为大写形式。                                | `0`            |
 | `render_drafts`         | 显示草稿                                                                       | `false`        |
 | `post_asset_folder`     | 启用 [资源文件夹](asset-folders.html)                                             | `false`        |
 | `relative_link`         | 把链接改为与根目录的相对位址                                                             | `false`        |
@@ -90,13 +90,13 @@ skip_render: "_posts/test-post.md"
 
 ### 首页设置
 
-| 设置                               | 描述                                                                                                              | 默认值     |
-| -------------------------------- | --------------------------------------------------------------------------------------------------------------- | ------- |
-| `index_generator`                | Generate an archive of posts, powered by [hexo-generator-index](https://github.com/hexojs/hexo-generator-index) |         |
-| `index_generator.path`           | Root path for your blog's index page                                                                            | `''`    |
-| `index_generator.per_page`       | Posts displayed per page.                                                                                       | `10`    |
-| `index_generator.order_by`       | Posts order. Order by descending date (new to old) by default.                                                  | `-date` |
-| `index_generator.pagination_dir` | URL format, see [Pagination](#Pagination) setting below                                                         | `page`  |
+| 设置                               | 描述                                                                                  | 默认值     |
+| -------------------------------- | ----------------------------------------------------------------------------------- | ------- |
+| `index_generator`                | 生成帖子归档。由 [hexo-generator-index](https://github.com/hexojs/hexo-generator-index) 驱动。 |         |
+| `index_generator.path`           | 博客索引页面的根路径                                                                          | `''`    |
+| `index_generator.per_page`       | 每页显示帖子数                                                                             | `10`    |
+| `index_generator.order_by`       | 帖子排列顺序。 默认情况下按日期降序(从新到旧)。                                                           | `-date` |
+| `index_generator.pagination_dir` | URL 格式，请参阅下面的 [分页](#Pagination) 设置                                                  | `page`  |
 
 ### 分类 & 标签
 
