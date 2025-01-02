@@ -12,9 +12,9 @@ hexo.extend.injector.register(entry, value, to);
 
 ### entry `<string>`
 
-Where the code will be injected inside the HTML.
+在 HTML 中的注入代码的位置。
 
-Support those values:
+支持这些值：
 
 - `head_begin`: 注入在 `<head>` 之后（默认）
 - `head_end`: 注入在 `</head>` 之前
@@ -29,7 +29,7 @@ Support those values:
 
 ### to `<string>`
 
-Which page will code snippets being injected.
+哪些页面会被注入代码
 
 - `default`: 注入到每个页面（默认值）
 - `home`: 只注入到主页（`is_home()` 为 `true` 的页面）

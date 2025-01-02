@@ -11,7 +11,7 @@ JS-YAML: incomplete explicit mapping pair; a key node is missed at line 18, colu
       last_updated: Last updated: %s
 ```
 
-Wrap the string with quotations if it contains colons.
+如果字符串包含冒号，则用引号将其括起来。
 
 ```plain
 JS-YAML: bad indentation of a mapping entry at line 18, column 31:
@@ -69,25 +69,25 @@ DefaultLimitNOFILE=10000
 
 3. 重启
 
-## Process Out of Memory
+## 进程内存溢出
 
-如果你遇到了这个错误，有可能是你的文件名、分类或者标签的名字混淆了大写和小写，你可以尝试检查每一个标签和分类的名称，是否大小写一致来修复这一问题。
+当您在生成过程中遇到此错误时：
 
 ```
 FATAL ERROR: CALL_AND_RETRY_LAST Allocation failed - process out of memory
 ```
 
-Increase Node.js heap memory size by changing the first line of `hexo-cli` (`which hexo` to look for the file).
+通过更改 `hexo-cli` 的第一行来增加 Node.js 堆内存大小（`which hexo` 用于查找文件）。
 
 ```
 #!/usr/bin/env node --max_old_space_size=8192
 ```
 
-[Out of memory while generating a huge blog · Issue #1735 · hexojs/hexo](https://github.com/hexojs/hexo/issues/1735)
+[生成大型博客时内存不足 Issue hexojs/hexo#1735](https://github.com/hexojs/hexo/issues/1735)
 
 ## Git 部署问题
 
-### RPC failed
+### RPC 失败
 
 ```plain
 error: RPC failed; result=22, HTTP code = 403
@@ -99,18 +99,18 @@ fatal: 'username.github.io' does not appear to be a git repository
 
 ### Error: ENOENT: no such file or directory
 
-If you get an error like `Error: ENOENT: no such file or directory` it's probably due to mixing uppercase and lowercase letters in your tags, categories, or filenames. Git cannot automatically merge this change, so it breaks the automatic branching.
+如果您遇到像 `Error: ENOENT: no such file or directory` 之类的错误，这可能是由于您的标签、分类或文件名中混合了大写和小写字母。 Git 不能自动合并此更改，所以它会中断自动分支。
 
-To fix this, try
+要解决这个问题，请试试
 
-1. Check every tag's and category's case and make sure they are the same.
-1. Commit
-1. Clean and build: `./node_modules/.bin/hexo clean && ./node_modules/.bin/hexo generate`
-1. Manually copy the public folder to your desktop
-1. Switch branch from your master branch to your deployment branch locally
-1. Copy the contents of the public folder from your desktop into the deployment branch
-1. Commit. You should see any merge conflicts appear that you can manually resolve.
-1. Switch back to your master branch and deploy normally: `./node_modules/.bin/hexo deploy`
+1. 检查每个标签和类别的大小写，并确保它们是相同的。
+1. 提交变更
+1. 清洁和构建：`./node_modules/.bin/hexo clean && ./node_modules/.bin/hexo generate`
+1. 手动复制公共文件夹到桌面
+1. 将分支从主分支切换到本地部署分支
+1. 从桌面复制公共文件夹的内容到部署分支
+1. 提交。 您应该看到您可以手动解决的任何合并冲突。
+1. 切换回主分支并正常部署： `./node_modules/.bin/hexo deploy`
 
 ## 服务器问题
 
@@ -159,7 +159,7 @@ Hexo 使用 [Warehouse][] 存储数据。 它不是一般数组所以必须先�
 
 ## 数据没有更新
 
-Some data cannot be updated, or the newly generated files are identical to those of the last version. Clean the cache and try again.
+有些数据无法更新，或者新生成的文件与上次版本相同。 清理缓存并重试。
 
 ```bash
 $ hexo clean
@@ -177,7 +177,7 @@ $ hexo clean
 }
 ```
 
-## Escape Contents
+## 转义内容
 
 Hexo 使用 [Nunjucks][] 来解析文章（旧版本使用 [Swig][]，两者语法类似）。 内容若包含 `{{ }}` 或 `{% %}` 可能导致解析错误。 您可以使用 [`raw`](/docs/tag-plugins#Raw) 标记插件、单反引号 `` `{{ }}` `` 或三反引号对其进行包裹，从而跳过解析过程。 此外，Nunjucks 标签也可以通过渲染器的选项（如果支持的话）、[API](/zh-cn/api/renderer#禁用-Nunjucks-标签) 或 [front-matter](/zh-cn/docs/front-matter) 来禁用。
 
@@ -217,14 +217,14 @@ $ echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo
 Error: watch /path/to/hexo/theme/ EMPERM
 ```
 
-这是由于你使用的 WSL 版本不支持监听文件系统改动。 Therefore, the live updating feature of hexo's server is currently unavailable. 您也仍然可以通过先使用 `hexo g` 生成文件然后将其作为静态服务器运行来从 WSL 环境运行服务器：
+这是由于你使用的 WSL 版本不支持监听文件系统改动。 因此，Hexo 服务器的实时更新功能不可用。 您也仍然可以通过先使用 `hexo g` 生成文件然后将其作为静态服务器运行来从 WSL 环境运行服务器：
 
 ```sh
 $ hexo generate
 $ hexo server -s
 ```
 
-This is [a known BashOnWindows issue](https://github.com/Microsoft/BashOnWindows/issues/216), and on 15 Aug 2016, the Windows team said they would work on it. You can get progress updates and encourage them to prioritize it on [the issue's UserVoice suggestion page](https://wpdev.uservoice.com/forums/266908-command-prompt-console-bash-on-ubuntu-on-windo/suggestions/13469097-support-for-filesystem-watchers-like-inotify).
+这是 [一个已知的 BashOnWindows 问题](https://github.com/Microsoft/BashOnWindows/issues/216)，2016 年 8 月 15 日，Windows 团队表示他们将解决这个问题。 您可以在 [该问题的 UserVoice 建议页面](https://wpdev.uservoice.com/forums/266908-command-prompt-console-bash-on-ubuntu-on-windo/suggestions/13469097-support-for-filesystem-watchers-like-inotify) 获取进度更新并鼓励他们优先解决这个问题。
 
 ## 模板渲染错误
 
@@ -235,12 +235,12 @@ FATAL Something's wrong. Maybe you can find the solution here: http://hexo.io/do
 Template render error: (unknown path)
 ```
 
-Possible cause:
+可能的原因：
 
 - 一种可能的原因是你的文件中存在一些不可被识别的字符，比如不可见的零宽度字符。
-- Incorrect use or limitation of [tag plugin](/docs/tag-plugins).
+- 不正确使用或限制 [标签插件](/docs/tag-plugins)
 
-  - Block-style tag plugin with content is not enclosed with `{% endplugin_name %}`
+  - 块式标签插件的内容被包围在 `{% endplugin_name %}` 中
 
   ```
   # Incorrect
@@ -258,7 +258,7 @@ Possible cause:
   {% endcodeblock %}
   ```
 
-  - Having Nunjucks-like syntax in a tag plugin, e.g. [`{#`](https://mozilla.github.io/nunjucks/templating.html#comments). A workaround for this example is to use [triple backtick](/docs/tag-plugins#Backtick-Code-Block) instead. [Escape Contents](/docs/troubleshooting#Escape-Contents) section has more details.
+  - 在标签插件中有类似于 Nunjucks 的语法，例如 [`{#`](https://mozilla.github.io/nunjucks/templating.html#comments). 此示例的一个解决方法是使用 [triple backtick](/docs/tag-plugins#Backtick-Code-Block)。 [转义内容](/docs/troubleshooting#Escape-Contents) 部分有更多详细信息。
 
   ```
   {% codeblock lang:bash %}

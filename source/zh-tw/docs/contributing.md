@@ -87,10 +87,18 @@ $ hexo server
 
 ### 翻譯
 
-1. 在 `source` 資料夾中建立一個新的語言資料夾（全小寫）。 (All lower case)
-2. 把 `source` 資料夾中相關的檔案（Markdown 和模板檔案）複製到新的語言資料夾中。
-3. 在 `source/_data/language.yml` 中新增語言。
-4. 在 `themes/navy/languages` 複製 `en.yml` 並命名為語言名稱（全小寫）。
+#### Contribute translations
+
+[![Crowdin](https://badges.crowdin.net/hexo/localized.svg)](https://crowdin.com/project/hexo)
+
+Now we use the [Crowdin](https://crowdin.com/project/hexo) platform for translation, where anyone can contribute translations and vote for translations without manual git operations.
+
+#### Add a new language
+
+1. Submit a new issue to let us know. The members with access to the [Crowdin Project](https://crowdin.com/project/hexo) add the language in settings.
+1. After adding language in Crowdin, anyone can contribute translations on it.
+1. 在 `source/_data/language.yml` 中新增語言。
+1. 在 `themes/navy/languages` 複製 `en.yml` 並命名為語言名稱（全小寫）。
 
 ## 回報問題
 

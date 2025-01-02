@@ -22,7 +22,7 @@ title: 贡献
 
 ### 工作流
 
-1. Fork [hexojs/hexo][].
+1. 分叉（fork） [hexojs/hexo][]。
 2. 把库（repository）复制到电脑上，并安装所依赖的插件。
 
 ```bash
@@ -66,7 +66,7 @@ Hexo 文档开放源代码，您可以在 [hexojs/site][] 找到源代码。
 
 ### 工作流
 
-1. Fork [hexojs/site][]
+1. 分叉（fork） [hexojs/site][]
 2. 把库（repository）复制到电脑上，并安装所依赖的插件。
 
 ```bash
@@ -87,10 +87,18 @@ $ hexo server
 
 ### 翻译
 
-1. 在 `source` 文件夹中建立一个新的语言文件夹。 （全小写）
-2. 把 `source` 文件夹中相关的文件（Markdown 和模板文件）复制到新的语言文件夹中。
-3. 在 `source/_data/language.yml` 中新增语言。
-4. 将 `en.yml` 复制到 `themes/navy/languages`中并命名为语言名称（全小写）。
+#### 贡献翻译
+
+[![Crowdin](https://badges.crowdin.net/hexo/localized.svg)](https://crowdin.com/project/hexo)
+
+现在我们使用 [Crowdin](https://crowdin.com/project/hexo) 平台进行翻译，任何人都可以贡献翻译并投票支持翻译，而不需要手动git 操作。
+
+#### 添加新语言
+
+1. 提交一个新议题（issue）让我们知道。 拥有权限 [Crowdin 项目](https://crowdin.com/project/hexo) 的成员在设置中添加语言。
+1. 在 Crowdin 中添加语言后，任何人都可以贡献翻译。
+1. 在 `source/_data/language.yml` 中新增语言。
+1. 将 `en.yml` 复制到 `themes/navy/languages`中并命名为语言名称（全小写）。
 
 ## 报告问题
 

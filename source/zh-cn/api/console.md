@@ -18,13 +18,13 @@ hexo.extend.console.register(name, desc, options, function (args) {
 | `desc`    | 描述 |
 | `options` | 选项 |
 
-An argument `args` will be passed into the function. This is the argument that users type into the terminal. It's parsed by [Minimist][].
+`args` 参数会被传递到 `function` 中。 这是用户输入终端的参数。 它由 [Minimist][] 解析。
 
 ## 选项
 
 ### 用法
 
-The usage of a console command. 例如：
+控制台命令的用法。 例如：
 
 ```js
 {

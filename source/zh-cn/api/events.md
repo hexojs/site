@@ -6,23 +6,23 @@ Hexo 继承了 [EventEmitter][]。 您可以用 `on` 方法监听 Hexo 所发布
 
 ### deployBefore
 
-Emitted before deployment begins.
+在部署开始前触发。
 
 ### deployAfter
 
-Emitted after deployment finishes.
+在部署完成后触发。
 
 ### exit
 
-在 Hexo 结束前发布。
+在 Hexo 退出前触发。
 
 ### generateBefore
 
-Emitted before generation begins.
+在生成器开始前触发。
 
 ### generateAfter
 
-Emitted after generation finishes.
+在生成器后触发。
 
 ### new
 

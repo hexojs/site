@@ -29,7 +29,7 @@ pages:
 ```
 
 6. GitLab CI 完成部署後，你應該能瀏覽 `<GitLab 用戶名>.gitlab.io` 頁面。
-7. (可選部分) 若要檢驗你的 site assets (html、 css、 js 等)，你可[點選這裡](https://docs.gitlab.com/ee/user/project/pipelines/job_artifacts.html) 了解。
+7. (可選部分) 若要檢驗你的 site assets (html、 css、 js 等)，你可[點選這裡](https://docs.gitlab.com/ee/ci/jobs/job_artifacts.html) 了解。
 
 ## Project page
 

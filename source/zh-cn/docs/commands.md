@@ -21,7 +21,7 @@ $ hexo init [folder]
 $ hexo new [layout] <title>
 ```
 
-新建一篇文章。 如果没有设置 `layout` 的话，默认使用 [\_config.yml](configuration.html) 中的 `default_layout` 参数代替。 Use the layout `draft` to create a draft. 如果标题包含空格的话，请使用引号括起来。
+新建一篇文章。 如果没有设置 `layout` 的话，默认使用 [\_config.yml](configuration.html) 中的 `default_layout` 参数代替。 使用布局 `draft` 来创建草稿。 如果标题包含空格的话，请使用引号括起来。
 
 | 选项                | 描述                |
 | ----------------- | ----------------- |
@@ -37,7 +37,7 @@ hexo new page --path about/me "About me"
 
 以上命令会创建一个 `source/about/me.md` 文件，同时 Front Matter 中的 title 为 `"About me"`
 
-注意！ title 是必须指定的！ For example, this will not result in the behaviour you might expect:
+注意！ title 是必须指定的！ 例如，这不会产生您可能期望的行为：
 
 ```bash
 hexo new page --path about/me
@@ -53,13 +53,13 @@ $ hexo generate
 
 生成静态文件。
 
-| 选项                    | 描述                               |
-| --------------------- | -------------------------------- |
-| `-d`, `--deploy`      | Deploy after generation finishes |
-| `-w`, `--watch`       | 监视文件变动                           |
-| `-b`, `--bail`        | 生成过程中如果发生任何未处理的异常则抛出异常           |
-| `-f`, `--force`       | 强制重新生成                           |
-| `-c`, `--concurrency` | 要同时生成的文件的最大数量。 默认无限制             |
+| 选项                    | 描述                     |
+| --------------------- | ---------------------- |
+| `-d`, `--deploy`      | 在生成完成后部署。              |
+| `-w`, `--watch`       | 监视文件变动                 |
+| `-b`, `--bail`        | 生成过程中如果发生任何未处理的异常则抛出异常 |
+| `-f`, `--force`       | 强制重新生成                 |
+| `-c`, `--concurrency` | 要同时生成的文件的最大数量。 默认无限制   |
 
 ## publish
 
@@ -77,11 +77,11 @@ $ hexo server
 
 启动服务器。 默认情况下，访问网址为： `http://localhost:4000/`。
 
-| 选项               | 描述                                     |
-| ---------------- | -------------------------------------- |
-| `-p`, `--port`   | 重设端口                                   |
-| `-s`, `--static` | 只使用静态文件                                |
-| `-l`, `--log`    | Enable logger. Override logger format. |
+| 选项               | 描述                            |
+| ---------------- | ----------------------------- |
+| `-p`, `--port`   | 重设端口                          |
+| `-s`, `--static` | 只使用静态文件                       |
+| `-l`, `--log`    | 启用日志。 Override logger format. |
 
 ## deploy
 
@@ -91,9 +91,9 @@ $ hexo deploy
 
 部署你的网站。
 
-| 选项                 | 描述                         |
-| ------------------ | -------------------------- |
-| `-g`, `--generate` | Generate before deployment |
+| 选项                 | 描述     |
+| ------------------ | ------ |
+| `-g`, `--generate` | 在部署前生成 |
 
 ## render
 

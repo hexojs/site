@@ -1,5 +1,5 @@
 ---
-title: Migrator
+title: 迁移器
 ---
 
 迁移器帮助开发者从其他系统迁移到 Hexo。

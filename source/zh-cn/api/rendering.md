@@ -26,7 +26,7 @@ hexo.render.render({ path: "path/to/file.swig" }).then(function (result) {
 
 ## 渲染选项
 
-You can pass in an options object as the second argument.
+您可以将选项对象作为第二个参数传入。
 
 ```js
 hexo.render.render({ text: "" }, { foo: "foo" }).then(function (result) {
@@ -58,7 +58,7 @@ hexo.render.isRenderable("image.png"); // false
 
 ## 获取文件的输出扩展名
 
-Use the `getOutput` method to get the extension of the rendered output. If a file is not renderable, the method will return an empty string.
+使用 `getOutput` 方法来获取渲染输出的扩展名。 如果文件不可渲染，这个方法将返回空字符串。
 
 ```js
 hexo.render.getOutput("layout.swig"); // html

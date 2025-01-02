@@ -29,7 +29,7 @@ pages:
 ```
 
 6. GitLab CI 应该会自动开始运行，构建成功以后你应该可以在 `https://<你的 GitLab 用户名>.gitlab.io` 查看你的网站。
-7. (可选) 如果你需要查看生成的文件，可以在 [job artifact](https://docs.gitlab.com/ee/ci/pipelines/job_artifacts.html) 中找到。
+7. (可选) 如果你需要查看生成的文件，可以在 [job artifact](https://docs.gitlab.com/ee/ci/jobs/job_artifacts.html) 中找到。
 
 ## 项目页面
 
