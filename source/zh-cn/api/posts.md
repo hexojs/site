@@ -13,7 +13,7 @@ hexo.post.create(data, replace);
 | `data`    | 数据     |
 | `replace` | 替换现有文件 |
 
-The attributes of a post can be defined in `data`. The table below is not exhaustive. Additional attributes may be appended to the front-matter.
+帖子的属性可以在 `data` 中定义。 下面的表格并不详尽。 其他属性可以添加在 front-matter 中。
 
 | Data     | 描述                                  |
 | -------- | ----------------------------------- |
@@ -34,7 +34,7 @@ hexo.post.publish(data, replace);
 | `data`    | 数据     |
 | `replace` | 替换现有文件 |
 
-The attributes of a post can be defined in `data`. The table below is not exhaustive. Additional attributes may be appended to the front-matter.
+帖子的属性可以在 `data` 中定义。 下面的表格并不详尽。 其他属性可以添加在 front-matter 中。
 
 | Data     | 描述                           |
 | -------- | ---------------------------- |
@@ -52,7 +52,7 @@ hexo.post.render(source, data);
 | `source` | 文件的完整路径（可忽略） |
 | `data`   | 数据           |
 
-The data must contain the `content` attribute. If not, Hexo will try to read the original file. 此函数的执行顺序为：
+data 中必须包含 `content` 属性。 否则，Hexo 将尝试读取原始文件。 此函数的执行顺序为：
 
 - 执行 `before_post_render` 过滤器
 - 使用 Markdown 或其他渲染器渲染（根据扩展名而定）

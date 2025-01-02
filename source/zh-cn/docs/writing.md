@@ -14,7 +14,7 @@ $ hexo new [layout] <title>
 
 ## 布局（Layout）
 
-Hexo 有三种默认布局：`post`、`page` 和 `draft`。 Files created by each of them is saved to a different path. Newly created posts are saved to the `source/_posts` folder.
+Hexo 有三种默认布局：`post`、`page` 和 `draft`。 每个布局创建的文件会被保存到不同的路径。 新创建的帖子被保存到 `source/_post` 文件夹。
 
 | 布局      | 路径               |
 | ------- | ---------------- |
@@ -28,28 +28,28 @@ Hexo 有三种默认布局：`post`、`page` 和 `draft`。 Files created by eac
 
 ## 文件名称
 
-By default, Hexo uses the post title as its filename. You can edit the `new_post_name` setting in `_config.yml` to change the default filename. For example, `:year-:month-:day-:title.md` will prefix filenames with the post creation date. 你可以使用以下占位符：
+默认情况下，Hexo 使用帖子标题作为其文件名。 您可以编辑 `_config.yml` 中的 `new_post_name` 设置去更改默认文件名。 例如， `:year-:month-:day-:title.md` 将在文件名前加上创建日期。 你可以使用以下占位符：
 
-| Placeholder | 描述                   |
-| ----------- | -------------------- |
-| `:title`    | 标题（小写，空格将会被替换为短杠）    |
-| `:year`     | 建立的年份，比如， `2015`     |
-| `:month`    | 建立的月份（有前导零），比如， `04` |
-| `:i_month`  | 建立的月份（无前导零），比如， `4`  |
-| `:day`      | 建立的日期（有前导零），比如， `07` |
-| `:i_day`    | 建立的日期（无前导零），比如， `7`  |
+| 占位符        | 描述                   |
+| ---------- | -------------------- |
+| `:title`   | 标题（小写，空格将会被替换为短杠）    |
+| `:year`    | 建立的年份，比如， `2015`     |
+| `:month`   | 建立的月份（有前导零），比如， `04` |
+| `:i_month` | 建立的月份（无前导零），比如， `4`  |
+| `:day`     | 建立的日期（有前导零），比如， `07` |
+| `:i_day`   | 建立的日期（无前导零），比如， `7`  |
 
 ## 草稿
 
-Previously, we mentioned a special layout in Hexo: `draft`. Posts initialized with this layout are saved to the `source/_drafts` folder. You can use the `publish` command to move drafts to the `source/_posts` folder. `publish` works in a similar way to the `new` command.
+之前，我们在提到了 Hexo 中的一个特殊的布局：`draft`。 使用此布局初始化的帖子将被保存到 `source/_drafts` 文件夹中。 您可以使用 `发布` 命令将草稿移动到 `source/_posts` 文件夹。 `publish` 工作方式类似于 `new` 命令。
 
 ```bash
 $ hexo publish [layout] <title>
 ```
 
-Drafts are not displayed by default. You can add the `--draft` option when running Hexo or enable the `render_drafts` setting in `_config.yml` to render drafts.
+默认情况下不显示草稿 您可以在运行 Hexo 时添加 `--draft` 选项或在 `_config.yml` 启用 `render_draft` 设置来渲染草稿。
 
-## Scaffolds
+## 脚手架
 
 在新建文章时，Hexo 会根据 `scaffolds` 文件夹内相对应的文件来建立文件。 例如：
 
@@ -59,11 +59,11 @@ $ hexo new photo "My Gallery"
 
 在执行这行指令时，Hexo 会尝试在 `scaffolds` 文件夹中寻找 `photo.md`，并根据其内容建立文章。 以下是您可以在模版中使用的变量：
 
-| Placeholder | 描述     |
-| ----------- | ------ |
-| `layout`    | 布局     |
-| `title`     | 标题     |
-| `date`      | 文件建立日期 |
+| 占位符      | 描述     |
+| -------- | ------ |
+| `layout` | 布局     |
+| `title`  | 标题     |
+| `date`   | 文件建立日期 |
 
 ## 支持的格式
 

@@ -1,8 +1,8 @@
 ---
-title: Renderer
+title: 渲染器
 ---
 
-A renderer is used to render content.
+渲染器用于渲染内容。
 
 ## 概要
 

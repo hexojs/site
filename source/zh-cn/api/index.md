@@ -31,7 +31,7 @@ hexo.init().then(function () {
 
 Hexo 提供了两种方法来加载文件：`load` 和 `watch`。 `load` 用于加载 `source` 文件夹中的所有文件以及主题数据。 `watch` 执行与 `load` 相同的操作，但还会开始连续监视文件更改。
 
-Both methods will load the list of files and pass them to the corresponding processors. After all files have been processed, they will call upon the generators to create the routes.
+这两种方法都将加载文件列表并将它们传递给对应的处理器。 处理完所有文件后，它们将调用生成器创建路由。
 
 ```js
 hexo.load().then(function () {
@@ -45,7 +45,7 @@ hexo.watch().then(function () {
 
 ## 执行指令
 
-Any console command can be called explicitly using the `call` method on the Hexo instance. Such a call takes two arguments: the name of the console command, and an options argument. Different options are available for the different console commands.
+任何控制台命令都可以在 Hexo 实例上明确使用 `call` 方法。 这种调用需要两个参数：控制台命令的名称和选项参数。 不同的控制台命令可用不同的选项。
 
 ```js
 hexo.call("generate", {}).then(function () {

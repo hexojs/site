@@ -2,7 +2,7 @@
 title: 过滤器（Filter）
 ---
 
-A filter is used to modify some specified data. Hexo passes data to filters in sequence and the filters then modify the data one after the other. This concept was borrowed from [WordPress](http://codex.wordpress.org/Plugin_API#Filters).
+过滤器用于修改某些指定的数据。 Hexo 将数据按顺序传递给过滤器，然后过滤器逐个修改数据。 这个概念是从 [WordPress](http://codex.wordpress.org/Plugin_API#Filters) 借鉴的。
 
 ## 概要
 
@@ -30,7 +30,7 @@ hexo.extend.filter.execSync(type, data, options);
 
 | 选项        | 描述         |
 | --------- | ---------- |
-| `context` | Context    |
+| `context` | 內容         |
 | `args`    | 参数。 必须为数组。 |
 
 `data` 会作为第一个参数传入每个过滤器。 而您可以在过滤器中通过返回值改变下一个过滤器中的 `data`。 如果什么都没有返回的话则会保持原本的 data。 您还可以使用 `args` 指定过滤器的其他参数。 举例来说：
@@ -143,7 +143,7 @@ hexo.extend.filter.register("before_generate", function () {
 
 ### after_generate
 
-Executed after generation finishes.
+在生成完成后执行。
 
 ```js
 hexo.extend.filter.register("after_generate", function () {
@@ -186,7 +186,7 @@ hexo.extend.filter.register("new_post_path", function (data, replace) {
 
 ### post_permalink
 
-Used to determine the permalink of posts.
+用于确定帖子的永久链接。
 
 ```js
 hexo.extend.filter.register("post_permalink", function (data) {
@@ -200,7 +200,7 @@ hexo.extend.filter.register("post_permalink", function (data) {
 
 ### after_clean
 
-Executed after generated files and cache are removed with `hexo clean` command.
+在使用`hexo clean`命令删除生成的文件和缓存后执行。
 
 ```js
 hexo.extend.filter.register("after_clean", function () {
