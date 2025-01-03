@@ -148,7 +148,7 @@ _.compact([0, 1, false, 2, '', 3]);
 
 ## 反引号代码块
 
-This is identical to using a code block, but instead uses three backticks to delimit the block.
+这与使用代码块相同，但使用三个反引号来分隔。
 
 {% raw %}
 &#96`[language] [title] [url] [link text]
@@ -158,7 +158,7 @@ code snippet
 
 ## Pull Quote
 
-To add pull quotes to your posts:
+将 pull quotes 添加到您的帖子：
 
 ```
 {% pullquote [class] %}
@@ -184,7 +184,7 @@ content
 如果你正在使用 `v7.0.0+`，请使用 [hexo-tag-embed](https://github.com/hexojs/hexo-tag-embed) 替代。
 {% endnote %}
 
-To embed a Gist snippet:
+在文章中嵌入 jsFiddle。
 
 ```
 {% gist gist_id [filename] %}
@@ -314,7 +314,7 @@ To embed a Gist snippet:
 
 例如，在文章中使用 `{% raw %}{% post_link how-to-bake-a-cake %}{% endraw %}` 时，只需有一个名为 `how-to-bake-a-cake.md` 的文章文件即可。
 
-This will work as long as the filename of the post is `how-to-bake-a-cake.md`, even if the post is located at `source/posts/2015-02-my-family-holiday` and has permalink `2018/en/how-to-bake-a-cake`.
+只要帖子的文件名是 `how-to-bake-a-cake.md`，即使帖子位于 `source/posts/2015-02-my-family-holiday` 也能正常运行，并且具有固定链接 `2018/en/how-to-bake-a-cake`。
 
 默认链接文字是文章的标题，你也可以自定义要显示的文本。
 

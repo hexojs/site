@@ -47,7 +47,7 @@ index
 
 ## Partials
 
-Partials are useful for sharing components between your templates. Typical examples include headers, footers or sidebars. You may want to put your partials in separate files to make maintaining your website significantly more convenient. 例如：
+Partials 对于在模板之间共享组件很有用。 典型的例子包括页眉、页脚或侧边栏。 您可能想要将您的 partials 放在单独的文件中，以使维护您的网站更加方便。 例如：
 
 ```html partial/header.ejs
 <h1 id="logo"><%= config.title %></h1>

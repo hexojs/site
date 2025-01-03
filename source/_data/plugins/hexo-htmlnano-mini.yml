@@ -1,0 +1,9 @@
+description: A lightweight Hexo plugin to minify HTML using htmlnano
+link: https://github.com/RoversX/hexo-htmlnano-mini
+tags:
+  - html
+  - htmlnano
+  - minify
+  - css
+  - js
+  - optmize

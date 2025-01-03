@@ -12,15 +12,15 @@
     "prepare": "node .husky/install.mjs"
   },
   "dependencies": {
-    "cheerio": "^0.22.0",
+    "cheerio": "^1.0.0",
     "hexo": "^7.3.0",
     "hexo-clean-css": "^2.0.0",
     "hexo-filter-nofollow": "^2.0.2",
-    "hexo-fs": "^4.1.1",
+    "hexo-fs": "^5.0.0",
     "hexo-generator-archive": "^2.0.0",
     "hexo-generator-feed": "^3.0.0",
     "hexo-generator-sitemap": "^3.0.1",
-    "hexo-renderer-marked": "^6.3.0",
+    "hexo-renderer-marked": "^7.0.0",
     "hexo-renderer-stylus": "^3.0.1",
     "hexo-server": "^3.0.0",
     "hexo-tag-embed": "^1.0.0",
