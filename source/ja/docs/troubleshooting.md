@@ -258,7 +258,7 @@ Template render error: (unknown path)
   {% endcodeblock %}
   ```
 
-  - タグプラグインでNunjucksのような構文を含んでいる場合、例えば[`{% raw %}{#{% endraw %}`](https://mozilla.github.io/nunjucks/templating.html#comments)。 この例の回避策は、[トリプルバックティック](tag-plugins#バックティックコードブロック)を代わりに使用することです。 [コンテンツのエスケープ](troubleshooting#コンテンツのエスケープ)セクションに詳細があります。
+  - タグプラグインでNunjucksのような構文を含んでいる場合、例えば [`{% raw %} {# {% endraw %}`](https://mozilla.github.io/nunjucks/templating.html#comments)。 この例の回避策は、[トリプルバックティック](tag-plugins#バックティックコードブロック)を代わりに使用することです。 [コンテンツのエスケープ](troubleshooting#コンテンツのエスケープ)セクションに詳細があります。
 
   ```
   {% codeblock lang:bash %}
