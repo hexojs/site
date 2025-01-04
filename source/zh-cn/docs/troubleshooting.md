@@ -258,7 +258,7 @@ Template render error: (unknown path)
   {% endcodeblock %}
   ```
 
-  - 在标签插件中有类似于 Nunjucks 的语法，例如 [`{#`](https://mozilla.github.io/nunjucks/templating.html#comments). 此示例的一个解决方法是使用 [triple backtick](/docs/tag-plugins#Backtick-Code-Block)。 [转义内容](/docs/troubleshooting#Escape-Contents) 部分有更多详细信息。
+  - 在标签插件中有类似于 Nunjucks 的语法，例如 [`{% raw %} {# {% endraw %}`](https://mozilla.github.io/nunjucks/templating.html#comments)。 此示例的一个解决方法是使用 [triple backtick](/docs/tag-plugins#Backtick-Code-Block)。 [转义内容](/docs/troubleshooting#Escape-Contents) 部分有更多详细信息。
 
   ```
   {% codeblock lang:bash %}
