@@ -22,10 +22,10 @@ Also, Hexo has its own [ESLint config](https://github.com/hexojs/eslint-config-h
 
 ### Fluxo de Trabalho
 
-1. Faça um fork [hexojs/hexo].
+1. Faça um fork [hexojs/hexo][].
 2. Clone o repositório no seu computador e instale as dependências.
 
-``` bash
+```bash
 $ git clone https://github.com/<username>/hexo.git
 $ cd hexo
 $ npm install
@@ -34,12 +34,12 @@ $ git submodule update --init
 
 3. Crie um branch para a feature a ser desenvolvida.
 
-``` bash
+```bash
 $ git checkout -b new_feature
 ```
 
-4. Comece a implementação.
-5. Faça o push da branch para seu repositório remoto:
+4. Start hacking.
+5. Push the branch:
 
 ```
 $ git push origin new_feature
@@ -47,12 +47,12 @@ $ git push origin new_feature
 
 6. Crie um pull request e descreva as mudanças.
 
-### Aviso Prévio
+### Notice
 
 - Não modifique o número da versão no arquivo `package.json`.
 - Seu pedido de pull request só será aceito quando os testes tiverem passado. Não se esqueça de executar testes antes da submissão.
 
-``` bash
+```bash
 $ npm test
 ```
 
@@ -62,14 +62,14 @@ Also, we welcome PR or issue to [official-plugins](https://github.com/hexojs). �
 
 ## Atualizando a Documentação
 
-A documentação do Hexo é de código aberto e você pode encontrar o código-fonte em [hexojs/site].
+A documentação do Hexo é de código aberto e você pode encontrar o código-fonte em [hexojs/site][].
 
 ### Fluxo de trabalho
 
-1. Faça um fork [hexojs/site]
+1. Faça um fork [hexojs/site][]
 2. Clone o repositório no seu computador e instale as dependências.
 
-``` bash
+```bash
 $ npm install hexo-cli -g # If you don't have hexo-cli installed
 $ git clone https://github.com/<username>/site.git
 $ cd site
@@ -78,19 +78,27 @@ $ npm install
 
 3. Comece a editar a documentação. Você pode iniciar o servidor para a visualização das mudanças em tempo real.
 
-``` bash
+```bash
 $ hexo server
 ```
 
-4. Faça o push da branch para seu repositório remoto:
+4. Push the branch.
 5. Crie um pull request e descreva as mudanças.
 
 ### Traduzindo
 
-1. Adicione um diretório para o novo idioma dentro do repositório `source`. (Todas as letras minúsculas)
-2. Copie os arquivos de template e Markdown que estão no `source` para o diretório do novo idioma.
-3. Adicione o novo idioma a `source/_data/language.yml`.
-4. Copie o arquivo `en.yml` em `themes/navy/languages` e o renomeie para o nome do novo idioma (todas as minúsculas).
+#### Contribute translations
+
+[![Crowdin](https://badges.crowdin.net/hexo/localized.svg)](https://crowdin.com/project/hexo)
+
+Now we use the [Crowdin](https://crowdin.com/project/hexo) platform for translation, where anyone can contribute translations and vote for translations without manual git operations.
+
+#### Add a new language
+
+1. Submit a new issue to let us know. The members with access to the [Crowdin Project](https://crowdin.com/project/hexo) add the language in settings.
+1. After adding language in Crowdin, anyone can contribute translations on it.
+1. Adicione o novo idioma a `source/_data/language.yml`.
+1. Copie o arquivo `en.yml` em `themes/navy/languages` e o renomeie para o nome do novo idioma (todas as minúsculas).
 
 ## Reportando Issues
 

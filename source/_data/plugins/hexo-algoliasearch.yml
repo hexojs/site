@@ -1,0 +1,6 @@
+description: A plugin to index posts of your Hexo blog on Algolia
+link: https://github.com/LouisBarranqueiro/hexo-algoliasearch
+tags:
+  - algoliasearch
+  - algolia
+  - search

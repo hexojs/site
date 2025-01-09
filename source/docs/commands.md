@@ -4,7 +4,7 @@ title: Commands
 
 ## init
 
-``` bash
+```bash
 $ hexo init [folder]
 ```
 
@@ -13,21 +13,21 @@ Initializes a website. If no `folder` is provided, Hexo will set up a website in
 This command is a shortcut that runs the following steps:
 
 1. Git clone [hexo-starter](https://github.com/hexojs/hexo-starter) including [hexo-theme-landscape](https://github.com/hexojs/hexo-theme-landscape) into the current directory or a target folder if specified.
-2. Install dependencies using a package manager: [Yarn 1](https://classic.yarnpkg.com/lang/en/), [pnpm](https://pnpm.js.org) or [npm](https://docs.npmjs.com/cli/install), whichever is installed; if there are more than one installed, the priority is as listed. npm is bundled with [Node.js](/docs/#Install-Node-js) by default.
+2. Install dependencies using a package manager: [Yarn 1](https://classic.yarnpkg.com/lang/en/), [pnpm](https://pnpm.io) or [npm](https://docs.npmjs.com/cli/install), whichever is installed; if there are more than one installed, the priority is as listed. npm is bundled with [Node.js](/docs/#Install-Node-js) by default.
 
 ## new
 
-``` bash
+```bash
 $ hexo new [layout] <title>
 ```
 
-Creates a new article. If no `layout` is provided, Hexo will use the `default_layout` from [_config.yml](configuration.html). If the `title` contains spaces, surround it with quotation marks.
+Creates a new article. If no `layout` is provided, Hexo will use the `default_layout` from [\_config.yml](configuration.html). Use the layout `draft` to create a draft. If the `title` contains spaces, surround it with quotation marks.
 
-Option | Description
---- | ---
-`-p`, `--path` | Post path. Customize the path of the post.
-`-r`, `--replace` | Replace the current post if existed.
-`-s`, `--slug` | Post slug. Customize the URL of the post.
+| Option            | Description                                |
+| ----------------- | ------------------------------------------ |
+| `-p`, `--path`    | Post path. Customize the path of the post. |
+| `-r`, `--replace` | Replace the current post if existed.       |
+| `-s`, `--slug`    | Post slug. Customize the URL of the post.  |
 
 By default, Hexo will use the title to define the path of the file. For pages, it will create a directory of that name and an `index.md` file in it. Use the `--path` option to override that behaviour and define the file path:
 
@@ -47,23 +47,23 @@ will create the post `source/_posts/about/me.md` with the title "page" in the fr
 
 ## generate
 
-``` bash
+```bash
 $ hexo generate
 ```
 
 Generates static files.
 
-Option | Description
---- | ---
-`-d`, `--deploy` | Deploy after generation finishes
-`-w`, `--watch` | Watch file changes
-`-b`, `--bail` | Raise an error if any unhandled exception is thrown during generation
-`-f`, `--force` | Force regenerate
-`-c`, `--concurrency` | Maximum number of files to be generated in parallel. Default is infinity
+| Option                | Description                                                              |
+| --------------------- | ------------------------------------------------------------------------ |
+| `-d`, `--deploy`      | Deploy after generation finishes                                         |
+| `-w`, `--watch`       | Watch file changes                                                       |
+| `-b`, `--bail`        | Raise an error if any unhandled exception is thrown during generation    |
+| `-f`, `--force`       | Force regenerate                                                         |
+| `-c`, `--concurrency` | Maximum number of files to be generated in parallel. Default is infinity |
 
 ## publish
 
-``` bash
+```bash
 $ hexo publish [layout] <filename>
 ```
 
@@ -71,45 +71,45 @@ Publishes a draft.
 
 ## server
 
-``` bash
+```bash
 $ hexo server
 ```
 
 Starts a local server. By default, this is at `http://localhost:4000/`.
 
-Option | Description
---- | ---
-`-p`, `--port` | Override default port
-`-s`, `--static` | Only serve static files
-`-l`, `--log` | Enable logger. Override logger format.
+| Option           | Description                            |
+| ---------------- | -------------------------------------- |
+| `-p`, `--port`   | Override default port                  |
+| `-s`, `--static` | Only serve static files                |
+| `-l`, `--log`    | Enable logger. Override logger format. |
 
 ## deploy
 
-``` bash
+```bash
 $ hexo deploy
 ```
 
 Deploys your website.
 
-Option | Description
---- | ---
-`-g`, `--generate` | Generate before deployment
+| Option             | Description                |
+| ------------------ | -------------------------- |
+| `-g`, `--generate` | Generate before deployment |
 
 ## render
 
-``` bash
+```bash
 $ hexo render <file1> [file2] ...
 ```
 
 Renders files.
 
-Option | Description
---- | ---
-`-o`, `--output` | Output destination
+| Option           | Description        |
+| ---------------- | ------------------ |
+| `-o`, `--output` | Output destination |
 
 ## migrate
 
-``` bash
+```bash
 $ hexo migrate <type>
 ```
 
@@ -117,7 +117,7 @@ $ hexo migrate <type>
 
 ## clean
 
-``` bash
+```bash
 $ hexo clean
 ```
 
@@ -125,7 +125,7 @@ Cleans the cache file (`db.json`) and generated files (`public`).
 
 ## list
 
-``` bash
+```bash
 $ hexo list <type>
 ```
 
@@ -133,17 +133,25 @@ Lists all routes.
 
 ## version
 
-``` bash
+```bash
 $ hexo version
 ```
 
 Displays version information.
 
+## config
+
+```bash
+$ hexo config [key] [value]
+```
+
+Lists the configuration (`_config.yml`). If `key` is specified, only the value of the corresponding `key` in the configuration is shown; if both `key` and `value` are specified, the value of the corresponding `key` in the configuration is changed to `value`.
+
 ## Options
 
 ### Safe mode
 
-``` bash
+```bash
 $ hexo --safe
 ```
 
@@ -151,15 +159,15 @@ Disables loading plugins and scripts. Try this if you encounter problems after i
 
 ### Debug mode
 
-``` bash
+```bash
 $ hexo --debug
 ```
 
-Logs verbose messages to the terminal and to `debug.log`. Try this if you encounter any problems with Hexo. If you see errors, please [raise a GitHub issue](https://github.com/hexojs/hexo/issues/new).
+Logs verbose messages to the terminal and to `debug.log`. Try this if you encounter any problems with Hexo. If you see errors, please [raise a GitHub issue](https://github.com/hexojs/hexo/issues/new?assignees=&labels=&projects=&template=bug_report.yml).
 
 ### Silent mode
 
-``` bash
+```bash
 $ hexo --silent
 ```
 
@@ -167,19 +175,19 @@ Silences output to the terminal.
 
 ### Customize config file path
 
-``` bash
+```bash
 $ hexo --config custom.yml
 ```
 
 Uses a custom config file (instead of `_config.yml`). Also accepts a comma-separated list (no spaces) of JSON or YAML config files that will combine the files into a single `_multiconfig.yml`.
 
-``` bash
+```bash
 $ hexo --config custom.yml,custom2.json
 ```
 
 ### Display drafts
 
-``` bash
+```bash
 $ hexo --draft
 ```
 
@@ -187,7 +195,7 @@ Displays draft posts (stored in the `source/_drafts` folder).
 
 ### Customize CWD
 
-``` bash
+```bash
 $ hexo --cwd /path/to/cwd
 ```
 

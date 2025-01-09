@@ -1,10 +1,10 @@
 ---
-title: Gerando
+title: Generating
 ---
 
 Gerar arquivos estáticos com o Hexo é bastante fácil e rápido.
 
-``` bash
+```bash
 $ hexo generate
 ```
 
@@ -14,7 +14,7 @@ $ hexo generate
 
 O Hexo pode ficar observando as alterações nos arquivos e regerar arquivos imediatamente. O hexo compara a hash (SHA1) dos seus arquivos e somente regenera aqueles que sofreram modificações.
 
-``` bash
+```bash
 $ hexo generate --watch
 ```
 
@@ -22,7 +22,7 @@ $ hexo generate --watch
 
 Para fazer o deploy depois de gerar os arquivos, você pode executar um dos seguintes comandos. Não há diferença entre os dois.
 
-``` bash
+```bash
 $ hexo generate --deploy
 $ hexo deploy --generate
 ```

@@ -1,0 +1,6 @@
+description: This plugin for Hexo can automatically detects broken links.
+link: https://github.com/tea3/hexo-auto-link-checker
+tags:
+  - link
+  - brokenLinks
+  - request

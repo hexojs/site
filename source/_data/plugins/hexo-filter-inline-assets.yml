@@ -1,0 +1,8 @@
+description: Inlines images, JS, and CSS in HTML for Hexo.
+link: https://www.npmjs.com/package/hexo-filter-inline-assets
+tags:
+  - filter
+  - images
+  - javascript
+  - css
+  - html

@@ -6,8 +6,8 @@ Um `migrator` ajuda os usuários a migrarem seus sistemas para o Hexo.
 
 ## Sinopse
 
-``` js
-hexo.extend.migrator.register(name, function(args){
+```js
+hexo.extend.migrator.register(name, function (args) {
   // ...
 });
 ```

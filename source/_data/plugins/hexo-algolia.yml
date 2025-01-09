@@ -1,0 +1,8 @@
+description: >-
+  Index posts and contents in [Algolia](https://www.algolia.com/) and offer a
+  blazing fast search experience to your users.
+link: https://github.com/thom4parisot/hexo-algolia
+tags:
+  - search
+  - algolia
+  - index

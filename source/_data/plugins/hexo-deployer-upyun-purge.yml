@@ -1,0 +1,6 @@
+description: hexo deployer to upyun and purge cache
+link: https://github.com/jingtaiboke/hexo-deployer-upyun-purge
+tags:
+  - upyun
+  - cache
+  - purge

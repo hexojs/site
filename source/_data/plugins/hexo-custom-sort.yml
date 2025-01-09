@@ -1,0 +1,6 @@
+description: Plugin helps to sort posts by required fields
+link: https://github.com/dimonpanik/hexo-custom-sort
+tags:
+  - fields
+  - locals
+  - sort

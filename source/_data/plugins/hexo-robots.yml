@@ -1,0 +1,5 @@
+description: A hexo plugin that can help you create robots.txt file when you build the site.
+link: https://github.com/Dedicatus546/hexo-robots
+tags:
+  - SEO
+  - robots.txt

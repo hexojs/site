@@ -1,9 +1,10 @@
 ---
 title: Tag Plugins
 ---
+
 Tag plugins are different from post tags. They are ported from Octopress and provide a useful way for you to quickly add specific content to your posts.
 
-Although you can write your posts in any formats, but the tag plugins will always be available and syntax remains the same.
+Although you can write your posts in any format, the tag plugins will always be available and syntax remains the same.
 
 {% youtube I07XMi7MHd4 %}
 
@@ -73,7 +74,7 @@ Every interaction is both precious and an opportunity to delight.
 
 ## Code Block
 
-Useful feature for adding code snippets to your post.
+A useful feature for adding code snippets to your post.
 
 **Alias:** code
 
@@ -85,13 +86,14 @@ code snippet
 
 Specify additional options in `option:value` format, e.g. `line_number:false first_line:5`.
 
-Extra Options | Description | Default
---- | --- | ---
-`line_number` | Show line number | `true`
-`highlight` | Enable code highlighting | `true`
-`first_line` | Specify the first line number | `1`
-`mark` | Line highlight specific line(s), each value separated by a comma. Specify number range using a dash<br>Example: `mark:1,4-7,10` will mark line 1, 4 to 7 and 10. |
-`wrap` | Wrap the code block in [`<table>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table) | `true`
+| Extra Options    | Description                                                                                                                                                           | Default |
+| ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
+| `line_number`    | Show line number                                                                                                                                                      | `true`  |
+| `line_threshold` | Only show line numbers as long as the numbers of lines of the code block exceed such threshold.                                                                       | `0`     |
+| `highlight`      | Enable code highlighting                                                                                                                                              | `true`  |
+| `first_line`     | Specify the first line number                                                                                                                                         | `1`     |
+| `mark`           | Line highlight specific line(s), each value separated by a comma. Specify the number range using a dash<br>Example: `mark:1,4-7,10` will mark lines 1, 4 to 7 and 10. |
+| `wrap`           | Wrap the code block in [`<table>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table)                                                                   | `true`  |
 
 ### Examples
 
@@ -141,7 +143,7 @@ _.compact([0, 1, false, 2, '', 3]);
 ```
 
 {% codeblock _.compact http://underscorejs.org/#compact Underscore.js %}
-_.compact([0, 1, false, 2, '', 3]);
+\_.compact([0, 1, false, 2, '', 3]);
 => [1, 2, 3]
 {% endcodeblock %}
 
@@ -150,9 +152,9 @@ _.compact([0, 1, false, 2, '', 3]);
 This is identical to using a code block, but instead uses three backticks to delimit the block.
 
 {% raw %}
-&#96`` [language] [title] [url] [link text]
+&#96` [language] [title] [url] [link text]
 code snippet
-&#96;``
+&#96;`
 {% endraw %}
 
 ## Pull Quote
@@ -165,7 +167,11 @@ content
 {% endpullquote %}
 ```
 
-## jsFiddle
+## jsFiddle (deleted in `v7.0.0`)
+
+{% note warn %}
+The tag was removed in Hexo 7.0.0. We have provided a plugin [hexo-tag-embed](https://github.com/hexojs/hexo-tag-embed) for backward compatibility with your existing posts.
+{% endnote %}
 
 To embed a jsFiddle snippet:
 
@@ -173,7 +179,11 @@ To embed a jsFiddle snippet:
 {% jsfiddle shorttag [tabs] [skin] [width] [height] %}
 ```
 
-## Gist
+## Gist (deleted in `v7.0.0`)
+
+{% note warn %}
+Please use [hexo-tag-embed](https://github.com/hexojs/hexo-tag-embed) instead if you use `v7.0.0+`.
+{% endnote %}
 
 To embed a Gist snippet:
 
@@ -245,7 +255,11 @@ Inserts code snippets in `source/downloads/code` folder. The folder location can
 {% include_code lang:javascript to:8 test.js %}
 ```
 
-## YouTube
+## YouTube (deleted in `v7.0.0`)
+
+{% note warn %}
+Please use [hexo-tag-embed](https://github.com/hexojs/hexo-tag-embed) instead if you use `v7.0.0+`.
+{% endnote %}
 
 Inserts a YouTube video.
 
@@ -276,7 +290,11 @@ YouTube's cookie is not used in this mode.
 {% youtube PL9hW1uS6HUfscJ9DHkOSoOX45MjXduUxo 'playlist' false %}
 ```
 
-## Vimeo
+## Vimeo (deleted in `v7.0.0`)
+
+{% note warn %}
+Please use [hexo-tag-embed](https://github.com/hexojs/hexo-tag-embed) instead if you use `v7.0.0+`.
+{% endnote %}
 
 Inserts a responsive or specified size Vimeo video.
 
@@ -322,6 +340,7 @@ For instance:
 ```
 {% post_link hexo-4-released 'How to use <b> tag in title' %}
 ```
+
 {% post_link hexo-4-released 'How to use <b> tag in title' %}
 
 **Do not escape title.**
@@ -329,6 +348,7 @@ For instance:
 ```
 {% post_link hexo-4-released '<b>bold</b> custom title' false %}
 ```
+
 {% post_link hexo-4-released '<b>bold</b> custom title' false %}
 
 ## Include Assets
@@ -351,32 +371,106 @@ _hexo-renderer-marked 3.1.0+ can (optionally) resolves the post's path of an ima
 
 `{% asset_img foo.jpg %}`
 
-``` html
-<img src="/2020/01/02/hello/foo.jpg">
+```html
+<img src="/2020/01/02/hello/foo.jpg" />
 ```
 
 **Custom class**
 
 `{% asset_img post-image foo.jpg %}`
 
-``` html
-<img src="/2020/01/02/hello/foo.jpg" class="post-image">
+```html
+<img src="/2020/01/02/hello/foo.jpg" class="post-image" />
 ```
 
 **Display size**
 
 `{% asset_img foo.jpg 500 400 %}`
 
-``` html
-<img src="/2020/01/02/hello/foo.jpg" width="500" height="400">
+```html
+<img src="/2020/01/02/hello/foo.jpg" width="500" height="400" />
 ```
 
 **Title & Alt**
 
-`{% asset_img logo.svg "lorem ipsum'dolor'" %}`
+`{% asset_img foo.jpg "lorem ipsum'dolor'" %}`
 
-``` html
-<img src="/2020/01/02/hello/foo.jpg" title="lorem ipsum" alt="dolor">
+```html
+<img src="/2020/01/02/hello/foo.jpg" title="lorem ipsum" alt="dolor" />
+```
+
+## URL
+
+### url_for (7.0.0+)
+
+Returns a url with the root path prefixed. Output is encoded automatically.
+
+```
+{% url_for text path [relative] %}
+```
+
+**Examples:**
+
+```yml
+_config.yml
+root: /blog/ # example
+```
+
+```
+{% url_for blog index.html %}
+```
+
+```html
+<a href="/blog/index.html">blog</a>
+```
+
+Relative link, follows `relative_link` option by default
+e.g. post/page path is '/foo/bar/index.html'
+
+```yml
+_config.yml
+relative_link: true
+```
+
+```
+{% url_for blog index.html %}
+```
+
+```html
+<a href="../../index.html">blog</a>
+```
+
+You could also disable it to output a non-relative link, even when `relative_link` is enabled and vice versa.
+
+```
+{% url_for blog index.html false %}
+```
+
+```html
+<a href="/index.html">blog</a>
+```
+
+### full_url_for (7.0.0+)
+
+Returns a url with the `config.url` prefixed. Output is encoded automatically.
+
+```
+{% full_url_for text path %}
+```
+
+**Examples:**
+
+```yml
+_config.yml
+url: https://example.com/blog # example
+```
+
+```
+{% full_url_for index /a/path %}
+```
+
+```html
+<a href="https://example.com/blog/a/path">index</a>
 ```
 
 ## Raw
@@ -388,7 +482,6 @@ If certain content is causing processing issues in your posts, wrap it with the 
 content
 {% endraw %}
 ```
-
 
 ## Post Excerpt
 

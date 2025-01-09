@@ -13,16 +13,15 @@ Include changes in [v4.0.0](https://github.com/hexojs/hexo-cli/releases/tag/4.0.
 ### Fixes
 
 - More detailed information for `hexo not found` [@stevenjoezhang](https://github.com/stevenjoezhang) [#206](https://github.com/hexojs/hexo-cli/pull/206)
-  * When `hexo` binary could not be located, we usually recommend removing the node_modules folder and reinstall the packages.
-  * `$ rm -rf node_modules && npm install --force`
+  - When `hexo` binary could not be located, we usually recommend removing the node_modules folder and reinstall the packages.
+  - `$ rm -rf node_modules && npm install --force`
 - fix(init): fix hexo init error with a number target project name [@brelian](https://github.com/brelian) [#200](https://github.com/hexojs/hexo-cli/pull/200)
-  * It's now possible to `hexo init 888`
+  - It's now possible to `hexo init 888`
 - fix(init): shallow clone and reduce verbosity [@curbengh](https://github.com/curbengh) [#129](https://github.com/hexojs/hexo-cli/pull/129)
-  * This should result in faster `hexo init` due to less file download.
-  * `hexo init` operates by git clone [hexo-starter](https://github.com/hexojs/hexo-starter/). With this change, git now just clone recent commit history (shallow clone), instead of full history.
-  * `hexo init` is also more _quiet_ while still show error if encountered.
+  - This should result in faster `hexo init` due to less file download.
+  - `hexo init` operates by git clone [hexo-starter](https://github.com/hexojs/hexo-starter/). With this change, git now just clone recent commit history (shallow clone), instead of full history.
+  - `hexo init` is also more _quiet_ while still show error if encountered.
 - Improve Node 14 compatibility [#185](https://github.com/hexojs/hexo-cli/pull/185) [#190](https://github.com/hexojs/hexo-cli/pull/190)
-
 
 ### Refactor
 
@@ -50,14 +49,17 @@ Include changes in [v4.0.0](https://github.com/hexojs/hexo-cli/releases/tag/4.0.
 ## hexo-migrator-wordpress 2.1.0
 
 ### Breaking change
+
 - Drop support of Node 13 due to compatibility issue; this doesn't prevent npm from installing this plugin in Node 13, it shows warning instead. [#96](https://github.com/hexojs/hexo-migrator-wordpress/pull/96)
-  * Nodejs has officially dropped support of Node 13 since 1 Jun 2020.
+  - Nodejs has officially dropped support of Node 13 since 1 Jun 2020.
 - fix(turndown): headingStyle: 'atx' & codeBlockStyle: 'fenced' [#65](https://github.com/hexojs/hexo-migrator-wordpress/pull/65)
-  * More in-line with markdown style preferred by Hexo.
+  - More in-line with markdown style preferred by Hexo.
 
 ### Feature
+
 - feat: import excerpt with markup [#64](https://github.com/hexojs/hexo-migrator-wordpress/pull/64)
-  * Retain original markup of excerpt
+  - Retain original markup of excerpt
+
   ```
   title: foo bar
   date: 2020-01-01 00:00:00
@@ -69,35 +71,38 @@ Include changes in [v4.0.0](https://github.com/hexojs/hexo-cli/releases/tag/4.0.
 
   Cu nulla aeterno nec, tibique deterruisset an eam, ea pro dolorem vituperata.
   ```
+
 - Option to import image attachments (original WP link must be up) [#69](https://github.com/hexojs/hexo-migrator-wordpress/pull/69) [#70](https://github.com/hexojs/hexo-migrator-wordpress/pull/70) [#72](https://github.com/hexojs/hexo-migrator-wordpress/pull/72) [#73](https://github.com/hexojs/hexo-migrator-wordpress/pull/73) [#78](https://github.com/hexojs/hexo-migrator-wordpress/pull/78) [#85](https://github.com/hexojs/hexo-migrator-wordpress/pull/85) [#91](https://github.com/hexojs/hexo-migrator-wordpress/pull/91)
-  * All attachments are imported by default, including original-sized and resized.
-    * Usage: `$ hexo migrate wordpress /path/export.xml --import-image`
-  * There is an option to import original-size images only.
-    * Usage: `$ hexo migrate wordpress /path/export.xml --import-image original`
+  - All attachments are imported by default, including original-sized and resized.
+    - Usage: `$ hexo migrate wordpress /path/export.xml --import-image`
+  - There is an option to import original-size images only.
+    - Usage: `$ hexo migrate wordpress /path/export.xml --import-image original`
 - Import nested categories [#89](https://github.com/hexojs/hexo-migrator-wordpress/pull/89)
-  * Imported categories are also no longer nested anymore if the original are not.
+  - Imported categories are also no longer nested anymore if the original are not.
 - feat: 'default-category' option [#93](https://github.com/hexojs/hexo-migrator-wordpress/pull/93)
-  * `Uncategorized` category is now skipped by default.
-  * A default category can be set for posts without any category.
-  ` $ hexo migrate wordpress /path/export.xml --default-category 'unknown'`
-  * Category name defaults to the value set in user configuration:
+  - `Uncategorized` category is now skipped by default.
+  - A default category can be set for posts without any category.
+  `$ hexo migrate wordpress /path/export.xml --default-category 'unknown'`
+  - Category name defaults to the value set in user configuration:
+
   ``` yml _config.yml
   default_category: uncategorized
   ```
 
 ### Fix
+
 - fix: unescape title if escaped [#82](https://github.com/hexojs/hexo-migrator-wordpress/pull/82)
-  * A post could be entitled `Some&quot;Title&quot;`, the fix is to detect the pattern and unescape it when necessary.
+  - A post could be entitled `Some&quot;Title&quot;`, the fix is to detect the pattern and unescape it when necessary.
 - fix: stricter excerpt regex [#88](https://github.com/hexojs/hexo-migrator-wordpress/pull/88)
-  * Now only the following variants of [excerpt tag](https://hexo.io/docs/tag-plugins#Post-Excerpt) are valid.
+  - Now only the following variants of [excerpt tag](https://hexo.io/docs/tag-plugins#Post-Excerpt) are valid.
   1. `<!--more-->`
   2. `<!-- more-->`
   3. `<!--more -->`
   4. `<!-- more -->`
 - fix: handle title with double quotes [#67](https://github.com/hexojs/hexo-migrator-wordpress/pull/67)
-  * Escape double quote before passing to yml parser
+  - Escape double quote before passing to yml parser
 - fix: restore paragraph [#79](https://github.com/hexojs/hexo-migrator-wordpress/pull/79)
-  * Paragraph lost issue only affects [Classic Editor](https://wordpress.org/plugins/classic-editor/)
+  - Paragraph lost issue only affects [Classic Editor](https://wordpress.org/plugins/classic-editor/)
 - Import tags and categories separately [#81](https://github.com/hexojs/hexo-migrator-wordpress/pull/81)
 
 ### Documentation
@@ -109,14 +114,17 @@ Include changes in [v4.0.0](https://github.com/hexojs/hexo-cli/releases/tag/4.0.
 ## hexo-migrator-rss 1.1.0
 
 ### Breaking change
+
 - Drop support of Node 13 due to compatibility issue; this doesn't prevent npm from installing this plugin in Node 13, it shows warning instead. [#69](https://github.com/hexojs/hexo-migrator-rss/pull/69)
-  * Nodejs has officially dropped support of Node 13 since 1 Jun 2020.
+  - Nodejs has officially dropped support of Node 13 since 1 Jun 2020.
 - fix(turndown): headingStyle: 'atx' & codeBlockStyle: 'fenced' [#65](https://github.com/hexojs/hexo-migrator-rss/pull/65)
-  * More in-line with markdown style preferred by Hexo.
+  - More in-line with markdown style preferred by Hexo.
 
 ### Feature
+
 - feat: import excerpt with markup [#65](https://github.com/hexojs/hexo-migrator-rss/pull/65)
-  * Retain original markup of excerpt
+  - Retain original markup of excerpt
+
   ```
   title: foo bar
   date: 2020-01-01 00:00:00
@@ -130,22 +138,24 @@ Include changes in [v4.0.0](https://github.com/hexojs/hexo-cli/releases/tag/4.0.
   ```
 
 ### Fix
+
 - fix: unescape title if escaped [#71](https://github.com/hexojs/hexo-migrator-rss/pull/71)
-  * A post could be entitled `Some&quot;Title&quot;`, the fix is to detect the pattern and unescape it when necessary.
+  - A post could be entitled `Some&quot;Title&quot;`, the fix is to detect the pattern and unescape it when necessary.
 - fix: stricter excerpt regex [#70](https://github.com/hexojs/hexo-migrator-rss/pull/70)
-  * Now only the following variants of [excerpt tag](https://hexo.io/docs/tag-plugins#Post-Excerpt) are valid.
+  - Now only the following variants of [excerpt tag](https://hexo.io/docs/tag-plugins#Post-Excerpt) are valid.
   1. `<!--more-->`
   2. `<!-- more-->`
   3. `<!--more -->`
   4. `<!-- more -->`
 - fix: handle title with double quotes [#64](https://github.com/hexojs/hexo-migrator-rss/pull/64)
-  * Escape double quote before passing to yml parser
+  - Escape double quote before passing to yml parser
 
 ---
 
 ## hexo-generator-sitemap 2.1.0
 
 ### Changes
+
 - Include site's tags, categories and home page in the sitemap [#26](https://github.com/hexojs/hexo-generator-sitemap/pull/26)
 - fix(sitemap): use date only in `<lastmod>` [#94](https://github.com/hexojs/hexo-generator-sitemap/pull/94)
-  * `2020-01-02 13:42:599Z` => `2020-01-02`
+  - `2020-01-02 13:42:599Z` => `2020-01-02`

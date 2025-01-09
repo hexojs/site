@@ -18,7 +18,8 @@ To upgrade to Hexo v5, change the following line in your package.json,
 ## Breaking change
 
 - refactor(external_link): migrate config during load_config [@SukkaW] [#4414] [#4371]
-  * See [Writing](https://hexo.io/docs/configuration#Writing) section for new options (introduced back in v4)
+  - See [Writing](https://hexo.io/docs/configuration#Writing) section for new options (introduced back in v4)
+
   ``` yml _config.yml
   # Deprecated
   external_link: true|false
@@ -35,32 +36,34 @@ To upgrade to Hexo v5, change the following line in your package.json,
   updated_option: date
   ```
 
-  * If you check `external_link` for [truthy](https://developer.mozilla.org/en-US/docs/Glossary/Truthy) value, since it's now automatically converted to object, it will always be truthy:
+  - If you check `external_link` for [truthy](https://developer.mozilla.org/en-US/docs/Glossary/Truthy) value, since it's now automatically converted to object, it will always be truthy:
 
   ``` js
   <% if (config.external_link) { %>
   ```
 
-  * If you wish to maintain backward compatibility with past versions:
+  - If you wish to maintain backward compatibility with past versions:
 
   ``` js
   <% if ((typeof config.external_link === 'boolean' && config.external_link === true) || (typeof config.external_link === 'object' && config.external_link.enable === true)) { %>
   ```
 
 - refactor(box): remove Bluebird.asCallback [@SukkaW] [#4379]
-  * Callback syntax for [`Box`](https://hexo.io/api/box) is never documented nor utilized in Hexo's internal.
-  * This is also a reminder that we might drop callbacks from all Hexo API in future. [#3328]
+  - Callback syntax for [`Box`](https://hexo.io/api/box) is never documented nor utilized in Hexo's internal.
+  - This is also a reminder that we might drop callbacks from all Hexo API in future. [#3328]
 - feat: bring up config.[updated_option](https://hexo.io/docs/configuration#Date-Time-format) [@SukkaW] [#4278]
-  * This can be useful for a theme that prefers to display `Updated: ` only when it's set in the article's front-matter.
+  - This can be useful for a theme that prefers to display `Updated:` only when it's set in the article's front-matter.
 - feat(open_graph): drop 'keywords' option from front-matter [@curbengh] [#4174]
-  * Search engines no longer support `keywords`.
+  - Search engines no longer support `keywords`.
 - fix: override site's permalink using an article's front-matter [@SukkaW] [#4359]
-  * User config:
+  - User config:
+
   ``` yml _config.yml
   permalink: :year/:month/:day/:title/
   ```
 
-  * Front-matter
+  - Front-matter
+
   ``` yml source/foo-bar.md
   ---
   title: foo bar
@@ -68,8 +71,9 @@ To upgrade to Hexo v5, change the following line in your package.json,
   ---
   ```
 
-  * That post will be available on `http://yourhexo.com/breaking-news/`
-  * A reminder that permalink must have a trailing `.html` or `/`
+  - That post will be available on `http://yourhexo.com/breaking-news/`
+  - A reminder that permalink must have a trailing `.html` or `/`
+
   ``` yml
   permalink: :year/:month/:day/:title/ # default
   # or
@@ -77,64 +81,69 @@ To upgrade to Hexo v5, change the following line in your package.json,
   ```
 
 - Remove lodash from global variable [@SukkaW] [#4266]
-  * Lodash `_` is no longer available in Hexo API.
-  *
+  - Lodash `_` is no longer available in Hexo API.
+
   ``` js
   // Dropped
   <% const arrayB = _.uniq(arrayA) %>
   ```
-  * We encourage the use of native JS API over Lodash, we find [this guide](https://github.com/you-dont-need/You-Dont-Need-Lodash-Underscore) to be helpful.
-  * If you prefer to use Lodash, you can always install it and make it available via [`Helper`](https://hexo.io/api/helper) API
+
+  - We encourage the use of native JS API over Lodash, we find [this guide](https://github.com/you-dont-need/You-Dont-Need-Lodash-Underscore) to be helpful.
+  - If you prefer to use Lodash, you can always install it and make it available via [`Helper`](https://hexo.io/api/helper) API
 - chore/ci: drop Node.js 8 and add Node.js 14 [@SukkaW] [#4255]
-  * Node 8 has [reached EOL](https://github.com/nodejs/Release) on 31 Dec 2019.
+  - Node 8 has [reached EOL](https://github.com/nodejs/Release) on 31 Dec 2019.
 - refactor: remove site config from theme config [@SukkaW] [#4145]
-  * Previously `hexo.theme.config` is merged into `hexo.config`, they are now separated to avoid possible conflict in configuration.
+  - Previously `hexo.theme.config` is merged into `hexo.config`, they are now separated to avoid possible conflict in configuration.
 
 ## New feature
 
 - feat([tag](https://hexo.io/api/tag)): show source of the error & beautify [@SukkaW] [#4420]
 - feat([post_link](https://hexo.io/docs/tag-plugins#Include-Posts)): better error message when a post could not be located [#4426]
-  * The error message is now clearer when there is an incorrect filename.
+  - The error message is now clearer when there is an incorrect filename.
 - skip assets of unpublished posts and delete them if exist [@DaemondShu] [#3489]
-  * When there is an unpublished post:
+  - When there is an unpublished post:
+
   ``` yml
   ---
   title: Still a draft....
   published: false
   ---
   ```
-  * That post including its assets will not be generated into the `public/` folder.
+
+  - That post including its assets will not be generated into the `public/` folder.
 - feat(extend/injector): bring up new extend Injector [@SukkaW] [#4049]
-  * Refer to the API [documentation](https://hexo.io/api/injector) for usage.
+  - Refer to the API [documentation](https://hexo.io/api/injector) for usage.
 - feat: add prism highlight support [@SukkaW] [#4119]
-  * Refer to the [documentation](https://hexo.io/docs/syntax-highlight#PrismJS) for usage.
+  - Refer to the [documentation](https://hexo.io/docs/syntax-highlight#PrismJS) for usage.
 - feat([tagcloud](https://hexo.io/docs/helpers#tagcloud)): new option class & level [@stevenjoezhang] [#4370]
-  * Ability to add class name for CSS styling.
+  - Ability to add class name for CSS styling.
 - feat(config): validate config before processing posts [@SukkaW] [#4381]
 - feat(post_permalink): add `:second` attribute option for post permalink [@kkocdko] [#4185]
-  * Example:
+  - Example:
+
   ``` yml
   permalink: :year/:month/:day/:hour/:minute/:second/:title.html
   ```
-  * Refer to [Permalinks](https://hexo.io/docs/permalinks) for available attributes.
+
+  - Refer to [Permalinks](https://hexo.io/docs/permalinks) for available attributes.
 - feat([youtube_tag](https://hexo.io/docs/tag-plugins#YouTube)): add cookie option [@curbengh] [#4155]
-  * When disabled, cookie is not set/sent in the youtube video embed.
+  - When disabled, cookie is not set/sent in the youtube video embed.
 - feat(youtube_tag): support playlist [@SukkaW] [#4139]
-  * Ability to embed a playlist.
+  - Ability to embed a playlist.
 - feat(load_theme_config): support alternate theme config [@SukkaW] [#4120]
-  * Theme can be configured in a file `_config.[name].yml`, e.g. `_config.landscape.yml` for [hexo-theme-landscape](https://github.com/hexojs/hexo-theme-landscape).
-  * Placed the file in the root folder, same as the current `_config.yml`.
-  * Refer to the [documentation](https://hexo.io/docs/configuration#Alternate-Theme-Config) for configuration priority.
+  - Theme can be configured in a file `_config.[name].yml`, e.g. `_config.landscape.yml` for [hexo-theme-landscape](https://github.com/hexojs/hexo-theme-landscape).
+  - Placed the file in the root folder, same as the current `_config.yml`.
+  - Refer to the [documentation](https://hexo.io/docs/configuration#Alternate-Theme-Config) for configuration priority.
 - feat([feed_tag](https://hexo.io/docs/helpers#feed-tag)): support parsing config.feed [@curbengh] [#4029]
-  * Better integration with [hexo-generator-feed](https://github.com/hexojs/hexo-generator-feed).
+  - Better integration with [hexo-generator-feed](https://github.com/hexojs/hexo-generator-feed).
 - feat(tag): add unregister() method [@SukkaW] [#4046]
-  * This means you can now unregister existing [tag plugins](https://hexo.io/docs/tag-plugins) and replace it with your own with the same name.
+  - This means you can now unregister existing [tag plugins](https://hexo.io/docs/tag-plugins) and replace it with your own with the same name.
 - feat(filter): add `_after_html_render` filter [@jiangtj] [#4051]
-  * perf(filter): set `after_render:html` as alias of `_after_html_render` [@curbengh] [#4073]
-  * Existing `after_render:html` filter plugins automatically benefit from this improvement.
+  - perf(filter): set `after_render:html` as alias of `_after_html_render` [@curbengh] [#4073]
+  - Existing `after_render:html` filter plugins automatically benefit from this improvement.
 - feat(load_config): support theme_dir in node_modules [@SukkaW] [#4112]
 - fix(list_tags): custom class for each element [@noraj] [#4059]
-  * Customize the class name for each element `<ul>`, `<li>`, `<a>`, `<span>` for [list_tags](https://hexo.io/docs/helpers#list-tags) plugin.
+  - Customize the class name for each element `<ul>`, `<li>`, `<a>`, `<span>` for [list_tags](https://hexo.io/docs/helpers#list-tags) plugin.
 
 ## Performance
 
@@ -144,7 +153,7 @@ To upgrade to Hexo v5, change the following line in your package.json,
 - perf(filter): shorthand syntax [@SukkaW] [#4377]
 - perf(backtick_code): shorthand [@SukkaW] [#4369]
 - perf: avoid running irrelevant plugins in 'clean' command [@curbengh] [#4386]
-  * To maintain compatibility with third-party [console](https://hexo.io/api/console) plugins, this only applies to `hexo clean`, not `hexo c` alias.
+  - To maintain compatibility with third-party [console](https://hexo.io/api/console) plugins, this only applies to `hexo clean`, not `hexo c` alias.
 - perf(titlecase): lazy require [@SukkaW] [#4417]
 - perf(tag/code): performance improvements [@SukkaW] [#4416]
 - perf(post): simplify codeblock escape [@SukkaW] [#4254]
@@ -162,23 +171,23 @@ To upgrade to Hexo v5, change the following line in your package.json,
 - fix(#4317): non-greedy regexp for tag escape [@SukkaW] [#4358]
 - fix(post): use non-greedy regular expressions [@stevenjoezhang] [#4161]
 - fix(post): properly escape swig tag inside post [@SukkaW] [#4352]
-  * swig tag inside a single backtick is now interpreted as code embed.
-  * <pre><code>`{% foo %}{{ bar }}{% endfoo %}`</code></pre>
+  - swig tag inside a single backtick is now interpreted as code embed.
+  - <pre><code>`{% foo %}{{ bar }}{% endfoo %}`</code></pre>
 - fix(logging): log database only in relevant commands [@curbengh] [#4387]
-  * `Writing database to ${dbPath}/db.json` message shouldn't show up in `hexo clean` and `hexo version`.
+  - `Writing database to ${dbPath}/db.json` message shouldn't show up in `hexo clean` and `hexo version`.
 - fix(server-cache): must match exact alias [@curbengh] [#4388]
-  * Improve compatibility with 3rd-party console plugins that may have a name that starts with an 's'.
+  - Improve compatibility with 3rd-party console plugins that may have a name that starts with an 's'.
 - fix(tag-code): parse 'wrap' option [@curbengh] [#4391]
-  * [`highlight.wrap`](https://hexo.io/docs/configuration#Writing) option in user config is now properly passed to the [`codeblock`](https://hexo.io/docs/tag-plugins#Code-Block) tag plugin
+  - [`highlight.wrap`](https://hexo.io/docs/configuration#Writing) option in user config is now properly passed to the [`codeblock`](https://hexo.io/docs/tag-plugins#Code-Block) tag plugin
 - fix: remove unused type check [@Himself65] [#4398]
 - fix: access error code from error object directly [@SukkaW] [#4280]
-  * Improve compatibility with native JS API
+  - Improve compatibility with native JS API
 - fix: load_plugin with extra line EOF [@SukkaW] [#4256]
 - fix: parsing code error in backticks [@seaoak] [#4229]
 - fix(toc_helper): escape class name and handle null id [@curbengh] [#4009]
 - fix(meta_generator): match existing `<meta>` with different order [@SukkaW] [#4017]
 - fix(excerpt): stricter regex [@curbengh] [#4443]
-  * Now only the following variants of [excerpt tag](https://hexo.io/docs/tag-plugins#Post-Excerpt) are valid.
+  - Now only the following variants of [excerpt tag](https://hexo.io/docs/tag-plugins#Post-Excerpt) are valid.
   1. `<!--more-->`
   2. `<!-- more-->`
   3. `<!--more -->`
@@ -216,21 +225,21 @@ To upgrade to Hexo v5, change the following line in your package.json,
 - Fix not to pass callback to hexo-fs [@segayuu] [#4339]
 - style: es6 string extensions & destructure [@SukkaW] [#4357]
 - Migrate Travis and Appveyor tp GitHub Actions
-  * ci(appveyor): drop appveyor [@SukkaW] [#4402]
-  * chore: add release release-drafter (#3858) [@YoshinoriN] [#4165]
-  * ci: add GitHub Actions to run linter [@Himself65] [#4143]
-  * ci(travis): remove Windows [@curbengh] [#4076]
-  * ci(github_actions): Create tester job [@segayuu] [#4169]
-  * Move coveralls from travis to github actions [@segayuu] [#4326]
+  - ci(appveyor): drop appveyor [@SukkaW] [#4402]
+  - chore: add release release-drafter (#3858) [@YoshinoriN] [#4165]
+  - ci: add GitHub Actions to run linter [@Himself65] [#4143]
+  - ci(travis): remove Windows [@curbengh] [#4076]
+  - ci(github_actions): Create tester job [@segayuu] [#4169]
+  - Move coveralls from travis to github actions [@segayuu] [#4326]
 - ci(benchmark): generate flamegraph [@SukkaW] [#4000]
 - ci(flamegraph): fix 0x [@SukkaW] [#4116]
 - Fix issues found by [lgtm.com](https://lgtm.com/projects/g/hexojs/hexo/)
-  * fix(console_generate): remove unnecessary boolean-to-object conversion [@curbengh] [#4152]
-  * fix: remove useless conditions [@curbengh] [#4147]
-  * fix: return callback if called [@curbengh] [#4178]
+  - fix(console_generate): remove unnecessary boolean-to-object conversion [@curbengh] [#4152]
+  - fix: remove useless conditions [@curbengh] [#4147]
+  - fix: return callback if called [@curbengh] [#4178]
 - refactor(benchmark): minor changes [@SukkaW] [#4411]
 - github(issue_template): add special notice [@SukkaW] [#4348]
-  * add mandarin issue template
+  - add mandarin issue template
 
 Refer to the [release note](https://github.com/hexojs/hexo/releases/tag/5.0.0) for a complete changelog.
 

@@ -1,21 +1,16 @@
 ---
 title: Documentation
 ---
-ยินดีต้อนรับเข้าสู่ documentation ของ hexo ถ้าคุณพบเจอปัญหาใดๆเวลาใช้ hexo 
-ไปดูข้อมูลได้ท่ี  [troubleshooting guide](troubleshooting.html) ไปเสนอ issue 
-ได้ที่ [GitHub](https://github.com/hexojs/hexo/issues) หรือไปเปิด topic ได้ท่ี [Google Group](https://groups.google.com/group/hexo)
+
+Welcome to the Hexo documentation. ยินดีต้อนรับเข้าสู่ documentation ของ hexo ถ้าคุณพบเจอปัญหาใดๆเวลาใช้ hexo ไปดูข้อมูลได้ท่ี [troubleshooting guide](troubleshooting.html) ไปเสนอ issue ได้ที่ [GitHub](https://github.com/hexojs/hexo/issues) หรือไปเปิด topic ได้ท่ี [Google Group](https://groups.google.com/group/hexo)
 
 ## What is Hexo?
 
-hexo เป็นกรอบบล็อกท่ีรวดเร็ว เรียบง่ายและมีประสิทธิภาพ 
-คุณเขียนโพสต์ได้ด้วยภาษา [Markdown](http://daringfireball
-.net/projects/markdown/)(หรือภาษาอื่นๆ) และ hexo จะ generate 
-ไฟล์คงที่ท่ีประกอบด้วยธีมสวยงามภายในเวลาไม่กี่วินาที
+Hexo is a fast, simple and powerful blog framework. hexo เป็นกรอบบล็อกท่ีรวดเร็ว เรียบง่ายและมีประสิทธิภาพ คุณเขียนโพสต์ได้ด้วยภาษา \[Markdown\](http://daringfireball .net/projects/markdown/)(หรือภาษาอื่นๆ) และ hexo จะ generate ไฟล์คงที่ท่ีประกอบด้วยธีมสวยงามภายในเวลาไม่กี่วินาที
 
 ## Installation
 
-การติดตั้ง hexo ต้องการเวลาหลายนาทีเท่านั้น ถ้าคุณพบเจอปัญหาท่ีแก้ไขไม่ได้ 
-กรุณาไปเสนอ issue ได้ท่ี [submit a GitHub issue](https://github.com/hexojs/hexo/issues)
+It only takes a few minutes to set up Hexo. If you encounter a problem and can't find the solution here, please [submit a GitHub issue](https://github.com/hexojs/hexo/issues) and we'll help.
 
 {% youtube ARted4RniaU %}
 
@@ -26,27 +21,20 @@ hexo เป็นกรอบบล็อกท่ีรวดเร็ว เ�
 - [Node.js](http://nodejs.org/) (Should be at least Node.js 10.13, recommends 12.0 or higher)
 - [Git](http://git-scm.com/)
 
-ถ้าคุณติดตั้งสองสิ่งนี้อยู่แล้วในคอม ขอแสดงความยินดี คุณจะติดตั้ง hexo ด้วย npm ได้อย่างนี้:
-
-``` bash
-$ npm install -g hexo-cli
-```
+If your computer already has these, congratulations! You can skip to the [Hexo installation](#Install-Hexo) step.
 
 ถ้าคุณยังไม่ได้ติดตั้งสองสิ่งนี้ กรุณาปฏิบัติตามวิธีการใช้เพื่อติดตั้งทุกสิ่งท่ีต้องการ
-{% note warn For Mac users %}
-คุณอาจจะพบปัญหาบ้างเมื่อ compiling กรุณาติดตั้ง Xcode จาก App Store ก่อน 
-เสร็จแล้วค่อยไปเปิด Xcode และ ไปถึง **Preferences -> Download -> Command Line
- Tools -> Install** เพื่อติดตั้งเครื่องมือคำสั่ง
-{% endnote %}
 
 ### Install Git
 
 - Windows: ดาวน์โหลด & ติดตั้ง [git](https://git-scm.com/download/win).
-- Mac: ติดตั้งด้วย [Homebrew](http://mxcl.github.com/homebrew/), [MacPorts]
-(http://www.macports.org/) หรือ [installer](http://sourceforge
-.net/projects/git-osx-installer/).
+- Mac: ติดตั้งด้วย [Homebrew](http://mxcl.github.com/homebrew/), \[MacPorts\] (http://www.macports.org/) หรือ \[installer\](http://sourceforge .net/projects/git-osx-installer/).
 - Linux (Ubuntu, Debian): `sudo apt-get install git-core`
 - Linux (Fedora, Red Hat, CentOS): `sudo yum install git-core`
+
+{% note warn For Mac users %}
+You may encounter some problems when compiling. Please install Xcode from App Store first. คุณอาจจะพบปัญหาบ้างเมื่อ compiling กรุณาติดตั้ง Xcode จาก App Store ก่อน เสร็จแล้วค่อยไปเปิด Xcode และ ไปถึง **Preferences -> Download -> Command Line Tools -> Install** เพื่อติดตั้งเครื่องมือคำสั่ง
+{% endnote %}
 
 ### Install Node.js
 
@@ -77,11 +65,30 @@ If you installed Node.js using Snap, you may need to manually run `npm install` 
 
 เมื่อความต้องการทุกอย่างได้ติดตั้งเรียบร้อยแล้ว คุณสามารถติดตั้ง hexo ด้วย npm
 
-``` bash
+```bash
 $ npm install -g hexo-cli
 ```
 
-### Minimum required Node.js version
+### Advanced installation and usage
+
+Advanced users may prefer to install and use `hexo` package instead.
+
+```bash
+$ npm install hexo
+```
+
+ถ้าคุณติดตั้งสองสิ่งนี้อยู่แล้วในคอม ขอแสดงความยินดี คุณจะติดตั้ง hexo ด้วย npm ได้อย่างนี้:
+
+1. `npx hexo <command>`
+2. Linux users can set relative path of `node_modules/` folder:
+
+```bash
+echo 'PATH="$PATH:./node_modules/.bin"' >> ~/.profile
+```
+
+then run Hexo using `hexo <command>`
+
+### Required Node.js version
 
 If you are stuck with older Node.js, you can consider installing a past version of Hexo.
 
@@ -89,12 +96,15 @@ Please note we do not provide bugfixes to past versions of Hexo.
 
 We highly recommend to always install the [latest version](https://www.npmjs.com/package/hexo?activeTab=versions) of Hexo and the [recommended version](#Requirements) of Node.js, whenever possible.
 
-Hexo version | Minimum Node.js version
---- | ---
-5.0+ | 10.13.0
-4.1 - 4.2 | 8.10
-4.0 | 8.6
-3.3 - 3.9 | 6.9
-3.2 - 3.3 | 0.12
-3.0 - 3.1 | 0.10 or iojs
-0.0.1 - 2.8 | 0.10
+| Hexo version | Minimum (Node.js version) | Less than (Node.js version) |
+| ------------ | ------------------------- | --------------------------- |
+| 7.0+         | 14.0.0                    | latest                      |
+| 6.2+         | 12.13.0                   | latest                      |
+| 6.0+         | 12.13.0                   | 18.5.0                      |
+| 5.0+         | 10.13.0                   | 12.0.0                      |
+| 4.1 - 4.2    | 8.10                      | 10.0.0                      |
+| 4.0          | 8.6                       | 8.10.0                      |
+| 3.3 - 3.9    | 6.9                       | 8.0.0                       |
+| 3.2 - 3.3    | 0.12                      | unknown                     |
+| 3.0 - 3.1    | 0.10 or iojs              | unknown                     |
+| 0.0.1 - 2.8  | 0.10                      | unknown                     |

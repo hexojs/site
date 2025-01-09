@@ -1,0 +1,7 @@
+description: Generate subscript (sub) tag for Hexo.
+link: https://github.com/bubkoo/hexo-filter-sub
+tags:
+  - sub
+  - tag
+  - filter
+  - markdown

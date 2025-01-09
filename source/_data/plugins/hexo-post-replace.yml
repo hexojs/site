@@ -1,0 +1,5 @@
+description: A plugin for Hexo, which helps to replace words in the posts.
+link: https://github.com/Sukwants/hexo-post-replace
+tags:
+  - filter
+  - post

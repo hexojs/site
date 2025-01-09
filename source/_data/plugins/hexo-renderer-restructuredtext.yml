@@ -1,0 +1,6 @@
+description: Renderer for restructuredtext using Docutils
+link: https://gitlab.com/mcepl/hexo-renderer-restructuredtext
+tags:
+  - renderer
+  - reStructedText
+  - rst

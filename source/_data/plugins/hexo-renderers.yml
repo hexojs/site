@@ -1,0 +1,9 @@
+description: All in one hexo renderers. Using latest compatible API and dependencies.
+link: https://www.npmjs.com/package/hexo-renderers
+tags:
+  - renderer
+  - nunjucks
+  - pug
+  - ejs
+  - sass
+  - stylus

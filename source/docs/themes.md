@@ -6,7 +6,7 @@ title: Themes
 
 It's easy to build a Hexo theme - you just have to create a new folder. To start using your theme, modify the `theme` setting in your site's `_config.yml`. A theme should have the following structure:
 
-``` plain
+```plain
 .
 ├── _config.yml
 ├── languages
@@ -15,7 +15,7 @@ It's easy to build a Hexo theme - you just have to create a new folder. To start
 └── source
 ```
 
-### _config.yml
+### \_config.yml
 
 Theme configuration file. Unlike the site's primary configuration file, modifying this doesn't require a server restart.
 
@@ -25,11 +25,11 @@ Language folder. See [internationalization (i18n)](internationalization.html) fo
 
 ### layout
 
-Layout folder. This folder contains the theme's template files, which define the appearance of your website. Hexo provides the [Swig] template engine by default, but you can easily install additional plugins to support alternative engines such as [EJS], [Haml], [Jade], or [Pug]. Hexo chooses the template engine based on the file extension of the template (just like the posts). For example:
+Layout folder. This folder contains the theme's template files, which define the appearance of your website. Hexo provides the [Nunjucks] template engine by default, but you can easily install additional plugins to support alternative engines such as [EJS] or [Pug]. Hexo chooses the template engine based on the file extension of the template (just like the posts). For example:
 
-``` plain
+```plain
 layout.ejs   - uses EJS
-layout.swig  - uses Swig
+layout.njk   - uses Nunjucks
 ```
 
 See [templates](templates.html) for more info.
@@ -51,34 +51,33 @@ When you have finished building your theme, you can publish it to the [theme lis
 1. Fork [hexojs/site]
 2. Clone the repository to your computer and install dependencies.
 
-    ```shell
-    $ git clone https://github.com/<username>/site.git
-    $ cd site
-    $ npm install
-    ```
+   ```shell
+   $ git clone https://github.com/<username>/site.git
+   $ cd site
+   $ npm install
+   ```
 
-3. Edit `source/_data/themes.yml` and add your theme. For example:
+3. Create a new yaml file in `source/_data/themes/`, use your theme name as the file name
 
-    ```yaml
-    - name: landscape
-      description: A brand new default theme for Hexo.
-      link: https://github.com/hexojs/hexo-theme-landscape
-      preview: http://hexo.io/hexo-theme-landscape
-      tags:
-        - official
-        - responsive
-        - widget
-        - two_column
-        - one_column
-    ```
+4. Edit `source/_data/themes/<your-theme-name>.yml` and add your theme. For example:
 
-4. Add a screenshot (with the same name as the theme) to `source/themes/screenshots`. It must be a 800*500px PNG.
-5. Push the branch.
-6. Create a pull request and describe the change.
+   ```yaml
+   description: A brand new default theme for Hexo.
+   link: https://github.com/hexojs/hexo-theme-landscape
+   preview: http://hexo.io/hexo-theme-landscape
+   tags:
+     - official
+     - responsive
+     - widget
+     - two_column
+     - one_column
+   ```
+
+5. Add a screenshot (with the same name as the theme) to `source/themes/screenshots`. It must be a 800\*500px PNG.
+6. Push the branch.
+7. Create a pull request and describe the change.
 
 [EJS]: https://github.com/hexojs/hexo-renderer-ejs
-[Swig]: https://github.com/node-swig/swig-templates
-[Haml]: https://github.com/hexojs/hexo-renderer-haml
-[Jade]: https://github.com/hexojs/hexo-renderer-jade
-[Pug]: https://github.com/maxknee/hexo-render-pug
+[Pug]: https://github.com/hexojs/hexo-renderer-pug
 [hexojs/site]: https://github.com/hexojs/site
+[Nunjucks]: https://mozilla.github.io/nunjucks/

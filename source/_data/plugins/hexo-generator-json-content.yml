@@ -1,0 +1,11 @@
+description: >-
+  Generate a JSON file for generic use or consumption with the contents of posts
+  and pages. Useful for AJAX search or content API.
+link: https://github.com/alexbruno/hexo-generator-json-content
+tags:
+  - generator
+  - content
+  - json
+  - data
+  - search
+  - api

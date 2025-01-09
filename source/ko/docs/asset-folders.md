@@ -1,15 +1,18 @@
 ---
 title: Asset Folders
 ---
+
 ## 전역 Asset 폴더
 
-Asset은 포스트 파일이 아니며 `source` 폴더에 위치합니다. 이미지, CSS, JavaScript 파일이 이에 해당합니다. 예를 들어, Hexo에서 이미지 파일을 사용하고 싶을 때 간단하게 `source/images` 디렉토리에 넣어두면 됩니다. 포스트 내에서 사용하고 싶을 때는 그냥 이렇게 부르면 됩니다. `![](/images/image.jpg)`
+Asset은 포스트 파일이 아니며 `source` 폴더에 위치합니다. 이미지, CSS, JavaScript 파일이 이에 해당합니다. 예를 들어, Hexo에서 이미지 파일을 사용하고 싶을 때 간단하게 `source/images` 디렉토리에 넣어두면 됩니다. Then, you can access them using something like `![](/images/image.jpg)`.
 
 ## Post Asset 폴더
 
+{% youtube feIDVQ2tz0o %}
+
 꾸준히 이미지 또는 다른 asset들을 제공해야 하고 포스트 단위로 asset을 관리하고 싶어하는 사용자들을 위해 Hexo는 asset을 관리할 수 있는 방법을 제공합니다. `_config.yml` 파일의 `post_asset_folder`을 true로 설정하면 됩니다.
 
-``` yaml _config.yml
+```yaml _config.yml
 post_asset_folder: true
 ```
 
@@ -42,7 +45,7 @@ Asset 폴더 관리 기능을 활성화 시켰다면, Hexo는 당신이 `hexo ne
 
 To enable:
 
-``` yml _config.yml
+```yml _config.yml
 post_asset_folder: true
 marked:
   prependRoot: true

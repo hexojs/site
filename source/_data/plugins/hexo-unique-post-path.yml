@@ -1,0 +1,11 @@
+description: This plug-in helps Hexo create new posts with unique auto-generated paths.
+link: https://github.com/dailyrandomphoto/hexo-unique-post-path
+tags:
+  - generate
+  - unique
+  - path
+  - permalink
+  - id
+  - random
+  - date
+  - sequence

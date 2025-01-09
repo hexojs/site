@@ -6,7 +6,7 @@ Um `filter` (filtro) pode ser utilizado para modificar alguns dados. O Hexo pass
 
 ## Resumo
 
-``` js
+```js
 hexo.extend.filter.register(type, function() {
   // User configuration
   const { config } = this;
@@ -19,73 +19,73 @@ hexo.extend.filter.register(type, function() {
 }, priority);
 ```
 
-Você pode definir uma prioridade específica para cada filtro (parâmetro `priority` no exemplo acima). Uma prioridade mais baixa significa que o filtro será executado primeiro. A prioridade padrão é 10.
+Você pode definir uma prioridade específica para cada filtro (parâmetro `priority` no exemplo acima). Lower `priority` means that it will be executed first. A prioridade padrão é 10. We recommend using user-configurable priority value that user can specify in the config, e.g. `hexo.config.your_plugin.priority`.
 
 ## Executar Filtros
 
-``` js
+```js
 hexo.extend.filter.exec(type, data, options);
 hexo.extend.filter.execSync(type, data, options);
 ```
 
-Opção | Descrição
---- | ---
-`context` | Contexto
-`args` | Argumentos. Deve ser um array.
+| Opção     | Descrição                      |
+| --------- | ------------------------------ |
+| `context` | Contexto                       |
+| `args`    | Argumentos. Deve ser um array. |
 
 O primeiro argumento passado para cada filtro é `data`. O próximo filtro da sequência pode receber o argumento `data` modificado ao se retornar um novo valor. Se nada for retornado, `data` continua intacto. Você ainda pode utilizar `args` para especificar outros argumentos dentro dos filtros. Por exemplo:
 
-``` js
-hexo.extend.filter.register('test', function(data, arg1, arg2){
+```js
+hexo.extend.filter.register("test", function (data, arg1, arg2) {
   // data === 'some data'
   // arg1 === 'foo'
   // arg2 === 'bar'
 
-  return 'something';
+  return "something";
 });
 
-hexo.extend.filter.register('test', function(data, arg1, arg2){
+hexo.extend.filter.register("test", function (data, arg1, arg2) {
   // data === 'something'
 });
 
-hexo.extend.filter.exec('test', 'some data', {
-  args: ['foo', 'bar']
+hexo.extend.filter.exec("test", "some data", {
+  args: ["foo", "bar"],
 });
 ```
 
 Você também pode utilizar os seguintes métodos para executar filtros:
 
-``` js
+```js
 hexo.execFilter(type, data, options);
 hexo.execFilterSync(type, data, options);
 ```
 
 ## Remover Filtros
 
-``` js
+```js
 hexo.extend.filter.unregister(type, filter);
 ```
 
 **Example**
 
-``` js
+```js
 // Unregister a filter which is registered with named function
 
 const filterFn = (data) => {
-  data = 'something';
+  data = "something";
   return data;
 };
-hexo.extend.filter.register('example', filterFn);
+hexo.extend.filter.register("example", filterFn);
 
-hexo.extend.filter.unregister('example', filterFn);
+hexo.extend.filter.unregister("example", filterFn);
 ```
 
-``` js
+```js
 // Unregister a filter which is registered with commonjs module
 
-hexo.extend.filter.register('example', require('path/to/filter'));
+hexo.extend.filter.register("example", require("path/to/filter"));
 
-hexo.extend.filter.unregister('example', require('path/to/filter'));
+hexo.extend.filter.unregister("example", require("path/to/filter"));
 ```
 
 ## Lista de Filtros
@@ -98,8 +98,8 @@ Executado antes de uma postagem ser renderizada. Verificar a seção [Renderizar
 
 Por exemplo, para se transformar um título em _caixa baixa_:
 
-``` js
-hexo.extend.filter.register('before_post_render', function(data){
+```js
+hexo.extend.filter.register("before_post_render", function (data) {
   data.title = data.title.toLowerCase();
   return data;
 });
@@ -111,9 +111,12 @@ Executado após a postagem ser renderizado. Verificar a seção [Renderizar](pos
 
 Por exemplo, para substituir `@username` por um link para o perfil do Twitter:
 
-``` js
-hexo.extend.filter.register('after_post_render', function(data){
-  data.content = data.content.replace(/@(\d+)/, '<a href="http://twitter.com/$1">#$1</a>');
+```js
+hexo.extend.filter.register("after_post_render", function (data) {
+  data.content = data.content.replace(
+    /@(\d+)/,
+    '<a href="http://twitter.com/$1">#$1</a>',
+  );
   return data;
 });
 ```
@@ -122,8 +125,8 @@ hexo.extend.filter.register('after_post_render', function(data){
 
 Executado quando o Hexo está prestes a ser terminado -- isso será executado logo após `hexo.exit` ser chamado.
 
-``` js
-hexo.extend.filter.register('before_exit', function(){
+```js
+hexo.extend.filter.register("before_exit", function () {
   // ...
 });
 ```
@@ -132,8 +135,8 @@ hexo.extend.filter.register('before_exit', function(){
 
 Executado antes do processo de geração ser iniciado.
 
-``` js
-hexo.extend.filter.register('before_generate', function(){
+```js
+hexo.extend.filter.register("before_generate", function () {
   // ...
 });
 ```
@@ -142,8 +145,8 @@ hexo.extend.filter.register('before_generate', function(){
 
 Executado após o processo de geração ser concluído.
 
-``` js
-hexo.extend.filter.register('after_generate', function(){
+```js
+hexo.extend.filter.register("after_generate", function () {
   // ...
 });
 ```
@@ -154,8 +157,8 @@ Modifica as [variáveis locais](../docs/variables.html) nos templates.
 
 Por exemplo, para adicionar a hora atual às variáveis locais dos templates:
 
-``` js
-hexo.extend.filter.register('template_locals', function(locals){
+```js
+hexo.extend.filter.register("template_locals", function (locals) {
   locals.now = Date.now();
   return locals;
 });
@@ -165,8 +168,8 @@ hexo.extend.filter.register('template_locals', function(locals){
 
 Executado após a inicialização do Hexo -- este será executado logo após `hexo.init` ser concluído.
 
-``` js
-hexo.extend.filter.register('after_init', function(){
+```js
+hexo.extend.filter.register("after_init", function () {
   // ...
 });
 ```
@@ -175,8 +178,8 @@ hexo.extend.filter.register('after_init', function(){
 
 Executado ao criar uma postagem para determinar o caminho das novas postagens.
 
-``` js
-hexo.extend.filter.register('new_post_path', function(data, replace){
+```js
+hexo.extend.filter.register("new_post_path", function (data, replace) {
   // ...
 });
 ```
@@ -185,8 +188,8 @@ hexo.extend.filter.register('new_post_path', function(data, replace){
 
 Usado para determinar os links permanentes das postagens.
 
-``` js
-hexo.extend.filter.register('post_permalink', function(data){
+```js
+hexo.extend.filter.register("post_permalink", function (data) {
   // ...
 });
 ```
@@ -199,22 +202,22 @@ Executado após a renderização ser terminada. Mais informações podem ser enc
 
 Executados após os arquivos serem gerados e o cache ser removido com o comando `hexo clean`.
 
-``` js
-hexo.extend.filter.register('after_clean', function(){
+```js
+hexo.extend.filter.register("after_clean", function () {
   // remove some other temporary files
 });
 ```
 
 ### server_middleware
 
-Adiciona um middleware ao servidor. `app` é uma instância de [Connect].
+Adiciona um middleware ao servidor. `app` é uma instância de [Connect][].
 
 Por exemplo, para adicionar `X-Powered-By: Hexo` ao cabeçalho de resposta:
 
-``` js
-hexo.extend.filter.register('server_middleware', function(app){
-  app.use(function(req, res, next){
-    res.setHeader('X-Powered-By', 'Hexo');
+```js
+hexo.extend.filter.register("server_middleware", function (app) {
+  app.use(function (req, res, next) {
+    res.setHeader("X-Powered-By", "Hexo");
     next();
   });
 });

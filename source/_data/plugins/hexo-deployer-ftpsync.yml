@@ -1,0 +1,6 @@
+description: FTP deployer for Hexo.
+link: https://github.com/hexojs/hexo-deployer-ftpsync
+tags:
+  - official
+  - deployer
+  - ftp

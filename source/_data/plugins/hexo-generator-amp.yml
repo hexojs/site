@@ -1,0 +1,6 @@
+description: AMP (accelerated mobile pages) page generator plugin for Hexo.
+link: https://github.com/tea3/hexo-generator-amp
+tags:
+  - generator
+  - acceleratedMobilePages
+  - amp

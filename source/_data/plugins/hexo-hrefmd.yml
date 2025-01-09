@@ -1,0 +1,6 @@
+description: set hexo can modfiy .md to html in links. |md链接支持
+link: https://github.com/ohroy/hexo-hrefmd
+tags:
+  - href
+  - md
+  - 中文支持

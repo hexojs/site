@@ -1,0 +1,70 @@
+name: Crowdin PR
+
+on:
+  workflow_dispatch:
+    inputs:
+      export_only_approved:
+        description: "Include approved translations only in exported files. If not combined with --skip-untranslated-strings option, strings without approval are fulfilled with the source language"
+        default: false
+        type: boolean
+        required: false
+  schedule:
+    - cron: "0 0 * * *" # Every day 0 o'clock
+
+permissions:
+  contents: write
+  pull-requests: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref_name }}
+  cancel-in-progress: true
+
+jobs:
+  pull:
+    name: Synchronize with Crowdin
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      max-parallel: 1 # Should be 1 to avoid parallel builds
+      matrix:
+        lc: [ko, pt-BR, ru, th, zh-CN, zh-TW, ja] # Target languages https://developer.crowdin.com/language-codes/
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Get BOT token
+        id: get_bot_token
+        uses: actions/create-github-app-token@v1
+        with:
+          app-id: ${{ secrets.GH_APP_ID }}
+          private-key: ${{ secrets.GH_APP_PRIVATE_KEY }}
+          owner: ${{ github.repository_owner }}
+          repositories: "site"
+
+      - name: Download Translations && Create PR
+        uses: crowdin/github-action@v2
+        with:
+          upload_sources: false
+          push_sources: false
+
+          upload_translations: false
+          push_translations: true
+          download_translations: true
+          create_pull_request: true
+
+          export_only_approved: ${{ inputs.export_only_approved || false }}
+          commit_message: "l10n(${{ matrix.lc }}): New translations from Crowdin"
+          localization_branch_name: l10n_${{ github.ref_name }}_${{ matrix.lc }}
+          pull_request_base_branch_name: ${{ github.ref_name }}
+          pull_request_title: "l10n(${{ matrix.lc }}): New translations from Crowdin"
+          pull_request_labels: "crowdin"
+          download_language: ${{ matrix.lc }}
+          skip_ref_checkout: false
+          github_user_name: "hexo-crowdin[bot]"
+          github_user_email: "159447924+hexo-crowdin[bot]@users.noreply.github.com"
+
+          crowdin_branch_name: ${{ github.ref_name }}
+          config: "crowdin.yml"
+        env:
+          GITHUB_TOKEN: ${{ steps.get_bot_token.outputs.token }}
+          CROWDIN_PROJECT_ID: ${{ secrets.CROWDIN_PROJECT_ID }}
+          CROWDIN_PERSONAL_TOKEN: ${{ secrets.CROWDIN_PERSONAL_TOKEN }}

@@ -1,0 +1,6 @@
+description: auto create one and only link for every post for hexo
+link: https://github.com/ohroy/hexo-abbrlink
+tags:
+  - permalink
+  - link
+  - 固定链接

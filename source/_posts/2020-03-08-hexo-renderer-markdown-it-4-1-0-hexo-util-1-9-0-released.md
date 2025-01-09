@@ -5,7 +5,8 @@ title: hexo-renderer-markdown-it 4.1.0 & hexo-util 1.9.0 released
 ## hexo-renderer-markdown-it 4.1.0
 
 ### Feature
-- `permalinkSide` option [@curbengh](https://github.com/curbengh) [#105]. 
+
+- `permalinkSide` option [@curbengh](https://github.com/curbengh) [#105].
 
 By default, when `permalink` option is enabled, the permalink symbol is prepended before each heading. If you prefer to append to the end of each heading:
 
@@ -17,8 +18,9 @@ markdown:
 ```
 
 ### Housekeeping
+
 - Remove unneeded `sluggo` dependency [@curbengh](https://github.com/curbengh) [#99].
-    - It has been replaced by hexo-util's slugize [@curbengh](https://github.com/curbengh) [#95].
+  - It has been replaced by hexo-util's slugize [@curbengh](https://github.com/curbengh) [#95].
 - Update nyc from 14.1.1 to 15.0.0 [#100]
 
 [#105]: https://github.com/hexojs/hexo-renderer-markdown-it/pull/105
@@ -35,7 +37,7 @@ markdown:
 - feat(prism): add data-language attribute [@SukkaW](https://github.com/SukkaW) [#177]
 - feat(prism): add mark & firstLine option support [@SukkaW](https://github.com/SukkaW) [#172]
 - feat: bring up prism highlight support [@SukkaW](https://github.com/SukkaW) [#168]
-    - Laying the groundwork for the planned support of [prism](https://prismjs.com/) highlight library in the upcoming Hexo v5, in addition to the current [highlight.js](https://highlightjs.org/) library.
+  - Laying the groundwork for the planned support of [prism](https://prismjs.com/) highlight library in the upcoming Hexo v5, in addition to the current [highlight.js](https://highlightjs.org/) library.
 
 ### Fixes
 

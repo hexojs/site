@@ -1,0 +1,5 @@
+description: Tencent Cloud Object Storage (COS) plugin of Hexo.
+link: https://github.com/sdlzhd/hexo-deployer-cos
+tags:
+  - deployer
+  - cos

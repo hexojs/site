@@ -81,8 +81,16 @@ hexo.extend.helper.register('header_menu', function(className) {
 });
 
 hexo.extend.helper.register('canonical_url', function(lang) {
-  let path = this.page.path;
-  if (lang && lang !== 'en') path = lang + '/' + path;
+  const slugs = this.page.path.split('/').filter(v => v !== '');
+
+  if (Object.keys(this.site.data.languages).includes(slugs[0])) {
+    slugs.shift();
+  }
+  if (lang !== 'en') {
+    slugs.unshift(lang);
+  }
+
+  const path = slugs.join('/');
 
   return full_url_for(path);
 });
@@ -119,7 +127,20 @@ hexo.extend.helper.register('plugin_list', function() {
   const partial = hexo.extend.helper.get('partial').bind(this);
   let html = '';
 
-  const arr = this.site.data[this.page.data].sort(() => { return Math.random() > 0.5 ? -1 : 1; });
+  const type = this.page.data;
+  const arr = this.site.data[type];
+
+  if (type === 'themes') {
+    arr.sort(() => { return Math.random() > 0.5 ? -1 : 1; });
+  }
+
+  if (type === 'plugins') {
+    arr.sort((a, b) => {
+      const nameA = a.name.toUpperCase();
+      const nameB = b.name.toUpperCase();
+      return nameA < nameB ? -1 : 1;
+    });
+  }
 
   for (const plugin of arr) {
     html += partial('partial/' + this.page.partial, { plugin });
@@ -161,6 +182,7 @@ hexo.extend.helper.register('disqus_lang', function() {
   return data.disqus_lang || lang;
 });
 
-hexo.extend.helper.register('hexo_version', function() {
-  return this.env.version;
+hexo.extend.filter.register('template_locals', locals => {
+  const { page } = locals;
+  if (page.archive) page.title = 'News';
 });

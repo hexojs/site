@@ -3,50 +3,47 @@
   "version": "0.0.0",
   "private": true,
   "hexo": {
-    "version": "5.1.1"
+    "version": "7.3.0"
   },
   "scripts": {
     "build": "hexo generate",
-    "eslint": "eslint ."
+    "eslint": "eslint .",
+    "format:md": "prettier --write */**/docs/*.md */**/api/*.md",
+    "prepare": "node .husky/install.mjs"
   },
   "dependencies": {
-    "cheerio": "^0.22.0",
-    "hexo": "hexojs/hexo",
-    "hexo-clean-css": "^1.0.0",
+    "cheerio": "^1.0.0",
+    "hexo": "^7.3.0",
+    "hexo-clean-css": "^2.0.0",
     "hexo-filter-nofollow": "^2.0.2",
-    "hexo-fs": "^3.1.0",
-    "hexo-generator-archive": "^1.0.0",
+    "hexo-fs": "^5.0.0",
+    "hexo-generator-archive": "^2.0.0",
     "hexo-generator-feed": "^3.0.0",
-    "hexo-generator-sitemap": "^2.0.0",
-    "hexo-renderer-marked": "^3.0.0",
-    "hexo-renderer-pug": "^1.0.0",
-    "hexo-renderer-stylus": "^2.0.0",
-    "hexo-renderer-swig": "^1.1.0",
-    "hexo-server": "^2.0.0",
+    "hexo-generator-sitemap": "^3.0.1",
+    "hexo-renderer-marked": "^7.0.0",
+    "hexo-renderer-stylus": "^3.0.1",
+    "hexo-server": "^3.0.0",
+    "hexo-tag-embed": "^1.0.0",
     "hexo-uglify": "^2.0.0",
-    "image-size": "^0.9.1",
     "lunr": "2.3.9",
-    "sharp": "^0.26.1"
+    "sharp": "^0.33.1"
   },
   "devDependencies": {
-    "eslint": "^7.0.0",
-    "eslint-config-hexo": "^4.0.0",
-    "husky": "^4.0.7",
-    "imagemin-lint-staged": "^0.4.0",
-    "lint-staged": "^10.2.2"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
+    "eslint": "^8.0.1",
+    "eslint-config-hexo": "^5.0.0",
+    "husky": "^9.0.6",
+    "imagemin-lint-staged": "^0.5.1",
+    "lint-staged": "^15.2.0",
+    "prettier": "3.4.2"
   },
   "lint-staged": {
     "*.{png,jpeg,jpg,gif,svg}": [
-      "imagemin-lint-staged",
-      "git add"
-    ]
+      "imagemin-lint-staged"
+    ],
+    "*.js": "eslint --fix",
+    "*.md": "prettier --write"
   },
   "engines": {
-    "node": ">=8.10.0"
+    "node": ">=14"
   }
 }

@@ -1,0 +1,9 @@
+description: A hexo tag for google maps. Does much more than a simple embedded iFrame
+link: https://github.com/the-simian/hexo-tag-googlemaps
+tags:
+  - tag
+  - googlemaps
+  - map
+  - latitude
+  - longitude
+  - markers

@@ -1,0 +1,34 @@
+description: >-
+  Hexo package that provides analytics on the read time to review a post.
+  Generates word, character, image, and video counts in the front-matter of the
+  markdown file. Plus provides read-time estimates for given language profile.
+  Supports 42 languages!
+link: https://github.com/AsemAlhaidary/hexo-generator-readtime/
+tags:
+  - read analytics
+  - hexo readtime
+  - readtime
+  - read-time
+  - read time
+  - reading-time
+  - reading time
+  - word count
+  - wordcount
+  - post time
+  - calculate
+  - estimate
+  - estimated time
+  - reading
+  - words
+  - time
+  - count
+  - wpm
+  - words per minute
+  - calculate-reading-time
+  - words-calculate
+  - reading-time-estimator
+  - estimated reading time
+  - character-counter
+  - word-counter
+  - character-count
+  - word-count

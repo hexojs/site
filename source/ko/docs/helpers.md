@@ -1,38 +1,115 @@
 ---
 title: Helpers
 ---
+
 Helper는 템플릿에 정보(snippet)를 쉽게 삽입할 수 있도록 도와줍니다. 소스 파일에서는 Helper를 사용할 수 없습니다.
+
+You could easily [write your own custom helper](https://hexo.io/api/helper.html) or use our ready-made helpers.
+
+{% youtube Uc53pW0GJHU %}
 
 ## URL
 
 ### url_for
 
-루트 경로를 포함한 url을 반환합니다. Hexo 2.7부터 `config.root + path` 대신 이 helper를 사용할 수 있습니다.
+루트 경로를 포함한 url을 반환합니다. Output is encoded automatically.
 
-``` js
+```js
 <%- url_for(path) %>
+```
+
+| Option     | Description          | Default                         |
+| ---------- | -------------------- | ------------------------------- |
+| `relative` | Output relative link | Value of `config.relative_link` |
+
+**Examples:**
+
+```yml
+_config.yml
+root: /blog/ # example
+```
+
+```js
+<%- url_for('/a/path') %>
+// /blog/a/path
+```
+
+Relative link, follows `relative_link` option by default e.g. post/page path is '/foo/bar/index.html'
+
+```yml
+_config.yml
+relative_link: true
+```
+
+```js
+<%- url_for('/css/style.css') %>
+// ../../css/style.css
+
+/* Override option
+ * you could also disable it to output a non-relative link,
+ * even when `relative_link` is enabled and vice versa.
+ */
+<%- url_for('/css/style.css', {relative: false}) %>
+// /css/style.css
 ```
 
 ### relative_url
 
 `from`부터 `to`까지의 상대 경로를 반환합니다.
 
-``` js
+```js
 <%- relative_url(from, to) %>
+```
+
+**Examples:**
+
+```js
+<%- relative_url('foo/bar/', 'css/style.css') %>
+// ../../css/style.css
+```
+
+### full_url_for
+
+Returns a URL with the `config.url` prefixed. Output is encoded automatically.
+
+```js
+<%- full_url_for(path) %>
+```
+
+**Examples:**
+
+```yml
+_config.yml
+url: https://example.com/blog # example
+```
+
+```js
+<%- full_url_for('/a/path') %>
+// https://example.com/blog/a/path
 ```
 
 ### gravatar
 
-Gravatar 이미지를 삽입합니다.
+Returns the gravatar image URL from an email.
+
 [options] 파라미터를 지정하지 않은 경우, 기본 값이 적용됩니다. [options] 파라미터를 지정할 경우 숫자로 크기를 지정하여 Gravatar에 전달할 수 있습니다. 또 다른 방법으로, object를 설정할 경우 Gravatar를 위한 query string으로 변환됩니다.
 
-``` js
+```js
 <%- gravatar(email, [options]) %>
 ```
 
-**예시:**
+| Option | Description | Default |
+| ------ | ----------- | ------- |
+| `s`    | 이미지의 세로 크기  | 40      |
+| `d`    | 기본 값        |         |
+| `f`    | 기본 값        |         |
+| `r`    | Rating      |         |
 
-``` js
+More info: [Gravatar](https://en.gravatar.com/site/implement/images/)
+
+**Examples:**
+
+```js
 <%- gravatar('a@abc.com') %>
 // https://www.gravatar.com/avatar/b9b00e66c6b8a70f88c73cb6bdb06787
 
@@ -47,15 +124,15 @@ Gravatar 이미지를 삽입합니다.
 
 ### css
 
-CSS 파일들을 불러옵니다. `path`에는 문자열(string) 또는 배열(array)을 사용할 수 있습니다. 만약 `path`가 `/` 또는 프로토콜명으로 시작하지 않는다면, 루트 URL이 접두어로 붙습니다. `path` 뒤에 `.css` 파일을 기입하지 않으면 자동으로 추가합니다. Use object type for custom attributes.
+CSS 파일들을 불러옵니다. 만약 `path`가 `/` 또는 프로토콜명으로 시작하지 않는다면, 루트 URL이 접두어로 붙습니다. `path` 뒤에 `.css` 파일을 기입하지 않으면 자동으로 추가합니다. Use object type for custom attributes.
 
-``` js
+```js
 <%- css(path, ...) %>
 ```
 
-**예시:**
+**Examples:**
 
-``` js
+```js
 <%- css('style.css') %>
 // <link rel="stylesheet" href="/style.css">
 
@@ -73,15 +150,15 @@ CSS 파일들을 불러옵니다. `path`에는 문자열(string) 또는 배열(a
 
 ### js
 
-JavaScript 파일들을 불러옵니다. `path`에는 문자열(string) 또는 배열(array)을 사용할 수 있습니다. 만약 `path`가 `/` 또는 프로토콜명으로 시작하지 않는다면, 루트 URL이 접두어로 붙습니다. `path` 뒤에 `.js` 파일을 기입하지 않으면 자동으로 추가합니다. Use object type for custom attributes.
+JavaScript 파일들을 불러옵니다. `path`에는 문자열(string) 또는 배열(array)을 사용할 수 있습니다. `path` 뒤에 `.js` 파일을 기입하지 않으면 자동으로 추가합니다. Use object type for custom attributes.
 
-``` js
+```js
 <%- js(path, ...) %>
 ```
 
-**예시:**
+**Examples:**
 
-``` js
+```js
 <%- js('script.js') %>
 // <script src="/script.js"></script>
 
@@ -101,19 +178,19 @@ JavaScript 파일들을 불러옵니다. `path`에는 문자열(string) 또는 �
 
 링크를 삽입합니다.
 
-``` js
+```js
 <%- link_to(path, [text], [options]) %>
 ```
 
-옵션 | 설명 | 기본 값
---- | --- | ---
-`external` | 링크를 새 탭에 엽니다. | false
-`class` | Class명 |
-`id` | ID |
+| Option     | Description   | Default |
+| ---------- | ------------- | ------- |
+| `external` | 링크를 새 탭에 엽니다. | false   |
+| `class`    | Class명        |         |
+| `id`       | ID            |         |
 
-**예시:**
+**Examples:**
 
-``` js
+```js
 <%- link_to('http://www.google.com') %>
 // <a href="http://www.google.com" title="http://www.google.com">http://www.google.com</a>
 
@@ -128,22 +205,22 @@ JavaScript 파일들을 불러옵니다. `path`에는 문자열(string) 또는 �
 
 메일 링크를 삽입합니다.
 
-``` js
+```js
 <%- mail_to(path, [text], [options]) %>
 ```
 
-옵션 | 설명
---- | ---
-`class` | Class명
-`id` | ID
-`subject` | 메일 제목
-`cc` | 참조
-`bcc` | 비밀참조
-`body` | 메일 내용
+| Option    | Description |
+| --------- | ----------- |
+| `class`   | Class명      |
+| `id`      | ID          |
+| `subject` | 메일 제목       |
+| `cc`      | CC          |
+| `bcc`     | BCC         |
+| `body`    | 메일 내용       |
 
-**예시:**
+**Examples:**
 
-``` js
+```js
 <%- mail_to('a@abc.com') %>
 // <a href="mailto:a@abc.com" title="a@abc.com">a@abc.com</a>
 
@@ -155,23 +232,23 @@ JavaScript 파일들을 불러옵니다. `path`에는 문자열(string) 또는 �
 
 이미지를 삽입합니다.
 
-``` js
+```js
 <%- image_tag(path, [options]) %>
 ```
 
-옵션 | 설명
---- | ---
-`alt` | 이미지 대신 표시할 텍스트
-`class` | Class명
-`id` | ID
-`width` | 이미지의 가로 크기
-`height` | 이미지의 세로 크기
+| Option   | Description    |
+| -------- | -------------- |
+| `alt`    | 이미지 대신 표시할 텍스트 |
+| `class`  | Class명         |
+| `id`     | ID             |
+| `width`  | 이미지의 가로 크기     |
+| `height` | 기본 값           |
 
 ### favicon_tag
 
-파비콘을 삽입합니다.
+Inserts a favicon.
 
-``` js
+```js
 <%- favicon_tag(path) %>
 ```
 
@@ -179,18 +256,18 @@ JavaScript 파일들을 불러옵니다. `path`에는 문자열(string) 또는 �
 
 Feed 링크를 삽입합니다.
 
-``` js
+```js
 <%- feed_tag(path, [options]) %>
 ```
 
-옵션 | 설명 | 기본 값
---- | --- | ---
-`title` | Feed 제목 | `config.title`
-`type` | Feed 형식 | atom
+| Option  | Description | Default        |
+| ------- | ----------- | -------------- |
+| `title` | Feed 제목     | `config.title` |
+| `type`  | Feed 형식     |                |
 
 **Examples:**
 
-``` js
+```js
 <%- feed_tag('atom.xml') %>
 // <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
 
@@ -202,13 +279,13 @@ Feed 링크를 삽입합니다.
 // <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
 ```
 
-### 조건 태그
+## 조건 태그
 
 ### is_current
 
 `path`가 현재 페이지의 URL과 동일한지 체크합니다. `strict` 옵션을 사용하면 제한적인 매칭을 활성화 합니다.
 
-``` js
+```js
 <%- is_current(path, [strict]) %>
 ```
 
@@ -216,23 +293,39 @@ Feed 링크를 삽입합니다.
 
 현재 페이지가 home 페이지인지 체크합니다.
 
-``` js
+```js
 <%- is_home() %>
+```
+
+### is_home_first_page (+6.3.0)
+
+기본 값
+
+```js
+<%- is_home_first_page() %>
 ```
 
 ### is_post
 
 현재 페이지가 포스트인지 체크합니다.
 
-``` js
+```js
 <%- is_post() %>
+```
+
+### is_page
+
+Paginator를 삽입합니다.
+
+```js
+<%- is_page() %>
 ```
 
 ### is_archive
 
 현재 페이지가 아카이브 페이지인지 체크합니다.
 
-``` js
+```js
 <%- is_archive() %>
 ```
 
@@ -240,7 +333,7 @@ Feed 링크를 삽입합니다.
 
 현재 페이지가 연간 아카이브 페이지인지 체크합니다.
 
-``` js
+```js
 <%- is_year() %>
 ```
 
@@ -248,26 +341,24 @@ Feed 링크를 삽입합니다.
 
 현재 페이지가 월간 아카이브 페이지인지 체크합니다.
 
-``` js
+```js
 <%- is_month() %>
 ```
 
 ### is_category
 
-현재 페이지가 카테고리 페이지인지 체크합니다.
-파라미터에 문자열을 넣으면, 현재 페이지가 해당 문자열의 카테고리에 속해있는지 체크합니다.
+현재 페이지가 카테고리 페이지인지 체크합니다. 파라미터에 문자열을 넣으면, 현재 페이지가 해당 문자열의 카테고리에 속해있는지 체크합니다.
 
-``` js
+```js
 <%- is_category() %>
 <%- is_category('hobby') %>
 ```
 
 ### is_tag
 
-현재 페이지가 태그 페이지인지 체크합니다.
-파라미터에 문자열을 넣으면, 현재 페이지가 해당 문자열의 태그에 속해있는지 체크합니다.
+현재 페이지가 태그 페이지인지 체크합니다. 파라미터에 문자열을 넣으면, 현재 페이지가 해당 문자열의 태그에 속해있는지 체크합니다.
 
-``` js
+```js
 <%- is_tag() %>
 <%- is_tag('hobby') %>
 ```
@@ -278,7 +369,7 @@ Feed 링크를 삽입합니다.
 
 문자열에서 공백을 제거합니다.
 
-``` js
+```js
 <%- trim(string) %>
 ```
 
@@ -286,13 +377,13 @@ Feed 링크를 삽입합니다.
 
 문자열에서 모든 HTML 태그를 제거합니다.
 
-``` js
+```js
 <%- strip_html(string) %>
 ```
 
-**예시:**
+**Examples:**
 
-``` js
+```js
 <%- strip_html('It\'s not <b>important</b> anymore!') %>
 // It's not important anymore!
 ```
@@ -301,13 +392,13 @@ Feed 링크를 삽입합니다.
 
 문자열을 적절한 타이틀 케이스(소문자/대문자)에 맞게 변환합니다.
 
-``` js
+```js
 <%- titlecase(string) %>
 ```
 
-**예시:**
+**Examples:**
 
-``` js
+```js
 <%- titlecase('this is an apple') %>
 # This is an Apple
 ```
@@ -316,13 +407,13 @@ Feed 링크를 삽입합니다.
 
 Markdown에 맞게 문자열을 렌더링합니다.
 
-``` js
+```js
 <%- markdown(str) %>
 ```
 
-**예시:**
+**Examples:**
 
-``` js
+```js
 <%- markdown('make me **strong**') %>
 // make me <strong>strong</strong>
 ```
@@ -331,13 +422,13 @@ Markdown에 맞게 문자열을 렌더링합니다.
 
 문자열을 렌더링합니다.
 
-``` js
+```js
 <%- render(str, engine, [options]) %>
 ```
 
 **Examples:**
 
-``` js
+```js
 <%- render('p(class="example") Test', 'pug'); %>
 // <p class="example">Test</p>
 ```
@@ -348,13 +439,13 @@ See [Rendering](https://hexo.io/ko/api/rendering) for more details.
 
 주어진 `length`에 맞게 문자열을 포장합니다. `length`의 기본값은 80 입니다.
 
-``` js
+```js
 <%- word_wrap(str, [length]) %>
 ```
 
-**예시:**
+**Examples:**
 
-``` js
+```js
 <%- word_wrap('Once upon a time', 8) %>
 // Once upon\n a time
 ```
@@ -363,13 +454,13 @@ See [Rendering](https://hexo.io/ko/api/rendering) for more details.
 
 `length` 이후의 문자들을 잘라냅니다. 기본 값은 30 입니다.
 
-``` js
+```js
 <%- truncate(text, [options]) %>
 ```
 
-**예시:**
+**Examples:**
 
-``` js
+```js
 <%- truncate('Once upon a time in a world far far away', {length: 17}) %>
 // Once upon a ti...
 
@@ -380,32 +471,47 @@ See [Rendering](https://hexo.io/ko/api/rendering) for more details.
 // And they f... (continued)
 ```
 
+### escape_html
+
+Escapes HTML entities in a string.
+
+```js
+<%- escape_html(str) %>
+```
+
+**Examples:**
+
+```js
+<%- escape_html('<p>Hello "world".</p>') %>
+// &lt;p&gt;Hello &quot;world&quot;.&lt;&#x2F;p&gt;
+```
+
 ## 템플릿
 
 ### partial
 
 다른 템플릿 파일을 불러옵니다. 지역 변수인 `locals`에 정의할 수 있습니다.
 
-``` js
+```js
 <%- partial(layout, [locals], [options]) %>
 ```
 
-옵션 | 설명 | 기본 값
---- | --- | ---
-`cache` | 내용을 캐싱합니다. (Fragment cache 사용) | `false`
-`only` | 지역 변수에 한정합니다. 템플릿에서 `locals` 변수만 설정할 수 있습니다. | `false`
+| Option  | Description                                  | Default |
+| ------- | -------------------------------------------- | ------- |
+| `cache` | (Fragment cache 사용)                          | `false` |
+| `only`  | 지역 변수에 한정합니다. 템플릿에서 `locals` 변수만 설정할 수 있습니다. | `false` |
 
 ### fragment_cache
 
 Fragment에 컨텐츠를 캐싱합니다. 컨텐츠를 fragment단위로 저장하고 다음 요청이 들어오면 캐시를 제공합니다.
 
-``` js
+```js
 <%- fragment_cache(id, fn);
 ```
 
-**예시:**
+**Examples:**
 
-``` js
+```js
 <%- fragment_cache('header', function(){
   return '<header></header>';
 }) %>
@@ -415,15 +521,15 @@ Fragment에 컨텐츠를 캐싱합니다. 컨텐츠를 fragment단위로 저장�
 
 ### date
 
-형식이 정의된 날짜를 삽입합니다. `date`는 unix time, ISO string, date object, [Moment.js] 객체를 사용할 수 있습니다. `format`은 기본 값으로 정의된 `date_format`를 사용합니다.
+형식이 정의된 날짜를 삽입합니다. `date`는 unix time, ISO string, date object, [Moment.js][] 객체를 사용할 수 있습니다. `format`은 기본 값으로 정의된 `date_format`를 사용합니다.
 
-``` js
+```js
 <%- date(date, [format]) %>
 ```
 
-**예시:**
+**Examples:**
 
-``` js
+```js
 <%- date(Date.now()) %>
 // 2013-01-01
 
@@ -433,30 +539,30 @@ Fragment에 컨텐츠를 캐싱합니다. 컨텐츠를 fragment단위로 저장�
 
 ### date_xml
 
-XML 형식의 날짜를 삽입합니다. `date`는 unix time, ISO string, date object, [Moment.js] 객체를 사용할 수 있습니다.
+XML 형식의 날짜를 삽입합니다. `date`는 unix time, ISO string, date object, [Moment.js][] 객체를 사용할 수 있습니다.
 
-``` js
+```js
 <%- date_xml(date) %>
 ```
 
-**예시:**
+**Examples:**
 
-``` js
+```js
 <%- date_xml(Date.now()) %>
 // 2013-01-01T00:00:00.000Z
 ```
 
 ### time
 
-형식이 정의된 시간을 사입합니다. `date`는 unix time, ISO string, date object, [Moment.js] 객체를 사용할 수 있습니다. `format`은 기본 값으로 정의된 `time_format`를 사용합니다.
+형식이 정의된 시간을 사입합니다. `date`는 unix time, ISO string, date object, [Moment.js][] 객체를 사용할 수 있습니다. `format`은 기본 값으로 정의된 `time_format`를 사용합니다.
 
-``` js
+```js
 <%- time(date, [format]) %>
 ```
 
-**예시:**
+**Examples:**
 
-``` js
+```js
 <%- time(Date.now()) %>
 // 13:05:12
 
@@ -466,15 +572,15 @@ XML 형식의 날짜를 삽입합니다. `date`는 unix time, ISO string, date o
 
 ### full_date
 
-형식이 정의된 날짜와 시간을 삽입합니다. `date`는 unix time, ISO string, date object, [Moment.js] 객체를 사용할 수 있습니다. `format`은 기본 값으로 정의된 `date_format + time_format`를 사용합니다.
+형식이 정의된 날짜와 시간을 삽입합니다. `date`는 unix time, ISO string, date object, [Moment.js][] 객체를 사용할 수 있습니다. `format`은 기본 값으로 정의된 `date_format + time_format`를 사용합니다.
 
-``` js
+```js
 <%- full_date(date, [format]) %>
 ```
 
-**예시:**
+**Examples:**
 
-``` js
+```js
 <%- full_date(new Date()) %>
 // Jan 1, 2013 0:00:00
 
@@ -482,9 +588,45 @@ XML 형식의 날짜를 삽입합니다. `date`는 unix time, ISO string, date o
 // Tuesday, January 1st 2013, 12:00:00 am
 ```
 
+### relative_date
+
+Inserts relative time from now. `date` can be unix time, ISO string, date object, or [Moment.js][] object.
+
+```js
+<%- relative_date(date) %>
+```
+
+**Examples:**
+
+```js
+<%- relative_date(new Date()) %>
+// a few seconds ago
+
+<%- relative_date(new Date(1000000000000)) %>
+// 22 years ago
+```
+
+### time_tag
+
+Inserts time tag. `date` can be unix time, ISO string, date object, or [Moment.js][] object. `format` is `date_format` setting by default.
+
+```js
+<%- time_tag(date, [format]) %>
+```
+
+**Examples:**
+
+```js
+<%- time_tag(new Date()) %>
+// <time datetime="2024-01-22T06:35:31.108Z">2024-01-22</time>
+
+<%- time_tag(new Date(), 'MMM-D-YYYY') %>
+// <time datetime="2024-01-22T06:35:31.108Z">Jan-22-2024</time>
+```
+
 ### moment
 
-[Moment.js] 라이브러리 입니다.
+[Moment.js][] 라이브러리 입니다.
 
 ## List
 
@@ -492,50 +634,69 @@ XML 형식의 날짜를 삽입합니다. `date`는 unix time, ISO string, date o
 
 모든 카테고리의 목록을 삽입합니다.
 
-``` js
+```js
 <%- list_categories([options]) %>
 ```
 
-옵션 | 설명 | 기본 값
---- | --- | ---
-`orderby` | 카테고리 정렬 기준 | name
-`order` | 정렬 방식. `1`, `asc`은 오름차순; `-1`, `desc`은 내림차순 | 1
-`show_count` | 각 카테고리 별 포스트의 번호를 표시합니다. | true
-`style` | 카테고리 목록 표시의 스타일. `list`는 카테고리 목록을 순서없이 표시합니다. | list
-`separator` | 카테고리 별 구분자. (`style`이 `list`가 아닐 때만 동작합니다.) | ,
-`depth` | 카테고리의 계층을 표시합니다. `0`은 모든 카테고리 및 하위 카테고리를 표시합니다.; `-1`은 `0`과 비슷하지만 flat하게 표시합니다.; `1`은 최상위 계층의 카테고리들만 표시합니다. | 0
-`class` | 카테고리 목록의 Class명. | category
-`transform` | 카테고리 이름의 표시 방식을 변경하는 기능. |
-`suffix` | 링크에 접미사를 붙입니다. | None
+| Option       | Description                                                                                                 | Default  |
+| ------------ | ----------------------------------------------------------------------------------------------------------- | -------- |
+| `orderby`    | 태그의 정렬 기준                                                                                                   | name     |
+| `order`      | 정렬 방식. `1`, `asc`은 오름차순; `-1`, `desc`은 내림차순                                                                 | 1        |
+| `show_count` | 각 카테고리 별 포스트의 번호를 표시합니다.                                                                                    | true     |
+| `style`      | 카테고리 목록 표시의 스타일. `list`는 카테고리 목록을 순서없이 표시합니다. Use `false` or any other value to disable it.                 | list     |
+| `separator`  | 카테고리 별 구분자. (`style`이 `list`가 아닐 때만 동작합니다.)                                                                 | ,        |
+| `depth`      | 카테고리의 계층을 표시합니다. `0`은 모든 카테고리 및 하위 카테고리를 표시합니다.; `-1`은 `0`과 비슷하지만 flat하게 표시합니다.; `1`은 최상위 계층의 카테고리들만 표시합니다. | 0        |
+| `class`      | 카테고리 목록의 Class명.                                                                                            | category |
+| `transform`  | 카테고리 이름의 표시 방식을 변경하는 기능.                                                                                    |          |
+| `suffix`     | 링크에 접미사를 붙입니다.                                                                                              | None     |
+
+**Examples:**
+
+```js
+<%- list_categories(post.categories, {
+  class: 'post-category',
+  transform(str) {
+    return titlecase(str);
+  }
+}) %>
+
+<%- list_categories(post.categories, {
+  class: 'post-category',
+  transform(str) {
+    return str.toUpperCase();
+  }
+}) %>
+```
 
 ### list_tags
 
 모든 태그의 목록을 삽입합니다.
 
-``` js
+```js
 <%- list_tags([options]) %>
 ```
 
-옵션 | 설명 | 기본 값
---- | --- | ---
-`orderby` | 태그 정렬 기준 | name
-`order` | 정렬 방식. `1`, `asc`은 오름차순; `-1`, `desc`은 내림차순 | 1
-`show_count` | 각 태그 별 포스트의 번호를 표시합니다. | true
-`style` | 태그 목록 표시의 스타일. `list`는 태그 목록을 순서없이 표시합니다.  | list
-`separator` | 태그 별 구분자. (`style`이 `list`가 아닐 때만 동작합니다.) | ,
-`class` | Class name of tag list (string) or customize each tag's class (object, see below). | tag
-`transform` | 태그 이름의 표시 방식을 변경하는 기능. |
-`amount` | 표시되는 태그의 개수. (0 = 무한대) | 0
-`suffix` | 링크에 접미사를 붙입니다. | None
+| Option       | Description                                                                                             | Default |
+| ------------ | ------------------------------------------------------------------------------------------------------- | ------- |
+| `orderby`    | 카테고리 정렬 기준                                                                                              | name    |
+| `order`      | 정렬 방식. `1`, `asc`은 오름차순; `-1`, `desc`은 내림차순                                                             | 1       |
+| `show_count` | 각 아카이브에 대한 포스트의 개수를 표시합니다.                                                                              | true    |
+| `style`      | 태그 목록 표시의 스타일. `list`는 태그 목록을 순서없이 표시합니다. Use `false` or any other value to disable it.                 | list    |
+| `separator`  | 포스트 간 구분자. (`style`이 `list`각 아닐 때만 동작하빈다.)                                                              | ,       |
+| `class`      | Class name of tag list (string) or customize each tag's class (object, see below).                      | tag     |
+| `transform`  | The function that changes the display of tag name. See examples in [list_categories](#list-categories). |         |
+| `amount`     | 표시되는 태그의 개수. (0 = 무한대)                                                                                  | 0       |
+| `suffix`     | 링크에 접미사를 붙입니다.                                                                                          | None    |
 
 Class advanced customization:
 
-Option | Description | Default
---- | --- | ---
-`class.ul` | `<ul>` class name (only for style `list`) | `tag-list` (list style)
-`class.li` | `<li>` class name (only for style `list`) | `tag-list-item` (list style)
-`class.a` | `<a>` class name | `tag-list-link` (list style) `tag-link` (normal style)
-`class.count` | `<span>` class name where the tag counter is stored (only when `show_count` is `true`) | `tag-list-count` (list style) `tag-count` (normal style)
+| Option        | Description                                                                                                                                     | Default                                                  |
+| ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------- |
+| `class.ul`    | `<ul>` class name (only for style `list`)                                                                                                 | `tag-list` (list style)                                  |
+| `class.li`    | `<li>` class name (only for style `list`)                                                                                                 | `tag-list-item` (list style)                             |
+| `class.a`     | `<a>` class name                                                                                                                          | `tag-list-link` (list style) `tag-link` (normal style)   |
+| `class.label` | `<span>` class name where the tag label is stored (only for normal style, when `class.label` is set the label is put in a `<span>`) | `tag-label` (normal style)                               |
+| `class.count` | `<span>` class name where the tag counter is stored (only when `show_count` is `true`)                                                    | `tag-list-count` (list style) `tag-count` (normal style) |
 
 Examples:
 
@@ -550,96 +711,114 @@ Examples:
 
 아카이브 목록을 삽입합니다.
 
-``` js
+```js
 <%- list_archives([options]) %>
 ```
 
-옵션 | 설명 | 기본 값
---- | --- | ---
-`type` | 형식. 이 값은 `yearly` 또는 `monthly`입니다. | monthly
-`order` | 정렬 방식. `1`, `asc`은 오름차순; `-1`, `desc`은 내림차순 | 1
-`show_count` | 각 아카이브에 대한 포스트의 개수를 표시합니다. | true
-`format` | 날짜 형태 | MMMM YYYY
-`style` | 아카이브 목록 표시의 스타일. `list`는 아카이브 목록을 순서없이 표시합니다.  | list
-`separator` | 아카이브 간 구분자. (`style`이 `list`가 아닐 때만 동작합니다.) | ,
-`class` | 아카이브 목록의 Class명. | archive
-`transform` | 아카이브 이름의 표시 방식을 변경하는 기능. |
+| Option       | Description                                                                                                 | Default   |
+| ------------ | ----------------------------------------------------------------------------------------------------------- | --------- |
+| `type`       | 형식. 이 값은 `yearly` 또는 `monthly`입니다.                                                                          | monthly   |
+| `order`      | 정렬 방식. `1`, `asc`은 오름차순; `-1`, `desc`은 내림차순                                                                 | 1         |
+| `show_count` | Display the number of posts for each archive                                                                | true      |
+| `format`     | 날짜 형태                                                                                                       | MMMM YYYY |
+| `style`      | 아카이브 목록 표시의 스타일. `list`는 아카이브 목록을 순서없이 표시합니다. Use `false` or any other value to disable it.                 | list      |
+| `separator`  | 아카이브 간 구분자. (`style`이 `list`가 아닐 때만 동작합니다.)                                                                 | ,         |
+| `class`      | 아카이브 목록의 Class명.                                                                                            | archive   |
+| `transform`  | The function that changes the display of archive name. See examples in [list_categories](#list-categories). |           |
 
 ### list_posts
 
 포스트의 목록을 삽입합니다.
 
-``` js
+```js
 <%- list_posts([options]) %>
 ```
 
-옵션 | 설명 | 기본 값
---- | --- | ---
-`orderby` | 포스트 정렬 기준 | date
-`order` | 정렬 방식. `1`, `asc`은 오름차순; `-1`, `desc`은 내림차순 | 1
-`style` | 포스트 목록 표시의 스타일. `list`는 포스트 목록을 순서없이 표시합니다.  | list
-`separator` | 포스트 간 구분자. (`style`이 `list`각 아닐 때만 동작하빈다.) | ,
-`class` | 포스트 목록의 Class명. | post
-`amount` | 표시되는 포스트의 개수. (0 = 무한대) | 6
-`transform` | 포스트 이름의 표시 방식을 변경하는 기능. |
+| Option      | Description                                                                                              | Default |
+| ----------- | -------------------------------------------------------------------------------------------------------- | ------- |
+| `orderby`   | 포스트 정렬 기준                                                                                                | date    |
+| `order`     | 정렬 방식. `1`, `asc`은 오름차순; `-1`, `desc`은 내림차순                                                              | 1       |
+| `style`     | 포스트 목록 표시의 스타일. `list`는 포스트 목록을 순서없이 표시합니다. Use `false` or any other value to disable it.                | list    |
+| `separator` | 태그 별 구분자. (`style`이 `list`가 아닐 때만 동작합니다.)                                                                | ,       |
+| `class`     | 포스트 목록의 Class명.                                                                                          | post    |
+| `amount`    | 표시되는 포스트의 개수. (0 = 무한대)                                                                                  | 6       |
+| `transform` | The function that changes the display of post name. See examples in [list_categories](#list-categories). |         |
 
 ### tagcloud
 
 태그 클라우드를 삽입합니다.
 
-``` js
+```js
 <%- tagcloud([tags], [options]) %>
 ```
 
-옵션 | 설명 | 기본 값
---- | --- | ---
-`min_font` | 최소 폰트 크기 | 10
-`max_font` | 최대 폰트 크기 | 20
-`unit` | 폰트 크기의 단위 | px
-`amount` | 태그의 총 개수 | 40
-`orderby` | 태그의 정렬 기준 | name
-`order` | 정렬 방식. `1`, `asc`은 오름차순; `-1`, `desc`은 내림차순 | 1
-`color` | 태그 클라우드에 색상을 입힙니다. | false
-`start_color` | 시작 색상. 16진수 색상 (`#b700ff`), rgba (`rgba(183, 0, 255, 1)`), hsla (`hsla(283, 100%, 50%, 1)`), [color keywords]을 사용할 수 있습니다. 이 옵션은 `color`가 true일 때만 동작합니다. |
-`end_color` | 종료 색상. 16진수 색상 (`#b700ff`), rgba (`rgba(183, 0, 255, 1)`), hsla (`hsla(283, 100%, 50%, 1)`), [color keywords]. 이 옵션은 `color`가 true일 때만 동작합니다. |
-`class` | Class name prefix of tags
-`level` | The number of different class names. This option only works when `class` is set. | 10
+| Option                 | Description                                                                                                                                                 | Default   |
+| ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- | --------- |
+| `min_font`             | 최소 폰트 크기                                                                                                                                                    | 10        |
+| `max_font`             | 최대 폰트 크기                                                                                                                                                    | 20        |
+| `unit`                 | 폰트 크기의 단위                                                                                                                                                   | px        |
+| `amount`               | 태그의 총 개수                                                                                                                                                    | unlimited |
+| `orderby`              | 태그 정렬 기준                                                                                                                                                    | name      |
+| `order`                | 정렬 방식. `1`, `asc`은 오름차순; `-1`, `desc`은 내림차순                                                                                                                 | 1         |
+| `color`                | 태그 클라우드에 색상을 입힙니다.                                                                                                                                          | false     |
+| `start_color`          | 시작 색상. 16진수 색상 (`#b700ff`), rgba (`rgba(183, 0, 255, 1)`), hsla (`hsla(283, 100%, 50%, 1)`), [color keywords][]을 사용할 수 있습니다. 이 옵션은 `color`가 true일 때만 동작합니다. |           |
+| `end_color`            | 종료 색상. 16진수 색상 (`#b700ff`), rgba (`rgba(183, 0, 255, 1)`), hsla (`hsla(283, 100%, 50%, 1)`), [color keywords][]. 이 옵션은 `color`가 true일 때만 동작합니다.             |           |
+| `class`                | Class name prefix of tags                                                                                                                                   |           |
+| `level`                | The number of different class names. This option only works when `class` is set.                                                                            | 10        |
+| `show_count` (+6.3.0)  | 각 태그 별 포스트의 번호를 표시합니다.                                                                                                                                      | false     |
+| `count_class` (+6.3.0) | 태그 이름의 표시 방식을 변경하는 기능.                                                                                                                                      | count     |
+
+**Examples:**
+
+```js
+// Default options
+<%- tagcloud() %>
+
+// Limit number of tags to 30
+<%- tagcloud({amount: 30}) %>
+```
 
 ## Miscellaneous
 
 ### paginator
 
-Paginator를 삽입합니다.
+파비콘을 삽입합니다.
 
-``` js
+```js
 <%- paginator(options) %>
 ```
 
-옵션 | 설명 | 기본 값
---- | --- | ---
-`base` | 기준 URL | /
-`format` | URL 형식 | page/%d/
-`total` | 페이지의 총 개수 | 1
-`current` | 현재 페이지의 번호 | 0
-`prev_text` | 이전 페이지의 링크 텍스트. `prev_next`가 true일 때만 동작합니다. | Prev
-`next_text` | 다음 페이지의 링크 텍스트. `prev_next`가 true일 때만 동작합니다. | Next
-`space` | 빈 공간을 나타내는 텍스트 | &hellp;
-`prev_next` | 이전, 다음 링크를 표시합니다. | true
-`end_size` | 시작/종료 측에 페이지의 개수를 표시합니다. | 1
-`mid_size` | 현재 페이지의 양쪽에 페이지의 개수를 표시합니다. 현재 페이지는 포함하지 않은 개수입니다. | 2
-`show_all` | 모든 페이지를 표시합니다. true로 설정되어있다면, `end_size`와 `mid_size`는 동작하지 않습니다. | false
-`escape` | Escape HTML tags | true
+| Option                     | Description                                                      | Default       |
+| -------------------------- | ---------------------------------------------------------------- | ------------- |
+| `base`                     | 기준 URL                                                           | /             |
+| `format`                   | URL 형식                                                           | page/%d/      |
+| `total`                    | 페이지의 총 개수                                                        | 1             |
+| `current`                  | 현재 페이지의 번호                                                       | 0             |
+| `prev_text`                | 이전 페이지의 링크 텍스트. `prev_next`가 true일 때만 동작합니다.                     | Prev          |
+| `next_text`                | 다음 페이지의 링크 텍스트. `prev_next`가 true일 때만 동작합니다.                     | Next          |
+| `space`                    | 빈 공간을 나타내는 텍스트                                                   | &hellp;       |
+| `prev_next`                | 이전, 다음 링크를 표시합니다.                                                | true          |
+| `end_size`                 | 시작/종료 측에 페이지의 개수를 표시합니다.                                         | 1             |
+| `mid_size`                 | 분수와 정수의 구분자.                                                     | 2             |
+| `show_all`                 | 모든 페이지를 표시합니다. true로 설정되어있다면, `end_size`와 `mid_size`는 동작하지 않습니다. | false         |
+| `escape`                   | Escape HTML tags                                                 | true          |
+| 기본 값                       | 옵션                                                               | `옵션`          |
+| `current_class` (+6.3.0)   | 옵션                                                               | `current`     |
+| `space_class` (+6.3.0)     | 옵션                                                               | `space`       |
+| `prev_class` (+6.3.0)      | 옵션                                                               | `extend prev` |
+| `next_class` (+6.3.0)      | Next page class name                                             | `extend next` |
+| `force_prev_next` (+6.3.0) | 아카이브 이름의 표시 방식을 변경하는 기능.                                         | false         |
 
 **Examples:**
 
-``` js
+```js
 <%- paginator({
   prev_text: '<',
   next_text: '>'
 }) %>
 ```
 
-``` html
+```html
 <!-- Rendered as -->
 <a href="/1/">&lt;</a>
 <a href="/1/">1</a>
@@ -648,7 +827,7 @@ Paginator를 삽입합니다.
 <a href="/3/">&gt;</a>
 ```
 
-``` js
+```js
 <%- paginator({
   prev_text: '<i class="fa fa-angle-left"></i>',
   next_text: '<i class="fa fa-angle-right"></i>',
@@ -656,7 +835,7 @@ Paginator를 삽입합니다.
 }) %>
 ```
 
-``` html
+```html
 <!-- Rendered as -->
 <a href="/1/"><i class="fa fa-angle-left"></i></a>
 <a href="/1/">1</a>
@@ -669,33 +848,33 @@ Paginator를 삽입합니다.
 
 Google 검색 form을 삽입합니다.
 
-``` js
+```js
 <%- search_form(options) %>
 ```
 
-옵션 | 설명 | 기본 값
---- | --- | ---
-`class` | Form의 Class명 | search-form
-`text` | 검색의 hint에 들어갈 문장 | Search
-`button` | 검색 버튼을 표시합니다. boolean 또는 string 값을 가질 수 있습니다. 이 값이 string이면 해당 문자열은 버튼에 표시됩니다. | false
+| Option   | Description                                                                    | Default     |
+| -------- | ------------------------------------------------------------------------------ | ----------- |
+| `class`  | Form의 Class명                                                                   | search-form |
+| `text`   | 검색의 hint에 들어갈 문장                                                               | Search      |
+| `button` | 검색 버튼을 표시합니다. boolean 또는 string 값을 가질 수 있습니다. 이 값이 string이면 해당 문자열은 버튼에 표시됩니다. | false       |
 
 ### number_format
 
 숫자의 형식을 지정합니다.
 
-``` js
+```js
 <%- number_format(number, [options]) %>
 ```
 
-옵션 | 설명 | 기본 값
---- | --- | ---
-`precision` | 수의 정밀도. `false` 또는 음수가 아닌 정수 값을 가집니다. | false
-`delimiter` | 1000 단위의 구분자. | ,
-`separator` | 분수와 정수의 구분자. | .
+| Option      | Description                                              | Default |
+| ----------- | -------------------------------------------------------- | ------- |
+| `precision` | 수의 정밀도. `false` 또는 음수가 아닌 정수 값을 가집니다.                    | false   |
+| `delimiter` | 1000 단위의 구분자.                                            | ,       |
+| `separator` | The separator between the fractional and integer digits. | .       |
 
-**예시:**
+**Examples:**
 
-``` js
+```js
 <%- number_format(12345.67, {precision: 1}) %>
 // 12,345.68
 
@@ -716,60 +895,86 @@ Google 검색 form을 삽입합니다.
 
 Inserts [generator tag](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta).
 
-``` js
+```js
 <%- meta_generator() %>
 ```
 
 **Examples:**
 
-``` js
+```js
 <%- meta_generator() %>
 // <meta name="generator" content="Hexo 4.0.0">
 ```
 
 ### open_graph
 
-[Open Graph] 데이터를 삽입합니다.
+[Open Graph][] 데이터를 삽입합니다.
 
-``` js
+```js
 <%- open_graph([options]) %>
 ```
 
-옵션 | 설명 | 기본 값
---- | --- | ---
-`title` | 페이지 제목 (`og:title`) | `page.title`
-`type` | 페이지 형태 (`og:type`) | blog
-`url` | 페이지 URL (`og:url`) | `url`
-`image` | 페이지 커버 (`og:image`) | All images in the content
-`site_name` | 사이트 이름 (`og:site_name`) | `config.title`
-`description` | 페이지 설명 (`og:description`) | Page excerpt or first 200 characters of the content
-`twitter_card` | Twitter card type (`twitter:card`) | summary
-`twitter_id` | Twitter ID (`twitter:creator`) |
-`twitter_site` | Twitter Site (`twitter:site`) |
-`google_plus` | Google+ profile link |
-`fb_admins` | Facebook admin ID |
-`fb_app_id` | Facebook App ID |
+| Option          | Description                                          | Default                                                 |
+| --------------- | ---------------------------------------------------- | ------------------------------------------------------- |
+| `title`         | 페이지 제목 (`og:title`)                                  | `page.title`                                            |
+| `type`          | 페이지 형태 (`og:type`)                                   | article(post page)<br>website(non-post page)      |
+| `url`           | 페이지 URL (`og:url`)                                   | `url`                                                   |
+| `image`         | 페이지 커버 (`og:image`)                                  | All images in the content                               |
+| `author`        | Article author (`og:article:author`)                 | `config.author`                                         |
+| `date`          | Article published time (`og:article:published_time`) | Page published time                                     |
+| `updated`       | Article modified time (`og:article:modified_time`)   | Page modified time                                      |
+| `language`      | Article language (`og:locale`)                       | `page.lang \|\| page.language \|\| config.language` |
+| `site_name`     | 사이트 이름 (`og:site_name`)                              | `config.title`                                          |
+| `description`   | 페이지 설명 (`og:description`)                            | Page excerpt or first 200 characters of the content     |
+| `twitter_card`  | Twitter card type (`twitter:card`)                   | summary                                                 |
+| `twitter_id`    | Twitter ID (`twitter:creator`)                       |                                                         |
+| `twitter_site`  | Twitter Site (`twitter:site`)                        |                                                         |
+| `twitter_image` | 예시:                                                  |                                                         |
+| `google_plus`   | Google+ profile link                                 |                                                         |
+| `fb_admins`     | Facebook admin ID                                    |                                                         |
+| `fb_app_id`     | Facebook App ID                                      |                                                         |
 
 ### toc
 
 헤딩 태그(h1~h6)를 파싱하여 목차(Table of Content)를 삽입합니다.
 
-``` js
+```js
 <%- toc(str, [options]) %>
 ```
 
-옵션 | 설명 | 기본 값
---- | --- | ---
-`class` | Class명 | toc
-`list_number` | 목록 번호를 표시합니다. | true
-`max_depth` | Maximum heading depth of generated toc | 6
-`min_depth` | Minimum heading depth of generated toc | 1
+| Option                  | Description                              | Default           |
+| ----------------------- | ---------------------------------------- | ----------------- |
+| `class`                 | Class명                                   | `toc`             |
+| `class_item` (+6.3.0)   | 옵션                                       | `${class}-item`   |
+| `class_link` (+6.3.0)   | 참조                                       | `${class}-link`   |
+| `class_text` (+6.3.0)   | 포스트 이름의 표시 방식을 변경하는 기능.                  | `${class}-text`   |
+| `class_child` (+6.3.0)  | 기본 값                                     | `${class}-child`  |
+| `class_number` (+6.3.0) | 기본 값                                     | `${class}-number` |
+| `class_level` (+6.3.0)  | 기본 값                                     | `${class}-level`  |
+| `list_number`           | 목록 번호를 표시합니다.                            | true              |
+| `max_depth`             | Maximum heading depth of generated toc   | 6                 |
+| `min_depth`             | Minimum heading depth of generated toc   | 1                 |
+| `max_items` (+7.3.0)    | Maximum number of items in generated toc | `Infinity`        |
 
-**예시:**
+**Examples:**
 
-``` js
+```js
 <%- toc(page.content) %>
 ```
+
+#### data-toc-unnumbered (+6.1.0)
+
+Headings with attribute `data-toc-unnumbered="true"` will be marked as unnumbered (list number will not be display).
+
+{% note warn "Warning!" %}
+For using `data-toc-unnumbered="true"`, the renderer must have the option to add CSS classes.
+
+Please see below PRs.
+
+- https://github.com/hexojs/hexo/pull/4871
+- https://github.com/hexojs/hexo-util/pull/269
+- https://github.com/hexojs/hexo-renderer-markdown-it/pull/174
+  {% endnote %}
 
 [color keywords]: http://www.w3.org/TR/css3-color/#svg-color
 [Moment.js]: http://momentjs.com/

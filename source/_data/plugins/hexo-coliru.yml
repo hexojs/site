@@ -1,0 +1,6 @@
+description: A hexo plugin to run code via coliru.
+link: https://github.com/SpriteMisaka/hexo-coliru
+tags:
+  - code
+  - compiler
+  - coliru

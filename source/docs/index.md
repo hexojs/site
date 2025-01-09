@@ -1,7 +1,8 @@
 ---
 title: Documentation
 ---
-Welcome to the Hexo documentation. If you encounter any problems when using Hexo, have a look at the  [troubleshooting guide](troubleshooting.html), raise an issue on [GitHub](https://github.com/hexojs/hexo/issues) or start a topic on the [Google Group](https://groups.google.com/group/hexo).
+
+Welcome to the Hexo documentation. If you encounter any problems when using Hexo, have a look at the [troubleshooting guide](troubleshooting.html), raise an issue on [GitHub](https://github.com/hexojs/hexo/issues) or start a topic on the [Google Group](https://groups.google.com/group/hexo).
 
 ## What is Hexo?
 
@@ -64,7 +65,7 @@ If you installed Node.js using Snap, you may need to manually run `npm install` 
 
 Once all the requirements are installed, you can install Hexo with npm:
 
-``` bash
+```bash
 $ npm install -g hexo-cli
 ```
 
@@ -72,7 +73,7 @@ $ npm install -g hexo-cli
 
 Advanced users may prefer to install and use `hexo` package instead.
 
-``` bash
+```bash
 $ npm install hexo
 ```
 
@@ -81,13 +82,13 @@ Once installed, you can run Hexo in two ways:
 1. `npx hexo <command>`
 2. Linux users can set relative path of `node_modules/` folder:
 
-  ``` bash
-  echo 'PATH="$PATH:./node_modules/.bin"' >> ~/.profile
-  ```
+```bash
+echo 'PATH="$PATH:./node_modules/.bin"' >> ~/.profile
+```
 
-  then run Hexo using `hexo <command>`
+then run Hexo using `hexo <command>`
 
-### Minimum required Node.js version
+### Required Node.js version
 
 If you are stuck with older Node.js, you can consider installing a past version of Hexo.
 
@@ -95,12 +96,15 @@ Please note we do not provide bugfixes to past versions of Hexo.
 
 We highly recommend to always install the [latest version](https://www.npmjs.com/package/hexo?activeTab=versions) of Hexo and the [recommended version](#Requirements) of Node.js, whenever possible.
 
-Hexo version | Minimum Node.js version
---- | ---
-5.0+ | 10.13.0
-4.1 - 4.2 | 8.10
-4.0 | 8.6
-3.3 - 3.9 | 6.9
-3.2 - 3.3 | 0.12
-3.0 - 3.1 | 0.10 or iojs
-0.0.1 - 2.8 | 0.10
+| Hexo version | Minimum (Node.js version) | Less than (Node.js version) |
+| ------------ | ------------------------- | --------------------------- |
+| 7.0+         | 14.0.0                    | latest                      |
+| 6.2+         | 12.13.0                   | latest                      |
+| 6.0+         | 12.13.0                   | 18.5.0                      |
+| 5.0+         | 10.13.0                   | 12.0.0                      |
+| 4.1 - 4.2    | 8.10                      | 10.0.0                      |
+| 4.0          | 8.6                       | 8.10.0                      |
+| 3.3 - 3.9    | 6.9                       | 8.0.0                       |
+| 3.2 - 3.3    | 0.12                      | unknown                     |
+| 3.0 - 3.1    | 0.10 or iojs              | unknown                     |
+| 0.0.1 - 2.8  | 0.10                      | unknown                     |

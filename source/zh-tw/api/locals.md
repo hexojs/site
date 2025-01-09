@@ -1,26 +1,27 @@
 ---
-title: 區域變數
+title: Local Variables
 ---
-區域變數用於模版渲染，也就是模版中的 `site` 變數。
 
-## 預設變數
+Local variables are used for template rendering, which is the `site` variable in templates.
 
-變數 | 描述
---- | ---
-`posts` | 所有文章
-`pages` | 所有分頁
-`categories` | 所有分類
-`tags` | 所有標籤
+## Default Variables
+
+| 變數           | 描述   |
+| ------------ | ---- |
+| `posts`      | 所有文章 |
+| `pages`      | 所有分頁 |
+| `categories` | 所有分類 |
+| `tags`       | 所有標籤 |
 
 ## 取得變數
 
-``` js
-hexo.locals.get('posts')
+```js
+hexo.locals.get("posts");
 ```
 
 ## 設定變數
 
-``` js
+```js
 hexo.locals.set('posts', function(){
   return ...
 });
@@ -28,18 +29,18 @@ hexo.locals.set('posts', function(){
 
 ## 移除變數
 
-``` js
-hexo.locals.remove('posts');
+```js
+hexo.locals.remove("posts");
 ```
 
 ## 取得所有變數
 
-``` js
+```js
 hexo.locals.toObject();
 ```
 
-## 清除快取
+## Invalidate the cache
 
-``` js
+```js
 hexo.locals.invalidate();
 ```

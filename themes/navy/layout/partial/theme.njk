@@ -1,0 +1,23 @@
+<li class="plugin on" id="{{ plugin.name }}">
+  <div class="plugin-screenshot">
+    <noscript>
+      <img src="{{ url_for('themes/screenshots/' + plugin.name + '.png') }}" class="plugin-screenshot-img" alt="{{ plugin.name }}">
+    </noscript>
+    <img data-src="{{ url_for('themes/screenshots/' + plugin.name + '.png') }}" data-sizes="auto" class="plugin-screenshot-img lazyload" alt="{{ plugin.name }}" data-zoom-src="{{ url_for('themes/screenshots/' + plugin.name + '@2x.jpg') }}" data-zoomable>
+    {% if plugin.preview %}
+      <div class="plugin-screenshot-mask"><i class="fa fa-eye"></i></div>
+    {% endif %}
+  </div>
+  <a href="{{ plugin.link }}" class="plugin-name" target="_blank">{{ plugin.name }} <i class="fa fa-external-link"></i></a>
+  {% if plugin.preview %}
+    <div class="plugin-preview-wrap">
+      <a href="{{ plugin.preview }}" class="plugin-preview-link" target="_blank"> Visit preview site <i class="fa fa-external-link"></i></a>
+    <div>
+  {% endif %}
+  <p class="plugin-desc">{{ plugin.description }}</p>
+  <div class="plugin-tag-list">
+    {% for tag in plugin.tags %}
+      <a href="#{{ tag }}" class="plugin-tag">{{ tag }}</a>
+    {% endfor %}
+  </div>
+</li>

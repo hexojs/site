@@ -1,0 +1,8 @@
+description: >-
+  Adds draft tags to isolate markdown text within a post that should be
+  considered as draft
+link: https://github.com/CallumHewitt/hexo-draft-tags
+tags:
+  - drafts
+  - tag
+  - tag_plugins

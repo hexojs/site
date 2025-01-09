@@ -50,22 +50,26 @@ The upcoming Hexo 5.0.0 will be compatible with Node 14. Stay tune.
 ## Breaking change
 
 - Remove `HashStream()` function [@curbengh](https://github.com/curbengh) [#198]
-  + Deprecated in [#45], part of [v1.0.0](https://github.com/hexojs/hexo-util/releases/tag/1.0.0) release
-  + Replaced by [`createSha1Hash()`](https://github.com/hexojs/hexo-util/tree/master#createsha1hash)
+  - Deprecated in [#45], part of [v1.0.0](https://github.com/hexojs/hexo-util/releases/tag/1.0.0) release
+  - Replaced by [`createSha1Hash()`](https://github.com/hexojs/hexo-util/tree/master#createsha1hash)
 
 ## hexo-util 2.0.0
 
 ### Breaking change
+
 - Drop support of Node 8 [@SukkaW](https://github.com/SukkaW) [#191] [#193]
 - Requires `autoDetect` to be enabled and `lang` to be unset to use sublanguage [`highlight()`](https://github.com/hexojs/hexo-util#highlightstr-options) [@curbengh](https://github.com/curbengh) [#192] [#196]
 
 ### Fix
+
 - Fix [`CacheStream()`](https://github.com/hexojs/hexo-util#cachestream) compatibility issue with Node 14 [@curbengh](https://github.com/curbengh) [#195]
 
 ### Misc
+
 - docs(isExternalLink): add JSDoc [@YoshinoriN](https://github.com/YoshinoriN) [#190](https://github.com/hexojs/hexo-util/pull/190)
 
 ### Dependencies
+
 - chore(deps-dev): bump rewire from 4.0.1 to 5.0.0 [#187]
 
 [#198]: https://github.com/hexojs/hexo-util/pull/198
@@ -82,15 +86,17 @@ The upcoming Hexo 5.0.0 will be compatible with Node 14. Stay tune.
 ### Changes
 
 - Requires at least Node 10.13 [@curbengh](https://github.com/curbengh) [#63]
-  + Requires Node 10.12+ to create folder recursively using `mkdirs()` and `mkdirsSync()` [#55]. While hexo-fs previously supported this feature, it had custom implementation; hexo-fs 3+ uses native implementation instead.
+  - Requires Node 10.12+ to create folder recursively using `mkdirs()` and `mkdirsSync()` [#55]. While hexo-fs previously supported this feature, it had custom implementation; hexo-fs 3+ uses native implementation instead.
 - chore(deps): update hexo-util to 2.0.0 [@curbengh](https://github.com/curbengh) [#64]
 
 ## hexo-fs 3.0.0
 
 ### Breaking change
+
 - Drop support of Node 8 [@curbengh](https://github.com/curbengh) [#51]
 
 ### Feature
+
 - Utilize native recursive option for `mkdirs()` and `mkdirsSync()` [@segayuu](https://github.com/segayuu) [#55]
 
 ### Fix

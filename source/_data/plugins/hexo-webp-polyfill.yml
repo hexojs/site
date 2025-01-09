@@ -1,0 +1,8 @@
+description: WebP image format browser polyfill for Hexo.
+link: https://github.com/MBRjun/hexo-webp-polyfill
+tags:
+  - polyfill
+  - webp
+  - webp-polyfill
+  - browser-polyfill
+  - decoder

@@ -1,69 +1,111 @@
 ---
-title: 将 Hexo 部署到 GitHub Pages
+title: 在 GitHub Pages 上部署 Hexo
 ---
 
-在本教程中，我们将会使用 [Travis CI](https://travis-ci.com/) 将 Hexo 博客部署到 GitHub Pages 上。Travis CI 对于开源 repository 是免费的，但是这意味着你的站点文件将会是公开的。如果你希望你的站点文件不被公开，请直接前往本文 [私有 Repository](#私有 Repository) 部分。
+在本教程中，我们使用 [GitHub Actions](https://docs.github.com/zh/actions) 部署 GitHub Pages。 此方法适用于公开或私人储存库. 若你不希望将源文件夹上传到 GitHub，请参阅 [一键部署](#一键部署)。
 
-1. 新建一个 repository。如果你希望你的站点能通过 `<你的 GitHub 用户名>.github.io` 域名访问，你的 repository 应该直接命名为 `<你的 GitHub 用户名>.github.io`。
-2. 将你的 Hexo 站点文件夹推送到 repository 中。默认情况下不应该 `public` 目录将不会被推送到 repository 中，你应该检查 `.gitignore` 文件中是否包含 `public` 一行，如果没有请加上。
-3. 将 [Travis CI](https://github.com/marketplace/travis-ci) 添加到你的 GitHub 账户中。
-4. 前往 GitHub 的 [Applications settings](https://github.com/settings/installations)，配置 Travis CI 权限，使其能够访问你的 repository。
-5. 你应该会被重定向到 Travis CI 的页面。如果没有，请 [手动前往](https://travis-ci.com/)。
-6. 在浏览器新建一个标签页，前往 GitHub [新建 Personal Access Token](https://github.com/settings/tokens)，只勾选 `repo` 的权限并生成一个新的 Token。Token 生成后请复制并保存好。
-7. 回到 Travis CI，前往你的 repository 的设置页面，在 **Environment Variables** 下新建一个环境变量，**Name** 为 `GH_TOKEN`，**Value** 为刚才你在 GitHub 生成的 Token。确保 **DISPLAY VALUE IN BUILD LOG** 保持 **不被勾选** 避免你的 Token 泄漏。点击 **Add** 保存。
-8. 在你的 Hexo 站点文件夹中新建一个 `.travis.yml` 文件：
+1. 建立名为 <b>_username_.github.io</b>的储存库。 若之前已将 Hexo 上传至其他储存库，将该储存库重命名即可。
+2. 将 Hexo 文件夹中的文件 push 到储存库的默认分支。 默认分支通常名为**main**，旧一点的储存库可能名为**master**。
 
-```yml
-sudo: false
-language: node_js
-node_js:
-  - 10 # use nodejs v10 LTS
-cache: npm
-branches:
-  only:
-    - master # build master branch only
-script:
-  - hexo generate # generate static files
-deploy:
-  provider: pages
-  skip-cleanup: true
-  github-token: $GH_TOKEN
-  keep-history: true
-  on:
-    branch: master
-  local-dir: public
-```
+- 将 `main` 分支 push 到 GitHub：
 
-9. 将 `.travis.yml` 推送到 repository 中。Travis CI 应该会自动开始运行，并将生成的文件推送到同一 repository 下的 `gh-pages` 分支下
-10. 在 GitHub 中前往你的 repository 的设置页面，修改 `GitHub Pages` 的部署分支为 `gh-pages`。
-11. 前往 `https://<你的 GitHub 用户名>.github.io` 查看你的站点是否可以访问。这可能需要一些时间。
-
-## Project page
-
-如果你更希望你的站点部署在 `<你的 GitHub 用户名>.github.io` 的子目录中，你的 repository 需要直接命名为子目录的名字，这样你的站点可以通过 `https://<你的 GitHub 用户名>.github.io/<repository 的名字>` 访问。你需要检查你的 Hexo 配置文件，将 `url` 修改为 `https://<你的 GitHub 用户名>.github.io/<repository 的名字>`、将 `root` 的值修改为 `/<repository 的名字>/`
-
-
-## 私有 Repository
-
-下面的指示基于 [一键部署](/docs/one-command-deployment) 编写。
-
-1. 安装 [hexo-deployer-git](https://github.com/hexojs/hexo-deployer-git).
-2. 在 **_config.yml**（如果有已存在的请删除）添加如下配置：
-
-  ``` yml
-  deploy:
-    type: git
-    repo: https://github.com/<username>/<project>
-    # example, https://github.com/hexojs/hexojs.github.io
-    branch: gh-pages
+  ```
+  $ git push -u origin main
   ```
 
-3. 运行 `hexo clean && hexo deploy` 。
-4. 查看 *username*.github.io 上的网页是否部署成功。
+- 默认情况下 `public/` 不会被上传(也不该被上传)，确保 `.gitignore` 文件中包含一行 `public/`。 整体文件夹结构应该与 [示例储存库](https://github.com/hexojs/hexo-starter) 大致相似。
 
-## 有用的参考链接
+3. 使用 `node --version` 指令检查你电脑上的 Node.js 版本。 记下主要版本（例如，`v20.y.z`）
+4. 在储存库中前往 **Settings** > **Pages** > **Source** 。 将 source 更改为 **GitHub Actions**，然后保存。
+5. 在储存库中建立 `.github/workflows/pages.yml`，并填入以下内容 (将 `20` 替换为上个步骤中记下的版本)：
 
-- [GitHub Pages 使用文档](https://help.github.com/categories/github-pages-basics/)
-- [Travis CI 使用文档](https://docs.travis-ci.com/user/tutorial/)
-- [Awesome Hexo](https://github.com/hexojs/awesome-hexo)
-- [在百度上搜索 "Hexo GitHub"](https://www.baidu.com/s?wd=Hexo%20GitHub)
+```yml .github/workflows/pages.yml
+name: Pages
+
+on:
+  push:
+    branches:
+      - main # default branch
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          # If your repository depends on submodule, please see: https://github.com/actions/checkout
+          submodules: recursive
+      - name: Use Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          # Examples: 20, 18.19, >=16.20.2, lts/Iron, lts/Hydrogen, *, latest, current, node
+          # Ref: https://github.com/actions/setup-node#supported-version-syntax
+          node-version: "20"
+      - name: Cache NPM dependencies
+        uses: actions/cache@v4
+        with:
+          path: node_modules
+          key: ${{ runner.OS }}-npm-cache
+          restore-keys: |
+            ${{ runner.OS }}-npm-cache
+      - name: Install Dependencies
+        run: npm install
+      - name: Build
+        run: npm run build
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./public
+  deploy:
+    needs: build
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+```
+
+6. 部署完成后，前往 _username_.github.io 查看网页。
+
+若你使用了一个带有 `CNAME` 的自定义域名，你需要在 `source/` 文件夹中新增 `CNAME` 文件。 [更多信息](https://docs.github.com/zh/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site)
+
+## 项目页面
+
+如果您希望在 GitHub 上有一个项目页面：
+
+1. 导航到 GitHub 上的存储库。 转到 **Settings** 选项卡。 建立名为 `<repository 的名字>` 的储存库，这样你的博客网址为 `<你的 GitHub 用户名>.github.io/<repository 的名字>`，repository 的名字可以任意，例如 blog 或 hexo。
+2. 编辑你的 `_config.yml`，将 `url:` 更改为 `<你的 GitHub 用户名>.github.io/<repository 的名字>`。
+3. 在 GitHub 仓库的设置中，导航至 **Settings** > **Pages** > **Source** 。 将 source 更改为 **GitHub Actions**，然后保存。
+4. Commit 并 push 到默认分支上。
+5. 部署完成后，前往 _username_.github.io/_repository_ 查看网页。
+
+## 一键部署
+
+以下教学改编自 [一键部署](/zh-cn/docs/one-command-deployment)。
+
+1. 安装 [hexo-deployer-git](https://github.com/hexojs/hexo-deployer-git)。
+2. 在 `_config.yml` 中添加以下配置（如果配置已经存在，请将其替换为如下）:
+
+```yml
+deploy:
+  type: git
+  repo: https://github.com/<username>/<project>
+  # example, https://github.com/hexojs/hexojs.github.io
+  branch: gh-pages
+```
+
+3. 执行 `hexo clean && hexo deploy` 。
+4. 浏览 _username_.github.io，检查你的网站能否运作。
+
+## 参考链接
+
+- [GitHub Pages](https://docs.github.com/zh/pages)
+- [使用自定义 GitHub Actions 工作流进行发布](https://docs.github.com/zh/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site#publishing-with-a-custom-github-actions-workflow)
+- [actions/deploy-github-pages-site](https://github.com/marketplace/actions/deploy-github-pages-site)

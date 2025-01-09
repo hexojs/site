@@ -1,0 +1,8 @@
+description: >-
+  hexo-tag-plantuml is a tag plugin for Hexo. It can work with plantuml to draw
+  uml.
+link: https://github.com/two/hexo-tag-plantuml
+tags:
+  - tag_plugins
+  - plantuml
+  - uml

@@ -1,0 +1,6 @@
+description: Simple api serve for Hexo. Can custom allowOrigin. (Build with generator)
+link: https://github.com/jz0ojiang/hexo-info-api
+tags:
+  - api
+  - json
+  - information

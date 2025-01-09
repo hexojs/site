@@ -1,0 +1,8 @@
+description: >-
+  Read git log and add the properties `author` and `contributors` for each
+  posts.
+link: https://github.com/xcatliu/hexo-filter-author-from-git
+tags:
+  - author
+  - contributors
+  - git
