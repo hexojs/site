@@ -1,7 +1,6 @@
 description: A lightweight and visually appealing Hexo plugin to visualize and analyze your blog’s statistical data.
 link: https://github.com/erispyu/hexo-stats-echarts
 tags:
-  - hexo
   - stats
   - echarts
   - tag
