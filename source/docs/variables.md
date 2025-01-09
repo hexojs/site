@@ -26,8 +26,8 @@ Lodash has been removed from global variables since Hexo 5.0.0. [You-Dont-Need-L
 | ----------------- | -------------- | ---------------------- |
 | `site.posts`      | All posts      | [Query][queryo] object |
 | `site.pages`      | All pages      | [Query][queryo] object |
-| `site.categories` | All categories | `array` of ???         |
-| `site.tags`       | All tags       | `array` of ???         |
+| `site.categories` | All categories | [Query][queryo] object |
+| `site.tags`       | All tags       | [Query][queryo] object |
 
 [queryo]: https://hexojs.github.io/warehouse/classes/query.default.html
 
