@@ -29,7 +29,7 @@ Lodash has been removed from global variables since Hexo 5.0.0. [You-Dont-Need-L
 | `site.categories` | All categories | `array` of ???         |
 | `site.tags`       | All tags       | `array` of ???         |
 
-[queryo]: http://hexojs.github.io/warehouse/Query.html
+[queryo]: https://hexojs.github.io/warehouse/classes/query.default.html
 
 ### Page Variables
 
