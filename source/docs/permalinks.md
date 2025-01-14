@@ -18,6 +18,7 @@ Besides the following variables, you can use any attributes in the permalink exc
 | `:hour`       | Published hour of posts (2-digit)                                                   |
 | `:minute`     | Published minute of posts (2-digit)                                                 |
 | `:second`     | Published second of posts (2-digit)                                                 |
+| `:timestamp`  | Timestamp of post's published [date](./front-matter#Settings-Their-Default-Values)  |
 | `:title`      | Filename (relative to "source/\_posts/" folder)                                     |
 | `:name`       | Filename                                                                            |
 | `:post_title` | Post title                                                                          |
