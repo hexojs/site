@@ -1,7 +1,7 @@
 description: >-
   Asset path format, fix original markdown image path when enabling
   post_asset_folder.support typora editor copy/paste image.
-link: https://github.com/mapxn/hexo-asset-pro
+link: https://github.com/wnwd/hexo-asset-pro
 tags:
   - asset
   - image
