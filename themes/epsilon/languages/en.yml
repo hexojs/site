@@ -1,0 +1,39 @@
+menu:
+  home: "Home"
+  blog: "Blog"
+  contact: "Contact"
+
+footer:
+  powered: "Powered by Hexo"
+
+post:
+  publish_info: "Published on %date, %words words, %minutes minutes to read"
+  share_button: "Share"
+
+share:
+  twitter: "Share on Twitter"
+  facebook: "Share on Facebook"
+  linkedin: "Share on LinkedIn"
+  tags_label: "Tags:"
+
+navigation:
+  previous: "Previous Post"
+  next: "Next Post"
+
+meta:
+  date: "Date"
+  tags: "Tags"
+
+misc:
+  read_more: "Read more"
+  recent_articles: "Recent Articles"
+  highlighted_projects: "Highlighted Projects"
+  quick_links: "Quick Links"
+  blog_articles: "Blog Articles"
+  blog_feed_intro: "If you have a compatible reader, be sure to check out my RSS feed for automatic updates. Also check out the JSONFeed."
+  blog_feed_intro_part1: "If you have a compatible reader, be sure to check out my "
+  rss_feed_text: "RSS feed"
+  blog_feed_intro_part2: " for automatic updates. Also check out the "
+  json_feed_text: "JSONFeed"
+  tags_title: "Tags"
+  tag_page: "Tag page"

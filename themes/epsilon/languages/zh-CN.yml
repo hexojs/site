@@ -1,0 +1,39 @@
+menu:
+  home: "首页"
+  blog: "博客"
+  contact: "联系"
+
+footer:
+  powered: "由 Hexo 驱动"
+
+post:
+  publish_info: "发表于 %date，%words 字，大约需要 %minutes 分钟阅读"
+  share_button: "分享"
+
+share:
+  twitter: "分享到Twitter"
+  facebook: "分享到Facebook"
+  linkedin: "分享到LinkedIn"
+  tags_label: "标签:"
+
+navigation:
+  previous: "上一篇"
+  next: "下一篇"
+
+meta:
+  date: "日期"
+  tags: "标签"
+
+misc:
+  read_more: "阅读更多"
+  recent_articles: "最新文章"
+  highlighted_projects: "重点项目"
+  quick_links: "快捷链接"
+  blog_articles: "博客文章"
+  blog_feed_intro: "如果你有兼容的阅读器，欢迎订阅我的 RSS/JSONFeed，自动获取更新。"
+  blog_feed_intro_part1: "如果你有兼容的阅读器，欢迎订阅我的"
+  rss_feed_text: "RSS源"
+  blog_feed_intro_part2: "获取自动更新。也可以看看"
+  json_feed_text: "JSONFeed"
+  tags_title: "标签"
+  tag_page : "标签页"

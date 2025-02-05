@@ -1,0 +1,26 @@
+<%- partial('_partial/head') %>
+<body>
+
+<%- partial('_partial/header') %>
+
+<div style="max-width: 1200px; margin: 0 auto; padding: 1em;">
+
+  <!-- 页面标题 -->
+  <h1 style="font-size: 24px; font-weight: bold; margin-bottom: 1em;">
+    <%= __('misc.tags_title') %> <!-- 多语言支持 -->
+  </h1>
+
+  <!-- 遍历所有标签 -->
+  <% site.tags.sort('name').each(function(tag){ %>
+    <p style="font-size: 16px; margin: 0 0 1em 0;">
+      <a href="<%= url_for(tag.path) %>" style="text-decoration: underline; color: #cc0052;">
+        <%= tag.name %> (<%= tag.length %>)
+      </a>
+    </p>
+  <% }) %>
+</div>
+
+<%- partial('_partial/footer') %>
+</body>
+</html>
+

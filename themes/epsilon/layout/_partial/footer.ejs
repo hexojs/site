@@ -1,0 +1,42 @@
+<!-- layout/_partial/footer.ejs -->
+<footer class="site-footer">
+  <div class="footer-container">
+    <p class="footer-text">
+      Copyright 2012-2025 Ian.
+      Keep America Great.
+    </p>
+
+    <hr class="footer-divider" />
+
+    <p class="footer-text">
+      Like what you see? Donate on
+      <a href="https://www.patreon.com" target="_blank" class="footer-link">
+        Patreon
+      </a>
+      like
+      <a href="https://example.com" target="_blank" class="footer-link">
+        these awesome people
+      </a>!
+    </p>
+
+    <hr class="footer-divider" />
+
+    <p class="footer-text">
+      Served by <strong>Ian</strong> (<code>/app/iansite</code>)
+      with site version <strong>1.0.1</strong>,
+      source code available
+      <a href="https://github.com/iaaaannn0/hexo-theme-epsilon" target="_blank" class="footer-link">
+        here
+      </a>.
+    </p>
+    <!-- 引入 Highlight.js 的脚本 -->
+<script src="/js/highlight.min.js"></script> <!-- 确保 highlight.min.js 位于 /source/js/ 目录下 -->
+<script>
+  document.addEventListener("DOMContentLoaded", (event) => {
+    document.querySelectorAll('pre code').forEach((block) => {
+      hljs.highlightElement(block);
+    });
+  });
+</script>
+  </div>
+</footer>

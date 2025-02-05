@@ -1,0 +1,154 @@
+
+title: "Me"            
+logo: "https://t3.ftcdn.net/jpg/02/89/21/84/360_F_289218444_XBzAVMbqNpj3xsSG8E0MslwX2R9RGSxd.jpg"   # Logo 图片相对路径
+description: "A Hexo theme with bilingual support"
+
+#  zh-CN
+language: en
+
+
+
+markdown:
+  render:
+    html: true
+    xhtmlOut: false
+    breaks: true
+    linkify: true
+    typographer: true
+    quotes: '“”‘’'
+  plugins:
+    - markdown-it-abbr
+    - markdown-it-footnote
+    - markdown-it-ins
+    - markdown-it-sub
+    - markdown-it-sup
+# 菜单示例（可在下面的多语言 yml 中实现 i18n）
+menu:                  # 导航菜单列表
+  - text: "Blog"
+    link: "/blog"
+  - text: "Contact"
+    link: "/contact"
+  - text: "Tags"
+    link: "/tags"
+  - text: "Category"
+    link: "/category"
+  - text: "Talk"
+    link: "/talk"
+
+headerRight:           # 右侧单独链接
+  text: "Other"
+  link: "/other"
+
+# 自定义配色
+colors:
+  background: "#F8F5D7"
+  text: "#333333"
+  link: "#cc0052"
+  link_hover: "#ff007f"
+
+
+intro:
+  title: "Joe Biden"
+  subtitle: "46th U.S. President"
+  avatar: "https://upload.wikimedia.org/wikipedia/commons/6/68/Joe_Biden_presidential_portrait.jpg"
+  description: >
+    I am Joseph Robinette Biden Jr., born on November 20, 1942. I served as the 46th President of the United States from 2021 to 2025. As a member of the Democratic Party, I was the 47th Vice President under President Barack Obama from 2009 to 2017. Before that, I represented Delaware in the U.S. Senate from 1973 to 2009.
+
+highlightedProjects:
+  - name: "The h Programming Language"
+    url: "https://github.com/example/h-lang"
+    desc: "An esoteric programming language that compiles to WebAssembly"
+  - name: "Olin"
+    url: "https://github.com/example/olin"
+    desc: "WebAssembly on the server"
+  - name: "Printer Facts"
+    url: "https://printer-facts.example.com"
+    desc: "Useful facts about printers"
+  - name: "waifud"
+    url: "https://github.com/example/waifud"
+    desc: "A VM manager for my homelab cluster"
+  - name: "When Then Zen"
+    url: "https://example.com/then-zen"
+    desc: "Meditation instructions in plain English"
+  - name: "x"
+    url: "https://github.com/example/x"
+    desc: "A monorepo of my experiments, toy programs, etc."
+  - name: "Xeact"
+    url: "https://github.com/example/xeact"
+    desc: "My personal JavaScript femtoframework"
+  - name: "Xesite"
+    url: "https://github.com/example/xesite"
+    desc: "The backend and templates for this website"
+  - name: "Xess"
+    url: "https://github.com/example/xess"
+    desc: "My personal CSS framework"
+
+mytags:
+  - "Docker"
+  - "Git"
+  - "Go"
+  - "Rust"
+  - "C"
+  - "DevOps"
+  - "Heroku"
+  - "WebAssembly"
+  - "Lua"
+  - "Mindfulness"
+  - "Nix"
+  - "NixOS"
+  - "HTTP/2"
+  - "Ubuntu"
+  - "Alpine Linux"
+  - "GraphViz"
+  - "JavaScript"
+  - "TypeScript"
+  - "SQLite"
+  - "PostgreSQL"
+  - "Dudeism"
+  - "Technical writing"
+  - "Emacs"
+  - "Continuous Integration"
+  - "Continuous Delivery"
+
+quickLinks:
+  - text: "GitHub"
+    url: "https://github.com/your-profile"
+  - text: "Bluesky"
+    url: "https://example.com/bluesky"
+  - text: "TikTok"
+    url: "https://tiktok.com/@username"
+  - text: "Keybase"
+    url: "https://keybase.io/username"
+  - text: "Patreon"
+    url: "https://patreon.com/..."
+  - text: "Twitch"
+    url: "https://twitch.tv/..."
+  - text: "Fediverse"
+    url: "https://mastodon.social/..."
+  - text: "Telegram"
+    url: "https://t.me/..."
+  - text: "IRC"
+    url: "irc://..."
+  - text: "Signal"
+    url: "https://signal.org/..."
+  - text: "LinkedIn"
+    url: "https://linkedin.com/..."
+
+feed:
+  type: atom
+  path: atom.xml
+  limit: 20
+jsonFeed:
+  path: feed.json
+  limit: 20
+
+css:
+  - css/style.css
+
+# 作者信息（也可放在这里方便 ejs 中读取）
+author: "Ian"
+
+# Disqus 评论系统
+disqus:
+  enable: false
+  shortname: [shortname]
