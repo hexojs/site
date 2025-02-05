@@ -1,7 +1,10 @@
 
-title: "Me"            
-logo: "https://t3.ftcdn.net/jpg/02/89/21/84/360_F_289218444_XBzAVMbqNpj3xsSG8E0MslwX2R9RGSxd.jpg"   # Logo 图片相对路径
-description: "A Hexo theme with bilingual support"
+title: "Epsilon"            
+logo: "https://t3.ftcdn.net/jpg/02/89/21/84/360_F_289218444_XBzAVMbqNpj3xsSG8E0MslwX2R9RGSxd.jpg"
+description: "About
+Epsilon is a clean, minimal, and customizable Hexo theme designed for simplicity and flexibility.
+
+"
 
 #  zh-CN
 language: en
