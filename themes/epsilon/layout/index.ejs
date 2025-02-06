@@ -1,0 +1,129 @@
+<%- partial('_partial/head') %>
+<body style="background-color: #F8F5D7; margin: 0; padding: 0;">
+
+<%- partial('_partial/header') %>
+
+<!-- 主容器，控制居中和边距 -->
+<div style="max-width: 1200px; margin: 0 auto; padding: 1em;">
+
+  <!-- 显示姓名和职称在外层 -->
+  <section style="margin-bottom: 2em;">
+    <% if (theme.intro && theme.intro.title) { %>
+      <h1 style="font-size: 2rem; margin: 0 0 0.3em 0;">
+        <%= theme.intro.title %>
+      </h1>
+    <% } %>
+
+    <% if (theme.intro && theme.intro.subtitle) { %>
+      <h2 style="font-size: 1.2rem; color: #444; margin: 0;">
+        <%= theme.intro.subtitle %>
+      </h2>
+    <% } %>
+  </section>
+
+  <!-- 头像 + 介绍文本的卡片 -->
+  <section style="
+    background-color: #E8D3AB;
+    border-radius: 6px;
+    padding: 1.5em;
+    display: flex;
+    align-items: flex-start;
+    gap: 2em;
+    margin-bottom: 2em;
+  ">
+    <% if (theme.intro && theme.intro.avatar) { %>
+      <!-- 左侧头像 -->
+      <div style="flex-shrink: 0;">
+        <img 
+          src="<%= url_for(theme.intro.avatar) %>"
+          alt="avatar"
+          style="width: 120px; height: auto; border-radius: 4px;"
+        />
+      </div>
+    <% } %>
+
+    <!-- 右侧详情文本 -->
+    <div style="flex: 1;">
+      <% if (theme.intro && theme.intro.description) { %>
+        <p style="line-height: 1.6; margin-top: 0;">
+          <%= theme.intro.description %>
+        </p>
+      <% } %>
+    </div>
+  </section>
+
+  <!-- Recent Articles 列表：日期 + 超链接标题 -->
+  <main style="font-size: 16px; margin-bottom: 2em;">
+    <h2 style="font-size: 24px; font-weight: bold; margin-bottom: 1em;">
+      <%= __('misc.recent_articles') %>
+    </h2>
+
+    <% page.posts.sort('date', -1).each(function(post){ %>
+      <p style="margin: 0 0 0.8em 0;">
+        <%= post.date.format('MM/DD/YYYY') %> -
+        <a href="<%= url_for(post.path) %>" style="text-decoration: underline; color: #333;">
+          <%= post.title %>
+        </a>
+      </p>
+    <% }) %>
+  </main>
+
+  <!-- Highlighted Projects 区块：从 theme.highlightedProjects 读取 -->
+  <% if (theme.highlightedProjects && theme.highlightedProjects.length) { %>
+    <section style="font-size: 16px; margin-bottom: 2em;">
+      <h2 style="font-size: 24px; font-weight: bold; margin-bottom: 1em;">
+        <%= __('misc.highlighted_projects') %>
+      </h2>
+      <% theme.highlightedProjects.forEach(function(project){ %>
+        <p style="margin: 0 0 0.8em 0;">
+          <strong>
+            <a href="<%= project.url %>" style="text-decoration: underline; color: #333;">
+              <%= project.name %>
+            </a>
+          </strong>
+          - <%= project.desc %>
+        </p>
+      <% }) %>
+    </section>
+  <% } %>
+
+  <!-- Quick Links 区块：从 theme.quickLinks 读取 -->
+  <% if (theme.quickLinks && theme.quickLinks.length) { %>
+    <section style="font-size: 16px;">
+      <h2 style="font-size: 24px; font-weight: bold; margin-bottom: 1em;">
+        <%= __('misc.quick_links') %>
+      </h2>
+      <ul style="margin: 0; padding: 0; list-style: none;">
+        <% theme.quickLinks.forEach(function(linkItem){ %>
+          <li style="margin-bottom: 0.8em; list-style: disc; padding-left: 1.5em;">
+            <a href="<%= linkItem.url %>"
+               style="color: #cc0052; text-decoration: underline;">
+              <%= linkItem.text %>
+            </a>
+          </li>
+        <% }) %>
+      </ul>
+    </section>
+  <% } %>
+
+      <!-- Tags... theme.mytags  -->
+  <% if (theme.mytags && theme.mytags.length) { %>
+    <section style="display: flex; flex-wrap: wrap; gap: 1em;">
+      <% theme.mytags.forEach(function(tag){ %>
+        <span style="
+          display: inline-block;
+          background-color: #E8D3AB;
+          padding: 0.3em 0.6em;
+          border-radius: 4px;
+          font-size: 16px;
+        ">
+          <%= tag %>
+        </span>
+      <% }) %>
+    </section>
+  <% } %>
+</div>
+
+<%- partial('_partial/footer') %>
+</body>
+</html>

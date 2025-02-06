@@ -1,0 +1,552 @@
+/* source/css/style.css */
+
+/* ========== Font Import ========== */
+@font-face {
+  font-family: "IosevkaAile";
+  src: url("../fonts/IosevkaAile-Thin.ttc") format("truetype");
+  font-weight: 100; /* Thin */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "IosevkaAile";
+  src: url("../fonts/IosevkaAile-ExtraLight.ttc") format("truetype");
+  font-weight: 200; /* ExtraLight */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "IosevkaAile";
+  src: url("../fonts/IosevkaAile-Light.ttc") format("truetype");
+  font-weight: 300; /* Light */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "IosevkaAile";
+  src: url("../fonts/IosevkaAile-Regular.ttc") format("truetype");
+  font-weight: 400; /* Regular */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "IosevkaAile";
+  src: url("../fonts/IosevkaAile-Medium.ttc") format("truetype");
+  font-weight: 500; /* Medium */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "IosevkaAile";
+  src: url("../fonts/IosevkaAile-SemiBold.ttc") format("truetype");
+  font-weight: 600; /* SemiBold */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "IosevkaAile";
+  src: url("../fonts/IosevkaAile-Bold.ttc") format("truetype");
+  font-weight: 700; /* Bold */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "IosevkaAile";
+  src: url("../fonts/IosevkaAile-ExtraBold.ttc") format("truetype");
+  font-weight: 800; /* ExtraBold */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "IosevkaAile";
+  src: url("../fonts/IosevkaAile-Heavy.ttc") format("truetype");
+  font-weight: 900; /* Heavy */
+  font-style: normal;
+}
+
+/* Podkova 字体 */
+@font-face {
+  font-family: "Podkova";
+  src: url("../fonts/Podkova-Regular.ttf") format("truetype");
+  font-weight: 400; /* Regular */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Podkova";
+  src: url("../fonts/Podkova-Medium.ttf") format("truetype");
+  font-weight: 500; /* Medium */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Podkova";
+  src: url("../fonts/Podkova-SemiBold.ttf") format("truetype");
+  font-weight: 600; /* SemiBold */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Podkova";
+  src: url("../fonts/Podkova-ExtraBold.ttf") format("truetype");
+  font-weight: 800; /* ExtraBold */
+  font-style: normal;
+}
+
+/* ========== Global Styles ========== */
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #F8F5D7; /* 全局背景色 */
+  /* 设置中文字符的备用字体 */
+  font-family: "IosevkaAile", "PingFang SC", "Microsoft Yahei", sans-serif;
+  font-weight: 400; /* Default regular */
+  color: #333;
+  line-height: 1.6;
+}
+
+/* 标题样式 */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Podkova", serif;
+  color: #cc0052; /* 标题颜色 */
+  margin: 1em 0 0.5em 0;
+}
+
+/* 链接样式 */
+a {
+  color: #cc0052;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #ff007f;
+  text-decoration: underline;
+}
+
+/* Post list container */
+.post-list {
+  margin: 2em auto;
+  width: 80%;
+  max-width: 800px;
+}
+
+/* Header container styles */
+.site-header {
+  background-color: #f1eec2;
+  padding: 10px 2em;
+}
+
+.header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 2em; /* Controls spacing between Logo, Title, and Menu */
+}
+
+.site-logo img {
+  height: 48px;
+  width: auto;
+  display: block;
+}
+
+.site-title {
+  font-weight: 600;
+  font-size: 1.4rem;
+}
+
+.site-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 1.5em;
+}
+
+.site-nav a,
+.header-right a {
+  color: #333;
+  text-decoration: underline; /* Always show underline for links */
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+.site-nav a:hover,
+.header-right a:hover {
+  color: #000;
+  text-decoration-color: #000;
+}
+
+/* Intro section styles */
+.home-intro {
+  background-color: #D5C4A1;
+  padding: 2em;
+  margin-bottom: 2em;
+  border-radius: 6px;
+  
+  display: flex;
+  align-items: flex-start;  /* Align image and text to the top */
+  gap: 2em;                 /* Add spacing between image and text */
+}
+
+/* Styles for avatar image */
+.intro-avatar img {
+  width: 120px;
+  height: auto;
+  border-radius: 50%;
+  display: block;
+}
+
+/* Text section styles */
+.intro-text {
+  /* Default is left-aligned; no need to explicitly set text-align */
+}
+
+.intro-title {
+  font-size: 2rem;
+  margin: 0 0 0.5em;
+}
+
+.intro-subtitle {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 1em;
+}
+
+.intro-desc {
+  line-height: 1.6;
+}
+
+/* 博文容器 */
+.post-container {
+  max-width: 800px;
+  margin: 2em auto;
+  padding: 1em;
+  background-color: #F8F5D7; /* 博文页面背景色 */
+  font-family: "IosevkaAile", "PingFang SC", "Microsoft Yahei", sans-serif;
+  font-weight: 400; 
+  line-height: 1.8;
+}
+
+/* 博文元数据 */
+.post-meta {
+  font-size: 14px;
+  color: #666666;
+  margin-bottom: 1em;
+}
+
+/* 博文内容 */
+.post-content {
+  font-family: "IosevkaAile", "PingFang SC", "Microsoft Yahei", sans-serif;
+  font-weight: 400;
+}
+
+/* ========== 代码块样式优化 ========== */
+
+/* 确保所有代码块在 post-content 内部正确换行并不超出容器 */
+.post-content pre {
+  white-space: pre-wrap;        /* 允许换行 */
+  word-wrap: break-word;        /* 断开长单词 */
+  overflow: auto;               /* 超出部分添加滚动条 */
+  max-width: 100%;              /* 代码块最大宽度不超过容器 */
+  box-sizing: border-box;       /* 包括padding和border在内 */
+  background-color: #1E2938;    /* 代码块背景色 */
+  padding: 2em;                /* 内边距 */
+  padding-left: 1em !important; /* 为左侧添加空隙，并强制应用 */
+  border-radius: 4px;            /* 圆角 */
+  font-family: "IosevkaAile", "PingFang SC", "Microsoft Yahei", sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #ffffff; /* 设置代码文本颜色为白色 */
+}
+
+/* 确保 <code> 标签继承字体 */
+.post-content code {
+  font-family: "IosevkaAile", "PingFang SC", "Microsoft Yahei", sans-serif;
+}
+
+/* 如果使用 <figure class="highlight"> 包裹代码块 */
+.post-content figure.highlight {
+  max-width: 100%;
+  overflow: auto;
+  margin: 1.5em 0;
+  background-color: #1E2938;
+  border-radius: 4px;
+}
+
+/* 调整 table 在 figure.highlight 内部的样式 */
+.post-content figure.highlight table {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+
+/* 调整代码区域的样式 */
+.post-content figure.highlight .code pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  margin: 0;
+  background-color: transparent;
+  padding: 0;
+  border: none;
+}
+
+/* 隐藏行号（如果不需要） */
+.post-content figure.highlight .gutter {
+  display: none;
+}
+
+/* 代码高亮样式（基于 highlight.js 默认样式） */
+.hljs {
+  background: transparent;
+  padding: 0;
+  border-radius: 0;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #999988;
+  font-style: italic;
+}
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-subst {
+  color: #cc0052;
+  font-weight: bold;
+}
+
+.hljs-literal,
+.hljs-number,
+.hljs-tag .hljs-attr {
+  color: #008080;
+}
+
+.hljs-string,
+.hljs-doctag {
+  color: #d14;
+}
+
+.hljs-title,
+.hljs-section,
+.hljs-selector-id {
+  color: #cc0052;
+  font-weight: bold;
+}
+
+.hljs-subst {
+  font-weight: normal;
+}
+
+.hljs-type,
+.hljs-class .hljs-title {
+  color: #458;
+  font-weight: bold;
+}
+
+.hljs-tag,
+.hljs-name,
+.hljs-attribute {
+  color: #000080;
+  font-weight: normal;
+}
+
+.hljs-regexp,
+.hljs-link {
+  color: #009926;
+}
+
+.hljs-symbol,
+.hljs-bullet {
+  color: #990073;
+}
+
+.hljs-built_in,
+.hljs-builtin-name {
+  color: #0086b3;
+}
+
+.hljs-meta {
+  color: #999;
+  font-weight: bold;
+}
+
+.hljs-deletion {
+  background: #fdd;
+}
+
+.hljs-addition {
+  background: #dfd;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+/* 响应式图片 */
+.post-content img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 1em 0;
+}
+
+/* 文章导航 */
+.post-navigation {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2em;
+}
+
+.post-navigation a {
+  color: #cc0052;
+}
+
+/* 评论区 */
+#comments {
+  margin-top: 3em;
+}
+
+/* 分享按钮 */
+.share-buttons {
+  margin-top: 2em;
+  display: flex;
+  gap: 1em;
+}
+
+.share-buttons a {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5em 1em;
+  background-color: #cc0052;
+  color: #fff;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.share-buttons a:hover {
+  background-color: #ff007f;
+}
+
+/* 分享按钮图标 */
+.share-buttons a i {
+  margin-right: 0.5em;
+}
+
+/* 标签样式 */
+.post-tags {
+  margin-top: 1em;
+}
+
+.post-tags a {
+  margin-right: 0.5em;
+  color: #cc0052;
+  text-decoration: underline;
+}
+
+/* Footer 最外层 */
+.site-footer {
+  margin-top: 2em;
+}
+
+/* Footer 容器 */
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #F2E4BB;
+  border-radius: 6px;
+  padding: 1.5em;
+  text-align: center;
+}
+
+/* Footer 文本 */
+.footer-text {
+  margin: 0;
+  font-size: 14px;
+  color: #333;
+}
+
+/* Footer 分割线 */
+.footer-divider {
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+}
+
+/* Footer 链接 */
+.footer-link {
+  color: #cc0052;
+  text-decoration: underline;
+}
+
+.footer-link:hover {
+  color: #ff007f;
+}
+
+/* 响应式调整 */
+@media (max-width: 600px) {
+  .post-container {
+    padding: 0.5em;
+    width: 95%;
+  }
+
+  .share-buttons {
+    flex-direction: column;
+    gap: 0.5em;
+  }
+
+  .share-buttons a {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .footer-container {
+    padding: 1em;
+  }
+}
+
+/* 此处样式只作用于 .post-content 内直接生成的表格，避免影响代码框 */
+.post-content > table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1em 0;
+  background: transparent;
+}
+
+.post-content > table th,
+.post-content > table td {
+  border: 1px solid #000; /* 黑色边框 */
+  padding: 0.5em;
+  text-align: left;
+}
+
+.post-content > table th {
+  background-color: transparent;
+  font-weight: bold;
+}
+
+/* 确保行内代码框（单个反引号 `code`）的样式 */
+.post-content p code,
+.post-content li code,
+.post-content span code {
+  background-color: #f4f4f4; /* 设置背景色 */
+  padding: 2px 4px; /* 适当的内边距 */
+  border-radius: 4px; /* 轻微圆角 */
+  font-size: 90%; /* 让代码字体稍微缩小 */
+  font-family: "IosevkaAile", "Courier New", monospace;
+  color: #d63384; /* 代码字体颜色 */
+  word-wrap: break-word; /* 允许换行 */
+}

@@ -1,0 +1,42 @@
+<%- partial('_partial/head') %>
+<body>
+
+<%- partial('_partial/header') %>
+
+<div style="max-width: 1200px; margin: 0 auto; padding: 1em;">
+
+  <!-- 多语言标题：Blog Articles -->
+  <h1 style="font-size: 24px; font-weight: bold; margin-bottom: 1em;">
+    <%= __('misc.blog_articles') %>
+  </h1>
+
+  <!-- 提示语，内含 RSS feed & JSONFeed 超链接 -->
+  <p style="font-size: 16px; margin-bottom: 2em;">
+    <!-- 前半句 (如果需要多语言，则在语言文件中拆分或用多个字段) -->
+    <%= __('misc.blog_feed_intro_part1') %> 
+    <a href="<%= url_for('/atom.xml') %>"
+       style="text-decoration: underline; color: #cc0052;">
+      <%= __('misc.rss_feed_text') %>
+    </a>
+    <%= __('misc.blog_feed_intro_part2') %>
+    <a href="<%= url_for('/feed.json') %>"
+       style="text-decoration: underline; color: #cc0052;">
+      <%= __('misc.json_feed_text') %>
+    </a>.
+  </p>
+
+  <!-- 列出所有文章：日期 + 标题链接 -->
+  <% site.posts.sort('date', -1).each(function(post){ %>
+    <p style="font-size: 16px; margin: 0 0 1em 0;">
+      <%= post.date.format('MM/DD/YYYY') %> -
+      <a href="<%= url_for(post.path) %>"
+         style="text-decoration: underline; color: #cc0052;">
+        <%= post.title %>
+      </a>
+    </p>
+  <% }) %>
+</div>
+
+<%- partial('_partial/footer') %>
+</body>
+</html>

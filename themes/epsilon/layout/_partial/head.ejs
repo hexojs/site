@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="<%= page.lang || config.language || 'en' %>">
+<head>
+  <meta charset="utf-8">
+  <title><%= page.title ? (page.title + ' | ' + config.title) : config.title %></title>
+  <meta name="description" content="<%= config.description %>">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- 引入全局样式 -->
+  <link rel="stylesheet" href="/css/style.css">
+
+  <!-- 引入 Highlight.js 的样式 -->
+  <link rel="stylesheet" href="/css/arta.min.css">
+
+  <!-- 引入 Font Awesome 用于分享按钮图标 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- 如果你有其他 CSS 文件，可以继续添加 -->
+  <% /* 例如:
+  <link rel="stylesheet" href="/css/another-style.css">
+  */ %>
+</head>
+<body>

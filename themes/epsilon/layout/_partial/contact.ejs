@@ -1,0 +1,23 @@
+<%- partial('_partial/head') %>
+<body>
+
+<%- partial('_partial/header') %>
+
+<div class="contact-container" style="max-width: 800px; margin: 0 auto; padding: 2em;">
+  
+  <!-- 页面标题 -->
+  <h1 style="font-size: 28px; font-weight: bold; margin-bottom: 1em; text-align: center;">
+    <%= page.title %>
+  </h1>
+
+  <!-- 渲染 Markdown 内容 -->
+  <div class="contact-content" style="font-size: 16px; line-height: 1.6;">
+    <%- page.content %>
+  </div>
+
+</div>
+
+<%- partial('_partial/footer') %>
+
+</body>
+</html>

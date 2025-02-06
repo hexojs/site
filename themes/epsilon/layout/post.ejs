@@ -1,0 +1,76 @@
+<!-- layout/post.ejs -->
+<%- partial('_partial/head') %>
+<body class="post-page">
+    <%- partial('_partial/header') %>
+
+    <div class="post-container">
+        <!-- 博文标题 -->
+        <h1><%= page.title %></h1>
+
+        <!-- 博文元数据（日期、标签） -->
+        <div class="post-meta">
+            <span><%= page.date.format('MMMM DD, YYYY') %></span>
+            <% if (page.tags && page.tags.length) { %>
+                | <span><%= __('meta.tags') %>:
+                    <% page.tags.forEach(function(tag, index) { %>
+                        <a href="<%= url_for(tag.path) %>"><%= tag.name %></a><%= index < page.tags.length - 1 ? ', ' : '' %>
+                    <% }) %>
+                </span>
+            <% } %>
+        </div>
+
+        <!-- 博文内容 -->
+        <div class="post-content">
+            <%- page.content %>
+        </div>
+
+        <!-- 分享按钮 -->
+        <div class="share-buttons">
+            <a href="https://twitter.com/intent/tweet?url=<%= url_for(page.path, true) %>&text=<%= encodeURIComponent(page.title) %>" target="_blank" aria-label="<%= __('share.twitter') %>">
+                <i class="fab fa-twitter" aria-hidden="true"></i> <%= __('share.twitter') %>
+            </a>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=<%= url_for(page.path, true) %>" target="_blank" aria-label="<%= __('share.facebook') %>">
+                <i class="fab fa-facebook-f" aria-hidden="true"></i> <%= __('share.facebook') %>
+            </a>
+            <a href="https://www.linkedin.com/shareArticle?mini=true&url=<%= url_for(page.path, true) %>&title=<%= encodeURIComponent(page.title) %>" target="_blank" aria-label="<%= __('share.linkedin') %>">
+                <i class="fab fa-linkedin-in" aria-hidden="true"></i> <%= __('share.linkedin') %>
+            </a>
+            <!-- 根据需要添加更多分享按钮 -->
+        </div>
+
+        <!-- 文章标签 -->
+        <% if (page.tags && page.tags.length) { %>
+            <div class="post-tags">
+                <strong><%= __('share.tags_label') %></strong>
+                <% page.tags.forEach(function(tag, index) { %>
+                    <a href="<%= url_for(tag.path) %>"><%= tag.name %></a>
+                <% }) %>
+            </div>
+        <% } %>
+
+        <!-- 文章导航（上一篇/下一篇） -->
+        <div class="post-navigation">
+            <% if (page.prev) { %>
+                <a href="<%= url_for(page.prev.path) %>">&#8592; <%= __('navigation.previous') %>: <%= page.prev.title %></a>
+            <% } else { %>
+                <span></span>
+            <% } %>
+
+            <% if (page.next) { %>
+                <a href="<%= url_for(page.next.path) %>"><%= __('navigation.next') %>: <%= page.next.title %> &#8594;</a>
+            <% } else { %>
+                <span></span>
+            <% } %>
+        </div>
+        
+        <!-- 评论区 -->
+        <% if (theme.disqus && theme.disqus.shortname && page.layout === 'post') { %>
+            <div id="comments">
+                <%- partial('_partial/disqus') %>
+            </div>
+        <% } %>
+        
+
+    <%- partial('_partial/footer') %>
+</body>
+</html>

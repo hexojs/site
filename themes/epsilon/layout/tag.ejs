@@ -1,0 +1,31 @@
+<%- partial('_partial/head') %>
+<body>
+
+<%- partial('_partial/header') %>
+
+<div style="max-width: 1200px; margin: 0 auto; padding: 1em;">
+
+  <!-- 多语言支持的标签页标题 -->
+  <h1 style="font-size: 24px; font-weight: bold; margin-bottom: 1em;">
+    <%= __('misc.tag_page') %>: <%= page.tag %>
+  </h1>
+
+  <!-- 该标签下的所有文章 -->
+  <% if (site.tags.findOne({name: page.tag})) { %>
+    <% site.tags.findOne({name: page.tag}).posts.sort('date', -1).each(function(post){ %>
+      <p style="font-size: 16px; margin: 0 0 1em 0;">
+        <%= post.date.format('MM/DD/YYYY') %> -
+        <a href="<%= url_for(post.path) %>" style="text-decoration: underline; color: #cc0052;">
+          <%= post.title %>
+        </a>
+      </p>
+    <% }) %>
+  <% } else { %>
+    <p style="font-size: 16px; color: #666;">No posts found for this tag.</p>
+  <% } %>
+</div>
+
+<%- partial('_partial/footer') %>
+</body>
+</html>
+

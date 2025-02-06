@@ -1,0 +1,68 @@
+<header style="
+  margin-bottom: 2em; 
+  background-color: #F8F5D7; /* 使 Header 的外层与正文背景一致，便于看见盒子区块效果 */
+">
+  <!-- 这是真正的 Header 盒子，宽度居中，固定高80px，背景、圆角等 -->
+  <div style="
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #F2E4BB;
+    border-radius: 6px;
+    height: 80px;               /* 固定高度 */
+    display: flex;
+    align-items: center;        /* 垂直居中 */
+    justify-content: flex-start;/* 左对齐主内容, 右侧若需菜单也可 space-between */
+    gap: 2em;
+    padding: 0 1em;
+  ">
+    <!-- 左侧：Logo + 标题 + 菜单 -->
+    <div style="display: flex; align-items: center; gap: 2em;">
+      <% if (theme.logo) { %>
+        <a class="site-logo" href="<%= url_for('/') %>">
+          <!-- 控制Logo高，避免超过80px -->
+          <img 
+            src="<%= url_for(theme.logo) %>" 
+            alt="Logo" 
+            style="height: 48px; width: auto;" 
+          />
+        </a>
+      <% } %>
+
+      <!-- 使标题可点击，链接到首页 -->
+      <a href="<%= url_for('/') %>" style="font-size: 1.5rem; font-weight: bold; text-decoration: none; color: inherit;">
+        <%= theme.title || config.title %>
+      </a>
+
+      <nav>
+        <ul style="
+          list-style: none; 
+          margin: 0; 
+          padding: 0; 
+          display: flex; 
+          gap: 1.5em;
+        ">
+          <% if (theme.menu) { %>
+            <% theme.menu.forEach(item => { %>
+              <li>
+                <a href="<%= url_for(item.link) %>"
+                  style="text-decoration: underline; color: #333;">
+                  <%= item.text %>
+                </a>
+              </li>
+            <% }) %>
+          <% } %>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- 右侧：可选链接（如Signalboost），若需在最右则可用 margin-left: auto -->
+    <div style="margin-left: auto;">
+      <% if (theme.headerRight) { %>
+        <a href="<%= url_for(theme.headerRight.link) %>"
+          style="text-decoration: underline; color: #333; font-size: 1rem;">
+          <%= theme.headerRight.text %>
+        </a>
+      <% } %>
+    </div>
+  </div>
+</header>
