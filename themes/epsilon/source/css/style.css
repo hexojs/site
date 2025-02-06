@@ -258,12 +258,14 @@ a:hover {
   overflow: auto;               /* 超出部分添加滚动条 */
   max-width: 100%;              /* 代码块最大宽度不超过容器 */
   box-sizing: border-box;       /* 包括padding和border在内 */
-  background-color: #f0f0f0;    /* 代码块背景色 */
-  padding: 0.5em;                /* 内边距 */
+  background-color: #1E2938;    /* 代码块背景色 */
+  padding: 2em;                /* 内边距 */
+  padding-left: 1em !important; /* 为左侧添加空隙，并强制应用 */
   border-radius: 4px;            /* 圆角 */
-  font-family: "IosevkaAile", "PingFang SC", "Microsoft Yahei", sans-serif; /* 字体 */
-  font-size: 14px;               /* 字体大小 */
+  font-family: "IosevkaAile", "PingFang SC", "Microsoft Yahei", sans-serif;
+  font-size: 14px;
   line-height: 1.5;
+  color: #ffffff; /* 设置代码文本颜色为白色 */
 }
 
 /* 确保 <code> 标签继承字体 */
@@ -271,42 +273,42 @@ a:hover {
   font-family: "IosevkaAile", "PingFang SC", "Microsoft Yahei", sans-serif;
 }
 
-/* 如果使用 <figure class="highlight java"> 包裹代码块 */
+/* 如果使用 <figure class="highlight"> 包裹代码块 */
 .post-content figure.highlight {
   max-width: 100%;
   overflow: auto;
-  margin: 1.5em 0;               /* 增加上下外边距 */
-  background-color: #f0f0f0;     /* 背景色 */
-  border-radius: 4px;            /* 圆角 */
+  margin: 1.5em 0;
+  background-color: #1E2938;
+  border-radius: 4px;
 }
 
 /* 调整 table 在 figure.highlight 内部的样式 */
 .post-content figure.highlight table {
   width: 100%;
-  table-layout: fixed;           /* 固定表格布局 */
-  border-collapse: collapse;     /* 合并边框 */
+  table-layout: fixed;
+  border-collapse: collapse;
 }
 
 /* 调整代码区域的样式 */
 .post-content figure.highlight .code pre {
   white-space: pre-wrap;
   word-wrap: break-word;
-  margin: 0;                      /* 移除默认外边距 */
-  background-color: transparent;  /* 继承 figure 的背景色 */
-  padding: 0;                     /* 移除内边距 */
-  border: none;                   /* 移除边框 */
+  margin: 0;
+  background-color: transparent;
+  padding: 0;
+  border: none;
 }
 
-/* 可选：隐藏行号（如果不需要） */
+/* 隐藏行号（如果不需要） */
 .post-content figure.highlight .gutter {
   display: none;
 }
 
 /* 代码高亮样式（基于 highlight.js 默认样式） */
 .hljs {
-  background: transparent; /* Set to transparent since figure.highlight has background */
-  padding: 0; /* Remove padding from hljs, since it's handled by pre */
-  border-radius: 0; /* Remove border-radius */
+  background: transparent;
+  padding: 0;
+  border-radius: 0;
 }
 
 .hljs-comment,
@@ -490,7 +492,6 @@ a:hover {
   text-decoration: underline;
 }
 
-/* 可选：调整链接在 Footer 中的 hover 效果 */
 .footer-link:hover {
   color: #ff007f;
 }
@@ -515,4 +516,37 @@ a:hover {
   .footer-container {
     padding: 1em;
   }
+}
+
+/* 此处样式只作用于 .post-content 内直接生成的表格，避免影响代码框 */
+.post-content > table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1em 0;
+  background: transparent;
+}
+
+.post-content > table th,
+.post-content > table td {
+  border: 1px solid #000; /* 黑色边框 */
+  padding: 0.5em;
+  text-align: left;
+}
+
+.post-content > table th {
+  background-color: transparent;
+  font-weight: bold;
+}
+
+/* 确保行内代码框（单个反引号 `code`）的样式 */
+.post-content p code,
+.post-content li code,
+.post-content span code {
+  background-color: #f4f4f4; /* 设置背景色 */
+  padding: 2px 4px; /* 适当的内边距 */
+  border-radius: 4px; /* 轻微圆角 */
+  font-size: 90%; /* 让代码字体稍微缩小 */
+  font-family: "IosevkaAile", "Courier New", monospace;
+  color: #d63384; /* 代码字体颜色 */
+  word-wrap: break-word; /* 允许换行 */
 }

@@ -1,7 +1,11 @@
 # Hexo Theme: Epsilon
 
+![license](https://img.shields.io/github/license/iaaaannn0/hexo-theme-epsilon)
+![language count](https://img.shields.io/github/languages/count/iaaaannn0/hexo-theme-epsilon)
+![repo size](https://img.shields.io/github/repo-size/iaaaannn0/hexo-theme-epsilon)
+
 Epsilon is a minimal, clean, and highly customizable theme for [Hexo](https://hexo.io/).  
-This theme is my first attempt at developing a Hexo theme, so please forgive any shortcomings! 😊  
+This theme is my first attempt at developing a Hexo theme, so please forgive any shortcomings! 😊
 
 ## 📖 Features
 
@@ -17,7 +21,7 @@ This theme is my first attempt at developing a Hexo theme, so please forgive any
 ```
 npm install --save hexo hexo-cli hexo-server hexo-renderer-ejs hexo-renderer-markdown-it hexo-renderer-stylus hexo-generator-index hexo-generator-archive hexo-generator-category hexo-generator-tag hexo-generator-feed hexo-generator-json-feed hexo-pagination hexo-browsersync hexo-clean-css hexo-generator-sitemap
 
---- 
+---
 
 mkdir source/blog
 touch source/blog/index.md
@@ -38,21 +42,22 @@ layout: blog
 Epsilon includes the fonts IosevkaAile and Podkova. You can add more fonts by updating the source/fonts/ folder and modifying source/css/style.css.
 
 ## 🖼 Screenshots
+
 <img width="1354" alt="image" src="https://github.com/user-attachments/assets/5537eabf-622a-4925-affc-6b00a70341bc" />
 
 <img width="1306" alt="image" src="https://github.com/user-attachments/assets/dba6912e-8d41-40c3-8db8-3d7778a4abe3" />
 
 <img width="976" alt="image" src="https://github.com/user-attachments/assets/2098a2c3-6d17-4166-909a-0a54ed058e6d" />
 
-<img width="937" alt="image" src="https://github.com/user-attachments/assets/96cd2023-ca13-4733-9a70-3b525c764658" />
-
 ## 🚀 Roadmap
-	•	Expand plugin integrations
+
+    •	Expand plugin integrations
 
 ## 🙏 Acknowledgements
-	•	Hexo: A fast, simple & powerful blog framework.
-	•	highlight.js: For beautiful syntax highlighting.
-	•	Open Source Fonts: IosevkaAile and Podkova.
+
+    •	Hexo: A fast, simple & powerful blog framework.
+    •	highlight.js: For beautiful syntax highlighting.
+    •	Open Source Fonts: IosevkaAile and Podkova.
 
 ## ❤️ About Me
 
@@ -61,7 +66,5 @@ Your feedback and suggestions are always welcome! Please report issues or contri
 
 This theme is modeled after [Xe Iaso](https://xeiaso.net/)).
 
-
 Thank you for your interest in Epsilon! If you have any questions, feel free to reach out or open an issue.  
-Happy blogging! 
-
+Happy blogging!

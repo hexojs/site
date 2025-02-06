@@ -62,26 +62,14 @@
                 <span></span>
             <% } %>
         </div>
-        <div class="post-navigation">
-            <% if (page.prev) { %>
-                <a href="<%= url_for(page.prev.path) %>">&#8592; <%= __('navigation.previous') %>: <%= page.prev.title %></a>
-            <% } else { %>
-                <span></span>
-            <% } %>
-        
-            <% if (page.next) { %>
-                <a href="<%= url_for(page.next.path) %>"><%= __('navigation.next') %>: <%= page.next.title %> &#8594;</a>
-            <% } else { %>
-                <span></span>
-            <% } %>
-        </div>
         
         <!-- 评论区 -->
-        <% if (theme.disqus && theme.disqus.shortname) { %>
+        <% if (theme.disqus && theme.disqus.shortname && page.layout === 'post') { %>
             <div id="comments">
                 <%- partial('_partial/disqus') %>
             </div>
         <% } %>
+        
 
     <%- partial('_partial/footer') %>
 </body>
