@@ -22,12 +22,12 @@ Lodash has been removed from global variables since Hexo 5.0.0. [You-Dont-Need-L
 
 ### Site Variables
 
-| 變數                | 描述   | Type                      |
-| ----------------- | ---- | ------------------------- |
-| `site.posts`      | 所有文章 | `array` of `post` objects |
-| `site.pages`      | 所有分頁 | `array` of `page` objects |
-| `site.categories` | 所有分類 | `array` of ???            |
-| `site.tags`       | 所有標籤 | `array` of ???            |
+| 變數                | 描述   | Type                   |
+| ----------------- | ---- | ---------------------- |
+| `site.posts`      | 所有文章 | [Query][queryo] object |
+| `site.pages`      | 所有分頁 | [Query][queryo] object |
+| `site.categories` | 所有分類 | [Query][queryo] object |
+| `site.tags`       | 所有標籤 | [Query][queryo] object |
 
 ### 頁面變數
 
@@ -95,6 +95,8 @@ Lodash has been removed from global variables since Hexo 5.0.0. [You-Dont-Need-L
 | Variable   | 文章摘要 | Type     |
 | ---------- | ---- | -------- |
 | `page.tag` | 標籤名稱 | `string` |
+
+[queryo]: https://hexojs.github.io/warehouse/classes/query.default.html
 
 [Moment.js]: http://momentjs.com/
 [Site Variables]: #Site-Variables
