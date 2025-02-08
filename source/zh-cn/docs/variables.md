@@ -26,8 +26,8 @@ title: 变量
 | ----------------- | ---- | --------------------------- |
 | `site.posts`      | 所有文章 | `array`，包含了站点全部的文章 `object` |
 | `site.pages`      | 所有分页 | `array`，包含了站点全部的分页 `object` |
-| `site.categories` | 所有分类 | `array` of ???              |
-| `site.tags`       | 所有标签 | `array` of ???              |
+| `site.categories` | 所有分类 | [Query][queryo] object      |
+| `site.tags`       | 所有标签 | [Query][queryo] object      |
 
 ### 页面变量
 
@@ -95,5 +95,7 @@ title: 变量
 | 变量         | 描述   | 类型       |
 | ---------- | ---- | -------- |
 | `page.tag` | 标签名称 | `string` |
+
+[queryo]: https://hexojs.github.io/warehouse/classes/query.default.html
 
 [Moment.js]: http://momentjs.com/
