@@ -22,12 +22,12 @@ Lodash has been removed from global variables since Hexo 5.0.0. [You-Dont-Need-L
 
 ### 사이트 변수
 
-| 변수                | 설명      | Type                      |
-| ----------------- | ------- | ------------------------- |
-| `site.posts`      | 모든 포스트  | `array` of `post` objects |
-| `site.pages`      | 모든 페이지  | `array` of `page` objects |
-| `site.categories` | 모든 카테고리 | `array` of ???            |
-| `site.tags`       | 모든 태그   | `array` of ???            |
+| 변수                | 설명      | Type                   |
+| ----------------- | ------- | ---------------------- |
+| `site.posts`      | 모든 포스트  | [Query][queryo] object |
+| `site.pages`      | 모든 페이지  | [Query][queryo] object |
+| `site.categories` | 모든 카테고리 | [Query][queryo] object |
+| `site.tags`       | 모든 태그   | [Query][queryo] object |
 
 ### 페이지 변수
 
@@ -95,6 +95,8 @@ Lodash has been removed from global variables since Hexo 5.0.0. [You-Dont-Need-L
 | 변수         | 설명  | Type     |
 | ---------- | --- | -------- |
 | `page.tag` | 태그명 | `string` |
+
+[queryo]: https://hexojs.github.io/warehouse/classes/query.default.html
 
 [Moment.js]: http://momentjs.com/
 [Site Variables]: #Site-Variables
