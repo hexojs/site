@@ -103,9 +103,9 @@ $ hexo render <file1> [file2] ...
 
 渲染文件。
 
-| 选项               | 描述                 |
-| ---------------- | ------------------ |
-| `-o`, `--output` | Output destination |
+| 选项               | 描述     |
+| ---------------- | ------ |
+| `-o`, `--output` | 输出目标地址 |
 
 ## migrate
 
@@ -171,7 +171,7 @@ $ hexo --debug
 $ hexo --silent
 ```
 
-Silences output to the terminal.
+静默输出到终端.
 
 ### 自定义配置文件的路径
 
