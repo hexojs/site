@@ -22,12 +22,12 @@ LodashはHexo 5.0.0でグローバル変数から削除されました。 [You-D
 
 ### サイト変数
 
-| 変数                | 説明      | タイプ              |
-| ----------------- | ------- | ---------------- |
-| `site.posts`      | 全ての記事   | `post` オブジェクトの配列 |
-| `site.pages`      | 全てのページ  | `page` オブジェクトの配列 |
-| `site.categories` | 全てのカテゴリ | `array` of ???   |
-| `site.tags`       | 全てのタグ   | `array` of ???   |
+| 変数                | 説明      | タイプ                    |
+| ----------------- | ------- | ---------------------- |
+| `site.posts`      | 全ての記事   | `post` オブジェクトの配列       |
+| `site.pages`      | 全てのページ  | `page` オブジェクトの配列       |
+| `site.categories` | 全てのカテゴリ | [Query][queryo] object |
+| `site.tags`       | 全てのタグ   | [Query][queryo] object |
 
 ### ページ変数
 
@@ -95,6 +95,8 @@ LodashはHexo 5.0.0でグローバル変数から削除されました。 [You-D
 | 変数         | 説明  | タイプ      |
 | ---------- | --- | -------- |
 | `page.tag` | タグ名 | `string` |
+
+[queryo]: https://hexojs.github.io/warehouse/classes/query.default.html
 
 [Moment.js]: http://momentjs.com/
 [サイト変数]: #サイト変数
