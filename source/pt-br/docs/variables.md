@@ -26,8 +26,8 @@ Lodash has been removed from global variables since Hexo 5.0.0. [You-Dont-Need-L
 | ----------------- | ------------------- | ------------------------- |
 | `site.posts`      | Todos as postagens  | `array` de objetos `post` |
 | `site.pages`      | Todas as páginas    | `array` de objetos `page` |
-| `site.categories` | Todas as categorias | `array` of ???            |
-| `site.tags`       | Todas as tags       | `array` of ???            |
+| `site.categories` | Todas as categorias | [Query][queryo] object    |
+| `site.tags`       | Todas as tags       | [Query][queryo] object    |
 
 ### Variáveis da Página
 
@@ -96,6 +96,8 @@ Lodash has been removed from global variables since Hexo 5.0.0. [You-Dont-Need-L
 | ---------- | ----------- | -------- |
 | `page.tag` | Nome da tag | `string` |
 
-[Moment.js]: http://momentjs.com/
+[queryo]: https://hexojs.github.io/warehouse/classes/query.default.html
 [Variáveis do Site]: #Variaveis-do-Site
+
+[Moment.js]: http://momentjs.com/
 [Variáveis da Página]: #Variaveis-da-Pagina
