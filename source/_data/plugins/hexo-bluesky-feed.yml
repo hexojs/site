@@ -1,0 +1,5 @@
+description: A Hexo plugin that automatically publishes your newest blog post to Bluesky whenever you generate your site with the --bluesky flag—giving you full control over when updates get posted.
+link: https://github.com/antonbelev/hexo-bluesky-feed
+tags:
+  - bluesky
+  - feed
