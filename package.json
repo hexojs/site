@@ -32,7 +32,7 @@
   },
   "devDependencies": {
     "eslint": "^8.0.1",
-    "eslint-config-hexo": "^5.0.0",
+    "eslint-config-hexo": "^6.0.0",
     "husky": "^9.0.6",
     "imagemin-lint-staged": "^0.5.1",
     "lint-staged": "^15.2.0",
