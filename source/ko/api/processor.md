@@ -1,13 +1,14 @@
 ---
 title: Processor
 ---
+
 `source` 폴더 내의 소스 파일들을 처리할 때 프로세서를 사용합니다.
 
 ## 개요
 
-``` js
-hexo.extend.processor.register(rule, function(file){
- // ...
+```js
+hexo.extend.processor.register(rule, function (file) {
+  // ...
 });
 ```
 

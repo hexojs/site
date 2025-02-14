@@ -1,15 +1,18 @@
 ---
 title: タグプラグイン
 ---
-タグプラグインは記事に付与するタグとは異なります。これらはOctopressから移植されました。特定のコンテンツを記事に素早く追加するのに便利です。
 
-記事は任意のフォーマットで書くことができますが、何れの場合もタグプラグインは利用可能です。構文には変わりはありません。
+タグプラグインは記事に付与するタグとは異なります。 これらはOctopressから移植されました。 特定のコンテンツを記事に素早く追加するのに便利です。
 
-_タグプラグインをMarkdownの構文でラップしてはいけません。例えば `[]({% post_path lorem-ipsum %})` はサポートされていません。_
+記事は任意のフォーマットで書くことができますが、何れの場合もタグプラグインは利用可能です。 構文には変わりはありません。
 
-## 引用
+{% youtube I07XMi7MHd4 %}
 
-記事に引用を追加します。オプションで著者、出典、タイトル情報を含めることができます。
+_タグプラグインをMarkdownの構文でラップしてはいけません。 例えば `[]({% post_path lorem-ipsum %})` はサポートされていません。_
+
+## 記事の抜粋
+
+記事に引用を追加します。 オプションで著者、出典、タイトル情報を含めることができます。
 
 **エイリアス:** quote
 
@@ -21,7 +24,7 @@ content
 
 ### 例
 
-**引数なし。プレーンなブロック引用。**
+**引数なし。 プレーンなブロック引用。**
 
 ```
 {% blockquote %}
@@ -81,16 +84,16 @@ code snippet
 {% endcodeblock %}
 ```
 
-追加オプションは `option:value` 形式で指定します。例: `line_number:false first_line:5`。
+追加オプションは `option:value` 形式で指定します。 例: `line_number:false first_line:5`。
 
-追加オプション | 説明 | デフォルト
---- | --- | ---
-`line_number` | 行番号を表示 | `true`
-`line_threshold` | コードブロックの行数がこの閾値を超える場合にのみ行番号を表示。 | `0` |
-`highlight` | コードのハイライトを有効にする | `true`
-`first_line` | 最初の行番号を指定 | `1`
-`mark` | コンマ区切りで指定された行をハイライト。範囲指定にはハイフンを使用<br>例: `mark:1,4-7,10` は行1、4から7、10をマークします。 |
-`wrap` | コードブロックを[`<table>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table)でラップ | `true`
+| 追加オプション          | 説明                                                                                             | デフォルト  |
+| ---------------- | ---------------------------------------------------------------------------------------------- | ------ |
+| `line_number`    | 行番号を表示                                                                                         | `true` |
+| `line_threshold` | コードブロックの行数がこの閾値を超える場合にのみ行番号を表示。                                                                | `0`    |
+| `highlight`      | コードのハイライトを有効にする                                                                                | `true` |
+| `first_line`     | 最初の行番号を指定                                                                                      | `1`    |
+| `mark`           | コンマ区切りで指定された行をハイライト。 範囲指定にはハイフンを使用<br>例: `mark:1,4-7,10` は行1、4から7、10をマークします。             |        |
+| `wrap`           | コードブロックを[`<table>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table)でラップ | `true` |
 
 ### 例
 
@@ -140,8 +143,7 @@ _.compact([0, 1, false, 2, '', 3]);
 ```
 
 {% codeblock _.compact http://underscorejs.org/#compact Underscore.js %}
-_.compact([0, 1, false, 2, '', 3]);
-=> [1, 2, 3]
+\_.compact([0, 1, false, 2, '', 3]); => [1, 2, 3]
 {% endcodeblock %}
 
 ## バックティックコードブロック
@@ -149,9 +151,9 @@ _.compact([0, 1, false, 2, '', 3]);
 これはコードブロックの使用と同じですが、ブロックを区切るために3つのバックティックを使用します。
 
 {% raw %}
-&#96`` [language] [title] [url] [link text]
+&#96`[language] [title] [url] [link text]
 code snippet
-&#96;``
+&#96;`
 {% endraw %}
 
 ## プルクオート
@@ -167,7 +169,7 @@ content
 ## jsFiddle (v7.0.0で削除されました)
 
 {% note warn %}
-このタグはHexo 7.0.0で削除されました。既存の記事との後方互換性を提供するために、プラグイン[hexo-tag-embed](https://github.com/hexojs/hexo-tag-embed)を提供しています。
+このタグはHexo 7.0.0で削除されました。 既存の記事との後方互換性を提供するために、プラグイン[hexo-tag-embed](https://github.com/hexojs/hexo-tag-embed)を提供しています。
 {% endnote %}
 
 jsFiddleスニペットを埋め込むには:
@@ -214,7 +216,7 @@ iframeを埋め込むには:
 
 ## コードの挿入
 
-`source/downloads/code`フォルダにあるコードスニペットを挿入します。フォルダの場所は`code_dir`オプションで設定できます。
+`source/downloads/code`フォルダにあるコードスニペットを挿入します。 フォルダの場所は`code_dir`オプションで設定できます。
 
 ```
 {% include_code [title] [lang:language] [from:line] [to:line] path/to/file %}
@@ -316,7 +318,7 @@ v7.0.0 以上で使用する場合は、代わりに[hexo-tag-embed](https://git
 
 記事のタイトルではなくカスタムテキストを表示することもできます。
 
-記事のタイトルとカスタムテキストはデフォルトでエスケープされます。`escape`オプションを使用してエスケープを無効にできます。
+記事のタイトルとカスタムテキストはデフォルトでエスケープされます。 `escape`オプションを使用してエスケープを無効にできます。
 
 例:
 
@@ -337,7 +339,6 @@ v7.0.0 以上で使用する場合は、代わりに[hexo-tag-embed](https://git
 ```
 {% post_link hexo-4-released 'How to use <b> tag in title' %}
 ```
-
 {% post_link hexo-4-released 'How to use <b> tag in title' %}
 
 **タイトルのエスケープを無効にする。**
@@ -360,7 +361,7 @@ v7.0.0 以上で使用する場合は、代わりに[hexo-tag-embed](https://git
 
 ### 画像を埋め込む
 
-_hexo-renderer-marked 3.1.0+は、オプションで画像の記事パスを自動的に解決できます。これを有効にする方法については、[このセクション](asset-folders#マークダウンを使用した画像の埋め込み)を参照してください。_
+_hexo-renderer-marked 3.1.0+は、オプションで画像の記事パスを自動的に解決できます。 これを有効にする方法については、[このセクション](asset-folders#マークダウンを使用した画像の埋め込み)を参照してください。_
 
 "foo.jpg"は`http://example.com/2020/01/02/hello/foo.jpg`に位置しています。
 
@@ -368,39 +369,39 @@ _hexo-renderer-marked 3.1.0+は、オプションで画像の記事パスを自�
 
 `{% asset_img foo.jpg %}`
 
-``` html
-<img src="/2020/01/02/hello/foo.jpg">
+```html
+<img src="/2020/01/02/hello/foo.jpg" />
 ```
 
 **カスタムクラス**
 
 `{% asset_img post-image foo.jpg %}`
 
-``` html
-<img src="/2020/01/02/hello/foo.jpg" class="post-image">
+```html
+<img src="/2020/01/02/hello/foo.jpg" class="post-image" />
 ```
 
 **サイズを指定**
 
 `{% asset_img foo.jpg 500 400 %}`
 
-``` html
-<img src="/2020/01/02/hello/foo.jpg" width="500" height="400">
+```html
+<img src="/2020/01/02/hello/foo.jpg" width="500" height="400" />
 ```
 
 **タイトル & Alt**
 
 `{% asset_img foo.jpg "lorem ipsum'dolor'" %}`
 
-``` html
-<img src="/2020/01/02/hello/foo.jpg" title="lorem ipsum" alt="dolor">
+```html
+<img src="/2020/01/02/hello/foo.jpg" title="lorem ipsum" alt="dolor" />
 ```
 
 ## URL
 
 ### url_for (7.0.0+)
 
-ルートパスをプレフィックスとして付加したURLを返します。出力は自動的にエンコードされます。
+ルートパスをプレフィックスとして付加したURLを返します。 出力は自動的にエンコードされます。
 
 ```
 {% url_for text path [relative] %}
@@ -408,23 +409,22 @@ _hexo-renderer-marked 3.1.0+は、オプションで画像の記事パスを自�
 
 **例:**
 
-``` yml
+```yml
 _config.yml
-root: /blog/ # 例
+root: /blog/ # example
 ```
 
-``` 
+```
 {% url_for blog index.html %}
 ```
 
-``` html
+```html
 <a href="/blog/index.html">blog</a>
 ```
 
-相対リンク指定はデフォルトで`relative_link`オプションに従います。
-例えば、記事/ページのパスが'/foo/bar/index.html'の場合
+`relative_link`が有効になっていても非相対リンクを出力する、あるいはその逆を行うこともできます。
 
-``` yml
+```yml
 _config.yml
 relative_link: true
 ```
@@ -433,23 +433,23 @@ relative_link: true
 {% url_for blog index.html %}
 ```
 
-``` html
+```html
 <a href="../../index.html">blog</a>
 ```
 
-`relative_link`が有効になっていても非相対リンクを出力する、あるいはその逆を行うこともできます。
+相対リンク指定はデフォルトで`relative_link`オプションに従います。 例えば、記事/ページのパスが'/foo/bar/index.html'の場合
 
 ```
 {% url_for blog index.html false %}
 ```
 
-``` html
+```html
 <a href="/index.html">blog</a>
 ```
 
 ### full_url_for (7.0.0+)
 
-`config.url`をプレフィックスとして付加したURLを返します。出力は自動的にエンコードされます。
+`config.url`をプレフィックスとして付加したURLを返します。 出力は自動的にエンコードされます。
 
 ```
 {% full_url_for text path %}
@@ -457,7 +457,7 @@ relative_link: true
 
 **例:**
 
-``` yml
+```yml
 _config.yml
 url: https://example.com/blog # example
 ```
@@ -466,7 +466,7 @@ url: https://example.com/blog # example
 {% full_url_for index /a/path %}
 ```
 
-``` html
+```html
 <a href="https://example.com/blog/a/path">index</a>
 ```
 
@@ -482,7 +482,7 @@ content
 
 ## 記事の抜粋
 
-`<!-- more -->`タグの前に置かれたテキストを記事の抜粋として使用します。Front Matterに指定された`excerpt:`の値がある場合、それが優先されます。
+`<!-- more -->`タグの前に置かれたテキストを記事の抜粋として使用します。 Front Matterに指定された`excerpt:`の値がある場合、それが優先されます。
 
 **例:**
 

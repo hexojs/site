@@ -1,17 +1,18 @@
 ---
-title: Diretórios de Recursos (Asset)
+title: Asset Folders
 ---
+
 ## Diretório Global de Recursos
 
 Os recursos, ou assets, são arquivos (imagens, CSS, JavaScript e etc) usados para compor as páginas do site. No Hexo, os recursos ficam dentro do diretório `source`. Por exemplo, se você só vai ter algumas imagens no projeto Hexo, então a maneira mais fácil é mantê-las em um diretório como `source/images`. Então, você pode acessá-las usando algo como `![](images/image.jpg)`.
 
-## Diretório de Recursos por Postagem
+## Post Asset Folder
 
 {% youtube feIDVQ2tz0o %}
 
 Para os usuários que esperam exibir imagens e/ou outros recursos regularmente, e para aqueles que preferem separar seus recursos por publicação, o Hexo também fornece uma maneira mais organizada de fazer este gerenciamento. Para ativar o gerenciamento de recursos por publicação, defina a configuração `post_asset_folder` no arquivo `_config.yml` como o valor `true`.
 
-``` yaml _config.yml
+```yaml _config.yml
 post_asset_folder: true
 ```
 
@@ -27,7 +28,7 @@ Referenciar imagens, ou outros recursos, usando a sintaxe normal do markdown e c
 {% asset_link slug [title] %}
 ```
 
-Por exemplo, com os diretórios de recursos de postagem ativados, se você colocar uma imagem `example.jpg` no seu diretório de recursos, ela *não* aparecerá na página de índice se você fizer referência a ela usando um caminho relativo com a expressão `![](example.jpg)` da sintaxe do markdown (no entanto, isto funcionará como esperado na publicação em si).
+Por exemplo, com os diretórios de recursos de postagem ativados, se você colocar uma imagem `example.jpg` no seu diretório de recursos, ela _não_ aparecerá na página de índice se você fizer referência a ela usando um caminho relativo com a expressão `![](example.jpg)` da sintaxe do markdown (no entanto, isto funcionará como esperado na publicação em si).
 
 A maneira correta de fazer referência à imagem será usando a sintaxe de tag plugin em vez do markdown:
 
@@ -44,7 +45,7 @@ Desta forma, a imagem aparecerá dentro da publicação e nas páginas de índic
 
 To enable:
 
-``` yml _config.yml
+```yml _config.yml
 post_asset_folder: true
 marked:
   prependRoot: true

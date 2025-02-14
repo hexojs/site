@@ -1,9 +1,12 @@
 ---
 title: Плагины тегов
 ---
+
 Плагины тегов отличаются от тегов в посте. Они портированы с Octopress и обеспечивают удобный способ, чтобы быстро добавить контент для ваших постов.
 
 Although you can write your posts in any formats, but the tag plugins will always be available and syntax remains the same.
+
+{% youtube I07XMi7MHd4 %}
 
 _Tag plugins should not be wrapped inside Markdown syntax, e.g. `[]({% post_path lorem-ipsum %})` is not supported._
 
@@ -19,7 +22,7 @@ content
 {% endblockquote %}
 ```
 
-### Примеры
+### Examples
 
 **Без аргументов. Обычная цитата.**
 
@@ -83,16 +86,16 @@ code snippet
 
 Specify additional options in `option:value` format, e.g. `line_number:false first_line:5`.
 
-Extra Options | Description | Default
---- | --- | ---
-`line_number` | Show line number | `true`
-`line_threshold` | Only show line numbers as long as the numbers of lines of the code block exceed such threshold. | `0` |
-`highlight` | Enable code highlighting | `true`
-`first_line` | Specify the first line number | `1`
-`mark` | Line highlight specific line(s), each value separated by a comma. Specify number range using a dash<br>Example: `mark:1,4-7,10` will mark line 1, 4 to 7 and 10. |
-`wrap` | Wrap the code block in [`<table>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table) | `true`
+| Extra Options    | Description                                                                                                                                                            | Default |
+| ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
+| `line_number`    | Show line number                                                                                                                                                       | `true`  |
+| `line_threshold` | Only show line numbers as long as the numbers of lines of the code block exceed such threshold.                                                                        | `0`     |
+| `highlight`      | Enable code highlighting                                                                                                                                               | `true`  |
+| `first_line`     | Specify the first line number                                                                                                                                          | `1`     |
+| `mark`           | Line highlight specific line(s), each value separated by a comma. Specify number range using a dash<br>Example: `mark:1,4-7,10` will mark line 1, 4 to 7 and 10. |         |
+| `wrap`           | Wrap the code block in [`<table>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table)                                                              | `true`  |
 
-### Примеры
+### Examples
 
 **Простой блок кода**
 
@@ -118,7 +121,7 @@ alert('Hello World!');
 [rectangle setX: 10 y: 10 width: 20 height: 20];
 {% endcodeblock %}
 
-**С добавление заголовка**
+**Adding a caption to the code block**
 
 ```
 {% codeblock Array.map %}
@@ -140,8 +143,7 @@ _.compact([0, 1, false, 2, '', 3]);
 ```
 
 {% codeblock _.compact http://underscorejs.org/#compact Underscore.js %}
-_.compact([0, 1, false, 2, '', 3]);
-=> [1, 2, 3]
+\_.compact([0, 1, false, 2, '', 3]); => [1, 2, 3]
 {% endcodeblock %}
 
 ## Блок кода в кавычках
@@ -149,12 +151,12 @@ _.compact([0, 1, false, 2, '', 3]);
 Тот же блок кода, но использует три обратные кавычки для отделения блока.
 
 {% raw %}
-&#96`` [language] [title] [url] [link text]
+&#96`[language] [title] [url] [link text]
 code snippet
-&#96;``
+&#96;`
 {% endraw %}
 
-## Цитата
+## Pull Quote
 
 Добавляет цитату в пост:
 
@@ -167,7 +169,7 @@ content
 ## jsFiddle (deleted in `v7.0.0`)
 
 {% note warn %}
-Please use [hexo-tag-embed](https://github.com/hexojs/hexo-tag-embed) instead if you use `v7.0.0+`.
+The tag was removed in Hexo 7.0.0. We have provided a plugin [hexo-tag-embed](https://github.com/hexojs/hexo-tag-embed) for backward compatibility with your existing posts.
 {% endnote %}
 
 Размещает фрагмент с jsFiddle:
@@ -214,10 +216,42 @@ Please use [hexo-tag-embed](https://github.com/hexojs/hexo-tag-embed) instead if
 
 ## Include Code
 
-Вставляет фрагменты кода из папки `source/downloads/code`.
+Вставляет фрагменты кода из папки `source/downloads/code`. The folder location can be specified through the `code_dir` option in the config.
 
 ```
-{% include_code [title] [lang:language] path/to/file %}
+{% include_code [title] [lang:language] [from:line] [to:line] path/to/file %}
+```
+
+### Examples
+
+**Embed the whole content of test.js**
+
+```
+{% include_code lang:javascript test.js %}
+```
+
+**Embed line 3 only**
+
+```
+{% include_code lang:javascript from:3 to:3 test.js %}
+```
+
+**Embed line 5 to 8**
+
+```
+{% include_code lang:javascript from:5 to:8 test.js %}
+```
+
+**Embed line 5 to the end of file**
+
+```
+{% include_code lang:javascript from:5 test.js %}
+```
+
+**Embed line 1 to 8**
+
+```
+{% include_code lang:javascript to:8 test.js %}
 ```
 
 ## YouTube (deleted in `v7.0.0`)
@@ -261,13 +295,13 @@ YouTube's cookie is not used in this mode.
 Please use [hexo-tag-embed](https://github.com/hexojs/hexo-tag-embed) instead if you use `v7.0.0+`.
 {% endnote %}
 
-Вставка видео с Vimeo.
+Inserts a responsive or specified size Vimeo video.
 
 ```
-{% vimeo video_id %}
+{% vimeo video_id [width] [height] %}
 ```
 
-## Включения из постов
+## Include Posts
 
 Содержит ссылку на другой пост.
 
@@ -305,7 +339,6 @@ For instance:
 ```
 {% post_link hexo-4-released 'How to use <b> tag in title' %}
 ```
-
 {% post_link hexo-4-released 'How to use <b> tag in title' %}
 
 **Do not escape title.**
@@ -316,9 +349,9 @@ For instance:
 
 {% post_link hexo-4-released '<b>bold</b> custom title' false %}
 
-## Вставка материала
+## Include Assets
 
-Содержит содержимое материала.
+Include post assets, to be used in conjunction with [`post_asset_folder`](/docs/asset-folders).
 
 ```
 {% asset_path filename %}
@@ -336,32 +369,32 @@ _hexo-renderer-marked 3.1.0+ can (optionally) resolves the post's path of an ima
 
 `{% asset_img foo.jpg %}`
 
-``` html
-<img src="/2020/01/02/hello/foo.jpg">
+```html
+<img src="/2020/01/02/hello/foo.jpg" />
 ```
 
 **Custom class**
 
 `{% asset_img post-image foo.jpg %}`
 
-``` html
-<img src="/2020/01/02/hello/foo.jpg" class="post-image">
+```html
+<img src="/2020/01/02/hello/foo.jpg" class="post-image" />
 ```
 
 **Display size**
 
 `{% asset_img foo.jpg 500 400 %}`
 
-``` html
-<img src="/2020/01/02/hello/foo.jpg" width="500" height="400">
+```html
+<img src="/2020/01/02/hello/foo.jpg" width="500" height="400" />
 ```
 
 **Title & Alt**
 
-`{% asset_img logo.svg "lorem ipsum'dolor'" %}`
+`{% asset_img foo.jpg "lorem ipsum'dolor'" %}`
 
-``` html
-<img src="/2020/01/02/hello/foo.jpg" title="lorem ipsum" alt="dolor">
+```html
+<img src="/2020/01/02/hello/foo.jpg" title="lorem ipsum" alt="dolor" />
 ```
 
 ## URL
@@ -376,23 +409,22 @@ Returns a url with the root path prefixed. Output is encoded automatically.
 
 **Examples:**
 
-``` yml
+```yml
 _config.yml
 root: /blog/ # example
 ```
 
-``` 
+```
 {% url_for blog index.html %}
 ```
 
-``` html
+```html
 <a href="/blog/index.html">blog</a>
 ```
 
-Relative link, follows `relative_link` option by default
-e.g. post/page path is '/foo/bar/index.html'
+Relative link, follows `relative_link` option by default e.g. post/page path is '/foo/bar/index.html'
 
-``` yml
+```yml
 _config.yml
 relative_link: true
 ```
@@ -401,7 +433,7 @@ relative_link: true
 {% url_for blog index.html %}
 ```
 
-``` html
+```html
 <a href="../../index.html">blog</a>
 ```
 
@@ -411,7 +443,7 @@ You could also disable it to output a non-relative link, even when `relative_lin
 {% url_for blog index.html false %}
 ```
 
-``` html
+```html
 <a href="/index.html">blog</a>
 ```
 
@@ -425,7 +457,7 @@ Returns a url with the `config.url` prefixed. Output is encoded automatically.
 
 **Examples:**
 
-``` yml
+```yml
 _config.yml
 url: https://example.com/blog # example
 ```
@@ -434,11 +466,11 @@ url: https://example.com/blog # example
 {% full_url_for index /a/path %}
 ```
 
-``` html
+```html
 <a href="https://example.com/blog/a/path">index</a>
 ```
 
-## Сырцы
+## Raw
 
 Если определённый контент вызывает ошибки обработки в ваших постах, оберните его тегом `raw`, чтобы избежать ошибок обработки.
 
@@ -448,11 +480,11 @@ content
 {% endraw %}
 ```
 
-## Отрывок поста
+## Post Excerpt
 
-Используйте текст до тега `<!-- more -->` в качестве отрывка поста.
+Используйте текст до тега `<!-- more -->` в качестве отрывка поста. `excerpt:` value in the [front-matter](/docs/front-matter#Settings-amp-Their-Default-Values), if specified, will take precedent.
 
-**Примеры:**
+**Examples:**
 
 ```
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.

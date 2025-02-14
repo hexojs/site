@@ -1,0 +1,8 @@
+description: A hexo plugin insert a bilibili video card into your page or article, some of css code is copy from bilibili.
+link: https://github.com/wherewhere/hexo-tag-bilibili-card
+tags:
+  - bilibili
+  - tag
+  - generator
+  - injector
+  - components

@@ -4,7 +4,7 @@ title: Команды
 
 ## init
 
-``` bash
+```bash
 $ hexo init [folder]
 ```
 
@@ -17,74 +17,99 @@ $ hexo init [folder]
 
 ## new
 
-``` bash
+```bash
 $ hexo new [layout] <title>
 ```
 
-Будет создана новая статья. Если макет не был указан, Hexo будет использовать значение `default_layout`, указанное в [_config.yml](configuration.html). Если название содержит пробелы, заключите его в кавычки.
+Будет создана новая статья. Если макет не был указан, Hexo будет использовать значение `default_layout`, указанное в [\_config.yml](configuration.html). Use the layout `draft` to create a draft. Если название содержит пробелы, заключите его в кавычки.
+
+| Параметр          | Описание                                   |
+| ----------------- | ------------------------------------------ |
+| `-p`, `--path`    | Post path. Customize the path of the post. |
+| `-r`, `--replace` | Replace the current post if existed.       |
+| `-s`, `--slug`    | Post slug. Customize the URL of the post.  |
+
+By default, Hexo will use the title to define the path of the file. For pages, it will create a directory of that name and an `index.md` file in it. Use the `--path` option to override that behaviour and define the file path:
+
+```bash
+hexo new page --path about/me "About me"
+```
+
+will create `source/about/me.md` file with the title "About me" set in the front matter.
+
+Please note that the title is mandatory. For example, this will not result in the behaviour you might expect:
+
+```bash
+hexo new page --path about/me
+```
+
+will create the post `source/_posts/about/me.md` with the title "page" in the front matter. This is because there is only one argument (`page`) and the default layout is `post`.
 
 ## generate
 
-``` bash
+```bash
 $ hexo generate
 ```
 
-Генерирует статичные файлы.
+Генерирует файлы.
 
-Параметр | Описание
---- | ---
-`-d`, `--deploy` | Опубликовать после генерации
-`-w`, `--watch` | Отслеживать изменения файлов
+| Параметр              | Описание                                                                 |
+| --------------------- | ------------------------------------------------------------------------ |
+| `-d`, `--deploy`      | Deploy after generation finishes                                         |
+| `-w`, `--watch`       | Отслеживать изменения файлов                                             |
+| `-b`, `--bail`        | Raise an error if any unhandled exception is thrown during generation    |
+| `-f`, `--force`       | Force regenerate                                                         |
+| `-c`, `--concurrency` | Maximum number of files to be generated in parallel. Default is infinity |
 
 ## publish
 
-``` bash
+```bash
 $ hexo publish [layout] <filename>
 ```
 
-Переносит черновик в публикуемую папку.
+Publishes a draft.
 
 ## server
 
-``` bash
+```bash
 $ hexo server
 ```
 
 Запускает локальный сервер. По умолчанию адрес: `http://localhost:4000/`.
 
-Параметр | Описание
---- | ---
-`-p`, `--port` | Переназначает стандартный порт
-`-s`, `--static` | Обрабатывать только статичные файлы
-`-l`, `--log` | Включить журналирование. Переопределяет формат журнала.
+| Параметр         | Описание                                                |
+| ---------------- | ------------------------------------------------------- |
+| `-p`, `--port`   | Переназначает стандартный порт                          |
+| `-s`, `--static` | Обрабатывать только статичные файлы                     |
+| `-l`, `--log`    | Включить журналирование. Переопределяет формат журнала. |
 
 ## deploy
 
-``` bash
+```bash
 $ hexo deploy
 ```
 
 Публикует сайт.
 
-Параметр | Описание
---- | ---
-`-g`, `--generate` | Генерировать перед публикацией
+| Параметр           | Описание                       |
+| ------------------ | ------------------------------ |
+| `-g`, `--generate` | Генерировать перед публикацией |
 
 ## render
 
-``` bash
+```bash
 $ hexo render <file1> [file2] ...
 ```
 
-Генерирует файлы.
+Renders files.
 
-Параметр | Описание
---- | ---
-`-o`, `--output` | Путь вывода
+| Опции            | Description |
+| ---------------- | ----------- |
+| `-o`, `--output` | Путь вывода |
 
 ## migrate
 
-``` bash
+```bash
 $ hexo migrate <type>
 ```
 
@@ -92,7 +117,7 @@ $ hexo migrate <type>
 
 ## clean
 
-``` bash
+```bash
 $ hexo clean
 ```
 
@@ -100,7 +125,7 @@ $ hexo clean
 
 ## list
 
-``` bash
+```bash
 $ hexo list <type>
 ```
 
@@ -108,17 +133,25 @@ $ hexo list <type>
 
 ## version
 
-``` bash
+```bash
 $ hexo version
 ```
 
 Отображает информацию о версии Hexo.
 
-## Опции
+## config
+
+```bash
+$ hexo config [key] [value]
+```
+
+Lists the configuration (`_config.yml`). If `key` is specified, only the value of the corresponding `key` in the configuration is shown; if both `key` and `value` are specified, the value of the corresponding `key` in the configuration is changed to `value`.
+
+## Альтернативная конфигурация
 
 ### Безопасный режим
 
-``` bash
+```bash
 $ hexo --safe
 ```
 
@@ -126,7 +159,7 @@ $ hexo --safe
 
 ### Режим отладки
 
-``` bash
+```bash
 $ hexo --debug
 ```
 
@@ -134,31 +167,35 @@ $ hexo --debug
 
 ### Тихий режим
 
-``` bash
+```bash
 $ hexo --silent
 ```
 
-Отключает показ сообщений в консоли.
+Silences output to the terminal.
 
-### Альтернативная конфигурация
+### Customize config file path
 
-``` bash
+```bash
 $ hexo --config custom.yml
 ```
 
-Использует другой конфигурационный файл (вместо `_config.yml`).
+Использует другой конфигурационный файл (вместо `_config.yml`). Also accepts a comma-separated list (no spaces) of JSON or YAML config files that will combine the files into a single `_multiconfig.yml`.
+
+```bash
+$ hexo --config custom.yml,custom2.json
+```
 
 ### Показать черновики
 
-``` bash
+```bash
 $ hexo --draft
 ```
 
 Отображает черновики (хранящиеся в папке `source/_drafts`).
 
-### Изменить рабочую папку
+### Customize CWD
 
-``` bash
+```bash
 $ hexo --cwd /path/to/cwd
 ```
 

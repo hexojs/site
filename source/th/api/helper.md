@@ -1,32 +1,35 @@
 ---
 title: Helper
 ---
+
 helper ทำให้ผู้ใช้เพิ่ม snippet เข้า template ของตนได้ง่ายขึ้น. เมื่อต้องจัดการ code ท่ีซับซ้อนขึ้น การใช้ helper จะสะดวกกว่าท่ีใช้ template ผู้ใช้จะเข้าถึง helper โดยไฟล์ `source` ไม่ได้
+
+Helpers can not be accessed from `source` files.
 
 ## Synopsis
 
-``` js
-hexo.extend.helper.register(name, function(){
+```js
+hexo.extend.helper.register(name, function () {
   // ...
 });
 ```
 
 ## Example
 
-``` js
-hexo.extend.helper.register('js', function(path){
+```js
+hexo.extend.helper.register("js", function (path) {
   return '<script src="' + path + '"></script>';
 });
 ```
 
-``` js
+```js
 <%- js('script.js') %>
 // <script src="script.js"></script>
 ```
 
 ## FAQ
 
-### helper ท่ีตั้งค่าด้วยตนนั้นจะวางท่ีใหนได้?
+### Where to place custom helper?
 
 Place it under `scripts/` or `themes/<yourtheme>/scripts/` folder.
 
@@ -34,8 +37,8 @@ Place it under `scripts/` or `themes/<yourtheme>/scripts/` folder.
 
 All helpers are executed in the same context. For example, to use [`url_for()`](/docs/helpers#url-for) inside a custom helper:
 
-``` js
-hexo.extend.helper.register('lorem', function(path) {
+```js
+hexo.extend.helper.register("lorem", function (path) {
   return '<script src="' + this.url_for(path) + '"></script>';
 });
 ```
@@ -44,6 +47,6 @@ hexo.extend.helper.register('lorem', function(path) {
 
 `hexo.extend.helper.get` will return the helper function, but it needs to have hexo as its context, so:
 
-``` js
-const url_for = hexo.extend.helper.get('url_for').bind(hexo);
+```js
+const url_for = hexo.extend.helper.get("url_for").bind(hexo);
 ```

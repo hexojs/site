@@ -1,12 +1,13 @@
 ---
 title: Генератор
 ---
+
 Генератор создаёт ссылки на основе обработанных файлов.
 
 ## Краткий обзор
 
-``` js
-hexo.extend.generator.register(name, function(locals){
+```js
+hexo.extend.generator.register(name, function (locals) {
   // ...
 });
 ```
@@ -15,27 +16,27 @@ hexo.extend.generator.register(name, function(locals){
 
 ## Обновление путей
 
-``` js
-hexo.extend.generator.register('test', function(locals){
+```js
+hexo.extend.generator.register("test", function (locals) {
   // Object
   return {
-    path: 'foo',
-    data: 'foo'
+    path: "foo",
+    data: "foo",
   };
 
   // Array
   return [
-    {path: 'foo', data: 'foo'},
-    {path: 'bar', data: 'bar'}
+    { path: "foo", data: "foo" },
+    { path: "bar", data: "bar" },
   ];
 });
 ```
 
-Атрибут | Описание
---- | ---
-`path` | Путь не включает префикс `/`.
-`data` | Данные
-`layout` | Макет. Укажите макеты для рендеринга. Значение может быть строкой или массивом. Если это проигнорировать, то путь будет возвращать данные `data` напрямую.
+| Атрибут  | Описание                                                                                                                                                   |
+| -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `path`   | Путь не включает префикс `/`.                                                                                                                              |
+| `data`   | Данные                                                                                                                                                     |
+| `layout` | Макет. Укажите макеты для рендеринга. Значение может быть строкой или массивом. Если это проигнорировать, то путь будет возвращать данные `data` напрямую. |
 
 Когда исходные файлы обновляются, Hexo выполняет генерацию и пересоздаёт ссылки. **Пожалуйста, генерируйте данные, а не создавайте ссылки напрямую.**
 
@@ -47,28 +48,29 @@ hexo.extend.generator.register('test', function(locals){
 
 Далее устанавливается атрибут `layout` для рендеринга шаблонов. В этом примере два варианта: если макета для `archive` нет, будет использоваться макет `index`.
 
-``` js
-hexo.extend.generator.register('archive', function(locals){
+```js
+hexo.extend.generator.register("archive", function (locals) {
   return {
-    path: 'archives/index.html',
-    data: locals.posts,
-    layout: ['archive', 'index']
-  }
+    path: "archives/index.html",
+    data: locals,
+    layout: ["archive", "index"],
+  };
 });
 ```
 
 ### Страница архива с постраничным разбиением
 
-Можно использовать удобный официальный инструмент [hexo-pagination] для легкого создания страниц с постраничной нумерацией.
+Можно использовать удобный официальный инструмент [hexo-pagination][] для легкого создания страниц с постраничной нумерацией.
 
-``` js
-var pagination = require('hexo-pagination');
+```js
+var pagination = require("hexo-pagination");
 
-hexo.extend.generator.register('archive', function(locals){
-  return pagination('archives/index.html', locals.posts, {
+hexo.extend.generator.register("archive", function (locals) {
+  // hexo-pagination makes an index.html for the /archives route
+  return pagination("archives", locals.posts, {
     perPage: 10,
-    layout: ['archive', 'index'],
-    data: {}
+    layout: ["archive", "index"],
+    data: {},
   });
 });
 ```
@@ -77,13 +79,13 @@ hexo.extend.generator.register('archive', function(locals){
 
 Перебирает все посты из переменной `locals.posts` и создаёт пути для всех найденных.
 
-``` js
-hexo.extend.generator.register('post', function(locals){
-  return locals.posts.map(function(post){
+```js
+hexo.extend.generator.register("post", function (locals) {
+  return locals.posts.map(function (post) {
     return {
       path: post.path,
       data: post,
-      layout: 'post'
+      layout: "post",
     };
   });
 });
@@ -93,15 +95,15 @@ hexo.extend.generator.register('post', function(locals){
 
 На этот раз данные не возвращаются явно, вместо этого данные `data` отправляются в функцию, чтобы `fs.ReadStream` вызывался только при необходимости.
 
-``` js
-var fs = require('hexo-fs');
+```js
+var fs = require("hexo-fs");
 
-hexo.extend.generator.register('asset', function(locals){
+hexo.extend.generator.register("asset", function (locals) {
   return {
-    path: 'file.txt',
-    data: function(){
-      return fs.createReadStream('path/to/file.txt')
-    }
+    path: "file.txt",
+    data: function () {
+      return fs.createReadStream("path/to/file.txt");
+    },
   };
 });
 ```

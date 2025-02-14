@@ -1,20 +1,21 @@
 ---
-title: 鷹架（Scaffold）
+title: Scaffolds
 ---
-## 取得鷹架
 
-``` js
+## Get a Scaffold
+
+```js
 hexo.scaffold.get(name);
 ```
 
 ## 設定鷹架
 
-``` js
+```js
 hexo.scaffold.set(name, content);
 ```
 
 ## 移除鷹架
 
-``` js
+```js
 hexo.scaffold.remove(name);
 ```

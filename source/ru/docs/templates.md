@@ -1,60 +1,66 @@
 ---
 title: Шаблоны
 ---
+
 Шаблон определяет, как страница определённого вида будет выглядеть на вашем сайте. В таблице ниже приведены соответствующие шаблоны для любой страницы. Как минимум, тема должна содержать шаблон `index`.
 
-Шаблон | Страница | Резерв
---- | --- | ---
-`index` | Домашняя страница |
-`post` | Посты | `index`
-`page` | Страницы | `index`
-`archive` | Архив | `index`
-`category` | Категории архивов | `archive`
-`tag` | Архив тегов | `archive`
+{% youtube mb65bQ4iUc4 %}
 
-## Макеты
+| Шаблон     | Страница          | Fallback  |
+| ---------- | ----------------- | --------- |
+| `index`    | Домашняя страница |           |
+| `post`     | Posts             | `index`   |
+| `page`     | Страницы          | `index`   |
+| `archive`  | Архив             | `index`   |
+| `category` | Категории архивов | `archive` |
+| `tag`      | Архив тегов       | `archive` |
+
+## Layouts
 
 Если страницы имеют схожую структуру, например, когда два шаблона имеют как верхний, так и нижний колонтитулы, тогда можно рассмотреть возможность использования макета `layout` для вынесения этих структурных сходств. Каждый файл разметки должен содержать переменную `body`, для отображения содержимого шаблона. Например:
 
-``` html index.ejs
+```html index.ejs
 index
 ```
 
-``` html layout.ejs
-<!DOCTYPE html>
+```html layout.ejs
+<!doctype html>
 <html>
-  <body><%- body %></body>
+  <body>
+    <%- body %>
+  </body>
 </html>
 ```
 
-сформируется в:
+yields:
 
-``` html
-<!DOCTYPE html>
+```html
+<!doctype html>
 <html>
-  <body>index</body>
+  <body>
+    index
+  </body>
 </html>
 ```
 
 По умолчанию макет `layout` используется всеми другими шаблонами. Вы можете указать дополнительные макеты в шапке файла или установить его значение в `false`, чтобы отключить. Также можно построить сложную вложенную структуру включив в верхней части макета другие макеты.
-<!-- TODO: Добавить примеры использования -->
 
 ## Части
 
 Разбивка на части полезна для обмена компонентами между шаблонами. Типичные примеры включают в себя заголовки, нижние колонтитулы, боковые панели. Можно подставить ваш фрагмент в отдельные файлы, чтобы сделать поддержку сайта намного удобнее. Например:
 
-``` html partial/header.ejs
+```html partial/header.ejs
 <h1 id="logo"><%= config.title %></h1>
 ```
 
-``` html index.ejs
+```html index.ejs
 <%- partial('partial/header') %>
 <div id="content">Home page</div>
 ```
 
-сформируется в:
+yields:
 
-``` html
+```html
 <h1 id="logo">My Site</h1>
 <div id="content">Home page</div>
 ```
@@ -63,18 +69,18 @@ index
 
 Вы можете назначать локальные переменные в шаблонах и после использовать в других шаблонах.
 
-``` html partial/header.ejs
+```html partial/header.ejs
 <h1 id="logo"><%= title></h1>
 ```
 
-``` html index.ejs
+```html index.ejs
 <%- partial('partial/header', {title: 'Hello World'}) %>
 <div id="content">Home page</div>
 ```
 
-сформируется в:
+yields:
 
-``` html
+```html
 <h1 id="logo">Hello World</h1>
 <div id="content">Home page</div>
 ```
@@ -87,7 +93,7 @@ index
 
 Кэширование фрагментов лучше всего использовать для заголовков, колонтитулов, боковых панелей или другого статического контента, который вряд ли будет менятся от шаблона к шаблону. Например:
 
-``` js
+```js
 <%- fragment_cache('header', function(){
   return '<header></header>';
 });
@@ -95,11 +101,10 @@ index
 
 Хотя это можно сделать проще, используя части:
 
-``` js
+```js
 <%- partial('header', {}, {cache: true});
 ```
 
 {% note warn %}
-`fragment_cache()` will cache the rendered result and output the cached result to other pages. This should only be used on partials that are expected **not** to change across different pages. Otherwise, it should **not** be enabled.
-For example, it should be disabled when `relative_link` is enabled in the config. This is because relative links may appear differently across pages.
+`fragment_cache()` will cache the rendered result and output the cached result to other pages. This should only be used on partials that are expected **not** to change across different pages. Otherwise, it should **not** be enabled. For example, it should be disabled when `relative_link` is enabled in the config. This is because relative links may appear differently across pages.
 {% endnote %}

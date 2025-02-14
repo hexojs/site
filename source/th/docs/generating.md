@@ -1,9 +1,10 @@
 ---
 title: Generating
 ---
+
 การ generate ไฟล์คงท่ีใน hexo จะค่อนข้างรวดเร็วและง่าย
 
-``` bash
+```bash
 $ hexo generate
 ```
 
@@ -11,18 +12,18 @@ $ hexo generate
 
 ### Watch for File Changes
 
-hexo จะเฝ้าดูการเปลี่ยนแปลงของไฟล์และ generate ไฟล์ ทันที  
+Hexo can watch for file changes and regenerate files immediately. hexo จะเฝ้าดูการเปลี่ยนแปลงของไฟล์และ generate ไฟล์ ทันที  
 เฝ้าดูการเปลี่ยนแปลงของไฟล์นั้นจะเป็นการเปรียนเทียบ SHA1 checksum ของไฟล์
 
-``` bash
+```bash
 $ hexo generate --watch
 ```
 
 ### Deploy After Generating
 
-คำสั่งสองบรรทัดต่อไปจะมีการปฏิบัติเหมือนกันสำหรับการ deploy หลังการ generate ไฟล์
+To deploy after generating, you can run one of the following commands. There is no difference between the two.
 
-``` bash
+```bash
 $ hexo generate --deploy
 $ hexo deploy --generate
 ```

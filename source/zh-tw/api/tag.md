@@ -1,92 +1,115 @@
 ---
-title: 標籤外掛（Tag）
+title: Tag
 ---
-標籤外掛幫助使用者在文章中快速插入內容。
+
+A tag allows users to quickly and easily insert snippets into their posts.
 
 ## 概要
 
-``` js
-hexo.extend.tag.register(name, function(args, content){
-  // ...
-}, options);
+```js
+hexo.extend.tag.register(
+  name,
+  function (args, content) {
+    // ...
+  },
+  options,
+);
 ```
 
-標籤函數會傳入兩個參數：`args` 和 `content`，前者代表使用者在使用標籤外掛時傳入的參數，而後者則是標籤外掛所包覆的內容。
+Two arguments will be passed into the tag function: `args` and `content`. `args` contains the arguments passed into the tag plugin and `content` is the wrapped content from the tag plugin.
 
-自 Hexo 3 開始，因為新增了非同步渲染功能，而改用 [Nunjucks] 作為渲染引擎，其行為可能會與過去使用的 [Swig] 有些許差異。
+自 Hexo 3 開始，因為新增了非同步渲染功能，而改用 [Nunjucks][] 作為渲染引擎，其行為可能會與過去使用的 [Swig][] 有些許差異。 The behavior may be somewhat different from that in [Swig][].
 
-## 移除標籤外掛
+## Unregister Tags
 
 Use `unregister()` to replace existing [tag plugins](/docs/tag-plugins) with custom functions.
 
-``` js
+```js
 hexo.extend.tag.unregister(name);
 ```
 
 **Example**
 
-``` js
+```js
 const tagFn = (args, content) => {
-  content = 'something';
+  content = "something";
   return content;
 };
 
 // https://hexo.io/docs/tag-plugins#YouTube
-hexo.extend.tag.unregister('youtube');
+hexo.extend.tag.unregister("youtube");
 
-hexo.extend.tag.register('youtube', tagFn);
+hexo.extend.tag.register("youtube", tagFn);
 ```
 
 ## 選項
 
 ### ends
 
-使用結尾標籤，此選項預設為 `false`。
+Use end tags. This option is `false` by default.
 
 ### async
 
-開啟非同步模式，此選項預設為 `false`。
+Enable async mode. This option is `false` by default.
 
 ## 範例
 
-### 沒有結尾標籤
+### Without End Tags
 
 插入 Youtube 影片。
 
-``` js
-hexo.extend.tag.register('youtube', function(args){
+```js
+hexo.extend.tag.register("youtube", function (args) {
   var id = args[0];
-  return '<div class="video-container"><iframe width="560" height="315" src="http://www.youtube.com/embed/' + id + '" frameborder="0" allowfullscreen></iframe></div>';
+  return (
+    '<div class="video-container"><iframe width="560" height="315" src="http://www.youtube.com/embed/' +
+    id +
+    '" frameborder="0" allowfullscreen></iframe></div>'
+  );
 });
 ```
 
-### 有結尾標籤
+### With End Tags
 
 插入 pull quote。
 
-``` js
-hexo.extend.tag.register('pullquote', function(args, content){
-  var className =  args.join(' ');
-  return '<blockquote class="pullquote' + className + '">' + content + '</blockquote>';
-}, {ends: true});
+```js
+hexo.extend.tag.register(
+  "pullquote",
+  function (args, content) {
+    var className = args.join(" ");
+    return (
+      '<blockquote class="pullquote' +
+      className +
+      '">' +
+      content +
+      "</blockquote>"
+    );
+  },
+  { ends: true },
+);
 ```
 
 ### 非同步渲染
 
 插入檔案。
 
-``` js
-var fs = require('hexo-fs');
-var pathFn = require('path');
+```js
+var fs = require("hexo-fs");
+var pathFn = require("path");
 
-hexo.extend.tag.register('include_code', function(args){
-  var filename = args[0];
-  var path = pathFn.join(hexo.source_dir, filename);
-  
-  return fs.readFile(path).then(function(content){
-    return '<pre><code>' + content + '</code></pre>';
-  });
-}, {async: true});
+hexo.extend.tag.register(
+  "include_code",
+  function (args) {
+    var filename = args[0];
+    var path = pathFn.join(hexo.source_dir, filename);
+
+    return fs.readFile(path).then(function (content) {
+      return "<pre><code>" + content + "</code></pre>";
+    });
+  },
+  { async: true },
+);
 ```
 
 ## Front-matter and user configuration
@@ -95,7 +118,7 @@ Any of the following options is valid:
 
 1.
 
-``` js
+```js
 hexo.extend.tag.register('foo', function (args) {
   const [firstArg] = args;
 
@@ -120,11 +143,11 @@ hexo.extend.tag.register('foo', function (args) {
 
 2.
 
-``` js index.js
-hexo.extend.tag.register('foo', require('./lib/foo')(hexo));
+```js index.js
+hexo.extend.tag.register("foo", require("./lib/foo")(hexo));
 ```
 
-``` js lib/foo.js
+```js lib/foo.js
 module.exports = hexo => {
   return function fooFn(args) {
     const [firstArg] = args;

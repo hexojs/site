@@ -1,9 +1,12 @@
 ---
 title: Setup
 ---
+
+{% youtube 0m2HnATkHOk %}
+
 Hexo를 설치했다면, 타겟 `<folder>`의 Hexo를 초기화하기 위해 아래의 명령을 수행하세요.
 
-``` bash
+```bash
 $ hexo init <folder>
 $ cd <folder>
 $ npm install
@@ -11,7 +14,7 @@ $ npm install
 
 초기화가 완료되면 다음과 같은 폴더 구조를 가지게 될 것입니다.
 
-``` plain
+```plain
 .
 ├── _config.yml
 ├── package.json
@@ -22,7 +25,7 @@ $ npm install
 └── themes
 ```
 
-### _config.yml
+### \_config.yml
 
 이 파일은 [환경설정](configuration.html) 파일입니다. 대부분의 설정을 여기서 할 수 있습니다.
 
@@ -30,7 +33,7 @@ $ npm install
 
 어플리케이션 데이터 파일입니다. [EJS](https://ejs.co/), [Stylus](http://learnboost.github.io/stylus/), [Markdown](http://daringfireball.net/projects/markdown/) 렌더러들이 기본으로 설치됩니다. 원한다면, 나중에 당신이 제거할 수도 있습니다.
 
-``` json package.json
+```json package.json
 {
   "name": "hexo-site",
   "version": "0.0.0",
@@ -39,15 +42,16 @@ $ npm install
     "version": ""
   },
   "dependencies": {
-    "hexo": "^3.8.0",
-    "hexo-generator-archive": "^0.1.5",
-    "hexo-generator-category": "^0.1.3",
-    "hexo-generator-index": "^0.2.1",
-    "hexo-generator-tag": "^0.2.0",
-    "hexo-renderer-ejs": "^0.3.1",
-    "hexo-renderer-stylus": "^0.3.3",
-    "hexo-renderer-marked": "^0.3.2",
-    "hexo-server": "^0.3.3"
+    "hexo": "^7.0.0",
+    "hexo-generator-archive": "^2.0.0",
+    "hexo-generator-category": "^2.0.0",
+    "hexo-generator-index": "^3.0.0",
+    "hexo-generator-tag": "^2.0.0",
+    "hexo-renderer-ejs": "^2.0.0",
+    "hexo-renderer-stylus": "^3.0.0",
+    "hexo-renderer-marked": "^6.0.0",
+    "hexo-server": "^3.0.0",
+    "hexo-theme-landscape": "^1.0.0"
   }
 }
 ```
@@ -58,7 +62,7 @@ $ npm install
 
 ### source
 
-소스 폴더입니다. 당신의 웹 사이트 컨텐츠들을 위치시키는 곳 입니다. Hexo는 숨겨진 파일과 `_` (언더스코어)로 시작하는 파일 및 폴더들을 무시합니다. - `_posts` 폴더는 제외하고 말이죠. 렌더링이 가능한 파일들(예. Markdown, HTML)은 처리된 후 `public` 폴더로 들어가게 됩니다. 그 동안 다른 파일들은 단순히 복사됩니다.
+소스 폴더입니다. 당신의 웹 사이트 컨텐츠들을 위치시키는 곳 입니다. Hexo는 숨겨진 파일과 `_` (언더스코어)로 시작하는 파일 및 폴더들을 무시합니다. - `_posts` 폴더는 제외하고 말이죠. Markdown, HTML)은 처리된 후 `public` 폴더로 들어가게 됩니다. 그 동안 다른 파일들은 단순히 복사됩니다.
 
 ### themes
 

@@ -1,9 +1,10 @@
 ---
 title: Internationalization (i18n)
 ---
+
 당신의 웹 사이트를 서로 다른 언어로 표시하기 위해 internationalization을 사용할 수 있습니다. 기본 언어의 변경은 `_config.yml` 파일의 `language`를 수정하면 됩니다. 다중 언어를 설정할 수도 있고 기본 언어의 순서를 수정할 수도 있습니다.
 
-``` yaml
+```yaml
 language: zh-tw
 
 language:
@@ -17,9 +18,9 @@ language:
 
 ### 템플릿
 
-`__` 또는 `_p`를 사용하면 템플릿에서의 문자열의 번역을 위한 helper를 사용할 수 있습니다. `__`는 일반적인 사용 방법이고 `_p`는 여러 개의 문자열을 위해 사용하는 방법입니다. 아래 예시를 보세요.
+또는 `_p`를 사용하면 템플릿에서의 문자열의 번역을 위한 helper를 사용할 수 있습니다. `__`는 일반적인 사용 방법이고 `_p`는 여러 개의 문자열을 위해 사용하는 방법입니다. 아래 예시를 보세요.
 
-``` yaml en.yml
+```yaml en.yml
 index:
   title: Home
   add: Add
@@ -29,7 +30,7 @@ index:
     other: %d videos
 ```
 
-``` js
+```js
 <%= __('index.title') %>
 // Home
 
@@ -41,13 +42,13 @@ index:
 
 페이지에서 사용할 언어는 front-matter에서도 설정이 가능합니다. `_config.yml` 파일의 `i18n_dir` 항목을 수정하면 Hexo가 자동으로 감지할 수 있습니다.
 
-``` yaml
+```yaml
 i18n_dir: :lang
 ```
 
-`i18n_dir` 설정의 기본 값은 `:lang` 이며, Hexo는 URL의 첫 번째 세그먼트에서 언어를 감지합니다.
+`i18n_dir` 설정의 기본 값은 `:lang` 이며, Hexo는 URL의 첫 번째 세그먼트에서 언어를 감지합니다. For example:
 
-``` plain
+```plain
 /index.html => en
 /archives/index.html => en
 /zh-tw/index.html => zh-tw

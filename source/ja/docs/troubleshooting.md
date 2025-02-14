@@ -1,18 +1,19 @@
 ---
 title: トラブルシューティング
 ---
-Hexoの使用中に頻繁に遭遇する問題に対する解決策のリストをここに示します。このページで問題が解決しない場合は、[GitHub](https://github.com/hexojs/hexo/issues)や[Google Group](https://groups.google.com/group/hexo)で検索してみてください。
+
+Hexoの使用中に頻繁に遭遇する問題に対する解決策のリストをここに示します。 このページで問題が解決しない場合は、[GitHub](https://github.com/hexojs/hexo/issues)や[Google Group](https://groups.google.com/group/hexo)で検索してみてください。
 
 ## YAML解析エラー
 
-``` plain
+```plain
 JS-YAML: incomplete explicit mapping pair; a key node is missed at line 18, column 29:
       last_updated: Last updated: %s
 ```
 
 文字列にコロンが含まれている場合は、引用符で囲みます。
 
-``` plain
+```plain
 JS-YAML: bad indentation of a mapping entry at line 18, column 31:
       last_updated:"Last updated: %s"
 ```
@@ -23,13 +24,13 @@ JS-YAML: bad indentation of a mapping entry at line 18, column 31:
 
 ## EMFILEエラー
 
-``` plain
+```plain
 Error: EMFILE, too many open files
 ```
 
-Node.jsはノンブロッキングI/Oを持っていますが、システムによって同時に実行できる同期I/Oの最大数には制限があります。大量のファイルを生成しようとするときにEMFILEエラーに遭遇することがあります。以下のコマンドを実行して、許可される同期I/O操作の数を増やしてみてください。
+Node.jsはノンブロッキングI/Oを持っていますが、システムによって同時に実行できる同期I/Oの最大数には制限があります。 大量のファイルを生成しようとするときにEMFILEエラーに遭遇することがあります。 以下のコマンドを実行して、許可される同期I/O操作の数を増やしてみてください。
 
-``` bash
+```bash
 $ ulimit -n 10000
 ```
 
@@ -37,7 +38,7 @@ $ ulimit -n 10000
 
 次のエラーに遭遇した場合:
 
-``` bash
+```bash
 $ ulimit -n 10000
 ulimit: open files: cannot modify limit: Operation not permitted
 ```
@@ -48,23 +49,23 @@ ulimit: open files: cannot modify limit: Operation not permitted
 
 1. "/etc/security/limits.conf"に以下の行を追加します:
 
-  ```
-  * - nofile 10000
+```
+* - nofile 10000
 
-  # '*'はすべてのユーザーに適用され、'-'はソフトとハードの両方の制限を設定します
-  ```
+# '*' applies to all users and '-' set both soft and hard limits
+```
 
-  * 上記の設定が適用されない場合があるため、"/etc/pam.d/login"と"/etc/pam.d/lightdm"に以下の行が含まれていることを確認してください。（これらのファイルが存在しない場合はこのステップを無視してください）
+- 上記の設定が適用されない場合があるため、"/etc/pam.d/login"と"/etc/pam.d/lightdm"に以下の行が含まれていることを確認してください。 （これらのファイルが存在しない場合はこのステップを無視してください）
 
-  ```
-  session required pam_limits.so
-  ```
+```
+session required pam_limits.so
+```
 
-2. [systemdベースのディストリビューション](https://en.wikipedia.org/wiki/Systemd#Adoption)を使用している場合、systemdは"limits.conf"を上書きする可能性があります。systemdで制限を設定するには、"/etc/systemd/system.conf"と"/etc/systemd/user.conf"に以下の行を追加します:
+2. [systemdベースのディストリビューション](https://en.wikipedia.org/wiki/Systemd#Adoption)を使用している場合、systemdは"limits.conf"を上書きする可能性があります。 systemdで制限を設定するには、"/etc/systemd/system.conf"と"/etc/systemd/user.conf"に以下の行を追加します:
 
-  ```
-  DefaultLimitNOFILE=10000
-  ```
+```
+DefaultLimitNOFILE=10000
+```
 
 3. 再起動
 
@@ -88,7 +89,7 @@ FATAL ERROR: CALL_AND_RETRY_LAST Allocation failed - process out of memory
 
 ### RPC失敗
 
-``` plain
+```plain
 error: RPC failed; result=22, HTTP code = 403
 
 fatal: 'username.github.io' does not appear to be a git repository
@@ -98,7 +99,7 @@ fatal: 'username.github.io' does not appear to be a git repository
 
 ### Error: ENOENT: no such file or directory
 
-`Error: ENOENT: no such file or directory`のようなエラーが発生した場合、タグ、カテゴリー、またはファイル名で大文字と小文字を混在させている可能性があります。Gitはこの変更を自動的にマージできないため、自動ブランチングが中断されます。
+`Error: ENOENT: no such file or directory`のようなエラーが発生した場合、タグ、カテゴリー、またはファイル名で大文字と小文字を混在させている可能性があります。 Gitはこの変更を自動的にマージできないため、自動ブランチングが中断されます。
 
 これを修正するには:
 
@@ -108,28 +109,28 @@ fatal: 'username.github.io' does not appear to be a git repository
 1. パブリックフォルダをデスクトップに手動でコピー
 1. マスターブランチからデプロイ用ブランチにローカルでブランチを切り替え
 1. デスクトップからのパブリックフォルダの内容をデプロイ用ブランチにコピー
-1. コミット。マージコンフリクトが表示され、手動で解決できます。
+1. コミット。 表示されたマージコンフリクトを手動で解決します。
 1. マスターブランチに戻り、通常どおりデプロイ: `./node_modules/.bin/hexo deploy`
 
 ## サーバーの問題
 
-``` plain
+```plain
 Error: listen EADDRINUSE
 ```
 
-同時に2つのHexoサーバーを起動したか、別のアプリケーションが同じポートを使用している可能性があります。`port`設定を変更するか、`-p`フラグを使用してHexoサーバーを起動してみてください。
+同時に2つのHexoサーバーを起動したか、別のアプリケーションが同じポートを使用している可能性があります。 `port`設定を変更するか、`-p`フラグを使用してHexoサーバーを起動してみてください。
 
-``` bash
+```bash
 $ hexo server -p 5000
 ```
 
 ## プラグインのインストール問題
 
-``` plain
+```plain
 npm ERR! node-waf configure build
 ```
 
-C、C++、またはJavaScript以外の言語で書かれたプラグインをインストールしようとすると、このエラーが発生することがあります。コンピュータに適切なコンパイラがインストールされていることを確認してください。
+C、C++、またはJavaScript以外の言語で書かれたプラグインをインストールしようとすると、このエラーが発生することがあります。 コンピュータに適切なコンパイラがインストールされていることを確認してください。
 
 ## DTraceのエラー（Mac OS X）
 
@@ -149,7 +150,7 @@ $ npm install hexo --no-optional
 
 ## JadeまたはSwigでのデータモデルのイテレート
 
-Hexoはデータモデルに[Warehouse]を使用しています。これは配列ではないので、反復可能オブジェクトに変換する必要があるかもしれません。
+Hexoはデータモデルに[Warehouse][]を使用しています。 これは配列ではないので、反復可能オブジェクトに変換する必要があるかもしれません。
 
 ```
 {% for post in site.posts.toArray() %}
@@ -158,9 +159,9 @@ Hexoはデータモデルに[Warehouse]を使用しています。これは配�
 
 ## データが更新されない
 
-一部のデータは更新されず、新しく生成されたファイルが前のバージョンと同一になることがあります。キャッシュをクリーンして再試行してください。
+一部のデータは更新されず、新しく生成されたファイルが前のバージョンと同一になることがあります。 キャッシュをクリーンして再試行してください。
 
-``` bash
+```bash
 $ hexo clean
 ```
 
@@ -178,8 +179,7 @@ $ hexo clean
 
 ## コンテンツのエスケープ
 
-Hexoは記事をレンダリングするために[Nunjucks]を使用しています（以前のバージョンでは、同様の構文を共有する[Swig]が使用されていました）。`{{ }}`または`{% %}`で囲まれたコンテンツはパースの際に問題を引き起こす可能性があります。[`raw`](tag-plugins#Raw)タグプラグイン、単一のバックティック```` `{{ }}` ````、またはトリプルバックティックでパースをスキップできます。
-または、レンダラーのオプション（サポートされている場合）、[API](../api/renderer#Nunjucksタグを無効にする)、または[Front Matter](front-matter)を通じてNunjucksタグを無効にすることもできます。
+Hexoは記事をレンダリングするために[Nunjucks][]を使用しています（以前のバージョンでは、同様の構文を共有する[Swig][]が使用されていました）。 `{{ }}`または`{% %}`で囲まれたコンテンツはパースの際に問題を引き起こす可能性があります。 [`raw`](tag-plugins#Raw)タグプラグイン、単一のバックティック`` `{{ }}` ``、またはトリプルバックティックでパースをスキップできます。 または、レンダラーのオプション（サポートされている場合）、[API](../api/renderer#Nunjucksタグを無効にする)、または[Front Matter](front-matter)を通じてNunjucksタグを無効にすることもできます。 レンダラーのオプション(サポートされている場合) や、[API](/api/renderer#Disable-Nunjucks-tags)、または[Front Matter](/docs/front-matter)を通じてNunjucksタグを無効にすることもできます。
 
 ```
 {% raw %}
@@ -217,14 +217,14 @@ BashOnWindows環境で`$ hexo server`を実行すると、次のエラーが返�
 Error: watch /path/to/hexo/theme/ EMPERM
 ```
 
-残念ながら、WSLは現在ファイルシステムウォッチャをサポートしていません。そのため、hexoサーバーのライブ更新機能は現在利用できません。ファイルを最初に生成してから、静的サーバーとして実行することにより、WSL環境からサーバーを実行することは可能です:
+残念ながら、WSLは現在ファイルシステムウォッチャをサポートしていません。 そのため、hexoサーバーのライブ更新機能は現在利用できません。 ファイルを最初に生成してから、静的サーバーとして実行することにより、WSL環境からサーバーを実行することは可能です:
 
-``` sh
+```sh
 $ hexo generate
 $ hexo server -s
 ```
 
-これは[既知のBashOnWindowsの問題](https://github.com/Microsoft/BashOnWindows/issues/216)であり、2016年8月15日にWindowsチームはそれに取り組むと述べました。[問題のUserVoice提案ページ](https://wpdev.uservoice.com/forums/266908-command-prompt-console-bash-on-ubuntu-on-windo/suggestions/13469097-support-for-filesystem-watchers-like-inotify)で進捗状況を確認し、それを優先してもらうよう奨励することができます。
+これは[既知のBashOnWindowsの問題](https://github.com/Microsoft/BashOnWindows/issues/216)であり、2016年8月15日にWindowsチームはそれに取り組むと述べました。 [問題のUserVoice提案ページ](https://wpdev.uservoice.com/forums/266908-command-prompt-console-bash-on-ubuntu-on-windo/suggestions/13469097-support-for-filesystem-watchers-like-inotify)で進捗状況を確認し、それを優先してもらうよう奨励することができます。
 
 ## テンプレートレンダリングエラー
 
@@ -236,25 +236,30 @@ Template render error: (unknown path)
 ```
 
 考えられる原因:
-- ファイルに認識できない単語が含まれていることがあります。例えば、見えないゼロ幅文字などです。
+
+- ファイルに認識できない単語が含まれていることがあります。 例えば、見えないゼロ幅文字などです。
 - [タグプラグイン](tag-plugins)の誤用または制限。
-  * コンテンツが`{% endplugin_name %}`で閉じられていないブロックスタイルのタグプラグイン
+
+  - コンテンツが`{% endplugin_name %}`で閉じられていないブロックスタイルのタグプラグイン
+
   ```
-  # 誤り
+  # Incorrect
   {% codeblock %}
   fn()
   {% codeblock %}
 
-  # 誤り
+  # Incorrect
   {% codeblock %}
   fn()
 
-  # 正しい
+  # Correct
   {% codeblock %}
   fn()
   {% endcodeblock %}
   ```
-  * タグプラグインでNunjucksのような構文を含んでいる場合、例えば[`{% raw %}{#{% endraw %}`](https://mozilla.github.io/nunjucks/templating.html#comments)。この例の回避策は、[トリプルバックティック](tag-plugins#バックティックコードブロック)を代わりに使用することです。[コンテンツのエスケープ](troubleshooting#コンテンツのエスケープ)セクションに詳細があります。
+
+  - タグプラグインでNunjucksのような構文を含んでいる場合、例えば [`{% raw %} {# {% endraw %}`](https://mozilla.github.io/nunjucks/templating.html#comments)。 この例の回避策は、[トリプルバックティック](tag-plugins#バックティックコードブロック)を代わりに使用することです。 [コンテンツのエスケープ](troubleshooting#コンテンツのエスケープ)セクションに詳細があります。
+
   ```
   {% codeblock lang:bash %}
   Size of array is ${#ARRAY}
@@ -275,11 +280,14 @@ YAMLException: Specified list of YAML types (or a single Type object) contains a
 ```sh
 $ npm install js-yaml@latest
 ```
-または、`yarn`を使用している場合は
+
+または
+
 ```sh
 $ yarn add js-yaml@latest
 ```
-を実行してください。
+
+`yarn`を使用している場合これを実行します。
 
 [Warehouse]: https://github.com/hexojs/warehouse
 [Swig]: https://node-swig.github.io/swig-templates/

@@ -1,0 +1,9 @@
+description: >-
+  Hexo-Layout allows users to replace theme partial templates without modifying
+  the theme source code.
+link: https://github.com/MaLuns/hexo-layout
+tags:
+  - theme
+  - template
+  - layout
+  - partial

@@ -6,19 +6,19 @@ O `console` forma a ponte entre o Hexo e os usuários. Ele registra e descreve o
 
 ## Resumo
 
-``` js
-hexo.extend.console.register(name, desc, options, function(args){
+```js
+hexo.extend.console.register(name, desc, options, function (args) {
   // ...
 });
 ```
 
-Argumento | Descrição
---- | ---
-`name` | Nome
-`desc` | Descrição
-`options`| Opções
+| Argumento | Descrição |
+| --------- | --------- |
+| `name`    | Nome      |
+| `desc`    | Descrição |
+| `options` | Opções    |
 
-Um argumento `args` será passado para a função. Este é o argumento que os usuários digitam no terminal. Ele é analisado pelo [Minimist].
+Um argumento `args` será passado para a função. Este é o argumento que os usuários digitam no terminal. Ele é analisado pelo [Minimist][].
 
 ## Opções
 
@@ -26,8 +26,10 @@ Um argumento `args` será passado para a função. Este é o argumento que os us
 
 O uso de um comando de terminal. Por exemplo:
 
-``` js
-{usage: '[layout] <title>'}
+```js
+{
+  usage: "[layout] <title>";
+}
 // hexo new [layout] <title>
 ```
 
@@ -35,12 +37,12 @@ O uso de um comando de terminal. Por exemplo:
 
 A descrição de cada argumento de um comando de terminal. Por exemplo:
 
-``` js
+```js
 {
   arguments: [
-    {name: 'layout', desc: 'Post layout'},
-    {name: 'title', desc: 'Post title'}
-  ]
+    { name: "layout", desc: "Post layout" },
+    { name: "title", desc: "Post title" },
+  ];
 }
 ```
 
@@ -48,11 +50,9 @@ A descrição de cada argumento de um comando de terminal. Por exemplo:
 
 A descrição de cada opção de um comando de terminal. Por exemplo:
 
-``` js
+```js
 {
-  options: [
-    {name: '-r, --replace', desc: 'Replace existing files'}
-  ]
+  options: [{ name: "-r, --replace", desc: "Replace existing files" }];
 }
 ```
 
@@ -62,10 +62,14 @@ Informações mais detalhadas sobre um comando de terminal.
 
 ## Exemplo
 
-``` js
-hexo.extend.console.register('config', 'Display configuration', function(args){
-  console.log(hexo.config);
-});
+```js
+hexo.extend.console.register(
+  "config",
+  "Display configuration",
+  function (args) {
+    console.log(hexo.config);
+  },
+);
 ```
 
 [Minimist]: https://github.com/substack/minimist

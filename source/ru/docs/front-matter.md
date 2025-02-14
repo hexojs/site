@@ -1,11 +1,14 @@
 ---
-title: Шапка файла
+title: Front-matter
 ---
+
+{% youtube pfD6FCZdW4Q %}
+
 Шапка файла это блок в формате YAML или JSON, расположенный в начале файла, который используется для изменения настроек написанного материала. Окончание шапки определяется строкой `---` или `;;;` при написании в формате JSON.
 
 **YAML**
 
-``` yaml
+```yaml
 ---
 title: Hello World
 date: 2013/7/13 20:46:25
@@ -14,7 +17,7 @@ date: 2013/7/13 20:46:25
 
 **JSON**
 
-``` json
+```json
 "title": "Hello World",
 "date": "2013/7/13 20:46:25"
 ;;;
@@ -22,40 +25,51 @@ date: 2013/7/13 20:46:25
 
 ### Параметры и значения по умолчанию
 
-Параметр | Описание | Значение по умолчанию
---- | --- | ---
-`layout` | Макет | [`config.default_layout`](/ru/docs/configuration#Написание)
-`title` | Заголовок | Filename (posts only)
-`date` | Дата публикации | Дата создания файла
-`updated` | Дата обновления | Дата обновления файла
-`comments` | Включение поддержки комментариев в посте | `true`
-`tags` | Теги (Недоступно для страниц) |
-`categories` | Категории (Не доступно для страниц) |
-`permalink` | Переопределяет ссылку по умолчанию. Должна заканчиваться `/` или `.html` | `null`
-`excerpt` | Отрывок страницы в виде простого текста. Используйте [этот плагин](/ru/docs/tag-plugins#Отрывок-поста) для оформления текста |
-`disableNunjucks` | Отключить отображение тегов Nunjucks `{{ }}`/`{% %}` и [плагины тегов](/ru/docs/tag-plugins) при включении
-`lang` | Установите язык для переопределения [автоопределения](/ru/docs/internationalization#Путь) | Берётся из `_config.yml`
-`published` | Whether the post should be published | For posts under `_posts`, it is `true`, and for posts under `_draft`, it is `false`
+| Параметр          | Описание                                                                                                                     | Значение по умолчанию                                                               |
+| ----------------- | ---------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| `layout`          | Layout                                                                                                                       | [`config.default_layout`](/docs/configuration#Writing)                              |
+| `title`           | Заголовок                                                                                                                    | Filename (posts only)                                                               |
+| `date`            | Дата публикации                                                                                                              | Дата создания файла                                                                 |
+| `updated`         | Дата обновления                                                                                                              | Дата обновления файла                                                               |
+| `comments`        | Включение поддержки комментариев в посте                                                                                     | `true`                                                                              |
+| `tags`            | Теги (Недоступно для страниц)                                                                                                |                                                                                     |
+| `categories`      | Категории (Не доступно для страниц)                                                                                          |                                                                                     |
+| `permalink`       | Переопределяет ссылку по умолчанию. Должна заканчиваться `/` или `.html`                                                     | `null`                                                                              |
+| `excerpt`         | Отрывок страницы в виде простого текста. Используйте [этот плагин](/ru/docs/tag-plugins#Отрывок-поста) для оформления текста |                                                                                     |
+| `disableNunjucks` | Отключить отображение тегов Nunjucks `{{ }}`/`{% %}` и [плагины тегов](/ru/docs/tag-plugins) при включении                   | false                                                                               |
+| `lang`            | Установите язык для переопределения [автоопределения](/ru/docs/internationalization#Путь)                                    | Берётся из `_config.yml`                                                            |
+| `published`       | Whether the post should be published                                                                                         | For posts under `_posts`, it is `true`, and for posts under `_draft`, it is `false` |
 
+#### Layout
 
-#### Макет
+Умолчания для макета `поста`, берутся в соответствии со значениеми [`параметров`](https://hexo.io/ru/docs/configuration#Написание) в файле `_config.yml`. Когда в статье макет отключён (`layout: false`), он не будет обрабатываться с темой. Тем не менее, он все равно будет отображаться любым доступным средством визуализации: если статья написана в Markdown и средстве визуализации Markdown (например, установлен по умолчанию [hexo-renderer-marked](https://github.com/hexojs/hexo-renderer-marked)) , он будет отображён в HTML.
 
-Умолчания для макета `поста`, берутся в соответствии со значениеми [`параметров`]((https://hexo.io/ru/docs/configuration#Написание)) в файле `_config.yml`. Когда в статье макет отключён (`layout: false`), он не будет обрабатываться с темой. Тем не менее, он все равно будет отображаться любым доступным средством визуализации: если статья написана в Markdown и средстве визуализации Markdown (например, установлен по умолчанию [hexo-renderer-marked](https://github.com/hexojs/hexo-renderer-marked )) , он будет отображён в HTML.
-
-[Плагины тегов](/ru/docs/tag-plugins) всегда обрабатываются независимо от макета, если только они не отключены настройкой `disableNunjucks` или [средство визуализации] (/api/renderer#Disable-Nunjucks-tags).
+[Плагины тегов](/ru/docs/tag-plugins) всегда обрабатываются независимо от макета, если только они не отключены настройкой `disableNunjucks` или \[средство визуализации\] (/api/renderer#Disable-Nunjucks-tags).
 
 #### Категории и теги
 
 Только посты поддерживают использование категорий и тегов. Категории считываются в порядке их написания, в результате чего сохраняется иерархия классификации и подклассификации. Теги определены на одном иерархическом уровне, не важен порядок написания.
 
+**Макет**
+
+```yaml
+categories:
+  - Sports
+  - Baseball
+tags:
+  - Injury
+  - Fight
+  - Shocking
+```
+
+If you want to apply multiple category hierarchies, use a list of names instead of a single name. If Hexo sees any categories defined this way on a post, it will treat each category for that post as its own independent hierarchy.
+
 **Например**
 
-``` yaml
+```yaml
 categories:
-- Sports
-- Baseball
-tags:
-- Injury
-- Fight
-- Shocking
+  - [Sports, Baseball]
+  - [MLB, American League, Boston Red Sox]
+  - [MLB, American League, New York Yankees]
+  - Rivalries
 ```

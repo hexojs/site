@@ -1,17 +1,18 @@
 ---
 title: 移行
 ---
+
 ## RSS
 
 まず`hexo-migrator-rss`プラグインをインストールします。
 
-``` bash
+```bash
 $ npm install hexo-migrator-rss --save
 ```
 
-プラグインがインストールされたら、以下のコマンドを実行してRSSからすべての記事を移行します。`source`はファイルパスまたはURLです。
+プラグインがインストールされたら、以下のコマンドを実行してRSSからすべての記事を移行します。 `source`はファイルパスまたはURLです。
 
-``` bash
+```bash
 $ hexo migrate rss <source>
 ```
 
@@ -21,7 +22,7 @@ Jekyllの`_posts`フォルダ内のすべてのファイルを`source/_posts`フ
 
 `_config.yml`の`new_post_name`設定を変更します:
 
-``` yaml
+```yaml
 new_post_name: :year-:month-:day-:title.md
 ```
 
@@ -31,7 +32,7 @@ Octopressの`source/_posts`フォルダ内のすべてのファイルを`source/
 
 `_config.yml`の`new_post_name`設定を変更します:
 
-``` yaml
+```yaml
 new_post_name: :year-:month-:day-:title.md
 ```
 
@@ -39,7 +40,7 @@ new_post_name: :year-:month-:day-:title.md
 
 まず、`hexo-migrator-wordpress`プラグインをインストールします。
 
-``` bash
+```bash
 $ npm install hexo-migrator-wordpress --save
 ```
 
@@ -47,7 +48,7 @@ WordPressダッシュボードで "Tools" → "Export" → "WordPress" に移動
 
 次のコマンドを実行します:
 
-``` bash
+```bash
 $ hexo migrate wordpress <source>
 ```
 

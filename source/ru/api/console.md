@@ -1,23 +1,24 @@
 ---
 title: Консоль
 ---
+
 Консоль служит для взаимодействия пользователей с Hexo. Регистрирует и описывает доступные консольные команды.
 
 ## Краткий обзор
 
-``` js
-hexo.extend.console.register(name, desc, options, function(args){
+```js
+hexo.extend.console.register(name, desc, options, function (args) {
   // ...
 });
 ```
 
-Свойство | Описание
---- | ---
-`name` | Имя
-`desc` | Описание
-`options` | Опции
+| Argument  | Описание |
+| --------- | -------- |
+| `name`    | Имя      |
+| `desc`    | Описание |
+| `options` | Опции    |
 
-Значение из аргумента `args` передаётся в функцию. Свойство описывает вводимые через терминал данные. Анализируется с помощью [Minimist].
+Значение из аргумента `args` передаётся в функцию. Свойство описывает вводимые через терминал данные. Анализируется с помощью [Minimist][].
 
 ## Опции
 
@@ -25,8 +26,10 @@ hexo.extend.console.register(name, desc, options, function(args){
 
 Добавление используемых команд в консоль. Например:
 
-``` js
-{usage: '[layout] <title>'}
+```js
+{
+  usage: "[layout] <title>";
+}
 // hexo new [layout] <title>
 ```
 
@@ -34,12 +37,12 @@ hexo.extend.console.register(name, desc, options, function(args){
 
 Описание аргументов в консоли. Например:
 
-``` js
+```js
 {
   arguments: [
-    {name: 'layout', desc: 'Post layout'},
-    {name: 'title', desc: 'Post title'}
-  ]
+    { name: "layout", desc: "Post layout" },
+    { name: "title", desc: "Post title" },
+  ];
 }
 ```
 
@@ -47,11 +50,9 @@ hexo.extend.console.register(name, desc, options, function(args){
 
 Описание опций в консоли. Например:
 
-``` js
+```js
 {
-  options: [
-    {name: '-r, --replace', desc: 'Replace existing files'}
-  ]
+  options: [{ name: "-r, --replace", desc: "Replace existing files" }];
 }
 ```
 
@@ -61,10 +62,14 @@ hexo.extend.console.register(name, desc, options, function(args){
 
 ## Пример
 
-``` js
-hexo.extend.console.register('config', 'Display configuration', function(args){
-  console.log(hexo.config);
-});
+```js
+hexo.extend.console.register(
+  "config",
+  "Display configuration",
+  function (args) {
+    console.log(hexo.config);
+  },
+);
 ```
 
 [Minimist]: https://github.com/minimistjs/minimist

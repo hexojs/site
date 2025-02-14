@@ -1,49 +1,50 @@
 ---
 title: Router
 ---
+
 router จะบันทึกและตั้งค่า path ทั้งหมดที่ใช้ในเว็บไซต์
 
 ## Get a Path
 
-วิธี `get` จะส่งกลับผลที่เป็น [Stream] code ต่อไปเป็นตัวอย่างการบ่งบอก path ไปถึงหน้งเว็บเฉพาะ
+วิธี `get` จะส่งกลับผลที่เป็น [Stream][] code ต่อไปเป็นตัวอย่างการบ่งบอก path ไปถึงหน้งเว็บเฉพาะ For example, to save the path data to a specified destination:
 
-``` js
-var data = hexo.route.get('index.html');
-var dest = fs.createWriteStream('somewhere');
+```js
+var data = hexo.route.get("index.html");
+var dest = fs.createWriteStream("somewhere");
 
 data.pipe(dest);
 ```
 
 ## Set a Path
 
-ตัวเลือกท่ีส่งเข้าวิธี `set` ต้องเป็น string [Buffer] หรือ function
+ตัวเลือกท่ีส่งเข้าวิธี `set` ต้องเป็น string [Buffer][] หรือ function
 
-``` js
+```js
 // String
-hexo.route.set('index.html', 'index')
+hexo.route.set("index.html", "index");
 
 // Buffer
-hexo.route.set('index.html', new Buffer('index'));
+hexo.route.set("index.html", new Buffer("index"));
 
 // Function (Promise)
-hexo.route.set('index.html', function(){
-  return new Promise(function(resolve, reject){
-    resolve('index');
+hexo.route.set("index.html", function () {
+  return new Promise(function (resolve, reject) {
+    resolve("index");
   });
 });
 
 // Function (Callback)
-hexo.route.set('index.html', function(callback){
-  callback(null, 'index');
+hexo.route.set("index.html", function (callback) {
+  callback(null, "index");
 });
 ```
 
-ผู้ใช้ส่ง boolean เข้าไปได้ว่า path นั้นจะถูกแก้ไขหรือเปล่า ดังนั้นการตั้งค่าท่ีเป็น  boolean นี้จะช่วยเพิ่มความเร็วใน file generation เพราะว่าจะเลือกการไม่รันไฟล์ที่ unmodified ได้
+You can also set a boolean for whether a path has been modified or not. This can speed up file generation as it allows for ignoring the unmodified files.
 
-``` js
-hexo.route.set('index.html', {
-    data: 'index',
-    modified: false
+```js
+hexo.route.set("index.html", {
+  data: "index",
+  modified: false,
 });
 
 // hexo.route.isModified('index.html') => false
@@ -51,13 +52,13 @@ hexo.route.set('index.html', {
 
 ## Remove a Path
 
-``` js
-hexo.route.remove('index.html');
+```js
+hexo.route.remove("index.html");
 ```
 
 ## Get the List of Routes
 
-``` js
+```js
 hexo.route.list();
 ```
 
@@ -65,8 +66,8 @@ hexo.route.list();
 
 วิธี `format` จะเปลี่ยน string เป็น path ที่ถูกต้อง
 
-``` js
-hexo.route.format('archives/');
+```js
+hexo.route.format("archives/");
 // archives/index.html
 ```
 

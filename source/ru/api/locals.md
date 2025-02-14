@@ -1,26 +1,27 @@
 ---
 title: Локальные переменные
 ---
+
 Локальные переменные используются для рендеринга шаблона, они доступны через переменную `site` в шаблоне.
 
 ## Переменные по умолчанию
 
-Переменная | Описание
---- | ---
-`posts` | Все посты
-`pages` | Все страницы
-`categories` | Все категории
-`tags` | Все теги
+| Variable     | Описание      |
+| ------------ | ------------- |
+| `posts`      | Все посты     |
+| `pages`      | Все страницы  |
+| `categories` | Все категории |
+| `tags`       | Все теги      |
 
 ## Получение переменной
 
-``` js
-hexo.locals.get('posts')
+```js
+hexo.locals.get("posts");
 ```
 
 ## Установка переменной
 
-``` js
+```js
 hexo.locals.set('posts', function(){
   return ...
 });
@@ -28,18 +29,18 @@ hexo.locals.set('posts', function(){
 
 ## Удаление переменной
 
-``` js
-hexo.locals.remove('posts');
+```js
+hexo.locals.remove("posts");
 ```
 
 ## Получение всех переменных
 
-``` js
+```js
 hexo.locals.toObject();
 ```
 
-## Очистка кэша
+## Invalidate the cache
 
-``` js
+```js
 hexo.locals.invalidate();
-``
+```

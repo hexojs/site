@@ -1,10 +1,11 @@
-description: A simple three columns theme which inspired by JianShu.com
+description: A responsive hexo blog theme, the style was inspired by the earlier stage of Jianshu.com.
 link: https://github.com/tangkunyin/hexo-theme-jsimple
-preview: http://shuoit.net
+preview: https://tomartisan.com
 tags:
-  - 森破
   - JSimple
-  - Simple
   - JianShu
-  - Three_columns
-  - Responsive
+  - responsive
+  - three_column
+  - perfect_seo
+  - local_search
+  - custom_highlight

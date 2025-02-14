@@ -6,73 +6,66 @@ title: Writing
 
 คุณสามรถรันคำสั่งต่อไปเพื่อสร้างโพสต์ใหม่หรือเพจใหม่:
 
-``` bash
+```bash
 $ hexo new [layout] <title>
 ```
 
-`post` เป็น `layout` default แต่คุณตั้งค่า layout ของตนได้โดยเปลี่ยนการตั้งค่าของ `default_layout` ใน  `_config.yml` ได้
+`post` is the default `layout`, but you can supply your own. `post` เป็น `layout` default แต่คุณตั้งค่า layout ของตนได้โดยเปลี่ยนการตั้งค่าของ `default_layout` ใน `_config.yml` ได้
 
-### Layout
+## Layout
 
-ใน hexo มี layout ทั้งหมดสามอย่าง: `post` `page`  และ `draft` ไฟล์ที่สร้างมาในต่าง layout จะอยู่ใน path ท่ีแตกต่างกัน 
-โพสต์ท่ีสร้างมาใหม่จะบันทึกอยู่ใน folder  `source/_posts`
+ใน hexo มี layout ทั้งหมดสามอย่าง: `post` `page` และ `draft` ไฟล์ที่สร้างมาในต่าง layout จะอยู่ใน path ท่ีแตกต่างกัน โพสต์ท่ีสร้างมาใหม่จะบันทึกอยู่ใน folder `source/_posts` Files created by each of them is saved to a different path. Newly created posts are saved to the `source/_posts` folder.
 
-Layout | Path
---- | ---
-`post` | `source/_posts`
-`page` | `source`
-`draft` | `source/_drafts`
+| Layout  | Path             |
+| ------- | ---------------- |
+| `post`  | `source/_posts`  |
+| `page`  | `source`         |
+| `draft` | `source/_drafts` |
 
 {% note tip Disabling layout %}
 If you don't want an article (post/page) to be processed with a theme, set `layout: false` in its front-matter. Refer to [this section](/docs/front-matter#Layout) for more details.
 {% endnote %}
 
-### Filename
+## Filename
 
-hexo ใช้หัวข้อของโพสต์เป็นชื่อไฟล์ คุณสามารถตั้งค่า `new_post_name` ในไฟล์ 
-`_config.yml` เพื่อเปลี่ยนชื่อไฟล์ default ยกตัวอย่างเช่น 
-`:year-:month-:day-:title.md` 
-จะทำให้ชื่อไฟล์มีกาลเวลาของการสร้างไฟล์รวมอยู่ด้วย คุณใช้ placeholder ต่อไปได้:
+By default, Hexo uses the post title as its filename. You can edit the `new_post_name` setting in `_config.yml` to change the default filename. hexo ใช้หัวข้อของโพสต์เป็นชื่อไฟล์ คุณสามารถตั้งค่า `new_post_name` ในไฟล์ `_config.yml` เพื่อเปลี่ยนชื่อไฟล์ default ยกตัวอย่างเช่น `:year-:month-:day-:title.md` จะทำให้ชื่อไฟล์มีกาลเวลาของการสร้างไฟล์รวมอยู่ด้วย คุณใช้ placeholder ต่อไปได้: You can use the following placeholders:
 
-Placeholder | Description
---- | ---
-`:title` | Post title (lower case, with spaces replaced by hyphens)
-`:year` | Created year, e.g. `2015`
-`:month` | Created month (leading zeros), e.g. `04`
-`:i_month` | Created month (no leading zeros), e.g. `4`
-`:day` | Created day (leading zeros), e.g. `07`
-`:i_day` | Created day (no leading zeros), e.g. `7`
+| Placeholder | Description                                              |
+| ----------- | -------------------------------------------------------- |
+| `:title`    | Post title (lower case, with spaces replaced by hyphens) |
+| `:year`     | Created year, e.g. `2015`                                |
+| `:month`    | Created month (leading zeros), e.g. `04`                 |
+| `:i_month`  | Created month (no leading zeros), e.g. `4`               |
+| `:day`      | Created day (leading zeros), e.g. `07`                   |
+| `:i_day`    | Created day (no leading zeros), e.g. `7`                 |
 
-### Drafts
+## Drafts
 
-`draft` เป็น layout อย่างหนึ่งของ hexo โพสต์ท่ีตั้งค่า layout เป็น draft 
-นั้นจะถูกบันทึกอยู่ใน folder `source/_drafts`  คุณสามารถใช้คำสั่ง `publish` ไปย้ายไฟล์ไปถึง folder `source/_posts`  ในท่ีนี้คำสั่ง `publish` คล้ายกับคำสั่ง `new`
+Previously, we mentioned a special layout in Hexo: `draft`. Posts initialized with this layout are saved to the `source/_drafts` folder. `draft` เป็น layout อย่างหนึ่งของ hexo โพสต์ท่ีตั้งค่า layout เป็น draft นั้นจะถูกบันทึกอยู่ใน folder `source/_drafts` คุณสามารถใช้คำสั่ง `publish` ไปย้ายไฟล์ไปถึง folder `source/_posts` ในท่ีนี้คำสั่ง `publish` คล้ายกับคำสั่ง `new` `publish` works in a similar way to the `new` command.
 
-``` bash
+```bash
 $ hexo publish [layout] <title>
 ```
 
-draft จะไม่ render ให้เห็นในเว็บ by default คุณสามารถเพิ่มตัวเลือก `--draft` 
-ให้เมื่อรัน hexo หรือ enable `render_drafts` ในไฟล์ `_config.yml` เพื่อ render draft
+Drafts are not displayed by default. draft จะไม่ render ให้เห็นในเว็บ by default คุณสามารถเพิ่มตัวเลือก `--draft` ให้เมื่อรัน hexo หรือ enable `render_drafts` ในไฟล์ `_config.yml` เพื่อ render draft
 
-### Scaffolds
+## Scaffolds
 
-เมื่อสร้างโพสต์ขึ้นมา hexo จะสร้างไฟล์ตามไฟล์ท่ีมีอยู่ใน folder `scaffolds`  ยกตัวอย่างเช่น：
+เมื่อสร้างโพสต์ขึ้นมา hexo จะสร้างไฟล์ตามไฟล์ท่ีมีอยู่ใน folder `scaffolds` ยกตัวอย่างเช่น： For example:
 
-``` bash
+```bash
 $ hexo new photo "My Gallery"
 ```
 
-เมื่อรันคำสั่งนี้ hexo จะลองหา `photo.md` ใน folder  `scaffolds`  และตามด้วยการสร้างโพสต์ขึ้นมา placeholder ต่อไปเป็น placeholder 
-ท่ีตั้งค่าได้ใน scaffold：
+เมื่อรันคำสั่งนี้ hexo จะลองหา `photo.md` ใน folder `scaffolds` และตามด้วยการสร้างโพสต์ขึ้นมา placeholder ต่อไปเป็น placeholder ท่ีตั้งค่าได้ใน scaffold： The following placeholders are available in scaffolds:
 
-Placeholder | Description
---- | ---
-`layout` | Layout
-`title` | Title
-`date` | File created date
+| Placeholder | Description       |
+| ----------- | ----------------- |
+| `layout`    | Layout            |
+| `title`     | Title             |
+| `date`      | File created date |
 
-### Supported Formats
+## Supported Formats
 
 Hexo support posts written in any format, as long as the corresponding renderer plugin is installed.
 

@@ -1,6 +1,6 @@
 ---
 layout: index
-description: Hexo is a fast, simple & powerful blog framework powered by Node.js.
+description: Hexo 是一个由Node.js驱动的快速、简单的 & 强大的博客框架。
 subtitle: 快速、简洁且高效的博客框架
 comments: false
 ---
@@ -12,7 +12,7 @@ comments: false
         <i class="fa fa-bolt"></i>
       </div>
       <h3 class="intro-feature-title">超快速度</h3>
-      <p class="intro-feature-desc">Node.js 所带来的超快生成速度，让上百个页面在几秒内瞬间完成渲染。</p>
+      <p class="intro-feature-desc">Node.js 所带来的超快生成速度。 上百个页面在几秒内完成渲染。</p>
     </div>
   </li>
   <li class="intro-feature-wrap">
@@ -34,8 +34,8 @@ comments: false
       <div class="intro-feature-icon">
         <i class="fa fa-cog"></i>
       </div>
-      <h3 class="intro-feature-title">插件和可扩展性</h3>
-      <p class="intro-feature-desc">强大的 API 带来无限的可能，与数种模板引擎（EJS，Pug，Nunjucks）和工具（Babel，PostCSS，Less/Sass）轻易集成</p>
+      <h3 class="intro-feature-title">插件</h3>
+      <p class="intro-feature-desc">强大的 API 带来无限的可能。 支持数种模板引擎（EJS，Pug，Nunjucks等）。 可以与现有的NPM包 (Babel, PostCSS, Less/Sass 等) 轻松地集成。</p>
     </div>
   </li>
 </ul>

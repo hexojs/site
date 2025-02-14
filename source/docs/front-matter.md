@@ -8,7 +8,7 @@ Front-matter is a block of YAML or JSON at the beginning of the file that is use
 
 **YAML**
 
-``` yaml
+```yaml
 ---
 title: Hello World
 date: 2013/7/13 20:46:25
@@ -17,7 +17,7 @@ date: 2013/7/13 20:46:25
 
 **JSON**
 
-``` json
+```json
 "title": "Hello World",
 "date": "2013/7/13 20:46:25"
 ;;;
@@ -25,20 +25,20 @@ date: 2013/7/13 20:46:25
 
 ### Settings & Their Default Values
 
-Setting | Description | Default
---- | --- | ---
-`layout` | Layout | [`config.default_layout`](/docs/configuration#Writing)
-`title` | Title | Filename (posts only)
-`date` | Published date | File created date
-`updated` | Updated date | File updated date
-`comments` | Enables comment feature for the post | `true`
-`tags` | Tags (Not available for pages) |
-`categories` | Categories (Not available for pages) |
-`permalink` | Overrides the default permalink of the post. Permalink should end with `/` or `.html` | `null`
-`excerpt` | Page excerpt in plain text. Use [this plugin](/docs/tag-plugins#Post-Excerpt) to format the text |
-`disableNunjucks` | Disable rendering of Nunjucks tag `{{ }}`/`{% %}` and [tag plugins](/docs/tag-plugins) when enabled | false
-`lang` | Set the language to override [auto-detection](/docs/internationalization#Path) | Inherited from `_config.yml`
-`published` | Whether the post should be published | For posts under `_posts`, it is `true`, and for posts under `_draft`, it is `false`
+| Setting           | Description                                                                                         | Default                                                                             |
+| ----------------- | --------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| `layout`          | Layout                                                                                              | [`config.default_layout`](/docs/configuration#Writing)                              |
+| `title`           | Title                                                                                               | Filename (posts only)                                                               |
+| `date`            | Published date                                                                                      | File created date                                                                   |
+| `updated`         | Updated date                                                                                        | File updated date                                                                   |
+| `comments`        | Enables comment feature for the post                                                                | `true`                                                                              |
+| `tags`            | Tags (Not available for pages)                                                                      |
+| `categories`      | Categories (Not available for pages)                                                                |
+| `permalink`       | Overrides the default permalink of the post. Permalink should end with `/` or `.html`               | `null`                                                                              |
+| `excerpt`         | Page excerpt in plain text. Use [this plugin](/docs/tag-plugins#Post-Excerpt) to format the text    |
+| `disableNunjucks` | Disable rendering of Nunjucks tag `{{ }}`/`{% %}` and [tag plugins](/docs/tag-plugins) when enabled | false                                                                               |
+| `lang`            | Set the language to override [auto-detection](/docs/internationalization#Path)                      | Inherited from `_config.yml`                                                        |
+| `published`       | Whether the post should be published                                                                | For posts under `_posts`, it is `true`, and for posts under `_draft`, it is `false` |
 
 #### Layout
 
@@ -52,24 +52,24 @@ Only posts support the use of categories and tags. Categories apply to posts in 
 
 **Example**
 
-``` yaml
+```yaml
 categories:
-- Sports
-- Baseball
+  - Sports
+  - Baseball
 tags:
-- Injury
-- Fight
-- Shocking
+  - Injury
+  - Fight
+  - Shocking
 ```
 
 If you want to apply multiple category hierarchies, use a list of names instead of a single name. If Hexo sees any categories defined this way on a post, it will treat each category for that post as its own independent hierarchy.
 
 **Example**
 
-``` yaml
+```yaml
 categories:
-- [Sports, Baseball]
-- [MLB, American League, Boston Red Sox]
-- [MLB, American League, New York Yankees]
-- Rivalries
+  - [Sports, Baseball]
+  - [MLB, American League, Boston Red Sox]
+  - [MLB, American League, New York Yankees]
+  - Rivalries
 ```

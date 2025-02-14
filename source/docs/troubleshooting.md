@@ -1,18 +1,19 @@
 ---
 title: Troubleshooting
 ---
+
 In case you're experiencing problems with using Hexo, here is a list of solutions to some frequently encountered issues. If this page doesn't help you solve your problem, try doing a search on [GitHub](https://github.com/hexojs/hexo/issues) or our [Google Group](https://groups.google.com/group/hexo).
 
 ## YAML Parsing Error
 
-``` plain
+```plain
 JS-YAML: incomplete explicit mapping pair; a key node is missed at line 18, column 29:
       last_updated: Last updated: %s
 ```
 
 Wrap the string with quotations if it contains colons.
 
-``` plain
+```plain
 JS-YAML: bad indentation of a mapping entry at line 18, column 31:
       last_updated:"Last updated: %s"
 ```
@@ -23,13 +24,13 @@ You can see [YAML Spec](http://www.yaml.org/spec/1.2/spec.html) for more info.
 
 ## EMFILE Error
 
-``` plain
+```plain
 Error: EMFILE, too many open files
 ```
 
 Though Node.js has non-blocking I/O, the maximum number of synchronous I/O is still limited by the system. You may come across an EMFILE error when trying to generate a large number of files. You can try to run the following command to increase the number of allowed synchronous I/O operations.
 
-``` bash
+```bash
 $ ulimit -n 10000
 ```
 
@@ -37,7 +38,7 @@ $ ulimit -n 10000
 
 If you encounter the following error:
 
-``` bash
+```bash
 $ ulimit -n 10000
 ulimit: open files: cannot modify limit: Operation not permitted
 ```
@@ -48,23 +49,23 @@ To override the limit:
 
 1. Add the following line to "/etc/security/limits.conf":
 
-  ```
-  * - nofile 10000
+```
+* - nofile 10000
 
-  # '*' applies to all users and '-' set both soft and hard limits
-  ```
+# '*' applies to all users and '-' set both soft and hard limits
+```
 
-  * The above setting may not apply in some cases, ensure "/etc/pam.d/login" and "/etc/pam.d/lightdm" have the following line. (Ignore this step if those files do not exist)
+- The above setting may not apply in some cases, ensure "/etc/pam.d/login" and "/etc/pam.d/lightdm" have the following line. (Ignore this step if those files do not exist)
 
-  ```
-  session required pam_limits.so
-  ```
+```
+session required pam_limits.so
+```
 
 2. If you are on a [systemd-based](https://en.wikipedia.org/wiki/Systemd#Adoption) distribution, systemd may override "limits.conf". To set the limit in systemd, add the following line in "/etc/systemd/system.conf" and "/etc/systemd/user.conf":
 
-  ```
-  DefaultLimitNOFILE=10000
-  ```
+```
+DefaultLimitNOFILE=10000
+```
 
 3. Reboot
 
@@ -88,7 +89,7 @@ Increase Node.js heap memory size by changing the first line of `hexo-cli` (`whi
 
 ### RPC failed
 
-``` plain
+```plain
 error: RPC failed; result=22, HTTP code = 403
 
 fatal: 'username.github.io' does not appear to be a git repository
@@ -113,19 +114,19 @@ To fix this, try
 
 ## Server Problems
 
-``` plain
+```plain
 Error: listen EADDRINUSE
 ```
 
 You may have started two Hexo servers at the same time or there might be another application using the same port. Try to modify the `port` setting or start the Hexo server with the `-p` flag.
 
-``` bash
+```bash
 $ hexo server -p 5000
 ```
 
 ## Plugin Installation Problems
 
-``` plain
+```plain
 npm ERR! node-waf configure build
 ```
 
@@ -160,7 +161,7 @@ Hexo uses [Warehouse] for its data model. It's not an array so you may have to t
 
 Some data cannot be updated, or the newly generated files are identical to those of the last version. Clean the cache and try again.
 
-``` bash
+```bash
 $ hexo clean
 ```
 
@@ -178,7 +179,7 @@ When you can't get any command except `help`, `init` and `version` to work and y
 
 ## Escape Contents
 
-Hexo uses [Nunjucks] to render posts ([Swig] was used in the older version, which shares a similar syntax). Content wrapped with `{{ }}` or `{% %}` will get parsed and may cause problems. You can skip the parsing by wrapping it with the [`raw`](/docs/tag-plugins#Raw) tag plugin, a single backtick ```` `{{ }}` ```` or a triple backtick.
+Hexo uses [Nunjucks] to render posts ([Swig] was used in the older version, which shares a similar syntax). Content wrapped with `{{ }}` or `{% %}` will get parsed and may cause problems. You can skip the parsing by wrapping it with the [`raw`](/docs/tag-plugins#Raw) tag plugin, a single backtick `` `{{ }}` `` or a triple backtick.
 Alternatively, Nunjucks tags can be disabled through the renderer's option (if supported), [API](/api/renderer#Disable-Nunjucks-tags) or [front-matter](/docs/front-matter).
 
 ```
@@ -219,7 +220,7 @@ Error: watch /path/to/hexo/theme/ EMPERM
 
 Unfortunately, WSL does not currently support filesystem watchers. Therefore, the live updating feature of hexo's server is currently unavailable. You can still run the server from a WSL environment by first generating the files and then running it as a static server:
 
-``` sh
+```sh
 $ hexo generate
 $ hexo server -s
 ```
@@ -236,9 +237,12 @@ Template render error: (unknown path)
 ```
 
 Possible cause:
+
 - There are some unrecognizable words in your file, e.g. invisible zero width characters.
 - Incorrect use or limitation of [tag plugin](/docs/tag-plugins).
-  * Block-style tag plugin with content is not enclosed with `{% endplugin_name %}`
+
+  - Block-style tag plugin with content is not enclosed with `{% endplugin_name %}`
+
   ```
   # Incorrect
   {% codeblock %}
@@ -254,7 +258,9 @@ Possible cause:
   fn()
   {% endcodeblock %}
   ```
-  * Having Nunjucks-like syntax in a tag plugin, e.g. [`{#`](https://mozilla.github.io/nunjucks/templating.html#comments). A workaround for this example is to use [triple backtick](/docs/tag-plugins#Backtick-Code-Block) instead. [Escape Contents](/docs/troubleshooting#Escape-Contents) section has more details.
+
+  - Having Nunjucks-like syntax in a tag plugin, e.g. [`{% raw %} {# {% endraw %}`](https://mozilla.github.io/nunjucks/templating.html#comments). A workaround for this example is to use [triple backtick](/docs/tag-plugins#Backtick-Code-Block) instead. [Escape Contents](/docs/troubleshooting#Escape-Contents) section has more details.
+
   ```
   {% codeblock lang:bash %}
   Size of array is ${#ARRAY}
@@ -269,16 +275,19 @@ Upgrading to `hexo^6.1.0` from an older version may cause the following error wh
 YAMLException: Specified list of YAML types (or a single Type object) contains a non-Type object.
     at ...
 ```
- 
-This may be caused by an incorrect dependency(i.e. `js-yaml`) setting that can't be solved automatically by the package manager, and you may have to update it manually running: 
+
+This may be caused by an incorrect dependency(i.e. `js-yaml`) setting that can't be solved automatically by the package manager, and you may have to update it manually running:
 
 ```sh
 $ npm install js-yaml@latest
 ```
+
 or
+
 ```sh
 $ yarn add js-yaml@latest
 ```
+
 if you use `yarn`.
 
 [Warehouse]: https://github.com/hexojs/warehouse

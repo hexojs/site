@@ -1,36 +1,39 @@
 ---
 title: Migration
 ---
+
 ## RSS
 
 ขั้นแรก ติดตั้งปลั๊กอิน `hexo-migrator-rss`
 
-``` bash
+```bash
 $ npm install hexo-migrator-rss --save
 ```
 
-เมื่อเสร็จการติดตั้งปลั๊กอินแล้วรันคำสั่งต่อไปเพื่อย้ายโพสต์ทั้งหมดจาก RSS   
- `source` นั้นเป็น path ของไฟล์หรือ URL ได้
+เมื่อเสร็จการติดตั้งปลั๊กอินแล้วรันคำสั่งต่อไปเพื่อย้ายโพสต์ทั้งหมดจาก RSS  
+`source` นั้นเป็น path ของไฟล์หรือ URL ได้ `source` can be a file path or URL.
 
-``` bash
+```bash
 $ hexo migrate rss <source>
 ```
 
 ## Jekyll
 
-ย้ายไฟล์ทั้งหมดใน folder Jekyll  `_posts` ไป folder  `source/_posts`
-แก้ไขการตั้งค่า `new_post_name` ใน `_config.yml`:
+ย้ายไฟล์ทั้งหมดใน folder Jekyll `_posts` ไป folder `source/_posts` แก้ไขการตั้งค่า `new_post_name` ใน `_config.yml`:
 
-``` yaml
+ย้ายไฟล์ทั้งหมดใน folder `source/_posts` ของ Octopress ไปถึง `source/_posts` แก้ไขการตั้งค่า `new_post_name` ใน `_config.yml`:
+
+```yaml
 new_post_name: :year-:month-:day-:title.md
 ```
 
 ## Octopress
 
-ย้ายไฟล์ทั้งหมดใน folder `source/_posts` ของ Octopress ไปถึง  `source/_posts`
-แก้ไขการตั้งค่า `new_post_name` ใน `_config.yml`:
+Move all files in the Octopress `source/_posts` folder to `source/_posts`
 
-``` yaml
+Modify the `new_post_name` setting in `_config.yml`:
+
+```yaml
 new_post_name: :year-:month-:day-:title.md
 ```
 
@@ -38,20 +41,19 @@ new_post_name: :year-:month-:day-:title.md
 
 ขั้นแรก ติดตั้งปลั๊กอิน `hexo-migrator-wordpress`
 
-``` bash
+```bash
 $ npm install hexo-migrator-wordpress --save
 ```
 
-นำไซตื WordPress ของคุณออกไปได้ด้วยการตั้งค่า "Tools" → "Export" →
-"WordPress"  ใน dashboard ของ WordPress (สำหรับข้อมูลเพิ่มเติมไปดูที่ [WordPress support page](http://en.support.wordpress.com/export/))
+นำไซตื WordPress ของคุณออกไปได้ด้วยการตั้งค่า "Tools" → "Export" → "WordPress" ใน dashboard ของ WordPress (สำหรับข้อมูลเพิ่มเติมไปดูที่ [WordPress support page](http://en.support.wordpress.com/export/))
 
 แล้วรัน:
 
-``` bash
+```bash
 $ hexo migrate wordpress <source>
 ```
 
-`source`  เป็น  path ของไฟล์หรือ URL ของไฟล์ท่ี  WordPress ท่ีส่งออกมา
+`source` เป็น path ของไฟล์หรือ URL ของไฟล์ท่ี WordPress ท่ีส่งออกมา
 
 ## Joomla
 
@@ -61,7 +63,7 @@ $ hexo migrate wordpress <source>
 $ npm install hexo-migrator-joomla --save
 ```
 
-นำออกบทความ Joomla ของคุณได้โดยใช้ component  [J2XML](http://extensions.joomla.org/extensions/migration-a-conversion/data-import-a-export/12816?qh=YToxOntpOjA7czo1OiJqMnhtbCI7fQ%3D%3D)
+นำออกบทความ Joomla ของคุณได้โดยใช้ component [J2XML](http://extensions.joomla.org/extensions/migration-a-conversion/data-import-a-export/12816?qh=YToxOntpOjA7czo1OiJqMnhtbCI7fQ%3D%3D)
 
 แล้วรัน:
 
@@ -69,4 +71,4 @@ $ npm install hexo-migrator-joomla --save
 $ hexo migrate joomla <source>
 ```
 
-`source`  เป็น  path ของไฟล์หรือ URL ของไฟล์ท่ี  Joomla ท่ีส่งออกมา
+`source` เป็น path ของไฟล์หรือ URL ของไฟล์ท่ี Joomla ท่ีส่งออกมา

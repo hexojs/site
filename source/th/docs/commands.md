@@ -1,14 +1,14 @@
 ---
 title: Commands
 ---
+
 ## init
 
-``` bash
+```bash
 $ hexo init [folder]
 ```
 
-initialize เว็บไซต์. ถ้าไม่ป่งชี้หรือสร้าง `folder` โดยเฉพาะ hexo
-จะสร้างไฟล์ต่างๆอยู่ใน directory ปัจจุบัน
+initialize เว็บไซต์. ถ้าไม่ป่งชี้หรือสร้าง `folder` โดยเฉพาะ hexo จะสร้างไฟล์ต่างๆอยู่ใน directory ปัจจุบัน
 
 This command is a shortcut that runs the following steps:
 
@@ -17,32 +17,53 @@ This command is a shortcut that runs the following steps:
 
 ## new
 
-``` bash
+```bash
 $ hexo new [layout] <title>
 ```
 
-สร้างบทความใหม่.
-ถ้าไม่ได้ตั้งค่าชั้ดเจน hexo จะใช้ `default_layout` ของไฟล์ [_config.yml](configuration.html)
-ถ้า `title` ของบทความนั้นมี  space  จะต้องห่อ `title` นั้นด้วยเครื่องหมายอ้างอิง
+สร้างบทความใหม่. ถ้าไม่ได้ตั้งค่าชั้ดเจน hexo จะใช้ `default_layout` ของไฟล์ [\_config.yml](configuration.html) ถ้า `title` ของบทความนั้นมี space จะต้องห่อ `title` นั้นด้วยเครื่องหมายอ้างอิง Use the layout `draft` to create a draft. If the `title` contains spaces, surround it with quotation marks.
+
+| Option            | Description                                |
+| ----------------- | ------------------------------------------ |
+| `-p`, `--path`    | Post path. Customize the path of the post. |
+| `-r`, `--replace` | Replace the current post if existed.       |
+| `-s`, `--slug`    | Post slug. Customize the URL of the post.  |
+
+By default, Hexo will use the title to define the path of the file. For pages, it will create a directory of that name and an `index.md` file in it. Use the `--path` option to override that behaviour and define the file path:
+
+```bash
+hexo new page --path about/me "About me"
+```
+
+will create `source/about/me.md` file with the title "About me" set in the front matter.
+
+Please note that the title is mandatory. For example, this will not result in the behaviour you might expect:
+
+```bash
+hexo new page --path about/me
+```
+
+will create the post `source/_posts/about/me.md` with the title "page" in the front matter. This is because there is only one argument (`page`) and the default layout is `post`.
 
 ## generate
 
-``` bash
+```bash
 $ hexo generate
 ```
 
 generate ไฟล์คงที่
 
-Option | Description
---- | ---
-`-d`, `--deploy` | Deploy after generation finishes
-`-w`, `--watch` | Watch file changes
-`-b`, `--bail` | Raise an error if any unhandled exception is thrown during generation
-`-f`, `--force` | Force regenerate
+| Option                | Description                                                              |
+| --------------------- | ------------------------------------------------------------------------ |
+| `-d`, `--deploy`      | Deploy after generation finishes                                         |
+| `-w`, `--watch`       | Watch file changes                                                       |
+| `-b`, `--bail`        | Raise an error if any unhandled exception is thrown during generation    |
+| `-f`, `--force`       | Force regenerate                                                         |
+| `-c`, `--concurrency` | Maximum number of files to be generated in parallel. Default is infinity |
 
 ## publish
 
-``` bash
+```bash
 $ hexo publish [layout] <filename>
 ```
 
@@ -50,46 +71,45 @@ $ hexo publish [layout] <filename>
 
 ## server
 
-``` bash
+```bash
 $ hexo server
 ```
 
-เปิดเซร์ฟเวอร์ local   เซร์ฟเวอร์ local นั้นจะเป็น `http://localhost:4000/`
-by default
+Starts a local server. เปิดเซร์ฟเวอร์ local เซร์ฟเวอร์ local นั้นจะเป็น `http://localhost:4000/` by default
 
-Option | Description
---- | ---
-`-p`, `--port` | Override default port
-`-s`, `--static` | Only serve static files
-`-l`, `--log` | Enable logger. Override logger format.
+| Option           | Description                            |
+| ---------------- | -------------------------------------- |
+| `-p`, `--port`   | Override default port                  |
+| `-s`, `--static` | Only serve static files                |
+| `-l`, `--log`    | Enable logger. Override logger format. |
 
 ## deploy
 
-``` bash
+```bash
 $ hexo deploy
 ```
 
 deploy เว็บไซต์ของคุณ
 
-Option | Description
---- | ---
-`-g`, `--generate` | Generate before deployment
+| Option             | Description                |
+| ------------------ | -------------------------- |
+| `-g`, `--generate` | Generate before deployment |
 
 ## render
 
-``` bash
+```bash
 $ hexo render <file1> [file2] ...
 ```
 
 render ไฟล์ต่างๆ
 
-Option | Description
---- | ---
-`-o`, `--output` | Output destination
+| Option           | Description        |
+| ---------------- | ------------------ |
+| `-o`, `--output` | Output destination |
 
 ## migrate
 
-``` bash
+```bash
 $ hexo migrate <type>
 ```
 
@@ -97,7 +117,7 @@ $ hexo migrate <type>
 
 ## clean
 
-``` bash
+```bash
 $ hexo clean
 ```
 
@@ -105,7 +125,7 @@ $ hexo clean
 
 ## list
 
-``` bash
+```bash
 $ hexo list <type>
 ```
 
@@ -113,34 +133,41 @@ $ hexo list <type>
 
 ## version
 
-``` bash
+```bash
 $ hexo version
 ```
 
 โชว์ข้อมูลเวร์อชั่น
 
+## config
+
+```bash
+$ hexo config [key] [value]
+```
+
+Lists the configuration (`_config.yml`). If `key` is specified, only the value of the corresponding `key` in the configuration is shown; if both `key` and `value` are specified, the value of the corresponding `key` in the configuration is changed to `value`.
+
 ## Options
 
 ### Safe mode
 
-``` bash
+```bash
 $ hexo --safe
 ```
 
-ปิดปลั๊กอิน loading และ script ลองใช้โหมดนี้หลังพบปัญหาเมื่อติดตั้งปลั๊กอินใหม่
+Disables loading plugins and scripts. ปิดปลั๊กอิน loading และ script ลองใช้โหมดนี้หลังพบปัญหาเมื่อติดตั้งปลั๊กอินใหม่
 
 ### Debug mode
 
-``` bash
+```bash
 $ hexo --debug
 ```
 
-log ข้อมูลละเอียดไปถึง terminal และ `debug.log`  เมื่อเห็นข้อผิดพลาดใดๆอยู่ใน
- log ไป[raise a GitHub issue](https://github.com/hexojs/hexo/issues/new)ได้
+Logs verbose messages to the terminal and to `debug.log`. Try this if you encounter any problems with Hexo. log ข้อมูลละเอียดไปถึง terminal และ `debug.log` เมื่อเห็นข้อผิดพลาดใดๆอยู่ใน log ไป[raise a GitHub issue](https://github.com/hexojs/hexo/issues/new)ได้
 
 ### Silent mode
 
-``` bash
+```bash
 $ hexo --silent
 ```
 
@@ -148,22 +175,20 @@ silence ผลไปถึง terminal
 
 ### Customize config file path
 
-``` bash
+```bash
 $ hexo --config custom.yml
 ```
 
-ใช้ไฟล์การตั้งค่าของตน(แทน `_config.yml`) ถ้่าเป็นไฟล์หลายตัว  
-ไฟล์นั้นเป็นไฟล์ JSON หรือ YAML ได้
-คุณต่องเขียนรายชื่อไฟล์พวกนี้อยู่ใน `_multiconfig.yml`
-และตัดแต่ละชื่อไฟล์ด้วยเครื่องหมายจุลภาค
+Uses a custom config file (instead of `_config.yml`). ใช้ไฟล์การตั้งค่าของตน(แทน `_config.yml`) ถ้่าเป็นไฟล์หลายตัว  
+ไฟล์นั้นเป็นไฟล์ JSON หรือ YAML ได้ คุณต่องเขียนรายชื่อไฟล์พวกนี้อยู่ใน `_multiconfig.yml` และตัดแต่ละชื่อไฟล์ด้วยเครื่องหมายจุลภาค
 
-``` bash
+```bash
 $ hexo --config custom.yml,custom2.json
 ```
 
 ### Display drafts
 
-``` bash
+```bash
 $ hexo --draft
 ```
 
@@ -171,7 +196,7 @@ $ hexo --draft
 
 ### Customize CWD
 
-``` bash
+```bash
 $ hexo --cwd /path/to/cwd
 ```
 

@@ -2,12 +2,12 @@
 title: Injector
 ---
 
-An injector is used to add static code snippet to the `<head>` or/and `<body>` of generated HTML files. Hexo run injector **before** `after_render:html` filter is executed.
+An injector is used to add static code snippet to the `<head>` or/and `<body>` of generated HTML files. An injector is used to add static code snippet to the `<head>` or/and `<body>` of generated HTML files. Hexo run injector **before** `after_render:html` filter is executed.
 
 ## Synopsis
 
 ```js
-hexo.extend.injector.register(entry, value, to)
+hexo.extend.injector.register(entry, value, to);
 ```
 
 ### entry `<string>`
@@ -40,28 +40,38 @@ Which page will code snippets being injected.
 - `tag`: Only inject to tag pages (which has `is_tag()` helper being `true`)
 - Custom layout name could be used as well, see [Writing - Layout](/docs/writing#Layout).
 
-----
+---
 
 There are other internal functions, see [hexojs/hexo#4049](https://github.com/hexojs/hexo/pull/4049) for more details.
 
 ## Example
 
 ```js
-const css = hexo.extend.helper.get('css').bind(hexo);
-const js = hexo.extend.helper.get('js').bind(hexo);
+const css = hexo.extend.helper.get("css").bind(hexo);
+const js = hexo.extend.helper.get("js").bind(hexo);
 
-hexo.extend.injector.register('head_end', () => {
-  return css('https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css');
-}, 'music');
+hexo.extend.injector.register(
+  "head_end",
+  () => {
+    return css(
+      "https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css",
+    );
+  },
+  "music",
+);
 
-hexo.extend.injector.register('body_end', '<script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js">', 'music');
+hexo.extend.injector.register(
+  "body_end",
+  '<script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js">',
+  "music",
+);
 
-hexo.extend.injector.register('body_end', () => {
-  return js('/js/jquery.js');
+hexo.extend.injector.register("body_end", () => {
+  return js("/js/jquery.js");
 });
 ```
 
-Above setup will inject `APlayer.min.css` (`<link>` tag) to the `</head>` of any page which layout is `music`, and `APlayer.min.js` (`<script>` tag) to the `</body>` of those pages. Also, `jquery.js` (`<script>` tag) will be injected to `</body>` of every page generated.
+Above setup will inject `APlayer.min.css` (`<link>` tag) to the `</head>` of any page which layout is `music`, and `APlayer.min.js` (`<script>` tag) to the `</body>` of those pages. Also, `jquery.js` (`<script>` tag) will be injected to `</body>` of every page generated. Also, `jquery.js` (`<script>` tag) will be injected to `</body>` of every page generated.
 
 ## Accessing user configuration
 
@@ -69,10 +79,10 @@ Use any of the following options:
 
 1.
 
-``` js
-const css = hexo.extend.helper.get('css').bind(hexo);
+```js
+const css = hexo.extend.helper.get("css").bind(hexo);
 
-hexo.extend.injector.register('head_end', () => {
+hexo.extend.injector.register("head_end", () => {
   const { cssPath } = hexo.config.fooPlugin;
   return css(cssPath);
 });
@@ -80,23 +90,23 @@ hexo.extend.injector.register('head_end', () => {
 
 2.
 
-``` js index.js
+```js index.js
 /* global hexo */
 
-hexo.extend.injector.register('head_end', require('./lib/inject').bind(hexo))
+hexo.extend.injector.register("head_end", require("./lib/inject").bind(hexo));
 ```
 
-``` js lib/inject.js
+```js lib/inject.js
 module.exports = function () {
-  const css = this.extend.helper.get('css');
+  const css = this.extend.helper.get("css");
   const { cssPath } = this.config.fooPlugin;
   return css(cssPath);
-}
+};
 ```
 
-``` js lib/inject.js
+```js lib/inject.js
 function injectFn() {
-  const css = this.extend.helper.get('css');
+  const css = this.extend.helper.get("css");
   const { cssPath } = this.config.fooPlugin;
   return css(cssPath);
 }
@@ -106,23 +116,23 @@ module.exports = injectFn;
 
 3.
 
-``` js index.js
+```js index.js
 /* global hexo */
 
-hexo.extend.injector.register('head_end', require('./lib/inject')(hexo))
+hexo.extend.injector.register("head_end", require("./lib/inject")(hexo));
 ```
 
-``` js lib/inject.js
+```js lib/inject.js
 module.exports = (hexo) => () => {
-  const css = hexo.extend.helper.get('css').bind(hexo);
+  const css = hexo.extend.helper.get("css").bind(hexo);
   const { cssPath } = hexo.config.fooPlugin;
   return css(cssPath);
 };
 ```
 
-``` js lib/inject.js
+```js lib/inject.js
 const injectFn = (hexo) => {
-  const css = hexo.extend.helper.get('css').bind(hexo);
+  const css = hexo.extend.helper.get("css").bind(hexo);
   const { cssPath } = hexo.config.fooPlugin;
   return css(cssPath);
 };

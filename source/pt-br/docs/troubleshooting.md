@@ -1,18 +1,19 @@
 ---
 title: Soluções de Problemas
 ---
+
 No caso de você ter problemas com o uso do Hexo, aqui está uma lista de soluções para alguns dos problemas mais frequentes. Se esta página não ajudar a resolver seu problema, tente fazer uma pesquisa no nosso [GitHub](https://github.com/hexojs/hexo/issues) ou no nosso [Google Group](https://groups.google.com/group/hexo).
 
 ## YAML Parsing Error
 
-``` plain
+```plain
 JS-YAML: incomplete explicit mapping pair; a key node is missed at line 18, column 29:
       last_updated: Last updated: %s
 ```
 
-Delimite a string com aspas duplas se ela contiver dois pontos (:).
+Wrap the string with quotations if it contains colons.
 
-``` plain
+```plain
 JS-YAML: bad indentation of a mapping entry at line 18, column 31:
       last_updated:"Last updated: %s"
 ```
@@ -23,13 +24,13 @@ Para mais informações, veja [YAML Spec](http://www.yaml.org/spec/1.2/spec.html
 
 ## EMFILE Error
 
-``` plain
+```plain
 Error: EMFILE, too many open files
 ```
 
 Embora o Node.js tenha I/O não bloqueante, o número máximo de I/O síncronas ainda é limitado pelo sistema. Você pode encontrar um erro EMFILE ao tentar gerar uma grande quantidade de arquivos. Você pode tentar executar o seguinte comando para aumentar o número de operações de I/O síncronas permitidas.
 
-``` bash
+```bash
 $ ulimit -n 10000
 ```
 
@@ -37,7 +38,7 @@ $ ulimit -n 10000
 
 If you encounter the following error:
 
-``` bash
+```bash
 $ ulimit -n 10000
 ulimit: open files: cannot modify limit: Operation not permitted
 ```
@@ -48,23 +49,23 @@ To override the limit:
 
 1. Add the following line to "/etc/security/limits.conf":
 
-  ```
-  * - nofile 10000
+```
+* - nofile 10000
 
-  # '*' applies to all users and '-' set both soft and hard limits
-  ```
+# '*' applies to all users and '-' set both soft and hard limits
+```
 
-  * The above setting may not apply in some cases, ensure "/etc/pam.d/login" and "/etc/pam.d/lightdm" have the following line. (Ignore this step if those files do not exist)
+- The above setting may not apply in some cases, ensure "/etc/pam.d/login" and "/etc/pam.d/lightdm" have the following line. (Ignore this step if those files do not exist)
 
-  ```
-  session required pam_limits.so
-  ```
+```
+session required pam_limits.so
+```
 
 2. If you are on a [systemd-based](https://en.wikipedia.org/wiki/Systemd#Adoption) distribution, systemd may override "limits.conf". To set the limit in systemd, add the following line in "/etc/systemd/system.conf" and "/etc/systemd/user.conf":
 
-  ```
-  DefaultLimitNOFILE=10000
-  ```
+```
+DefaultLimitNOFILE=10000
+```
 
 3. Reboot
 
@@ -86,7 +87,9 @@ Aumente o tamanho da memória heap do Node.js alterando a primeira linha de `hex
 
 ## Problemas de Deploy com Git
 
-``` plain
+### RPC failed
+
+```plain
 error: RPC failed; result=22, HTTP code = 403
 
 fatal: 'username.github.io' does not appear to be a git repository
@@ -94,21 +97,36 @@ fatal: 'username.github.io' does not appear to be a git repository
 
 Certifique-se de ter [configurado o git](https://help.github.com/articles/set-up-git) corretamente no seu computador ou tente usar a URL HTTPS do repositório ao invés da URL SSH.
 
+### Error: ENOENT: no such file or directory
+
+If you get an error like `Error: ENOENT: no such file or directory` it's probably due to mixing uppercase and lowercase letters in your tags, categories, or filenames. Git cannot automatically merge this change, so it breaks the automatic branching.
+
+To fix this, try
+
+1. Check every tag's and category's case and make sure they are the same.
+1. Commit
+1. Clean and build: `./node_modules/.bin/hexo clean && ./node_modules/.bin/hexo generate`
+1. Manually copy the public folder to your desktop
+1. Switch branch from your master branch to your deployment branch locally
+1. Copy the contents of the public folder from your desktop into the deployment branch
+1. Commit. You should see any merge conflicts appear that you can manually resolve.
+1. Switch back to your master branch and deploy normally: `./node_modules/.bin/hexo deploy`
+
 ## Problemas de Servidor
 
-``` plain
+```plain
 Error: listen EADDRINUSE
 ```
 
 Você pode ter iniciado dois servidores do Hexo ao mesmo tempo ou pode haver outro aplicativo usando a mesma porta. Tente modificar a configuração `port` ou iniciar o servidor do Hexo com o argumento `-p`.
 
-``` bash
+```bash
 $ hexo server -p 5000
 ```
 
 ## Problemas na Instalação de Plugins
 
-``` plain
+```plain
 npm ERR! node-waf configure build
 ```
 
@@ -132,7 +150,7 @@ Veja a issue [#1326](https://github.com/hexojs/hexo/issues/1326#issuecomment-113
 
 ## Iterando o Modelo de Dados em Jade ou Swig
 
-A Hexo usa [Warehouse] para o seu modelo de dados. Ele não é um array, então você pode ter que transformar objetos em iteráveis.
+A Hexo usa [Warehouse][] para o seu modelo de dados. Ele não é um array, então você pode ter que transformar objetos em iteráveis.
 
 ```
 {% for post in site.posts.toArray() %}
@@ -143,7 +161,7 @@ A Hexo usa [Warehouse] para o seu modelo de dados. Ele não é um array, então 
 
 Alguns dados não podem ser atualizados ou os arquivos recém-gerados são idênticos aos da última versão. Limpe o cache e tente novamente.
 
-``` bash
+```bash
 $ hexo clean
 ```
 
@@ -161,8 +179,7 @@ Quando você não consegue executar nenhum comando do Hexo, com exceção de `he
 
 ## Conteúdo Escapando
 
-O Hexo usa [Nunjucks] para renderizar posts ([Swig] foi usado na versão mais antiga, que compartilha uma sintaxe semelhante). O conteúdo delimitado com `{{ }}` ou `{% %}` será "parseado" e pode causar problemas. Você pode empacotar um conteúdo sensível com a tag plugin [`raw`](/docs/tag-plugins#Raw), single backtick ```` `{{ }}` ```` or triple backtick.
-Alternatively, Nunjucks tags can be disabled through the renderer's option (if supported), [API](/api/renderer#Disable-Nunjucks-tags) or [front-matter](/docs/front-matter).
+O Hexo usa [Nunjucks][] para renderizar posts ([Swig][] foi usado na versão mais antiga, que compartilha uma sintaxe semelhante). O conteúdo delimitado com `{{ }}` ou `{% %}` será "parseado" e pode causar problemas. Você pode empacotar um conteúdo sensível com a tag plugin [`raw`](/docs/tag-plugins#Raw), single backtick `` `{{ }}` `` or triple backtick. Alternatively, Nunjucks tags can be disabled through the renderer's option (if supported), [API](/api/renderer#Disable-Nunjucks-tags) or [front-matter](/docs/front-matter).
 
 ```
 {% raw %}
@@ -186,7 +203,7 @@ Error: watch ENOSPC ...
 
 Isto pode ser consertado através do comando `$ npm dedupe` ou, se isso não funcionar, tente o seguinte comando no terminal do Linux:
 
-``` bash
+```
 $ echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
 ```
 
@@ -202,7 +219,7 @@ Error: watch /path/to/hexo/theme/ EMPERM
 
 Infelizmente, o WSL (Windows Subsystem for Linux) atualmente não suporta os observadores (watchers) do sistema de arquivos. Portanto, o recurso de atualização em tempo real do servidor do Hexo não está disponível no momento. Contudo, ainda é possível executar o servidor a partir de um ambiente WSL, primeiro gere os arquivos e depois execute servidor em modo estático:
 
-``` sh
+```sh
 $ hexo generate
 $ hexo server -s
 ```
@@ -214,11 +231,62 @@ Este é [um problema no BashOnWindows conhecido](https://github.com/Microsoft/Ba
 Às vezes, ao executar o comando `$ hexo generate`, ele retorna um erro:
 
 ```
-FATAL Something's wrong. Maybe you can find the solution here: http://hexo.io/docs/troubleshooting.html
-Template render error: (unknown path)
+FATAL Something's wrong. Maybe you can find the solution here: http://hexo.io/docs/troubleshooting.html Template render error: (unknown path)
 ```
 
-One possible reason is that there are some unrecognizable words in your file, e.g. invisible zero width characters.
+Possible cause:
+
+- One possible reason is that there are some unrecognizable words in your file, e.g. invisible zero width characters.
+- Incorrect use or limitation of [tag plugin](/docs/tag-plugins).
+
+  - Block-style tag plugin with content is not enclosed with `{% endplugin_name %}`
+
+  ```
+  # Incorrect
+  {% codeblock %}
+  fn()
+  {% codeblock %}
+
+  # Incorrect
+  {% codeblock %}
+  fn()
+
+  # Correct
+  {% codeblock %}
+  fn()
+  {% endcodeblock %}
+  ```
+
+  - Having Nunjucks-like syntax in a tag plugin, e.g. [`{% raw %} {# {% endraw %}`](https://mozilla.github.io/nunjucks/templating.html#comments). A workaround for this example is to use [triple backtick](/docs/tag-plugins#Backtick-Code-Block) instead. [Escape Contents](/docs/troubleshooting#Escape-Contents) section has more details.
+
+  ```
+  {% codeblock lang:bash %}
+  Size of array is ${#ARRAY}
+  {% endcodeblock %}
+  ```
+
+## Delimite a string com aspas duplas se ela contiver dois pontos (:).
+
+Upgrading to `hexo^6.1.0` from an older version may cause the following error when running `$ hexo generate`:
+
+```
+YAMLException: Specified list of YAML types (or a single Type object) contains a non-Type object.
+    at ...
+```
+
+This may be caused by an incorrect dependency(i.e. `js-yaml`) setting that can't be solved automatically by the package manager, and you may have to update it manually running:
+
+```sh
+$ npm install js-yaml@latest
+```
+
+or
+
+```sh
+$ yarn add js-yaml@latest
+```
+
+if you use `yarn`.
 
 [Warehouse]: https://github.com/hexojs/warehouse
 [Swig]: http://paularmstrong.github.io/swig/
