@@ -47,6 +47,10 @@ th:
   - changed-files:
       - any-glob-to-any-file:
           - "source/th/**"
+es:
+  - changed-files:
+      - any-glob-to-any-file:
+          - "source/es/**"
 zh:
   - changed-files:
       - any-glob-to-any-file:
