@@ -26,6 +26,15 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "lts/*"
+          cache: 'npm'
+          cache-dependency-path: "package.json"
+
+      - name: Install dependencies
+        run: npm install
+
       - name: Get BOT token
         id: get_bot_token
         uses: actions/create-github-app-token@v1
@@ -34,6 +43,14 @@ jobs:
           private-key: ${{ secrets.GH_APP_PRIVATE_KEY }}
           owner: ${{ github.repository_owner }}
           repositories: "site"
+
+      - name: Get Translations Progress
+        continue-on-error: true
+        run: |
+          node .github/workflows/get_translations_progress.mjs
+        env:
+          CROWDIN_PROJECT_ID: ${{ secrets.CROWDIN_PROJECT_ID }}
+          CROWDIN_PERSONAL_TOKEN: ${{ secrets.CROWDIN_PERSONAL_TOKEN }}
 
       - name: Download Translations && Create PR
         uses: crowdin/github-action@v2
