@@ -31,12 +31,14 @@
     "sharp": "^0.33.1"
   },
   "devDependencies": {
+    "@crowdin/crowdin-api-client": "^1.41.0",
     "eslint": "^8.0.1",
     "eslint-config-hexo": "^5.0.0",
     "husky": "^9.0.6",
     "imagemin-lint-staged": "^0.5.1",
     "lint-staged": "^15.2.0",
-    "prettier": "3.5.0"
+    "prettier": "3.5.0",
+    "yaml": "^2.7.0"
   },
   "lint-staged": {
     "*.{png,jpeg,jpg,gif,svg}": [
