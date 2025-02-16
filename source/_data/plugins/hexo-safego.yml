@@ -1,0 +1,6 @@
+description: Add a secure redirect intermediate page to your Hexo site's external links. | 给你的 Hexo 网站的外部链接，添加一个安全跳转中间页。
+link: https://github.com/willow-god/hexo-safego
+tags:
+  - safego
+  - external link
+  - safety
