@@ -12,6 +12,7 @@
     "prepare": "node .husky/install.mjs"
   },
   "dependencies": {
+    "@node-rs/jieba": "^1.7.2",
     "cheerio": "^1.0.0",
     "hexo": "^7.3.0",
     "hexo-clean-css": "^2.0.0",
@@ -26,6 +27,7 @@
     "hexo-tag-embed": "^1.0.0",
     "hexo-uglify": "^2.0.0",
     "lunr": "2.3.9",
+    "lunr-languages": "^1.14.0",
     "sharp": "^0.33.1"
   },
   "devDependencies": {
