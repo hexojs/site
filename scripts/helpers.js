@@ -176,7 +176,7 @@ hexo.extend.helper.register('canonical_path_for_nav', function() {
 
 hexo.extend.helper.register('lang_name', function(lang) {
   const data = this.site.data.languages[lang];
-  return data.name || data;
+  return data.name;
 });
 
 hexo.extend.helper.register('disqus_lang', function() {
