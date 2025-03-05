@@ -1,0 +1,12 @@
+description: A Hexo tag plugin for embedding link preview by OpenGraph on article.
+link: https://github.com/h-sugawara/hexo-tag-ogp-link-preview
+tags:
+  - tag
+  - link
+  - preview
+  - og
+  - ogp
+  - opengraph
+  - opengraph-protocol
+  - open-graph
+  - open-graph-protocol

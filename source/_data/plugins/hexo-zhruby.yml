@@ -1,0 +1,16 @@
+description: Hexo Tag Plugin for html tag <ruby>. Provide auto pronounciation indication for Jyutping (Cantonese), Zhuyin (Taiwanese Mandarin), and Pinyin (Chinese Mandarin). Support Traditonal and Simplified Chinese characters.
+link: https://github.com/GreenMeeple/hexo-zhruby
+tags:
+  - hexo
+  - ruby
+  - blog
+  - cantonese
+  - mandarin
+  - jyutping
+  - zhuyin
+  - pinyin
+  - traditional-chinese
+  - simplified-chinese
+  - chinese
+  - chinese-characters
+  - cantonese-romanization

@@ -1,0 +1,6 @@
+description: Embed a movie card on your Hexo article, used mtime API.
+link: https://github.com/liopoos/hexo-tag-mtime
+tags:
+  - tag
+  - plugin
+  - moive

@@ -1,0 +1,6 @@
+description: Embed tags (Gists, Viemo, jsFiddle, Youtube) for Hexo.
+link: https://github.com/hexojs/hexo-tag-embed
+tags:
+  - official
+  - generator
+  - tag

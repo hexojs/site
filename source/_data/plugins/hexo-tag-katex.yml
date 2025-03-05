@@ -1,0 +1,7 @@
+description: Hexo Tag Plugin to support LaTeX using Katex library.
+link: https://github.com/iamprasad88/hexo-tag-katex
+tags:
+  - tag
+  - latex
+  - katex
+  - tex
