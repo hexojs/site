@@ -1,7 +1,7 @@
 description: >-
   All in one. Minifier & Optimization plugin for Hexo. Inspired by
   `hexo-all-minifier` but including more features.
-link: https://github.com/mamboer/hexo-filter-cleanup
+link: https://github.com/aispin/hexo-filter-cleanup
 tags:
   - filter
   - imagemin
