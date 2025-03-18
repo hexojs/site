@@ -21,3 +21,6 @@ th:
 ja:
   name: 日本語
   disqus_lang: ja
+es:
+  name: Español
+  disqus_lang: es
