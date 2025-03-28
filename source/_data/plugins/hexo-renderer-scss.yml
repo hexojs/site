@@ -1,5 +1,5 @@
 description: A hexo plugin for node-scss
-link: https://github.com/mamboer/hexo-renderer-scss
+link: https://github.com/aispin/hexo-renderer-scss
 tags:
   - renderer
   - scss
