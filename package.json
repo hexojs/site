@@ -28,7 +28,7 @@
     "hexo-uglify": "^2.0.0",
     "lunr": "2.3.9",
     "lunr-languages": "^1.14.0",
-    "sharp": "^0.33.1"
+    "sharp": "^0.34.0"
   },
   "devDependencies": {
     "eslint": "^8.0.1",
