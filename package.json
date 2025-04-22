@@ -12,7 +12,7 @@
     "prepare": "node .husky/install.mjs"
   },
   "dependencies": {
-    "@node-rs/jieba": "^1.7.2",
+    "@node-rs/jieba": "^2.0.1",
     "cheerio": "^1.0.0",
     "hexo": "^7.3.0",
     "hexo-clean-css": "^2.0.0",
@@ -37,7 +37,7 @@
     "husky": "^9.0.6",
     "imagemin-lint-staged": "^0.5.1",
     "lint-staged": "^15.2.0",
-    "prettier": "3.5.0",
+    "prettier": "3.5.3"
     "yaml": "^2.7.0"
   },
   "lint-staged": {

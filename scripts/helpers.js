@@ -179,7 +179,6 @@ hexo.extend.helper.register('lang_name', function(lang) {
   if ('translationProgress' in data) {
     return `${data.name} (${data.translationProgress}%)`;
   }
-  return data.name;
 });
 
 hexo.extend.helper.register('disqus_lang', function() {
