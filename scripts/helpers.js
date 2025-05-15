@@ -134,7 +134,11 @@ hexo.extend.helper.register('plugin_list', function() {
   const arr = this.site.data[type];
 
   if (type === 'themes') {
-    arr.sort(() => { return Math.random() > 0.5 ? -1 : 1; });
+    // Fisher–Yates shuffle
+    for (let i = arr.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [arr[i], arr[j]] = [arr[j], arr[i]];
+    }
   }
 
   if (type === 'plugins') {
