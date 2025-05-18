@@ -8,22 +8,23 @@ You can specify the permalinks for your site in `_config.yml` or in the front-ma
 
 除了下列變數外，您還可使用除了 `:path` 和 `:permalink` 之外 Front-matter 中的所有屬性。
 
-| 變數            | 描述                                                                        |
-| ------------- | ------------------------------------------------------------------------- |
-| `:year`       | 文章的發表年份（4 位數）                                                             |
-| `:month`      | Published month of posts (2-digit)                                        |
-| `:i_month`    | 文章的發表月份（去掉開頭的零）                                                           |
-| `:day`        | Published day of posts (2-digit)                                          |
-| `:i_day`      | Published day of posts (Without leading zeros)                            |
-| `:hour`       | Published hour of posts (2-digit)                                         |
-| `:minute`     | Published minute of posts (2-digit)                                       |
-| `:second`     | Published second of posts (2-digit)                                       |
-| `:title`      | 檔案名稱 (relative to "source/\_posts/" folder)                             |
-| `:name`       | 檔案名稱                                                                      |
-| `:post_title` | 文章標題                                                                      |
-| `:id`         | 文章 ID (_not persistent across [cache reset](/zh-tw/docs/commands#clean)_) |
-| `:category`   | 分類。 如果文章沒有分類，則是 `default_category` 設定。                                    |
-| `:hash`       | SHA1 hash of filename (same as `:title`) and date (12-hexadecimal)        |
+| 變數            | 描述                                                                                 |
+| ------------- | ---------------------------------------------------------------------------------- |
+| `:year`       | 文章的發表年份（4 位數）                                                                      |
+| `:month`      | Published month of posts (2-digit)                                                 |
+| `:i_month`    | 文章的發表月份（去掉開頭的零）                                                                    |
+| `:day`        | Published day of posts (2-digit)                                                   |
+| `:i_day`      | Published day of posts (Without leading zeros)                                     |
+| `:hour`       | Published hour of posts (2-digit)                                                  |
+| `:minute`     | Published minute of posts (2-digit)                                                |
+| `:second`     | Published second of posts (2-digit)                                                |
+| `:timestamp`  | Timestamp of post's published [date](./front-matter#Settings-Their-Default-Values) |
+| `:title`      | 檔案名稱 (relative to "source/\_posts/" folder)                                      |
+| `:name`       | 檔案名稱                                                                               |
+| `:post_title` | 文章標題                                                                               |
+| `:id`         | 文章 ID (_not persistent across [cache reset](/zh-tw/docs/commands#clean)_)          |
+| `:category`   | 分類。 如果文章沒有分類，則是 `default_category` 設定。                                             |
+| `:hash`       | SHA1 hash of filename (same as `:title`) and date (12-hexadecimal)                 |
 
 您可在 `permalink_defaults` 設定中調整永久連結中各變數的預設值：
 
