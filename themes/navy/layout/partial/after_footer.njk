@@ -8,6 +8,8 @@
 {% if page.layout === 'plugins' %}
 <!-- Plugin search -->
 <script src="https://cdn.jsdelivr.net/npm/lunr@2.3.9/lunr.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lunr-languages@1.14.0/min/lunr.stemmer.support.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lunr-languages@1.14.0/min/lunr.zh.min.js"></script>
 <!-- Lazy load -->
 <script async src="https://cdn.jsdelivr.net/lazysizes/3.0.0/lazysizes.min.js"></script>
 <!-- build:js build/js/plugins.js -->
@@ -15,14 +17,17 @@
 <!-- endbuild -->
 {% endif %}
 <!-- Algolia -->
-{% if config.algolia[page.lang] %}
-<script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
 <script type="text/javascript">
-document.getElementById('search-input-wrap').classList.add('on');
 docsearch({
-  apiKey: '{{ config.algolia[page.lang].api_key }}',
-  indexName: '{{ config.algolia[page.lang].index_name }}',
-  inputSelector: '#search-input'
+  appId: '{{ config.algolia.app_id }}',
+  apiKey: '{{ config.algolia.api_key }}',
+  indexName: '{{ config.algolia.index_name }}',
+  insights: true,
+  container: '#docsearch',
+  debug: false,
+  searchParameters: {
+    facetFilters: ['lang:{{ page.lang }}']
+  }
 });
 </script>
-{% endif %}

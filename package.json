@@ -12,6 +12,7 @@
     "prepare": "node .husky/install.mjs"
   },
   "dependencies": {
+    "@node-rs/jieba": "^2.0.1",
     "cheerio": "^1.0.0",
     "hexo": "^7.3.0",
     "hexo-clean-css": "^2.0.0",
@@ -26,7 +27,8 @@
     "hexo-tag-embed": "^1.0.0",
     "hexo-uglify": "^2.0.0",
     "lunr": "2.3.9",
-    "sharp": "^0.33.1"
+    "lunr-languages": "^1.14.0",
+    "sharp": "^0.34.2"
   },
   "devDependencies": {
     "eslint": "^8.0.1",
@@ -34,7 +36,7 @@
     "husky": "^9.0.6",
     "imagemin-lint-staged": "^0.5.1",
     "lint-staged": "^15.2.0",
-    "prettier": "3.5.0"
+    "prettier": "3.5.3"
   },
   "lint-staged": {
     "*.{png,jpeg,jpg,gif,svg}": [

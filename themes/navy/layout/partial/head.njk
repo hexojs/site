@@ -48,4 +48,7 @@
   }) }}
   <!-- Google Analytics -->
   {{ partial('google_analytics') }}
+  <!-- Algolia -->
+  <link rel="preconnect" href="https://{{ config.algolia.app_id }}-dsn.algolia.net" crossorigin />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
 </head>
