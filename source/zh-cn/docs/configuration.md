@@ -139,7 +139,7 @@ Hexo 使用 [Moment.js](http://momentjs.com/) 来解析和显示时间。
 | 设置               | 描述                   | 参数     |
 | ---------------- | -------------------- | ------ |
 | `per_page`       | 每页显示的帖子数。 `0` 关闭分页功能 | `10`   |
-| `pagination_dir` | URL format           | `page` |
+| `pagination_dir` | URL 格式               | `page` |
 
 例如：
 
