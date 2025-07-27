@@ -1,0 +1,13 @@
+- name: Halunhaku
+  description: A modern, responsive Hexo theme with enhanced code blocks, perfect cover images, and Chinese text optimization
+  link: https://github.com/forhalunhaku/hexo-theme-halunhaku
+  preview: https://blog.halunhaku.top
+  tags:
+    - responsive
+    - modern
+    - code-highlighting
+    - chinese-support
+    - mobile-first
+    - dark-theme
+    - light-theme
+    - production-ready
