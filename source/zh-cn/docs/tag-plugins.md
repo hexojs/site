@@ -156,7 +156,7 @@ code snippet
 &#96;`
 {% endraw %}
 
-## Pull Quote
+## 拉取引用
 
 将 pull quotes 添加到您的帖子：
 
@@ -470,7 +470,7 @@ url: https://example.com/blog # example
 <a href="https://example.com/blog/a/path">index</a>
 ```
 
-## Raw
+## 原始
 
 如果帖子中的某些内容会导致处理问题，将其封装在 `raw` 标签中，以避免渲染错误。
 
