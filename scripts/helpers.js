@@ -5,6 +5,9 @@
 const { basename } = require('path');
 const cheerio = require('cheerio');
 const lunr = require('lunr');
+require('lunr-languages/lunr.stemmer.support.js')(lunr);
+require('lunr-languages/lunr.zh.js')(lunr);
+require('lunr-languages/lunr.multi.js')(lunr);
 const full_url_for = hexo.extend.helper.get('full_url_for').bind(hexo);
 
 const localizedPath = ['docs', 'api'];
@@ -131,7 +134,11 @@ hexo.extend.helper.register('plugin_list', function() {
   const arr = this.site.data[type];
 
   if (type === 'themes') {
-    arr.sort(() => { return Math.random() > 0.5 ? -1 : 1; });
+    // Fisher–Yates shuffle
+    for (let i = arr.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [arr[i], arr[j]] = [arr[j], arr[i]];
+    }
   }
 
   if (type === 'plugins') {
@@ -151,6 +158,7 @@ hexo.extend.helper.register('plugin_list', function() {
 
 hexo.extend.helper.register('lunr_index', data => {
   const index = lunr(function() {
+    this.use(lunr.multiLanguage('en', 'zh'));
     this.field('name', {boost: 10});
     this.field('tags', {boost: 50});
     this.field('description');
@@ -172,7 +180,7 @@ hexo.extend.helper.register('canonical_path_for_nav', function() {
 
 hexo.extend.helper.register('lang_name', function(lang) {
   const data = this.site.data.languages[lang];
-  return data.name || data;
+  return data.name;
 });
 
 hexo.extend.helper.register('disqus_lang', function() {

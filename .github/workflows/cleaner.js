@@ -66,37 +66,55 @@ function buildRepoQuery(owner, repo) {
 }
 
 // Function to read GitHub repositories list and make the GraphQL query
-async function queryRepos(reposList, batchSize = 100) {
+async function queryRepos(reposList, batchSize = 100, maxRetries = 3, retryDelay = 1000) {
   let result = {};
-  try {
-    for (let i = 0; i < reposList.length; i += batchSize) {
-      // Construct the query for a batch of repositories
-      const reposQuery = reposList.slice(i, i + batchSize).map(({ owner, repo }) => buildRepoQuery(owner, repo)).join(' ');
-      const query = queryTemplate.replace('{repos}', reposQuery);
 
-      // Send the GraphQL query
-      const response = await fetch('https://api.github.com/graphql', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Authorization': headers.Authorization
-        },
-        body: JSON.stringify({ query: query })
-      });
+  for (let i = 0; i < reposList.length; i += batchSize) {
+    // Construct the query for a batch of repositories
+    const reposQuery = reposList.slice(i, i + batchSize).map(({ owner, repo }) => buildRepoQuery(owner, repo)).join(' ');
+    const query = queryTemplate.replace('{repos}', reposQuery);
+    let retries = 0;
+    let success = false;
+    let responseData = null;
 
-      if (!response.ok) {
-        throw new Error(`Query failed with status code ${response.status}: ${response.statusText}`);
+    while (retries < maxRetries && !success) {
+      try {
+        // Send the GraphQL query
+        const response = await fetch('https://api.github.com/graphql', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': headers.Authorization
+          },
+          body: JSON.stringify({ query: query })
+        });
+
+        if (response.ok) {
+          responseData = await response.json();
+          const { data, errors } = responseData;
+
+          if (data) {
+            result = { ...result, ...data };
+            success = true;
+          }
+        }
+
+        if (!success) {
+          throw new Error(`Query attempt ${retries + 1} failed with status code ${response.status}: ${response.statusText}`);
+        }
+      } catch (fetchError) {
+        console.error(`Fetch error on attempt ${retries + 1}:`, fetchError);
+        retries++;
+        if (retries < maxRetries) {
+          const delay = retryDelay * Math.pow(2, retries - 1);
+          console.log(`Retrying in ${delay/1000} seconds...`);
+          await new Promise(resolve => setTimeout(resolve, delay));
+        } else {
+          console.error(`Failed to query batch after ${maxRetries} attempts. Abort.`);
+          process.exit(1);
+        }
       }
-
-      const json = await response.json();
-      const { data, errors } = json;
-      if (errors) {
-        console.log(`Query failed with error: ${JSON.stringify(errors)}`);
-      }
-      result = { ...result, ...data };
     }
-  } catch (error) {
-    console.error('Error:', error);
   }
   return result;
 }

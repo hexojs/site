@@ -1,0 +1,77 @@
+menu:
+  docs: Documentación
+  api: API
+  news: Noticias
+  plugins: Complementos
+  themes: Temas
+  about: Acerca de
+  search: Búsqueda
+
+index:
+  get_started: Introducción
+  theme_intro: Elige un tema visual espectacular, repleto de funcionalidades y personalizable dentro de una inmensa biblioteca. Crea uno usando cualquier constructor de plantilla compatible.
+  theme_link: Explora temas
+
+page:
+  contents: Contenidos
+  back_to_top: Inicio
+  improve: Mejora esta documentación
+  prev: Previo
+  next: Siguiente
+  last_updated: "Última actualización: %s"
+
+sidebar:
+  docs:
+    getting_started: Empezando
+    overview: Vista general
+    setup: Puesta a punto
+    configuration: Configuración
+    commands: Comandos
+    migration: Migración
+    basic_usage: Uso básico
+    writing: Escritura
+    front_matter: Frontispicio
+    tag_plugins: Complemento de etiquetado
+    asset_folders: Carpetas de recursos
+    data_files: Archivos de datos
+    server: Servidor
+    generating: Generación
+    deployment: Despliegue
+    github_pages: GitHub Pages
+    gitlab_pages: GitLab Pages
+    one_command_deployment: Despliegue en un comando
+    customization: Personalización
+    permalinks: Enlaces permanentes
+    themes: Temas
+    structure: Estructura
+    templates: Plantillas
+    variables: Variables
+    helpers: Auxiliadores
+    internationalization: Internacionalización (i18n)
+    syntax_highlight: Resaltado de sintaxis
+    plugins: Complementos
+    miscellaneous: Miscelánea
+    troubleshooting: Resolución de problemas
+    contributing: Colaboración
+  api:
+    core: Núcleo
+    overview: Vista general
+    events: Eventos
+    locals: Variables locales
+    router: Enrutador
+    box: Box
+    rendering: Renderización
+    posts: Artículos
+    scaffolds: Moldes
+    themes: Temas
+    extensions: Extensiones
+    console: Consola
+    deployer: Desplegador
+    filter: Filtro
+    generator: Generador
+    helper: Ayudante
+    injector: Inyector
+    migrator: Migrador
+    processor: Procesador
+    renderer: Renderizador
+    tag: Etiquetas
