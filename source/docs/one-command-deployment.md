@@ -333,6 +333,12 @@ Alternatively, you can click the deploy button below to create a new project:
 
 [![Deploy To Edgio](https://docs.edg.io/button.svg)](https://app.layer0.co/deploy?repo=https%3A%2F%2Fgithub.com%2Fedgio-docs%2Fedgio-hexo-example)
 
+## CloudRay
+
+[CloudRay](https://cloudray.io/) is a centralized platform for server management and automation. It allows you to deploy your Hexo site across your own virtual machines or cloud servers using reusable Bash scripts and [secure agent-based access](https://cloudray.io/docs/agent), ideal for custom, production-ready environments.
+
+[Read the full deployment guide](https://cloudray.io/articles/how-to-deploy-your-hexo-site)
+
 ## Other Methods
 
 All generated files are saved in the `public` folder. You can copy them to wherever you like.
