@@ -925,7 +925,7 @@ url: https://example.com/blog # example
 | `language`      | 文章语言 (`og:locale`)                   | `page.lang \|\| page.language \|\| config.language` |
 | `site_name`     | 网站名称 (`og:site_name`)                | `config.title`                                          |
 | `description`   | 页面描述 (`og:description`)              | 内容摘要或前 200 字                                            |
-| `twitter_card`  | Twitter 卡片类型 (`twitter:card`)        | summary                                                 |
+| `twitter_card`  | Twitter 卡片类型 (`twitter:card`)        | 概要                                                      |
 | `twitter_id`    | Twitter ID (`twitter:creator`)       |                                                         |
 | `twitter_site`  | Twitter 网站 (`twitter:site`)          |                                                         |
 | `twitter_image` | Twitter 图片 (`twitter:image`)         |                                                         |
@@ -941,19 +941,19 @@ url: https://example.com/blog # example
 <%- toc(str, [options]) %>
 ```
 
-| 选项                      | 描述                  | 默认值               |
-| ----------------------- | ------------------- | ----------------- |
-| `class`                 | Class 名称            | `toc`             |
-| `class_item` (+6.3.0)   | 目录元素的 Class 名称      | `${class}-item`   |
-| `class_link` (+6.3.0)   | 目录内链接的 Class 名称     | `${class}-link`   |
-| `class_text` (+6.3.0)   | 目录链接内文本的 Class 名称   | `${class}-text`   |
-| `class_child` (+6.3.0)  | Class name of child | `${class}-child`  |
-| `class_number` (+6.3.0) | 目录序号的 Class 名称      | `${class}-number` |
-| `class_level` (+6.3.0)  | 目录层级的 Class 名称前缀    | `${class}-level`  |
-| `list_number`           | 显示编号                | true              |
-| `max_depth`             | 生成 TOC 的最大深度        | 6                 |
-| `min_depth`             | 生成 TOC 的最小深度        | 1                 |
-| `max_items` (+7.3.0)    | 生成的 toc 的最大项目数      | `Infinity`        |
+| 选项                      | 描述                | 默认值               |
+| ----------------------- | ----------------- | ----------------- |
+| `class`                 | Class 名称          | `toc`             |
+| `class_item` (+6.3.0)   | 目录元素的 Class 名称    | `${class}-item`   |
+| `class_link` (+6.3.0)   | 目录内链接的 Class 名称   | `${class}-link`   |
+| `class_text` (+6.3.0)   | 目录链接内文本的 Class 名称 | `${class}-text`   |
+| `class_child` (+6.3.0)  | 子类别名称             | `${class}-child`  |
+| `class_number` (+6.3.0) | 目录序号的 Class 名称    | `${class}-number` |
+| `class_level` (+6.3.0)  | 目录层级的 Class 名称前缀  | `${class}-level`  |
+| `list_number`           | 显示编号              | true              |
+| `max_depth`             | 生成 TOC 的最大深度      | 6                 |
+| `min_depth`             | 生成 TOC 的最小深度      | 1                 |
+| `max_items` (+7.3.0)    | 生成的 toc 的最大项目数    | `Infinity`        |
 
 **示例：**
 

@@ -38,7 +38,7 @@ $ git submodule update --init
 $ git checkout -b new_feature
 ```
 
-4. Start hacking.
+4. 开始黑入。
 5. 推送分支：
 
 ```
