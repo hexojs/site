@@ -7,7 +7,7 @@ By default, Codeberg Pages will serve the `main` branch of `pages` repository un
 
 If you do not need a custom domain and is willing to make use of `username.codeberg.page` subdomain, please consider using a branch other than "main" to host your website root directory, and make sure `public` folder will be using "main" branch.
 
-To use Codeberg Pages to deploy your website with a custom domain, add a `.domains` file at the `/source` folder. If your website is at `pages` branch of `pages` repository, it should contain the following content: 
+To use Codeberg Pages to deploy your website with a custom domain, add a `.domains` file at the `/source` folder. If your website is at `pages` branch of `pages` repository, it should contain the following content (please substitute `example.org` with your own domain and `username` with your own username): 
 
 ```text
 example.org
@@ -25,6 +25,8 @@ And set it as `skip_render`:
 skip_render:
  - '.domains'
 ```
+
+There are currently two approaches to automatically generate pages from source site branch. One is [Forgejo Actions](https://docs.codeberg.org/ci/actions/) and the other one is [Woodpecker CI](https://docs.codeberg.org/ci/#using-codeberg's-instance-of-woodpecker-ci).
 
 # Using Forgejo Actions
 
