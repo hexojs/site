@@ -1,0 +1,6 @@
+description: A guide to using the Hexo-live-photo plugin, which helps you elegantly display dynamic photos (Live Photos) taken by devices like iPhones and Androids in your Hexo blog. It supports interactive features such as automatic playback and hover playback, enhancing the media display experience of your blog.
+link: https://github.com/cykzht/hexo-live-photo
+tags:
+  - Live Photo
+  - video
+  - photo
