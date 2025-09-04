@@ -59,7 +59,7 @@ note-warn = hsl(0, 100%, 50%)
   margin-top: 2em
   font-size: 0.9em
   text-decoration: none
-  color: color-default
+  color: light-dark(color-default, color-default-dark)
   display: block
   font-family: font-title
   &:hover
@@ -75,7 +75,7 @@ note-warn = hsl(0, 100%, 50%)
   font-size: 36px
   font-weight: 300
   text-decoration: none
-  color: color-default
+  color: light-dark(color-default, color-default-dark)
   transition: 0.2s
   a&:hover
     color: color-link-hover
@@ -114,7 +114,7 @@ note-warn = hsl(0, 100%, 50%)
 
 .article-content
   line-height: line-height
-  color: color-default
+  color: light-dark(color-default, color-default-dark)
   @media print
     font-size: 12pt
   p, ol, ul, dl, table, blockquote, iframe, .highlight
@@ -143,7 +143,7 @@ note-warn = hsl(0, 100%, 50%)
       color: color-link-hover
       text-decoration: underline
     @media print
-      color: color-default
+      color: light-dark(color-default, color-default-dark)
       text-decoration: underline
       &:after
         content: " (" attr(href) ")"
@@ -175,7 +175,7 @@ note-warn = hsl(0, 100%, 50%)
   blockquote
     padding: 0 20px
     position: relative
-    border: 1px solid color-border
+    border: 1px solid light-dark(color-border, color-border-dark)
     border-left: 5px solid #ddd
     footer
       margin: 1em 0
@@ -200,7 +200,7 @@ note-warn = hsl(0, 100%, 50%)
     font-weight: bold
   table
     max-width: 100%
-    border: 1px solid color-border
+    border: 1px solid light-dark(color-border, color-border-dark)
     display: block
     overflow: auto
     th
@@ -209,12 +209,12 @@ note-warn = hsl(0, 100%, 50%)
       padding: 5px 15px
     tr
       &:nth-child(2n)
-        background: #eee
+        background: light-dark(#eee, #282828)
 
 .article-footer
   clearfix()
   margin: 3em 0 5em 0
-  border-top: 1px solid color-border
+  border-top: 1px solid light-dark(color-border, color-border-dark)
   text-align: center
   color: color-gray
   line-height: 1em
