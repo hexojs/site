@@ -28,7 +28,7 @@
     "hexo-uglify": "^2.0.0",
     "lunr": "2.3.9",
     "lunr-languages": "^1.14.0",
-    "sharp": "^0.33.1"
+    "sharp": "^0.34.2"
   },
   "devDependencies": {
     "@crowdin/crowdin-api-client": "^1.41.0",
@@ -36,8 +36,8 @@
     "eslint-config-hexo": "^5.0.0",
     "husky": "^9.0.6",
     "imagemin-lint-staged": "^0.5.1",
-    "lint-staged": "^15.2.0",
-    "prettier": "3.5.3",
+    "lint-staged": "^16.1.6",
+    "prettier": "3.6.2",
     "yaml": "^2.7.0"
   },
   "lint-staged": {
