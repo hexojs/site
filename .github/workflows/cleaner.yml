@@ -41,7 +41,7 @@ jobs:
           git push origin cleanup -f
       - name: Check for existing PR
         id: check_pr
-        uses: actions/github-script@v7
+        uses: actions/github-script@v8
         with:
           script: |
             const owner = context.repo.owner;
