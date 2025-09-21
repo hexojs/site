@@ -17,16 +17,19 @@ highlight-purple = #8959a8
 
 pre, code
   font-family: font-mono
+  background: #f7e6e6
   background: light-dark(#f7e6e6, #342728)
   font-size: 0.95em
 
 code
   padding: 1px 5px
+  color: highlight-foreground
   color: light-dark(highlight-foreground, highlight-foreground-dark)
 
 pre
   padding: 10px 15px
   line-height: 22px
+  color: highlight-black
   color: light-dark(highlight-black, highlight-black-dark)
   code
     border: none
@@ -34,8 +37,10 @@ pre
     padding: 0
 
 .highlight
+  background: #eee
   background: light-dark(#eee, #282828)
   padding: 10px 15px
+  color: highlight-foreground
   color: light-dark(highlight-foreground, highlight-foreground-dark)
   overflow: auto
   margin: 0
