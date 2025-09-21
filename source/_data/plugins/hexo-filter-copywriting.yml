@@ -1,0 +1,11 @@
+description: A Hexo filter to automatically apply Chinese copywriting guidelines for enhanced readability.
+link: https://github.com/Cytrogen/hexo-filter-copywriting
+tags:
+  - filter
+  - copywriting
+  - typography
+  - formatter
+  - pangu
+  - spacing
+  - punctuation
+  - cjk
