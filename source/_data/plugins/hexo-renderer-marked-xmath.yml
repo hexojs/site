@@ -4,4 +4,6 @@ tags:
   - renderer
   - markdown
   - marked
-  - mathjax
+  - filter
+  - math
+  - MathJax
