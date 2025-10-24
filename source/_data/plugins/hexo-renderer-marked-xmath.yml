@@ -1,0 +1,7 @@
+description: Hexo 懒人包 一键支持 markdown 和 mathjax.
+link: https://github.com/MHuiG/hexo-renderer-marked-xmath
+tags:
+  - renderer
+  - markdown
+  - marked
+  - mathjax
