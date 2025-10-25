@@ -180,6 +180,9 @@ hexo.extend.helper.register('canonical_path_for_nav', function() {
 
 hexo.extend.helper.register('lang_name', function(lang) {
   const data = this.site.data.languages[lang];
+  if ('translationProgress' in data) {
+    return `${data.name} (${data.translationProgress}%)`;
+  }
   return data.name;
 });
 

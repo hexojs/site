@@ -1,4 +1,7 @@
 {
   "extends": "hexo",
-  "root": true
+  "root": true,
+  "parserOptions": {
+    "ecmaVersion": 2020
+  }
 }
