@@ -1,5 +1,8 @@
 global-reset()
 
+:root
+  color-scheme: light dark
+
 html
   text-size-adjust 100%
   -webkit-text-size-adjust 100%
@@ -34,6 +37,7 @@ body
   font-size: font-size
   font-family: font-sans
   color: color-default
+  color: light-dark(color-default, color-default-dark)
   text-rendering: optimizeLegibility
   -webkit-font-smoothing: antialiased
   -moz-osx-font-smoothing: grayscale
@@ -52,6 +56,7 @@ body
 
 #content-wrap
   background: #fff
+  background: light-dark(#fff, #121212)
   border-top: 1px solid darken(color-navy, 5%)
   border-bottom: 1px solid darken(color-navy, 5%)
   margin: -1px 0
