@@ -156,9 +156,19 @@ async function validate(type) {
         console.log(`Repo: ${owner}/${repo}, Stars: ${stars}, Archived: ${isArchived}, Last Commit Date: ${lastCommitDate}`);
         const newOwner = entry.owner.login;
         const newRepo = entry.name;
+
+        let requireUpdate = false;
         if (owner !== newOwner || repo !== newRepo) {
           console.log(`Repo: ${owner}/${repo} has been renamed to ${newOwner}/${newRepo}`);
           content.link = `https://github.com/${newOwner}/${newRepo}`;
+          requireUpdate = true;
+        }
+        // Always update is_archived field
+        if (content.is_archived !== isArchived) {
+          content.is_archived = isArchived;
+          requireUpdate = true;
+        }
+        if (requireUpdate) {
           fs.writeFileSync(file, yaml.dump(content));
         }
       } else {
