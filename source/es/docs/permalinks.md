@@ -18,6 +18,7 @@ Además de las siguientes variables, se puede usar cualquier atributo en el enla
 | `:hour`       | Hora de publicación del artículo con 2 dígitos                                                     |
 | `:minute`     | Minuto de publicación del artículo con 2 dígitos                                                   |
 | `:second`     | Segundo de publicación del artículo con 2 dígitos                                                  |
+| `:timestamp`  | Timestamp of post's published [date](./front-matter#Settings-Their-Default-Values)                 |
 | `:title`      | Nombre del fichero (relativo al directorio "source/\_posts/")                                    |
 | `:name`       | Nombre del fichero                                                                                 |
 | `:post_title` | Título del artículo                                                                                |
