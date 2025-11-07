@@ -98,6 +98,7 @@ then run Hexo using `hexo <command>`
 
 | Hexo version | Minimum (Node.js version) | Less than (Node.js version) |
 | ------------ | ------------------------- | --------------------------- |
+| 8.0+         | 20.19.0                   | latest                      |
 | 7.0+         | 14.0.0                    | latest                      |
 | 6.2+         | 12.13.0                   | latest                      |
 | 6.0+         | 12.13.0                   | 18.5.0                      |

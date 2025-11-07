@@ -1,3 +1,5 @@
+'use strict';
+
 (() => {
   const queryDark = window.matchMedia('(prefers-color-scheme: dark)');
 
