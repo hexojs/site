@@ -1,12 +1,12 @@
-(function() {
-  'use strict';
+'use strict';
 
-  var Cookies = window.Cookies.noConflict();
+(function() {
+  const Cookies = window.Cookies.noConflict();
 
   function changeLang() {
-    var lang = this.value;
-    var canonical = this.dataset.canonical;
-    var path = '/';
+    const lang = this.value;
+    const canonical = this.dataset.canonical;
+    let path = '/';
     if (lang !== 'en') path += lang + '/';
 
     Cookies.set('nf_lang', lang, { expires: 365 });
