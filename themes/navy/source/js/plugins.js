@@ -1,19 +1,19 @@
+'use strict';
+
 (function() {
   /* global lunr */
-  'use strict';
-
-  var elements = document.getElementsByClassName('plugin');
-  var $count = document.getElementById('plugin-list-count');
-  var $input = document.getElementById('plugin-search-input');
-  var elementLen = elements.length;
-  var index = lunr.Index.load(window.SEARCH_INDEX);
+  const elements = document.getElementsByClassName('plugin');
+  const $count = document.getElementById('plugin-list-count');
+  const $input = document.getElementById('plugin-search-input');
+  const elementLen = elements.length;
+  const index = lunr.Index.load(window.SEARCH_INDEX);
 
   function updateCount(count) {
     $count.innerHTML = count + (count === 1 ? ' item' : ' items');
   }
 
   function addClass(elem, className) {
-    var classList = elem.classList;
+    const classList = elem.classList;
 
     if (!classList.contains(className)) {
       classList.add(className);
@@ -21,7 +21,7 @@
   }
 
   function removeClass(elem, className) {
-    var classList = elem.classList;
+    const classList = elem.classList;
 
     if (classList.contains(className)) {
       classList.remove(className);
@@ -29,10 +29,10 @@
   }
 
   function search(value) {
-    var result = index.search('*' + value + '* ' + value);
-    var len = result.length;
-    var selected = {};
-    var i = 0;
+    const result = index.search('*' + value + '* ' + value);
+    const len = result.length;
+    const selected = {};
+    let i = 0;
 
     for (i = 0; i < len; i++) {
       selected[result[i].ref] = true;
@@ -50,7 +50,7 @@
   }
 
   function displayAll() {
-    for (var i = 0; i < elementLen; i++) {
+    for (let i = 0; i < elementLen; i++) {
       addClass(elements[i], 'on');
     }
 
@@ -58,7 +58,7 @@
   }
 
   $input.addEventListener('input', function() {
-    var value = this.value;
+    const value = this.value;
 
     if (!value) return displayAll();
     search(value);

@@ -1,6 +1,6 @@
 'use strict';
 
-// eslint-disable-next-line node/no-extraneous-require
+// eslint-disable-next-line n/no-extraneous-require
 const yaml = require('js-yaml');
 const fs = require('fs');
 const { join, basename } = require('path');
@@ -80,6 +80,7 @@ async function queryRepos(reposList, batchSize = 100, maxRetries = 3, retryDelay
     while (retries < maxRetries && !success) {
       try {
         // Send the GraphQL query
+        // eslint-disable-next-line n/no-unsupported-features/node-builtins
         const response = await fetch('https://api.github.com/graphql', {
           method: 'POST',
           headers: {
@@ -91,7 +92,7 @@ async function queryRepos(reposList, batchSize = 100, maxRetries = 3, retryDelay
 
         if (response.ok) {
           responseData = await response.json();
-          const { data, errors } = responseData;
+          const { data } = responseData;
 
           if (data) {
             result = { ...result, ...data };
@@ -107,10 +108,11 @@ async function queryRepos(reposList, batchSize = 100, maxRetries = 3, retryDelay
         retries++;
         if (retries < maxRetries) {
           const delay = retryDelay * Math.pow(2, retries - 1);
-          console.log(`Retrying in ${delay/1000} seconds...`);
+          console.log(`Retrying in ${delay / 1000} seconds...`);
           await new Promise(resolve => setTimeout(resolve, delay));
         } else {
           console.error(`Failed to query batch after ${maxRetries} attempts. Abort.`);
+          // eslint-disable-next-line n/no-process-exit
           process.exit(1);
         }
       }

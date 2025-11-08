@@ -1,19 +1,19 @@
-(function() {
-  'use strict';
+'use strict';
 
-  var body = document.getElementsByTagName('body')[0];
-  var navToggle = document.getElementById('mobile-nav-toggle');
-  var dimmer = document.getElementById('mobile-nav-dimmer');
-  var CLASS_NAME = 'mobile-nav-on';
+(function() {
+  const body = document.getElementsByTagName('body')[0];
+  const navToggle = document.getElementById('mobile-nav-toggle');
+  const dimmer = document.getElementById('mobile-nav-dimmer');
+  const CLASS_NAME = 'mobile-nav-on';
   if (!navToggle) return;
 
-  navToggle.addEventListener('click', function(e) {
+  navToggle.addEventListener('click', e => {
     e.preventDefault();
     e.stopPropagation();
     body.classList.toggle(CLASS_NAME);
   });
 
-  dimmer.addEventListener('click', function(e) {
+  dimmer.addEventListener('click', e => {
     if (!body.classList.contains(CLASS_NAME)) return;
 
     e.preventDefault();
