@@ -125,32 +125,6 @@ deploy:
 | `verbose`       | Display verbose messages        | true    |
 | `ignore_errors` | Ignore errors                   | false   |
 
-## OpenShift
-
-{% note warn %}
-`hexo-deployer-openshift` has been deprecated in 2022.
-{% endnote %}
-
-Install [hexo-deployer-openshift].
-
-```bash
-$ npm install hexo-deployer-openshift --save
-```
-
-Edit settings.
-
-```yaml
-deploy:
-  type: openshift
-  repo: <repository url>
-  message: [message]
-```
-
-| Option    | Description                                                                                                 |
-| --------- | ----------------------------------------------------------------------------------------------------------- |
-| `repo`    | OpenShift repository URL                                                                                    |
-| `message` | Customize commit message (Default to `Site updated: {% raw %}{{ now('YYYY-MM-DD HH:mm:ss') }}{% endraw %}`) |
-
 ## FTPSync
 
 Install [hexo-deployer-ftpsync].
@@ -267,46 +241,6 @@ $ hexo generate —deploy && bip deploy
 
 After a few moments, your website will be deployed.
 
-## RSS3
-
-{% note warn %}
-`hexo-deployer-rss3` has been deprecated in 2023.
-{% endnote %}
-
-[RSS3](https://rss3.io) is an open protocol designed for content and social networks in the Web 3.0 era.
-
-1. Install [hexo-deployer-rss3].
-
-2. Modify the configuration.
-
-```yaml
-deploy: # The root configuration block for all deployers
-  - type: rss3
-    endpoint: https://hub.rss3.io
-    privateKey: 47e18d6c386898b424025cd9db446f779ef24ad33a26c499c87bb3d9372540ba
-    ipfs:
-      deploy: true
-      gateway: pinata
-      api:
-        key: d693df715d3631e489d6
-        secret: ee8b74626f12b61c1a4bde3b8c331ad390567c86ba779c9b18561ee92c1cbff0
-```
-
-| Parameters        | Description                                 |
-| ----------------- | ------------------------------------------- |
-| `endpoint`        | a link to the RSS3 Hub                      |
-| `privateKey`      | your private key, 64 bytes                  |
-| `ipfs/deploy`     | whether to deploy to IPFS                   |
-| `ipfs/gateway`    | IPFS API gateway                            |
-| `ipfs/api/key`    | IPFS gateway-related authentication content |
-| `ipfs/api/secret` | IPFS gateway-related authentication content |
-
-3. generate static files
-
-4. deploy
-
-For deployment-related considerations, you can refer to [Our documentation](https://github.com/NaturalSelectionLabs/hexo-deployer-rss3/blob/develop/README.md).
-
 ## Edgio (formerly Layer0)
 
 [Edgio (formerly Layer0)](https://docs.edg.io) is an Internet-scale platform that makes it easy for teams to build, release, protect, and accelerate their web apps and APIs.
@@ -340,7 +274,5 @@ All generated files are saved in the `public` folder. You can copy them to where
 [hexo-deployer-git]: https://github.com/hexojs/hexo-deployer-git
 [hexo-deployer-heroku]: https://github.com/hexojs/hexo-deployer-heroku
 [hexo-deployer-rsync]: https://github.com/hexojs/hexo-deployer-rsync
-[hexo-deployer-openshift]: https://github.com/hexojs/hexo-deployer-openshift
 [hexo-deployer-ftpsync]: https://github.com/hexojs/hexo-deployer-ftpsync
 [hexo-deployer-sftp]: https://github.com/lucascaro/hexo-deployer-sftp
-[hexo-deployer-rss3]: https://github.com/NaturalSelectionLabs/hexo-deployer-rss3
