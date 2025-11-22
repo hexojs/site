@@ -241,32 +241,6 @@ $ hexo generate —deploy && bip deploy
 
 After a few moments, your website will be deployed.
 
-## Edgio (formerly Layer0)
-
-[Edgio (formerly Layer0)](https://docs.edg.io) is an Internet-scale platform that makes it easy for teams to build, release, protect, and accelerate their web apps and APIs.
-
-1. In your hexo project directory, install the Edgio CLI:
-
-```bash
-npm i -g @edgio/cli
-```
-
-2. Install Hexo connector by Edgio:
-
-```bash
-edgio init --connector=@edgio/hexo
-```
-
-3. Deploy
-
-```bash
-edgio deploy
-```
-
-Alternatively, you can click the deploy button below to create a new project:
-
-[![Deploy To Edgio](https://docs.edg.io/button.svg)](https://app.layer0.co/deploy?repo=https%3A%2F%2Fgithub.com%2Fedgio-docs%2Fedgio-hexo-example)
-
 ## Other Methods
 
 All generated files are saved in the `public` folder. You can copy them to wherever you like.
