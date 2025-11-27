@@ -125,35 +125,9 @@ deploy:
 | `verbose`       | 詳細なメッセージを表示        | true  |
 | `ignore_errors` | エラーを無視             | false |
 
-## OpenShift
-
-{% note warn %}
-`hexo-deployer-openshift`は2022年に非推奨となりました。
-{% endnote %}
-
-[hexo-deployer-openshift][]をインストールします。
-
-```bash
-$ npm install hexo-deployer-openshift --save
-```
-
-設定を編集します。
-
-```yaml
-deploy:
-  type: openshift
-  repo: <repository url>
-  message: [message]
-```
-
-| オプション     | 説明                                                                                              |
-| --------- | ----------------------------------------------------------------------------------------------- |
-| `repo`    | OpenShiftリポジトリURL                                                                               |
-| `message` | コミットメッセージをカスタマイズ (デフォルト: `Site updated: {% raw %}{{ now('YYYY-MM-DD HH:mm:ss') }}{% endraw %}`) |
-
 ## FTPSync
 
-[hexo-deployer-ftpsync][]をインストールします。
+Install [hexo-deployer-ftpsync][].
 
 ```bash
 $ npm install hexo-deployer-ftpsync --save
@@ -185,7 +159,7 @@ deploy:
 
 ## SFTP
 
-[hexo-deployer-sftp][]をインストールします。 sshエージェントを利用しパスワードなしでSFTP経由でサイトをデプロイできます。
+Install [hexo-deployer-sftp][]. sshエージェントを利用しパスワードなしでSFTP経由でサイトをデプロイできます。
 
 ```bash
 $ npm install hexo-deployer-sftp --save
@@ -267,72 +241,6 @@ $ hexo generate —deploy && bip deploy
 
 しばらくすると、ウェブサイトがデプロイされます。
 
-## RSS3
-
-{% note warn %}
-`hexo-deployer-rss3`は2023年に非推奨となりました。
-{% endnote %}
-
-[RSS3](https://rss3.io)は、Web 3.0時代のコンテンツおよびソーシャルネットワークのために設計されたオープンプロトコルです。
-
-1. [hexo-deployer-rss3][]をインストールします。
-
-2. 設定を変更します。
-
-```yaml
-deploy: # The root configuration block for all deployers
-  - type: rss3
-    endpoint: https://hub.rss3.io
-    privateKey: 47e18d6c386898b424025cd9db446f779ef24ad33a26c499c87bb3d9372540ba
-    ipfs:
-      deploy: true
-      gateway: pinata
-      api:
-        key: d693df715d3631e489d6
-        secret: ee8b74626f12b61c1a4bde3b8c331ad390567c86ba779c9b18561ee92c1cbff0
-```
-
-| パラメータ             | 説明                   |
-| ----------------- | -------------------- |
-| `endpoint`        | RSS3ハブへのリンク          |
-| `privateKey`      | あなたのプライベートキー、64バイト   |
-| `ipfs/deploy`     | IPFSへのデプロイを実行するか？    |
-| `ipfs/gateway`    | IPFS APIゲートウェイ       |
-| `ipfs/api/key`    | IPFSゲートウェイ関連の認証コンテンツ |
-| `ipfs/api/secret` | IPFSゲートウェイ関連の認証コンテンツ |
-
-3. 静的ファイルを生成します
-
-4. デプロイします
-
-デプロイ関連の考慮事項については、[ドキュメント](https://github.com/NaturalSelectionLabs/hexo-deployer-rss3/blob/develop/README.md)を参照してください。
-
-## Edgio (旧Layer0)
-
-[Edgio (旧Layer0)](https://docs.edg.io)は、WebアプリやAPのをビルド、リリース、保護を加速する、インターネットスケールなプラットフォームです。
-
-1. hexoプロジェクトディレクトリで、Edgio CLIをインストールします:
-
-```bash
-npm i -g @edgio/cli
-```
-
-2. EdgioのHexoコネクタをインストールします:
-
-```bash
-edgio init --connector=@edgio/hexo
-```
-
-3. デプロイします
-
-```bash
-edgio deploy
-```
-
-または、以下のデプロイボタンをクリックして新しいプロジェクトを作成できます:
-
-[![Deploy To Edgio](https://docs.edg.io/button.svg)](https://app.layer0.co/deploy?repo=https%3A%2F%2Fgithub.com%2Fedgio-docs%2Fedgio-hexo-example)
-
 ## その他の方法
 
 生成されたすべてのファイルは`public`フォルダに保存されます。 好きな場所にコピーしてください。
@@ -340,7 +248,5 @@ edgio deploy
 [hexo-deployer-git]: https://github.com/hexojs/hexo-deployer-git
 [hexo-deployer-heroku]: https://github.com/hexojs/hexo-deployer-heroku
 [hexo-deployer-rsync]: https://github.com/hexojs/hexo-deployer-rsync
-[hexo-deployer-openshift]: https://github.com/hexojs/hexo-deployer-openshift
 [hexo-deployer-ftpsync]: https://github.com/hexojs/hexo-deployer-ftpsync
 [hexo-deployer-sftp]: https://github.com/lucascaro/hexo-deployer-sftp
-[hexo-deployer-rss3]: https://github.com/NaturalSelectionLabs/hexo-deployer-rss3

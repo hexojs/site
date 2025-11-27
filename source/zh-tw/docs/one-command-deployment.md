@@ -125,35 +125,9 @@ deploy:
 | `verbose`       | Display verbose messages | true    |
 | `ignore_errors` | 忽略錯誤                     | false   |
 
-## OpenShift
-
-{% note warn %}
-`hexo-deployer-openshift` 在 2022 時已被棄用。
-{% endnote %}
-
-安裝 [hexo-deployer-openshift][]。
-
-```bash
-$ npm install hexo-deployer-openshift --save
-```
-
-修改設定。
-
-```yaml
-deploy:
-  type: openshift
-  repo: <repository url>
-  message: [message]
-```
-
-| 選項        | 描述                                                                                 |
-| --------- | ---------------------------------------------------------------------------------- |
-| `repo`    | OpenShift 儲存庫網址                                                                    |
-| `message` | 自訂提交訊息 (預設是 `Site updated: {% raw %}{{ now('YYYY-MM-DD HH:mm:ss') }}{% endraw %}`) |
-
 ## FTPSync
 
-安裝 [hexo-deployer-ftpsync][]。
+Install [hexo-deployer-ftpsync][].
 
 ```bash
 $ npm install hexo-deployer-ftpsync --save
@@ -191,7 +165,7 @@ Install [hexo-deployer-sftp][]. Deploys the site via SFTP, allowing for password
 $ npm install hexo-deployer-sftp --save
 ```
 
-預設值
+修改設定。
 
 ```yaml
 deploy:
@@ -206,7 +180,7 @@ deploy:
   agent: [path/to/agent/socket]
 ```
 
-| Option        | 描述                                              | Default          |
+| 選項            | 描述                                              | Default          |
 | ------------- | ----------------------------------------------- | ---------------- |
 | `host`        | Address of remote host                          |                  |
 | `port`        | Port                                            | 22               |
@@ -267,72 +241,6 @@ $ hexo generate —deploy && bip deploy
 
 After a few moments, your website will be deployed.
 
-## RSS3
-
-{% note warn %}
-`hexo-deployer-rss3` has been deprecated in 2023.
-{% endnote %}
-
-[RSS3](https://rss3.io) 是一個為 Web 3.0 時代的內容和社交網路設計的開放協議。
-
-1. 安裝 [hexo-deployer-rss3][]
-
-2. 修改配置。
-
-```yaml
-deploy: # The root configuration block for all deployers
-  - type: rss3
-    endpoint: https://hub.rss3.io
-    privateKey: 47e18d6c386898b424025cd9db446f779ef24ad33a26c499c87bb3d9372540ba
-    ipfs:
-      deploy: true
-      gateway: pinata
-      api:
-        key: d693df715d3631e489d6
-        secret: ee8b74626f12b61c1a4bde3b8c331ad390567c86ba779c9b18561ee92c1cbff0
-```
-
-| 參數                | Description     |
-| ----------------- | --------------- |
-| `endpoint`        | 一個 RSS3 Hub 的鏈接 |
-| `privateKey`      | 您的私鑰， 64 字節     |
-| `ipfs/deploy`     | 是否部署到 IPFS 上    |
-| `ipfs/gateway`    | IPFS API 網關     |
-| `ipfs/api/key`    | IPFS 網關相關的驗證內容  |
-| `ipfs/api/secret` | IPFS 網關相關的驗證內容  |
-
-3. 生成靜態文件
-
-4. 部署
-
-關於具體部署相關的註意事項，您可以參閱 [我們的文檔](https://github.com/NaturalSelectionLabs/hexo-deployer-rss3/tree/develop/docs/zh_TW/start.md) 。
-
-## Edgio (formerly Layer0)
-
-[Edgio (formerly Layer0)](https://docs.edg.io) is an Internet-scale platform that makes it easy for teams to build, release, protect, and accelerate their web apps and APIs.
-
-1. In your hexo project directory, install the Edgio CLI:
-
-```bash
-npm i -g @edgio/cli
-```
-
-2. Install Hexo connector by Edgio:
-
-```bash
-edgio init --connector=@edgio/hexo
-```
-
-3. 預設
-
-```bash
-edgio deploy
-```
-
-或者，你可以點擊下方的佈署按鈕來建立一個新專案：
-
-[![Deploy To Edgio](https://docs.edg.io/button.svg)](https://app.layer0.co/deploy?repo=https%3A%2F%2Fgithub.com%2Fedgio-docs%2Fedgio-hexo-example)
-
 ## 其他方法
 
 All generated files are saved in the `public` folder. You can copy them to wherever you like.
@@ -340,7 +248,5 @@ All generated files are saved in the `public` folder. You can copy them to where
 [hexo-deployer-git]: https://github.com/hexojs/hexo-deployer-git
 [hexo-deployer-heroku]: https://github.com/hexojs/hexo-deployer-heroku
 [hexo-deployer-rsync]: https://github.com/hexojs/hexo-deployer-rsync
-[hexo-deployer-openshift]: https://github.com/hexojs/hexo-deployer-openshift
 [hexo-deployer-ftpsync]: https://github.com/hexojs/hexo-deployer-ftpsync
 [hexo-deployer-sftp]: https://github.com/lucascaro/hexo-deployer-sftp
-[hexo-deployer-rss3]: https://github.com/NaturalSelectionLabs/hexo-deployer-rss3
