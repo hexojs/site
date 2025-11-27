@@ -125,35 +125,9 @@ deploy:
 | `verbose`       | 显示调试信息      | true  |
 | `ignore_errors` | 忽略错误        | false |
 
-## OpenShift
-
-{% note warn %}
-`hexo-deployer-openshift` 已于2022年被弃用。
-{% endnote %}
-
-安装 [hexo-deployer-openshift][]。
-
-```bash
-$ npm install hexo-deployer-openshift --save
-```
-
-修改配置。
-
-```yaml
-deploy:
-  type: openshift
-  repo: <repository url>
-  message: [message]
-```
-
-| 选项        | 描述                                                                                |
-| --------- | --------------------------------------------------------------------------------- |
-| `repo`    | OpenShift 库（Repository）地址                                                         |
-| `message` | 自定提交信息（默认为 `Site updated： {% raw %}{{ now('YYYY-MM-DD HH:mm:ss') }}{% endraw %}`) |
-
 ## FTPSync
 
-安装 [hexo-deployer-ftpsync][]。
+Install [hexo-deployer-ftpsync][].
 
 ```bash
 $ npm install hexo-deployer-ftpsync --save
@@ -185,7 +159,7 @@ deploy:
 
 ## SFTP
 
-安装 [hexo-deployer-sftp][]。 通过 SFTP 部署站点，允许使用 ssh-agent 进行无密码连接。
+Install [hexo-deployer-sftp][]. 通过 SFTP 部署站点，允许使用 ssh-agent 进行无密码连接。
 
 ```bash
 $ npm install hexo-deployer-sftp --save
@@ -267,72 +241,6 @@ $ hexo generate —deploy && bip deploy
 
 几分钟后，你的网站将被部署。
 
-## RSS3
-
-{% note warn %}
-`hexo-deployer-rss3` 已于2023年被弃用。
-{% endnote %}
-
-[RSS3](https://rss3.io) 是一个为 Web 3.0 时代的内容和社交网络设计的开放协议。
-
-1. 安装 [hexo-deployer-rss3][]
-
-2. 修改配置。
-
-```yaml
-deploy: # The root configuration block for all deployers
-  - type: rss3
-    endpoint: https://hub.rss3.io
-    privateKey: 47e18d6c386898b424025cd9db446f779ef24ad33a26c499c87bb3d9372540ba
-    ipfs:
-      deploy: true
-      gateway: pinata
-      api:
-        key: d693df715d3631e489d6
-        secret: ee8b74626f12b61c1a4bde3b8c331ad390567c86ba779c9b18561ee92c1cbff0
-```
-
-| 参数                | 描述              |
-| ----------------- | --------------- |
-| `endpoint`        | 一个 RSS3 Hub 的链接 |
-| `privateKey`      | 您的私钥， 64 字节     |
-| `ipfs/deploy`     | 是否部署到 IPFS 上    |
-| `ipfs/gateway`    | IPFS API 网关     |
-| `ipfs/api/key`    | IPFS 网关相关的验证内容  |
-| `ipfs/api/secret` | IPFS 网关相关的验证内容  |
-
-3. 生成静态文件
-
-4. 部署
-
-关于具体部署相关的注意事项，您可以参阅 [我们的文档](https://github.com/NaturalSelectionLabs/hexo-deployer-rss3/tree/develop/docs/zh_CN/start.md) 。
-
-## Edgio (原 Layer0)
-
-[Edgio (原 Layer0)](https://docs.edg.io) 是一个互联网规模的平台，使团队可以轻松构建、发布、保护和加速其 Web 应用程序和 API。
-
-1. 在您的 Hexo 项目目录中，安装 Edgio CLI：
-
-```bash
-npm i -g @edgio/cli
-```
-
-2. 通过 Edgio 安装 Hexo 连接器：
-
-```bash
-edgio init --connector=@edgio/hexo
-```
-
-3. 部署
-
-```bash
-edgio deploy
-```
-
-此外，你也可以点击下面的部署按钮来创建一个新的项目：
-
-[![部署到 Edgio](https://docs.edg.io/button.svg)](https://app.layer0.co/deploy?repo=https%3A%2F%2Fgithub.com%2Fedgio-docs%2Fedgio-hexo-example)
-
 ## 其他方法
 
 Hexo 生成的所有文件都放在 `public` 文件夹中。 您可以将它们复制到您喜欢的地方。
@@ -340,7 +248,5 @@ Hexo 生成的所有文件都放在 `public` 文件夹中。 您可以将它们�
 [hexo-deployer-git]: https://github.com/hexojs/hexo-deployer-git
 [hexo-deployer-heroku]: https://github.com/hexojs/hexo-deployer-heroku
 [hexo-deployer-rsync]: https://github.com/hexojs/hexo-deployer-rsync
-[hexo-deployer-openshift]: https://github.com/hexojs/hexo-deployer-openshift
 [hexo-deployer-ftpsync]: https://github.com/hexojs/hexo-deployer-ftpsync
 [hexo-deployer-sftp]: https://github.com/lucascaro/hexo-deployer-sftp
-[hexo-deployer-rss3]: https://github.com/NaturalSelectionLabs/hexo-deployer-rss3

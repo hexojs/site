@@ -125,35 +125,9 @@ deploy:
 | `verbose`       | Exibi mensagens detalhadas             | true    |
 | `ignore_errors` | Ignora erros                           | false   |
 
-## OpenShift
-
-{% note warn %}
-`hexo-deployer-openshift` has been deprecated in 2022.
-{% endnote %}
-
-Instale o pacote [hexo-deployer-openshift][].
-
-```bash
-$ npm install hexo-deployer-openshift --save
-```
-
-Editando as configurações.
-
-```yaml
-deploy:
-  type: openshift
-  repo: <repository url>
-  message: [message]
-```
-
-| Option    | Description                                                                                                       |
-| --------- | ----------------------------------------------------------------------------------------------------------------- |
-| `repo`    | URL do repositório no OpenShift                                                                                   |
-| `message` | Customiza a mensagem de commit (O padrão é `Site updated: {% raw %}{{ now('YYYY-MM-DD HH:mm:ss') }}{% endraw %}`) |
-
 ## FTPSync
 
-Instale o pacote [hexo-deployer-ftpsync][].
+Install [hexo-deployer-ftpsync][].
 
 ```bash
 $ npm install hexo-deployer-ftpsync --save
@@ -185,7 +159,7 @@ deploy:
 
 ## SFTP
 
-Instale o pacote [hexo-deployer-sftp][]. Implantação do site via SFTP, permitindo conexões sem senhas usando "ssh-agent".
+Install [hexo-deployer-sftp][]. Implantação do site via SFTP, permitindo conexões sem senhas usando "ssh-agent".
 
 ```bash
 $ npm install hexo-deployer-sftp --save
@@ -267,72 +241,6 @@ $ hexo generate —deploy && bip deploy
 
 After a few moments, your website will be deployed.
 
-## RSS3
-
-{% note warn %}
-`hexo-deployer-rss3` has been deprecated in 2023.
-{% endnote %}
-
-\[RSS3\] (https://rss3.io) é um protocolo aberto projetado para conteúdo e redes sociais na era da Web 3.0.
-
-1. Instale [hexo-deployer-rss3][]
-
-2. Modifique a configuração.
-
-```yaml
-deploy: # The root configuration block for all deployers
-  - type: rss3
-    endpoint: https://hub.rss3.io
-    privateKey: 47e18d6c386898b424025cd9db446f779ef24ad33a26c499c87bb3d9372540ba
-    ipfs:
-      deploy: true
-      gateway: pinata
-      api:
-        key: d693df715d3631e489d6
-        secret: ee8b74626f12b61c1a4bde3b8c331ad390567c86ba779c9b18561ee92c1cbff0
-```
-
-| Parameters        | Description                                         |
-| ----------------- | --------------------------------------------------- |
-| `endpoint`        | Um link para o hub RSS3                             |
-| `privateKey`      | Sua chave privada, 64 bytes                         |
-| `ipfs/deploy`     | Se deve implantar no IPFS                           |
-| `ipfs/gateway`    | Gateway de API IPFS                                 |
-| `ipfs/api/key`    | Conteúdo de verificação relacionado ao gateway IPFS |
-| `ipfs/api/secret` | Conteúdo de verificação relacionado ao gateway IPFS |
-
-3. Gere arquivos estáticos
-
-4. deploy
-
-Para precauções relacionadas à implantação específica, você pode consultar \[nossa documentação\] (https://github.com/NaturalSelectionLabs/hexo-deployer-rss3/tree/develop/docs/zh_CN/start.md).
-
-## Edgio (formerly Layer0)
-
-[Edgio (formerly Layer0)](https://docs.edg.io) is an Internet-scale platform that makes it easy for teams to build, release, protect, and accelerate their web apps and APIs.
-
-1. In your hexo project directory, install the Edgio CLI:
-
-```bash
-npm i -g @edgio/cli
-```
-
-2. Install Hexo connector by Edgio:
-
-```bash
-edgio init --connector=@edgio/hexo
-```
-
-3. Deploy
-
-```bash
-edgio deploy
-```
-
-Alternatively, you can click the deploy button below to create a new project:
-
-[![Deploy To Edgio](https://docs.edg.io/button.svg)](https://app.layer0.co/deploy?repo=https%3A%2F%2Fgithub.com%2Fedgio-docs%2Fedgio-hexo-example)
-
 ## Outros Métodos
 
 Todos os arquivos gerados são salvos no diretório `public`. Você pode copiá-los para onde quiser.
@@ -340,7 +248,5 @@ Todos os arquivos gerados são salvos no diretório `public`. Você pode copiá-
 [hexo-deployer-git]: https://github.com/hexojs/hexo-deployer-git
 [hexo-deployer-heroku]: https://github.com/hexojs/hexo-deployer-heroku
 [hexo-deployer-rsync]: https://github.com/hexojs/hexo-deployer-rsync
-[hexo-deployer-openshift]: https://github.com/hexojs/hexo-deployer-openshift
 [hexo-deployer-ftpsync]: https://github.com/hexojs/hexo-deployer-ftpsync
 [hexo-deployer-sftp]: https://github.com/lucascaro/hexo-deployer-sftp
-[hexo-deployer-rss3]: https://github.com/NaturalSelectionLabs/hexo-deployer-rss3
