@@ -163,7 +163,7 @@ async function validate(type) {
           content.link = `https://github.com/${newOwner}/${newRepo}`;
           requireUpdate = true;
         }
-        // Always update is_archived field
+        // Update is_archived field if it has changed
         if (content.is_archived !== isArchived) {
           content.is_archived = isArchived;
           requireUpdate = true;
