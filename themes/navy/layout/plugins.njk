@@ -11,12 +11,25 @@
         <p>Many plugins and themes are contributed by the community. They are not maintained by Hexo organization. Hexo organization does not guarantee their availability and security.
         </p>
       </blockquote>
-      <ul id="plugin-list">
+      <ul id="plugin-list"{% if page.data == 'themes' %} style="display: none;"{% endif %}>
         {{ plugin_list() }}
       </ul>
     </div>
   </div>
 </div>
 <script>window.SEARCH_INDEX = {{ lunr_index(site.data[page.data]) }}</script>
+{% if page.data == 'themes' %}
+<script>
+const container = document.querySelector("#plugin-list");
+const plugins = Array.from(container.children);
+// Fisher–Yates shuffle
+for (let i = plugins.length - 1; i > 0; i--) {
+  const j = Math.floor(Math.random() * (i + 1));
+  [plugins[i], plugins[j]] = [plugins[j], plugins[i]];
+}
+plugins.forEach(plugin => container.appendChild(plugin));
+container.style.display = '';
+</script>
 <script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.8/dist/medium-zoom.min.js"></script>
 <script defer>mediumZoom('[data-zoomable]',{background:'#171f26'});</script>
+{% endif %}
