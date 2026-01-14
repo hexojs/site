@@ -8,3 +8,7 @@ tags:
   - single column
   - ejs
   - scss
+repository:
+  is_archived: true
+  stars: 53
+  last_commit_date: '2023-08-24T08:26:15Z'

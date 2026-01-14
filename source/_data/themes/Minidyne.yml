@@ -7,3 +7,7 @@ tags:
   - no-javascript
   - minimal
   - one_column
+repository:
+  is_archived: false
+  stars: 3
+  last_commit_date: '2024-12-17T20:01:48Z'

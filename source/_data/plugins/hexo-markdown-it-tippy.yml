@@ -10,3 +10,7 @@ tags:
   - footnotes
   - markdown-it
   - markdown
+repository:
+  is_archived: false
+  stars: 2
+  last_commit_date: '2019-10-11T03:23:15Z'

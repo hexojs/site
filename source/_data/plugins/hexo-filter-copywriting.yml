@@ -1,4 +1,6 @@
-description: A Hexo filter to automatically apply Chinese copywriting guidelines for enhanced readability.
+description: >-
+  A Hexo filter to automatically apply Chinese copywriting guidelines for
+  enhanced readability.
 link: https://github.com/Cytrogen/hexo-filter-copywriting
 tags:
   - filter
@@ -9,3 +11,7 @@ tags:
   - spacing
   - punctuation
   - cjk
+repository:
+  is_archived: false
+  stars: 1
+  last_commit_date: '2025-10-08T00:13:09Z'

@@ -9,3 +9,7 @@ tags:
   - simple
   - gallery
   - portfolio
+repository:
+  is_archived: false
+  stars: 378
+  last_commit_date: '2017-08-03T01:16:41Z'

@@ -3,3 +3,7 @@ link: https://github.com/klren0312/hexo-deployer-walrus
 tags:
   - walrus
   - deployer
+repository:
+  is_archived: false
+  stars: 1
+  last_commit_date: '2025-05-07T06:16:41Z'

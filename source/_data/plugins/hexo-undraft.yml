@@ -5,3 +5,7 @@ tags:
   - drafts
   - posts
   - cli
+repository:
+  is_archived: false
+  stars: 1
+  last_commit_date: '2018-11-12T18:32:43Z'

@@ -2,3 +2,7 @@ description: Webhook for Bloggerrolle.de
 link: https://github.com/gummipunkt/hexo_webhook_bloggerrolle
 tags:
   - server
+repository:
+  is_archived: false
+  stars: 0
+  last_commit_date: '2025-05-20T13:40:41Z'

@@ -2,3 +2,7 @@ description: Converts local URLs to CDN ones when hexo generator.
 link: https://github.com/zqjimlove/hexo-cdnify
 tags:
   - cdn
+repository:
+  is_archived: false
+  stars: 19
+  last_commit_date: '2021-09-22T05:59:01Z'

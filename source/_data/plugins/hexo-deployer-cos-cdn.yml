@@ -9,3 +9,7 @@ tags:
   - cdn
   - aliyun
   - oss
+repository:
+  is_archived: false
+  stars: 76
+  last_commit_date: '2021-07-31T12:05:05Z'

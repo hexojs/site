@@ -8,3 +8,7 @@ tags:
   - simple
   - fast
   - latest-comment
+repository:
+  is_archived: false
+  stars: 317
+  last_commit_date: '2025-01-14T02:48:33Z'

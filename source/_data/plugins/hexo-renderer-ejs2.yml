@@ -3,3 +3,7 @@ link: https://github.com/NoahDragon/hexo-renderer-ejs2
 tags:
   - ejs
   - renderer
+repository:
+  is_archived: false
+  stars: 1
+  last_commit_date: '2017-03-30T18:08:21Z'

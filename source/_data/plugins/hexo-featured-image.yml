@@ -5,3 +5,7 @@ tags:
   - image
   - json
   - json-content
+repository:
+  is_archived: false
+  stars: 32
+  last_commit_date: '2020-03-16T17:48:58Z'

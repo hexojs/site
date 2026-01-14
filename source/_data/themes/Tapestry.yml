@@ -1,4 +1,6 @@
-description: Multi-column theme where images are the focus and old-school social media is the vibe. Ideal for photo blogs, portfolios, or visual storytelling.
+description: >-
+  Multi-column theme where images are the focus and old-school social media is
+  the vibe. Ideal for photo blogs, portfolios, or visual storytelling.
 link: https://github.com/HackmanClub/tapestry
 preview: https://tapestry.demo.bashynx.dev/
 tags:
@@ -12,3 +14,7 @@ tags:
   - scrollable-gallery
   - infinite-scroll
   - social-feed
+repository:
+  is_archived: false
+  stars: 2
+  last_commit_date: '2025-09-24T18:13:58Z'

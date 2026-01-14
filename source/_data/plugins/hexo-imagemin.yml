@@ -5,3 +5,7 @@ tags:
   - filter
   - imagemin
   - images
+repository:
+  is_archived: true
+  stars: 6
+  last_commit_date: '2021-12-18T16:10:53Z'

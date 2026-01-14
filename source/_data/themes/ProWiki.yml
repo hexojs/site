@@ -5,3 +5,7 @@ tags:
   - wiki
   - black
   - no fancy
+repository:
+  is_archived: false
+  stars: 13
+  last_commit_date: '2025-11-19T09:30:10Z'

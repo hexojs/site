@@ -4,3 +4,7 @@ tags:
   - official
   - deployer
   - openshift
+repository:
+  is_archived: true
+  stars: 6
+  last_commit_date: '2022-01-06T12:38:30Z'

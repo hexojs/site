@@ -6,3 +6,7 @@ tags:
   - admin
   - editor
   - admin-panel
+repository:
+  is_archived: false
+  stars: 38
+  last_commit_date: '2024-10-21T04:31:47Z'

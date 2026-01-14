@@ -4,3 +4,7 @@ tags:
   - official
   - server
   - console
+repository:
+  is_archived: false
+  stars: 83
+  last_commit_date: '2026-01-02T16:16:10Z'

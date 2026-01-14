@@ -3,3 +3,7 @@ link: https://github.com/tcatche/hexo-generator-issues
 tags:
   - github
   - issue
+repository:
+  is_archived: false
+  stars: 4
+  last_commit_date: '2022-04-11T01:24:09Z'

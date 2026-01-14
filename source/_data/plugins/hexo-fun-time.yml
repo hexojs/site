@@ -3,3 +3,7 @@ link: https://github.com/Drunkman/hexo-fun-time
 tags:
   - joke
   - tag
+repository:
+  is_archived: false
+  stars: 5
+  last_commit_date: '2019-09-12T06:27:33Z'

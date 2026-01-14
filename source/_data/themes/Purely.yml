@@ -7,3 +7,7 @@ tags:
   - clean
   - minimal
   - line
+repository:
+  is_archived: false
+  stars: 10
+  last_commit_date: '2023-07-11T03:30:55Z'

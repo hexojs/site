@@ -3,3 +3,7 @@ link: https://github.com/welksonramos/hexo-migrator-joomla
 tags:
   - joomla
   - migrator
+repository:
+  is_archived: false
+  stars: 3
+  last_commit_date: '2021-12-04T22:54:58Z'

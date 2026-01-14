@@ -4,3 +4,7 @@ tags:
   - official
   - generator
   - tag
+repository:
+  is_archived: false
+  stars: 32
+  last_commit_date: '2024-04-06T02:20:25Z'

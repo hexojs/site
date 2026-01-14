@@ -5,3 +5,7 @@ tags:
   - bg_video
   - bg_audio
   - simple
+repository:
+  is_archived: false
+  stars: 20
+  last_commit_date: '2018-09-01T11:00:18Z'

@@ -1,5 +1,6 @@
 description: Fully featured HexoJS theme build with flowbite and tailwind
-link: https://github.com/dimaslanjaka/hexo-themes/tree/master/themes/hexo-theme-flowbite
+link: >-
+  https://github.com/dimaslanjaka/hexo-themes/tree/master/themes/hexo-theme-flowbite
 preview: https://www.webmanajemen.com/hexo-themes/hexo-theme-flowbite/
 tags:
   - flowbite
@@ -8,3 +9,7 @@ tags:
   - dark
   - widget
   - seo
+repository:
+  is_archived: false
+  stars: 0
+  last_commit_date: '2025-07-28T06:13:33Z'

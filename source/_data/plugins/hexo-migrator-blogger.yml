@@ -4,3 +4,7 @@ tags:
   - migrator
   - blogger
   - blogspot
+repository:
+  is_archived: false
+  stars: 2
+  last_commit_date: '2016-09-24T06:54:10Z'

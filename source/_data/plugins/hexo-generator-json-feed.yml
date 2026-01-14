@@ -10,3 +10,7 @@ tags:
   - rss
   - search
   - api
+repository:
+  is_archived: false
+  stars: 4
+  last_commit_date: '2021-06-29T13:34:03Z'

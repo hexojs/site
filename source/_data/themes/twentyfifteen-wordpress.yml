@@ -9,3 +9,7 @@ tags:
   - clean
   - mobile-first
   - multiple languages
+repository:
+  is_archived: false
+  stars: 36
+  last_commit_date: '2022-08-01T14:58:54Z'

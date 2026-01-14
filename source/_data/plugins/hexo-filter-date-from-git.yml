@@ -6,3 +6,7 @@ tags:
   - date
   - updated
   - git
+repository:
+  is_archived: false
+  stars: 15
+  last_commit_date: '2024-11-21T07:10:48Z'

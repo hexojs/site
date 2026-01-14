@@ -5,3 +5,7 @@ tags:
   - images
   - performance
   - IntersectionObserver
+repository:
+  is_archived: false
+  stars: 13
+  last_commit_date: '2018-04-18T15:56:25Z'

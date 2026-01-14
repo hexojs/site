@@ -1,7 +1,7 @@
 description: 一个简约的hexo暗色主题。
 link: https://github.com/xingwangzhe/hexo-theme-wang
 preview: https://hexo-theme-wang.needhelp.icu/
-tags: 
+tags:
   - Responsive Design
   - Multilingual Support
   - Copyright
@@ -9,5 +9,7 @@ tags:
   - Performance
   - Floating Sidebar
   - Dark
-
-
+repository:
+  is_archived: true
+  stars: 10
+  last_commit_date: '2025-09-15T10:59:06Z'

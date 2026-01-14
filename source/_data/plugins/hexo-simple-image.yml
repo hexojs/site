@@ -2,3 +2,7 @@ description: Simple to use markdown tag import image.
 link: https://github.com/ZaiZheTingDun/hexo-simple-image
 tags:
   - image
+repository:
+  is_archived: false
+  stars: 11
+  last_commit_date: '2022-02-01T09:32:23Z'

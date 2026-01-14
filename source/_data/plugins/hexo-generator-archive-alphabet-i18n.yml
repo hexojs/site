@@ -5,3 +5,7 @@ tags:
   - archive
   - alphabet
   - i18n
+repository:
+  is_archived: false
+  stars: 1
+  last_commit_date: '2016-06-24T12:33:42Z'

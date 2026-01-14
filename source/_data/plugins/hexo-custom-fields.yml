@@ -7,3 +7,7 @@ tags:
   - custom
   - fields
   - markdown
+repository:
+  is_archived: false
+  stars: 10
+  last_commit_date: '2017-05-22T09:31:58Z'

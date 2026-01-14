@@ -11,3 +11,7 @@ tags:
   - clean-css
   - revisioning
   - versioning
+repository:
+  is_archived: true
+  stars: 28
+  last_commit_date: '2022-07-24T09:38:32Z'

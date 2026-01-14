@@ -1,4 +1,10 @@
-description: A Hexo plugin to integrate commentbox.io commenting system into your blog posts.
+description: >-
+  A Hexo plugin to integrate commentbox.io commenting system into your blog
+  posts.
 link: https://github.com/neoalienson/hexo-plugin-commentbox
 tags:
   - comments
+repository:
+  is_archived: false
+  stars: 1
+  last_commit_date: '2025-10-22T11:25:43Z'

@@ -1,4 +1,6 @@
-description: A responsive hexo blog theme, the style was inspired by the earlier stage of Jianshu.com.
+description: >-
+  A responsive hexo blog theme, the style was inspired by the earlier stage of
+  Jianshu.com.
 link: https://github.com/tangkunyin/hexo-theme-jsimple
 preview: https://tomartisan.com
 tags:
@@ -9,3 +11,7 @@ tags:
   - perfect_seo
   - local_search
   - custom_highlight
+repository:
+  is_archived: false
+  stars: 217
+  last_commit_date: '2024-08-14T10:35:47Z'

@@ -4,3 +4,7 @@ preview: https://sunnybyeon.github.io/hexo-theme-dashed/
 tags:
   - simple
   - list
+repository:
+  is_archived: false
+  stars: 8
+  last_commit_date: '2025-08-03T15:39:17Z'

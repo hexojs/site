@@ -5,3 +5,7 @@ tags:
   - bootstrap
   - tag_plugins
   - elegant
+repository:
+  is_archived: true
+  stars: 39
+  last_commit_date: '2016-03-06T15:00:25Z'

@@ -3,3 +3,7 @@ link: https://github.com/fengkx/hexo-native-lazy-load
 tags:
   - lazyload
   - optimize
+repository:
+  is_archived: false
+  stars: 7
+  last_commit_date: '2020-12-02T17:46:19Z'

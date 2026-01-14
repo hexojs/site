@@ -6,3 +6,7 @@ tags:
   - js
   - uglify
   - minify
+repository:
+  is_archived: false
+  stars: 16
+  last_commit_date: '2024-07-15T02:28:51Z'

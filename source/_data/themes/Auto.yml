@@ -6,3 +6,7 @@ tags:
   - stylish
   - clean
   - simple
+repository:
+  is_archived: false
+  stars: 25
+  last_commit_date: '2021-03-06T04:41:35Z'

@@ -3,3 +3,7 @@ link: https://github.com/Sukwants/hexo-post-replace
 tags:
   - filter
   - post
+repository:
+  is_archived: false
+  stars: 2
+  last_commit_date: '2023-10-24T05:46:01Z'

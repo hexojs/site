@@ -8,3 +8,7 @@ tags:
   - variable
   - dynamic
   - config
+repository:
+  is_archived: false
+  stars: 2
+  last_commit_date: '2022-09-24T03:35:00Z'

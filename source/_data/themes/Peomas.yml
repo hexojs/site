@@ -7,3 +7,7 @@ tags:
   - Tag
   - Search
   - Concise
+repository:
+  is_archived: false
+  stars: 7
+  last_commit_date: '2022-01-08T07:10:55Z'

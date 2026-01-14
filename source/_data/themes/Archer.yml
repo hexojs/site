@@ -9,3 +9,7 @@ tags:
   - two_columns
   - Chinese
   - English
+repository:
+  is_archived: false
+  stars: 1589
+  last_commit_date: '2024-12-25T17:01:21Z'

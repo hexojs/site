@@ -3,3 +3,7 @@ link: https://github.com/jsweibo/hexo-tag-qrcode
 tags:
   - tag
   - qrcode
+repository:
+  is_archived: false
+  stars: 5
+  last_commit_date: '2019-05-02T14:53:42Z'

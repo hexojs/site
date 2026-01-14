@@ -3,3 +3,7 @@ link: https://github.com/coldnew/hexo-renderer-org
 tags:
   - renderer
   - orgmode
+repository:
+  is_archived: false
+  stars: 165
+  last_commit_date: '2022-03-21T07:21:36Z'

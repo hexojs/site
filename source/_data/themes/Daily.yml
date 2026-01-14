@@ -6,3 +6,7 @@ tags:
   - responsive
   - minimalism
   - daily
+repository:
+  is_archived: true
+  stars: 245
+  last_commit_date: '2021-03-21T10:55:08Z'

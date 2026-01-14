@@ -4,3 +4,7 @@ tags:
   - github
   - generator
   - helper
+repository:
+  is_archived: false
+  stars: 10
+  last_commit_date: '2019-11-06T06:45:08Z'

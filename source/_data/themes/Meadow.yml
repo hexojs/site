@@ -7,3 +7,7 @@ tags:
   - responsive
   - ejs
   - simple
+repository:
+  is_archived: true
+  stars: 56
+  last_commit_date: '2020-11-15T12:40:49Z'

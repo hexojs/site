@@ -8,3 +8,7 @@ tags:
   - three_columns
   - elegant
   - standard
+repository:
+  is_archived: false
+  stars: 190
+  last_commit_date: '2017-11-15T00:19:42Z'

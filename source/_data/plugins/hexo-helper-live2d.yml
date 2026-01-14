@@ -4,3 +4,7 @@ tags:
   - live2d
   - helper
   - webgl
+repository:
+  is_archived: true
+  stars: 3885
+  last_commit_date: '2021-01-27T15:14:05Z'

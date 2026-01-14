@@ -10,3 +10,7 @@ tags:
   - blog
   - two_columns
   - three_columns
+repository:
+  is_archived: false
+  stars: 1102
+  last_commit_date: '2025-08-14T02:36:41Z'

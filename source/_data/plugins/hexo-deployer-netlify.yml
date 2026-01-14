@@ -3,3 +3,7 @@ link: https://github.com/piktaszuikis/hexo-deployer-netlify
 tags:
   - deployer
   - netlify
+repository:
+  is_archived: false
+  stars: 11
+  last_commit_date: '2020-05-24T18:49:26Z'

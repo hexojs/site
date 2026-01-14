@@ -6,3 +6,7 @@ tags:
   - clean
   - simple
   - responsive
+repository:
+  is_archived: true
+  stars: 171
+  last_commit_date: '2020-08-31T07:17:38Z'

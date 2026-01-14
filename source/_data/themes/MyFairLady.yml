@@ -8,3 +8,7 @@ tags:
   - simple
   - less
   - ejs
+repository:
+  is_archived: false
+  stars: 36
+  last_commit_date: '2017-05-13T07:24:22Z'

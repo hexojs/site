@@ -8,3 +8,7 @@ tags:
   - dark/light
   - pure
   - clean
+repository:
+  is_archived: false
+  stars: 210
+  last_commit_date: '2022-04-19T07:22:57Z'

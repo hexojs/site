@@ -4,3 +4,7 @@ tags:
   - filter
   - link
   - file
+repository:
+  is_archived: false
+  stars: 10
+  last_commit_date: '2018-06-24T09:19:41Z'

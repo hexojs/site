@@ -8,3 +8,7 @@ tags:
   - card
   - one_column
   - multi_column
+repository:
+  is_archived: false
+  stars: 6716
+  last_commit_date: '2025-01-05T06:09:35Z'

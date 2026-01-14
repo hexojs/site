@@ -3,3 +3,7 @@ link: https://github.com/amgsk/hexo-tag-kbd
 tags:
   - tag
   - keycaps
+repository:
+  is_archived: false
+  stars: 26
+  last_commit_date: '2016-06-17T17:04:45Z'
