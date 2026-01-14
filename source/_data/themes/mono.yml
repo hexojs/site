@@ -8,3 +8,7 @@ tags:
   - responsive
   - customizable
   - 中文
+repository:
+  is_archived: true
+  stars: 2
+  last_commit_date: '2019-01-14T03:49:16Z'

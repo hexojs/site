@@ -5,3 +5,7 @@ tags:
   - generator
   - feed
   - rss
+repository:
+  is_archived: false
+  stars: 594
+  last_commit_date: '2026-01-03T04:48:48Z'

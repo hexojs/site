@@ -9,3 +9,7 @@ tags:
   - highlight
   - mathjax
   - local-search
+repository:
+  is_archived: false
+  stars: 12
+  last_commit_date: '2025-11-24T15:37:41Z'

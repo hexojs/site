@@ -4,3 +4,7 @@ tags:
   - deployer
   - google
   - firebase
+repository:
+  is_archived: false
+  stars: 5
+  last_commit_date: '2022-02-27T08:02:14Z'

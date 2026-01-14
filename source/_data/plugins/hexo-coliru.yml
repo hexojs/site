@@ -4,3 +4,7 @@ tags:
   - code
   - compiler
   - coliru
+repository:
+  is_archived: false
+  stars: 3
+  last_commit_date: '2024-03-25T18:23:27Z'

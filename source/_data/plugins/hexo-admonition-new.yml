@@ -1,5 +1,12 @@
-description: A Hexo plugin that adds customizable admonition blocks (note, info, warning, etc.) with icons and styles. Hexo 插件，支持自定义提示块（如 note、info、warning 等），并提供图标和样式设置。
+description: >-
+  A Hexo plugin that adds customizable admonition blocks (note, info, warning,
+  etc.) with icons and styles. Hexo 插件，支持自定义提示块（如 note、info、warning
+  等），并提供图标和样式设置。
 link: https://github.com/Mr-EEEeee/hexo-admonition-new
 tags:
   - admonition
   - call-outs
+repository:
+  is_archived: false
+  stars: 2
+  last_commit_date: '2026-01-12T08:52:51Z'

@@ -8,3 +8,7 @@ tags:
   - clean
   - responsive
   - one_column
+repository:
+  is_archived: false
+  stars: 16
+  last_commit_date: '2017-04-18T03:23:05Z'

@@ -6,3 +6,7 @@ tags:
   - tag
   - include
   - insert
+repository:
+  is_archived: false
+  stars: 19
+  last_commit_date: '2016-10-13T21:27:01Z'

@@ -7,3 +7,7 @@ tags:
   - wordpress
   - elegant
   - hueman
+repository:
+  is_archived: true
+  stars: 1165
+  last_commit_date: '2021-10-27T23:20:50Z'

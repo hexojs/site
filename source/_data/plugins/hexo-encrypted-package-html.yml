@@ -4,3 +4,7 @@ tags:
   - encrypt
   - package
   - base64_with_xor
+repository:
+  is_archived: false
+  stars: 0
+  last_commit_date: '2021-04-02T13:46:43Z'

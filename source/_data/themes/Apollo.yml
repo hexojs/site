@@ -5,3 +5,7 @@ tags:
   - 中文
   - apollo
   - light
+repository:
+  is_archived: true
+  stars: 1895
+  last_commit_date: '2024-05-22T08:26:16Z'

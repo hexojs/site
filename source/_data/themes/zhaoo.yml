@@ -6,3 +6,7 @@ tags:
   - fast
   - clean
   - simple
+repository:
+  is_archived: false
+  stars: 277
+  last_commit_date: '2023-04-28T04:04:26Z'

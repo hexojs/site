@@ -7,3 +7,7 @@ tags:
   - one_page
   - light
   - responsive
+repository:
+  is_archived: true
+  stars: 298
+  last_commit_date: '2020-05-15T05:58:24Z'

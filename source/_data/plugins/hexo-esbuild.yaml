@@ -5,3 +5,7 @@ tags:
   - css
   - esbuild
   - optimize
+repository:
+  is_archived: false
+  stars: 1
+  last_commit_date: '2024-09-11T16:26:42Z'

@@ -3,3 +3,7 @@ link: https://github.com/lalunamel/hexo-front-matter-excerpt
 tags:
   - excerpt
   - front-matter
+repository:
+  is_archived: false
+  stars: 24
+  last_commit_date: '2018-08-13T19:57:36Z'

@@ -6,3 +6,7 @@ tags:
   - common
   - headless
   - browser
+repository:
+  is_archived: false
+  stars: 5
+  last_commit_date: '2025-11-01T19:44:03Z'

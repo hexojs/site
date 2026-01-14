@@ -12,3 +12,7 @@ tags:
   - html-minifier
   - uglify
   - clean-css
+repository:
+  is_archived: false
+  stars: 34
+  last_commit_date: '2020-10-06T10:27:33Z'

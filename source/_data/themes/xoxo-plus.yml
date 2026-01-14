@@ -6,3 +6,7 @@ tags:
   - simple
   - blog
   - responsive
+repository:
+  is_archived: false
+  stars: 45
+  last_commit_date: '2023-02-08T09:09:09Z'

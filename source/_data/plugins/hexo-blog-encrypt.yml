@@ -4,3 +4,7 @@ tags:
   - encrypt
   - aes
   - security
+repository:
+  is_archived: false
+  stars: 1047
+  last_commit_date: '2023-09-19T00:35:53Z'

@@ -8,3 +8,7 @@ tags:
   - light
   - blog
   - simple
+repository:
+  is_archived: false
+  stars: 80
+  last_commit_date: '2017-05-18T19:00:05Z'

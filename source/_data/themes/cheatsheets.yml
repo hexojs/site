@@ -4,3 +4,7 @@ preview: https://cheatsheets.inevitable.tech/
 tags:
   - cheatsheets
   - well-designed
+repository:
+  is_archived: false
+  stars: 140
+  last_commit_date: '2022-08-30T19:36:32Z'

@@ -7,3 +7,7 @@ tags:
   - rss
   - feed
   - atom
+repository:
+  is_archived: false
+  stars: 8
+  last_commit_date: '2017-12-29T07:40:46Z'

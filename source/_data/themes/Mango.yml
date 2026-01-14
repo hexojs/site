@@ -6,3 +6,7 @@ tags:
   - simple
   - light
   - clean
+repository:
+  is_archived: false
+  stars: 16
+  last_commit_date: '2019-05-08T05:01:31Z'

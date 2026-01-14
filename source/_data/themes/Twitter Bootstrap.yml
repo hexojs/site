@@ -7,3 +7,7 @@ tags:
   - white
   - disqus
   - offline
+repository:
+  is_archived: false
+  stars: 11
+  last_commit_date: '2018-08-19T11:41:00Z'

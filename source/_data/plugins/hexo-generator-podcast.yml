@@ -3,3 +3,7 @@ link: https://github.com/owen8877/hexo-generator-podcast
 tags:
   - rss
   - podcast
+repository:
+  is_archived: false
+  stars: 28
+  last_commit_date: '2020-11-12T21:00:52Z'

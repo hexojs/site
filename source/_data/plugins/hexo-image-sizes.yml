@@ -3,3 +3,7 @@ link: https://github.com/ottobonn/hexo-image-sizes
 tags:
   - images
   - processor
+repository:
+  is_archived: false
+  stars: 17
+  last_commit_date: '2021-05-06T15:54:13Z'

@@ -1,5 +1,4 @@
-description: >-
-  All pages of hexo display the number of visitors.
+description: All pages of hexo display the number of visitors.
 link: https://github.com/BP-Devteam/hexo-pagecounter
 tags:
   - counter
@@ -9,3 +8,7 @@ tags:
   - visitorCounts
   - pageViews
   - PV
+repository:
+  is_archived: false
+  stars: 0
+  last_commit_date: '2024-01-18T00:35:12Z'

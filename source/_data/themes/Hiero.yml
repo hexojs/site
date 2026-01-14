@@ -6,3 +6,7 @@ tags:
   - black
   - magazine
   - blog
+repository:
+  is_archived: false
+  stars: 228
+  last_commit_date: '2018-12-09T06:49:04Z'

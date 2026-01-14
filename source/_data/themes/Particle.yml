@@ -9,3 +9,7 @@ tags:
   - 3-color-styles
   - dark_mode
   - maiden_mode
+repository:
+  is_archived: true
+  stars: 66
+  last_commit_date: '2022-10-07T10:49:31Z'

@@ -4,3 +4,7 @@ tags:
   - tag
   - echarts
   - chart
+repository:
+  is_archived: false
+  stars: 9
+  last_commit_date: '2016-02-07T11:37:48Z'

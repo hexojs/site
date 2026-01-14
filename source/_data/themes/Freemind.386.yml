@@ -8,3 +8,7 @@ tags:
   - two_columns
   - tag_plugins
   - retro
+repository:
+  is_archived: false
+  stars: 243
+  last_commit_date: '2023-09-20T02:11:08Z'

@@ -3,3 +3,7 @@ link: https://github.com/leverimmy/hexo-d2
 tags:
   - d2
   - diagram
+repository:
+  is_archived: false
+  stars: 1
+  last_commit_date: '2025-02-09T14:01:46Z'

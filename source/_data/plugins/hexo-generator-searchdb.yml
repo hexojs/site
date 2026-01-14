@@ -3,3 +3,7 @@ link: https://github.com/next-theme/hexo-generator-searchdb
 tags:
   - generator
   - search
+repository:
+  is_archived: false
+  stars: 90
+  last_commit_date: '2025-03-29T16:52:38Z'

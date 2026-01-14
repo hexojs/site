@@ -4,3 +4,7 @@ tags:
   - deployer
   - s3
   - cloudfront
+repository:
+  is_archived: false
+  stars: 15
+  last_commit_date: '2017-01-07T11:46:30Z'

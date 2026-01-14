@@ -1,5 +1,11 @@
-description: Automatically reloads the browser when files are modified while the hexo-server is running.
+description: >-
+  Automatically reloads the browser when files are modified while the
+  hexo-server is running.
 link: https://github.com/yoshinorin/hexo-browser-reloader-websocket
 tags:
   - livereload
   - server
+repository:
+  is_archived: false
+  stars: 2
+  last_commit_date: '2025-10-25T14:49:07Z'

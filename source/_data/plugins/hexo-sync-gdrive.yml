@@ -3,3 +3,7 @@ link: https://github.com/hollanddd/hexo-sync-gdrive
 tags:
   - google
   - console
+repository:
+  is_archived: false
+  stars: 4
+  last_commit_date: '2016-12-08T15:54:44Z'

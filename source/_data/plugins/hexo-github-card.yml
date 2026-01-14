@@ -5,3 +5,7 @@ tags:
   - github
   - card
   - profile
+repository:
+  is_archived: false
+  stars: 57
+  last_commit_date: '2020-03-14T06:10:09Z'

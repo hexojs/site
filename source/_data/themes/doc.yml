@@ -11,3 +11,7 @@ tags:
   - swagger-ui
   - swagger
   - responsive
+repository:
+  is_archived: true
+  stars: 252
+  last_commit_date: '2020-04-15T12:05:04Z'

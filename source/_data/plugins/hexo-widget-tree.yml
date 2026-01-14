@@ -6,3 +6,7 @@ tags:
   - menu
   - categories
   - archive
+repository:
+  is_archived: false
+  stars: 7
+  last_commit_date: '2024-09-18T02:37:58Z'

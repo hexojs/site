@@ -7,3 +7,7 @@ tags:
   - clean
   - simple
   - 中文
+repository:
+  is_archived: false
+  stars: 15
+  last_commit_date: '2023-11-29T19:53:47Z'

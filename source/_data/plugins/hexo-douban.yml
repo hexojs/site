@@ -5,3 +5,7 @@ tags:
   - books
   - movies
   - douban
+repository:
+  is_archived: false
+  stars: 487
+  last_commit_date: '2025-09-14T02:19:00Z'

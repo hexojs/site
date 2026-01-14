@@ -5,3 +5,7 @@ tags:
   - delopyer
   - qiniu
   - 七牛云
+repository:
+  is_archived: false
+  stars: 2
+  last_commit_date: '2019-12-31T15:46:17Z'

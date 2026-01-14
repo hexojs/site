@@ -10,3 +10,7 @@ tags:
   - 中文
   - chinese
   - clean
+repository:
+  is_archived: false
+  stars: 234
+  last_commit_date: '2017-07-02T13:16:50Z'

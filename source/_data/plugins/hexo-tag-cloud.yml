@@ -3,3 +3,7 @@ link: https://github.com/D0n9X1n/hexo-tag-cloud
 tags:
   - tag
   - cloud
+repository:
+  is_archived: false
+  stars: 154
+  last_commit_date: '2021-01-01T01:35:58Z'

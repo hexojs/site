@@ -1,4 +1,6 @@
-description: A simple yet beautiful theme, thoughtfully designed for an effortlessly clean and appealing aesthetic
+description: >-
+  A simple yet beautiful theme, thoughtfully designed for an effortlessly clean
+  and appealing aesthetic
 link: https://github.com/DyingDown/hexo-theme-last
 preview: https://hexo-theme-last.github.io
 tags:
@@ -8,3 +10,7 @@ tags:
   - versatile
   - two_column
   - multilingual
+repository:
+  is_archived: false
+  stars: 10
+  last_commit_date: '2025-09-13T02:21:02Z'

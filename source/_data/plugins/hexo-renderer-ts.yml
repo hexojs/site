@@ -5,3 +5,7 @@ tags:
   - js
   - ts
   - renderer
+repository:
+  is_archived: false
+  stars: 1
+  last_commit_date: '2021-12-27T03:25:33Z'

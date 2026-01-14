@@ -3,3 +3,7 @@ link: https://github.com/xuexb/hexo-generator-mip
 tags:
   - mip
   - generator
+repository:
+  is_archived: true
+  stars: 7
+  last_commit_date: '2018-01-25T16:43:15Z'

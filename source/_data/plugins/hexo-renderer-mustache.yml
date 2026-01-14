@@ -3,3 +3,7 @@ link: https://github.com/snovey/hexo-renderer-mustache
 tags:
   - renderer
   - mustache
+repository:
+  is_archived: false
+  stars: 6
+  last_commit_date: '2023-05-12T08:28:31Z'

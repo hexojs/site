@@ -6,3 +6,7 @@ tags:
   - two_columns
   - blue
   - elegant
+repository:
+  is_archived: false
+  stars: 1024
+  last_commit_date: '2017-11-14T03:29:49Z'

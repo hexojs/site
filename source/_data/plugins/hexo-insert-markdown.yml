@@ -8,3 +8,7 @@ tags:
   - insert
   - tag
   - template
+repository:
+  is_archived: false
+  stars: 5
+  last_commit_date: '2022-08-15T20:40:54Z'

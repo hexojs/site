@@ -8,3 +8,7 @@ tags:
   - blog
   - fast
   - disqus
+repository:
+  is_archived: false
+  stars: 168
+  last_commit_date: '2023-02-12T15:05:06Z'

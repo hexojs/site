@@ -4,3 +4,7 @@ tags:
   - api
   - json
   - information
+repository:
+  is_archived: false
+  stars: 11
+  last_commit_date: '2024-03-11T00:28:13Z'

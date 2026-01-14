@@ -6,3 +6,7 @@ tags:
   - clean
   - pure
   - ejs
+repository:
+  is_archived: false
+  stars: 56
+  last_commit_date: '2021-04-26T02:42:08Z'

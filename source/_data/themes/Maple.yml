@@ -15,3 +15,7 @@ tags:
   - Mermaid support
   - Baidu/Google Analytics
   - giscus
+repository:
+  is_archived: false
+  stars: 96
+  last_commit_date: '2024-12-23T07:25:51Z'

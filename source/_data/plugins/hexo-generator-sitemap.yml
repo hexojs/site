@@ -4,3 +4,7 @@ tags:
   - official
   - generator
   - sitemap
+repository:
+  is_archived: false
+  stars: 327
+  last_commit_date: '2023-11-02T15:54:56Z'

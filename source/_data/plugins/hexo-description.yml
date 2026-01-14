@@ -4,3 +4,7 @@ tags:
   - excerpt
   - abstract
   - description
+repository:
+  is_archived: false
+  stars: 6
+  last_commit_date: '2017-09-13T18:01:50Z'

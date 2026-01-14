@@ -5,3 +5,7 @@ tags:
   - minify
   - htmlnano
   - optimize
+repository:
+  is_archived: false
+  stars: 1
+  last_commit_date: '2024-09-11T16:15:31Z'

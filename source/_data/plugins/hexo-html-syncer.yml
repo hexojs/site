@@ -8,3 +8,7 @@ tags:
   - html
   - markdown
   - console
+repository:
+  is_archived: false
+  stars: 7
+  last_commit_date: '2019-08-08T19:33:19Z'

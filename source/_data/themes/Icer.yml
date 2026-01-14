@@ -5,3 +5,7 @@ tags:
   - simple
   - one_column
   - beautiful
+repository:
+  is_archived: false
+  stars: 20
+  last_commit_date: '2022-09-16T03:03:18Z'

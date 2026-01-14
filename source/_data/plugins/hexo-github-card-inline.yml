@@ -1,7 +1,13 @@
-description: Display a card with statistics for GitHub profile and repository in your hexo blog post. The card does not need external resources or services.
+description: >-
+  Display a card with statistics for GitHub profile and repository in your hexo
+  blog post. The card does not need external resources or services.
 link: https://github.com/neoalienson/hexo-github-card-inline
 tags:
   - tag
   - github
   - card
   - profile
+repository:
+  is_archived: false
+  stars: 1
+  last_commit_date: '2025-11-07T14:44:20Z'

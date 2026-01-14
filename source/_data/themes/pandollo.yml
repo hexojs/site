@@ -8,3 +8,7 @@ tags:
   - pug
   - panda
   - apollo
+repository:
+  is_archived: false
+  stars: 43
+  last_commit_date: '2018-05-15T03:16:44Z'

@@ -5,3 +5,7 @@ tags:
   - encryption
   - decryption
   - crypto-js
+repository:
+  is_archived: false
+  stars: 8
+  last_commit_date: '2024-08-20T16:21:01Z'

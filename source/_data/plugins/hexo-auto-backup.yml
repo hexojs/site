@@ -1,9 +1,12 @@
 description: >-
-  seamlessly automates the backup process for your Hexo data,
-  encompassing posts, drafts, pages, and theme files,
-  ensuring local and cloud drive storage.
+  seamlessly automates the backup process for your Hexo data, encompassing
+  posts, drafts, pages, and theme files, ensuring local and cloud drive storage.
 link: https://github.com/HelloLingC/hexo-auto-backup
 tags:
   - auto
   - autobackup
   - backup
+repository:
+  is_archived: false
+  stars: 4
+  last_commit_date: '2023-12-20T04:17:11Z'

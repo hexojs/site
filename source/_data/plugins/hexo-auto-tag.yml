@@ -9,3 +9,7 @@ tags:
   - OpenAI
   - API
   - Embeddings
+repository:
+  is_archived: false
+  stars: 42
+  last_commit_date: '2023-04-15T06:33:20Z'

@@ -3,3 +3,7 @@ link: https://github.com/sdlzhd/hexo-deployer-cos
 tags:
   - deployer
   - cos
+repository:
+  is_archived: false
+  stars: 50
+  last_commit_date: '2021-02-17T13:55:50Z'

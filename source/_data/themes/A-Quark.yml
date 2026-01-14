@@ -6,3 +6,7 @@ tags:
   - hexo-theme
   - simple
   - clean
+repository:
+  is_archived: false
+  stars: 60
+  last_commit_date: '2023-05-09T05:31:33Z'

@@ -2,3 +2,7 @@ description: Replace any theme layout file to the custom file.
 link: https://github.com/jiangtj/hexo-extend-theme
 tags:
   - theme
+repository:
+  is_archived: false
+  stars: 15
+  last_commit_date: '2020-08-13T09:03:08Z'

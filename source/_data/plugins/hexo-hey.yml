@@ -4,3 +4,7 @@ tags:
   - admin
   - dashboard
   - editor
+repository:
+  is_archived: true
+  stars: 209
+  last_commit_date: '2017-11-15T12:19:08Z'

@@ -7,3 +7,7 @@ tags:
   - two_columns
   - zanblog
   - mygalgame
+repository:
+  is_archived: false
+  stars: 418
+  last_commit_date: '2019-10-16T13:15:42Z'

@@ -4,3 +4,7 @@ tags:
   - encrypt
   - permission
   - private
+repository:
+  is_archived: true
+  stars: 88
+  last_commit_date: '2018-06-22T03:35:17Z'

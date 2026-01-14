@@ -5,3 +5,7 @@ tags:
   - link
   - wiki
   - image
+repository:
+  is_archived: false
+  stars: 12
+  last_commit_date: '2023-09-11T12:34:15Z'

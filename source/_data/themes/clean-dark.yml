@@ -11,3 +11,7 @@ tags:
   - 中文
   - 阅读数统计
   - 回复
+repository:
+  is_archived: false
+  stars: 34
+  last_commit_date: '2025-01-16T08:59:47Z'

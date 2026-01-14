@@ -11,3 +11,7 @@ tags:
   - blog
   - hexo
   - 中文
+repository:
+  is_archived: false
+  stars: 3
+  last_commit_date: '2026-01-03T18:19:35Z'

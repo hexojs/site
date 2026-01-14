@@ -7,3 +7,7 @@ tags:
   - modern
   - two_columns
   - purple
+repository:
+  is_archived: true
+  stars: 5
+  last_commit_date: '2024-10-05T01:27:46Z'

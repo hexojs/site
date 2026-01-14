@@ -9,3 +9,7 @@ tags:
   - three_columns
   - project layout
   - multi-languages
+repository:
+  is_archived: false
+  stars: 43
+  last_commit_date: '2023-09-09T07:01:44Z'

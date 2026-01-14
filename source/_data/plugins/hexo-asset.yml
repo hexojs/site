@@ -6,3 +6,7 @@ tags:
   - asset
   - image
   - path
+repository:
+  is_archived: false
+  stars: 7
+  last_commit_date: '2019-09-18T12:01:00Z'

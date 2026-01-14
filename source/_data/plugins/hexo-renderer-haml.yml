@@ -4,3 +4,7 @@ tags:
   - official
   - renderer
   - haml
+repository:
+  is_archived: true
+  stars: 5
+  last_commit_date: '2022-01-23T02:29:51Z'

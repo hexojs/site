@@ -3,3 +3,7 @@ link: https://github.com/wzpan/hexo-generator-search
 tags:
   - generator
   - search
+repository:
+  is_archived: false
+  stars: 490
+  last_commit_date: '2023-05-11T13:55:46Z'

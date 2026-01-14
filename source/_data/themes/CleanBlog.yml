@@ -8,3 +8,7 @@ tags:
   - one_column
   - elegant
   - standard
+repository:
+  is_archived: false
+  stars: 405
+  last_commit_date: '2021-02-08T07:01:15Z'

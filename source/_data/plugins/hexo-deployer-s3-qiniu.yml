@@ -4,3 +4,7 @@ tags:
   - deployer
   - s3
   - qiniu
+repository:
+  is_archived: false
+  stars: 0
+  last_commit_date: '2024-12-07T13:27:24Z'

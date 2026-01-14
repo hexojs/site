@@ -4,3 +4,7 @@ tags:
   - renderer
   - sass
   - typesettings
+repository:
+  is_archived: true
+  stars: 0
+  last_commit_date: '2020-10-11T22:39:21Z'

@@ -11,3 +11,7 @@ tags:
   - version
   - expire
   - assets
+repository:
+  is_archived: false
+  stars: 4
+  last_commit_date: '2023-05-18T07:21:06Z'

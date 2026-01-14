@@ -3,3 +3,7 @@ link: https://github.com/nt3rp/hexo-deployer-s3
 tags:
   - deployer
   - s3
+repository:
+  is_archived: true
+  stars: 36
+  last_commit_date: '2022-08-31T19:09:04Z'

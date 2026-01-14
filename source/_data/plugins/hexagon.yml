@@ -6,3 +6,7 @@ tags:
   - emojis
   - cli
   - manager
+repository:
+  is_archived: false
+  stars: 55
+  last_commit_date: '2022-07-22T05:17:11Z'
