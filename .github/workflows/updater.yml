@@ -1,4 +1,4 @@
-name: Cleaner
+name: Updater
 
 on:
   schedule:
@@ -23,7 +23,7 @@ jobs:
       - name: Install Dependencies
         run: npm install
       - name: Cleanup
-        run: node .github/workflows/cleaner.js
+        run: node .github/workflows/updater.js
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Config
