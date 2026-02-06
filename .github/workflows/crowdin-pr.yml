@@ -24,7 +24,7 @@ jobs:
     name: Synchronize with Crowdin
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
 
       - name: Get BOT token
         id: get_bot_token
