@@ -19,7 +19,7 @@
     "hexo-filter-nofollow": "^2.0.2",
     "hexo-fs": "^5.0.0",
     "hexo-generator-archive": "^2.0.0",
-    "hexo-generator-feed": "^3.0.0",
+    "hexo-generator-feed": "^4.0.0",
     "hexo-generator-sitemap": "^3.0.1",
     "hexo-renderer-marked": "^7.0.0",
     "hexo-renderer-stylus": "^3.0.1",
