@@ -1,0 +1,6 @@
+description: Convert Obsidian-style bidirectional links into Hexo permanent links
+link: https://github.com/Sentixxx/hexo-obsidian-link-converter
+tags:
+  - obsidian
+  - link
+  - abbrlink
