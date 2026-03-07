@@ -1,0 +1,9 @@
+description: 一个 Hexo 插件，自动将跨域图片通过代理服务器加载，解决图片访问限制和加速问题。
+link: https://github.com/Aixbox/hexo-image-proxy
+tags:
+  - image
+  - proxy
+  - cross-domain
+  - image-proxy
+  - cdn
+  - cors
