@@ -1,0 +1,5 @@
+description: A Hexo helper function to include markdown files that is located in `_source`.
+link: https://github.com/patrick330602/hexo-include-md
+tags:
+  - markdown
+  - helper
