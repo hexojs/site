@@ -4,6 +4,7 @@
 
 #banner-title,
 .theme-intro-title
+.plugin-intro-title
   line-height: 1.15
   font-weight: 300
   font-family: font-title
@@ -17,6 +18,7 @@
     padding-top: 100px
 
 .theme-intro-title
+.plugin-intro-title
   margin-bottom: 24px
   padding-top: 24px
   @media mq-normal
@@ -168,6 +170,7 @@
 
 #intro-get-started-link
 #theme-link
+.plugin-link
   font-size: 18px
   font-family: font-title
   display: inline-block
@@ -194,6 +197,13 @@
     background: @border-color
     color: lighten(color-navy, 10%)
 
+.plugin-link
+  color: color-border
+  border-color: color-border
+  &:hover
+    background: @border-color
+    color: lighten(color-navy, 20%)
+
 #theme-wrap
   background: lighten(color-navy, 10%)
   border-top: 1px solid #161d24
@@ -205,7 +215,16 @@
   @media mq-normal
     padding: 96px 64px
 
+#plugin-wrap
+  background: lighten(color-navy, 20%)
+  padding: 32px
+  @media mq-tablet
+    padding: 64px 64px
+  @media mq-normal
+    padding: 96px 64px
+
 .theme-wrapper
+.plugin-wrapper
   display: flex
   flex-wrap: wrap
   color: rgba(255, 255, 255, 0.8)
@@ -216,21 +235,31 @@
     order: 0
     width: 50%
 
+.plugin-thumbnail
+  width: 100%
+  @media mq-normal
+    order: 2
+    width: 50%
+
 .theme-thumbnail-container
+.plugin-thumbnail-container
   margin-right: auto
   margin-left: auto
   width: 90%
 
 .theme-thumbnail img
+.plugin-thumbnail img
   max-width: 100%
   box-shadow: 6px 6px 12px 0 rgba(0,0,0,.4)
 
 .theme-intro
+.plugin-intro
   width: 100%
   @media mq-normal
     width: 50%
 
 .theme-intro-container
+.plugin-intro-container
   margin-right: auto
   margin-left: auto
   text-align: center
@@ -238,6 +267,7 @@
     width: 80%
 
 .theme-intro-text
+.plugin-intro-text
   color: rgba(255, 255, 255, 0.6)
   line-height: 1.5
   font-size: 16px
