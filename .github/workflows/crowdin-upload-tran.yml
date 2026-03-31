@@ -27,7 +27,7 @@ jobs:
       matrix:
         lc: [ko, pt-BR, ru, th, zh-CN, zh-TW] # Target languages https://developer.crowdin.com/language-codes/
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
 
       - uses: crowdin/github-action@v2
         with:

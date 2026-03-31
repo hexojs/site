@@ -1,0 +1,13 @@
+name: hexo-theme-cyberpunk2077
+description: A Cyberpunk 2077 style theme for Hexo with stunning neon effects, glitch animations, and futuristic design.
+link: https://github.com/ceeyu/hexo-theme-cyberpunk2077
+preview: https://raw.githubusercontent.com/ceeyu/hexo-theme-cyberpunk2077/master/screenshots/preview.png
+author: ceeyu
+tags:
+  - cyberpunk
+  - neon
+  - glitch
+  - animation
+  - gsap
+  - dark-theme
+  - futuristic
