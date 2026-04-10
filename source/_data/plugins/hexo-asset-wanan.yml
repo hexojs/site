@@ -1,0 +1,10 @@
+description: >-
+  Asset path format, fix original markdown image path when enabling post_asset_folder.
+  When using a relative path, it will automatically switch to the article's resource directory. When using a URL link, the image will first be automatically downloaded, and then switched to the article's resource directory.
+link: https://github.com/WanAnUncommon/hexo-asset-wanan
+tags:
+  - asset
+  - image
+  - path
+  - typora
+  - url
