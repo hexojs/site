@@ -156,11 +156,25 @@ async function validate(type) {
         console.log(`Repo: ${owner}/${repo}, Stars: ${stars}, Archived: ${isArchived}, Last Commit Date: ${lastCommitDate}`);
         const newOwner = entry.owner.login;
         const newRepo = entry.name;
+
+        // Update link if repository has been renamed
         if (owner !== newOwner || repo !== newRepo) {
           console.log(`Repo: ${owner}/${repo} has been renamed to ${newOwner}/${newRepo}`);
           content.link = `https://github.com/${newOwner}/${newRepo}`;
-          fs.writeFileSync(file, yaml.dump(content));
         }
+
+        // Initialize repository object if it doesn't exist
+        if (!content.repository) {
+          content.repository = {};
+        }
+
+        // Update repository information
+        content.repository = {
+          is_archived: isArchived,
+          stars: stars,
+          last_commit_date: lastCommitDate
+        };
+        fs.writeFileSync(file, yaml.dump(content));
       } else {
         console.log(`Repo: ${owner}/${repo} does not exist or is private.`);
         console.log(`Remove: ${file}`);
