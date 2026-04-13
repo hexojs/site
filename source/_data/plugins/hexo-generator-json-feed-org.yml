@@ -1,9 +1,0 @@
-description: Generate a JSON feed as per the jsonfeed.org specification
-link: https://github.com/rknightuk/hexo-generator-json-feed-org
-tags:
-  - generator
-  - content
-  - json
-  - feed
-  - rss
-  - jsonfeed

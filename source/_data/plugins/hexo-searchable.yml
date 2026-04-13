@@ -1,0 +1,10 @@
+description:  >-
+  Generate structured JSON search documents from Hexo posts and pages for any search backend.
+link: https://github.com/codeporn/hexo-searchable
+tags:
+  - search
+  - json
+  - index
+  - azure
+  - algolia
+  - meilisearch
