@@ -1,4 +1,6 @@
-description: A dark, zero-dependency Hexo theme with an Obsidian-style UI, file explorer, full-text search, and syntax highlighting.
+description: >-
+  A dark, zero-dependency Hexo theme with an Obsidian-style UI, file explorer,
+  full-text search, and syntax highlighting.
 link: https://github.com/rashidmya/vaultex
 preview: https://rashidmya.github.io/vaultex/
 tags:
@@ -12,3 +14,7 @@ tags:
   - sidebar
   - two-column
   - one_column
+repository:
+  is_archived: false
+  stars: 1
+  last_commit_date: '2026-03-22T09:34:16Z'

@@ -8,3 +8,7 @@ tags:
   - pug
   - facebook
   - minimal
+repository:
+  is_archived: false
+  stars: 32
+  last_commit_date: '2022-07-16T13:22:11Z'

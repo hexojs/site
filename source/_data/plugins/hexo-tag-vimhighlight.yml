@@ -4,3 +4,7 @@ tags:
   - highlight
   - code
   - vim
+repository:
+  is_archived: false
+  stars: 20
+  last_commit_date: '2023-04-06T09:40:57Z'

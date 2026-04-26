@@ -2,3 +2,7 @@ description: A hexo tag for insert configuration file values to your post/page
 link: https://github.com/yoshinorin/hexo-tag-config
 tags:
   - config
+repository:
+  is_archived: false
+  stars: 2
+  last_commit_date: '2024-07-02T16:55:06Z'

@@ -6,3 +6,7 @@ tags:
   - leaflet
   - osm
   - tracks
+repository:
+  is_archived: false
+  stars: 6
+  last_commit_date: '2017-07-19T21:39:01Z'

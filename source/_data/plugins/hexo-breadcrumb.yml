@@ -7,3 +7,7 @@ tags:
   - generator
   - microdata
   - json-ld
+repository:
+  is_archived: false
+  stars: 9
+  last_commit_date: '2026-04-19T14:56:22Z'

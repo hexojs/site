@@ -4,3 +4,7 @@ tags:
   - renderer
   - markdown
   - markdown-it
+repository:
+  is_archived: false
+  stars: 11
+  last_commit_date: '2025-07-21T15:32:05Z'

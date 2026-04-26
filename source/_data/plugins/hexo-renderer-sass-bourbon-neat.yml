@@ -5,3 +5,7 @@ tags:
   - sass
   - bourbon
   - neat
+repository:
+  is_archived: true
+  stars: 2
+  last_commit_date: '2020-10-03T04:10:20Z'

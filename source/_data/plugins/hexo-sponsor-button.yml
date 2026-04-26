@@ -3,3 +3,7 @@ link: https://github.com/GhostyJade/hexo-sponsor-button
 tags:
   - funding
   - sponsor
+repository:
+  is_archived: false
+  stars: 1
+  last_commit_date: '2021-03-28T19:31:54Z'

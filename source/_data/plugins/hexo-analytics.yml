@@ -2,3 +2,7 @@ description: A Hexo plugin to enable Google Analytics and Microsoft Clarity.
 link: https://github.com/neoalienson/hexo-analytics
 tags:
   - analytics
+repository:
+  is_archived: false
+  stars: 0
+  last_commit_date: '2024-05-01T13:03:46Z'

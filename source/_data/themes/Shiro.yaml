@@ -1,4 +1,6 @@
-description: A clean, pure, and elegant Hexo theme involved with whitespace (余白). Built with Nunjucks and Tailwind CSS.
+description: >-
+  A clean, pure, and elegant Hexo theme involved with whitespace (余白). Built
+  with Nunjucks and Tailwind CSS.
 link: https://github.com/Acris/hexo-theme-shiro
 preview: https://acris.me
 tags:
@@ -10,3 +12,7 @@ tags:
   - Responsive
   - Nunjucks
   - 中文
+repository:
+  is_archived: false
+  stars: 96
+  last_commit_date: '2026-03-14T14:08:34Z'

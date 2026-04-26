@@ -4,3 +4,7 @@ tags:
   - images
   - size
   - filter
+repository:
+  is_archived: false
+  stars: 4
+  last_commit_date: '2021-06-25T09:53:40Z'

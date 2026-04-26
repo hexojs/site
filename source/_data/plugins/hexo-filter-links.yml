@@ -4,3 +4,7 @@ tags:
   - links
   - external links
   - Internal links
+repository:
+  is_archived: false
+  stars: 5
+  last_commit_date: '2022-11-06T08:03:44Z'

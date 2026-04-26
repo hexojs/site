@@ -6,3 +6,7 @@ tags:
   - one_column
   - apollo
   - light
+repository:
+  is_archived: false
+  stars: 36
+  last_commit_date: '2020-07-14T04:20:56Z'

@@ -3,3 +3,7 @@ link: https://github.com/NaturalSelectionLabs/hexo-deployer-rss3
 tags:
   - deployer
   - rss3
+repository:
+  is_archived: true
+  stars: 22
+  last_commit_date: '2022-05-16T01:53:23Z'

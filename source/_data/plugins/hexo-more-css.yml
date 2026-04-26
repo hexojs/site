@@ -5,3 +5,7 @@ tags:
   - filter
   - minify
   - more-css
+repository:
+  is_archived: false
+  stars: 1
+  last_commit_date: '2015-07-27T11:00:49Z'

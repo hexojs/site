@@ -3,3 +3,7 @@ link: https://github.com/maliMirkec/hexo-caniuse
 tags:
   - tag
   - caniuse
+repository:
+  is_archived: true
+  stars: 3
+  last_commit_date: '2017-07-30T13:15:35Z'

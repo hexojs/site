@@ -4,3 +4,7 @@ tags:
   - href
   - md
   - 中文支持
+repository:
+  is_archived: false
+  stars: 1
+  last_commit_date: '2016-05-28T08:08:23Z'

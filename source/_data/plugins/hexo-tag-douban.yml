@@ -9,3 +9,7 @@ tags:
   - tag_plugins
   - plugins
   - 豆瓣
+repository:
+  is_archived: false
+  stars: 14
+  last_commit_date: '2019-01-08T09:47:42Z'

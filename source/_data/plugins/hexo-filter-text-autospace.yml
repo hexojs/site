@@ -3,3 +3,7 @@ link: https://github.com/Cerallin/hexo-filter-text-autospace
 tags:
   - filter
   - html
+repository:
+  is_archived: false
+  stars: 4
+  last_commit_date: '2026-02-05T17:14:14Z'

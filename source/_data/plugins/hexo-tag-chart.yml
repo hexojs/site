@@ -4,3 +4,7 @@ tags:
   - tag
   - chart
   - chartjs
+repository:
+  is_archived: false
+  stars: 26
+  last_commit_date: '2025-08-18T02:42:16Z'

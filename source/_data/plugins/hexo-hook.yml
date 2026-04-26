@@ -6,3 +6,7 @@ tags:
   - webhook
   - generate
   - git
+repository:
+  is_archived: false
+  stars: 3
+  last_commit_date: '2019-01-10T05:02:24Z'

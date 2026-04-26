@@ -7,3 +7,7 @@ tags:
   - preview
   - image
   - ogp
+repository:
+  is_archived: true
+  stars: 20
+  last_commit_date: '2022-01-03T02:31:47Z'

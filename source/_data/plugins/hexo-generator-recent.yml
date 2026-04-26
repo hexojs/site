@@ -3,3 +3,7 @@ link: https://github.com/leviwheatcroft/hexo-generator-recent
 tags:
   - generator
   - recent
+repository:
+  is_archived: false
+  stars: 2
+  last_commit_date: '2017-01-08T07:44:42Z'

@@ -3,3 +3,7 @@ link: https://github.com/wshunli/hexo-gitter
 tags:
   - helper
   - gitter
+repository:
+  is_archived: false
+  stars: 2
+  last_commit_date: '2018-02-11T03:37:49Z'

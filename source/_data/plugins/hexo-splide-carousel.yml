@@ -1,7 +1,13 @@
-﻿description: A package for Hexo blogs using the NexT theme, provides image carousel and zoom functionality using Splide.js and medium-zoom libraries.
+description: >-
+  A package for Hexo blogs using the NexT theme, provides image carousel and
+  zoom functionality using Splide.js and medium-zoom libraries.
 link: https://github.com/Siriusq/hexo-splide-carousel
 tags:
   - tag
   - image
   - carousel
   - zoom
+repository:
+  is_archived: false
+  stars: 0
+  last_commit_date: '2024-09-14T15:49:47Z'

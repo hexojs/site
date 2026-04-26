@@ -32,3 +32,7 @@ tags:
   - word-counter
   - character-count
   - word-count
+repository:
+  is_archived: false
+  stars: 5
+  last_commit_date: '2025-01-06T12:27:06Z'

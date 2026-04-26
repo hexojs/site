@@ -7,3 +7,7 @@ tags:
   - white
   - pug
   - scss
+repository:
+  is_archived: false
+  stars: 16
+  last_commit_date: '2017-03-13T04:32:31Z'

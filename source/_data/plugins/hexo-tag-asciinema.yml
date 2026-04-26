@@ -3,3 +3,7 @@ link: https://github.com/narongdejsrn/hexo-tag-asciinema
 tags:
   - tag
   - asciinema
+repository:
+  is_archived: false
+  stars: 10
+  last_commit_date: '2019-06-09T15:16:36Z'

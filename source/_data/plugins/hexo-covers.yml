@@ -11,3 +11,7 @@ tags:
   - images
   - microbrowser
   - review
+repository:
+  is_archived: false
+  stars: 21
+  last_commit_date: '2022-12-14T07:19:46Z'

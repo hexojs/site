@@ -7,3 +7,7 @@ tags:
   - pagination
   - ajax-pagination
   - fragments
+repository:
+  is_archived: false
+  stars: 6
+  last_commit_date: '2016-07-14T08:06:05Z'

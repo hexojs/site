@@ -7,3 +7,7 @@ tags:
   - latitude
   - longitude
   - markers
+repository:
+  is_archived: false
+  stars: 24
+  last_commit_date: '2017-07-02T09:07:37Z'

@@ -1,4 +1,6 @@
-description: A minimalist Hexo blog theme inspired by A4 paper aesthetics with jilan (霁蓝) blue accent, built with zero jQuery.
+description: >-
+  A minimalist Hexo blog theme inspired by A4 paper aesthetics with jilan (霁蓝)
+  blue accent, built with zero jQuery.
 link: https://github.com/yeliqin666/hexo-theme-qingzhi
 preview: https://www.runqinliu666.cn
 tags:
@@ -7,3 +9,7 @@ tags:
   - responsive
   - chinese
   - minimal
+repository:
+  is_archived: false
+  stars: 4
+  last_commit_date: '2026-02-19T10:29:56Z'

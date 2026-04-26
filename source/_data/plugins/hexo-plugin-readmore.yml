@@ -5,3 +5,7 @@ link: https://github.com/snowdreams1006/hexo-plugin-readmore
 tags:
   - readmore
   - openwrite
+repository:
+  is_archived: false
+  stars: 22
+  last_commit_date: '2019-11-13T03:05:58Z'

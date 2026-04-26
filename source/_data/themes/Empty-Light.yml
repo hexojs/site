@@ -6,3 +6,7 @@ tags:
   - not responsive
   - Bulma css
   - clean
+repository:
+  is_archived: false
+  stars: 1
+  last_commit_date: '2017-12-31T04:27:46Z'

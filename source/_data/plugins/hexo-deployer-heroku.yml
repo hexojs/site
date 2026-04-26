@@ -4,3 +4,7 @@ tags:
   - official
   - deployer
   - heroku
+repository:
+  is_archived: false
+  stars: 27
+  last_commit_date: '2024-04-09T07:24:02Z'

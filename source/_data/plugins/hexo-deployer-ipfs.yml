@@ -2,3 +2,7 @@ description: this is plugin for hexo to deploy static sites to ipfs network.
 link: https://github.com/ishallbethat/hexo-deployer-ipfs
 tags:
   - deployer
+repository:
+  is_archived: false
+  stars: 17
+  last_commit_date: '2018-04-06T09:11:36Z'

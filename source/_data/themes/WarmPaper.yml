@@ -1,4 +1,6 @@
-description: A warm blog theme inspired by Claude's color scheme. Beige background with light orange grid draft paper texture for immersive reading.
+description: >-
+  A warm blog theme inspired by Claude's color scheme. Beige background with
+  light orange grid draft paper texture for immersive reading.
 link: https://github.com/finch-xu/hexo-theme-warmpaper
 preview: https://pidan.dev
 tags:
@@ -9,3 +11,7 @@ tags:
   - beautiful
   - one_column
   - responsive
+repository:
+  is_archived: false
+  stars: 2
+  last_commit_date: '2026-04-03T14:17:00Z'

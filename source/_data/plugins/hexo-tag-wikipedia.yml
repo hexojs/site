@@ -5,3 +5,7 @@ tags:
   - wikipedia
   - tag
   - extracts
+repository:
+  is_archived: false
+  stars: 8
+  last_commit_date: '2021-06-06T11:49:15Z'

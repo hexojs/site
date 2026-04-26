@@ -5,3 +5,7 @@ tags:
   - filter
   - path
   - tag
+repository:
+  is_archived: false
+  stars: 3
+  last_commit_date: '2016-04-24T14:52:47Z'

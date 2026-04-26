@@ -3,3 +3,7 @@ link: https://github.com/buxuku/hexo-issue2readme
 tags:
   - issue
   - readme
+repository:
+  is_archived: false
+  stars: 0
+  last_commit_date: '2021-01-29T08:04:22Z'

@@ -9,3 +9,7 @@ tags:
   - fast
   - long-term developing
   - maintaining
+repository:
+  is_archived: true
+  stars: 10
+  last_commit_date: '2018-03-26T08:18:35Z'

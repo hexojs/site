@@ -4,3 +4,7 @@ tags:
   - tag
   - music
   - cPlayer
+repository:
+  is_archived: false
+  stars: 7
+  last_commit_date: '2019-03-14T02:35:40Z'

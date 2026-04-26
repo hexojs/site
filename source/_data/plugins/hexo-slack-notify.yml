@@ -4,3 +4,7 @@ tags:
   - notify
   - slack
   - social
+repository:
+  is_archived: false
+  stars: 1
+  last_commit_date: '2016-10-20T16:29:35Z'

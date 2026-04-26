@@ -1,7 +1,13 @@
-description: SAM (Software Automatic Mouth) text-to-speech (TTS) reader widget for Hexo blog posts.
+description: >-
+  SAM (Software Automatic Mouth) text-to-speech (TTS) reader widget for Hexo
+  blog posts.
 link: https://github.com/trintlermint/hexo-sam-reader
 tags:
   - tts
   - sam
   - widget
   - voice
+repository:
+  is_archived: false
+  stars: 0
+  last_commit_date: '2026-04-02T17:25:24Z'
