@@ -6,3 +6,7 @@ tags:
   - drafts
   - tag
   - tag_plugins
+repository:
+  is_archived: false
+  stars: 4
+  last_commit_date: '2021-04-04T20:40:19Z'

@@ -125,35 +125,9 @@ deploy:
 | `verbose`       | Verbose 메시지를 표시합니다.    | true    |
 | `ignore_errors` | 에러를 무시합니다.             | false   |
 
-## OpenShift
-
-{% note warn %}
-`hexo-deployer-openshift` has been deprecated in 2022.
-{% endnote %}
-
-[hexo-deployer-openshift][]를 설치합니다.
-
-```bash
-$ npm install hexo-deployer-openshift --save
-```
-
-설정을 수정합니다.
-
-```yaml
-deploy:
-  type: openshift
-  repo: <repository url>
-  message: [message]
-```
-
-| Option    | Description                                                                                          |
-| --------- | ---------------------------------------------------------------------------------------------------- |
-| `repo`    | OpenShift 저장소 URL                                                                                    |
-| `message` | Commit message를 수정합니다. (기본값 - `Site updated: {% raw %}{{ now('YYYY-MM-DD HH:mm:ss') }}{% endraw %}`) |
-
 ## FTPSync
 
-[hexo-deployer-ftpsync][]를 설치합니다.
+Install [hexo-deployer-ftpsync][].
 
 ```bash
 $ npm install hexo-deployer-ftpsync --save
@@ -267,72 +241,6 @@ $ hexo generate —deploy && bip deploy
 
 After a few moments, your website will be deployed.
 
-## RSS3
-
-{% note warn %}
-`hexo-deployer-rss3` has been deprecated in 2023.
-{% endnote %}
-
-[RSS3](https://rss3.io)는 Web 3.0 시대의 콘텐츠 및 소셜 네트워크를 위해 설계된 개방형 프로토콜입니다.
-
-1. [hexo-deployer-rss3][] 설치
-
-2. 구성을 수정합니다.
-
-```yaml
-deploy: # The root configuration block for all deployers
-  - type: rss3
-    endpoint: https://hub.rss3.io
-    privateKey: 47e18d6c386898b424025cd9db446f779ef24ad33a26c499c87bb3d9372540ba
-    ipfs:
-      deploy: true
-      gateway: pinata
-      api:
-        key: d693df715d3631e489d6
-        secret: ee8b74626f12b61c1a4bde3b8c331ad390567c86ba779c9b18561ee92c1cbff0
-```
-
-| 매개변수              | Description         |
-| ----------------- | ------------------- |
-| `endpoint`        | RSS3 Hub에 대한 링크     |
-| `privateKey`      | 개인 키, 64바이트         |
-| `ipfs/deploy`     | IPFS에 배포할지 여부       |
-| `ipfs/gateway`    | IPFS API 게이트웨이      |
-| `ipfs/api/key`    | IPFS 게이트웨이 관련 검증 내용 |
-| `ipfs/api/secret` | IPFS 게이트웨이 관련 검증 내용 |
-
-3. 정적 파일 생성
-
-4. 배포
-
-특정 배포와 관련된 주의 사항은 [당사 문서](https://github.com/NaturalSelectionLabs/hexo-deployer-rss3/blob/develop/README.md)를 참조하세요.
-
-## Edgio (formerly Layer0)
-
-[Edgio (formerly Layer0)](https://docs.edg.io) is an Internet-scale platform that makes it easy for teams to build, release, protect, and accelerate their web apps and APIs.
-
-1. In your hexo project directory, install the Edgio CLI:
-
-```bash
-npm i -g @edgio/cli
-```
-
-2. Install Hexo connector by Edgio:
-
-```bash
-edgio init --connector=@edgio/hexo
-```
-
-3. Deployment
-
-```bash
-설명
-```
-
-Alternatively, you can click the deploy button below to create a new project:
-
-[![Deploy To Edgio](https://docs.edg.io/button.svg)](https://app.layer0.co/deploy?repo=https%3A%2F%2Fgithub.com%2Fedgio-docs%2Fedgio-hexo-example)
-
 ## 다른 메소드들
 
 생성되는 모든 파일들은 `public` 폴더에 저장됩니다. 이 파일들을 당신이 원하는 곳 아무데나 복사하여 사용할 수 있습니다.
@@ -340,7 +248,5 @@ Alternatively, you can click the deploy button below to create a new project:
 [hexo-deployer-git]: https://github.com/hexojs/hexo-deployer-git
 [hexo-deployer-heroku]: https://github.com/hexojs/hexo-deployer-heroku
 [hexo-deployer-rsync]: https://github.com/hexojs/hexo-deployer-rsync
-[hexo-deployer-openshift]: https://github.com/hexojs/hexo-deployer-openshift
 [hexo-deployer-ftpsync]: https://github.com/hexojs/hexo-deployer-ftpsync
 [hexo-deployer-sftp]: https://github.com/lucascaro/hexo-deployer-sftp
-[hexo-deployer-rss3]: https://github.com/NaturalSelectionLabs/hexo-deployer-rss3

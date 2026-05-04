@@ -1,0 +1,16 @@
+description: Hexo Multi-Comment Generator
+link: >-
+  https://github.com/huazie/diversity-plugins/tree/main/packages/hexo-generator-comments
+tags:
+  - hexo
+  - plugin
+  - generator
+  - comments
+  - hexo-comments-utterances
+  - hexo-comments-gitalk
+  - hexo-comments-giscus
+  - 多评论生成插件
+repository:
+  is_archived: false
+  stars: 1
+  last_commit_date: '2026-02-08T10:57:50Z'

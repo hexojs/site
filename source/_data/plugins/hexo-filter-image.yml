@@ -5,3 +5,7 @@ tags:
   - image
   - path
   - asset
+repository:
+  is_archived: false
+  stars: 8
+  last_commit_date: '2020-01-20T01:27:24Z'

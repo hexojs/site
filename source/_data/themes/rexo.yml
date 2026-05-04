@@ -12,3 +12,7 @@ tags:
   - arabic
   - persian
   - hebrew
+repository:
+  is_archived: false
+  stars: 10
+  last_commit_date: '2022-08-05T17:33:30Z'

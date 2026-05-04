@@ -1,5 +1,9 @@
 description: Auto generator readme file for hexo blog
 link: https://github.com/buxuku/hexo-generator-readme
-tags: 
+tags:
   - readme
   - generator
+repository:
+  is_archived: false
+  stars: 3
+  last_commit_date: '2021-01-18T04:11:35Z'

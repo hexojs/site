@@ -7,3 +7,7 @@ tags:
   - simple
   - English
   - Internationalization
+repository:
+  is_archived: true
+  stars: 5
+  last_commit_date: '2022-10-21T09:36:31Z'

@@ -5,3 +5,7 @@ link: https://github.com/buxuku/hexo-generator-latest2json
 tags:
   - latest
   - json
+repository:
+  is_archived: false
+  stars: 0
+  last_commit_date: '2021-01-18T15:56:49Z'

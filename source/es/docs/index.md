@@ -98,6 +98,7 @@ Recomendamos encarecidamente instalar siempre la [última versión](https://www.
 
 | Versión Hexo | Mínima (versión Node.js) | Menor que (versión que Node.js) |
 | ------------ | ------------------------ | ------------------------------- |
+| 8.0+         | 20.19.0                  | latest                          |
 | 7.0+         | 14.0.0                   | latest                          |
 | 6.2+         | 12.13.0                  | latest                          |
 | 6.0+         | 12.13.0                  | 18.5.0                          |

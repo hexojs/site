@@ -1,0 +1,12 @@
+description: 🤗 基于 Hexo & MDUI 的轻量级个人主页。
+link: https://github.com/fly6022/hexo-theme-kuri
+preview: http://kuri.ink/
+tags:
+  - homepage
+  - hexo
+  - mdui
+  - kuri
+repository:
+  is_archived: false
+  stars: 10
+  last_commit_date: '2026-02-25T11:45:10Z'

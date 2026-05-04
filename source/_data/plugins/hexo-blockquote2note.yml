@@ -3,3 +3,7 @@ link: https://github.com/BlockLune/hexo-blockquote2note
 tags:
   - NexT
   - NexT-theme
+repository:
+  is_archived: false
+  stars: 1
+  last_commit_date: '2024-12-10T04:15:30Z'

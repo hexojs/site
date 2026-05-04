@@ -6,3 +6,7 @@ tags:
   - highlight
   - plugin
   - hexo
+repository:
+  is_archived: false
+  stars: 10
+  last_commit_date: '2026-04-12T16:13:10Z'

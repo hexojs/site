@@ -3,3 +3,7 @@ link: https://github.com/unnamed42/hexo-spoiler
 tags:
   - spoiler
   - tag
+repository:
+  is_archived: false
+  stars: 14
+  last_commit_date: '2025-07-07T09:24:50Z'

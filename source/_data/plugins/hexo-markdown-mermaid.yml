@@ -1,0 +1,10 @@
+description: Render mermaid diagrams in markdown code blocks.
+link: https://github.com/mangege/hexo-markdown-mermaid
+tags:
+  - mermaid
+  - diagram
+  - markdown
+repository:
+  is_archived: false
+  stars: 0
+  last_commit_date: '2026-03-26T14:08:30Z'

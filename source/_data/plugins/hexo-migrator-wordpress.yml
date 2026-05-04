@@ -4,3 +4,7 @@ tags:
   - official
   - migrator
   - wordpress
+repository:
+  is_archived: false
+  stars: 49
+  last_commit_date: '2023-10-07T17:40:05Z'

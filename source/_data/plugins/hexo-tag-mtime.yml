@@ -4,3 +4,7 @@ tags:
   - tag
   - plugin
   - moive
+repository:
+  is_archived: false
+  stars: 8
+  last_commit_date: '2022-07-18T02:35:13Z'

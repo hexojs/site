@@ -3,3 +3,7 @@ link: https://github.com/stan-chen/hexo-tag-ossimg
 tags:
   - aliyun
   - oss
+repository:
+  is_archived: true
+  stars: 5
+  last_commit_date: '2020-01-22T02:34:22Z'

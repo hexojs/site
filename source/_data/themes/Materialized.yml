@@ -7,3 +7,7 @@ tags:
   - elegant
   - clean
   - simple
+repository:
+  is_archived: true
+  stars: 42
+  last_commit_date: '2020-08-06T03:51:46Z'

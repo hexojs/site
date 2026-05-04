@@ -1,0 +1,13 @@
+description: Minimal Hexo theme with ASCII animations powered by pretext
+link: https://github.com/YingmuZ/hexo-theme-pretext-with-ascii-bunny
+preview: https://yingmuz.github.io/lulu-blog-pretext/
+tags:
+  - responsive
+  - dark-mode
+  - ascii-art
+  - i18n
+  - minimal
+repository:
+  is_archived: false
+  stars: 0
+  last_commit_date: '2026-04-19T16:36:14Z'

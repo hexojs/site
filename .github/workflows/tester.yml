@@ -12,11 +12,11 @@ jobs:
       pull-requests: write  # for marocchino/sticky-pull-request-comment to create or update PR comment
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
         with:
           ref: refs/pull/${{ github.event.pull_request.number }}/merge
       - name: Use Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
       - name: Install Dependencies
         run: npm install
       - name: Lint
@@ -26,10 +26,10 @@ jobs:
         env:
           CI: true
       - name: Comment PR
-        uses: marocchino/sticky-pull-request-comment@v2
+        uses: marocchino/sticky-pull-request-comment@v3
         with:
           path: public/validate_theme.txt
-      - uses: actions/github-script@v7
+      - uses: actions/github-script@v8
         with:
           script: |
             const fs = require('fs');

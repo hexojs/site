@@ -5,3 +5,7 @@ tags:
   - lazyload
   - inline
   - bundle
+repository:
+  is_archived: false
+  stars: 48
+  last_commit_date: '2020-03-22T09:20:02Z'

@@ -5,3 +5,7 @@ tags:
   - css
   - lightningcss
   - autoprefixer
+repository:
+  is_archived: false
+  stars: 0
+  last_commit_date: '2023-01-24T15:12:23Z'

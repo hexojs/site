@@ -1,0 +1,13 @@
+description: Xmath：Server side MathJax renderer plugin for hexo-renderer-marked.
+link: https://github.com/MHuiG/hexo-xmath
+tags:
+  - filter
+  - math
+  - MathJax
+  - latex
+  - markdown
+  - marked
+repository:
+  is_archived: false
+  stars: 1
+  last_commit_date: '2025-11-01T07:23:19Z'

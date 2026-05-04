@@ -4,3 +4,7 @@ preview: https://hexojs.github.io/hexo-theme-phase
 tags:
   - official
   - one_column
+repository:
+  is_archived: false
+  stars: 95
+  last_commit_date: '2024-12-27T11:29:55Z'

@@ -6,3 +6,7 @@ tags:
   - two_columns
   - simple
   - light
+repository:
+  is_archived: false
+  stars: 73
+  last_commit_date: '2017-02-11T08:31:16Z'

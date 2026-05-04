@@ -1,0 +1,16 @@
+description: >-
+  A quiet editorial Hexo theme with a fixed visual sidebar and a calm archive
+  timeline.
+link: https://github.com/watanabe-hsad/hexo-theme-hsad
+preview: https://hsad.xyz
+tags:
+  - responsive
+  - clean
+  - minimal
+  - sidebar
+  - two_column
+  - light
+repository:
+  is_archived: false
+  stars: 0
+  last_commit_date: '2026-03-21T12:41:33Z'

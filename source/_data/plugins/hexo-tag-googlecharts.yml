@@ -4,3 +4,7 @@ tags:
   - tag
   - googlecharts
   - chart
+repository:
+  is_archived: false
+  stars: 8
+  last_commit_date: '2015-06-03T01:22:30Z'

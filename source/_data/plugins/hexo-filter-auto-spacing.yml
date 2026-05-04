@@ -4,3 +4,7 @@ tags:
   - official
   - filter
   - spacing
+repository:
+  is_archived: true
+  stars: 25
+  last_commit_date: '2022-01-06T12:34:02Z'

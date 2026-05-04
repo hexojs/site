@@ -125,35 +125,9 @@ deploy:
 | `verbose`       | Muestra mensajes detallados                 | true              |
 | `ignore_errors` | Ignora errores                              | false             |
 
-## OpenShift
-
-{% note warn %}
-`hexo-deployer-openshift` quedó obsoleto en 2022.
-{% endnote %}
-
-Instala [hexo-deployer-openshift][].
-
-```bash
-$ npm install hexo-deployer-openshift --save
-```
-
-Edita los ajustes.
-
-```yaml
-deploy:
-  type: openshift
-  repo: <repository url>
-  message: [message]
-```
-
-| Opción    | Descripción                                                                                                       |
-| --------- | ----------------------------------------------------------------------------------------------------------------- |
-| `repo`    | URL del repositorio OpenShift                                                                                     |
-| `message` | Personaliza el mensaje commit (Por defecto `Site updated: {% raw %}{{ now('YYYY-MM-DD HH:mm:ss') }}{% endraw %}`) |
-
 ## FTPSync
 
-Instala [hexo-deployer-ftpsync][].
+Install [hexo-deployer-ftpsync][].
 
 ```bash
 $ npm install hexo-deployer-ftpsync --save
@@ -185,7 +159,7 @@ deploy:
 
 ## SFTP
 
-Instala [hexo-deployer-sftp][]. Despliega el sitio mediante SFTP, permitiendo conexiones sin contraseña usando ssh-agent.
+Install [hexo-deployer-sftp][]. Despliega el sitio mediante SFTP, permitiendo conexiones sin contraseña usando ssh-agent.
 
 ```bash
 $ npm install hexo-deployer-sftp --save
@@ -267,72 +241,6 @@ $ hexo generate —deploy && bip deploy
 
 Después de unos momentos, tu sitio web estará desplegado.
 
-## RSS3
-
-{% note warn %}
-`hexo-deployer-rss3` quedó obsoleto en 2023.
-{% endnote %}
-
-[RSS3](https://rss3.io) es un protocolo abierto diseñado para contenido y redes sociales la era de la Web 3.0.
-
-1. Instala [hexo-deployer-rss3][].
-
-2. Modifica la configuración.
-
-```yaml
-deploy: # The root configuration block for all deployers
-  - type: rss3
-    endpoint: https://hub.rss3.io
-    privateKey: 47e18d6c386898b424025cd9db446f779ef24ad33a26c499c87bb3d9372540ba
-    ipfs:
-      deploy: true
-      gateway: pinata
-      api:
-        key: d693df715d3631e489d6
-        secret: ee8b74626f12b61c1a4bde3b8c331ad390567c86ba779c9b18561ee92c1cbff0
-```
-
-| Parámetros        | Descripción                                                        |
-| ----------------- | ------------------------------------------------------------------ |
-| `endpoint`        | un enlace al Hub RSS3                                              |
-| `privateKey`      | tu clave privada, 64 bytes                                         |
-| `ipfs/deploy`     | si el despliegue es a IPFS                                         |
-| `ipfs/gateway`    | Puerta de enlace API de IPFS                                       |
-| `ipfs/api/key`    | Contenido relacionado de la puerta de enlace IPFS                  |
-| `ipfs/api/secret` | Contenido de autenticación relacionado de la puerta de enlace IPFS |
-
-3. genera los ficheros estáticos
-
-4. despliega
-
-Para cuestiones de despliegue relacionadas, puedes consultar a [nuestra documentación](https://github.com/NaturalSelectionLabs/hexo-deployer-rss3/blob/develop/README.md).
-
-## Edgio (anteriormente Layer0)
-
-[Edgio (formerly Layer0)](https://docs.edg.io) es una plataforma de internet de escalado que facilita a los equipos la generación, lanzamiento, protección y acelerado de sus aplicaciones web y APIs.
-
-1. En el directorio de tu proyecto hexo, instala Edgio CLI:
-
-```bash
-npm i -g @edgio/cli
-```
-
-2. Instala Hexo connector by Edgio:
-
-```bash
-edgio init --connector=@edgio/hexo
-```
-
-3. Despliega
-
-```bash
-edgio deploy
-```
-
-Alternativamente, puedes clicar en el botón de despliegue de abajo para crear un nuevo proyecto:
-
-[![Despliega a Edgio](https://docs.edg.io/button.svg)](https://app.layer0.co/deploy?repo=https%3A%2F%2Fgithub.com%2Fedgio-docs%2Fedgio-hexo-example)
-
 ## Otros métodos
 
 Todos los ficheros generados se guardan en el directorio `public`. Puedes copiarlos donde desees.
@@ -340,7 +248,5 @@ Todos los ficheros generados se guardan en el directorio `public`. Puedes copiar
 [hexo-deployer-git]: https://github.com/hexojs/hexo-deployer-git
 [hexo-deployer-heroku]: https://github.com/hexojs/hexo-deployer-heroku
 [hexo-deployer-rsync]: https://github.com/hexojs/hexo-deployer-rsync
-[hexo-deployer-openshift]: https://github.com/hexojs/hexo-deployer-openshift
 [hexo-deployer-ftpsync]: https://github.com/hexojs/hexo-deployer-ftpsync
 [hexo-deployer-sftp]: https://github.com/lucascaro/hexo-deployer-sftp
-[hexo-deployer-rss3]: https://github.com/NaturalSelectionLabs/hexo-deployer-rss3

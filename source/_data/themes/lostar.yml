@@ -1,0 +1,15 @@
+description: A concise Hexo theme, inherited from ParticleX and Particle
+link: https://github.com/thatnghiepdev/hexo-theme-lostar
+preview: https://lostar.thatnghiep.dev
+tags:
+  - Concise
+  - Responsive
+  - Customizable
+  - Widget
+  - Search
+  - KaTeX
+  - Highlight.js
+repository:
+  is_archived: false
+  stars: 1
+  last_commit_date: '2026-03-19T13:13:56Z'

@@ -9,3 +9,7 @@ tags:
   - babel
   - babelify
   - browserify
+repository:
+  is_archived: false
+  stars: 2
+  last_commit_date: '2020-03-14T07:44:59Z'

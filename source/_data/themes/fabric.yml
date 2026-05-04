@@ -7,3 +7,7 @@ tags:
   - one_column
   - clean
   - tagscloud
+repository:
+  is_archived: false
+  stars: 12
+  last_commit_date: '2017-01-09T10:54:24Z'

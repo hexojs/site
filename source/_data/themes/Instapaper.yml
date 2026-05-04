@@ -1,5 +1,5 @@
 description: A light fast hexo theme.
-link: https://github.com/techmovie/hexo-theme-instapaper
+link: https://github.com/xheiop/hexo-theme-instapaper
 preview: https://techmovie.xyz/
 tags:
   - 中文
@@ -8,3 +8,7 @@ tags:
   - simple
   - Concise
   - darkMode
+repository:
+  is_archived: false
+  stars: 58
+  last_commit_date: '2024-01-09T10:15:38Z'

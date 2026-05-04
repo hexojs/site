@@ -8,3 +8,7 @@ tags:
   - blog
   - template
   - hexo
+repository:
+  is_archived: false
+  stars: 5
+  last_commit_date: '2023-10-21T18:01:38Z'

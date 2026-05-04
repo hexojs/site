@@ -4,3 +4,7 @@ tags:
   - tag
   - image
   - cloudinary
+repository:
+  is_archived: true
+  stars: 6
+  last_commit_date: '2023-05-19T11:16:07Z'

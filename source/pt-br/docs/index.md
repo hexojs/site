@@ -18,7 +18,7 @@ Demora apenas alguns minutos para configurar o Hexo. Se você encontrar um probl
 
 Instalar o Hexo é bastante fácil. No entanto, você precisa ter algumas outras coisas instaladas primeiro:
 
-- [Node.js](http://nodejs.org/) (Should be at least Node.js 10.13, recommends 12.0 or higher)
+- [Node.js](http://nodejs.org/) (See [Required Node.js version](#Required-Node-js-version))
 - [Git](http://git-scm.com/)
 
 Se o seu computador já possui estes, parabéns! Basta instalar o Hexo com o npm:
@@ -98,6 +98,7 @@ We highly recommend to always install the [latest version](https://www.npmjs.com
 
 | Hexo version | Minimum (Node.js version) | Less than (Node.js version) |
 | ------------ | ------------------------- | --------------------------- |
+| 8.0+         | 20.19.0                   | latest                      |
 | 7.0+         | 14.0.0                    | latest                      |
 | 6.2+         | 12.13.0                   | latest                      |
 | 6.0+         | 12.13.0                   | 18.5.0                      |

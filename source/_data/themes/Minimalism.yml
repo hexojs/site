@@ -1,5 +1,5 @@
 description: Minimalism, simplicity and refined details
-link: https://github.com/f-dong/hexo-theme-minimalism
+link: https://github.com/mintfog/hexo-theme-minimalism
 preview: https://www.codeover.cn/
 tags:
   - 中文
@@ -8,3 +8,7 @@ tags:
   - Mobile
   - minimalism
   - Light/Dark
+repository:
+  is_archived: false
+  stars: 330
+  last_commit_date: '2025-07-22T07:05:31Z'

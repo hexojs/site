@@ -9,3 +9,7 @@ tags:
   - 日本語
   - beautiful
   - scalable
+repository:
+  is_archived: false
+  stars: 10
+  last_commit_date: '2021-12-14T05:58:31Z'

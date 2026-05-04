@@ -7,3 +7,7 @@ tags:
   - bootstrap
   - debonaire
   - responsive
+repository:
+  is_archived: false
+  stars: 20
+  last_commit_date: '2016-05-06T02:44:45Z'

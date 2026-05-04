@@ -4,3 +4,7 @@ tags:
   - renderer
   - js
   - webpack
+repository:
+  is_archived: false
+  stars: 8
+  last_commit_date: '2019-02-04T21:44:24Z'

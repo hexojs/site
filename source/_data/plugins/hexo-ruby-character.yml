@@ -6,3 +6,7 @@ tags:
   - tag
   - ruby-character
   - pinyin
+repository:
+  is_archived: true
+  stars: 95
+  last_commit_date: '2015-11-23T06:27:57Z'

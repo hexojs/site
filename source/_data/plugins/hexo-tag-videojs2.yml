@@ -1,7 +1,11 @@
 description: Use video.js player in Hexo.
-link: https://github.com/lzctuhao/hexo-tag-videojs2
+link: https://github.com/PyroSoar/hexo-tag-videojs2
 tags:
   - video
   - tag
   - video.js
   - player
+repository:
+  is_archived: false
+  stars: 7
+  last_commit_date: '2024-07-23T12:31:45Z'

@@ -1,0 +1,15 @@
+description: A modernist, gridless, scatter-card style theme.
+link: https://github.com/FengIKUN/hexo-theme-desktop
+preview: https://csfeng.dev.tc
+tags:
+  - minimalist
+  - gridless
+  - white
+  - dark mode
+  - mathjax
+  - katex
+  - rapid
+repository:
+  is_archived: false
+  stars: 6
+  last_commit_date: '2026-03-28T13:10:51Z'

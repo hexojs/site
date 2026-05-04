@@ -7,3 +7,7 @@ tags:
   - bidi
   - multilingual
   - left-to-right
+repository:
+  is_archived: false
+  stars: 2
+  last_commit_date: '2017-08-01T16:26:25Z'

@@ -3,3 +3,7 @@ link: https://github.com/hqweay/hexo-douban-getter.git
 tags:
   - douban
   - 豆瓣
+repository:
+  is_archived: false
+  stars: 17
+  last_commit_date: '2022-03-26T18:26:33Z'

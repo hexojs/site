@@ -7,3 +7,7 @@ tags:
   - asset_img
   - path
   - markdown
+repository:
+  is_archived: false
+  stars: 70
+  last_commit_date: '2024-02-21T10:39:13Z'

@@ -3,3 +3,7 @@ link: https://github.com/tcatche/hexo-generator-readme-file
 tags:
   - generator
   - readme
+repository:
+  is_archived: false
+  stars: 6
+  last_commit_date: '2021-08-05T09:45:52Z'

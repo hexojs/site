@@ -1,7 +1,11 @@
 description: Transparent theme, with station search
-link: https://github.com/WinMin/Sw-blog
+link: https://github.com/winmin/Sw-blog
 preview: http://bestwing.me/
 tags:
   - transparence
   - responsive
   - search
+repository:
+  is_archived: true
+  stars: 61
+  last_commit_date: '2018-05-29T08:34:15Z'

@@ -6,3 +6,7 @@ tags:
   - chinese
   - simple
   - responsive
+repository:
+  is_archived: true
+  stars: 153
+  last_commit_date: '2019-01-30T01:29:19Z'

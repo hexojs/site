@@ -4,3 +4,7 @@ tags:
   - generator
   - archive
   - alphabet
+repository:
+  is_archived: false
+  stars: 0
+  last_commit_date: '2016-06-24T12:32:37Z'

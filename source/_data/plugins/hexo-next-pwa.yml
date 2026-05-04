@@ -5,3 +5,7 @@ tags:
   - Service Worker
   - Web App Manifest
   - Workbox
+repository:
+  is_archived: false
+  stars: 11
+  last_commit_date: '2026-03-29T14:35:46Z'

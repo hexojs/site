@@ -3,3 +3,7 @@ link: https://github.com/laomao800/hexo-tag-demo
 tags:
   - tag
   - demo
+repository:
+  is_archived: false
+  stars: 13
+  last_commit_date: '2016-12-06T02:36:32Z'

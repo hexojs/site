@@ -14,12 +14,12 @@
   "dependencies": {
     "@node-rs/jieba": "^2.0.1",
     "cheerio": "^1.0.0",
-    "hexo": "^7.3.0",
+    "hexo": "^8.0.0",
     "hexo-clean-css": "^2.0.0",
     "hexo-filter-nofollow": "^2.0.2",
     "hexo-fs": "^5.0.0",
     "hexo-generator-archive": "^2.0.0",
-    "hexo-generator-feed": "^3.0.0",
+    "hexo-generator-feed": "^4.0.0",
     "hexo-generator-sitemap": "^3.0.1",
     "hexo-renderer-marked": "^7.0.0",
     "hexo-renderer-stylus": "^3.0.1",
@@ -31,12 +31,12 @@
     "sharp": "^0.34.2"
   },
   "devDependencies": {
-    "eslint": "^8.0.1",
-    "eslint-config-hexo": "^5.0.0",
+    "eslint": "^9.39.1",
+    "eslint-config-hexo": "^6.0.0",
     "husky": "^9.0.6",
     "imagemin-lint-staged": "^0.5.1",
-    "lint-staged": "^15.2.0",
-    "prettier": "3.6.2"
+    "lint-staged": "^16.1.6",
+    "prettier": "3.8.1"
   },
   "lint-staged": {
     "*.{png,jpeg,jpg,gif,svg}": [

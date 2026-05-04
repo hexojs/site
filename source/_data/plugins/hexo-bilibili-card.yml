@@ -3,3 +3,7 @@ link: https://github.com/maxchang3/hexo-bilibili-card
 tags:
   - bilibili
   - card
+repository:
+  is_archived: false
+  stars: 49
+  last_commit_date: '2024-07-29T18:23:44Z'

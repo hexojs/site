@@ -5,3 +5,7 @@ tags:
   - clean
   - 中文
   - easy to use
+repository:
+  is_archived: false
+  stars: 6
+  last_commit_date: '2018-04-24T02:59:20Z'

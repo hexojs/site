@@ -5,3 +5,7 @@ tags:
   - link
   - email
   - URL
+repository:
+  is_archived: false
+  stars: 26
+  last_commit_date: '2016-04-18T08:23:38Z'

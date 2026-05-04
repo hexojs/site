@@ -4,3 +4,7 @@ tags:
   - upyun
   - cache
   - purge
+repository:
+  is_archived: false
+  stars: 1
+  last_commit_date: '2021-01-23T02:43:47Z'
