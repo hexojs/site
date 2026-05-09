@@ -9,9 +9,7 @@ Because of this mistake, the [hexojs/hexo][hexorepo] repository in GitHub lost a
 
 The repository was changed back to public about 3 hours later, but the stars, forks, and watchers won't be restored.
 
-{% asset_img star-history-old.webp %}
-
-{% asset_img star-history-new.webp %}
+{% asset_img star-history.webp %}
 
 ## About Hexo
 
