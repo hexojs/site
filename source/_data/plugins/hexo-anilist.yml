@@ -1,6 +1,12 @@
-description: A Hexo plugin that generates a gallery page from your AniList anime and manga lists.
+description: >-
+  A Hexo plugin that generates a gallery page from your AniList anime and manga
+  lists.
 link: https://github.com/ajratnam/hexo-anilist
 tags:
   - anilist
   - anime
   - manga
+repository:
+  is_archived: false
+  stars: 0
+  last_commit_date: '2026-04-12T09:26:27Z'
