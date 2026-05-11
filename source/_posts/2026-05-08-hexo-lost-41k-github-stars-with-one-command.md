@@ -63,9 +63,9 @@ In most cases, this should not be a serious problem. If necessary, you can simpl
 
 ### For contributors
 
-For everyone who contributed to Hexo, this may be very sad news. Today's Hexo exists because many community members worked together for many years. Stars are not only numbers. They also represent effort of contributors and recognition from users. I truly feel deeply sorry and upset about what happened. I sincerely apologize to every contributor of Hexo community.
+For everyone who contributed to Hexo, this may be very sad news. Today's Hexo exists because many community members worked together for many years. Stars are not only numbers. They also represent effort of contributors and recognition from users. We truly feel deeply sorry and upset about what happened. We sincerely apologize to every contributor of Hexo community.
 
-If possible, I truly hope these data could be recovered.
+If possible, We truly hope these data could be recovered.
 
 ## Additional findings
 
