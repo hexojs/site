@@ -9,6 +9,10 @@ Because of this mistake, the [hexojs/hexo][hexorepo] repository in GitHub lost a
 
 The repository was changed back to public about 3 hours later, but the stars, forks, and watchers won't be restored.
 
+> **On May 14**, the stars and watchers of the repository have been **restored successfully** with the help of Github support.
+>
+> A heartfelt thank you to everyone! Thank everyone who offered help and encouragement in the [discussions][hexo5775], everyone who has continued to support Hexo, and the GitHub Support team for their assistance.
+
 {% asset_img star-history.webp %}
 
 ## About Hexo
@@ -101,6 +105,7 @@ In general, before doing any dangerous operation, we should always check careful
 [archive]: https://web.archive.org/web/20260406140512/https://github.com/hexojs/hexo
 [githubcli]: https://cli.github.com/manual/gh
 [githubdoc]: https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/managing-repository-settings/setting-repository-visibility#changing-from-public-to-private
+[hexo5775]: https://github.com/orgs/hexojs/discussions/5775
 [hexoio]: https://hexo.io/
 [hexojs]: https://github.com/hexojs
 [hexopkg]: https://www.npmjs.com/package/hexo
