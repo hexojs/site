@@ -1,6 +1,10 @@
 description: Embeded new BV-based bilibili video in your post.
-link: https://github.com/Mars-way/hexo-bilibili-video-tag
+link: https://github.com/marswayred/hexo-bilibili-video-tag
 tags:
   - bilibili
   - video
   - embeded
+repository:
+  is_archived: false
+  stars: 2
+  last_commit_date: '2025-03-27T08:40:14Z'
