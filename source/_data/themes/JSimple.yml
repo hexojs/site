@@ -12,6 +12,6 @@ tags:
   - local_search
   - custom_highlight
 repository:
-  is_archived: false
+  is_archived: true
   stars: 217
   last_commit_date: '2024-08-14T10:35:47Z'
