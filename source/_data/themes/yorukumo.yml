@@ -1,4 +1,7 @@
-description: A modern, minimalist Hexo blog theme featuring fluid GSAP & ScrollTrigger animations, an elegant glassmorphism design system, native multi-language support (EN/ZH/JA), and seamless native dark mode.
+description: >-
+  A modern, minimalist Hexo blog theme featuring fluid GSAP & ScrollTrigger
+  animations, an elegant glassmorphism design system, native multi-language
+  support (EN/ZH/JA), and seamless native dark mode.
 link: https://github.com/AsukaCC/YoruKumo
 preview: https://AsukaCC.github.io/Blog-YoruKumo/
 tags:
@@ -9,3 +12,7 @@ tags:
   - glassmorphism
   - dark_mode
   - lxgw-wenkai
+repository:
+  is_archived: false
+  stars: 0
+  last_commit_date: '2026-05-22T09:55:35Z'
