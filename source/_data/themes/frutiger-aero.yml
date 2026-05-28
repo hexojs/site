@@ -1,0 +1,11 @@
+- name: frutiger-aero
+  description: A nostalgic Frutiger Aero style theme with glassmorphism and animated bubbles.
+  link: https://github.com/tud8951/hexo-theme-frutiger-aero
+  preview: https://blog.bigjackson.vip
+  author: BigJackson
+  screenshot: https://raw.githubusercontent.com/tud8951/hexo-theme-frutiger-aero/master/screenshot.png
+  tags:
+    - nostalgia
+    - glassmorphism
+    - blue
+    - clean
