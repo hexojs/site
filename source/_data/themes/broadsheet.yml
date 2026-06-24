@@ -1,0 +1,18 @@
+name: broadsheet
+
+description: A newspaper-style editorial theme with a monochrome design, masonry layouts, and structured blog patterns like listicles, roundups, and split articles.
+
+link: https://github.com/Lame-Fortuna/broadsheet
+
+preview: https://broadsheet-blog.netlify.app/
+
+tags:
+  - tailwind
+  - flowbite
+  - newspaper
+  - editorial
+  - masonry
+  - clean
+  - monochrome
+  - ejs
+  - responsive
