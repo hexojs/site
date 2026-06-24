@@ -28,14 +28,14 @@ comments: false
         <i class="fa fa-cloud-upload"></i>
       </div>
       <h3 class="intro-feature-title">One-Command Deployment</h3>
-        <p class="intro-feature-desc">You only need one command to deploy your site to GitHub Pages, Heroku or other platforms.</p>
+        <p class="intro-feature-desc">You only need one command to deploy your site to GitHub Pages, Heroku, Netlify, Vercel or other platforms.</p>
       </div></li><li class="intro-feature-wrap">
     <div class="intro-feature">
       <div class="intro-feature-icon">
         <i class="fa fa-cog"></i>
       </div>
       <h3 class="intro-feature-title">Plugins</h3>
-      <p class="intro-feature-desc">Features powerful APIs for limitless extensibility. Various plugins are available to support most template engines (EJS, Pug, Nunjucks, and many others). Easily integrate with existing NPM packages (Babel, PostCSS, Less/Sass, etc).</p>
+      <p class="intro-feature-desc">Various plugins are available to generate sitemap and RSS, insert player for audio or video, intergrate search engine and support most template engines.</p>
     </div>
   </li>
 </ul>
