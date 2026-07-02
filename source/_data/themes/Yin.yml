@@ -1,11 +1,13 @@
-description: A Simple Theme for hexo.
+description: A clean, responsive Hexo theme with a social feed-style homepage, dark mode, local/Algolia search, Gitalk comments, and SEO enhancements.
 link: https://github.com/Yin-Hongwei/hexo-theme-Yin
 preview: https://yin-hongwei.github.io/
 tags:
-  - Beautiful
-  - cool
-  - hexo-theme
+  - Responsive
   - Simple
+  - Card UI
+  - Dark mode
+  - Search
+  - 中文
 repository:
   is_archived: false
   stars: 12
