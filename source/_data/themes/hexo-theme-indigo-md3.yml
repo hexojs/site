@@ -1,6 +1,8 @@
-description: 基于 Material Design 3 (MD3) 改版的高颜值 Hexo 博客主题（Forked from yscoder/hexo-theme-indigo）
-author:
-  name: Thomas Tung
-  link: https://tongfei11.github.io/blog
-github: https://github.com/tongfei11/hexo-theme-indigo-md3
-demo: https://tongfei11.github.io/blog
+description: 基于 Material Design 3 (MD3) 设计规范深度改版的高颜值、极简响应式 Hexo 博客主题（基于 yscoder/hexo-theme-indigo 魔改升级）
+link: https://github.com/tongfei11/hexo-theme-indigo-md3
+preview: https://tongfei11.github.io/blog
+tags:
+  - responsive
+  - chinese
+  - material
+  - vanilla-css
