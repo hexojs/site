@@ -29,6 +29,29 @@ function difference(setA, setB) {
   return diff;
 }
 
+function findCaseInsensitiveDuplicates(names) {
+  const groups = new Map();
+
+  for (const name of names) {
+    const normalizedName = name.toLocaleLowerCase();
+    if (!groups.has(normalizedName)) groups.set(normalizedName, new Set());
+    groups.get(normalizedName).add(name);
+  }
+
+  return Array.from(groups.values()).filter(group => group.size > 1);
+}
+
+function validateCaseInsensitiveUnique(message, label, names) {
+  const duplicates = findCaseInsensitiveDuplicates(names);
+  if (duplicates.length === 0) return true;
+
+  for (const duplicate of duplicates) {
+    message.push(`❌ ${label} conflict by case: ${Array.from(duplicate).join(', ')}.`);
+  }
+
+  return false;
+}
+
 function isPlainObject(value) {
   return value !== null && typeof value === 'object' && !Array.isArray(value);
 }
@@ -143,6 +166,10 @@ async function validateTheme() {
   let isValidationPassed = true;
 
   const themeData = hexo.locals.get('data').themes;
+  if (!validateCaseInsensitiveUnique(message, 'Theme names', themeData.map(theme => theme.name))) {
+    isValidationPassed = false;
+  }
+
   const themes = new Set();
   for (const theme of themeData) {
     const name = theme.name.toLocaleLowerCase();
@@ -151,12 +178,19 @@ async function validateTheme() {
   }
 
   const pluginData = hexo.locals.get('data').plugins;
+  if (!validateCaseInsensitiveUnique(message, 'Plugin names', pluginData.map(plugin => plugin.name))) {
+    isValidationPassed = false;
+  }
+
   for (const plugin of pluginData) {
     if (!validatePluginSchema(message, plugin)) isValidationPassed = false;
   }
 
   const screenshotsPath = join(hexo.source_dir, 'themes/screenshots');
   let screenshots = await listDir(screenshotsPath);
+  if (!validateCaseInsensitiveUnique(message, 'Theme screenshot filenames', screenshots)) {
+    isValidationPassed = false;
+  }
 
   for (const filename of screenshots) {
     if (!filename.endsWith('.png')) {
