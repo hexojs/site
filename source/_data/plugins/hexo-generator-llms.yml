@@ -1,0 +1,7 @@
+description: Generate an llms.txt index and a Markdown (.md) twin of every page for AI/LLM crawlers.
+link: https://github.com/SSARCandy/hexo-generator-llms
+tags:
+  - generator
+  - llms
+  - seo
+  - ai
