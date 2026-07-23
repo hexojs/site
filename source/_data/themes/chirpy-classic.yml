@@ -2,7 +2,6 @@ name: chirpy-classic
 title: Chirpy Classic
 description: 简约、高颜值且功能丰富的 Hexo 极简技术博客主题（支持 Zero-CLI 零配置与 Hexo CMS 可视化编辑）。
 link: https://github.com/base404/hexo-theme-chirpy
-preview: https://www.airbozh.cn/
 tags:
   - responsive
   - dark-mode
