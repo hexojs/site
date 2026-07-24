@@ -1,0 +1,11 @@
+name: chirpy
+description: A minimalist, high-aesthetic Hexo blog theme with 67 design system presets, zero-config architecture, and Hexo CMS schema support.
+link: https://github.com/base404/hexo-theme-chirpy
+preview: https://base404.github.io/hexo-theme-chirpy/
+tags:
+  - responsive
+  - dark
+  - light
+  - bento
+  - minimal
+  - cms
