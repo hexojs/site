@@ -1,0 +1,10 @@
+name: quiet-system
+description: A minimal dark Hexo theme for portfolios, research, and long-form writing.
+link: https://github.com/1-om/quiet-system-hexo
+preview: https://1-om.github.io/quiet-system-hexo/demo/
+tags:
+  - responsive
+  - dark
+  - portfolio
+  - minimal
+  - ejs
