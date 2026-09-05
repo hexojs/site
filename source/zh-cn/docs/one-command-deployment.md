@@ -127,7 +127,7 @@ deploy:
 
 ## FTPSync
 
-Install [hexo-deployer-ftpsync][].
+安装 [hexo-deployer-ftpsync][]。
 
 ```bash
 $ npm install hexo-deployer-ftpsync --save
