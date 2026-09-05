@@ -212,15 +212,8 @@ hexo.extend.filter.register("after_clean", function () {
 
 Adiciona um middleware ao servidor. `app` é uma instância de [Connect][].
 
-Por exemplo, para adicionar `X-Powered-By: Hexo` ao cabeçalho de resposta:
-
-```js
-hexo.extend.filter.register("server_middleware", function (app) {
-  app.use(function (req, res, next) {
-    res.setHeader("X-Powered-By", "Hexo");
-    next();
-  });
-});
-```
+This hook is provided by [hexo-server][], not Hexo core, so it only runs when `hexo-server` is installed. See the [hexo-server README][] for an implementation example.
 
 [Connect]: https://github.com/senchalabs/connect
+[hexo-server]: https://github.com/hexojs/hexo-server
+[hexo-server README]: https://github.com/hexojs/hexo-server#middleware

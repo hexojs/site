@@ -213,15 +213,8 @@ hexo.extend.filter.register("after_clean", function () {
 
 新增伺服器的 Middleware。 `app` 是一個 [Connect][] 實例。
 
-舉例來說，在回應標頭中新增 `X-Powered-By: Hexo`。
-
-```js
-hexo.extend.filter.register("server_middleware", function (app) {
-  app.use(function (req, res, next) {
-    res.setHeader("X-Powered-By", "Hexo");
-    next();
-  });
-});
-```
+This hook is provided by [hexo-server][], not Hexo core, so it only runs when `hexo-server` is installed. See the [hexo-server README][] for an implementation example.
 
 [Connect]: https://github.com/senchalabs/connect
+[hexo-server]: https://github.com/hexojs/hexo-server
+[hexo-server README]: https://github.com/hexojs/hexo-server#middleware
