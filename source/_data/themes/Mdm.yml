@@ -1,12 +1,13 @@
-description: A material design theme, with dark mode. Suitable for PC & Phone
+description: A responsive Material Design 3 theme with dynamic colors, dark mode, and infinite scrolling.
 link: https://github.com/TonyChenn/mdm
-preview: https://tonychenn.cn
+preview: https://blog.tonychenn.cn
 tags:
   - Material Design
   - Light/Dark Mode
-  - clean
-  - Hitokoto
   - Responsive
+  - Infinite Scroll
+  - SEO
+  - Gitalk
   - Valine
 repository:
   is_archived: false
