@@ -1,0 +1,10 @@
+description: A dark, responsive Hexo theme powered by Web Components, with immersive reading, search, music and Giscus comments.
+link: https://github.com/callmesoul/soul-blog-theme
+preview: https://callmesoul.github.io/
+tags:
+  - responsive
+  - dark
+  - web_components
+  - search
+  - music
+  - giscus
