@@ -1,7 +1,8 @@
+---
 title: Documentação
 ---
 
-Bem-vindo à documentação do Hexo. Se você encontrar algum problema ao usar o Hexo, dê uma olhada no  [guia de solução de problemas](troubleshooting.html), abra uma issue no [GitHub](https://github.com/hexojs/hexo/issues) ou inicie um tópico no [Google Group](https://groups.google.com/group/hexo).
+Bem-vindo à documentação do Hexo. Se você encontrar algum problema ao usar o Hexo, dê uma olhada no [guia de solução de problemas](troubleshooting.html), abra uma issue no [GitHub](https://github.com/hexojs/hexo/issues) ou inicie um tópico no [Google Group](https://groups.google.com/group/hexo).
 
 ## O que é o Hexo?
 
@@ -13,24 +14,16 @@ Demora apenas alguns minutos para configurar o Hexo. Se você encontrar um probl
 
 {% youtube ARted4RniaU %}
 
-### Requerimentos
+### Requirements
 
 Instalar o Hexo é bastante fácil. No entanto, você precisa ter algumas outras coisas instaladas primeiro:
 
-- [Node.js](http://nodejs.org/)
+- [Node.js](http://nodejs.org/) (See [Required Node.js version](#Required-Node-js-version))
 - [Git](http://git-scm.com/)
 
 Se o seu computador já possui estes, parabéns! Basta instalar o Hexo com o npm:
 
-``` bash
-$ npm install -g hexo-cli
-```
-
 Caso contrário, siga as instruções a seguir para instalar todos os requisitos.
-
-{% note warn Para usuários Mac %}
-Você pode encontrar alguns problemas ao compilar. Instale o Xcode da App Store primeiro. Depois que o Xcode estiver instalado, abra o Xcode e vá para **Preferences -> Download -> Command Line Tools -> Install** para instalar as ferramentas de linhas de comandos.
-{% endnote %}
 
 ### Instalando o Git
 
@@ -39,35 +32,80 @@ Você pode encontrar alguns problemas ao compilar. Instale o Xcode da App Store 
 - Linux (Ubuntu, Debian): `sudo apt-get install git-core`
 - Linux (Fedora, Red Hat, CentOS): `sudo yum install git-core`
 
+{% note warn Para usuários Mac %}
+Você pode encontrar alguns problemas ao compilar. Instale o Xcode da App Store primeiro. Depois que o Xcode estiver instalado, abra o Xcode e vá para **Preferences -> Download -> Command Line Tools -> Install** para instalar as ferramentas de linhas de comandos.
+{% endnote %}
+
 ### Instalando o Node.js
 
-A melhor maneira de instalar o Node.js é com o [Node Version Manager](https://github.com/creationix/nvm).
-Felizmente, os criadores do nvm fornecem um script simples que instala automaticamente o nvm:
+Node.js provides [official installer](https://nodejs.org/en/download/) for most platforms.
 
-cURL:
+Alternative installation methods:
 
-``` bash
-$ curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash
-```
+- Windows: Install it with [nvs](https://github.com/jasongin/nvs/) (recommended) or [nvm](https://github.com/nvm-sh/nvm).
+- Mac: Install it with [Homebrew](https://brew.sh/) or [MacPorts](http://www.macports.org/).
+- Linux (DEB/RPM-based): Install it with [NodeSource](https://github.com/nodesource/distributions).
+- Others: Install it through respective package manager. Refer to [the guide](https://nodejs.org/en/download/package-manager/) provided by Node.js.
 
-Wget:
+nvs is also recommended for Mac and Linux to avoid possible permission issue.
 
-``` bash
-$ wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash
-```
+{% note info Windows %}
+If you use the official installer, make sure **Add to PATH** is checked (it's checked by default).
+{% endnote %}
 
-Uma vez que o nvm esteja instalado, reinicie o terminal e execute o seguinte comando para instalar o Node.js:
+{% note warn Mac / Linux %}
+If you encounter `EACCES` permission error when trying to install Hexo, please follow [the workaround](https://docs.npmjs.com/resolving-eacces-permissions-errors-when-installing-packages-globally) provided by npmjs; overriding with root/sudo is highly discouraged.
+{% endnote %}
 
-``` bash
-$ nvm install stable
-```
-
-Alternativamente, é possível baixar e executar [o instalador do Node.js](http://nodejs.org/).
+{% note info Linux %}
+If you installed Node.js using Snap, you may need to manually run `npm install` in the target folder when [initializing](/docs/commands#init) a blog.
+{% endnote %}
 
 ### Instalando Hexo
 
 Uma vez que todos os requisitos estão instalados, você pode instalar o Hexo com npm:
 
-``` bash
+```bash
 $ npm install -g hexo-cli
 ```
+
+### Advanced installation and usage
+
+Advanced users may prefer to install and use `hexo` package instead.
+
+```bash
+$ npm install hexo
+```
+
+Once installed, you can run Hexo in two ways:
+
+1. `npx hexo <command>`
+2. Linux users can set relative path of `node_modules/` folder:
+
+```bash
+echo 'PATH="$PATH:./node_modules/.bin"' >> ~/.profile
+```
+
+then run Hexo using `hexo <command>`
+
+### Required Node.js version
+
+If you are stuck with older Node.js, you can consider installing a past version of Hexo.
+
+Please note we do not provide bugfixes to past versions of Hexo.
+
+We highly recommend to always install the [latest version](https://www.npmjs.com/package/hexo?activeTab=versions) of Hexo and the [recommended version](#Requirements) of Node.js, whenever possible.
+
+| Hexo version | Minimum (Node.js version) | Less than (Node.js version) |
+| ------------ | ------------------------- | --------------------------- |
+| 8.0+         | 20.19.0                   | latest                      |
+| 7.0+         | 14.0.0                    | latest                      |
+| 6.2+         | 12.13.0                   | latest                      |
+| 6.0+         | 12.13.0                   | 18.5.0                      |
+| 5.0+         | 10.13.0                   | 12.0.0                      |
+| 4.1 - 4.2    | 8.10                      | 10.0.0                      |
+| 4.0          | 8.6                       | 8.10.0                      |
+| 3.3 - 3.9    | 6.9                       | 8.0.0                       |
+| 3.2 - 3.3    | 0.12                      | unknown                     |
+| 3.0 - 3.1    | 0.10 or iojs              | unknown                     |
+| 0.0.1 - 2.8  | 0.10                      | unknown                     |

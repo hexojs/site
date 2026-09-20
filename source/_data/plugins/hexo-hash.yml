@@ -1,0 +1,17 @@
+description: 为静态资源创建哈希版本 | Create hash versions for static resources
+link: https://github.com/lete114/Hexo-hash
+tags:
+  - hash
+  - rev
+  - revving
+  - cache
+  - file
+  - files
+  - caching
+  - version
+  - expire
+  - assets
+repository:
+  is_archived: false
+  stars: 4
+  last_commit_date: '2023-05-18T07:21:06Z'

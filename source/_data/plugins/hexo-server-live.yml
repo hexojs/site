@@ -1,0 +1,9 @@
+description: Live reload while source file changed for Hexo.
+link: https://github.com/KazariEX/hexo-server-live
+tags:
+  - server
+  - livereload
+repository:
+  is_archived: false
+  stars: 3
+  last_commit_date: '2024-01-21T14:59:18Z'

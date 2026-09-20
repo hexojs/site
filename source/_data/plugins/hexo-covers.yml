@@ -1,0 +1,17 @@
+description: >-
+  Microbrowser covers for Hexo static site generator so you'll have compelling
+  webpage preview while sharing the link via iMessage, WhatsApp, Telegram,
+  Facebook and others.
+link: https://github.com/sergeyzwezdin/hexo-covers
+tags:
+  - filter
+  - generator
+  - cover
+  - image
+  - images
+  - microbrowser
+  - review
+repository:
+  is_archived: false
+  stars: 21
+  last_commit_date: '2022-12-14T07:19:46Z'

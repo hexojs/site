@@ -1,0 +1,12 @@
+description: >-
+  A plugin make your site as a PWA, can be added to home screen and can work
+  offline
+link: https://github.com/lavas-project/hexo-pwa
+tags:
+  - PWA
+  - Service Worker
+  - Web App Manifest
+repository:
+  is_archived: false
+  stars: 132
+  last_commit_date: '2020-03-21T04:52:13Z'

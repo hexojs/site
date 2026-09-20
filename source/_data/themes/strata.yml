@@ -1,0 +1,12 @@
+description: A responsive full featured blog or portfolio theme
+link: https://github.com/livingos/hexo-theme-strata
+preview: https://livingos.github.io/hexo-theme-strata/
+tags:
+  - responsive
+  - gravatar
+  - gallery
+  - blog
+repository:
+  is_archived: false
+  stars: 32
+  last_commit_date: '2017-04-26T15:04:08Z'

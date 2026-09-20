@@ -1,0 +1,10 @@
+description: BrowserSync plugin for Hexo.
+link: https://github.com/hexojs/hexo-browsersync
+tags:
+  - official
+  - browsersync
+  - server
+repository:
+  is_archived: false
+  stars: 147
+  last_commit_date: '2023-12-31T06:19:39Z'

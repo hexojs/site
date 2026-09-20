@@ -1,0 +1,11 @@
+description: A minimalist theme for for Hexo.
+link: https://github.com/17px/hexo-theme-cosy
+preview: https://www.mozzie.cn
+tags:
+  - responsive
+  - widget
+  - two_column
+repository:
+  is_archived: false
+  stars: 89
+  last_commit_date: '2024-04-21T07:51:07Z'

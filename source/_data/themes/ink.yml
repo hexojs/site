@@ -1,0 +1,13 @@
+description: A simple and easy-to-use theme. Inspired by the starter theme of bearblog.
+link: https://github.com/hoytzhang/hexo-theme-ink/
+preview: https://hoytzhang.github.io/hexo-theme-ink/
+tags:
+  - simple
+  - bearblog
+  - clean
+  - gallery
+  - one_column
+repository:
+  is_archived: false
+  stars: 2
+  last_commit_date: '2025-01-08T05:15:10Z'

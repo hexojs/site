@@ -1,0 +1,22 @@
+description: >-
+  A clean, lightweight, and minimalist Hexo theme for developers, based on the
+  Hermes theme.
+link: https://github.com/Cytrogen/hexo-theme-ares
+preview: https://hexo-theme-ares-demo.netlify.app/
+tags:
+  - minimal
+  - responsive
+  - light
+  - one_column
+  - ares
+  - hermes
+  - apollo
+  - i18n
+  - 中文
+  - search
+  - pug
+  - scss
+repository:
+  is_archived: false
+  stars: 1
+  last_commit_date: '2025-11-06T20:36:58Z'

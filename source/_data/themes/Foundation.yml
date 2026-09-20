@@ -1,0 +1,12 @@
+description: A theme based on the Zurb Foundation 5 theme
+link: https://github.com/chrisl8888/hexo-theme-zurb-foundation
+preview: http://chrisjlee.github.io/hexo-theme-zurb-foundation
+tags:
+  - responsive
+  - mobile_first
+  - simple
+  - white
+repository:
+  is_archived: false
+  stars: 24
+  last_commit_date: '2015-06-13T03:02:14Z'

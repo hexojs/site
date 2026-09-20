@@ -1,0 +1,12 @@
+description: >-
+  Index posts and contents in [Algolia](https://www.algolia.com/) and offer a
+  blazing fast search experience to your users.
+link: https://github.com/thom4parisot/hexo-algolia
+tags:
+  - search
+  - algolia
+  - index
+repository:
+  is_archived: false
+  stars: 95
+  last_commit_date: '2021-02-12T07:58:23Z'

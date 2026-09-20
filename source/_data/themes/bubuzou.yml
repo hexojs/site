@@ -1,0 +1,12 @@
+description: A theme inspired by apollo
+link: https://github.com/Bulandent/hexo-theme-bubuzou
+preview: http://bubuzou.com/
+tags:
+  - 中文
+  - responsive
+  - widget
+  - simple
+repository:
+  is_archived: false
+  stars: 121
+  last_commit_date: '2024-01-23T06:43:21Z'

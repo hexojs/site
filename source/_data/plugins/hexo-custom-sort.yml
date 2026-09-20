@@ -1,0 +1,10 @@
+description: Plugin helps to sort posts by required fields
+link: https://github.com/dimonpanik/hexo-custom-sort
+tags:
+  - fields
+  - locals
+  - sort
+repository:
+  is_archived: false
+  stars: 0
+  last_commit_date: '2020-09-16T13:32:59Z'

@@ -1,0 +1,10 @@
+description: Yet, another blog encrypt plugin for hexo.
+link: https://github.com/D0n9X1n/hexo-blog-encrypt
+tags:
+  - encrypt
+  - aes
+  - security
+repository:
+  is_archived: false
+  stars: 1047
+  last_commit_date: '2026-05-19T05:02:36Z'

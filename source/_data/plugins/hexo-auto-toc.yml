@@ -1,0 +1,15 @@
+description: >-
+  Automatically generates a responsive table of contents that fixes to the side
+  of the article page or above the articles, depending on the user's device.
+link: https://github.com/70v-Yoyo/hexo-auto-toc
+tags:
+  - article
+  - contents
+  - toc
+  - md
+  - blog
+  - hexo
+repository:
+  is_archived: false
+  stars: 0
+  last_commit_date: '2025-07-29T05:03:16Z'

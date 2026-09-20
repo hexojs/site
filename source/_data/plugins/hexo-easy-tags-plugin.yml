@@ -1,0 +1,13 @@
+description: A Hexo plugin that automatically corrects tag names.
+link: https://github.com/dailyrandomphoto/hexo-easy-tags-plugin
+tags:
+  - tags
+  - tag-name
+  - case-insensitive
+  - transform
+  - lowercase
+  - slug
+repository:
+  is_archived: false
+  stars: 6
+  last_commit_date: '2020-01-03T06:21:27Z'

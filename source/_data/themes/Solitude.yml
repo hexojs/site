@@ -1,0 +1,16 @@
+description: 一款优雅的 Hexo 主题，设计师风格。
+link: https://github.com/everfu/hexo-theme-solitude
+preview: https://blog.wzsco.top/
+tags:
+  - 优雅
+  - 设计师风格
+  - 组件化
+  - 短标签
+  - 中文
+  - English
+  - 速度快
+  - pug & stylus
+repository:
+  is_archived: false
+  stars: 1170
+  last_commit_date: '2026-05-10T16:12:58Z'

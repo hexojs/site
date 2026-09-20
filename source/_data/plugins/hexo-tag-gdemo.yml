@@ -1,0 +1,10 @@
+description: glorious-demo tag plugin for Hexo
+link: https://github.com/heowc/hexo-tag-gdemo
+tags:
+  - tag
+  - demo
+  - glorious-demo
+repository:
+  is_archived: false
+  stars: 13
+  last_commit_date: '2025-12-02T15:26:12Z'

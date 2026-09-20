@@ -1,0 +1,12 @@
+description: Package manager for Hexo.
+link: https://github.com/adamsiwiec/hexagon
+tags:
+  - themes
+  - plugins
+  - emojis
+  - cli
+  - manager
+repository:
+  is_archived: false
+  stars: 56
+  last_commit_date: '2022-07-22T05:17:11Z'

@@ -1,0 +1,11 @@
+description: A hexo plugin for node-scss
+link: https://github.com/aispin/hexo-renderer-scss
+tags:
+  - renderer
+  - scss
+  - css
+  - style
+repository:
+  is_archived: false
+  stars: 28
+  last_commit_date: '2023-01-04T12:09:26Z'

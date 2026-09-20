@@ -1,0 +1,10 @@
+description: Archive generator plugin for Hexo.
+link: https://github.com/hexojs/hexo-generator-archive
+tags:
+  - official
+  - generator
+  - archive
+repository:
+  is_archived: false
+  stars: 36
+  last_commit_date: '2026-04-08T18:03:05Z'

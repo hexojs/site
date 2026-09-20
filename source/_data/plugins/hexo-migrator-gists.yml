@@ -1,0 +1,10 @@
+description: GithubGist migrator plugin for Hexo.
+link: https://github.com/xujiaao/hexo-migrator-gists
+tags:
+  - migrator
+  - github
+  - gist
+repository:
+  is_archived: false
+  stars: 1
+  last_commit_date: '2018-02-02T06:18:57Z'

@@ -1,0 +1,14 @@
+description: A port of the Octopress 2 'classic' theme
+link: https://github.com/jbreckmckye/hexo-theme-octo
+preview: http://www.breck-mckye.com
+tags:
+  - octopress
+  - responsive
+  - google analytics
+  - disqus
+  - readability
+  - monochrome
+repository:
+  is_archived: false
+  stars: 41
+  last_commit_date: '2020-08-04T21:46:40Z'

@@ -1,0 +1,13 @@
+description: A terminal like hexo theme.
+link: https://github.com/tinkink-net/hexo-theme-terminal
+preview: https://blog.tinkink.net/
+tags:
+  - 中文
+  - English
+  - simple
+  - dark
+  - responsive
+repository:
+  is_archived: false
+  stars: 23
+  last_commit_date: '2022-07-11T07:38:15Z'

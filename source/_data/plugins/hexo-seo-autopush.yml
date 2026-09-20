@@ -1,0 +1,13 @@
+description: >-
+  Daily automatic submission of urls to Baidu and Google Bing|每天自动提交site
+  url到百度、谷歌、必应
+link: https://github.com/lete114/Hexo-SEO-AutoPush
+tags:
+  - baidu
+  - bing
+  - google
+  - seo
+repository:
+  is_archived: false
+  stars: 94
+  last_commit_date: '2024-07-07T12:34:01Z'

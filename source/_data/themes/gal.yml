@@ -1,0 +1,13 @@
+description: https://mygalgame.com wordpress theme
+link: https://github.com/ZEROKISEKI/hexo-theme-gal
+preview: http://sora3.coding.me
+tags:
+  - bootstrap
+  - responsive
+  - two_columns
+  - zanblog
+  - mygalgame
+repository:
+  is_archived: false
+  stars: 419
+  last_commit_date: '2019-10-16T13:15:42Z'

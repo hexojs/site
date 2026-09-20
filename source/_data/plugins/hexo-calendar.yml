@@ -1,0 +1,13 @@
+description: >-
+  Insert a calendar like Github contributions into your blog. | 在博客中插入类似 Github
+  contributions 的活动日历。
+link: https://github.com/HCLonely/hexo-calendar
+tags:
+  - helper
+  - tag
+  - calendar
+  - echarts
+repository:
+  is_archived: false
+  stars: 47
+  last_commit_date: '2024-09-13T07:19:50Z'

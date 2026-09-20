@@ -1,0 +1,11 @@
+description: Minify HTML files with HTMLMinifier.
+link: https://github.com/hexojs/hexo-html-minifier
+tags:
+  - official
+  - filter
+  - html
+  - minify
+repository:
+  is_archived: false
+  stars: 27
+  last_commit_date: '2026-05-04T15:45:39Z'

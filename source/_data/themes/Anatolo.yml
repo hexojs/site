@@ -1,0 +1,13 @@
+description: A simple hexo theme based on Anatole.
+link: https://github.com/Lhcfl/hexo-theme-anatolo
+preview: https://lhcfl.github.io/Anatolodemo/
+tags:
+  - simple
+  - resume
+  - searchbox
+  - tagcloud
+  - Chinese
+repository:
+  is_archived: false
+  stars: 119
+  last_commit_date: '2025-01-09T09:02:51Z'

@@ -1,0 +1,10 @@
+description: Easily link Scripture references to Bible Gateway
+link: https://github.com/danieljsummers/hexo-tag-scripture
+tags:
+  - tag
+  - bible
+  - scripture
+repository:
+  is_archived: false
+  stars: 4
+  last_commit_date: '2024-04-03T22:46:50Z'

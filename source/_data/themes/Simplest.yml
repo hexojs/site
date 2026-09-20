@@ -1,0 +1,12 @@
+description: Very simple, written with swig & scss
+link: https://github.com/dnxbf321/hexo-theme-simplest
+preview: https://dnxbf321.github.io
+tags:
+  - responsive
+  - swig
+  - scss
+  - one_column
+repository:
+  is_archived: false
+  stars: 27
+  last_commit_date: '2017-04-20T06:45:42Z'

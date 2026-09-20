@@ -1,0 +1,12 @@
+description: Inserts an image tag using a github content distribution.
+link: https://github.com/wizicer/hexo-tag-githubimage/
+tags:
+  - website
+  - blog
+  - image
+  - embedded
+  - github
+repository:
+  is_archived: false
+  stars: 2
+  last_commit_date: '2015-11-27T14:05:29Z'

@@ -1,0 +1,12 @@
+description: Generate restful json data for Hexo plugins.
+link: https://github.com/wherewhere/hexo-generator-apis
+tags:
+  - restful
+  - json
+  - generator
+  - api
+  - openapi
+repository:
+  is_archived: false
+  stars: 2
+  last_commit_date: '2026-01-01T04:01:12Z'

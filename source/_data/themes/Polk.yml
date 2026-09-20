@@ -1,0 +1,14 @@
+description: Simple blog theme, focusing on articles
+link: https://github.com/chunqiuyiyu/hexo-theme-polk
+preview: https://github.com/chunqiuyiyu/hexo-theme-polk
+tags:
+  - simple
+  - responsive
+  - one_column
+  - light
+  - Chinese
+  - minimalism
+repository:
+  is_archived: false
+  stars: 96
+  last_commit_date: '2023-12-26T11:09:32Z'

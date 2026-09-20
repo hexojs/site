@@ -1,0 +1,12 @@
+description: A plugin using shiki for code highlight,built for hexo.
+link: https://github.com/nova1751/hexo-shiki-plugin
+tags:
+  - code
+  - shiki
+  - highlight
+  - plugin
+  - hexo
+repository:
+  is_archived: false
+  stars: 10
+  last_commit_date: '2026-04-12T16:13:10Z'

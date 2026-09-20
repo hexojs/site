@@ -1,0 +1,13 @@
+description: A light theme base on Even, inspired by Giuem
+link: https://github.com/frostfan/hexo-theme-polarbear
+preview: https://d2fan.com
+tags:
+  - simple
+  - widget
+  - light
+  - two_columns
+  - 中文
+repository:
+  is_archived: false
+  stars: 320
+  last_commit_date: '2024-05-14T10:38:20Z'

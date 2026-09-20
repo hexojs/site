@@ -1,0 +1,14 @@
+description: A minimal theme
+link: https://github.com/tiaanduplessis/hexo-theme-brewski
+preview: https://tiaanduplessis.github.io/hexo-theme-brewski-demo/
+tags:
+  - clean
+  - simple
+  - minimal
+  - blog
+  - custom pages
+  - pjax
+repository:
+  is_archived: false
+  stars: 107
+  last_commit_date: '2020-06-01T08:35:53Z'

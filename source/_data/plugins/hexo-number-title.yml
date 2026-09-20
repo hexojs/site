@@ -1,0 +1,10 @@
+description: the hexo blog post url is displayed as a number.
+link: https://github.com/hluglk/hexo-number-title
+tags:
+  - permalink
+  - link
+  - 固定链接
+repository:
+  is_archived: true
+  stars: 7
+  last_commit_date: '2020-01-19T03:18:26Z'

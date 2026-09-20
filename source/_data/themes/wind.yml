@@ -1,0 +1,15 @@
+description: A light and pure theme, in this complicated world
+link: https://github.com/voezy/hexo-theme-wind
+preview: https://blog.voezy.com/
+tags:
+  - responsive
+  - widget
+  - one_column
+  - light
+  - simple
+  - google analytics
+  - disqus
+repository:
+  is_archived: false
+  stars: 23
+  last_commit_date: '2018-06-06T05:26:39Z'

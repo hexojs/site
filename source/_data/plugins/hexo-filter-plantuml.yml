@@ -1,0 +1,11 @@
+description: Generate PlantUML Diagram with markdown code fence
+link: https://github.com/miao1007/hexo-filter-plantuml
+tags:
+  - filter
+  - plantuml
+  - uml
+  - markdown
+repository:
+  is_archived: false
+  stars: 35
+  last_commit_date: '2021-06-13T03:31:57Z'

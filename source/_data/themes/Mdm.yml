@@ -1,0 +1,15 @@
+description: A responsive Material Design 3 theme with dynamic colors, dark mode, and infinite scrolling.
+link: https://github.com/TonyChenn/mdm
+preview: https://blog.tonychenn.cn
+tags:
+  - Material Design
+  - Light/Dark Mode
+  - Responsive
+  - Infinite Scroll
+  - SEO
+  - Gitalk
+  - Valine
+repository:
+  is_archived: false
+  stars: 34
+  last_commit_date: '2024-09-21T05:17:44Z'

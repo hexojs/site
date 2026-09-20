@@ -1,0 +1,11 @@
+description: Generate flowchart diagrams for Hexo.
+link: https://github.com/bubkoo/hexo-filter-flowchart
+tags:
+  - filter
+  - flowchart
+  - diagrams
+  - markdown
+repository:
+  is_archived: false
+  stars: 121
+  last_commit_date: '2019-06-11T10:58:01Z'

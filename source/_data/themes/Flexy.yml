@@ -1,0 +1,16 @@
+description: Flexy is a modern theme, written in Jade and Stylus using Flexbox
+link: https://github.com/sjaakvandenberg/flexy
+preview: https://svdb.co/
+tags:
+  - responsive
+  - flexbox
+  - two_columns
+  - clean
+  - css3
+  - jade
+  - stylus
+  - translate3d
+repository:
+  is_archived: false
+  stars: 105
+  last_commit_date: '2016-01-04T12:35:37Z'

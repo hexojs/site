@@ -1,0 +1,6 @@
+description: borrow taxonomy from hugo
+link: https://www.npmjs.com/package/hexo-generator-taxonomy
+tags:
+  - generator
+  - taxonomy
+  - awesome

@@ -1,0 +1,11 @@
+description: >-
+  hexo-tag-bootstrap is a collection of Hexo tag plugins, which wraps most
+  Twitter-Bootstrap 4 components in a uniform way.
+link: https://github.com/wzpan/hexo-tag-bootstrap
+tags:
+  - tag_plugins
+  - bootstrap
+repository:
+  is_archived: false
+  stars: 27
+  last_commit_date: '2021-10-03T15:18:28Z'

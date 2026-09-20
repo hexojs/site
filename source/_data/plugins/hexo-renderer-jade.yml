@@ -1,0 +1,11 @@
+description: Jade/Pug renderer for Hexo.
+link: https://github.com/hexojs/hexo-renderer-jade
+tags:
+  - official
+  - renderer
+  - jade
+  - pug
+repository:
+  is_archived: true
+  stars: 29
+  last_commit_date: '2019-10-19T08:02:47Z'

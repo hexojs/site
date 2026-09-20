@@ -1,0 +1,10 @@
+description: Postrender your posts with hanzi (漢字標準格式).
+link: https://github.com/lujjjh/hexo-hanzi
+tags:
+  - filter
+  - hanzi
+  - han-css
+repository:
+  is_archived: true
+  stars: 27
+  last_commit_date: '2020-07-24T12:13:38Z'

@@ -1,0 +1,11 @@
+description: Pin posts on the top of the post list.
+link: https://github.com/cubesky/hexo-helper-post-top
+tags:
+  - helper
+  - pin
+  - post
+  - top
+repository:
+  is_archived: false
+  stars: 6
+  last_commit_date: '2018-09-20T08:18:24Z'

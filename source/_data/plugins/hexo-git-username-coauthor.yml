@@ -1,0 +1,13 @@
+description: >-
+  A Hexo plugin that give your post an default author/coauthor from git user
+  name.
+link: https://github.com/peixin/hexo-git-username-coauthor
+tags:
+  - hexo
+  - author
+  - coauthors
+  - git-username
+repository:
+  is_archived: false
+  stars: 1
+  last_commit_date: '2020-05-14T01:53:46Z'

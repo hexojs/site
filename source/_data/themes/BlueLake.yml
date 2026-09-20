@@ -1,0 +1,17 @@
+description: A responsive , simple theme
+link: https://github.com/chaooo/hexo-theme-BlueLake
+preview: http://chaoo.oschina.io/
+tags:
+  - responsive
+  - multi-languages
+  - two_columns
+  - blog
+  - simple
+  - mobile
+  - light
+  - jade
+  - stylus
+repository:
+  is_archived: false
+  stars: 327
+  last_commit_date: '2022-04-21T08:30:19Z'

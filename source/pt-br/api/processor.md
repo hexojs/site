@@ -1,3 +1,4 @@
+---
 title: Processor
 ---
 
@@ -5,9 +6,9 @@ Um `processor` √© utilizado para processar os arquivos fontes contidos no diret√
 
 ## Resumo
 
-``` js
-hexo.extend.processor.register(rule, function(file){
- // ...
+```js
+hexo.extend.processor.register(rule, function (file) {
+  // ...
 });
 ```
 

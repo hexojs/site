@@ -1,0 +1,14 @@
+description: A classy theme for Hexo for academia + blogging.
+link: https://github.com/chen-yingfa/hexo-theme-fengye
+preview: http://chen-yingfa.github.io
+tags:
+  - academic
+  - responsive
+  - one_column
+  - mobile
+  - minimalistic
+  - maple
+repository:
+  is_archived: false
+  stars: 37
+  last_commit_date: '2025-08-04T04:13:04Z'

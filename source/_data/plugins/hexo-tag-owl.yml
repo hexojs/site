@@ -1,0 +1,19 @@
+description: A media tag for Hexo 3.x
+link: https://github.com/m80126colin/hexo-tag-owl
+tags:
+  - blog
+  - tag
+  - video
+  - youtube
+  - niconico
+  - bilibili
+  - vimeo
+  - tudou
+  - youku
+  - tencent
+  - image
+  - giphy
+repository:
+  is_archived: false
+  stars: 44
+  last_commit_date: '2020-09-01T11:44:44Z'

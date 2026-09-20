@@ -1,0 +1,10 @@
+description: Help you generate a random page to locate a random post in your hexo blog.
+link: https://github.com/Drew233/hexo-generator-random
+tags:
+  - generator
+  - post
+  - random
+repository:
+  is_archived: false
+  stars: 31
+  last_commit_date: '2020-03-20T04:02:51Z'

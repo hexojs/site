@@ -1,0 +1,10 @@
+description: Hides content until the reveal area is pressed.
+link: https://github.com/fletchto99/hexo-sliding-spoiler
+tags:
+  - spoiler
+  - sliding
+  - hidden-content
+repository:
+  is_archived: false
+  stars: 29
+  last_commit_date: '2026-05-04T01:29:55Z'

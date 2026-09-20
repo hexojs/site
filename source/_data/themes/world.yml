@@ -1,0 +1,12 @@
+description: A Hexo theme devoted to i18n (multilingual support).
+link: https://github.com/kiwirafe/hexo-theme-world/
+preview: https://kiwirafe.github.io/hexo-theme-world/
+tags:
+  - i18n
+  - responsive
+  - multilingual
+  - 中文
+repository:
+  is_archived: false
+  stars: 1
+  last_commit_date: '2024-07-14T06:14:55Z'

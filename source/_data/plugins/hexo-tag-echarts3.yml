@@ -1,0 +1,10 @@
+description: A simple plugin for inserting ECharts 3 by using tags in Hexo.
+link: https://github.com/kchen0x/hexo-tag-echarts3
+tags:
+  - tag
+  - echarts
+  - chart
+repository:
+  is_archived: false
+  stars: 33
+  last_commit_date: '2018-09-03T02:23:51Z'

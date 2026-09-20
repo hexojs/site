@@ -1,0 +1,10 @@
+description: The easy to use chart tags for Hexo.
+link: https://github.com/aspirewit/hexo-tag-easy-charts
+tags:
+  - barchart
+  - linechart
+  - piechart
+repository:
+  is_archived: false
+  stars: 31
+  last_commit_date: '2017-03-24T14:06:37Z'

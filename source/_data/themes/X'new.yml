@@ -1,0 +1,13 @@
+description: X'new theme. Referred from https://github.com/sjaakvandenberg/flexy
+link: https://github.com/XadillaX/hexo-xnew
+preview: https://xcoder.in/
+tags:
+  - responsive
+  - flexbox
+  - two_columns
+  - css3
+  - translate3d
+repository:
+  is_archived: false
+  stars: 33
+  last_commit_date: '2021-05-19T06:20:18Z'

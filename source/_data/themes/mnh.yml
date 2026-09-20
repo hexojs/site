@@ -1,0 +1,15 @@
+description: A simple, clean Hexo theme.
+link: https://github.com/czgaotian/hexo-theme-mnh
+preview: https://mnh.gao.tn
+tags:
+  - clean
+  - scss
+  - simple
+  - beautiful
+  - blog
+  - custom pages
+  - 中文
+repository:
+  is_archived: false
+  stars: 8
+  last_commit_date: '2023-07-31T04:04:20Z'

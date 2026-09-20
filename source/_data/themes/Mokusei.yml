@@ -1,0 +1,13 @@
+description: A dark theme
+link: https://github.com/ohoh3000/hexo-theme-mokusei
+preview: https://blog.shijukun.com/
+tags:
+  - dark
+  - light
+  - widget
+  - three_columns
+  - clean
+repository:
+  is_archived: false
+  stars: 8
+  last_commit_date: '2020-09-06T13:08:02Z'

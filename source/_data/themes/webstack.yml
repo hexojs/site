@@ -1,0 +1,11 @@
+description: A hexo theme based on webstack.
+link: https://github.com/HCLonely/hexo-theme-webstack
+preview: https://webstack.hclonely.com/
+tags:
+  - navigation
+  - webstack
+  - 中文
+repository:
+  is_archived: false
+  stars: 517
+  last_commit_date: '2025-09-05T12:03:29Z'

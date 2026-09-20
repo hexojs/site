@@ -1,0 +1,10 @@
+description: Index generator plugin for Hexo.
+link: https://github.com/hexojs/hexo-generator-index
+tags:
+  - official
+  - generator
+  - index
+repository:
+  is_archived: false
+  stars: 54
+  last_commit_date: '2026-05-17T21:04:01Z'

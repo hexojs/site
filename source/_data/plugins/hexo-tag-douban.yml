@@ -1,0 +1,15 @@
+description: >-
+  Douban Tag for Hexo, you can easily add a Douban card of book, movie or music
+  into your posts.
+link: https://github.com/YuyingWu/hexo-tag-douban
+tags:
+  - douban
+  - tag
+  - markdown
+  - tag_plugins
+  - plugins
+  - 豆瓣
+repository:
+  is_archived: false
+  stars: 14
+  last_commit_date: '2019-01-08T09:47:42Z'

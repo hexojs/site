@@ -1,0 +1,9 @@
+description: A simple url card display plugin for hexo
+link: https://github.com/toastsgithub/hexo-valkyr-url
+tags:
+  - url
+  - card
+repository:
+  is_archived: false
+  stars: 12
+  last_commit_date: '2024-08-25T08:51:11Z'

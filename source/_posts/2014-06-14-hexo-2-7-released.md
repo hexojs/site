@@ -1,3 +1,4 @@
+---
 title: Hexo 2.7 Released
 ---
 Hexo 2.7 has been released with three new features. I'm going to introduce them below.

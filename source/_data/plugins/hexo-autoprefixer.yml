@@ -1,0 +1,11 @@
+description: Autoprefixer plugin for Hexo.
+link: https://github.com/hexojs/hexo-autoprefixer
+tags:
+  - official
+  - filter
+  - css
+  - autoprefixer
+repository:
+  is_archived: false
+  stars: 18
+  last_commit_date: '2023-07-29T00:10:39Z'

@@ -1,0 +1,9 @@
+description: Auto load hexo highlight style, support highlight and prismjs
+link: https://github.com/jiangtj-lab/hexo-patch-load-highlight-style
+tags:
+  - highlight
+  - prismjs
+repository:
+  is_archived: false
+  stars: 2
+  last_commit_date: '2021-03-19T02:14:32Z'

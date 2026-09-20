@@ -1,0 +1,11 @@
+description: A deployment plugin that uses Pulumi to publish to Amazon S3.
+link: https://github.com/thoward/hexo-deployer-pulumi
+tags:
+  - deployer
+  - pulumi
+  - s3
+  - iac
+repository:
+  is_archived: false
+  stars: 0
+  last_commit_date: '2024-11-14T21:50:41Z'

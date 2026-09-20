@@ -1,0 +1,14 @@
+description: A materialize and clean theme in nunjucks
+link: https://github.com/jonashao/hexo-theme-pteris
+preview: https://github.com/jonashao/hexo-theme-pteris
+tags:
+  - materialize
+  - simple
+  - nunjucks
+  - clean
+  - responsive
+  - one_column
+repository:
+  is_archived: false
+  stars: 16
+  last_commit_date: '2017-04-18T03:23:05Z'

@@ -1,81 +1,102 @@
+---
 title: Содействие
 ---
+
+Добро пожаловать в команду разработчиков Hexo. 🤗
+
 ## Разработчикам
 
-Мы рады желающим присоединится к развитию Hexo. Этот документ поможет вам начать.
+Мы рады желающим присоединиться к развитию Hexo. Этот документ поможет вам начать.
 
-### Прежде чем начать
+### Прежде, чем начать
 
-Пожалуйста, следите за стилем написания кода:
+Пожалуйста сначала прочтите [Contributor Covenant Code of Conduct](https://github.com/hexojs/hexo/blob/master/CODE_OF_CONDUCT.md).
+
+Убедительно просим, следите за стилем написания кода:
 
 - Следуйте [Google JavaScript Style Guide](https://google.github.io/styleguide/jsguide.html).
 - Используйте мягкие табы с двойным пробелом.
 - Не ставьте запятую в начале.
 
-### Рабочее пространство
+Кроме того, у Hexo есть своя собственная конфигурация [ESLint config](https://github.com/hexojs/eslint-config-hexo), поэтому, пожалуйста, убедитесь, что ваш вклад пройдёт ESLint проверку.
 
-1. Создайте форк [hexojs/site]
-1. Клонируйте репозиторий на компьютер и установите все зависимости.
+### Workflow
 
-    {% code %}
-    $ git clone https://github.com/<username>/hexo.git
-    $ cd hexo
-    $ npm install
-    $ git submodule update --init
-    {% endcode %}
+1. Создайте форк [hexojs/site][]
+2. Клонируйте репозиторий на компьютер и установите все зависимости.
 
-1. Создать отдельную ветку.
+```bash
+$ git clone https://github.com/<username>/hexo.git
+$ cd hexo
+$ npm install
+$ git submodule update --init
+```
 
-    {% code %}
-    $ git checkout -b new_feature
-    {% endcode %}
+3. Создать отдельную ветку.
 
-1. Вносите изменения.
-1. Выгрузите ветку:
+```bash
+$ git checkout -b new_feature
+```
 
-    {% code %}
-    $ git push origin new_feature
-    {% endcode %}
+4. Start hacking.
+5. Push the branch:
 
-1. Запросите принятие изменений с их описанием.
+```
+$ git push origin new_feature
+```
+
+6. Запросите принятие изменений с их описанием.
 
 ### На заметку
 
 - Не изменяйте номер версии в `package.json`.
 - Ваш запрос могут только принять, когда все тесты пройдут. Не забудьте провести испытания перед отправкой.
 
-    {% code %}
-    $ npm test
-    {% endcode %}
+```bash
+$ npm test
+```
+
+## Обновление официальных плагинов
+
+Также мы будем рады PR или задачам на странице [официальных плагинов](https://github.com/hexojs). 🤗
 
 ## Обновление документации
 
-Документация Hexo имеет открытый исходный код, его можно найти по адресу [hexojs/site].
+Документация Hexo имеет открытый исходный код, его можно найти по адресу [hexojs/site](https://github.com/hexojs/site).
 
-### Рабочее пространство
+### Workflow
 
-1. Создайте форк [hexojs/site]
-1. Клонируйте репозиторий на компьютер и установите все зависимости.
+1. Создайте форк [hexojs/site][]
+2. Клонируйте репозиторий на компьютер и установите все зависимости.
 
-    {% code %}
-    $ git clone https://github.com/<username>/site.git
-    $ cd site
-    $ npm install
-    {% endcode %}
+```bash
+$ npm install hexo-cli -g # If you don't have hexo-cli installed
+$ git clone https://github.com/<username>/site.git
+$ cd site
+$ npm install
+```
 
-1. Начать редактировать документацию. Вы можете запустить сервер для просмотра изменений.
+3. Начать редактировать документацию. Вы можете запустить сервер для просмотра изменений.
 
-    {% code %}
-    $ hexo server
-    {% endcode %}
+```bash
+$ hexo server
+```
 
-1. Выгрузите ветку.
-1. Запросите принятие изменений с их описанием.
+4. Выгрузите ветку.
+5. Запросите принятие изменений с их описанием.
 
 ### Перевод
 
-1. Добавьте новую папку с языком в папке `source`. (Всё в нижнем регистре)
-1. Скопируйте markdown фалы и шаблоны из папки `source` в папку с создаваемым переводом.
+#### Contribute translations
+
+[![Crowdin](https://badges.crowdin.net/hexo/localized.svg)](https://crowdin.com/project/hexo)
+
+Now we use the [Crowdin](https://crowdin.com/project/hexo) platform for translation, where anyone can contribute translations and vote for translations without manual git operations.
+
+#### Add a new language
+
+1. Submit a new issue to let us know. The members with access to the [Crowdin Project](https://crowdin.com/project/hexo) add the language in settings.
+1. After adding language in Crowdin, anyone can contribute translations on it.
 1. Добавьте новый язык в файл `source/_data/language.yml`.
 1. Скопируйте `en.yml` в `themes/navy/languages` и измените имя (всё в нижнем регистре).
 
@@ -84,8 +105,6 @@ title: Содействие
 Если Вы столкнулись с проблемой при использовании Hexo, то можно поискать решения в [устранении неполадок](troubleshooting.html) или задать вопросы на [GitHub](https://github.com/hexojs/hexo/issues) или [Google Group](https://groups.google.com/group/hexo). Если решения не нашлось, пожалуйста, сообщите об этом на GitHub.
 
 1. Воспроизведите проблему в режиме отладки [debug mode](commands.html#Режим-отладки).
-1. Запустите `hexo version` и прочтите описание версии.
-1. Создайте сообщение об ошибке с отладочными данными и номером используемой версии на GitHub.
+2. Следуйте инструкциям из шаблона issue, чтобы предоставить сообщение об отладке и версию при создании нового issue на GitHub.
 
-[hexojs/hexo]: https://github.com/hexojs/hexo
 [hexojs/site]: https://github.com/hexojs/site

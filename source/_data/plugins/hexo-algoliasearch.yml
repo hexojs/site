@@ -1,0 +1,10 @@
+description: A plugin to index posts of your Hexo blog on Algolia
+link: https://github.com/LouisBarranqueiro/hexo-algoliasearch
+tags:
+  - algoliasearch
+  - algolia
+  - search
+repository:
+  is_archived: false
+  stars: 152
+  last_commit_date: '2023-11-12T03:40:41Z'

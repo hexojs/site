@@ -1,0 +1,12 @@
+description: Material Design theme
+link: https://github.com/yscoder/hexo-theme-indigo
+preview: https://yscoder.github.io/
+tags:
+  - responsive
+  - chinese
+  - material
+  - less
+repository:
+  is_archived: false
+  stars: 2827
+  last_commit_date: '2019-01-25T08:40:52Z'

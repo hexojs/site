@@ -1,0 +1,12 @@
+description: A simple, elegant, book-like hexo theme with some useful features.
+link: https://github.com/kaiiiz/hexo-theme-book
+preview: https://kaiiiz.github.io/hexo-theme-book-demo/
+tags:
+  - Responsive
+  - Customizable
+  - Simple
+  - Elegant
+repository:
+  is_archived: true
+  stars: 355
+  last_commit_date: '2023-06-18T10:03:58Z'

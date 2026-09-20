@@ -1,0 +1,10 @@
+description: Amazon S3 and Cloudfront deployer plugin for Hexo.
+link: https://github.com/Wouter33/hexo-deployer-s3-cloudfront
+tags:
+  - deployer
+  - s3
+  - cloudfront
+repository:
+  is_archived: false
+  stars: 15
+  last_commit_date: '2017-01-07T11:46:30Z'

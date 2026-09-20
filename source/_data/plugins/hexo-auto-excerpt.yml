@@ -1,0 +1,10 @@
+description: Auto excerpt plugin for hexo. No need to manually add <!-- more --> tag.
+link: https://github.com/ashisherc/hexo-auto-excerpt
+tags:
+  - excerpt
+  - auto-excerpt
+  - read-more
+repository:
+  is_archived: false
+  stars: 21
+  last_commit_date: '2017-10-28T14:34:02Z'

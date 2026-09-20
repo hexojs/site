@@ -1,0 +1,17 @@
+description: A documentation theme
+link: https://github.com/zalando-incubator/hexo-theme-doc
+preview: https://zalando-incubator.github.io/hexo-theme-doc
+tags:
+  - documentation
+  - docs
+  - documentation-tool
+  - api-documentation
+  - api-docs
+  - rest-api-documentation
+  - swagger-ui
+  - swagger
+  - responsive
+repository:
+  is_archived: true
+  stars: 251
+  last_commit_date: '2020-04-15T12:05:04Z'

@@ -4,10 +4,13 @@ menu:
   news: 新聞
   plugins: 外掛
   themes: 主題
+  about: About
   search: 搜尋
 
 index:
   get_started: 開始使用
+  theme_intro: Choose from a huge library of spectacular, feature-packed and customizable themes. Create your own using any compatible template engines.
+  theme_link: Explore themes
 
 page:
   contents: 目錄
@@ -34,6 +37,9 @@ sidebar:
     server: 伺服器
     generating: 產生檔案
     deployment: 佈署
+    github_pages: GitHub Pages
+    gitlab_pages: GitLab Pages
+    one_command_deployment: One-Command Deployment
     customization: 自定
     permalinks: 永久連結
     themes: 主題
@@ -42,6 +48,7 @@ sidebar:
     variables: 變數
     helpers: 輔助函數
     internationalization: 國際化 (i18n)
+    syntax_highlight: 語法突顯
     plugins: 外掛
     miscellaneous: 其他
     troubleshooting: 解決問題
@@ -63,6 +70,7 @@ sidebar:
     filter: 過濾器 (Filter)
     generator: 產生器 (Generator)
     helper: 輔助函數 (Helper)
+    injector: 注射器 (Injector)
     migrator: 轉移器 (Migrator)
     processor: 處理器 (Processor)
     renderer: 渲染引擎 (Renderer)

@@ -1,0 +1,13 @@
+description: Still is a minimal, pure colored theme inspired by farbox and apollo
+link: https://github.com/JeremyFan/hexo-theme-still
+preview: http://jeremyfan.name/blog/
+tags:
+  - responsive
+  - minimal
+  - pure
+  - clean
+  - one_column
+repository:
+  is_archived: false
+  stars: 27
+  last_commit_date: '2020-12-10T04:44:14Z'

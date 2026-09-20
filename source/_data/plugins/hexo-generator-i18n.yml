@@ -1,0 +1,10 @@
+description: Multi-languages pages generator for Hexo
+link: https://github.com/Jamling/hexo-generator-i18n
+tags:
+  - i18n
+  - generator
+  - helper
+repository:
+  is_archived: false
+  stars: 39
+  last_commit_date: '2020-07-24T14:15:51Z'

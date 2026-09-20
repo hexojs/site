@@ -1,16 +1,20 @@
+---
 title: Установка
 ---
+
+{% youtube 0m2HnATkHOk %}
+
 После установки Hexo, запустите следующие команды в консоли для инициализации Hexo в папке `<folder>`.
 
-``` bash
+```bash
 $ hexo init <folder>
 $ cd <folder>
 $ npm install
 ```
 
-После инициализации папку будет выглядеть так:
+После инициализации папка будет выглядеть так:
 
-``` plain
+```plain
 .
 ├── _config.yml
 ├── package.json
@@ -21,15 +25,15 @@ $ npm install
 └── themes
 ```
 
-### _config.yml
+### \_config.yml
 
-Файл [конфигурации](configuration.html) сайта. В нём, возможно, настроить большинство параметров.
+Файл [конфигурации](configuration.html) сайта. В нём возможно настроить большинство параметров.
 
 ### package.json
 
-Данные приложений. [EJS](http://embeddedjs.com/), [Stylus](http://learnboost.github.io/stylus/) и [Markdown](http://daringfireball.net/projects/markdown/)  обработчики устанавливаются по умолчанию. При желании можно удалить их позже.
+Данные приложений. [EJS](https://ejs.co/)-, [Stylus](http://learnboost.github.io/stylus/)- и [Markdown](http://daringfireball.net/projects/markdown/)-обработчики устанавливаются по умолчанию. При желании можно удалить их позже.
 
-``` json package.json
+```json package.json
 {
   "name": "hexo-site",
   "version": "0.0.0",
@@ -38,15 +42,16 @@ $ npm install
     "version": ""
   },
   "dependencies": {
-    "hexo": "^3.0.0",
-    "hexo-generator-archive": "^0.1.0",
-    "hexo-generator-category": "^0.1.0",
-    "hexo-generator-index": "^0.1.0",
-    "hexo-generator-tag": "^0.1.0",
-    "hexo-renderer-ejs": "^0.1.0",
-    "hexo-renderer-stylus": "^0.2.0",
-    "hexo-renderer-marked": "^0.2.4",
-    "hexo-server": "^0.1.2"
+    "hexo": "^7.0.0",
+    "hexo-generator-archive": "^2.0.0",
+    "hexo-generator-category": "^2.0.0",
+    "hexo-generator-index": "^3.0.0",
+    "hexo-generator-tag": "^2.0.0",
+    "hexo-renderer-ejs": "^2.0.0",
+    "hexo-renderer-stylus": "^3.0.0",
+    "hexo-renderer-marked": "^6.0.0",
+    "hexo-server": "^3.0.0",
+    "hexo-theme-landscape": "^1.0.0"
   }
 }
 ```
@@ -57,7 +62,7 @@ $ npm install
 
 ### source
 
-Папка с исходниками. Это содержащая сайт папка. Hexo игнорирует скрытые файлы и файлы или папки, имена которых начинаются с `_` (подчеркивания). Исключением является папка `_posts`. Обрабатываемые файлы (напр. markdown, HTML) будут вставлены в общую папку, остальные файлы просто копируются.
+Папка с исходниками. Это содержащая сайт папка. Hexo игнорирует скрытые файлы и файлы или папки, имена которых начинаются с `_` (подчеркивания). Исключением является папка `_posts`. Обрабатываемые файлы (напр., markdown, HTML) будут вставлены в общую папку, остальные файлы просто копируются.
 
 ### themes
 

@@ -1,0 +1,8 @@
+description: Hexo shortcodes helper. Various shortcodes for hexo, adapted from jekyll.
+link: https://www.npmjs.com/package/hexo-shortcodes
+tags:
+  - shortcode
+  - rss reader
+  - codepen
+  - jsfiddle
+  - dailymotion

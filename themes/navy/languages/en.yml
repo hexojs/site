@@ -4,10 +4,13 @@ menu:
   news: News
   plugins: Plugins
   themes: Themes
+  about: About
   search: Search
 
 index:
   get_started: Get started
+  theme_intro: Choose from a huge library of spectacular, feature-packed and customizable themes. Create your own using any compatible template engines.
+  theme_link: Explore themes
 
 page:
   contents: Contents
@@ -34,6 +37,9 @@ sidebar:
     server: Server
     generating: Generating
     deployment: Deployment
+    github_pages: GitHub Pages
+    gitlab_pages: GitLab Pages
+    one_command_deployment: One-Command Deployment
     customization: Customization
     permalinks: Permalinks
     themes: Themes
@@ -42,6 +48,7 @@ sidebar:
     variables: Variables
     helpers: Helpers
     internationalization: Internationalization (i18n)
+    syntax_highlight: Syntax Highlight
     plugins: Plugins
     miscellaneous: Miscellaneous
     troubleshooting: Troubleshooting
@@ -63,6 +70,7 @@ sidebar:
     filter: Filter
     generator: Generator
     helper: Helper
+    injector: Injector
     migrator: Migrator
     processor: Processor
     renderer: Renderer

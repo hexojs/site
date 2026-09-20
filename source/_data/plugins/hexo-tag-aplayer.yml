@@ -1,0 +1,11 @@
+description: Embed aplayer in Hexo posts/pages.
+link: https://github.com/MoePlayer/hexo-tag-aplayer
+tags:
+  - tag
+  - player
+  - aplayer
+  - music
+repository:
+  is_archived: false
+  stars: 756
+  last_commit_date: '2018-06-04T13:51:41Z'

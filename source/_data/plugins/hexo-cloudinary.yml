@@ -1,0 +1,10 @@
+description: Hexo tag to add an image from Cloudinary - with srcset support.
+link: https://github.com/maliMirkec/hexo-cloudinary
+tags:
+  - tag
+  - image
+  - cloudinary
+repository:
+  is_archived: true
+  stars: 6
+  last_commit_date: '2023-05-19T11:16:07Z'

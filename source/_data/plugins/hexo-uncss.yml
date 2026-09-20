@@ -1,0 +1,11 @@
+description: Remove unused styles from CSS with uncss.
+link: https://github.com/vseventer/hexo-uncss
+tags:
+  - css
+  - filter
+  - html
+  - uncss
+repository:
+  is_archived: false
+  stars: 8
+  last_commit_date: '2016-01-17T22:57:58Z'

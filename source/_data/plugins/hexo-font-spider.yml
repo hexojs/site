@@ -1,0 +1,10 @@
+description: Hexo console plugin for automatic compression of web fonts.
+link: https://github.com/hdxw/hexo-font-spider
+tags:
+  - console
+  - font
+  - compression
+repository:
+  is_archived: false
+  stars: 0
+  last_commit_date: '2025-03-29T11:35:46Z'

@@ -1,0 +1,14 @@
+description: |
+  [EN] A Hexo plugin that helps you quickly create tips for your blog posts.
+  [中文] 一个帮助您快速创建博客文章小贴士的Hexo插件。
+link: https://github.com/xingwangzhe/hexo-tips
+tags:
+  - content
+  - tips
+  - notes
+  - writing
+  - helper
+repository:
+  is_archived: false
+  stars: 1
+  last_commit_date: '2025-10-02T08:11:32Z'

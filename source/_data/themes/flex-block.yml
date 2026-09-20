@@ -1,0 +1,13 @@
+description: A simple block blog style based on a flex layout
+link: https://github.com/miiiku/hexo-theme-flexblock
+preview: https://kyori.xyz
+tags:
+  - simple
+  - block
+  - image
+  - responsive
+  - neumorphism
+repository:
+  is_archived: false
+  stars: 683
+  last_commit_date: '2026-01-26T06:44:06Z'

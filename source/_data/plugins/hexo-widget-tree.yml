@@ -1,0 +1,12 @@
+description: A widget that displays a tree-like menu.
+link: https://github.com/YunYouJun/hexo-widget-tree
+tags:
+  - tree
+  - widget
+  - menu
+  - categories
+  - archive
+repository:
+  is_archived: false
+  stars: 7
+  last_commit_date: '2024-09-18T02:37:58Z'

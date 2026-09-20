@@ -1,0 +1,14 @@
+description: >-
+  Hexo tag to embed Image Comparison Slider Scripts. Image Comparison Slider
+  depend on jQuery Twenty Twenty plugin.
+link: https://github.com/tea3/hexo-tag-twentytwenty
+tags:
+  - tag_plugins
+  - image
+  - comparison
+  - slider
+  - twentytwenty
+repository:
+  is_archived: false
+  stars: 12
+  last_commit_date: '2019-03-18T01:01:05Z'

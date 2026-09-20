@@ -1,0 +1,12 @@
+description: A simple theme for Hexo.
+link: https://github.com/zhaoo/hexo-theme-zhaoo
+preview: https://www.izhaoo.com
+tags:
+  - responsive
+  - fast
+  - clean
+  - simple
+repository:
+  is_archived: false
+  stars: 279
+  last_commit_date: '2023-04-28T04:04:26Z'

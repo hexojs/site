@@ -1,0 +1,14 @@
+description: Edit your content in style with this integrating blogging environment.
+link: https://github.com/jaredly/hexo-admin
+tags:
+  - admin
+  - interface
+  - editor
+  - IDE
+  - preview
+  - ghost
+  - dashboard
+repository:
+  is_archived: false
+  stars: 1794
+  last_commit_date: '2021-02-01T02:31:02Z'

@@ -1,0 +1,13 @@
+description: Meadow is a Material Designed Hexo theme based on MDUI.
+link: https://github.com/kb1000fx/hexo-theme-meadow
+preview: https://garybear.cn/hexo-theme-meadow/
+tags:
+  - Material Design
+  - MDUI
+  - responsive
+  - ejs
+  - simple
+repository:
+  is_archived: true
+  stars: 56
+  last_commit_date: '2020-11-15T12:40:49Z'

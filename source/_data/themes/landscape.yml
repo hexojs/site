@@ -1,0 +1,13 @@
+description: A brand new default theme
+link: https://github.com/hexojs/hexo-theme-landscape
+preview: https://hexojs.github.io/hexo-theme-landscape/
+tags:
+  - official
+  - responsive
+  - widget
+  - two_columns
+  - one_column
+repository:
+  is_archived: false
+  stars: 336
+  last_commit_date: '2025-02-14T01:09:44Z'

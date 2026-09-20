@@ -1,0 +1,13 @@
+description: Another simple blog theme, inspired by Choo
+link: https://github.com/chunqiuyiyu/hexo-theme-samljen
+preview: https://www.chunqiuyiyu.com/
+tags:
+  - simple
+  - responsive
+  - one_column
+  - light
+  - pink
+repository:
+  is_archived: false
+  stars: 14
+  last_commit_date: '2019-05-14T14:40:09Z'

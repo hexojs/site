@@ -1,0 +1,11 @@
+description: >-
+  Asciidoc renderer plugin for Hexo. It underlying call asciidoctor.js as
+  rendering engine.
+link: https://github.com/hcoona/hexo-renderer-asciidoc
+tags:
+  - renderer
+  - asciidoc
+repository:
+  is_archived: false
+  stars: 18
+  last_commit_date: '2025-12-10T18:14:33Z'

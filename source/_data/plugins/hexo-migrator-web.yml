@@ -1,0 +1,12 @@
+description: Hexo Migrator plugin for common Web pages
+link: https://github.com/TechQuery/Web-fetch
+tags:
+  - migrator
+  - web
+  - common
+  - headless
+  - browser
+repository:
+  is_archived: false
+  stars: 5
+  last_commit_date: '2025-11-01T19:44:03Z'

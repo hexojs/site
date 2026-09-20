@@ -1,0 +1,10 @@
+description: A hexo plugin for cPlayer.
+link: https://github.com/EYHN/hexo-tag-cplayer
+tags:
+  - cplayer
+  - music
+  - audio
+repository:
+  is_archived: false
+  stars: 27
+  last_commit_date: '2017-08-13T12:38:10Z'

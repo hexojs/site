@@ -1,0 +1,10 @@
+description: Hexo plugin for rendering Graphviz plots
+link: https://github.com/sounak98/hexo-graphviz
+tags:
+  - filter
+  - graphviz
+  - graph
+repository:
+  is_archived: false
+  stars: 11
+  last_commit_date: '2019-02-08T21:59:40Z'

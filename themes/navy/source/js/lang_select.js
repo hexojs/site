@@ -1,13 +1,16 @@
+'use strict';
+
 (function() {
-  'use strict';
+  const Cookies = window.Cookies.noConflict();
 
   function changeLang() {
-    var lang = this.value;
-    var canonical = this.dataset.canonical;
-    if (lang === 'en') lang = '';
-    if (lang) lang += '/';
+    const lang = this.value;
+    const canonical = this.dataset.canonical;
+    let path = '/';
+    if (lang !== 'en') path += lang + '/';
 
-    location.href = '/' + lang + canonical;
+    Cookies.set('nf_lang', lang, { expires: 365 });
+    location.href = path + canonical;
   }
 
   document.getElementById('lang-select').addEventListener('change', changeLang);

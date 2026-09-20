@@ -1,0 +1,12 @@
+description: Generate slide page with reveal.js
+link: https://github.com/wicksome/hexo-slides-reveal
+tags:
+  - slide
+  - slides
+  - markdown
+  - ppt
+  - reveal
+repository:
+  is_archived: false
+  stars: 8
+  last_commit_date: '2017-05-03T07:54:11Z'

@@ -1,0 +1,10 @@
+description: Hexo plugin that renames post files based on title
+link: https://github.com/luzhang/hexo-rename
+tags:
+  - rename
+  - markdown
+  - title
+repository:
+  is_archived: false
+  stars: 2
+  last_commit_date: '2022-07-01T05:25:10Z'

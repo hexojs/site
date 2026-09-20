@@ -1,0 +1,10 @@
+description: >-
+  A simple plugin which can embed asciinema-player in your article with local
+  file.
+link: https://github.com/mythsman/hexo-filter-asciinema
+tags:
+  - asciinema
+repository:
+  is_archived: false
+  stars: 6
+  last_commit_date: '2021-12-31T04:13:13Z'

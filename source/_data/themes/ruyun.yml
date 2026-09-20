@@ -1,0 +1,16 @@
+description: An ICP-friendly personal blog theme for Hexo
+link: https://github.com/ztygalaxy/hexo-theme-ruyun
+preview: https://tyzhang.top
+tags:
+  - hexo-theme
+  - Customizable
+  - QRCode
+  - sidebar
+  - blog
+  - mobile
+  - latex
+  - 中文
+repository:
+  is_archived: false
+  stars: 6
+  last_commit_date: '2024-06-03T13:53:57Z'

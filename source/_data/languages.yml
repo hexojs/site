@@ -1,4 +1,5 @@
-en: English
+en:
+  name: English
 zh-tw:
   name: 正體中文
   disqus_lang: zh_TW
@@ -14,3 +15,12 @@ ko:
 pt-br:
   name: Português (Brasil)
   disqus_lang: pt-br
+th:
+  name: ภาษาไทย
+  disqus_lang: th
+ja:
+  name: 日本語
+  disqus_lang: ja
+es:
+  name: Español
+  disqus_lang: es

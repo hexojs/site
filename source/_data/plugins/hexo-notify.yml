@@ -1,0 +1,9 @@
+description: Notification plugins for Hexo.
+link: https://github.com/hexojs/hexo-notify
+tags:
+  - official
+  - notify
+repository:
+  is_archived: true
+  stars: 8
+  last_commit_date: '2020-04-25T08:23:58Z'

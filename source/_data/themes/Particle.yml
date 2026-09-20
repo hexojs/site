@@ -1,0 +1,15 @@
+description: A concise theme with 3 color styles.
+link: https://github.com/korilin/hexo-theme-particle
+preview: https://korilin.github.io/
+tags:
+  - Vue
+  - home-figure
+  - Chinese
+  - 中文
+  - 3-color-styles
+  - dark_mode
+  - maiden_mode
+repository:
+  is_archived: true
+  stars: 64
+  last_commit_date: '2022-10-07T10:49:31Z'

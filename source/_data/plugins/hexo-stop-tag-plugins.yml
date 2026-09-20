@@ -1,0 +1,10 @@
+description: Disable tag plugins for all markdown posts
+link: https://github.com/think-in-universe/hexo-stop-tag-plugins
+tags:
+  - markdown
+  - tag_plugins
+  - renderer
+repository:
+  is_archived: false
+  stars: 0
+  last_commit_date: '2019-06-16T17:30:29Z'

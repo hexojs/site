@@ -1,0 +1,10 @@
+description: 支持在文章中使用 UnoCSS | Support using UnoCSS when writing articles
+link: https://github.com/imba97/hexo-unocss
+tags:
+  - unocss
+  - style
+  - css
+repository:
+  is_archived: false
+  stars: 1
+  last_commit_date: '2025-07-09T14:44:25Z'

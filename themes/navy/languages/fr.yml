@@ -1,0 +1,77 @@
+menu:
+  docs: Docs
+  api: API
+  news: Nouvelles
+  plugins: Plugins
+  themes: Thèmes
+  about: About
+  search: Chercher
+
+index:
+  get_started: Commençer
+  theme_intro: Choose from a huge library of spectacular, feature-packed and customizable themes. Create your own using any compatible template engines.
+  theme_link: Explore themes
+
+page:
+  contents: Contenus
+  back_to_top: Retour au début
+  improve: Améliorer ce document
+  prev: Précédent
+  next: Suivant
+  last_updated: "Dernière mise à jour : %s"
+
+sidebar:
+  docs:
+    getting_started: Premier pas
+    overview: Vue d'ensemble
+    setup: Installation
+    configuration: Configuration
+    commands: Commandes
+    migration: Migration
+    basic_usage: Utilisation de base
+    writing: Écriture
+    front_matter: Métadonnées
+    tag_plugins: Tag Plugins
+    asset_folders: Dossier de ressources
+    data_files: Fichiers de données
+    server: Serveur
+    generating: Génération
+    deployment: Déploiement
+    github_pages: GitHub Pages
+    gitlab_pages: GitLab Pages
+    one_command_deployment: One-Command Deployment
+    customization: Personnalisation
+    permalinks: Permaliens
+    themes: Thèmes
+    structure: Structure
+    templates: Gabarits
+    variables: Variables
+    helpers: Assistants
+    internationalization: Internationalisation (i18n)
+    syntax_highlight: Syntax Highlight
+    plugins: Plugins
+    miscellaneous: Divers
+    troubleshooting: Dépannage
+    contributing: Contribuer
+  api:
+    core: Noyau
+    overview: Aperçu
+    events: Évènements
+    locals: Variables locales
+    router: Routeur
+    box: Box
+    rendering: Rendu
+    posts: Messages
+    scaffolds: Échafaudages
+    themes: Thèmes
+    extensions: Extensions
+    console: Console
+    deployer: Déployer
+    filter: Filtre
+    injector: Injector
+    generator: Générateur
+    helper: Assistant
+    migrator: Migrateur
+    processor: Processeur
+    renderer: Rendu
+    tag: Tag

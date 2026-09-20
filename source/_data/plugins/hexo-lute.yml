@@ -1,0 +1,12 @@
+description: A markdown renderer for Hexo based on Lute.
+link: https://github.com/SukkaW/hexo-lute
+tags:
+  - renderer
+  - lute
+  - markdown
+  - gfm
+  - commonmark
+repository:
+  is_archived: false
+  stars: 8
+  last_commit_date: '2021-09-12T21:39:43Z'

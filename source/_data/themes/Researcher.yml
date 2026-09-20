@@ -1,0 +1,18 @@
+description: >-
+  Researcher is a modern, responsive, and professional academic portfolio theme
+  for researchers, built with Tailwind CSS, and DaisyUI.
+link: https://github.com/jiehua1995/hexo-theme-researcher
+preview: https://jiehua1995.github.io/hexo-theme-researcher/
+tags:
+  - responsive
+  - researcher
+  - academic
+  - portfolio
+  - scholar
+  - science
+  - tailwindcss
+  - daisyui
+repository:
+  is_archived: false
+  stars: 31
+  last_commit_date: '2025-10-07T11:55:11Z'

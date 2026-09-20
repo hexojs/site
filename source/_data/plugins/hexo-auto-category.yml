@@ -1,0 +1,13 @@
+description: Generates categories automatically by folder name
+link: https://github.com/xu-song/hexo-auto-category
+tags:
+  - auto
+  - generation
+  - categories
+  - folder
+  - directory
+  - structure
+repository:
+  is_archived: false
+  stars: 109
+  last_commit_date: '2024-09-11T05:47:04Z'

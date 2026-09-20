@@ -1,0 +1,10 @@
+description: Add Minecraft related contents into your blog with simple tag.
+link: https://github.com/cmpute/hexo-minecraft-templates
+tags:
+  - tag
+  - generator
+  - minecraft
+repository:
+  is_archived: true
+  stars: 6
+  last_commit_date: '2021-10-12T15:48:23Z'

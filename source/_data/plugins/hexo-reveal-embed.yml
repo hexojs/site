@@ -1,0 +1,6 @@
+description: This Hexo plugin allows you to display slides created with reveal.js on your blog. Both embedded display and full screen display are possible.
+link: https://www.npmjs.com/package/hexo-reveal-embed
+tags:
+  - presentation
+  - reveal
+  - slides

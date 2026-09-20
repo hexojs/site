@@ -1,0 +1,16 @@
+description: >-
+  Generate a JSON file similar to RSS feed channel structure with posts contents
+  for generic use or consumption.
+link: https://github.com/alexbruno/hexo-generator-json-feed
+tags:
+  - generator
+  - content
+  - json
+  - feed
+  - rss
+  - search
+  - api
+repository:
+  is_archived: false
+  stars: 4
+  last_commit_date: '2021-06-29T13:34:03Z'

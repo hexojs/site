@@ -1,0 +1,9 @@
+description: A generator for Hexo that adds a license statement to every page
+link: https://github.com/sbanwart/hexo-global-license
+tags:
+  - generator
+  - license
+repository:
+  is_archived: true
+  stars: 2
+  last_commit_date: '2024-10-04T18:50:43Z'

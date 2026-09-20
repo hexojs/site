@@ -1,0 +1,11 @@
+description: Default theme
+link: https://github.com/hexojs/hexo-theme-light
+preview: https://hexojs.github.io/hexo-theme-light
+tags:
+  - official
+  - responsive
+  - two_columns
+repository:
+  is_archived: false
+  stars: 318
+  last_commit_date: '2024-12-25T06:45:51Z'

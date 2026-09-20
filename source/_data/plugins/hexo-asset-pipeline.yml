@@ -1,0 +1,17 @@
+description: >-
+  A hexo plugin to minify/optimize HTML, CSS, JS and images. Supports
+  revisioning of assets.
+link: https://github.com/hexojs/hexo-asset-pipeline
+tags:
+  - official
+  - filter
+  - imagemin
+  - html-minifier
+  - uglify
+  - clean-css
+  - revisioning
+  - versioning
+repository:
+  is_archived: true
+  stars: 28
+  last_commit_date: '2022-07-24T09:38:32Z'

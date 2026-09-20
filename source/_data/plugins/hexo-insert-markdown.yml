@@ -1,0 +1,14 @@
+description: >-
+  Insert Markdown files in your posts or pages. This plugin also allows to
+  include multiple Markdown files from a custom folder.
+link: https://github.com/bennycode/hexo-insert-markdown
+tags:
+  - markdown
+  - include
+  - insert
+  - tag
+  - template
+repository:
+  is_archived: true
+  stars: 5
+  last_commit_date: '2022-08-15T20:40:54Z'

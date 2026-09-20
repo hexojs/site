@@ -1,0 +1,13 @@
+description: A transplanted theme for Hexo, with many new features built with love.
+link: https://github.com/Candinya/Kratos-Rebirth
+preview: https://kr-demo.candinya.com
+tags:
+  - kratos
+  - sidebar
+  - widgets
+  - responsive
+  - dark/light
+repository:
+  is_archived: false
+  stars: 775
+  last_commit_date: '2026-03-17T14:45:09Z'

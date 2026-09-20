@@ -1,0 +1,11 @@
+description: A utility function which helps to inline Font Awesome SVG files.
+link: https://github.com/hexojs/hexo-fontawesome
+tags:
+  - official
+  - helper
+  - fontawesome
+  - awesome
+repository:
+  is_archived: false
+  stars: 18
+  last_commit_date: '2026-01-13T18:21:46Z'

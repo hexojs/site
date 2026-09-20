@@ -1,14 +1,18 @@
+---
 title: Asset Folders
 ---
+
 ## 전역 Asset 폴더
 
-Asset은 포스트 파일이 아니며 `source` 폴더에 위치합니다. 이미지, CSS, JavaScript 파일이 이에 해당합니다. 예를 들어, Hexo에서 이미지 파일을 사용하고 싶을 때 간단하게 `source/images` 디렉토리에 넣어두면 됩니다. 포스트 내에서 사용하고 싶을 때는 그냥 이렇게 부르면 됩니다. `![](/images/image.jpg)`
+Asset은 포스트 파일이 아니며 `source` 폴더에 위치합니다. 이미지, CSS, JavaScript 파일이 이에 해당합니다. 예를 들어, Hexo에서 이미지 파일을 사용하고 싶을 때 간단하게 `source/images` 디렉토리에 넣어두면 됩니다. Then, you can access them using something like `![](/images/image.jpg)`.
 
 ## Post Asset 폴더
 
+{% youtube feIDVQ2tz0o %}
+
 꾸준히 이미지 또는 다른 asset들을 제공해야 하고 포스트 단위로 asset을 관리하고 싶어하는 사용자들을 위해 Hexo는 asset을 관리할 수 있는 방법을 제공합니다. `_config.yml` 파일의 `post_asset_folder`을 true로 설정하면 됩니다.
 
-``` yaml _config.yml
+```yaml _config.yml
 post_asset_folder: true
 ```
 
@@ -24,7 +28,7 @@ Asset 폴더 관리 기능을 활성화 시켰다면, Hexo는 당신이 `hexo ne
 {% asset_link slug [title] %}
 ```
 
-예를 들어, post asset 폴더가 활성화 상태 일 때 `example.jpg` 파일을 asset folder에 넣어놓고 `![](/example.jpg)` 구문으로 상대 경로를 사용하여 참조한다면 이 이미지는 인덱스 페이지에서 *보이지 않을 것*입니다. (하지만, 포스트 내부에서는 정상 동작할 것 입니다.)
+예를 들어, post asset 폴더가 활성화 상태 일 때 `example.jpg` 파일을 asset folder에 넣어놓고 `![](example.jpg)` 구문으로 상대 경로를 사용하여 참조한다면 이 이미지는 인덱스 페이지에서 *보이지 않을 것*입니다. (하지만, 포스트 내부에서는 정상 동작할 것 입니다.)
 
 이미지 참조의 올바른 방법은 markdown 대신 태그 플러그인 구문을 사용하는 것 입니다.
 
@@ -34,3 +38,18 @@ Asset 폴더 관리 기능을 활성화 시켰다면, Hexo는 당신이 `hexo ne
 ```
 
 이 방법을 통해, 이미지 파일은 포스트 내부나 인덱스 페이지나 아카이브 페이지에서 모두 정상적으로 표시될 것 입니다.
+
+## Embedding an image using markdown
+
+[hexo-renderer-marked](https://github.com/hexojs/hexo-renderer-marked) 3.1.0 introduced a new option that allows you to embed an image in markdown without using `asset_img` tag plugin.
+
+To enable:
+
+```yml _config.yml
+post_asset_folder: true
+marked:
+  prependRoot: true
+  postAsset: true
+```
+
+Once enabled, an asset image will be automatically resolved to its corresponding post's path. For example, "image.jpg" is located at "/2020/01/02/foo/image.jpg", meaning it is an asset image of "/2020/01/02/foo/" post, `![](image.jpg)` will be rendered as `<img src="/2020/01/02/foo/image.jpg">`.

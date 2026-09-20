@@ -1,0 +1,17 @@
+description: A personal wiki system based on a Hexo theme.
+link: https://github.com/quanoc/hexo-theme-Quinoa
+preview: https://waisec.cn/
+tags:
+  - simple
+  - personal
+  - wiki
+  - CSS3_animation
+  - bootstrap
+  - two_columns
+  - blog
+  - hexo
+  - 中文
+repository:
+  is_archived: false
+  stars: 4
+  last_commit_date: '2026-03-28T17:09:02Z'

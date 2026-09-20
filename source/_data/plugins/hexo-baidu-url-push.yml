@@ -1,0 +1,8 @@
+description: >-
+  A hexo plugin, using Baidu JS automatic link push method, submit links to
+  Baidu
+link: https://www.npmjs.com/package/hexo-baidu-url-push
+tags:
+  - baidu
+  - seo
+  - url

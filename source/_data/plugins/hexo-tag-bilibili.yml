@@ -1,0 +1,10 @@
+description: Embed bilibili videos in Hexo posts/pages.
+link: https://github.com/Z4Tech/hexo-tag-bilibili
+tags:
+  - tag
+  - bilibili
+  - video
+repository:
+  is_archived: false
+  stars: 76
+  last_commit_date: '2020-03-11T22:53:06Z'

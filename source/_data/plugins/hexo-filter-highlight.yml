@@ -1,0 +1,9 @@
+description: Highlight plugin using highlight.js for Hexo
+link: https://github.com/Jamling/hexo-filter-highlight
+tags:
+  - highlight
+  - 代码高亮
+repository:
+  is_archived: false
+  stars: 17
+  last_commit_date: '2019-10-20T13:48:46Z'

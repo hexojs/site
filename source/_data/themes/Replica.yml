@@ -1,0 +1,13 @@
+description: A github style replication theme
+link: https://github.com/sabrinaluo/hexo-theme-replica
+preview: http://sabrinaluo.github.io/tech
+tags:
+  - github
+  - responsive
+  - geek
+  - blog
+  - post_calendar
+repository:
+  is_archived: false
+  stars: 541
+  last_commit_date: '2020-10-28T13:19:10Z'

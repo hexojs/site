@@ -1,0 +1,15 @@
+description: >-
+  Automatically assigns relevant predefined tags to your posts based on their
+  content with the power of GPT-3.
+link: https://github.com/declan-haojin/hexo-auto-tag
+tags:
+  - tag
+  - auto
+  - GPT-3
+  - OpenAI
+  - API
+  - Embeddings
+repository:
+  is_archived: false
+  stars: 42
+  last_commit_date: '2023-04-15T06:33:20Z'

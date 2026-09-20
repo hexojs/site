@@ -1,0 +1,11 @@
+description: A simple responsive theme
+link: https://github.com/zo-ly/hexo-theme-ztopic
+preview: https://zo-ly.github.io/blog/
+tags:
+  - responsive
+  - simple
+  - scss
+repository:
+  is_archived: false
+  stars: 30
+  last_commit_date: '2023-12-17T13:37:21Z'

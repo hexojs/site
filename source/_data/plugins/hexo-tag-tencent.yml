@@ -1,0 +1,11 @@
+description: A hexo plugin for inserting youku or tencent video in your site.
+link: https://github.com/kingofctrl/hexo-tag-tencent
+tags:
+  - tag
+  - video
+  - youku
+  - tencent video
+repository:
+  is_archived: false
+  stars: 5
+  last_commit_date: '2018-03-07T12:21:23Z'

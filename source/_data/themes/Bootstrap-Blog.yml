@@ -1,0 +1,12 @@
+description: A simple Twitter Bootstrap blog theme
+link: https://github.com/cgmartin/hexo-theme-bootstrap-blog
+preview: http://cgmartin.github.io/hexo-theme-bootstrap-blog/
+tags:
+  - bootstrap
+  - simple
+  - responsive
+  - two_columns
+repository:
+  is_archived: false
+  stars: 105
+  last_commit_date: '2016-10-07T00:00:13Z'

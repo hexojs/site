@@ -1,0 +1,11 @@
+description: 自动为hexo中的图片映射绝对路径 | Automatically maps absolute paths to images in hexo
+link: https://github.com/JoeyBling/hexo-filter-image
+tags:
+  - filter
+  - image
+  - path
+  - asset
+repository:
+  is_archived: false
+  stars: 8
+  last_commit_date: '2020-01-20T01:27:24Z'

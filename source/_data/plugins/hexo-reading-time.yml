@@ -1,0 +1,9 @@
+description: Plugin that displays reading time for the article.
+link: https://github.com/ierhyna/hexo-reading-time
+tags:
+  - reading-time
+  - helper
+repository:
+  is_archived: false
+  stars: 30
+  last_commit_date: '2019-12-01T20:53:29Z'

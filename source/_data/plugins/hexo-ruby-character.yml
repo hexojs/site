@@ -1,0 +1,12 @@
+description: >-
+  Ruby character tag for Hexo, like <ruby>博客<rp> (</rp><rt>bó kè</rt><rp>)
+  </rp></ruby>.
+link: https://github.com/jamespan/hexo-ruby-character
+tags:
+  - tag
+  - ruby-character
+  - pinyin
+repository:
+  is_archived: true
+  stars: 94
+  last_commit_date: '2015-11-23T06:27:57Z'

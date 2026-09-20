@@ -1,0 +1,11 @@
+description: >-
+  build a latest post list in a json file. that you can use it for other
+  platforms
+link: https://github.com/buxuku/hexo-generator-latest2json
+tags:
+  - latest
+  - json
+repository:
+  is_archived: false
+  stars: 0
+  last_commit_date: '2021-01-18T15:56:49Z'

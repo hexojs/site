@@ -1,0 +1,12 @@
+description: Updated, opinionated continuation of the Apollo theme
+link: https://github.com/claymcleod/hexo-theme-hermes
+preview: https://claymcleod.github.io/hexo-theme-hermes/
+tags:
+  - responsive
+  - one_column
+  - apollo
+  - light
+repository:
+  is_archived: false
+  stars: 36
+  last_commit_date: '2020-07-14T04:20:56Z'

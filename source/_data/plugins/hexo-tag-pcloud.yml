@@ -1,0 +1,10 @@
+description: A Hexo tag for inserting pcloud public links
+link: https://github.com/p1slave/hexo-tag-pcloud
+tags:
+  - tag
+  - pcloud
+  - hexo
+repository:
+  is_archived: false
+  stars: 0
+  last_commit_date: '2023-12-21T21:07:47Z'

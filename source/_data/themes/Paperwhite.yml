@@ -1,0 +1,13 @@
+description: A minimalist theme for Hexo
+link: https://github.com/aeilot/hexo-theme-paperwhite
+preview: http://en.blog.aeilot.top
+tags:
+  - responsive
+  - minimalist
+  - simple
+  - light
+  - one_column
+repository:
+  is_archived: false
+  stars: 18
+  last_commit_date: '2025-01-18T13:55:45Z'

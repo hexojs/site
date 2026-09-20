@@ -1,0 +1,12 @@
+description: A node tree directory theme for Hexo.
+link: https://github.com/Exisi/hexo-theme-node-tree
+preview: https://exisi.github.io/hexo-theme-node-tree
+tags:
+  - note
+  - responsive
+  - sidebar
+  - multi-languages
+repository:
+  is_archived: false
+  stars: 4
+  last_commit_date: '2025-04-25T15:36:28Z'

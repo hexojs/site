@@ -1,0 +1,11 @@
+description: A hexo plugin that optimize the pages loading speed.
+link: https://github.com/theme-next/hexo-filter-optimize
+tags:
+  - optimize
+  - lazyload
+  - inline
+  - bundle
+repository:
+  is_archived: false
+  stars: 48
+  last_commit_date: '2020-03-22T09:20:02Z'

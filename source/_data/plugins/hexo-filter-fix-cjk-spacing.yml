@@ -1,0 +1,11 @@
+description: Join continuous CJK lines in markdown before rendering.
+link: https://github.com/lotabout/hexo-filter-fix-cjk-spacing
+tags:
+  - filter
+  - cjk
+  - spacing
+  - line
+repository:
+  is_archived: false
+  stars: 3
+  last_commit_date: '2019-09-01T00:45:46Z'

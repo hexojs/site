@@ -1,3 +1,4 @@
+---
 title: Setup
 ---
 
@@ -5,7 +6,7 @@ title: Setup
 
 Uma vez instalado o Hexo, execute os seguintes comandos para inicializar um site com Hexo em um diretório `<folder>`.
 
-``` bash
+```bash
 $ hexo init <folder>
 $ cd <folder>
 $ npm install
@@ -13,7 +14,7 @@ $ npm install
 
 Após inicializado, o diretório do seu projeto ficará com a seguinte estrutura:
 
-``` plain
+```plain
 .
 ├── _config.yml
 ├── package.json
@@ -24,15 +25,15 @@ Após inicializado, o diretório do seu projeto ficará com a seguinte estrutura
 └── themes
 ```
 
-### _config.yml
+### \_config.yml
 
 Arquivo de [configuração](configuration.html) do site. Você pode definir a maioria das configurações aqui.
 
 ### package.json
 
-Arquivo de dados da aplicação. Os renderizadores [Markdown](http://daringfireball.net/projects/markdown/), [EJS](http://embeddedjs.com/) e [Stylus](http://learnboost.github.io/stylus/) são instalados por padrão. Se desejar, você pode desinstalá-los posteriormente.
+Arquivo de dados da aplicação. Os renderizadores [Markdown](http://daringfireball.net/projects/markdown/), [EJS](https://ejs.co/) e [Stylus](http://learnboost.github.io/stylus/) são instalados por padrão. Se desejar, você pode desinstalá-los posteriormente.
 
-``` json package.json
+```json package.json
 {
   "name": "hexo-site",
   "version": "0.0.0",
@@ -41,15 +42,16 @@ Arquivo de dados da aplicação. Os renderizadores [Markdown](http://daringfireb
     "version": ""
   },
   "dependencies": {
-    "hexo": "^3.0.0",
-    "hexo-generator-archive": "^0.1.0",
-    "hexo-generator-category": "^0.1.0",
-    "hexo-generator-index": "^0.1.0",
-    "hexo-generator-tag": "^0.1.0",
-    "hexo-renderer-ejs": "^0.1.0",
-    "hexo-renderer-stylus": "^0.2.0",
-    "hexo-renderer-marked": "^0.2.4",
-    "hexo-server": "^0.1.2"
+    "hexo": "^7.0.0",
+    "hexo-generator-archive": "^2.0.0",
+    "hexo-generator-category": "^2.0.0",
+    "hexo-generator-index": "^3.0.0",
+    "hexo-generator-tag": "^2.0.0",
+    "hexo-renderer-ejs": "^2.0.0",
+    "hexo-renderer-stylus": "^3.0.0",
+    "hexo-renderer-marked": "^6.0.0",
+    "hexo-server": "^3.0.0",
+    "hexo-theme-landscape": "^1.0.0"
   }
 }
 ```

@@ -1,0 +1,10 @@
+description: A plugin to make convenient to link local posted file in markdown style
+link: https://github.com/zhenyong/hexo-filter-file-link
+tags:
+  - filter
+  - link
+  - file
+repository:
+  is_archived: false
+  stars: 10
+  last_commit_date: '2018-06-24T09:19:41Z'

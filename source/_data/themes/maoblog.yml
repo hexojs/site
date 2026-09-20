@@ -1,0 +1,13 @@
+description: A hexo theme for blog.
+link: https://github.com/muzuiyo/hexo-theme-maoblog
+preview: https://maodaisuki.github.io/hexo-theme-maoblog
+tags:
+  - simple
+  - one_column
+  - clean
+  - light
+  - modern
+repository:
+  is_archived: true
+  stars: 16
+  last_commit_date: '2024-04-30T07:53:38Z'

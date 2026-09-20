@@ -1,0 +1,9 @@
+description: Tag plugin for inserting admonition in your blog.
+link: https://github.com/haishanh/hexo-tag-admonition
+tags:
+  - tag
+  - admonition
+repository:
+  is_archived: false
+  stars: 4
+  last_commit_date: '2016-06-10T14:18:31Z'

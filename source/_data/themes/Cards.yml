@@ -1,0 +1,15 @@
+description: A Simple & Swift Theme for Hexo, designed as its name.
+link: https://github.com/ChrAlpha/hexo-theme-cards
+preview: https://theme-cards.ichr.me/demo/
+tags:
+  - simple
+  - swift
+  - clean
+  - fast
+  - responsive
+  - card
+  - one_column
+repository:
+  is_archived: false
+  stars: 445
+  last_commit_date: '2026-04-28T06:47:59Z'

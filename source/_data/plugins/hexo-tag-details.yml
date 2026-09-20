@@ -1,0 +1,10 @@
+description: HTML5 details tag on your Hexo article
+link: https://github.com/hinastory/hexo-tag-details
+tags:
+  - tag
+  - details
+  - summary
+repository:
+  is_archived: false
+  stars: 6
+  last_commit_date: '2019-03-08T23:51:27Z'

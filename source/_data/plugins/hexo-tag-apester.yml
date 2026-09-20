@@ -1,0 +1,10 @@
+description: Apester interactive tag plugin to include in Hexo page/post.
+link: https://github.com/iamchathu/hexo-tag-apester
+tags:
+  - apester
+  - interactive
+  - quiz
+repository:
+  is_archived: false
+  stars: 1
+  last_commit_date: '2017-09-01T09:43:45Z'

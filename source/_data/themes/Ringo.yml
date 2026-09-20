@@ -1,0 +1,15 @@
+description: A simple, concise, and fast theme for Hexo
+link: https://github.com/HeliumOI/hexo-theme-ringo
+preview: https://heliumoi.github.io/ringoExample/
+tags:
+  - responsive
+  - simple
+  - clean
+  - fast
+  - English
+  - 中文
+  - 简约
+repository:
+  is_archived: false
+  stars: 38
+  last_commit_date: '2026-04-04T06:36:45Z'

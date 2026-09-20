@@ -1,0 +1,16 @@
+description: >-
+  A hexo plugin to add tooltips to your blog posts using tippy. Supporting rich
+  text. This is the pandoc edition.
+link: https://github.com/Ritsuka314/hexo-pandoc-tippy
+tags:
+  - tooltip
+  - hint
+  - reference
+  - footnote
+  - footnotes
+  - pandoc
+  - markdown
+repository:
+  is_archived: false
+  stars: 2
+  last_commit_date: '2020-11-16T09:29:57Z'

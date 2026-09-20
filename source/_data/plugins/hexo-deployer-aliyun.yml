@@ -1,0 +1,9 @@
+description: Aliyun deployer plugin of Hexo.
+link: https://github.com/yedaodao/hexo-deployer-aliyun
+tags:
+  - deployer
+  - Aliyun
+repository:
+  is_archived: false
+  stars: 17
+  last_commit_date: '2017-02-01T19:48:00Z'

@@ -1,0 +1,14 @@
+description: >-
+  A hexo plugin for using variable in configuration. You can use environment
+  variable in your `_config.yml`
+link: https://github.com/wenonly/hexo-dynamic-config
+tags:
+  - environment
+  - env
+  - variable
+  - dynamic
+  - config
+repository:
+  is_archived: false
+  stars: 2
+  last_commit_date: '2022-09-24T03:35:00Z'

@@ -1,0 +1,11 @@
+description: A plugin to convert your image url use CDN host.
+link: https://github.com/hexojs/hexo-tag-imgurl
+tags:
+  - official
+  - tag
+  - images
+  - photos
+repository:
+  is_archived: true
+  stars: 4
+  last_commit_date: '2022-01-23T02:46:07Z'

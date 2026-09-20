@@ -1,0 +1,15 @@
+description: A fully customizable and component-based Hexo theme.
+link: https://github.com/mulder21c/hexo-theme-carpediem
+preview: https://mulder21c.io
+tags:
+  - responsive
+  - components
+  - customizable
+  - accessibility
+  - dark/light
+  - search
+  - seo
+repository:
+  is_archived: false
+  stars: 3
+  last_commit_date: '2023-09-03T05:23:43Z'

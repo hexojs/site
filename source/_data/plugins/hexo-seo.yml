@@ -1,0 +1,12 @@
+description: >-
+  Automated Search Engine Optimizations. Sitemap, Schema JSON/LD, Fix Broken
+  Images, Etc. Demo https://www.webmanajemen.com
+link: https://github.com/dimaslanjaka/hexo-seo
+tags:
+  - automated
+  - seo
+  - search engine optimization
+repository:
+  is_archived: false
+  stars: 19
+  last_commit_date: '2026-02-13T06:20:42Z'

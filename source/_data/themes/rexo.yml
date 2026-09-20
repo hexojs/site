@@ -1,0 +1,18 @@
+description: Rexo is a minimally customized theme that supports RTL
+link: https://github.com/bluemix/hexo-theme-rexo
+preview: https://bluemix.github.io
+tags:
+  - responsive
+  - clean
+  - vue.js
+  - minimal
+  - emojis
+  - multilingual
+  - rtl
+  - arabic
+  - persian
+  - hebrew
+repository:
+  is_archived: false
+  stars: 10
+  last_commit_date: '2022-08-05T17:33:30Z'

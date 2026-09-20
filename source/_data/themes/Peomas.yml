@@ -1,0 +1,13 @@
+description: A concise hexo theme.
+link: https://github.com/thomasyu929/hexo-theme-peomas
+preview: https://thomasyu929.github.io/
+tags:
+  - Responsive design
+  - Category
+  - Tag
+  - Search
+  - Concise
+repository:
+  is_archived: false
+  stars: 8
+  last_commit_date: '2022-01-08T07:10:55Z'

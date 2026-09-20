@@ -1,0 +1,10 @@
+description: Top and Index generator plugin for Hexo.
+link: https://github.com/amlove2/hexo-generator-topindex
+tags:
+  - generator
+  - index
+  - top|置顶
+repository:
+  is_archived: false
+  stars: 9
+  last_commit_date: '2017-03-13T11:01:57Z'

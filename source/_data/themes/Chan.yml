@@ -1,0 +1,14 @@
+description: A super simple and elegant theme
+link: https://github.com/denjones/hexo-theme-chan
+preview: http://denjones.github.io/hexo-theme-chan
+tags:
+  - simple
+  - cc_4.0
+  - photoswipe
+  - responsive
+  - two_columns
+  - 中文
+repository:
+  is_archived: false
+  stars: 147
+  last_commit_date: '2016-10-09T13:08:13Z'

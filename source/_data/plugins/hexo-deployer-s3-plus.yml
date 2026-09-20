@@ -1,0 +1,15 @@
+description: >-
+  A flexible Hexo deployer for AWS S3 and other S3-compatible services. Updated
+  for Hexo 7 and modern Node.js.
+link: https://github.com/JackTJC/hexo-deployer-s3-plus
+tags:
+  - deployer
+  - s3
+  - aws
+  - tebi
+  - r2
+  - universal
+repository:
+  is_archived: false
+  stars: 0
+  last_commit_date: '2025-07-19T06:23:59Z'

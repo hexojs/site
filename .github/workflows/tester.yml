@@ -1,0 +1,40 @@
+name: Tester
+
+on: pull_request_target
+
+permissions:
+  contents: read
+
+jobs:
+  tester:
+    permissions:
+      contents: read  # for actions/checkout to fetch code
+      pull-requests: write  # for marocchino/sticky-pull-request-comment to create or update PR comment
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: refs/pull/${{ github.event.pull_request.number }}/merge
+          allow-unsafe-pr-checkout: true
+      - name: Use Node.js
+        uses: actions/setup-node@v7
+      - name: Install Dependencies
+        run: npm install
+      - name: Lint
+        run: npm run eslint
+      - name: Test
+        run: npm run build
+        env:
+          CI: true
+      - name: Comment PR
+        uses: marocchino/sticky-pull-request-comment@v3
+        with:
+          path: public/validate_theme.txt
+      - uses: actions/github-script@v9
+        with:
+          script: |
+            const fs = require('fs');
+            const fileContent = fs.readFileSync('public/validate_theme.txt', 'utf8');
+            if (fileContent.includes('❌')) {
+              core.setFailed('Validation failed!')
+            }

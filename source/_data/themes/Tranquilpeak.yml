@@ -1,0 +1,14 @@
+description: A gorgeous responsive theme
+link: https://github.com/LouisBarranqueiro/hexo-theme-tranquilpeak
+preview: http://louisbarranqueiro.github.io/hexo-theme-tranquilpeak
+tags:
+  - responsive
+  - gorgeous
+  - sidebar
+  - two_columns
+  - one_column
+  - tag_plugins
+repository:
+  is_archived: false
+  stars: 1901
+  last_commit_date: '2023-11-12T03:47:18Z'

@@ -1,0 +1,13 @@
+description: >-
+  A Hexo plugin to automatically generate tags and categories using any
+  OpenAI-compatible model.
+link: https://github.com/zack-zzq/hexo-llm-tagging
+tags:
+  - llm
+  - OpenAI
+  - tags
+  - categories
+repository:
+  is_archived: false
+  stars: 4
+  last_commit_date: '2025-02-22T06:36:50Z'

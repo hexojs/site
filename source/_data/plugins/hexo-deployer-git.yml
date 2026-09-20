@@ -1,0 +1,10 @@
+description: Git deployer plugin for Hexo.
+link: https://github.com/hexojs/hexo-deployer-git
+tags:
+  - official
+  - deployer
+  - git
+repository:
+  is_archived: false
+  stars: 588
+  last_commit_date: '2024-12-23T20:00:21Z'

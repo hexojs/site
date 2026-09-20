@@ -1,0 +1,13 @@
+description: A masonry layout plugin used on hexo post page
+link: https://github.com/EasonWangs/hexo-pin
+tags:
+  - masonry
+  - tag
+  - layout
+  - html
+  - js
+  - css
+repository:
+  is_archived: false
+  stars: 0
+  last_commit_date: '2026-02-05T01:14:59Z'

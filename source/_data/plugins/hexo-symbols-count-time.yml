@@ -1,0 +1,11 @@
+description: Symbols count and time to read for articles.
+link: https://github.com/theme-next/hexo-symbols-count-time
+tags:
+  - helper
+  - count
+  - symbols
+  - reading-time
+repository:
+  is_archived: false
+  stars: 114
+  last_commit_date: '2020-04-03T16:49:37Z'

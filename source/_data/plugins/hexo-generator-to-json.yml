@@ -1,0 +1,11 @@
+description: Generate flatten, plain and reusable json data for state manage using.
+link: https://github.com/HeskeyBaozi/hexo-generator-to-json
+tags:
+  - normalizr
+  - json
+  - api
+  - redux
+repository:
+  is_archived: false
+  stars: 5
+  last_commit_date: '2017-02-08T08:21:19Z'

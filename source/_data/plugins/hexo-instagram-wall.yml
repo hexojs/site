@@ -1,0 +1,10 @@
+description: Displays up to 18 most recent images from your Instagram account
+link: https://github.com/rdgpt/hexo-instagram-wall
+tags:
+  - filter
+  - helper
+  - instagram
+repository:
+  is_archived: false
+  stars: 12
+  last_commit_date: '2017-03-05T20:44:42Z'

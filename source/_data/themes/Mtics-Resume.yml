@@ -1,0 +1,13 @@
+description: A simple and minimal hexo resume theme
+link: https://github.com/mtics/hexo-mtics-resume
+preview: https://mtics.netlify.com/
+tags:
+  - resume
+  - 简历
+  - responsive
+  - clean
+  - simple
+repository:
+  is_archived: false
+  stars: 110
+  last_commit_date: '2021-09-24T02:22:23Z'

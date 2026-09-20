@@ -1,0 +1,11 @@
+description: A plugin that adds support for featured images in posts and json-content.
+link: https://github.com/poacher2k/hexo-featured-image
+tags:
+  - featured
+  - image
+  - json
+  - json-content
+repository:
+  is_archived: false
+  stars: 32
+  last_commit_date: '2020-03-16T17:48:58Z'

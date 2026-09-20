@@ -1,0 +1,9 @@
+description: adding url_image in front-matter, then refer post.url_image in your templates;
+link: https://github.com/roybein/hexo-url-image
+tags:
+  - url
+  - image
+repository:
+  is_archived: false
+  stars: 1
+  last_commit_date: '2018-10-11T10:59:54Z'

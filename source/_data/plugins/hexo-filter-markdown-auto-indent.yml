@@ -1,0 +1,13 @@
+description: >-
+  This is an auto indent based on hexo-renderer-marked. It will work on text
+  tags that are not list tags. When I want to upload, I find that there is
+  already a similar plugin called hexo-filter-text-autospace, so you can also
+  try it.
+link: https://github.com/fireMan-34/hexo-filter-markdown-auto-indent
+tags:
+  - filter
+  - marked
+repository:
+  is_archived: false
+  stars: 0
+  last_commit_date: '2023-08-18T03:12:13Z'

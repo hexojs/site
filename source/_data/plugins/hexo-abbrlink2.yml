@@ -1,0 +1,10 @@
+description: zero based auto-incrementing permalink
+link: https://github.com/ohroy/hexo-abbrlink2
+tags:
+  - permalink
+  - link
+  - 固定链接
+repository:
+  is_archived: false
+  stars: 21
+  last_commit_date: '2020-07-28T03:03:03Z'

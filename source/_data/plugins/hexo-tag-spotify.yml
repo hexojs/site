@@ -1,0 +1,11 @@
+description: Server module for Hexo.
+link: https://github.com/ivanovyordan/hexo-tag-spotify
+tags:
+  - tag
+  - spotify
+  - music
+  - widget
+repository:
+  is_archived: false
+  stars: 9
+  last_commit_date: '2020-04-13T05:53:32Z'

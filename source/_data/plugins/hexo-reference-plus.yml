@@ -1,0 +1,12 @@
+description: >-
+  A hexo plugin to support simply reference marked and footnotes by markdown.
+  Auto serial number, tooltip, and more
+link: https://github.com/maxchang3/hexo-reference-plus
+tags:
+  - footnotes
+  - reference
+  - tooltip
+repository:
+  is_archived: false
+  stars: 19
+  last_commit_date: '2022-09-20T10:38:01Z'

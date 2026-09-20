@@ -1,0 +1,10 @@
+description: A plugin to support markdown footnotes in your Hexo blog posts
+link: https://github.com/LouisBarranqueiro/hexo-footnotes
+tags:
+  - filter
+  - markdown
+  - footnotes
+repository:
+  is_archived: true
+  stars: 55
+  last_commit_date: '2017-11-24T07:42:49Z'

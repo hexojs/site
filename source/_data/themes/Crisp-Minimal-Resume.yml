@@ -1,0 +1,11 @@
+description: A minimalist resume template for Hexo
+link: https://github.com/crispgm/resume/tree/master/port-hexo
+preview: https://crispgm.github.io/resume-hexo-example/
+tags:
+  - resume
+  - responsive
+  - minimal
+repository:
+  is_archived: false
+  stars: 307
+  last_commit_date: '2021-08-11T05:51:32Z'

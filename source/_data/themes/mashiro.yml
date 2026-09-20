@@ -1,0 +1,14 @@
+description: A CTeX-like theme for Hexo.
+link: https://github.com/bill-xia/hexo-theme-mashiro
+preview: http://mashiro.wilsonxia.cn
+tags:
+  - 中文
+  - responsive
+  - CTeX
+  - scholar
+  - simple
+  - one-column
+repository:
+  is_archived: false
+  stars: 89
+  last_commit_date: '2025-07-05T14:06:47Z'

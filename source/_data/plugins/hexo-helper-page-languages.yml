@@ -1,0 +1,10 @@
+description: Hexo helper to get available languages on a page
+link: https://github.com/polo2ro/hexo-helper-page-languages
+tags:
+  - helper
+  - i18n
+  - languages
+repository:
+  is_archived: false
+  stars: 4
+  last_commit_date: '2016-11-01T14:39:00Z'

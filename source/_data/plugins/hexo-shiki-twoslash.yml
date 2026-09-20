@@ -1,0 +1,10 @@
+description: A Hexo plugin for highlighting code blocks using shiki.
+link: https://github.com/shikijs/twoslash/tree/main/packages/hexo-shiki-twoslash
+tags:
+  - code
+  - highlight
+  - shiki
+repository:
+  is_archived: true
+  stars: 1143
+  last_commit_date: '2024-02-19T12:13:47Z'

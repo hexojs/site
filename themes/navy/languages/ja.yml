@@ -1,0 +1,77 @@
+menu:
+  docs: Docs
+  api: API
+  news: News
+  plugins: Plugins
+  themes: Themes
+  about: About
+  search: Search
+
+index:
+  get_started: 開始する
+  theme_intro: 魅力的で機能満載、カスタマイズ可能な多くのテーマ。あらゆるテンプレートエンジンによる、あなた独自のテーマを作成することもできます。
+  theme_link: テーマを探す
+
+page:
+  contents: 目次
+  back_to_top: Back to Top
+  improve: このページを改善する
+  prev: Prev
+  next: Next
+  last_updated: "最終更新: %s"
+
+sidebar:
+  docs:
+    getting_started: はじめに
+    overview: 概要
+    setup: セットアップ
+    configuration: 設定
+    commands: コマンド
+    migration: 移行
+    basic_usage: 基本的な使い方
+    writing: 執筆
+    front_matter: Front Matter
+    tag_plugins: タグプラグイン
+    asset_folders: アセットフォルダ
+    data_files: データファイル
+    server: サーバー
+    generating: 生成
+    deployment: デプロイ
+    github_pages: GitHub Pages
+    gitlab_pages: GitLab Pages
+    one_command_deployment: ワンコマンド・デプロイ
+    customization: カスタマイズ
+    permalinks: パーマリンク
+    themes: テーマ
+    structure: Structure
+    templates: テンプレート
+    variables: 変数
+    helpers: ヘルパー
+    internationalization: 国際化 (i18n)
+    syntax_highlight: シンタックスハイライト
+    plugins: プラグイン
+    miscellaneous: その他
+    troubleshooting: トラブルシューティング
+    contributing: 貢献
+  api:
+    core: コア
+    overview: 概要
+    events: イベント
+    locals: ローカル変数
+    router: ルーター
+    box: ボックス
+    rendering: レンダリング
+    posts: 記事
+    scaffolds: スキャフォールド
+    themes: テーマ
+    extensions: 拡張
+    console: コンソール
+    deployer: デプロイヤー
+    filter: フィルター
+    generator: ジェネレータ
+    helper: ヘルパー
+    injector: インジェクター
+    migrator: マイグレーター
+    processor: プロセッサー
+    renderer: レンダラー
+    tag: タグ

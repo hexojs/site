@@ -1,43 +1,69 @@
+---
 title: 指令
 ---
 
 ## init
 
-``` bash
+```bash
 $ hexo init [folder]
 ```
 
-新建一个网站。如果没有设置 `folder` ，Hexo 默认在目前的文件夹建立网站。
+新建一个网站。 如果没有设置 `folder` ，Hexo 默认在目前的文件夹建立网站。
+
+本命令相当于执行了以下几步：
+
+1. Git clone [hexo-starter](https://github.com/hexojs/hexo-starter) 和 [hexo-theme-landscape](https://github.com/hexojs/hexo-theme-landscape) 主题到当前目录或指定目录。
+2. 使用 [Yarn 1](https://classic.yarnpkg.com/lang/en/)、[pnpm](https://pnpm.io/zh/) 或 [npm](https://docs.npmjs.com/cli/install) 包管理器下载依赖（如有已安装多个，则列在前面的优先）。 npm 默认随 [Node.js](/zh-cn/docs/index.html#安装-Node-js) 安装。
 
 ## new
 
-``` bash
+```bash
 $ hexo new [layout] <title>
 ```
 
-新建一篇文章。如果没有设置 `layout` 的话，默认使用 [_config.yml](configuration.html) 中的 `default_layout` 参数代替。如果标题包含空格的话，请使用引号括起来。
+新建一篇文章。 如果没有设置 `layout` 的话，默认使用 [\_config.yml](configuration.html) 中的 `default_layout` 参数代替。 使用布局 `draft` 来创建草稿。 如果标题包含空格的话，请使用引号括起来。
+
+| 选项                | 描述                |
+| ----------------- | ----------------- |
+| `-p`, `--path`    | 文章的路径。 自定义文章的路径。  |
+| `-r`, `--replace` | 如果存在的话，替换当前的文章。   |
+| `-s`, `--slug`    | 文章别名。 自定义文章的 URL。 |
+
+默认情况下，Hexo 会使用文章的标题来决定文章文件的路径。 对于独立页面来说，Hexo 会创建一个以标题为名字的目录，并在目录中放置一个 `index.md` 文件。 你可以使用 `--path` 参数来覆盖上述行为、自行决定文件的目录：
+
+```bash
+hexo new page --path about/me "About me"
+```
+
+以上命令会创建一个 `source/about/me.md` 文件，同时 Front Matter 中的 title 为 `"About me"`
+
+注意！ title 是必须指定的！ 例如，这不会产生您可能期望的行为：
+
+```bash
+hexo new page --path about/me
+```
+
+此时 Hexo 会创建 `source/_posts/about/me.md`，同时 `me.md` 的 Front Matter 中的 title 为 `"page"`。 这是因为在上述命令中，hexo-cli 将 `page` 视为指定文章的标题、并采用默认的 `layout`。
 
 ## generate
 
-``` bash
+```bash
 $ hexo generate
 ```
 
 生成静态文件。
 
-选项 | 描述
---- | ---
-`-d`, `--deploy` | 文件生成后立即部署网站
-`-w`, `--watch` | 监视文件变动
-
-该命令可以简写为
-```bash
-$ hexo g
-```
+| 选项                    | 描述                     |
+| --------------------- | ---------------------- |
+| `-d`, `--deploy`      | 在生成完成后部署。              |
+| `-w`, `--watch`       | 监视文件变动                 |
+| `-b`, `--bail`        | 生成过程中如果发生任何未处理的异常则抛出异常 |
+| `-f`, `--force`       | 强制重新生成                 |
+| `-c`, `--concurrency` | 要同时生成的文件的最大数量。 默认无限制   |
 
 ## publish
 
-``` bash
+```bash
 $ hexo publish [layout] <filename>
 ```
 
@@ -45,50 +71,45 @@ $ hexo publish [layout] <filename>
 
 ## server
 
-``` bash
+```bash
 $ hexo server
 ```
 
-启动服务器。默认情况下，访问网址为： `http://localhost:4000/`。
+启动服务器。 默认情况下，访问网址为： `http://localhost:4000/`。
 
-选项 | 描述
---- | ---
-`-p`, `--port` | 重设端口
-`-s`, `--static` | 只使用静态文件
-`-l`, `--log` | 启动日记记录，使用覆盖记录格式
+| 选项               | 描述                            |
+| ---------------- | ----------------------------- |
+| `-p`, `--port`   | 重设端口                          |
+| `-s`, `--static` | 只使用静态文件                       |
+| `-l`, `--log`    | 启用日志。 Override logger format. |
 
 ## deploy
 
-``` bash
+```bash
 $ hexo deploy
 ```
 
-部署网站。
+部署你的网站。
 
-参数 | 描述
---- | ---
-`-g`, `--generate` | 部署之前预先生成静态文件
-
-该命令可以简写为：
-```bash
-$ hexo d
-```
+| 选项                 | 描述     |
+| ------------------ | ------ |
+| `-g`, `--generate` | 在部署前生成 |
 
 ## render
 
-``` bash
+```bash
 $ hexo render <file1> [file2] ...
 ```
 
 渲染文件。
 
-参数 | 描述
---- | ---
-`-o`, `--output` | 设置输出路径
+| 选项               | 描述     |
+| ---------------- | ------ |
+| `-o`, `--output` | 输出目标地址 |
 
 ## migrate
 
-``` bash
+```bash
 $ hexo migrate <type>
 ```
 
@@ -96,67 +117,77 @@ $ hexo migrate <type>
 
 ## clean
 
-``` bash
+```bash
 $ hexo clean
 ```
 
 清除缓存文件 (`db.json`) 和已生成的静态文件 (`public`)。
 
-在某些情况（尤其是更换主题后），如果发现您对站点的更改无论如何也不生效，您可能需要运行该命令。
-
 ## list
 
-``` bash
+```bash
 $ hexo list <type>
 ```
 
-列出网站资料。
+列出所有路由。
 
 ## version
 
-``` bash
+```bash
 $ hexo version
 ```
 
-显示 Hexo 版本。
+显示版本信息。
+
+## config
+
+```bash
+$ hexo config [key] [value]
+```
+
+列出网站的配置（`_config.yml`）。 如果指定了 `key`，则只展示配置中对应 `key` 的值；如果同时指定了 `key` 和 `value`，则将配置中对应的 `key` 的值修改为 `value`。
 
 ## 选项
 
 ### 安全模式
 
-``` bash
+```bash
 $ hexo --safe
 ```
 
-在安全模式下，不会载入插件和脚本。当您在安装新插件遭遇问题时，可以尝试以安全模式重新执行。
+在安全模式下，不会加载插件和脚本。 当您在安装新插件遭遇问题时，可以尝试以安全模式重新执行。
 
 ### 调试模式
 
-``` bash
+```bash
 $ hexo --debug
 ```
 
-在终端中显示调试信息并记录到 `debug.log`。当您碰到问题时，可以尝试用调试模式重新执行一次，并 [提交调试信息到 GitHub](https://github.com/hexojs/hexo/issues/new)。
+在终端中显示调试信息并记录到 `debug.log`。 当您使用 Hexo 时遇到问题，可以尝试用调试模式重新执行一次。 如果您发现错误，请[在 GitHub 上提出 issue](https://github.com/hexojs/hexo/issues/new?assignees=&labels=&projects=&template=bug_report.yml)。
 
 ### 简洁模式
 
-``` bash
+```bash
 $ hexo --silent
 ```
 
-隐藏终端信息。
+静默输出到终端.
 
 ### 自定义配置文件的路径
 
-``` bash
+```bash
 $ hexo --config custom.yml
 ```
 
-自定义配置文件的路径，执行后将不再使用 `_config.yml`。
+自定义配置文件的路径，指定这个参数后将不再使用默认的 `_config.yml`。 还接受一个以逗号分隔的 JSON 或 YAML 配置文件列表（无空格），该列表将把这些文件合并为一个 `_multiconfig.yml` 文件。
+
+```bash
+$ hexo --config custom.yml,custom2.json
+```
 
 ### 显示草稿
 
-``` bash
+```bash
 $ hexo --draft
 ```
 
@@ -164,9 +195,8 @@ $ hexo --draft
 
 ### 自定义 CWD
 
-``` bash
+```bash
 $ hexo --cwd /path/to/cwd
 ```
 
 自定义当前工作目录（Current working directory）的路径。
-

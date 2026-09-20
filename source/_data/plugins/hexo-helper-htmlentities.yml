@@ -1,0 +1,11 @@
+description: Hexo helper plugin for encoding html entities.
+link: https://github.com/kulikala/hexo-helper-htmlentities
+tags:
+  - helper
+  - html-entities
+  - encode
+  - entities
+repository:
+  is_archived: false
+  stars: 0
+  last_commit_date: '2017-03-15T11:33:43Z'

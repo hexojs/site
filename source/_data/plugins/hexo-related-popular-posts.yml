@@ -1,0 +1,17 @@
+description: >-
+  A hexo plugin that generates a list of links to related posts and popular
+  posts. Also , this plugin can get Visitor Counts (PV) on posts.
+link: https://github.com/tea3/hexo-related-popular-posts
+tags:
+  - popularPosts
+  - relatedPosts
+  - RelevanceOfContents
+  - visitorCounts
+  - pageViews
+  - PV
+  - helper
+  - generator
+repository:
+  is_archived: false
+  stars: 115
+  last_commit_date: '2020-08-29T10:16:48Z'
