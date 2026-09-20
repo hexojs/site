@@ -1,0 +1,860 @@
+/* Cascade layer order: reset lowest, then Tailwind/Quanta base, then
+ * components and finally utilities — so Quanta's q-* utilities (e.g.
+ * q-button-*) always win over global element resets. */
+@layer reset, theme, base, components, utilities;
+
+@import "tailwindcss" source(none);
+@source "../src";
+@source "../packages/app-landing/src";
+@source "../packages/quanta/src";
+@import "@higgsfield/quanta/tailwind.css";
+
+/* New in-app Quanta-style components (moved out of the quanta package). Their
+ * CSS uses Tailwind v4 @utility/@source, so it must load through this tailwind
+ * entry. Ordering mirrors quanta's components.css (composer after button;
+ * media-card + generation-card after media). */
+@import "./components/composer/composer.css";
+@import "./components/media-card/media-card.css";
+@import "./components/generation-card/generation-card.css";
+@import "./components/setting-trigger/setting-trigger.css";
+@import "./components/prompt-box/prompt-box.css";
+@import "./components/icon-tile/icon-tile.css";
+
+@import "tw-animate-css";
+/* shadcn v4 base (scrollbar/scroll-fade utilities, toast base) for src/components/ui */
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:where([data-theme="default-dark"], [data-theme="default-dark"] *));
+
+/*
+ * Quanta is the visual source of truth. This file imports Quanta's Tailwind
+ * entry once; that entry brings in primitives, semantic theme variables,
+ * typography, z-index, border-width, and q-* component utilities.
+ *
+ * Generated app layout should use normal Tailwind spacing (`p-4`, `gap-2`,
+ * `mt-6`, `h-10`) and Quanta semantic utilities for color/type
+ * (`bg-q-background-primary`, `text-q-body-md-regular`). Do not use old numeric
+ * token classes such as `px-400` / `gap-200`, and do not reach for raw
+ * q-spacing vars in app code. Quanta component internals own their q-* classes.
+ *
+ * The `--spacing: 0.25rem` restoration keeps native Tailwind layout utilities
+ * stable for generated apps and legacy scaffold components. The inline theme
+ * aliases below keep shadcn-style imports rendering while new UI migrates to
+ * Quanta components.
+ */
+@theme {
+  --spacing: 0.25rem;
+}
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+
+  --color-background: var(--hf-color-background-primary);
+  --color-foreground: var(--hf-color-text-primary);
+  --color-card: var(--hf-color-background-secondary);
+  --color-card-foreground: var(--hf-color-text-primary);
+  --color-popover: var(--hf-color-background-secondary);
+  --color-popover-foreground: var(--hf-color-text-primary);
+  --color-primary: var(--hf-color-button-brand);
+  --color-primary-foreground: var(--hf-color-button-label-brand);
+  --color-secondary: var(--hf-color-background-secondary);
+  --color-secondary-foreground: var(--hf-color-text-primary);
+  --color-muted: var(--hf-color-background-tertiary);
+  --color-muted-foreground: var(--hf-color-text-secondary);
+  --color-accent: var(--hf-color-overlay-hover);
+  --color-accent-foreground: var(--hf-color-text-primary);
+  /* shadcn v4 components use text-destructive on tinted fills — needs the
+   * bright brand red, not the dark error surface */
+  --color-destructive: var(--hf-color-button-destructive);
+  --color-destructive-foreground: var(--hf-color-button-label-destructive);
+  --color-border: var(--hf-color-border-default);
+  --color-input: var(--hf-color-border-default);
+  --color-ring: var(--hf-color-border-focus);
+  --color-ring-offset-background: var(--hf-color-background-primary);
+
+  --color-chart-1: var(--hf-color-lime-500);
+  --color-chart-2: var(--hf-color-pink-500);
+  --color-chart-3: var(--hf-color-blue-500);
+  --color-chart-4: var(--hf-color-yellow-500);
+  --color-chart-5: var(--hf-color-purple-500);
+
+  --color-sidebar: var(--hf-color-background-secondary);
+  --color-sidebar-foreground: var(--hf-color-text-primary);
+  --color-sidebar-primary: var(--hf-color-button-brand);
+  --color-sidebar-primary-foreground: var(--hf-color-button-label-brand);
+  --color-sidebar-accent: var(--hf-color-overlay-hover);
+  --color-sidebar-accent-foreground: var(--hf-color-text-primary);
+  --color-sidebar-border: var(--hf-color-border-default);
+  --color-sidebar-ring: var(--hf-color-border-focus);
+
+  --font-grotesk: var(--hf-type-family-grotesk);
+}
+
+/* Fills used by src/components/ui (badge, tabs, marketing-button), mapped to
+ * Quanta's --hf-gradient-* tokens. */
+@utility badge-gradient-blue {
+  background-image: var(--hf-gradient-badge-blue);
+}
+@utility badge-gradient-pink {
+  background-image: var(--hf-gradient-badge-pink);
+}
+@utility badge-gradient-purple {
+  background-image: var(--hf-gradient-badge-purple);
+}
+@utility glass-sheen {
+  background-image: var(--hf-gradient-glass-sheen);
+}
+@utility gloss-lime {
+  background-image:
+    var(--hf-gradient-special-gloss-lime-angled),
+    linear-gradient(90deg, var(--hf-color-lime-500), var(--hf-color-lime-500));
+}
+@utility gloss-pink {
+  background-image:
+    var(--hf-gradient-special-gloss-pink),
+    linear-gradient(90deg, var(--hf-color-pink-500), var(--hf-color-pink-500));
+}
+
+/* Toast skin (Figma node 4085:2671): compact glass pill, kind-colored fills */
+[data-sonner-toast][data-styled="true"] {
+  width: fit-content;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  border: 1px solid var(--hf-color-transparent-light-05);
+  border-radius: var(--hf-radius-300, 12px);
+  background: var(--hf-color-glass-dark);
+  backdrop-filter: blur(40px);
+  box-shadow: 0 6px 6px rgb(0 0 0 / 0.25);
+  color: var(--hf-color-text-primary);
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+}
+[data-sonner-toast][data-type="success"] {
+  border-color: var(--hf-color-transparent-light-15);
+  background: #68b922; /* toast/success — raw value in Figma, no hf token */
+  backdrop-filter: none;
+}
+[data-sonner-toast].toast-new {
+  border-color: var(--hf-color-transparent-light-15);
+  background: #7a58ff; /* toast/new — raw value in Figma, no hf token */
+  backdrop-filter: none;
+}
+[data-sonner-toast] [data-close-button] {
+  position: static;
+  order: 9;
+  margin-left: 4px;
+  border: none;
+  background: transparent;
+  color: inherit;
+  transform: none;
+}
+[data-sonner-toast] [data-close-button]:hover {
+  background: var(--hf-color-overlay-hover);
+}
+
+:root {
+  --radius: 0.625rem;
+}
+
+@layer base {
+  html {
+    background-color: var(--hf-color-background-primary);
+    color: var(--hf-color-text-primary);
+    color-scheme: dark;
+  }
+
+  body {
+    min-height: 100vh;
+    background-color: var(--hf-color-background-primary);
+    color: var(--hf-color-text-primary);
+    font-family: var(--hf-type-family-secondary);
+  }
+
+  * {
+    border-color: var(--hf-color-border-default);
+  }
+}
+
+/* ===================================================================
+ * 暗号通貨とブロックチェーン — site-owned token layer & components.
+ * Deliberately UNLAYERED (outside @layer) so it always wins over the
+ * Quanta/Tailwind layered defaults above. This site imports no Quanta
+ * component and uses no q- token; only the Tailwind build wiring above
+ * this line is shared scaffold.
+ * =================================================================== */
+
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=IBM+Plex+Mono:wght@400;500;600&display=swap");
+
+:root {
+  --site-bg: #10142b;
+  --site-panel: #171c3a;
+  --site-panel-soft: #1c2247;
+  --site-ink: #f3efe4;
+  --site-muted: #a8acc6;
+  --site-accent: #d9b76b;
+  --site-accent-soft: rgba(217, 183, 107, 0.16);
+  --site-border: rgba(168, 172, 198, 0.18);
+  --site-font-display: "Noto Sans JP", "Hiragino Sans", sans-serif;
+  --site-font-mono: "IBM Plex Mono", ui-monospace, monospace;
+}
+
+html,
+body {
+  background-color: var(--site-bg);
+  color: var(--site-ink);
+  color-scheme: dark;
+}
+
+.site-root {
+  background-color: var(--site-bg);
+  color: var(--site-ink);
+  font-family: var(--site-font-display);
+  overflow-x: clip;
+}
+
+.site-kicker {
+  font-family: var(--site-font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--site-accent);
+}
+
+.site-nav {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+  padding: 0 clamp(1rem, 4vw, 3rem);
+  background: linear-gradient(to bottom, rgba(16, 20, 43, 0.92), rgba(16, 20, 43, 0.72));
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--site-border);
+}
+
+.site-nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--site-ink);
+  text-decoration: none;
+}
+
+.site-nav-mark {
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  object-fit: cover;
+  display: block;
+}
+
+.site-nav-links {
+  display: none;
+  gap: 2rem;
+  font-size: 0.9rem;
+  color: var(--site-muted);
+}
+
+@media (min-width: 768px) {
+  .site-nav-links {
+    display: flex;
+  }
+}
+
+.site-nav-links a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.site-nav-links a:hover {
+  color: var(--site-ink);
+}
+
+.cta-chainlink {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--site-ink);
+  font-weight: 600;
+  font-size: 0.92rem;
+  text-decoration: none;
+  padding-bottom: 2px;
+}
+
+.cta-chainlink svg {
+  width: 22px;
+  height: 10px;
+  overflow: visible;
+}
+
+.cta-chainlink .cta-chainlink-path {
+  stroke: var(--site-accent);
+  stroke-width: 1.6;
+  fill: none;
+  stroke-dasharray: 30;
+  stroke-dashoffset: 30;
+  transition: stroke-dashoffset 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.cta-chainlink .cta-chainlink-arrow {
+  fill: var(--site-accent);
+  transform: translateX(0);
+  transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.cta-chainlink:hover .cta-chainlink-path,
+.cta-chainlink:focus-visible .cta-chainlink-path {
+  stroke-dashoffset: 0;
+}
+
+.cta-chainlink:hover .cta-chainlink-arrow,
+.cta-chainlink:focus-visible .cta-chainlink-arrow {
+  transform: translateX(4px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cta-chainlink .cta-chainlink-path {
+    stroke-dashoffset: 0;
+  }
+}
+
+.site-hero {
+  position: relative;
+  min-height: 100dvh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding: clamp(5rem, 12vw, 8rem) clamp(1.25rem, 5vw, 4rem) clamp(3rem, 8vw, 5rem);
+}
+
+.site-hero-layer {
+  position: absolute;
+  inset: -6% -6%;
+  will-change: transform;
+}
+
+.site-hero-layer img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.site-hero-layer--back {
+  z-index: 1;
+  opacity: 0.9;
+}
+
+.site-hero-layer--mid {
+  z-index: 2;
+  opacity: 0.55;
+  mix-blend-mode: screen;
+}
+
+.site-hero-layer--front {
+  z-index: 3;
+  inset: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.site-hero-layer--front img {
+  width: auto;
+  height: 92%;
+  max-width: 60%;
+  object-fit: contain;
+  object-position: bottom right;
+  margin-right: clamp(0rem, 4vw, 3rem);
+  filter: drop-shadow(0 30px 60px rgba(0, 0, 0, 0.55));
+}
+
+.site-hero-scrim {
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+  background: linear-gradient(
+    100deg,
+    rgba(16, 20, 43, 0.96) 0%,
+    rgba(16, 20, 43, 0.78) 34%,
+    rgba(16, 20, 43, 0.2) 62%,
+    rgba(16, 20, 43, 0.05) 100%
+  );
+}
+
+.site-hero-content {
+  position: relative;
+  z-index: 5;
+  max-width: 40rem;
+}
+
+.site-hero-title {
+  font-size: clamp(2.25rem, 5.4vw, 4rem);
+  line-height: 1.12;
+  letter-spacing: -0.01em;
+  font-weight: 900;
+  margin: 0.9rem 0 1.1rem;
+  color: var(--site-ink);
+}
+
+.site-hero-sub {
+  font-size: clamp(1rem, 1.6vw, 1.15rem);
+  line-height: 1.7;
+  color: var(--site-muted);
+  max-width: 34ch;
+  margin-bottom: 2rem;
+}
+
+.site-reveal {
+  animation: site-rise 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes site-rise {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site-reveal {
+    animation: none;
+  }
+  .site-hero-layer {
+    transform: none !important;
+  }
+}
+
+.cta-coin {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--site-ink);
+  font-family: var(--site-font-display);
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 0;
+}
+
+.cta-coin-badge {
+  width: 52px;
+  height: 52px;
+  border-radius: 999px;
+  border: 1.5px solid var(--site-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1), background 0.3s ease;
+  transform-origin: center;
+}
+
+.cta-coin-badge svg {
+  width: 18px;
+  height: 18px;
+  stroke: var(--site-accent);
+  transition: stroke 0.3s ease;
+}
+
+.cta-coin:hover .cta-coin-badge,
+.cta-coin:focus-visible .cta-coin-badge {
+  transform: rotate(180deg);
+  background: var(--site-accent-soft);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cta-coin-badge {
+    transition: none;
+  }
+}
+
+.site-section {
+  position: relative;
+  padding: clamp(4rem, 9vw, 7rem) clamp(1.25rem, 5vw, 4rem);
+}
+
+.site-section--panel {
+  background: var(--site-panel);
+}
+
+.site-container {
+  max-width: 74rem;
+  margin: 0 auto;
+}
+
+.site-h2 {
+  font-size: clamp(1.75rem, 3.4vw, 2.6rem);
+  font-weight: 800;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  color: var(--site-ink);
+  max-width: 22ch;
+}
+
+.site-p {
+  color: var(--site-muted);
+  line-height: 1.8;
+  max-width: 62ch;
+}
+
+.site-split {
+  display: grid;
+  gap: clamp(2rem, 5vw, 4rem);
+  align-items: center;
+}
+
+@media (min-width: 900px) {
+  .site-split {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.site-split-figure {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid var(--site-border);
+}
+
+.site-split-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.site-stat-rail {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  font-family: var(--site-font-mono);
+  border-left: 2px solid var(--site-accent);
+  padding-left: 1.25rem;
+}
+
+.site-stat-num {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--site-accent);
+  display: block;
+}
+
+.site-stat-label {
+  font-size: 0.78rem;
+  color: var(--site-muted);
+}
+
+.site-bento {
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 900px) {
+  .site-bento {
+    grid-template-columns: 1.3fr 1fr 1fr;
+    grid-template-rows: auto auto;
+  }
+  .site-bento > *:first-child {
+    grid-row: span 2;
+  }
+}
+
+.site-bento-cell {
+  background: var(--site-panel-soft);
+  border: 1px solid var(--site-border);
+  border-radius: 18px;
+  padding: clamp(1.5rem, 3vw, 2.25rem);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: flex-end;
+  min-height: 220px;
+}
+
+.site-bento-icon {
+  width: 40px;
+  height: 40px;
+  stroke: var(--site-accent);
+  fill: none;
+  stroke-width: 1.6;
+}
+
+.site-bento-cell h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--site-ink);
+}
+
+.site-bento-cell p {
+  color: var(--site-muted);
+  font-size: 0.92rem;
+  line-height: 1.7;
+}
+
+.site-gallery {
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+}
+
+.site-gallery-card {
+  position: relative;
+  background: var(--site-panel-soft);
+  border: 1px solid var(--site-border);
+  border-radius: 16px;
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.site-gallery-card:nth-child(2n) {
+  transform: translateY(1.25rem);
+}
+
+@media (max-width: 640px) {
+  .site-gallery-card:nth-child(2n) {
+    transform: none;
+  }
+}
+
+.site-gallery-icon {
+  width: 34px;
+  height: 34px;
+  stroke: var(--site-accent);
+  fill: none;
+  stroke-width: 1.6;
+}
+
+.cta-bracket {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--site-muted);
+  font-size: 0.85rem;
+  text-decoration: none;
+  padding: 0.35rem 0.1rem;
+  width: fit-content;
+}
+
+.cta-bracket::before,
+.cta-bracket::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 10px;
+  border-color: var(--site-accent);
+  border-style: solid;
+  opacity: 0;
+  transition: opacity 0.3s ease, width 0.3s ease;
+}
+
+.cta-bracket::before {
+  left: -10px;
+  border-width: 1px 0 1px 1px;
+}
+
+.cta-bracket::after {
+  right: -10px;
+  border-width: 1px 1px 1px 0;
+}
+
+.cta-bracket:hover,
+.cta-bracket:focus-visible {
+  color: var(--site-ink);
+}
+
+.cta-bracket:hover::before,
+.cta-bracket:hover::after,
+.cta-bracket:focus-visible::before,
+.cta-bracket:focus-visible::after {
+  opacity: 1;
+}
+
+.site-security {
+  display: grid;
+  gap: clamp(2rem, 5vw, 4rem);
+}
+
+@media (min-width: 900px) {
+  .site-security {
+    grid-template-columns: 0.7fr 1.3fr;
+  }
+}
+
+.site-rail-note {
+  font-family: var(--site-font-mono);
+  font-size: 0.8rem;
+  color: var(--site-muted);
+  line-height: 1.9;
+  border-left: 1px solid var(--site-border);
+  padding-left: 1rem;
+}
+
+.site-security-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.site-security-item {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--site-border);
+}
+
+.site-security-item:last-child {
+  border-bottom: none;
+}
+
+.cta-decode {
+  position: relative;
+  display: inline-block;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: var(--site-font-mono);
+  font-size: 0.85rem;
+  color: var(--site-accent);
+  letter-spacing: 0.03em;
+  padding: 0;
+  text-decoration: none;
+}
+
+.cta-decode .cta-decode-ghost {
+  color: var(--site-muted);
+  opacity: 0.45;
+}
+
+.cta-decode .cta-decode-real {
+  display: inline-block;
+  clip-path: inset(0 100% 0 0);
+  transition: clip-path 0.5s steps(10, end);
+  white-space: nowrap;
+  margin-left: 0.5rem;
+}
+
+.cta-decode:hover .cta-decode-real,
+.cta-decode:focus-visible .cta-decode-real {
+  clip-path: inset(0 0 0 0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cta-decode .cta-decode-real {
+    clip-path: inset(0 0 0 0);
+    transition: none;
+  }
+}
+
+.site-footer {
+  position: relative;
+  padding: clamp(4rem, 10vw, 6rem) clamp(1.25rem, 5vw, 4rem) 2.5rem;
+  background: var(--site-panel);
+  border-top: 1px solid var(--site-border);
+}
+
+.site-footer-banner {
+  text-align: center;
+  max-width: 40rem;
+  margin: 0 auto 3.5rem;
+}
+
+.cta-stamp {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: transparent;
+  border: 1.5px solid var(--site-accent);
+  color: var(--site-accent);
+  font-family: var(--site-font-mono);
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  padding: 0.85rem 1.6rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.2s ease, color 0.2s ease;
+  text-decoration: none;
+}
+
+.cta-stamp:hover,
+.cta-stamp:focus-visible {
+  background: var(--site-accent-soft);
+}
+
+.cta-stamp:active {
+  transform: scale(0.97) rotate(-0.6deg);
+  box-shadow: inset 0 0 0 2px var(--site-accent);
+}
+
+.site-footer-columns {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr;
+  padding-top: 2.5rem;
+  border-top: 1px solid var(--site-border);
+  font-size: 0.85rem;
+  color: var(--site-muted);
+}
+
+@media (min-width: 700px) {
+  .site-footer-columns {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.site-footer-columns h4 {
+  font-family: var(--site-font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--site-muted);
+  margin-bottom: 0.9rem;
+}
+
+.site-footer-columns a {
+  color: var(--site-ink);
+  text-decoration: none;
+  opacity: 0.85;
+}
+
+.site-footer-columns a:hover {
+  opacity: 1;
+  color: var(--site-accent);
+}
+
+.site-footer-legal {
+  margin-top: 2.5rem;
+  font-size: 0.75rem;
+  color: var(--site-muted);
+  opacity: 0.7;
+}
+
+.site-section--textured {
+  background-image: linear-gradient(rgba(16, 20, 43, 0.94), rgba(16, 20, 43, 0.94)),
+    url("/assets/texture/icon-motif.jpg");
+  background-size: cover;
+  background-position: center;
+}
