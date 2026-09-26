@@ -11,13 +11,13 @@ title: 变量
 | `site`   | 全站信息                             | `object`; 见 [网站变量](#网站变量) |
 | `page`   | 针对该页面的内容以及 front-matter 中自定义的变量。 | `object`; 见 [页面变量](#页面变量) |
 | `config` | 网站配置                             | `object` (站点的配置文件)        |
-| `theme`  | 主题配置。 继承自网站配置。                   | `object` (主题的配置文件)        |
+| `theme`  | 主题配置。继承自网站配置。                    | `object` (主题的配置文件)        |
 | `path`   | 当前页面的路径（不含根路径）                   | `string`                  |
 | `url`    | 当前页面的完整网址                        | `string`                  |
 | `env`    | 环境变量                             | ???                       |
 
 {% note warn %}
-从 Hexo 5.0.0 开始，Lodash 已从全局变量中移除。 迁移时 [You-Dont-Need-Lodash-Underscore](https://github.com/you-dont-need/You-Dont-Need-Lodash-Underscore) 或许能为你提供帮助。
+从 Hexo 5.0.0 开始，Lodash 已从全局变量中移除。迁移时 [You-Dont-Need-Lodash-Underscore](https://github.com/you-dont-need/You-Dont-Need-Lodash-Underscore) 或许能为你提供帮助。
 {% endnote %}
 
 ### 网站变量
@@ -33,25 +33,25 @@ title: 变量
 
 **页面（`page`）**
 
-| 变量                 | 描述                                            | 类型               |
-| ------------------ | --------------------------------------------- | ---------------- |
-| `page.title`       | 文章标题                                          | `string`         |
-| `page.date`        | 文章建立日期                                        | [Moment.js][] 对象 |
-| `page.updated`     | 页面更新日期                                        | [Moment.js][] 对象 |
-| `page.comments`    | 评论是否启用                                        | `boolean`        |
-| `page.layout`      | 布局名称                                          | `string`         |
-| `page.content`     | 页面的完整内容                                       | `string`         |
-| `page.excerpt`     | 文章摘要                                          | `string`         |
-| `page.more`        | 除了页面摘要的其余内容                                   | `string`         |
-| `page.source`      | 源文件的路径                                        | `string`         |
-| `page.full_source` | 页面的完整原始路径                                     | `string`         |
-| `page.path`        | 页面网址（不含根路径）。 我们通常在主题中使用 `url_for(page.path)`。 | `string`         |
-| `page.permalink`   | 文章的完整（编码的）URL                                 | `string`         |
-| `page.prev`        | 上一个页面。 如果此为第一个页面则为 `null`。                    | ???              |
-| `page.next`        | 下一个页面。 如果此为最后一个页面则为 `null`。                   | ???              |
-| `page.raw`         | 文章的原始内容                                       | ???              |
-| `page.photos`      | 文章的照片（用于相簿）                                   | array of ???     |
-| `page.link`        | 文章的外部链接（用于链接文章）                               | `string`         |
+| 变量                 | 描述                                           | 类型               |
+| ------------------ | -------------------------------------------- | ---------------- |
+| `page.title`       | 文章标题                                         | `string`         |
+| `page.date`        | 文章建立日期                                       | [Moment.js][] 对象 |
+| `page.updated`     | 页面更新日期                                       | [Moment.js][] 对象 |
+| `page.comments`    | 评论是否启用                                       | `boolean`        |
+| `page.layout`      | 布局名称                                         | `string`         |
+| `page.content`     | 页面的完整内容                                      | `string`         |
+| `page.excerpt`     | 文章摘要                                         | `string`         |
+| `page.more`        | 除了页面摘要的其余内容                                  | `string`         |
+| `page.source`      | 源文件的路径                                       | `string`         |
+| `page.full_source` | 页面的完整原始路径                                    | `string`         |
+| `page.path`        | 页面网址（不含根路径）。我们通常在主题中使用 `url_for(page.path)`。 | `string`         |
+| `page.permalink`   | 文章的完整（编码的）URL                                | `string`         |
+| `page.prev`        | 上一个页面。 如果此为第一个页面则为 `null`。                   | ???              |
+| `page.next`        | 下一个页面。 如果此为最后一个页面则为 `null`。                  | ???              |
+| `page.raw`         | 文章的原始内容                                      | ???              |
+| `page.photos`      | 文章的照片（用于相簿）                                  | array of ???     |
+| `page.link`        | 文章的外部链接（用于链接文章）                              | `string`         |
 
 **文章 (`post`):** 与 `page` 布局相同，但新增以下变量。
 
@@ -70,11 +70,11 @@ title: 变量
 | `page.current`     | 目前页数                                                     | `number` |
 | `page.current_url` | 目前分页的网址                                                  | `string` |
 | `page.posts`       | 本页文章 ([Data Model](https://hexojs.github.io/warehouse/)) | `object` |
-| `page.prev`        | 上一页的页数。 如果此页是第一页的话则为 `0`。                                | `number` |
-| `page.prev_link`   | 上一页的网址。 如果此页是第一页的话则为 `''`。                               | `string` |
-| `page.next`        | 下一页的页数。 如果此页是最后一页的话则为 `0`。                               | `number` |
-| `page.next_link`   | 下一页的网址。 如果此页是最后一页的话则为 `''`。                              | `string` |
-| `page.path`        | 当前页面的路径（不含根目录）。 我们通常在主题中使用 `url_for(page.path)`。         | `string` |
+| `page.prev`        | 上一页的页数。如果此页是第一页的话则为 `0`。                                 | `number` |
+| `page.prev_link`   | 上一页的网址。如果此页是第一页的话则为 `''`。                                | `string` |
+| `page.next`        | 下一页的页数。如果此页是最后一页的话则为 `0`。                                | `number` |
+| `page.next_link`   | 下一页的网址。如果此页是最后一页的话则为 `''`。                               | `string` |
+| `page.path`        | 当前页面的路径（不含根目录）。我们通常在主题中使用 `url_for(page.path)`。          | `string` |
 
 **分类 (`category`)** ：与 `index` 布局相同，但新增以下变量。
 

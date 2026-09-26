@@ -12,4 +12,4 @@ hexo.extend.deployer.register(name, function (args) {
 });
 ```
 
-在函数中会传入 `args` 参数。 该参数包含了 `_config.yml` 中设置的 `deploy` 值，以及用户在终端中输入的内容。
+在函数中会传入 `args` 参数。该参数包含了 `_config.yml` 中设置的 `deploy` 值，以及用户在终端中输入的内容。

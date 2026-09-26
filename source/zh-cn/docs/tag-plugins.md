@@ -2,7 +2,7 @@
 title: 标签插件（Tag Plugins）
 ---
 
-标签插件和 Front-matter 中的标签不同。 它们是从 Octopress 移植的，为您提供了一种快速向帖子添加特定内容的有用方法。
+标签插件和 Front-matter 中的标签不同。它们是从 Octopress 移植的，为您提供了一种快速向帖子添加特定内容的有用方法。
 
 虽然你可以使用任何格式书写你的文章，但是标签插件永远可用，且语法也都是一致的。
 
@@ -24,7 +24,7 @@ content
 
 ### 示例
 
-**无参数。 普通引用块。**
+**无参数。普通引用块。**
 
 ```
 {% blockquote %}
@@ -92,7 +92,7 @@ code snippet
 | `line_threshold` | 只有代码块的行数超过该阈值，才显示行数                                                                        | `0`    |
 | `highlight`      | 启用代码高亮                                                                                     | `true` |
 | `first_line`     | 指定第一个行号                                                                                    | `1`    |
-| `mark`           | 突出显示特定的行，每个值用逗号分隔。 使用破折号指定数字范围<br>例如： `mark:1,4-7,10` 将标记第1、4至7和10行                  |        |
+| `mark`           | 突出显示特定的行，每个值用逗号分隔。使用破折号指定数字范围<br>例如： `mark:1,4-7,10` 将标记第1、4至7和10行                   |        |
 | `wrap`           | 用 [`<table>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table) 包裹代码块 | `true` |
 
 ### 示例
@@ -169,7 +169,7 @@ content
 ## jsFiddle (`v7.0.0` 中被移除)
 
 {% note warn %}
-该标签在 Hexo 7.0.0 中被删除。 如果你正在使用 `v7.0.0+`，请使用 [hexo-tag-embed](https://github.com/hexojs/hexo-tag-embed) 替代。
+该标签在 Hexo 7.0.0 中被删除。如果你正在使用 `v7.0.0+`，请使用 [hexo-tag-embed](https://github.com/hexojs/hexo-tag-embed) 替代。
 {% endnote %}
 
 在文章中嵌入 jsFiddle。
@@ -318,7 +318,7 @@ content
 
 默认链接文字是文章的标题，你也可以自定义要显示的文本。
 
-默认对文章的标题和自定义标题里的特殊字符进行转义。 可以使用 `escape` 选项，禁止对特殊字符进行转义。
+默认对文章的标题和自定义标题里的特殊字符进行转义。可以使用 `escape` 选项，禁止对特殊字符进行转义。
 
 例如：
 
@@ -401,7 +401,7 @@ _hexo-renderer-marked 3.1.0+ 可以（可选）自动解析图片的文章路径
 
 ### url_for (7.0.0+)
 
-返回一个带有根路径前缀的URL。 输出将会自动编码。
+返回一个带有根路径前缀的URL。输出将会自动编码。
 
 ```
 {% url_for text path [relative] %}
@@ -449,7 +449,7 @@ relative_link: true
 
 ### full_url_for (7.0.0+)
 
-返回一个以 `config.url` 为前缀的URL。 输出将会自动编码。
+返回一个以 `config.url` 为前缀的URL。输出将会自动编码。
 
 ```
 {% full_url_for text path %}
@@ -482,7 +482,7 @@ content
 
 ## 帖子摘要
 
-在文章中使用 `<!-- more -->`，那么 `<!-- more -->` 之前的文字将会被视为摘要。 如果在 [front-matter](/docs/front-matter#Settings-amp-Their-Default-Values) 中指定了 `excerpt:` 值，则优先使用此值。
+在文章中使用 `<!-- more -->`，那么 `<!-- more -->` 之前的文字将会被视为摘要。如果在 [front-matter](/docs/front-matter#Settings-amp-Their-Default-Values) 中指定了 `excerpt:` 值，则优先使用此值。
 
 **示例：**
 
