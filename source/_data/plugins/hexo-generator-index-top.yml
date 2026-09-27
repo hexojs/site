@@ -1,0 +1,7 @@
+description: Index generator for Hexo with pin top and customized style.
+link: https://github.com/drowning-in-codes/hexo-generator-index-top
+tags:
+  - generator
+  - index
+repository:
+  is_archived: false
