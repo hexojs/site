@@ -2,7 +2,7 @@
 title: 事件
 ---
 
-Hexo 继承了 [EventEmitter][]。 您可以用 `on` 方法监听 Hexo 所发布的事件，也可以使用 `emit` 方法对 Hexo 发布事件。 更详细的说明请参阅 Node.js 的 API。
+Hexo 继承了 [EventEmitter][]。您可以用 `on` 方法监听 Hexo 所发布的事件，也可以使用 `emit` 方法对 Hexo 发布事件。更详细的说明请参阅 Node.js 的 API。
 
 ### deployBefore
 
@@ -26,7 +26,7 @@ Hexo 继承了 [EventEmitter][]。 您可以用 `on` 方法监听 Hexo 所发布
 
 ### new
 
-在文章文件建立后发布。 该事件返回文章参数。
+在文章文件建立后发布。该事件返回文章参数。
 
 ```js
 hexo.on("new", function (post) {
@@ -41,11 +41,11 @@ hexo.on("new", function (post) {
 
 ### processBefore
 
-在处理原始文件前发布。 此事件会返回一个路径，代表 盒（Box）的根目录。
+在处理原始文件前发布。此事件会返回一个路径，代表 盒（Box）的根目录。
 
 ### processAfter
 
-在原始文件处理后发布。 此事件会返回一个路径，代表 盒（Box）的根目录。
+在原始文件处理后发布。此事件会返回一个路径，代表 盒（Box）的根目录。
 
 ### ready
 

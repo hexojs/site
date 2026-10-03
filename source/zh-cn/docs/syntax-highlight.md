@@ -2,7 +2,7 @@
 title: 语法高亮
 ---
 
-Hexo 对 [highlight.js](https://github.com/highlightjs/highlight.js) 与 [prismjs](https://github.com/PrismJS/prism) 两种代码高亮库提供内建支持。 本篇教程将展示如何将 Hexo 的内建语法高亮组件整合至你的模板中。
+Hexo 对 [highlight.js](https://github.com/highlightjs/highlight.js) 与 [prismjs](https://github.com/PrismJS/prism) 两种代码高亮库提供内建支持。本篇教程将展示如何将 Hexo 的内建语法高亮组件整合至你的模板中。
 
 ## 如何在文章中插入代码块
 
@@ -21,8 +21,8 @@ code snippet
 code snippet
 ```
 ````
-上面的第三种是 Markdown 的 fenced code block 语法。 Hexo 对其进行了扩展，使其支持更多特性。 在[标签插件文档](tag-plugins#代码块)中你可以找到可用的选项。
-> 提示：Hexo 支持用任何格式书写文章，只需安装相应渲染插件即可。 可以使用 markdown、ejs、swig、nunjucks、pug、asciidoc 等。 无论使用哪种格式，这三种代码块语法始终可用。
+上面的第三种是 Markdown 的 fenced code block 语法。 Hexo 对其进行了扩展，使其支持更多特性。在[标签插件文档](tag-plugins#代码块)中你可以找到可用的选项。
+> 提示：Hexo 支持用任何格式书写文章，只需安装相应渲染插件即可。可以使用 markdown、ejs、swig、nunjucks、pug、asciidoc 等。无论使用哪种格式，这三种代码块语法始终可用。
 ## 配置
 v7.0.0以下：
 
@@ -88,7 +88,7 @@ v7.0.0及以上：
 syntax_highlighter: # empty
 ```
 
-当 `highlight.enable` 和 `prismjs.enable` 均为 `false` （v7.0.0以下）或 `syntax_highlighter` 为空（v7.0.0及以上）时，代码块输出的 HTML 由相应的渲染器控制。 举个例子：[`marked.js`](https://github.com/markedjs/marked)（Hexo 的默认 Markdown 渲染器 [`hexo-renderer-marked`](https://github.com/hexojs/hexo-renderer-marked) 由此驱动）会把语言加入 `<code>` 标签的 `class` 中：
+当 `highlight.enable` 和 `prismjs.enable` 均为 `false` （v7.0.0以下）或 `syntax_highlighter` 为空（v7.0.0及以上）时，代码块输出的 HTML 由相应的渲染器控制。举个例子：[`marked.js`](https://github.com/markedjs/marked)（Hexo 的默认 Markdown 渲染器 [`hexo-renderer-marked`](https://github.com/hexojs/hexo-renderer-marked) 由此驱动）会把语言加入 `<code>` 标签的 `class` 中：
 
 ````markdown
 ```yaml
@@ -151,7 +151,7 @@ highlight:
 > 提示：如果你想使用「子语言高亮」功能（例如在高亮 HTML 时同时高亮内部嵌入的 JavaScript 代码），请开启 `auto_detect`，并且在文章中插入代码块时不要标注语言。
 
 {% note warn "警告！" %}
-`auto_detect` 十分耗费资源。 如果你不需要使用「子语言高亮」功能，或者不介意在书写代码块时标记语言，请不要启用此功能。
+`auto_detect` 十分耗费资源。如果你不需要使用「子语言高亮」功能，或者不介意在书写代码块时标记语言，请不要启用此功能。
 {% endnote %}
 
 ### line_number
@@ -183,11 +183,11 @@ Hexo 通过用 `<figure>` 和 `<table>` 包裹其代码块为其添加了行号�
 
 ### line_threshold (+6.1.0)
 
-接受一个可选的阈值，只有代码块的行数超过这个阈值才显示行数。 默认值为 `0`。
+接受一个可选的阈值，只有代码块的行数超过这个阈值才显示行数。默认值为 `0`。
 
 ### tab_replace
 
-用给定字符串替换代码块内的制表符。 默认为 2 个空格。
+用给定字符串替换代码块内的制表符。默认为 2 个空格。
 
 ### exclude_languages (+6.1.0)
 
@@ -195,7 +195,7 @@ Hexo 通过用 `<figure>` 和 `<table>` 包裹其代码块为其添加了行号�
 
 ### wrap
 
-为了支持行号显示，Hexo 将输出包裹在了 `<figure>` 和 `<table>` 内部。 如果要保持 `highlight.js` 原来的行为，你需要将 `line_number` 和 `wrap` **全部**关闭。
+为了支持行号显示，Hexo 将输出包裹在了 `<figure>` 和 `<table>` 内部。如果要保持 `highlight.js` 原来的行为，你需要将 `line_number` 和 `wrap` **全部**关闭。
 
 ```html
 <pre><code class="yaml">
@@ -249,13 +249,13 @@ prismjs:
   tab_replace: ""
 ```
 
-PrismJS 默认禁用。 启用 PrismJS 前应设置 `highlight.enable` 为 `false`（v7.0.0以下）或设置 `syntax_highlighter` 为 `prismjs`（v7.0.0及以上）。
+PrismJS 默认禁用。启用 PrismJS 前应设置 `highlight.enable` 为 `false`（v7.0.0以下）或设置 `syntax_highlighter` 为 `prismjs`（v7.0.0及以上）。
 
 ### preprocess
 
 Hexo 内建的 PrismJS 支持浏览器端高亮（`preprocess` 设置为 `false`）和服务器端高亮（`preprocess` 设置为 `true`）两种方式。
 
-当 `preprocess` 与 `line_number` 均设置为 `true` 时，只需要引入 `prism-line-numbers.css` 即可启用行号显示。 如果 `preprocess` 和 `line_number` 均被关闭，则需要将 `prism-line-numbers.css` 和 `prism-line-numbers.js` 都引入才能启用行号显示。
+当 `preprocess` 与 `line_number` 均设置为 `true` 时，只需要引入 `prism-line-numbers.css` 即可启用行号显示。如果 `preprocess` 和 `line_number` 均被关闭，则需要将 `prism-line-numbers.css` 和 `prism-line-numbers.js` 都引入才能启用行号显示。
 
 `preprocess` 设置为 `false` 时所有 PrismJS 插件均可用，只需额外注意以下几点：
 
@@ -263,23 +263,23 @@ Hexo 内建的 PrismJS 支持浏览器端高亮（`preprocess` 设置为 `false`
 - [语言显示](https://prismjs.com/plugins/show-language/)：当代码块有标注语言时，Hexo 总会添加 `data-language` 属性。
 - Hexo 也支持其它不需要特殊 HTML 代码格式的 PrismJS 插件，不过你需要引入它们的 JavaScript 文件。
 
-如果 `preprocess` 设置为 `false`，则支持所有 prism 插件。 以下是您仍需注意的几件事：
+如果 `preprocess` 设置为 `false`，则支持所有 prism 插件。以下是您仍需注意的几件事：
 
 - [行号显示](https://prismjs.com/plugins/line-numbers/)：当 `preprocess` 设置为 `false` 时，Hexo 不会生成插件所需的 HTML 代码格式。 `prism-line-numbers.css` 和 `prism-line-numbers.js`均需被引入。
 - [语言显示](https://prismjs.com/plugins/show-language/)：当代码块有标注语言时，Hexo 总会添加 `data-language` 属性。
-- [高亮特定行](https://prismjs.com/plugins/line-highlight/): Hexo 的[代码块标签插件](tag-plugins#代码块)和[反引号代码块标签插件](tag-plugins#反引号代码块)都支持高亮特定行的语法（即 `mark` 选项）。 当 `mark` 项被设置时，Hexo 将生成其所需的 HTML 代码格式。
+- [高亮特定行](https://prismjs.com/plugins/line-highlight/): Hexo 的[代码块标签插件](tag-plugins#代码块)和[反引号代码块标签插件](tag-plugins#反引号代码块)都支持高亮特定行的语法（即 `mark` 选项）。当 `mark` 项被设置时，Hexo 将生成其所需的 HTML 代码格式。
 
 ### line_number
 
-因为 `line_number` 功能依赖 `wrap`，你无法在配置中关闭 `wrap` 而又开启 `line_number`。 如果你将 `line_number` 设置为 `true` 的话，`wrap` 将被自动开启。
+因为 `line_number` 功能依赖 `wrap`，你无法在配置中关闭 `wrap` 而又开启 `line_number`。如果你将 `line_number` 设置为 `true` 的话，`wrap` 将被自动开启。
 
 ### line_threshold (+6.1.0)
 
-接受一个可选的阈值，只有代码块的行数超过这个阈值才显示行数。 默认值为 `0`。
+接受一个可选的阈值，只有代码块的行数超过这个阈值才显示行数。默认值为 `0`。
 
 ### tab_replace
 
-将代码块内的 `\t` 替换为给定的字符串。 默认为 2 个空格。
+将代码块内的 `\t` 替换为给定的字符串。默认为 2 个空格。
 
 ## 其它参考资料
 
