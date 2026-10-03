@@ -2,7 +2,7 @@
 title: 一键部署
 ---
 
-Hexo 提供快速、简便的部署策略。 您只需一条命令即可将网站部署到服务器上。
+Hexo 提供快速、简便的部署策略。您只需一条命令即可将网站部署到服务器上。
 
 ```bash
 $ hexo deploy
@@ -10,7 +10,7 @@ $ hexo deploy
 
 安装与服务器/存储库提供的部署方法兼容的必要插件。
 
-部署通常通过**\_config.yml**进行配置。 有效配置必须有 `type` 字段。 例如：
+部署通常通过**\_config.yml**进行配置。有效配置必须有 `type` 字段。例如：
 
 ```yaml
 deploy:
@@ -47,19 +47,19 @@ deploy:
   message: [message]
 ```
 
-| 选项        | 描述                                       | 默认                                                                                  |
-| --------- | ---------------------------------------- | ----------------------------------------------------------------------------------- |
-| `repo`    | 目标存储库的 URL                               |                                                                                     |
-| `branch`  | 分支名称                                     | `gh-pages` (GitHub)<br>`coding-pages` (Coding.net)<br>`master` (others) |
-| `message` | 自定义提交信息                                  | `Site updated: {% raw %}{{ now('YYYY-MM-DD HH:mm:ss') }}{% endraw %}`               |
-| `token`   | 可选的令牌值，用于认证 repo。 用 `$` 作为前缀从而从环境变量中读取令牌 |                                                                                     |
+| 选项        | 描述                                      | 默认                                                                                  |
+| --------- | --------------------------------------- | ----------------------------------------------------------------------------------- |
+| `repo`    | 目标存储库的 URL                              |                                                                                     |
+| `branch`  | 分支名称                                    | `gh-pages` (GitHub)<br>`coding-pages` (Coding.net)<br>`master` (others) |
+| `message` | 自定义提交信息                                 | `Site updated: {% raw %}{{ now('YYYY-MM-DD HH:mm:ss') }}{% endraw %}`               |
+| `token`   | 可选的令牌值，用于认证 repo。用 `$` 作为前缀从而从环境变量中读取令牌 |                                                                                     |
 
 3. 此外，如果您的 Github Pages 需要使用 CNAME 文件**自定义域名**，请将 CNAME 文件置于 `source` 目录下，只有这样 `hexo deploy` 才能将 CNAME 文件一并推送至部署分支。
 
 - 除非你使用令牌或 SSH 密钥认证，否则你会被提示提供目标仓库的用户名和密码。
-- hexo-deployer-git 并不会存储你的用户名和密码。 请使用 [git-credential-cache](https://git-scm.com/docs/git-credential-cache) 来临时存储它们。
+- hexo-deployer-git 并不会存储你的用户名和密码。请使用 [git-credential-cache](https://git-scm.com/docs/git-credential-cache) 来临时存储它们。
 
-4. 登入 Github/BitBucket/Gitlab，请在库设置（Repository Settings）中将默认分支设置为`_config.yml`配置中的分支名称。 稍等片刻，您的站点就会显示在您的Github Pages中。
+4. 登入 Github/BitBucket/Gitlab，请在库设置（Repository Settings）中将默认分支设置为`_config.yml`配置中的分支名称。稍等片刻，您的站点就会显示在您的Github Pages中。
 
 ## Heroku
 
@@ -85,9 +85,9 @@ deploy:
 
 ## Netlify
 
-[Netlify](https://www.netlify.com/) 提供持续部署（Git 触发构建）、智能全球 CDN、完整 DNS（包括自定义域）、自动 HTTPS、资产加速等功能。 它是一个统一的平台，可自动执行代码，创建高性能、易于维护的网站和网络应用程序。
+[Netlify](https://www.netlify.com/) 提供持续部署（Git 触发构建）、智能全球 CDN、完整 DNS（包括自定义域）、自动 HTTPS、资产加速等功能。它是一个统一的平台，可自动执行代码，创建高性能、易于维护的网站和网络应用程序。
 
-在 Netlify 上部署站点，有两种不同的方式。 首先，也是最通用的方式，就是使用Netlify提供的网页端用户界面。 前往[新建一个网站页面](https://app.netlify.com/start)，选择需要关联的 Github/BitBucket/Gitlab 库，然后遵循网站提示。
+在 Netlify 上部署站点，有两种不同的方式。首先，也是最通用的方式，就是使用Netlify提供的网页端用户界面。前往[新建一个网站页面](https://app.netlify.com/start)，选择需要关联的 Github/BitBucket/Gitlab 库，然后遵循网站提示。
 
 另一种方式是使用Netlify提供的命令行客户端工具 [Node based CLI](https://www.netlify.com/docs/cli/) 管理和部署您的站点。
 
@@ -127,7 +127,7 @@ deploy:
 
 ## FTPSync
 
-Install [hexo-deployer-ftpsync][].
+安装 [hexo-deployer-ftpsync][]。
 
 ```bash
 $ npm install hexo-deployer-ftpsync --save
@@ -159,7 +159,7 @@ deploy:
 
 ## SFTP
 
-Install [hexo-deployer-sftp][]. 通过 SFTP 部署站点，允许使用 ssh-agent 进行无密码连接。
+安装 [hexo-deployer-sftp][]。通过 SFTP 部署站点，允许使用 ssh-agent 进行无密码连接。
 
 ```bash
 $ npm install hexo-deployer-sftp --save
@@ -195,7 +195,7 @@ deploy:
 
 ## Vercel
 
-[Vercel](https://vercel.com) 是一个云平台，使开发人员能够托管 Jamstack 网站和网络服务，这些网站和服务可即时部署，自动扩展，无需监督，零配置。 他们提供全球边缘网络、SSL 加密、资源压缩、缓存失效等服务。
+[Vercel](https://vercel.com) 是一个云平台，使开发人员能够托管 Jamstack 网站和网络服务，这些网站和服务可即时部署，自动扩展，无需监督，零配置。他们提供全球边缘网络、SSL 加密、资源压缩、缓存失效等服务。
 
 步骤 1: 在你的 `package.json` 文件中添加一个构建脚本：
 
@@ -211,7 +211,7 @@ deploy:
 
 要通过 [Git整合Vercel](https://vercel.com/docs/git-integrations) 部署 Hexo 应用程序，请确保它已被推送到 Git 仓库。
 
-使用 [导入流](https://vercel.com/import/git) 将该项目导入 Vercel。 在导入过程中，你会发现所有相关的选项都是预先配置好的；但是，你可以选择改变其中的任何选项，这些选项的清单可以在 [这里](https://vercel.com/docs/build-step#build-&-development-settings) 找到。
+使用 [导入流](https://vercel.com/import/git) 将该项目导入 Vercel。在导入过程中，你会发现所有相关的选项都是预先配置好的；但是，你可以选择改变其中的任何选项，这些选项的清单可以在 [这里](https://vercel.com/docs/build-step#build-&-development-settings) 找到。
 
 在你的项目被导入后，所有后续推送到分支的内容都会产生 [预览部署](https://vercel.com/docs/platform/deployments#preview) ，而对 [生产分支](https://vercel.com/docs/git-integrations#production-branch)（通常是“主分支”）所做的所有更改都会导致 [生产部署](https://vercel.com/docs/platform/deployments#production)。
 
@@ -221,9 +221,9 @@ deploy:
 
 ## Bip
 
-[Bip](https://bip.sh) 是一项商业托管服务，为静态网站提供零停机部署、全球 CDN、SSL、无限带宽等。 计划以以每个域为基础，随用随付的方式提供。
+[Bip](https://bip.sh) 是一项商业托管服务，为静态网站提供零停机部署、全球 CDN、SSL、无限带宽等。计划以以每个域为基础，随用随付的方式提供。
 
-由于 Bip 为 Hexo 提供了开箱即用的支持，因此开始使用是很容易的。 本指南假定你已经有 [一个Bip域和已经安装Bip CLI](https://bip.sh/getstarted)。
+由于 Bip 为 Hexo 提供了开箱即用的支持，因此开始使用是很容易的。本指南假定你已经有 [一个Bip域和已经安装Bip CLI](https://bip.sh/getstarted)。
 
 1: 初始化你的项目目录
 
@@ -243,7 +243,7 @@ $ hexo generate —deploy && bip deploy
 
 ## 其他方法
 
-Hexo 生成的所有文件都放在 `public` 文件夹中。 您可以将它们复制到您喜欢的地方。
+Hexo 生成的所有文件都放在 `public` 文件夹中。您可以将它们复制到您喜欢的地方。
 
 [hexo-deployer-git]: https://github.com/hexojs/hexo-deployer-git
 [hexo-deployer-heroku]: https://github.com/hexojs/hexo-deployer-heroku
