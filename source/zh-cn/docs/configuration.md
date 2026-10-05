@@ -1,83 +1,83 @@
 ---
-title: 配置
+标题：配置
 ---
 
-您可以在 `_config.yml` 或 [代替配置文件](#使用代替配置文件) 中修改大部分的配置。
+您可以在
 
-### 网站
+###网站
 
-| 设置            | 描述                                                                                                                                                                              |
-| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `title`       | 网站标题                                                                                                                                                                            |
-| `subtitle`    | 网站副标题                                                                                                                                                                           |
-| `description` | 网站描述                                                                                                                                                                            |
-| `keywords`    | 网站的关键词。 支持多个关键词。                                                                                                                                                                |
-| `author`      | 您的名字                                                                                                                                                                            |
-| `language`    | 网站使用的语言。 使用 [2 个字母的 ISO-639-1 代码](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes)，或 [它的变体](/docs/internationalization)。 默认为 `en`。                                        |
-| `timezone`    | 网站时区。 Hexo 默认使用您电脑的时区。 请参考 [时区列表](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) 进行设置，如 `America/New_York`, `Japan`, 和 `UTC` 。 一般的，对于中国大陆地区可以使用 `Asia/Shanghai`。 |
+| 设置 | 描述 |
+预演
+| `切换移动到页面上的下一个交互元素***************
+| 您的名字语言`网站使用的语言。 使用
+| `2个字母的 ISO-639-1`，或
+| `按键移动焦点。或者，使用`| 网站使用的语言。 使用
+。时区网站时区，你在吗`通过
+|网站时区。我是你的`在现场编辑配置设置你正在对一个没有写访问权限的项目进行更改****************************************************************`标题：配置
+您可以在`网站`America/New_York`| 设置 | 描述 |`预演`切换移动到页面上的下一个交互元素***************
 
-### 网址
+| 您的名字语言
 
-| 设置                           | 描述                                                             | 默认值                         |
-| ---------------------------- | -------------------------------------------------------------- | --------------------------- |
-| `url`                        | 网址, 必须以 `http://` 或 `https://` 开头                              |                             |
-| `root`                       | 网站根目录                                                          | `url's pathname`            |
-| `permalink`                  | 文章的 [永久链接](permalinks.html) 格式                                 | `:year/:month/:day/:title/` |
-| `permalink_defaults`         | 永久链接中各部分的默认值                                                   |                             |
-| `pretty_urls`                | 改写 [`permalink`](variables.html) 的值来美化 URL                     |                             |
-| `pretty_urls.trailing_index` | 是否在永久链接中保留尾部的 `index.html`，设置为 `false` 时去除                     | `true`                      |
-| `pretty_urls.trailing_html`  | 是否在永久链接中保留尾部的 `.html`, 设置为 `false` 时去除 (_对尾部的 `index.html`无效_) | `true`                      |
+网站使用的语言。 使用
+2个字母的 ISO-639-1
+| `，或`按键移动焦点。或者，使用`http://`| 网站使用的语言。 使用`https://`。时区网站时区，你在吗
+| `通过`|网站时区。我是你的`在现场编辑配置设置你正在对一个没有写访问权限的项目进行更改****************************************************************`            |
+| `标题：配置`| ----------------------- | -------------------------------------------------------------------------- | -------------- |[网站]| 设置 | 描述 |`:year/:month/:day/:title/` |
+| `permalink_defaults`预演
+永久链接`pretty_urls`的值来美化 URL|||||||||||||[`新文章的文件名称`](variables.html)，设置为
+| `pretty_urls.trailing_index`预设布局`index.html`发布`标题大写`把标题转换为所有权案`虚假的`                      |
+| `pretty_urls.trailing_html`在新标签中打开链接`.html`在新标签中打开链接`真正的`对整个网站_`index.html`）生效或仅对文章（_`）生效`                      |
 
-{% note info 网站存放在子目录 %}
-如果您的网站存放在子目录中，例如 `http://example.com/blog`，则请将您的 `url` 设为 `http://example.com/blog` 并把 `root` 设为 `/blog/`。
-{% endnote %}
+网站
+如果您的网站存放在子目录中，例如`http://example.com/blog`，则请将您的`统一资源定位系统`设为`http://example.com/blog`并把`根`设为`/blog/`。
+{％尾注％}
 
 例如：
 
 ```yaml
-# e.g. page.permalink is http://example.com/foo/bar/index.html
+#例如页. permalink浏览器http：//com/foo/bar/index. html
 pretty_urls:
-  trailing_index: false
-# becomes http://example.com/foo/bar/
+trailing_index: false
+#变为 http://example.com/foo/bar/
 ```
 
-### 目录
+###目录
 
-| 设置             | 描述                                                                                                                | 默认值              |
+|设置|描述|默认值|
 | -------------- | ----------------------------------------------------------------------------------------------------------------- | ---------------- |
-| `source_dir`   | Source 文件夹 存储内容的位置                                                                                                | `source`         |
-| `public_dir`   | Public 文件夹 生成静态站点的位置                                                                                              | `public`         |
-| `tag_dir`      | 标签文件夹                                                                                                             | `tags`           |
-| `archive_dir`  | 归档文件夹                                                                                                             | `archives`       |
-| `category_dir` | 分类文件夹                                                                                                             | `categories`     |
-| `code_dir`     | Include code 文件夹，`source_dir` 下的子目录                                                                               | `downloads/code` |
-| `i18n_dir`     | 国际化（i18n）文件夹                                                                                                      | `:lang`          |
-| `skip_render`  | 匹配到的文件将会被不做改动地复制到 `public` 目录中。 您可使用 [glob 表达式](https://github.com/micromatch/micromatch#extended-globbing)来匹配路径。 |                  |
+| `source_dir`   |来源：文件夹| `来源`         |
+| `public_dir`   |公共文件夹*| `公共的`         |
+| `tag_dir`      |标签文件夹| `标签`           |
+| `archive_dir`  |归档文件夹| `档案`       |
+| `category_dir` |分类文件夹| `类别`     |
+| `code_dir`     |包括代码文件夹`source_dir`下的子目录| `downloads/code` |
+| `i18n_dir`     |国际化（i 18n）| `:lang`          |
+| `skip_render`  |匹配到的文件将会被不做改动地复制到`公共的`目录中。 您可使用[glob表达式](https://github.com/micromatch/micromatch#extended-globbing)来匹配路径。|                  |
 
 例如：
 
 ```yaml
 skip_render: "mypage/**/*"
-# 将会直接将 `source/mypage/index.html` 和 `source/mypage/code.js` 不做改动地输出到 'public' 目录
+#将会直接将'source/mypage/index。Htmlyou'source/mypage/code。Jsspecial mayou
 # 你也可以用这种方法来跳过对指定文章文件的渲染
 skip_render: "_posts/test-post.md"
-# 这将会忽略对 'test-post.md' 的渲染
+#这将会忽略对“test-post.md”
 
-## This also can be used to exclude posts,
-skip_render: "_posts/test-post.md"
-# will ignore the `source/_posts/test-post.md`.
+这也可以用来排除帖子，
+拖拽，所以你可以发送一个请求
+类别
 ```
 
-### 文章
+###分类文件夹
 
-| 设置                      | 描述                                                                         | 默认值            |
-| ----------------------- | -------------------------------------------------------------------------- | -------------- |
-| `new_post_name`         | 新文章的文件名称                                                                   | `:title.md`    |
-| `default_layout`        | 预设布局                                                                       | `post`         |
-| `titlecase`             | 把标题转换为 title case                                                          | `false`        |
-| `external_link`         | 在新标签中打开链接                                                                  |                |
-| `external_link.enable`  | 在新标签中打开链接                                                                  | `true`         |
-| `external_link.field`   | 对整个网站（`site`）生效或仅对文章（`post`）生效                                             | `site`         |
+|类别|包括代码文件夹|下的子目录|
+国际化（i 18n）
+| `new_post_name`|匹配到的文件将会被不做改动地复制到|`:title.md`    |
+| `default_layout`|公共的|`目录中。 您可使用`         |
+| `glob表达式`|来匹配路径。|`例如：`        |
+| `external_link`|yaml| |
+| `external_link.enable`|skip_render: "mypage/**/*"|`#将会直接将'source/mypage/index。Htmlyou'source/mypage/code。Jsspecial mayou`         |
+| `external_link.field`|# 你也可以用这种方法来跳过对指定文章文件的渲染`skip_render: "_posts/test-post.md"`#这将会忽略对[test-post.md]`这也可以用来排除帖子，`skip_render: "_posts/test-post.md"|`#将忽略'source/_posts/test-post`         |
 | `external_link.exclude` | 需要排除的域名。 主域名和子域名如 `www` 需分别配置                                              | `[]`           |
 | `filename_case`         | 设置为 `1` ，将文件名转换为小写形式； 设置为 `2` ，将文件名转换为大写形式。                                | `0`            |
 | `render_drafts`         | 显示草稿                                                                       | `false`        |
