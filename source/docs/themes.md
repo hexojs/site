@@ -46,7 +46,7 @@ Hexo will process and save all renderable files to the `public` folder. Non-rend
 
 ### Publishing
 
-When you have finished building your theme, you can publish it to the [theme list](/themes). Before doing so, you should run the [theme unit test](https://github.com/hexojs/hexo-theme-unit-test) to ensure that everything works. The steps for publishing a theme are very similar to those for [updating documentation](contributing.html#Updating_Documentation).
+When you have finished building your theme, you can publish it to the [theme list](/themes). Before doing so, you should run the [theme unit test](https://github.com/hexojs/hexo-theme-unit-test) to ensure that everything works. The steps for publishing a theme are very similar to those for [updating documentation](contributing.html#Updating-Documentation).
 
 1. Fork [hexojs/site]
 2. Clone the repository to your computer and install dependencies.
