@@ -241,6 +241,29 @@ $ hexo generate —deploy && bip deploy
 
 After a few moments, your website will be deployed.
 
+## DeployHQ
+
+[DeployHQ](https://www.deployhq.com/) is a Git-based deployment service that builds your Hexo site on its build servers and transfers the generated `public/` directory to your own infrastructure over SSH/SFTP/FTP, or to S3, Azure Blob, or Rackspace Cloud Files. It supports multiple environments per project, config-file injection, atomic releases, one-click rollback, and deploy hooks. A free tier is available.
+
+Unlike the plugin-based options above, DeployHQ runs outside the `hexo deploy` command — you push to your Git host as usual and DeployHQ handles the build and upload.
+
+1. Sign up at [deployhq.com/signup](https://www.deployhq.com/signup) and create a new project connected to your Hexo repository on GitHub, GitLab, or Bitbucket.
+
+2. Add a server in the project. Provide the protocol (SSH/SFTP, FTP, S3, etc.), hostname, credentials, and the web root path (for example `public_html/`).
+
+3. In **Build Pipeline**, add the commands needed to generate the site:
+
+```bash
+npm install
+npx hexo generate
+```
+
+Set the build output path to `public/` so DeployHQ uploads the generated files rather than your sources.
+
+4. Trigger a deployment manually from the dashboard, or enable automatic deployments so each push to your production branch builds and ships the site.
+
+Refer to the [DeployHQ documentation](https://www.deployhq.com/support) for advanced configuration such as config-file injection, deploy hooks, and rollbacks.
+
 ## Other Methods
 
 All generated files are saved in the `public` folder. You can copy them to wherever you like.
