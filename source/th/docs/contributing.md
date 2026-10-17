@@ -104,7 +104,7 @@ Now we use the [Crowdin](https://crowdin.com/project/hexo) platform for translat
 
 เมื่อคุณพบเจอปัญหาการใช้ hexo คุณไปค้นหาวิธีการแก้ไขได้ท่ [Troubleshooting](troubleshooting.html) หรือไปถามท่ี [GitHub](https://github.com/hexojs/hexo/issues) กรือไปถามท่ี [Google Group](https://groups.google.com/group/hexo) ถ้าคุณหาวิธีแก้ไขไม่ได้ กรุณาไปรายงานปัญหาท่ี Github If you can't find the answer, please report it on GitHub.
 
-1. Represent the problem in [debug mode](commands.html#Debug_mode).
+1. Represent the problem in [debug mode](commands.html#Debug-mode).
 2. Follow the steps from issue template to provide debug message and version when submitting a new issue at GitHub.
 
 [hexojs/hexo]: https://github.com/hexojs/hexo
