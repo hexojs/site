@@ -1,0 +1,8 @@
+description: >-
+  Generate an llms.txt index and a Markdown (.md) twin of every page for AI/LLM crawlers. Forked from SSARCandy/hexo-generator-llms with bug fixes. | 生成 llms.txt 索引和每个页面的 Markdown (.md) 副本供 AI/LLM 爬虫阅读。 本插件 fork 于 SSARCandy/hexo-generator-llms 并修复了一些 bug。
+link: https://github.com/boris1993/hexo-generator-llms
+tags:
+  - generator
+  - llms
+  - seo
+  - ai
