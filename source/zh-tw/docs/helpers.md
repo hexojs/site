@@ -283,7 +283,7 @@ More info: [Gravatar](https://en.gravatar.com/site/implement/images/)
 
 ### is_current
 
-檢查 `path` 是否符合目前頁面的網址。 開啟 `strict` 選項啟用嚴格比對。
+檢查 `path` 是否符合目前頁面的網址。開啟 `strict` 選項啟用嚴格比對。
 
 ```js
 <%- is_current(path, [strict]) %>
@@ -495,10 +495,10 @@ Loads other template files. You can define local variables in `locals`.
 <%- partial(layout, [locals], [options]) %>
 ```
 
-| Option  | Description                       | Default |
-| ------- | --------------------------------- | ------- |
-| `cache` | 儲存快取（使用 Fragment cache）           | `false` |
-| `only`  | 限制區域變數。 在模板中只能使用 `locals` 中設定的變數。 | `false` |
+| Option  | Description                      | Default |
+| ------- | -------------------------------- | ------- |
+| `cache` | 儲存快取（使用 Fragment cache）          | `false` |
+| `only`  | 限制區域變數。在模板中只能使用 `locals` 中設定的變數。 | `false` |
 
 ### fragment_cache
 
@@ -643,7 +643,7 @@ Inserts time tag. Inserts relative time from now. `date` can be unix time, ISO s
 | `order`      | 排列順序。 `1`, `asc` 升冪；`-1`, `desc` 降冪。                                                                                              | 1        |
 | `show_count` | Display the number of posts for each category                                                                                     | true     |
 | `style`      | Style to display the category list. 分類列表的顯示方式。 使用 `list` 以無序列表（unordered list）方式顯示。 Use `false` or any other value to disable it. | list     |
-| `separator`  | 分類間的分隔符號。 只有在 `style` 不是 `list` 時有用。                                                                                              | ,        |
+| `separator`  | 分類間的分隔符號。只有在 `style` 不是 `list` 時有用。                                                                                               | ,        |
 | `depth`      | 要顯示的分類層級。 `0` 顯示所有層級的分類；`-1` 和 `0` 很類似，但是顯示不分層級；`1` 只顯示第一層的分類。                                                                    | 0        |
 | `class`      | 分類列表的 class 名稱。                                                                                                                   | category |
 | `transform`  | The function that changes the display of category name.                                                                           |          |
@@ -669,7 +669,7 @@ Inserts a list of all tags.
 | `order`      | 分類排列順序。 `1`, `asc` 升冪；`-1`, `desc` 降冪。                                                                            | 1       |
 | `show_count` | Display the number of posts for each tag                                                                          | true    |
 | `style`      | Style to display the tag list. 使用 `list` 以無序列表（unordered list）方式顯示。 Use `false` or any other value to disable it. | list    |
-| `separator`  | 文章間的分隔符號。 只有在 `style` 不是 `list` 時有用。                                                                              | ,       |
+| `separator`  | 文章間的分隔符號。只有在 `style` 不是 `list` 時有用。                                                                               | ,       |
 | `class`      | Class name of tag list (string) or customize each tag's class (object, see below).                                | tag     |
 | `transform`  | The function that changes the display of tag name. See examples in [list_categories](#list-categories).           |         |
 | `amount`     | 要顯示的標籤數量（0 = 無限制）                                                                                                 | 0       |
@@ -704,12 +704,12 @@ Examples:
 
 | Option       | Description                                                                                                           | Default   |
 | ------------ | --------------------------------------------------------------------------------------------------------------------- | --------- |
-| `type`       | 類型。 此設定可為 `yearly` 或 `monthly`。                                                                                       | monthly   |
+| `type`       | 類型。此設定可為 `yearly` 或 `monthly`。                                                                                        | monthly   |
 | `order`      | 文章排列順序。 `1`, `asc` 升冪；`-1`, `desc` 降冪。                                                                                | 1         |
 | `show_count` | Display the number of posts for each archive                                                                          | true      |
 | `format`     | 日期格式                                                                                                                  | MMMM YYYY |
 | `style`      | Style to display the archive list. 使用 `list` 以無序列表（unordered list）方式顯示。 Use `false` or any other value to disable it. | list      |
-| `separator`  | 標籤間的分隔符號。 只有在 `style` 不是 `list` 時有用。                                                                                  | ,         |
+| `separator`  | 標籤間的分隔符號。只有在 `style` 不是 `list` 時有用。                                                                                   | ,         |
 | `class`      | 彙整列表的 class 名稱。                                                                                                       | archive   |
 | `transform`  | The function that changes the display of archive name. See examples in [list_categories](#list-categories).           |           |
 
@@ -725,8 +725,8 @@ Examples:
 | ----------- | -------------------------------------------------------------------------------------------------------- | ------- |
 | `orderby`   | Order of posts                                                                                           | date    |
 | `order`     | 標籤排列順序。 `1`, `asc` 升冪；`-1`, `desc` 降冪。                                                                   | 1       |
-| `style`     | 文章列表的顯示方式。 使用 `list` 以無序列表（unordered list）方式顯示。 Use `false` or any other value to disable it.            | list    |
-| `separator` | 彙整間的分隔符號。 只有在 `style` 不是 `list` 時有用。                                                                     | ,       |
+| `style`     | 文章列表的顯示方式。使用 `list` 以無序列表（unordered list）方式顯示。 Use `false` or any other value to disable it.             | list    |
+| `separator` | 彙整間的分隔符號。只有在 `style` 不是 `list` 時有用。                                                                      | ,       |
 | `class`     | 插入分類列表。                                                                                                  | post    |
 | `amount`    | 要顯示的文章數量（0 = 無限制）                                                                                        | 6       |
 | `transform` | The function that changes the display of post name. See examples in [list_categories](#list-categories). |         |
@@ -739,21 +739,21 @@ Examples:
 <%- tagcloud([tags], [options]) %>
 ```
 
-| Option                 | Description                                                                                                                  | Default   |
-| ---------------------- | ---------------------------------------------------------------------------------------------------------------------------- | --------- |
-| `min_font`             | 最小字體尺寸                                                                                                                       | 10        |
-| `max_font`             | 最大字體尺寸                                                                                                                       | 20        |
-| `unit`                 | 字體尺寸的單位                                                                                                                      | px        |
-| `amount`               | Total amount of tags                                                                                                         | unlimited |
-| `orderby`              | Order of tags                                                                                                                | name      |
-| `order`                | 標籤排列順序。 `1`, `sac` 升冪；`-1`, `desc` 降冪                                                                                        | 1         |
-| `color`                | Colorizes the tag cloud                                                                                                      | false     |
-| `start_color`          | 開始的顏色。 您可使用十六進位值（`#b700ff`），rgba（`rgba(183, 0, 255, 1)`），hsla（`hsla(283, 100%, 50%, 1)`）或 [顏色關鍵字][]。 此選項僅在 `color` 設定開啟時才有用。 |           |
-| `end_color`            | 結束的顏色。 您可使用十六進位值（`#b700ff`），rgba（`rgba(183, 0, 255, 1)`），hsla（`hsla(283, 100%, 50%, 1)`）或 [顏色關鍵字][]。 此選項僅在 `color` 設定開啟時才有用。 |           |
-| `class`                | 標籤的 class name prefix of tags                                                                                                |           |
-| `level`                | 不同 class name 的總數。 此選項僅在 `class` 設定時才有用。                                                                                     | 10        |
-| `show_count` (+6.3.0)  | Display the number of posts for each tag                                                                                     | false     |
-| `count_class` (+6.3.0) | 改變標籤名稱顯示方法的函數                                                                                                                | count     |
+| Option                 | Description                                                                                                                | Default   |
+| ---------------------- | -------------------------------------------------------------------------------------------------------------------------- | --------- |
+| `min_font`             | 最小字體尺寸                                                                                                                     | 10        |
+| `max_font`             | 最大字體尺寸                                                                                                                     | 20        |
+| `unit`                 | 字體尺寸的單位                                                                                                                    | px        |
+| `amount`               | Total amount of tags                                                                                                       | unlimited |
+| `orderby`              | Order of tags                                                                                                              | name      |
+| `order`                | 標籤排列順序。 `1`, `sac` 升冪；`-1`, `desc` 降冪                                                                                      | 1         |
+| `color`                | Colorizes the tag cloud                                                                                                    | false     |
+| `start_color`          | 開始的顏色。您可使用十六進位值（`#b700ff`），rgba（`rgba(183, 0, 255, 1)`），hsla（`hsla(283, 100%, 50%, 1)`）或 [顏色關鍵字][]。此選項僅在 `color` 設定開啟時才有用。 |           |
+| `end_color`            | 結束的顏色。您可使用十六進位值（`#b700ff`），rgba（`rgba(183, 0, 255, 1)`），hsla（`hsla(283, 100%, 50%, 1)`）或 [顏色關鍵字][]。此選項僅在 `color` 設定開啟時才有用。 |           |
+| `class`                | 標籤的 class name prefix of tags                                                                                              |           |
+| `level`                | 不同 class name 的總數。此選項僅在 `class` 設定時才有用。                                                                                    | 10        |
+| `show_count` (+6.3.0)  | Display the number of posts for each tag                                                                                   | false     |
+| `count_class` (+6.3.0) | 改變標籤名稱顯示方法的函數                                                                                                              | count     |
 
 **Examples:**
 
@@ -781,13 +781,13 @@ Inserts a paginator.
 | `format`                   | 網址格式                                                                               | page/%d/      |
 | `total`                    | 顯示於中間的頁數                                                                           | 1             |
 | `current`                  | 目前頁數                                                                               | 0             |
-| `prev_text`                | 上一頁連結的文字。 僅在 `prev_next` 設定開啟時才有用。                                                 | Prev          |
-| `next_text`                | 下一頁連結的文字。 僅在 `prev_next` 設定開啟時才有用。                                                 | Next          |
+| `prev_text`                | 上一頁連結的文字。僅在 `prev_next` 設定開啟時才有用。                                                  | Prev          |
+| `next_text`                | 下一頁連結的文字。僅在 `prev_next` 設定開啟時才有用。                                                  | Next          |
 | `space`                    | 空白文字                                                                               | &hellp;       |
 | `prev_next`                | 顯示上一頁和下一頁的連結                                                                       | true          |
 | `end_size`                 | The number of pages displayed on the start and the end side                        | 1             |
 | `mid_size`                 | The number of pages displayed between current page, but not including current page | 2             |
-| `show_all`                 | 顯示所有頁數。 如果開啟此設定的話，`end_size` 和 `mid_size` 就沒用了。                                    | false         |
+| `show_all`                 | 顯示所有頁數。如果開啟此設定的話，`end_size` 和 `mid_size` 就沒用了。                                     | false         |
 | `escape`                   | Escape HTML tags                                                                   | true          |
 | 移除超過 `length` 的字串。         | 選項                                                                                 | `分頁總數`        |
 | `current_class` (+6.3.0)   | 文章排列方式                                                                             | `current`     |
@@ -855,7 +855,7 @@ Inserts a paginator.
 
 | Option      | Description                                              | Default |
 | ----------- | -------------------------------------------------------- | ------- |
-| `precision` | 數字精確度。 此選項可為 `false` 或非負整數。                              | false   |
+| `precision` | 數字精確度。此選項可為 `false` 或非負整數。                               | false   |
 | `delimiter` | The thousands delimiter                                  | ,       |
 | `separator` | The separator between the fractional and integer digits. | .       |
 

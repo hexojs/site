@@ -2,7 +2,7 @@
 title: API
 ---
 
-本文件提供您更豐富的 API 資訊，使您更容易修改 Hexo 原始碼或撰寫外掛。 如果您只是想要查詢關於 Hexo 的基本使用方法，請參閱 [文件](../docs/)。
+本文件提供您更豐富的 API 資訊，使您更容易修改 Hexo 原始碼或撰寫外掛。如果您只是想要查詢關於 Hexo 的基本使用方法，請參閱 [文件](../docs/)。
 
 在開始之前，請注意本文件僅適用於 Hexo 3 及以上版本。
 
@@ -21,9 +21,9 @@ hexo.init().then(function () {
 
 | 選項                 | 描述                                                                                                 | Default                           |
 | ------------------ | -------------------------------------------------------------------------------------------------- | --------------------------------- |
-| `debug`            | 開啟除錯模式。 在終端機中顯示除錯訊息，並在根目錄中儲存 `debug.log` 記錄檔。                                                      | `false`                           |
-| `safe`             | 開啟安全模式。 不要載入任何外掛。                                                                                  | `false`                           |
-| `silent`           | 開啟安靜模式。 不要在終端機中顯示任何訊息。                                                                             | `false`                           |
+| `debug`            | 開啟除錯模式。在終端機中顯示除錯訊息，並在根目錄中儲存 `debug.log` 記錄檔。                                                       | `false`                           |
+| `safe`             | 開啟安全模式。不要載入任何外掛。                                                                                   | `false`                           |
+| `silent`           | 開啟安靜模式。不要在終端機中顯示任何訊息。                                                                              | `false`                           |
 | `config`           | 指定配置檔案的路徑。                                                                                         | `_config.yml`                     |
 | `draft` / `drafts` | Enable to add drafts to the posts list.<br> example: when you use `hexo.locals.get('posts')` | `render_drafts` of \_config.yml |
 

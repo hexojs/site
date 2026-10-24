@@ -41,12 +41,12 @@ box.addProcessor("posts/:id", function (file) {
 
 Box passes the content of matched files to processors. This information can then be read straight from the `file` argument in the callback:
 
-| 屬性       | 描述                                            |
-| -------- | --------------------------------------------- |
-| `source` | 檔案完整路徑                                        |
-| `path`   | 檔案相對於箱子的路徑                                    |
-| `type`   | 檔案類型。 有 `create`, `update`, `skip`, `delete`。 |
-| `params` | The information from path matching.           |
+| 屬性       | 描述                                           |
+| -------- | -------------------------------------------- |
+| `source` | 檔案完整路徑                                       |
+| `path`   | 檔案相對於箱子的路徑                                   |
+| `type`   | 檔案類型。有 `create`, `update`, `skip`, `delete`。 |
+| `params` | The information from path matching.          |
 
 箱子還提供了一些方法，讓您無須自行處理檔案 IO。
 
