@@ -33,7 +33,7 @@ hexo.extend.filter.execSync(type, data, options);
 | `context` | Context                           |
 | `args`    | Arguments. This must be an array. |
 
-The first argument passed into each filter is `data`. The `data` passed into the next filter can be modified by returning a new value. If nothing is returned, the data remains unmodified. 您還可使用 `args` 指定過濾器的其他參數。 舉例來說：
+The first argument passed into each filter is `data`. The `data` passed into the next filter can be modified by returning a new value. If nothing is returned, the data remains unmodified. 您還可使用 `args` 指定過濾器的其他參數。舉例來說：
 
 ```js
 hexo.extend.filter.register("test", function (data, arg1, arg2) {
@@ -94,7 +94,7 @@ hexo.extend.filter.unregister("example", require("path/to/filter"));
 
 ### before_post_render
 
-在文章開始渲染前執行。 您可參考 [文章渲染](posts.html#渲染) 以瞭解執行順序。
+在文章開始渲染前執行。您可參考 [文章渲染](posts.html#渲染) 以瞭解執行順序。
 
 For example, to transform the title to lower case:
 
@@ -107,7 +107,7 @@ hexo.extend.filter.register("before_post_render", function (data) {
 
 ### after_post_render
 
-在文章渲染完成後執行。 您可參考 [文章渲染](posts.html#渲染) 以瞭解執行順序。
+在文章渲染完成後執行。您可參考 [文章渲染](posts.html#渲染) 以瞭解執行順序。
 
 舉例來說，把 `@username` 取代為 Twitter 的使用者連結。
 
@@ -213,15 +213,8 @@ hexo.extend.filter.register("after_clean", function () {
 
 新增伺服器的 Middleware。 `app` 是一個 [Connect][] 實例。
 
-舉例來說，在回應標頭中新增 `X-Powered-By: Hexo`。
-
-```js
-hexo.extend.filter.register("server_middleware", function (app) {
-  app.use(function (req, res, next) {
-    res.setHeader("X-Powered-By", "Hexo");
-    next();
-  });
-});
-```
+This hook is provided by [hexo-server][], not Hexo core, so it only runs when `hexo-server` is installed. See the [hexo-server README][] for an implementation example.
 
 [Connect]: https://github.com/senchalabs/connect
+[hexo-server]: https://github.com/hexojs/hexo-server
+[hexo-server README]: https://github.com/hexojs/hexo-server#middleware

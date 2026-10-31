@@ -6,15 +6,15 @@ title: 配置
 
 ### 网站
 
-| 设置            | 描述                                                                                                                                                                              |
-| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `title`       | 网站标题                                                                                                                                                                            |
-| `subtitle`    | 网站副标题                                                                                                                                                                           |
-| `description` | 网站描述                                                                                                                                                                            |
-| `keywords`    | 网站的关键词。 支持多个关键词。                                                                                                                                                                |
-| `author`      | 您的名字                                                                                                                                                                            |
-| `language`    | 网站使用的语言。 使用 [2 个字母的 ISO-639-1 代码](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes)，或 [它的变体](/docs/internationalization)。 默认为 `en`。                                        |
-| `timezone`    | 网站时区。 Hexo 默认使用您电脑的时区。 请参考 [时区列表](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) 进行设置，如 `America/New_York`, `Japan`, 和 `UTC` 。 一般的，对于中国大陆地区可以使用 `Asia/Shanghai`。 |
+| 设置            | 描述                                                                                                                                                                            |
+| ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `title`       | 网站标题                                                                                                                                                                          |
+| `subtitle`    | 网站副标题                                                                                                                                                                         |
+| `description` | 网站描述                                                                                                                                                                          |
+| `keywords`    | 网站的关键词。支持多个关键词。                                                                                                                                                               |
+| `author`      | 您的名字                                                                                                                                                                          |
+| `language`    | 网站使用的语言。使用 [2 个字母的 ISO-639-1 代码](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes)，或 [它的变体](/docs/internationalization)。默认为 `en`。                                        |
+| `timezone`    | 网站时区。 Hexo 默认使用您电脑的时区。请参考 [时区列表](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) 进行设置，如 `America/New_York`, `Japan`, 和 `UTC` 。一般的，对于中国大陆地区可以使用 `Asia/Shanghai`。 |
 
 ### 网址
 
@@ -43,16 +43,16 @@ pretty_urls:
 
 ### 目录
 
-| 设置             | 描述                                                                                                                | 默认值              |
-| -------------- | ----------------------------------------------------------------------------------------------------------------- | ---------------- |
-| `source_dir`   | Source 文件夹 存储内容的位置                                                                                                | `source`         |
-| `public_dir`   | Public 文件夹 生成静态站点的位置                                                                                              | `public`         |
-| `tag_dir`      | 标签文件夹                                                                                                             | `tags`           |
-| `archive_dir`  | 归档文件夹                                                                                                             | `archives`       |
-| `category_dir` | 分类文件夹                                                                                                             | `categories`     |
-| `code_dir`     | Include code 文件夹，`source_dir` 下的子目录                                                                               | `downloads/code` |
-| `i18n_dir`     | 国际化（i18n）文件夹                                                                                                      | `:lang`          |
-| `skip_render`  | 匹配到的文件将会被不做改动地复制到 `public` 目录中。 您可使用 [glob 表达式](https://github.com/micromatch/micromatch#extended-globbing)来匹配路径。 |                  |
+| 设置             | 描述                                                                                                               | 默认值              |
+| -------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------- |
+| `source_dir`   | Source 文件夹存储内容的位置                                                                                                | `source`         |
+| `public_dir`   | Public 文件夹生成静态站点的位置                                                                                              | `public`         |
+| `tag_dir`      | 标签文件夹                                                                                                            | `tags`           |
+| `archive_dir`  | 归档文件夹                                                                                                            | `archives`       |
+| `category_dir` | 分类文件夹                                                                                                            | `categories`     |
+| `code_dir`     | Include code 文件夹，`source_dir` 下的子目录                                                                              | `downloads/code` |
+| `i18n_dir`     | 国际化（i18n）文件夹                                                                                                     | `:lang`          |
+| `skip_render`  | 匹配到的文件将会被不做改动地复制到 `public` 目录中。您可使用 [glob 表达式](https://github.com/micromatch/micromatch#extended-globbing)来匹配路径。 |                  |
 
 例如：
 
@@ -78,7 +78,7 @@ skip_render: "_posts/test-post.md"
 | `external_link`         | 在新标签中打开链接                                                                  |                |
 | `external_link.enable`  | 在新标签中打开链接                                                                  | `true`         |
 | `external_link.field`   | 对整个网站（`site`）生效或仅对文章（`post`）生效                                             | `site`         |
-| `external_link.exclude` | 需要排除的域名。 主域名和子域名如 `www` 需分别配置                                              | `[]`           |
+| `external_link.exclude` | 需要排除的域名。主域名和子域名如 `www` 需分别配置                                               | `[]`           |
 | `filename_case`         | 设置为 `1` ，将文件名转换为小写形式； 设置为 `2` ，将文件名转换为大写形式。                                | `0`            |
 | `render_drafts`         | 显示草稿                                                                       | `false`        |
 | `post_asset_folder`     | 启用 [资源文件夹](asset-folders.html)                                             | `false`        |
@@ -95,7 +95,7 @@ skip_render: "_posts/test-post.md"
 | `index_generator`                | 生成帖子归档。由 [hexo-generator-index](https://github.com/hexojs/hexo-generator-index) 驱动。 |         |
 | `index_generator.path`           | 博客索引页面的根路径                                                                          | `''`    |
 | `index_generator.per_page`       | 每页显示帖子数                                                                             | `10`    |
-| `index_generator.order_by`       | 帖子排列顺序。 默认情况下按日期降序(从新到旧)。                                                           | `-date` |
+| `index_generator.order_by`       | 帖子排列顺序。默认情况下按日期降序(从新到旧)。                                                            | `-date` |
 | `index_generator.pagination_dir` | URL 格式，请参阅下面的 [分页](#Pagination) 设置                                                  | `page`  |
 
 ### 分类 & 标签
@@ -127,11 +127,11 @@ Hexo 使用 [Moment.js](http://momentjs.com/) 来解析和显示时间。
 {% note info updated_option %}
 `updated_option` 控制了当 Front Matter 中没有指定 `updated` 时，`updated` 如何取值：
 
-- `mtime`: 使用文件的最后修改时间。 这是从 Hexo 3.0.0 开始的默认行为。
-- `date`: 使用 `date` 作为 `updated` 的值。 可被用于 Git 工作流之中，因为使用 Git 管理站点时，文件的最后修改日期常常会发生改变
-- `empty`: 直接删除 `updated`。 使用这一选项可能会导致大部分主题和插件无法正常工作。
+- `mtime`: 使用文件的最后修改时间。这是从 Hexo 3.0.0 开始的默认行为。
+- `date`: 使用 `date` 作为 `updated` 的值。可被用于 Git 工作流之中，因为使用 Git 管理站点时，文件的最后修改日期常常会发生改变
+- `empty`: 直接删除 `updated`。使用这一选项可能会导致大部分主题和插件无法正常工作。
 
-`use_date_for_updated` 选项已经在 v7.0.0+ 中被移除。 请改为使用 `updated_option: 'date'`。
+`use_date_for_updated` 选项已经在 v7.0.0+ 中被移除。请改为使用 `updated_option: 'date'`。
 {% endnote %}
 
 ### 分页
@@ -153,16 +153,16 @@ pagination_dir: 'awesome-page'
 
 ### 扩展
 
-| 设置               | 描述                                                                                                                                   |
-| ---------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
-| `theme`          | 当前主题名称。 值为`false`时禁用主题                                                                                                               |
-| `theme_config`   | 主题的配置文件。 在这里放置的配置会覆盖主题目录下的 `_config.yml` 中的配置                                                                                        |
-| `deploy`         | 部署部分的设置                                                                                                                              |
-| `meta_generator` | [Meta generator](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/meta#%E5%B1%9E%E6%80%A7) 标签。 值为 `false` 时 Hexo 不会在头部插入该标签 |
+| 设置               | 描述                                                                                                                                  |
+| ---------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| `theme`          | 当前主题名称。值为`false`时禁用主题                                                                                                               |
+| `theme_config`   | 主题的配置文件。在这里放置的配置会覆盖主题目录下的 `_config.yml` 中的配置                                                                                        |
+| `deploy`         | 部署部分的设置                                                                                                                             |
+| `meta_generator` | [Meta generator](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/meta#%E5%B1%9E%E6%80%A7) 标签。值为 `false` 时 Hexo 不会在头部插入该标签 |
 
 ### 包括或不包括目录和文件
 
-使用以下选项可明确处理或忽略某些文件/文件夹。 可以使用 [glob 表达式](https://github.com/micromatch/micromatch#extended-globbing) 进行路径匹配。
+使用以下选项可明确处理或忽略某些文件/文件夹。可以使用 [glob 表达式](https://github.com/micromatch/micromatch#extended-globbing) 进行路径匹配。
 
 `include` 和 `exclude` 选项只会应用到 `source/` ，而 `ignore` 选项会应用到所有文件夹.
 
@@ -197,7 +197,7 @@ exclude:
   # 不处理 'source/js/' 及其子目录中任何以 'test' 开头的文件。
   - "js/**/test*"
   # 不要用 exclude 来忽略 'source/_posts/' 中的文件。
-  # 你应该使用 'skip_render'。 或者在要忽略的文件的文件名之前加一个下划线 '_'。
+  # 你应该使用 'skip_render'。或者在要忽略的文件的文件名之前加一个下划线 '_'。
   # - "_posts/hello-world.md" # 在这里配置是没有用的。
 
 ignore:
@@ -211,9 +211,9 @@ ignore:
 
 列表中的每一项都必须用单引号或双引号包裹起来。
 
-`include` 和 `exclude` 并不适用于 `themes/` 目录下的文件。 如果需要忽略 `themes/` 目录下的部分文件或文件夹，可以使用 `ignore` 或在文件名之前添加下划线 `_`。
+`include` 和 `exclude` 并不适用于 `themes/` 目录下的文件。如果需要忽略 `themes/` 目录下的部分文件或文件夹，可以使用 `ignore` 或在文件名之前添加下划线 `_`。
 
-`source/_posts` 文件夹是一个例外，但该文件夹下任何名称以 `_` 开头的文件或文件夹仍会被忽略。 不建议在该文件夹中使用 `include` 规则。
+`source/_posts` 文件夹是一个例外，但该文件夹下任何名称以 `_` 开头的文件或文件夹仍会被忽略。不建议在该文件夹中使用 `include` 规则。
 
 ### 使用代替配置文件
 
@@ -227,7 +227,7 @@ $ hexo server --config custom.yml
 $ hexo server --config custom.yml,custom2.json
 ```
 
-当你指定了多个配置文件以后，Hexo 会按顺序将这部分配置文件合并成一个 `_multiconfig.yml`。 后面的值优先。 这个原则适用于任意数量、任意深度的 YAML 和 JSON 文件。 请注意，**列表中不允许有空格**。
+当你指定了多个配置文件以后，Hexo 会按顺序将这部分配置文件合并成一个 `_multiconfig.yml`。后面的值优先。这个原则适用于任意数量、任意深度的 YAML 和 JSON 文件。请注意，**列表中不允许有空格**。
 
 如果 `custom.yml` 中指定了 `foo: bar`，在 custom2.json 中指定了 `"foo": "dinosaur"`，那么在 `_multiconfig.yml` 中你会得到 `foo: dinosaur`。
 
@@ -275,7 +275,7 @@ logo: "a-cool-image.png"
 
 > 该特性自 Hexo 5.0.0 起提供
 
-独立的主题配置文件应放置于站点根目录下，支持 `yml` 或 `json` 格式。 需要配置站点 `_config.yml` 文件中的 `theme` 以供 Hexo 寻找 `_config.[theme].yml` 文件。
+独立的主题配置文件应放置于站点根目录下，支持 `yml` 或 `json` 格式。需要配置站点 `_config.yml` 文件中的 `theme` 以供 Hexo 寻找 `_config.[theme].yml` 文件。
 
 ```yml
 # _config.yml
@@ -311,5 +311,5 @@ logo: "a-cool-image.png"
 ```
 
 {% note %}
-我们强烈建议你将所有的主题配置集中在一处。 如果你不得不在多处配置你的主题，那么这些信息对你将会非常有用：Hexo 在合并主题配置时，Hexo 配置文件中的 `theme_config` 的优先级最高，其次是 `_config.[theme].yml` 文件。 最后是位于主题目录下的 `_config.yml` 文件。
+我们强烈建议你将所有的主题配置集中在一处。如果你不得不在多处配置你的主题，那么这些信息对你将会非常有用：Hexo 在合并主题配置时，Hexo 配置文件中的 `theme_config` 的优先级最高，其次是 `_config.[theme].yml` 文件。最后是位于主题目录下的 `_config.yml` 文件。
 {% endnote %}

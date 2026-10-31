@@ -482,7 +482,7 @@ content
 
 ## Post Excerpt
 
-Используйте текст до тега `<!-- more -->` в качестве отрывка поста. `excerpt:` value in the [front-matter](/docs/front-matter#Settings-amp-Their-Default-Values), if specified, will take precedent.
+Используйте текст до тега `<!-- more -->` в качестве отрывка поста. `excerpt:` value in the [front-matter](/docs/front-matter#Settings-Their-Default-Values), if specified, will take precedent.
 
 **Examples:**
 

@@ -15,13 +15,13 @@ hexo.post.create(data, replace);
 
 The attributes of a post can be defined in `data`. The table below is not exhaustive. Additional attributes may be appended to the front-matter.
 
-| 資料       | 描述                                  |
-| -------- | ----------------------------------- |
-| `title`  | 標題                                  |
-| `slug`   | 網址                                  |
-| `layout` | 佈局。 預設為 `default_layout` 設定。        |
-| `path`   | 路徑。 預設會根據 `new_post_path` 設定建構文章路徑。 |
-| `date`   | 日期。 預設為目前時間。                        |
+| 資料       | 描述                                 |
+| -------- | ---------------------------------- |
+| `title`  | 標題                                 |
+| `slug`   | 網址                                 |
+| `layout` | 佈局。預設為 `default_layout` 設定。        |
+| `path`   | 路徑。預設會根據 `new_post_path` 設定建構文章路徑。 |
+| `date`   | 日期。預設為目前時間。                        |
 
 ## Publish a Draft
 
@@ -36,10 +36,10 @@ hexo.post.publish(data, replace);
 
 The attributes of a post can be defined in `data`. The table below is not exhaustive. Additional attributes may be appended to the front-matter.
 
-| 資料       | 描述                           |
-| -------- | ---------------------------- |
-| `slug`   | 檔案名稱（必須）                     |
-| `layout` | 佈局。 預設為 `default_layout` 設定。 |
+| 資料       | 描述                          |
+| -------- | --------------------------- |
+| `slug`   | 檔案名稱（必須）                    |
+| `layout` | 佈局。預設為 `default_layout` 設定。 |
 
 ## 渲染
 
