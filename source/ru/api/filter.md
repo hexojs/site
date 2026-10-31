@@ -212,15 +212,8 @@ hexo.extend.filter.register("after_clean", function () {
 
 Добавляет промежуточные задачи для сервера. `app` является экземпляром [Connect][].
 
-Например, чтобы добавить `X-Powered-By: Hexo` в заголовке ответа:
-
-```js
-hexo.extend.filter.register("server_middleware", function (app) {
-  app.use(function (req, res, next) {
-    res.setHeader("X-Powered-By", "Hexo");
-    next();
-  });
-});
-```
+This hook is provided by [hexo-server][], not Hexo core, so it only runs when `hexo-server` is installed. See the [hexo-server README][] for an implementation example.
 
 [Connect]: https://github.com/senchalabs/connect
+[hexo-server]: https://github.com/hexojs/hexo-server
+[hexo-server README]: https://github.com/hexojs/hexo-server#middleware

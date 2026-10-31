@@ -2,7 +2,7 @@
 title: 过滤器（Filter）
 ---
 
-过滤器用于修改某些指定的数据。 Hexo 将数据按顺序传递给过滤器，然后过滤器逐个修改数据。 这个概念是从 [WordPress](http://codex.wordpress.org/Plugin_API#Filters) 借鉴的。
+过滤器用于修改某些指定的数据。 Hexo 将数据按顺序传递给过滤器，然后过滤器逐个修改数据。这个概念是从 [WordPress](http://codex.wordpress.org/Plugin_API#Filters) 借鉴的。
 
 ## 概要
 
@@ -19,7 +19,7 @@ hexo.extend.filter.register(type, function() {
 }, priority);
 ```
 
-您可以指定过滤器的优先级 `priority`。 `priority` 值越低，过滤器会越早执行。 默认的 `priority` 是 10。 我们建议提供配置选项如 `hexo.config.your_plugin.priority`、让用户自行决定过滤器的优先级。
+您可以指定过滤器的优先级 `priority`。 `priority` 值越低，过滤器会越早执行。默认的 `priority` 是 10。我们建议提供配置选项如 `hexo.config.your_plugin.priority`、让用户自行决定过滤器的优先级。
 
 ## 执行过滤器
 
@@ -28,12 +28,12 @@ hexo.extend.filter.exec(type, data, options);
 hexo.extend.filter.execSync(type, data, options);
 ```
 
-| 选项        | 描述         |
-| --------- | ---------- |
-| `context` | 內容         |
-| `args`    | 参数。 必须为数组。 |
+| 选项        | 描述        |
+| --------- | --------- |
+| `context` | 內容        |
+| `args`    | 参数。必须为数组。 |
 
-`data` 会作为第一个参数传入每个过滤器。 而您可以在过滤器中通过返回值改变下一个过滤器中的 `data`。 如果什么都没有返回的话则会保持原本的 data。 您还可以使用 `args` 指定过滤器的其他参数。 举例来说：
+`data` 会作为第一个参数传入每个过滤器。而您可以在过滤器中通过返回值改变下一个过滤器中的 `data`。如果什么都没有返回的话则会保持原本的 data。您还可以使用 `args` 指定过滤器的其他参数。举例来说：
 
 ```js
 hexo.extend.filter.register("test", function (data, arg1, arg2) {
@@ -94,7 +94,7 @@ hexo.extend.filter.unregister("example", require("path/to/filter"));
 
 ### before_post_render
 
-在文章开始渲染前执行。 您可以参考 [文章渲染](posts.html#渲染) 以了解执行顺序。
+在文章开始渲染前执行。您可以参考 [文章渲染](posts.html#渲染) 以了解执行顺序。
 
 举例来说，把标题转为小写：
 
@@ -107,7 +107,7 @@ hexo.extend.filter.register("before_post_render", function (data) {
 
 ### after_post_render
 
-在文章渲染完成后执行。 您可以参考 [文章渲染](posts.html#渲染) 以了解执行顺序。
+在文章渲染完成后执行。您可以参考 [文章渲染](posts.html#渲染) 以了解执行顺序。
 
 举例来说，把 `@username` 取代为 Twitter 的开发者链接。
 
@@ -196,7 +196,7 @@ hexo.extend.filter.register("post_permalink", function (data) {
 
 ### after_render
 
-在渲染后执行。 您可以参考 [渲染](rendering.html#after-render-过滤器) 以了解更多信息。
+在渲染后执行。您可以参考 [渲染](rendering.html#after-render-过滤器) 以了解更多信息。
 
 ### after_clean
 
@@ -212,15 +212,8 @@ hexo.extend.filter.register("after_clean", function () {
 
 向服务器添加中间件（Middleware）。 `app` 是一个 [Connect][] 实例。
 
-举例来说，在响应头中新增 `X-Powered-By: Hexo`。
-
-```js
-hexo.extend.filter.register("server_middleware", function (app) {
-  app.use(function (req, res, next) {
-    res.setHeader("X-Powered-By", "Hexo");
-    next();
-  });
-});
-```
+此钩子由 [hexo-server][] 而不是 Hexo 核心提供，所以它只能在 `hexo-server` 安装时运行。请参阅 [hexo-server 自述文件][]以了解实现的示例。
 
 [Connect]: https://github.com/senchalabs/connect
+[hexo-server]: https://github.com/hexojs/hexo-server
+[hexo-server 自述文件]: https://github.com/hexojs/hexo-server#middleware
