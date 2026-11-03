@@ -1,0 +1,11 @@
+description: >-
+  A one-page resume in one column, with serif type and centered section
+  headings. Prints to a clean PDF on US Letter or A4.
+link: https://github.com/supertj/hexo-theme-readable-resume
+preview: https://supertj.github.io/hexo-theme-readable-resume/
+tags:
+  - resume
+  - one_column
+  - minimal
+  - light
+  - responsive
