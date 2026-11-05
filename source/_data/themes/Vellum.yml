@@ -1,0 +1,19 @@
+description: A minimal Hexo theme focused on reading experience, build performance and configurability, with zero frontend framework.
+link: https://github.com/cayzlh/hexo-theme-vellum
+preview: https://www.cayzlh.com/
+tags:
+  - responsive
+  - minimal
+  - one_column
+  - dark_mode
+  - i18n
+  - search
+  - seo
+  - fast
+  - 中文
+  - English
+  - 繁體中文
+repository:
+  is_archived: false
+  stars: 0
+  last_commit_date: '2026-11-05T14:51:57Z'
