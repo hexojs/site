@@ -1,0 +1,10 @@
+description: >-
+  Tags and helpers for gun and ammo blogs: normalized caliber badges, cost per
+  round, and spec tables parsed from a product listing title.
+link: https://github.com/gunsnprices/hexo-gunsnprices
+tags:
+  - tag
+  - helper
+  - firearms
+  - ammo
+  - caliber
