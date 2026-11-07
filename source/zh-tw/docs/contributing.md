@@ -102,7 +102,7 @@ Now we use the [Crowdin](https://crowdin.com/project/hexo) platform for translat
 
 ## 回報問題
 
-當您使用 Hexo 遭遇問題時，可試著在 [解決問題](troubleshooting.html) 中尋找解答，或是在 [GitHub](https://github.com/hexojs/hexo/issues) 或 [Google Group](https://groups.google.com/group/hexo) 詢問。 若找不到答案，請至 GitHub 回報。
+當您使用 Hexo 遭遇問題時，可試著在 [解決問題](troubleshooting.html) 中尋找解答，或是在 [GitHub](https://github.com/hexojs/hexo/issues) 或 [Google Group](https://groups.google.com/group/hexo) 詢問。若找不到答案，請至 GitHub 回報。
 
 1. 以 [除錯模式](commands.html#除錯模式) 再執行一次。
 2. 在 GitHub 上提交新 Issue 時，請按照問題模板中的步驟提供除錯資訊和版本資訊。

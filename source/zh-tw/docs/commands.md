@@ -8,7 +8,7 @@ title: 指令
 $ hexo init [folder]
 ```
 
-建立一個新的網站。 如果沒有設定 `folder` 的話，Hexo 會在目前的資料夾建立網站。
+建立一個新的網站。如果沒有設定 `folder` 的話，Hexo 會在目前的資料夾建立網站。
 
 這個指令是一個捷徑且會執行下列步驟：
 
@@ -21,7 +21,7 @@ $ hexo init [folder]
 $ hexo new [layout] <title>
 ```
 
-建立一篇新的文章。 如果沒有設定 `layout` 的話，則會使用 [\_config.yml](configuration.html) 中的 `default_layout` 設定代替。 Use the layout `draft` to create a draft. If the `title` contains spaces, surround it with quotation marks.
+建立一篇新的文章。如果沒有設定 `layout` 的話，則會使用 [\_config.yml](configuration.html) 中的 `default_layout` 設定代替。 Use the layout `draft` to create a draft. If the `title` contains spaces, surround it with quotation marks.
 
 | 選項                | 描述                                         |
 | ----------------- | ------------------------------------------ |
@@ -179,7 +179,7 @@ Silences output to the terminal.
 $ hexo --config custom.yml
 ```
 
-自訂配置檔的路徑而不是使用 `_config.yml`。 此參數也接受以逗號分隔的 JSON 或 YAML 檔列表字串 (不得含有空格)，它們將會被合併產生一個 `_multiconfig.yml`。
+自訂配置檔的路徑而不是使用 `_config.yml`。此參數也接受以逗號分隔的 JSON 或 YAML 檔列表字串 (不得含有空格)，它們將會被合併產生一個 `_multiconfig.yml`。
 
 ```bash
 $ hexo --config custom.yml,custom2.json

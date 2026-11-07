@@ -2,7 +2,7 @@
 title: 文档
 ---
 
-欢迎使用 Hexo，本文档将帮助您快速上手。 如果您在使用过程中遇到问题，请查看 [问题解答](troubleshooting.html) 中的解答，或者在 [GitHub](https://github.com/hexojs/hexo/issues)、[Google Group](https://groups.google.com/group/hexo) 上提问。
+欢迎使用 Hexo，本文档将帮助您快速上手。如果您在使用过程中遇到问题，请查看 [问题解答](troubleshooting.html) 中的解答，或者在 [GitHub](https://github.com/hexojs/hexo/issues)、[Google Group](https://groups.google.com/group/hexo) 上提问。
 
 ## 什么是 Hexo？
 
@@ -10,7 +10,7 @@ Hexo 是一个快速、简洁且高效的博客框架。 Hexo 使用 [Markdown](
 
 ## 安装
 
-设置 Hexo 只需几分钟。 如果您遇到问题，并且在这里找不到解决方案，请[提交 GitHub 问题](https://github.com/hexojs/hexo/issues)，我们将提供帮助。
+设置 Hexo 只需几分钟。如果您遇到问题，并且在这里找不到解决方案，请[提交 GitHub 问题](https://github.com/hexojs/hexo/issues)，我们将提供帮助。
 
 {% youtube PsXWbI2Mqu0 %}
 
@@ -21,7 +21,7 @@ Hexo 是一个快速、简洁且高效的博客框架。 Hexo 使用 [Markdown](
 - [Node.js](http://nodejs.org/) (Node.js 版本需不低于 10.13，建议使用 Node.js 12.0 及以上版本)
 - [Git](http://git-scm.com/)
 
-如果您的电脑中已经安装上述必备程序，那么恭喜您！ 你可以直接前往 [安装 Hexo](#安装-Hexo) 步骤。
+如果您的电脑中已经安装上述必备程序，那么恭喜您！你可以直接前往 [安装 Hexo](#安装-Hexo) 步骤。
 
 如果您的电脑中尚未安装所需要的程序，请根据以下安装指示完成安装。
 
@@ -33,7 +33,7 @@ Hexo 是一个快速、简洁且高效的博客框架。 Hexo 使用 [Markdown](
 - Linux (Fedora, Red Hat, CentOS)：`sudo yum install git-core`
 
 {% note warn Mac 用户 %}
-如果在编译时可能会遇到问题。 请先到 App Store 安装 Xcode。 Xcode 完成后，启动并进入 **Preferences -> Download -> Command Line Tools -> Install** 安装命令行工具。
+如果在编译时可能会遇到问题。请先到 App Store 安装 Xcode。 Xcode 完成后，启动并进入 **Preferences -> Download -> Command Line Tools -> Install** 安装命令行工具。
 {% endnote %}
 
 ### 安装 Node.js
@@ -45,7 +45,7 @@ Node.js 为大多数平台提供了官方的 [安装程序](https://nodejs.org/z
 - Windows：通过 [nvs](https://github.com/jasongin/nvs/)（推荐）或者 [nvm](https://github.com/nvm-sh/nvm) 安装。
 - Mac：使用 [Homebrew](https://brew.sh/) 或 [MacPorts](http://www.macports.org/) 安装。
 - Linux（DEB/RPM-based）：从 [NodeSource](https://github.com/nodesource/distributions) 安装。
-- 其它：使用相应的软件包管理器进行安装。 可以参考由 Node.js 提供的 [指导](https://nodejs.org/en/download/package-manager/)。
+- 其它：使用相应的软件包管理器进行安装。可以参考由 Node.js 提供的 [指导](https://nodejs.org/en/download/package-manager/)。
 
 对于 Mac 和 Linux 同样建议使用 nvs 或者 nvm，以避免可能会出现的权限问题。
 
@@ -100,7 +100,7 @@ echo 'PATH="$PATH:./node_modules/.bin"' >> ~/.profile
 | ----------- | ----------------- | ----------------- |
 | 8.0+        | 20.19.0           | latest            |
 | 7.0+        | 14.0.0            | latest            |
-| 6.2+        | 12.13.0           | latest            |
+| 6.2+        | 12.13.0           | 最新版               |
 | 6.0+        | 12.13.0           | 18.5.0            |
 | 5.0+        | 10.13.0           | 12.0.0            |
 | 4.1 - 4.2   | 8.10              | 10.0.0            |
