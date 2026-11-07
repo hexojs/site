@@ -2,7 +2,7 @@
 title: Plugins
 ---
 
-Hexo 有強大的外掛系統，使您能輕鬆擴展功能而不用修改核心模組的原始碼。 在 Hexo 中有兩種形式的外掛：
+Hexo 有強大的外掛系統，使您能輕鬆擴展功能而不用修改核心模組的原始碼。在 Hexo 中有兩種形式的外掛：
 
 ### 腳本（Scripts）
 
@@ -43,7 +43,7 @@ You'll also need to list your plugin as a dependency in the root `package.json` 
 
 ### Publishing
 
-當您完成外掛後，可以考慮將它發佈到 [外掛列表](/plugins)，讓更多人能夠使用您的外掛。 發佈外掛的步驟和 [更新文件](contributing.html#更新文件) 非常類似。
+當您完成外掛後，可以考慮將它發佈到 [外掛列表](/plugins)，讓更多人能夠使用您的外掛。發佈外掛的步驟和 [更新文件](contributing.html#更新文件) 非常類似。
 
 1. Fork [hexojs/site][]
 2. Clone the repository to your computer and install dependencies.

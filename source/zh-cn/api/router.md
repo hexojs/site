@@ -6,7 +6,7 @@ title: 路由
 
 ## 获取路径
 
-`get` 方法会传回一个 [Stream][]。 例如，把该路径的数据存储到某个指定位置：
+`get` 方法会传回一个 [Stream][]。例如，把该路径的数据存储到某个指定位置：
 
 ```js
 var data = hexo.route.get("index.html");
@@ -39,7 +39,7 @@ hexo.route.set("index.html", function (callback) {
 });
 ```
 
-您也可以设置一个布尔值来声明路径是否被修改。 这可以加快文件生成，因为它允许忽略未修改的文件。
+您也可以设置一个布尔值来声明路径是否被修改。这可以加快文件生成，因为它允许忽略未修改的文件。
 
 ```js
 hexo.route.set("index.html", {

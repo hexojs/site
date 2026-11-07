@@ -482,7 +482,7 @@ content
 
 ## Post Excerpt
 
-text ท่ีวางก่อนแท็ก `<!-- more -->` จะถือเป็นส่วนที่ตัดตอนมาจากโพสต์ `excerpt:` value in the [front-matter](/docs/front-matter#Settings-amp-Their-Default-Values), if specified, will take precedent.
+text ท่ีวางก่อนแท็ก `<!-- more -->` จะถือเป็นส่วนที่ตัดตอนมาจากโพสต์ `excerpt:` value in the [front-matter](/docs/front-matter#Settings-Their-Default-Values), if specified, will take precedent.
 
 **YouTube**
 
