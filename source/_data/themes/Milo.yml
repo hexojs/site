@@ -1,0 +1,10 @@
+description: A minimal, responsive Hexo theme focused on comfortable reading, with dark mode and search.
+link: https://github.com/twhao/hexo-theme-milo
+preview: https://demo.tanwenhao.com
+
+tags:
+  - simple
+  - responsive
+  - two_columns
+  - dark_mode
+  - search
