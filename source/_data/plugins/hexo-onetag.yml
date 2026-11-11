@@ -1,0 +1,7 @@
+description: Ask AI box and llms.txt for Hexo blogs. Writes llms.txt and llms-full.txt from your posts, and adds a box that answers questions from them.
+link: https://github.com/fengyiqicoder/onetagai/tree/main/packages/hexo-onetag
+tags:
+  - generator
+  - llms
+  - ai
+  - search
