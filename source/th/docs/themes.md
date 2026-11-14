@@ -46,7 +46,7 @@ hexo จะจัดการและบันทึกไฟล์ทั้ง
 
 ### Publishing
 
-When you have finished building your theme, you can publish it to the [theme list](/themes). เมื่อคุณเสร็จการสร้างธีมของตน คุณสามารถประกาศไปถึง [theme list](/themes) ก่อนการประกาศคุณต้องรัน \[theme unit test\](<https://github> .com/hexojs/hexo-theme-unit-test) เพื่อทำให้แน่ใจว่าทุกสิ่งทุกอย่างเป็นไปได้ดี ขั้นตอนการประกาศธีมจะคล้ายกับขั้นตอนของ [updating documentation](contributing.html#Updating_Documentation) The steps for publishing a theme are very similar to those for [updating documentation](contributing.html#Updating_Documentation).
+When you have finished building your theme, you can publish it to the [theme list](/themes). เมื่อคุณเสร็จการสร้างธีมของตน คุณสามารถประกาศไปถึง [theme list](/themes) ก่อนการประกาศคุณต้องรัน \[theme unit test\](<https://github> .com/hexojs/hexo-theme-unit-test) เพื่อทำให้แน่ใจว่าทุกสิ่งทุกอย่างเป็นไปได้ดี ขั้นตอนการประกาศธีมจะคล้ายกับขั้นตอนของ [updating documentation](contributing.html#Updating_Documentation) The steps for publishing a theme are very similar to those for [updating documentation](contributing.html#Updating-Documentation).
 
 1. Fork [hexojs/site][]
 2. Clone the repository to your computer and install dependencies.

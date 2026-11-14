@@ -18,7 +18,7 @@ hexo.extend.tag.register(
 
 标签函数会传入两个参数：`args` 和 `content`。 `args` 包含传入标签插件的参数，`content` 是标签插件所覆盖的内容。
 
-从 Hexo 3 开始，因为新增了异步渲染功能，而改用 [Nunjucks][] 作为渲染引擎。 其行为可能会与过去使用的 [Swig][] 有些许差异。
+从 Hexo 3 开始，因为新增了异步渲染功能，而改用 [Nunjucks][] 作为渲染引擎。其行为可能会与过去使用的 [Swig][] 有些许差异。
 
 ## 移除标签插件
 
@@ -46,11 +46,11 @@ hexo.extend.tag.register("youtube", tagFn);
 
 ### ends
 
-使用结束标签。 此选项默认为 `false`。
+使用结束标签。此选项默认为 `false`。
 
 ### async
 
-启用异步模式。 此选项默认为 `false`。
+启用异步模式。此选项默认为 `false`。
 
 ## 示例
 

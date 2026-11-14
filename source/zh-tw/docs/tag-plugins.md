@@ -92,7 +92,7 @@ code snippet
 | `line_threshold` | Only show line numbers as long as the numbers of lines of the code block exceed such threshold. | `0`     |
 | `highlight`      | 啟用程式碼強調                                                                                         | `true`  |
 | `first_line`     | Specify the first line number                                                                   | `1`     |
-| `mark`           | 強調特定的程式碼行號，每個值會以逗點區分。 特定的程式碼區間則使用破折號 (dash)<br>範例：`mark:1,4-7,10` 會標示行號 1、 4 到 7 以及 10。   |         |
+| `mark`           | 強調特定的程式碼行號，每個值會以逗點區分。特定的程式碼區間則使用破折號 (dash)<br>範例：`mark:1,4-7,10` 會標示行號 1、 4 到 7 以及 10。    |         |
 | `wrap`           | 將程式碼區塊包裝在 [`<table>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table) 中  | `true`  |
 
 ### 說明
@@ -318,7 +318,7 @@ Include links to other posts.
 
 你可以自定義要顯示的文字，取代顯示文章的標題。
 
-文章標題及自定義文字預設會逸出 (escape)。 你可以使用選項 `escape` 將逸出關閉。
+文章標題及自定義文字預設會逸出 (escape)。你可以使用選項 `escape` 將逸出關閉。
 
 例如：
 
@@ -401,7 +401,7 @@ _hexo-renderer-marked 3.1.0+ 可以（可選的）自動解析文章內的圖片
 
 ### url_for (7.0.0+)
 
-回傳一個具有前綴根路徑 URL。 輸出將會自動編碼。
+回傳一個具有前綴根路徑 URL。輸出將會自動編碼。
 
 ```
 {% url_for text path [relative] %}
@@ -449,7 +449,7 @@ relative_link: true
 
 ### full_url_for (7.0.0+)
 
-回傳一個 `config.url` 前綴的 URL。 輸出將會自動編碼。
+回傳一個 `config.url` 前綴的 URL。輸出將會自動編碼。
 
 ```
 {% full_url_for text path %}

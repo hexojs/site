@@ -482,7 +482,7 @@ content
 
 ## Trecho de Postagem
 
-Use o texto colocado antes da marcação `<!-- more -->` como um trecho da publicação. `excerpt:` value in the [front-matter](/docs/front-matter#Settings-amp-Their-Default-Values), if specified, will take precedent.
+Use o texto colocado antes da marcação `<!-- more -->` como um trecho da publicação. `excerpt:` value in the [front-matter](/docs/front-matter#Settings-Their-Default-Values), if specified, will take precedent.
 
 **Exemplo:**
 

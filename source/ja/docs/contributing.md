@@ -6,7 +6,7 @@ title: 貢献
 
 ## 開発
 
-私達は、Hexoの開発への参加を歓迎しています。 この文書は、そのプロセスをサポートします。
+私達は、Hexoの開発への参加を歓迎しています。この文書は、そのプロセスをサポートします。
 
 ### 始める前に
 
@@ -50,7 +50,7 @@ $ git push origin new_feature
 ### 注意
 
 - `package.json`のバージョン番号は変更しないでください。
-- プルリクエストは、テストが通った場合にのみマージされます。 提出前にテストを実行してください。
+- プルリクエストは、テストが通った場合にのみマージされます。提出前にテストを実行してください。
 
 ```bash
 $ npm test
@@ -76,7 +76,7 @@ $ cd site
 $ npm install
 ```
 
-3. ドキュメントの編集を始めます。 ライブプレビューのためにサーバーを起動することができます。
+3. ドキュメントの編集を始めます。ライブプレビューのためにサーバーを起動することができます。
 
 ```bash
 $ hexo server
@@ -102,7 +102,7 @@ $ hexo server
 
 ## 問題の報告
 
-Hexoの使用中に問題に遭遇した場合、[トラブルシューティング](troubleshooting.html)で解決策を見つけるか、[GitHub](https://github.com/hexojs/hexo/issues)や[Google Group](https://groups.google.com/group/hexo)で質問してください。 解決策が見つからない場合は、GitHubで報告してください。
+Hexoの使用中に問題に遭遇した場合、[トラブルシューティング](troubleshooting.html)で解決策を見つけるか、[GitHub](https://github.com/hexojs/hexo/issues)や[Google Group](https://groups.google.com/group/hexo)で質問してください。解決策が見つからない場合は、GitHubで報告してください。
 
 1. [デバッグモード](commands.html#デバッグモード)で問題を示してください。
 2. 新しい問題をGitHubで作成するときは、Issueテンプレートの手順に従い、デバッグメッセージとバージョンを提供してください。

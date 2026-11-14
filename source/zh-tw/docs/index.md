@@ -2,7 +2,7 @@
 title: 文件
 ---
 
-歡迎使用 Hexo，此文件將幫助您快速開始使用。 如果您在使用途中遇到任何問題，您可以在 [解決問題](troubleshooting.html) 中找到解答，或者也可以在 [GitHub](https://github.com/hexojs/hexo/issues) 或 [Google Group](https://groups.google.com/group/hexo) 上詢問。
+歡迎使用 Hexo，此文件將幫助您快速開始使用。如果您在使用途中遇到任何問題，您可以在 [解決問題](troubleshooting.html) 中找到解答，或者也可以在 [GitHub](https://github.com/hexojs/hexo/issues) 或 [Google Group](https://groups.google.com/group/hexo) 上詢問。
 
 ## 什麼是 Hexo？
 
@@ -21,7 +21,7 @@ It only takes a few minutes to set up Hexo. If you encounter a problem and can't
 - [Node.js](http://nodejs.org/) (Node.js 版本需不低於8.10，建議使用 Node.js 10.0 及以上版本)
 - [Git](http://git-scm.com/)
 
-若您的電腦已經安裝上述的必備軟體，那麼恭喜您！ 只需要透過 npm 即可完成 Hexo 的安裝。
+若您的電腦已經安裝上述的必備軟體，那麼恭喜您！只需要透過 npm 即可完成 Hexo 的安裝。
 
 If not, please follow the following instructions to install all the requirements.
 
