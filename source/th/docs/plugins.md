@@ -43,7 +43,7 @@ Edit `source/_data/plugins.yml` and add your plugin. For example:
 
 ### Publishing
 
-เมื่อปลั๊กอินของคุณพร้อมแล้ว คุณอาจจะคิดท่ีจะประกาศมันไปถึง \[plugin list\] (/plugins) เพื่อชวนคนอื่นมาใช้ การประกาศปลั๊กอินของตนจะคล้ายกับ [updating documentation](contributing.html#Updating_Documentation) Publishing your own plugins is very similar to [updating documentation](contributing.html#Updating_Documentation).
+เมื่อปลั๊กอินของคุณพร้อมแล้ว คุณอาจจะคิดท่ีจะประกาศมันไปถึง \[plugin list\] (/plugins) เพื่อชวนคนอื่นมาใช้ การประกาศปลั๊กอินของตนจะคล้ายกับ [updating documentation](contributing.html#Updating_Documentation) Publishing your own plugins is very similar to [updating documentation](contributing.html#Updating-Documentation).
 
 1. Fork [hexojs/site][]
 2. Clone the repository to your computer and install dependencies.
