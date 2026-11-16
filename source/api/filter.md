@@ -178,20 +178,80 @@ hexo.extend.filter.register("after_init", function () {
 
 Executed when creating a post to determine the path of new posts.
 
+Hexo's built-in `new_post_path` filter is registered with priority `10`. It
+converts the post data object into a file path string. Therefore, a filter
+running before the built-in filter receives the post data object, while a
+filter running after it receives the generated file path. The `replace`
+argument is available in both cases.
+
+External plugins and scripts are normally registered after Hexo's built-in
+filters. As a result, an external filter using the default priority of `10`
+normally receives the generated file path. Use an explicit priority lower than
+`10` to modify the post data, or higher than `10` to modify the generated path.
+
+For example, to modify the post data before Hexo determines the path:
+
 ```js
-hexo.extend.filter.register("new_post_path", function (data, replace) {
-  // ...
-});
+hexo.extend.filter.register(
+  "new_post_path",
+  function (data, replace) {
+    data.slug = data.slug.toLowerCase();
+    return data;
+  },
+  9,
+);
+```
+
+To modify the generated path instead:
+
+```js
+hexo.extend.filter.register(
+  "new_post_path",
+  function (filePath, replace) {
+    return filePath.replace(/\.md$/, ".markdown");
+  },
+  11,
+);
 ```
 
 ### post_permalink
 
 Used to determine the permalink of posts.
 
+Hexo's built-in `post_permalink` filter is registered with priority `10`. It
+converts the post data object into a permalink string. Therefore, a filter
+running before the built-in filter receives the post data object, while a
+filter running after it receives the generated permalink.
+
+External plugins and scripts are normally registered after Hexo's built-in
+filters. As a result, an external filter using the default priority of `10`
+normally receives the generated permalink. Use an explicit priority lower than
+`10` to modify the post data, or higher than `10` to modify the generated
+permalink.
+
+For example, to modify the post data before Hexo generates the permalink:
+
 ```js
-hexo.extend.filter.register("post_permalink", function (data) {
-  // ...
-});
+hexo.extend.filter.register(
+  "post_permalink",
+  function (post) {
+    post.slug = post.slug.toLowerCase();
+    return post;
+  },
+  9,
+);
+```
+
+To modify the generated permalink instead:
+
+```js
+hexo.extend.filter.register(
+  "post_permalink",
+  function (permalink) {
+    return `archive/${permalink}`;
+  },
+  11,
+);
 ```
 
 ### after_render
