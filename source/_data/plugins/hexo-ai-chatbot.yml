@@ -1,0 +1,7 @@
+description: AI chat assistant for your Hexo site. It answers visitors from your own posts and pages, in 80+ languages.
+link: https://github.com/asyntai/hexo-ai-chatbot
+tags:
+  - ai
+  - chatbot
+  - chat
+  - injector
