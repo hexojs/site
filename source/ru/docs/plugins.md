@@ -43,7 +43,7 @@ Hexo имеет мощную систему плагинов, это делае�
 
 ### Публикация
 
-Когда плагин будет готов, можно рассмотреть возможность его публикации в список [плагинов](/plugins), чтобы пригласить других людей воспользоваться им. Публикация плагинов очень похожа на [обновление документации](contributing.html#Обновление-документации). Publishing your own plugins is very similar to [updating documentation](contributing.html#Updating_Documentation).
+Когда плагин будет готов, можно рассмотреть возможность его публикации в список [плагинов](/plugins), чтобы пригласить других людей воспользоваться им. Публикация плагинов очень похожа на [обновление документации](contributing.html#Обновление-документации). Publishing your own plugins is very similar to [updating documentation](contributing.html#Updating-Documentation).
 
 1. Создайте форк [hexojs/site][]
 2. Клонируйте репозиторий на компьютер и установите все зависимости.

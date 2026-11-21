@@ -75,7 +75,7 @@ skip_render: "_posts/test-post.md"
 | `external_link`         | Open external links in a new tab?                                                  |                |
 | `external_link.enable`  | Open external links in a new tab?                                                  | `true`         |
 | `external_link.field`   | 應用至整個 `site` 或僅只於 `post`                                                           | `site`         |
-| `external_link.exclude` | 主機名稱除外。 適用於特指子網域，包含 `www`                                                          | `[]`           |
+| `external_link.exclude` | 主機名稱除外。適用於特指子網域，包含 `www`                                                           | `[]`           |
 | `filename_case`         | 把檔案名稱轉換為: `1` 小寫或 `2` 大寫                                                           | `0`            |
 | `render_drafts`         | 顯示草稿                                                                               | `false`        |
 | `post_asset_folder`     | 啟動 [Asset 資料夾](asset-folders.html)                                                 | `false`        |
@@ -125,10 +125,10 @@ Hexo 使用 [Moment.js](http://momentjs.com/) 來解析和顯示時間。
 當 front-matter 沒有提供 `updated` 值，則 `updated_option` 控制此值：
 
 - `mtime`: 使用檔案修改日期作為 `updated`。 Hexo 自從 3.0.0 版本開始有這個預設行為。
-- `date`: 使用 `date` 作為 `updated`。 通常與 Git 的工作流程搭配使用，與檔案修改日期可能不同。
-- `empty`: 當沒有提供時直接捨棄 `updated`。 可能與多數的主題及外掛不相容。
+- `date`: 使用 `date` 作為 `updated`。通常與 Git 的工作流程搭配使用，與檔案修改日期可能不同。
+- `empty`: 當沒有提供時直接捨棄 `updated`。可能與多數的主題及外掛不相容。
 
-`use_date_for_updated` 已在版本 v7.0.0 開始移除。 請使用 `updated_option: 'date'` 作為代替。
+`use_date_for_updated` 已在版本 v7.0.0 開始移除。請使用 `updated_option: 'date'` 作為代替。
 {% endnote %}
 
 ### 分頁
@@ -208,7 +208,7 @@ ignore:
 
 Each value in the list must be enclosed with single/double quotes.
 
-`include` 和 `exclude` 並不適用於 `themes/` 目錄下的檔案。 如果需要忽略 `themes/` 目錄下的部分檔案或資料夾，可以使用 `ignore` 或在檔案名之前添加下劃線 `_`。
+`include` 和 `exclude` 並不適用於 `themes/` 目錄下的檔案。如果需要忽略 `themes/` 目錄下的部分檔案或資料夾，可以使用 `ignore` 或在檔案名之前添加下劃線 `_`。
 
 \* Notable exception is the `source/_posts` folder, but any file or folder with a name that starts with an underscore under that folder would still be ignored. Using `include:` rule in that folder is not recommended.
 
@@ -224,7 +224,7 @@ $ hexo server --config custom.yml
 $ hexo server --config custom.yml,custom2.json
 ```
 
-使用多個配置檔會合併產生一個 `_multiconfig.yml`。 當合併遇到衝突時，列在愈後面的檔案，有愈高的優先權。 可以使用任意數量帶有任意層級物件的 JSON 或 YAML 檔。 注意**檔案列表字串中不得有空白**。
+使用多個配置檔會合併產生一個 `_multiconfig.yml`。當合併遇到衝突時，列在愈後面的檔案，有愈高的優先權。可以使用任意數量帶有任意層級物件的 JSON 或 YAML 檔。注意**檔案列表字串中不得有空白**。
 
 以前述的多個配置檔範例來說明，若 `custom.yml` 中有 `foo: bar`，且 `custom2.json` 中有 `"foo": "dinosaur"`，最終在 `_multiconfig.yml` 裡的將會是 `foo: dinosaur`。
 
@@ -272,7 +272,7 @@ logo: "a-cool-image.png"
 
 > 從 Hexo 5.0.0 後開始支援
 
-檔案應該要被放在 site 資料夾中，`yml` 和 `json` 兩種格式都支援。 在 `_config.yml` 中的 `theme` 必須進行設定，讓 Hexo 可以讀取 `_config.[theme].yml`
+檔案應該要被放在 site 資料夾中，`yml` 和 `json` 兩種格式都支援。在 `_config.yml` 中的 `theme` 必須進行設定，讓 Hexo 可以讀取 `_config.[theme].yml`
 
 ```yml
 # _config.yml
@@ -308,5 +308,5 @@ logo: "a-cool-image.png"
 ```
 
 {% note %}
-我們強烈建議您將主題設定只存放在一個地方。 但如果你有將主題設定存放在不同地方，下列的資訊是有些重要的：在頁面主要設定檔案中的 `theme_config` 在合併的時候具有最高優先權，而在專用的主題設定檔案中，主題資料夾中的 `_config.yml` 檔案則是最低優先權。 The `_config.yml` file under the theme directory has the lowest priority.
+我們強烈建議您將主題設定只存放在一個地方。但如果你有將主題設定存放在不同地方，下列的資訊是有些重要的：在頁面主要設定檔案中的 `theme_config` 在合併的時候具有最高優先權，而在專用的主題設定檔案中，主題資料夾中的 `_config.yml` 檔案則是最低優先權。 The `_config.yml` file under the theme directory has the lowest priority.
 {% endnote %}

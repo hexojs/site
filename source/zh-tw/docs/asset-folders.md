@@ -52,4 +52,4 @@ marked:
   postAsset: true
 ```
 
-一旦啟用，資產圖片便會自動解析成其對應的文章路徑。 舉例來說，"image.jpg" 的位置在 "/2020/01/02/foo/image.jpg"，意味著他是 "/2020/01/02/foo/" 文章中的一張資產圖片，`![](image.jpg)` 將會呈現為 `<img src="/2020/01/02/foo/image.jpg">`。
+一旦啟用，資產圖片便會自動解析成其對應的文章路徑。舉例來說，"image.jpg" 的位置在 "/2020/01/02/foo/image.jpg"，意味著他是 "/2020/01/02/foo/" 文章中的一張資產圖片，`![](image.jpg)` 將會呈現為 `<img src="/2020/01/02/foo/image.jpg">`。
