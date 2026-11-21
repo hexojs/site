@@ -2,7 +2,7 @@
 title: タグプラグイン
 ---
 
-タグプラグインは記事に付与するタグとは異なります。 これらはOctopressから移植されました。 特定のコンテンツを記事に素早く追加するのに便利です。
+タグプラグインは記事に付与するタグとは異なります。これらはOctopressから移植されました。 特定のコンテンツを記事に素早く追加するのに便利です。
 
 記事は任意のフォーマットで書くことができますが、何れの場合もタグプラグインは利用可能です。 構文には変わりはありません。
 
@@ -24,7 +24,7 @@ content
 
 ### 例
 
-**引数なし。 プレーンなブロック引用。**
+**引数なし。プレーンなブロック引用。**
 
 ```
 {% blockquote %}
@@ -92,7 +92,7 @@ code snippet
 | `line_threshold` | コードブロックの行数がこの閾値を超える場合にのみ行番号を表示。                                                                | `0`    |
 | `highlight`      | コードのハイライトを有効にする                                                                                | `true` |
 | `first_line`     | 最初の行番号を指定                                                                                      | `1`    |
-| `mark`           | コンマ区切りで指定された行をハイライト。 範囲指定にはハイフンを使用<br>例: `mark:1,4-7,10` は行1、4から7、10をマークします。             |        |
+| `mark`           | コンマ区切りで指定された行をハイライト。範囲指定にはハイフンを使用<br>例: `mark:1,4-7,10` は行1、4から7、10をマークします。              |        |
 | `wrap`           | コードブロックを[`<table>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table)でラップ | `true` |
 
 ### 例
@@ -169,7 +169,7 @@ content
 ## jsFiddle (v7.0.0で削除されました)
 
 {% note warn %}
-このタグはHexo 7.0.0で削除されました。 既存の記事との後方互換性を提供するために、プラグイン[hexo-tag-embed](https://github.com/hexojs/hexo-tag-embed)を提供しています。
+このタグはHexo 7.0.0で削除されました。既存の記事との後方互換性を提供するために、プラグイン[hexo-tag-embed](https://github.com/hexojs/hexo-tag-embed)を提供しています。
 {% endnote %}
 
 jsFiddleスニペットを埋め込むには:
@@ -216,7 +216,7 @@ iframeを埋め込むには:
 
 ## コードの挿入
 
-`source/downloads/code`フォルダにあるコードスニペットを挿入します。 フォルダの場所は`code_dir`オプションで設定できます。
+`source/downloads/code`フォルダにあるコードスニペットを挿入します。フォルダの場所は`code_dir`オプションで設定できます。
 
 ```
 {% include_code [title] [lang:language] [from:line] [to:line] path/to/file %}
@@ -401,7 +401,7 @@ _hexo-renderer-marked 3.1.0+は、オプションで画像の記事パスを自�
 
 ### url_for (7.0.0+)
 
-ルートパスをプレフィックスとして付加したURLを返します。 出力は自動的にエンコードされます。
+ルートパスをプレフィックスとして付加したURLを返します。出力は自動的にエンコードされます。
 
 ```
 {% url_for text path [relative] %}
@@ -449,7 +449,7 @@ relative_link: true
 
 ### full_url_for (7.0.0+)
 
-`config.url`をプレフィックスとして付加したURLを返します。 出力は自動的にエンコードされます。
+`config.url`をプレフィックスとして付加したURLを返します。出力は自動的にエンコードされます。
 
 ```
 {% full_url_for text path %}

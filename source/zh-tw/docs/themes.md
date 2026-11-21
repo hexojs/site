@@ -21,7 +21,7 @@ title: 主題
 
 ### languages
 
-語言資料夾。 請參見 [國際化 (i18n)](internationalization.html)。
+語言資料夾。請參見 [國際化 (i18n)](internationalization.html)。
 
 ### layout
 
@@ -46,7 +46,7 @@ Hexo will process and save all renderable files to the `public` folder. Non-rend
 
 ### Publishing
 
-When you have finished building your theme, you can publish it to the [theme list](/themes). 當您完成主題後，可以考慮將它發佈到 [主題列表](/themes)，讓更多人能夠使用您的主題，在發佈前建議先進行 [主題單元測試](https://github.com/hexojs/hexo-theme-unit-test)，確保每一項功能都能正常運作。 發佈主題的步驟和 [更新文件](contributing.html#更新文件) 非常類似。
+When you have finished building your theme, you can publish it to the [theme list](/themes). 當您完成主題後，可以考慮將它發佈到 [主題列表](/themes)，讓更多人能夠使用您的主題，在發佈前建議先進行 [主題單元測試](https://github.com/hexojs/hexo-theme-unit-test)，確保每一項功能都能正常運作。發佈主題的步驟和 [更新文件](contributing.html#更新文件) 非常類似。
 
 1. Fork [hexojs/site][]
 2. Clone the repository to your computer and install dependencies.
