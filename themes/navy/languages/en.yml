@@ -11,6 +11,10 @@ index:
   get_started: Get started
   theme_intro: Choose from a huge library of spectacular, feature-packed and customizable themes. Create your own using any compatible template engines.
   theme_link: Explore themes
+  plugin_intro_title: Powerful API
+  plugin_intro: Features powerful APIs for limitless extensibility. Easily integrate with your existing toolchains (Babel, UglifyJS, PostCSS, HTMLMinifier and many others).
+  plugin_link: Explore Plugins
+  api_link: View API docs
 
 page:
   contents: Contents
