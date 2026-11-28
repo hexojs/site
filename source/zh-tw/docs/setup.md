@@ -58,7 +58,7 @@ Application data. [EJS](https://ejs.co/), [Stylus](http://learnboost.github.io/s
 
 ### scaffolds
 
-[鷹架](writing.html#鷹架（Scaffold）) 資料夾。 當您建立新文章時，Hexo 會根據 scaffold 來建立檔案。
+[鷹架](writing.html#鷹架（Scaffold）) 資料夾。當您建立新文章時，Hexo 會根據 scaffold 來建立檔案。
 
 ### source
 

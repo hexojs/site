@@ -13,7 +13,7 @@ title: 在 GitHub Pages 上部署 Hexo
   $ git push -u origin main
   ```
 
-- 預設情況下 `public/` 不會被上傳(也不該被上傳)，確認 `.gitignore` 檔案中包含一行 `public/`。 整體資料夾結構應會與[範例儲存庫](https://github.com/hexojs/hexo-starter)極為相似。
+- 預設情況下 `public/` 不會被上傳(也不該被上傳)，確認 `.gitignore` 檔案中包含一行 `public/`。整體資料夾結構應會與[範例儲存庫](https://github.com/hexojs/hexo-starter)極為相似。
 
 3. 使用 `node --version` 指令檢查你電腦上的 Node.js 版本，並記下該版本 (例如：`v20.y.z`) Make a note of the major version (e.g., `v20.y.z`)
 4. In your GitHub repo's setting, navigate to **Settings** > **Pages** > **Source**. Change the source to **GitHub Actions** and save.
@@ -74,7 +74,7 @@ jobs:
 
 6. Once the deployment is finished, check the webpage at _username_.github.io.
 
-若你使用 `CNAME` 自訂域名，你需要在 `source/` 資料夾中新增 `CNAME` 檔案。 [更多資訊](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site)
+若你使用 `CNAME` 自訂域名，你需要在 `source/` 資料夾中新增 `CNAME` 檔案。[更多資訊](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site)
 
 ## Project page
 
