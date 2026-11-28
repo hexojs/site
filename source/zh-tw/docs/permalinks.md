@@ -23,7 +23,7 @@ You can specify the permalinks for your site in `_config.yml` or in the front-ma
 | `:name`       | 檔案名稱                                                                               |
 | `:post_title` | 文章標題                                                                               |
 | `:id`         | 文章 ID (_not persistent across [cache reset](/zh-tw/docs/commands#clean)_)          |
-| `:category`   | 分類。 如果文章沒有分類，則是 `default_category` 設定。                                             |
+| `:category`   | 分類。如果文章沒有分類，則是 `default_category` 設定。                                              |
 | `:hash`       | SHA1 hash of filename (same as `:title`) and date (12-hexadecimal)                 |
 
 您可在 `permalink_defaults` 設定中調整永久連結中各變數的預設值：

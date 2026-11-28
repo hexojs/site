@@ -91,7 +91,7 @@ If your theme is exceedingly complex or if the number of files to generate becom
 
 本功能借鑑於 [Ruby on Rails](http://guides.rubyonrails.org/caching_with_rails.html#fragment-caching)，它儲存局部區塊的內容，下次便能直接使用快取內容，可以減少資料庫查詢並使產生速度更快。 It causes content to be saved as fragments and cached for when additional requests are made. This can reduce the number of database queries and can also speed up file generation.
 
-局部模板讓您在不同模板之間共享相同的組件，例如頁首（Header）、頁尾（Footer）或側邊欄（Sidebar）等，可利用局部模板功能分割為個別檔案，讓維護更加便利。 舉例來說：
+局部模板讓您在不同模板之間共享相同的組件，例如頁首（Header）、頁尾（Footer）或側邊欄（Sidebar）等，可利用局部模板功能分割為個別檔案，讓維護更加便利。舉例來說：
 
 ```js
 <%- fragment_cache('header', function(){

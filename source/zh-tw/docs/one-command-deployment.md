@@ -47,17 +47,17 @@ deploy:
   message: [message]
 ```
 
-| 選項        | 描述                                               | Default                                                                         |
-| --------- | ------------------------------------------------ | ------------------------------------------------------------------------------- |
-| `repo`    | URL of the target repository                     |                                                                                 |
-| `branch`  | 分支名稱。                                            | `gh-pages` (GitHub)<br>`coding-pages` (Coding.net)<br>`master` (其他) |
-| `message` | Customize commit message.                        | `Site updated: {% raw %}{{ now('YYYY-MM-DD HH:mm:ss') }}{% endraw %}`           |
-| `token`   | 選填的 token 值用來儲存庫存取身份認證。 以 `$` 作為前綴從環境變數中讀取 token |                                                                                 |
+| 選項        | 描述                                              | Default                                                                         |
+| --------- | ----------------------------------------------- | ------------------------------------------------------------------------------- |
+| `repo`    | URL of the target repository                    |                                                                                 |
+| `branch`  | 分支名稱。                                           | `gh-pages` (GitHub)<br>`coding-pages` (Coding.net)<br>`master` (其他) |
+| `message` | Customize commit message.                       | `Site updated: {% raw %}{{ now('YYYY-MM-DD HH:mm:ss') }}{% endraw %}`           |
+| `token`   | 選填的 token 值用來儲存庫存取身份認證。以 `$` 作為前綴從環境變數中讀取 token |                                                                                 |
 
 3. 上傳你的網站。 執行 `hexo clean && hexo deploy`。
 
 - 你將會被提示提供目標儲存庫的使用者名稱及密碼，除非你用 token 或是 ssh 金鑰進行身份驗證。
-- hexo-deployer-git 不會儲存你的使用者名稱及密碼。 使用 [git-credential-cache](https://git-scm.com/docs/git-credential-cache) 來暫時儲存它們。
+- hexo-deployer-git 不會儲存你的使用者名稱及密碼。使用 [git-credential-cache](https://git-scm.com/docs/git-credential-cache) 來暫時儲存它們。
 
 4. 在 Github / BitBucket / Gitlab 前往你的儲存庫設定，並將你的主要分支從 `master` 設為 `gh-pages`（或者任何你在 \_config.yml 中設定的名字)。 The deployed site should be live on the link shown on the "Pages" setting.
 
@@ -195,7 +195,7 @@ deploy:
 
 ## Vercel
 
-[Vercel](https://vercel.com) 是一個雲端平台讓開發者可以架設 Jamstack 網站以及網路服務，且可以快速佈署、自動調整大小 (auto scaling)，且不須監督、無須設定。 他們提供全球邊緣網路、SSL 加密、資產壓縮、快取無效化等服務。
+[Vercel](https://vercel.com) 是一個雲端平台讓開發者可以架設 Jamstack 網站以及網路服務，且可以快速佈署、自動調整大小 (auto scaling)，且不須監督、無須設定。他們提供全球邊緣網路、SSL 加密、資產壓縮、快取無效化等服務。
 
 第一步：新增一個建構腳本至到你的 `package.json` 檔案：
 
@@ -211,7 +211,7 @@ deploy:
 
 為了使用 [Vercel for Git Integration](https://vercel.com/docs/git-integrations) 佈署你的 Hexo 應用程式，請確認它已推送到 Git 儲存庫中。
 
-使用 [Import Flow](https://vercel.com/import/git) 輸入專案到 Vercel 中。 在輸入期間，你可以找到所有有關的選項已預先為你進行設定；然而，你可以選擇更改任何選項，你可以在[這裡](https://vercel.com/docs/build-step#build-&-development-settings)找到選項清單。
+使用 [Import Flow](https://vercel.com/import/git) 輸入專案到 Vercel 中。在輸入期間，你可以找到所有有關的選項已預先為你進行設定；然而，你可以選擇更改任何選項，你可以在[這裡](https://vercel.com/docs/build-step#build-&-development-settings)找到選項清單。
 
 當你的專案完成輸入之後，所有往後分支中的推送皆會產生[預覽佈署](https://vercel.com/docs/platform/deployments#preview)，在[生產環境分支](https://vercel.com/docs/git-integrations#production-branch)所有的更動，都會呈現結果在[生產環境佈署](https://vercel.com/docs/platform/deployments#production)。
 
@@ -221,7 +221,7 @@ Follow the prompts, where you'll be asked which domain you'd like to deploy to. 
 
 ## Bip
 
-[Bip](https://bip.sh) 是一個商業架設服務並提供不斷線佈署，專為靜態網頁提供全球 CDN、SSL、無限頻寬等服務。 提供實支實付 (pay as you go) 的方案，以一個網域為單位。
+[Bip](https://bip.sh) 是一個商業架設服務並提供不斷線佈署，專為靜態網頁提供全球 CDN、SSL、無限頻寬等服務。提供實支實付 (pay as you go) 的方案，以一個網域為單位。
 
 Getting started is quick and easy, as Bip provides out the box support for Hexo. This guide assumes you already have [a Bip domain and Bip CLI installed](https://bip.sh/getstarted). This guide assumes you already have [a Bip domain and Bip CLI installed](https://bip.sh/getstarted).
 
